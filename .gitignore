@@ -1,5 +1,6 @@
 key.properties
 flutter_export_environment.sh
+.flutter-plugins-dependencies
 
 # Created by https://www.gitignore.io/api/android,flutter,androidstudio
 # Edit at https://www.gitignore.io/?templates=android,flutter,androidstudio
