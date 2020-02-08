@@ -98,7 +98,7 @@ class HomePage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => GamePage()),
+                  _FadeRoute(page: GamePage()),
               );
             },
           ),
@@ -110,6 +110,9 @@ class HomePage extends StatelessWidget {
 }
 
 class _FadeRoute extends PageRouteBuilder {
+  @override
+  final Duration transitionDuration = const Duration(milliseconds: 150);
+
   final Widget page;
   _FadeRoute({this.page})
       : super(
