@@ -34,7 +34,7 @@ abstract class DynamicComponent extends BasicComponent {
 
   // If this component was previously still update its direction and orientation
   void updateDirection(double newInputDirectionX, double newInputDirectionY,
-      {bool forced}) {
+      {bool forced = false}) {
     if ((directionX == 0 && directionY == 0) || forced) {
       directionX = newInputDirectionX;
       directionY = newInputDirectionY;

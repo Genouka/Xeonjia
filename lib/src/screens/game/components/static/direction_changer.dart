@@ -21,9 +21,20 @@ class DirectionChangerComponent extends BasicComponent {
     List<double> _directionXY = directionToXY(_forcedDirection);
     Rect _thisRect = toRect();
     Rect _aboveRect = componentAbove.toRect();
-    if (_thisRect.center == _aboveRect.center) {
-      componentAbove.updateDirection(_directionXY.first, _directionXY.last,
-          forced: true);
+    if (componentAbove.directionX != 0) {
+      if (_thisRect.center.dx == _aboveRect.center.dx &&
+          _thisRect.bottomCenter.dy > _aboveRect.center.dy &&
+          _thisRect.topCenter.dy < _aboveRect.center.dy) {
+        componentAbove.updateDirection(_directionXY.first, _directionXY.last,
+            forced: true);
+      }
+    } else {
+      if (_thisRect.center.dy == _aboveRect.center.dy &&
+          _thisRect.centerLeft.dx < _aboveRect.center.dx &&
+          _thisRect.centerRight.dx > _aboveRect.center.dx) {
+        componentAbove.updateDirection(_directionXY.first, _directionXY.last,
+            forced: true);
+      }
     }
   }
 }

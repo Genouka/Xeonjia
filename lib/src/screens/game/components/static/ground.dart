@@ -19,7 +19,7 @@ class GroundComponent extends BasicComponent {
     if (componentAbove.directionX != 0) {
       if (_thisRect.center.dx == _aboveRect.center.dx &&
           _thisRect.bottomCenter.dy > _aboveRect.center.dy &&
-          _thisRect.bottomCenter.dy > _aboveRect.center.dy) {
+          _thisRect.topCenter.dy < _aboveRect.center.dy) {
         componentAbove.stop();
       }
     } else {
