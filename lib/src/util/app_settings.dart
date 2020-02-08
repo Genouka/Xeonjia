@@ -14,10 +14,10 @@ class AppSettings {
 
   // Import settings from a Json
   AppSettings(Map<String, dynamic> json)
-      : this.fullScreen = json['fullScreen'] ?? true,
-        this.inputMethod = json['inputMethod'] ?? 0,
-        this.gamepadSize = json['gamepadSize'] ?? 50,
-        this.gamepadShape = json['gamepadShape'] ?? 0;
+      : fullScreen = json['fullScreen'] ?? true,
+        inputMethod = json['inputMethod'] ?? 0,
+        gamepadSize = json['gamepadSize'] ?? 50,
+        gamepadShape = json['gamepadShape'] ?? 0;
 
   // Export settings as a Json
   Map<String, dynamic> toJson() => {

@@ -79,8 +79,8 @@ abstract class BasicComponent extends SpriteComponent {
   @mustCallSuper
   void onCreate() {
     _lifePoints = initialLifePoints;
-    this.x = startX;
-    this.y = startY;
+    x = startX;
+    y = startY;
     game.add(this);
   }
 
@@ -102,7 +102,7 @@ abstract class BasicComponent extends SpriteComponent {
       componentDeleted();
       if (this is! BasicStaticComponent) {
         cause?.killedEnemies++;
-        cause?.experiencePoints += this.level;
+        cause?.experiencePoints += level;
       }
     }
   }

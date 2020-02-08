@@ -1,6 +1,6 @@
 // List of every weapon available in this game
 // id == list index
-List<Map<String, dynamic>> weaponDetails = [
+const List<Map<String, dynamic>> weaponDetails = [
   {
     'id': 0,
     'name': 'Punch',

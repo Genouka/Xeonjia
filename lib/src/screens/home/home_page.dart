@@ -25,12 +25,12 @@ class HomePage extends StatelessWidget {
         leading: Hero(
           tag: 'character',
           child: Padding(
-            padding: EdgeInsets.all(6),
+            padding: const EdgeInsets.all(6),
             child: Material(
               color: Colors.white70,
               shape: const CircleBorder(),
               child: Padding(
-                padding: EdgeInsets.all(6),
+                padding: const EdgeInsets.all(6),
                 child: Ink.image(
                     image:
                         AssetImage('assets/images/${mainCharacter.imageName}'),
@@ -49,12 +49,12 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: ListView.builder(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           itemCount: pageList.length,
           itemBuilder: (BuildContext context, int index) {
-            if (pageList[index].containsKey('divider'))
+            if (pageList[index].containsKey('divider')) {
               return Divider(color: Colors.black45);
-            else
+            } else {
               return ListTile(
                 leading: Icon(
                   pageList[index]['icon'].icon,
@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
                 ),
                 title: Text(
                   pageList[index]['title'],
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: kTextFontSize,
                   ),
                 ),
@@ -76,6 +76,7 @@ class HomePage extends StatelessWidget {
                   );
                 },
               );
+            }
           }),
       floatingActionButton: Hero(
         tag: 'Play',
@@ -83,7 +84,7 @@ class HomePage extends StatelessWidget {
           width: 150,
           height: 50,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(30)),
+              borderRadius: const BorderRadius.all(Radius.circular(30)),
               gradient: LinearGradient(colors: [
                 Colors.lightBlue[700],
                 Colors.lightBlue[400],

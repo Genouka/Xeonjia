@@ -144,8 +144,9 @@ void parseMapTiles(var xmlElement) {
               if ((_doorId == -1 ||
                       !mainCharacter.doorKeyList.contains(_doorId)) &&
                   (_objectId == -1 ||
-                      !mainCharacter.objectList.contains(_objectId)))
+                      !mainCharacter.objectList.contains(_objectId))) {
                 ModifierComponent(componentTile);
+              }
               break;
             case 'Ground':
               GroundComponent(componentTile);

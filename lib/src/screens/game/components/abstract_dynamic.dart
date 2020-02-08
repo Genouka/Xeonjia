@@ -49,13 +49,13 @@ abstract class DynamicComponent extends BasicComponent {
   // Update component orientation
   void updateOrientation(double x, double y) {
     if (x != 0 || y != 0) {
-      if (y > 0)
+      if (y > 0) {
         orientation = 1;
-      else if (y < 0)
+      } else if (y < 0) {
         orientation = 2;
-      else if (x > 0)
+      } else if (x > 0) {
         orientation = 3;
-      else if (x < 0) orientation = 4;
+      } else if (x < 0) orientation = 4;
 
       updateSprite();
     }
@@ -63,8 +63,8 @@ abstract class DynamicComponent extends BasicComponent {
 
   // Update sprite image based on its orientation
   void updateSprite() {
-    this.sprite = Sprite(
-        (this.image).split('-').first + '-' + orientation.toString() + '.png');
+    sprite = Sprite(
+        (image).split('-').first + '-' + orientation.toString() + '.png');
   }
 
   @override
@@ -85,7 +85,7 @@ abstract class DynamicComponent extends BasicComponent {
       game.components.cast<BasicComponent>().forEach((component) {
         // If this is going to overlap an unrelated component
         if (component != this &&
-            component != this.father &&
+            component != father &&
             this != component.father &&
             component.toRect().overlaps(_newPosition)) {
           // If the overlapped component is solid -> collide component
@@ -103,9 +103,9 @@ abstract class DynamicComponent extends BasicComponent {
         onCollision();
       } else {
         // Else move this component
-        this.x = _newX;
-        this.y = _newY;
-        this.hasMoved();
+        x = _newX;
+        y = _newY;
+        hasMoved();
         _overlappedComponent?.overlappedBy(this);
       }
     }
@@ -116,10 +116,11 @@ abstract class DynamicComponent extends BasicComponent {
 
   // Function called when this component collide another component
   void onCollision() {
-    this.lifePointsDifference(-collidedComponent.atk, cause: collidedComponent);
-    if (collidedComponent is! BasicStaticComponent)
-      collidedComponent.lifePointsDifference(-this.atk, cause: this);
-    collidedComponent.poisonQuantity += this.poisonAtk;
+    lifePointsDifference(-collidedComponent.atk, cause: collidedComponent);
+    if (collidedComponent is! BasicStaticComponent) {
+      collidedComponent.lifePointsDifference(-atk, cause: this);
+    }
+    collidedComponent.poisonQuantity += poisonAtk;
     stop();
   }
 

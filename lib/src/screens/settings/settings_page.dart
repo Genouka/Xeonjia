@@ -8,7 +8,7 @@ import 'package:xeonjia/src/util/local_data_controller.dart';
 
 class SettingsPage extends StatefulWidget {
   static _SettingsPageState of(BuildContext context) =>
-      context.ancestorStateOfType(const TypeMatcher<_SettingsPageState>());
+      context.findAncestorStateOfType();
 
   @override
   _SettingsPageState createState() => _SettingsPageState();
@@ -18,7 +18,7 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
-          title: Text('S E T T I N G S'),
+          title: const Text('S E T T I N G S'),
           centerTitle: true,
           actions: <Widget>[
             IconButton(
@@ -35,12 +35,12 @@ class _SettingsPageState extends State<SettingsPage> {
   _restoreSettingsDialog() => showDialog(
       context: context,
       builder: (BuildContext context) => AlertDialog(
-            title: Text('Restore default settings?'),
-            content: Text(
-                'Are you sure you wish to delete your settings and restore default ones?'),
+            title: const Text('Restore default settings?'),
+            content: const Text(
+                'Are you sure you want to delete your settings and restore default ones?'),
             actions: <Widget>[
               FlatButton(
-                child: Text('Yes'),
+                child: const Text('Yes'),
                 onPressed: () {
                   SystemChrome.setEnabledSystemUIOverlays([]);
                   settings = AppSettings({});
@@ -50,7 +50,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 },
               ),
               FlatButton(
-                child: Text('No'),
+                child: const Text('No'),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
@@ -102,11 +102,12 @@ class _SettingsPageState extends State<SettingsPage> {
       onChanged: (_fullScreen) {
         setState(() {
           settings.fullScreen = _fullScreen;
-          if (settings.fullScreen)
+          if (settings.fullScreen) {
             SystemChrome.setEnabledSystemUIOverlays([]);
-          else
+          } else {
             SystemChrome.setEnabledSystemUIOverlays(
                 [SystemUiOverlay.top, SystemUiOverlay.bottom]);
+          }
         });
         saveSettings();
       });

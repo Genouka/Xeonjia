@@ -9,7 +9,7 @@ class StatsPage extends StatelessWidget {
     List<Map<String, dynamic>> statsList = statsListGenerator();
     return Scaffold(
         appBar: AppBar(
-          title: Text('S T A T S'),
+          title: const Text('S T A T S'),
           centerTitle: true,
         ),
         body: ListView.separated(
@@ -25,6 +25,6 @@ class StatsPage extends StatelessWidget {
                   ),*/
                   trailing: Text(statsList[index]['value'].toString()),
                 ),
-            separatorBuilder: (context, index) => Divider()));
+            separatorBuilder: (context, index) => const Divider()));
   }
 }

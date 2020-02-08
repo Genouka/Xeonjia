@@ -36,35 +36,34 @@ class CharacterComponent extends DynamicComponent {
     mainCharacter.jsonWeaponList.forEach((weaponId, weaponLevel) {
       switch (int.parse(weaponId)) {
         case 0:
-          this.weaponList.add(PunchWeapon(level: weaponLevel));
+          weaponList.add(PunchWeapon(level: weaponLevel));
           break;
         case 1:
-          this.weaponList.add(SnowBallWeapon(level: weaponLevel));
+          weaponList.add(SnowBallWeapon(level: weaponLevel));
           break;
         case 2:
-          this.weaponList.add(MineWeapon(level: weaponLevel));
+          weaponList.add(MineWeapon(level: weaponLevel));
           break;
         default:
           break;
       }
     });
     player = this;
-    game.updateCamera(this.x, this.y);
+    game.updateCamera(x, y);
   }
 
   Weapon get selectedWeapon => weaponList[_selectedWeaponElement];
 
   // Select next weapon in weapon list
   void nextWeapon() {
-    if (++_selectedWeaponElement >= weaponList.length)
+    if (++_selectedWeaponElement >= weaponList.length) {
       _selectedWeaponElement = 0;
+    }
   }
 
   @override
   void hasMoved() {
-    if (this == player) {
-      game.updateCamera(this.x, this.y);
-    }
+    if (this == player) game.updateCamera(x, y);
   }
 
   @override

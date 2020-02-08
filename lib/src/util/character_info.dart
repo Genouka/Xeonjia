@@ -56,22 +56,22 @@ class CharacterInfo {
 
   // Import character data from a Json
   CharacterInfo(Map<String, dynamic> json)
-      : this.name = json['name'] ?? 'yourName',
-        this.imageName = json['imageName'] ?? 'character-1.png',
-        this.level = json['level'] ?? 0,
-        this.money = json['money'] ?? 0,
-        this.jsonWeaponList = jsonDecode(json['jsonWeaponList'] ?? '{"0": 0}'),
-        this.jsonAvailableWeaponList =
+      : name = json['name'] ?? 'yourName',
+        imageName = json['imageName'] ?? 'character-1.png',
+        level = json['level'] ?? 0,
+        money = json['money'] ?? 0,
+        jsonWeaponList = jsonDecode(json['jsonWeaponList'] ?? '{"0": 0}'),
+        jsonAvailableWeaponList =
             jsonDecode(json['jsonAvailableWeaponList'] ?? '{}'),
-        this.doorKeyList = (json['doorKeyList'] ?? []).cast<int>(),
-        this.objectList = (json['objectList'] ?? []).cast<int>(),
-        this.totalEarnedMoney = json['totalEarnedMoney'] ?? 0,
-        this.visitedRooms = (json['viewedRooms'] ?? [1]).cast<int>(),
-        this.minutesPlayed = json['minutesPlayed'] ?? 0,
-        this.killedComponents = json['killedComponents'] ?? 0,
-        this.movesCounter = json['movesCounter'] ?? 0,
-        this.deathCounter = json['deathCounter'] ?? 0,
-        this._experiencePoints = json['experiencePoints'] ?? 0;
+        doorKeyList = (json['doorKeyList'] ?? []).cast<int>(),
+        objectList = (json['objectList'] ?? []).cast<int>(),
+        totalEarnedMoney = json['totalEarnedMoney'] ?? 0,
+        visitedRooms = (json['viewedRooms'] ?? [1]).cast<int>(),
+        minutesPlayed = json['minutesPlayed'] ?? 0,
+        killedComponents = json['killedComponents'] ?? 0,
+        movesCounter = json['movesCounter'] ?? 0,
+        deathCounter = json['deathCounter'] ?? 0,
+        _experiencePoints = json['experiencePoints'] ?? 0;
 
   // Export character data as a Json
   Map<String, dynamic> toJson() {
@@ -102,7 +102,8 @@ class CharacterInfo {
       _experiencePoints = 0;
       ++level;
       return true;
-    } else
+    } else {
       return false;
+    }
   }
 }

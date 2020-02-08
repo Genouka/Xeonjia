@@ -48,7 +48,7 @@ class _UserPageState extends State<UserPage> {
         onWillPop: () async {
           // Restore system UI overlays before exit
           // That because the android keyboard disables hidden system bars
-          SystemChrome.restoreSystemUIOverlays();
+          await SystemChrome.restoreSystemUIOverlays();
           return true;
         },
         child: Scaffold(
@@ -80,7 +80,8 @@ class _UserPageState extends State<UserPage> {
                                 },
                               )
                             : Text(mainCharacter.name,
-                                style: TextStyle(fontSize: kTextFontSize)),
+                                style:
+                                    const TextStyle(fontSize: kTextFontSize)),
 
                         // Flexible space that contains character images
                         flexibleSpace: FlexibleSpaceBar(
@@ -94,7 +95,7 @@ class _UserPageState extends State<UserPage> {
                                   ],
                                       begin: Alignment.bottomLeft,
                                       end: Alignment.topRight)),
-                              padding: EdgeInsets.only(top: 80),
+                              padding: const EdgeInsets.only(top: 80),
                               child: Row(children: [
                                 Hero(
                                   tag: 'character',
@@ -139,14 +140,14 @@ class _UserPageState extends State<UserPage> {
                     title: Text('Level: ' + mainCharacter.level.toString()),
                     children: [
                       ListTile(
-                        title: Text('Experience points'),
-                        leading: Text(''),
+                        title: const Text('Experience points'),
+                        leading: const Text(''),
                         trailing:
                             Text('${mainCharacter.experiencePoints.round()}'),
                       ),
                       ListTile(
-                        title: Text('XP needed for next level'),
-                        leading: Text(''),
+                        title: const Text('XP needed for next level'),
+                        leading: const Text(''),
                         trailing: Text(
                           ((mainCharacter.experienceRemaining).toString()),
                         ),
@@ -158,14 +159,14 @@ class _UserPageState extends State<UserPage> {
                       backgroundColor: Colors.indigoAccent[300],
                       child: Icon(Icons.attach_money),
                     ),
-                    title: Text('Money'),
+                    title: const Text('Money'),
                     trailing: Text(mainCharacter.money.toString()),
                   ),
 
                   // Tile that contains character stats
                   Container(
                     child: ExpansionTile(
-                        title: Text('Player Stats'),
+                        title: const Text('Player Stats'),
                         leading: CircleAvatar(
                           backgroundColor: Colors.indigoAccent[300],
                           child: Icon(
@@ -178,7 +179,7 @@ class _UserPageState extends State<UserPage> {
                             for (var index in characterStatsList)
                               ListTile(
                                 title: Text(index['name']),
-                                leading: Text(''),
+                                leading: const Text(''),
                                 trailing: Text(index['value']),
                               ),
                           ])
@@ -188,7 +189,7 @@ class _UserPageState extends State<UserPage> {
                   // Tile that contains weapon stats
                   Container(
                     child: ExpansionTile(
-                        title: Text('Weapons'),
+                        title: const Text('Weapons'),
                         leading: CircleAvatar(
                           backgroundColor: Colors.indigoAccent[300],
                           child: Icon(
@@ -202,13 +203,12 @@ class _UserPageState extends State<UserPage> {
                             ButtonBar(
                               children: <Widget>[
                                 if (mainCharacter
-                                        .jsonAvailableWeaponList.length !=
-                                    0)
+                                    .jsonAvailableWeaponList.isNotEmpty)
                                   FlatButton(
                                     onPressed: () {
                                       weaponSelectorDialog();
                                     },
-                                    child: Text('Choose weapons'),
+                                    child: const Text('Choose weapons'),
                                   ),
                                 if (weaponDetails.length -
                                         (mainCharacter.jsonWeaponList.length +
@@ -220,7 +220,7 @@ class _UserPageState extends State<UserPage> {
                                     onPressed: () {
                                       weaponPurchaseDialog();
                                     },
-                                    child: Text('Buy new weapons'),
+                                    child: const Text('Buy new weapons'),
                                   )
                               ],
                             )
@@ -239,7 +239,7 @@ class _UserPageState extends State<UserPage> {
         child: ListTile(
           title: Text(weaponDetails[int.parse(weaponId)]['name'] +
               (weaponId != '0' ? ' - LV: $weaponLevel' : '')),
-          leading: Text(''),
+          leading: const Text(''),
           trailing: Icon(Icons.info_outline),
           onTap: () {
             weaponDetailDialog(int.parse(weaponId), weaponLevel);
@@ -274,7 +274,7 @@ class _UserPageState extends State<UserPage> {
                     },
                   ),
                 FlatButton(
-                  child: Text('Close'),
+                  child: const Text('Close'),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -303,14 +303,14 @@ class _UserPageState extends State<UserPage> {
                     value: mainCharacter.jsonWeaponList.containsKey(weaponId),
                     onChanged: (weaponAdded) {
                       setState(() {
-                        editBroughtWeapon(weaponId, weaponAdded);
+                        editBroughtWeapon(weaponId, added: weaponAdded);
                       });
                     },
                   ));
                 }
               });
               return AlertDialog(
-                title: Text('Select Weapons'),
+                title: const Text('Select Weapons'),
                 content: Container(
                     width: double.maxFinite,
                     child: ListView(
@@ -318,7 +318,7 @@ class _UserPageState extends State<UserPage> {
                     )),
                 actions: <Widget>[
                   FlatButton(
-                    child: Text('Ok'),
+                    child: const Text('Ok'),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -361,7 +361,7 @@ class _UserPageState extends State<UserPage> {
                 }
               });
               return AlertDialog(
-                title: Text('Select Weapons'),
+                title: const Text('Select Weapons'),
                 content: Container(
                     width: double.maxFinite,
                     child: ListView(
@@ -369,7 +369,7 @@ class _UserPageState extends State<UserPage> {
                     )),
                 actions: <Widget>[
                   FlatButton(
-                    child: Text('Close'),
+                    child: const Text('Close'),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -409,19 +409,21 @@ class _UserPageState extends State<UserPage> {
         saveUserData();
         Navigator.of(context).pop();
       }
-    } else
+    } else {
       Toast.show(_noEnoughMoney, context);
+    }
   }
 
   // Edit weapons order
-  void editBroughtWeapon(String weaponId, bool added) {
+  void editBroughtWeapon(String weaponId, {@required bool added}) {
     if (added) {
       if (mainCharacter.jsonWeaponList.length <= mainCharacter.level) {
         mainCharacter.jsonWeaponList[weaponId] =
             mainCharacter.jsonAvailableWeaponList[weaponId];
         mainCharacter.jsonAvailableWeaponList.remove(weaponId);
-      } else
+      } else {
         Toast.show("You can't keep so many weapons at your level", context);
+      }
     } else {
       mainCharacter.jsonAvailableWeaponList[weaponId] =
           mainCharacter.jsonWeaponList[weaponId];
@@ -450,7 +452,8 @@ class _UserPageState extends State<UserPage> {
               (mainCharacter.jsonWeaponList.length +
                   mainCharacter.jsonAvailableWeaponList.length) ==
           0) Navigator.of(context).pop();
-    } else
+    } else {
       Toast.show(_noEnoughMoney, context);
+    }
   }
 }

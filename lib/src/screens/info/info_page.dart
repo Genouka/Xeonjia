@@ -15,7 +15,7 @@ class _InfoPageState extends State<InfoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('I N F O'),
+        title: const Text('I N F O'),
         centerTitle: true,
       ),
       body: ListView.builder(
@@ -34,9 +34,9 @@ class _InfoPageState extends State<InfoPage> {
                 ),
                 subtitle: Text(infoMenuList[index]['subtitle']),
                 onTap: () {
-                  if (infoMenuList[index]['url'].length != 0)
+                  if (infoMenuList[index]['url'].length != 0) {
                     launch('${infoMenuList[index]['url']}');
-                  else if (infoMenuList[index]['title'] ==
+                  } else if (infoMenuList[index]['title'] ==
                       'Third Party Licenses') _licenseDialog();
                 },
               )),
@@ -60,7 +60,7 @@ class _InfoPageState extends State<InfoPage> {
                 ));
               });
               return AlertDialog(
-                title: Text('Third Party Licenses'),
+                title: const Text('Third Party Licenses'),
                 content: Container(
                     width: double.maxFinite,
                     child: ListView(
@@ -68,7 +68,7 @@ class _InfoPageState extends State<InfoPage> {
                     )),
                 actions: <Widget>[
                   FlatButton(
-                    child: Text('Ok'),
+                    child: const Text('Ok'),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },

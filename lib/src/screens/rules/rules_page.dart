@@ -15,7 +15,7 @@ class _RulesPageState extends State<RulesPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: Text('R U L E S'),
+          title: const Text('R U L E S'),
           centerTitle: true,
         ),
         body: SingleChildScrollView(
@@ -42,7 +42,7 @@ class _RulesPageState extends State<RulesPage> {
               ),
             ),
             Container(
-                padding: EdgeInsets.fromLTRB(20, 35, 20, 0),
+                padding: const EdgeInsets.fromLTRB(20, 35, 20, 0),
                 child: Text(
                   ruleList[_page]['text'],
                   style: TextStyle(fontSize: kTextFontSize - 2),
@@ -54,8 +54,10 @@ class _RulesPageState extends State<RulesPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
               MaterialButton(
-                child: Row(
-                    children: [Icon(Icons.keyboard_arrow_left), Text('Back')]),
+                child: Row(children: [
+                  Icon(Icons.keyboard_arrow_left),
+                  const Text('Back')
+                ]),
                 onPressed: _page > 0
                     ? () => setState(() {
                           --_page;
@@ -64,7 +66,7 @@ class _RulesPageState extends State<RulesPage> {
               ),
               MaterialButton(
                   child: Row(children: [
-                    Text('Next'),
+                    const Text('Next'),
                     Icon(Icons.keyboard_arrow_right)
                   ]),
                   onPressed: _page < ruleList.length - 1

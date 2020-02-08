@@ -11,11 +11,11 @@ class FloatingGamepad extends StatefulWidget {
 
 // Map direction-buttonIcon
 Map<String, dynamic> arrowIconMap = {
-  'up': Icon(Icons.keyboard_arrow_up),
-  'down': Icon(Icons.keyboard_arrow_down),
-  'left': Icon(Icons.keyboard_arrow_left),
-  'right': Icon(Icons.keyboard_arrow_right),
-  'center': Icon(Icons.add),
+  'up': const Icon(Icons.keyboard_arrow_up),
+  'down': const Icon(Icons.keyboard_arrow_down),
+  'left': const Icon(Icons.keyboard_arrow_left),
+  'right': const Icon(Icons.keyboard_arrow_right),
+  'center': const Icon(Icons.add),
 };
 
 // Floating gamepad widget
@@ -105,25 +105,25 @@ class _FloatingGamepadState extends State<FloatingGamepad> {
 
   // Manage up direction input
   void _upInput() {
-    game.gestureDragInput(Offset(0, -1));
+    game.gestureDragInput(const Offset(0, -1));
     _saveOffset(_offset);
   }
 
   // Manage down direction input
   void _downInput() {
-    game.gestureDragInput(Offset(0, 1));
+    game.gestureDragInput(const Offset(0, 1));
     _saveOffset(_offset);
   }
 
   // Manage left direction input
   void _leftInput() {
-    game.gestureDragInput(Offset(-1, 0));
+    game.gestureDragInput(const Offset(-1, 0));
     _saveOffset(_offset);
   }
 
   // Manage right direction input
   void _rightInput() {
-    game.gestureDragInput(Offset(1, 0));
+    game.gestureDragInput(const Offset(1, 0));
     _saveOffset(_offset);
   }
 

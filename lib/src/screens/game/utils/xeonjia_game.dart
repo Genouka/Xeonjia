@@ -119,7 +119,9 @@ class XeonjiaGame extends BaseGame {
     mainCharacter.visitedRooms.add(nextRoomId);
     saveUserData();
 
-    if (_levelUp) print('Level Up!');
+    if (_levelUp) {
+      // print('Level Up!');
+    }
 
     // Start a new game
     game.initialize();
@@ -144,12 +146,12 @@ class XeonjiaGame extends BaseGame {
 
       // Update character orientation
       if (position.dx < componentSize ||
-          position.dx > screenDimensions.width - componentSize)
+          position.dx > screenDimensions.width - componentSize) {
         player.updateOrientation(position.dx - componentSize, 0);
-      else if (position.dy - 40 < componentSize ||
-          position.dy > screenDimensions.height - componentSize)
+      } else if (position.dy - 40 < componentSize ||
+          position.dy > screenDimensions.height - componentSize) {
         player.updateOrientation(0, position.dy - 40 - componentSize);
-      else if (_relativeTapX.abs() > 15 || _relativeTapY.abs() > 15) {
+      } else if (_relativeTapX.abs() > 15 || _relativeTapY.abs() > 15) {
         if (_relativeTapX.abs() > _relativeTapY.abs()) {
           player.updateOrientation(_relativeTapX, 0);
         } else {
@@ -166,21 +168,22 @@ class XeonjiaGame extends BaseGame {
   void updateCamera(double x, double y) {
     // Update x position
     if (x <= screenDimensions.width / 2 ||
-        screenDimensions.width > componentSize * mapWidth)
+        screenDimensions.width > componentSize * mapWidth) {
       game.camera.x = 0.0;
-    else if (x > componentSize * mapWidth - screenDimensions.width / 2)
+    } else if (x > componentSize * mapWidth - screenDimensions.width / 2) {
       game.camera.x = componentSize * mapWidth - screenDimensions.width;
-    else
+    } else {
       game.camera.x = x - screenDimensions.width / 2;
-
+    }
     // Update y position
     if (y <= screenDimensions.height / 2 ||
-        screenDimensions.height > componentSize * mapHeight)
+        screenDimensions.height > componentSize * mapHeight) {
       game.camera.y = 0.0;
-    else if (y > componentSize * mapHeight - screenDimensions.height / 2)
+    } else if (y > componentSize * mapHeight - screenDimensions.height / 2) {
       game.camera.y = componentSize * mapHeight - screenDimensions.height;
-    else
+    } else {
       game.camera.y = y - screenDimensions.height / 2;
+    }
   }
 
   // End game, function called if player one lose
@@ -203,18 +206,18 @@ class XeonjiaGame extends BaseGame {
         builder: (BuildContext context) => WillPopScope(
             onWillPop: () => null,
             child: AlertDialog(
-              title: Text('You have been deleted'),
-              content: Text('Do you want to restart this game?'),
+              title: const Text('You have been deleted'),
+              content: const Text('Do you want to restart this game?'),
               actions: <Widget>[
                 FlatButton(
-                  child: Text('Yes'),
+                  child: const Text('Yes'),
                   onPressed: () {
                     initialize();
                     Navigator.of(context).pop();
                   },
                 ),
                 FlatButton(
-                  child: Text('No'),
+                  child: const Text('No'),
                   onPressed: () {
                     Navigator.pop(context);
                     game = null;

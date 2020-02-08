@@ -43,17 +43,19 @@ class _GamePageState extends State<GamePage> {
     Offset panGestureOffset;
     Flame.util.addGestureRecognizer(TapGestureRecognizer()
       ..onTapDown = (TapDownDetails evt) {
-        if (settings.inputMethod == 0 && game != null)
+        if (settings.inputMethod == 0 && game != null) {
           game.gestureTapInput(evt.globalPosition);
+        }
       });
     Flame.util.addGestureRecognizer(PanGestureRecognizer()
       ..onUpdate = (DragUpdateDetails upd) {
         if (settings.inputMethod == 0 && !(game?.pause ?? true)) {
           if (upd.delta.dx.abs() > 5 || upd.delta.dy.abs() > 5) {
-            if (upd.delta.dx.abs() > upd.delta.dy.abs())
+            if (upd.delta.dx.abs() > upd.delta.dy.abs()) {
               panGestureOffset = Offset(upd.delta.dx, 0);
-            else
+            } else {
               panGestureOffset = Offset(0, upd.delta.dy);
+            }
             player?.updateOrientation(panGestureOffset.dx, panGestureOffset.dy);
           }
         }
@@ -199,7 +201,7 @@ class _GamePageState extends State<GamePage> {
         {
           'title': 'Exit match',
           'text':
-              'Are you sure you wish to exit this game? Match data will be lost.',
+              'Are you sure you want to exit this game? Match data will be lost.',
         },
       ];
 
@@ -224,7 +226,7 @@ class _GamePageState extends State<GamePage> {
                     actions: <Widget>[
                       mode == 0
                           ? FlatButton(
-                              child: Text('Restart'),
+                              child: const Text('Restart'),
                               onPressed: () {
                                 setState(() {
                                   mode = 1;
@@ -233,7 +235,7 @@ class _GamePageState extends State<GamePage> {
                           : null,
                       mode == 0
                           ? FlatButton(
-                              child: Text('Exit'),
+                              child: const Text('Exit'),
                               onPressed: () {
                                 setState(() {
                                   mode = 2;
@@ -242,7 +244,7 @@ class _GamePageState extends State<GamePage> {
                           : null,
                       mode == 0
                           ? FlatButton(
-                              child: Text('Close'),
+                              child: const Text('Close'),
                               onPressed: () {
                                 Navigator.of(context).pop(true);
                                 game.pause = false;
@@ -250,7 +252,7 @@ class _GamePageState extends State<GamePage> {
                           : null,
                       mode != 0
                           ? FlatButton(
-                              child: Text('Yes'),
+                              child: const Text('Yes'),
                               onPressed: () {
                                 if (mode == 1) {
                                   game.initialize();
@@ -263,7 +265,7 @@ class _GamePageState extends State<GamePage> {
                           : null,
                       mode != 0
                           ? FlatButton(
-                              child: Text('No'),
+                              child: const Text('No'),
                               onPressed: () {
                                 game.pause = false;
                                 return Navigator.of(context).pop(false);

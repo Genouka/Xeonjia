@@ -107,28 +107,29 @@ class _LinearPercentIndicatorState extends State<LinearPercentIndicator>
   double _percent = 1;
   String _text = '';
   bool _poison = false;
-  Color _progressColor = Color(0xFF0288D1);
+  Color _progressColor = const Color(0xFF0288D1);
 
   void refresh({@required double percent, @required String text, bool poison}) {
     _percent = percent;
     _text = text;
     _poison = poison ?? false;
-    if (_percent < 0)
+    if (_percent < 0) {
       _percent = 0;
-    else if (_percent > 1) _percent = 1;
+    } else if (_percent > 1) _percent = 1;
     _updateColor();
     if (mounted) setState(() {});
   }
 
   void _updateColor() {
-    if (_poison)
+    if (_poison) {
       _progressColor = const Color(0xFF7B1FA2);
-    else if (_percent < 0.15)
+    } else if (_percent < 0.15) {
       _progressColor = const Color(0xFFBF360C);
-    else if (_percent < 0.3)
+    } else if (_percent < 0.3) {
       _progressColor = const Color(0xFFF57F17);
-    else
+    } else {
       _progressColor = const Color(0xFF0288D1);
+    }
   }
 
   @override
@@ -142,7 +143,7 @@ class _LinearPercentIndicatorState extends State<LinearPercentIndicator>
   @override
   void initState() {
     if (widget.animation) {
-      _animationController = new AnimationController(
+      _animationController = AnimationController(
           vsync: this,
           duration: Duration(milliseconds: widget.animationDuration));
       _animation =
@@ -222,7 +223,7 @@ class _LinearPercentIndicatorState extends State<LinearPercentIndicator>
 
     return Material(
       color: Colors.transparent,
-      child: new Container(
+      child: Container(
           color: widget.fillColor,
           child: Row(
             mainAxisAlignment: widget.alignment,
@@ -237,8 +238,8 @@ class _LinearPercentIndicatorState extends State<LinearPercentIndicator>
 }
 
 class LinearPainter extends CustomPainter {
-  final Paint _paintBackground = new Paint();
-  final Paint _paintLine = new Paint();
+  final Paint _paintBackground = Paint();
+  final Paint _paintLine = Paint();
   final lineWidth;
   final progress;
   final center;

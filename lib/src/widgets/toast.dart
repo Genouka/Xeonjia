@@ -42,7 +42,7 @@ class Toast {
 }
 
 class ToastView {
-  static final ToastView _singleton = new ToastView._internal();
+  static final ToastView _singleton = ToastView._internal();
 
   factory ToastView() {
     return _singleton;
@@ -69,7 +69,7 @@ class ToastView {
     paint.strokeCap = StrokeCap.square;
     paint.color = background;
 
-    _overlayEntry = new OverlayEntry(
+    _overlayEntry = OverlayEntry(
       builder: (BuildContext context) => ToastWidget(
           widget: Container(
             width: MediaQuery.of(context).size.width,
@@ -82,8 +82,8 @@ class ToastView {
                     borderRadius: BorderRadius.circular(backgroundRadius),
                     border: border,
                   ),
-                  margin: EdgeInsets.symmetric(horizontal: 20),
-                  padding: EdgeInsets.fromLTRB(16, 10, 16, 10),
+                  margin: const EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
                   child: Text(msg,
                       softWrap: true,
                       style: TextStyle(fontSize: 15, color: textColor)),
@@ -93,8 +93,7 @@ class ToastView {
     );
     _isVisible = true;
     overlayState.insert(_overlayEntry);
-    await new Future.delayed(
-        Duration(seconds: duration == null ? 1 : duration));
+    await Future.delayed(Duration(seconds: duration == null ? 1 : duration));
     dismiss();
   }
 
@@ -119,7 +118,7 @@ class ToastWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Positioned(
+    return Positioned(
         top: gravity == 2 ? 50 : null,
         bottom: gravity == 0 ? 50 : null,
         child: Material(
