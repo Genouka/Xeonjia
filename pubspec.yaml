@@ -5,12 +5,13 @@ version: 1.0.0+1
 
 environment:
   sdk: ">=2.2.2 <3.0.0"
+  flutter: ^1.9.1+hotfix.4
 
 dependencies:
   flutter:
     sdk: flutter
   flame: ^0.16.1
-  url_launcher: ^5.2.5
+  url_launcher: ^5.4.1
   shared_preferences: ^0.5.4+3
 
 dev_dependencies:
