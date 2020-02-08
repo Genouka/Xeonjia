@@ -13,26 +13,9 @@ class SnowballComponent extends DynamicComponent {
 
   SnowballComponent(startX, startY, this._direction, this.father, this.atk)
       : super(startX, startY, 'snowball.png') {
-    switch (_direction) {
-      case 1:
-        directionX = 0;
-        directionY = 1;
-        break;
-      case 2:
-        directionX = 0;
-        directionY = -1;
-        break;
-      case 3:
-        directionX = 1;
-        directionY = 0;
-        break;
-      case 4:
-        directionX = -1;
-        directionY = 0;
-        break;
-      default:
-        break;
-    }
+    List<double> directionXY = directionToXY(_direction);
+    directionX = directionXY.first;
+    directionY = directionXY.last;
   }
 
   @override

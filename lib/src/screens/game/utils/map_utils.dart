@@ -6,6 +6,7 @@ import 'package:xeonjia/src/screens/game/components/dynamic/character.dart';
 import 'package:xeonjia/src/screens/game/components/dynamic/slither_cpu.dart';
 import 'package:xeonjia/src/screens/game/components/dynamic/walker_cpu.dart';
 import 'package:xeonjia/src/screens/game/components/static/basic_static.dart';
+import 'package:xeonjia/src/screens/game/components/static/direction_changer.dart';
 import 'package:xeonjia/src/screens/game/components/static/door.dart';
 import 'package:xeonjia/src/screens/game/components/static/ground.dart';
 import 'package:xeonjia/src/screens/game/components/static/hurdle.dart';
@@ -164,6 +165,9 @@ void parseMapTiles(var xmlElement) {
               break;
             case 'Hurdle':
               HurdleComponent(componentTile);
+              break;
+            case 'DirectionChanger':
+              DirectionChangerComponent(componentTile);
               break;
             case 'WalkerCpu':
               WalkerCpuComponent(componentTile);

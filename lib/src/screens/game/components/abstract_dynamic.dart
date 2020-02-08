@@ -33,8 +33,9 @@ abstract class DynamicComponent extends BasicComponent {
   int movesCounter = 0;
 
   // If this component was previously still update its direction and orientation
-  void updateDirection(double newInputDirectionX, double newInputDirectionY) {
-    if (directionX == 0 && directionY == 0) {
+  void updateDirection(double newInputDirectionX, double newInputDirectionY,
+      {bool forced}) {
+    if ((directionX == 0 && directionY == 0) || forced) {
       directionX = newInputDirectionX;
       directionY = newInputDirectionY;
 
@@ -135,4 +136,33 @@ abstract class DynamicComponent extends BasicComponent {
   // Generate random number between -0.5 and +0.5
   // It is used to generate random direction for CPU-moved characters
   double randomDouble() => Random().nextDouble() - 0.5;
+}
+
+// Convert int direction into X and Y
+List<double> directionToXY(int direction) {
+  double _directionX;
+  double _directionY;
+  switch (direction) {
+    case 1:
+      _directionX = 0;
+      _directionY = 1;
+      break;
+    case 2:
+      _directionX = 0;
+      _directionY = -1;
+      break;
+    case 3:
+      _directionX = 1;
+      _directionY = 0;
+      break;
+    case 4:
+      _directionX = -1;
+      _directionY = 0;
+      break;
+    default:
+      _directionX = 0;
+      _directionY = 0;
+      break;
+  }
+  return [_directionX, _directionY];
 }
