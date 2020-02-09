@@ -71,8 +71,7 @@ class HomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => pageList[index]['page']),
+                      _FadeRoute(page: pageList[index]['page']),
                   );
                 },
               );
