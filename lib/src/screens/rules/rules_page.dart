@@ -55,7 +55,7 @@ class _RulesPageState extends State<RulesPage> {
                 children: [
               MaterialButton(
                 child: Row(children: [
-                  Icon(Icons.keyboard_arrow_left),
+                  const Icon(Icons.keyboard_arrow_left),
                   const Text('Back')
                 ]),
                 onPressed: _page > 0

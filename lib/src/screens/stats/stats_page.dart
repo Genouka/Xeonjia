@@ -17,7 +17,7 @@ class StatsPage extends StatelessWidget {
             itemBuilder: (context, index) => ListTile(
                   title: Text(
                     statsList[index]['title'],
-                    style: TextStyle(fontSize: kTextFontSize),
+                    style: const TextStyle(fontSize: kTextFontSize),
                   ),
                   /*subtitle: Text(
                     statsList[index]['subtitle'],

@@ -68,7 +68,7 @@ class ModifierComponent extends BasicComponent {
         componentAbove.objectList.add(_objectId);
         Toast.show('I found a Gem!', gameContext, duration: 1);
       }
-      componentDeleted();
+      delete();
     }
   }
 }

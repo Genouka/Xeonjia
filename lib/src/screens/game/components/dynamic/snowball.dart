@@ -36,7 +36,7 @@ class SnowballComponent extends DynamicComponent {
   void onCollision() {
     if (collidedComponent != father) {
       collidedComponent?.lifePointsDifference(-atk, cause: father);
-      componentDeleted();
+      delete();
     }
   }
 }

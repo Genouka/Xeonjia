@@ -75,13 +75,13 @@ class CharacterComponent extends DynamicComponent {
   }
 
   @override
-  void componentDeleted() {
+  void delete() {
     if (game.mode == GameMode.story) {
       if (this == player) {
-        super.componentDeleted();
+        super.delete();
         game.end();
       } else {
-        super.componentDeleted();
+        super.delete();
       }
     } else {
       respawn();

@@ -99,7 +99,7 @@ abstract class BasicComponent extends SpriteComponent {
       );
     }
     if (_lifePoints <= 0) {
-      componentDeleted();
+      delete();
       if (this is! BasicStaticComponent) {
         cause?.killedEnemies++;
         cause?.experiencePoints += level;
@@ -123,7 +123,8 @@ abstract class BasicComponent extends SpriteComponent {
     _lifePoints = initialLifePoints;
   }
 
-  void componentDeleted() {
+  // Delete component
+  void delete() {
     remove = true;
   }
 
