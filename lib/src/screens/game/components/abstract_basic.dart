@@ -118,7 +118,11 @@ abstract class BasicComponent extends SpriteComponent {
   // Used if isSolid() returned false
   void overlappedBy(DynamicComponent componentAbove) {}
 
-  @mustCallSuper
+  // Reset life points
+  void restoreLifePoints() {
+    _lifePoints = initialLifePoints;
+  }
+
   void componentDeleted() {
     remove = true;
   }

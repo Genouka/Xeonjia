@@ -161,11 +161,14 @@ void parseMapTiles(var xmlElement) {
               if (game.mode == GameMode.story &&
                   _previousRoomId ==
                       int.parse(componentTile.properties['roomId'])) {
-                CharacterComponent.main(componentTile);
+                CharacterComponent(componentTile,
+                    isPlayerOne: true,
+                    level: mainCharacter.level,
+                    jsonWeaponList: mainCharacter.jsonWeaponList);
                 Toast.show(_toastText, gameContext,
                     gravity: (lineCount < 5) ? 0 : 2);
               } else if (game.mode == GameMode.tdm) {
-                CharacterComponent.from(componentTile,
+                CharacterComponent(componentTile,
                     isPlayerOne: true,
                     team: int.parse(componentTile.properties['team'] ?? '0'));
               }

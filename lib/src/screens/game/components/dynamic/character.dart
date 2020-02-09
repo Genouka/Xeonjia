@@ -3,7 +3,7 @@ import 'package:xeonjia/src/screens/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/src/screens/game/utils/weapon.dart';
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 
-// Dynamic component used for user controlled player
+// Dynamic component used for human-like players
 class CharacterComponent extends DynamicComponent {
   // List of weapon owned
   List<Weapon> weaponList = [];
@@ -26,42 +26,13 @@ class CharacterComponent extends DynamicComponent {
   // Team id, used only in multi-player matches
   int team;
 
-  CharacterComponent(tile) : super.fromTile(tile);
-
-  // Create character by loading mainCharacter details
-  CharacterComponent.main(tile)
-      : initialLifePoints = (100 + 5 * mainCharacter.level).toDouble(),
-        super(tile.x, tile.y,
-            'character-${int.parse(tile.properties['orientation'] ?? '1')}.png') {
-    orientation = int.parse(tile.properties['orientation'] ?? '1');
-    atk = (mainCharacter.level + 1).toDouble();
-    def = (mainCharacter.level ~/ 5).toDouble();
-    mainCharacter.jsonWeaponList.forEach((weaponId, weaponLevel) {
-      switch (int.parse(weaponId)) {
-        case 0:
-          weaponList.add(PunchWeapon(level: weaponLevel));
-          break;
-        case 1:
-          weaponList.add(SnowBallWeapon(level: weaponLevel));
-          break;
-        case 2:
-          weaponList.add(MineWeapon(level: weaponLevel));
-          break;
-        default:
-          break;
-      }
-    });
-    player = this;
-    game.updateCamera(x, y);
-  }
-
   // Create character from input details
-  CharacterComponent.from(
+  CharacterComponent(
     tile, {
     bool isPlayerOne = false,
     int level = 0,
     Map<String, dynamic> jsonWeaponList = const {'0': 0, '1': 0},
-    this.team,
+    this.team = 0,
   })  : initialLifePoints = (100 + 5 * level).toDouble(),
         super(tile.x, tile.y,
             'character-${int.parse(tile.properties['orientation'] ?? '1')}.png') {
@@ -105,10 +76,21 @@ class CharacterComponent extends DynamicComponent {
 
   @override
   void componentDeleted() {
-    super.componentDeleted();
-    if (this == player) {
-      if (game.mode == GameMode.story) game.end();
-      // TODO: else...
+    if (game.mode == GameMode.story) {
+      if (this == player) {
+        super.componentDeleted();
+        game.end();
+      } else {
+        super.componentDeleted();
+      }
+    } else {
+      respawn();
     }
+  }
+
+  // Respawn player
+  void respawn() {
+    restoreLifePoints();
+    // TODO: ...
   }
 }
