@@ -32,6 +32,9 @@ double defaultDistancePerFrame;
 
 // Xeonjia game class
 class XeonjiaGame extends BaseGame {
+  // Game mode
+  final GameMode mode;
+
   // Game start date
   double startDate;
 
@@ -45,7 +48,7 @@ class XeonjiaGame extends BaseGame {
   int mapHeight;
   int mapWidth;
 
-  XeonjiaGame() {
+  XeonjiaGame(this.mode) {
     initialize();
   }
 
@@ -64,9 +67,10 @@ class XeonjiaGame extends BaseGame {
     });
 
     // Import map and components
-    importMap('assets/maps/' +
-        mainCharacter.visitedRooms.last.toString().padLeft(3, '0') +
-        '.tmx');
+    String _map = (mode == GameMode.story)
+        ? mainCharacter.visitedRooms.last.toString().padLeft(3, '0')
+        : 'arena/1';
+    importMap('assets/maps/' + _map + '.tmx');
 
     // Reset top and bottom bars
     lifePointsBar.state.refresh(percent: 1, text: 'LP: Max', poison: false);

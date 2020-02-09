@@ -27,7 +27,8 @@ class CharacterComponent extends DynamicComponent {
 
   CharacterComponent.main(tile)
       : initialLifePoints = (100 + 5 * mainCharacter.level).toDouble(),
-        super(tile.x, tile.y, 'character-${int.parse(tile.properties['orientation'] ?? '1')}.png') {
+        super(tile.x, tile.y,
+            'character-${int.parse(tile.properties['orientation'] ?? '1')}.png') {
     orientation = int.parse(tile.properties['orientation'] ?? '1');
     atk = (mainCharacter.level + 1).toDouble();
     def = (mainCharacter.level ~/ 5).toDouble();
@@ -69,6 +70,9 @@ class CharacterComponent extends DynamicComponent {
   @override
   void componentDeleted() {
     super.componentDeleted();
-    if (this == player) game.end();
+    if (this == player) {
+      if (game.mode == GameMode.story) game.end();
+      // TODO: else...
+    }
   }
 }

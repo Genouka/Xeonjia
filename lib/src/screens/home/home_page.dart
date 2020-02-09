@@ -97,7 +97,7 @@ class HomePage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                  _FadeRoute(page: GamePage()),
+                  _FadeRoute(page: GamePage(GameMode.story)),
               );
             },
           ),

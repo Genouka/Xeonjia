@@ -90,7 +90,12 @@ importMap(String fileName) async {
     Tile newTile = Tile();
     newTile.id = int.parse(tile.getAttribute('id')) + 1;
     newTile.type = tile.getAttribute('type');
-    newTile.image = tile.findElements('image').single.getAttribute('source');
+    newTile.image = tile
+        .findElements('image')
+        .single
+        .getAttribute('source')
+        .split('/')
+        .last;
     // Import tile properties
     var properties = tile.findElements('properties');
     if (properties.isNotEmpty) {
@@ -153,11 +158,15 @@ void parseMapTiles(var xmlElement) {
               GroundComponent(componentTile);
               break;
             case 'Start':
-              if (_previousRoomId ==
-                  int.parse(componentTile.properties['roomId'])) {
+              if (game.mode == GameMode.story &&
+                  _previousRoomId ==
+                      int.parse(componentTile.properties['roomId'])) {
                 CharacterComponent.main(componentTile);
                 Toast.show(_toastText, gameContext,
                     gravity: (lineCount < 5) ? 0 : 2);
+              } else if (game.mode == GameMode.tdm &&
+                  int.parse(componentTile.properties['team']) == 1) {
+                CharacterComponent.main(componentTile);
               }
               break;
             case 'Door':

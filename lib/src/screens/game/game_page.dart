@@ -21,6 +21,9 @@ BuildContext gameContext;
 const double _bottomBarButtonWidth = 50;
 
 class GamePage extends StatefulWidget {
+  final GameMode mode;
+  GamePage(this.mode);
+
   @override
   _GamePageState createState() => _GamePageState();
 }
@@ -37,7 +40,7 @@ class _GamePageState extends State<GamePage> {
     );
 
     // Initialize game variable
-    game = XeonjiaGame();
+    game = XeonjiaGame(widget.mode);
 
     // Manage gestures input
     Offset panGestureOffset;

@@ -21,3 +21,6 @@ Offset kGamepadOffset;
 // Main player data
 // In-game data is managed by "player" variable in xeonjia_game.dart
 CharacterInfo mainCharacter = CharacterInfo({});
+
+// Game modes
+enum GameMode { story, tdm, ctf }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/screens/info/info_page.dart';
 import 'package:xeonjia/src/screens/rules/rules_page.dart';
@@ -12,19 +13,15 @@ final List<Map<String, dynamic>> pageList = [
   {
     'title': 'Play',
     'subtitle': 'Continue story mode',
-    'page': GamePage(),
+    'page': GamePage(GameMode.story),
     'icon': const Icon(Icons.play_arrow),
-    'gameMode': 1,
   },
-  /*
   {
     'title': 'Arena',
-    'subtitle': 'Multi-player match versus CPU', // eg TDM, CTF, ...
-    'page': ,
-    'icon': Icon(Icons.group),
-    'gameMode': 1,
+    'subtitle': 'Multi-player match versus CPU',
+    'page': GamePage(GameMode.tdm),
+    'icon': const Icon(Icons.group),
   },
-  */
   {
     'divider': 'Character',
   },
