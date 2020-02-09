@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   flame: ^0.16.1
-  url_launcher: ^5.4.1
+  url_launcher: ^5.2.5
   shared_preferences: ^0.5.4+3
 
 dev_dependencies:
