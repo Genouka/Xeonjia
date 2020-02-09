@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="10" height="15" tilewidth="16" tileheight="16" nextobjectid="1">
  <properties>
-  <property name="hint" value="Rocks are strange here... I could try to hit them"/>
+  <property name="hint" value="It's possible to break these rocks by hitting them"/>
  </properties>
  <tileset firstgid="1" name="Basic" tilewidth="16" tileheight="16" tilecount="18" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
