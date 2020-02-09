@@ -36,8 +36,6 @@ class CharacterComponent extends DynamicComponent {
     orientation = int.parse(tile.properties['orientation'] ?? '1');
     atk = (mainCharacter.level + 1).toDouble();
     def = (mainCharacter.level ~/ 5).toDouble();
-    doorKeyList = List.from(mainCharacter.doorKeyList);
-    doorKeyList = List.from(mainCharacter.objectList);
     mainCharacter.jsonWeaponList.forEach((weaponId, weaponLevel) {
       switch (int.parse(weaponId)) {
         case 0:

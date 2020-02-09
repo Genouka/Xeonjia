@@ -63,7 +63,7 @@ class CharacterInfo {
         jsonWeaponList = jsonDecode(json['jsonWeaponList'] ?? '{"0": 0}'),
         jsonAvailableWeaponList =
             jsonDecode(json['jsonAvailableWeaponList'] ?? '{}'),
-        doorKeyList = (json['doorKeyList'] ?? []).cast<int>(),
+        doorKeyList = (json['doorKeyListV2'] ?? []).cast<int>(),
         objectList = (json['objectList'] ?? []).cast<int>(),
         totalEarnedMoney = json['totalEarnedMoney'] ?? 0,
         visitedRooms = (json['viewedRooms'] ?? [1]).cast<int>(),
@@ -82,7 +82,7 @@ class CharacterInfo {
       'money': money,
       'jsonWeaponList': jsonEncode(jsonWeaponList),
       'jsonAvailableWeaponList': jsonEncode(jsonAvailableWeaponList),
-      'doorKeyList': doorKeyList,
+      'doorKeyListV2': doorKeyList,
       'objectList': objectList,
       'viewedRooms': visitedRooms,
       'totalEarnedMoney': totalEarnedMoney,
