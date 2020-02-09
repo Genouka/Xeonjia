@@ -94,7 +94,7 @@ abstract class BasicComponent extends SpriteComponent {
       lifePointsBar.state.refresh(
         percent: _percent,
         text: 'LP: ' +
-            (_percent.isFinite ? (_percent * 100).round().toString() : 'Max'),
+            (_percent.isFinite ? player.lifePoints.round().toString() : 'Max'),
         poison: player.poisonQuantity > 0,
       );
     }
