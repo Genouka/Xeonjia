@@ -164,9 +164,10 @@ void parseMapTiles(var xmlElement) {
                 CharacterComponent.main(componentTile);
                 Toast.show(_toastText, gameContext,
                     gravity: (lineCount < 5) ? 0 : 2);
-              } else if (game.mode == GameMode.tdm &&
-                  int.parse(componentTile.properties['team']) == 1) {
-                CharacterComponent.main(componentTile);
+              } else if (game.mode == GameMode.tdm) {
+                CharacterComponent.from(componentTile,
+                    isPlayerOne: true,
+                    team: int.parse(componentTile.properties['team'] ?? '0'));
               }
               break;
             case 'Door':

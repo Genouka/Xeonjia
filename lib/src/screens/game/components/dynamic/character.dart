@@ -23,8 +23,12 @@ class CharacterComponent extends DynamicComponent {
   // Initial life points
   double initialLifePoints;
 
+  // Team id, used only in multi-player matches
+  int team;
+
   CharacterComponent(tile) : super.fromTile(tile);
 
+  // Create character by loading mainCharacter details
   CharacterComponent.main(tile)
       : initialLifePoints = (100 + 5 * mainCharacter.level).toDouble(),
         super(tile.x, tile.y,
@@ -51,6 +55,40 @@ class CharacterComponent extends DynamicComponent {
     });
     player = this;
     game.updateCamera(x, y);
+  }
+
+  // Create character from input details
+  CharacterComponent.from(
+    tile, {
+    bool isPlayerOne = false,
+    int level = 0,
+    Map<String, dynamic> jsonWeaponList = const {'0': 0, '1': 0},
+    this.team,
+  })  : initialLifePoints = (100 + 5 * level).toDouble(),
+        super(tile.x, tile.y,
+            'character-${int.parse(tile.properties['orientation'] ?? '1')}.png') {
+    orientation = int.parse(tile.properties['orientation'] ?? '1');
+    atk = (level + 1).toDouble();
+    def = (level ~/ 5).toDouble();
+    jsonWeaponList.forEach((weaponId, weaponLevel) {
+      switch (int.parse(weaponId)) {
+        case 0:
+          weaponList.add(PunchWeapon(level: weaponLevel));
+          break;
+        case 1:
+          weaponList.add(SnowBallWeapon(level: weaponLevel));
+          break;
+        case 2:
+          weaponList.add(MineWeapon(level: weaponLevel));
+          break;
+        default:
+          break;
+      }
+    });
+    if (isPlayerOne) {
+      player = this;
+      game.updateCamera(x, y);
+    }
   }
 
   Weapon get selectedWeapon => weaponList[_selectedWeaponElement];
