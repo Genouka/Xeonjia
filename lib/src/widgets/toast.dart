@@ -29,7 +29,7 @@ import 'package:flutter/widgets.dart';
 
 class Toast {
   static void show(String msg, BuildContext context,
-      {int duration = 4,
+      {int duration = 5,
       int gravity = 0,
       Color backgroundColor = const Color(0xAA000000),
       Color textColor = Colors.white,
