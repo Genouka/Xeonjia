@@ -26,6 +26,11 @@ abstract class Weapon {
 
   Weapon(this.id);
 
+  // Set max PP for this level
+  void resetPp() {
+    powerPoints = (10 + 5 * level).toDouble();
+  }
+
   // Function used when a shoot input happens
   void shoot({@required CharacterComponent shooter}) {
     if (shooter == player) {
@@ -89,7 +94,7 @@ class SnowBallWeapon extends Weapon {
   final int level;
 
   SnowBallWeapon({@required this.level}) : super(1) {
-    powerPoints = (10 + 5 * level).toDouble();
+    resetPp();
     atk = (10 + level * 2).toDouble();
   }
 
@@ -109,7 +114,7 @@ class MineWeapon extends Weapon {
   final int level;
 
   MineWeapon({@required this.level}) : super(2) {
-    powerPoints = (10 + 5 * level).toDouble();
+    resetPp();
     atk = (10 + level * 2).toDouble();
   }
 

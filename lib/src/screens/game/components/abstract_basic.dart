@@ -89,6 +89,18 @@ abstract class BasicComponent extends SpriteComponent {
   // Function used to change life points
   void lifePointsDifference(double difference, {BasicComponent cause}) {
     _lifePoints += difference < 0 ? difference + def : difference;
+    updateLpBar();
+    if (_lifePoints <= 0) {
+      delete();
+      if (this is! BasicStaticComponent) {
+        cause?.killedEnemies++;
+        cause?.experiencePoints += level;
+      }
+    }
+  }
+
+  // Update LP top bar
+  void updateLpBar() {
     if (this == player) {
       double _percent = player.lifePoints / player.initialLifePoints;
       lifePointsBar.state.refresh(
@@ -97,13 +109,6 @@ abstract class BasicComponent extends SpriteComponent {
             (_percent.isFinite ? player.lifePoints.round().toString() : 'Max'),
         poison: player.poisonQuantity > 0,
       );
-    }
-    if (_lifePoints <= 0) {
-      delete();
-      if (this is! BasicStaticComponent) {
-        cause?.killedEnemies++;
-        cause?.experiencePoints += level;
-      }
     }
   }
 
@@ -121,6 +126,7 @@ abstract class BasicComponent extends SpriteComponent {
   // Reset life points
   void restoreLifePoints() {
     _lifePoints = initialLifePoints;
+    updateLpBar();
   }
 
   // Delete component

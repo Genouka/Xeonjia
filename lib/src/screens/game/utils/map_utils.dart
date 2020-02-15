@@ -169,7 +169,8 @@ void parseMapTiles(var xmlElement) {
                     gravity: (lineCount < 5) ? 0 : 2);
               } else if (game.mode == GameMode.tdm) {
                 CharacterComponent(componentTile,
-                    isPlayerOne: true,
+                    isPlayerOne: 'true' ==
+                        (componentTile.properties['playerOne'] ?? 'false'),
                     team: int.parse(componentTile.properties['team'] ?? '0'));
               }
               break;

@@ -1,5 +1,6 @@
 import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/screens/game/components/abstract_dynamic.dart';
+import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/screens/game/utils/weapon.dart';
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 
@@ -90,7 +91,15 @@ class CharacterComponent extends DynamicComponent {
 
   // Respawn player
   void respawn() {
+    stop();
     restoreLifePoints();
-    // TODO: ...
+    weaponList.forEach((weapon) {
+      weapon.resetPp();
+    });
+    _selectedWeaponElement = 0;
+    weaponBar.state.refresh(percent: 1, text: 'Punch');
+    x = startX;
+    y = startY;
+    game.updateCamera(x, y);
   }
 }
