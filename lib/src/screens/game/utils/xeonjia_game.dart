@@ -51,13 +51,16 @@ class XeonjiaGame extends BaseGame {
   // List of CharacterComponent in game
   List<CharacterComponent> players = [];
 
+  // Number of players for each team
+  int teamSize;
+
   // List of teams
   final List<Team> teams = [
     Team(id: 0, name: 'Team A', color: Colors.red),
     Team(id: 1, name: 'Team B', color: Colors.blue)
   ];
 
-  XeonjiaGame(this.mode) {
+  XeonjiaGame(this.mode, {this.teamSize}) {
     initialize();
   }
 
@@ -74,6 +77,7 @@ class XeonjiaGame extends BaseGame {
     components.forEach((component) {
       (component as BasicComponent).remove = true;
     });
+    player = null;
 
     // Import map and components
     String _map = (mode == GameMode.story)

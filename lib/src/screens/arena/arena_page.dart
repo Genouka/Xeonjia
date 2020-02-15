@@ -60,7 +60,7 @@ class _ArenaPageState extends State<ArenaPage> {
                     _players = newValue;
                   });
                 },
-                items: [3, 4, 5]
+                items: [3, 4, 5, 6]
                     .map<DropdownMenuItem<int>>(
                         (int value) => DropdownMenuItem<int>(
                               value: value,
@@ -73,7 +73,7 @@ class _ArenaPageState extends State<ArenaPage> {
           tag: 'Play',
           child: PlayButton(
             mode: _mode,
-            players: _players,
+            teamSize: _players,
             gradient: false,
           ),
         ),

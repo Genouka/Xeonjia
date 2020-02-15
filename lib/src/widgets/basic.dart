@@ -10,12 +10,12 @@ class PlayButton extends StatelessWidget {
   final GameMode mode;
 
   // Number of players
-  final int players;
+  final int teamSize;
 
   // Gradient color
   final bool gradient;
 
-  PlayButton({@required this.mode, this.players, @required this.gradient});
+  PlayButton({@required this.mode, this.teamSize, @required this.gradient});
 
   static const BorderRadius fabBorderRadius =
       BorderRadius.all(Radius.circular(30));
@@ -38,7 +38,10 @@ class PlayButton extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            FadeRoute(GamePage(mode)),
+            FadeRoute(GamePage(
+              mode,
+              teamSize: teamSize,
+            )),
           );
         },
       ),

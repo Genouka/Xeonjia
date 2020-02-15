@@ -168,10 +168,12 @@ void parseMapTiles(var xmlElement) {
                 Toast.show(_toastText, gameContext,
                     gravity: (lineCount < 5) ? 0 : 2);
               } else if (game.mode == GameMode.tdm) {
-                CharacterComponent(componentTile,
-                    isPlayerOne: 'true' ==
-                        (componentTile.properties['playerOne'] ?? 'false'),
-                    team: int.parse(componentTile.properties['team'] ?? '0'));
+                int _team = int.parse(componentTile.properties['team'] ?? '0');
+                if (game.players.where((p) => p.team == _team).length <
+                    game.teamSize) {
+                  CharacterComponent(componentTile,
+                      isPlayerOne: player == null && _team == 0, team: _team);
+                }
               }
               break;
             case 'Door':

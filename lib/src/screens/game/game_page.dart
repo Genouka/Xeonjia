@@ -22,7 +22,8 @@ const double _bottomBarButtonWidth = 50;
 
 class GamePage extends StatefulWidget {
   final GameMode mode;
-  GamePage(this.mode);
+  final int teamSize;
+  GamePage(this.mode, {this.teamSize});
 
   @override
   _GamePageState createState() => _GamePageState();
@@ -40,7 +41,7 @@ class _GamePageState extends State<GamePage> {
     );
 
     // Initialize game variable
-    game = XeonjiaGame(widget.mode);
+    game = XeonjiaGame(widget.mode, teamSize: widget.teamSize);
 
     // Manage gestures input
     Offset panGestureOffset;
