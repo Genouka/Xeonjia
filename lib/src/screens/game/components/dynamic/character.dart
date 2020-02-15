@@ -99,9 +99,11 @@ class CharacterComponent extends DynamicComponent {
       weapon.resetPp();
     });
     _selectedWeaponElement = 0;
-    weaponBar.state.refresh(percent: 1, text: 'Punch');
     x = startX;
     y = startY;
-    game.updateCamera(x, y);
+    if (this == player) {
+      weaponBar.state.refresh(percent: 1, text: 'Punch');
+      game.updateCamera(x, y);
+    }
   }
 }
