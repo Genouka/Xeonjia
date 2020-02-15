@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/src/screens/game/components/abstract_dynamic.dart';
+import 'package:xeonjia/src/screens/game/components/dynamic/character.dart';
 import 'package:xeonjia/src/screens/game/components/static/basic_static.dart';
 import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/screens/game/utils/map_utils.dart';
@@ -42,6 +43,12 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Enemies killed by this component
   int killedEnemies = 0;
+
+  // Number of times this died
+  int deaths = 0;
+
+  // Player points (100 points for each CharacterComponents killed)
+  int points = 0;
 
   // Amount of damage done on collision
   double atk = 0;
@@ -95,6 +102,9 @@ abstract class BasicComponent extends SpriteComponent {
       if (this is! BasicStaticComponent) {
         cause?.killedEnemies++;
         cause?.experiencePoints += level;
+        if (this is CharacterComponent) {
+          cause?.points += 100;
+        }
       }
     }
   }
@@ -131,6 +141,7 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Delete component
   void delete() {
+    ++deaths;
     remove = true;
   }
 

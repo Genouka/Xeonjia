@@ -55,6 +55,7 @@ class CharacterComponent extends DynamicComponent {
           break;
       }
     });
+    game.players.add(this);
     if (isPlayerOne) {
       player = this;
       game.updateCamera(x, y);
@@ -77,6 +78,7 @@ class CharacterComponent extends DynamicComponent {
 
   @override
   void delete() {
+    ++deaths;
     if (game.mode == GameMode.story) {
       if (this == player) {
         super.delete();

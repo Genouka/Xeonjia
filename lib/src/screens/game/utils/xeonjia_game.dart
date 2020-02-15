@@ -48,6 +48,15 @@ class XeonjiaGame extends BaseGame {
   int mapHeight;
   int mapWidth;
 
+  // List of CharacterComponent in game
+  List<CharacterComponent> players = [];
+
+  // List of teams
+  final List<Team> teams = [
+    Team(id: 0, name: 'Team A', color: Colors.red),
+    Team(id: 1, name: 'Team B', color: Colors.blue)
+  ];
+
   XeonjiaGame(this.mode) {
     initialize();
   }
@@ -234,4 +243,32 @@ class XeonjiaGame extends BaseGame {
               ],
             )));
   }
+}
+
+// Team used in multi-player match
+// It is composed by 2-5 players
+class Team {
+  // Team id
+  final int id;
+
+  // Team name
+  final String name;
+
+  // Team color
+  final Color color;
+
+  // Team members
+  List<CharacterComponent> get members =>
+      game.players.where((player) => player.team == id);
+
+  // Team points
+  int get points {
+    int _points = 0;
+    members.forEach((member) {
+      _points += member.points;
+    });
+    return _points;
+  }
+
+  Team({@required this.id, this.name = 'Team', this.color = Colors.blue});
 }
