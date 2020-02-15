@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
-import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/screens/home/resources/page_list.dart';
 import 'package:xeonjia/src/screens/user/user_page.dart';
 import 'package:xeonjia/src/util/utils.dart';
+import 'package:xeonjia/src/widgets/basic.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -16,11 +16,8 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [
-            Colors.lightBlue[700],
-            Colors.lightBlue[400],
-            Colors.lightBlue[200]
-          ], begin: Alignment.bottomLeft, end: Alignment.topRight)),
+            gradient: appGradient,
+          ),
         ),
         leading: Hero(
           tag: 'character',
@@ -39,7 +36,7 @@ class HomePage extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          _FadeRoute(page: UserPage(appBarCollapsed: false)),
+                          FadeRoute(UserPage(appBarCollapsed: false)),
                         );
                       },
                     )),
@@ -71,7 +68,7 @@ class HomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                      _FadeRoute(page: pageList[index]['page']),
+                    FadeRoute(pageList[index]['page']),
                   );
                 },
               );
@@ -79,52 +76,12 @@ class HomePage extends StatelessWidget {
           }),
       floatingActionButton: Hero(
         tag: 'Play',
-        child: Container(
-          width: 150,
-          height: 50,
-          decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(30)),
-              gradient: LinearGradient(colors: [
-                Colors.lightBlue[700],
-                Colors.lightBlue[400],
-                Colors.lightBlue[200]
-              ], begin: Alignment.bottomLeft, end: Alignment.topRight)),
-          child: FlatButton(
-            child: const Text(
-              'P L A Y',
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                  _FadeRoute(page: GamePage(GameMode.story)),
-              );
-            },
-          ),
+        child: PlayButton(
+          mode: GameMode.story,
+          gradient: true,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
-}
-
-class _FadeRoute extends PageRouteBuilder {
-  @override
-  final Duration transitionDuration = const Duration(milliseconds: 150);
-
-  final Widget page;
-  _FadeRoute({this.page})
-      : super(
-          pageBuilder: (
-            BuildContext context,
-            Animation<double> animation,
-            Animation<double> secondaryAnimation,
-          ) =>
-              page,
-          transitionsBuilder: (BuildContext context,
-                  Animation<double> animation,
-                  Animation<double> secondaryAnimation,
-                  Widget child) =>
-              FadeTransition(opacity: animation, child: child),
-        );
 }

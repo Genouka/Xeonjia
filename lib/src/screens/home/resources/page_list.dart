@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
+import 'package:xeonjia/src/screens/arena/arena_page.dart';
 import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/screens/info/info_page.dart';
 import 'package:xeonjia/src/screens/rules/rules_page.dart';
@@ -19,7 +20,7 @@ final List<Map<String, dynamic>> pageList = [
   {
     'title': 'Arena',
     'subtitle': 'Multi-player match versus CPU',
-    'page': GamePage(GameMode.tdm),
+    'page': ArenaPage(),
     'icon': const Icon(Icons.group),
   },
   {
