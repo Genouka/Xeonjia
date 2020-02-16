@@ -93,7 +93,7 @@ abstract class BasicComponent extends SpriteComponent {
     _lifePoints = initialLifePoints;
     x = startX;
     y = startY;
-    game.add(this);
+    game.addLater(this);
   }
 
   double get lifePoints => _lifePoints;

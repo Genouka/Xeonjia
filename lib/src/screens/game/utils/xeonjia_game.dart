@@ -102,8 +102,7 @@ class XeonjiaGame extends BaseGame {
       for (timeSinceUpdate += t;
           timeSinceUpdate >= updatePeriod;
           timeSinceUpdate -= updatePeriod) {
-        components.forEach((c) => c.update(t));
-        components.removeWhere((c) => c.destroy());
+        super.update(t);
       }
     }
   }
