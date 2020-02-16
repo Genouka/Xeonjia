@@ -6,6 +6,7 @@ import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/resources/weapon_details.dart';
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 import 'package:xeonjia/src/screens/game/widgets/gamepad.dart';
+import 'package:xeonjia/src/screens/game/widgets/multiplayer_bar.dart';
 import 'package:xeonjia/src/screens/game/widgets/percent_indicator.dart';
 
 // Top bar percent indicator that shows player life points
@@ -85,34 +86,39 @@ class _GamePageState extends State<GamePage> {
           child: SafeArea(
             child: Scaffold(
               appBar: PreferredSize(
-                  preferredSize: Size.fromHeight(kToolbarHeight),
-                  child: SizedBox(
-                      height: 40,
-                      child: Row(children: [
-                        Container(
-                            width: _bottomBarButtonWidth,
-                            color: Colors.white,
-                            child: IconButton(
-                              onPressed: () {
-                                _pauseDialog(context, mode: 2);
-                              },
-                              icon: Icon(Icons.close),
-                              color: Colors.black,
-                              tooltip: 'Exit game',
-                            )),
-                        lifePointsBar,
-                        Container(
-                            width: _bottomBarButtonWidth,
-                            color: Colors.white,
-                            child: IconButton(
-                              onPressed: () {
-                                _pauseDialog(context, mode: 0);
-                              },
-                              icon: Icon(Icons.pause),
-                              color: Colors.black,
-                              tooltip: 'Pause',
-                            )),
-                      ]))),
+                  preferredSize:
+                      Size.fromHeight(game.mode == GameMode.story ? 40 : 80),
+                  child: Column(children: <Widget>[
+                    SizedBox(
+                        height: 40,
+                        child: Row(children: [
+                          Container(
+                              width: _bottomBarButtonWidth,
+                              color: Colors.white,
+                              child: IconButton(
+                                onPressed: () {
+                                  _pauseDialog(context, mode: 2);
+                                },
+                                icon: Icon(Icons.close),
+                                color: Colors.black,
+                                tooltip: 'Exit game',
+                              )),
+                          lifePointsBar,
+                          Container(
+                              width: _bottomBarButtonWidth,
+                              color: Colors.white,
+                              child: IconButton(
+                                onPressed: () {
+                                  _pauseDialog(context, mode: 0);
+                                },
+                                icon: Icon(Icons.pause),
+                                color: Colors.black,
+                                tooltip: 'Pause',
+                              )),
+                        ])),
+                    if (game.mode != GameMode.story)
+                      SizedBox(height: 40, child: MultiplayerBar()),
+                  ])),
               body: Hero(
                 tag: 'Play',
                 child: Container(

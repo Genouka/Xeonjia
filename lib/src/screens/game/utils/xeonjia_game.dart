@@ -41,6 +41,12 @@ class XeonjiaGame extends BaseGame {
   // If true, players can hit their teammates
   final bool friendlyFire;
 
+  // Points required to win in multi-player
+  final int maxPoints;
+
+  // Max game time in multi-player mode
+  final int maxTime;
+
   // Game start date
   double startDate;
 
@@ -63,7 +69,11 @@ class XeonjiaGame extends BaseGame {
     Team(id: 1, name: 'Team B', color: Colors.blue)
   ];
 
-  XeonjiaGame(this.mode, {this.teamSize = 0, this.friendlyFire = false}) {
+  XeonjiaGame(this.mode,
+      {this.teamSize = 0,
+      this.friendlyFire = false,
+      this.maxPoints = 1500,
+      this.maxTime = 180}) {
     initialize();
   }
 
