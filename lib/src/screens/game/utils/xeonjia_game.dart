@@ -276,7 +276,7 @@ class Team {
 
   // Team members
   List<CharacterComponent> get members =>
-      game.players.where((player) => player.team == id);
+      game.players.where((player) => player.team == id).toList();
 
   // Team points
   int get points {
