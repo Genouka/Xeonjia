@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/screens/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/src/screens/game/game_page.dart';
@@ -29,7 +31,7 @@ class CharacterComponent extends DynamicComponent {
     tile, {
     bool isPlayerOne = false,
     int level = 0,
-    Map<String, dynamic> jsonWeaponList = const {'0': 0, '1': 0},
+    Map<String, dynamic> jsonWeaponList = const {'1': 5, '2': 5},
     team = 0,
   })  : initialLifePoints = (100 + 5 * level).toDouble(),
         super(tile.x, tile.y,
@@ -102,6 +104,36 @@ class CharacterComponent extends DynamicComponent {
     if (this == playerOne) {
       weaponBar.state.refresh(percent: 1, text: 'Punch');
       game.updateCamera(x, y);
+    }
+  }
+
+  @override
+  void update(double t) {
+    if (this != playerOne) {
+      _cpuMove();
+      _cpuShoot();
+    }
+    super.update(t);
+  }
+
+  // Move done if this is controlled by CPU
+  void _cpuMove() {
+    if (isStationary) {
+      if (randomDouble() > 0.4) {
+        if (randomDouble() > 0) {
+          updateDirection(randomDouble(), 0);
+        } else {
+          updateDirection(0, randomDouble());
+        }
+      }
+    }
+  }
+
+  // Shot done if this is controlled by CPU
+  void _cpuShoot() {
+    if (Random().nextDouble() > 0.98) {
+      selectedWeapon.shoot(shooter: this);
+      if (selectedWeapon.powerPoints == 0) nextWeapon();
     }
   }
 }

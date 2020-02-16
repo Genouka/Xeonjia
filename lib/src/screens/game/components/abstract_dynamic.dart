@@ -31,10 +31,13 @@ abstract class DynamicComponent extends BasicComponent {
   // Number of moves done
   int movesCounter = 0;
 
+  // If this is not moving, isStationary returns true
+  bool get isStationary => directionX == 0 && directionY == 0;
+
   // If this component was previously still update its direction and orientation
   void updateDirection(double newInputDirectionX, double newInputDirectionY,
       {bool forced = false}) {
-    if ((directionX == 0 && directionY == 0) || forced) {
+    if (isStationary || forced) {
       directionX = newInputDirectionX;
       directionY = newInputDirectionY;
 

@@ -85,7 +85,9 @@ class PunchWeapon extends Weapon {
         return;
       }
     });
-    Toast.show('~ Punch! ~', gameContext, duration: 1);
+    if (shooter == playerOne) {
+      Toast.show('~ Punch! ~', gameContext, duration: 1);
+    }
   }
 }
 
