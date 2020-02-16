@@ -80,7 +80,7 @@ abstract class DynamicComponent extends BasicComponent {
   // I should to fix this...
   void _move() {
     collidedComponent = null;
-    BasicComponent _overlappedComponent;
+    List<BasicComponent> _overlappedComponents = [];
     if (directionX != 0 || directionY != 0) {
       double _newX = x + directionX.sign * distancePerFrame;
       double _newY = y + directionY.sign * distancePerFrame;
@@ -97,7 +97,7 @@ abstract class DynamicComponent extends BasicComponent {
             return;
           } else {
             // Else -> overlap component
-            _overlappedComponent = component;
+            _overlappedComponents.add(component);
           }
         }
       });
@@ -109,7 +109,8 @@ abstract class DynamicComponent extends BasicComponent {
         x = _newX;
         y = _newY;
         hasMoved();
-        _overlappedComponent?.overlappedBy(this);
+        _overlappedComponents.forEach(
+            (_overlappedComponent) => _overlappedComponent.overlappedBy(this));
       }
     }
   }

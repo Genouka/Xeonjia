@@ -1,6 +1,7 @@
 import 'package:xeonjia/src/screens/game/components/abstract_basic.dart';
 import 'package:xeonjia/src/screens/game/components/dynamic/character.dart';
 import 'package:xeonjia/src/screens/game/game_page.dart';
+import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 import 'package:xeonjia/src/widgets/toast.dart';
 
 // Stats modifier component
@@ -51,7 +52,8 @@ class ModifierComponent extends BasicComponent {
 
   @override
   void overlappedBy(BasicComponent componentAbove) {
-    if (componentAbove is CharacterComponent) {
+    if (componentAbove is CharacterComponent &&
+        (game.friendlyFire || (father?.team ?? -99) != componentAbove.team)) {
       componentAbove.lifePointsDifference(_lifePointsDiff,
           cause: father ?? this);
       componentAbove.atk += _atkDelta;
