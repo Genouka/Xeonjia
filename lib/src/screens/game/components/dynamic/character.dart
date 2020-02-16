@@ -95,6 +95,7 @@ class CharacterComponent extends DynamicComponent {
   void respawn() {
     stop();
     restoreLifePoints();
+    removeChildren();
     weaponList.forEach((weapon) {
       weapon.resetPp();
     });

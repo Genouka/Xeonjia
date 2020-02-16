@@ -161,4 +161,11 @@ abstract class BasicComponent extends SpriteComponent {
 
   @override
   bool destroy() => remove;
+
+  // Delete every son of this component
+  void removeChildren() {
+    game.components.cast<BasicComponent>().forEach((component) {
+      if (component.father == this) component.delete();
+    });
+  }
 }
