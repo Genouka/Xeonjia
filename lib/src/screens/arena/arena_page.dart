@@ -12,7 +12,7 @@ class ArenaPage extends StatefulWidget {
 }
 
 class _ArenaPageState extends State<ArenaPage> {
-  int _players = 3;
+  int _teamSize = 3;
   GameMode _mode = GameMode.tdm;
 
   @override
@@ -23,7 +23,7 @@ class _ArenaPageState extends State<ArenaPage> {
         ),
         body: ListView(children: <Widget>[
           ListTile(
-              title: Text(
+              title: const Text(
                 'Mode',
                 style: TextStyle(
                   fontSize: kTextFontSize,
@@ -46,7 +46,7 @@ class _ArenaPageState extends State<ArenaPage> {
                     .toList(),
               )),
           ListTile(
-              title: Text(
+              title: const Text(
                 'Players',
                 style: TextStyle(
                   fontSize: kTextFontSize,
@@ -54,10 +54,10 @@ class _ArenaPageState extends State<ArenaPage> {
               ),
               subtitle: const Text('Number of players'),
               trailing: DropdownButton<int>(
-                value: _players,
+                value: _teamSize,
                 onChanged: (int newValue) {
                   setState(() {
-                    _players = newValue;
+                    _teamSize = newValue;
                   });
                 },
                 items: [3, 4, 5, 6]
@@ -73,7 +73,7 @@ class _ArenaPageState extends State<ArenaPage> {
           tag: 'Play',
           child: PlayButton(
             mode: _mode,
-            teamSize: _players,
+            teamSize: _teamSize,
             gradient: false,
           ),
         ),

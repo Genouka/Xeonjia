@@ -111,13 +111,15 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Update LP top bar
   void updateLpBar() {
-    if (this == player) {
-      double _percent = player.lifePoints / player.initialLifePoints;
+    if (this == playerOne) {
+      double _percent = playerOne.lifePoints / playerOne.initialLifePoints;
       lifePointsBar.state.refresh(
         percent: _percent,
         text: 'LP: ' +
-            (_percent.isFinite ? player.lifePoints.round().toString() : 'Max'),
-        poison: player.poisonQuantity > 0,
+            (_percent.isFinite
+                ? playerOne.lifePoints.round().toString()
+                : 'Max'),
+        poison: playerOne.poisonQuantity > 0,
       );
     }
   }

@@ -60,7 +60,8 @@ class _GamePageState extends State<GamePage> {
             } else {
               panGestureOffset = Offset(0, upd.delta.dy);
             }
-            player?.updateOrientation(panGestureOffset.dx, panGestureOffset.dy);
+            playerOne?.updateOrientation(
+                panGestureOffset.dx, panGestureOffset.dy);
           }
         }
       }
@@ -128,18 +129,22 @@ class _GamePageState extends State<GamePage> {
                             color: Colors.white,
                             child: IconButton(
                               onPressed: () {
-                                player.nextWeapon();
+                                playerOne.nextWeapon();
                                 weaponBar.state.refresh(
-                                    percent: player.selectedWeapon.powerPoints /
-                                        (10 + 5 * player.selectedWeapon.level)
-                                            .toDouble(),
-                                    text: (weaponDetails[player
+                                    percent:
+                                        playerOne.selectedWeapon.powerPoints /
+                                            (10 +
+                                                    5 *
+                                                        playerOne.selectedWeapon
+                                                            .level)
+                                                .toDouble(),
+                                    text: (weaponDetails[playerOne
                                                 ?.selectedWeapon?.id]['name'] ??
                                             '') +
-                                        (player?.selectedWeapon?.powerPoints
+                                        (playerOne?.selectedWeapon?.powerPoints
                                                     ?.isFinite ??
                                                 false
-                                            ? ' (${player?.selectedWeapon?.powerPoints?.round().toString()})'
+                                            ? ' (${playerOne?.selectedWeapon?.powerPoints?.round().toString()})'
                                             : ''));
                               },
                               icon: Icon(Icons.swap_horiz),
@@ -152,7 +157,8 @@ class _GamePageState extends State<GamePage> {
                             color: Colors.white,
                             child: IconButton(
                               onPressed: () {
-                                player.selectedWeapon.shoot(shooter: player);
+                                playerOne.selectedWeapon
+                                    .shoot(shooter: playerOne);
                               },
                               icon: Icon(Icons.whatshot),
                               color: Colors.black,
@@ -166,7 +172,7 @@ class _GamePageState extends State<GamePage> {
                       color: Colors.white,
                       child: MaterialButton(
                         onPressed: () {
-                          player.selectedWeapon.shoot(shooter: player);
+                          playerOne.selectedWeapon.shoot(shooter: playerOne);
                         },
                         splashColor: Colors.lightBlue[700],
                         child: Text(
@@ -187,13 +193,13 @@ class _GamePageState extends State<GamePage> {
           'title':
               'Pause - Room ${mainCharacter.visitedRooms.last.toString().padLeft(3, '0')}',
           'text': '''
-          \n • Moves: ${player.movesCounter.toString()}
+          \n • Moves: ${playerOne.movesCounter.toString()}
           \n • Minutes played: ${((game.currentTime() - game.startDate) / 60).round()}
-          \n • Money earned: ${player.earnedMoney.toString()}
-          \n • Lifepoints: ${player.lifePoints.round().toString()}
-          \n • Poison quantity: ${player.poisonQuantity.round().toString()}
-          \n • Enemies killed: ${player.killedEnemies.toString()}
-          \n • Exp gained: ${player.experiencePoints.toString()}
+          \n • Money earned: ${playerOne.earnedMoney.toString()}
+          \n • Lifepoints: ${playerOne.lifePoints.round().toString()}
+          \n • Poison quantity: ${playerOne.poisonQuantity.round().toString()}
+          \n • Enemies killed: ${playerOne.killedEnemies.toString()}
+          \n • Exp gained: ${playerOne.experiencePoints.toString()}
           ''',
         },
         // Restart (mode == 1)

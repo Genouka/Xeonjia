@@ -17,12 +17,12 @@ class DoorComponent extends BasicComponent {
 
   @override
   bool isSolid({BasicComponent otherComponent}) =>
-      _keyRequired == true && !player.doorKeyList.contains(_roomId) ||
+      _keyRequired == true && !playerOne.doorKeyList.contains(_roomId) ||
       otherComponent is! CharacterComponent;
 
   @override
   void overlappedBy(BasicComponent componentAbove) {
-    if (componentAbove == player) {
+    if (componentAbove == playerOne) {
       game.changeRoom(_roomId);
     }
   }

@@ -63,19 +63,19 @@ class _FloatingGamepadState extends State<FloatingGamepad> {
     void _buttonInput({@required bool isTapDown}) {
       switch (direction) {
         case 'up':
-          isTapDown ? player.updateOrientation(0, -1) : _upInput();
+          isTapDown ? playerOne.updateOrientation(0, -1) : _upInput();
           break;
         case 'down':
-          isTapDown ? player.updateOrientation(0, 1) : _downInput();
+          isTapDown ? playerOne.updateOrientation(0, 1) : _downInput();
           break;
         case 'left':
-          isTapDown ? player.updateOrientation(-1, 0) : _leftInput();
+          isTapDown ? playerOne.updateOrientation(-1, 0) : _leftInput();
           break;
         case 'right':
-          isTapDown ? player.updateOrientation(1, 0) : _rightInput();
+          isTapDown ? playerOne.updateOrientation(1, 0) : _rightInput();
           break;
         case 'center':
-          if (!isTapDown) player.selectedWeapon.shoot(shooter: player);
+          if (!isTapDown) playerOne.selectedWeapon.shoot(shooter: playerOne);
           break;
         default:
           break;

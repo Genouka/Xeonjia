@@ -15,7 +15,7 @@ import 'package:xeonjia/src/util/local_data_controller.dart';
 XeonjiaGame game;
 
 // Main character
-CharacterComponent player;
+CharacterComponent playerOne;
 
 // Default component dimension
 double componentSize;
@@ -77,7 +77,7 @@ class XeonjiaGame extends BaseGame {
     components.forEach((component) {
       (component as BasicComponent).remove = true;
     });
-    player = null;
+    playerOne = null;
 
     // Import map and components
     String _map = (mode == GameMode.story)
@@ -113,11 +113,11 @@ class XeonjiaGame extends BaseGame {
     bool _isNewRoom = true;
 
     // Save new player data into mainCharacter
-    mainCharacter.killedComponents += player.killedEnemies;
-    mainCharacter.doorKeyList.addAll(player.doorKeyList);
-    mainCharacter.objectList.addAll(player.objectList);
+    mainCharacter.killedComponents += playerOne.killedEnemies;
+    mainCharacter.doorKeyList.addAll(playerOne.doorKeyList);
+    mainCharacter.objectList.addAll(playerOne.objectList);
     mainCharacter.minutesPlayed += (game.currentTime() - game.startDate) / 60;
-    mainCharacter.movesCounter += player.movesCounter;
+    mainCharacter.movesCounter += playerOne.movesCounter;
 
     // If the room hasn't been already visited, increase exp points and money
     for (int i = 0; i < mainCharacter.visitedRooms.length - 1; i++) {
@@ -128,9 +128,10 @@ class XeonjiaGame extends BaseGame {
       }
     }
     if (_isNewRoom) {
-      _levelUp = mainCharacter.expGained(player.experiencePoints + nextRoomId);
-      mainCharacter.money += player.earnedMoney;
-      mainCharacter.totalEarnedMoney += player.earnedMoney;
+      _levelUp =
+          mainCharacter.expGained(playerOne.experiencePoints + nextRoomId);
+      mainCharacter.money += playerOne.earnedMoney;
+      mainCharacter.totalEarnedMoney += playerOne.earnedMoney;
     }
 
     mainCharacter.visitedRooms.add(nextRoomId);
@@ -146,7 +147,7 @@ class XeonjiaGame extends BaseGame {
 
   // Manage drag gestures
   void gestureDragInput(Offset delta) {
-    player?.updateDirection(delta.dx, delta.dy);
+    playerOne?.updateDirection(delta.dx, delta.dy);
   }
 
   // Manage tap gesture
@@ -157,28 +158,28 @@ class XeonjiaGame extends BaseGame {
     // Do not update orientation if tapping on bottom bar
     if (position.dy <= screenDimensions.height + 40) {
       double _relativeTapX =
-          position.dx - (player.x + componentSize / 2 - camera.x);
+          position.dx - (playerOne.x + componentSize / 2 - camera.x);
       double _relativeTapY =
-          position.dy - (player.y + componentSize / 2 - camera.y) - 40;
+          position.dy - (playerOne.y + componentSize / 2 - camera.y) - 40;
 
       // Update character orientation
       if (position.dx < componentSize ||
           position.dx > screenDimensions.width - componentSize) {
-        player.updateOrientation(position.dx - componentSize, 0);
+        playerOne.updateOrientation(position.dx - componentSize, 0);
       } else if (position.dy - 40 < componentSize ||
           position.dy > screenDimensions.height - componentSize) {
-        player.updateOrientation(0, position.dy - 40 - componentSize);
+        playerOne.updateOrientation(0, position.dy - 40 - componentSize);
       } else if (_relativeTapX.abs() > 15 || _relativeTapY.abs() > 15) {
         if (_relativeTapX.abs() > _relativeTapY.abs()) {
-          player.updateOrientation(_relativeTapX, 0);
+          playerOne.updateOrientation(_relativeTapX, 0);
         } else {
-          player.updateOrientation(0, _relativeTapY);
+          playerOne.updateOrientation(0, _relativeTapY);
         }
       }
     }
 
     // Use weapon selected by player
-    player.selectedWeapon.shoot(shooter: player);
+    playerOne.selectedWeapon.shoot(shooter: playerOne);
   }
 
   // Update camera position
@@ -207,7 +208,7 @@ class XeonjiaGame extends BaseGame {
   void end() {
     pause = true;
     mainCharacter.minutesPlayed += (game.currentTime() - game.startDate) / 60;
-    mainCharacter.movesCounter += player.movesCounter;
+    mainCharacter.movesCounter += playerOne.movesCounter;
     ++mainCharacter.deathCounter;
     mainCharacter.money -= mainCharacter.visitedRooms.last * 10;
     if (mainCharacter.money < 0) mainCharacter.money = 0;

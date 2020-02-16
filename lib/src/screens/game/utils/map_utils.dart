@@ -171,8 +171,11 @@ void parseMapTiles(var xmlElement) {
                 int _team = int.parse(componentTile.properties['team'] ?? '0');
                 if (game.players.where((p) => p.team == _team).length <
                     game.teamSize) {
-                  CharacterComponent(componentTile,
-                      isPlayerOne: player == null && _team == 0, team: _team);
+                  CharacterComponent(
+                    componentTile,
+                    isPlayerOne: playerOne == null && _team == 0,
+                    team: _team,
+                  );
                 }
               }
               break;

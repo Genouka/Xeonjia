@@ -33,17 +33,17 @@ abstract class Weapon {
 
   // Function used when a shoot input happens
   void shoot({@required CharacterComponent shooter}) {
-    if (shooter == player) {
+    if (shooter == playerOne) {
       // Update bottom weapon bar
       weaponBar.state.refresh(
-          percent: player?.selectedWeapon?.powerPoints != double.infinity
-              ? (player?.selectedWeapon?.powerPoints ?? 100) /
+          percent: playerOne?.selectedWeapon?.powerPoints != double.infinity
+              ? (playerOne?.selectedWeapon?.powerPoints ?? 100) /
                   // should use max PP...
-                  (10 + 5 * player?.selectedWeapon?.level)
+                  (10 + 5 * playerOne?.selectedWeapon?.level)
               : 1,
-          text: (weaponDetails[player?.selectedWeapon?.id]['name'] ?? '') +
-              (player?.selectedWeapon?.powerPoints?.isFinite ?? false
-                  ? ' (${player?.selectedWeapon?.powerPoints?.round().toString()})'
+          text: (weaponDetails[playerOne?.selectedWeapon?.id]['name'] ?? '') +
+              (playerOne?.selectedWeapon?.powerPoints?.isFinite ?? false
+                  ? ' (${playerOne?.selectedWeapon?.powerPoints?.round().toString()})'
                   : ''));
     }
   }

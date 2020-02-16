@@ -57,7 +57,7 @@ class CharacterComponent extends DynamicComponent {
     });
     game.players.add(this);
     if (isPlayerOne) {
-      player = this;
+      playerOne = this;
       game.updateCamera(x, y);
     }
   }
@@ -73,14 +73,14 @@ class CharacterComponent extends DynamicComponent {
 
   @override
   void hasMoved() {
-    if (this == player) game.updateCamera(x, y);
+    if (this == playerOne) game.updateCamera(x, y);
   }
 
   @override
   void delete() {
     ++deaths;
     if (game.mode == GameMode.story) {
-      if (this == player) {
+      if (this == playerOne) {
         super.delete();
         game.end();
       } else {
@@ -101,7 +101,7 @@ class CharacterComponent extends DynamicComponent {
     _selectedWeaponElement = 0;
     x = startX;
     y = startY;
-    if (this == player) {
+    if (this == playerOne) {
       weaponBar.state.refresh(percent: 1, text: 'Punch');
       game.updateCamera(x, y);
     }
