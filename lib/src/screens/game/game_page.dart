@@ -23,7 +23,8 @@ const double _bottomBarButtonWidth = 50;
 class GamePage extends StatefulWidget {
   final GameMode mode;
   final int teamSize;
-  GamePage(this.mode, {this.teamSize});
+  final bool friendlyFire;
+  GamePage(this.mode, {this.teamSize = 0, this.friendlyFire = false});
 
   @override
   _GamePageState createState() => _GamePageState();
@@ -41,7 +42,8 @@ class _GamePageState extends State<GamePage> {
     );
 
     // Initialize game variable
-    game = XeonjiaGame(widget.mode, teamSize: widget.teamSize);
+    game = XeonjiaGame(widget.mode,
+        teamSize: widget.teamSize, friendlyFire: widget.friendlyFire);
 
     // Manage gestures input
     Offset panGestureOffset;
@@ -175,7 +177,7 @@ class _GamePageState extends State<GamePage> {
                           playerOne.selectedWeapon.shoot(shooter: playerOne);
                         },
                         splashColor: Colors.lightBlue[700],
-                        child: Text(
+                        child: const Text(
                           'Punch!',
                           style: TextStyle(fontSize: kTextFontSize),
                         ),

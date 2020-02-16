@@ -24,22 +24,20 @@ class CharacterComponent extends DynamicComponent {
   // Initial life points
   double initialLifePoints;
 
-  // Team id, used only in multi-player matches
-  int team;
-
   // Create character from input details
   CharacterComponent(
     tile, {
     bool isPlayerOne = false,
     int level = 0,
     Map<String, dynamic> jsonWeaponList = const {'0': 0, '1': 0},
-    this.team = 0,
+    team = 0,
   })  : initialLifePoints = (100 + 5 * level).toDouble(),
         super(tile.x, tile.y,
             'character-${int.parse(tile.properties['orientation'] ?? '1')}.png') {
     orientation = int.parse(tile.properties['orientation'] ?? '1');
     atk = (level + 1).toDouble();
     def = (level ~/ 5).toDouble();
+    this.team = team;
     jsonWeaponList.forEach((weaponId, weaponLevel) {
       switch (int.parse(weaponId)) {
         case 0:

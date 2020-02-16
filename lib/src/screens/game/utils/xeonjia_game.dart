@@ -35,6 +35,12 @@ class XeonjiaGame extends BaseGame {
   // Game mode
   final GameMode mode;
 
+  // Number of players for each team
+  final int teamSize;
+
+  // If true, players can hit their teammates
+  final bool friendlyFire;
+
   // Game start date
   double startDate;
 
@@ -51,16 +57,13 @@ class XeonjiaGame extends BaseGame {
   // List of CharacterComponent in game
   List<CharacterComponent> players = [];
 
-  // Number of players for each team
-  int teamSize;
-
   // List of teams
   final List<Team> teams = [
     Team(id: 0, name: 'Team A', color: Colors.red),
     Team(id: 1, name: 'Team B', color: Colors.blue)
   ];
 
-  XeonjiaGame(this.mode, {this.teamSize}) {
+  XeonjiaGame(this.mode, {this.teamSize = 0, this.friendlyFire = false}) {
     initialize();
   }
 

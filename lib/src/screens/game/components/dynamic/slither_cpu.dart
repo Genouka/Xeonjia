@@ -2,6 +2,7 @@ import 'package:xeonjia/src/screens/game/components/abstract_dynamic.dart';
 
 // Basic CPU controlled enemy that slides on ice
 class SlitherCpuComponent extends DynamicComponent {
+  int team = -2;
   SlitherCpuComponent(tile) : super.fromTile(tile);
 
   @override

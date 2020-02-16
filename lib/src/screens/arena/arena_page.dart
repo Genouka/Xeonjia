@@ -12,8 +12,9 @@ class ArenaPage extends StatefulWidget {
 }
 
 class _ArenaPageState extends State<ArenaPage> {
-  int _teamSize = 3;
   GameMode _mode = GameMode.tdm;
+  int _teamSize = 3;
+  bool _friendlyFire = false;
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -68,12 +69,29 @@ class _ArenaPageState extends State<ArenaPage> {
                             ))
                     .toList(),
               )),
+          CheckboxListTile(
+              title: const Text(
+                'Friendly Fire',
+                style: TextStyle(
+                  fontSize: kTextFontSize,
+                ),
+              ),
+              activeColor: Colors.blueGrey,
+              subtitle: const Text(
+                  'If enabled, players can hit their teammates'),
+              value: _friendlyFire,
+              onChanged: (_newValue) {
+                setState(() {
+                  _friendlyFire = _newValue;
+                });
+              }),
         ]),
         floatingActionButton: Hero(
           tag: 'Play',
           child: PlayButton(
             mode: _mode,
             teamSize: _teamSize,
+            friendlyFire: _friendlyFire,
             gradient: false,
           ),
         ),
