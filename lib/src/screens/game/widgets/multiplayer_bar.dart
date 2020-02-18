@@ -37,25 +37,42 @@ class _MultiplayerBarState extends State<MultiplayerBar> {
     startTimer();
   }
 
-  Widget build(BuildContext context) => Row(children: [
+  Widget build(BuildContext context) {
+    int _firstTeamPoints = game.teams.first.points;
+    int _lastTeamPoints = game.teams.last.points;
+    return Row(children: [
+      if (_firstTeamPoints != 0 || _firstTeamPoints == _lastTeamPoints)
         Expanded(
+            flex: _firstTeamPoints + 1,
             child: Container(
-          child: Center(child: Text(game.teams.first.points.toString())),
-          decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(40)),
-              border: Border.all(color: game.teams.first.color)),
-        )),
+              child: Center(
+                  child: Text(
+                _firstTeamPoints.toString(),
+                style: TextStyle(fontSize: 18),
+              )),
+              color: game.teams.first.color.withOpacity(0.4),
+            )),
+      if (_lastTeamPoints != 0 || _firstTeamPoints == _lastTeamPoints)
         Expanded(
-            child:
-                Container(child: Center(child: Text((remaining.toString()))))),
-        Expanded(
+            flex: _firstTeamPoints + 1,
             child: Container(
-          child: Center(child: Text(game.teams.last.points.toString())),
-          decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(40)),
-              border: Border.all(color: game.teams.last.color)),
-        )),
-      ]);
+              child: Center(
+                  child: Text(
+                _lastTeamPoints.toString(),
+                style: TextStyle(fontSize: 18),
+              )),
+              color: game.teams.last.color.withOpacity(0.4),
+            )),
+      SizedBox(
+          width: 50,
+          child: Container(
+            child: Center(
+                child:
+                    Text(remaining.toString(), style: TextStyle(fontSize: 18))),
+            color: Colors.white.withOpacity(0.4),
+          )),
+    ]);
+  }
 
   @override
   void dispose() {
