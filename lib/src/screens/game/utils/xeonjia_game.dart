@@ -66,7 +66,7 @@ class XeonjiaGame extends BaseGame {
   // List of teams
   final List<Team> teams = [
     Team(id: 0, name: 'Team A', color: Colors.red),
-    Team(id: 1, name: 'Team B', color: Colors.blue)
+    Team(id: 1, name: 'Team B', color: Colors.green)
   ];
 
   XeonjiaGame(this.mode,

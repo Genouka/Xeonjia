@@ -61,7 +61,7 @@ class ModifierComponent extends BasicComponent {
       componentAbove.poisonQuantity += _poisonDelta;
       componentAbove.earnedMoney += _moneyDelta;
       componentAbove.selectedWeapon.powerPoints += _powerPointsDelta;
-      if (_moneyDelta != 0) {
+      if (_moneyDelta != 0 && componentAbove == playerOne) {
         Toast.show('+ $_moneyDelta \$', gameContext, duration: 1);
       }
       if (_doorId != -1) {

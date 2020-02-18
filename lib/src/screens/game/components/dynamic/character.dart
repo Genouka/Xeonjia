@@ -133,8 +133,8 @@ class CharacterComponent extends DynamicComponent {
   // Shot done if this is controlled by CPU
   void _cpuShoot() {
     if (Random().nextDouble() > 0.98) {
+      if (Random().nextDouble() > 0.6) nextWeapon();
       selectedWeapon.shoot(shooter: this);
-      if (selectedWeapon.powerPoints == 0) nextWeapon();
     }
   }
 }

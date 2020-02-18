@@ -109,8 +109,7 @@ abstract class BasicComponent extends SpriteComponent {
         delete();
         if (team == (cause?.team ?? -99)) {
           cause?.points -= 100;
-        }
-        else if (this is! BasicStaticComponent) {
+        } else if (this is! BasicStaticComponent) {
           cause?.killedEnemies++;
           cause?.experiencePoints += level;
           if (this is CharacterComponent) {

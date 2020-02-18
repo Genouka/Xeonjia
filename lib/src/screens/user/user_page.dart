@@ -72,7 +72,7 @@ class _UserPageState extends State<UserPage> {
                                 showCursor: false,
                                 autocorrect: false,
                                 textAlign: TextAlign.center,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: kTextFontSize,
                                     color: Colors.white),
                                 onSubmitted: (text) {
