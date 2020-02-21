@@ -64,10 +64,11 @@ abstract class BasicComponent extends SpriteComponent {
   // Mainly used for weapon shot
   BasicComponent father;
 
-  // Team id
+  // This component's team
   // It is used to avoid friendly fire among components of the same species
   // It is also used in multi-player matches to manage team membership
-  int team = -1;
+  int teamId = -1;
+  Team get team => game.teams.firstWhere((team) => team.id == teamId);
 
   BasicComponent.fromTile(Tile tile)
       : startX = tile.x,
@@ -101,15 +102,19 @@ abstract class BasicComponent extends SpriteComponent {
   // Function used to change life points
   void lifePointsDifference(double difference,
       {BasicComponent cause, double poison = 0}) {
-    if (game.friendlyFire || team != (cause?.team ?? -99)) {
+    if (game.friendlyFire || teamId != (cause?.teamId ?? -99)) {
       _lifePoints += difference < 0 ? difference + def : difference;
       poisonQuantity += poison;
       updateLpBar();
       if (_lifePoints <= 0) {
         delete();
-        if (team == (cause?.team ?? -99)) {
-          cause?.points -= 100;
+        if (teamId == (cause?.teamId ?? -99)) {
+          // Teammate killed
+          game.teams.forEach((team) {
+            if (team.id != teamId) team.basisPoints += 10;
+          });
         } else if (this is! BasicStaticComponent) {
+          // Enemy killed
           cause?.killedEnemies++;
           cause?.experiencePoints += level;
           if (this is CharacterComponent) {

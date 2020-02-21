@@ -2,7 +2,7 @@ import 'package:xeonjia/src/screens/game/components/abstract_dynamic.dart';
 
 // CPU controlled enemy. This component doesn't swipe on ice
 class WalkerCpuComponent extends DynamicComponent {
-  int team = -3;
+  int teamId = -3;
   WalkerCpuComponent(tile) : super.fromTile(tile);
 
   @override

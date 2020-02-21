@@ -39,7 +39,7 @@ class CharacterComponent extends DynamicComponent {
     orientation = int.parse(tile.properties['orientation'] ?? '1');
     atk = (level + 1).toDouble();
     def = (level ~/ 5).toDouble();
-    this.team = team;
+    teamId = team;
     jsonWeaponList.forEach((weaponId, weaponLevel) {
       switch (int.parse(weaponId)) {
         case 0:

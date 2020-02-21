@@ -201,8 +201,7 @@ class XeonjiaGame extends BaseGame {
   // Update camera position
   void updateCamera(double x, double y) {
     // Update x position
-    if (x <= screenWidth / 2 ||
-        screenWidth > componentSize * mapWidth) {
+    if (x <= screenWidth / 2 || screenWidth > componentSize * mapWidth) {
       game.camera.x = 0.0;
     } else if (x > componentSize * mapWidth - screenWidth / 2) {
       game.camera.x = componentSize * mapWidth - screenWidth;
@@ -280,15 +279,18 @@ class Team {
 
   // Team members
   List<CharacterComponent> get members =>
-      game.players.where((player) => player.team == id).toList();
+      game.players.where((player) => player.teamId == id).toList();
 
-  // Team points
+  // Team points acquired by friendly fire kills
+  int basisPoints = 0;
+
+  // Team points (basePoints + players points)
   int get points {
     int _points = 0;
     members.forEach((member) {
       _points += member.points;
     });
-    return _points;
+    return _points + basisPoints;
   }
 
   Team({@required this.id, this.name = 'Team', this.color = Colors.blue});

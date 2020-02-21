@@ -40,29 +40,33 @@ class _MultiplayerBarState extends State<MultiplayerBar> {
   Widget build(BuildContext context) {
     int _firstTeamPoints = game.teams.first.points;
     int _lastTeamPoints = game.teams.last.points;
+    int _firstFlex = _firstTeamPoints;
+    int _lastFlex = _lastTeamPoints;
+    if (_firstTeamPoints == 0 && _lastTeamPoints == 0) {
+      _firstFlex = _lastFlex = 1;
+    }
+
     return Row(children: [
-      if (_firstTeamPoints != 0 || _firstTeamPoints == _lastTeamPoints)
-        Expanded(
-            flex: _firstTeamPoints + 1,
-            child: Container(
-              child: Center(
-                  child: Text(
-                _firstTeamPoints.toString(),
-                style: TextStyle(fontSize: 18),
-              )),
-              color: game.teams.first.color.withOpacity(0.4),
+      Expanded(
+          flex: _firstFlex,
+          child: Container(
+            child: Center(
+                child: Text(
+              _firstTeamPoints.toString(),
+              style: TextStyle(fontSize: 18),
             )),
-      if (_lastTeamPoints != 0 || _firstTeamPoints == _lastTeamPoints)
-        Expanded(
-            flex: _firstTeamPoints + 1,
-            child: Container(
-              child: Center(
-                  child: Text(
-                _lastTeamPoints.toString(),
-                style: TextStyle(fontSize: 18),
-              )),
-              color: game.teams.last.color.withOpacity(0.4),
+            color: game.teams.first.color.withOpacity(0.4),
+          )),
+      Expanded(
+          flex: _lastFlex,
+          child: Container(
+            child: Center(
+                child: Text(
+              _lastTeamPoints.toString(),
+              style: TextStyle(fontSize: 18),
             )),
+            color: game.teams.last.color.withOpacity(0.4),
+          )),
       SizedBox(
           width: 50,
           child: Container(

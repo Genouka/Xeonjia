@@ -169,7 +169,7 @@ void parseMapTiles(var xmlElement) {
                     gravity: (lineCount < 5) ? 0 : 2);
               } else if (game.mode == GameMode.tdm) {
                 int _team = int.parse(componentTile.properties['team'] ?? '0');
-                if (game.players.where((p) => p.team == _team).length <
+                if (game.players.where((p) => p.teamId == _team).length <
                     game.teamSize) {
                   CharacterComponent(
                     componentTile,

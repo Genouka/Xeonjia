@@ -53,7 +53,7 @@ class ModifierComponent extends BasicComponent {
   @override
   void overlappedBy(BasicComponent componentAbove) {
     if (componentAbove is CharacterComponent &&
-        (game.friendlyFire || (father?.team ?? -99) != componentAbove.team)) {
+        (game.friendlyFire || (father?.teamId ?? -99) != componentAbove.teamId)) {
       componentAbove.lifePointsDifference(_lifePointsDiff,
           cause: father ?? this);
       componentAbove.atk += _atkDelta;
