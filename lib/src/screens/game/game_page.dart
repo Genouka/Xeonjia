@@ -104,7 +104,7 @@ class _GamePageState extends State<GamePage> {
                               color: Colors.white,
                               child: IconButton(
                                 onPressed: () {
-                                  _pauseDialog(context, mode: 2);
+                                  _pauseDialog(context, dialogMode: 2);
                                 },
                                 icon: Icon(Icons.close),
                                 color: Colors.black,
@@ -116,7 +116,7 @@ class _GamePageState extends State<GamePage> {
                               color: Colors.white,
                               child: IconButton(
                                 onPressed: () {
-                                  _pauseDialog(context, mode: 0);
+                                  _pauseDialog(context, dialogMode: 0);
                                 },
                                 icon: Icon(Icons.pause),
                                 color: Colors.black,
@@ -198,15 +198,17 @@ class _GamePageState extends State<GamePage> {
             ),
           ),
         ),
-        onWillPop: () => _pauseDialog(context, mode: 2));
+        onWillPop: () => _pauseDialog(context, dialogMode: 2));
   }
 
   // Return a string that contains pause dialog texts
   List<Map<String, String>> _pauseDialogStringsListGenerator() => [
         // Pause (mode == 0)
         {
-          'title':
-              'Pause - Room ${mainCharacter.visitedRooms.last.toString().padLeft(3, '0')}',
+          'title': 'Pause - ' +
+              (game.mode == GameMode.story
+                  ? 'Room ${mainCharacter.visitedRooms.last.toString().padLeft(3, '0')}'
+                  : modeNames[game.mode]),
           'text': '''
           \n • Moves: ${playerOne.movesCounter.toString()}
           \n • Minutes played: ${((game.currentTime() - game.startDate) / 60).round()}
@@ -214,8 +216,10 @@ class _GamePageState extends State<GamePage> {
           \n • Lifepoints: ${playerOne.lifePoints.round().toString()}
           \n • Poison quantity: ${playerOne.poisonQuantity.round().toString()}
           \n • Enemies killed: ${playerOne.killedEnemies.toString()}
-          \n • Exp gained: ${playerOne.experiencePoints.toString()}
-          ''',
+          ''' +
+              (game.mode == GameMode.story
+                  ? '\n • Exp gained: ${playerOne.experiencePoints.toString()}'
+                  : '\n • Your points: ${playerOne.points.toString()}'),
         },
         // Restart (mode == 1)
         {
@@ -234,7 +238,7 @@ class _GamePageState extends State<GamePage> {
   // If mode == 0 -> pause menu
   // If mode == 1 -> restart menu
   // If mode == 2 -> exit menu
-  Future<bool> _pauseDialog(BuildContext context, {@required int mode}) {
+  Future<bool> _pauseDialog(BuildContext context, {@required int dialogMode}) {
     game.pause = true;
     return showDialog(
         barrierDismissible: false,
@@ -246,28 +250,28 @@ class _GamePageState extends State<GamePage> {
               return WillPopScope(
                   onWillPop: () => null,
                   child: AlertDialog(
-                    title: Text(pauseDialogModeList[mode]['title']),
-                    content: Text(pauseDialogModeList[mode]['text']),
+                    title: Text(pauseDialogModeList[dialogMode]['title']),
+                    content: Text(pauseDialogModeList[dialogMode]['text']),
                     actions: <Widget>[
-                      mode == 0
+                      dialogMode == 0
                           ? FlatButton(
                               child: const Text('Restart'),
                               onPressed: () {
                                 setState(() {
-                                  mode = 1;
+                                  dialogMode = 1;
                                 });
                               })
                           : null,
-                      mode == 0
+                      dialogMode == 0
                           ? FlatButton(
                               child: const Text('Exit'),
                               onPressed: () {
                                 setState(() {
-                                  mode = 2;
+                                  dialogMode = 2;
                                 });
                               })
                           : null,
-                      mode == 0
+                      dialogMode == 0
                           ? FlatButton(
                               child: const Text('Close'),
                               onPressed: () {
@@ -275,11 +279,11 @@ class _GamePageState extends State<GamePage> {
                                 game.pause = false;
                               })
                           : null,
-                      mode != 0
+                      dialogMode != 0
                           ? FlatButton(
                               child: const Text('Yes'),
                               onPressed: () {
-                                if (mode == 1) {
+                                if (dialogMode == 1) {
                                   game.initialize();
                                 } else {
                                   Navigator.pop(context);
@@ -288,7 +292,7 @@ class _GamePageState extends State<GamePage> {
                                 Navigator.of(context).pop(true);
                               })
                           : null,
-                      mode != 0
+                      dialogMode != 0
                           ? FlatButton(
                               child: const Text('No'),
                               onPressed: () {
