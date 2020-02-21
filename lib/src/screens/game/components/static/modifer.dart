@@ -43,7 +43,7 @@ class ModifierComponent extends BasicComponent {
   // Constructor used for mine weapon shots
   ModifierComponent.mine(
       double _startX, double _startY, this.father, double _atk)
-      : super(_startX, _startY, 'mine.png') {
+      : super(_startX, _startY, 'mine_${father.teamId}.png') {
     _lifePointsDiff = -_atk;
   }
 
@@ -53,7 +53,8 @@ class ModifierComponent extends BasicComponent {
   @override
   void overlappedBy(BasicComponent componentAbove) {
     if (componentAbove is CharacterComponent &&
-        (game.friendlyFire || (father?.teamId ?? -99) != componentAbove.teamId)) {
+        (game.friendlyFire ||
+            (father?.teamId ?? -99) != componentAbove.teamId)) {
       componentAbove.lifePointsDifference(_lifePointsDiff,
           cause: father ?? this);
       componentAbove.atk += _atkDelta;

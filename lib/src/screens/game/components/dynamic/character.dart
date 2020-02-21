@@ -34,8 +34,11 @@ class CharacterComponent extends DynamicComponent {
     Map<String, dynamic> jsonWeaponList = const {'1': 5, '2': 5},
     team = 0,
   })  : initialLifePoints = (100 + 5 * level).toDouble(),
-        super(tile.x, tile.y,
-            'character-${int.parse(tile.properties['orientation'] ?? '1')}.png') {
+        super(
+            tile.x,
+            tile.y,
+            (isPlayerOne ? '' : ('cpu${team}_')) +
+                'character-${int.parse(tile.properties['orientation'] ?? '1')}.png') {
     orientation = int.parse(tile.properties['orientation'] ?? '1');
     atk = (level + 1).toDouble();
     def = (level ~/ 5).toDouble();
