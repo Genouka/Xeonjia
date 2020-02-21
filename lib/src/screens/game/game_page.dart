@@ -21,6 +21,9 @@ BuildContext gameContext;
 // Width of the buttons beside weaponBar
 const double _bottomBarButtonWidth = 50;
 
+// True if weapon buttons (change weapon and shot) should be displayed
+bool _weaponButtonVisibility;
+
 class GamePage extends StatefulWidget {
   final GameMode mode;
   final int teamSize;
@@ -34,6 +37,10 @@ class GamePage extends StatefulWidget {
 class _GamePageState extends State<GamePage> {
   @override
   void initState() {
+    _weaponButtonVisibility = (widget.mode == GameMode.story)
+        ? _weaponButtonVisibility = mainCharacter.jsonWeaponList.length > 1
+        : true;
+
     // Initialize top and bottom bars
     lifePointsBar = LinearPercentIndicator(
       width: screenWidth - 2 * _bottomBarButtonWidth,
