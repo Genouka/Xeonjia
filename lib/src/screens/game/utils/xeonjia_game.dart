@@ -60,6 +60,9 @@ class XeonjiaGame extends BaseGame {
   int mapHeight;
   int mapWidth;
 
+  // Screen height minus points bar
+  double fixedScreenHeight;
+
   // List of CharacterComponent in game
   List<CharacterComponent> players = [];
 
@@ -74,6 +77,7 @@ class XeonjiaGame extends BaseGame {
       this.friendlyFire = false,
       this.maxPoints = 1500,
       this.maxTime = 180}) {
+    fixedScreenHeight = screenHeight - (mode != GameMode.story ? 40 : 0);
     initialize();
   }
 
@@ -168,7 +172,7 @@ class XeonjiaGame extends BaseGame {
     if (pause || position.dy < 40) return;
 
     // Do not update orientation if tapping on bottom bar
-    if (position.dy <= screenDimensions.height + 40) {
+    if (position.dy <= fixedScreenHeight + 40) {
       double _relativeTapX =
           position.dx - (playerOne.x + componentSize / 2 - camera.x);
       double _relativeTapY =
@@ -176,10 +180,10 @@ class XeonjiaGame extends BaseGame {
 
       // Update character orientation
       if (position.dx < componentSize ||
-          position.dx > screenDimensions.width - componentSize) {
+          position.dx > screenWidth - componentSize) {
         playerOne.updateOrientation(position.dx - componentSize, 0);
       } else if (position.dy - 40 < componentSize ||
-          position.dy > screenDimensions.height - componentSize) {
+          position.dy > fixedScreenHeight - componentSize) {
         playerOne.updateOrientation(0, position.dy - 40 - componentSize);
       } else if (_relativeTapX.abs() > 15 || _relativeTapY.abs() > 15) {
         if (_relativeTapX.abs() > _relativeTapY.abs()) {
@@ -197,22 +201,22 @@ class XeonjiaGame extends BaseGame {
   // Update camera position
   void updateCamera(double x, double y) {
     // Update x position
-    if (x <= screenDimensions.width / 2 ||
-        screenDimensions.width > componentSize * mapWidth) {
+    if (x <= screenWidth / 2 ||
+        screenWidth > componentSize * mapWidth) {
       game.camera.x = 0.0;
-    } else if (x > componentSize * mapWidth - screenDimensions.width / 2) {
-      game.camera.x = componentSize * mapWidth - screenDimensions.width;
+    } else if (x > componentSize * mapWidth - screenWidth / 2) {
+      game.camera.x = componentSize * mapWidth - screenWidth;
     } else {
-      game.camera.x = x - screenDimensions.width / 2;
+      game.camera.x = x - screenWidth / 2;
     }
     // Update y position
-    if (y <= screenDimensions.height / 2 ||
-        screenDimensions.height > componentSize * mapHeight) {
+    if (y <= fixedScreenHeight / 2 ||
+        fixedScreenHeight > componentSize * mapHeight) {
       game.camera.y = 0.0;
-    } else if (y > componentSize * mapHeight - screenDimensions.height / 2) {
-      game.camera.y = componentSize * mapHeight - screenDimensions.height;
+    } else if (y > componentSize * mapHeight - fixedScreenHeight / 2) {
+      game.camera.y = componentSize * mapHeight - fixedScreenHeight;
     } else {
-      game.camera.y = y - screenDimensions.height / 2;
+      game.camera.y = y - fixedScreenHeight / 2;
     }
   }
 

@@ -36,10 +36,10 @@ class _GamePageState extends State<GamePage> {
   void initState() {
     // Initialize top and bottom bars
     lifePointsBar = LinearPercentIndicator(
-      width: screenDimensions.width - 2 * _bottomBarButtonWidth,
+      width: screenWidth - 2 * _bottomBarButtonWidth,
     );
     weaponBar = LinearPercentIndicator(
-      width: screenDimensions.width - 2 * _bottomBarButtonWidth,
+      width: screenWidth - 2 * _bottomBarButtonWidth,
     );
 
     // Initialize game variable
@@ -128,7 +128,7 @@ class _GamePageState extends State<GamePage> {
                       if (settings.inputMethod == 1) FloatingGamepad(),
                     ])),
               ),
-              bottomNavigationBar: mainCharacter.jsonWeaponList.length > 1
+              bottomNavigationBar: _weaponButtonVisibility
                   ? SizedBox(
                       height: 40,
                       child: Row(children: [

@@ -10,7 +10,8 @@ const String appVersion = '1.0.1';
 const double kTextFontSize = 20;
 
 // Screen dimensions
-Size screenDimensions;
+double screenWidth;
+double screenHeight;
 
 // Stored app settings
 AppSettings settings = AppSettings({});
