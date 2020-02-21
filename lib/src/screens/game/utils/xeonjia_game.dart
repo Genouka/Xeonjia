@@ -72,6 +72,13 @@ class XeonjiaGame extends BaseGame {
     Team(id: 1, name: 'Team B', color: Colors.green)
   ];
 
+  // List of teams sorted by points
+  List<Team> get ranking {
+    var list = List.from(teams).cast<Team>();
+    list.sort((a, b) => b.points.compareTo(a.points));
+    return list;
+  }
+
   XeonjiaGame(this.mode,
       {this.teamSize = 0,
       this.friendlyFire = false,
@@ -221,28 +228,45 @@ class XeonjiaGame extends BaseGame {
     }
   }
 
-  // End game, function called if player one lose
-  void end() {
+  // End of the game
+  void end({bool timeOut = false}) {
     pause = true;
-    mainCharacter.minutesPlayed += (game.currentTime() - game.startDate) / 60;
-    mainCharacter.movesCounter += playerOne.movesCounter;
-    ++mainCharacter.deathCounter;
-    mainCharacter.money -= mainCharacter.visitedRooms.last * 10;
-    if (mainCharacter.money < 0) mainCharacter.money = 0;
-    saveUserData();
-    endDialog();
+    if (mode == GameMode.story) {
+      mainCharacter.minutesPlayed += (game.currentTime() - game.startDate) / 60;
+      mainCharacter.movesCounter += playerOne.movesCounter;
+      ++mainCharacter.deathCounter;
+      mainCharacter.money -= mainCharacter.visitedRooms.last * 10;
+      if (mainCharacter.money < 0) mainCharacter.money = 0;
+      saveUserData();
+    }
+    endDialog(timeOut: timeOut);
   }
 
-  // Dialog displayed if player one loose
-  void endDialog() {
+  // Dialog displayed when the game ends
+  void endDialog({bool timeOut}) {
+    String title = '';
+    String content = '';
+    if (mode == GameMode.story) {
+      title = 'You have been deleted';
+    } else {
+      title = 'Your team ' +
+          (ranking.first.id == playerOne.teamId ? 'won' : 'lost');
+      if (timeOut) {
+        content = 'The time is over.';
+      } else {
+        content = '${game.maxPoints.toString()} points have been achieved.';
+      }
+    }
+    content += '\n\nDo you want to restart this game?';
+
     showDialog(
         context: gameContext,
         barrierDismissible: false,
         builder: (BuildContext context) => WillPopScope(
             onWillPop: () => null,
             child: AlertDialog(
-              title: const Text('You have been deleted'),
-              content: const Text('Do you want to restart this game?'),
+              title: Text(title),
+              content: Text(content),
               actions: <Widget>[
                 FlatButton(
                   child: const Text('Yes'),

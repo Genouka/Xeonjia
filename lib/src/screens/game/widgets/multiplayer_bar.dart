@@ -29,15 +29,16 @@ class _MultiplayerBarState extends State<MultiplayerBar> {
     if (mounted) setState(() {});
     _startTimer();
   }
+
   void _startTimer() {
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
       if ((game?.pause ?? true) || !mounted) return;
       setState(() {
         if (--_remaining <= 0) {
           _timer.cancel();
-          game.end(); // It shouldn't be here
-        } else if (game.teams.first.points > game.maxPoints ||
-            game.teams.last.points > game.maxPoints) {
+          game.end(timeOut: true); // It shouldn't be here
+        } else if (game.teams.first.points >= game.maxPoints ||
+            game.teams.last.points >= game.maxPoints) {
           game.end();
         }
       });
