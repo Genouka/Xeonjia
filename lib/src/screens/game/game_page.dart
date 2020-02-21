@@ -216,14 +216,16 @@ class _GamePageState extends State<GamePage> {
           'text': '''
           \n • Moves: ${playerOne.movesCounter.toString()}
           \n • Minutes played: ${((game.currentTime() - game.startDate) / 60).round()}
-          \n • Money earned: ${playerOne.earnedMoney.toString()}
           \n • Lifepoints: ${playerOne.lifePoints.round().toString()}
           \n • Poison quantity: ${playerOne.poisonQuantity.round().toString()}
           \n • Enemies killed: ${playerOne.killedEnemies.toString()}
           ''' +
               (game.mode == GameMode.story
-                  ? '\n • Exp gained: ${playerOne.experiencePoints.toString()}'
-                  : '\n • Your points: ${playerOne.points.toString()}'),
+                  ? '\n • Money earned: ${playerOne.earnedMoney.toString()}'
+                  : '\n • Deaths: ${playerOne.deaths.toString()}') +
+              (game.mode == GameMode.story
+                  ? '\n\n • Exp gained: ${playerOne.experiencePoints.toString()}'
+                  : '\n\n • Your points: ${playerOne.points.toString()}'),
         },
         // Restart (mode == 1)
         {
