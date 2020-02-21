@@ -14,13 +14,26 @@ class MultiplayerBar extends StatefulWidget {
 
 class _MultiplayerBarState extends State<MultiplayerBar> {
   Timer _timer;
-  int remaining = game.maxTime;
+  int _remaining;
 
-  void startTimer() {
+  @override
+  void initState() {
+    super.initState();
+    start();
+  }
+
+  // Start widget
+  void start() {
+    _timer?.cancel();
+    _remaining = game?.maxTime ?? 100;
+    if (mounted) setState(() {});
+    _startTimer();
+  }
+  void _startTimer() {
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
-      if (game?.pause ?? true) return;
+      if ((game?.pause ?? true) || !mounted) return;
       setState(() {
-        if (--remaining <= 0) {
+        if (--_remaining <= 0) {
           _timer.cancel();
           game.end(); // It shouldn't be here
         } else if (game.teams.first.points > game.maxPoints ||
@@ -29,12 +42,6 @@ class _MultiplayerBarState extends State<MultiplayerBar> {
         }
       });
     });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    startTimer();
   }
 
   Widget build(BuildContext context) {
@@ -71,8 +78,8 @@ class _MultiplayerBarState extends State<MultiplayerBar> {
           width: 50,
           child: Container(
             child: Center(
-                child:
-                    Text(remaining.toString(), style: TextStyle(fontSize: 18))),
+                child: Text(_remaining.toString(),
+                    style: TextStyle(fontSize: 18))),
             color: Colors.white.withOpacity(0.4),
           )),
     ]);

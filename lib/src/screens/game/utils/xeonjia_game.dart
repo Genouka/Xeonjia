@@ -95,6 +95,8 @@ class XeonjiaGame extends BaseGame {
       (component as BasicComponent).remove = true;
     });
     playerOne = null;
+    players.clear();
+    multiplayerBar?.state?.start();
 
     // Import map and components
     String _map = (mode == GameMode.story)

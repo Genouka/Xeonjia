@@ -15,6 +15,8 @@ LinearPercentIndicator lifePointsBar;
 // Bottom bar percent indicator that shows active weapon details
 LinearPercentIndicator weaponBar;
 
+MultiplayerBar multiplayerBar;
+
 // BuildContext of GamePage
 BuildContext gameContext;
 
@@ -37,10 +39,6 @@ class GamePage extends StatefulWidget {
 class _GamePageState extends State<GamePage> {
   @override
   void initState() {
-    _weaponButtonVisibility = (widget.mode == GameMode.story)
-        ? _weaponButtonVisibility = mainCharacter.jsonWeaponList.length > 1
-        : true;
-
     // Initialize top and bottom bars
     lifePointsBar = LinearPercentIndicator(
       width: screenWidth - 2 * _bottomBarButtonWidth,
@@ -48,6 +46,12 @@ class _GamePageState extends State<GamePage> {
     weaponBar = LinearPercentIndicator(
       width: screenWidth - 2 * _bottomBarButtonWidth,
     );
+    if (widget.mode == GameMode.story) {
+      _weaponButtonVisibility = mainCharacter.jsonWeaponList.length > 1;
+    } else {
+      _weaponButtonVisibility = true;
+      multiplayerBar = MultiplayerBar();
+    }
 
     // Initialize game variable
     game = XeonjiaGame(widget.mode,
@@ -124,7 +128,7 @@ class _GamePageState extends State<GamePage> {
                               )),
                         ])),
                     if (game.mode != GameMode.story)
-                      SizedBox(height: 40, child: MultiplayerBar()),
+                      SizedBox(height: 40, child: multiplayerBar),
                   ])),
               body: Hero(
                 tag: 'Play',
