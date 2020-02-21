@@ -171,8 +171,8 @@ class XeonjiaGame extends BaseGame {
     // Do nothing if pause or if tapping on top bar
     if (pause || position.dy < 40) return;
 
-    // Do not update orientation if tapping on bottom bar
-    if (position.dy <= fixedScreenHeight + 40) {
+    // Update orientation if not tapping on bottom bar
+    if (position.dy <= fixedScreenHeight + (mode != GameMode.story ? 80 : 40)) {
       double _relativeTapX =
           position.dx - (playerOne.x + componentSize / 2 - camera.x);
       double _relativeTapY =
