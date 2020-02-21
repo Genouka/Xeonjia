@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
+import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/screens/home/resources/page_list.dart';
 import 'package:xeonjia/src/screens/user/user_page.dart';
 import 'package:xeonjia/src/util/utils.dart';
@@ -77,7 +78,7 @@ class HomePage extends StatelessWidget {
       floatingActionButton: Hero(
         tag: 'Play',
         child: PlayButton(
-          mode: GameMode.story,
+          page: GamePage(GameMode.story),
           gradient: true,
         ),
       ),

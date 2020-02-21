@@ -29,8 +29,16 @@ bool _weaponButtonVisibility;
 class GamePage extends StatefulWidget {
   final GameMode mode;
   final int teamSize;
+  final int maxTime;
+  final int maxPoints;
+  final int mapId;
   final bool friendlyFire;
-  GamePage(this.mode, {this.teamSize = 0, this.friendlyFire = false});
+  GamePage(this.mode,
+      {this.teamSize = 0,
+      this.maxTime = 0,
+      this.maxPoints = 0,
+      this.mapId = 0,
+      this.friendlyFire = false});
 
   @override
   _GamePageState createState() => _GamePageState();
@@ -55,7 +63,11 @@ class _GamePageState extends State<GamePage> {
 
     // Initialize game variable
     game = XeonjiaGame(widget.mode,
-        teamSize: widget.teamSize, friendlyFire: widget.friendlyFire);
+        teamSize: widget.teamSize,
+        friendlyFire: widget.friendlyFire,
+        maxTime: widget.maxTime,
+        maxPoints: widget.maxPoints,
+        mapId: widget.mapId);
 
     // Manage gestures input
     Offset panGestureOffset;

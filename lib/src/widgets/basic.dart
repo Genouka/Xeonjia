@@ -6,18 +6,12 @@ import 'package:xeonjia/src/screens/game/game_page.dart';
 // Floating "PLAY" button
 // Used for single and multi-player mode
 class PlayButton extends StatelessWidget {
-  final GameMode mode;
-  final int teamSize;
-  final bool friendlyFire;
+  final GamePage page;
 
   // Gradient color
   final bool gradient;
 
-  PlayButton(
-      {@required this.mode,
-      this.teamSize = 0,
-      this.friendlyFire = false,
-      @required this.gradient});
+  PlayButton({@required this.page, @required this.gradient});
 
   static const BorderRadius fabBorderRadius =
       BorderRadius.all(Radius.circular(30));
@@ -40,11 +34,7 @@ class PlayButton extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            FadeRoute(GamePage(
-              mode,
-              teamSize: teamSize,
-              friendlyFire: friendlyFire,
-            )),
+            FadeRoute(page),
           );
         },
       ),

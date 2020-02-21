@@ -44,8 +44,11 @@ class XeonjiaGame extends BaseGame {
   // Points required to win in multi-player
   final int maxPoints;
 
-  // Max game time in multi-player mode
+  // Max game time in multi-player mode (seconds)
   final int maxTime;
+
+  // Map to load if mode != story
+  final int mapId;
 
   // Game start date
   double startDate;
@@ -83,7 +86,8 @@ class XeonjiaGame extends BaseGame {
       {this.teamSize = 0,
       this.friendlyFire = false,
       this.maxPoints = 1500,
-      this.maxTime = 180}) {
+      this.maxTime = 180,
+      this.mapId = 0}) {
     fixedScreenHeight = screenHeight - (mode != GameMode.story ? 40 : 0);
     initialize();
   }
@@ -108,7 +112,7 @@ class XeonjiaGame extends BaseGame {
     // Import map and components
     String _map = (mode == GameMode.story)
         ? mainCharacter.visitedRooms.last.toString().padLeft(3, '0')
-        : 'arena/1';
+        : 'arena/$mapId';
     importMap('assets/maps/' + _map + '.tmx');
 
     // Reset top and bottom bars
