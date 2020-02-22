@@ -3,6 +3,7 @@ import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/src/screens/game/components/abstract_basic.dart';
+import 'package:xeonjia/src/screens/game/components/static/basic_static.dart';
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 
 // Component able to move on the game field
@@ -121,8 +122,10 @@ abstract class DynamicComponent extends BasicComponent {
   // Function called when this component collide another component
   void onCollision() {
     lifePointsDifference(-collidedComponent.atk, cause: collidedComponent);
-    collidedComponent.lifePointsDifference(-atk,
-        cause: this, poison: poisonAtk);
+    if (collidedComponent is! BasicStaticComponent) {
+      collidedComponent.lifePointsDifference(-atk,
+          cause: this, poison: poisonAtk);
+    }
     stop();
   }
 
