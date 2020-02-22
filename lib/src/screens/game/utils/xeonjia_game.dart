@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flame/game.dart';
-import 'package:flutter/gestures.dart';
+import 'package:flame/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -31,7 +31,7 @@ const double updatePeriod = 0.03;
 double defaultDistancePerFrame;
 
 // Xeonjia game class
-class XeonjiaGame extends BaseGame {
+class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
   // Game mode
   final GameMode mode;
 
@@ -172,6 +172,36 @@ class XeonjiaGame extends BaseGame {
 
     // Start a new game
     game.initialize();
+  }
+
+  Offset _panGestureOffset;
+  @override
+  void onPanUpdate(DragUpdateDetails upd) {
+    if (settings.inputMethod == 0 && !pause) {
+      if (upd.delta.dx.abs() > 5 || upd.delta.dy.abs() > 5) {
+        if (upd.delta.dx.abs() > upd.delta.dy.abs()) {
+          _panGestureOffset = Offset(upd.delta.dx, 0);
+        } else {
+          _panGestureOffset = Offset(0, upd.delta.dy);
+        }
+        playerOne?.updateOrientation(
+            _panGestureOffset.dx, _panGestureOffset.dy);
+      }
+    }
+  }
+
+  @override
+  void onPanEnd(DragEndDetails end) {
+    if (settings.inputMethod == 0 && !pause) {
+      gestureDragInput(_panGestureOffset);
+    }
+  }
+
+  @override
+  void onTapDown(TapDownDetails details) {
+    if (settings.inputMethod == 0) {
+      gestureTapInput(details.globalPosition);
+    }
   }
 
   // Manage drag gestures

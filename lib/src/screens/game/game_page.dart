@@ -1,5 +1,3 @@
-import 'package:flame/flame.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
@@ -68,34 +66,6 @@ class _GamePageState extends State<GamePage> {
         maxTime: widget.maxTime,
         maxPoints: widget.maxPoints,
         mapId: widget.mapId);
-
-    // Manage gestures input
-    Offset panGestureOffset;
-    Flame.util.addGestureRecognizer(TapGestureRecognizer()
-      ..onTapDown = (TapDownDetails evt) {
-        if (settings.inputMethod == 0 && game != null) {
-          game.gestureTapInput(evt.globalPosition);
-        }
-      });
-    Flame.util.addGestureRecognizer(PanGestureRecognizer()
-      ..onUpdate = (DragUpdateDetails upd) {
-        if (settings.inputMethod == 0 && !(game?.pause ?? true)) {
-          if (upd.delta.dx.abs() > 5 || upd.delta.dy.abs() > 5) {
-            if (upd.delta.dx.abs() > upd.delta.dy.abs()) {
-              panGestureOffset = Offset(upd.delta.dx, 0);
-            } else {
-              panGestureOffset = Offset(0, upd.delta.dy);
-            }
-            playerOne?.updateOrientation(
-                panGestureOffset.dx, panGestureOffset.dy);
-          }
-        }
-      }
-      ..onEnd = (DragEndDetails end) {
-        if (settings.inputMethod == 0 && !(game?.pause ?? true)) {
-          game?.gestureDragInput(panGestureOffset);
-        }
-      });
 
     super.initState();
   }
