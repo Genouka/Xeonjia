@@ -24,6 +24,11 @@ abstract class Weapon {
   // Number of times a weapon can be used
   double powerPoints = double.infinity;
 
+  // Weapon details
+  String get name => weaponDetails[id]['name'];
+  String get description => weaponDetails[id]['description'];
+  String get prize => weaponDetails[id]['prize'];
+
   Weapon(this.id);
 
   // Set max PP for this level
