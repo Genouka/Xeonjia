@@ -61,7 +61,7 @@ class _MultiplayerBarState extends State<MultiplayerBar> {
             child: Center(
                 child: Text(
               _firstTeamPoints.toString(),
-              style: TextStyle(fontSize: 18),
+              style: const TextStyle(fontSize: 18),
             )),
             color: game.teams.first.color.withOpacity(0.4),
           )),
@@ -71,7 +71,7 @@ class _MultiplayerBarState extends State<MultiplayerBar> {
             child: Center(
                 child: Text(
               _lastTeamPoints.toString(),
-              style: TextStyle(fontSize: 18),
+              style: const TextStyle(fontSize: 18),
             )),
             color: game.teams.last.color.withOpacity(0.4),
           )),
@@ -80,7 +80,7 @@ class _MultiplayerBarState extends State<MultiplayerBar> {
           child: Container(
             child: Center(
                 child: Text(_remaining.toString(),
-                    style: TextStyle(fontSize: 18))),
+                    style: const TextStyle(fontSize: 18))),
             color: Colors.white.withOpacity(0.4),
           )),
     ]);
