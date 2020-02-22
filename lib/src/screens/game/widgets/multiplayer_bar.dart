@@ -5,6 +5,7 @@ import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 
 // Bar shown in multi-player mode
 // It shows team points and timer
+// Time related things should be moved into XeonjiaGame
 class MultiplayerBar extends StatefulWidget {
   final _MultiplayerBarState state = _MultiplayerBarState();
 
@@ -40,6 +41,8 @@ class _MultiplayerBarState extends State<MultiplayerBar> {
         } else if (game.teams.first.points >= game.maxPoints ||
             game.teams.last.points >= game.maxPoints) {
           game.end();
+        } else if (_remaining % 10 == 0) {
+          game.regenerateModifiers();
         }
       });
     });

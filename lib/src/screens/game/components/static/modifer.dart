@@ -27,6 +27,9 @@ class ModifierComponent extends BasicComponent {
   // Father is only used if another component generated this one
   BasicComponent father;
 
+  // True if this is capable of being regenerated
+  bool _regenerable;
+
   ModifierComponent(tile, {this.father})
       : _moneyDelta = int.parse(tile.properties['moneyDelta'] ?? '0'),
         _atkDelta = int.parse(tile.properties['atkDelta'] ?? '0'),
@@ -38,6 +41,7 @@ class ModifierComponent extends BasicComponent {
         _poisonDelta = double.parse(tile.properties['poisonDelta'] ?? '0'),
         _doorId = int.parse(tile.properties['door'] ?? '-1'),
         _objectId = int.parse(tile.properties['objectId'] ?? '-1'),
+        _regenerable = (tile.properties['regenerable'] ?? 'false') == 'true',
         super.fromTile(tile);
 
   // Constructor used for mine weapon shots
@@ -62,6 +66,9 @@ class ModifierComponent extends BasicComponent {
       componentAbove.poisonQuantity += _poisonDelta;
       componentAbove.earnedMoney += _moneyDelta;
       componentAbove.selectedWeapon.powerPoints += _powerPointsDelta;
+      if (_powerPointsDelta != 0) {
+        game.refreshWeaponBar();
+      }
       if (_moneyDelta != 0 && componentAbove == playerOne) {
         Toast.show('+ $_moneyDelta \$', gameContext, duration: 1);
       }
@@ -71,6 +78,7 @@ class ModifierComponent extends BasicComponent {
         componentAbove.objectList.add(_objectId);
         Toast.show('I found a Gem!', gameContext, duration: 1);
       }
+      if (_regenerable ?? false) game.modifiersToBeRegenerated.add(this);
       delete();
     }
   }

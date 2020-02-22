@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/screens/game/components/abstract_basic.dart';
 import 'package:xeonjia/src/screens/game/components/dynamic/character.dart';
+import 'package:xeonjia/src/screens/game/components/static/modifer.dart';
 import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/screens/game/utils/map_utils.dart';
 import 'package:xeonjia/src/util/local_data_controller.dart';
@@ -79,6 +80,9 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
     return list;
   }
 
+  // List of modifier to be regenerate during the next regenerateModifiers()
+  var modifiersToBeRegenerated = List<ModifierComponent>();
+
   XeonjiaGame(this.mode,
       {this.teamSize = 0,
       this.friendlyFire = false,
@@ -113,6 +117,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
       Team(id: 0, name: 'Team A', color: Colors.red),
       Team(id: 1, name: 'Team B', color: Colors.green)
     ];
+    modifiersToBeRegenerated.clear();
 
     // Import map and components
     String _map = (mode == GameMode.story)
@@ -243,6 +248,15 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
 
     // Use weapon selected by player
     playerOne.selectedWeapon.shoot(shooter: playerOne);
+  }
+
+  // Regenerate regenerable modifiers
+  void regenerateModifiers() {
+    modifiersToBeRegenerated.forEach((modifier) {
+      modifier.remove = false;
+      components.add(modifier);
+    });
+    modifiersToBeRegenerated.clear();
   }
 
   // Update camera position
