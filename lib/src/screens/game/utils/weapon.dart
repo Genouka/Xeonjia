@@ -27,8 +27,8 @@ abstract class Weapon {
   Weapon(this.id);
 
   // Set max PP for this level
-  void resetPp() {
-    powerPoints = (10 + 5 * level).toDouble();
+  void resetPp({double customValue}) {
+    powerPoints = customValue ?? (10 + 5 * level).toDouble();
   }
 
   // Function used when a shoot input happens
@@ -95,8 +95,8 @@ class PunchWeapon extends Weapon {
 class SnowBallWeapon extends Weapon {
   final int level;
 
-  SnowBallWeapon({@required this.level}) : super(1) {
-    resetPp();
+  SnowBallWeapon({@required this.level, double powerPoints}) : super(1) {
+    resetPp(customValue: powerPoints);
     atk = (10 + level * 2).toDouble();
   }
 
@@ -115,8 +115,8 @@ class SnowBallWeapon extends Weapon {
 class MineWeapon extends Weapon {
   final int level;
 
-  MineWeapon({@required this.level}) : super(2) {
-    resetPp();
+  MineWeapon({@required this.level, double powerPoints}) : super(2) {
+    resetPp(customValue: powerPoints);
     atk = (10 + level * 2).toDouble();
   }
 
