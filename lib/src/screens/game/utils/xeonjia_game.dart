@@ -125,10 +125,6 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
         : 'arena/$mapId';
     importMap('assets/maps/' + _map + '.tmx');
 
-    // Reset top and bottom bars
-    lifePointsBar.state.refresh(percent: 1, text: 'LP: Max', poison: false);
-    weaponBar.state.refresh(percent: 1, text: 'Punch');
-
     pause = false;
   }
 
@@ -278,6 +274,31 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
     } else {
       camera.y = y - fixedScreenHeight / 2;
     }
+  }
+
+  // Reload weapon bar
+  void refreshWeaponBar() {
+    weaponBar.state.refresh(
+        percent: playerOne?.selectedWeapon?.powerPoints != double.infinity
+            ? (playerOne?.selectedWeapon?.powerPoints ?? 100) /
+                // should use max PP...
+                (10 + 5 * playerOne?.selectedWeapon?.level)
+            : 1,
+        text: (playerOne?.selectedWeapon?.name ?? '') +
+            (playerOne?.selectedWeapon?.powerPoints?.isFinite ?? false
+                ? ' (${playerOne?.selectedWeapon?.powerPoints?.round().toString()})'
+                : ''));
+  }
+
+  // Reload LP bar
+  void refreshLifePointsBar() {
+    double _percent = playerOne.lifePoints / playerOne.initialLifePoints;
+    lifePointsBar.state.refresh(
+      percent: _percent,
+      text: 'LP: ' +
+          (_percent.isFinite ? playerOne.lifePoints.round().toString() : 'Max'),
+      poison: playerOne.poisonQuantity > 0,
+    );
   }
 
   // End of the game

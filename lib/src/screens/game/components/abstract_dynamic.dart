@@ -46,7 +46,7 @@ abstract class DynamicComponent extends BasicComponent {
       ++movesCounter;
 
       // Decrease life points cause poison
-      lifePointsDifference(-poisonQuantity);
+      if (poisonQuantity > 0) lifePointsDifference(-poisonQuantity);
     }
   }
 

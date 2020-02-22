@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/screens/game/components/abstract_dynamic.dart';
-import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/screens/game/utils/weapon.dart';
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 
@@ -61,6 +60,8 @@ class CharacterComponent extends DynamicComponent {
     game.players.add(this);
     if (isPlayerOne) {
       playerOne = this;
+      game.refreshWeaponBar();
+      game.refreshLifePointsBar();
       game.updateCamera(x, y);
     }
   }
@@ -106,7 +107,7 @@ class CharacterComponent extends DynamicComponent {
     x = startX;
     y = startY;
     if (this == playerOne) {
-      weaponBar.state.refresh(percent: 1, text: 'Punch');
+      game.refreshWeaponBar();
       game.updateCamera(x, y);
     }
   }

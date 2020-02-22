@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/src/screens/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/src/screens/game/components/dynamic/character.dart';
 import 'package:xeonjia/src/screens/game/components/static/basic_static.dart';
-import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/screens/game/utils/map_utils.dart';
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 
@@ -105,7 +104,7 @@ abstract class BasicComponent extends SpriteComponent {
     if (game.friendlyFire || teamId != (cause?.teamId ?? -99)) {
       _lifePoints += difference < 0 ? difference + def : difference;
       poisonQuantity += poison;
-      updateLpBar();
+      if (this == playerOne) game.refreshLifePointsBar();
       if (_lifePoints <= 0) {
         delete();
         if (teamId == (cause?.teamId ?? -99)) {
@@ -125,21 +124,6 @@ abstract class BasicComponent extends SpriteComponent {
     }
   }
 
-  // Update LP top bar
-  void updateLpBar() {
-    if (this == playerOne) {
-      double _percent = playerOne.lifePoints / playerOne.initialLifePoints;
-      lifePointsBar.state.refresh(
-        percent: _percent,
-        text: 'LP: ' +
-            (_percent.isFinite
-                ? playerOne.lifePoints.round().toString()
-                : 'Max'),
-        poison: playerOne.poisonQuantity > 0,
-      );
-    }
-  }
-
   // True if this component could be collided
   // It depends on component that would collide this one
   bool isSolid({@required DynamicComponent otherComponent}) => true;
@@ -154,7 +138,7 @@ abstract class BasicComponent extends SpriteComponent {
   // Reset life points
   void restoreLifePoints() {
     _lifePoints = initialLifePoints;
-    updateLpBar();
+    if (this == playerOne) game.refreshLifePointsBar();
   }
 
   // Delete component
