@@ -115,7 +115,6 @@ class _GamePageState extends State<GamePage> {
               body: Hero(
                 tag: 'Play',
                 child: Container(
-                    color: Colors.lightBlue[50],
                     child: Stack(children: <Widget>[
                       game.widget,
                       if (settings.inputMethod == 1) FloatingGamepad(),

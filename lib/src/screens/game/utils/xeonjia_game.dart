@@ -92,6 +92,9 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
     initialize();
   }
 
+  @override
+  Color backgroundColor() => const Color(0xFFE1F5FE);
+
   // Reset variables and import map data
   void initialize() {
     pause = true;
