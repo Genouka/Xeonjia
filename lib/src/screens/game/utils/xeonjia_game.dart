@@ -139,8 +139,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
 
   // Save match data and load the new room
   void changeRoom(int nextRoomId) {
-    game.pause = true;
-
+    pause = true;
     bool _levelUp = false;
     bool _isNewRoom = true;
 
@@ -148,7 +147,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
     mainCharacter.killedComponents += playerOne.killedEnemies;
     mainCharacter.doorKeyList.addAll(playerOne.doorKeyList);
     mainCharacter.objectList.addAll(playerOne.objectList);
-    mainCharacter.minutesPlayed += (game.currentTime() - game.startDate) / 60;
+    mainCharacter.minutesPlayed += (currentTime() - startDate) / 60;
     mainCharacter.movesCounter += playerOne.movesCounter;
 
     // If the room hasn't been already visited, increase exp points and money
@@ -174,7 +173,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
     }
 
     // Start a new game
-    game.initialize();
+    initialize();
   }
 
   Offset _panGestureOffset;
@@ -248,20 +247,20 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
   void updateCamera(double x, double y) {
     // Update x position
     if (x <= screenWidth / 2 || screenWidth > componentSize * mapWidth) {
-      game.camera.x = 0.0;
+      camera.x = 0.0;
     } else if (x > componentSize * mapWidth - screenWidth / 2) {
-      game.camera.x = componentSize * mapWidth - screenWidth;
+      camera.x = componentSize * mapWidth - screenWidth;
     } else {
-      game.camera.x = x - screenWidth / 2;
+      camera.x = x - screenWidth / 2;
     }
     // Update y position
     if (y <= fixedScreenHeight / 2 ||
         fixedScreenHeight > componentSize * mapHeight) {
-      game.camera.y = 0.0;
+      camera.y = 0.0;
     } else if (y > componentSize * mapHeight - fixedScreenHeight / 2) {
-      game.camera.y = componentSize * mapHeight - fixedScreenHeight;
+      camera.y = componentSize * mapHeight - fixedScreenHeight;
     } else {
-      game.camera.y = y - fixedScreenHeight / 2;
+      camera.y = y - fixedScreenHeight / 2;
     }
   }
 
@@ -269,7 +268,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
   void end({bool timeOut = false}) {
     pause = true;
     if (mode == GameMode.story) {
-      mainCharacter.minutesPlayed += (game.currentTime() - game.startDate) / 60;
+      mainCharacter.minutesPlayed += (currentTime() - startDate) / 60;
       mainCharacter.movesCounter += playerOne.movesCounter;
       ++mainCharacter.deathCounter;
       mainCharacter.money -= mainCharacter.visitedRooms.last * 10;
@@ -291,7 +290,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
       if (timeOut) {
         content = 'The time is over.';
       } else {
-        content = '${game.maxPoints.toString()} points have been achieved.';
+        content = '${maxPoints.toString()} points have been achieved.';
       }
     }
     content += '\n\nDo you want to restart this game?';
