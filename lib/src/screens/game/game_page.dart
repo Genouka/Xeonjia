@@ -6,13 +6,10 @@ import 'package:xeonjia/src/screens/game/widgets/gamepad.dart';
 import 'package:xeonjia/src/screens/game/widgets/multiplayer_bar.dart';
 import 'package:xeonjia/src/screens/game/widgets/percent_indicator.dart';
 
-// Top bar percent indicator that shows player life points
+// Top and bottom bars
 LinearPercentIndicator lifePointsBar;
-
-// Bottom bar percent indicator that shows active weapon details
 LinearPercentIndicator weaponBar;
-
-MultiplayerBar multiplayerBar;
+MultiPlayerBar multiPlayerBar;
 
 // BuildContext of GamePage
 BuildContext gameContext;
@@ -55,7 +52,7 @@ class _GamePageState extends State<GamePage> {
       _weaponButtonVisibility = mainCharacter.jsonWeaponList.length > 1;
     } else {
       _weaponButtonVisibility = true;
-      multiplayerBar = MultiplayerBar();
+      multiPlayerBar = MultiPlayerBar(widget.maxTime);
     }
 
     // Initialize game variable
@@ -109,7 +106,7 @@ class _GamePageState extends State<GamePage> {
                               )),
                         ])),
                     if (game.mode != GameMode.story)
-                      SizedBox(height: 40, child: multiplayerBar),
+                      SizedBox(height: 40, child: multiPlayerBar),
                   ])),
               body: Hero(
                 tag: 'Play',
@@ -289,5 +286,11 @@ class _GamePageState extends State<GamePage> {
                     ],
                   ));
             }));
+  }
+
+  @override
+  void dispose() {
+    timer.cancel();
+    super.dispose();
   }
 }

@@ -1,50 +1,24 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 
-// Bar shown in multi-player mode
-// It shows team points and timer
-// Time related things should be moved into XeonjiaGame
-class MultiplayerBar extends StatefulWidget {
-  final _MultiplayerBarState state = _MultiplayerBarState();
+// Bar shown in multi-player mode. It shows team points and timer
+class MultiPlayerBar extends StatefulWidget {
+  final int maxTime;
+  MultiPlayerBar(this.maxTime);
+
+  final _MultiPlayerBarState state = _MultiPlayerBarState();
 
   @override
-  _MultiplayerBarState createState() => state;
+  _MultiPlayerBarState createState() => state;
 }
 
-class _MultiplayerBarState extends State<MultiplayerBar> {
-  Timer _timer;
+class _MultiPlayerBarState extends State<MultiPlayerBar> {
   int _remaining;
 
-  @override
-  void initState() {
-    super.initState();
-    start();
-  }
-
-  // Start widget
-  void start() {
-    _timer?.cancel();
-    _remaining = game?.maxTime ?? 100;
-    if (mounted) setState(() {});
-    _startTimer();
-  }
-
-  void _startTimer() {
-    _timer = Timer.periodic(const Duration(seconds: 1), (_) {
-      if ((game?.pause ?? true) || !mounted) return;
-      setState(() {
-        if (--_remaining <= 0) {
-          _timer.cancel();
-          game.end(timeOut: true); // It shouldn't be here
-        } else if (game.teams.first.points >= game.maxPoints ||
-            game.teams.last.points >= game.maxPoints) {
-          game.end();
-        } else if (_remaining % 10 == 0) {
-          game.regenerateModifiers();
-        }
-      });
+  void refresh(int remaining) {
+    setState(() {
+      _remaining = remaining;
     });
   }
 
@@ -82,16 +56,10 @@ class _MultiplayerBarState extends State<MultiplayerBar> {
           width: 50,
           child: Container(
             child: Center(
-                child: Text(_remaining.toString(),
+                child: Text((_remaining ?? widget.maxTime).toString(),
                     style: const TextStyle(fontSize: 18))),
             color: Colors.white.withOpacity(0.4),
           )),
     ]);
-  }
-
-  @override
-  void dispose() {
-    _timer.cancel();
-    super.dispose();
   }
 }

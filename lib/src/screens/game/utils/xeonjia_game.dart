@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui';
 import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
@@ -24,6 +25,9 @@ double componentSize;
 // Time between each cycle of update
 // Frequency = (1 / updatePeriod)
 const double updatePeriod = 0.03;
+
+// Timer used in multi-player games
+Timer timer;
 
 // Default distance made at each frame update
 // Component speed depend on this value and on updatePeriod value
@@ -73,6 +77,9 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
   // List of teams
   List<Team> teams;
 
+  // Remaining time (used in multi-player games)
+  int _remainingTime;
+
   // List of teams sorted by points
   List<Team> get ranking {
     var list = List.from(teams).cast<Team>();
@@ -111,7 +118,6 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
     });
     playerOne = null;
     players.clear();
-    multiplayerBar?.state?.start();
 
     teams = [
       Team(id: 0, name: 'Team A', color: Colors.red),
@@ -125,6 +131,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
         : 'arena/$mapId';
     importMap('assets/maps/' + _map + '.tmx');
 
+    if (mode != GameMode.story) startTimer();
     pause = false;
   }
 
@@ -138,6 +145,30 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
         super.update(t);
       }
     }
+  }
+
+  // Start game timer
+  void startTimer() {
+    timer?.cancel();
+    _remainingTime = maxTime;
+    if (multiPlayerBar.state.mounted) {
+      multiPlayerBar.state.refresh(_remainingTime);
+    }
+    timer = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (pause) return;
+      if (--_remainingTime <= 0) {
+        timer.cancel();
+        end(timeOut: true);
+      } else if (teams.first.points >= maxPoints ||
+          teams.last.points >= maxPoints) {
+        end();
+      } else if (_remainingTime % 10 == 0) {
+        regenerateModifiers();
+      }
+      if (multiPlayerBar.state.mounted) {
+        multiPlayerBar.state.refresh(_remainingTime);
+      }
+    });
   }
 
   // Save match data and load the new room
