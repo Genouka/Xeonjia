@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
+import 'package:xeonjia/src/util/local_data_controller.dart';
+
+enum Direction { right, left, up, down, center }
 
 // Floating virtual gamepad used to move the player
 class FloatingGamepad extends StatefulWidget {
@@ -9,19 +12,24 @@ class FloatingGamepad extends StatefulWidget {
   _FloatingGamepadState createState() => _FloatingGamepadState();
 }
 
-// Map direction-buttonIcon
-Map<String, dynamic> arrowIconMap = {
-  'up': const Icon(Icons.keyboard_arrow_up),
-  'down': const Icon(Icons.keyboard_arrow_down),
-  'left': const Icon(Icons.keyboard_arrow_left),
-  'right': const Icon(Icons.keyboard_arrow_right),
-  'center': const Icon(Icons.add),
-};
-
 // Floating gamepad widget
 class _FloatingGamepadState extends State<FloatingGamepad> {
-  Color _buttonColor = Colors.blueGrey[500];
+  // Gamepad position
   Offset _offset = kGamepadOffset;
+
+  // Arrow button color
+  final Color _buttonColor = Colors.blueGrey[500];
+
+  // Map direction-button icon
+  final Map<Direction, dynamic> arrowIconMap = {
+    Direction.up: const Icon(Icons.keyboard_arrow_up),
+    Direction.down: const Icon(Icons.keyboard_arrow_down),
+    Direction.left: const Icon(Icons.keyboard_arrow_left),
+    Direction.right: const Icon(Icons.keyboard_arrow_right),
+    Direction.center: const Icon(Icons.add),
+  };
+
+  @override
   Widget build(BuildContext context) {
     return Positioned(
         right: _offset.dx,
@@ -30,111 +38,95 @@ class _FloatingGamepadState extends State<FloatingGamepad> {
           children: [
             Row(
               children: [
-                _separator(),
-                _arrowButton('up'),
-                _separator(),
+                separator(),
+                arrowButton(Direction.up),
+                separator(),
               ],
             ),
             Row(
               children: [
-                _arrowButton('left'),
-                if (settings.gamepadShape == 0)
-                  _arrowButton('center')
-                else
-                  _arrowButton('down'),
-                _arrowButton('right'),
+                arrowButton(Direction.left),
+                arrowButton(Direction.center),
+                arrowButton(Direction.right),
               ],
             ),
-            if (settings.gamepadShape == 0)
-              Row(
-                children: [
-                  _separator(),
-                  _arrowButton('down'),
-                  _separator(),
-                ],
-              ),
+            Row(
+              children: [
+                separator(),
+                arrowButton(Direction.down),
+                separator(),
+              ],
+            ),
           ],
         ));
   }
 
   // Gamepad button widget
-  Widget _arrowButton(String direction) {
-    // Manage onTapDown (isTapDown=false) and onTapUp events (isTapDown=true)
-    void _buttonInput({@required bool isTapDown}) {
-      switch (direction) {
-        case 'up':
-          isTapDown ? playerOne.updateOrientation(0, -1) : _upInput();
-          break;
-        case 'down':
-          isTapDown ? playerOne.updateOrientation(0, 1) : _downInput();
-          break;
-        case 'left':
-          isTapDown ? playerOne.updateOrientation(-1, 0) : _leftInput();
-          break;
-        case 'right':
-          isTapDown ? playerOne.updateOrientation(1, 0) : _rightInput();
-          break;
-        case 'center':
-          if (!isTapDown) playerOne.selectedWeapon.shoot(shooter: playerOne);
-          break;
-        default:
-          break;
-      }
-    }
-
-    return Card(
-        color: Colors.white.withOpacity(0),
-        elevation: 0,
-        child: GestureDetector(
-            onTapDown: (details) {
-              _buttonInput(isTapDown: true);
-            },
-            child: IconButton(
-              icon: arrowIconMap[direction],
-              iconSize: settings.gamepadSize,
-              color: _buttonColor,
-              onPressed: () {
-                _buttonInput(isTapDown: false);
-              },
-            )));
+  Widget arrowButton(Direction direction) {
+    return GestureDetector(
+        // Edit widget position by moving it
+        onPanUpdate: (details) {
+          setState(() {
+            if (direction == Direction.center) {
+              double _dx = details.delta.dx;
+              double _dy = details.delta.dy;
+              if (_dx.abs() > _dy.abs()) {
+                _dy = 0;
+              } else {
+                _dx = 0;
+              }
+              playerOne.updateOrientation(_dx, _dy);
+            } else {
+              _offset = Offset(
+                  _offset.dx - details.delta.dx, _offset.dy - details.delta.dy);
+            }
+          });
+        },
+        child: IconButton(
+          icon: arrowIconMap[direction],
+          iconSize: settings.gamepadSize,
+          color: _buttonColor,
+          onPressed: () {
+            input(direction);
+          },
+        ));
   }
 
-  // White space in gamepad
-  Widget _separator() =>
+  // Empty space in gamepad
+  Widget separator() =>
       Container(width: settings.gamepadSize, height: settings.gamepadSize);
 
-  // Manage up direction input
-  void _upInput() {
-    game.gestureDragInput(const Offset(0, -1));
-    _saveOffset(_offset);
-  }
-
-  // Manage down direction input
-  void _downInput() {
-    game.gestureDragInput(const Offset(0, 1));
-    _saveOffset(_offset);
-  }
-
-  // Manage left direction input
-  void _leftInput() {
-    game.gestureDragInput(const Offset(-1, 0));
-    _saveOffset(_offset);
-  }
-
-  // Manage right direction input
-  void _rightInput() {
-    game.gestureDragInput(const Offset(1, 0));
-    _saveOffset(_offset);
+  // Manage direction input
+  void input(Direction direction) {
+    if (direction == Direction.center) {
+      playerOne.selectedWeapon.shoot(shooter: playerOne);
+    } else {
+      game.gestureDragInput(directionToOffset(direction));
+    }
+    saveOffset(_offset);
   }
 
   // Save widget position to be used in next matches
-  // Currently disabled
-  void _saveOffset(Offset newOffset) {
-    /*
+  void saveOffset(Offset newOffset) {
     if (newOffset != kGamepadOffset) {
       kGamepadOffset = newOffset;
-      //saveGamepadOffset();
+      saveGamepadOffset();
     }
-    */
+  }
+
+  // Convert offset into direction
+  Offset directionToOffset(Direction direction) {
+    switch (direction) {
+      case Direction.right:
+        return const Offset(1, 0);
+      case Direction.left:
+        return const Offset(-1, 0);
+      case Direction.up:
+        return const Offset(0, -1);
+      case Direction.down:
+        return const Offset(0, 1);
+      default:
+        return const Offset(0, 0);
+    }
   }
 }
