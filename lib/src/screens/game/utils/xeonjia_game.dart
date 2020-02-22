@@ -70,10 +70,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
   List<CharacterComponent> players = [];
 
   // List of teams
-  final List<Team> teams = [
-    Team(id: 0, name: 'Team A', color: Colors.red),
-    Team(id: 1, name: 'Team B', color: Colors.green)
-  ];
+  List<Team> teams;
 
   // List of teams sorted by points
   List<Team> get ranking {
@@ -111,6 +108,11 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
     playerOne = null;
     players.clear();
     multiplayerBar?.state?.start();
+
+    teams = [
+      Team(id: 0, name: 'Team A', color: Colors.red),
+      Team(id: 1, name: 'Team B', color: Colors.green)
+    ];
 
     // Import map and components
     String _map = (mode == GameMode.story)
