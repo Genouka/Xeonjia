@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
-import 'package:xeonjia/src/resources/weapon_details.dart';
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 import 'package:xeonjia/src/screens/game/widgets/gamepad.dart';
 import 'package:xeonjia/src/screens/game/widgets/multiplayer_bar.dart';
@@ -138,8 +137,8 @@ class _GamePageState extends State<GamePage> {
                                                         playerOne.selectedWeapon
                                                             .level)
                                                 .toDouble(),
-                                    text: (weaponDetails[playerOne
-                                                ?.selectedWeapon?.id]['name'] ??
+                                    text: (playerOne
+                                                ?.selectedWeapon?.name ??
                                             '') +
                                         (playerOne?.selectedWeapon?.powerPoints
                                                     ?.isFinite ??

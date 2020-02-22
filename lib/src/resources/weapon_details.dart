@@ -11,15 +11,15 @@ const List<Map<String, dynamic>> weaponDetails = [
   },
   {
     'id': 1,
-    'name': 'SnowBall',
-    'description': 'Throw snowball in front of you.\n'
+    'name': 'SnowBalls',
+    'description': 'Throw snowballs in front of you.\n'
         'Its power increases by 2 at each level.',
     'prize': 1000,
   },
   {
     'id': 2,
-    'name': 'Mine',
-    'description': 'Leave explosive mine on the floor.\n'
+    'name': 'Mines',
+    'description': 'Leave explosive mines on the floor.\n'
         'A mine explodes if someone except you walks on it.\n'
         'Its power increases by 2 at each level.',
     'prize': 3000,
