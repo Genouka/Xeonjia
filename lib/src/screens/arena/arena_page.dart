@@ -5,6 +5,11 @@ import 'package:xeonjia/src/screens/arena/resources/maps.dart';
 import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/widgets/basic.dart';
 
+// List of possible options
+const List<int> _teamSizeOptions = [3, 4, 5, 6, 7];
+const List<int> _maxTimeOptions = [2, 3, 4, 5];
+const List<int> _maxPointsOptions = [1000, 1500, 2000, 2500];
+
 // Match settings
 GameMode _mode = GameMode.tdm;
 int _teamSize = 5;
@@ -67,7 +72,7 @@ class _ArenaPageState extends State<ArenaPage> {
                     _teamSize = newValue;
                   });
                 },
-                items: [3, 4, 5, 6, 7]
+                items: _teamSizeOptions
                     .map<DropdownMenuItem<int>>(
                         (int value) => DropdownMenuItem<int>(
                               value: value,
@@ -90,7 +95,7 @@ class _ArenaPageState extends State<ArenaPage> {
                     _maxTime = newValue;
                   });
                 },
-                items: [3, 4, 5]
+                items: _maxTimeOptions
                     .map<DropdownMenuItem<int>>(
                         (int value) => DropdownMenuItem<int>(
                               value: value,
@@ -113,7 +118,7 @@ class _ArenaPageState extends State<ArenaPage> {
                     _maxPoints = newValue;
                   });
                 },
-                items: [1500, 2000, 2500]
+                items: _maxPointsOptions
                     .map<DropdownMenuItem<int>>(
                         (int value) => DropdownMenuItem<int>(
                               value: value,
@@ -136,7 +141,7 @@ class _ArenaPageState extends State<ArenaPage> {
                     _mapId = newValue;
                   });
                 },
-                items: [0, 1]
+                items: mapNames.keys
                     .map<DropdownMenuItem<int>>(
                         (int value) => DropdownMenuItem<int>(
                               value: value,
