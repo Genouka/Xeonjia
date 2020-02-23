@@ -36,8 +36,8 @@ class _RulesPageState extends State<RulesPage> {
                 child: Text(
                   ruleList[_page]['title'],
                   textAlign: TextAlign.center,
-                  style:
-                      TextStyle(color: Colors.white, fontSize: kTextFontSize),
+                  style: const TextStyle(
+                      color: Colors.white, fontSize: kTextFontSize),
                 ),
               ),
             ),
@@ -45,7 +45,7 @@ class _RulesPageState extends State<RulesPage> {
                 padding: const EdgeInsets.fromLTRB(20, 35, 20, 0),
                 child: Text(
                   ruleList[_page]['text'],
-                  style: TextStyle(fontSize: kTextFontSize - 2),
+                  style: const TextStyle(fontSize: kTextFontSize - 2),
                 )),
           ],
         )),

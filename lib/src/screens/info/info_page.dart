@@ -28,7 +28,7 @@ class _InfoPageState extends State<InfoPage> {
                 ),
                 title: Text(
                   infoMenuList[index]['title'],
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: kTextFontSize,
                   ),
                 ),

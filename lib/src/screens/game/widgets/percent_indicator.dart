@@ -204,7 +204,7 @@ class _LinearPercentIndicatorState extends State<LinearPercentIndicator>
         child: Center(
             child: Text(
           _text,
-          style: TextStyle(fontSize: kTextFontSize),
+          style: const TextStyle(fontSize: kTextFontSize),
         )),
       ),
     );
