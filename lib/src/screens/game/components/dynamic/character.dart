@@ -30,7 +30,7 @@ class CharacterComponent extends DynamicComponent {
     tile, {
     bool isPlayerOne = false,
     int level = 0,
-    Map<String, dynamic> jsonWeaponList = const {'1': 5, '2': 5},
+    Map<String, dynamic> jsonWeaponList,
     team = 0,
   })  : initialLifePoints = (100 + 5 * level).toDouble(),
         super(
@@ -42,6 +42,11 @@ class CharacterComponent extends DynamicComponent {
     atk = (level + 1).toDouble();
     def = (level ~/ 5).toDouble();
     teamId = team;
+    if (jsonWeaponList == null) {
+      // Temporary solution to remedy the functions _cpuMove() and _cpuShoot()
+      jsonWeaponList =
+          (team == 0) ? const {'1': 5, '2': 1} : const {'1': 9, '2': 5};
+    }
     jsonWeaponList.forEach((weaponId, weaponLevel) {
       switch (int.parse(weaponId)) {
         case 0:

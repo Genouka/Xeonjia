@@ -168,13 +168,15 @@ void parseMapTiles(var xmlElement) {
                 Toast.show(_toastText, gameContext,
                     gravity: (lineCount < 5) ? 0 : 2);
               } else if (game.mode == GameMode.tdm) {
-                int _team = int.parse(componentTile.properties['team'] ?? '0');
-                if (game.players.where((p) => p.teamId == _team).length <
+                int _teamId =
+                    int.parse(componentTile.properties['team'] ?? '0');
+                if (game.players.where((p) => p.teamId == _teamId).length <
                     game.teamSize) {
                   CharacterComponent(
                     componentTile,
-                    isPlayerOne: playerOne == null && _team == 0,
-                    team: _team,
+                    isPlayerOne: playerOne == null && _teamId == 0,
+                    team: _teamId,
+                    level: _teamId * 5, // Temp solution before an actual cpu
                   );
                 }
               }
