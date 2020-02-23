@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/src/resources/global_variables.dart';
 
+import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/screens/rules/resources/rules_list.dart';
 
 class RulesPage extends StatefulWidget {
