@@ -130,75 +130,14 @@ void parseMapTiles(var xmlElement) {
   int columnCount = 0;
   lines.forEach((line) {
     List<String> tiles = line.split(',');
-    // Parse map layer and create components based on "Type" tile property
+    // Parse map layer
     tiles.forEach((tileId) {
       if (tileId.isNotEmpty) {
         Tile componentTile = _tileMap[int.parse(tileId)];
         if (componentTile != null) {
           componentTile.x = componentSize * columnCount;
           componentTile.y = componentSize * lineCount;
-          switch (componentTile?.type) {
-            case 'Solid':
-              BasicStaticComponent(componentTile);
-              break;
-            case 'Modifier':
-              int _doorId = int.parse(componentTile.properties['door'] ?? '-1');
-              int _objectId =
-                  int.parse(componentTile.properties['objectId'] ?? '-1');
-              // Import object only if it is not already owned by the player
-              // or if it is not an unique object
-              if ((_doorId == -1 ||
-                      !mainCharacter.doorKeyList.contains(_doorId)) &&
-                  (_objectId == -1 ||
-                      !mainCharacter.objectList.contains(_objectId))) {
-                ModifierComponent(componentTile);
-              }
-              break;
-            case 'Ground':
-              GroundComponent(componentTile);
-              break;
-            case 'Start':
-              if (game.mode == GameMode.story &&
-                  _previousRoomId ==
-                      int.parse(componentTile.properties['roomId'])) {
-                CharacterComponent(componentTile,
-                    isPlayerOne: true,
-                    level: mainCharacter.level,
-                    jsonWeaponList: mainCharacter.jsonWeaponList);
-                Toast.show(_toastText, gameContext,
-                    gravity: (lineCount < 5) ? 0 : 2);
-              } else if (game.mode == GameMode.tdm) {
-                int _teamId =
-                    int.parse(componentTile.properties['team'] ?? '0');
-                if (game.players.where((p) => p.teamId == _teamId).length <
-                    game.teamSize) {
-                  CharacterComponent(
-                    componentTile,
-                    isPlayerOne: playerOne == null && _teamId == 0,
-                    team: _teamId,
-                    level: _teamId * 5, // Temp solution before an actual cpu
-                  );
-                }
-              }
-              break;
-            case 'Door':
-              DoorComponent(componentTile);
-              break;
-            case 'Hurdle':
-              HurdleComponent(componentTile);
-              break;
-            case 'DirectionChanger':
-              DirectionChangerComponent(componentTile);
-              break;
-            case 'WalkerCpu':
-              WalkerCpuComponent(componentTile);
-              break;
-            case 'SlitherCpu':
-              SlitherCpuComponent(componentTile);
-              break;
-            default:
-              break;
-          }
+          createComponent(componentTile, lineCount);
         }
         ++columnCount;
         if (columnCount == game.mapWidth) {
@@ -208,4 +147,64 @@ void parseMapTiles(var xmlElement) {
       }
     });
   });
+}
+
+// Create components based on "type" tile property
+void createComponent(Tile componentTile, int lineCount) {
+  switch (componentTile.type) {
+    case 'Solid':
+      BasicStaticComponent(componentTile);
+      break;
+    case 'Modifier':
+      int _doorId = int.parse(componentTile.properties['door'] ?? '-1');
+      int _objectId = int.parse(componentTile.properties['objectId'] ?? '-1');
+      // Import object only if it is not already owned by the player
+      // or if it is not an unique object
+      if ((_doorId == -1 || !mainCharacter.doorKeyList.contains(_doorId)) &&
+          (_objectId == -1 || !mainCharacter.objectList.contains(_objectId))) {
+        ModifierComponent(componentTile);
+      }
+      break;
+    case 'Ground':
+      GroundComponent(componentTile);
+      break;
+    case 'Start':
+      if (game.mode == GameMode.story &&
+          _previousRoomId == int.parse(componentTile.properties['roomId'])) {
+        CharacterComponent(componentTile,
+            isPlayerOne: true,
+            level: mainCharacter.level,
+            jsonWeaponList: mainCharacter.jsonWeaponList);
+        Toast.show(_toastText, gameContext, gravity: (lineCount < 5) ? 0 : 2);
+      } else if (game.mode == GameMode.tdm) {
+        int _teamId = int.parse(componentTile.properties['team'] ?? '0');
+        if (game.players.where((p) => p.teamId == _teamId).length <
+            game.teamSize) {
+          CharacterComponent(
+            componentTile,
+            isPlayerOne: playerOne == null && _teamId == 0,
+            team: _teamId,
+            level: _teamId * 5, // Temp solution before an actual cpu
+          );
+        }
+      }
+      break;
+    case 'Door':
+      DoorComponent(componentTile);
+      break;
+    case 'Hurdle':
+      HurdleComponent(componentTile);
+      break;
+    case 'DirectionChanger':
+      DirectionChangerComponent(componentTile);
+      break;
+    case 'WalkerCpu':
+      WalkerCpuComponent(componentTile);
+      break;
+    case 'SlitherCpu':
+      SlitherCpuComponent(componentTile);
+      break;
+    default:
+      break;
+  }
 }
