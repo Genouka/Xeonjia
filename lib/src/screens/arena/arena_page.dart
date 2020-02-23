@@ -5,6 +5,14 @@ import 'package:xeonjia/src/screens/arena/resources/maps.dart';
 import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/widgets/basic.dart';
 
+// Match settings
+GameMode _mode = GameMode.tdm;
+int _teamSize = 5;
+int _maxTime = 3;
+int _maxPoints = 1500;
+int _mapId = 0;
+bool _friendlyFire = true;
+
 class ArenaPage extends StatefulWidget {
   static _ArenaPageState of(BuildContext context) =>
       context.findAncestorStateOfType();
@@ -14,13 +22,6 @@ class ArenaPage extends StatefulWidget {
 }
 
 class _ArenaPageState extends State<ArenaPage> {
-  GameMode _mode = GameMode.tdm;
-  int _teamSize = 3;
-  int _maxTime = 3;
-  int _maxPoints = 1500;
-  int _mapId = 0;
-  bool _friendlyFire = true;
-
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -66,7 +67,7 @@ class _ArenaPageState extends State<ArenaPage> {
                     _teamSize = newValue;
                   });
                 },
-                items: [3, 4, 5, 6]
+                items: [3, 4, 5, 6, 7]
                     .map<DropdownMenuItem<int>>(
                         (int value) => DropdownMenuItem<int>(
                               value: value,
