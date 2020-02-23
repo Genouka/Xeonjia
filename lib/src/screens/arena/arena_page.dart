@@ -7,7 +7,7 @@ import 'package:xeonjia/src/widgets/basic.dart';
 
 class ArenaPage extends StatefulWidget {
   static _ArenaPageState of(BuildContext context) =>
-      context.ancestorStateOfType(const TypeMatcher<_ArenaPageState>());
+      context.findAncestorStateOfType();
 
   @override
   _ArenaPageState createState() => _ArenaPageState();
