@@ -54,9 +54,9 @@ class _RulesPageState extends State<RulesPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
               MaterialButton(
-                child: Row(children: [
-                  const Icon(Icons.keyboard_arrow_left),
-                  const Text('Back')
+                child: Row(children: const [
+                  Icon(Icons.keyboard_arrow_left),
+                  Text('Back')
                 ]),
                 onPressed: _page > 0
                     ? () => setState(() {
@@ -65,8 +65,8 @@ class _RulesPageState extends State<RulesPage> {
                     : null,
               ),
               MaterialButton(
-                  child: Row(children: [
-                    const Text('Next'),
+                  child: Row(children: const [
+                    Text('Next'),
                     Icon(Icons.keyboard_arrow_right)
                   ]),
                   onPressed: _page < ruleList.length - 1

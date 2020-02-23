@@ -65,7 +65,7 @@ class _SettingsPageState extends State<SettingsPage> {
       ListTile(
           title: Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: kTextFontSize,
             ),
           ),
@@ -92,7 +92,7 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget checkBoxTile(String title, String subtitle) => CheckboxListTile(
       title: Text(
         title,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: kTextFontSize,
         ),
       ),
