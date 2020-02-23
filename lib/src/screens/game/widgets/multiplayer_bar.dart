@@ -35,20 +35,24 @@ class _MultiPlayerBarState extends State<MultiPlayerBar> {
       Expanded(
           flex: _firstFlex,
           child: Container(
+            padding: const EdgeInsets.only(left: 5, right: 5),
             child: Center(
                 child: Text(
               _firstTeamPoints.toString(),
               style: const TextStyle(fontSize: 18),
+              maxLines: 1,
             )),
             color: game.teams.first.color.withOpacity(0.4),
           )),
       Expanded(
           flex: _lastFlex,
           child: Container(
+            padding: const EdgeInsets.only(left: 5, right: 5),
             child: Center(
                 child: Text(
               _lastTeamPoints.toString(),
               style: const TextStyle(fontSize: 18),
+              maxLines: 1,
             )),
             color: game.teams.last.color.withOpacity(0.4),
           )),
