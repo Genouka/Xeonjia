@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/screens/game/components/abstract_basic.dart';
@@ -384,9 +383,6 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
                   onPressed: () {
                     Navigator.pop(context);
                     game = null;
-                    // Re-enable system bars before exit
-                    SystemChrome.setEnabledSystemUIOverlays(
-                        SystemUiOverlay.values);
                     Navigator.of(context).pop();
                   },
                 ),
