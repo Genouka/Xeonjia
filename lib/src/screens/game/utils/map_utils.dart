@@ -184,7 +184,8 @@ void createComponent(Tile componentTile, int lineCount) {
             componentTile,
             isPlayerOne: playerOne == null && _teamId == 0,
             team: _teamId,
-            level: _teamId * 5, // Temp solution before an actual cpu
+            level:
+                _teamId * game.difficulty, // Temp solution before an actual cpu
           );
         }
       }

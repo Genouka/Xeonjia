@@ -16,6 +16,7 @@ int _teamSize = 5;
 int _maxTime = 3;
 int _maxPoints = 1500;
 int _mapId = 0;
+int _difficulty = 4;
 bool _friendlyFire = true;
 
 class ArenaPage extends StatefulWidget {
@@ -59,20 +60,66 @@ class _ArenaPageState extends State<ArenaPage> {
               )),
           ListTile(
               title: const Text(
-                'Players',
+                'Map',
                 style: TextStyle(
                   fontSize: kTextFontSize,
                 ),
               ),
-              subtitle: const Text('Number of players'),
+              subtitle: const Text('Place to play'),
               trailing: DropdownButton<int>(
-                value: _teamSize,
+                value: _mapId,
                 onChanged: (int newValue) {
                   setState(() {
-                    _teamSize = newValue;
+                    _mapId = newValue;
                   });
                 },
-                items: _teamSizeOptions
+                items: mapNames.keys
+                    .map<DropdownMenuItem<int>>(
+                        (int value) => DropdownMenuItem<int>(
+                              value: value,
+                              child: Text(mapNames[value]),
+                            ))
+                    .toList(),
+              )),
+          ListTile(
+              title: const Text(
+                'Difficulty',
+                style: TextStyle(
+                  fontSize: kTextFontSize,
+                ),
+              ),
+              subtitle: const Text('Match difficulty'),
+              trailing: DropdownButton<int>(
+                value: _difficulty,
+                onChanged: (int newValue) {
+                  setState(() {
+                    _difficulty = newValue;
+                  });
+                },
+                items: difficultyNames.keys
+                    .map<DropdownMenuItem<int>>(
+                        (int value) => DropdownMenuItem<int>(
+                              value: value,
+                              child: Text(difficultyNames[value]),
+                            ))
+                    .toList(),
+              )),
+          ListTile(
+              title: const Text(
+                'Points to score',
+                style: TextStyle(
+                  fontSize: kTextFontSize,
+                ),
+              ),
+              subtitle: const Text('Points needed to win'),
+              trailing: DropdownButton<int>(
+                value: _maxPoints,
+                onChanged: (int newValue) {
+                  setState(() {
+                    _maxPoints = newValue;
+                  });
+                },
+                items: _maxPointsOptions
                     .map<DropdownMenuItem<int>>(
                         (int value) => DropdownMenuItem<int>(
                               value: value,
@@ -105,47 +152,24 @@ class _ArenaPageState extends State<ArenaPage> {
               )),
           ListTile(
               title: const Text(
-                'Points to score',
+                'Players',
                 style: TextStyle(
                   fontSize: kTextFontSize,
                 ),
               ),
-              subtitle: const Text('Points needed to win'),
+              subtitle: const Text('Number of players per team'),
               trailing: DropdownButton<int>(
-                value: _maxPoints,
+                value: _teamSize,
                 onChanged: (int newValue) {
                   setState(() {
-                    _maxPoints = newValue;
+                    _teamSize = newValue;
                   });
                 },
-                items: _maxPointsOptions
+                items: _teamSizeOptions
                     .map<DropdownMenuItem<int>>(
                         (int value) => DropdownMenuItem<int>(
                               value: value,
                               child: Text(value.toString()),
-                            ))
-                    .toList(),
-              )),
-          ListTile(
-              title: const Text(
-                'Map',
-                style: TextStyle(
-                  fontSize: kTextFontSize,
-                ),
-              ),
-              subtitle: const Text('Place to play'),
-              trailing: DropdownButton<int>(
-                value: _mapId,
-                onChanged: (int newValue) {
-                  setState(() {
-                    _mapId = newValue;
-                  });
-                },
-                items: mapNames.keys
-                    .map<DropdownMenuItem<int>>(
-                        (int value) => DropdownMenuItem<int>(
-                              value: value,
-                              child: Text(mapNames[value]),
                             ))
                     .toList(),
               )),
@@ -175,6 +199,7 @@ class _ArenaPageState extends State<ArenaPage> {
               maxTime: _maxTime * 60,
               maxPoints: _maxPoints,
               mapId: _mapId,
+              difficulty: _difficulty,
               friendlyFire: _friendlyFire,
             ),
             gradient: false,

@@ -50,6 +50,9 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
   // Max game time in multi-player mode (seconds)
   final int maxTime;
 
+  // Multi-player match difficulty
+  final int difficulty;
+
   // Map to load if mode != story
   final int mapId;
 
@@ -93,6 +96,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
       this.friendlyFire = false,
       this.maxPoints = 1500,
       this.maxTime = 180,
+      this.difficulty = 4,
       this.mapId = 0}) {
     fixedScreenHeight = screenHeight - (mode != GameMode.story ? 40 : 0);
     initialize();

@@ -26,12 +26,14 @@ class GamePage extends StatefulWidget {
   final int maxTime;
   final int maxPoints;
   final int mapId;
+  final int difficulty;
   final bool friendlyFire;
   GamePage(this.mode,
       {this.teamSize = 0,
       this.maxTime = 0,
       this.maxPoints = 0,
       this.mapId = 0,
+      this.difficulty = 0,
       this.friendlyFire = false});
 
   @override
@@ -61,6 +63,7 @@ class _GamePageState extends State<GamePage> {
         friendlyFire: widget.friendlyFire,
         maxTime: widget.maxTime,
         maxPoints: widget.maxPoints,
+        difficulty: widget.difficulty,
         mapId: widget.mapId);
 
     super.initState();
