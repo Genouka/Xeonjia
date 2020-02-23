@@ -113,6 +113,7 @@ class CharacterComponent extends DynamicComponent {
       weapon.resetPp();
     });
     _selectedWeaponElement = 0;
+    movesCounter = 0;
     x = startX;
     y = startY;
     orientation = _initialOrientation;
@@ -134,7 +135,10 @@ class CharacterComponent extends DynamicComponent {
 
   // Move done if this is controlled by CPU
   void _cpuMove() {
-    if (isStationary) {
+    if (movesCounter == 0) {
+      List<double> _firstMove = directionToXY(_initialOrientation);
+      updateDirection(_firstMove.first, _firstMove.last);
+    } else if (isStationary) {
       if (randomDouble() > 0.4) {
         if (randomDouble() > 0) {
           updateDirection(randomDouble(), 0);
