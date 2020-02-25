@@ -137,8 +137,7 @@ class _GamePageState extends State<GamePage> {
                                                         playerOne.selectedWeapon
                                                             .level)
                                                 .toDouble(),
-                                    text: (playerOne
-                                                ?.selectedWeapon?.name ??
+                                    text: (playerOne?.selectedWeapon?.name ??
                                             '') +
                                         (playerOne?.selectedWeapon?.powerPoints
                                                     ?.isFinite ??
@@ -210,7 +209,7 @@ class _GamePageState extends State<GamePage> {
         // Restart (mode == 1)
         {
           'title': 'Restart match',
-          'text': 'Are you sure you wish to restart this game?',
+          'text': 'Are you sure you want to restart this game?',
         },
         // Exit (mode == 2)
         {

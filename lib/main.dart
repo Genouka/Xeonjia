@@ -7,7 +7,7 @@ import 'package:xeonjia/src/xeonjia.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  loadStoredData().then((v) {
+  loadStoredData().then((_) {
     // Set fullscreen
     if (settings.fullScreen) SystemChrome.setEnabledSystemUIOverlays([]);
   });

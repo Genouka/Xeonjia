@@ -106,7 +106,7 @@ class _ArenaPageState extends State<ArenaPage> {
               )),
           ListTile(
               title: const Text(
-                'Points to score',
+                'Points required',
                 style: TextStyle(
                   fontSize: kTextFontSize,
                 ),

@@ -146,7 +146,7 @@ class _UserPageState extends State<UserPage> {
                             Text('${mainCharacter.experiencePoints.round()}'),
                       ),
                       ListTile(
-                        title: const Text('XP needed for next level'),
+                        title: const Text('XP required for the next level'),
                         leading: const Text(''),
                         trailing: Text(
                           ((mainCharacter.experienceRemaining).toString()),
