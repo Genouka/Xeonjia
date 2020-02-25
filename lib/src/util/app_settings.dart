@@ -12,12 +12,16 @@ class AppSettings {
   // Virtual gamepad shape
   int gamepadShape;
 
+  // True if rules have been read
+  bool rulesRead;
+
   // Import settings from a Json
   AppSettings(Map<String, dynamic> json)
       : fullScreen = json['fullScreen'] ?? true,
         inputMethod = json['inputMethod'] ?? 0,
         gamepadSize = json['gamepadSize'] ?? 50,
-        gamepadShape = json['gamepadShape'] ?? 0;
+        gamepadShape = json['gamepadShape'] ?? 0,
+        rulesRead = json['rulesRead'] ?? false;
 
   // Export settings as a Json
   Map<String, dynamic> toJson() => {
@@ -25,5 +29,6 @@ class AppSettings {
         'inputMethod': inputMethod,
         'gamepadSize': gamepadSize,
         'gamepadShape': gamepadShape,
+        'rulesRead': rulesRead,
       };
 }

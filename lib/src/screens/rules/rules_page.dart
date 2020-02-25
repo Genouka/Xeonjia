@@ -12,6 +12,12 @@ class _RulesPageState extends State<RulesPage> {
   // Page currently displayed
   int _page = 0;
 
+  @override void initState() {
+    settings.rulesRead = true;
+    saveSettings();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(

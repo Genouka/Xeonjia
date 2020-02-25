@@ -6,6 +6,7 @@ import 'package:xeonjia/src/screens/home/resources/page_list.dart';
 import 'package:xeonjia/src/screens/user/user_page.dart';
 import 'package:xeonjia/src/util/utils.dart';
 import 'package:xeonjia/src/widgets/basic.dart';
+import 'package:xeonjia/src/widgets/toast.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -67,10 +68,16 @@ class HomePage extends StatelessWidget {
                 ),
                 subtitle: Text(pageList[index]['subtitle']),
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    FadeRoute(pageList[index]['page']),
-                  );
+                  if (pageList[index]['title'] == 'Arena' &&
+                      !settings.rulesRead) {
+                    Toast.show('You must read "How to play" first', context,
+                        gravity: 1, duration: 1);
+                  } else {
+                    Navigator.push(
+                      context,
+                      FadeRoute(pageList[index]['page']),
+                    );
+                  }
                 },
               );
             }

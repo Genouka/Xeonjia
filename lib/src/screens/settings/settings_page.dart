@@ -43,7 +43,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 child: const Text('Yes'),
                 onPressed: () {
                   SystemChrome.setEnabledSystemUIOverlays([]);
-                  settings = AppSettings({});
+                  settings = AppSettings({'rulesRead': settings.rulesRead});
                   saveSettings();
                   setState(() {});
                   Navigator.of(context).pop();
