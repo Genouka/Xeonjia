@@ -12,28 +12,18 @@ class OptionList extends StatelessWidget {
           'Input method',
           'Method used to move',
           settings.inputMethod,
-          <int>[0, 1],
+          <int>[0, 1, 2],
           mapText: inputMethods,
         ),
-        if (settings.inputMethod == 1)
+        if (settings.inputMethod != 0)
           SettingsPage.of(context).dropDownTile(
             'gamepadSize',
-            'Gamepad size:',
+            'Gamepad size',
             'Virtual gamepad dimension',
             settings.gamepadSize.toInt(),
             gamepadSizes.keys.toList(),
             mapText: gamepadSizes,
           ),
-        /*
-        if (settings.inputMethod == 1)
-          SettingsPage.of(context).dropDownTile(
-            'gamepadShape',
-            'Gamepad shape:',
-            'Select gamepad shape',
-            settings.gamepadShape,
-            gamepadShape.keys.toList(),
-            mapText: gamepadShape,
-          ),*/
         SettingsPage.of(context).checkBoxTile(
           'Fullscreen mode',
           'Enable fullscreen',
@@ -46,10 +36,6 @@ updateVariables(String element, int newValue) {
   switch (element) {
     case 'inputMethod':
       settings.inputMethod = newValue;
-      break;
-    case 'gamepadShape':
-      settings.gamepadShape = newValue;
-      kGamepadOffset = Offset.zero;
       break;
     case 'gamepadSize':
       settings.gamepadSize = newValue.toDouble();

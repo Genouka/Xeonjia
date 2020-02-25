@@ -115,9 +115,10 @@ class _GamePageState extends State<GamePage> {
                 tag: 'Play',
                 child: Container(
                     child: Stack(children: <Widget>[
-                      game.widget,
-                      if (settings.inputMethod == 1) FloatingGamepad(),
-                    ])),
+                  game.widget,
+                  if (settings.inputMethod != 0)
+                    FloatingGamepad(manageMovements: settings.inputMethod == 1),
+                ])),
               ),
               bottomNavigationBar: _weaponButtonVisibility
                   ? SizedBox(

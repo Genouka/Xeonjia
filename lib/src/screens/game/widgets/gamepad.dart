@@ -8,6 +8,9 @@ enum Direction { right, left, up, down, center }
 
 // Floating virtual gamepad used to move the player
 class FloatingGamepad extends StatefulWidget {
+  final bool manageMovements;
+  FloatingGamepad({@required this.manageMovements});
+
   @override
   _FloatingGamepadState createState() => _FloatingGamepadState();
 }
@@ -63,34 +66,38 @@ class _FloatingGamepadState extends State<FloatingGamepad> {
 
   // Gamepad button widget
   Widget arrowButton(Direction direction) {
-    return GestureDetector(
-        // Edit widget position by moving it
-        onPanUpdate: (details) {
-          setState(() {
-            if (direction == Direction.center) {
-              double _dx = details.delta.dx;
-              double _dy = details.delta.dy;
-              if (_dx.abs() > _dy.abs()) {
-                _dy = 0;
-              } else {
-                _dx = 0;
-              }
-              playerOne.updateOrientation(_dx, _dy);
-            } else {
-              _offset = Offset(
-                  _offset.dx - details.delta.dx, _offset.dy - details.delta.dy);
-            }
-          });
-        },
-        child: IconButton(
-          icon: arrowIconMap[direction],
-          iconSize: settings.gamepadSize,
-          color: _buttonColor,
-          onPressed: () {
-            input(direction);
-          },
-        ));
+    return widget.manageMovements
+        ? GestureDetector(
+            // Edit widget position by moving it
+            onPanUpdate: (details) {
+              setState(() {
+                if (direction == Direction.center) {
+                  double _dx = details.delta.dx;
+                  double _dy = details.delta.dy;
+                  if (_dx.abs() > _dy.abs()) {
+                    _dy = 0;
+                  } else {
+                    _dx = 0;
+                  }
+                  playerOne.updateOrientation(_dx, _dy);
+                } else {
+                  _offset = Offset(_offset.dx - details.delta.dx,
+                      _offset.dy - details.delta.dy);
+                }
+              });
+            },
+            child: _button(direction))
+        : _button(direction);
   }
+
+  Widget _button(Direction direction) => IconButton(
+        icon: arrowIconMap[direction],
+        iconSize: settings.gamepadSize,
+        color: _buttonColor,
+        onPressed: () {
+          input(direction);
+        },
+      );
 
   // Empty space in gamepad
   Widget separator() =>
@@ -101,7 +108,12 @@ class _FloatingGamepadState extends State<FloatingGamepad> {
     if (direction == Direction.center) {
       playerOne.selectedWeapon.shoot(shooter: playerOne);
     } else {
-      game.gestureDragInput(directionToOffset(direction));
+      if (widget.manageMovements) {
+        game.gestureDragInput(directionToOffset(direction));
+      } else {
+        var _orientation = directionToOffset(direction);
+        playerOne.updateOrientation(_orientation.dx, _orientation.dy);
+      }
     }
     saveOffset(_offset);
   }
