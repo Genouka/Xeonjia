@@ -4,13 +4,15 @@ Solve ice puzzles and defeat enemies in an RPG world.
 
 ## About
 
-The aim of this game is to reach the last floor of the tower and defeat the King of Evil.
+There are two modes:
 
-Swipe your finger to move your character across the room; keep in mind that you can't stop yourself until you reach a wall or a boulder.
+1) Story mode: the aim is to reach the last floor of the tower and defeat the "King of Evil".
 
-Over time, you will gain experience points that will allow you to increase your level.
+2) Multi-player mode: the aim of this mode is to score points and make your team win.
 
-During your trip you will find money and hidden treasures that you can use to buy stuff and improve yourself.
+Basically you will have to swipe your finger to move your character across the room; keep in mind that you can't stop yourself until you reach a wall or a boulder.
+
+Over time, you will gain experience points that will allow you to increase your level and during your trip you will find money and hidden treasures that you can use to buy stuff and improve yourself.
 
 Be careful, the tower is full of dangerous enemies ready to attack you!
 
