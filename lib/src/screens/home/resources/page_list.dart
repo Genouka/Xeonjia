@@ -19,7 +19,7 @@ final List<Map<String, dynamic>> pageList = [
   },
   {
     'title': 'Arena',
-    'subtitle': 'Multi-player match versus CPU',
+    'subtitle': 'Multiplayer match versus CPU',
     'page': ArenaPage(),
     'icon': const Icon(Icons.group),
   },

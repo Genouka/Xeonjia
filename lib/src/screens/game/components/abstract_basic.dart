@@ -65,7 +65,7 @@ abstract class BasicComponent extends SpriteComponent {
 
   // This component's team
   // It is used to avoid friendly fire among components of the same species
-  // It is also used in multi-player matches to manage team membership
+  // It is also used in multiplayer matches to manage team membership
   int teamId = -1;
   Team get team => game.teams.firstWhere((team) => team.id == teamId);
 

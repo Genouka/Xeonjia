@@ -24,7 +24,7 @@ double componentSize;
 // Frequency = (1 / updatePeriod)
 const double updatePeriod = 0.03;
 
-// Timer used in multi-player games
+// Timer used in multiplayer games
 Timer timer;
 
 // Default distance made at each frame update
@@ -44,13 +44,13 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
   // If true, players can hit their teammates
   final bool friendlyFire;
 
-  // Points required to win in multi-player
+  // Points required to win in multiplayer
   final int maxPoints;
 
-  // Max game time in multi-player mode (seconds)
+  // Max game time in multiplayer mode (seconds)
   final int maxTime;
 
-  // Multi-player match difficulty
+  // Multiplayer match difficulty
   final int difficulty;
 
   // Map to load if mode != story
@@ -78,7 +78,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
   // List of teams
   List<Team> teams;
 
-  // Remaining time (used in multi-player games)
+  // Remaining time (used in multiplayer games)
   int _remainingTime;
 
   // List of teams sorted by points
@@ -394,7 +394,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
   }
 }
 
-// Team used in multi-player match
+// Team used in multiplayer match
 // It is composed by 2-5 players
 class Team {
   // Team id

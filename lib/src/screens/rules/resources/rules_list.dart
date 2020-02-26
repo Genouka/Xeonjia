@@ -8,7 +8,7 @@ There are two modes in Xeonjia:
 
 1) Story mode: the aim is to reach the last floor of the tower and defeat the "King of Evil".
 
-2) Multi-player mode: the aim of this mode is to score points and make your team win.
+2) Multiplayer mode: the aim of this mode is to score points and make your team win.
 
 ---
 

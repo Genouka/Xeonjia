@@ -4,7 +4,7 @@ import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/screens/game/game_page.dart';
 
 // Floating "PLAY" button
-// Used for single and multi-player mode
+// Used for single and multiplayer mode
 class PlayButton extends StatelessWidget {
   final GamePage page;
 

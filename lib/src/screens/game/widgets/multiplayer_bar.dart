@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 
-// Bar shown in multi-player mode. It shows team points and timer
+// Bar shown in multiplayer mode. It shows team points and timer
 class MultiPlayerBar extends StatefulWidget {
   final int maxTime;
   MultiPlayerBar(this.maxTime);
