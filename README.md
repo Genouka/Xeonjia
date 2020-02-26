@@ -23,7 +23,7 @@ Use your mind to figure out how to find the right path!
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/HomePage.png" height="320">
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/RoomGame.png" height="320">
 <img src ="fastlane/metadata/android/en-US/images/phoneScreenshots/RoomGame_2.png" height="320">
-<img src ="fastlane/metadata/android/en-US/images/phoneScreenshots/RoomGame_3.png" height="320">
+<img src ="fastlane/metadata/android/en-US/images/phoneScreenshots/Multiplayer.png" height="320">
 
 ## License
 
