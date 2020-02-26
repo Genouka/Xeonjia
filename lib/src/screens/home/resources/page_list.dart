@@ -37,7 +37,7 @@ final List<Map<String, dynamic>> pageList = [
   },
   {
     'title': 'Stats',
-    'subtitle': 'View stats',
+    'subtitle': 'View story mode stats',
     'page': StatsPage(),
     'icon': const Icon(Icons.show_chart),
   },

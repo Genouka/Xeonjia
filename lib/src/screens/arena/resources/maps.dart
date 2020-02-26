@@ -1,8 +1,8 @@
 // Map names
 Map<int, String> mapNames = {
-  0: 'temp0',
-  1: 'temp1',
-  2: 'temp2',
+  0: 'Kontrast',
+  1: 'Stopovers',
+  2: 'Flussi',
 };
 
 // Difficulty

@@ -162,7 +162,7 @@ class _GamePageState extends State<GamePage> {
                               icon: Icon(Icons.whatshot),
                               color: Colors.black,
                               splashColor: Colors.lightBlue[700],
-                              tooltip: 'Hit',
+                              tooltip: 'Shoot',
                             )),
                       ]))
                   : Container(
