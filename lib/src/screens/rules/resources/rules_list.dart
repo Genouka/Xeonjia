@@ -34,7 +34,7 @@ If you prefer, you can use a virtual gamepad to move your character. You can ena
 
 If you enable "Gamepad only":
 - arrow buttons are used to move;
-- swiping from the plus (+) icon to the desired direction is used to change the orientation of you character.
+- swiping from the plus (+) icon to the desired direction is used to change the orientation of your character.
 
 Otherwise, if you enable "Gesture + Gamepad":
 - arrow buttons are used to change orientation;
