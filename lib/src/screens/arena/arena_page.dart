@@ -34,162 +34,164 @@ class _ArenaPageState extends State<ArenaPage> {
           title: const Text('A R E N A'),
           centerTitle: true,
         ),
-        body: ListView(children: <Widget>[
-          ListTile(
-              title: const Text(
-                'Mode',
-                style: TextStyle(
-                  fontSize: kTextFontSize,
-                ),
-              ),
-              subtitle: const Text('Game mode'),
-              trailing: DropdownButton<GameMode>(
-                value: _mode,
-                onChanged: (GameMode newValue) {
-                  setState(() {
-                    _mode = newValue;
-                  });
-                },
-                items: [GameMode.tdm]
-                    .map<DropdownMenuItem<GameMode>>(
-                        (GameMode value) => DropdownMenuItem<GameMode>(
-                              value: value,
-                              child: Text(modeNames[value]),
-                            ))
-                    .toList(),
-              )),
-          ListTile(
-              title: const Text(
-                'Map',
-                style: TextStyle(
-                  fontSize: kTextFontSize,
-                ),
-              ),
-              subtitle: const Text('Place to play'),
-              trailing: DropdownButton<int>(
-                value: _mapId,
-                onChanged: (int newValue) {
-                  setState(() {
-                    _mapId = newValue;
-                  });
-                },
-                items: mapNames.keys
-                    .map<DropdownMenuItem<int>>(
-                        (int value) => DropdownMenuItem<int>(
-                              value: value,
-                              child: Text(mapNames[value]),
-                            ))
-                    .toList(),
-              )),
-          ListTile(
-              title: const Text(
-                'Difficulty',
-                style: TextStyle(
-                  fontSize: kTextFontSize,
-                ),
-              ),
-              subtitle: const Text('Match difficulty'),
-              trailing: DropdownButton<int>(
-                value: _difficulty,
-                onChanged: (int newValue) {
-                  setState(() {
-                    _difficulty = newValue;
-                  });
-                },
-                items: difficultyNames.keys
-                    .map<DropdownMenuItem<int>>(
-                        (int value) => DropdownMenuItem<int>(
-                              value: value,
-                              child: Text(difficultyNames[value]),
-                            ))
-                    .toList(),
-              )),
-          ListTile(
-              title: const Text(
-                'Points required',
-                style: TextStyle(
-                  fontSize: kTextFontSize,
-                ),
-              ),
-              subtitle: const Text('Points needed to win'),
-              trailing: DropdownButton<int>(
-                value: _maxPoints,
-                onChanged: (int newValue) {
-                  setState(() {
-                    _maxPoints = newValue;
-                  });
-                },
-                items: _maxPointsOptions
-                    .map<DropdownMenuItem<int>>(
-                        (int value) => DropdownMenuItem<int>(
-                              value: value,
-                              child: Text(value.toString()),
-                            ))
-                    .toList(),
-              )),
-          ListTile(
-              title: const Text(
-                'Time available',
-                style: TextStyle(
-                  fontSize: kTextFontSize,
-                ),
-              ),
-              subtitle: const Text('Maximum time for a match (minutes)'),
-              trailing: DropdownButton<int>(
-                value: _maxTime,
-                onChanged: (int newValue) {
-                  setState(() {
-                    _maxTime = newValue;
-                  });
-                },
-                items: _maxTimeOptions
-                    .map<DropdownMenuItem<int>>(
-                        (int value) => DropdownMenuItem<int>(
-                              value: value,
-                              child: Text(value.toString()),
-                            ))
-                    .toList(),
-              )),
-          ListTile(
-              title: const Text(
-                'Players',
-                style: TextStyle(
-                  fontSize: kTextFontSize,
-                ),
-              ),
-              subtitle: const Text('Number of players per team'),
-              trailing: DropdownButton<int>(
-                value: _teamSize,
-                onChanged: (int newValue) {
-                  setState(() {
-                    _teamSize = newValue;
-                  });
-                },
-                items: _teamSizeOptions
-                    .map<DropdownMenuItem<int>>(
-                        (int value) => DropdownMenuItem<int>(
-                              value: value,
-                              child: Text(value.toString()),
-                            ))
-                    .toList(),
-              )),
-          CheckboxListTile(
-              title: const Text(
-                'Friendly Fire',
-                style: TextStyle(
-                  fontSize: kTextFontSize,
-                ),
-              ),
-              activeColor: Colors.blueGrey,
-              subtitle:
-                  const Text('If enabled, players can hit their teammates'),
-              value: _friendlyFire,
-              onChanged: (_newValue) {
-                setState(() {
-                  _friendlyFire = _newValue;
-                });
-              }),
-        ]),
+        body: ListView(
+            padding: const EdgeInsets.fromLTRB(8, 8, 8, 70),
+            children: <Widget>[
+              ListTile(
+                  title: const Text(
+                    'Mode',
+                    style: TextStyle(
+                      fontSize: kTextFontSize,
+                    ),
+                  ),
+                  subtitle: const Text('Game mode'),
+                  trailing: DropdownButton<GameMode>(
+                    value: _mode,
+                    onChanged: (GameMode newValue) {
+                      setState(() {
+                        _mode = newValue;
+                      });
+                    },
+                    items: [GameMode.tdm]
+                        .map<DropdownMenuItem<GameMode>>(
+                            (GameMode value) => DropdownMenuItem<GameMode>(
+                                  value: value,
+                                  child: Text(modeNames[value]),
+                                ))
+                        .toList(),
+                  )),
+              ListTile(
+                  title: const Text(
+                    'Map',
+                    style: TextStyle(
+                      fontSize: kTextFontSize,
+                    ),
+                  ),
+                  subtitle: const Text('Place to play'),
+                  trailing: DropdownButton<int>(
+                    value: _mapId,
+                    onChanged: (int newValue) {
+                      setState(() {
+                        _mapId = newValue;
+                      });
+                    },
+                    items: mapNames.keys
+                        .map<DropdownMenuItem<int>>(
+                            (int value) => DropdownMenuItem<int>(
+                                  value: value,
+                                  child: Text(mapNames[value]),
+                                ))
+                        .toList(),
+                  )),
+              ListTile(
+                  title: const Text(
+                    'Difficulty',
+                    style: TextStyle(
+                      fontSize: kTextFontSize,
+                    ),
+                  ),
+                  subtitle: const Text('Match difficulty'),
+                  trailing: DropdownButton<int>(
+                    value: _difficulty,
+                    onChanged: (int newValue) {
+                      setState(() {
+                        _difficulty = newValue;
+                      });
+                    },
+                    items: difficultyNames.keys
+                        .map<DropdownMenuItem<int>>(
+                            (int value) => DropdownMenuItem<int>(
+                                  value: value,
+                                  child: Text(difficultyNames[value]),
+                                ))
+                        .toList(),
+                  )),
+              ListTile(
+                  title: const Text(
+                    'Points required',
+                    style: TextStyle(
+                      fontSize: kTextFontSize,
+                    ),
+                  ),
+                  subtitle: const Text('Points needed to win'),
+                  trailing: DropdownButton<int>(
+                    value: _maxPoints,
+                    onChanged: (int newValue) {
+                      setState(() {
+                        _maxPoints = newValue;
+                      });
+                    },
+                    items: _maxPointsOptions
+                        .map<DropdownMenuItem<int>>(
+                            (int value) => DropdownMenuItem<int>(
+                                  value: value,
+                                  child: Text(value.toString()),
+                                ))
+                        .toList(),
+                  )),
+              ListTile(
+                  title: const Text(
+                    'Time available',
+                    style: TextStyle(
+                      fontSize: kTextFontSize,
+                    ),
+                  ),
+                  subtitle: const Text('Maximum time for a match (minutes)'),
+                  trailing: DropdownButton<int>(
+                    value: _maxTime,
+                    onChanged: (int newValue) {
+                      setState(() {
+                        _maxTime = newValue;
+                      });
+                    },
+                    items: _maxTimeOptions
+                        .map<DropdownMenuItem<int>>(
+                            (int value) => DropdownMenuItem<int>(
+                                  value: value,
+                                  child: Text(value.toString()),
+                                ))
+                        .toList(),
+                  )),
+              ListTile(
+                  title: const Text(
+                    'Players',
+                    style: TextStyle(
+                      fontSize: kTextFontSize,
+                    ),
+                  ),
+                  subtitle: const Text('Number of players per team'),
+                  trailing: DropdownButton<int>(
+                    value: _teamSize,
+                    onChanged: (int newValue) {
+                      setState(() {
+                        _teamSize = newValue;
+                      });
+                    },
+                    items: _teamSizeOptions
+                        .map<DropdownMenuItem<int>>(
+                            (int value) => DropdownMenuItem<int>(
+                                  value: value,
+                                  child: Text(value.toString()),
+                                ))
+                        .toList(),
+                  )),
+              CheckboxListTile(
+                  title: const Text(
+                    'Friendly Fire',
+                    style: TextStyle(
+                      fontSize: kTextFontSize,
+                    ),
+                  ),
+                  activeColor: Colors.blueGrey,
+                  subtitle:
+                      const Text('If enabled, players can hit their teammates'),
+                  value: _friendlyFire,
+                  onChanged: (_newValue) {
+                    setState(() {
+                      _friendlyFire = _newValue;
+                    });
+                  }),
+            ]),
         floatingActionButton: Hero(
           tag: 'Play',
           child: PlayButton(

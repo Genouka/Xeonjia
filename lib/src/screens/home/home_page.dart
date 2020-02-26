@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: ListView.builder(
-          padding: const EdgeInsets.all(8),
+          padding: const EdgeInsets.fromLTRB(8, 8, 8, 70),
           itemCount: pageList.length,
           itemBuilder: (BuildContext context, int index) {
             if (pageList[index].containsKey('divider')) {
