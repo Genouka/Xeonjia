@@ -28,7 +28,7 @@ class SnowballComponent extends DynamicComponent {
   int priority() => 5;
 
   @override
-  void updateSprite() {
+  void updateSprite({String event}) {
     // It doesn't do anything because the sprite remains the same
   }
 

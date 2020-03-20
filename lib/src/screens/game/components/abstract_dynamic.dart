@@ -65,10 +65,19 @@ abstract class DynamicComponent extends BasicComponent {
     }
   }
 
-  // Update sprite image based on its orientation
-  void updateSprite() {
-    sprite = Sprite(
-        (image).split('-').first + '-' + orientation.toString() + '.png');
+  // Update sprite image based on its orientation and event type (e.g. "punch")
+  void updateSprite({String event}) {
+    if (event != null) {
+      event = '-' + event;
+      Future.delayed(const Duration(milliseconds: 120), () => updateSprite());
+    } else {
+      event = '';
+    }
+    sprite = Sprite((image).split('-').first +
+        '-' +
+        orientation.toString() +
+        event +
+        '.png');
   }
 
   @override

@@ -5,9 +5,7 @@ import 'package:xeonjia/src/resources/weapon_details.dart';
 import 'package:xeonjia/src/screens/game/components/dynamic/character.dart';
 import 'package:xeonjia/src/screens/game/components/dynamic/snowball.dart';
 import 'package:xeonjia/src/screens/game/components/static/modifer.dart';
-import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
-import 'package:xeonjia/src/widgets/toast.dart';
 
 // Abstract class used to manage weapons inside game
 // It defines what happens if someone use a weapon
@@ -80,9 +78,7 @@ class PunchWeapon extends Weapon {
         return;
       }
     });
-    if (shooter == playerOne) {
-      Toast.show('~ Punch! ~', gameContext, duration: 1);
-    }
+    shooter.updateSprite(event: 'punch');
   }
 }
 
