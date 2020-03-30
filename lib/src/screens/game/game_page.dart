@@ -78,80 +78,92 @@ class _GamePageState extends State<GamePage> {
           child: SafeArea(
             child: Scaffold(
               appBar: PreferredSize(
-                  preferredSize:
-                      Size.fromHeight(game.mode == GameMode.story ? 40 : 80),
-                  child: Column(children: <Widget>[
+                preferredSize:
+                    Size.fromHeight(game.mode == GameMode.story ? 40 : 80),
+                child: Column(
+                  children: <Widget>[
                     SizedBox(
-                        height: 40,
-                        child: Row(children: [
+                      height: 40,
+                      child: Row(
+                        children: [
                           Container(
-                              width: _bottomBarButtonWidth,
-                              color: Colors.white,
-                              child: IconButton(
-                                onPressed: () {
-                                  _pauseDialog(context, dialogMode: 2);
-                                },
-                                icon: Icon(Icons.close),
-                                color: Colors.black,
-                                tooltip: 'Exit game',
-                              )),
+                            width: _bottomBarButtonWidth,
+                            color: Colors.white,
+                            child: IconButton(
+                              onPressed: () {
+                                _pauseDialog(context, dialogMode: 2);
+                              },
+                              icon: Icon(Icons.close),
+                              color: Colors.black,
+                              tooltip: 'Exit game',
+                            ),
+                          ),
                           lifePointsBar,
                           Container(
-                              width: _bottomBarButtonWidth,
-                              color: Colors.white,
-                              child: IconButton(
-                                onPressed: () {
-                                  _pauseDialog(context, dialogMode: 0);
-                                },
-                                icon: Icon(Icons.pause),
-                                color: Colors.black,
-                                tooltip: 'Pause',
-                              )),
-                        ])),
+                            width: _bottomBarButtonWidth,
+                            color: Colors.white,
+                            child: IconButton(
+                              onPressed: () {
+                                _pauseDialog(context, dialogMode: 0);
+                              },
+                              icon: Icon(Icons.pause),
+                              color: Colors.black,
+                              tooltip: 'Pause',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                     if (game.mode != GameMode.story)
                       SizedBox(height: 40, child: multiPlayerBar),
-                  ])),
+                  ],
+                ),
+              ),
               body: Hero(
                 tag: 'Play',
                 child: Container(
-                    child: Stack(children: <Widget>[
-                  game.widget,
-                  if (settings.inputMethod != 0)
-                    FloatingGamepad(manageMovements: settings.inputMethod == 1),
-                ])),
+                  child: Stack(
+                    children: <Widget>[
+                      game.widget,
+                      if (settings.inputMethod != 0)
+                        FloatingGamepad(
+                            manageMovements: settings.inputMethod == 1),
+                    ],
+                  ),
+                ),
               ),
               bottomNavigationBar: _weaponButtonVisibility
                   ? SizedBox(
                       height: 40,
-                      child: Row(children: [
-                        Container(
+                      child: Row(
+                        children: [
+                          Container(
                             width: _bottomBarButtonWidth,
                             color: Colors.white,
                             child: IconButton(
                               onPressed: () {
                                 playerOne.nextWeapon();
                                 weaponBar.state.refresh(
-                                    percent:
-                                        playerOne.selectedWeapon.powerPoints /
-                                            (10 +
-                                                    5 *
-                                                        playerOne.selectedWeapon
-                                                            .level)
-                                                .toDouble(),
-                                    text: (playerOne?.selectedWeapon?.name ??
-                                            '') +
-                                        (playerOne?.selectedWeapon?.powerPoints
-                                                    ?.isFinite ??
-                                                false
-                                            ? ' (${playerOne?.selectedWeapon?.powerPoints?.round().toString()})'
-                                            : ''));
+                                  percent: playerOne
+                                          .selectedWeapon.powerPoints /
+                                      (10 + 5 * playerOne.selectedWeapon.level)
+                                          .toDouble(),
+                                  text: (playerOne?.selectedWeapon?.name ??
+                                          '') +
+                                      (playerOne?.selectedWeapon?.powerPoints
+                                                  ?.isFinite ??
+                                              false
+                                          ? ' (${playerOne?.selectedWeapon?.powerPoints?.round().toString()})'
+                                          : ''),
+                                );
                               },
                               icon: Icon(Icons.swap_horiz),
                               color: Colors.black,
                               tooltip: 'Change weapon',
-                            )),
-                        weaponBar,
-                        Container(
+                            ),
+                          ),
+                          weaponBar,
+                          Container(
                             width: _bottomBarButtonWidth,
                             color: Colors.white,
                             child: IconButton(
@@ -163,8 +175,11 @@ class _GamePageState extends State<GamePage> {
                               color: Colors.black,
                               splashColor: Colors.lightBlue[700],
                               tooltip: 'Shoot',
-                            )),
-                      ]))
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
                   : Container(
                       height: 40,
                       width: _bottomBarButtonWidth,
@@ -178,7 +193,8 @@ class _GamePageState extends State<GamePage> {
                           'Punch!',
                           style: TextStyle(fontSize: kTextFontSize),
                         ),
-                      )),
+                      ),
+                    ),
             ),
           ),
         ),
@@ -227,68 +243,76 @@ class _GamePageState extends State<GamePage> {
   Future<bool> _pauseDialog(BuildContext context, {@required int dialogMode}) {
     game.pause = true;
     return showDialog(
-        barrierDismissible: false,
-        context: context,
-        builder: (BuildContext context) =>
-            StatefulBuilder(builder: (context, setState) {
-              List<Map<String, String>> pauseDialogModeList =
-                  _pauseDialogStringsListGenerator();
-              return WillPopScope(
-                  onWillPop: () => null,
-                  child: AlertDialog(
-                    title: Text(pauseDialogModeList[dialogMode]['title']),
-                    content: Text(pauseDialogModeList[dialogMode]['text']),
-                    actions: <Widget>[
-                      dialogMode == 0
-                          ? FlatButton(
-                              child: const Text('Restart'),
-                              onPressed: () {
-                                setState(() {
-                                  dialogMode = 1;
-                                });
-                              })
-                          : null,
-                      dialogMode == 0
-                          ? FlatButton(
-                              child: const Text('Exit'),
-                              onPressed: () {
-                                setState(() {
-                                  dialogMode = 2;
-                                });
-                              })
-                          : null,
-                      dialogMode == 0
-                          ? FlatButton(
-                              child: const Text('Close'),
-                              onPressed: () {
-                                Navigator.of(context).pop(true);
-                                game.pause = false;
-                              })
-                          : null,
-                      dialogMode != 0
-                          ? FlatButton(
-                              child: const Text('Yes'),
-                              onPressed: () {
-                                if (dialogMode == 1) {
-                                  game.initialize();
-                                } else {
-                                  Navigator.pop(context);
-                                  game = null;
-                                }
-                                Navigator.of(context).pop(true);
-                              })
-                          : null,
-                      dialogMode != 0
-                          ? FlatButton(
-                              child: const Text('No'),
-                              onPressed: () {
-                                game.pause = false;
-                                return Navigator.of(context).pop(false);
-                              })
-                          : null,
-                    ],
-                  ));
-            }));
+      barrierDismissible: false,
+      context: context,
+      builder: (BuildContext context) => StatefulBuilder(
+        builder: (context, setState) {
+          List<Map<String, String>> pauseDialogModeList =
+              _pauseDialogStringsListGenerator();
+          return WillPopScope(
+            onWillPop: () => null,
+            child: AlertDialog(
+              title: Text(pauseDialogModeList[dialogMode]['title']),
+              content: Text(pauseDialogModeList[dialogMode]['text']),
+              actions: <Widget>[
+                dialogMode == 0
+                    ? FlatButton(
+                        child: const Text('Restart'),
+                        onPressed: () {
+                          setState(() {
+                            dialogMode = 1;
+                          });
+                        },
+                      )
+                    : null,
+                dialogMode == 0
+                    ? FlatButton(
+                        child: const Text('Exit'),
+                        onPressed: () {
+                          setState(() {
+                            dialogMode = 2;
+                          });
+                        },
+                      )
+                    : null,
+                dialogMode == 0
+                    ? FlatButton(
+                        child: const Text('Close'),
+                        onPressed: () {
+                          Navigator.of(context).pop(true);
+                          game.pause = false;
+                        },
+                      )
+                    : null,
+                dialogMode != 0
+                    ? FlatButton(
+                        child: const Text('Yes'),
+                        onPressed: () {
+                          if (dialogMode == 1) {
+                            game.initialize();
+                          } else {
+                            Navigator.pop(context);
+                            game = null;
+                          }
+                          Navigator.of(context).pop(true);
+                        },
+                      )
+                    : null,
+                dialogMode != 0
+                    ? FlatButton(
+                        child: const Text('No'),
+                        onPressed: () {
+                          game.pause = false;
+                          return Navigator.of(context).pop(false);
+                        },
+                      )
+                    : null,
+              ],
+            ),
+          );
+        },
+      ),
+    );
   }
 
   @override

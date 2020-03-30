@@ -366,31 +366,33 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
     content += '\n\nDo you want to restart this game?';
 
     showDialog(
-        context: gameContext,
-        barrierDismissible: false,
-        builder: (BuildContext context) => WillPopScope(
-            onWillPop: () => null,
-            child: AlertDialog(
-              title: Text(title),
-              content: Text(content),
-              actions: <Widget>[
-                FlatButton(
-                  child: const Text('Yes'),
-                  onPressed: () {
-                    initialize();
-                    Navigator.of(context).pop();
-                  },
-                ),
-                FlatButton(
-                  child: const Text('No'),
-                  onPressed: () {
-                    Navigator.pop(context);
-                    game = null;
-                    Navigator.of(context).pop();
-                  },
-                ),
-              ],
-            )));
+      context: gameContext,
+      barrierDismissible: false,
+      builder: (BuildContext context) => WillPopScope(
+        onWillPop: () => null,
+        child: AlertDialog(
+          title: Text(title),
+          content: Text(content),
+          actions: <Widget>[
+            FlatButton(
+              child: const Text('Yes'),
+              onPressed: () {
+                initialize();
+                Navigator.of(context).pop();
+              },
+            ),
+            FlatButton(
+              child: const Text('No'),
+              onPressed: () {
+                Navigator.pop(context);
+                game = null;
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 

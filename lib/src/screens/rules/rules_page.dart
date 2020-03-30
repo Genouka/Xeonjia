@@ -13,7 +13,8 @@ class _RulesPageState extends State<RulesPage> {
   // Page currently displayed
   int _page = 0;
 
-  @override void initState() {
+  @override
+  void initState() {
     settings.rulesRead = true;
     saveSettings();
     super.initState();
@@ -27,9 +28,9 @@ class _RulesPageState extends State<RulesPage> {
         ),
         body: GestureDetector(
           child: Container(
-              height: MediaQuery.of(context).size.height,
-              child: SingleChildScrollView(
-                  child: Column(
+            height: MediaQuery.of(context).size.height,
+            child: SingleChildScrollView(
+              child: Column(
                 children: <Widget>[
                   /*Center(
                 child: Container(
@@ -52,21 +53,24 @@ class _RulesPageState extends State<RulesPage> {
                     ),
                   ),
                   Container(
-                      padding: const EdgeInsets.fromLTRB(20, 35, 20, 0),
-                      child: Text(
-                        ruleList[_page]['text'],
-                        style: const TextStyle(fontSize: kTextFontSize - 2),
-                      )),
+                    padding: const EdgeInsets.fromLTRB(20, 35, 20, 0),
+                    child: Text(
+                      ruleList[_page]['text'],
+                      style: const TextStyle(fontSize: kTextFontSize - 2),
+                    ),
+                  ),
                 ],
-              ))),
+              ),
+            ),
+          ),
           onHorizontalDragEnd: (DragEndDetails details) {
             changePage(details.velocity.pixelsPerSecond.dx > 0 ? -1 : 1);
           },
         ),
         bottomNavigationBar: BottomAppBar(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
               MaterialButton(
                 child: Row(children: const [
                   Icon(Icons.keyboard_arrow_left),
@@ -81,7 +85,9 @@ class _RulesPageState extends State<RulesPage> {
                   ]),
                   onPressed:
                       _page < ruleList.length - 1 ? () => changePage(1) : null)
-            ])),
+            ],
+          ),
+        ),
       );
 
   void changePage(int diff) {

@@ -74,20 +74,21 @@ class ToastView {
           widget: Container(
             width: MediaQuery.of(context).size.width,
             child: Container(
-                alignment: Alignment.center,
-                width: MediaQuery.of(context).size.width,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: background,
-                    borderRadius: BorderRadius.circular(backgroundRadius),
-                    border: border,
-                  ),
-                  margin: const EdgeInsets.symmetric(horizontal: 20),
-                  padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
-                  child: Text(msg,
-                      softWrap: true,
-                      style: TextStyle(fontSize: 15, color: textColor)),
-                )),
+              alignment: Alignment.center,
+              width: MediaQuery.of(context).size.width,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: background,
+                  borderRadius: BorderRadius.circular(backgroundRadius),
+                  border: border,
+                ),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                child: Text(msg,
+                    softWrap: true,
+                    style: TextStyle(fontSize: 15, color: textColor)),
+              ),
+            ),
           ),
           gravity: gravity),
     );
@@ -119,11 +120,12 @@ class ToastWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-        top: gravity == 2 ? 50 : null,
-        bottom: gravity == 0 ? 50 : null,
-        child: Material(
-          color: Colors.transparent,
-          child: widget,
-        ));
+      top: gravity == 2 ? 50 : null,
+      bottom: gravity == 0 ? 50 : null,
+      child: Material(
+        color: Colors.transparent,
+        child: widget,
+      ),
+    );
   }
 }

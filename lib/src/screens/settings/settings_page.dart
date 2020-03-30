@@ -18,75 +18,79 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
-          title: const Text('S E T T I N G S'),
-          centerTitle: true,
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.settings_backup_restore),
-              tooltip: 'Restore',
-              onPressed: () {
-                _restoreSettingsDialog();
-              },
-            ),
-          ]),
+        title: const Text('S E T T I N G S'),
+        centerTitle: true,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.settings_backup_restore),
+            tooltip: 'Restore',
+            onPressed: () {
+              _restoreSettingsDialog();
+            },
+          ),
+        ],
+      ),
       body: OptionList());
 
   // Dialog used to restore default settings
   _restoreSettingsDialog() => showDialog(
-      context: context,
-      builder: (BuildContext context) => AlertDialog(
-            title: const Text('Restore default settings?'),
-            content: const Text(
-                'Are you sure you want to delete your settings and restore default ones?'),
-            actions: <Widget>[
-              FlatButton(
-                child: const Text('Yes'),
-                onPressed: () {
-                  SystemChrome.setEnabledSystemUIOverlays([]);
-                  settings = AppSettings({'rulesRead': settings.rulesRead});
-                  saveSettings();
-                  setState(() {});
-                  Navigator.of(context).pop();
-                },
-              ),
-              FlatButton(
-                child: const Text('No'),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-            ],
-          ));
+        context: context,
+        builder: (BuildContext context) => AlertDialog(
+          title: const Text('Restore default settings?'),
+          content: const Text(
+              'Are you sure you want to delete your settings and restore default ones?'),
+          actions: <Widget>[
+            FlatButton(
+              child: const Text('Yes'),
+              onPressed: () {
+                SystemChrome.setEnabledSystemUIOverlays([]);
+                settings = AppSettings({'rulesRead': settings.rulesRead});
+                saveSettings();
+                setState(() {});
+                Navigator.of(context).pop();
+              },
+            ),
+            FlatButton(
+              child: const Text('No'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        ),
+      );
 
   // Returns a tile widget for options that use drop down button
   Widget dropDownTile(String element, String title, String subtitle, int value,
           List<int> list,
           {Map<int, String> mapText}) =>
       ListTile(
-          title: Text(
-            title,
-            style: const TextStyle(
-              fontSize: kTextFontSize,
-            ),
+        title: Text(
+          title,
+          style: const TextStyle(
+            fontSize: kTextFontSize,
           ),
-          subtitle: Text(subtitle),
-          trailing: DropdownButton<int>(
-            value: value,
-            onChanged: (int newValue) {
-              updateVariables(element, newValue);
-              setState(() {
-                saveSettings();
-              });
-            },
-            items: list
-                .map<DropdownMenuItem<int>>((int value) =>
-                    DropdownMenuItem<int>(
-                      value: value,
-                      child: Text(
-                          mapText != null ? mapText[value] : value.toString()),
-                    ))
-                .toList(),
-          ));
+        ),
+        subtitle: Text(subtitle),
+        trailing: DropdownButton<int>(
+          value: value,
+          onChanged: (int newValue) {
+            updateVariables(element, newValue);
+            setState(() {
+              saveSettings();
+            });
+          },
+          items: list
+              .map<DropdownMenuItem<int>>(
+                (int value) => DropdownMenuItem<int>(
+                  value: value,
+                  child:
+                      Text(mapText != null ? mapText[value] : value.toString()),
+                ),
+              )
+              .toList(),
+        ),
+      );
 
   // Returns a checkbox tile. Used only for fullscreen option, for now
   Widget checkBoxTile(String title, String subtitle) => CheckboxListTile(

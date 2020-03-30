@@ -31,39 +31,46 @@ class _MultiPlayerBarState extends State<MultiPlayerBar> {
       _firstFlex = _lastFlex = 1;
     }
 
-    return Row(children: [
-      Expanded(
+    return Row(
+      children: [
+        Expanded(
           flex: _firstFlex,
           child: Container(
             padding: const EdgeInsets.only(left: 5, right: 5),
             child: Center(
-                child: Text(
-              _firstTeamPoints.toString(),
-              style: const TextStyle(fontSize: 18),
-              maxLines: 1,
-            )),
+              child: Text(
+                _firstTeamPoints.toString(),
+                style: const TextStyle(fontSize: 18),
+                maxLines: 1,
+              ),
+            ),
             color: game.teams.first.color.withOpacity(0.4),
-          )),
-      Expanded(
+          ),
+        ),
+        Expanded(
           flex: _lastFlex,
           child: Container(
             padding: const EdgeInsets.only(left: 5, right: 5),
             child: Center(
-                child: Text(
-              _lastTeamPoints.toString(),
-              style: const TextStyle(fontSize: 18),
-              maxLines: 1,
-            )),
+              child: Text(
+                _lastTeamPoints.toString(),
+                style: const TextStyle(fontSize: 18),
+                maxLines: 1,
+              ),
+            ),
             color: game.teams.last.color.withOpacity(0.4),
-          )),
-      SizedBox(
+          ),
+        ),
+        SizedBox(
           width: 50,
           child: Container(
             child: Center(
                 child: Text((_remaining ?? widget.maxTime).toString(),
                     style: const TextStyle(fontSize: 18))),
             color: Colors.white.withOpacity(0.4),
-          )),
-    ]);
+          ),
+        ),
+      ],
+    );
   }
 }

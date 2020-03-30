@@ -31,17 +31,17 @@ class HomePage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(6),
                 child: Ink.image(
-                    image:
-                        AssetImage('assets/images/${mainCharacter.imageName}'),
-                    fit: BoxFit.cover,
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          FadeRoute(UserPage(appBarCollapsed: false)),
-                        );
-                      },
-                    )),
+                  image: AssetImage('assets/images/${mainCharacter.imageName}'),
+                  fit: BoxFit.cover,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        FadeRoute(UserPage(appBarCollapsed: false)),
+                      );
+                    },
+                  ),
+                ),
               ),
             ),
           ),

@@ -8,23 +8,25 @@ class StatsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> statsList = statsListGenerator();
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('S T A T S'),
-          centerTitle: true,
-        ),
-        body: ListView.separated(
-            itemCount: statsList.length,
-            itemBuilder: (context, index) => ListTile(
-                  title: Text(
-                    statsList[index]['title'],
-                    style: const TextStyle(fontSize: kTextFontSize),
-                  ),
-                  /*subtitle: Text(
+      appBar: AppBar(
+        title: const Text('S T A T S'),
+        centerTitle: true,
+      ),
+      body: ListView.separated(
+        itemCount: statsList.length,
+        itemBuilder: (context, index) => ListTile(
+          title: Text(
+            statsList[index]['title'],
+            style: const TextStyle(fontSize: kTextFontSize),
+          ),
+          /*subtitle: Text(
                     statsList[index]['subtitle'],
                     style: TextStyle(fontSize: kTextFontSize - 4),
                   ),*/
-                  trailing: Text(statsList[index]['value'].toString()),
-                ),
-            separatorBuilder: (context, index) => const Divider()));
+          trailing: Text(statsList[index]['value'].toString()),
+        ),
+        separatorBuilder: (context, index) => const Divider(),
+      ),
+    );
   }
 }
