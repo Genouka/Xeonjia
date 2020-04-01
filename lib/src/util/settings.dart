@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
-import 'package:xeonjia/src/util/app_settings.dart';
 import 'package:xeonjia/src/util/character_info.dart';
 
 SharedPreferences _prefs;
@@ -42,4 +41,39 @@ void _loadSettings() {
   settings = AppSettings(jsonDecode(_prefs.getString('settings') ?? '{}'));
   kGamepadOffset = Offset(_prefs.getDouble('gamepadOffsetX') ?? 0,
       _prefs.getDouble('gamepadOffsetY') ?? 0);
+}
+
+// Class used to store settings data
+class AppSettings {
+  // Enable app fullscreen
+  bool fullScreen;
+
+  // Selected input method
+  int inputMethod;
+
+  // Virtual gamepad dimension
+  double gamepadSize;
+
+  // Virtual gamepad shape
+  int gamepadShape;
+
+  // True if rules have been read
+  bool rulesRead;
+
+  // Import settings from a Json
+  AppSettings(Map<String, dynamic> json)
+      : fullScreen = json['fullScreen'] ?? true,
+        inputMethod = json['inputMethod'] ?? 0,
+        gamepadSize = json['gamepadSize'] ?? 50,
+        gamepadShape = json['gamepadShape'] ?? 0,
+        rulesRead = json['rulesRead'] ?? false;
+
+  // Export settings as a Json
+  Map<String, dynamic> toJson() => {
+        'fullScreen': fullScreen,
+        'inputMethod': inputMethod,
+        'gamepadSize': gamepadSize,
+        'gamepadShape': gamepadShape,
+        'rulesRead': rulesRead,
+      };
 }

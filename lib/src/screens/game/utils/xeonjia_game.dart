@@ -9,7 +9,7 @@ import 'package:xeonjia/src/screens/game/components/dynamic/character.dart';
 import 'package:xeonjia/src/screens/game/components/static/modifer.dart';
 import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/screens/game/utils/map_utils.dart';
-import 'package:xeonjia/src/util/local_data_controller.dart';
+import 'package:xeonjia/src/util/settings.dart';
 
 // Main game variable
 XeonjiaGame game;

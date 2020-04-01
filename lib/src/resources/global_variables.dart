@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:xeonjia/src/util/app_settings.dart';
+import 'package:xeonjia/src/util/settings.dart';
 import 'package:xeonjia/src/util/character_info.dart';
 
 // App version
@@ -14,14 +14,13 @@ double screenWidth;
 double screenHeight;
 
 // Stored app settings
-AppSettings settings = AppSettings({});
+AppSettings settings;
 
 // Gamepad position
 Offset kGamepadOffset;
 
-// Main player data
-// In-game data is managed by "player" variable in xeonjia_game.dart
-CharacterInfo mainCharacter = CharacterInfo({});
+// Main character data
+CharacterInfo mainCharacter;
 
 // Game modes
 enum GameMode { story, tdm, ctf }

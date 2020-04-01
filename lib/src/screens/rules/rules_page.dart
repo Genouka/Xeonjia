@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/screens/rules/resources/rules_list.dart';
-import 'package:xeonjia/src/util/local_data_controller.dart';
+import 'package:xeonjia/src/util/settings.dart';
 
 class RulesPage extends StatefulWidget {
   @override

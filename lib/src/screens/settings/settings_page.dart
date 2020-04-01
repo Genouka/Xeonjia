@@ -3,8 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/screens/settings/resources/option_list.dart';
-import 'package:xeonjia/src/util/app_settings.dart';
-import 'package:xeonjia/src/util/local_data_controller.dart';
+import 'package:xeonjia/src/util/settings.dart';
 
 class SettingsPage extends StatefulWidget {
   static _SettingsPageState of(BuildContext context) =>

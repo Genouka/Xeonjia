@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/resources/weapon_details.dart';
 import 'package:xeonjia/src/screens/user/resources/content_list.dart';
-import 'package:xeonjia/src/util/local_data_controller.dart';
+import 'package:xeonjia/src/util/settings.dart';
 import 'package:xeonjia/src/widgets/toast.dart';
 
 // Text controller used to edit character name

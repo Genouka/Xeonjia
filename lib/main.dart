@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
-import 'package:xeonjia/src/util/local_data_controller.dart';
+import 'package:xeonjia/src/util/settings.dart';
 import 'package:xeonjia/src/xeonjia.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  loadStoredData().then((_) {
+  await loadStoredData().then((_) {
     // Set fullscreen
     if (settings.fullScreen) SystemChrome.setEnabledSystemUIOverlays([]);
   });
