@@ -8,6 +8,7 @@ import 'package:xeonjia/src/screens/game/components/abstract_basic.dart';
 import 'package:xeonjia/src/screens/game/components/dynamic/character.dart';
 import 'package:xeonjia/src/screens/game/components/static/modifer.dart';
 import 'package:xeonjia/src/screens/game/game_page.dart';
+import 'package:xeonjia/src/screens/game/utils/gamepad.dart';
 import 'package:xeonjia/src/screens/game/utils/map_utils.dart';
 import 'package:xeonjia/src/util/settings.dart';
 
@@ -91,6 +92,12 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
   // List of modifier to be regenerate during the next regenerateModifiers()
   var modifiersToBeRegenerated = List<ModifierComponent>();
 
+  // Wireless gamepad
+  FlameGamepad gamepad;
+
+  // Variable used to avoid exit when gamepad B button is pressed
+  bool avoidExit = false;
+
   XeonjiaGame(this.mode,
       {this.teamSize = 0,
       this.friendlyFire = false,
@@ -132,6 +139,8 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
         ? mainCharacter.visitedRooms.last.toString().padLeft(3, '0')
         : 'arena/$mapId';
     importMap('assets/maps/' + _map + '.tmx');
+
+    initGamepad();
 
     if (mode != GameMode.story) startTimer();
     pause = false;
@@ -385,6 +394,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
               child: const Text('No'),
               onPressed: () {
                 Navigator.pop(context);
+                gamepad.removeListener();
                 game = null;
                 Navigator.of(context).pop();
               },
@@ -393,6 +403,54 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
         ),
       ),
     );
+  }
+
+  // Initialize wireless gamepad listener
+  void initGamepad() async {
+    gamepad = FlameGamepad()
+      ..setListener((evtType, key) {
+        switch (key) {
+          case GAMEPAD_DPAD_UP:
+            gestureDragInput(const Offset(0, -1));
+            break;
+          case GAMEPAD_DPAD_DOWN:
+            gestureDragInput(const Offset(0, 1));
+            break;
+          case GAMEPAD_DPAD_RIGHT:
+            gestureDragInput(const Offset(1, 0));
+            break;
+          case GAMEPAD_DPAD_LEFT:
+            gestureDragInput(const Offset(-1, 0));
+            break;
+          case GAMEPAD_BUTTON_A:
+            playerOne.selectedWeapon.shoot(shooter: playerOne);
+            break;
+          case GAMEPAD_BUTTON_B:
+            avoidExit = true;
+            playerOne.selectedWeapon.shoot(shooter: playerOne);
+            break;
+          case GAMEPAD_BUTTON_X:
+            playerOne.selectedWeapon.shoot(shooter: playerOne);
+            break;
+          case GAMEPAD_BUTTON_Y:
+            playerOne.selectedWeapon.shoot(shooter: playerOne);
+            break;
+          case GAMEPAD_BUTTON_L1:
+            playerOne.nextWeapon();
+            break;
+          case GAMEPAD_BUTTON_L2:
+            playerOne.nextWeapon();
+            break;
+          case GAMEPAD_BUTTON_R1:
+            playerOne.nextWeapon();
+            break;
+          case GAMEPAD_BUTTON_R2:
+            playerOne.nextWeapon();
+            break;
+          case GAMEPAD_BUTTON_START:
+            break;
+        }
+      });
   }
 }
 

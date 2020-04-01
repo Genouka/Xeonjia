@@ -6,17 +6,17 @@ import 'package:xeonjia/src/util/settings.dart';
 
 enum Direction { right, left, up, down, center }
 
-// Floating virtual gamepad used to move the player
-class FloatingGamepad extends StatefulWidget {
+// Virtual gamepad used to move the player
+class VirtualGamepad extends StatefulWidget {
   final bool manageMovements;
-  FloatingGamepad({@required this.manageMovements});
+  VirtualGamepad({@required this.manageMovements});
 
   @override
-  _FloatingGamepadState createState() => _FloatingGamepadState();
+  _VirtualGamepadState createState() => _VirtualGamepadState();
 }
 
-// Floating gamepad widget
-class _FloatingGamepadState extends State<FloatingGamepad> {
+// Virtual gamepad widget
+class _VirtualGamepadState extends State<VirtualGamepad> {
   // Gamepad position
   Offset _offset = kGamepadOffset;
 

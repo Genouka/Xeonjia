@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
-import 'package:xeonjia/src/screens/game/widgets/gamepad.dart';
+import 'package:xeonjia/src/screens/game/widgets/virtual_gamepad.dart';
 import 'package:xeonjia/src/screens/game/widgets/multiplayer_bar.dart';
 import 'package:xeonjia/src/screens/game/widgets/percent_indicator.dart';
 
@@ -126,7 +126,7 @@ class _GamePageState extends State<GamePage> {
                     children: <Widget>[
                       game.widget,
                       if (settings.inputMethod != 0)
-                        FloatingGamepad(
+                        VirtualGamepad(
                             manageMovements: settings.inputMethod == 1),
                     ],
                   ),
@@ -241,6 +241,10 @@ class _GamePageState extends State<GamePage> {
   // If mode == 1 -> restart menu
   // If mode == 2 -> exit menu
   Future<bool> _pauseDialog(BuildContext context, {@required int dialogMode}) {
+    if (game.avoidExit) {
+      game.avoidExit = false;
+      return Future.value(false);
+    }
     game.pause = true;
     return showDialog(
       barrierDismissible: false,
