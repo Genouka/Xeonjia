@@ -31,7 +31,7 @@ class _ArenaPageState extends State<ArenaPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: const Text('A R E N A'),
+          title: const Text('ARENA'),
           centerTitle: true,
         ),
         body: ListView(

@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
     setScreenDimension(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('X E O N J I A'),
+        title: const Text('XEONJIA'),
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(

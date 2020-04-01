@@ -23,7 +23,7 @@ class _RulesPageState extends State<RulesPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: const Text('R U L E S'),
+          title: const Text('RULES'),
           centerTitle: true,
         ),
         body: GestureDetector(

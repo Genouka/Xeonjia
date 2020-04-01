@@ -9,7 +9,7 @@ class StatsPage extends StatelessWidget {
     List<Map<String, dynamic>> statsList = statsListGenerator();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('S T A T S'),
+        title: const Text('STATS'),
         centerTitle: true,
       ),
       body: ListView.separated(

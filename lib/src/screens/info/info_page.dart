@@ -15,7 +15,7 @@ class _InfoPageState extends State<InfoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('I N F O'),
+        title: const Text('INFO'),
         centerTitle: true,
       ),
       body: ListView.builder(

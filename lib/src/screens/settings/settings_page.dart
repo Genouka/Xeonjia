@@ -17,7 +17,7 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
-        title: const Text('S E T T I N G S'),
+        title: const Text('SETTINGS'),
         centerTitle: true,
         actions: <Widget>[
           IconButton(

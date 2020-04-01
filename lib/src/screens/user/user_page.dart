@@ -77,7 +77,8 @@ class _UserPageState extends State<UserPage> {
                       },
                     )
                   : Text(mainCharacter.name,
-                      style: const TextStyle(fontSize: kTextFontSize)),
+                      style: const TextStyle(
+                          letterSpacing: 1, fontSize: kTextFontSize)),
 
               // Flexible space that contains character images
               flexibleSpace: FlexibleSpaceBar(
