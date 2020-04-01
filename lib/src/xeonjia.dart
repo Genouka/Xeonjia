@@ -24,7 +24,7 @@ class Xeonjia extends StatelessWidget {
         primaryColor: Colors.lightBlue[700],
         appBarTheme: AppBarTheme(
           textTheme: TextTheme(
-            headline6: TextStyle(
+            title: TextStyle(
                 letterSpacing: 6, fontSize: 22, fontWeight: FontWeight.w600),
           ),
         ),
