@@ -5,6 +5,7 @@ import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 import 'package:xeonjia/src/screens/game/widgets/virtual_gamepad.dart';
 import 'package:xeonjia/src/screens/game/widgets/multiplayer_bar.dart';
 import 'package:xeonjia/src/screens/game/widgets/percent_indicator.dart';
+import 'package:xeonjia/src/util/utils.dart';
 
 // Top and bottom bars
 LinearPercentIndicator lifePointsBar;
@@ -72,130 +73,138 @@ class _GamePageState extends State<GamePage> {
   @override
   Widget build(BuildContext context) {
     gameContext = context;
+
     return WillPopScope(
         child: Container(
           color: Colors.white,
           child: SafeArea(
-            child: Scaffold(
-              appBar: PreferredSize(
-                preferredSize:
-                    Size.fromHeight(game.mode == GameMode.story ? 40 : 80),
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(
-                      height: 40,
-                      child: Row(
-                        children: [
-                          Container(
-                            width: _bottomBarButtonWidth,
-                            color: Colors.white,
-                            child: IconButton(
-                              onPressed: () {
-                                _pauseDialog(context, dialogMode: 2);
-                              },
-                              icon: Icon(Icons.close),
-                              color: Colors.black,
-                              tooltip: 'Exit game',
-                            ),
-                          ),
-                          lifePointsBar,
-                          Container(
-                            width: _bottomBarButtonWidth,
-                            color: Colors.white,
-                            child: IconButton(
-                              onPressed: () {
-                                _pauseDialog(context, dialogMode: 0);
-                              },
-                              icon: Icon(Icons.pause),
-                              color: Colors.black,
-                              tooltip: 'Pause',
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    if (game.mode != GameMode.story)
-                      SizedBox(height: 40, child: multiPlayerBar),
-                  ],
-                ),
-              ),
-              body: Hero(
-                tag: 'Play',
-                child: Container(
-                  child: Stack(
+            child: OrientationBuilder(builder: (context, orientation) {
+              setScreenDimension(context);
+              game.updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
+              return Scaffold(
+                appBar: PreferredSize(
+                  preferredSize:
+                      Size.fromHeight(game.mode == GameMode.story ? 40 : 80),
+                  child: Column(
                     children: <Widget>[
-                      game.widget,
-                      if (settings.inputMethod != 0)
-                        VirtualGamepad(
-                            manageMovements: settings.inputMethod == 1),
+                      SizedBox(
+                        height: 40,
+                        child: Row(
+                          children: [
+                            Container(
+                              width: _bottomBarButtonWidth,
+                              color: Colors.white,
+                              child: IconButton(
+                                onPressed: () {
+                                  _pauseDialog(context, dialogMode: 2);
+                                },
+                                icon: Icon(Icons.close),
+                                color: Colors.black,
+                                tooltip: 'Exit game',
+                              ),
+                            ),
+                            lifePointsBar,
+                            Container(
+                              width: _bottomBarButtonWidth,
+                              color: Colors.white,
+                              child: IconButton(
+                                onPressed: () {
+                                  _pauseDialog(context, dialogMode: 0);
+                                },
+                                icon: Icon(Icons.pause),
+                                color: Colors.black,
+                                tooltip: 'Pause',
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      if (game.mode != GameMode.story)
+                        SizedBox(height: 40, child: multiPlayerBar),
                     ],
                   ),
                 ),
-              ),
-              bottomNavigationBar: _weaponButtonVisibility
-                  ? SizedBox(
-                      height: 40,
-                      child: Row(
-                        children: [
-                          Container(
-                            width: _bottomBarButtonWidth,
-                            color: Colors.white,
-                            child: IconButton(
-                              onPressed: () {
-                                playerOne.nextWeapon();
-                                weaponBar.state.refresh(
-                                  percent: playerOne
-                                          .selectedWeapon.powerPoints /
-                                      (10 + 5 * playerOne.selectedWeapon.level)
-                                          .toDouble(),
-                                  text: (playerOne?.selectedWeapon?.name ??
-                                          '') +
-                                      (playerOne?.selectedWeapon?.powerPoints
-                                                  ?.isFinite ??
-                                              false
-                                          ? ' (${playerOne?.selectedWeapon?.powerPoints?.round().toString()})'
-                                          : ''),
-                                );
-                              },
-                              icon: Icon(Icons.swap_horiz),
-                              color: Colors.black,
-                              tooltip: 'Change weapon',
+                body: Hero(
+                  tag: 'Play',
+                  child: Container(
+                    child: Stack(
+                      children: <Widget>[
+                        game.widget,
+                        if (settings.inputMethod != 0)
+                          VirtualGamepad(
+                              manageMovements: settings.inputMethod == 1),
+                      ],
+                    ),
+                  ),
+                ),
+                bottomNavigationBar: _weaponButtonVisibility
+                    ? SizedBox(
+                        height: 40,
+                        child: Row(
+                          children: [
+                            Container(
+                              width: _bottomBarButtonWidth,
+                              color: Colors.white,
+                              child: IconButton(
+                                onPressed: () {
+                                  playerOne.nextWeapon();
+                                  weaponBar.state.refresh(
+                                    percent:
+                                        playerOne.selectedWeapon.powerPoints /
+                                            (10 +
+                                                    5 *
+                                                        playerOne.selectedWeapon
+                                                            .level)
+                                                .toDouble(),
+                                    text: (playerOne?.selectedWeapon?.name ??
+                                            '') +
+                                        (playerOne?.selectedWeapon?.powerPoints
+                                                    ?.isFinite ??
+                                                false
+                                            ? ' (${playerOne?.selectedWeapon?.powerPoints?.round().toString()})'
+                                            : ''),
+                                  );
+                                },
+                                icon: Icon(Icons.swap_horiz),
+                                color: Colors.black,
+                                tooltip: 'Change weapon',
+                              ),
                             ),
-                          ),
-                          weaponBar,
-                          Container(
-                            width: _bottomBarButtonWidth,
-                            color: Colors.white,
-                            child: IconButton(
-                              onPressed: () {
-                                playerOne.selectedWeapon
-                                    .shoot(shooter: playerOne);
-                              },
-                              icon: Icon(Icons.whatshot),
-                              color: Colors.black,
-                              splashColor: Colors.lightBlue[700],
-                              tooltip: 'Shoot',
+                            weaponBar,
+                            Container(
+                              width: _bottomBarButtonWidth,
+                              color: Colors.white,
+                              child: IconButton(
+                                onPressed: () {
+                                  playerOne.selectedWeapon
+                                      .shoot(shooter: playerOne);
+                                },
+                                icon: Icon(Icons.whatshot),
+                                color: Colors.black,
+                                splashColor: Colors.lightBlue[700],
+                                tooltip: 'Shoot',
+                              ),
                             ),
+                          ],
+                        ),
+                      )
+                    : Container(
+                        height: 40,
+                        width: _bottomBarButtonWidth,
+                        color: Colors.white,
+                        child: MaterialButton(
+                          onPressed: () {
+                            playerOne.selectedWeapon.shoot(shooter: playerOne);
+                          },
+                          splashColor: Colors.lightBlue[700],
+                          child: const Text(
+                            'Punch!',
+                            style: TextStyle(fontSize: kTextFontSize),
                           ),
-                        ],
-                      ),
-                    )
-                  : Container(
-                      height: 40,
-                      width: _bottomBarButtonWidth,
-                      color: Colors.white,
-                      child: MaterialButton(
-                        onPressed: () {
-                          playerOne.selectedWeapon.shoot(shooter: playerOne);
-                        },
-                        splashColor: Colors.lightBlue[700],
-                        child: const Text(
-                          'Punch!',
-                          style: TextStyle(fontSize: kTextFontSize),
                         ),
                       ),
-                    ),
-            ),
+              );
+            }),
           ),
         ),
         onWillPop: () => _pauseDialog(context, dialogMode: 2));

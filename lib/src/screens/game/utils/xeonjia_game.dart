@@ -18,21 +18,20 @@ XeonjiaGame game;
 // Main character
 CharacterComponent playerOne;
 
-// Default component dimension
-double componentSize;
+// Timer used in multiplayer games
+Timer timer;
 
 // Time between each cycle of update
 // Frequency = (1 / updatePeriod)
 const double updatePeriod = 0.03;
 
-// Timer used in multiplayer games
-Timer timer;
+// Default component dimension
+const double componentSize = 40;
 
 // Default distance made at each frame update
 // Component speed depend on this value and on updatePeriod value
-// It equals to componentSize / 4
 // Movements don't depend on the time that has been passed between 2 update()...
-double defaultDistancePerFrame;
+const double defaultDistancePerFrame = componentSize / 4;
 
 // Xeonjia game class
 class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
@@ -105,7 +104,6 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
       this.maxTime = 180,
       this.difficulty = 4,
       this.mapId = 0}) {
-    fixedScreenHeight = screenHeight - (mode != GameMode.story ? 40 : 0);
     initialize();
   }
 
@@ -299,6 +297,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
 
   // Update camera position
   void updateCamera(double x, double y) {
+    fixedScreenHeight = screenHeight - (mode != GameMode.story ? 40 : 0);
     // Update x position
     if (x <= screenWidth / 2 || screenWidth > componentSize * mapWidth) {
       camera.x = 0.0;

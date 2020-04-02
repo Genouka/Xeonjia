@@ -6,12 +6,6 @@ import 'package:xeonjia/src/screens/home/home_page.dart';
 class Xeonjia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Set portrait only
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
-
     // Set system overlay color
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
         systemNavigationBarColor: Colors.lightBlue[500],
