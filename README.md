@@ -2,6 +2,10 @@
 
 Solve ice puzzles and defeat enemies in an RPG world.
 
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/xyz.deepdaikon.xeonjia/)
+
 ## About
 
 There are two modes:
