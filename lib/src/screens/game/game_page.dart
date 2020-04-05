@@ -15,9 +15,6 @@ MultiPlayerBar multiPlayerBar;
 // BuildContext of GamePage
 BuildContext gameContext;
 
-// Width of the buttons beside weaponBar
-const double _bottomBarButtonWidth = 50;
-
 class GamePage extends StatefulWidget {
   final GameMode mode;
   final int teamSize;
@@ -90,7 +87,6 @@ class _GamePageState extends State<GamePage> {
                         child: Row(
                           children: [
                             Container(
-                              width: _bottomBarButtonWidth,
                               color: Colors.white,
                               child: IconButton(
                                 onPressed: () {
@@ -103,7 +99,6 @@ class _GamePageState extends State<GamePage> {
                             ),
                             Expanded(child: lifePointsBar),
                             Container(
-                              width: _bottomBarButtonWidth,
                               color: Colors.white,
                               child: IconButton(
                                 onPressed: () {
@@ -141,7 +136,6 @@ class _GamePageState extends State<GamePage> {
                     children: [
                       if (_weaponButtonVisibility)
                         Container(
-                          width: _bottomBarButtonWidth,
                           color: Colors.white,
                           child: IconButton(
                             onPressed: () {
@@ -156,7 +150,6 @@ class _GamePageState extends State<GamePage> {
                       Expanded(child: weaponBar),
                       if (_weaponButtonVisibility)
                         Container(
-                          width: _bottomBarButtonWidth,
                           color: Colors.white,
                           child: IconButton(
                             onPressed: () {
