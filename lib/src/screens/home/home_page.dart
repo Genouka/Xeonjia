@@ -4,14 +4,12 @@ import 'package:xeonjia/src/resources/global_variables.dart';
 import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/screens/home/resources/page_list.dart';
 import 'package:xeonjia/src/screens/user/user_page.dart';
-import 'package:xeonjia/src/util/utils.dart';
 import 'package:xeonjia/src/widgets/basic.dart';
 import 'package:xeonjia/src/widgets/toast.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    setScreenDimension(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('XEONJIA'),

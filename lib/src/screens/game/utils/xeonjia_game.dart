@@ -338,7 +338,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
       percent: _percent,
       text: 'LP: ' +
           (_percent.isFinite ? playerOne.lifePoints.round().toString() : 'Max'),
-      poison: playerOne.poisonQuantity > 0,
+      poisoned: playerOne.poisonQuantity > 0,
     );
   }
 

@@ -8,8 +8,8 @@ import 'package:xeonjia/src/screens/game/widgets/percent_indicator.dart';
 import 'package:xeonjia/src/util/utils.dart';
 
 // Top and bottom bars
-LinearPercentIndicator lifePointsBar;
-LinearPercentIndicator weaponBar;
+PercentIndicator lifePointsBar;
+PercentIndicator weaponBar;
 MultiPlayerBar multiPlayerBar;
 
 // BuildContext of GamePage
@@ -45,12 +45,8 @@ class _GamePageState extends State<GamePage> {
   @override
   void initState() {
     // Initialize top and bottom bars
-    lifePointsBar = LinearPercentIndicator(
-      width: screenWidth - 2 * _bottomBarButtonWidth,
-    );
-    weaponBar = LinearPercentIndicator(
-      width: screenWidth - 2 * _bottomBarButtonWidth,
-    );
+    lifePointsBar = PercentIndicator();
+    weaponBar = PercentIndicator();
     if (widget.mode == GameMode.story) {
       _weaponButtonVisibility = mainCharacter.jsonWeaponList.length > 1;
     } else {
@@ -103,7 +99,7 @@ class _GamePageState extends State<GamePage> {
                                 tooltip: 'Exit game',
                               ),
                             ),
-                            lifePointsBar,
+                            Expanded(child: lifePointsBar),
                             Container(
                               width: _bottomBarButtonWidth,
                               color: Colors.white,
@@ -148,29 +144,14 @@ class _GamePageState extends State<GamePage> {
                               child: IconButton(
                                 onPressed: () {
                                   playerOne.nextWeapon();
-                                  weaponBar.state.refresh(
-                                    percent:
-                                        playerOne.selectedWeapon.powerPoints /
-                                            (10 +
-                                                    5 *
-                                                        playerOne.selectedWeapon
-                                                            .level)
-                                                .toDouble(),
-                                    text: (playerOne?.selectedWeapon?.name ??
-                                            '') +
-                                        (playerOne?.selectedWeapon?.powerPoints
-                                                    ?.isFinite ??
-                                                false
-                                            ? ' (${playerOne?.selectedWeapon?.powerPoints?.round().toString()})'
-                                            : ''),
-                                  );
+                                  game.refreshWeaponBar();
                                 },
                                 icon: Icon(Icons.swap_horiz),
                                 color: Colors.black,
                                 tooltip: 'Change weapon',
                               ),
                             ),
-                            weaponBar,
+                            Expanded(child: weaponBar),
                             Container(
                               width: _bottomBarButtonWidth,
                               color: Colors.white,
