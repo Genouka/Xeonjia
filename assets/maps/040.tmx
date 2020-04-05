@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="37" height="30" tilewidth="16" tileheight="16" nextobjectid="1">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="37" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
  <properties>
   <property name="hint" value="You went too far. This room doesn't exist yet... Don't waste your time here and wait for the next update!  ^-^"/>
  </properties>
@@ -10,7 +10,7 @@
   </tile>
   <tile id="2" type="Solid">
    <properties>
-    <property name="lifePoints" type="int" value="7"/>
+    <property name="lifePoints" type="int" value="2"/>
    </properties>
    <image width="16" height="16" source="../images/rock_breakable.png"/>
   </tile>
@@ -152,7 +152,7 @@
    <image width="16" height="16" source="../images/enemy_green-1.png"/>
   </tile>
  </tileset>
- <layer name="Tile Layer 1" width="37" height="30">
+ <layer id="1" name="Tile Layer 1" width="37" height="30">
   <data encoding="csv">
 61,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,63,
 5,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,0,0,0,0,0,11,0,0,0,0,0,0,0,0,56,

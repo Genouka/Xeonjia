@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="10" height="15" tilewidth="16" tileheight="16" nextobjectid="1">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="10" height="15" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
  <properties>
   <property name="hint" value="It's possible to break these rocks by hitting them"/>
  </properties>
@@ -10,7 +10,7 @@
   </tile>
   <tile id="2" type="Solid">
    <properties>
-    <property name="lifePoints" type="int" value="7"/>
+    <property name="lifePoints" type="int" value="2"/>
    </properties>
    <image width="16" height="16" source="../images/rock_breakable.png"/>
   </tile>
@@ -85,7 +85,7 @@
    <image width="16" height="16" source="../images/gem.png"/>
   </tile>
  </tileset>
- <layer name="Tile Layer 1" width="10" height="15">
+ <layer id="1" name="Tile Layer 1" width="10" height="15">
   <data encoding="csv">
 61,62,62,62,62,62,62,29,62,63,
 5,0,0,0,0,0,0,34,3,56,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="46" height="31" tilewidth="16" tileheight="16" nextobjectid="1">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="46" height="31" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
  <tileset firstgid="1" name="Basic" tilewidth="16" tileheight="16" tilecount="35" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="1" type="Solid">
@@ -7,7 +7,7 @@
   </tile>
   <tile id="2" type="Solid">
    <properties>
-    <property name="lifePoints" type="int" value="7"/>
+    <property name="lifePoints" type="int" value="3"/>
    </properties>
    <image width="16" height="16" source="../images/rock_breakable.png"/>
   </tile>
@@ -143,7 +143,7 @@
    <image width="16" height="16" source="../images/door1-1.png"/>
   </tile>
  </tileset>
- <layer name="Tile Layer 1" width="46" height="31">
+ <layer id="1" name="Tile Layer 1" width="46" height="31">
   <data encoding="csv">
 61,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,64,62,62,63,
 5,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,2,65,0,0,0,0,0,0,0,0,0,69,0,11,0,0,0,3,34,3,0,56,
