@@ -106,7 +106,7 @@ class _VirtualGamepadState extends State<VirtualGamepad> {
   // Manage direction input
   void input(Direction direction) {
     if (direction == Direction.center) {
-      playerOne.selectedWeapon.shoot(shooter: playerOne);
+      playerOne.shoot();
     } else {
       if (widget.manageMovements) {
         game.gestureDragInput(directionToOffset(direction));

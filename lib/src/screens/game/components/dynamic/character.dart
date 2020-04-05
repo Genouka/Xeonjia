@@ -76,6 +76,9 @@ class CharacterComponent extends DynamicComponent {
   }
 
   Weapon get selectedWeapon => weaponList[_selectedWeaponElement];
+  void shoot() {
+    selectedWeapon.shoot(shooter: this);
+  }
 
   // Select next weapon in weapon list
   void nextWeapon() {
@@ -153,7 +156,7 @@ class CharacterComponent extends DynamicComponent {
   void _cpuShoot() {
     if (Random().nextDouble() > 0.98) {
       if (Random().nextDouble() > 0.6) nextWeapon();
-      selectedWeapon.shoot(shooter: this);
+      shoot();
     }
   }
 }

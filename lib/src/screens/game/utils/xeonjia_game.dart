@@ -283,7 +283,7 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
     }
 
     // Use weapon selected by player
-    playerOne.selectedWeapon.shoot(shooter: playerOne);
+    playerOne.shoot();
   }
 
   // Regenerate regenerable modifiers
@@ -422,17 +422,17 @@ class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
             gestureDragInput(const Offset(-1, 0));
             break;
           case GAMEPAD_BUTTON_A:
-            playerOne.selectedWeapon.shoot(shooter: playerOne);
+            playerOne.shoot();
             break;
           case GAMEPAD_BUTTON_B:
             avoidExit = true;
-            playerOne.selectedWeapon.shoot(shooter: playerOne);
+            playerOne.shoot();
             break;
           case GAMEPAD_BUTTON_X:
-            playerOne.selectedWeapon.shoot(shooter: playerOne);
+            playerOne.shoot();
             break;
           case GAMEPAD_BUTTON_Y:
-            playerOne.selectedWeapon.shoot(shooter: playerOne);
+            playerOne.shoot();
             break;
           case GAMEPAD_BUTTON_L1:
             playerOne.nextWeapon();

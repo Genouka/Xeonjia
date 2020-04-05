@@ -159,8 +159,7 @@ class _GamePageState extends State<GamePage> {
                               color: Colors.white,
                               child: IconButton(
                                 onPressed: () {
-                                  playerOne.selectedWeapon
-                                      .shoot(shooter: playerOne);
+                                  playerOne.shoot();
                                 },
                                 icon: Icon(Icons.whatshot),
                                 color: Colors.black,
@@ -177,7 +176,7 @@ class _GamePageState extends State<GamePage> {
                         color: Colors.white,
                         child: MaterialButton(
                           onPressed: () {
-                            playerOne.selectedWeapon.shoot(shooter: playerOne);
+                            playerOne.shoot();
                           },
                           splashColor: Colors.lightBlue[700],
                           child: const Text(
