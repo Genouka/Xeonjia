@@ -46,7 +46,9 @@ class _GamePageState extends State<GamePage> {
   void initState() {
     // Initialize top and bottom bars
     lifePointsBar = PercentIndicator();
-    weaponBar = PercentIndicator();
+    weaponBar = PercentIndicator(onTap: () {
+      playerOne?.shoot();
+    });
     if (widget.mode == GameMode.story) {
       _weaponButtonVisibility = mainCharacter.jsonWeaponList.length > 1;
     } else {

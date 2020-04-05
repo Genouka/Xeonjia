@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 // Linear percent indicator used for top and bottom in-game bars
 class PercentIndicator extends StatefulWidget {
+  final Function onTap;
+  PercentIndicator({this.onTap});
+
   final _PercentIndicatorState state = _PercentIndicatorState();
 
   @override
@@ -9,13 +12,13 @@ class PercentIndicator extends StatefulWidget {
 }
 
 class _PercentIndicatorState extends State<PercentIndicator> {
-  int firstValue;
-  int secondValue;
+  int firstValue = 0;
+  int secondValue = 0;
   String firstText = '';
   String secondText = '';
   Color firstColor = Colors.lightBlue;
   Color secondColor = Colors.lightBlue[200];
-  bool poisoned;
+  bool poisoned = false;
   String text = '';
 
   void refresh({
@@ -44,51 +47,56 @@ class _PercentIndicatorState extends State<PercentIndicator> {
   }
 
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            if (firstValue != 0)
-              Expanded(
-                flex: firstValue,
-                child: Container(
-                  padding: const EdgeInsets.only(left: 5, right: 5),
-                  child: Center(
-                    child: Text(
-                      firstText,
-                      style: const TextStyle(fontSize: 18),
-                      maxLines: 1,
+    return InkWell(
+      onTap: widget.onTap,
+      child: Stack(
+        children: [
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              if (firstValue != 0)
+                Expanded(
+                  flex: firstValue,
+                  child: Container(
+                    padding: const EdgeInsets.only(left: 5, right: 5),
+                    child: Center(
+                      child: Text(
+                        firstText,
+                        style: const TextStyle(fontSize: 18),
+                        maxLines: 1,
+                      ),
                     ),
+                    color: firstColor.withOpacity(0.4),
                   ),
-                  color: firstColor.withOpacity(0.4),
                 ),
-              ),
-            if (secondValue != 0)
-              Expanded(
-                flex: secondValue,
-                child: Container(
-                  padding: const EdgeInsets.only(left: 5, right: 5),
-                  child: Center(
-                    child: Text(
-                      secondText,
-                      style: const TextStyle(fontSize: 18),
-                      maxLines: 1,
+              if (secondValue > 0)
+                Expanded(
+                  flex: secondValue,
+                  child: Container(
+                    padding: const EdgeInsets.only(left: 5, right: 5),
+                    child: Center(
+                      child: Text(
+                        secondText,
+                        style: const TextStyle(fontSize: 18),
+                        maxLines: 1,
+                      ),
                     ),
+                    color: secondColor.withOpacity(0.4),
                   ),
-                  color: secondColor.withOpacity(0.4),
                 ),
-              ),
-          ],
-        ),
-        Center(
-          child: Text(
-            text,
-            style: TextStyle(
-                color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+            ],
           ),
-        ),
-      ],
+          Center(
+            child: Text(
+              text,
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
