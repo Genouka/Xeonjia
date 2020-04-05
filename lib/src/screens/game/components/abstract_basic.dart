@@ -104,7 +104,7 @@ abstract class BasicComponent extends SpriteComponent {
     if (game.friendlyFire || teamId != (cause?.teamId ?? -99)) {
       _lifePoints += difference < 0 ? difference + def : difference;
       poisonQuantity += poison;
-      if (this == playerOne) game.refreshLifePointsBar();
+      if (this == playerOne && difference != 0) game.refreshLifePointsBar();
       if (_lifePoints <= 0) {
         delete();
         if (teamId == (cause?.teamId ?? -99)) {
