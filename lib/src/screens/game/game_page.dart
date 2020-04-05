@@ -18,9 +18,6 @@ BuildContext gameContext;
 // Width of the buttons beside weaponBar
 const double _bottomBarButtonWidth = 50;
 
-// True if weapon buttons (change weapon and shot) should be displayed
-bool _weaponButtonVisibility;
-
 class GamePage extends StatefulWidget {
   final GameMode mode;
   final int teamSize;
@@ -42,6 +39,9 @@ class GamePage extends StatefulWidget {
 }
 
 class _GamePageState extends State<GamePage> {
+  // True if weapon buttons (change weapon and shot) should be displayed
+  bool _weaponButtonVisibility;
+
   @override
   void initState() {
     // Initialize top and bottom bars
@@ -135,56 +135,42 @@ class _GamePageState extends State<GamePage> {
                     ),
                   ),
                 ),
-                bottomNavigationBar: _weaponButtonVisibility
-                    ? SizedBox(
-                        height: 40,
-                        child: Row(
-                          children: [
-                            Container(
-                              width: _bottomBarButtonWidth,
-                              color: Colors.white,
-                              child: IconButton(
-                                onPressed: () {
-                                  playerOne.nextWeapon();
-                                  game.refreshWeaponBar();
-                                },
-                                icon: Icon(Icons.swap_horiz),
-                                color: Colors.black,
-                                tooltip: 'Change weapon',
-                              ),
-                            ),
-                            Expanded(child: weaponBar),
-                            Container(
-                              width: _bottomBarButtonWidth,
-                              color: Colors.white,
-                              child: IconButton(
-                                onPressed: () {
-                                  playerOne.shoot();
-                                },
-                                icon: Icon(Icons.whatshot),
-                                color: Colors.black,
-                                splashColor: Colors.lightBlue[700],
-                                tooltip: 'Shoot',
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
-                    : Container(
-                        height: 40,
-                        width: _bottomBarButtonWidth,
-                        color: Colors.white,
-                        child: MaterialButton(
-                          onPressed: () {
-                            playerOne.shoot();
-                          },
-                          splashColor: Colors.lightBlue[700],
-                          child: const Text(
-                            'Punch!',
-                            style: TextStyle(fontSize: kTextFontSize),
+                bottomNavigationBar: SizedBox(
+                  height: 40,
+                  child: Row(
+                    children: [
+                      if (_weaponButtonVisibility)
+                        Container(
+                          width: _bottomBarButtonWidth,
+                          color: Colors.white,
+                          child: IconButton(
+                            onPressed: () {
+                              playerOne.nextWeapon();
+                              game.refreshWeaponBar();
+                            },
+                            icon: Icon(Icons.swap_horiz),
+                            color: Colors.black,
+                            tooltip: 'Change weapon',
                           ),
                         ),
-                      ),
+                      Expanded(child: weaponBar),
+                      if (_weaponButtonVisibility)
+                        Container(
+                          width: _bottomBarButtonWidth,
+                          color: Colors.white,
+                          child: IconButton(
+                            onPressed: () {
+                              playerOne.shoot();
+                            },
+                            icon: Icon(Icons.whatshot),
+                            color: Colors.black,
+                            splashColor: Colors.lightBlue[700],
+                            tooltip: 'Shoot',
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
               );
             }),
           ),
