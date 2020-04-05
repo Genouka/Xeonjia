@@ -1,3 +1,4 @@
+import 'package:flame/flame.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -8,8 +9,17 @@ import 'package:xeonjia/src/xeonjia.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await loadStoredData().then((_) {
-    // Set fullscreen
     if (settings.fullScreen) SystemChrome.setEnabledSystemUIOverlays([]);
   });
+  await Flame.images.loadAll([
+    'character-1.png',
+    'character-1-punch.png',
+    'character-2.png',
+    'character-2-punch.png',
+    'character-3.png',
+    'character-3-punch.png',
+    'character-4.png',
+    'character-4-punch.png',
+  ]);
   return runApp(Xeonjia());
 }
