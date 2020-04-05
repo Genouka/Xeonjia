@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 // Linear percent indicator used for top and bottom in-game bars
 class PercentIndicator extends StatefulWidget {
-  final Function onTap;
+  final VoidCallback onTap;
   PercentIndicator({this.onTap});
 
   final _PercentIndicatorState state = _PercentIndicatorState();
