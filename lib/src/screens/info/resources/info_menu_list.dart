@@ -15,13 +15,13 @@ final List<Map<String, dynamic>> infoMenuList = [
     'subtitle': 'App version',
     'url': '',
     'icon': const Icon(Icons.looks_one),
-  },/*
+  },
   {
     'title': 'Updates',
     'subtitle': 'Search for updates on F-Droid',
     'url': 'https://f-droid.org/packages/xyz.deepdaikon.xeonjia/',
-    'icon': Icon(Icons.system_update),
-  },*/
+    'icon': const Icon(Icons.system_update),
+  },
   {
     'title': 'Changelog',
     'subtitle': 'View app changelog',
