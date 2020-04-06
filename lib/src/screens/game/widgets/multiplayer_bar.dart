@@ -62,7 +62,7 @@ class _MultiPlayerBarState extends State<MultiPlayerBar> {
           ),
         ),
         SizedBox(
-          width: 50,
+          width: 48,
           child: Container(
             child: Center(
                 child: Text((_remaining ?? widget.maxTime).toString(),
