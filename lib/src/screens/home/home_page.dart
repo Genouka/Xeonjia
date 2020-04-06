@@ -1,3 +1,5 @@
+import 'package:flame/flame.dart';
+import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/src/resources/global_variables.dart';
@@ -8,6 +10,9 @@ import 'package:xeonjia/src/widgets/basic.dart';
 import 'package:xeonjia/src/widgets/toast.dart';
 
 class HomePage extends StatelessWidget {
+  final Widget characterImage = Flame.util.spriteAsWidget(
+      const Size.fromHeight(50), Sprite(mainCharacter.imageName));
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,17 +33,14 @@ class HomePage extends StatelessWidget {
               shape: const CircleBorder(),
               child: Padding(
                 padding: const EdgeInsets.all(6),
-                child: Ink.image(
-                  image: AssetImage('assets/images/${mainCharacter.imageName}'),
-                  fit: BoxFit.cover,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        FadeRoute(UserPage(appBarCollapsed: false)),
-                      );
-                    },
-                  ),
+                child: InkWell(
+                  child: characterImage,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      FadeRoute(UserPage(appBarCollapsed: false)),
+                    );
+                  },
                 ),
               ),
             ),

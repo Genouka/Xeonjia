@@ -1,3 +1,5 @@
+import 'package:flame/flame.dart';
+import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -7,10 +9,6 @@ import 'package:xeonjia/src/screens/user/resources/content_list.dart';
 import 'package:xeonjia/src/util/settings.dart';
 import 'package:xeonjia/src/widgets/toast.dart';
 
-// Text controller used to edit character name
-TextEditingController _textFieldController =
-    TextEditingController(text: mainCharacter.name);
-
 class UserPage extends StatefulWidget {
   // True if app bar should start collapsed
   final bool appBarCollapsed;
@@ -18,20 +16,24 @@ class UserPage extends StatefulWidget {
   UserPage({@required this.appBarCollapsed});
 
   @override
-  _UserPageState createState() =>
-      _UserPageState(appBarCollapsed: appBarCollapsed);
+  _UserPageState createState() => _UserPageState();
 }
 
 class _UserPageState extends State<UserPage> {
-  // True if app bar should start collapsed
-  final bool appBarCollapsed;
-  _UserPageState({@required this.appBarCollapsed});
-
-  // Sliver app bar height
-  double _expandedHeight;
+  // Text controller used to edit character name
+  TextEditingController _textFieldController =
+      TextEditingController(text: mainCharacter.name);
 
   // Variable used to track if character name is being edited
   bool _editMode = false;
+
+  List<Widget> characterImages = [
+    for (int direction in [1, 2, 4, 3])
+      Flame.util.spriteAsWidget(
+        const Size.fromHeight(100),
+        Sprite('character-$direction.png'),
+      ),
+  ];
 
   // Text displayed if character has no enough money to buy something
   String _noEnoughMoney = "You don't have enough money";
@@ -42,7 +44,10 @@ class _UserPageState extends State<UserPage> {
     List<Map<String, String>> characterStatsList =
         characterStatsListGenerator();
 
-    _expandedHeight = MediaQuery.of(context).size.width / 4 + 80;
+    double imageSize = MediaQuery.of(context).size.width / 4;
+
+    // Sliver app bar height
+    double expandedHeight = imageSize + 80;
 
     return WillPopScope(
       onWillPop: () async {
@@ -54,14 +59,15 @@ class _UserPageState extends State<UserPage> {
       child: Scaffold(
         body: NestedScrollView(
           controller: ScrollController(
-              initialScrollOffset: appBarCollapsed ? _expandedHeight - 55 : 0),
+              initialScrollOffset:
+                  widget.appBarCollapsed ? expandedHeight - 55 : 0),
           headerSliverBuilder:
               (BuildContext context, bool innerBoxIsScrolled) => <Widget>[
             SliverAppBar(
               floating: false,
               pinned: false,
               snap: false,
-              expandedHeight: _expandedHeight,
+              expandedHeight: expandedHeight,
               centerTitle: true,
               title: _editMode
                   ? TextField(
@@ -83,29 +89,33 @@ class _UserPageState extends State<UserPage> {
               // Flexible space that contains character images
               flexibleSpace: FlexibleSpaceBar(
                 background: Container(
-                    decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [
-                      Colors.lightBlue[700],
-                      Colors.lightBlue[400],
-                      Colors.lightBlue[200]
-                    ], begin: Alignment.bottomLeft, end: Alignment.topRight)),
-                    padding: const EdgeInsets.only(top: 80),
-                    child: Row(children: [
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(colors: [
+                    Colors.lightBlue[700],
+                    Colors.lightBlue[400],
+                    Colors.lightBlue[200]
+                  ], begin: Alignment.bottomLeft, end: Alignment.topRight)),
+                  padding: const EdgeInsets.only(top: 80),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
                       Hero(
                         tag: 'character',
-                        child: Image(
-                            image: AssetImage(
-                                'assets/images/${mainCharacter.imageName}'),
-                            fit: BoxFit.fitHeight,
-                            width: MediaQuery.of(context).size.width / 4),
+                        child: SizedBox(
+                          width: imageSize,
+                          height: imageSize,
+                          child: characterImages.first,
+                        ),
                       ),
-                      for (int direction in [2, 3, 4])
-                        Image(
-                            image: AssetImage(
-                                'assets/images/character-$direction.png'),
-                            fit: BoxFit.fitHeight,
-                            width: MediaQuery.of(context).size.width / 4),
-                    ])),
+                      for (var image in characterImages.getRange(1, 4))
+                        SizedBox(
+                          width: imageSize,
+                          height: imageSize,
+                          child: image,
+                        ),
+                    ],
+                  ),
+                ),
               ),
               actions: <Widget>[
                 IconButton(
