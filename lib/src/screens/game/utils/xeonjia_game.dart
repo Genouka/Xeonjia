@@ -26,12 +26,12 @@ Timer timer;
 const double updatePeriod = 0.03;
 
 // Default component dimension
-const double componentSize = 40;
+double componentSize;
 
 // Default distance made at each frame update
 // Component speed depend on this value and on updatePeriod value
 // Movements don't depend on the time that has been passed between 2 update()...
-const double defaultDistancePerFrame = componentSize / 4;
+double defaultDistancePerFrame;
 
 // Xeonjia game class
 class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
