@@ -34,7 +34,7 @@ double componentSize;
 double defaultDistancePerFrame;
 
 // Xeonjia game class
-class XeonjiaGame extends BaseGame with TapDetector, PanDetector {
+class XeonjiaGame extends BaseGame with PanDetector {
   // Game mode
   final GameMode mode;
 
