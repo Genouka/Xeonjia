@@ -49,7 +49,7 @@ class _SnowballExplosion extends AnimatedComponent {
       : super(
           startX: snowball.x + snowball.directionX * componentSize / 2,
           startY: snowball.y + snowball.directionY * componentSize / 2,
-          imagePath: 'snowball-explosion.png',
+          imagePath: snowball.image,
           amount: 5,
           destroyOnFinish: true,
         );
