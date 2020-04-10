@@ -1,4 +1,5 @@
 import 'package:flame/components/component.dart';
+import 'package:flame/sprite.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -78,13 +79,17 @@ abstract class BasicComponent extends SpriteComponent {
         atk = double.parse(tile.properties['atk'] ?? '0'),
         def = double.parse(tile.properties['def'] ?? '0'),
         poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
-        super.square(tile.size, tile.image) {
+        super.fromSprite(tile.size, tile.size, Sprite(tile.image)) {
     onCreate();
   }
 
   BasicComponent(this.startX, this.startY, this.image)
       : initialLifePoints = double.infinity,
-        super.square(componentSize, image) {
+        super.fromSprite(
+          componentSize,
+          componentSize,
+          Sprite(image, width: 16),
+        ) {
     onCreate();
   }
 
