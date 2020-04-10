@@ -5,6 +5,21 @@ import 'package:flutter/foundation.dart';
 import 'package:xeonjia/src/screens/game/components/abstract_basic.dart';
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 
+// Animated explosion
+class Explosion extends AnimatedComponent {
+  Explosion(BasicComponent component,
+      {double textureX = 0, double textureY = 0, int amount = 5})
+      : super(
+          startX: component.x + component.directionX * componentSize / 2,
+          startY: component.y + component.directionY * componentSize / 2,
+          imagePath: component.image,
+          textureX: textureX,
+          textureY: textureY,
+          amount: amount,
+          destroyOnFinish: true,
+        );
+}
+
 // Component with animation
 class AnimatedComponent extends BasicComponent {
   Animation animation;

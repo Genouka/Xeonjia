@@ -56,6 +56,11 @@ abstract class BasicComponent extends SpriteComponent {
   // Amount of protected damage
   double def = 0;
 
+  // Direction values
+  // They equal to zero if the component is not moving
+  double directionX = 0;
+  double directionY = 0;
+
   // True if this component has to be removed from game
   bool remove = false;
 
@@ -83,12 +88,12 @@ abstract class BasicComponent extends SpriteComponent {
     onCreate();
   }
 
-  BasicComponent(this.startX, this.startY, this.image)
+  BasicComponent(this.startX, this.startY, this.image, {int imageRow = 0})
       : initialLifePoints = double.infinity,
         super.fromSprite(
           componentSize,
           componentSize,
-          Sprite(image, width: 16),
+          Sprite(image, width: 16, height: 16, y: 16.0 * imageRow),
         ) {
     onCreate();
   }

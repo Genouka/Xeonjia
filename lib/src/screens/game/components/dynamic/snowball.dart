@@ -35,22 +35,10 @@ class SnowballComponent extends DynamicComponent {
 
   @override
   void onCollision() {
-    _SnowballExplosion(this);
+    Explosion(this);
     delete();
     if (game.friendlyFire || collidedComponent.teamId != father.teamId) {
       collidedComponent?.lifePointsDifference(-atk, cause: father);
     }
   }
-}
-
-// Animated explosion displayed on collision
-class _SnowballExplosion extends AnimatedComponent {
-  _SnowballExplosion(SnowballComponent snowball)
-      : super(
-          startX: snowball.x + snowball.directionX * componentSize / 2,
-          startY: snowball.y + snowball.directionY * componentSize / 2,
-          imagePath: snowball.image,
-          amount: 5,
-          destroyOnFinish: true,
-        );
 }

@@ -1,4 +1,5 @@
 import 'package:xeonjia/src/screens/game/components/abstract_basic.dart';
+import 'package:xeonjia/src/screens/game/components/animated_component.dart';
 import 'package:xeonjia/src/screens/game/components/dynamic/character.dart';
 import 'package:xeonjia/src/screens/game/game_page.dart';
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
@@ -30,6 +31,9 @@ class ModifierComponent extends BasicComponent {
   // True if this is capable of being regenerated
   bool _regenerable;
 
+  // True if this should show an explosion animation on destruction
+  bool explosionOnDelete = false;
+
   ModifierComponent(tile, {this.father})
       : _moneyDelta = int.parse(tile.properties['moneyDelta'] ?? '0'),
         _atkDelta = int.parse(tile.properties['atkDelta'] ?? '0'),
@@ -47,8 +51,9 @@ class ModifierComponent extends BasicComponent {
   // Constructor used for mine weapon shots
   ModifierComponent.mine(
       double _startX, double _startY, this.father, double _atk)
-      : super(_startX, _startY, 'mine_${father.teamId}.png') {
+      : super(_startX, _startY, 'mine.png', imageRow: father.teamId) {
     _lifePointsDiff = -_atk;
+    explosionOnDelete = true;
   }
 
   @override
@@ -79,6 +84,10 @@ class ModifierComponent extends BasicComponent {
         Toast.show('I found a Gem!', gameContext, duration: 1);
       }
       if (_regenerable ?? false) game.modifiersToBeRegenerated.add(this);
+      if (explosionOnDelete) {
+        Explosion(this,
+            textureX: 16, textureY: 16.0 * father.teamId, amount: 4);
+      }
       delete();
     }
   }

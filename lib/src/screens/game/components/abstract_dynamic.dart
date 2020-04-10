@@ -18,11 +18,6 @@ abstract class DynamicComponent extends BasicComponent {
   // 1: down, 2: up, 3: right, 4: left
   int orientation = 1;
 
-  // Direction values
-  // They equal to zero if the component is not moving
-  double directionX = 0;
-  double directionY = 0;
-
   // Distance made at each frame update
   double distancePerFrame = defaultDistancePerFrame;
 
