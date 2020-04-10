@@ -1,5 +1,6 @@
 import 'package:xeonjia/src/screens/game/components/abstract_basic.dart';
 import 'package:xeonjia/src/screens/game/components/abstract_dynamic.dart';
+import 'package:xeonjia/src/screens/game/components/animated_component.dart';
 import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 
 // Shot created by SnowBallWeapon
@@ -34,9 +35,22 @@ class SnowballComponent extends DynamicComponent {
 
   @override
   void onCollision() {
+    _SnowballExplosion(this);
     delete();
     if (game.friendlyFire || collidedComponent.teamId != father.teamId) {
       collidedComponent?.lifePointsDifference(-atk, cause: father);
     }
   }
+}
+
+// Animated explosion displayed on collision
+class _SnowballExplosion extends AnimatedComponent {
+  _SnowballExplosion(SnowballComponent snowball)
+      : super(
+          startX: snowball.x + snowball.directionX * componentSize / 2,
+          startY: snowball.y + snowball.directionY * componentSize / 2,
+          imagePath: 'snowball-explosion.png',
+          amount: 5,
+          destroyOnFinish: true,
+        );
 }

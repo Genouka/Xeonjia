@@ -88,6 +88,11 @@ abstract class BasicComponent extends SpriteComponent {
     onCreate();
   }
 
+  BasicComponent.withoutImage(this.startX, this.startY)
+      : initialLifePoints = double.infinity {
+    onCreate();
+  }
+
   @mustCallSuper
   void onCreate() {
     _lifePoints = initialLifePoints;
