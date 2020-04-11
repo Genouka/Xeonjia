@@ -35,7 +35,7 @@ class SnowballComponent extends DynamicComponent {
 
   @override
   void onCollision() {
-    Explosion(this);
+    Explosion(this, stepTime: 0.02);
     delete();
     if (game.friendlyFire || collidedComponent.teamId != father.teamId) {
       collidedComponent?.lifePointsDifference(-atk, cause: father);

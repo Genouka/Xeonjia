@@ -7,15 +7,20 @@ import 'package:xeonjia/src/screens/game/utils/xeonjia_game.dart';
 
 // Animated explosion
 class Explosion extends AnimatedComponent {
-  Explosion(BasicComponent component,
-      {double textureX = 0, double textureY = 0, int amount = 5})
-      : super(
+  Explosion(
+    BasicComponent component, {
+    double textureX = 0,
+    double textureY = 0,
+    int amount = 5,
+    stepTime = 0.05,
+  }) : super(
           startX: component.x + component.directionX * componentSize / 2,
           startY: component.y + component.directionY * componentSize / 2,
           imagePath: component.image,
           textureX: textureX,
           textureY: textureY,
           amount: amount,
+          stepTime: stepTime,
           destroyOnFinish: true,
         );
 }
@@ -37,8 +42,8 @@ class AnimatedComponent extends BasicComponent {
     double textureY = 0,
     double textureWidth = 16,
     double textureHeight = 16,
-    double stepTime = 0.075,
-    bool loop = true,
+    double stepTime = 0.05,
+    bool loop = false,
     this.destroyOnFinish = false,
   }) : super.withoutImage(startX, startY) {
     this.width = (width ?? componentSize);
