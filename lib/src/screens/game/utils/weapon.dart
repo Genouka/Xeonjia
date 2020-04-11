@@ -50,7 +50,7 @@ class PunchWeapon extends Weapon {
   final int level;
 
   PunchWeapon({@required this.level}) : super(0) {
-    atk = (level + 1).toDouble();
+    atk = level.toDouble();
   }
 
   @override

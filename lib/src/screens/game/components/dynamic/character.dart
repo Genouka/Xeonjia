@@ -54,7 +54,7 @@ class CharacterComponent extends DynamicComponent {
     jsonWeaponList.forEach((weaponId, weaponLevel) {
       switch (int.parse(weaponId)) {
         case 0:
-          weaponList.add(PunchWeapon(level: weaponLevel));
+          weaponList.add(PunchWeapon(level: atk.round()));
           break;
         case 1:
           weaponList.add(SnowBallWeapon(level: weaponLevel));
