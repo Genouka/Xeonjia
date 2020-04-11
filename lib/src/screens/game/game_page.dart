@@ -227,7 +227,8 @@ class _GamePageState extends State<GamePage> {
             onWillPop: () => null,
             child: AlertDialog(
               title: Text(pauseDialogModeList[dialogMode]['title']),
-              content: Text(pauseDialogModeList[dialogMode]['text']),
+              content: SingleChildScrollView(
+                  child: Text(pauseDialogModeList[dialogMode]['text'])),
               actions: <Widget>[
                 dialogMode == 0
                     ? FlatButton(
