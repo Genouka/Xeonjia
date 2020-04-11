@@ -37,7 +37,7 @@ class AnimatedComponent extends BasicComponent {
     double textureY = 0,
     double textureWidth = 16,
     double textureHeight = 16,
-    double stepTime = 0.1,
+    double stepTime = 0.075,
     bool loop = true,
     this.destroyOnFinish = false,
   }) : super.withoutImage(startX, startY) {
