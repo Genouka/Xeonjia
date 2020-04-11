@@ -39,6 +39,7 @@ abstract class DynamicComponent extends BasicComponent {
 
       updateOrientation(directionX, directionY);
       ++movesCounter;
+      if (this == playerOne) updateSprite(event: 'walk');
 
       // Decrease life points cause poison
       if (poisonQuantity > 0) lifePointsDifference(-poisonQuantity);

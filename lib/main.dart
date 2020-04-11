@@ -14,12 +14,16 @@ void main() async {
   await Flame.images.loadAll([
     'character-1.png',
     'character-1-punch.png',
+    'character-1-walk.png',
     'character-2.png',
     'character-2-punch.png',
+    'character-2-walk.png',
     'character-3.png',
     'character-3-punch.png',
+    'character-3-walk.png',
     'character-4.png',
     'character-4-punch.png',
+    'character-4-walk.png',
   ]);
   return runApp(Xeonjia());
 }
