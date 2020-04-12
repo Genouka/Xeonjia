@@ -4,7 +4,7 @@ import 'package:xeonjia/src/util/settings.dart';
 import 'package:xeonjia/src/util/character_info.dart';
 
 // App version
-const String appVersion = '1.1.1';
+const String appVersion = '1.2.0';
 
 // App font size
 const double kTextFontSize = 20;
