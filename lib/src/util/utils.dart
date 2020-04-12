@@ -14,7 +14,7 @@ void setScreenDimension(BuildContext context) {
   screenHeight = _size.height - _padding.bottom - _padding.top - 80;
 
   if (componentSize == null) {
-    double rawComponentSize = max(screenWidth, screenHeight) / 15;
+    double rawComponentSize = max(screenWidth, screenHeight) / 18;
     componentSize = rawComponentSize - rawComponentSize % 4;
     defaultDistancePerFrame = componentSize / 4;
   }
