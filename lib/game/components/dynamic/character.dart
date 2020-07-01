@@ -22,7 +22,7 @@ class CharacterComponent extends DynamicComponent {
   // List of objects owned (eg gems)
   List<int> objectList = [];
 
-  // Initial life points
+  @override
   double initialLifePoints;
 
   // Initial orientation
@@ -46,11 +46,9 @@ class CharacterComponent extends DynamicComponent {
     atk = (level + 1).toDouble();
     def = (level ~/ 5).toDouble();
     teamId = team;
-    if (jsonWeaponList == null) {
-      // Temporary solution to remedy the functions _cpuMove() and _cpuShoot()
-      jsonWeaponList =
-          (team == 0) ? const {'1': 5, '2': 1} : const {'1': 9, '2': 5};
-    }
+    // Temporary solution to remedy the functions _cpuMove() and _cpuShoot()
+    jsonWeaponList ??=
+        (team == 0) ? const {'1': 5, '2': 1} : const {'1': 9, '2': 5};
     jsonWeaponList.forEach((weaponId, weaponLevel) {
       switch (int.parse(weaponId)) {
         case 0:
@@ -139,7 +137,7 @@ class CharacterComponent extends DynamicComponent {
   // Move done if this is controlled by CPU
   void _cpuMove() {
     if (movesCounter == 0) {
-      List<double> _firstMove = directionToXY(_initialOrientation);
+      List _firstMove = directionToXY(_initialOrientation);
       updateDirection(_firstMove.first, _firstMove.last);
     } else if (isStationary) {
       if (randomDouble() > 0.4) {

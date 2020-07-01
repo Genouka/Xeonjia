@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 
@@ -14,8 +12,8 @@ class GroundComponent extends BasicComponent {
   @override
   void overlappedBy(DynamicComponent componentAbove) {
     if (componentAbove.isFlying()) return;
-    Rect _thisRect = toRect();
-    Rect _aboveRect = componentAbove.toRect();
+    var _thisRect = toRect();
+    var _aboveRect = componentAbove.toRect();
     if (componentAbove.directionX != 0) {
       if (_thisRect.center.dx == _aboveRect.center.dx &&
           // Do not stop if the head of componentAbove is overlapping this

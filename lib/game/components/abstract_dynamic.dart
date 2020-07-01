@@ -86,11 +86,11 @@ abstract class DynamicComponent extends BasicComponent {
   // I should to fix this...
   void _move() {
     collidedComponent = null;
-    List<BasicComponent> _overlappedComponents = [];
+    var _overlappedComponents = <BasicComponent>[];
     if (directionX != 0 || directionY != 0) {
-      double _newX = x + directionX.sign * distancePerFrame;
-      double _newY = y + directionY.sign * distancePerFrame;
-      Rect _newPosition = Rect.fromLTWH(_newX, _newY, width - 1, height - 1);
+      var _newX = x + directionX.sign * distancePerFrame;
+      var _newY = y + directionY.sign * distancePerFrame;
+      var _newPosition = Rect.fromLTWH(_newX, _newY, width - 1, height - 1);
       game.components.cast<BasicComponent>().forEach((component) {
         // If this is going to overlap an unrelated component
         if (component != this &&

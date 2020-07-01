@@ -25,7 +25,7 @@ class ModifierComponent extends BasicComponent {
   // It is != 0 only if this is a key
   int _doorId = -1;
 
-  // Father is only used if another component generated this one
+  @override
   BasicComponent father;
 
   // True if this is capable of being regenerated

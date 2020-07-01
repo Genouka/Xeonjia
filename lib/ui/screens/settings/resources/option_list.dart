@@ -7,6 +7,7 @@ import 'package:xeonjia/util/local_data_controller.dart';
 
 // List of available options displayed in settings page
 class OptionList extends StatelessWidget {
+  @override
   Widget build(BuildContext context) => ListView(children: <Widget>[
         SettingsPage.of(context).dropDownTile(
           'inputMethod',
@@ -33,7 +34,7 @@ class OptionList extends StatelessWidget {
 }
 
 // Update value of the chosen option
-updateVariables(String element, int newValue) {
+void updateVariables(String element, int newValue) {
   switch (element) {
     case 'inputMethod':
       settings.inputMethod = newValue;

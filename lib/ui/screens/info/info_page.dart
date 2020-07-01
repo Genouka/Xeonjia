@@ -51,7 +51,7 @@ class _InfoPageState extends State<InfoPage> {
       context: context,
       builder: (BuildContext context) => StatefulBuilder(
         builder: (context, setState) {
-          List<Widget> _licenseList = [];
+          var _licenseList = <Widget>[];
           licenses.forEach((license) {
             _licenseList.add(ExpansionTile(
               title: Text(license['lib']),

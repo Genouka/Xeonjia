@@ -33,7 +33,7 @@ class _SettingsPageState extends State<SettingsPage> {
       body: OptionList());
 
   // Dialog used to restore default settings
-  _restoreSettingsDialog() => showDialog(
+  Future _restoreSettingsDialog() => showDialog(
         context: context,
         builder: (BuildContext context) => AlertDialog(
           title: const Text('Restore default settings?'),

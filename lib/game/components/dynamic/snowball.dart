@@ -8,13 +8,18 @@ class SnowballComponent extends DynamicComponent {
   // Shot direction
   final int _direction;
 
+  @override
   final double atk;
+
+  @override
   BasicComponent father;
+
+  @override
   double distancePerFrame = defaultDistancePerFrame * 2;
 
   SnowballComponent(startX, startY, this._direction, this.father, this.atk)
       : super(startX, startY, 'snowball.png') {
-    List<double> directionXY = directionToXY(_direction);
+    List directionXY = directionToXY(_direction);
     directionX = directionXY.first;
     directionY = directionXY.last;
   }

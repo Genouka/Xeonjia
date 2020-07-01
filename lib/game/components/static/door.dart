@@ -5,10 +5,10 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 // Component that permits to change room
 class DoorComponent extends BasicComponent {
   // Next Room ID
-  int _roomId;
+  final _roomId;
 
   // True if a key is required to open this door
-  bool _keyRequired;
+  final _keyRequired;
 
   DoorComponent(tile)
       : _roomId = int.parse(tile.properties['roomId'] ?? '0'),

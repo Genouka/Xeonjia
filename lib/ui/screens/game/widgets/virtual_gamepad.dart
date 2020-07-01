@@ -72,8 +72,8 @@ class _VirtualGamepadState extends State<VirtualGamepad> {
             onPanUpdate: (details) {
               setState(() {
                 if (direction == Direction.center) {
-                  double _dx = details.delta.dx;
-                  double _dy = details.delta.dy;
+                  var _dx = details.delta.dx;
+                  var _dy = details.delta.dy;
                   if (_dx.abs() > _dy.abs()) {
                     _dy = 0;
                   } else {

@@ -223,8 +223,7 @@ class _GamePageState extends State<GamePage> {
       context: context,
       builder: (BuildContext context) => StatefulBuilder(
         builder: (context, setState) {
-          List<Map<String, String>> pauseDialogModeList =
-              _pauseDialogStringsListGenerator();
+          List pauseDialogModeList = _pauseDialogStringsListGenerator();
           return WillPopScope(
             onWillPop: () => null,
             child: AlertDialog(

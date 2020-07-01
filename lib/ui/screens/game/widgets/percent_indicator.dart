@@ -46,6 +46,7 @@ class _PercentIndicatorState extends State<PercentIndicator> {
     }
   }
 
+  @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: widget.onTap,

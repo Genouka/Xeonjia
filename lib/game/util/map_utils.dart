@@ -59,11 +59,11 @@ class Tile {
 }
 
 // Import map and tileset details from a TMX file
-importMap(String fileName) async {
+void importMap(String fileName) async {
   _tileMap = {};
 
   // Read TMX (xml) file
-  String importedTmx = await rootBundle.loadString(fileName);
+  var importedTmx = await rootBundle.loadString(fileName);
   var xmlElement = xml.parse(importedTmx).rootElement;
 
   // Get map information
@@ -88,7 +88,7 @@ importMap(String fileName) async {
 
   // Get each tile details from tileset
   tileSet.single.findElements('tile').forEach((tile) {
-    Tile newTile = Tile();
+    var newTile = Tile();
     newTile.id = int.parse(tile.getAttribute('id')) + 1;
     newTile.type = tile.getAttribute('type');
     newTile.image = tile
@@ -126,15 +126,15 @@ void parseMapTiles(var xmlElement) {
       xmlElement.findElements('layer').single.findElements('data').single.text;
 
   // Read map line by line
-  List<String> lines = mapData.split('\n');
-  int lineCount = 0;
-  int columnCount = 0;
+  List lines = mapData.split('\n');
+  var lineCount = 0;
+  var columnCount = 0;
   lines.forEach((line) {
     List<String> tiles = line.split(',');
     // Parse map layer
     tiles.forEach((tileId) {
       if (tileId.isNotEmpty) {
-        Tile componentTile = _tileMap[int.parse(tileId)];
+        var componentTile = _tileMap[int.parse(tileId)];
         if (componentTile != null) {
           componentTile.x = componentSize * columnCount;
           componentTile.y = componentSize * lineCount;
@@ -157,8 +157,8 @@ void createComponent(Tile componentTile, int lineCount) {
       BasicStaticComponent(componentTile);
       break;
     case 'Modifier':
-      int _doorId = int.parse(componentTile.properties['door'] ?? '-1');
-      int _objectId = int.parse(componentTile.properties['objectId'] ?? '-1');
+      var _doorId = int.parse(componentTile.properties['door'] ?? '-1');
+      var _objectId = int.parse(componentTile.properties['objectId'] ?? '-1');
       // Import object only if it is not already owned by the player
       // or if it is not an unique object
       if ((_doorId == -1 || !mainCharacter.doorKeyList.contains(_doorId)) &&
@@ -178,7 +178,7 @@ void createComponent(Tile componentTile, int lineCount) {
             jsonWeaponList: mainCharacter.jsonWeaponList);
         Toast.show(_toastText, gameContext, gravity: (lineCount < 5) ? 0 : 2);
       } else if (game.mode == GameMode.tdm) {
-        int _teamId = int.parse(componentTile.properties['team'] ?? '0');
+        var _teamId = int.parse(componentTile.properties['team'] ?? '0');
         if (game.players.where((p) => p.teamId == _teamId).length <
             game.teamSize) {
           CharacterComponent(

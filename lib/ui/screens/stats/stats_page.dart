@@ -6,7 +6,7 @@ import 'package:xeonjia/ui/screens/stats/resources/stat_list.dart';
 class StatsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Map<String, dynamic>> statsList = statsListGenerator();
+    List statsList = statsListGenerator();
     return Scaffold(
       appBar: AppBar(
         title: const Text('STATS'),

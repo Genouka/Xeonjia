@@ -4,7 +4,7 @@ import 'package:xeonjia/game/components/abstract_dynamic.dart';
 // Hurdle component that can be bypassed only coming from the right direction
 class HurdleComponent extends BasicComponent {
   // Other components direction that permits to jump over this component
-  int _jumpDirection;
+  final _jumpDirection;
 
   HurdleComponent(tile)
       : _jumpDirection = int.parse(tile.properties['jumpDirection'] ?? '0'),

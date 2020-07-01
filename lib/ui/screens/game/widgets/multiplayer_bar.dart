@@ -22,11 +22,12 @@ class _MultiPlayerBarState extends State<MultiPlayerBar> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
-    int _firstTeamPoints = game.teams.first.points;
-    int _lastTeamPoints = game.teams.last.points;
-    int _firstFlex = _firstTeamPoints;
-    int _lastFlex = _lastTeamPoints;
+    var _firstTeamPoints = game.teams.first.points;
+    var _lastTeamPoints = game.teams.last.points;
+    var _firstFlex = _firstTeamPoints;
+    var _lastFlex = _lastTeamPoints;
     if (_firstTeamPoints == 0 && _lastTeamPoints == 0) {
       _firstFlex = _lastFlex = 1;
     }

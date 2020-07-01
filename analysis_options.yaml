@@ -7,6 +7,7 @@ linter:
     - avoid_print
     - avoid_returning_null
     - avoid_setters_without_getters
+    - directives_ordering
     - prefer_adjacent_string_concatenation
     - prefer_const_constructors
     - unnecessary_this

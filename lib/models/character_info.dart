@@ -50,9 +50,9 @@ class CharacterInfo {
   // Map structure: {weaponId : weaponLevel}
   Map<String, dynamic> jsonAvailableWeaponList;
 
-  get experiencePoints => _experiencePoints;
-  get experienceRequired => (level + 1) * (level + 1) * 500;
-  get experienceRemaining => experienceRequired - experiencePoints;
+  int get experiencePoints => _experiencePoints;
+  int get experienceRequired => (level + 1) * (level + 1) * 500;
+  int get experienceRemaining => experienceRequired - experiencePoints;
 
   // Import character data from a Json
   CharacterInfo(Map<String, dynamic> json)

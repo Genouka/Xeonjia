@@ -47,6 +47,7 @@ abstract class Weapon {
 
 // Punch
 class PunchWeapon extends Weapon {
+  @override
   final int level;
 
   PunchWeapon({@required this.level}) : super(0) {
@@ -55,7 +56,7 @@ class PunchWeapon extends Weapon {
 
   @override
   void shoot({@required CharacterComponent shooter}) {
-    Offset punch = Offset.zero;
+    var punch = Offset.zero;
     switch (shooter.orientation) {
       case 1:
         punch = Offset(shooter.x, shooter.y + componentSize * 3 / 2);
@@ -84,6 +85,7 @@ class PunchWeapon extends Weapon {
 
 // Snowball
 class SnowBallWeapon extends Weapon {
+  @override
   final int level;
 
   SnowBallWeapon({@required this.level, double powerPoints}) : super(1) {
@@ -104,6 +106,7 @@ class SnowBallWeapon extends Weapon {
 
 // Mine
 class MineWeapon extends Weapon {
+  @override
   final int level;
 
   MineWeapon({@required this.level, double powerPoints}) : super(2) {

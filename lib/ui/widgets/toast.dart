@@ -65,7 +65,7 @@ class ToastView {
       Border border) async {
     overlayState = Overlay.of(context);
 
-    Paint paint = Paint();
+    var paint = Paint();
     paint.strokeCap = StrokeCap.square;
     paint.color = background;
 
@@ -94,14 +94,12 @@ class ToastView {
     );
     _isVisible = true;
     overlayState.insert(_overlayEntry);
-    await Future.delayed(Duration(seconds: duration == null ? 1 : duration));
+    await Future.delayed(Duration(seconds: duration ?? 1));
     dismiss();
   }
 
-  static dismiss() async {
-    if (!_isVisible) {
-      return;
-    }
+  static void dismiss() async {
+    if (!_isVisible) return;
     _isVisible = false;
     _overlayEntry?.remove();
   }

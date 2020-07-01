@@ -21,8 +21,7 @@ class UserPage extends StatefulWidget {
 
 class _UserPageState extends State<UserPage> {
   // Text controller used to edit character name
-  TextEditingController _textFieldController =
-      TextEditingController(text: mainCharacter.name);
+  final _textFieldController = TextEditingController(text: mainCharacter.name);
 
   // Variable used to track if character name is being edited
   bool _editMode = false;
@@ -36,18 +35,17 @@ class _UserPageState extends State<UserPage> {
   ];
 
   // Text displayed if character has no enough money to buy something
-  String _noEnoughMoney = "You don't have enough money";
+  final _noEnoughMoney = "You don't have enough money";
 
   @override
   Widget build(BuildContext context) {
     // List of character stats
-    List<Map<String, String>> characterStatsList =
-        characterStatsListGenerator();
+    List characterStatsList = characterStatsListGenerator();
 
-    double imageSize = MediaQuery.of(context).size.width / 4;
+    var imageSize = MediaQuery.of(context).size.width / 4;
 
     // Sliver app bar height
-    double expandedHeight = imageSize + 80;
+    var expandedHeight = imageSize + 80;
 
     return WillPopScope(
       onWillPop: () async {
@@ -238,7 +236,7 @@ class _UserPageState extends State<UserPage> {
 
   // Return the list of weapons carried by the character
   List<Widget> weaponTileList() {
-    List<Widget> weaponTileList = [];
+    var weaponTileList = <Widget>[];
     mainCharacter.jsonWeaponList.forEach((weaponId, weaponLevel) {
       weaponTileList.add(SizedBox(
         height: 60,
@@ -259,7 +257,7 @@ class _UserPageState extends State<UserPage> {
   // Display weapons details in a dialog
   void weaponDetailDialog(int weaponId, int weaponLevel) {
     // Upgrade weapon price. It depends on weapon level
-    int _price = (weaponLevel + 1) * (weaponLevel + 1) * 500;
+    var _price = (weaponLevel + 1) * (weaponLevel + 1) * 500;
 
     showDialog(
       context: context,
@@ -291,7 +289,7 @@ class _UserPageState extends State<UserPage> {
 
   // Dialog that permits to select weapons to keep in game
   void weaponSelectorDialog() {
-    List<dynamic> unlockedWeapons = [
+    var unlockedWeapons = <dynamic>[
       ...mainCharacter.jsonWeaponList.keys,
       ...mainCharacter.jsonAvailableWeaponList.keys
     ];
@@ -299,7 +297,7 @@ class _UserPageState extends State<UserPage> {
       context: context,
       builder: (BuildContext context) =>
           StatefulBuilder(builder: (context, setState) {
-        List<Widget> weaponTileList = [];
+        var weaponTileList = <Widget>[];
         unlockedWeapons.forEach((weaponId) {
           // Do not show punch
           if (weaponId != '0') {
@@ -343,7 +341,7 @@ class _UserPageState extends State<UserPage> {
       context: context,
       builder: (BuildContext context) => StatefulBuilder(
         builder: (context, setState) {
-          List<Widget> weaponTileList = [];
+          var weaponTileList = <Widget>[];
           weaponDetails.forEach((weapon) {
             if (!mainCharacter.jsonWeaponList
                     .containsKey(weapon['id'].toString()) &&

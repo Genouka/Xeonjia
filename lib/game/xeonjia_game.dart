@@ -91,7 +91,7 @@ class XeonjiaGame extends BaseGame with PanDetector {
   }
 
   // List of modifier to be regenerate during the next regenerateModifiers()
-  var modifiersToBeRegenerated = List<ModifierComponent>();
+  var modifiersToBeRegenerated = <ModifierComponent>[];
 
   // Wireless gamepad
   FlameGamepad gamepad;
@@ -135,7 +135,7 @@ class XeonjiaGame extends BaseGame with PanDetector {
     modifiersToBeRegenerated.clear();
 
     // Import map and components
-    String _map = (mode == GameMode.story)
+    var _map = (mode == GameMode.story)
         ? mainCharacter.visitedRooms.last.toString().padLeft(3, '0')
         : 'arena/$mapId';
     importMap('assets/maps/' + _map + '.tmx');
@@ -185,8 +185,8 @@ class XeonjiaGame extends BaseGame with PanDetector {
   // Save match data and load the new room
   void changeRoom(int nextRoomId) {
     pause = true;
-    bool _levelUp = false;
-    bool _isNewRoom = true;
+    var _levelUp = false;
+    var _isNewRoom = true;
 
     // Save new player data into mainCharacter
     mainCharacter.killedComponents += playerOne.killedEnemies;
@@ -196,7 +196,7 @@ class XeonjiaGame extends BaseGame with PanDetector {
     mainCharacter.movesCounter += playerOne.movesCounter;
 
     // If the room hasn't been already visited, increase exp points and money
-    for (int i = 0; i < mainCharacter.visitedRooms.length - 1; i++) {
+    for (var i = 0; i < mainCharacter.visitedRooms.length - 1; i++) {
       if (mainCharacter.visitedRooms[i] == mainCharacter.visitedRooms.last &&
           mainCharacter.visitedRooms[i + 1] == nextRoomId) {
         _isNewRoom = false;
@@ -263,9 +263,9 @@ class XeonjiaGame extends BaseGame with PanDetector {
 
     // Update orientation if not tapping on bottom bar
     if (position.dy <= fixedScreenHeight + (mode != GameMode.story ? 80 : 40)) {
-      double _relativeTapX =
+      var _relativeTapX =
           position.dx - (playerOne.x + componentSize / 2 - camera.x);
-      double _relativeTapY =
+      var _relativeTapY =
           position.dy - (playerOne.y + componentSize / 2 - camera.y) - 40;
 
       // Update character orientation
@@ -335,7 +335,7 @@ class XeonjiaGame extends BaseGame with PanDetector {
 
   // Reload LP bar
   void refreshLifePointsBar() {
-    double _percent = playerOne.lifePoints / playerOne.initialLifePoints;
+    var _percent = playerOne.lifePoints / playerOne.initialLifePoints;
     lifePointsBar.state.refresh(
       percent: _percent,
       text: 'LP: ' +
@@ -360,8 +360,8 @@ class XeonjiaGame extends BaseGame with PanDetector {
 
   // Dialog displayed when the game ends
   void endDialog({bool timeOut}) {
-    String title = '';
-    String content = '';
+    var title = '';
+    var content = '';
     if (mode == GameMode.story) {
       title = 'You have been deleted';
     } else {
@@ -476,7 +476,7 @@ class Team {
 
   // Team points (basePoints + players points)
   int get points {
-    int _points = 0;
+    var _points = 0;
     members.forEach((member) {
       _points += member.points;
     });
