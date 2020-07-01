@@ -1,0 +1,29 @@
+import 'package:xeonjia/game/components/abstract_basic.dart';
+import 'package:xeonjia/game/components/dynamic/character.dart';
+import 'package:xeonjia/game/xeonjia_game.dart';
+
+// Component that permits to change room
+class DoorComponent extends BasicComponent {
+  // Next Room ID
+  int _roomId;
+
+  // True if a key is required to open this door
+  bool _keyRequired;
+
+  DoorComponent(tile)
+      : _roomId = int.parse(tile.properties['roomId'] ?? '0'),
+        _keyRequired = 'true' == (tile.properties['keyRequired'] ?? 'false'),
+        super.fromTile(tile);
+
+  @override
+  bool isSolid({BasicComponent otherComponent}) =>
+      _keyRequired == true && !playerOne.doorKeyList.contains(_roomId) ||
+      otherComponent is! CharacterComponent;
+
+  @override
+  void overlappedBy(BasicComponent componentAbove) {
+    if (componentAbove == playerOne) {
+      game.changeRoom(_roomId);
+    }
+  }
+}
