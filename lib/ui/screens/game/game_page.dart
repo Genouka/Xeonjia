@@ -94,7 +94,7 @@ class _GamePageState extends State<GamePage> {
                                 onPressed: () {
                                   _pauseDialog(context, dialogMode: 2);
                                 },
-                                icon: Icon(Icons.close),
+                                icon: const Icon(Icons.close),
                                 color: Colors.black,
                                 tooltip: 'Exit game',
                               ),
@@ -106,7 +106,7 @@ class _GamePageState extends State<GamePage> {
                                 onPressed: () {
                                   _pauseDialog(context, dialogMode: 0);
                                 },
-                                icon: Icon(Icons.pause),
+                                icon: const Icon(Icons.pause),
                                 color: Colors.black,
                                 tooltip: 'Pause',
                               ),
@@ -144,7 +144,7 @@ class _GamePageState extends State<GamePage> {
                               playerOne.nextWeapon();
                               game.refreshWeaponBar();
                             },
-                            icon: Icon(Icons.swap_horiz),
+                            icon: const Icon(Icons.swap_horiz),
                             color: Colors.black,
                             tooltip: 'Change weapon',
                           ),
@@ -157,7 +157,7 @@ class _GamePageState extends State<GamePage> {
                             onPressed: () {
                               playerOne.shoot();
                             },
-                            icon: Icon(Icons.whatshot),
+                            icon: const Icon(Icons.whatshot),
                             color: Colors.black,
                             splashColor: Colors.lightBlue[700],
                             tooltip: 'Shoot',

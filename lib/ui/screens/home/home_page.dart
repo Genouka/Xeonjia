@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
           itemCount: pageList.length,
           itemBuilder: (BuildContext context, int index) {
             if (pageList[index].containsKey('divider')) {
-              return Divider(color: Colors.black45);
+              return const Divider(color: Colors.black45);
             } else {
               return ListTile(
                 leading: Icon(

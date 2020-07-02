@@ -22,7 +22,7 @@ class _SettingsPageState extends State<SettingsPage> {
         centerTitle: true,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.settings_backup_restore),
+            icon: const Icon(Icons.settings_backup_restore),
             tooltip: 'Restore',
             onPressed: () {
               _restoreSettingsDialog();

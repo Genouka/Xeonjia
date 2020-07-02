@@ -156,7 +156,7 @@ class _UserPageState extends State<UserPage> {
               ListTile(
                 leading: CircleAvatar(
                   backgroundColor: Colors.indigoAccent[300],
-                  child: Icon(Icons.attach_money),
+                  child: const Icon(Icons.attach_money),
                 ),
                 title: const Text('Money'),
                 trailing: Text(mainCharacter.money.toString()),
@@ -192,7 +192,7 @@ class _UserPageState extends State<UserPage> {
                     title: const Text('Weapons'),
                     leading: CircleAvatar(
                       backgroundColor: Colors.indigoAccent[300],
-                      child: Icon(
+                      child: const Icon(
                         Icons.flare,
                       ),
                     ),
@@ -243,7 +243,7 @@ class _UserPageState extends State<UserPage> {
           title: Text(weaponDetails[int.parse(weaponId)]['name'] +
               (weaponId != '0' ? ' - LV: $weaponLevel' : '')),
           leading: const Text(''),
-          trailing: Icon(Icons.info_outline),
+          trailing: const Icon(Icons.info_outline),
           onTap: () {
             weaponDetailDialog(int.parse(weaponId), weaponLevel);
           },
