@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:xeonjia/ui/screens/home/home_page.dart';
+import 'package:xeonjia/ui/themes.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 void main() async {
@@ -36,16 +37,7 @@ class Xeonjia extends StatelessWidget {
 
     return MaterialApp(
       title: 'Xeonjia',
-      theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
-        primaryColor: Colors.lightBlue[700],
-        appBarTheme: const AppBarTheme(
-          textTheme: TextTheme(
-            headline6: TextStyle(
-                letterSpacing: 6, fontSize: 22, fontWeight: FontWeight.w600),
-          ),
-        ),
-      ),
+      theme: lightTheme,
       home: HomePage(),
     );
   }
