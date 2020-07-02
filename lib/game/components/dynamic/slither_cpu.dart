@@ -10,11 +10,9 @@ class SlitherCpuComponent extends DynamicComponent {
   @override
   void update(double t) {
     if (randomDouble() > 0.4) {
-      if (randomDouble() > 0) {
-        updateDirection(randomDouble(), 0);
-      } else {
-        updateDirection(0, randomDouble());
-      }
+      randomDouble() > 0
+          ? updateDirection(randomDouble(), 0)
+          : updateDirection(0, randomDouble());
     }
     super.update(t);
   }

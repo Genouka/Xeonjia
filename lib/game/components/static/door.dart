@@ -22,8 +22,6 @@ class DoorComponent extends BasicComponent {
 
   @override
   void overlappedBy(BasicComponent componentAbove) {
-    if (componentAbove == playerOne) {
-      game.changeRoom(_roomId);
-    }
+    if (componentAbove == playerOne) game.changeRoom(_roomId);
   }
 }

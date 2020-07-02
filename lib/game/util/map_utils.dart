@@ -1,9 +1,7 @@
-import 'dart:html';
 import 'package:flutter/services.dart';
 import 'package:xml/xml.dart';
 
 import 'package:xeonjia/models/game_mode.dart';
-import 'package:xeonjia/resources/global_variables.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/dynamic/slither_cpu.dart';
 import 'package:xeonjia/game/components/dynamic/walker_cpu.dart';
@@ -14,6 +12,7 @@ import 'package:xeonjia/game/components/static/ground.dart';
 import 'package:xeonjia/game/components/static/hurdle.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/ui/widgets/toast.dart';
 
@@ -122,8 +121,8 @@ void importMap(String fileName) async {
 
 // Import map data from a TMX file
 // It just import data managed in this game
-void parseMapTiles(var xmlElement) {
-  String mapData =
+void parseMapTiles(XmlElement xmlElement) {
+  var mapData =
       xmlElement.findElements('layer').single.findElements('data').single.text;
 
   // Read map line by line

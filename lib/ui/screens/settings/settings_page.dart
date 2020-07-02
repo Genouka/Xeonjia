@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xeonjia/models/settings.dart';
 
-import 'package:xeonjia/resources/global_variables.dart';
 import 'package:xeonjia/ui/screens/settings/resources/option_list.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
@@ -44,7 +43,7 @@ class _SettingsPageState extends State<SettingsPage> {
               child: const Text('Yes'),
               onPressed: () {
                 SystemChrome.setEnabledSystemUIOverlays([]);
-                settings = AppSettings({'rulesRead': settings.rulesRead});
+                settings = Settings({'rulesRead': settings.rulesRead});
                 saveSettings();
                 setState(() {});
                 Navigator.of(context).pop();
@@ -68,7 +67,7 @@ class _SettingsPageState extends State<SettingsPage> {
         title: Text(
           title,
           style: const TextStyle(
-            fontSize: kTextFontSize,
+            fontSize: 20,
           ),
         ),
         subtitle: Text(subtitle),
@@ -97,7 +96,7 @@ class _SettingsPageState extends State<SettingsPage> {
       title: Text(
         title,
         style: const TextStyle(
-          fontSize: kTextFontSize,
+          fontSize: 20,
         ),
       ),
       activeColor: Colors.blueGrey,

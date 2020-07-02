@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/models/game_mode.dart';
 
-import 'package:xeonjia/resources/global_variables.dart';
 import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/arena/resources/maps.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
@@ -42,7 +41,7 @@ class _ArenaPageState extends State<ArenaPage> {
               title: const Text(
                 'Mode',
                 style: TextStyle(
-                  fontSize: kTextFontSize,
+                  fontSize: 20,
                 ),
               ),
               subtitle: const Text('Game mode'),
@@ -67,7 +66,7 @@ class _ArenaPageState extends State<ArenaPage> {
               title: const Text(
                 'Map',
                 style: TextStyle(
-                  fontSize: kTextFontSize,
+                  fontSize: 20,
                 ),
               ),
               subtitle: const Text('Place to play'),
@@ -92,7 +91,7 @@ class _ArenaPageState extends State<ArenaPage> {
               title: const Text(
                 'Difficulty',
                 style: TextStyle(
-                  fontSize: kTextFontSize,
+                  fontSize: 20,
                 ),
               ),
               subtitle: const Text('Match difficulty'),
@@ -117,7 +116,7 @@ class _ArenaPageState extends State<ArenaPage> {
               title: const Text(
                 'Points required',
                 style: TextStyle(
-                  fontSize: kTextFontSize,
+                  fontSize: 20,
                 ),
               ),
               subtitle: const Text('Points needed to win'),
@@ -142,7 +141,7 @@ class _ArenaPageState extends State<ArenaPage> {
               title: const Text(
                 'Time available',
                 style: TextStyle(
-                  fontSize: kTextFontSize,
+                  fontSize: 20,
                 ),
               ),
               subtitle: const Text('Maximum time for a match (minutes)'),
@@ -167,7 +166,7 @@ class _ArenaPageState extends State<ArenaPage> {
               title: const Text(
                 'Players',
                 style: TextStyle(
-                  fontSize: kTextFontSize,
+                  fontSize: 20,
                 ),
               ),
               subtitle: const Text('Number of players per team'),
@@ -192,7 +191,7 @@ class _ArenaPageState extends State<ArenaPage> {
               title: const Text(
                 'Friendly Fire',
                 style: TextStyle(
-                  fontSize: kTextFontSize,
+                  fontSize: 20,
                 ),
               ),
               activeColor: Colors.blueGrey,

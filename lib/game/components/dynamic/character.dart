@@ -141,11 +141,9 @@ class CharacterComponent extends DynamicComponent {
       updateDirection(_firstMove.first, _firstMove.last);
     } else if (isStationary) {
       if (randomDouble() > 0.4) {
-        if (randomDouble() > 0) {
-          updateDirection(randomDouble(), 0);
-        } else {
-          updateDirection(0, randomDouble());
-        }
+        randomDouble() > 0
+            ? updateDirection(randomDouble(), 0)
+            : updateDirection(0, randomDouble());
       }
     }
   }

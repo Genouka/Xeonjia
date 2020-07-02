@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:xeonjia/resources/global_variables.dart';
 import 'package:xeonjia/ui/screens/settings/resources/option_values.dart';
 import 'package:xeonjia/ui/screens/settings/settings_page.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
@@ -41,7 +40,7 @@ void updateVariables(String element, int newValue) {
       break;
     case 'gamepadSize':
       settings.gamepadSize = newValue.toDouble();
-      kGamepadOffset = Offset.zero;
+      gamepadOffset = Offset.zero;
       break;
     default:
       break;

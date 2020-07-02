@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:xeonjia/resources/global_variables.dart';
 import 'package:xeonjia/ui/screens/rules/resources/rules_list.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
@@ -47,8 +46,8 @@ class _RulesPageState extends State<RulesPage> {
                       child: Text(
                         ruleList[_page]['title'],
                         textAlign: TextAlign.center,
-                        style: const TextStyle(
-                            color: Colors.white, fontSize: kTextFontSize),
+                        style:
+                            const TextStyle(color: Colors.white, fontSize: 20),
                       ),
                     ),
                   ),
@@ -56,7 +55,7 @@ class _RulesPageState extends State<RulesPage> {
                     padding: const EdgeInsets.fromLTRB(20, 35, 20, 0),
                     child: Text(
                       ruleList[_page]['text'],
-                      style: const TextStyle(fontSize: kTextFontSize - 2),
+                      style: const TextStyle(fontSize: 18),
                     ),
                   ),
                 ],

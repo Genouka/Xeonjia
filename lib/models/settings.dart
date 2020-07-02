@@ -1,5 +1,5 @@
 // Class used to store settings data
-class AppSettings {
+class Settings {
   // Enable app fullscreen
   bool fullScreen;
 
@@ -16,7 +16,7 @@ class AppSettings {
   bool rulesRead;
 
   // Import settings from a Json
-  AppSettings(Map<String, dynamic> json)
+  Settings(Map<String, dynamic> json)
       : fullScreen = json['fullScreen'] ?? true,
         inputMethod = json['inputMethod'] ?? 0,
         gamepadSize = json['gamepadSize'] ?? 50,

@@ -1,4 +1,4 @@
-import 'package:xeonjia/resources/global_variables.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 
 // Generate list of character stats
 List<Map<String, String>> characterStatsListGenerator() => [

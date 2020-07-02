@@ -131,9 +131,7 @@ abstract class BasicComponent extends SpriteComponent {
           // Enemy killed
           cause?.killedEnemies++;
           cause?.experiencePoints += level;
-          if (this is CharacterComponent) {
-            cause?.points += 100;
-          }
+          if (this is CharacterComponent) cause?.points += 100;
         }
       }
     }

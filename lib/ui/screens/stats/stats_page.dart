@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:xeonjia/resources/global_variables.dart';
 import 'package:xeonjia/ui/screens/stats/resources/stat_list.dart';
 
 class StatsPage extends StatelessWidget {
@@ -17,11 +16,11 @@ class StatsPage extends StatelessWidget {
         itemBuilder: (context, index) => ListTile(
           title: Text(
             statsList[index]['title'],
-            style: const TextStyle(fontSize: kTextFontSize),
+            style: const TextStyle(fontSize: 20),
           ),
           /*subtitle: Text(
                     statsList[index]['subtitle'],
-                    style: TextStyle(fontSize: kTextFontSize - 4),
+                    style: TextStyle(fontSize: 20 - 4),
                   ),*/
           trailing: Text(statsList[index]['value'].toString()),
         ),

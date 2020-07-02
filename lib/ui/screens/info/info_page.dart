@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:xeonjia/resources/global_variables.dart';
-import 'package:xeonjia/resources/third_party_licenses.dart';
-import 'package:xeonjia/ui/screens/info/resources/info_menu_list.dart';
+import 'package:xeonjia/ui/screens/info/resources/third_party_licenses.dart';
 
 class InfoPage extends StatefulWidget {
   @override
@@ -11,6 +9,59 @@ class InfoPage extends StatefulWidget {
 }
 
 class _InfoPageState extends State<InfoPage> {
+  static final version = '1.2.0';
+
+  final List<Map<String, dynamic>> infoMenuList = [
+    {
+      'title': 'By DeepDaikon',
+      'subtitle': 'App developed by DeepDaikon',
+      'url': 'https://gitlab.com/DeepDaikon/',
+      'icon': const Icon(Icons.change_history),
+    },
+    {
+      'title': 'Version: $version',
+      'subtitle': 'App version',
+      'url': '',
+      'icon': const Icon(Icons.looks_one),
+    },
+    {
+      'title': 'Updates',
+      'subtitle': 'Search for updates on F-Droid',
+      'url': 'https://f-droid.org/packages/xyz.deepdaikon.xeonjia/',
+      'icon': const Icon(Icons.system_update),
+    },
+    {
+      'title': 'Changelog',
+      'subtitle': 'View app changelog',
+      'url': 'https://gitlab.com/DeepDaikon/Xeonjia/blob/master/CHANGELOG',
+      'icon': const Icon(Icons.playlist_add),
+    },
+    {
+      'title': 'View source code',
+      'subtitle': 'Look at the source code',
+      'url': 'https://gitlab.com/DeepDaikon/Xeonjia',
+      'icon': const Icon(Icons.developer_mode),
+    },
+    {
+      'title': 'Report bugs',
+      'subtitle': 'Report bugs or request new feature',
+      'url': 'https://gitlab.com/DeepDaikon/Xeonjia/issues',
+      'icon': const Icon(Icons.bug_report),
+    },
+    {
+      'title': 'View License (GPLv3)',
+      'subtitle': 'Read software license',
+      'url': 'https://gitlab.com/DeepDaikon/Xeonjia/blob/master/LICENSE',
+      'icon': const Icon(Icons.chrome_reader_mode),
+    },
+    {
+      'title': 'Third Party Licenses',
+      'subtitle': 'Read third party notices',
+      'url': '',
+      'icon': const Icon(Icons.code),
+    }
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +80,7 @@ class _InfoPageState extends State<InfoPage> {
           title: Text(
             infoMenuList[index]['title'],
             style: const TextStyle(
-              fontSize: kTextFontSize,
+              fontSize: 20,
             ),
           ),
           subtitle: Text(infoMenuList[index]['subtitle']),

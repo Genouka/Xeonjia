@@ -1,4 +1,4 @@
-import 'package:xeonjia/resources/global_variables.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 
 // Generate the list of stats displayed in stats page
 List<Map<String, dynamic>> statsListGenerator() => [

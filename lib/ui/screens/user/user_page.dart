@@ -1,9 +1,6 @@
-import 'package:flame/sprite.dart';
-import 'package:flame/widgets/sprite_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:xeonjia/resources/global_variables.dart';
 import 'package:xeonjia/resources/weapon_details.dart';
 import 'package:xeonjia/ui/screens/user/resources/content_list.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
@@ -25,13 +22,6 @@ class _UserPageState extends State<UserPage> {
 
   // Variable used to track if character name is being edited
   bool _editMode = false;
-
-  List<Widget> characterImages = [
-    for (int direction in [1, 2, 4, 3])
-      SpriteWidget(sprite:
-        Sprite('character-$direction.png', width: 100, height: 100),
-      ),
-  ];
 
   // Text displayed if character has no enough money to buy something
   final _noEnoughMoney = "You don't have enough money";
@@ -73,47 +63,13 @@ class _UserPageState extends State<UserPage> {
                       showCursor: false,
                       autocorrect: false,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
-                          fontSize: kTextFontSize, color: Colors.white),
+                      style: const TextStyle(fontSize: 20, color: Colors.white),
                       onSubmitted: (text) {
                         saveNewName(text);
                       },
                     )
                   : Text(mainCharacter.name,
-                      style: const TextStyle(
-                          letterSpacing: 1, fontSize: kTextFontSize)),
-
-              // Flexible space that contains character images
-              flexibleSpace: FlexibleSpaceBar(
-                background: Container(
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [
-                    Colors.lightBlue[700],
-                    Colors.lightBlue[400],
-                    Colors.lightBlue[200]
-                  ], begin: Alignment.bottomLeft, end: Alignment.topRight)),
-                  padding: const EdgeInsets.only(top: 80),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Hero(
-                        tag: 'character',
-                        child: SizedBox(
-                          width: imageSize,
-                          height: imageSize,
-                          child: characterImages.first,
-                        ),
-                      ),
-                      for (var image in characterImages.getRange(1, 4))
-                        SizedBox(
-                          width: imageSize,
-                          height: imageSize,
-                          child: image,
-                        ),
-                    ],
-                  ),
-                ),
-              ),
+                      style: const TextStyle(letterSpacing: 1, fontSize: 20)),
               actions: <Widget>[
                 IconButton(
                   icon: Icon(_editMode ? Icons.done : Icons.edit),

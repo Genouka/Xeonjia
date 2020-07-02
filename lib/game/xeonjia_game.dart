@@ -4,14 +4,13 @@ import 'package:flame/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/models/game_mode.dart';
-import 'package:xeonjia/resources/global_variables.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
 import 'package:xeonjia/game/util/gamepad.dart';
 import 'package:xeonjia/game/util/map_utils.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
 
 // Main game variable
@@ -99,13 +98,15 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   // Variable used to avoid exit when gamepad B button is pressed
   bool avoidExit = false;
 
-  XeonjiaGame(this.mode,
-      {this.teamSize = 0,
-      this.friendlyFire = false,
-      this.maxPoints = 1500,
-      this.maxTime = 180,
-      this.difficulty = 4,
-      this.mapId = 0}) {
+  XeonjiaGame(
+    this.mode, {
+    this.teamSize = 0,
+    this.friendlyFire = false,
+    this.maxPoints = 1500,
+    this.maxTime = 180,
+    this.difficulty = 4,
+    this.mapId = 0,
+  }) {
     initialize();
   }
 
@@ -130,7 +131,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
     teams = [
       Team(id: 0, name: 'Team A', color: Colors.red),
-      Team(id: 1, name: 'Team B', color: Colors.green)
+      Team(id: 1, name: 'Team B', color: Colors.green),
     ];
     modifiersToBeRegenerated.clear();
 
@@ -222,18 +223,16 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   }
 
   Offset _panGestureOffset;
+
   @override
   void onPanUpdate(DragUpdateDetails upd) {
-    if (settings.inputMethod != 1 && !pause) {
-      if (upd.delta.dx.abs() > 5 || upd.delta.dy.abs() > 5) {
-        if (upd.delta.dx.abs() > upd.delta.dy.abs()) {
-          _panGestureOffset = Offset(upd.delta.dx, 0);
-        } else {
-          _panGestureOffset = Offset(0, upd.delta.dy);
-        }
-        playerOne?.updateOrientation(
-            _panGestureOffset.dx, _panGestureOffset.dy);
-      }
+    if (settings.inputMethod != 1 &&
+        !pause &&
+        (upd.delta.dx.abs() > 5 || upd.delta.dy.abs() > 5)) {
+      _panGestureOffset = upd.delta.dx.abs() > upd.delta.dy.abs()
+          ? Offset(upd.delta.dx, 0)
+          : Offset(0, upd.delta.dy);
+      playerOne?.updateOrientation(_panGestureOffset.dx, _panGestureOffset.dy);
     }
   }
 
@@ -246,9 +245,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   @override
   void onTapDown(TapDownDetails details) {
-    if (settings.inputMethod != 1) {
-      gestureTapInput(details.globalPosition);
-    }
+    if (settings.inputMethod != 1) gestureTapInput(details.globalPosition);
   }
 
   // Manage drag gestures
@@ -270,17 +267,15 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
       // Update character orientation
       if (position.dx < componentSize ||
-          position.dx > screenWidth - componentSize) {
+          position.dx > screenSize.width - componentSize) {
         playerOne.updateOrientation(position.dx - componentSize, 0);
       } else if (position.dy - 40 < componentSize ||
           position.dy > fixedScreenHeight - componentSize) {
         playerOne.updateOrientation(0, position.dy - 40 - componentSize);
       } else if (_relativeTapX.abs() > 15 || _relativeTapY.abs() > 15) {
-        if (_relativeTapX.abs() > _relativeTapY.abs()) {
-          playerOne.updateOrientation(_relativeTapX, 0);
-        } else {
-          playerOne.updateOrientation(0, _relativeTapY);
-        }
+        _relativeTapX.abs() > _relativeTapY.abs()
+            ? playerOne.updateOrientation(_relativeTapX, 0)
+            : playerOne.updateOrientation(0, _relativeTapY);
       }
     }
 
@@ -299,14 +294,15 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   // Update camera position
   void updateCamera(double x, double y) {
-    fixedScreenHeight = screenHeight - (mode != GameMode.story ? 40 : 0);
+    fixedScreenHeight = screenSize.height - (mode != GameMode.story ? 40 : 0);
     // Update x position
-    if (x <= screenWidth / 2 || screenWidth > componentSize * mapWidth) {
+    if (x <= screenSize.width / 2 ||
+        screenSize.width > componentSize * mapWidth) {
       camera.x = 0.0;
-    } else if (x > componentSize * mapWidth - screenWidth / 2) {
-      camera.x = componentSize * mapWidth - screenWidth;
+    } else if (x > componentSize * mapWidth - screenSize.width / 2) {
+      camera.x = componentSize * mapWidth - screenSize.width;
     } else {
-      camera.x = x - screenWidth / 2;
+      camera.x = x - screenSize.width / 2;
     }
     // Update y position
     if (y <= fixedScreenHeight / 2 ||

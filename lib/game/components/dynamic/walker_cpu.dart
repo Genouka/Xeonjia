@@ -10,14 +10,10 @@ class WalkerCpuComponent extends DynamicComponent {
   @override
   void update(double t) {
     if (randomDouble() > 0.2) {
-      if (randomDouble() > 0) {
-        directionX = randomDouble();
-      } else {
-        directionY = randomDouble();
-      }
-      if (randomDouble() > 0.2) {
-        stop();
-      }
+      randomDouble() > 0
+          ? directionX = randomDouble()
+          : directionY = randomDouble();
+      if (randomDouble() > 0.2) stop();
       updateOrientation(directionX, directionY);
       super.update(t);
     }

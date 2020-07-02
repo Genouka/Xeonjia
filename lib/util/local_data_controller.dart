@@ -1,15 +1,20 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:xeonjia/models/settings.dart';
 
-import 'package:xeonjia/resources/global_variables.dart';
+import 'package:xeonjia/models/settings.dart';
 import 'package:xeonjia/models/character_info.dart';
 
 SharedPreferences _prefs;
 
 // Stored app settings
-AppSettings settings;
+Settings settings;
+
+// Main character data
+CharacterInfo mainCharacter;
+
+// Gamepad position
+Offset gamepadOffset;
 
 // Import all data from shared preferences
 Future<void> loadStoredData() async {
@@ -36,13 +41,13 @@ void saveSettings() {
 
 // Save gamepad offset in shared preferences
 void saveGamepadOffset() {
-  _prefs.setDouble('gamepadOffsetX', kGamepadOffset.dx);
-  _prefs.setDouble('gamepadOffsetY', kGamepadOffset.dy);
+  _prefs.setDouble('gamepadOffsetX', gamepadOffset.dx);
+  _prefs.setDouble('gamepadOffsetY', gamepadOffset.dy);
 }
 
 // Restore app settings
 void _loadSettings() {
-  settings = AppSettings(jsonDecode(_prefs.getString('settings') ?? '{}'));
-  kGamepadOffset = Offset(_prefs.getDouble('gamepadOffsetX') ?? 0,
+  settings = Settings(jsonDecode(_prefs.getString('settings') ?? '{}'));
+  gamepadOffset = Offset(_prefs.getDouble('gamepadOffsetX') ?? 0,
       _prefs.getDouble('gamepadOffsetY') ?? 0);
 }

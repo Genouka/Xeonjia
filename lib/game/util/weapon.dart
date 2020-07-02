@@ -36,9 +36,7 @@ abstract class Weapon {
 
   // Function used when a shoot input happens
   void shoot({@required CharacterComponent shooter}) {
-    if (shooter == playerOne) {
-      game.refreshWeaponBar();
-    }
+    if (shooter == playerOne) game.refreshWeaponBar();
   }
 
   // Export weapon details as a Json

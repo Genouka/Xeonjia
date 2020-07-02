@@ -54,6 +54,19 @@ class CharacterInfo {
   int get experienceRequired => (level + 1) * (level + 1) * 500;
   int get experienceRemaining => experienceRequired - experiencePoints;
 
+  // Increase experience points earned
+  // Return true if level up, false otherwise
+  bool expGained(int exp) {
+    _experiencePoints += exp;
+    if (_experiencePoints >= experienceRequired) {
+      _experiencePoints = 0;
+      ++level;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   // Import character data from a Json
   CharacterInfo(Map<String, dynamic> json)
       : name = json['name'] ?? 'yourName',
@@ -92,18 +105,5 @@ class CharacterInfo {
       'deathCounter': deathCounter,
       'experiencePoints': _experiencePoints,
     };
-  }
-
-  // Increase experience points earned
-  // Return true if level up, false otherwise
-  bool expGained(int exp) {
-    _experiencePoints += exp;
-    if (_experiencePoints >= experienceRequired) {
-      _experiencePoints = 0;
-      ++level;
-      return true;
-    } else {
-      return false;
-    }
   }
 }

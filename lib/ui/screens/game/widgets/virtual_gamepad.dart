@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:xeonjia/resources/global_variables.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
@@ -18,7 +17,7 @@ class VirtualGamepad extends StatefulWidget {
 // Virtual gamepad widget
 class _VirtualGamepadState extends State<VirtualGamepad> {
   // Gamepad position
-  Offset _offset = kGamepadOffset;
+  Offset _offset = gamepadOffset;
 
   // Arrow button color
   final Color _buttonColor = Colors.blueGrey[500];
@@ -120,8 +119,8 @@ class _VirtualGamepadState extends State<VirtualGamepad> {
 
   // Save widget position to be used in next matches
   void saveOffset(Offset newOffset) {
-    if (newOffset != kGamepadOffset) {
-      kGamepadOffset = newOffset;
+    if (newOffset != gamepadOffset) {
+      gamepadOffset = newOffset;
       saveGamepadOffset();
     }
   }

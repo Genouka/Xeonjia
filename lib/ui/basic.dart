@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:xeonjia/resources/global_variables.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
 
+// Linear gradient used in app
+LinearGradient appGradient = LinearGradient(colors: [
+  Colors.lightBlue[700],
+  Colors.lightBlue[400],
+  Colors.lightBlue[200],
+], begin: Alignment.topLeft, end: Alignment.bottomRight);
+
 // Floating "PLAY" button
-// Used for single and multiplayer mode
 class PlayButton extends StatelessWidget {
   final GamePage page;
 
@@ -29,13 +34,10 @@ class PlayButton extends StatelessWidget {
         shape: const RoundedRectangleBorder(borderRadius: fabBorderRadius),
         child: const Text(
           'P L A Y',
-          style: TextStyle(color: Colors.white, fontSize: kTextFontSize),
+          style: TextStyle(color: Colors.white, fontSize: 20),
         ),
         onPressed: () {
-          Navigator.push(
-            context,
-            FadeRoute(page),
-          );
+          Navigator.push(context, FadeRoute(page));
         },
       ),
     );
@@ -63,10 +65,3 @@ class FadeRoute extends PageRouteBuilder {
               FadeTransition(opacity: animation, child: child),
         );
 }
-
-// Linear gradient used in app
-LinearGradient appGradient = LinearGradient(colors: [
-  Colors.lightBlue[700],
-  Colors.lightBlue[400],
-  Colors.lightBlue[200],
-], begin: Alignment.topLeft, end: Alignment.bottomRight);

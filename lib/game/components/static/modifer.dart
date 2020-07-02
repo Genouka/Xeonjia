@@ -71,9 +71,7 @@ class ModifierComponent extends BasicComponent {
       componentAbove.poisonQuantity += _poisonDelta;
       componentAbove.earnedMoney += _moneyDelta;
       componentAbove.selectedWeapon.powerPoints += _powerPointsDelta;
-      if (_powerPointsDelta != 0) {
-        game.refreshWeaponBar();
-      }
+      if (_powerPointsDelta != 0) game.refreshWeaponBar();
       if (_moneyDelta != 0 && componentAbove == playerOne) {
         Toast.show('+ $_moneyDelta \$', gameContext, duration: 1);
       }

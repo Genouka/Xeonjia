@@ -44,9 +44,7 @@ class Toast {
 class ToastView {
   static final ToastView _singleton = ToastView._internal();
 
-  factory ToastView() {
-    return _singleton;
-  }
+  factory ToastView() => _singleton;
 
   ToastView._internal();
 
@@ -83,10 +81,13 @@ class ToastView {
                   border: border,
                 ),
                 margin: const EdgeInsets.symmetric(horizontal: 20),
-                padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
-                child: Text(msg,
-                    softWrap: true,
-                    style: TextStyle(fontSize: 15, color: textColor)),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                child: Text(
+                  msg,
+                  softWrap: true,
+                  style: TextStyle(fontSize: 15, color: textColor),
+                ),
               ),
             ),
           ),
@@ -106,11 +107,8 @@ class ToastView {
 }
 
 class ToastWidget extends StatelessWidget {
-  ToastWidget({
-    Key key,
-    @required this.widget,
-    @required this.gravity,
-  }) : super(key: key);
+  ToastWidget({Key key, @required this.widget, @required this.gravity})
+      : super(key: key);
 
   final Widget widget;
   final int gravity;
@@ -120,10 +118,7 @@ class ToastWidget extends StatelessWidget {
     return Positioned(
       top: gravity == 2 ? 50 : null,
       bottom: gravity == 0 ? 50 : null,
-      child: Material(
-        color: Colors.transparent,
-        child: widget,
-      ),
+      child: Material(color: Colors.transparent, child: widget),
     );
   }
 }
