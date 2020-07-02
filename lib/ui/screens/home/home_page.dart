@@ -1,5 +1,5 @@
-import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
+import 'package:flame/widgets/sprite_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/models/game_mode.dart';
 
@@ -12,8 +12,8 @@ import 'package:xeonjia/ui/widgets/toast.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 class HomePage extends StatelessWidget {
-  final Widget characterImage = Flame.util.spriteAsWidget(
-      const Size.fromHeight(50), Sprite(mainCharacter.imageName));
+  final Widget characterImage = SpriteWidget(
+      sprite: Sprite(mainCharacter.imageName, width: 50, height: 50));
 
   @override
   Widget build(BuildContext context) {

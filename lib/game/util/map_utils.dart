@@ -1,7 +1,8 @@
+import 'dart:html';
 import 'package:flutter/services.dart';
-import 'package:xeonjia/models/game_mode.dart';
-import 'package:xml/xml.dart' as xml;
+import 'package:xml/xml.dart';
 
+import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/resources/global_variables.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/dynamic/slither_cpu.dart';
@@ -64,7 +65,7 @@ void importMap(String fileName) async {
 
   // Read TMX (xml) file
   var importedTmx = await rootBundle.loadString(fileName);
-  var xmlElement = xml.parse(importedTmx).rootElement;
+  var xmlElement = XmlDocument.parse(importedTmx).rootElement;
 
   // Get map information
   game.mapWidth = int.parse(xmlElement.getAttribute('width'));

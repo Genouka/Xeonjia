@@ -77,9 +77,9 @@ abstract class DynamicComponent extends BasicComponent {
   }
 
   @override
-  @mustCallSuper
   void update(double t) {
     _move();
+    super.update(t);
   }
 
   // Recalculate component position

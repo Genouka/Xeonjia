@@ -1,5 +1,5 @@
-import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
+import 'package:flame/widgets/sprite_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -28,9 +28,8 @@ class _UserPageState extends State<UserPage> {
 
   List<Widget> characterImages = [
     for (int direction in [1, 2, 4, 3])
-      Flame.util.spriteAsWidget(
-        const Size.fromHeight(100),
-        Sprite('character-$direction.png'),
+      SpriteWidget(sprite:
+        Sprite('character-$direction.png', width: 100, height: 100),
       ),
   ];
 

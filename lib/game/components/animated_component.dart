@@ -85,5 +85,6 @@ class AnimatedComponent extends BasicComponent {
   @override
   void update(double t) {
     animation.update(t);
+    super.update(t);
   }
 }
