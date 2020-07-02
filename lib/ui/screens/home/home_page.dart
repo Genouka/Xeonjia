@@ -1,79 +1,57 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/models/game_mode.dart';
 
+import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
-import 'package:xeonjia/ui/screens/home/resources/page_list.dart';
-import 'package:xeonjia/ui/widgets/toast.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
+import 'package:xeonjia/ui/screens/arena/arena_page.dart';
+import 'package:xeonjia/ui/screens/home/widgets/bottom_row.dart';
+import 'package:xeonjia/ui/screens/home/widgets/page_button.dart';
+import 'package:xeonjia/ui/screens/user/user_page.dart';
 
 class HomePage extends StatelessWidget {
+  final pageList = <Map<String, dynamic>>[
+    {'title': 'Story mode', 'goto': GamePage(GameMode.story)},
+    {'title': 'Arena', 'goto': ArenaPage()},
+    {'title': 'Character', 'goto': UserPage(appBarCollapsed: true)},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('XEONJIA'),
-        centerTitle: true,
-        flexibleSpace: Container(
-          decoration: BoxDecoration(gradient: appGradient),
-        ),
-        leading: const Hero(
-          tag: 'character',
-          child: Padding(
-            padding: EdgeInsets.all(6),
-            child: Material(
-              color: Colors.white70,
-              shape: CircleBorder(),
-              child: Padding(
-                padding: EdgeInsets.all(6),
-              ),
-            ),
-          ),
-        ),
-      ),
-      body: ListView.builder(
-          padding: const EdgeInsets.fromLTRB(8, 8, 8, 70),
-          itemCount: pageList.length,
-          itemBuilder: (BuildContext context, int index) {
-            if (pageList[index].containsKey('divider')) {
-              return const Divider(color: Colors.black45);
-            } else {
-              return ListTile(
-                leading: Icon(
-                  pageList[index]['icon'].icon,
-                  size: 27,
-                  color: Colors.grey[600],
-                ),
-                title: Text(
-                  pageList[index]['title'],
-                  style: const TextStyle(
-                    fontSize: 20,
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: Theme.of(context).brightness == Brightness.light
+                ? appGradient
+                : darkAppGradient),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            const Expanded(
+              flex: 5,
+              child: Center(
+                child: Text(
+                  'XEONJiA',
+                  style: TextStyle(
+                    letterSpacing: 14,
+                    color: Colors.white,
+                    fontSize: 60,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
-                subtitle: Text(pageList[index]['subtitle']),
-                onTap: () {
-                  if (pageList[index]['title'] == 'Arena' &&
-                      !settings.rulesRead) {
-                    Toast.show('You must read "How to play" first', context,
-                        gravity: 1, duration: 1);
-                  } else {
-                    Navigator.push(
-                      context,
-                      FadeRoute(pageList[index]['page']),
-                    );
-                  }
+              ),
+            ),
+            for (var page in pageList)
+              PageButton(
+                title: page['title'],
+                onPressed: () {
+                  Navigator.push(context, FadeRoute(page['goto']));
                 },
-              );
-            }
-          }),
-      floatingActionButton: Hero(
-        tag: 'Play',
-        child: PlayButton(
-          page: GamePage(GameMode.story),
-          gradient: true,
+              ),
+            const Spacer(),
+            bottomRow(),
+          ],
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

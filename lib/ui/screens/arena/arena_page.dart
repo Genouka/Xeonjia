@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/models/game_mode.dart';
 
-import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/arena/resources/maps.dart';
+import 'package:xeonjia/ui/screens/arena/widgets/play_button.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
 
 // List of possible options
@@ -209,7 +209,7 @@ class _ArenaPageState extends State<ArenaPage> {
         floatingActionButton: Hero(
           tag: 'Play',
           child: PlayButton(
-            page: GamePage(
+            GamePage(
               _mode,
               teamSize: _teamSize,
               maxTime: _maxTime * 60,
@@ -218,7 +218,6 @@ class _ArenaPageState extends State<ArenaPage> {
               difficulty: _difficulty,
               friendlyFire: _friendlyFire,
             ),
-            gradient: false,
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
