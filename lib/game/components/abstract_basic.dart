@@ -1,13 +1,12 @@
 import 'package:flame/components/component.dart';
 import 'package:flame/sprite.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/basic_static.dart';
-import 'package:xeonjia/game/util/map_utils.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/tile.dart';
 
 // Basic game component
 // Every game component extends this one
@@ -78,13 +77,12 @@ abstract class BasicComponent extends SpriteComponent {
   BasicComponent.fromTile(Tile tile)
       : startX = tile.x,
         startY = tile.y,
-        image = tile.image,
         initialLifePoints =
             double.parse(tile.properties['lifePoints'] ?? 'Infinity'),
         atk = double.parse(tile.properties['atk'] ?? '0'),
         def = double.parse(tile.properties['def'] ?? '0'),
         poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
-        super.fromSprite(tile.size, tile.size, Sprite(tile.image)) {
+        super.fromSprite(tile.size, tile.size, tile.sprite) {
     onCreate();
   }
 

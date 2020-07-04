@@ -1,228 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="39" height="21" tilewidth="16" tileheight="16" nextobjectid="1">
- <tileset firstgid="1" name="Basic" tilewidth="16" tileheight="16" tilecount="44" columns="0">
-  <grid orientation="orthogonal" width="1" height="1"/>
-  <tile id="1" type="Solid">
-   <image width="16" height="16" source="../../images/rock1.png"/>
-  </tile>
-  <tile id="2" type="Solid">
-   <properties>
-    <property name="lifePoints" type="int" value="7"/>
-   </properties>
-   <image width="16" height="16" source="../../images/rock_breakable.png"/>
-  </tile>
-  <tile id="4" type="Solid">
-   <image width="16" height="16" source="../../images/wall2-2.png"/>
-  </tile>
-  <tile id="7" type="Hurdle">
-   <properties>
-    <property name="jumpDirection" type="int" value="1"/>
-   </properties>
-   <image width="16" height="16" source="../../images/hurdle-1.png"/>
-  </tile>
-  <tile id="8" type="Hurdle">
-   <properties>
-    <property name="jumpDirection" type="int" value="2"/>
-   </properties>
-   <image width="16" height="16" source="../../images/hurdle-2.png"/>
-  </tile>
-  <tile id="9" type="Hurdle">
-   <properties>
-    <property name="jumpDirection" type="int" value="3"/>
-   </properties>
-   <image width="16" height="16" source="../../images/hurdle-3.png"/>
-  </tile>
-  <tile id="10" type="Hurdle">
-   <properties>
-    <property name="jumpDirection" type="int" value="4"/>
-   </properties>
-   <image width="16" height="16" source="../../images/hurdle-4.png"/>
-  </tile>
-  <tile id="13" type="Modifier">
-   <properties>
-    <property name="moneyDelta" type="int" value="5"/>
-   </properties>
-   <image width="16" height="16" source="../../images/money.png"/>
-  </tile>
-  <tile id="24" type="Door">
-   <properties>
-    <property name="roomId" type="int" value="41"/>
-   </properties>
-   <image width="16" height="16" source="../../images/stairs.png"/>
-  </tile>
-  <tile id="32" type="Start">
+<map version="1.2" tiledversion="1.3.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="39" height="21" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="common" tilewidth="16" tileheight="16" tilecount="64" columns="8">
+  <image source="../../images/common.png" width="128" height="128"/>
+  <tile id="0" type="Start"/>
+  <tile id="1" type="Start"/>
+  <tile id="2" type="Start"/>
+  <tile id="3" type="Start"/>
+  <tile id="4" type="Start"/>
+  <tile id="5" type="Start"/>
+  <tile id="6" type="Start">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="team" type="int" value="0"/>
    </properties>
-   <image width="16" height="16" source="../../images/start-1.png"/>
   </tile>
-  <tile id="33" type="Start">
+  <tile id="7" type="Start">
    <properties>
-    <property name="orientation" type="int" value="4"/>
+    <property name="orientation" type="int" value="2"/>
     <property name="team" type="int" value="1"/>
    </properties>
-   <image width="16" height="16" source="../../images/start-2.png"/>
-  </tile>
-  <tile id="40" type="Ground">
-   <image width="16" height="16" source="../../images/ground-1.png"/>
-  </tile>
-  <tile id="41" type="Ground">
-   <image width="16" height="16" source="../../images/ground-2.png"/>
-  </tile>
-  <tile id="42" type="Ground">
-   <image width="16" height="16" source="../../images/ground-3.png"/>
-  </tile>
-  <tile id="43" type="Ground">
-   <image width="16" height="16" source="../../images/ground-4.png"/>
-  </tile>
-  <tile id="44" type="Ground">
-   <image width="16" height="16" source="../../images/ground-5.png"/>
-  </tile>
-  <tile id="45" type="Ground">
-   <image width="16" height="16" source="../../images/ground-6.png"/>
-  </tile>
-  <tile id="46" type="Ground">
-   <image width="16" height="16" source="../../images/ground-7.png"/>
-  </tile>
-  <tile id="47" type="Ground">
-   <image width="16" height="16" source="../../images/ground-8.png"/>
-  </tile>
-  <tile id="48" type="Ground">
-   <image width="16" height="16" source="../../images/ground-9.png"/>
-  </tile>
-  <tile id="49" type="Ground">
-   <image width="16" height="16" source="../../images/ground-10.png"/>
-  </tile>
-  <tile id="50" type="Ground">
-   <image width="16" height="16" source="../../images/ground-11.png"/>
-  </tile>
-  <tile id="51" type="Ground">
-   <image width="16" height="16" source="../../images/ground-12.png"/>
-  </tile>
-  <tile id="52" type="Ground">
-   <image width="16" height="16" source="../../images/ground-13.png"/>
-  </tile>
-  <tile id="53" type="Solid">
-   <image width="16" height="16" source="../../images/ground2.png"/>
-  </tile>
-  <tile id="55" type="Solid">
-   <image width="16" height="16" source="../../images/wall2-3.png"/>
-  </tile>
-  <tile id="56" type="Solid">
-   <image width="16" height="16" source="../../images/wall2-4.png"/>
-  </tile>
-  <tile id="57" type="Solid">
-   <image width="16" height="16" source="../../images/wall2-5.png"/>
-  </tile>
-  <tile id="59" type="Solid">
-   <image width="16" height="16" source="../../images/wall2-6.png"/>
-  </tile>
-  <tile id="60" type="Solid">
-   <image width="16" height="16" source="../../images/wall2-7.png"/>
-  </tile>
-  <tile id="61" type="Solid">
-   <image width="16" height="16" source="../../images/wall2-8.png"/>
-  </tile>
-  <tile id="62" type="Solid">
-   <image width="16" height="16" source="../../images/wall2-9.png"/>
-  </tile>
-  <tile id="63" type="Door">
-   <properties>
-    <property name="roomId" type="int" value="36"/>
-   </properties>
-   <image width="16" height="16" source="../../images/door1-4.png"/>
-  </tile>
-  <tile id="64" type="Modifier">
-   <properties>
-    <property name="moneyDelta" type="int" value="10"/>
-   </properties>
-   <image width="16" height="16" source="../../images/money.png"/>
-  </tile>
-  <tile id="65" type="Solid">
-   <properties>
-    <property name="lifePoints" type="int" value="7"/>
-   </properties>
-   <image width="16" height="16" source="../../images/rock2.png"/>
-  </tile>
-  <tile id="68" type="Solid">
-   <image width="16" height="16" source="../../images/rock2.png"/>
-  </tile>
-  <tile id="69" type="Modifier">
-   <properties>
-    <property name="objectId" type="int" value="6"/>
-   </properties>
-   <image width="16" height="16" source="../../images/gem.png"/>
-  </tile>
-  <tile id="70" type="DirectionChanger">
-   <properties>
-    <property name="forcedDirection" type="int" value="1"/>
-   </properties>
-   <image width="16" height="16" source="../../images/direction-down.png"/>
-  </tile>
-  <tile id="71" type="DirectionChanger">
-   <properties>
-    <property name="forcedDirection" type="int" value="4"/>
-   </properties>
-   <image width="16" height="16" source="../../images/direction-left.png"/>
-  </tile>
-  <tile id="72" type="DirectionChanger">
-   <properties>
-    <property name="forcedDirection" type="int" value="3"/>
-   </properties>
-   <image width="16" height="16" source="../../images/direction-right.png"/>
-  </tile>
-  <tile id="73" type="DirectionChanger">
-   <properties>
-    <property name="forcedDirection" type="int" value="2"/>
-   </properties>
-   <image width="16" height="16" source="../../images/direction-up.png"/>
-  </tile>
-  <tile id="74" type="Modifier">
-   <properties>
-    <property name="lifePointsDelta" type="int" value="15"/>
-    <property name="regenerable" type="bool" value="true"/>
-   </properties>
-   <image width="16" height="16" source="../../images/potion_red-1.png"/>
-  </tile>
-  <tile id="75" type="Modifier">
-   <properties>
-    <property name="lifePointsDelta" type="int" value="30"/>
-    <property name="regenerable" type="bool" value="true"/>
-   </properties>
-   <image width="16" height="16" source="../../images/potion_red-2.png"/>
-  </tile>
-  <tile id="76" type="Modifier">
-   <properties>
-    <property name="powerPointsDelta" type="int" value="10"/>
-    <property name="regenerable" type="bool" value="true"/>
-   </properties>
-   <image width="16" height="16" source="../../images/powerpoints.png"/>
   </tile>
  </tileset>
- <layer name="Tile Layer 1" width="39" height="21">
+ <tileset firstgid="65" source="../tileset_0.tsx"/>
+ <tileset firstgid="425" source="../basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="39" height="21">
   <data encoding="csv">
-61,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,63,
-5,33,73,0,0,0,48,47,0,2,0,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,48,47,0,0,0,0,69,56,
-5,2,0,0,0,0,48,47,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,2,0,48,47,0,0,0,72,34,56,
-5,33,73,0,0,0,48,47,0,0,0,2,77,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,47,0,0,0,0,69,56,
-5,2,0,0,0,0,48,47,0,0,0,0,0,0,0,0,0,0,44,46,46,46,43,0,0,0,77,2,0,0,0,48,47,0,0,0,72,34,56,
-5,33,73,0,0,0,48,47,0,0,0,0,0,2,77,0,0,0,48,49,49,49,47,0,0,0,0,0,0,0,0,48,47,0,0,0,0,69,56,
-5,2,0,0,0,0,48,47,0,0,0,0,0,0,0,0,0,0,42,41,41,41,45,0,77,2,0,0,0,0,0,48,47,0,0,0,72,34,56,
-5,33,73,0,0,0,48,47,0,0,0,0,0,0,0,2,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,47,0,0,0,0,69,56,
-5,2,0,0,0,0,48,47,0,0,0,0,3,0,0,0,0,0,0,0,0,0,77,2,0,0,0,0,0,0,0,48,47,0,0,0,72,34,56,
-5,33,73,0,0,0,48,47,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,3,0,0,0,48,47,0,0,0,0,69,56,
-5,2,0,0,0,0,48,47,0,0,2,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,2,0,48,47,0,0,0,72,34,56,
-5,33,73,0,0,0,48,47,0,0,0,0,0,0,0,0,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0,48,47,0,0,0,0,69,56,
-5,2,0,0,0,0,48,47,0,0,0,3,0,0,0,0,0,0,0,2,0,77,0,0,0,0,0,0,0,0,0,48,47,0,0,0,72,34,56,
-5,33,73,0,0,0,48,47,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,3,0,0,0,0,0,48,47,0,0,0,0,69,56,
-5,2,0,0,0,0,48,47,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,2,0,0,48,47,0,0,0,72,34,56,
-5,75,0,0,2,0,42,45,0,0,0,2,0,0,0,0,0,0,0,0,0,0,75,2,0,0,76,0,0,0,0,42,45,0,0,0,0,69,56,
-5,0,0,0,0,0,0,2,0,0,0,0,0,0,0,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,
-5,0,0,2,0,0,0,0,0,0,0,2,77,0,0,0,0,0,0,0,0,0,0,0,0,2,2,0,0,0,2,75,0,0,0,0,0,69,56,
-5,0,0,0,0,0,0,0,0,0,0,0,2,75,0,0,0,0,0,0,0,0,0,2,0,0,0,77,0,0,0,0,2,0,0,0,0,0,56,
-5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,0,0,0,0,2,0,0,0,0,0,0,0,0,0,56,
-60,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,58
+300,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,301,302,
+324,7,427,0,0,0,0,223,221,0,0,0,0,0,0,0,0,0,0,372,0,0,0,0,0,0,0,0,0,0,223,221,0,0,0,0,0,372,326,
+324,372,0,0,0,0,0,223,221,0,372,0,372,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,223,221,0,0,0,0,426,8,326,
+324,7,427,0,0,0,0,223,221,0,0,0,0,0,0,0,0,436,0,0,0,372,449,0,0,0,372,0,0,0,223,221,0,0,0,0,0,372,326,
+324,372,0,0,0,0,0,223,221,0,0,0,0,449,0,0,373,0,0,0,0,0,0,0,0,0,0,0,0,0,223,221,0,0,0,0,426,8,326,
+324,7,427,0,0,0,0,223,221,0,0,0,0,0,0,0,0,0,0,0,0,373,436,0,0,0,0,0,0,0,223,221,0,0,0,0,0,372,326,
+324,372,0,0,0,0,0,223,221,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,372,0,0,0,223,221,0,0,0,0,426,8,326,
+324,7,427,0,0,0,0,223,221,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,223,221,0,0,0,0,0,372,326,
+324,372,0,0,0,0,0,223,221,0,0,0,0,0,0,0,0,372,0,0,0,0,0,0,372,0,0,0,0,0,223,221,0,0,0,0,426,8,326,
+324,7,427,0,0,0,0,223,221,0,372,0,0,0,372,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,223,221,0,0,0,0,0,372,326,
+324,372,0,0,0,0,0,223,221,0,0,0,0,0,0,0,0,0,0,0,0,372,372,0,0,0,0,0,0,0,223,221,0,0,0,0,426,8,326,
+324,7,427,0,0,0,0,223,221,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,372,0,0,223,221,0,0,0,0,0,372,326,
+324,372,0,0,0,0,0,223,221,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,372,0,0,0,223,221,0,0,0,0,426,8,326,
+324,7,427,0,0,0,0,223,221,0,0,0,0,0,0,0,0,0,0,0,0,0,0,372,0,0,372,0,0,0,223,221,0,0,0,0,0,372,326,
+324,372,0,0,0,0,0,223,221,0,0,0,0,0,0,372,0,0,0,0,0,0,0,0,0,0,0,0,0,0,223,221,0,0,0,0,426,8,326,
+324,0,0,0,0,0,0,267,268,0,0,449,0,0,0,0,0,0,0,0,0,372,0,0,0,0,0,0,0,0,267,268,0,0,0,0,0,372,326,
+324,0,372,0,0,0,0,0,0,0,0,0,373,436,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,326,
+324,0,0,0,436,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,373,0,0,0,372,372,0,0,0,0,0,0,372,0,0,0,326,
+324,0,0,372,0,0,372,0,372,0,0,0,0,0,0,0,0,372,0,436,0,0,0,0,0,0,436,0,0,0,0,0,0,0,0,0,0,0,326,
+324,0,0,0,0,0,0,0,449,0,0,0,0,0,0,372,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,372,449,0,0,0,0,372,326,
+348,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,349,350
 </data>
  </layer>
 </map>

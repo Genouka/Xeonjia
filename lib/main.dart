@@ -24,6 +24,9 @@ void main() async {
     'character-4.png',
     'character-4-punch.png',
     'character-4-walk.png',
+    'basic.png',
+    'common.png',
+    'tileset_0.png',
   ]);
   return runApp(Xeonjia());
 }

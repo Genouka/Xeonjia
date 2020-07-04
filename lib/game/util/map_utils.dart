@@ -1,144 +1,96 @@
+import 'package:flame/sprite.dart';
 import 'package:flutter/services.dart';
 import 'package:xml/xml.dart';
 
-import 'package:xeonjia/models/game_mode.dart';
-import 'package:xeonjia/game/components/dynamic/character.dart';
-import 'package:xeonjia/game/components/dynamic/slither_cpu.dart';
-import 'package:xeonjia/game/components/dynamic/walker_cpu.dart';
-import 'package:xeonjia/game/components/static/basic_static.dart';
-import 'package:xeonjia/game/components/static/direction_changer.dart';
-import 'package:xeonjia/game/components/static/door.dart';
-import 'package:xeonjia/game/components/static/ground.dart';
-import 'package:xeonjia/game/components/static/hurdle.dart';
-import 'package:xeonjia/game/components/static/modifer.dart';
-import 'package:xeonjia/ui/screens/game/game_page.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
+import 'package:xeonjia/game/util/component_tile.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/ui/widgets/toast.dart';
+import 'package:xeonjia/models/tile.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 
-// Map that stores each tile id and tile details
-Map<int, Tile> _tileMap;
-
-// Previous room visited by the player
-int _previousRoomId;
-
-// Text displayed entering in a room
-String _toastText;
-
-// Class used to manage a single tile
-class Tile {
-  // Tile ID defined in the TMX file
-  int id;
-
-  // Component type
-  String type;
-
-  // List of tile properties
-  // Properties define component features and stats (eg: atk, def, lifePoints)
-  Map<String, dynamic> properties = {};
-
-  // Component image
-  String image;
-
-  // Component size
-  double size = componentSize;
-
-  // Start position
-  double x;
-  double y;
-
-  Tile();
-  Tile.fromValues(
-      {this.id,
-      this.type,
-      this.properties,
-      this.image,
-      this.size,
-      this.x,
-      this.y});
-}
-
-// Import map and tileset details from a TMX file
+// Import map from a TMX file
 void importMap(String fileName) async {
-  _tileMap = {};
-
-  // Read TMX (xml) file
-  var importedTmx = await rootBundle.loadString(fileName);
-  var xmlElement = XmlDocument.parse(importedTmx).rootElement;
+  var mapXml =
+      XmlDocument.parse(await rootBundle.loadString(fileName)).rootElement;
 
   // Get map information
-  game.mapWidth = int.parse(xmlElement.getAttribute('width'));
-  game.mapHeight = int.parse(xmlElement.getAttribute('height'));
-
-  // Read map properties
-  var mapProperties = xmlElement.findElements('properties');
-  _toastText =
+  game.mapWidth = int.parse(mapXml.getAttribute('width'));
+  game.mapHeight = int.parse(mapXml.getAttribute('height'));
+  var mapProperties = mapXml.findElements('properties');
+  var toastText =
       'Room ${mainCharacter.visitedRooms.last.toString().padLeft(3, '0')}';
   if (mapProperties.isNotEmpty) {
     mapProperties.single.children.forEach((property) {
       if (property.attributes.isNotEmpty &&
           property.attributes[0].value == 'hint') {
-        _toastText += ':\n' + property.attributes[1].value;
+        toastText += ':\n' + property.attributes[1].value;
       }
     });
   }
 
-  // Read tileSet
-  var tileSet = xmlElement.findElements('tileset');
+  // tileId : Tile
+  var _tileMap = <int, Tile>{};
 
-  // Get each tile details from tileset
-  tileSet.single.findElements('tile').forEach((tile) {
-    var newTile = Tile();
-    newTile.id = int.parse(tile.getAttribute('id')) + 1;
-    newTile.type = tile.getAttribute('type');
-    newTile.image = tile
-        .findElements('image')
-        .single
-        .getAttribute('source')
-        .split('/')
-        .last;
-    // Import tile properties
-    var properties = tile.findElements('properties');
-    if (properties.isNotEmpty) {
-      properties.single.children.forEach((property) {
-        if (property.attributes.isNotEmpty) {
-          newTile.properties[property.attributes[0].value] =
-              property.attributes[2].value;
-        }
-      });
-    }
-    // Store tile details in tileMap
-    _tileMap[newTile.id] = newTile;
+  // Read tileset
+  await Future.forEach(mapXml.findElements('tileset'), (tilesetElement) async {
+    var firstGid = int.parse(tilesetElement.getAttribute('firstgid'));
+
+    XmlElement tileset = (tilesetElement.getAttribute('source') == null)
+        ? tilesetElement
+        : XmlDocument.parse(await rootBundle.loadString(
+                'assets/maps/arena/' + tilesetElement.getAttribute('source')))
+            .rootElement;
+
+    var tileWidth = double.parse(tileset.getAttribute('tilewidth'));
+    var tileHeight = double.parse(tileset.getAttribute('tileheight'));
+    var columns = int.parse(tileset.getAttribute('columns'));
+
+    // Get tiles from tileset
+    tileset.findElements('tile').forEach((tile) {
+      var newTile = Tile(
+        id: int.parse(tile.getAttribute('id')) + firstGid,
+        type: tile.getAttribute('type'),
+      );
+      newTile.sprite = Sprite(
+        tileset
+            .findElements('image')
+            .single
+            .getAttribute('source')
+            .split('../../images/')
+            .last,
+        x: ((newTile.id - firstGid) % columns) * tileWidth,
+        y: ((newTile.id - firstGid) / columns).floor() * tileHeight,
+        width: tileWidth,
+        height: tileHeight,
+      );
+
+      // Read tile properties
+      var properties = tile.findElements('properties');
+      if (properties.isNotEmpty) {
+        properties.single.children.forEach((property) {
+          if (property.attributes.isNotEmpty) {
+            newTile.properties[property.attributes[0].value] =
+                property.attributes[2].value;
+          }
+        });
+      }
+      _tileMap[newTile.id] = newTile;
+    });
   });
 
-  // Get id of the previously visited room
-  _previousRoomId = (mainCharacter.visitedRooms.length <= 1)
-      ? 1
-      : mainCharacter.visitedRooms[mainCharacter.visitedRooms.length - 2];
-
-  parseMapTiles(xmlElement);
-}
-
-// Import map data from a TMX file
-// It just import data managed in this game
-void parseMapTiles(XmlElement xmlElement) {
   var mapData =
-      xmlElement.findElements('layer').single.findElements('data').single.text;
+      mapXml.findElements('layer').single.findElements('data').single.text;
 
-  // Read map line by line
-  List lines = mapData.split('\n');
+  // Read map layer
   var lineCount = 0;
   var columnCount = 0;
-  lines.forEach((line) {
-    List<String> tiles = line.split(',');
-    // Parse map layer
-    tiles.forEach((tileId) {
+  mapData.split('\n').forEach((line) {
+    line.split(',').forEach((tileId) {
       if (tileId.isNotEmpty) {
         var componentTile = _tileMap[int.parse(tileId)];
         if (componentTile != null) {
-          componentTile.x = componentSize * columnCount;
-          componentTile.y = componentSize * lineCount;
-          createComponent(componentTile, lineCount);
+          componentTile.x = componentTile.size * columnCount;
+          componentTile.y = componentTile.size * lineCount;
+          componentTile.createComponent();
         }
         ++columnCount;
         if (columnCount == game.mapWidth) {
@@ -148,65 +100,4 @@ void parseMapTiles(XmlElement xmlElement) {
       }
     });
   });
-}
-
-// Create components based on "type" tile property
-void createComponent(Tile componentTile, int lineCount) {
-  switch (componentTile.type) {
-    case 'Solid':
-      BasicStaticComponent(componentTile);
-      break;
-    case 'Modifier':
-      var _doorId = int.parse(componentTile.properties['door'] ?? '-1');
-      var _objectId = int.parse(componentTile.properties['objectId'] ?? '-1');
-      // Import object only if it is not already owned by the player
-      // or if it is not an unique object
-      if ((_doorId == -1 || !mainCharacter.doorKeyList.contains(_doorId)) &&
-          (_objectId == -1 || !mainCharacter.objectList.contains(_objectId))) {
-        ModifierComponent(componentTile);
-      }
-      break;
-    case 'Ground':
-      GroundComponent(componentTile);
-      break;
-    case 'Start':
-      if (game.mode == GameMode.story &&
-          _previousRoomId == int.parse(componentTile.properties['roomId'])) {
-        CharacterComponent(componentTile,
-            isPlayerOne: true,
-            level: mainCharacter.level,
-            jsonWeaponList: mainCharacter.jsonWeaponList);
-        Toast.show(_toastText, gameContext, gravity: (lineCount < 5) ? 0 : 2);
-      } else if (game.mode == GameMode.tdm) {
-        var _teamId = int.parse(componentTile.properties['team'] ?? '0');
-        if (game.players.where((p) => p.teamId == _teamId).length <
-            game.teamSize) {
-          CharacterComponent(
-            componentTile,
-            isPlayerOne: playerOne == null && _teamId == 0,
-            team: _teamId,
-            level:
-                _teamId * game.difficulty, // Temp solution before an actual cpu
-          );
-        }
-      }
-      break;
-    case 'Door':
-      DoorComponent(componentTile);
-      break;
-    case 'Hurdle':
-      HurdleComponent(componentTile);
-      break;
-    case 'DirectionChanger':
-      DirectionChangerComponent(componentTile);
-      break;
-    case 'WalkerCpu':
-      WalkerCpuComponent(componentTile);
-      break;
-    case 'SlitherCpu':
-      SlitherCpuComponent(componentTile);
-      break;
-    default:
-      break;
-  }
 }
