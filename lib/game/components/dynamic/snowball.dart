@@ -34,11 +34,6 @@ class SnowballComponent extends DynamicComponent {
   int priority() => 5;
 
   @override
-  void updateSprite({String event}) {
-    // It doesn't do anything because the sprite remains the same
-  }
-
-  @override
   void onCollision() {
     Explosion(this, stepTime: 0.02);
     delete();

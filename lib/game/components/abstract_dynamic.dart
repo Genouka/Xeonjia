@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:flame/animation.dart' as flame_animation;
 import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,28 @@ abstract class DynamicComponent extends BasicComponent {
   // If this is not moving, isStationary returns true
   bool get isStationary => directionX == 0 && directionY == 0;
 
+  // Sprite animation
+  flame_animation.Animation _animation;
+
+  // Map orientation : sprite
+  final sprites = <int, Sprite>{};
+  final _walkingSprites = <int, Sprite>{};
+  final punchSprites = <int, Sprite>{};
+
+  @override
+  void onCreate() {
+    final size = 16.0;
+    for (var i = 0; i < 4; i++) {
+      sprites[i + 1] =
+          Sprite(image, x: i * size, y: 0, width: size, height: size);
+      _walkingSprites[i + 1] =
+          Sprite(image, x: i * size, y: size, width: size, height: size);
+      punchSprites[i + 1] =
+          Sprite(image, x: i * size, y: size * 2, width: size, height: size);
+    }
+    super.onCreate();
+  }
+
   // If this component was previously still update its direction and orientation
   void updateDirection(double newInputDirectionX, double newInputDirectionY,
       {bool forced = false}) {
@@ -38,8 +61,8 @@ abstract class DynamicComponent extends BasicComponent {
       directionY = newInputDirectionY;
 
       updateOrientation(directionX, directionY);
+      animate([_walkingSprites[orientation]]);
       ++movesCounter;
-      if (this == playerOne) updateSprite(event: 'walk');
 
       // Decrease life points cause poison
       if (poisonQuantity > 0) lifePointsDifference(-poisonQuantity);
@@ -56,29 +79,31 @@ abstract class DynamicComponent extends BasicComponent {
       } else if (x > 0) {
         orientation = 3;
       } else if (x < 0) orientation = 4;
-
-      updateSprite();
     }
   }
 
-  // Update sprite image based on its orientation and event type (e.g. "punch")
-  void updateSprite({String event}) {
-    if (event != null) {
-      event = '-' + event;
-      Future.delayed(const Duration(milliseconds: 120), () => updateSprite());
+  @override
+  void render(Canvas canvas) {
+    if (!(_animation?.done() ?? true)) {
+      prepareCanvas(canvas);
+      _animation.getSprite().render(canvas,
+          width: width, height: height, overridePaint: overridePaint);
     } else {
-      event = '';
+      sprite = sprites[orientation];
+      super.render(canvas);
     }
-    sprite = Sprite((image).split('-').first +
-        '-' +
-        orientation.toString() +
-        event +
-        '.png');
+  }
+
+  // Animate this component
+  void animate(List<Sprite> sprites) {
+    _animation = flame_animation.Animation.spriteList(sprites,
+        stepTime: 0.3, loop: false);
   }
 
   @override
   void update(double t) {
     _move();
+    _animation?.update(t);
     super.update(t);
   }
 

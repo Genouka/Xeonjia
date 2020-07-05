@@ -37,10 +37,7 @@ class CharacterComponent extends DynamicComponent {
     team = 0,
   })  : initialLifePoints = (100 + 5 * level).toDouble(),
         super(
-            tile.x,
-            tile.y,
-            (isPlayerOne ? '' : ('cpu${team}_')) +
-                'character-${int.parse(tile.properties['orientation'] ?? '1')}.png') {
+            tile.x, tile.y, 'character${isPlayerOne ? '' : '_cpu_$team'}.png') {
     orientation = int.parse(tile.properties['orientation'] ?? '1');
     _initialOrientation = orientation;
     atk = (level + 1).toDouble();
@@ -118,7 +115,6 @@ class CharacterComponent extends DynamicComponent {
     x = startX;
     y = startY;
     orientation = _initialOrientation;
-    updateSprite();
     if (this == playerOne) {
       game.refreshWeaponBar();
       game.updateCamera(x, y);

@@ -54,7 +54,7 @@ class PunchWeapon extends Weapon {
 
   @override
   void shoot({@required CharacterComponent shooter}) {
-    var punch = Offset.zero;
+    Offset punch;
     switch (shooter.orientation) {
       case 1:
         punch = Offset(shooter.x, shooter.y + componentSize * 3 / 2);
@@ -77,7 +77,7 @@ class PunchWeapon extends Weapon {
         return;
       }
     });
-    shooter.updateSprite(event: 'punch');
+    shooter.animate([shooter.punchSprites[shooter.orientation]]);
   }
 }
 
