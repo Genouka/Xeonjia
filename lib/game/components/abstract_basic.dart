@@ -7,6 +7,7 @@ import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/basic_static.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/tile.dart';
 
 // Basic game component
@@ -57,8 +58,7 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Direction values
   // They equal to zero if the component is not moving
-  double directionX = 0;
-  double directionY = 0;
+  Direction direction;
 
   // True if this component has to be removed from game
   bool remove = false;

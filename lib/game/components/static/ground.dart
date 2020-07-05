@@ -1,5 +1,6 @@
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
+import 'package:xeonjia/models/direction.dart';
 
 // Ground component
 // Other components walk on this instead of sliding
@@ -14,7 +15,7 @@ class GroundComponent extends BasicComponent {
     if (componentAbove.isFlying()) return;
     var _thisRect = toRect();
     var _aboveRect = componentAbove.toRect();
-    if (componentAbove.directionX != 0) {
+    if (componentAbove.direction.dx != 0) {
       if (_thisRect.center.dx == _aboveRect.center.dx &&
           // Do not stop if the head of componentAbove is overlapping this
           _thisRect.bottomCenter.dy > _aboveRect.center.dy &&

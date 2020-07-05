@@ -4,28 +4,25 @@ import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/animated_component.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/direction.dart';
 
 // Shot created by SnowBallWeapon
 class SnowballComponent extends DynamicComponent {
-  // Shot direction
-  final int _direction;
+  @override
+  BasicComponent father;
+
+  @override
+  final Direction direction;
 
   @override
   final double atk;
 
   @override
-  BasicComponent father;
-
-  @override
   double distancePerFrame = defaultDistancePerFrame * 2;
 
   SnowballComponent(
-      Point startingPosition, this._direction, this.father, this.atk)
-      : super(startingPosition, 'snowball.png') {
-    List directionXY = directionToXY(_direction);
-    directionX = directionXY.first;
-    directionY = directionXY.last;
-  }
+      Point startingPosition, this.father, this.direction, this.atk)
+      : super(startingPosition, 'snowball.png');
 
   @override
   bool isSolid({DynamicComponent otherComponent}) => false;

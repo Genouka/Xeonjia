@@ -1,4 +1,5 @@
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
+import 'package:xeonjia/models/direction.dart';
 
 // Basic CPU controlled enemy that slides on ice
 class SlitherCpuComponent extends DynamicComponent {
@@ -9,11 +10,7 @@ class SlitherCpuComponent extends DynamicComponent {
 
   @override
   void update(double t) {
-    if (randomDouble() > 0.4) {
-      randomDouble() > 0
-          ? updateDirection(randomDouble(), 0)
-          : updateDirection(0, randomDouble());
-    }
+    if (randomDouble() > 0.4) updateDirection(GetDirection.random);
     super.update(t);
   }
 }

@@ -3,14 +3,15 @@ import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
 import 'package:flutter/material.dart';
 
-import 'package:xeonjia/models/game_mode.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
-import 'package:xeonjia/ui/screens/game/game_page.dart';
 import 'package:xeonjia/game/util/gamepad.dart';
 import 'package:xeonjia/game/util/map_utils.dart';
+import 'package:xeonjia/models/direction.dart';
+import 'package:xeonjia/models/game_mode.dart';
+import 'package:xeonjia/ui/screens/game/game_page.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
 
 // Main game variable
@@ -232,14 +233,14 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
       _panGestureOffset = upd.delta.dx.abs() > upd.delta.dy.abs()
           ? Offset(upd.delta.dx, 0)
           : Offset(0, upd.delta.dy);
-      playerOne?.updateOrientation(_panGestureOffset.dx, _panGestureOffset.dy);
+      playerOne?.updateOrientation(GetDirection.fromOffset(_panGestureOffset));
     }
   }
 
   @override
   void onPanEnd(DragEndDetails end) {
     if (settings.inputMethod != 1 && !pause) {
-      gestureDragInput(_panGestureOffset);
+      gestureDragInput(GetDirection.fromOffset(_panGestureOffset));
     }
   }
 
@@ -249,8 +250,8 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   }
 
   // Manage drag gestures
-  void gestureDragInput(Offset delta) {
-    playerOne?.updateDirection(delta.dx, delta.dy);
+  void gestureDragInput(Direction direction) {
+    playerOne?.updateDirection(direction);
   }
 
   // Manage tap gesture
@@ -268,14 +269,17 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
       // Update character orientation
       if (position.dx < componentSize ||
           position.dx > screenSize.width - componentSize) {
-        playerOne.updateOrientation(position.dx - componentSize, 0);
+        playerOne.updateOrientation(
+            GetDirection.fromXY(position.dx - componentSize, 0));
       } else if (position.dy - 40 < componentSize ||
           position.dy > fixedScreenHeight - componentSize) {
-        playerOne.updateOrientation(0, position.dy - 40 - componentSize);
+        playerOne.updateOrientation(
+            GetDirection.fromXY(0, position.dy - 40 - componentSize));
       } else if (_relativeTapX.abs() > 15 || _relativeTapY.abs() > 15) {
         _relativeTapX.abs() > _relativeTapY.abs()
-            ? playerOne.updateOrientation(_relativeTapX, 0)
-            : playerOne.updateOrientation(0, _relativeTapY);
+            ? playerOne.updateOrientation(GetDirection.fromXY(_relativeTapX, 0))
+            : playerOne
+                .updateOrientation(GetDirection.fromXY(0, _relativeTapY));
       }
     }
 
@@ -408,16 +412,16 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
       ..setListener((evtType, key) {
         switch (key) {
           case GAMEPAD_DPAD_UP:
-            gestureDragInput(const Offset(0, -1));
+            gestureDragInput(Direction.up);
             break;
           case GAMEPAD_DPAD_DOWN:
-            gestureDragInput(const Offset(0, 1));
+            gestureDragInput(Direction.down);
             break;
           case GAMEPAD_DPAD_RIGHT:
-            gestureDragInput(const Offset(1, 0));
+            gestureDragInput(Direction.right);
             break;
           case GAMEPAD_DPAD_LEFT:
-            gestureDragInput(const Offset(-1, 0));
+            gestureDragInput(Direction.left);
             break;
           case GAMEPAD_BUTTON_A:
             playerOne.shoot();

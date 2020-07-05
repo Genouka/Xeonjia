@@ -2,11 +2,12 @@ import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import 'package:xeonjia/resources/weapon_details.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/dynamic/snowball.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/direction.dart';
+import 'package:xeonjia/resources/weapon_details.dart';
 
 // Abstract class used to manage weapons inside game
 // It defines what happens if someone use a weapon
@@ -57,16 +58,16 @@ class PunchWeapon extends Weapon {
   void shoot({@required CharacterComponent shooter}) {
     Offset punch;
     switch (shooter.orientation) {
-      case 1:
+      case Direction.down:
         punch = Offset(shooter.x, shooter.y + componentSize * 3 / 2);
         break;
-      case 2:
+      case Direction.up:
         punch = Offset(shooter.x, shooter.y - componentSize / 2);
         break;
-      case 3:
+      case Direction.right:
         punch = Offset(shooter.x + componentSize * 3 / 2, shooter.y);
         break;
-      case 4:
+      case Direction.left:
         punch = Offset(shooter.x - componentSize / 2, shooter.y);
         break;
       default:
@@ -96,7 +97,7 @@ class SnowBallWeapon extends Weapon {
   void shoot({@required CharacterComponent shooter}) {
     if (powerPoints > 0) {
       SnowballComponent(
-          Point(shooter.x, shooter.y), shooter.orientation, shooter, atk);
+          Point(shooter.x, shooter.y), shooter, shooter.orientation, atk);
       --powerPoints;
       super.shoot(shooter: shooter);
     }

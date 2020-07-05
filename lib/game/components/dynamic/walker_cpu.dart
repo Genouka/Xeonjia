@@ -1,4 +1,7 @@
+import 'dart:math';
+
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
+import 'package:xeonjia/models/direction.dart';
 
 // CPU controlled enemy. This component doesn't swipe on ice
 class WalkerCpuComponent extends DynamicComponent {
@@ -10,11 +13,8 @@ class WalkerCpuComponent extends DynamicComponent {
   @override
   void update(double t) {
     if (randomDouble() > 0.2) {
-      randomDouble() > 0
-          ? directionX = randomDouble()
-          : directionY = randomDouble();
+      updateDirection(Direction.values[Random().nextInt(4)]);
       if (randomDouble() > 0.2) stop();
-      updateOrientation(directionX, directionY);
       super.update(t);
     }
   }

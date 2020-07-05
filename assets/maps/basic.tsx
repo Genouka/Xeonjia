@@ -3,22 +3,22 @@
  <image source="../images/basic.png" width="128" height="128"/>
  <tile id="0" type="DirectionChanger">
   <properties>
-   <property name="forcedDirection" type="int" value="1"/>
+   <property name="forcedDirection" type="int" value="0"/>
   </properties>
  </tile>
  <tile id="1" type="DirectionChanger">
   <properties>
-   <property name="forcedDirection" type="int" value="4"/>
+   <property name="forcedDirection" type="int" value="3"/>
   </properties>
  </tile>
  <tile id="2" type="DirectionChanger">
   <properties>
-   <property name="forcedDirection" type="int" value="3"/>
+   <property name="forcedDirection" type="int" value="2"/>
   </properties>
  </tile>
  <tile id="3" type="DirectionChanger">
   <properties>
-   <property name="forcedDirection" type="int" value="2"/>
+   <property name="forcedDirection" type="int" value="1"/>
   </properties>
  </tile>
  <tile id="8" type="Modifier"/>

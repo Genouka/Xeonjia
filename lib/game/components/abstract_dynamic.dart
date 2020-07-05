@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/static/basic_static.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/direction.dart';
 
 // Component able to move on the game field
 abstract class DynamicComponent extends BasicComponent {
@@ -16,8 +17,7 @@ abstract class DynamicComponent extends BasicComponent {
   DynamicComponent.fromTile(tile) : super.fromTile(tile);
 
   // Component orientation
-  // 1: down, 2: up, 3: right, 4: left
-  int orientation = 1;
+  Direction orientation = Direction.down;
 
   // Distance made at each frame update
   double distancePerFrame = defaultDistancePerFrame;
@@ -29,38 +29,35 @@ abstract class DynamicComponent extends BasicComponent {
   int movesCounter = 0;
 
   // If this is not moving, isStationary returns true
-  bool get isStationary => directionX == 0 && directionY == 0;
+  bool get isStationary => direction == null;
 
   // Sprite animation
   flame_animation.Animation _animation;
 
   // Map orientation : sprite
-  final sprites = <int, Sprite>{};
-  final _walkingSprites = <int, Sprite>{};
-  final punchSprites = <int, Sprite>{};
+  final _sprites = <Direction, Sprite>{};
+  final _walkingSprites = <Direction, Sprite>{};
+  final punchSprites = <Direction, Sprite>{};
 
   @override
   void onCreate() {
     final size = 16.0;
-    for (var i = 0; i < 4; i++) {
-      sprites[i + 1] =
-          Sprite(image, x: i * size, y: 0, width: size, height: size);
-      _walkingSprites[i + 1] =
-          Sprite(image, x: i * size, y: size, width: size, height: size);
-      punchSprites[i + 1] =
-          Sprite(image, x: i * size, y: size * 2, width: size, height: size);
-    }
+    Direction.values.forEach((d) {
+      _sprites[d] =
+          Sprite(image, x: d.index * size, y: 0, width: size, height: size);
+      _walkingSprites[d] =
+          Sprite(image, x: d.index * size, y: size, width: size, height: size);
+      punchSprites[d] = Sprite(image,
+          x: d.index * size, y: size * 2, width: size, height: size);
+    });
     super.onCreate();
   }
 
   // If this component was previously still update its direction and orientation
-  void updateDirection(double newInputDirectionX, double newInputDirectionY,
-      {bool forced = false}) {
+  void updateDirection(Direction newDirection, {bool forced = false}) {
     if (isStationary || forced) {
-      directionX = newInputDirectionX;
-      directionY = newInputDirectionY;
-
-      updateOrientation(directionX, directionY);
+      direction = newDirection;
+      updateOrientation();
       animate([_walkingSprites[orientation]]);
       ++movesCounter;
 
@@ -70,16 +67,8 @@ abstract class DynamicComponent extends BasicComponent {
   }
 
   // Update component orientation
-  void updateOrientation(double x, double y) {
-    if (x != 0 || y != 0) {
-      if (y > 0) {
-        orientation = 1;
-      } else if (y < 0) {
-        orientation = 2;
-      } else if (x > 0) {
-        orientation = 3;
-      } else if (x < 0) orientation = 4;
-    }
+  void updateOrientation([Direction newDirection]) {
+    orientation = (newDirection ?? direction ?? orientation);
   }
 
   @override
@@ -89,7 +78,7 @@ abstract class DynamicComponent extends BasicComponent {
       _animation.getSprite().render(canvas,
           width: width, height: height, overridePaint: overridePaint);
     } else {
-      sprite = sprites[orientation];
+      sprite = _sprites[orientation];
       super.render(canvas);
     }
   }
@@ -112,9 +101,9 @@ abstract class DynamicComponent extends BasicComponent {
   void _move() {
     collidedComponent = null;
     var _overlappedComponents = <BasicComponent>[];
-    if (directionX != 0 || directionY != 0) {
-      var _newX = x + directionX.sign * distancePerFrame;
-      var _newY = y + directionY.sign * distancePerFrame;
+    if (direction != null) {
+      var _newX = x + direction.dx * distancePerFrame;
+      var _newY = y + direction.dy * distancePerFrame;
       var _newPosition = Rect.fromLTWH(_newX, _newY, width - 1, height - 1);
       game.components.cast<BasicComponent>().forEach((component) {
         // If this is going to overlap an unrelated component
@@ -160,8 +149,7 @@ abstract class DynamicComponent extends BasicComponent {
   }
 
   void stop() {
-    directionX = 0;
-    directionY = 0;
+    direction = null;
   }
 
   @override
@@ -170,33 +158,4 @@ abstract class DynamicComponent extends BasicComponent {
   // Generate random number between -0.5 and +0.5
   // It is used to generate random direction for CPU-moved characters
   double randomDouble() => Random().nextDouble() - 0.5;
-}
-
-// Convert int direction into X and Y
-List<double> directionToXY(int direction) {
-  double _directionX;
-  double _directionY;
-  switch (direction) {
-    case 1:
-      _directionX = 0;
-      _directionY = 1;
-      break;
-    case 2:
-      _directionX = 0;
-      _directionY = -1;
-      break;
-    case 3:
-      _directionX = 1;
-      _directionY = 0;
-      break;
-    case 4:
-      _directionX = -1;
-      _directionY = 0;
-      break;
-    default:
-      _directionX = 0;
-      _directionY = 0;
-      break;
-  }
-  return [_directionX, _directionY];
 }

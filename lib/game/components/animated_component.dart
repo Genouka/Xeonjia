@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/direction.dart';
 
 // Animated explosion
 class Explosion extends AnimatedComponent {
@@ -16,8 +17,8 @@ class Explosion extends AnimatedComponent {
     stepTime = 0.05,
   }) : super(
           position: Point(
-              component.x + component.directionX * componentSize / 2,
-              component.y + component.directionY * componentSize / 2),
+              component.x + component.direction.dx * componentSize / 2,
+              component.y + component.direction.dy * componentSize / 2),
           imagePath: component.image,
           textureX: textureX,
           textureY: textureY,

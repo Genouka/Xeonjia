@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/tile.dart';
 
@@ -27,7 +28,7 @@ class CharacterComponent extends DynamicComponent {
   double initialLifePoints;
 
   // Initial orientation
-  int _initialOrientation;
+  Direction _initialOrientation;
 
   // Create character from input details
   CharacterComponent(
@@ -39,7 +40,8 @@ class CharacterComponent extends DynamicComponent {
   })  : initialLifePoints = (100 + 5 * level).toDouble(),
         super(
             tile.position, 'character${isPlayerOne ? '' : '_cpu_$team'}.png') {
-    orientation = int.parse(tile.properties['orientation'] ?? '1');
+    orientation =
+        GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0'));
     _initialOrientation = orientation;
     atk = (level + 1).toDouble();
     def = (level ~/ 5).toDouble();
@@ -134,14 +136,9 @@ class CharacterComponent extends DynamicComponent {
   // Move done if this is controlled by CPU
   void _cpuMove() {
     if (movesCounter == 0) {
-      List _firstMove = directionToXY(_initialOrientation);
-      updateDirection(_firstMove.first, _firstMove.last);
+      updateDirection(_initialOrientation);
     } else if (isStationary) {
-      if (randomDouble() > 0.4) {
-        randomDouble() > 0
-            ? updateDirection(randomDouble(), 0)
-            : updateDirection(0, randomDouble());
-      }
+      if (randomDouble() > 0.4) updateDirection(GetDirection.random);
     }
   }
 

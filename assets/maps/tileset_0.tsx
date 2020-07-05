@@ -282,27 +282,27 @@
  </tile>
  <tile id="275" type="Hurdle">
   <properties>
-   <property name="jumpDirection" type="int" value="1"/>
+   <property name="allowedDirection" type="int" value="3"/>
   </properties>
  </tile>
  <tile id="276" type="Hurdle">
   <properties>
-   <property name="jumpDirection" type="int" value="1"/>
+   <property name="allowedDirection" type="int" value="2"/>
   </properties>
  </tile>
  <tile id="277" type="Hurdle">
   <properties>
-   <property name="jumpDirection" type="int" value="1"/>
+   <property name="allowedDirection" type="int" value="1"/>
   </properties>
  </tile>
  <tile id="278" type="Hurdle">
   <properties>
-   <property name="jumpDirection" type="int" value="1"/>
+   <property name="allowedDirection" type="int" value="1"/>
   </properties>
  </tile>
  <tile id="279" type="Hurdle">
   <properties>
-   <property name="jumpDirection" type="int" value="1"/>
+   <property name="allowedDirection" type="int" value="1"/>
   </properties>
  </tile>
  <tile id="280" type="Solid"/>
@@ -330,27 +330,27 @@
  </tile>
  <tile id="299" type="Hurdle">
   <properties>
-   <property name="jumpDirection" type="int" value="1"/>
+   <property name="allowedDirection" type="int" value="3"/>
   </properties>
  </tile>
  <tile id="300" type="Hurdle">
   <properties>
-   <property name="jumpDirection" type="int" value="1"/>
+   <property name="allowedDirection" type="int" value="2"/>
   </properties>
  </tile>
  <tile id="301" type="Hurdle">
   <properties>
-   <property name="jumpDirection" type="int" value="1"/>
+   <property name="allowedDirection" type="int" value="0"/>
   </properties>
  </tile>
  <tile id="302" type="Hurdle">
   <properties>
-   <property name="jumpDirection" type="int" value="1"/>
+   <property name="allowedDirection" type="int" value="0"/>
   </properties>
  </tile>
  <tile id="303" type="Hurdle">
   <properties>
-   <property name="jumpDirection" type="int" value="1"/>
+   <property name="allowedDirection" type="int" value="0"/>
   </properties>
  </tile>
  <tile id="304" type="Solid"/>
@@ -386,12 +386,12 @@
  </tile>
  <tile id="323" type="Hurdle">
   <properties>
-   <property name="jumpDirection" type="int" value="1"/>
+   <property name="allowedDirection" type="int" value="3"/>
   </properties>
  </tile>
  <tile id="324" type="Hurdle">
   <properties>
-   <property name="jumpDirection" type="int" value="1"/>
+   <property name="allowedDirection" type="int" value="2"/>
   </properties>
  </tile>
  <tile id="325" type="Hurdle">

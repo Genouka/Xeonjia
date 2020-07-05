@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
-
-enum Direction { right, left, up, down, center }
 
 // Virtual gamepad used to move the player
 class VirtualGamepad extends StatefulWidget {
@@ -28,7 +27,7 @@ class _VirtualGamepadState extends State<VirtualGamepad> {
     Direction.down: const Icon(Icons.keyboard_arrow_down),
     Direction.left: const Icon(Icons.keyboard_arrow_left),
     Direction.right: const Icon(Icons.keyboard_arrow_right),
-    Direction.center: const Icon(Icons.add),
+    null: const Icon(Icons.add),
   };
 
   @override
@@ -48,7 +47,7 @@ class _VirtualGamepadState extends State<VirtualGamepad> {
             Row(
               children: [
                 arrowButton(Direction.left),
-                arrowButton(Direction.center),
+                arrowButton(null),
                 arrowButton(Direction.right),
               ],
             ),
@@ -70,7 +69,7 @@ class _VirtualGamepadState extends State<VirtualGamepad> {
             // Edit widget position by moving it
             onPanUpdate: (details) {
               setState(() {
-                if (direction == Direction.center) {
+                if (direction == null) {
                   var _dx = details.delta.dx;
                   var _dy = details.delta.dy;
                   if (_dx.abs() > _dy.abs()) {
@@ -78,7 +77,7 @@ class _VirtualGamepadState extends State<VirtualGamepad> {
                   } else {
                     _dx = 0;
                   }
-                  playerOne.updateOrientation(_dx, _dy);
+                  playerOne.updateOrientation(GetDirection.fromXY(_dx, _dy));
                 } else {
                   _offset = Offset(_offset.dx - details.delta.dx,
                       _offset.dy - details.delta.dy);
@@ -104,14 +103,13 @@ class _VirtualGamepadState extends State<VirtualGamepad> {
 
   // Manage direction input
   void input(Direction direction) {
-    if (direction == Direction.center) {
+    if (direction == null) {
       playerOne.shoot();
     } else {
       if (widget.manageMovements) {
-        game.gestureDragInput(directionToOffset(direction));
+        game.gestureDragInput(direction);
       } else {
-        var _orientation = directionToOffset(direction);
-        playerOne.updateOrientation(_orientation.dx, _orientation.dy);
+        playerOne.updateOrientation(direction);
       }
     }
     saveOffset(_offset);
@@ -122,22 +120,6 @@ class _VirtualGamepadState extends State<VirtualGamepad> {
     if (newOffset != gamepadOffset) {
       gamepadOffset = newOffset;
       saveGamepadOffset();
-    }
-  }
-
-  // Convert offset into direction
-  Offset directionToOffset(Direction direction) {
-    switch (direction) {
-      case Direction.right:
-        return const Offset(1, 0);
-      case Direction.left:
-        return const Offset(-1, 0);
-      case Direction.up:
-        return const Offset(0, -1);
-      case Direction.down:
-        return const Offset(0, 1);
-      default:
-        return const Offset(0, 0);
     }
   }
 }
