@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flame/sprite.dart';
 import 'package:flutter/services.dart';
 import 'package:xml/xml.dart';
@@ -88,8 +90,8 @@ void importMap(String fileName) async {
       if (tileId.isNotEmpty) {
         var componentTile = _tileMap[int.parse(tileId)];
         if (componentTile != null) {
-          componentTile.x = componentTile.size * columnCount;
-          componentTile.y = componentTile.size * lineCount;
+          componentTile.position = Point(
+              componentTile.size * columnCount, componentTile.size * lineCount);
           componentTile.createComponent();
         }
         ++columnCount;

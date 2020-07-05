@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flame/components/component.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
@@ -11,9 +12,8 @@ import 'package:xeonjia/models/tile.dart';
 // Basic game component
 // Every game component extends this one
 abstract class BasicComponent extends SpriteComponent {
-  // Component start position
-  double startX;
-  double startY;
+  // Component starting position
+  Point startingPosition;
 
   // Component image file
   // Not used if it is instantiated by BasicComponent.fromTile()
@@ -75,8 +75,7 @@ abstract class BasicComponent extends SpriteComponent {
   Team get team => game.teams.firstWhere((team) => team.id == teamId);
 
   BasicComponent.fromTile(Tile tile)
-      : startX = tile.x,
-        startY = tile.y,
+      : startingPosition = tile.position,
         initialLifePoints =
             double.parse(tile.properties['lifePoints'] ?? 'Infinity'),
         atk = double.parse(tile.properties['atk'] ?? '0'),
@@ -86,7 +85,7 @@ abstract class BasicComponent extends SpriteComponent {
     onCreate();
   }
 
-  BasicComponent(this.startX, this.startY, this.image, {int imageRow = 0})
+  BasicComponent(this.startingPosition, this.image, {int imageRow = 0})
       : initialLifePoints = double.infinity,
         super.fromSprite(
           componentSize,
@@ -96,7 +95,7 @@ abstract class BasicComponent extends SpriteComponent {
     onCreate();
   }
 
-  BasicComponent.withoutImage(this.startX, this.startY)
+  BasicComponent.withoutImage(this.startingPosition)
       : initialLifePoints = double.infinity {
     onCreate();
   }
@@ -104,8 +103,8 @@ abstract class BasicComponent extends SpriteComponent {
   @mustCallSuper
   void onCreate() {
     _lifePoints = initialLifePoints;
-    x = startX;
-    y = startY;
+    x = startingPosition.x;
+    y = startingPosition.y;
     game.addLater(this);
   }
 

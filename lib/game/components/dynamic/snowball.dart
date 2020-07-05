@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/animated_component.dart';
@@ -17,8 +19,9 @@ class SnowballComponent extends DynamicComponent {
   @override
   double distancePerFrame = defaultDistancePerFrame * 2;
 
-  SnowballComponent(startX, startY, this._direction, this.father, this.atk)
-      : super(startX, startY, 'snowball.png') {
+  SnowballComponent(
+      Point startingPosition, this._direction, this.father, this.atk)
+      : super(startingPosition, 'snowball.png') {
     List directionXY = directionToXY(_direction);
     directionX = directionXY.first;
     directionY = directionXY.last;

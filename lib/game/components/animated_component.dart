@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'dart:ui';
 import 'package:flame/animation.dart';
 import 'package:flutter/foundation.dart';
@@ -14,8 +15,9 @@ class Explosion extends AnimatedComponent {
     int amount = 5,
     stepTime = 0.05,
   }) : super(
-          startX: component.x + component.directionX * componentSize / 2,
-          startY: component.y + component.directionY * componentSize / 2,
+          position: Point(
+              component.x + component.directionX * componentSize / 2,
+              component.y + component.directionY * componentSize / 2),
           imagePath: component.image,
           textureX: textureX,
           textureY: textureY,
@@ -33,8 +35,7 @@ class AnimatedComponent extends BasicComponent {
   AnimatedComponent({
     @required String imagePath,
     @required int amount,
-    @required double startX,
-    @required double startY,
+    @required Point position,
     double width,
     double height,
     int amountPerRow,
@@ -45,7 +46,7 @@ class AnimatedComponent extends BasicComponent {
     double stepTime = 0.05,
     bool loop = false,
     this.destroyOnFinish = false,
-  }) : super.withoutImage(startX, startY) {
+  }) : super.withoutImage(position) {
     this.width = (width ?? componentSize);
     this.height = (height ?? componentSize);
     animation = Animation.sequenced(

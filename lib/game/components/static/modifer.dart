@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/animated_component.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
@@ -49,9 +51,8 @@ class ModifierComponent extends BasicComponent {
         super.fromTile(tile);
 
   // Constructor used for mine weapon shots
-  ModifierComponent.mine(
-      double _startX, double _startY, this.father, double _atk)
-      : super(_startX, _startY, 'mine.png', imageRow: father.teamId) {
+  ModifierComponent.mine(Point position, this.father, double _atk)
+      : super(position, 'mine.png', imageRow: father.teamId) {
     _lifePointsDiff = -_atk;
     explosionOnDelete = true;
   }

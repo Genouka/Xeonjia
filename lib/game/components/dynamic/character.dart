@@ -1,9 +1,10 @@
 import 'dart:math';
 
-import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/game_mode.dart';
+import 'package:xeonjia/models/tile.dart';
 
 // Dynamic component used for human-like players
 class CharacterComponent extends DynamicComponent {
@@ -30,14 +31,14 @@ class CharacterComponent extends DynamicComponent {
 
   // Create character from input details
   CharacterComponent(
-    tile, {
+    Tile tile, {
     bool isPlayerOne = false,
     int level = 0,
     Map<String, dynamic> jsonWeaponList,
     team = 0,
   })  : initialLifePoints = (100 + 5 * level).toDouble(),
         super(
-            tile.x, tile.y, 'character${isPlayerOne ? '' : '_cpu_$team'}.png') {
+            tile.position, 'character${isPlayerOne ? '' : '_cpu_$team'}.png') {
     orientation = int.parse(tile.properties['orientation'] ?? '1');
     _initialOrientation = orientation;
     atk = (level + 1).toDouble();
@@ -112,8 +113,8 @@ class CharacterComponent extends DynamicComponent {
     });
     _selectedWeaponElement = 0;
     movesCounter = 0;
-    x = startX;
-    y = startY;
+    x = startingPosition.x;
+    y = startingPosition.y;
     orientation = _initialOrientation;
     if (this == playerOne) {
       game.refreshWeaponBar();

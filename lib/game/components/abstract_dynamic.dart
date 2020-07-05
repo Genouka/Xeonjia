@@ -9,8 +9,8 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Component able to move on the game field
 abstract class DynamicComponent extends BasicComponent {
-  DynamicComponent(double startX, double startY, String imageName)
-      : super(startX, startY, imageName);
+  DynamicComponent(Point startingPosition, String imageName)
+      : super(startingPosition, imageName);
 
   // Constructor used when component is imported from a tmx file
   DynamicComponent.fromTile(tile) : super.fromTile(tile);

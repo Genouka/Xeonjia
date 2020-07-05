@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flame/sprite.dart';
 
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -20,9 +21,8 @@ class Tile {
   // Component size
   double size;
 
-  // Start position
-  double x;
-  double y;
+  // Tile position
+  Point position;
 
   Tile({
     this.id,
@@ -30,8 +30,7 @@ class Tile {
     this.properties,
     this.sprite,
     this.size,
-    this.x,
-    this.y,
+    this.position,
   }) {
     properties ??= {};
     size ??= componentSize;

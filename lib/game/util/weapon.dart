@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -95,7 +96,7 @@ class SnowBallWeapon extends Weapon {
   void shoot({@required CharacterComponent shooter}) {
     if (powerPoints > 0) {
       SnowballComponent(
-          shooter.x, shooter.y, shooter.orientation, shooter, atk);
+          Point(shooter.x, shooter.y), shooter.orientation, shooter, atk);
       --powerPoints;
       super.shoot(shooter: shooter);
     }
@@ -115,7 +116,7 @@ class MineWeapon extends Weapon {
   @override
   void shoot({@required CharacterComponent shooter}) {
     if (powerPoints > 0) {
-      ModifierComponent.mine(shooter.x, shooter.y, shooter, atk);
+      ModifierComponent.mine(Point(shooter.x, shooter.y), shooter, atk);
       --powerPoints;
       super.shoot(shooter: shooter);
     }
