@@ -217,7 +217,7 @@ class _GamePageState extends State<GamePage> {
       game.avoidExit = false;
       return Future.value(false);
     }
-    game.pause = true;
+    game.pause();
     return showDialog(
       barrierDismissible: false,
       context: context,
@@ -256,7 +256,7 @@ class _GamePageState extends State<GamePage> {
                         child: const Text('Close'),
                         onPressed: () {
                           Navigator.of(context).pop(true);
-                          game.pause = false;
+                          game.resume();
                         },
                       )
                     : null,
@@ -278,7 +278,7 @@ class _GamePageState extends State<GamePage> {
                     ? FlatButton(
                         child: const Text('No'),
                         onPressed: () {
-                          game.pause = false;
+                          game.resume();
                           return Navigator.of(context).pop(false);
                         },
                       )

@@ -68,7 +68,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   double timeSinceUpdate;
 
   // If true, game is paused so no one can move
-  bool pause;
+  bool _pause;
 
   // Map size
   int mapHeight;
@@ -119,7 +119,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   // Reset variables and import map data
   void initialize() {
-    pause = true;
+    pause();
 
     // Reset variables
     timeSinceUpdate = 0;
@@ -148,19 +148,29 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
     initGamepad();
 
     if (mode != GameMode.story) startTimer();
-    pause = false;
+    resume();
   }
 
   @override
   void update(double t) {
-    if (!pause) {
-      // Update components for each updatePeriod elapsed since last game.update
-      for (timeSinceUpdate += t;
-          timeSinceUpdate >= updatePeriod;
-          timeSinceUpdate -= updatePeriod) {
-        super.update(t);
-      }
+    // Update components for each updatePeriod elapsed since last game.update
+    for (timeSinceUpdate += t;
+        timeSinceUpdate >= updatePeriod;
+        timeSinceUpdate -= updatePeriod) {
+      super.update(t);
     }
+  }
+
+  // Pause game
+  void pause() {
+    _pause = true;
+    pauseEngine();
+  }
+
+  // Resume game
+  void resume() {
+    _pause = false;
+    resumeEngine();
   }
 
   // Start game timer
@@ -171,7 +181,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
       multiPlayerBar.state.refresh(_remainingTime);
     }
     timer = Timer.periodic(const Duration(seconds: 1), (_) {
-      if (pause) return;
+      if (_pause) return;
       if (--_remainingTime <= 0) {
         timer.cancel();
         end(timeOut: true);
@@ -189,7 +199,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   // Save match data and load the new room
   void changeRoom(int nextRoomId) {
-    pause = true;
+    pause();
     var _levelUp = false;
     var _isNewRoom = true;
 
@@ -231,7 +241,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   @override
   void onPanUpdate(DragUpdateDetails upd) {
     if (settings.inputMethod != 1 &&
-        !pause &&
+        !_pause &&
         (upd.delta.dx.abs() > 5 || upd.delta.dy.abs() > 5)) {
       _panGestureOffset = upd.delta.dx.abs() > upd.delta.dy.abs()
           ? Offset(upd.delta.dx, 0)
@@ -242,7 +252,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   @override
   void onPanEnd(DragEndDetails end) {
-    if (settings.inputMethod != 1 && !pause) {
+    if (settings.inputMethod != 1 && !_pause) {
       gestureDragInput(GetDirection.fromOffset(_panGestureOffset));
     }
   }
@@ -264,7 +274,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   // Manage tap gesture
   void gestureTapInput(Offset position) {
     // Do nothing if pause or if tapping on top bar
-    if (pause || position.dy < 40) return;
+    if (_pause || position.dy < 40) return;
 
     // Update orientation if not tapping on bottom bar
     if (position.dy <= fixedScreenHeight + (mode != GameMode.story ? 80 : 40)) {
@@ -353,7 +363,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   // End of the game
   void end({bool timeOut = false}) {
-    pause = true;
+    pause();
     if (mode == GameMode.story) {
       mainCharacter.minutesPlayed += (currentTime() - startDate) / 60;
       mainCharacter.movesCounter += playerOne.movesCounter;
