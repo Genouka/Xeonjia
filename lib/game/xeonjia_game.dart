@@ -252,7 +252,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   @override
   void onPanEnd(DragEndDetails end) {
-    if (settings.inputMethod != 1 && !_pause) {
+    if (settings.inputMethod != 1 && !_pause && _panGestureOffset != null) {
       gestureDragInput(GetDirection.fromOffset(_panGestureOffset));
     }
   }
