@@ -3,7 +3,6 @@ import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
 import 'package:flutter/material.dart';
 
-import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/util/gamepad.dart';
@@ -11,6 +10,7 @@ import 'package:xeonjia/game/util/map_utils.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
+import 'package:xeonjia/ui/screens/game/widgets/message_box.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
 
@@ -57,6 +57,9 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   // Map to load if mode != story
   final int mapId;
+
+  // Message box
+  final messageBox = MessageBox();
 
   // Game start date
   double startDate;
@@ -125,7 +128,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
     // Remove previous components
     // They are removed during the next update()
     components.forEach((component) {
-      (component as BasicComponent).remove = true;
+      markToRemove(component);
     });
     playerOne = null;
     players.clear();
@@ -246,6 +249,10 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   @override
   void onTapDown(TapDownDetails details) {
+    if (messageBox.state.message != null) {
+      messageBox.state.dismiss();
+      return;
+    }
     if (settings.inputMethod != 1) gestureTapInput(details.globalPosition);
   }
 

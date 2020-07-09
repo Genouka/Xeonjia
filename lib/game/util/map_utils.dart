@@ -7,7 +7,6 @@ import 'package:xml/xml.dart';
 import 'package:xeonjia/game/util/component_tile.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/tile.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
 
 // Import map from a TMX file
 void importMap(String fileName) async {
@@ -18,13 +17,12 @@ void importMap(String fileName) async {
   game.mapWidth = int.parse(mapXml.getAttribute('width'));
   game.mapHeight = int.parse(mapXml.getAttribute('height'));
   var mapProperties = mapXml.findElements('properties');
-  var toastText =
-      'Room ${mainCharacter.visitedRooms.last.toString().padLeft(3, '0')}';
+  // 'Room ${mainCharacter.visitedRooms.last.toString().padLeft(3, '0')}';
   if (mapProperties.isNotEmpty) {
     mapProperties.single.children.forEach((property) {
       if (property.attributes.isNotEmpty &&
-          property.attributes[0].value == 'hint') {
-        toastText += ':\n' + property.attributes[1].value;
+          property.attributes[0].value == 'message') {
+        game.messageBox.state.message  = property.attributes[1].value;
       }
     });
   }

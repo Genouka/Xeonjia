@@ -105,9 +105,10 @@ abstract class DynamicComponent extends BasicComponent {
       var _newX = x + direction.dx * distancePerFrame;
       var _newY = y + direction.dy * distancePerFrame;
       var _newPosition = Rect.fromLTWH(_newX, _newY, width - 1, height - 1);
-      game.components.cast<BasicComponent>().forEach((component) {
+      game.components.forEach((component) {
         // If this is going to overlap an unrelated component
-        if (component != this &&
+        if (component is BasicComponent &&
+            component != this &&
             component != father &&
             this != component.father &&
             component.toRect().overlaps(_newPosition)) {

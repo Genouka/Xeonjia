@@ -124,6 +124,7 @@ class _GamePageState extends State<GamePage> {
                     child: Stack(
                       children: <Widget>[
                         game.widget,
+                        game.messageBox,
                         if (settings.inputMethod != 0)
                           VirtualGamepad(
                               manageMovements: settings.inputMethod == 1),
