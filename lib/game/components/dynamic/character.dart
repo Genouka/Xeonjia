@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
+import 'package:xeonjia/game/util/lifepoints_bar.dart';
 import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -8,7 +9,7 @@ import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/tile.dart';
 
 // Dynamic component used for human-like players
-class CharacterComponent extends DynamicComponent {
+class CharacterComponent extends DynamicComponent with LifePointsBar {
   // List of weapon owned
   List<Weapon> weaponList = [];
 
