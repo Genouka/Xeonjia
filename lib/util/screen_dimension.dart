@@ -11,9 +11,7 @@ void setScreenDimension(BuildContext context) {
   var _size = MediaQuery.of(context).size;
   var _padding = MediaQuery.of(context).padding;
 
-  // 80 is life points bar plus weapon bar (40 + 40)
-  screenSize =
-      Size(_size.width, _size.height - _padding.bottom - _padding.top - 80);
+  screenSize = Size(_size.width, _size.height - _padding.bottom - _padding.top);
 
   if (componentSize == null) {
     var rawComponentSize = max(screenSize.width, screenSize.height) / 18;

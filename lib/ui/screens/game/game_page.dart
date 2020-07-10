@@ -3,15 +3,7 @@ import 'package:xeonjia/models/game_mode.dart';
 
 import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/ui/screens/game/widgets/virtual_gamepad.dart';
-import 'package:xeonjia/ui/screens/game/widgets/multiplayer_bar.dart';
-import 'package:xeonjia/ui/screens/game/widgets/percent_indicator.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
-
-// Top and bottom bars
-PercentIndicator lifePointsBar;
-PercentIndicator weaponBar;
-MultiPlayerBar multiPlayerBar;
 
 // BuildContext of GamePage
 BuildContext gameContext;
@@ -37,31 +29,19 @@ class GamePage extends StatefulWidget {
 }
 
 class _GamePageState extends State<GamePage> {
-  // True if weapon buttons (change weapon and shot) should be displayed
-  bool _weaponButtonVisibility;
-
   @override
   void initState() {
-    // Initialize top and bottom bars
-    lifePointsBar = PercentIndicator();
-    weaponBar = PercentIndicator(onTap: () {
-      playerOne?.shoot();
-    });
-    if (widget.mode == GameMode.story) {
-      _weaponButtonVisibility = mainCharacter.jsonWeaponList.length > 1;
-    } else {
-      _weaponButtonVisibility = true;
-      multiPlayerBar = MultiPlayerBar(widget.maxTime);
-    }
-
     // Initialize game variable
-    game = XeonjiaGame(widget.mode,
-        teamSize: widget.teamSize,
-        friendlyFire: widget.friendlyFire,
-        maxTime: widget.maxTime,
-        maxPoints: widget.maxPoints,
-        difficulty: widget.difficulty,
-        mapId: widget.mapId);
+    game = XeonjiaGame(
+      widget.mode,
+      teamSize: widget.teamSize,
+      friendlyFire: widget.friendlyFire,
+      maxTime: widget.maxTime,
+      maxPoints: widget.maxPoints,
+      difficulty: widget.difficulty,
+      mapId: widget.mapId,
+      pauseDialog: () => _pauseDialog(context, dialogMode: 0),
+    );
 
     super.initState();
   }
@@ -73,102 +53,13 @@ class _GamePageState extends State<GamePage> {
     return WillPopScope(
         child: Container(
           color: Colors.white,
-          child: SafeArea(
-            child: OrientationBuilder(builder: (context, orientation) {
-              setScreenDimension(context);
-              game.updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
-              return Scaffold(
-                appBar: PreferredSize(
-                  preferredSize:
-                      Size.fromHeight(game.mode == GameMode.story ? 40 : 80),
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 40,
-                        child: Row(
-                          children: [
-                            Container(
-                              color: Colors.white,
-                              child: IconButton(
-                                onPressed: () {
-                                  _pauseDialog(context, dialogMode: 2);
-                                },
-                                icon: const Icon(Icons.close),
-                                color: Colors.black,
-                                tooltip: 'Exit game',
-                              ),
-                            ),
-                            Expanded(child: lifePointsBar),
-                            Container(
-                              color: Colors.white,
-                              child: IconButton(
-                                onPressed: () {
-                                  _pauseDialog(context, dialogMode: 0);
-                                },
-                                icon: const Icon(Icons.pause),
-                                color: Colors.black,
-                                tooltip: 'Pause',
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      if (game.mode != GameMode.story)
-                        SizedBox(height: 40, child: multiPlayerBar),
-                    ],
-                  ),
-                ),
-                body: Hero(
-                  tag: 'Play',
-                  child: Container(
-                    child: Stack(
-                      children: <Widget>[
-                        game.widget,
-                        game.messageBox,
-                        if (settings.inputMethod != 0)
-                          VirtualGamepad(
-                              manageMovements: settings.inputMethod == 1),
-                      ],
-                    ),
-                  ),
-                ),
-                bottomNavigationBar: SizedBox(
-                  height: 40,
-                  child: Row(
-                    children: [
-                      if (_weaponButtonVisibility)
-                        Container(
-                          color: Colors.white,
-                          child: IconButton(
-                            onPressed: () {
-                              playerOne.nextWeapon();
-                              game.refreshWeaponBar();
-                            },
-                            icon: const Icon(Icons.swap_horiz),
-                            color: Colors.black,
-                            tooltip: 'Change weapon',
-                          ),
-                        ),
-                      Expanded(child: weaponBar),
-                      if (_weaponButtonVisibility)
-                        Container(
-                          color: Colors.white,
-                          child: IconButton(
-                            onPressed: () {
-                              playerOne.shoot();
-                            },
-                            icon: const Icon(Icons.whatshot),
-                            color: Colors.black,
-                            splashColor: Colors.lightBlue[700],
-                            tooltip: 'Shoot',
-                          ),
-                        ),
-                    ],
-                  ),
-                ),
-              );
-            }),
-          ),
+          child: OrientationBuilder(builder: (context, orientation) {
+            setScreenDimension(context);
+            game.updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
+            return Scaffold(
+              body: Hero(tag: 'Play', child: game.widget),
+            );
+          }),
         ),
         onWillPop: () => _pauseDialog(context, dialogMode: 2));
   }

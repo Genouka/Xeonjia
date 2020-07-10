@@ -10,7 +10,9 @@ import 'package:xeonjia/game/util/map_utils.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
+import 'package:xeonjia/ui/screens/game/widgets/info_box.dart';
 import 'package:xeonjia/ui/screens/game/widgets/message_box.dart';
+import 'package:xeonjia/ui/screens/game/widgets/virtual_gamepad.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
 
@@ -61,6 +63,12 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   // Message box
   final messageBox = MessageBox();
 
+  // Box with lifePoints, pause, time and team points
+  final _infoBox = InfoBox();
+
+  // Open pause dialog
+  final VoidCallback pauseDialog;
+
   // Game start date
   double startDate;
 
@@ -84,7 +92,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   List<Team> teams;
 
   // Remaining time (used in multiplayer games)
-  int _remainingTime;
+  int remainingTime;
 
   // List of teams sorted by points
   List<Team> get ranking {
@@ -110,9 +118,21 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
     this.maxTime = 180,
     this.difficulty = 4,
     this.mapId = 0,
+    @required this.pauseDialog,
   }) {
     initialize();
   }
+
+  @override
+  Widget get widget => Stack(
+        children: <Widget>[
+          super.widget,
+          messageBox,
+          _infoBox,
+          if (settings.inputMethod != 0)
+            VirtualGamepad(manageMovements: settings.inputMethod == 1),
+        ],
+      );
 
   @override
   Color backgroundColor() => const Color(0xFFE1F5FE);
@@ -176,24 +196,19 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   // Start game timer
   void startTimer() {
     timer?.cancel();
-    _remainingTime = maxTime;
-    if (multiPlayerBar.state.mounted) {
-      multiPlayerBar.state.refresh(_remainingTime);
-    }
+    remainingTime = maxTime;
     timer = Timer.periodic(const Duration(seconds: 1), (_) {
       if (_pause) return;
-      if (--_remainingTime <= 0) {
+      if (--remainingTime <= 0) {
         timer.cancel();
         end(timeOut: true);
       } else if (teams.first.points >= maxPoints ||
           teams.last.points >= maxPoints) {
         end();
-      } else if (_remainingTime % 10 == 0) {
+      } else if (remainingTime % 10 == 0) {
         regenerateModifiers();
       }
-      if (multiPlayerBar.state.mounted) {
-        multiPlayerBar.state.refresh(_remainingTime);
-      }
+      _infoBox.state.refresh();
     });
   }
 
@@ -337,28 +352,11 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   }
 
   // Reload weapon bar
-  void refreshWeaponBar() {
-    weaponBar.state.refresh(
-        percent: playerOne?.selectedWeapon?.powerPoints != double.infinity
-            ? (playerOne?.selectedWeapon?.powerPoints ?? 100) /
-                // should use max PP...
-                (10 + 5 * playerOne?.selectedWeapon?.level)
-            : 1,
-        text: (playerOne?.selectedWeapon?.name ?? '') +
-            (playerOne?.selectedWeapon?.powerPoints?.isFinite ?? false
-                ? ' (${playerOne?.selectedWeapon?.powerPoints?.round().toString()})'
-                : ''));
-  }
+  void refreshWeaponBar() {}
 
   // Reload LP bar
   void refreshLifePointsBar() {
-    var _percent = playerOne.lifePoints / playerOne.initialLifePoints;
-    lifePointsBar.state.refresh(
-      percent: _percent,
-      text: 'LP: ' +
-          (_percent.isFinite ? playerOne.lifePoints.round().toString() : 'Max'),
-      poisoned: playerOne.poisonQuantity > 0,
-    );
+    _infoBox.state.refresh();
   }
 
   // End of the game

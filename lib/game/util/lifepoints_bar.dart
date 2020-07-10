@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/util/lifepoints_color.dart';
 
 // Draw a life point bar near the component
 // It is shown only for 2 seconds after lifePointsDifference
@@ -37,10 +38,7 @@ mixin LifePointsBar on BasicComponent {
         Offset(0, -_padding),
         Offset(currentLifePoints, -_padding),
         Paint()
-          ..color = () {
-            if (currentLifePoints > (2 / 3) * width) return Colors.green;
-            return (currentLifePoints > width / 3) ? Colors.orange : Colors.red;
-          }()
+          ..color = lifePointsColor(currentLifePoints / width)
           ..strokeWidth = 2
           ..style = PaintingStyle.fill);
   }
