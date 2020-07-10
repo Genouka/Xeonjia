@@ -9,6 +9,7 @@ import 'package:xeonjia/game/util/gamepad.dart';
 import 'package:xeonjia/game/util/map_utils.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
+import 'package:xeonjia/models/team.dart';
 import 'package:xeonjia/ui/screens/game/widgets/info_box.dart';
 import 'package:xeonjia/ui/screens/game/widgets/message_box.dart';
 import 'package:xeonjia/ui/screens/game/widgets/virtual_gamepad.dart';
@@ -421,35 +422,4 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
         }
       });
   }
-}
-
-// Team used in multiplayer match
-// It is composed by 2-5 players
-class Team {
-  // Team id
-  final int id;
-
-  // Team name
-  final String name;
-
-  // Team color
-  final Color color;
-
-  // Team members
-  List<CharacterComponent> get members =>
-      game.players.where((player) => player.teamId == id).toList();
-
-  // Team points acquired by friendly fire kills
-  int basisPoints = 0;
-
-  // Team points (basePoints + players points)
-  int get points {
-    var _points = 0;
-    members.forEach((member) {
-      _points += member.points;
-    });
-    return _points + basisPoints;
-  }
-
-  Team({@required this.id, this.name = 'Team', this.color = Colors.blue});
 }
