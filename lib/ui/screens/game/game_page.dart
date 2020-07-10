@@ -5,9 +5,6 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/ui/screens/game/widgets/dialogs.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
 
-// BuildContext of GamePage
-BuildContext gameContext;
-
 class GamePage extends StatefulWidget {
   final GameMode mode;
   final int teamSize;
@@ -41,6 +38,7 @@ class _GamePageState extends State<GamePage> with GameDialogs {
       difficulty: widget.difficulty,
       mapId: widget.mapId,
       pauseDialog: () => pauseDialog(context, dialogMode: 0),
+      endDialog: endDialog,
     );
 
     super.initState();
@@ -48,7 +46,6 @@ class _GamePageState extends State<GamePage> with GameDialogs {
 
   @override
   Widget build(BuildContext context) {
-    gameContext = context;
     return WillPopScope(
         child: Container(
           color: Colors.white,

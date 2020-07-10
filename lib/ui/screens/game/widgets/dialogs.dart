@@ -123,4 +123,52 @@ mixin GameDialogs on State<GamePage> {
       ),
     );
   }
+
+  // Dialog displayed when the game ends
+  void endDialog({bool timeOut}) {
+    var title = '';
+    var content = '';
+    if (game.mode == GameMode.story) {
+      title = 'You have been deleted';
+    } else {
+      title = 'Your team ' +
+          (game.ranking.first.id == playerOne.teamId ? 'won' : 'lost');
+      if (timeOut) {
+        content = 'The time is over.';
+      } else {
+        content = '${game.maxPoints.toString()} points have been achieved.';
+      }
+    }
+    content += '\n\nDo you want to restart this game?';
+
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) => WillPopScope(
+        onWillPop: () => null,
+        child: AlertDialog(
+          title: Text(title),
+          content: Text(content),
+          actions: <Widget>[
+            FlatButton(
+              child: const Text('Yes'),
+              onPressed: () {
+                game.initialize();
+                Navigator.of(context).pop();
+              },
+            ),
+            FlatButton(
+              child: const Text('No'),
+              onPressed: () {
+                Navigator.pop(context);
+                game.gamepad.removeListener();
+                game = null;
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }

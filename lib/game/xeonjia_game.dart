@@ -9,7 +9,6 @@ import 'package:xeonjia/game/util/gamepad.dart';
 import 'package:xeonjia/game/util/map_utils.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
-import 'package:xeonjia/ui/screens/game/game_page.dart';
 import 'package:xeonjia/ui/screens/game/widgets/info_box.dart';
 import 'package:xeonjia/ui/screens/game/widgets/message_box.dart';
 import 'package:xeonjia/ui/screens/game/widgets/virtual_gamepad.dart';
@@ -66,8 +65,9 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   // Box with lifePoints, pause, time and team points
   final _infoBox = InfoBox();
 
-  // Open pause dialog
+  // Game dialogs
   final VoidCallback pauseDialog;
+  final Function endDialog;
 
   // Game start date
   double startDate;
@@ -119,6 +119,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
     this.difficulty = 4,
     this.mapId = 0,
     @required this.pauseDialog,
+    @required this.endDialog,
   }) {
     initialize();
   }
@@ -371,54 +372,6 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
       saveUserData();
     }
     endDialog(timeOut: timeOut);
-  }
-
-  // Dialog displayed when the game ends
-  void endDialog({bool timeOut}) {
-    var title = '';
-    var content = '';
-    if (mode == GameMode.story) {
-      title = 'You have been deleted';
-    } else {
-      title = 'Your team ' +
-          (ranking.first.id == playerOne.teamId ? 'won' : 'lost');
-      if (timeOut) {
-        content = 'The time is over.';
-      } else {
-        content = '${maxPoints.toString()} points have been achieved.';
-      }
-    }
-    content += '\n\nDo you want to restart this game?';
-
-    showDialog(
-      context: gameContext,
-      barrierDismissible: false,
-      builder: (BuildContext context) => WillPopScope(
-        onWillPop: () => null,
-        child: AlertDialog(
-          title: Text(title),
-          content: Text(content),
-          actions: <Widget>[
-            FlatButton(
-              child: const Text('Yes'),
-              onPressed: () {
-                initialize();
-                Navigator.of(context).pop();
-              },
-            ),
-            FlatButton(
-              child: const Text('No'),
-              onPressed: () {
-                Navigator.pop(context);
-                gamepad.removeListener();
-                game = null;
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        ),
-      ),
-    );
   }
 
   // Initialize wireless gamepad listener
