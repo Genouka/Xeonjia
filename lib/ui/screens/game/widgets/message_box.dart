@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/util/screen_dimension.dart';
@@ -18,6 +19,9 @@ class _MessageBoxState extends State<MessageBox> {
     if (mounted) {
       setState(() {});
     }
+    Timer(const Duration(seconds: 3), () {
+      dismiss();
+    });
   }
 
   // Clear message and hide message box
