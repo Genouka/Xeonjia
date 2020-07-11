@@ -40,6 +40,8 @@ abstract class DynamicComponent extends BasicComponent {
   final _walkingSprites = <Direction, Sprite>{};
   final punchSprites = <Direction, Sprite>{};
 
+  bool isRespawning = false;
+
   @override
   void onCreate() {
     final size = 16.0;
@@ -56,7 +58,7 @@ abstract class DynamicComponent extends BasicComponent {
 
   // If this component was previously still update its direction and orientation
   void updateDirection(Direction newDirection, {bool forced = false}) {
-    if (isStationary || forced) {
+    if (!isRespawning && (isStationary || forced)) {
       direction = newDirection;
       updateOrientation();
       animate([_walkingSprites[orientation]]);

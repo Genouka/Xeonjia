@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/util/lifepoints_bar.dart';
+import 'package:xeonjia/game/util/respawn_animation.dart';
 import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -9,7 +10,8 @@ import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/tile.dart';
 
 // Dynamic component used for human-like players
-class CharacterComponent extends DynamicComponent with LifePointsBar {
+class CharacterComponent extends DynamicComponent
+    with LifePointsBar, RespawnAnimation {
   // List of weapon owned
   List<Weapon> weaponList = [];
 
@@ -25,11 +27,14 @@ class CharacterComponent extends DynamicComponent with LifePointsBar {
   // List of objects owned (eg gems)
   List<int> objectList = [];
 
+  // Initial orientation
+  Direction _initialOrientation;
+
   @override
   double initialLifePoints;
 
-  // Initial orientation
-  Direction _initialOrientation;
+  @override
+  bool isSolid({DynamicComponent otherComponent}) => !isRespawning;
 
   // Create character from input details
   CharacterComponent(
@@ -76,6 +81,7 @@ class CharacterComponent extends DynamicComponent with LifePointsBar {
 
   Weapon get selectedWeapon => weaponList[_selectedWeaponElement];
   void shoot([Weapon weapon]) {
+    if (isRespawning) return;
     (weapon ?? selectedWeapon).shoot(shooter: this);
   }
 
@@ -88,6 +94,7 @@ class CharacterComponent extends DynamicComponent with LifePointsBar {
 
   // Inspect what is in front of this
   void inspect() {
+    if (isRespawning) return;
     game.messageBox.state.message = componentInFront().message;
   }
 
@@ -100,20 +107,16 @@ class CharacterComponent extends DynamicComponent with LifePointsBar {
   void delete() {
     ++deaths;
     if (game.config.mode == GameMode.story) {
-      if (this == playerOne) {
-        super.delete();
-        game.end();
-      } else {
-        super.delete();
-      }
+      super.delete();
+      if (this == playerOne) game.end();
     } else {
-      respawn();
+      stop();
+      respawnAnimation();
     }
   }
 
   // Respawn player
   void respawn() {
-    stop();
     restoreLifePoints();
     removeChildren();
     weaponList.forEach((weapon) {
@@ -121,6 +124,7 @@ class CharacterComponent extends DynamicComponent with LifePointsBar {
     });
     _selectedWeaponElement = 0;
     movesCounter = 0;
+    isRespawning = false;
     x = startingPosition.x;
     y = startingPosition.y;
     orientation = _initialOrientation;
