@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 enum Direction { down, up, right, left }
@@ -14,11 +13,8 @@ extension GetDirection on Direction {
   // Get direction from different sources
   static Direction fromInt(int value) => Direction.values[value];
   static Direction fromXY(double x, double y) => fromOffset(Offset(x, y));
-  static Direction fromOffset(Offset offset) {
-    if (offset.dx > 0) return Direction.right;
-    if (offset.dx < 0) return Direction.left;
-    if (offset.dy > 0) return Direction.down;
-    if (offset.dy < 0) return Direction.up;
-    return null;
-  }
+  static Direction fromOffset(Offset offset) =>
+      (offset.dx.abs() >= offset.dy.abs())
+          ? offset.dx >= 0 ? Direction.right : Direction.left
+          : offset.dy >= 0 ? Direction.down : Direction.up;
 }

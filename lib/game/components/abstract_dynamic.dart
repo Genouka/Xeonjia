@@ -86,7 +86,7 @@ abstract class DynamicComponent extends BasicComponent {
   // Animate this component
   void animate(List<Sprite> sprites) {
     _animation = flame_animation.Animation.spriteList(sprites,
-        stepTime: 0.3, loop: false);
+        stepTime: 0.15, loop: false);
   }
 
   @override

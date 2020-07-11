@@ -1,125 +1,196 @@
+import 'dart:async';
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
 
-// Virtual gamepad used to move the player
-class VirtualGamepad extends StatefulWidget {
-  final bool manageMovements;
-  VirtualGamepad({@required this.manageMovements});
-
+// Virtual stick + buttons
+class VirtualGamePad extends StatelessWidget {
   @override
-  _VirtualGamepadState createState() => _VirtualGamepadState();
+  Widget build(BuildContext context) => Stack(children: [Stick(), Buttons()]);
 }
 
-// Virtual gamepad widget
-class _VirtualGamepadState extends State<VirtualGamepad> {
-  // Gamepad position
-  Offset _offset = gamepadOffset;
+// Buttons on the right
+class Buttons extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      height: 120,
+      width: 120,
+      bottom: 15,
+      right: 15,
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              button('O', () {}),
+              button('S', () => playerOne.shoot()),
+            ],
+          ),
+          const Spacer(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              button('M', () {}),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
 
-  // Arrow button color
-  final Color _buttonColor = Colors.blueGrey[500];
+  Widget button(String text, VoidCallback onTap) => InkWell(
+        child: CircleAvatar(
+            child: Text(text), backgroundColor: Colors.white54, radius: 24),
+        onTap: onTap,
+      );
+}
 
-  // Map direction-button icon
-  final Map<Direction, dynamic> arrowIconMap = {
-    Direction.up: const Icon(Icons.keyboard_arrow_up),
-    Direction.down: const Icon(Icons.keyboard_arrow_down),
-    Direction.left: const Icon(Icons.keyboard_arrow_left),
-    Direction.right: const Icon(Icons.keyboard_arrow_right),
-    null: const Icon(Icons.add),
-  };
+// Virtual stick on the left
+class Stick extends StatefulWidget {
+  @override
+  StickState createState() => StickState();
+}
+
+class StickState extends State<Stick> {
+  final padSize = 45.0;
+  final margin = const Offset(15, 15);
+  Offset position = Offset.zero;
+  Timer timer;
 
   @override
   Widget build(BuildContext context) {
     return Positioned(
-        right: _offset.dx,
-        bottom: _offset.dy,
-        child: Column(
-          children: [
-            Row(
-              children: [
-                separator(),
-                arrowButton(Direction.up),
-                separator(),
-              ],
+      height: 120,
+      width: 120,
+      bottom: margin.dy,
+      left: margin.dx,
+      child: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white30,
+              borderRadius: BorderRadius.circular(60),
             ),
-            Row(
-              children: [
-                arrowButton(Direction.left),
-                arrowButton(null),
-                arrowButton(Direction.right),
-              ],
+            child: GestureDetector(
+              child: Center(
+                child: Transform.translate(
+                  offset: position,
+                  child: SizedBox(
+                    height: padSize,
+                    width: padSize,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white54,
+                        borderRadius: BorderRadius.circular(30),
+                        border: Border.all(color: Colors.black38),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              onPanDown: onPanDown,
+              onPanUpdate: onPanUpdate,
+              onPanEnd: onPanEnd,
+              onPanCancel: onPanCancel,
             ),
-            Row(
-              children: [
-                separator(),
-                arrowButton(Direction.down),
-                separator(),
-              ],
-            ),
-          ],
-        ));
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  InkWell(
+                    child: const Icon(Icons.keyboard_arrow_up,
+                        color: Colors.black),
+                    onTap: () {
+                      updatePlayer(orientation: Direction.up);
+                    },
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    child: const Icon(Icons.keyboard_arrow_left,
+                        color: Colors.black),
+                    onTap: () {
+                      updatePlayer(orientation: Direction.left);
+                    },
+                  ),
+                  InkWell(
+                    child: const Icon(Icons.keyboard_arrow_right,
+                        color: Colors.black),
+                    onTap: () {
+                      updatePlayer(orientation: Direction.right);
+                    },
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  InkWell(
+                    child: const Icon(Icons.keyboard_arrow_down,
+                        color: Colors.black),
+                    onTap: () {
+                      updatePlayer(orientation: Direction.down);
+                    },
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 
-  // Gamepad button widget
-  Widget arrowButton(Direction direction) {
-    return widget.manageMovements
-        ? GestureDetector(
-            // Edit widget position by moving it
-            onPanUpdate: (details) {
-              setState(() {
-                if (direction == null) {
-                  var _dx = details.delta.dx;
-                  var _dy = details.delta.dy;
-                  if (_dx.abs() > _dy.abs()) {
-                    _dy = 0;
-                  } else {
-                    _dx = 0;
-                  }
-                  playerOne.updateOrientation(GetDirection.fromXY(_dx, _dy));
-                } else {
-                  _offset = Offset(_offset.dx - details.delta.dx,
-                      _offset.dy - details.delta.dy);
-                }
-              });
-            },
-            child: _button(direction))
-        : _button(direction);
+  void setPosition(Offset newDelta) {
+    setState(() {
+      position = newDelta;
+    });
   }
 
-  Widget _button(Direction direction) => IconButton(
-        icon: arrowIconMap[direction],
-        iconSize: settings.gamepadSize,
-        color: _buttonColor,
-        onPressed: () {
-          input(direction);
-        },
-      );
+  void offsetToDelta(Offset offset) {
+    var newDelta = offset - Offset(padSize, padSize) - margin;
+    setPosition(
+        Offset.fromDirection(newDelta.direction, min(60, newDelta.distance)));
+  }
 
-  // Empty space in gamepad
-  Widget separator() =>
-      Container(width: settings.gamepadSize, height: settings.gamepadSize);
-
-  // Manage direction input
-  void input(Direction direction) {
-    if (direction == null) {
-      playerOne.shoot();
-    } else {
-      if (widget.manageMovements) {
-        game.gestureDragInput(direction);
-      } else {
-        playerOne.updateOrientation(direction);
-      }
+  void updatePlayer({Direction orientation}) {
+    if (orientation != null) {
+      playerOne.updateOrientation(orientation);
+    } else if (position.distanceSquared > 900) {
+      playerOne.isStationary
+          ? playerOne.updateDirection(GetDirection.fromOffset(position))
+          : playerOne.updateOrientation(GetDirection.fromOffset(position));
     }
-    saveOffset(_offset);
   }
 
-  // Save widget position to be used in next matches
-  void saveOffset(Offset newOffset) {
-    if (newOffset != gamepadOffset) {
-      gamepadOffset = newOffset;
-      saveGamepadOffset();
-    }
+  void onPanDown(DragDownDetails details) {
+    offsetToDelta(details.localPosition);
+    updatePlayer();
+    timer = Timer.periodic(const Duration(milliseconds: 200), (_) {
+      updatePlayer();
+    });
+  }
+
+  void onPanUpdate(DragUpdateDetails details) {
+    offsetToDelta(details.localPosition);
+  }
+
+  void onPanEnd(_) {
+    setPosition(Offset.zero);
+    timer?.cancel();
+  }
+
+  void onPanCancel() {
+    setPosition(Offset.zero);
+    timer?.cancel();
   }
 }
