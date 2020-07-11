@@ -75,8 +75,8 @@ class CharacterComponent extends DynamicComponent with LifePointsBar {
   }
 
   Weapon get selectedWeapon => weaponList[_selectedWeaponElement];
-  void shoot() {
-    selectedWeapon.shoot(shooter: this);
+  void shoot([Weapon weapon]) {
+    (weapon ?? selectedWeapon).shoot(shooter: this);
   }
 
   // Select next weapon in weapon list

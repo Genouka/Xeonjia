@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 
@@ -26,14 +27,20 @@ class Buttons extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               button('O', () {}),
-              button('S', () => playerOne.shoot()),
+              button('S', () {
+                playerOne.shoot(
+                    playerOne.weaponList.whereType<SnowBallWeapon>().single);
+              }),
             ],
           ),
           const Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              button('M', () {}),
+              button('M', () {
+                playerOne
+                    .shoot(playerOne.weaponList.whereType<MineWeapon>().single);
+              }),
             ],
           ),
         ],
