@@ -22,7 +22,7 @@ void importMap(String fileName) async {
     mapProperties.single.children.forEach((property) {
       if (property.attributes.isNotEmpty &&
           property.attributes[0].value == 'message') {
-        game.messageBox.state.message  = property.attributes[1].value;
+        game.messageBox.state.message = property.attributes[1].value;
       }
     });
   }

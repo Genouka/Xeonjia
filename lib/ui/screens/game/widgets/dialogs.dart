@@ -161,8 +161,7 @@ mixin GameDialogs on State<GamePage> {
               child: const Text('No'),
               onPressed: () {
                 Navigator.pop(context);
-                game.gamepad.removeListener();
-                game = null;
+                game.dispose();
                 Navigator.of(context).pop();
               },
             ),

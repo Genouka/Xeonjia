@@ -206,18 +206,15 @@ class _ArenaPageState extends State<ArenaPage> {
             ),
           ],
         ),
-        floatingActionButton: Hero(
-          tag: 'Play',
-          child: PlayButton(
-            GamePage(
-              _mode,
-              teamSize: _teamSize,
-              maxTime: _maxTime * 60,
-              maxPoints: _maxPoints,
-              mapId: _mapId,
-              difficulty: _difficulty,
-              friendlyFire: _friendlyFire,
-            ),
+        floatingActionButton: PlayButton(
+          GamePage(
+            _mode,
+            teamSize: _teamSize,
+            maxTime: _maxTime * 60,
+            maxPoints: _maxPoints,
+            mapId: _mapId,
+            difficulty: _difficulty,
+            friendlyFire: _friendlyFire,
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

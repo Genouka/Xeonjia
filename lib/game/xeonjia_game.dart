@@ -12,7 +12,6 @@ import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/team.dart';
 import 'package:xeonjia/ui/screens/game/widgets/info_box.dart';
 import 'package:xeonjia/ui/screens/game/widgets/message_box.dart';
-import 'package:xeonjia/ui/screens/game/widgets/virtual_gamepad.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
 
@@ -64,7 +63,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   final messageBox = MessageBox();
 
   // Box with lifePoints, pause, time and team points
-  final _infoBox = InfoBox();
+  final infoBox = InfoBox();
 
   // Game dialogs
   final VoidCallback pauseDialog;
@@ -124,17 +123,6 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   }) {
     initialize();
   }
-
-  @override
-  Widget get widget => Stack(
-        children: <Widget>[
-          super.widget,
-          messageBox,
-          _infoBox,
-          if (settings.inputMethod != 0)
-            VirtualGamepad(manageMovements: settings.inputMethod == 1),
-        ],
-      );
 
   @override
   Color backgroundColor() => const Color(0xFFE1F5FE);
@@ -210,7 +198,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
       } else if (remainingTime % 10 == 0) {
         regenerateModifiers();
       }
-      _infoBox.state.refresh();
+      infoBox.state.refresh();
     });
   }
 
@@ -358,7 +346,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   // Reload LP bar
   void refreshLifePointsBar() {
-    _infoBox.state.refresh();
+    infoBox.state.refresh();
   }
 
   // End of the game
@@ -373,6 +361,11 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
       saveUserData();
     }
     endDialog(timeOut: timeOut);
+  }
+
+  void dispose() {
+    gamepad.removeListener();
+    game = null;
   }
 
   // Initialize wireless gamepad listener
