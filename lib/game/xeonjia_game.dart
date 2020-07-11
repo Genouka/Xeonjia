@@ -342,6 +342,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   }
 
   void dispose() {
+    timer?.cancel();
     gamepad.removeListener();
     game = null;
   }

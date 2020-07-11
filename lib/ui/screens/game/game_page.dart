@@ -18,7 +18,6 @@ class GamePage extends StatefulWidget {
 class _GamePageState extends State<GamePage> with GameDialogs {
   @override
   void initState() {
-    // Initialize game variable
     game = XeonjiaGame(
       widget.config,
       pauseDialog: () => pauseDialog(context, dialogMode: 0),
@@ -46,11 +45,5 @@ class _GamePageState extends State<GamePage> with GameDialogs {
           );
         }),
         onWillPop: () => pauseDialog(context, dialogMode: 2));
-  }
-
-  @override
-  void dispose() {
-    timer?.cancel();
-    super.dispose();
   }
 }
