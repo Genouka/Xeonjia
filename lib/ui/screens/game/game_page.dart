@@ -42,31 +42,27 @@ class _GamePageState extends State<GamePage> with GameDialogs {
       pauseDialog: () => pauseDialog(context, dialogMode: 0),
       endDialog: endDialog,
     );
-
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-        child: Container(
-          color: Colors.white,
-          child: OrientationBuilder(builder: (context, orientation) {
-            setScreenDimension(context);
-            game.updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
-            return Scaffold(
-              body: Stack(
-                children: <Widget>[
-                  game.widget,
-                  game.messageBox,
-                  game.infoBox,
-                  if (settings.inputMethod != 0)
-                    VirtualGamepad(manageMovements: settings.inputMethod == 1),
-                ],
-              ),
-            );
-          }),
-        ),
+        child: OrientationBuilder(builder: (context, orientation) {
+          setScreenDimension(context);
+          game.updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
+          return Scaffold(
+            body: Stack(
+              children: <Widget>[
+                game.widget,
+                game.messageBox,
+                game.infoBox,
+                if (settings.inputMethod != 0)
+                  VirtualGamepad(manageMovements: settings.inputMethod == 1),
+              ],
+            ),
+          );
+        }),
         onWillPop: () => pauseDialog(context, dialogMode: 2));
   }
 
