@@ -76,6 +76,7 @@ class SnowBallWeapon extends Weapon {
           Point(shooter.x, shooter.y), shooter, shooter.orientation, atk);
       --powerPoints;
       super.shoot(shooter: shooter);
+      shooter.animate([shooter.punchSprites[shooter.orientation]]);
     }
   }
 }
