@@ -237,7 +237,11 @@
  <tile id="233" type="Solid"/>
  <tile id="234" type="Solid"/>
  <tile id="235" type="Solid"/>
- <tile id="236" type="Solid"/>
+ <tile id="236" type="Solid">
+  <properties>
+   <property name="message" value="This is a wall..."/>
+  </properties>
+ </tile>
  <tile id="237" type="Solid"/>
  <tile id="238" type="Solid"/>
  <tile id="239" type="Solid"/>

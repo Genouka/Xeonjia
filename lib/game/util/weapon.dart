@@ -1,12 +1,10 @@
 import 'dart:math';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/dynamic/snowball.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/resources/weapon_details.dart';
 
 // Abstract class used to manage weapons inside game
@@ -56,29 +54,7 @@ class PunchWeapon extends Weapon {
 
   @override
   void shoot({@required CharacterComponent shooter}) {
-    Offset punch;
-    switch (shooter.orientation) {
-      case Direction.down:
-        punch = Offset(shooter.x, shooter.y + componentSize * 3 / 2);
-        break;
-      case Direction.up:
-        punch = Offset(shooter.x, shooter.y - componentSize / 2);
-        break;
-      case Direction.right:
-        punch = Offset(shooter.x + componentSize * 3 / 2, shooter.y);
-        break;
-      case Direction.left:
-        punch = Offset(shooter.x - componentSize / 2, shooter.y);
-        break;
-      default:
-        break;
-    }
-    List.from(game.components).forEach((component) {
-      if (component.toRect().contains(punch)) {
-        component.lifePointsDifference(-atk, cause: shooter);
-        return;
-      }
-    });
+    shooter.componentInFront()?.lifePointsDifference(-atk, cause: shooter);
     shooter.animate([shooter.punchSprites[shooter.orientation]]);
   }
 }

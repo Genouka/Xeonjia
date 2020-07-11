@@ -86,6 +86,11 @@ class CharacterComponent extends DynamicComponent with LifePointsBar {
     }
   }
 
+  // Inspect what is in front of this
+  void inspect() {
+    game.messageBox.state.message = componentInFront().message;
+  }
+
   @override
   void hasMoved() {
     if (this == playerOne) game.updateCamera(x, y);

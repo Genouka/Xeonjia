@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flame/animation.dart' as flame_animation;
+import 'package:flame/components/component.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 
@@ -151,6 +152,28 @@ abstract class DynamicComponent extends BasicComponent {
 
   void stop() {
     direction = null;
+  }
+
+  // Get component in front of this
+  BasicComponent componentInFront() {
+    Offset offset;
+    switch (orientation) {
+      case Direction.down:
+        offset = Offset(x, y + componentSize * 3 / 2);
+        break;
+      case Direction.up:
+        offset = Offset(x, y - componentSize / 2);
+        break;
+      case Direction.right:
+        offset = Offset(x + componentSize * 3 / 2, y);
+        break;
+      case Direction.left:
+        offset = Offset(x - componentSize / 2, y);
+        break;
+    }
+    var components = game.components.where((component) =>
+        component is SpriteComponent && component.toRect().contains(offset));
+    return components.isNotEmpty ? components.first : null;
   }
 
   @override

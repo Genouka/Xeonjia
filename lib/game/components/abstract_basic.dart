@@ -57,6 +57,9 @@ abstract class BasicComponent extends SpriteComponent {
   // Amount of protected damage
   double def = 0;
 
+  // Component message
+  String message;
+
   // Direction values
   // They equal to zero if the component is not moving
   Direction direction;
@@ -82,6 +85,7 @@ abstract class BasicComponent extends SpriteComponent {
         atk = double.parse(tile.properties['atk'] ?? '0'),
         def = double.parse(tile.properties['def'] ?? '0'),
         poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
+        message = tile.properties['message'],
         super.fromSprite(tile.size, tile.size, tile.sprite) {
     onCreate();
   }

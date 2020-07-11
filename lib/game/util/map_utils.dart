@@ -68,8 +68,8 @@ void importMap(String fileName) async {
       if (properties.isNotEmpty) {
         properties.single.children.forEach((property) {
           if (property.attributes.isNotEmpty) {
-            newTile.properties[property.attributes[0].value] =
-                property.attributes[2].value;
+            newTile.properties[property.getAttributeNode('name').value] =
+                property.getAttributeNode('value').value;
           }
         });
       }

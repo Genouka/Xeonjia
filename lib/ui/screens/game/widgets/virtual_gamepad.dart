@@ -26,7 +26,9 @@ class Buttons extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              button('O', () {}),
+              button('A', () {
+                playerOne.inspect();
+              }),
               button('S', () {
                 playerOne.shoot(
                     playerOne.weaponList.whereType<SnowBallWeapon>().single);
