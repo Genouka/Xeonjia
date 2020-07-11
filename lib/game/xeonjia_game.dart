@@ -9,6 +9,7 @@ import 'package:xeonjia/game/util/gamepad.dart';
 import 'package:xeonjia/game/util/map_utils.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
+import 'package:xeonjia/models/map_properties.dart';
 import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/models/team.dart';
 import 'package:xeonjia/ui/screens/game/widgets/info_box.dart';
@@ -60,9 +61,8 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   // If true, game is paused so no one can move
   bool _pause;
 
-  // Map size
-  int mapHeight;
-  int mapWidth;
+  // Map properties
+  MapProperties map;
 
   // Screen height minus points bar
   double fixedScreenHeight;
@@ -104,7 +104,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   Color backgroundColor() => const Color(0xFFE1F5FE);
 
   // Reset variables and import map data
-  void initialize() {
+  void initialize() async {
     pause();
 
     // Reset variables
@@ -129,12 +129,12 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
     var _map = (config.mode == GameMode.story)
         ? mainCharacter.visitedRooms.last.toString().padLeft(3, '0')
         : 'arena/${config.mapId}';
-    importMap('assets/maps/' + _map + '.tmx');
+    await importMap('assets/maps/' + _map + '.tmx');
 
+    game.messageBox.state.message = game.map.message;
     initGamepad();
-
-    if (config.mode != GameMode.story) startTimer();
     resume();
+    if (config.mode != GameMode.story) startTimer();
   }
 
   @override
@@ -301,19 +301,19 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
         screenSize.height - (config.mode != GameMode.story ? 40 : 0);
     // Update x position
     if (x <= screenSize.width / 2 ||
-        screenSize.width > componentSize * mapWidth) {
+        screenSize.width > componentSize * map.width) {
       camera.x = 0.0;
-    } else if (x > componentSize * mapWidth - screenSize.width / 2) {
-      camera.x = componentSize * mapWidth - screenSize.width;
+    } else if (x > componentSize * map.width - screenSize.width / 2) {
+      camera.x = componentSize * map.width - screenSize.width;
     } else {
       camera.x = x - screenSize.width / 2;
     }
     // Update y position
     if (y <= fixedScreenHeight / 2 ||
-        fixedScreenHeight > componentSize * mapHeight) {
+        fixedScreenHeight > componentSize * map.height) {
       camera.y = 0.0;
-    } else if (y > componentSize * mapHeight - fixedScreenHeight / 2) {
-      camera.y = componentSize * mapHeight - fixedScreenHeight;
+    } else if (y > componentSize * map.height - fixedScreenHeight / 2) {
+      camera.y = componentSize * map.height - fixedScreenHeight;
     } else {
       camera.y = y - fixedScreenHeight / 2;
     }

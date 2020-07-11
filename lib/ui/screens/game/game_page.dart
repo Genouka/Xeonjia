@@ -35,9 +35,9 @@ class _GamePageState extends State<GamePage> with GameDialogs {
             body: Stack(
               children: <Widget>[
                 game.widget,
+                VirtualGamePad(),
                 game.messageBox,
                 game.infoBox,
-                VirtualGamePad(),
               ],
             ),
           );

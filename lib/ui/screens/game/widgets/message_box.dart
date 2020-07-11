@@ -1,6 +1,6 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
 
 class MessageBox extends StatefulWidget {
@@ -19,14 +19,13 @@ class _MessageBoxState extends State<MessageBox> {
     if (mounted) {
       setState(() {});
     }
-    Timer(const Duration(seconds: 3), () {
-      dismiss();
-    });
+    if (message != null) game.pause();
   }
 
   // Clear message and hide message box
   void dismiss() {
     message = null;
+    game.resume();
   }
 
   @override
@@ -35,18 +34,22 @@ class _MessageBoxState extends State<MessageBox> {
       visible: _message != null,
       child: Positioned(
         bottom: 0,
-        child: Container(
-          margin: const EdgeInsets.all(20),
-          padding: const EdgeInsets.all(20),
-          width: screenSize.width - 40,
-          decoration: BoxDecoration(
-              color: Colors.grey[800],
-              borderRadius: const BorderRadius.all(Radius.circular(10))),
-          child: ListTile(
-            leading: const CircleAvatar(),
-            title: Text(
-              _message ?? '',
-              style: const TextStyle(fontSize: 20, color: Colors.white),
+        child: InkWell(
+          onTap: dismiss,
+          child: Container(
+            margin: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
+            width: screenSize.width - 40,
+            height: 140,
+            decoration: BoxDecoration(
+                color: Colors.grey[800],
+                borderRadius: const BorderRadius.all(Radius.circular(10))),
+            child: ListTile(
+              leading: const CircleAvatar(),
+              title: Text(
+                _message ?? '',
+                style: const TextStyle(fontSize: 20, color: Colors.white),
+              ),
             ),
           ),
         ),

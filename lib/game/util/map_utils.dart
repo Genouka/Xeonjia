@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flame/sprite.dart';
 import 'package:flutter/services.dart';
+import 'package:xeonjia/models/map_properties.dart';
 import 'package:xml/xml.dart';
 
 import 'package:xeonjia/game/util/component_tile.dart';
@@ -14,15 +15,18 @@ void importMap(String fileName) async {
       XmlDocument.parse(await rootBundle.loadString(fileName)).rootElement;
 
   // Get map information
-  game.mapWidth = int.parse(mapXml.getAttribute('width'));
-  game.mapHeight = int.parse(mapXml.getAttribute('height'));
+  game.map = MapProperties(
+    width: int.parse(mapXml.getAttribute('width')),
+    height: int.parse(mapXml.getAttribute('height')),
+  );
+
   var mapProperties = mapXml.findElements('properties');
   // 'Room ${mainCharacter.visitedRooms.last.toString().padLeft(3, '0')}';
   if (mapProperties.isNotEmpty) {
     mapProperties.single.children.forEach((property) {
       if (property.attributes.isNotEmpty &&
           property.attributes[0].value == 'message') {
-        game.messageBox.state.message = property.attributes[1].value;
+        game.map.message = property.attributes[1].value;
       }
     });
   }
@@ -93,7 +97,7 @@ void importMap(String fileName) async {
           componentTile.createComponent();
         }
         ++columnCount;
-        if (columnCount == game.mapWidth) {
+        if (columnCount == game.map.width) {
           columnCount = 0;
           ++lineCount;
         }
