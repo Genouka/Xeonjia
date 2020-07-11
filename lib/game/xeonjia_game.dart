@@ -9,6 +9,7 @@ import 'package:xeonjia/game/util/gamepad.dart';
 import 'package:xeonjia/game/util/map_utils.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
+import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/models/team.dart';
 import 'package:xeonjia/ui/screens/game/widgets/info_box.dart';
 import 'package:xeonjia/ui/screens/game/widgets/message_box.dart';
@@ -38,26 +39,7 @@ double defaultDistancePerFrame;
 
 // Xeonjia game class
 class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
-  // Game mode
-  final GameMode mode;
-
-  // Number of players for each team
-  final int teamSize;
-
-  // If true, players can hit their teammates
-  final bool friendlyFire;
-
-  // Points required to win in multiplayer
-  final int maxPoints;
-
-  // Max game time in multiplayer mode (seconds)
-  final int maxTime;
-
-  // Multiplayer match difficulty
-  final int difficulty;
-
-  // Map to load if mode != story
-  final int mapId;
+  final MatchConfig config;
 
   // Message box
   final messageBox = MessageBox();
@@ -111,13 +93,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   bool avoidExit = false;
 
   XeonjiaGame(
-    this.mode, {
-    this.teamSize = 0,
-    this.friendlyFire = false,
-    this.maxPoints = 1500,
-    this.maxTime = 180,
-    this.difficulty = 4,
-    this.mapId = 0,
+    this.config, {
     @required this.pauseDialog,
     @required this.endDialog,
   }) {
@@ -150,14 +126,14 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
     modifiersToBeRegenerated.clear();
 
     // Import map and components
-    var _map = (mode == GameMode.story)
+    var _map = (config.mode == GameMode.story)
         ? mainCharacter.visitedRooms.last.toString().padLeft(3, '0')
-        : 'arena/$mapId';
+        : 'arena/${config.mapId}';
     importMap('assets/maps/' + _map + '.tmx');
 
     initGamepad();
 
-    if (mode != GameMode.story) startTimer();
+    if (config.mode != GameMode.story) startTimer();
     resume();
   }
 
@@ -186,14 +162,14 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   // Start game timer
   void startTimer() {
     timer?.cancel();
-    remainingTime = maxTime;
+    remainingTime = config.maxTime;
     timer = Timer.periodic(const Duration(seconds: 1), (_) {
       if (_pause) return;
       if (--remainingTime <= 0) {
         timer.cancel();
         end(timeOut: true);
-      } else if (teams.first.points >= maxPoints ||
-          teams.last.points >= maxPoints) {
+      } else if (teams.first.points >= config.maxPoints ||
+          teams.last.points >= config.maxPoints) {
         end();
       } else if (remainingTime % 10 == 0) {
         regenerateModifiers();
@@ -282,7 +258,8 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
     if (_pause || position.dy < 40) return;
 
     // Update orientation if not tapping on bottom bar
-    if (position.dy <= fixedScreenHeight + (mode != GameMode.story ? 80 : 40)) {
+    if (position.dy <=
+        fixedScreenHeight + (config.mode != GameMode.story ? 80 : 40)) {
       var _relativeTapX =
           position.dx - (playerOne.x + componentSize / 2 - camera.x);
       var _relativeTapY =
@@ -320,7 +297,8 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   // Update camera position
   void updateCamera(double x, double y) {
-    fixedScreenHeight = screenSize.height - (mode != GameMode.story ? 40 : 0);
+    fixedScreenHeight =
+        screenSize.height - (config.mode != GameMode.story ? 40 : 0);
     // Update x position
     if (x <= screenSize.width / 2 ||
         screenSize.width > componentSize * mapWidth) {
@@ -352,7 +330,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   // End of the game
   void end({bool timeOut = false}) {
     pause();
-    if (mode == GameMode.story) {
+    if (config.mode == GameMode.story) {
       mainCharacter.minutesPlayed += (currentTime() - startDate) / 60;
       mainCharacter.movesCounter += playerOne.movesCounter;
       ++mainCharacter.deathCounter;

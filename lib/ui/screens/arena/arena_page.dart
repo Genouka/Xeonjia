@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/models/game_mode.dart';
+import 'package:xeonjia/models/match_config.dart';
 
 import 'package:xeonjia/ui/screens/arena/resources/maps.dart';
 import 'package:xeonjia/ui/screens/arena/widgets/play_button.dart';
@@ -207,7 +208,7 @@ class _ArenaPageState extends State<ArenaPage> {
           ],
         ),
         floatingActionButton: PlayButton(
-          GamePage(
+          GamePage(MatchConfig(
             _mode,
             teamSize: _teamSize,
             maxTime: _maxTime * 60,
@@ -215,7 +216,7 @@ class _ArenaPageState extends State<ArenaPage> {
             mapId: _mapId,
             difficulty: _difficulty,
             friendlyFire: _friendlyFire,
-          ),
+          )),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       );

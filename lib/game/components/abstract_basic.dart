@@ -114,7 +114,7 @@ abstract class BasicComponent extends SpriteComponent {
   // Function used to change life points
   void lifePointsDifference(double difference,
       {BasicComponent cause, double poison = 0}) {
-    if (game.friendlyFire || teamId != (cause?.teamId ?? -99)) {
+    if (game.config.friendlyFire || teamId != (cause?.teamId ?? -99)) {
       _lifePoints += difference < 0 ? difference + def : difference;
       poisonQuantity += poison;
       if (this == playerOne && difference != 0) game.refreshLifePointsBar();

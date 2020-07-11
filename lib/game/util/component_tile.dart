@@ -38,22 +38,22 @@ extension CreateComponent on Tile {
         var _previousRoomId = (mainCharacter.visitedRooms.length <= 1)
             ? 1
             : mainCharacter.visitedRooms[mainCharacter.visitedRooms.length - 2];
-        if (game.mode == GameMode.story &&
+        if (game.config.mode == GameMode.story &&
             _previousRoomId == int.parse(properties['roomId'])) {
           CharacterComponent(this,
               isPlayerOne: true,
               level: mainCharacter.level,
               jsonWeaponList: mainCharacter.jsonWeaponList);
           // Toast.show(_toastText, gameContext, gravity: (lineCount < 5) ? 0 : 2);
-        } else if (game.mode == GameMode.tdm) {
+        } else if (game.config.mode == GameMode.tdm) {
           var _teamId = int.parse(properties['team'] ?? '0');
           if (game.players.where((p) => p.teamId == _teamId).length <
-              game.teamSize) {
+              game.config.teamSize) {
             CharacterComponent(
               this,
               isPlayerOne: playerOne == null && _teamId == 0,
               team: _teamId,
-              level: _teamId * game.difficulty,
+              level: _teamId * game.config.difficulty,
             );
           }
         }

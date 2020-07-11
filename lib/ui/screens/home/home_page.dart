@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/models/game_mode.dart';
+import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
 import 'package:xeonjia/ui/screens/arena/arena_page.dart';
@@ -10,7 +11,7 @@ import 'package:xeonjia/ui/screens/user/user_page.dart';
 
 class HomePage extends StatelessWidget {
   final pageList = <Map<String, dynamic>>[
-    {'title': 'Story mode', 'goto': GamePage(GameMode.story)},
+    {'title': 'Story mode', 'goto': GamePage(MatchConfig(GameMode.story))},
     {'title': 'Arena', 'goto': ArenaPage()},
     {'title': 'Character', 'goto': UserPage(appBarCollapsed: true)},
   ];

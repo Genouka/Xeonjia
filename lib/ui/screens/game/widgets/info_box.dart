@@ -58,7 +58,7 @@ class _InfoBoxState extends State<InfoBox> {
                   const Text(' ▐ ▌', style: TextStyle(color: Colors.white))
                 ],
               ),
-              if (game.mode == GameMode.tdm) ...[
+              if (game.config.mode == GameMode.tdm) ...[
                 Container(height: 10),
                 Row(
                   children: [
@@ -81,7 +81,9 @@ class _InfoBoxState extends State<InfoBox> {
                       ),
                     ),
                     Text(
-                      '  ' + (game.remainingTime ?? game.maxTime).toString(),
+                      '  ' +
+                          (game.remainingTime ?? game.config.maxTime)
+                              .toString(),
                       style: const TextStyle(
                         fontSize: 18,
                         color: Colors.white,

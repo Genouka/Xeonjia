@@ -94,7 +94,7 @@ class CharacterComponent extends DynamicComponent with LifePointsBar {
   @override
   void delete() {
     ++deaths;
-    if (game.mode == GameMode.story) {
+    if (game.config.mode == GameMode.story) {
       if (this == playerOne) {
         super.delete();
         game.end();

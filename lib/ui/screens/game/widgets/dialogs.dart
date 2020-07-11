@@ -11,9 +11,9 @@ mixin GameDialogs on State<GamePage> {
         // Pause (mode == 0)
         {
           'title': 'Pause - ' +
-              (game.mode == GameMode.story
+              (game.config.mode == GameMode.story
                   ? 'Room ${mainCharacter.visitedRooms.last.toString().padLeft(3, '0')}'
-                  : modeNames[game.mode]),
+                  : modeNames[game.config.mode]),
           'text': '''
           \n • Moves: ${playerOne.movesCounter.toString()}
           \n • Minutes played: ${((game.currentTime() - game.startDate) / 60).round()}
@@ -21,10 +21,10 @@ mixin GameDialogs on State<GamePage> {
           \n • Poison quantity: ${playerOne.poisonQuantity.round().toString()}
           \n • Enemies killed: ${playerOne.killedEnemies.toString()}
           ''' +
-              (game.mode == GameMode.story
+              (game.config.mode == GameMode.story
                   ? '\n • Money earned: ${playerOne.earnedMoney.toString()}'
                   : '\n • Deaths: ${playerOne.deaths.toString()}') +
-              (game.mode == GameMode.story
+              (game.config.mode == GameMode.story
                   ? '\n\n • Exp gained: ${playerOne.experiencePoints.toString()}'
                   : '\n\n • Your points: ${playerOne.points.toString()}'),
         },
@@ -128,7 +128,7 @@ mixin GameDialogs on State<GamePage> {
   void endDialog({bool timeOut}) {
     var title = '';
     var content = '';
-    if (game.mode == GameMode.story) {
+    if (game.config.mode == GameMode.story) {
       title = 'You have been deleted';
     } else {
       title = 'Your team ' +
@@ -136,7 +136,8 @@ mixin GameDialogs on State<GamePage> {
       if (timeOut) {
         content = 'The time is over.';
       } else {
-        content = '${game.maxPoints.toString()} points have been achieved.';
+        content =
+            '${game.config.maxPoints.toString()} points have been achieved.';
       }
     }
     content += '\n\nDo you want to restart this game?';
