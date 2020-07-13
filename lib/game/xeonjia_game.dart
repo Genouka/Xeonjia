@@ -64,9 +64,6 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
   // Map properties
   MapProperties map;
 
-  // Screen height minus points bar
-  double fixedScreenHeight;
-
   // List of CharacterComponent in game
   List<CharacterComponent> players = [];
 
@@ -259,7 +256,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
     // Update orientation if not tapping on bottom bar
     if (position.dy <=
-        fixedScreenHeight + (config.mode != GameMode.story ? 80 : 40)) {
+        screenSize.height + (config.mode != GameMode.story ? 80 : 40)) {
       var _relativeTapX =
           position.dx - (playerOne.x + componentSize / 2 - camera.x);
       var _relativeTapY =
@@ -271,7 +268,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
         playerOne.updateOrientation(
             GetDirection.fromXY(position.dx - componentSize, 0));
       } else if (position.dy - 40 < componentSize ||
-          position.dy > fixedScreenHeight - componentSize) {
+          position.dy > screenSize.height - componentSize) {
         playerOne.updateOrientation(
             GetDirection.fromXY(0, position.dy - 40 - componentSize));
       } else if (_relativeTapX.abs() > 15 || _relativeTapY.abs() > 15) {
