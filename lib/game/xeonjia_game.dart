@@ -297,26 +297,10 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   // Update camera position
   void updateCamera(double x, double y) {
-    fixedScreenHeight =
-        screenSize.height - (config.mode != GameMode.story ? 40 : 0);
-    // Update x position
-    if (x <= screenSize.width / 2 ||
-        screenSize.width > componentSize * map.width) {
-      camera.x = 0.0;
-    } else if (x > componentSize * map.width - screenSize.width / 2) {
-      camera.x = componentSize * map.width - screenSize.width;
-    } else {
-      camera.x = x - screenSize.width / 2;
-    }
-    // Update y position
-    if (y <= fixedScreenHeight / 2 ||
-        fixedScreenHeight > componentSize * map.height) {
-      camera.y = 0.0;
-    } else if (y > componentSize * map.height - fixedScreenHeight / 2) {
-      camera.y = componentSize * map.height - fixedScreenHeight;
-    } else {
-      camera.y = y - fixedScreenHeight / 2;
-    }
+    camera.x = min(max(0, x - screenSize.width / 2),
+        componentSize * (map?.width ?? 0) - screenSize.width);
+    camera.y = min(max(0, y - screenSize.height / 2),
+        componentSize * (map?.height ?? 0) - screenSize.height);
   }
 
   // Reload weapon bar
