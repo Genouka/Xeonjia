@@ -161,4 +161,9 @@ class CharacterComponent extends DynamicComponent
       shoot();
     }
   }
+
+  @override
+  void render(Canvas canvas) {
+    super.render(canvas..translate(0, -4));
+  }
 }
