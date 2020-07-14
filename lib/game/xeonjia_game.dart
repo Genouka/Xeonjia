@@ -8,13 +8,14 @@ import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/util/gamepad.dart';
 import 'package:xeonjia/game/util/map_utils.dart';
+import 'package:xeonjia/game/widgets_overlay/info_box.dart';
+import 'package:xeonjia/game/widgets_overlay/message_box.dart';
+import 'package:xeonjia/game/widgets_overlay/virtual_gamepad.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/map_properties.dart';
 import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/models/team.dart';
-import 'package:xeonjia/ui/screens/game/widgets/info_box.dart';
-import 'package:xeonjia/ui/screens/game/widgets/message_box.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
 
@@ -40,14 +41,16 @@ double componentSize;
 double defaultDistancePerFrame;
 
 // Xeonjia game class
-class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
+class XeonjiaGame extends BaseGame
+    with HasWidgetsOverlay, PanDetector, TapDetector {
+  // Match settings
   final MatchConfig config;
 
   // Message box
-  final messageBox = MessageBox();
+  final _messageBox = MessageBox();
 
   // Box with lifePoints, pause, time and team points
-  final infoBox = InfoBox();
+  final _infoBox = InfoBox();
 
   // Game dialogs
   final VoidCallback pauseDialog;
@@ -129,8 +132,11 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
         : 'arena/${config.mapId}';
     await importMap('assets/maps/' + _map + '.tmx');
 
-    game.messageBox.state.message = game.map.message;
+    game._messageBox.state.message = game.map.message;
     initGamepad();
+    addWidgetOverlay('gamePad', VirtualGamePad());
+    addWidgetOverlay('messageBox', _messageBox);
+    addWidgetOverlay('infoBox', _infoBox);
     resume();
     if (config.mode != GameMode.story) startTimer();
   }
@@ -172,9 +178,17 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
       } else if (remainingTime % 10 == 0) {
         regenerateModifiers();
       }
-      infoBox.state.refresh();
+      _infoBox.state.refresh();
     });
   }
+
+  // Show message in messageBox
+  set message(String message) {
+    _messageBox.state.message = message;
+  }
+
+  // Get shown message
+  String get message => _messageBox.state.message;
 
   // Save match data and load the new room
   void changeRoom(int nextRoomId) {
@@ -238,8 +252,8 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   @override
   void onTapDown(TapDownDetails details) {
-    if (messageBox.state.message != null) {
-      messageBox.state.dismiss();
+    if (_messageBox.state.message != null) {
+      _messageBox.state.dismiss();
       return;
     }
     if (settings.inputMethod != 1) gestureTapInput(details.globalPosition);
@@ -306,7 +320,7 @@ class XeonjiaGame extends BaseGame with PanDetector, TapDetector {
 
   // Reload LP bar
   void refreshLifePointsBar() {
-    infoBox.state.refresh();
+    _infoBox.state.refresh();
   }
 
   // End of the game

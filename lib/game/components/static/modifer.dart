@@ -72,13 +72,13 @@ class ModifierComponent extends BasicComponent {
       componentAbove.selectedWeapon.powerPoints += _powerPointsDelta;
       if (_powerPointsDelta != 0) game.refreshWeaponBar();
       if (_moneyDelta != 0 && componentAbove == playerOne) {
-        game.messageBox.state.message = '+ $_moneyDelta \$';
+        game.message = '+ $_moneyDelta \$';
       }
       if (_doorId != -1) {
         componentAbove.doorKeyList.add(_doorId);
       } else if (_objectId != -1) {
         componentAbove.objectList.add(_objectId);
-        game.messageBox.state.message = 'I found a Gem!';
+        game.message = 'I found a Gem!';
       }
       if (_regenerable ?? false) game.modifiersToBeRegenerated.add(this);
       if (explosionOnDelete) {

@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:ui';
 
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/util/lifepoints_bar.dart';
@@ -95,7 +96,7 @@ class CharacterComponent extends DynamicComponent
   // Inspect what is in front of this
   void inspect() {
     if (isRespawning) return;
-    game.messageBox.state.message = componentInFront().message;
+    game.message = componentInFront().message;
   }
 
   @override
