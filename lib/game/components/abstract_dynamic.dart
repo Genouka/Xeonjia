@@ -21,7 +21,7 @@ abstract class DynamicComponent extends BasicComponent {
   Direction orientation = Direction.down;
 
   // Distance made at each frame update
-  double distancePerFrame = defaultDistancePerFrame;
+  double distancePerFrame = defaultDistancePerUpdate;
 
   // Component collided
   BasicComponent collidedComponent;

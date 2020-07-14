@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
+import 'package:flame/time.dart';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/components/dynamic/character.dart';
@@ -25,20 +26,15 @@ XeonjiaGame game;
 // Main character
 CharacterComponent playerOne;
 
-// Timer used in multiplayer games
-Timer timer;
-
-// Time between each cycle of update
-// Frequency = (1 / updatePeriod)
+// Seconds between each cycle of update
 const double updatePeriod = 0.03;
+
+// Default distance traveled with each update
+// Component speed depends on this and on updatePeriod
+double defaultDistancePerUpdate;
 
 // Default component dimension
 double componentSize;
-
-// Default distance made at each frame update
-// Component speed depend on this value and on updatePeriod value
-// Movements don't depend on the time that has been passed between 2 update()...
-double defaultDistancePerFrame;
 
 // Xeonjia game class
 class XeonjiaGame extends BaseGame
@@ -46,18 +42,28 @@ class XeonjiaGame extends BaseGame
   // Match settings
   final MatchConfig config;
 
+  // Game dialogs
+  final VoidCallback pauseDialog;
+  final Function endDialog;
+
+  XeonjiaGame(
+    this.config, {
+    @required this.pauseDialog,
+    @required this.endDialog,
+  }) {
+    init();
+  }
+
   // Message box
   final _messageBox = MessageBox();
 
   // Box with lifePoints, pause, time and team points
   final _infoBox = InfoBox();
 
-  // Game dialogs
-  final VoidCallback pauseDialog;
-  final Function endDialog;
-
-  // Game start date
-  double startDate;
+  // Timer used in multiplayer mode
+  Timer _timer;
+  int elapsedSeconds = 0;
+  int get remainingTime => config.maxTime - elapsedSeconds;
 
   // Time elapsed since last time components have been updated
   double timeSinceUpdate;
@@ -73,9 +79,6 @@ class XeonjiaGame extends BaseGame
 
   // List of teams
   List<Team> teams;
-
-  // Remaining time (used in multiplayer games)
-  int remainingTime;
 
   // List of teams sorted by points
   List<Team> get ranking {
@@ -93,24 +96,16 @@ class XeonjiaGame extends BaseGame
   // Variable used to avoid exit when gamepad B button is pressed
   bool avoidExit = false;
 
-  XeonjiaGame(
-    this.config, {
-    @required this.pauseDialog,
-    @required this.endDialog,
-  }) {
-    initialize();
-  }
-
   @override
   Color backgroundColor() => const Color(0xFFE1F5FE);
 
   // Reset variables and import map data
-  void initialize() async {
+  void init() async {
     pause();
 
     // Reset variables
     timeSinceUpdate = 0;
-    startDate = currentTime();
+    elapsedSeconds = 0;
 
     // Remove previous components
     // They are removed during the next update()
@@ -137,17 +132,27 @@ class XeonjiaGame extends BaseGame
     addWidgetOverlay('gamePad', VirtualGamePad());
     addWidgetOverlay('messageBox', _messageBox);
     addWidgetOverlay('infoBox', _infoBox);
+
+    _timer = Timer(1, repeat: true, callback: () {
+      elapsedSeconds++;
+      if (config.mode != GameMode.story) {
+        if (elapsedSeconds == config.maxTime) end(timeOut: true);
+        if (elapsedSeconds % 10 == 0) regenerateModifiers();
+        _infoBox.state.refresh();
+      }
+    });
+    _timer.start();
     resume();
-    if (config.mode != GameMode.story) startTimer();
   }
 
   @override
-  void update(double t) {
+  void update(double dt) {
+    _timer?.update(dt);
     // Update components for each updatePeriod elapsed since last game.update
-    for (timeSinceUpdate += t;
+    for (timeSinceUpdate += dt;
         timeSinceUpdate >= updatePeriod;
         timeSinceUpdate -= updatePeriod) {
-      super.update(t);
+      super.update(dt);
     }
   }
 
@@ -161,25 +166,6 @@ class XeonjiaGame extends BaseGame
   void resume() {
     _pause = false;
     resumeEngine();
-  }
-
-  // Start game timer
-  void startTimer() {
-    timer?.cancel();
-    remainingTime = config.maxTime;
-    timer = Timer.periodic(const Duration(seconds: 1), (_) {
-      if (_pause) return;
-      if (--remainingTime <= 0) {
-        timer.cancel();
-        end(timeOut: true);
-      } else if (teams.first.points >= config.maxPoints ||
-          teams.last.points >= config.maxPoints) {
-        end();
-      } else if (remainingTime % 10 == 0) {
-        regenerateModifiers();
-      }
-      _infoBox.state.refresh();
-    });
   }
 
   // Show message in messageBox
@@ -200,7 +186,7 @@ class XeonjiaGame extends BaseGame
     mainCharacter.killedComponents += playerOne.killedEnemies;
     mainCharacter.doorKeyList.addAll(playerOne.doorKeyList);
     mainCharacter.objectList.addAll(playerOne.objectList);
-    mainCharacter.minutesPlayed += (currentTime() - startDate) / 60;
+    mainCharacter.minutesPlayed += elapsedSeconds / 60;
     mainCharacter.movesCounter += playerOne.movesCounter;
 
     // If the room hasn't been already visited, increase exp points and money
@@ -226,7 +212,7 @@ class XeonjiaGame extends BaseGame
     }
 
     // Start a new game
-    initialize();
+    init();
   }
 
   Offset _panGestureOffset;
@@ -323,11 +309,19 @@ class XeonjiaGame extends BaseGame
     _infoBox.state.refresh();
   }
 
+  // Check if someone won
+  void checkMatchStatus() {
+    if (teams.first.points >= config.maxPoints ||
+        teams.last.points >= config.maxPoints) {
+      end();
+    }
+  }
+
   // End of the game
   void end({bool timeOut = false}) {
     pause();
     if (config.mode == GameMode.story) {
-      mainCharacter.minutesPlayed += (currentTime() - startDate) / 60;
+      mainCharacter.minutesPlayed += elapsedSeconds / 60;
       mainCharacter.movesCounter += playerOne.movesCounter;
       ++mainCharacter.deathCounter;
       mainCharacter.money -= mainCharacter.visitedRooms.last * 10;
@@ -338,7 +332,6 @@ class XeonjiaGame extends BaseGame
   }
 
   void dispose() {
-    timer?.cancel();
     gamepad.removeListener();
     game = null;
   }

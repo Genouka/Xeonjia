@@ -113,6 +113,7 @@ class CharacterComponent extends DynamicComponent
     } else {
       stop();
       respawnAnimation();
+      game.checkMatchStatus();
     }
   }
 

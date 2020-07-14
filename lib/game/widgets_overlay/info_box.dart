@@ -80,9 +80,7 @@ class _InfoBoxState extends State<InfoBox> {
                       ),
                     ),
                     Text(
-                      '  ' +
-                          (game.remainingTime ?? game.config.maxTime)
-                              .toString(),
+                      '  ${game.remainingTime}',
                       style: const TextStyle(
                         fontSize: 18,
                         color: Colors.white,

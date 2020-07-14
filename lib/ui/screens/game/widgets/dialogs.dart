@@ -16,7 +16,7 @@ mixin GameDialogs on State<GamePage> {
                   : modeNames[game.config.mode]),
           'text': '''
           \n • Moves: ${playerOne.movesCounter.toString()}
-          \n • Minutes played: ${((game.currentTime() - game.startDate) / 60).round()}
+          \n • Minutes played: ${(game.elapsedSeconds / 60).round()}
           \n • Lifepoints: ${playerOne.lifePoints.round().toString()}
           \n • Poison quantity: ${playerOne.poisonQuantity.round().toString()}
           \n • Enemies killed: ${playerOne.killedEnemies.toString()}
@@ -98,7 +98,7 @@ mixin GameDialogs on State<GamePage> {
                         child: const Text('Yes'),
                         onPressed: () {
                           if (dialogMode == 1) {
-                            game.initialize();
+                            game.init();
                           } else {
                             Navigator.pop(context);
                             game = null;
@@ -154,7 +154,7 @@ mixin GameDialogs on State<GamePage> {
             FlatButton(
               child: const Text('Yes'),
               onPressed: () {
-                game.initialize();
+                game.init();
                 Navigator.of(context).pop();
               },
             ),
