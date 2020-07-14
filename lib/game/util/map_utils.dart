@@ -104,4 +104,31 @@ void importMap(String fileName) async {
       }
     });
   });
+
+  // Read groups
+  mapXml.findElements('group').forEach((group) {
+    if (group.getAttributeNode('name').value == 'Spawn points') {
+      group.findElements('objectgroup').forEach((objectgroup) {
+        var properties = <String, dynamic>{};
+        objectgroup
+            .findElements('properties')
+            .single
+            .findElements('property')
+            .forEach((property) {
+          properties[property.getAttributeNode('name').value] =
+              property.getAttributeNode('value').value;
+        });
+        objectgroup.findElements('object').forEach((object) {
+          var x = int.parse(object.getAttributeNode('x').value) *
+              componentSize /
+              16;
+          var y = int.parse(object.getAttributeNode('y').value) *
+              componentSize /
+              16;
+          Tile(type: 'Start', position: Point(x, y), properties: properties)
+              .createComponent();
+        });
+      });
+    }
+  });
 }

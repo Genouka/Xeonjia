@@ -11,12 +11,7 @@ void main() async {
   await loadStoredData().then((_) {
     if (settings.fullScreen) SystemChrome.setEnabledSystemUIOverlays([]);
   });
-  await Flame.images.loadAll([
-    'basic.png',
-    'character.png',
-    'common.png',
-    'tileset_0.png',
-  ]);
+  await Flame.images.loadAll(['basic.png', 'character.png', 'tileset_0.png']);
   return runApp(Xeonjia());
 }
 
