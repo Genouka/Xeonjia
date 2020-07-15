@@ -5,7 +5,7 @@ import 'package:xeonjia/ui/screens/game/game_page.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
-mixin GameDialogs on State<GamePage> {
+mixin GameDialogs on GamePage {
   // Return a string that contains pause dialog texts
   List<Map<String, String>> _pauseDialogStringsListGenerator() => [
         // Pause (mode == 0)
@@ -125,7 +125,7 @@ mixin GameDialogs on State<GamePage> {
   }
 
   // Dialog displayed when the game ends
-  void endDialog({bool timeOut}) {
+  void endDialog(BuildContext context, {bool timeOut}) {
     var title = '';
     var content = '';
     if (game.config.mode == GameMode.story) {

@@ -8,16 +8,21 @@ import 'package:xeonjia/ui/screens/arena/arena_page.dart';
 import 'package:xeonjia/ui/screens/home/widgets/bottom_row.dart';
 import 'package:xeonjia/ui/screens/home/widgets/page_button.dart';
 import 'package:xeonjia/ui/screens/user/user_page.dart';
+import 'package:xeonjia/util/screen_dimension.dart';
 
 class HomePage extends StatelessWidget {
   final pageList = <Map<String, dynamic>>[
-    {'title': 'Story mode', 'goto': GamePage(MatchConfig(GameMode.story))},
-    {'title': 'Arena', 'goto': ArenaPage()},
-    {'title': 'Character', 'goto': UserPage(appBarCollapsed: true)},
+    {
+      'title': 'Story mode',
+      'goto': () => GamePage(MatchConfig(GameMode.story))
+    },
+    {'title': 'Arena', 'goto': () => ArenaPage()},
+    {'title': 'Character', 'goto': () => UserPage(appBarCollapsed: true)},
   ];
 
   @override
   Widget build(BuildContext context) {
+    setScreenDimension(context);
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -45,7 +50,7 @@ class HomePage extends StatelessWidget {
               PageButton(
                 title: page['title'],
                 onPressed: () {
-                  Navigator.push(context, FadeRoute(page['goto']));
+                  Navigator.push(context, FadeRoute(page['goto']()));
                 },
               ),
             const Spacer(),

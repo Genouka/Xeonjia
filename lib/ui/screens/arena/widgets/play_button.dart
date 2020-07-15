@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/ui/basic.dart';
-import 'package:xeonjia/ui/screens/game/game_page.dart';
 
 // Floating "PLAY" button
 class PlayButton extends StatelessWidget {
-  final GamePage page;
+  final page;
   PlayButton(this.page);
 
   @override
@@ -22,7 +21,7 @@ class PlayButton extends StatelessWidget {
           style: TextStyle(color: Colors.white, fontSize: 20),
         ),
         onPressed: () {
-          Navigator.push(context, FadeRoute(page));
+          Navigator.push(context, FadeRoute(page()));
         },
       ),
     );

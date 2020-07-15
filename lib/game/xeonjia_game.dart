@@ -42,15 +42,10 @@ class XeonjiaGame extends BaseGame
   // Match settings
   final MatchConfig config;
 
-  // Game dialogs
-  final VoidCallback pauseDialog;
-  final Function endDialog;
-
-  XeonjiaGame(
-    this.config, {
-    @required this.pauseDialog,
-    @required this.endDialog,
-  }) {
+  XeonjiaGame(this.config) {
+    pauseDialog = endDialog = () {
+      _pause ? resume() : pause();
+    };
     init();
   }
 
@@ -59,6 +54,10 @@ class XeonjiaGame extends BaseGame
 
   // Box with lifePoints, pause, time and team points
   final _infoBox = InfoBox();
+
+  // Game dialogs
+  VoidCallback pauseDialog;
+  Function endDialog;
 
   // Timer used in multiplayer mode
   Timer _timer;
@@ -154,6 +153,13 @@ class XeonjiaGame extends BaseGame
         timeSinceUpdate -= updatePeriod) {
       super.update(dt);
     }
+  }
+
+  @override
+  void resize(Size size) {
+    screenSize = size;
+    updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
+    super.resize(size);
   }
 
   // Pause game
@@ -328,7 +334,7 @@ class XeonjiaGame extends BaseGame
       if (mainCharacter.money < 0) mainCharacter.money = 0;
       saveUserData();
     }
-    endDialog(timeOut: timeOut);
+    endDialog(/*timeOut: timeOut*/);
   }
 
   void dispose() {

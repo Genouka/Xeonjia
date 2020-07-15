@@ -18,7 +18,7 @@ class SnowballComponent extends DynamicComponent {
   final double atk;
 
   @override
-  double distancePerFrame = defaultDistancePerUpdate * 2;
+  double distancePerUpdate = defaultDistancePerUpdate * 2;
 
   SnowballComponent(
       Point startingPosition, this.father, this.direction, this.atk)

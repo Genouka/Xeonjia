@@ -96,7 +96,7 @@ class CharacterComponent extends DynamicComponent
   // Inspect what is in front of this
   void inspect() {
     if (isRespawning) return;
-    game.message = componentInFront().message;
+    game.message = componentInFront()?.message;
   }
 
   @override

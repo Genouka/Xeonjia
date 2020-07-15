@@ -21,7 +21,7 @@ abstract class DynamicComponent extends BasicComponent {
   Direction orientation = Direction.down;
 
   // Distance made at each frame update
-  double distancePerFrame = defaultDistancePerUpdate;
+  double distancePerUpdate = defaultDistancePerUpdate;
 
   // Component collided
   BasicComponent collidedComponent;
@@ -105,8 +105,8 @@ abstract class DynamicComponent extends BasicComponent {
     collidedComponent = null;
     var _overlappedComponents = <BasicComponent>[];
     if (direction != null) {
-      var _newX = x + direction.dx * distancePerFrame;
-      var _newY = y + direction.dy * distancePerFrame;
+      var _newX = x + direction.dx * distancePerUpdate;
+      var _newY = y + direction.dy * distancePerUpdate;
       var _newPosition = Rect.fromLTWH(_newX, _newY, width - 1, height - 1);
       game.components.forEach((component) {
         // If this is going to overlap an unrelated component
