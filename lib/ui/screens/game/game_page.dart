@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/game/widgets_overlay/pause_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/match_config.dart';
 
@@ -14,6 +15,9 @@ class GamePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return WillPopScope(
         child: Scaffold(body: game.widget),
-        onWillPop: () => Future.value(true));
+        onWillPop: () {
+          game.pause(mode: PauseMode.Exit);
+          return Future.value(false);
+        });
   }
 }

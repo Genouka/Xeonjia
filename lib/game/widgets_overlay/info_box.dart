@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/game/widgets_overlay/pause_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/util/lifepoints_color.dart';
@@ -24,7 +25,7 @@ class _InfoBoxState extends State<InfoBox> {
       top: 0,
       left: 0,
       child: InkWell(
-        onTap: game.pauseDialog,
+        onTap: () => game.pause(mode: PauseMode.Pause),
         child: Container(
           margin: const EdgeInsets.all(4),
           padding: const EdgeInsets.all(15),

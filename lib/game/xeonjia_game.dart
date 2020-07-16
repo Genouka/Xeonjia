@@ -9,8 +9,10 @@ import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/util/gamepad.dart';
 import 'package:xeonjia/game/util/map_utils.dart';
+import 'package:xeonjia/game/widgets_overlay/end_menu.dart';
 import 'package:xeonjia/game/widgets_overlay/info_box.dart';
 import 'package:xeonjia/game/widgets_overlay/message_box.dart';
+import 'package:xeonjia/game/widgets_overlay/pause_menu.dart';
 import 'package:xeonjia/game/widgets_overlay/virtual_gamepad.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
@@ -43,9 +45,6 @@ class XeonjiaGame extends BaseGame
   final MatchConfig config;
 
   XeonjiaGame(this.config) {
-    pauseDialog = endDialog = () {
-      _pause ? resume() : pause();
-    };
     init();
   }
 
@@ -54,10 +53,6 @@ class XeonjiaGame extends BaseGame
 
   // Box with lifePoints, pause, time and team points
   final _infoBox = InfoBox();
-
-  // Game dialogs
-  VoidCallback pauseDialog;
-  Function endDialog;
 
   // Timer used in multiplayer mode
   Timer _timer;
@@ -91,9 +86,6 @@ class XeonjiaGame extends BaseGame
 
   // Wireless gamepad
   FlameGamepad gamepad;
-
-  // Variable used to avoid exit when gamepad B button is pressed
-  bool avoidExit = false;
 
   @override
   Color backgroundColor() => const Color(0xFFE1F5FE);
@@ -163,9 +155,11 @@ class XeonjiaGame extends BaseGame
   }
 
   // Pause game
-  void pause() {
+  void pause({PauseMode mode}) {
+    if (_pause ?? false) return;
     _pause = true;
     pauseEngine();
+    if (mode != null) addWidgetOverlay('pauseMenu', PauseMenu(mode));
   }
 
   // Resume game
@@ -334,7 +328,7 @@ class XeonjiaGame extends BaseGame
       if (mainCharacter.money < 0) mainCharacter.money = 0;
       saveUserData();
     }
-    endDialog(/*timeOut: timeOut*/);
+    addWidgetOverlay('endMenu', EndMenu());
   }
 
   void dispose() {
@@ -363,7 +357,6 @@ class XeonjiaGame extends BaseGame
             playerOne.shoot();
             break;
           case GAMEPAD_BUTTON_B:
-            avoidExit = true;
             playerOne.shoot();
             break;
           case GAMEPAD_BUTTON_X:
