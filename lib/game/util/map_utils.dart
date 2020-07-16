@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'dart:io';
 import 'dart:math';
 
 import 'package:flame/sprite.dart';
@@ -82,24 +84,27 @@ void importMap(String fileName) async {
   });
 
   mapXml.findElements('layer').forEach((layer) {
+    var mapData = <int>[];
+    var gzipMapData = layer.findElements('data').single.text;
+    var m = gzip.decode(base64.decode(gzipMapData.trim()));
+    for (var i = 0; i < m.length; i += 4) {
+      mapData.add(m[i] + (m[i + 1] << 8) + (m[i + 2] << 16) + (m[i + 3] << 16));
+    }
+
     var lineCount = 0;
     var columnCount = 0;
-    layer.findElements('data').single.text.split('\n').forEach((line) {
-      line.split(',').forEach((tileId) {
-        if (tileId.isNotEmpty) {
-          var componentTile = _tileMap[int.parse(tileId)];
-          if (componentTile != null) {
-            componentTile.position = Point(componentTile.size * columnCount,
-                componentTile.size * lineCount);
-            componentTile.createComponent();
-          }
-          ++columnCount;
-          if (columnCount == game.map.width) {
-            columnCount = 0;
-            ++lineCount;
-          }
-        }
-      });
+    mapData.forEach((tileId) {
+      var componentTile = _tileMap[tileId];
+      if (componentTile != null) {
+        componentTile.position = Point(
+            componentTile.size * columnCount, componentTile.size * lineCount);
+        componentTile.createComponent();
+      }
+      ++columnCount;
+      if (columnCount == game.map.width) {
+        columnCount = 0;
+        ++lineCount;
+      }
     });
   });
 
