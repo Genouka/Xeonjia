@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objecttypes>
+ <objecttype name="DirectionChanger" color="#a0a0a4"/>
+ <objecttype name="Door" color="#a0a0a4"/>
+ <objecttype name="Ground" color="#a0a0a4"/>
+ <objecttype name="Hurdle" color="#a0a0a4"/>
+ <objecttype name="Modifier" color="#a0a0a4"/>
+ <objecttype name="Solid" color="#a0a0a4"/>
+</objecttypes>
