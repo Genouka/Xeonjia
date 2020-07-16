@@ -81,27 +81,25 @@ void importMap(String fileName) async {
     });
   });
 
-  var mapData =
-      mapXml.findElements('layer').single.findElements('data').single.text;
-
-  // Read map layer
-  var lineCount = 0;
-  var columnCount = 0;
-  mapData.split('\n').forEach((line) {
-    line.split(',').forEach((tileId) {
-      if (tileId.isNotEmpty) {
-        var componentTile = _tileMap[int.parse(tileId)];
-        if (componentTile != null) {
-          componentTile.position = Point(
-              componentTile.size * columnCount, componentTile.size * lineCount);
-          componentTile.createComponent();
+  mapXml.findElements('layer').forEach((layer) {
+    var lineCount = 0;
+    var columnCount = 0;
+    layer.findElements('data').single.text.split('\n').forEach((line) {
+      line.split(',').forEach((tileId) {
+        if (tileId.isNotEmpty) {
+          var componentTile = _tileMap[int.parse(tileId)];
+          if (componentTile != null) {
+            componentTile.position = Point(componentTile.size * columnCount,
+                componentTile.size * lineCount);
+            componentTile.createComponent();
+          }
+          ++columnCount;
+          if (columnCount == game.map.width) {
+            columnCount = 0;
+            ++lineCount;
+          }
         }
-        ++columnCount;
-        if (columnCount == game.map.width) {
-          columnCount = 0;
-          ++lineCount;
-        }
-      }
+      });
     });
   });
 
