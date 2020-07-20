@@ -42,8 +42,8 @@ void importMap(String fileName) async {
 
     XmlElement tileset = (tilesetElement.getAttribute('source') == null)
         ? tilesetElement
-        : XmlDocument.parse(await rootBundle.loadString(
-                'assets/maps/arena/' + tilesetElement.getAttribute('source')))
+        : XmlDocument.parse(await rootBundle.loadString('assets/maps/' +
+                tilesetElement.getAttribute('source').split('/').last))
             .rootElement;
 
     var tileWidth = double.parse(tileset.getAttribute('tilewidth'));
@@ -112,15 +112,6 @@ void importMap(String fileName) async {
   mapXml.findElements('group').forEach((group) {
     if (group.getAttributeNode('name').value == 'Spawn points') {
       group.findElements('objectgroup').forEach((objectgroup) {
-        var properties = <String, dynamic>{};
-        objectgroup
-            .findElements('properties')
-            .single
-            .findElements('property')
-            .forEach((property) {
-          properties[property.getAttributeNode('name').value] =
-              property.getAttributeNode('value').value;
-        });
         objectgroup.findElements('object').forEach((object) {
           var x = int.parse(object.getAttributeNode('x').value) *
               componentSize /
@@ -128,7 +119,19 @@ void importMap(String fileName) async {
           var y = int.parse(object.getAttributeNode('y').value) *
               componentSize /
               16;
-          Tile(type: 'Start', position: Point(x, y), properties: properties)
+          var properties = <String, dynamic>{};
+          object
+              .findElements('properties')
+              .single
+              .findElements('property')
+              .forEach((property) {
+            properties[property.getAttributeNode('name').value] =
+                property.getAttributeNode('value').value;
+          });
+          Tile(
+                  type: object.getAttribute('type'),
+                  position: Point(x, y),
+                  properties: properties)
               .createComponent();
         });
       });
