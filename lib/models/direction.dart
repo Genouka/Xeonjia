@@ -4,8 +4,12 @@ import 'package:flutter/material.dart';
 enum Direction { down, up, right, left }
 
 extension GetDirection on Direction {
-  int get dx => this == Direction.right ? 1 : (this == Direction.left ? -1 : 0);
-  int get dy => this == Direction.down ? 1 : (this == Direction.up ? -1 : 0);
+  double get dx =>
+      this == Direction.right ? 1 : (this == Direction.left ? -1 : 0);
+  double get dy => this == Direction.down ? 1 : (this == Direction.up ? -1 : 0);
+
+  // Get opposite direction
+  Direction get opposite => fromXY(-dx, -dy);
 
   // Get a random direction
   static Direction get random => Direction.values[Random().nextInt(4)];

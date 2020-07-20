@@ -33,19 +33,20 @@ extension CreateComponent on Tile {
       case 'Ground':
         GroundComponent(this);
         break;
-      case 'Start':
-        // Id of the previously visited room
-        var _previousRoomId = (mainCharacter.visitedRooms.length <= 1)
-            ? 1
-            : mainCharacter.visitedRooms[mainCharacter.visitedRooms.length - 2];
-        if (game.config.mode == GameMode.story &&
-            _previousRoomId == int.parse(properties['roomId'])) {
-          CharacterComponent(this,
-              isPlayerOne: true,
-              level: mainCharacter.level,
-              jsonWeaponList: mainCharacter.jsonWeaponList);
-          // Toast.show(_toastText, gameContext, gravity: (lineCount < 5) ? 0 : 2);
-        } else if (game.config.mode == GameMode.tdm) {
+      case 'Door':
+        if (game.config.mode == GameMode.story) {
+          var _previousRoomId = (mainCharacter.visitedRooms.length <= 1)
+              ? 1
+              : mainCharacter
+                  .visitedRooms[mainCharacter.visitedRooms.length - 2];
+          if (_previousRoomId == int.parse(properties['roomId'])) {
+            CharacterComponent(this,
+                isPlayerOne: true,
+                level: mainCharacter.level,
+                jsonWeaponList: mainCharacter.jsonWeaponList);
+          }
+          if (_previousRoomId != 0) DoorComponent(this);
+        } else {
           var _teamId = int.parse(properties['team'] ?? '0');
           if (game.players.where((p) => p.teamId == _teamId).length <
               game.config.teamSize) {
@@ -57,9 +58,6 @@ extension CreateComponent on Tile {
             );
           }
         }
-        break;
-      case 'Door':
-        DoorComponent(this);
         break;
       case 'Hurdle':
         HurdleComponent(this);
