@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/util/gamepad.dart';
-import 'package:xeonjia/game/util/map_utils.dart';
+import 'package:xeonjia/game/util/map_importer.dart';
 import 'package:xeonjia/game/widgets_overlay/end_menu.dart';
 import 'package:xeonjia/game/widgets_overlay/info_box.dart';
 import 'package:xeonjia/game/widgets_overlay/message_box.dart';
@@ -114,7 +114,7 @@ class XeonjiaGame extends BaseGame
 
     // Import map and components
     var _map = (config.mode == GameMode.story)
-        ? mainCharacter.visitedRooms.last.toString().padLeft(3, '0')
+        ? 'rooms/' + mainCharacter.visitedRooms.last.toString().padLeft(3, '0')
         : 'arena/${config.mapId}';
     await importMap('assets/maps/' + _map + '.tmx');
 
