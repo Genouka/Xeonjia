@@ -164,6 +164,6 @@ class CharacterComponent extends DynamicComponent
 
   @override
   void render(Canvas canvas) {
-    super.render(canvas..translate(0, -4));
+    super.render(canvas..translate(0, -componentSize / 8));
   }
 }
