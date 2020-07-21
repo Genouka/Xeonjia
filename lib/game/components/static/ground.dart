@@ -13,6 +13,9 @@ class GroundComponent extends BasicComponent {
         super.fromTile(tile);
 
   @override
+  int priority() => flying ? 100 : 0;
+
+  @override
   bool isSolid({BasicComponent otherComponent}) => false;
 
   @override

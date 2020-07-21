@@ -70,7 +70,7 @@ class AnimatedComponent extends BasicComponent {
   bool isFlying() => true;
 
   @override
-  int priority() => super.priority() + 10;
+  int priority() => 10;
 
   @override
   bool loaded() => animation.loaded();
