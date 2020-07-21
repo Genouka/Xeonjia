@@ -175,7 +175,7 @@ abstract class DynamicComponent extends BasicComponent {
     }
     var components = game.components.where((component) =>
         component is SpriteComponent && component.toRect().contains(offset));
-    return components.isNotEmpty ? components.first : null;
+    return components.isNotEmpty ? components.last : null;
   }
 
   @override

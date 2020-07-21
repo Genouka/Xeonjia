@@ -72,6 +72,12 @@ abstract class BasicComponent extends SpriteComponent {
   // Mainly used for weapon shot
   BasicComponent father;
 
+  // Priority defined by map layer (layer 0-> 0, layer 1-> 100, layer 2-> 200)
+  int layerPriority;
+
+  @override
+  int priority() => layerPriority;
+
   // This component's team
   // It is used to avoid friendly fire among components of the same species
   // It is also used in multiplayer matches to manage team membership
@@ -86,6 +92,7 @@ abstract class BasicComponent extends SpriteComponent {
         def = double.parse(tile.properties['def'] ?? '0'),
         poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
         message = tile.properties['message'],
+        layerPriority = tile.properties['priority'] ?? 0,
         super.fromSprite(tile.size, tile.size, tile.sprite) {
     onCreate();
   }
