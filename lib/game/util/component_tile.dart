@@ -59,6 +59,9 @@ extension CreateComponent on Tile {
           }
         }
         break;
+      case 'NPC':
+        CharacterComponent.npc(this);
+        break;
       case 'Hurdle':
         HurdleComponent(this);
         break;

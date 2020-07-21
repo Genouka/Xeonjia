@@ -31,6 +31,10 @@ class CharacterComponent extends DynamicComponent
   // Initial orientation
   Direction _initialOrientation;
 
+  // NPC features: If friendly it doesn't shoot. If quiet it doesn't move.
+  bool friendly;
+  bool quiet;
+
   @override
   double initialLifePoints;
 
@@ -42,14 +46,17 @@ class CharacterComponent extends DynamicComponent
     Tile tile, {
     bool isPlayerOne = false,
     int level = 0,
+    double initialLP,
     Map<String, dynamic> jsonWeaponList,
     team = 0,
-  })  : initialLifePoints = (100 + 5 * level).toDouble(),
+  })  : initialLifePoints = initialLP ?? (100 + 5 * level).toDouble(),
         super(
             tile.position, 'character${isPlayerOne ? '' : '_cpu_$team'}.png') {
     orientation =
         GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0'));
     _initialOrientation = orientation;
+    friendly = 'true' == tile.properties['friendly'] ?? 'false';
+    quiet = 'true' == tile.properties['quiet'] ?? 'false';
     atk = (level + 1).toDouble();
     def = (level ~/ 5).toDouble();
     teamId = team;
@@ -79,6 +86,9 @@ class CharacterComponent extends DynamicComponent
       game.updateCamera(x, y);
     }
   }
+
+  // Non-Player Character
+  CharacterComponent.npc(Tile tile) : this(tile, initialLP: double.infinity);
 
   Weapon get selectedWeapon => weaponList[_selectedWeaponElement];
   void shoot([Weapon weapon]) {
@@ -139,8 +149,8 @@ class CharacterComponent extends DynamicComponent
   @override
   void update(double t) {
     if (this != playerOne) {
-      _cpuMove();
-      _cpuShoot();
+      if (!quiet) _cpuMove();
+      if (!friendly) _cpuShoot();
     }
     super.update(t);
   }

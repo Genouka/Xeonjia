@@ -10,7 +10,10 @@ mixin LifePointsBar on BasicComponent {
   final _padding = 5.0;
   final _seconds = 2.0;
   double _remainingSeconds;
-  bool get _show => this != playerOne && (_remainingSeconds ?? -1) >= 0;
+  bool get _show =>
+      this != playerOne &&
+      lifePoints != double.infinity &&
+      (_remainingSeconds ?? -1) >= 0;
 
   @override
   void render(Canvas canvas) {
