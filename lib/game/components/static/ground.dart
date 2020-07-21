@@ -5,14 +5,19 @@ import 'package:xeonjia/models/direction.dart';
 // Ground component
 // Other components walk on this instead of sliding
 class GroundComponent extends BasicComponent {
-  GroundComponent(tile) : super.fromTile(tile);
+  // True if this is not on the ground floor
+  final bool flying;
+
+  GroundComponent(tile)
+      : flying = 'true' == (tile.properties['flying'] ?? 'false'),
+        super.fromTile(tile);
 
   @override
   bool isSolid({BasicComponent otherComponent}) => false;
 
   @override
   void overlappedBy(DynamicComponent componentAbove) {
-    if (componentAbove.isFlying()) return;
+    if (componentAbove.isFlying() != flying) return;
     var _thisRect = toRect();
     var _aboveRect = componentAbove.toRect();
     if (componentAbove.direction.dx != 0) {
