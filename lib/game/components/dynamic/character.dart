@@ -41,6 +41,12 @@ class CharacterComponent extends DynamicComponent
   @override
   bool isSolid({DynamicComponent otherComponent}) => !isRespawning;
 
+  @override
+  void playAction(Direction orientation) {
+    this.orientation = orientation.opposite;
+    super.playAction(orientation);
+  }
+
   // Create character from input details
   CharacterComponent(
     Tile tile, {
@@ -60,6 +66,8 @@ class CharacterComponent extends DynamicComponent
     atk = (level + 1).toDouble();
     def = (level ~/ 5).toDouble();
     teamId = team;
+    eventChange = tile.properties['eventChange'] ?? '';
+    action = tile.properties['dialog'] ?? '';
     // Temporary solution to remedy the functions _cpuMove() and _cpuShoot()
     jsonWeaponList ??=
         (team == 0) ? const {'1': 5, '2': 1} : const {'1': 9, '2': 5};
@@ -85,6 +93,7 @@ class CharacterComponent extends DynamicComponent
       game.refreshLifePointsBar();
       game.updateCamera(x, y);
     }
+    eventChanged();
   }
 
   // Non-Player Character
@@ -105,8 +114,9 @@ class CharacterComponent extends DynamicComponent
 
   // Inspect what is in front of this
   void inspect() {
-    if (isRespawning) return;
-    game.message = componentInFront()?.message;
+    if (isStationary && !isRespawning) {
+      componentInFront()?.playAction(orientation);
+    }
   }
 
   @override

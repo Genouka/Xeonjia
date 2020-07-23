@@ -14,6 +14,10 @@ class CharacterInfo {
   // Experience points
   int _experiencePoints;
 
+  // Store story events (eg. things done, info acquired)
+  // event name : value (bool or int)
+  Map<String, dynamic> eventLog;
+
   // Available money
   int money;
 
@@ -71,6 +75,7 @@ class CharacterInfo {
   CharacterInfo(Map<String, dynamic> json)
       : name = json['name'] ?? 'yourName',
         imageName = json['imageName'] ?? 'character-1.png',
+        eventLog = jsonDecode(json['eventLog'] ?? '{}'),
         level = json['level'] ?? 0,
         money = json['money'] ?? 0,
         jsonWeaponList = jsonDecode(json['jsonWeaponList'] ?? '{"0": 0}'),
@@ -89,6 +94,7 @@ class CharacterInfo {
   // Export character data as a Json
   Map<String, dynamic> toJson() {
     return {
+      'eventLog': jsonEncode(eventLog),
       'name': name,
       'imageName': imageName,
       'level': level,

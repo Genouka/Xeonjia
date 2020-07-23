@@ -6,10 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/basic_static.dart';
+import 'package:xeonjia/game/util/event_manager.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/team.dart';
 import 'package:xeonjia/models/tile.dart';
+import 'package:xeonjia/util/little_scheme.dart';
 
 // Basic game component
 // Every game component extends this one
@@ -31,9 +33,9 @@ abstract class BasicComponent extends SpriteComponent {
   int experiencePoints = 0;
 
   // Current life points
-  // Value accessed by using lifePoints getter
   // Value edited by using lifePointsDifference() method
   double _lifePoints;
+  double get lifePoints => _lifePoints;
 
   // Poison released to enemies during collision
   double poisonAtk = 0;
@@ -57,9 +59,6 @@ abstract class BasicComponent extends SpriteComponent {
   // Amount of protected damage
   double def = 0;
 
-  // Component message
-  String message;
-
   // Direction values
   // They equal to zero if the component is not moving
   Direction direction;
@@ -78,14 +77,26 @@ abstract class BasicComponent extends SpriteComponent {
   int teamId = -1;
   Team get team => game.teams.firstWhere((team) => team.id == teamId);
 
+  // Actions executed by the component
+  String action = '';
+  String eventChange = '';
+
+  @mustCallSuper
+  void playAction(Direction orientation) {
+    if (action == '') return;
+    globalEnv.defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => this));
+    evaluate(readFromTokens(splitStringIntoTokens(action)), globalEnv);
+  }
+
   BasicComponent.fromTile(Tile tile)
       : startingPosition = tile.position,
+        action = tile.properties['dialog'] ?? '',
+        eventChange = tile.properties['eventChange'] ?? '',
         initialLifePoints =
             double.parse(tile.properties['lifePoints'] ?? 'Infinity'),
         atk = double.parse(tile.properties['atk'] ?? '0'),
         def = double.parse(tile.properties['def'] ?? '0'),
         poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
-        message = tile.properties['message'],
         super.fromSprite(tile.size, tile.size, tile.sprite) {
     onCreate();
   }
@@ -111,9 +122,15 @@ abstract class BasicComponent extends SpriteComponent {
     x = startingPosition.x;
     y = startingPosition.y;
     game.addLater(this);
+    eventChanged();
   }
 
-  double get lifePoints => _lifePoints;
+  // Execute eventChange property
+  void eventChanged() {
+    if (eventChange == '') return;
+    globalEnv.defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => this));
+    evaluate(readFromTokens(splitStringIntoTokens(eventChange)), globalEnv);
+  }
 
   // Function used to change life points
   void lifePointsDifference(double difference,

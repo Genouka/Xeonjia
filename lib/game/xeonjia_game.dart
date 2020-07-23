@@ -68,6 +68,10 @@ class XeonjiaGame extends BaseGame
   // Map properties
   MapProperties map;
 
+  // Current event log
+  // It is synced with mainCharacter.eventLog while changing room
+  Map<String, dynamic> currentEventLog;
+
   // List of CharacterComponent in game
   List<CharacterComponent> players = [];
 
@@ -93,6 +97,9 @@ class XeonjiaGame extends BaseGame
   // Reset variables and import map data
   void init() async {
     pause();
+
+    // Import mainCharacter.eventLog
+    currentEventLog = mainCharacter.eventLog;
 
     // Reset variables
     timeSinceUpdate = 0;
@@ -321,6 +328,7 @@ class XeonjiaGame extends BaseGame
   void end({bool timeOut = false}) {
     pause();
     if (config.mode == GameMode.story) {
+      mainCharacter.eventLog = currentEventLog;
       mainCharacter.minutesPlayed += elapsedSeconds / 60;
       mainCharacter.movesCounter += playerOne.movesCounter;
       ++mainCharacter.deathCounter;
