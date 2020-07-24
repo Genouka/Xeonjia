@@ -1,6 +1,5 @@
 import 'dart:math';
 import 'package:flame/animation.dart' as flame_animation;
-import 'package:flame/components/component.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 
@@ -174,7 +173,9 @@ abstract class DynamicComponent extends BasicComponent {
         break;
     }
     var components = game.components.where((component) =>
-        component is SpriteComponent && component.toRect().contains(offset));
+        component is BasicComponent &&
+        component.toRect().contains(offset) &&
+        !component.isFlying());
     return components.isNotEmpty ? components.last : null;
   }
 

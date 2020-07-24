@@ -61,8 +61,8 @@ class CharacterComponent extends DynamicComponent
     orientation =
         GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0'));
     _initialOrientation = orientation;
-    friendly = 'true' == tile.properties['friendly'] ?? 'false';
-    quiet = 'true' == tile.properties['quiet'] ?? 'false';
+    friendly = 'true' == (tile.properties['friendly'] ?? 'true');
+    quiet = 'true' == (tile.properties['quiet'] ?? 'true');
     atk = (level + 1).toDouble();
     def = (level ~/ 5).toDouble();
     teamId = team;
