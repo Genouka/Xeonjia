@@ -22,6 +22,7 @@ abstract class BasicComponent extends SpriteComponent {
   // Component image file
   // Not used if it is instantiated by BasicComponent.fromTile()
   String image;
+  double imageY;
 
   // Initial life points
   double initialLifePoints = double.infinity;
@@ -94,12 +95,12 @@ abstract class BasicComponent extends SpriteComponent {
     onCreate();
   }
 
-  BasicComponent(this.startingPosition, this.image, {int imageRow = 0})
+  BasicComponent(this.startingPosition, this.image, {this.imageY = 0})
       : initialLifePoints = double.infinity,
         super.fromSprite(
           componentSize,
           componentSize,
-          Sprite(image, width: 16, height: 16, y: 16.0 * imageRow),
+          Sprite(image, width: 16, height: 16, y: 16.0 * imageY),
         ) {
     onCreate();
   }

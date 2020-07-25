@@ -59,15 +59,18 @@ void importMap(String fileName) async {
         id: int.parse(tile.getAttribute('id')) + firstGid,
         type: tile.getAttribute('type'),
       );
+      newTile.properties['imageY'] =
+          (((newTile.id - firstGid) / columns).floor() * tileHeight);
+      newTile.properties['image'] = tileset
+          .findElements('image')
+          .single
+          .getAttribute('source')
+          .split('../../images/')
+          .last;
       newTile.sprite = Sprite(
-        tileset
-            .findElements('image')
-            .single
-            .getAttribute('source')
-            .split('../../images/')
-            .last,
+        newTile.properties['image'],
         x: ((newTile.id - firstGid) % columns) * tileWidth,
-        y: ((newTile.id - firstGid) / columns).floor() * tileHeight,
+        y: newTile.properties['imageY'],
         width: tileWidth,
         height: tileHeight,
       );

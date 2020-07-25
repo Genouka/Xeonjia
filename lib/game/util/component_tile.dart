@@ -40,6 +40,7 @@ extension CreateComponent on Tile {
               : mainCharacter
                   .visitedRooms[mainCharacter.visitedRooms.length - 2];
           if (_previousRoomId == int.parse(properties['roomId'])) {
+            properties['image'] = 'character.png';
             CharacterComponent(this,
                 isPlayerOne: true,
                 level: mainCharacter.level,
@@ -50,9 +51,12 @@ extension CreateComponent on Tile {
           var _teamId = int.parse(properties['team'] ?? '0');
           if (game.players.where((p) => p.teamId == _teamId).length <
               game.config.teamSize) {
+            var _playerOne = playerOne == null && _teamId == 0;
+            properties['image'] =
+                'character${_playerOne ? '' : '_cpu_$_teamId'}.png';
             CharacterComponent(
               this,
-              isPlayerOne: playerOne == null && _teamId == 0,
+              isPlayerOne: _playerOne,
               team: _teamId,
               level: _teamId * game.config.difficulty,
             );

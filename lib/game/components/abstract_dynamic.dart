@@ -10,8 +10,9 @@ import 'package:xeonjia/models/direction.dart';
 
 // Component able to move on the game field
 abstract class DynamicComponent extends BasicComponent {
-  DynamicComponent(Point startingPosition, String imageName)
-      : super(startingPosition, imageName);
+  DynamicComponent(Point startingPosition, String imageName,
+      {double imageY = 0})
+      : super(startingPosition, imageName, imageY: imageY);
 
   // Constructor used when component is imported from a tmx file
   DynamicComponent.fromTile(tile) : super.fromTile(tile);
@@ -45,8 +46,8 @@ abstract class DynamicComponent extends BasicComponent {
   void onCreate() {
     final size = 16.0;
     Direction.values.forEach((d) {
-      _sprites[d] =
-          Sprite(image, x: d.index * size, y: 0, width: size, height: size);
+      _sprites[d] = Sprite(image,
+          x: d.index * size, y: imageY, width: size, height: size);
       _walkingSprites[d] =
           Sprite(image, x: d.index * size, y: size, width: size, height: size);
       punchSprites[d] = Sprite(image,

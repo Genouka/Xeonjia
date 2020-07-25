@@ -56,8 +56,8 @@ class CharacterComponent extends DynamicComponent
     Map<String, dynamic> jsonWeaponList,
     team = 0,
   })  : initialLifePoints = initialLP ?? (100 + 5 * level).toDouble(),
-        super(
-            tile.position, 'character${isPlayerOne ? '' : '_cpu_$team'}.png') {
+        super(tile.position, tile.properties['image'],
+            imageY: tile.properties['imageY'] ?? 0) {
     orientation =
         GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0'));
     _initialOrientation = orientation;
