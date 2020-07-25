@@ -67,7 +67,7 @@ class CharacterComponent extends DynamicComponent
     def = (level ~/ 5).toDouble();
     teamId = team;
     eventChange = tile.properties['eventChange'] ?? '';
-    action = tile.properties['dialog'] ?? '';
+    action = tile.properties['action'] ?? '';
     // Temporary solution to remedy the functions _cpuMove() and _cpuShoot()
     jsonWeaponList ??=
         (team == 0) ? const {'1': 5, '2': 1} : const {'1': 9, '2': 5};

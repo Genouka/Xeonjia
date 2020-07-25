@@ -81,16 +81,9 @@ abstract class BasicComponent extends SpriteComponent {
   String action = '';
   String eventChange = '';
 
-  @mustCallSuper
-  void playAction(Direction orientation) {
-    if (action == '') return;
-    globalEnv.defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => this));
-    evaluate(readFromTokens(splitStringIntoTokens(action)), globalEnv);
-  }
-
   BasicComponent.fromTile(Tile tile)
       : startingPosition = tile.position,
-        action = tile.properties['dialog'] ?? '',
+        action = tile.properties['action'] ?? '',
         eventChange = tile.properties['eventChange'] ?? '',
         initialLifePoints =
             double.parse(tile.properties['lifePoints'] ?? 'Infinity'),
@@ -123,6 +116,13 @@ abstract class BasicComponent extends SpriteComponent {
     y = startingPosition.y;
     game.addLater(this);
     eventChanged();
+  }
+
+  @mustCallSuper
+  void playAction(Direction orientation) {
+    if (action == '') return;
+    globalEnv.defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => this));
+    evaluate(readFromTokens(splitStringIntoTokens(action)), globalEnv);
   }
 
   // Execute eventChange property
