@@ -75,7 +75,7 @@ void importMap(String fileName) async {
         properties.single.children.forEach((property) {
           if (property.attributes.isNotEmpty) {
             newTile.properties[property.getAttributeNode('name').value] =
-                property.getAttributeNode('value').value;
+                property.getAttributeNode('value')?.value ?? property.text;
           }
         });
       }
@@ -126,7 +126,7 @@ void importMap(String fileName) async {
               .findElements('property')
               .forEach((property) {
             properties[property.getAttributeNode('name').value] =
-                property.getAttributeNode('value').value;
+                property.getAttributeNode('value')?.value ?? property.text;
           });
           Tile(
                   type: object.getAttribute('type'),
