@@ -1,14 +1,14 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
-
+import 'package:flame/components/component.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/services.dart';
-import 'package:xeonjia/models/map_properties.dart';
 import 'package:xml/xml.dart';
 
 import 'package:xeonjia/game/util/component_tile.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/map_properties.dart';
 import 'package:xeonjia/models/tile.dart';
 
 // Import map from a TMX file
@@ -21,6 +21,9 @@ void importMap(String fileName) async {
     width: int.parse(mapXml.getAttribute('width')),
     height: int.parse(mapXml.getAttribute('height')),
   );
+
+  game.addLater(SpriteComponent.fromSprite(game.map.width * componentSize,
+      game.map.height * componentSize, Sprite('background.png')));
 
   var mapProperties = mapXml.findElements('properties');
   // 'Room ${mainCharacter.visitedRooms.last.toString().padLeft(3, '0')}';

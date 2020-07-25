@@ -92,7 +92,7 @@ class XeonjiaGame extends BaseGame
   FlameGamepad gamepad;
 
   @override
-  Color backgroundColor() => const Color(0xFFE1F5FE);
+  Color backgroundColor() => const Color(0xFF777777);
 
   // Reset variables and import map data
   void init() async {
@@ -304,8 +304,10 @@ class XeonjiaGame extends BaseGame
   void updateCamera(double x, double y) {
     camera.x = min(max(0, x - screenSize.width / 2),
         componentSize * (map?.width ?? 0) - screenSize.width);
-    camera.y = min(max(0, y - screenSize.height / 2),
-        componentSize * (map?.height ?? 0) - screenSize.height);
+    camera.y = max(
+        0,
+        min(y - screenSize.height / 2,
+            componentSize * (map?.height ?? 0) - screenSize.height));
   }
 
   // Reload weapon bar
