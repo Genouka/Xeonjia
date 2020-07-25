@@ -42,6 +42,7 @@ Environment globalEnv = (() {
   _('pair?', 1, (Cell x) => x.car is Cell);
   _('null?', 1, (Cell x) => x.car == null);
   _('not', 1, (Cell x) => x.car == false);
+  _('!', 1, (Cell x) => x.car == false);
   _('list', -1, (Cell x) => x);
   _('newline', 0, (Cell x) {
     stdout.writeln();
