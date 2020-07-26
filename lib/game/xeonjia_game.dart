@@ -100,7 +100,7 @@ class XeonjiaGame extends BaseGame
     pause();
 
     // Import mainCharacter.eventLog
-    currentEventLog = mainCharacter.eventLog;
+    currentEventLog = Map.from(mainCharacter.eventLog);
 
     // Reset variables
     timeSinceUpdate = 0;
@@ -333,7 +333,7 @@ class XeonjiaGame extends BaseGame
   void end({bool timeOut = false}) {
     pause();
     if (config.mode == GameMode.story) {
-      mainCharacter.eventLog = currentEventLog;
+      mainCharacter.eventLog = Map.from(currentEventLog);
       mainCharacter.minutesPlayed += elapsedSeconds / 60;
       mainCharacter.movesCounter += playerOne.movesCounter;
       ++mainCharacter.deathCounter;
