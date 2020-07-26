@@ -178,7 +178,7 @@ class XeonjiaGame extends BaseGame
 
   // Show a message in messageBox
   void setMessage(Message message) {
-    if (message != null) _dialogBox.state.setMessages([message]);
+    if (message != null) setMessages([message]);
   }
 
   // Show a list of messages in messageBox
@@ -194,8 +194,7 @@ class XeonjiaGame extends BaseGame
 
     // Save new player data into mainCharacter
     mainCharacter.killedComponents += playerOne.killedEnemies;
-    mainCharacter.doorKeyList.addAll(playerOne.doorKeyList);
-    mainCharacter.objectList.addAll(playerOne.objectList);
+    mainCharacter.objectList = List.from(playerOne.objectList);
     mainCharacter.minutesPlayed += elapsedSeconds / 60;
     mainCharacter.movesCounter += playerOne.movesCounter;
 

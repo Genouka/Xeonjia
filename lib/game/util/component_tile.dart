@@ -20,13 +20,10 @@ extension CreateComponent on Tile {
         BasicStaticComponent(this);
         break;
       case 'Modifier':
-        var _doorId = int.parse(properties['door'] ?? '-1');
         var _objectId = int.parse(properties['objectId'] ?? '-1');
         // Import object only if it is not already owned by the player
         // or if it is not an unique object
-        if ((_doorId == -1 || !mainCharacter.doorKeyList.contains(_doorId)) &&
-            (_objectId == -1 ||
-                !mainCharacter.objectList.contains(_objectId))) {
+        if (_objectId == -1 || !mainCharacter.objectList.contains(_objectId)) {
           ModifierComponent(this);
         }
         break;

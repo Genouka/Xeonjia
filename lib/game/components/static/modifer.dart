@@ -78,7 +78,7 @@ class ModifierComponent extends BasicComponent {
       if (_doorId != -1) {
         componentAbove.doorKeyList.add(_doorId);
       } else if (_objectId != -1) {
-        componentAbove.objectList.add(_objectId);
+        componentAbove.addObject(_objectId);
         game.setMessage(Message('I found a Gem!'));
       }
       if (_regenerable ?? false) game.modifiersToBeRegenerated.add(this);

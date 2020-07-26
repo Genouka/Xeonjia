@@ -9,6 +9,7 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/tile.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 
 // Dynamic component used for human-like players
 class CharacterComponent extends DynamicComponent
@@ -26,7 +27,9 @@ class CharacterComponent extends DynamicComponent
   List<int> doorKeyList = [];
 
   // List of objects owned (eg gems)
-  List<int> objectList = [];
+  // Add/remove items by using addObject() and removeObject()
+  List<int> _objectList = [];
+  List<int> get objectList => _objectList;
 
   // Initial orientation
   Direction _initialOrientation;
@@ -92,6 +95,9 @@ class CharacterComponent extends DynamicComponent
       game.refreshWeaponBar();
       game.refreshLifePointsBar();
       game.updateCamera(x, y);
+      if (game.config.mode == GameMode.story) {
+        _objectList = List.from(mainCharacter.objectList);
+      }
     }
     eventChanged();
   }
@@ -117,6 +123,16 @@ class CharacterComponent extends DynamicComponent
     if (isStationary && !isRespawning) {
       componentInFront()?.playAction(orientation);
     }
+  }
+
+  // Add item to _objectList
+  void addObject(int objectId) {
+    _objectList.add(objectId);
+  }
+
+  // Remove item from _objectList
+  void removeObject(int objectId) {
+    _objectList.remove(objectId);
   }
 
   @override
