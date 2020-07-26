@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:xeonjia/models/item.dart';
 import 'package:xeonjia/models/settings.dart';
 import 'package:xeonjia/models/character_info.dart';
 
@@ -13,6 +15,10 @@ Settings settings;
 // Main character data
 CharacterInfo mainCharacter;
 
+// List of all items
+// itemId : Item info
+Map<int, Item> itemData = {};
+
 // Gamepad position
 Offset gamepadOffset;
 
@@ -21,17 +27,18 @@ Future<void> loadStoredData() async {
   _prefs = await SharedPreferences.getInstance();
   _loadUserData();
   _loadSettings();
+  _loadItems();
 }
 
 // Save user data in shared preferences
 void saveUserData() {
-  _prefs.setString('userData', jsonEncode(mainCharacter.toJson()));
+  _prefs.setString('userData10', jsonEncode(mainCharacter.toJson()));
 }
 
 // Load user data from shared preferences
 void _loadUserData() {
   mainCharacter =
-      CharacterInfo(jsonDecode(_prefs.getString('userData') ?? '{}'));
+      CharacterInfo(jsonDecode(_prefs.getString('userData10') ?? '{}'));
 }
 
 // Save app settings in shared preferences
@@ -50,4 +57,12 @@ void _loadSettings() {
   settings = Settings(jsonDecode(_prefs.getString('settings') ?? '{}'));
   gamepadOffset = Offset(_prefs.getDouble('gamepadOffsetX') ?? 0,
       _prefs.getDouble('gamepadOffsetY') ?? 0);
+}
+
+// Load items from assets
+void _loadItems() async {
+  var data = json.decode(await rootBundle.loadString('assets/data.json'));
+  data['items'].forEach((key, value) {
+    itemData[int.parse(key)] = Item(value);
+  });
 }

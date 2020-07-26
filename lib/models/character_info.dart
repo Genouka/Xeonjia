@@ -40,8 +40,8 @@ class CharacterInfo {
   // A room could be stored more than once in this list
   List<int> visitedRooms;
 
-  // List of objects owned by the character (eg gems)
-  List<int> objectList;
+  // List of items owned by the character
+  List<int> itemList;
 
   // Weapons carried by the character
   // Map structure: {weaponId : weaponLevel}
@@ -78,7 +78,7 @@ class CharacterInfo {
         jsonWeaponList = jsonDecode(json['jsonWeaponList'] ?? '{"0": 0}'),
         jsonAvailableWeaponList =
             jsonDecode(json['jsonAvailableWeaponList'] ?? '{}'),
-        objectList = (json['objectList'] ?? []).cast<int>(),
+        itemList = (json['itemList'] ?? []).cast<int>(),
         totalEarnedMoney = json['totalEarnedMoney'] ?? 0,
         visitedRooms = (json['viewedRooms'] ?? [1]).cast<int>(),
         minutesPlayed = json['minutesPlayed'] ?? 0,
@@ -97,7 +97,7 @@ class CharacterInfo {
       'money': money,
       'jsonWeaponList': jsonEncode(jsonWeaponList),
       'jsonAvailableWeaponList': jsonEncode(jsonAvailableWeaponList),
-      'objectList': objectList,
+      'itemList': itemList,
       'viewedRooms': visitedRooms,
       'totalEarnedMoney': totalEarnedMoney,
       'minutesPlayed': minutesPlayed,

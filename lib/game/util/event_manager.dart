@@ -16,9 +16,9 @@ Environment globalEnv = (() {
   _('life', 0, (Cell x) => playerOne.lifePoints);
   _('move', 1, (Cell x) => (x.car as BasicComponent).x += componentSize);
   _('event-change', 1, (Cell x) => (x.car as BasicComponent).eventChanged());
-  _('has-object', 1, (Cell x) => playerOne.objectList.contains(x.car));
-  _('give-object', 1, (Cell x) => playerOne.addObject(x.car));
-  _('take-object', 1, (Cell x) => playerOne.removeObject(x.car));
+  _('has-item', 1, (Cell x) => playerOne.itemList.contains(x.car));
+  _('give-item', 1, (Cell x) => playerOne.addItem(x.car));
+  _('take-item', 1, (Cell x) => playerOne.removeItem(x.car));
   _('dialog', 1, (Cell x) {
     game.setMessage(Message(stringify(x.car, false)));
     return #NONE;

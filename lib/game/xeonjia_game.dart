@@ -194,7 +194,7 @@ class XeonjiaGame extends BaseGame
 
     // Save new player data into mainCharacter
     mainCharacter.killedComponents += playerOne.killedEnemies;
-    mainCharacter.objectList = List.from(playerOne.objectList);
+    mainCharacter.itemList = List.from(playerOne.itemList);
     mainCharacter.minutesPlayed += elapsedSeconds / 60;
     mainCharacter.movesCounter += playerOne.movesCounter;
 

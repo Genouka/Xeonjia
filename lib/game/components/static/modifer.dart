@@ -17,9 +17,9 @@ class ModifierComponent extends BasicComponent {
   int _powerPointsDelta = 0;
   double _poisonDelta = 0;
 
-  // Object unique id
-  // It is != 0 only if this is an unique object
-  int _objectId = -1;
+  // Item unique id
+  // It is != 0 only if this is an unique item
+  int _itemId = -1;
 
   // Door opened by this component
   // Door ID is equal to the next room ID
@@ -45,7 +45,7 @@ class ModifierComponent extends BasicComponent {
             int.parse(tile.properties['powerPointsDelta'] ?? '0'),
         _poisonDelta = double.parse(tile.properties['poisonDelta'] ?? '0'),
         _doorId = int.parse(tile.properties['door'] ?? '-1'),
-        _objectId = int.parse(tile.properties['objectId'] ?? '-1'),
+        _itemId = int.parse(tile.properties['itemId'] ?? '-1'),
         _regenerable = (tile.properties['regenerable'] ?? 'false') == 'true',
         super.fromTile(tile);
 
@@ -77,8 +77,8 @@ class ModifierComponent extends BasicComponent {
       }
       if (_doorId != -1) {
         componentAbove.doorKeyList.add(_doorId);
-      } else if (_objectId != -1) {
-        componentAbove.addObject(_objectId);
+      } else if (_itemId != -1) {
+        componentAbove.addItem(_itemId);
         game.setMessage(Message('I found a Gem!'));
       }
       if (_regenerable ?? false) game.modifiersToBeRegenerated.add(this);

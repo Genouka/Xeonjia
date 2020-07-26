@@ -33,7 +33,7 @@ List<Map<String, dynamic>> statsListGenerator() => [
       {
         'title': 'Gems owned',
         'subtitle': 'Total number of gems owned',
-        'value': mainCharacter.objectList.length,
+        'value': mainCharacter.itemList.length,
       },
       {
         'title': 'Defeats',

@@ -27,10 +27,10 @@ class CharacterComponent extends DynamicComponent
   // List of door keys owned
   List<int> doorKeyList = [];
 
-  // List of objects owned (eg gems)
-  // Add/remove items by using addObject() and removeObject()
-  List<int> _objectList = [];
-  List<int> get objectList => _objectList;
+  // List of items owned
+  // Add/remove items by using addItem() and removeItem()
+  List<int> _itemList = [];
+  List<int> get itemList => _itemList;
 
   // Initial orientation
   Direction _initialOrientation;
@@ -97,7 +97,7 @@ class CharacterComponent extends DynamicComponent
       game.refreshLifePointsBar();
       game.updateCamera(x, y);
       if (game.config.mode == GameMode.story) {
-        _objectList = List.from(mainCharacter.objectList);
+        _itemList = List.from(mainCharacter.itemList);
       }
     }
     eventChanged();
@@ -126,19 +126,19 @@ class CharacterComponent extends DynamicComponent
     }
   }
 
-  // Add item to _objectList
-  void addObject(int objectId) {
-    _objectList.add(objectId);
+  // Add item to _itemList
+  void addItem(int itemId) {
+    _itemList.add(itemId);
     if (this == playerOne) {
-      game.setMessage(Message('* You received an object *'));
+      game.setMessage(Message('* You received ${itemData[itemId].name} *'));
     }
   }
 
-  // Remove item from _objectList
-  void removeObject(int objectId) {
-    _objectList.remove(objectId);
+  // Remove item from _itemList
+  void removeItem(int itemId) {
+    _itemList.remove(itemId);
     if (this == playerOne) {
-      game.setMessage(Message('* You gave an object *'));
+      game.setMessage(Message('* You gave ${itemData[itemId].name} *'));
     }
   }
 
