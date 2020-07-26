@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/util/little_scheme.dart';
 
 // Scheme's global environment
@@ -19,7 +20,17 @@ Environment globalEnv = (() {
   _('give-object', 1, (Cell x) => playerOne.objectList.add(x.car));
   _('take-object', 1, (Cell x) => playerOne.objectList.remove(x.car));
   _('dialog', 1, (Cell x) {
-    game.message = stringify(x.car, false);
+    game.setMessage(Message(stringify(x.car, false)));
+    return #NONE;
+  });
+  _('dialogs', 1, (Cell x) {
+    var dialogs = <Message>[];
+    var it = (x.car as Cell).iterator;
+    while (it.moveNext()) {
+      dialogs
+          .add(Message((it.current as Cell).cdr.car, (it.current as Cell).car));
+    }
+    game.setMessages(dialogs);
     return #NONE;
   });
   _(

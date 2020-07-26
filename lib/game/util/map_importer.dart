@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flame/components/component.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/services.dart';
+import 'package:xeonjia/models/message.dart';
 import 'package:xml/xml.dart';
 
 import 'package:xeonjia/game/util/component_tile.dart';
@@ -31,7 +32,7 @@ void importMap(String fileName) async {
     mapProperties.single.children.forEach((property) {
       if (property.attributes.isNotEmpty &&
           property.attributes[0].value == 'message') {
-        game.map.message = property.attributes[1].value;
+        game.map.message = Message(property.attributes[1].value);
       }
     });
   }

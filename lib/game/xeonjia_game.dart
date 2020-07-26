@@ -11,13 +11,14 @@ import 'package:xeonjia/game/util/gamepad.dart';
 import 'package:xeonjia/game/util/map_importer.dart';
 import 'package:xeonjia/game/widgets_overlay/end_menu.dart';
 import 'package:xeonjia/game/widgets_overlay/info_box.dart';
-import 'package:xeonjia/game/widgets_overlay/message_box.dart';
+import 'package:xeonjia/game/widgets_overlay/dialog_box.dart';
 import 'package:xeonjia/game/widgets_overlay/pause_menu.dart';
 import 'package:xeonjia/game/widgets_overlay/virtual_gamepad.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/map_properties.dart';
 import 'package:xeonjia/models/match_config.dart';
+import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/team.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
@@ -48,8 +49,8 @@ class XeonjiaGame extends BaseGame
     init();
   }
 
-  // Message box
-  final _messageBox = MessageBox();
+  // Dialog box
+  final _dialogBox = DialogBox();
 
   // Box with lifePoints, pause, time and team points
   final _infoBox = InfoBox();
@@ -125,10 +126,10 @@ class XeonjiaGame extends BaseGame
         : 'arena/${config.mapId}';
     await importMap('assets/maps/' + _map + '.tmx');
 
-    game._messageBox.state.message = game.map.message;
+    setMessage(map.message);
     initGamepad();
     addWidgetOverlay('gamePad', VirtualGamePad());
-    addWidgetOverlay('messageBox', _messageBox);
+    addWidgetOverlay('messageBox', _dialogBox);
     addWidgetOverlay('infoBox', _infoBox);
 
     _timer = Timer(1, repeat: true, callback: () {
@@ -175,13 +176,15 @@ class XeonjiaGame extends BaseGame
     resumeEngine();
   }
 
-  // Show message in messageBox
-  set message(String message) {
-    _messageBox.state.message = message;
+  // Show a message in messageBox
+  void setMessage(Message message) {
+    if (message != null) _dialogBox.state.setMessages([message]);
   }
 
-  // Get shown message
-  String get message => _messageBox.state.message;
+  // Show a list of messages in messageBox
+  void setMessages(List<Message> messages) {
+    _dialogBox.state.setMessages(messages);
+  }
 
   // Save match data and load the new room
   void changeRoom(int nextRoomId) {
@@ -245,8 +248,8 @@ class XeonjiaGame extends BaseGame
 
   @override
   void onTapDown(TapDownDetails details) {
-    if (_messageBox.state.message != null) {
-      _messageBox.state.dismiss();
+    if (_dialogBox.state.active) {
+      _dialogBox.state.next();
       return;
     }
     if (settings.inputMethod != 1) gestureTapInput(details.globalPosition);

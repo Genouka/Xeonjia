@@ -4,6 +4,7 @@ import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/animated_component.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/message.dart';
 
 // Stats modifier component
 // It increases/decreases character stats
@@ -72,13 +73,13 @@ class ModifierComponent extends BasicComponent {
       componentAbove.selectedWeapon.powerPoints += _powerPointsDelta;
       if (_powerPointsDelta != 0) game.refreshWeaponBar();
       if (_moneyDelta != 0 && componentAbove == playerOne) {
-        game.message = '+ $_moneyDelta \$';
+        game.setMessage(Message('+ $_moneyDelta \$'));
       }
       if (_doorId != -1) {
         componentAbove.doorKeyList.add(_doorId);
       } else if (_objectId != -1) {
         componentAbove.objectList.add(_objectId);
-        game.message = 'I found a Gem!';
+        game.setMessage(Message('I found a Gem!'));
       }
       if (_regenerable ?? false) game.modifiersToBeRegenerated.add(this);
       if (explosionOnDelete) {
