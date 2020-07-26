@@ -24,13 +24,11 @@ Environment globalEnv = (() {
     return #NONE;
   });
   _('dialogs', 1, (Cell x) {
-    var dialogs = <Message>[];
     var it = (x.car as Cell).iterator;
     while (it.moveNext()) {
-      dialogs
-          .add(Message((it.current as Cell).cdr.car, (it.current as Cell).car));
+      game.setMessage(
+          Message((it.current as Cell).cdr.car, (it.current as Cell).car));
     }
-    game.setMessages(dialogs);
     return #NONE;
   });
   _(

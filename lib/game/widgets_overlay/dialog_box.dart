@@ -13,24 +13,20 @@ class DialogBox extends StatefulWidget {
 
 class _DialogBoxState extends State<DialogBox> {
   // Messages to show
-  List<Message> _messages;
+  List<Message> _messages = [];
 
   // Message currently displayed
   int _currentIndex;
   Message get currentMessage => active ? _messages[_currentIndex] : null;
 
   // True if this dialog box is visible
-  bool get active => _messages != null;
+  bool get active => _messages.isNotEmpty;
 
   // Show one or more messages
   void setMessages(List<Message> newMessages) {
     if (newMessages == null) return;
-    if (_messages?.isNotEmpty ?? false) {
-      _messages.insertAll(_currentIndex, newMessages);
-    } else {
-      _messages = newMessages;
-      _currentIndex = 0;
-    }
+    _messages.addAll(newMessages);
+    _currentIndex = 0;
     if (mounted) setState(() {});
     game.pause();
   }
@@ -38,7 +34,7 @@ class _DialogBoxState extends State<DialogBox> {
   // Show the next message or hide dialog box if there are no message to show
   void next() {
     if (++_currentIndex >= (_messages?.length ?? 0)) {
-      _messages = null;
+      _messages = [];
       game.resume();
     }
     if (mounted) setState(() {});
