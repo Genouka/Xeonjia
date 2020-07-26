@@ -8,6 +8,7 @@ import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
+import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/tile.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
@@ -128,11 +129,17 @@ class CharacterComponent extends DynamicComponent
   // Add item to _objectList
   void addObject(int objectId) {
     _objectList.add(objectId);
+    if (this == playerOne) {
+      game.setMessage(Message('* You received an object *'));
+    }
   }
 
   // Remove item from _objectList
   void removeObject(int objectId) {
     _objectList.remove(objectId);
+    if (this == playerOne) {
+      game.setMessage(Message('* You gave an object *'));
+    }
   }
 
   @override

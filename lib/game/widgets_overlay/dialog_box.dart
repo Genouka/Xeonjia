@@ -25,8 +25,12 @@ class _DialogBoxState extends State<DialogBox> {
   // Show one or more messages
   void setMessages(List<Message> newMessages) {
     if (newMessages == null) return;
-    _messages = newMessages;
-    _currentIndex = 0;
+    if (_messages?.isNotEmpty ?? false) {
+      _messages.insertAll(_currentIndex, newMessages);
+    } else {
+      _messages = newMessages;
+      _currentIndex = 0;
+    }
     if (mounted) setState(() {});
     game.pause();
   }
