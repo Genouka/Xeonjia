@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
+import 'package:xeonjia/game/util/event_manager.dart';
 import 'package:xeonjia/game/util/gamepad.dart';
 import 'package:xeonjia/game/util/map_importer.dart';
 import 'package:xeonjia/game/widgets_overlay/end_menu.dart';
@@ -20,6 +21,7 @@ import 'package:xeonjia/models/map_properties.dart';
 import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/team.dart';
+import 'package:xeonjia/util/little_scheme.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
 
@@ -126,7 +128,7 @@ class XeonjiaGame extends BaseGame
         : 'arena/${config.mapId}';
     await importMap('assets/maps/' + _map + '.tmx');
 
-    setMessage(map.message);
+    evaluate(readFromTokens(splitStringIntoTokens(map.action)), globalEnv);
     initGamepad();
     addWidgetOverlay('gamePad', VirtualGamePad());
     addWidgetOverlay('messageBox', _dialogBox);

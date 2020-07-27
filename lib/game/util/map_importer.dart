@@ -4,7 +4,6 @@ import 'dart:math';
 import 'package:flame/components/component.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/services.dart';
-import 'package:xeonjia/models/message.dart';
 import 'package:xml/xml.dart';
 
 import 'package:xeonjia/game/util/component_tile.dart';
@@ -23,16 +22,17 @@ void importMap(String fileName) async {
     height: int.parse(mapXml.getAttribute('height')),
   );
 
+  // Add map background
   game.addLater(SpriteComponent.fromSprite(game.map.width * componentSize,
       game.map.height * componentSize, Sprite('background.png')));
 
   var mapProperties = mapXml.findElements('properties');
-  // 'Room ${mainCharacter.visitedRooms.last.toString().padLeft(3, '0')}';
   if (mapProperties.isNotEmpty) {
     mapProperties.single.children.forEach((property) {
       if (property.attributes.isNotEmpty &&
-          property.attributes[0].value == 'message') {
-        game.map.message = Message(property.attributes[1].value);
+          property.getAttributeNode('name').value == 'action') {
+        game.map.action =
+            property.getAttributeNode('value')?.value ?? property.text;
       }
     });
   }

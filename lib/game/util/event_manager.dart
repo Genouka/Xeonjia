@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
+import 'package:xeonjia/game/widgets_overlay/map_box.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/util/little_scheme.dart';
@@ -40,6 +41,13 @@ Environment globalEnv = (() {
   );
   _('set', 2, (Cell x) {
     game.currentEventLog[x.car.toString()] = x.cdr.car;
+    return #NONE;
+  });
+  _('map-name', 1, (Cell x) {
+    game.addWidgetOverlay('MapBox', MapBox(stringify(x.car, false)));
+    Future.delayed(const Duration(seconds: 3), () {
+      game.removeWidgetOverlay('MapBox');
+    });
     return #NONE;
   });
 
