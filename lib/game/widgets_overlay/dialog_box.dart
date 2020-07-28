@@ -22,9 +22,14 @@ class _DialogBoxState extends State<DialogBox> {
   // True if this dialog box is visible
   bool get active => _messages.isNotEmpty;
 
+  // If true, hide the map with a black container
+  // eg. it is used for chapter change
+  bool _hideMap;
+
   // Show one or more messages
-  void setMessages(List<Message> newMessages) {
+  void setMessages(List<Message> newMessages, {bool hideMap = false}) {
     if (newMessages == null) return;
+    _hideMap = hideMap;
     _messages.addAll(newMessages);
     _currentIndex = 0;
     if (mounted) setState(() {});
@@ -44,33 +49,38 @@ class _DialogBoxState extends State<DialogBox> {
   Widget build(BuildContext context) {
     return Visibility(
       visible: active,
-      child: Positioned(
-        bottom: 0,
-        child: InkWell(
-          onTap: next,
-          child: Container(
-            margin: const EdgeInsets.all(20),
-            padding: const EdgeInsets.all(20),
-            width: screenSize.width - 40,
-            height: 140,
-            decoration: BoxDecoration(
-                color: Colors.grey[800],
-                borderRadius: const BorderRadius.all(Radius.circular(10))),
-            child: ListTile(
-              leading: currentMessage?.image != null
-                  ? CircleAvatar(child: Image.asset(currentMessage?.image))
-                  : null,
-              title: Text(
-                (currentMessage?.authorName ?? '') + ':',
-                style: const TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.w800),
-              ),
-              subtitle: Text(
-                currentMessage?.text ?? '',
-                style: const TextStyle(fontSize: 20, color: Colors.white),
+      child: InkWell(
+        onTap: next,
+        child: Stack(
+          children: [
+            if (_hideMap ?? false) Container(color: Colors.black),
+            Positioned(
+              bottom: 0,
+              child: Container(
+                margin: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
+                width: screenSize.width - 40,
+                height: 140,
+                decoration: BoxDecoration(
+                    color: Colors.grey[800],
+                    borderRadius: const BorderRadius.all(Radius.circular(10))),
+                child: ListTile(
+                  leading: currentMessage?.image != null
+                      ? CircleAvatar(child: Image.asset(currentMessage?.image))
+                      : null,
+                  title: Text(
+                    (currentMessage?.authorName ?? '') + ':',
+                    style: const TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w800),
+                  ),
+                  subtitle: Text(
+                    currentMessage?.text ?? '',
+                    style: const TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ),
               ),
             ),
-          ),
+          ],
         ),
       ),
     );

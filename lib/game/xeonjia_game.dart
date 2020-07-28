@@ -128,7 +128,6 @@ class XeonjiaGame extends BaseGame
         : 'arena/${config.mapId}';
     await importMap('assets/maps/' + _map + '.tmx');
 
-    evaluate(readFromTokens(splitStringIntoTokens(map.action)), globalEnv);
     initGamepad();
     addWidgetOverlay('gamePad', VirtualGamePad());
     addWidgetOverlay('messageBox', _dialogBox);
@@ -144,6 +143,9 @@ class XeonjiaGame extends BaseGame
     });
     _timer.start();
     resume();
+    if (map.action != null) {
+      evaluate(readFromTokens(splitStringIntoTokens(map.action)), globalEnv);
+    }
   }
 
   @override
@@ -179,13 +181,13 @@ class XeonjiaGame extends BaseGame
   }
 
   // Show a message in messageBox
-  void setMessage(Message message) {
-    if (message != null) setMessages([message]);
+  void setMessage(Message message, {bool hideMap}) {
+    if (message != null) setMessages([message], hideMap: hideMap);
   }
 
   // Show a list of messages in messageBox
-  void setMessages(List<Message> messages) {
-    _dialogBox.state.setMessages(messages);
+  void setMessages(List<Message> messages, {bool hideMap = false}) {
+    _dialogBox.state.setMessages(messages, hideMap: hideMap);
   }
 
   // Save match data and load the new room

@@ -5,6 +5,7 @@ import 'package:xeonjia/game/widgets_overlay/map_box.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/util/little_scheme.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 
 // Scheme's global environment
 Environment globalEnv = (() {
@@ -15,6 +16,7 @@ Environment globalEnv = (() {
 
   // Game procedures
   _('life', 0, (Cell x) => playerOne.lifePoints);
+  _('place-visited', 0, (Cell x) => mainCharacter?.visitedRooms?.length ?? 0);
   _('move', 1, (Cell x) => (x.car as BasicComponent).x += componentSize);
   _('event-change', 1, (Cell x) => (x.car as BasicComponent).eventChanged());
   _('has-item', 1, (Cell x) => playerOne.itemList.contains(x.car));
@@ -22,6 +24,10 @@ Environment globalEnv = (() {
   _('take-item', 1, (Cell x) => playerOne.removeItem(x.car));
   _('dialog', 1, (Cell x) {
     game.setMessage(Message(stringify(x.car, false)));
+    return #NONE;
+  });
+  _('story-dialog', 1, (Cell x) {
+    game.setMessage(Message(stringify(x.car, false)), hideMap: true);
     return #NONE;
   });
   _('dialogs', 1, (Cell x) {
@@ -75,6 +81,7 @@ Environment globalEnv = (() {
   _('-', 2, (Cell x) => subtract(x.car, x.cdr.car));
   _('*', 2, (Cell x) => multiply(x.car, x.cdr.car));
   _('<', 2, (Cell x) => compare(x.car, x.cdr.car) < 0);
+  _('>', 2, (Cell x) => compare(x.car, x.cdr.car) > 0);
   _('=', 2, (Cell x) => compare(x.car, x.cdr.car) == 0);
   _('number?', 1, (Cell x) => isNumber(x.car));
   _('error', 2, (Cell x) => throw ErrorException(x.car, x.cdr.car));
