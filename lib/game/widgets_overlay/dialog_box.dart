@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/message.dart';
@@ -30,10 +31,28 @@ class _DialogBoxState extends State<DialogBox> {
   void setMessages(List<Message> newMessages, {bool hideMap = false}) {
     if (newMessages == null) return;
     _hideMap = hideMap;
-    _messages.addAll(newMessages);
+    _messages.addAll(newMessages.fold([], (previousValue, element) {
+      (previousValue as List<Message>).addAll(_splitMessage(element));
+      return previousValue;
+    }));
     _currentIndex = 0;
     if (mounted) setState(() {});
     game.pause();
+  }
+
+  // Split message in sentences and group them
+  List<Message> _splitMessage(Message message) {
+    var strings = <String>[];
+    RegExp(r"(\w|\s|')+[.,?!]*\s*").allMatches(message.text).forEach((m) {
+      var match = m.group(0);
+      (strings.isNotEmpty && strings.last.length + match.length < 90)
+          ? strings.last += match
+          : strings.add(match);
+    });
+    return strings.fold([], (previousValue, element) {
+      previousValue.add(Message(element, message.authorName));
+      return previousValue;
+    });
   }
 
   // Show the next message or hide dialog box if there are no message to show
@@ -60,7 +79,7 @@ class _DialogBoxState extends State<DialogBox> {
                 margin: const EdgeInsets.all(20),
                 padding: const EdgeInsets.all(20),
                 width: screenSize.width - 40,
-                height: 140,
+                height: 180,
                 decoration: BoxDecoration(
                     color: Colors.grey[800],
                     borderRadius: const BorderRadius.all(Radius.circular(10))),
