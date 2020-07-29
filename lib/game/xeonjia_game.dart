@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/util/event_manager.dart';
-import 'package:xeonjia/game/util/gamepad.dart';
 import 'package:xeonjia/game/util/map_importer.dart';
+import 'package:xeonjia/game/util/wireless_gamepad.dart';
 import 'package:xeonjia/game/widgets_overlay/end_menu.dart';
 import 'package:xeonjia/game/widgets_overlay/info_box.dart';
 import 'package:xeonjia/game/widgets_overlay/dialog_box.dart';
@@ -213,6 +213,56 @@ class XeonjiaGame extends BaseGame
     init();
   }
 
+  // Regenerate regenerable modifiers
+  void regenerateModifiers() {
+    modifiersToBeRegenerated.forEach((modifier) {
+      modifier.remove = false;
+      components.add(modifier);
+    });
+    modifiersToBeRegenerated.clear();
+  }
+
+  // Update camera position
+  void updateCamera(double x, double y) {
+    camera.x = min(max(0, x - screenSize.width / 2),
+        componentSize * (map?.width ?? 0) - screenSize.width);
+    camera.y = max(
+        0,
+        min(y - screenSize.height / 2,
+            componentSize * (map?.height ?? 0) - screenSize.height));
+  }
+
+  // Reload weapon bar
+  void refreshWeaponBar() {}
+
+  // Reload LP bar
+  void refreshLifePointsBar() {
+    _infoBox.state.refresh();
+  }
+
+  // Check if someone won
+  void checkMatchStatus() {
+    if (teams.first.points >= config.maxPoints ||
+        teams.last.points >= config.maxPoints) {
+      end();
+    }
+  }
+
+  // End of the game (defeat in single player or end match in multiplayer)
+  void end({bool timeOut = false}) {
+    pause();
+    if (config.mode == GameMode.story) {
+      mainCharacter.minutesPlayed += elapsedSeconds / 60;
+      mainCharacter.movesCounter += playerOne.movesCounter;
+      ++mainCharacter.deathCounter;
+      mainCharacter.lifePoints = playerOne.initialLifePoints;
+      mainCharacter.money -= mainCharacter.visitedRooms.last * 10;
+      if (mainCharacter.money < 0) mainCharacter.money = 0;
+      saveUserData();
+    }
+    addWidgetOverlay('endMenu', EndMenu());
+  }
+
   Offset _panGestureOffset;
 
   @override
@@ -282,105 +332,8 @@ class XeonjiaGame extends BaseGame
     playerOne.shoot();
   }
 
-  // Regenerate regenerable modifiers
-  void regenerateModifiers() {
-    modifiersToBeRegenerated.forEach((modifier) {
-      modifier.remove = false;
-      components.add(modifier);
-    });
-    modifiersToBeRegenerated.clear();
-  }
-
-  // Update camera position
-  void updateCamera(double x, double y) {
-    camera.x = min(max(0, x - screenSize.width / 2),
-        componentSize * (map?.width ?? 0) - screenSize.width);
-    camera.y = max(
-        0,
-        min(y - screenSize.height / 2,
-            componentSize * (map?.height ?? 0) - screenSize.height));
-  }
-
-  // Reload weapon bar
-  void refreshWeaponBar() {}
-
-  // Reload LP bar
-  void refreshLifePointsBar() {
-    _infoBox.state.refresh();
-  }
-
-  // Check if someone won
-  void checkMatchStatus() {
-    if (teams.first.points >= config.maxPoints ||
-        teams.last.points >= config.maxPoints) {
-      end();
-    }
-  }
-
-  // End of the game (defeat in single player or end match in multiplayer)
-  void end({bool timeOut = false}) {
-    pause();
-    if (config.mode == GameMode.story) {
-      mainCharacter.minutesPlayed += elapsedSeconds / 60;
-      mainCharacter.movesCounter += playerOne.movesCounter;
-      ++mainCharacter.deathCounter;
-      mainCharacter.lifePoints = playerOne.initialLifePoints;
-      mainCharacter.money -= mainCharacter.visitedRooms.last * 10;
-      if (mainCharacter.money < 0) mainCharacter.money = 0;
-      saveUserData();
-    }
-    addWidgetOverlay('endMenu', EndMenu());
-  }
-
   void dispose() {
     gamepad.removeListener();
     game = null;
-  }
-
-  // Initialize wireless gamepad listener
-  void initGamepad() async {
-    gamepad = FlameGamepad()
-      ..setListener((evtType, key) {
-        switch (key) {
-          case GAMEPAD_DPAD_UP:
-            gestureDragInput(Direction.up);
-            break;
-          case GAMEPAD_DPAD_DOWN:
-            gestureDragInput(Direction.down);
-            break;
-          case GAMEPAD_DPAD_RIGHT:
-            gestureDragInput(Direction.right);
-            break;
-          case GAMEPAD_DPAD_LEFT:
-            gestureDragInput(Direction.left);
-            break;
-          case GAMEPAD_BUTTON_A:
-            playerOne.shoot();
-            break;
-          case GAMEPAD_BUTTON_B:
-            playerOne.shoot();
-            break;
-          case GAMEPAD_BUTTON_X:
-            playerOne.shoot();
-            break;
-          case GAMEPAD_BUTTON_Y:
-            playerOne.shoot();
-            break;
-          case GAMEPAD_BUTTON_L1:
-            playerOne.nextWeapon();
-            break;
-          case GAMEPAD_BUTTON_L2:
-            playerOne.nextWeapon();
-            break;
-          case GAMEPAD_BUTTON_R1:
-            playerOne.nextWeapon();
-            break;
-          case GAMEPAD_BUTTON_R2:
-            playerOne.nextWeapon();
-            break;
-          case GAMEPAD_BUTTON_START:
-            break;
-        }
-      });
   }
 }

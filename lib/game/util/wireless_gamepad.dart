@@ -1,4 +1,58 @@
-// flame_gamepad
+import 'package:flutter/services.dart';
+
+import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/direction.dart';
+
+// Manage a wireless gamepad
+extension WirelessGamepad on XeonjiaGame {
+  void initGamepad() async {
+    gamepad ??= (FlameGamepad()
+      ..setListener((evtType, key) {
+        switch (key) {
+          case GAMEPAD_DPAD_UP:
+            gestureDragInput(Direction.up);
+            break;
+          case GAMEPAD_DPAD_DOWN:
+            gestureDragInput(Direction.down);
+            break;
+          case GAMEPAD_DPAD_RIGHT:
+            gestureDragInput(Direction.right);
+            break;
+          case GAMEPAD_DPAD_LEFT:
+            gestureDragInput(Direction.left);
+            break;
+          case GAMEPAD_BUTTON_A:
+            playerOne.shoot();
+            break;
+          case GAMEPAD_BUTTON_B:
+            playerOne.shoot();
+            break;
+          case GAMEPAD_BUTTON_X:
+            playerOne.shoot();
+            break;
+          case GAMEPAD_BUTTON_Y:
+            playerOne.shoot();
+            break;
+          case GAMEPAD_BUTTON_L1:
+            playerOne.nextWeapon();
+            break;
+          case GAMEPAD_BUTTON_L2:
+            playerOne.nextWeapon();
+            break;
+          case GAMEPAD_BUTTON_R1:
+            playerOne.nextWeapon();
+            break;
+          case GAMEPAD_BUTTON_R2:
+            playerOne.nextWeapon();
+            break;
+          case GAMEPAD_BUTTON_START:
+            break;
+        }
+      }));
+  }
+}
+
+// flame_gamepad (edited)
 // Original repo: https://github.com/flame-engine/flame_gamepad/
 
 /* MIT License
@@ -23,9 +77,6 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 * SOFTWARE.
 */
-
-import 'dart:async';
-import 'package:flutter/services.dart';
 
 const GAMEPAD_BUTTON_UP = 'UP';
 const GAMEPAD_BUTTON_DOWN = 'DOWN';
@@ -88,9 +139,7 @@ class FlameGamepad {
         var androidEvent = e.data as RawKeyEventDataAndroid;
 
         var key = ANDROID_MAPPING[androidEvent.keyCode];
-        if (key != null) {
-          gamepadListener(evtType, key);
-        }
+        if (key != null) gamepadListener(evtType, key);
       }
     };
     RawKeyboard.instance.addListener(listener);
