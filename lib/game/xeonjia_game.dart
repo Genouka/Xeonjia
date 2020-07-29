@@ -193,37 +193,20 @@ class XeonjiaGame extends BaseGame
   // Save match data and load the new room
   void changeRoom(int nextRoomId) {
     pause();
-    var _levelUp = false;
-    var _isNewRoom = true;
 
     // Save new player data into mainCharacter
-    mainCharacter.eventLog = Map.from(currentEventLog);
     mainCharacter.killedComponents += playerOne.killedEnemies;
-    mainCharacter.itemList = List.from(playerOne.itemList);
     mainCharacter.minutesPlayed += elapsedSeconds / 60;
     mainCharacter.movesCounter += playerOne.movesCounter;
-
-    // If the room hasn't been already visited, increase exp points and money
-    for (var i = 0; i < mainCharacter.visitedRooms.length - 1; i++) {
-      if (mainCharacter.visitedRooms[i] == mainCharacter.visitedRooms.last &&
-          mainCharacter.visitedRooms[i + 1] == nextRoomId) {
-        _isNewRoom = false;
-        break;
-      }
-    }
-    if (_isNewRoom) {
-      _levelUp =
-          mainCharacter.expGained(playerOne.experiencePoints + nextRoomId);
-      mainCharacter.money += playerOne.earnedMoney;
-      mainCharacter.totalEarnedMoney += playerOne.earnedMoney;
-    }
-
+    mainCharacter.money += playerOne.earnedMoney;
+    mainCharacter.totalEarnedMoney += playerOne.earnedMoney;
     mainCharacter.visitedRooms.add(nextRoomId);
+    mainCharacter.expGained(playerOne.experiencePoints +
+        currentEventLog.length -
+        mainCharacter.eventLog.length * nextRoomId);
+    mainCharacter.eventLog = Map.from(currentEventLog);
+    mainCharacter.itemList = List.from(playerOne.itemList);
     saveUserData();
-
-    if (_levelUp) {
-      // print('Level Up!');
-    }
 
     // Start a new game
     init();
