@@ -195,6 +195,7 @@ class XeonjiaGame extends BaseGame
     pause();
 
     // Save new player data into mainCharacter
+    mainCharacter.lifePoints = playerOne.lifePoints;
     mainCharacter.killedComponents += playerOne.killedEnemies;
     mainCharacter.minutesPlayed += elapsedSeconds / 60;
     mainCharacter.movesCounter += playerOne.movesCounter;
@@ -323,6 +324,7 @@ class XeonjiaGame extends BaseGame
       mainCharacter.minutesPlayed += elapsedSeconds / 60;
       mainCharacter.movesCounter += playerOne.movesCounter;
       ++mainCharacter.deathCounter;
+      mainCharacter.lifePoints = playerOne.initialLifePoints;
       mainCharacter.money -= mainCharacter.visitedRooms.last * 10;
       if (mainCharacter.money < 0) mainCharacter.money = 0;
       saveUserData();

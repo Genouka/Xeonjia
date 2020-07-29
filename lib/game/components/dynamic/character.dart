@@ -93,6 +93,7 @@ class CharacterComponent extends DynamicComponent
     game.players.add(this);
     if (isPlayerOne) {
       playerOne = this;
+      status(mainCharacter.lifePoints, mainCharacter.poisonQuantity);
       game.refreshWeaponBar();
       game.refreshLifePointsBar();
       game.updateCamera(x, y);

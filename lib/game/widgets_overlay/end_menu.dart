@@ -7,7 +7,7 @@ class EndMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String title;
-    String content;
+    var content = '';
     List<Widget> actions;
     actions = [
       FlatButton(

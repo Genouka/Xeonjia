@@ -11,6 +11,10 @@ class CharacterInfo {
   // Character level
   int level;
 
+  // Player current status
+  double lifePoints;
+  double poisonQuantity;
+
   // Experience points
   int _experiencePoints;
 
@@ -74,6 +78,8 @@ class CharacterInfo {
         imageName = json['imageName'] ?? 'character-1.png',
         eventLog = jsonDecode(json['eventLog'] ?? '{}'),
         level = json['level'] ?? 0,
+        lifePoints = json['lifePoints'] ?? 0,
+        poisonQuantity = json['poisonQuantity'] ?? 0,
         money = json['money'] ?? 0,
         jsonWeaponList = jsonDecode(json['jsonWeaponList'] ?? '{"0": 0}'),
         jsonAvailableWeaponList =
@@ -94,6 +100,8 @@ class CharacterInfo {
       'name': name,
       'imageName': imageName,
       'level': level,
+      'lifePoints': lifePoints,
+      'poisonQuantity': poisonQuantity,
       'money': money,
       'jsonWeaponList': jsonEncode(jsonWeaponList),
       'jsonAvailableWeaponList': jsonEncode(jsonAvailableWeaponList),

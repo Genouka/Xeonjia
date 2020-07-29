@@ -133,6 +133,12 @@ abstract class BasicComponent extends SpriteComponent {
     evaluate(readFromTokens(splitStringIntoTokens(eventChange)), globalEnv);
   }
 
+  // Update LP and poison quantity
+  void status(double lifePoints, double poison) {
+    _lifePoints = lifePoints;
+    poison = poison;
+  }
+
   // Function used to change life points
   void lifePointsDifference(double difference,
       {BasicComponent cause, double poison = 0}) {
