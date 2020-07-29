@@ -197,6 +197,7 @@ class XeonjiaGame extends BaseGame
     var _isNewRoom = true;
 
     // Save new player data into mainCharacter
+    mainCharacter.eventLog = Map.from(currentEventLog);
     mainCharacter.killedComponents += playerOne.killedEnemies;
     mainCharacter.itemList = List.from(playerOne.itemList);
     mainCharacter.minutesPlayed += elapsedSeconds / 60;
@@ -332,11 +333,10 @@ class XeonjiaGame extends BaseGame
     }
   }
 
-  // End of the game
+  // End of the game (defeat in single player or end match in multiplayer)
   void end({bool timeOut = false}) {
     pause();
     if (config.mode == GameMode.story) {
-      mainCharacter.eventLog = Map.from(currentEventLog);
       mainCharacter.minutesPlayed += elapsedSeconds / 60;
       mainCharacter.movesCounter += playerOne.movesCounter;
       ++mainCharacter.deathCounter;
