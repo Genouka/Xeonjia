@@ -201,12 +201,13 @@ abstract class BasicComponent extends SpriteComponent {
 
   @override
   void render(Canvas canvas) {
-    if (!(animation?.done() ?? true)) {
+    if (animation?.done() ?? true) {
+      super.render(canvas);
+    } else {
       prepareCanvas(canvas);
       animation.getSprite().render(canvas,
           width: width, height: height, overridePaint: overridePaint);
     }
-    super.render(canvas);
   }
 
   // Delete component
