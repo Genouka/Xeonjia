@@ -1,8 +1,8 @@
 import 'dart:math';
+import 'package:flame/animation.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
-import 'package:xeonjia/game/components/animated_component.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 
@@ -35,8 +35,20 @@ class SnowballComponent extends DynamicComponent {
 
   @override
   void onCollision() {
-    Explosion(this, stepTime: 0.02);
-    delete();
+    if (isBeingDeleted) return;
+    x += direction.dx * componentSize / 2;
+    y += direction.dy * componentSize / 2;
+    isBeingDeleted = true;
+    animation = Animation.sequenced(
+      image,
+      4,
+      textureX: 16,
+      textureY: 16.0 * father.teamId,
+      textureWidth: 16,
+      textureHeight: 16,
+      stepTime: 0.02,
+      loop: false,
+    )..onCompleteAnimation = delete;
     if (game.config.friendlyFire || collidedComponent.teamId != father.teamId) {
       collidedComponent?.lifePointsDifference(-atk, cause: father);
     }

@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:flame/animation.dart' as flame_animation;
 import 'package:flame/components/component.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
@@ -77,6 +78,12 @@ abstract class BasicComponent extends SpriteComponent {
   // It is also used in multiplayer matches to manage team membership
   int teamId = -1;
   Team get team => game.teams.firstWhere((team) => team.id == teamId);
+
+  // Sprite animation
+  flame_animation.Animation animation;
+
+  // True if this is doing the deletion animation
+  bool isBeingDeleted = false;
 
   // Actions executed by the component
   String action = '';
@@ -178,6 +185,28 @@ abstract class BasicComponent extends SpriteComponent {
   void restoreLifePoints() {
     _lifePoints = initialLifePoints;
     if (this == playerOne) game.refreshLifePointsBar();
+  }
+
+  // Animate this component
+  void animate(List<Sprite> sprites) {
+    animation = flame_animation.Animation.spriteList(sprites,
+        stepTime: 0.15, loop: false);
+  }
+
+  @override
+  void update(double dt) {
+    animation?.update(dt);
+    super.update(dt);
+  }
+
+  @override
+  void render(Canvas canvas) {
+    if (!(animation?.done() ?? true)) {
+      prepareCanvas(canvas);
+      animation.getSprite().render(canvas,
+          width: width, height: height, overridePaint: overridePaint);
+    }
+    super.render(canvas);
   }
 
   // Delete component

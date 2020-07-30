@@ -9,11 +9,11 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 mixin RespawnAnimation on DynamicComponent {
   final _seconds = 1.0;
   double _remainingSeconds;
-  bool get _show => isRespawning;
+  bool get _show => isBeingDeleted;
 
   // Start respawn animation
   void respawnAnimation() {
-    isRespawning = true;
+    isBeingDeleted = true;
     _remainingSeconds = _seconds;
   }
 

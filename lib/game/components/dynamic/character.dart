@@ -43,7 +43,7 @@ class CharacterComponent extends DynamicComponent
   double initialLifePoints;
 
   @override
-  bool isSolid({DynamicComponent otherComponent}) => !isRespawning;
+  bool isSolid({DynamicComponent otherComponent}) => !isBeingDeleted;
 
   @override
   void playAction(Direction orientation) {
@@ -113,7 +113,7 @@ class CharacterComponent extends DynamicComponent
 
   Weapon get selectedWeapon => weaponList[_selectedWeaponElement];
   void shoot([Weapon weapon]) {
-    if (isRespawning) return;
+    if (isBeingDeleted) return;
     (weapon ?? selectedWeapon).shoot(shooter: this);
   }
 
@@ -126,7 +126,7 @@ class CharacterComponent extends DynamicComponent
 
   // Inspect what is in front of this
   void inspect() {
-    if (isStationary && !isRespawning) {
+    if (isStationary && !isBeingDeleted) {
       componentInFront()?.playAction(orientation);
     }
   }
@@ -174,7 +174,7 @@ class CharacterComponent extends DynamicComponent
     });
     _selectedWeaponElement = 0;
     movesCounter = 0;
-    isRespawning = false;
+    isBeingDeleted = false;
     x = startingPosition.x;
     y = startingPosition.y;
     orientation = _initialOrientation;

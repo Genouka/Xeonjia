@@ -1,7 +1,7 @@
 import 'dart:math';
 
+import 'package:flame/animation.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
-import 'package:xeonjia/game/components/animated_component.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/message.dart';
@@ -61,7 +61,8 @@ class ModifierComponent extends BasicComponent {
 
   @override
   void overlappedBy(BasicComponent componentAbove) {
-    if (componentAbove is CharacterComponent &&
+    if (!isBeingDeleted &&
+        componentAbove is CharacterComponent &&
         (game.config.friendlyFire ||
             (father?.teamId ?? -99) != componentAbove.teamId)) {
       componentAbove.lifePointsDifference(_lifePointsDiff,
@@ -83,10 +84,20 @@ class ModifierComponent extends BasicComponent {
       }
       if (_regenerable ?? false) game.modifiersToBeRegenerated.add(this);
       if (explosionOnDelete) {
-        Explosion(this,
-            textureX: 16, textureY: 16.0 * father.teamId, amount: 4);
+        isBeingDeleted = true;
+        animation = Animation.sequenced(
+          image,
+          4,
+          textureX: 16,
+          textureY: 16.0 * father.teamId,
+          textureWidth: 16,
+          textureHeight: 16,
+          stepTime: 0.05,
+          loop: false,
+        )..onCompleteAnimation = delete;
+      } else {
+        delete();
       }
-      delete();
     }
   }
 }

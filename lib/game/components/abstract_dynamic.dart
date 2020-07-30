@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'package:flame/animation.dart' as flame_animation;
 import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 
@@ -32,15 +31,10 @@ abstract class DynamicComponent extends BasicComponent {
   // If this is not moving, isStationary returns true
   bool get isStationary => direction == null;
 
-  // Sprite animation
-  flame_animation.Animation _animation;
-
   // Map orientation : sprite
   final _sprites = <Direction, Sprite>{};
   final _walkingSprites = <Direction, Sprite>{};
   final punchSprites = <Direction, Sprite>{};
-
-  bool isRespawning = false;
 
   @override
   void onCreate() {
@@ -58,7 +52,7 @@ abstract class DynamicComponent extends BasicComponent {
 
   // If this component was previously still update its direction and orientation
   void updateDirection(Direction newDirection, {bool forced = false}) {
-    if (!isRespawning && (isStationary || forced)) {
+    if (!isBeingDeleted && (isStationary || forced)) {
       direction = newDirection;
       updateOrientation();
       animate([_walkingSprites[orientation]]);
@@ -76,26 +70,13 @@ abstract class DynamicComponent extends BasicComponent {
 
   @override
   void render(Canvas canvas) {
-    if (!(_animation?.done() ?? true)) {
-      prepareCanvas(canvas);
-      _animation.getSprite().render(canvas,
-          width: width, height: height, overridePaint: overridePaint);
-    } else {
-      sprite = _sprites[orientation];
-      super.render(canvas);
-    }
-  }
-
-  // Animate this component
-  void animate(List<Sprite> sprites) {
-    _animation = flame_animation.Animation.spriteList(sprites,
-        stepTime: 0.15, loop: false);
+    sprite = _sprites[orientation];
+    super.render(canvas);
   }
 
   @override
   void update(double t) {
     _move();
-    _animation?.update(t);
     super.update(t);
   }
 
