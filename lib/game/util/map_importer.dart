@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:math';
 import 'package:flame/components/component.dart';
 import 'package:flame/sprite.dart';
+import 'package:flame/spritesheet.dart';
 import 'package:flutter/services.dart';
 import 'package:xml/xml.dart';
 
@@ -50,9 +51,22 @@ void importMap(String fileName) async {
                 tilesetElement.getAttribute('source').split('/').last))
             .rootElement;
 
-    var tileWidth = double.parse(tileset.getAttribute('tilewidth'));
     var tileHeight = double.parse(tileset.getAttribute('tileheight'));
+    var tileCount = int.parse(tileset.getAttribute('tilecount'));
     var columns = int.parse(tileset.getAttribute('columns'));
+
+    var image = tileset
+        .findElements('image')
+        .single
+        .getAttribute('source')
+        .split('../../images/')
+        .last;
+    var spriteSheet = SpriteSheet(
+        imageName: image,
+        textureWidth: 16,
+        textureHeight: 16,
+        columns: columns,
+        rows: tileCount ~/ columns);
 
     // Get tiles from tileset
     tileset.findElements('tile').forEach((tile) {
@@ -68,13 +82,8 @@ void importMap(String fileName) async {
           .getAttribute('source')
           .split('../../images/')
           .last;
-      newTile.sprite = Sprite(
-        newTile.properties['image'],
-        x: ((newTile.id - firstGid) % columns) * tileWidth,
-        y: newTile.properties['imageY'],
-        width: tileWidth,
-        height: tileHeight,
-      );
+      newTile.sprite = spriteSheet.getSprite((newTile.id - firstGid) ~/ columns,
+          (newTile.id - firstGid) % columns);
 
       // Read tile properties
       var properties = tile.findElements('properties');
