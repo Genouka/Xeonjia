@@ -16,6 +16,6 @@ void setScreenDimension(BuildContext context) {
   if (componentSize == null) {
     var rawComponentSize = max(screenSize.width, screenSize.height) / 18;
     componentSize = rawComponentSize - rawComponentSize % 4;
-    defaultDistancePerUpdate = componentSize / 4;
+    defaultSpeed = 10 * componentSize;
   }
 }

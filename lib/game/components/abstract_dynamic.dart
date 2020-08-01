@@ -19,17 +19,17 @@ abstract class DynamicComponent extends BasicComponent {
   // Component orientation
   Direction orientation = Direction.down;
 
-  // Distance made at each frame update
-  double distancePerUpdate = defaultDistancePerUpdate;
-
-  // Component collided
-  BasicComponent collidedComponent;
+  // Component speed (componentSize per second)
+  double speed = defaultSpeed;
 
   // Number of moves done
   int movesCounter = 0;
 
   // If this is not moving, isStationary returns true
   bool get isStationary => direction == null;
+
+  // True if this just moved (it's stationary but it's calculating the movement)
+  bool wasStationary = true;
 
   // Map orientation : sprite
   final _sprites = <Direction, Sprite>{};
@@ -53,6 +53,7 @@ abstract class DynamicComponent extends BasicComponent {
   // If this component was previously still update its direction and orientation
   void updateDirection(Direction newDirection, {bool forced = false}) {
     if (!isBeingDeleted && (isStationary || forced)) {
+      wasStationary = true;
       direction = newDirection;
       updateOrientation();
       animate([_walkingSprites[orientation]]);
@@ -75,56 +76,77 @@ abstract class DynamicComponent extends BasicComponent {
   }
 
   @override
-  void update(double t) {
-    _move();
-    super.update(t);
+  void update(double dt) {
+    if (direction != null) _move(dt);
+    super.update(dt);
   }
 
   // Recalculate component position
-  // I should to fix this...
-  void _move() {
-    collidedComponent = null;
-    var _overlappedComponents = <BasicComponent>[];
-    if (direction != null) {
-      var _newX = x + direction.dx * distancePerUpdate;
-      var _newY = y + direction.dy * distancePerUpdate;
-      var _newPosition = Rect.fromLTWH(_newX, _newY, width - 1, height - 1);
-      game.components.forEach((component) {
-        // If this is going to overlap an unrelated component
-        if (component is BasicComponent &&
-            component != this &&
-            component != father &&
-            this != component.father &&
-            component.toRect().overlaps(_newPosition)) {
-          // If the overlapped component is solid -> collide component
+  void _move(double dt) {
+    Rect collidedRect;
+    BasicComponent collidedComponent;
+    final overlappedComponents = <BasicComponent>[];
+
+    // Distance traveled
+    final _delta = min(speed * dt, componentSize / 2 - 1);
+    final deltaX = direction.dx * _delta;
+    final deltaY = direction.dy * _delta;
+
+    // Area covered by this update
+    final motion = Rect.fromLTWH(
+      x + min(deltaX, 0),
+      y + min(deltaY, 0),
+      componentSize + deltaX.abs(),
+      componentSize + deltaY.abs(),
+    );
+
+    // Check if this is going to collide or overlap another component
+    game.components.forEach((component) {
+      if (component is BasicComponent &&
+          component != this &&
+          component != father &&
+          this != component.father) {
+        var componentCollisionRect = component.collisionRect(this);
+        if (componentCollisionRect?.overlaps(motion) ?? false) {
           if (component.isSolid(otherComponent: this)) {
             collidedComponent = component;
+            collidedRect = componentCollisionRect;
             return;
           } else {
-            // Else -> overlap component
-            _overlappedComponents.add(component);
+            overlappedComponents.add(component);
           }
         }
-      });
-      // If this has overlapped another component -> stop this move
-      if (collidedComponent != null) {
-        onCollision();
-      } else {
-        // Else move this component
-        x = _newX;
-        y = _newY;
-        hasMoved();
-        _overlappedComponents.forEach(
-            (_overlappedComponent) => _overlappedComponent.overlappedBy(this));
       }
+    });
+
+    if (collidedRect != null) {
+      // This component collided another one
+      if (direction.dx < 0) {
+        x = collidedRect.right;
+      } else if (direction.dx > 0) {
+        x = collidedRect.left - width;
+      } else if (direction.dy < 0) {
+        y = collidedRect.bottom;
+      } else if (direction.dy > 0) {
+        y = collidedRect.top - height;
+      }
+      onCollision(collidedComponent);
+    } else {
+      // This component did not collide with another one
+      x += deltaX;
+      y += deltaY;
+      overlappedComponents.forEach(
+          (_overlappedComponent) => _overlappedComponent.overlappedBy(this));
     }
+    hasMoved();
+    wasStationary = false;
   }
 
   // Function called if the component moved
   void hasMoved() {}
 
   // Function called when this component collide another component
-  void onCollision() {
+  void onCollision(BasicComponent collidedComponent) {
     lifePointsDifference(-collidedComponent.atk, cause: collidedComponent);
     if (collidedComponent is! BasicStaticComponent) {
       collidedComponent.lifePointsDifference(-atk,

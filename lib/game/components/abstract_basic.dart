@@ -170,12 +170,15 @@ abstract class BasicComponent extends SpriteComponent {
     }
   }
 
+  // True if this component is flying
+  bool isFlying() => false;
+
+  // Collision area
+  Rect collisionRect(DynamicComponent otherComponent) => toRect();
+
   // True if this component could be collided
   // It depends on component that would collide this one
   bool isSolid({@required DynamicComponent otherComponent}) => true;
-
-  // True if this component is flying
-  bool isFlying() => false;
 
   // Define what happens if this component has been overlapped by another one
   // Used if isSolid() returned false

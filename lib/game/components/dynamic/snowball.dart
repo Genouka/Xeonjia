@@ -12,13 +12,13 @@ class SnowballComponent extends DynamicComponent {
   BasicComponent father;
 
   @override
-  final Direction direction;
+  Direction direction;
 
   @override
   final double atk;
 
   @override
-  double distancePerUpdate = defaultDistancePerUpdate * 2;
+  double speed = defaultSpeed * 2;
 
   SnowballComponent(
       Point startingPosition, this.father, this.direction, this.atk)
@@ -34,10 +34,11 @@ class SnowballComponent extends DynamicComponent {
   int priority() => 5;
 
   @override
-  void onCollision() {
+  void onCollision(BasicComponent collidedComponent) {
     if (isBeingDeleted) return;
     x += direction.dx * componentSize / 2;
     y += direction.dy * componentSize / 2;
+    stop();
     isBeingDeleted = true;
     animation = Animation.sequenced(
       image,

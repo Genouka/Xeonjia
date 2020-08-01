@@ -31,12 +31,8 @@ XeonjiaGame game;
 // Main character
 CharacterComponent playerOne;
 
-// Seconds between each cycle of update
-const double updatePeriod = 0.03;
-
-// Default distance traveled with each update
-// Component speed depends on this and on updatePeriod
-double defaultDistancePerUpdate;
+// Default component speed (componentSize per second)
+double defaultSpeed;
 
 // Default component dimension
 double componentSize;
@@ -151,12 +147,7 @@ class XeonjiaGame extends BaseGame
   @override
   void update(double dt) {
     _timer?.update(dt);
-    // Update components for each updatePeriod elapsed since last game.update
-    for (timeSinceUpdate += dt;
-        timeSinceUpdate >= updatePeriod;
-        timeSinceUpdate -= updatePeriod) {
-      super.update(dt);
-    }
+    super.update(dt);
   }
 
   @override

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -19,26 +21,21 @@ class GroundComponent extends BasicComponent {
   int priority() => _flying ? 100 : 0;
 
   @override
-  bool isSolid({BasicComponent otherComponent}) => false;
-
-  @override
-  void overlappedBy(DynamicComponent componentAbove) {
-    if (componentAbove.isFlying() != isFlying()) return;
-    var _thisRect = toRect();
-    var _aboveRect = componentAbove.toRect();
-    if (componentAbove.direction.dx != 0) {
-      if (_thisRect.center.dx == _aboveRect.center.dx &&
-          // Do not stop if the head of componentAbove is overlapping this
-          _thisRect.bottomCenter.dy > _aboveRect.center.dy &&
-          _thisRect.topCenter.dy <= _aboveRect.center.dy) {
-        componentAbove.stop();
-      }
+  Rect collisionRect(DynamicComponent otherComponent) {
+    if (otherComponent.isFlying() != isFlying() ||
+        otherComponent.wasStationary) {
+      return null;
+    }
+    if (otherComponent.direction.dx != 0) {
+      return otherComponent.direction.dx * (otherComponent.x - x) > 0
+          ? null
+          : Rect.fromLTWH(
+              x + (otherComponent.direction.dx > 0 ? width : -1), y, 1, height);
     } else {
-      if (_thisRect.center.dy == _aboveRect.center.dy &&
-          _thisRect.centerLeft.dx <= _aboveRect.center.dx &&
-          _thisRect.centerRight.dx >= _aboveRect.center.dx) {
-        componentAbove.stop();
-      }
+      return otherComponent.direction.dy * (otherComponent.y - y) > 0
+          ? null
+          : Rect.fromLTWH(
+              x, y + (otherComponent.direction.dy > 0 ? height : -1), width, 1);
     }
   }
 }
