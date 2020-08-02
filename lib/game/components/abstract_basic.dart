@@ -1,8 +1,9 @@
 import 'dart:math';
-import 'package:flame/animation.dart' as flame_animation;
+import 'dart:ui';
+import 'package:flame/animation.dart';
 import 'package:flame/components/component.dart';
 import 'package:flame/sprite.dart';
-import 'package:flutter/material.dart';
+import 'package:meta/meta.dart';
 
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
@@ -82,7 +83,7 @@ abstract class BasicComponent extends SpriteComponent {
   bool get isPlayerOne => false;
 
   // Sprite animation
-  flame_animation.Animation animation;
+  Animation animation;
 
   // True if this is doing the deletion animation
   bool isBeingDeleted = false;
@@ -199,8 +200,7 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Animate this component
   void animate(List<Sprite> sprites) {
-    animation = flame_animation.Animation.spriteList(sprites,
-        stepTime: 0.15, loop: false);
+    animation = Animation.spriteList(sprites, stepTime: 0.15, loop: false);
   }
 
   @override

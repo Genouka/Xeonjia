@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/util/lifepoints_color.dart';
 
 // Draw a life point bar near the component
