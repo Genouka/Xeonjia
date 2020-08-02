@@ -44,6 +44,9 @@ class XeonjiaGame extends BaseGame
     init();
   }
 
+  // Scheme's environment
+  final environment = setEnvironment();
+
   // Dialog box
   final _dialogBox = DialogBox();
 
@@ -139,7 +142,7 @@ class XeonjiaGame extends BaseGame
     _timer.start();
     resume();
     if (map.action != null) {
-      evaluate(readFromTokens(splitStringIntoTokens(map.action)), globalEnv);
+      evaluate(readFromTokens(splitStringIntoTokens(map.action)), environment);
     }
   }
 

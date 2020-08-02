@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/basic_static.dart';
-import 'package:xeonjia/game/util/event_manager.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/team.dart';
@@ -132,15 +131,18 @@ abstract class BasicComponent extends SpriteComponent {
   @mustCallSuper
   void playAction(Direction orientation) {
     if (action == '') return;
-    globalEnv.defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => this));
-    evaluate(readFromTokens(splitStringIntoTokens(action)), globalEnv);
+    game.environment
+        .defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => this));
+    evaluate(readFromTokens(splitStringIntoTokens(action)), game.environment);
   }
 
   // Execute eventChange property
   void eventChanged() {
     if (eventChange == '') return;
-    globalEnv.defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => this));
-    evaluate(readFromTokens(splitStringIntoTokens(eventChange)), globalEnv);
+    game.environment
+        .defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => this));
+    evaluate(
+        readFromTokens(splitStringIntoTokens(eventChange)), game.environment);
   }
 
   // Update LP and poison quantity

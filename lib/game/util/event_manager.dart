@@ -7,8 +7,8 @@ import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/util/little_scheme.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
-// Scheme's global environment
-Environment globalEnv = (() {
+// Set scheme's environment
+Environment setEnvironment() {
   var env = Environment(null, null, null);
   var _ = (String name, int arity, IntrinsicBody fun) {
     env.defineSymbol(Sym(name), Intrinsic(name, arity, fun));
@@ -87,10 +87,10 @@ Environment globalEnv = (() {
   _('error', 2, (Cell x) => throw ErrorException(x.car, x.cdr.car));
   _('globals', 0, (Cell x) {
     Cell j;
-    for (var symbol in globalEnv.names) {
+    for (var symbol in game.environment.names) {
       j = Cell(symbol, j);
     }
     return j;
   });
   return env;
-})();
+}
