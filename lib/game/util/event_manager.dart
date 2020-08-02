@@ -15,13 +15,13 @@ Environment globalEnv = (() {
   };
 
   // Game procedures
-  _('life', 0, (Cell x) => playerOne.lifePoints);
+  _('life', 0, (Cell x) => game.playerOne.lifePoints);
   _('place-visited', 0, (Cell x) => mainCharacter?.visitedRooms?.length ?? 0);
   _('move', 1, (Cell x) => (x.car as BasicComponent).x += componentSize);
   _('event-change', 1, (Cell x) => (x.car as BasicComponent).eventChanged());
-  _('has-item', 1, (Cell x) => playerOne.itemList.contains(x.car));
-  _('give-item', 1, (Cell x) => playerOne.addItem(x.car));
-  _('take-item', 1, (Cell x) => playerOne.removeItem(x.car));
+  _('has-item', 1, (Cell x) => game.playerOne.itemList.contains(x.car));
+  _('give-item', 1, (Cell x) => game.playerOne.addItem(x.car));
+  _('take-item', 1, (Cell x) => game.playerOne.removeItem(x.car));
   _('dialog', 1, (Cell x) {
     game.setMessage(Message(stringify(x.car, false)));
     return #NONE;

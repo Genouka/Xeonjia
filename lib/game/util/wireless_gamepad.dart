@@ -22,28 +22,28 @@ extension WirelessGamepad on XeonjiaGame {
             gestureDragInput(Direction.left);
             break;
           case GAMEPAD_BUTTON_A:
-            playerOne.shoot();
+            game.playerOne.shoot();
             break;
           case GAMEPAD_BUTTON_B:
-            playerOne.shoot();
+            game.playerOne.shoot();
             break;
           case GAMEPAD_BUTTON_X:
-            playerOne.shoot();
+            game.playerOne.shoot();
             break;
           case GAMEPAD_BUTTON_Y:
-            playerOne.shoot();
+            game.playerOne.shoot();
             break;
           case GAMEPAD_BUTTON_L1:
-            playerOne.nextWeapon();
+            game.playerOne.nextWeapon();
             break;
           case GAMEPAD_BUTTON_L2:
-            playerOne.nextWeapon();
+            game.playerOne.nextWeapon();
             break;
           case GAMEPAD_BUTTON_R1:
-            playerOne.nextWeapon();
+            game.playerOne.nextWeapon();
             break;
           case GAMEPAD_BUTTON_R2:
-            playerOne.nextWeapon();
+            game.playerOne.nextWeapon();
             break;
           case GAMEPAD_BUTTON_START:
             break;

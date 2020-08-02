@@ -28,9 +28,6 @@ import 'package:xeonjia/util/screen_dimension.dart';
 // Main game variable
 XeonjiaGame game;
 
-// Main character
-CharacterComponent playerOne;
-
 // Default component speed (componentSize per second)
 double defaultSpeed;
 
@@ -74,6 +71,9 @@ class XeonjiaGame extends BaseGame
   // List of CharacterComponent in game
   List<CharacterComponent> players = [];
 
+  // Main character
+  CharacterComponent playerOne;
+
   // List of teams
   List<Team> teams;
 
@@ -109,7 +109,6 @@ class XeonjiaGame extends BaseGame
     components.forEach((component) {
       markToRemove(component);
     });
-    playerOne = null;
     players.clear();
 
     teams = [

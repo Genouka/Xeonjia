@@ -74,18 +74,18 @@ class _PauseMenuState extends State<PauseMenu> {
     switch (pauseMode) {
       case PauseMode.Pause:
         text = '''
-          \nMoves: ${playerOne.movesCounter.toString()}
+          \nMoves: ${game.playerOne.movesCounter.toString()}
           \nMinutes played: ${(game.elapsedSeconds / 60).round()}
-          \nLifepoints: ${playerOne.lifePoints.round().toString()}
-          \nPoison quantity: ${playerOne.poisonQuantity.round().toString()}
-          \nEnemies killed: ${playerOne.killedEnemies.toString()}
+          \nLifepoints: ${game.playerOne.lifePoints.round().toString()}
+          \nPoison quantity: ${game.playerOne.poisonQuantity.round().toString()}
+          \nEnemies killed: ${game.playerOne.killedEnemies.toString()}
           ''' +
             (game.config.mode == GameMode.story
-                ? '\nMoney earned: ${playerOne.earnedMoney.toString()}'
-                : '\nDeaths: ${playerOne.deaths.toString()}') +
+                ? '\nMoney earned: ${game.playerOne.earnedMoney.toString()}'
+                : '\nDeaths: ${game.playerOne.deaths.toString()}') +
             (game.config.mode == GameMode.story
-                ? '\n\nExp gained: ${playerOne.experiencePoints.toString()}'
-                : '\n\nYour points: ${playerOne.points.toString()}');
+                ? '\n\nExp gained: ${game.playerOne.experiencePoints.toString()}'
+                : '\n\nYour points: ${game.playerOne.points.toString()}');
         actions = [
           FlatButton(
             color: Colors.white54,

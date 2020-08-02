@@ -15,6 +15,9 @@ import 'package:xeonjia/util/local_data_controller.dart';
 // Dynamic component used for human-like players
 class CharacterComponent extends DynamicComponent
     with LifePointsBar, RespawnAnimation {
+  @override
+  bool get isPlayerOne => this == game.playerOne;
+
   // List of weapon owned
   List<Weapon> weaponList = [];
 
@@ -92,7 +95,7 @@ class CharacterComponent extends DynamicComponent
     });
     game.players.add(this);
     if (isPlayerOne) {
-      playerOne = this;
+      game.playerOne = this;
       status(
           mainCharacter.lifePoints <= 0
               ? initialLifePoints
@@ -134,7 +137,7 @@ class CharacterComponent extends DynamicComponent
   // Add item to _itemList
   void addItem(int itemId) {
     _itemList.add(itemId);
-    if (this == playerOne) {
+    if (isPlayerOne) {
       game.setMessage(Message('* You received ${itemData[itemId].name} *'));
     }
   }
@@ -142,14 +145,14 @@ class CharacterComponent extends DynamicComponent
   // Remove item from _itemList
   void removeItem(int itemId) {
     _itemList.remove(itemId);
-    if (this == playerOne) {
+    if (isPlayerOne) {
       game.setMessage(Message('* You gave ${itemData[itemId].name} *'));
     }
   }
 
   @override
   void hasMoved() {
-    if (this == playerOne) game.updateCamera(x, y);
+    if (isPlayerOne) game.updateCamera(x, y);
   }
 
   @override
@@ -157,7 +160,7 @@ class CharacterComponent extends DynamicComponent
     ++deaths;
     if (game.config.mode == GameMode.story) {
       super.delete();
-      if (this == playerOne) game.end();
+      if (isPlayerOne) game.end();
     } else {
       stop();
       respawnAnimation();
@@ -178,7 +181,7 @@ class CharacterComponent extends DynamicComponent
     x = startingPosition.x;
     y = startingPosition.y;
     orientation = _initialOrientation;
-    if (this == playerOne) {
+    if (isPlayerOne) {
       game.refreshWeaponBar();
       game.updateCamera(x, y);
     }
@@ -186,7 +189,7 @@ class CharacterComponent extends DynamicComponent
 
   @override
   void update(double t) {
-    if (this != playerOne) {
+    if (!isPlayerOne) {
       if (!quiet) _cpuMove();
       if (!friendly) _cpuShoot();
     }

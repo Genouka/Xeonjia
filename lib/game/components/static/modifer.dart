@@ -73,7 +73,7 @@ class ModifierComponent extends BasicComponent {
       componentAbove.earnedMoney += _moneyDelta;
       componentAbove.selectedWeapon.powerPoints += _powerPointsDelta;
       if (_powerPointsDelta != 0) game.refreshWeaponBar();
-      if (_moneyDelta != 0 && componentAbove == playerOne) {
+      if (_moneyDelta != 0 && componentAbove.isPlayerOne) {
         game.setMessage(Message('+ $_moneyDelta \$'));
       }
       if (_doorId != -1) {

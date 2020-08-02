@@ -27,11 +27,12 @@ class Buttons extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               button('A', () {
-                playerOne.inspect();
+                game.playerOne.inspect();
               }),
               button('S', () {
-                playerOne.shoot(
-                    playerOne.weaponList.whereType<SnowBallWeapon>().single);
+                game.playerOne.shoot(game.playerOne.weaponList
+                    .whereType<SnowBallWeapon>()
+                    .single);
               }),
             ],
           ),
@@ -40,8 +41,8 @@ class Buttons extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               button('M', () {
-                playerOne
-                    .shoot(playerOne.weaponList.whereType<MineWeapon>().single);
+                game.playerOne.shoot(
+                    game.playerOne.weaponList.whereType<MineWeapon>().single);
               }),
             ],
           ),
@@ -173,11 +174,11 @@ class StickState extends State<Stick> {
 
   void updatePlayer({Direction orientation}) {
     if (orientation != null) {
-      playerOne.updateOrientation(orientation);
+      game.playerOne.updateOrientation(orientation);
     } else if (position.distanceSquared > 900) {
-      playerOne.isStationary
-          ? playerOne.updateDirection(GetDirection.fromOffset(position))
-          : playerOne.updateOrientation(GetDirection.fromOffset(position));
+      game.playerOne.isStationary
+          ? game.playerOne.updateDirection(GetDirection.fromOffset(position))
+          : game.playerOne.updateOrientation(GetDirection.fromOffset(position));
     }
   }
 

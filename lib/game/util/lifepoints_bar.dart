@@ -11,7 +11,7 @@ mixin LifePointsBar on BasicComponent {
   final _seconds = 2.0;
   double _remainingSeconds;
   bool get _show =>
-      this != playerOne &&
+      !isPlayerOne &&
       lifePoints != double.infinity &&
       (_remainingSeconds ?? -1) >= 0;
 

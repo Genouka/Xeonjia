@@ -40,17 +40,17 @@ class _InfoBoxState extends State<InfoBox> {
                   const Text('❤️  '),
                   Expanded(
                     child: _PercentIndicator(
-                      values: playerOne == null
+                      values: game.playerOne == null
                           ? [1, 0]
                           : [
-                              playerOne.lifePoints.round(),
-                              playerOne.initialLifePoints.round() -
-                                  playerOne.lifePoints.round()
+                              game.playerOne.lifePoints.round(),
+                              game.playerOne.initialLifePoints.round() -
+                                  game.playerOne.lifePoints.round()
                             ],
-                      texts: [playerOne?.lifePoints?.toString() ?? ''],
+                      texts: [game.playerOne?.lifePoints?.toString() ?? ''],
                       colors: [
-                        lifePointsColor((playerOne?.lifePoints ?? 1) /
-                            (playerOne?.initialLifePoints ?? 1)),
+                        lifePointsColor((game.playerOne?.lifePoints ?? 1) /
+                            (game.playerOne?.initialLifePoints ?? 1)),
                         Colors.grey
                       ],
                     ),
@@ -64,7 +64,7 @@ class _InfoBoxState extends State<InfoBox> {
                   children: [
                     Expanded(
                       child: _PercentIndicator(
-                        values: playerOne == null
+                        values: game.playerOne == null
                             ? [1, 1]
                             : [
                                 max(game.teams.first.points, 1),

@@ -79,6 +79,9 @@ abstract class BasicComponent extends SpriteComponent {
   int teamId = -1;
   Team get team => game.teams.firstWhere((team) => team.id == teamId);
 
+  // Check if this is player one (a player can only be a CharacterComponent)
+  bool get isPlayerOne => false;
+
   // Sprite animation
   flame_animation.Animation animation;
 
@@ -152,7 +155,9 @@ abstract class BasicComponent extends SpriteComponent {
     if (game.config.friendlyFire || teamId != (cause?.teamId ?? -99)) {
       _lifePoints += difference < 0 ? difference + def : difference;
       poisonQuantity += poison;
-      if (this == playerOne && difference != 0) game.refreshLifePointsBar();
+      if (isPlayerOne && difference != 0) {
+        game.refreshLifePointsBar();
+      }
       if (_lifePoints <= 0) {
         delete();
         if (teamId == (cause?.teamId ?? -99)) {
@@ -187,7 +192,7 @@ abstract class BasicComponent extends SpriteComponent {
   // Reset life points
   void restoreLifePoints() {
     _lifePoints = initialLifePoints;
-    if (this == playerOne) game.refreshLifePointsBar();
+    if (isPlayerOne) game.refreshLifePointsBar();
   }
 
   // Animate this component

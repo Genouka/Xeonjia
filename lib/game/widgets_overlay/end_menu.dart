@@ -29,7 +29,7 @@ class EndMenu extends StatelessWidget {
       title = 'You have been deleted';
     } else {
       title = 'Your team ' +
-          (game.ranking.first.id == playerOne.teamId ? 'won' : 'lost');
+          (game.ranking.first.id == game.playerOne.teamId ? 'won' : 'lost');
       if (game.remainingTime <= 0) {
         content = 'The time is over.';
       } else {
