@@ -1,9 +1,10 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
 
-enum PauseMode { Pause, Restart, Exit }
+enum PauseMode { pause, restart, exit }
 
 class PauseMenu extends StatefulWidget {
   final PauseMode mode;
@@ -27,7 +28,7 @@ class _PauseMenuState extends State<PauseMenu> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            pauseMode.toString().split('.').last.toUpperCase(),
+            describeEnum(pauseMode).toUpperCase(),
             style: const TextStyle(
                 color: Colors.white, fontSize: 32, letterSpacing: 1.4),
           ),
@@ -53,7 +54,7 @@ class _PauseMenuState extends State<PauseMenu> {
         color: Colors.white54,
         child: const Text('Yes'),
         onPressed: () {
-          if (pauseMode == PauseMode.Restart) {
+          if (pauseMode == PauseMode.restart) {
             game.removeWidgetOverlay('pauseMenu');
             game.init();
           } else {
@@ -72,7 +73,7 @@ class _PauseMenuState extends State<PauseMenu> {
       ),
     ];
     switch (pauseMode) {
-      case PauseMode.Pause:
+      case PauseMode.pause:
         text = '''
           \nMoves: ${game.playerOne.movesCounter.toString()}
           \nMinutes played: ${(game.elapsedSeconds / 60).round()}
@@ -92,7 +93,7 @@ class _PauseMenuState extends State<PauseMenu> {
             child: const Text('Restart'),
             onPressed: () {
               setState(() {
-                pauseMode = PauseMode.Restart;
+                pauseMode = PauseMode.restart;
               });
             },
           ),
@@ -101,7 +102,7 @@ class _PauseMenuState extends State<PauseMenu> {
             child: const Text('Exit'),
             onPressed: () {
               setState(() {
-                pauseMode = PauseMode.Exit;
+                pauseMode = PauseMode.exit;
               });
             },
           ),
@@ -114,10 +115,10 @@ class _PauseMenuState extends State<PauseMenu> {
               })
         ];
         break;
-      case PauseMode.Restart:
+      case PauseMode.restart:
         text = 'Are you sure you want to restart this game?';
         break;
-      case PauseMode.Exit:
+      case PauseMode.exit:
         text =
             'Are you sure you want to exit this game? Match data will be lost.';
     }

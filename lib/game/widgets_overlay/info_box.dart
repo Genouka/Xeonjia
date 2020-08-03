@@ -25,7 +25,7 @@ class _InfoBoxState extends State<InfoBox> {
       top: 0,
       left: 0,
       child: InkWell(
-        onTap: () => game.pause(mode: PauseMode.Pause),
+        onTap: () => game.pause(mode: PauseMode.pause),
         child: Container(
           margin: const EdgeInsets.all(4),
           padding: const EdgeInsets.all(15),

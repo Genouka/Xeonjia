@@ -16,7 +16,7 @@ class GamePage extends StatelessWidget {
     return WillPopScope(
         child: Scaffold(body: game.widget),
         onWillPop: () {
-          game.pause(mode: PauseMode.Exit);
+          game.pause(mode: PauseMode.exit);
           return Future.value(false);
         });
   }
