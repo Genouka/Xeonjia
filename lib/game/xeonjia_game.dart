@@ -44,8 +44,10 @@ class XeonjiaGame extends BaseGame
   final MatchConfig config;
 
   XeonjiaGame(this.config) {
-    _backgroundMusic = Bgm();
-    _backgroundMusic.initialize();
+    if (settings.backgroundMusic) {
+      _backgroundMusic = Bgm();
+      _backgroundMusic.initialize();
+    }
     init();
   }
 
@@ -174,7 +176,7 @@ class XeonjiaGame extends BaseGame
     if (_pause ?? false) return;
     _pause = true;
     pauseEngine();
-    if (stopMusic) _backgroundMusic.pause();
+    if (stopMusic) _backgroundMusic?.pause();
     if (mode != null) addWidgetOverlay('pauseMenu', PauseMenu(mode));
   }
 
@@ -182,7 +184,7 @@ class XeonjiaGame extends BaseGame
   void resume() {
     _pause = false;
     resumeEngine();
-    _backgroundMusic.resume();
+    _backgroundMusic?.resume();
   }
 
   // Show a message in messageBox
@@ -197,6 +199,7 @@ class XeonjiaGame extends BaseGame
 
   // Start the background music
   void playBackgroundMusic() {
+    if (!settings.backgroundMusic) return;
     var newBgm = map.music ?? 'town.ogg';
     if (newBgm == currentBgm) return;
     currentBgm = newBgm;
@@ -205,6 +208,7 @@ class XeonjiaGame extends BaseGame
 
   // Start the background music
   void playSound(Sfx sfx) {
+    if (!settings.soundEffects) return;
     Flame.audio.play(sfx.fileName, volume: 0.2);
   }
 
@@ -351,7 +355,7 @@ class XeonjiaGame extends BaseGame
   }
 
   void dispose() {
-    _backgroundMusic.dispose();
+    _backgroundMusic?.dispose();
     gamepad.removeListener();
     game = null;
   }

@@ -114,4 +114,8 @@ class _SettingsPageState extends State<SettingsPage> {
         });
         saveSettings();
       });
+
+  void refresh() {
+    setState(() {});
+  }
 }

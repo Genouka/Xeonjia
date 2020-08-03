@@ -29,6 +29,32 @@ class OptionList extends StatelessWidget {
           'Fullscreen mode',
           'Enable fullscreen',
         ),
+        CheckboxListTile(
+            title: const Text(
+              'Background music',
+              style: TextStyle(fontSize: 20),
+            ),
+            activeColor: Colors.blueGrey,
+            subtitle: const Text('Enable background music'),
+            value: settings.backgroundMusic,
+            onChanged: (newValue) {
+              settings.backgroundMusic = newValue;
+              SettingsPage.of(context).refresh();
+              saveSettings();
+            }),
+        CheckboxListTile(
+            title: const Text(
+              'Sound effects',
+              style: TextStyle(fontSize: 20),
+            ),
+            activeColor: Colors.blueGrey,
+            subtitle: const Text('Enable sound effects'),
+            value: settings.soundEffects,
+            onChanged: (newValue) {
+              settings.soundEffects = newValue;
+              SettingsPage.of(context).refresh();
+              saveSettings();
+            }),
       ]);
 }
 
