@@ -5,6 +5,7 @@ import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
+import 'package:xeonjia/models/sfx.dart';
 
 // Shot created by SnowBallWeapon
 class SnowballComponent extends DynamicComponent {
@@ -39,6 +40,7 @@ class SnowballComponent extends DynamicComponent {
     x += direction.dx * componentSize / 2;
     y += direction.dy * componentSize / 2;
     stop();
+    game.playSound(Sfx.snowball);
     isBeingDeleted = true;
     animation = Animation.sequenced(
       image,

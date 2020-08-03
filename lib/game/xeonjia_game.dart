@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flame/bgm.dart';
+import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
 import 'package:flame/time.dart';
@@ -21,6 +22,7 @@ import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/map_properties.dart';
 import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/models/message.dart';
+import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/models/team.dart';
 import 'package:xeonjia/util/little_scheme.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
@@ -199,6 +201,11 @@ class XeonjiaGame extends BaseGame
     if (newBgm == currentBgm) return;
     currentBgm = newBgm;
     _backgroundMusic.play(currentBgm);
+  }
+
+  // Start the background music
+  void playSound(Sfx sfx) {
+    Flame.audio.play(sfx.fileName, volume: 0.2);
   }
 
   // Save match data and load the new room

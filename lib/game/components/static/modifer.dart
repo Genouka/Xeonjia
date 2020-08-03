@@ -5,6 +5,7 @@ import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/message.dart';
+import 'package:xeonjia/models/sfx.dart';
 
 // Stats modifier component
 // It increases/decreases character stats
@@ -85,6 +86,7 @@ class ModifierComponent extends BasicComponent {
       if (_regenerable ?? false) game.modifiersToBeRegenerated.add(this);
       if (explosionOnDelete) {
         isBeingDeleted = true;
+        game.playSound(Sfx.explosion);
         animation = Animation.sequenced(
           image,
           4,

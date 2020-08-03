@@ -5,6 +5,7 @@ import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/dynamic/snowball.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/resources/weapon_details.dart';
 
 // Abstract class used to manage weapons inside game
@@ -56,6 +57,7 @@ class PunchWeapon extends Weapon {
   void shoot({@required CharacterComponent shooter}) {
     shooter.componentInFront()?.lifePointsDifference(-atk, cause: shooter);
     shooter.animate([shooter.punchSprites[shooter.orientation]]);
+    if (shooter.isPlayerOne) game.playSound(Sfx.punch);
   }
 }
 

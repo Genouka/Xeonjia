@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/message.dart';
+import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
 
 class DialogBox extends StatefulWidget {
@@ -38,6 +39,7 @@ class _DialogBoxState extends State<DialogBox> {
     _currentIndex = 0;
     if (mounted) setState(() {});
     game.pause(stopMusic: false);
+    game.playSound(Sfx.dialog);
   }
 
   // Split message in sentences and group them
@@ -61,6 +63,7 @@ class _DialogBoxState extends State<DialogBox> {
       _messages = [];
       game.resume();
     }
+    game.playSound(Sfx.dialog);
     if (mounted) setState(() {});
   }
 

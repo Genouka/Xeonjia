@@ -9,6 +9,7 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/message.dart';
+import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/models/tile.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
@@ -139,6 +140,7 @@ class CharacterComponent extends DynamicComponent
     _itemList.add(itemId);
     if (isPlayerOne) {
       game.setMessage(Message('* You received ${itemData[itemId].name} *'));
+      game.playSound(Sfx.item);
     }
   }
 
@@ -152,7 +154,10 @@ class CharacterComponent extends DynamicComponent
 
   @override
   void hasMoved() {
-    if (isPlayerOne) game.updateCamera(x, y);
+    if (isPlayerOne) {
+      game.updateCamera(x, y);
+      if (wasStationary) game.playSound(Sfx.movement);
+    }
   }
 
   @override
