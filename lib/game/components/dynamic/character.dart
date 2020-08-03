@@ -16,7 +16,7 @@ import 'package:xeonjia/util/local_data_controller.dart';
 class CharacterComponent extends DynamicComponent
     with LifePointsBar, RespawnAnimation {
   @override
-  bool get isPlayerOne => this == game.playerOne;
+  bool get isPlayerOne => this == game?.playerOne;
 
   // List of weapon owned
   List<Weapon> weaponList = [];
