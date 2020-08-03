@@ -15,6 +15,7 @@ import 'package:xeonjia/game/util/wireless_gamepad.dart';
 import 'package:xeonjia/game/widgets_overlay/end_menu.dart';
 import 'package:xeonjia/game/widgets_overlay/info_box.dart';
 import 'package:xeonjia/game/widgets_overlay/dialog_box.dart';
+import 'package:xeonjia/game/widgets_overlay/loading_page.dart';
 import 'package:xeonjia/game/widgets_overlay/pause_menu.dart';
 import 'package:xeonjia/game/widgets_overlay/virtual_gamepad.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -110,6 +111,7 @@ class XeonjiaGame extends BaseGame
   // Reset variables and import map data
   void init() async {
     pause(stopMusic: false);
+    addWidgetOverlay('loading', LoadingPage());
 
     // Import mainCharacter.eventLog
     currentEventLog = Map.from(mainCharacter.eventLog);
@@ -151,11 +153,13 @@ class XeonjiaGame extends BaseGame
       }
     });
     _timer.start();
+    removeWidgetOverlay('loading');
     resume();
+    playBackgroundMusic();
+
     if (map.action != null) {
       evaluate(readFromTokens(splitStringIntoTokens(map.action)), environment);
     }
-    playBackgroundMusic();
   }
 
   @override

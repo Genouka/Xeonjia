@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 import 'package:flame/components/component.dart';
+import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
 import 'package:flame/spritesheet.dart';
 import 'package:flutter/services.dart';
@@ -62,6 +63,7 @@ void importMap(String fileName) async {
         .getAttribute('source')
         .split('../../images/')
         .last;
+    await Flame.images.load(image);
     var spriteSheet = SpriteSheet(
         imageName: image,
         textureWidth: 16,
