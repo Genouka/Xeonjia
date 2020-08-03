@@ -21,6 +21,7 @@ void importMap(String fileName) async {
   game.map = MapProperties(
     width: int.parse(mapXml.getAttribute('width')),
     height: int.parse(mapXml.getAttribute('height')),
+    music: mapXml.getAttribute('music'),
   );
 
   // Add map background

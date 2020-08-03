@@ -7,5 +7,8 @@ class MapProperties {
   // Map action (eg. show map-name)
   String action;
 
-  MapProperties({this.width, this.height, this.action});
+  // Background music
+  String music;
+
+  MapProperties({this.width, this.height, this.action, this.music});
 }

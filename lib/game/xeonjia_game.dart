@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:math';
+import 'package:flame/bgm.dart';
 import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
 import 'package:flame/time.dart';
@@ -41,6 +42,8 @@ class XeonjiaGame extends BaseGame
   final MatchConfig config;
 
   XeonjiaGame(this.config) {
+    _backgroundMusic = Bgm();
+    _backgroundMusic.initialize();
     init();
   }
 
@@ -93,12 +96,16 @@ class XeonjiaGame extends BaseGame
   // Wireless gamepad
   FlameGamepad gamepad;
 
+  // Background music
+  Bgm _backgroundMusic;
+  String currentBgm;
+
   @override
   Color backgroundColor() => const Color(0xFF777777);
 
   // Reset variables and import map data
   void init() async {
-    pause();
+    pause(stopMusic: false);
 
     // Import mainCharacter.eventLog
     currentEventLog = Map.from(mainCharacter.eventLog);
@@ -144,6 +151,7 @@ class XeonjiaGame extends BaseGame
     if (map.action != null) {
       evaluate(readFromTokens(splitStringIntoTokens(map.action)), environment);
     }
+    playBackgroundMusic();
   }
 
   @override
@@ -160,10 +168,11 @@ class XeonjiaGame extends BaseGame
   }
 
   // Pause game
-  void pause({PauseMode mode}) {
+  void pause({PauseMode mode, bool stopMusic = true}) {
     if (_pause ?? false) return;
     _pause = true;
     pauseEngine();
+    if (stopMusic) _backgroundMusic.pause();
     if (mode != null) addWidgetOverlay('pauseMenu', PauseMenu(mode));
   }
 
@@ -171,6 +180,7 @@ class XeonjiaGame extends BaseGame
   void resume() {
     _pause = false;
     resumeEngine();
+    _backgroundMusic.resume();
   }
 
   // Show a message in messageBox
@@ -183,9 +193,17 @@ class XeonjiaGame extends BaseGame
     _dialogBox.state.setMessages(messages, hideMap: hideMap);
   }
 
+  // Start the background music
+  void playBackgroundMusic() {
+    var newBgm = map.music ?? 'town.ogg';
+    if (newBgm == currentBgm) return;
+    currentBgm = newBgm;
+    _backgroundMusic.play(currentBgm);
+  }
+
   // Save match data and load the new room
   void changeRoom(int nextRoomId) {
-    pause();
+    pause(stopMusic: false);
 
     // Save new player data into mainCharacter
     mainCharacter.lifePoints = playerOne.lifePoints;
@@ -326,6 +344,7 @@ class XeonjiaGame extends BaseGame
   }
 
   void dispose() {
+    _backgroundMusic.dispose();
     gamepad.removeListener();
     game = null;
   }

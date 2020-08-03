@@ -37,7 +37,7 @@ class _DialogBoxState extends State<DialogBox> {
     }));
     _currentIndex = 0;
     if (mounted) setState(() {});
-    game.pause();
+    game.pause(stopMusic: false);
   }
 
   // Split message in sentences and group them
