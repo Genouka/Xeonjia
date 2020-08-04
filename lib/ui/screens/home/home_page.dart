@@ -7,7 +7,7 @@ import 'package:xeonjia/ui/screens/game/game_page.dart';
 import 'package:xeonjia/ui/screens/arena/arena_page.dart';
 import 'package:xeonjia/ui/screens/home/widgets/bottom_row.dart';
 import 'package:xeonjia/ui/screens/home/widgets/page_button.dart';
-import 'package:xeonjia/ui/screens/user/user_page.dart';
+import 'package:xeonjia/ui/screens/rules/rules_page.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
 
 class HomePage extends StatelessWidget {
@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
       'goto': () => GamePage(MatchConfig(GameMode.story))
     },
     {'title': 'Arena', 'goto': () => ArenaPage()},
-    {'title': 'Character', 'goto': () => UserPage(appBarCollapsed: true)},
+    {'title': 'How to play', 'goto': () => RulesPage()},
   ];
 
   @override
