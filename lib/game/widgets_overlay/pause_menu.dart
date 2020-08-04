@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 
 enum PauseMode { pause, restart, exit }
 
+// In-game pause menu
 class PauseMenu extends StatefulWidget {
   final PauseMode mode;
   PauseMenu(this.mode);
@@ -15,13 +17,23 @@ class PauseMenu extends StatefulWidget {
 }
 
 class _PauseMenuState extends State<PauseMenu> {
+  // Pause mode. It is also the title of this menu
   PauseMode pauseMode;
+
+  // Text inside the central box
   String text;
+
+  // Buttons
   List<Widget> actions;
 
   @override
+  void initState() {
+    reloadInfo();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    _getInfo();
     return Container(
       color: Colors.black87,
       child: Column(
@@ -30,14 +42,25 @@ class _PauseMenuState extends State<PauseMenu> {
           Text(
             describeEnum(pauseMode).toUpperCase(),
             style: const TextStyle(
-                color: Colors.white, fontSize: 32, letterSpacing: 1.4),
+              color: Colors.white,
+              fontSize: 32,
+              letterSpacing: 1.4,
+            ),
           ),
-          Text(
-            text,
-            style: const TextStyle(color: Colors.white, fontSize: 18),
-            textAlign: TextAlign.center,
+          divider,
+          Container(
+            constraints: BoxConstraints(
+              minHeight: MediaQuery.of(context).size.height / 6,
+            ),
+            child: Center(
+              child: Text(
+                text,
+                style: const TextStyle(color: Colors.white, fontSize: 18),
+                textAlign: TextAlign.center,
+              ),
+            ),
           ),
-          Container(height: 25),
+          divider,
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: actions,
@@ -47,13 +70,13 @@ class _PauseMenuState extends State<PauseMenu> {
     );
   }
 
-  void _getInfo() {
+  // Reload texts and buttons
+  void reloadInfo() {
     pauseMode ??= widget.mode;
     actions = [
-      FlatButton(
-        color: Colors.white54,
-        child: const Text('Yes'),
-        onPressed: () {
+      actionButton(
+        describeEnum(pauseMode).toUpperCase(),
+        () {
           if (pauseMode == PauseMode.restart) {
             game.removeWidgetOverlay('pauseMenu');
             game.init();
@@ -63,10 +86,9 @@ class _PauseMenuState extends State<PauseMenu> {
           }
         },
       ),
-      FlatButton(
-        color: Colors.white54,
-        child: const Text('No'),
-        onPressed: () {
+      actionButton(
+        'CANCEL',
+        () {
           game.removeWidgetOverlay('pauseMenu');
           game.resume();
         },
@@ -74,53 +96,79 @@ class _PauseMenuState extends State<PauseMenu> {
     ];
     switch (pauseMode) {
       case PauseMode.pause:
-        text = '''
-          \nMoves: ${game.playerOne.movesCounter.toString()}
-          \nMinutes played: ${(game.elapsedSeconds / 60).round()}
-          \nLifepoints: ${game.playerOne.lifePoints.round().toString()}
-          \nPoison quantity: ${game.playerOne.poisonQuantity.round().toString()}
-          \nEnemies killed: ${game.playerOne.killedEnemies.toString()}
-          ''' +
+        text = '\nlifepoints: ${game.playerOne.lifePoints.round()}\n' +
             (game.config.mode == GameMode.story
-                ? '\nMoney earned: ${game.playerOne.earnedMoney.toString()}'
-                : '\nDeaths: ${game.playerOne.deaths.toString()}') +
-            (game.config.mode == GameMode.story
-                ? '\n\nExp gained: ${game.playerOne.experiencePoints.toString()}'
-                : '\n\nYour points: ${game.playerOne.points.toString()}');
+                ? '''
+                \nyour level: ${mainCharacter.level}
+            \nmoney: ${mainCharacter.totalEarnedMoney}
+            \nplay time: ${mainCharacter.minutesPlayed.round()} min
+            '''
+                : '''
+            \nDeaths: ${game.playerOne.deaths}
+            \nEnemies killed: ${game.playerOne.killedEnemies}
+            \nYour points: ${game.playerOne.points.toString()}
+          ''');
         actions = [
-          FlatButton(
-            color: Colors.white54,
-            child: const Text('Restart'),
-            onPressed: () {
-              setState(() {
-                pauseMode = PauseMode.restart;
-              });
-            },
-          ),
-          FlatButton(
-            color: Colors.white54,
-            child: const Text('Exit'),
-            onPressed: () {
+          actionButton(
+            'EXIT',
+            () {
               setState(() {
                 pauseMode = PauseMode.exit;
+                reloadInfo();
               });
             },
           ),
-          FlatButton(
-              color: Colors.white54,
-              child: const Text('Resume'),
-              onPressed: () {
-                game.removeWidgetOverlay('pauseMenu');
-                game.resume();
-              })
+          actionButton('RESUME', () {
+            game.removeWidgetOverlay('pauseMenu');
+            game.resume();
+          }),
+          actionButton(
+            'RESTART',
+            () {
+              setState(() {
+                pauseMode = PauseMode.restart;
+                reloadInfo();
+              });
+            },
+          ),
         ];
         break;
       case PauseMode.restart:
-        text = 'Are you sure you want to restart this game?';
+        text = 'Are you sure you want to restart this match?';
+        if (game.config.mode == GameMode.story) {
+          text += '\n\nIt will restart from the last location change.';
+        }
         break;
       case PauseMode.exit:
-        text =
-            'Are you sure you want to exit this game? Match data will be lost.';
+        text = 'Are you sure you want to quit this match?';
+        if (game.config.mode == GameMode.story) {
+          text +=
+              '\n\nMatch data since the last time you changed your location will be lost.';
+        }
     }
+  }
+
+  // White line that divides the children of the Column
+  Widget get divider => Container(
+        margin: const EdgeInsets.symmetric(vertical: 20),
+        height: 3,
+        width: MediaQuery.of(context).size.width / 1.5,
+        decoration: const BoxDecoration(
+          color: Colors.white54,
+          borderRadius: BorderRadius.all(Radius.circular(30)),
+        ),
+      );
+
+  // Button on the bottom row
+  Widget actionButton(String text, VoidCallback onPressed) {
+    return FlatButton(
+      color: Colors.transparent,
+      child: Text(
+        text,
+        textAlign: TextAlign.center,
+        style: const TextStyle(color: Colors.white),
+      ),
+      onPressed: onPressed,
+    );
   }
 }
