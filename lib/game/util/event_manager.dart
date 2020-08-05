@@ -50,9 +50,12 @@ Environment setEnvironment() {
     return #NONE;
   });
   _('map-name', 1, (Cell x) {
-    game.addWidgetOverlay('MapBox', MapBox(stringify(x.car, false)));
+    game.addWidgetOverlay('mapBox', MapBox(stringify(x.car, false)));
+    var _id = mainCharacter.visitedRooms.length;
     Future.delayed(const Duration(seconds: 3), () {
-      game.removeWidgetOverlay('MapBox');
+      if (_id == mainCharacter.visitedRooms.length) {
+        game.removeWidgetOverlay('mapBox');
+      }
     });
     return #NONE;
   });

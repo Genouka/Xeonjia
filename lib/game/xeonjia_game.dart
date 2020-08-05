@@ -112,6 +112,7 @@ class XeonjiaGame extends BaseGame
   void init() async {
     pause(stopMusic: false);
     addWidgetOverlay('loading', LoadingPage());
+    removeWidgetOverlay('mapBox');
 
     // Import mainCharacter.eventLog
     currentEventLog = Map.from(mainCharacter.eventLog);
