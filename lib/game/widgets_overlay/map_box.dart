@@ -10,23 +10,24 @@ class MapBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 0,
-      right: 0,
+      top: 12,
+      right: 12,
       child: Container(
-        margin: const EdgeInsets.all(4),
-        padding: const EdgeInsets.all(15),
-        width: screenSize.width / 2.2,
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+        width: screenSize.width / 2.5,
+        constraints: const BoxConstraints(maxWidth: 360),
         decoration: BoxDecoration(
             color: Colors.grey[800].withOpacity(0.7),
             borderRadius: const BorderRadius.all(Radius.circular(10))),
         child: Text(
-          text,
+          '~ $text ~',
           style: const TextStyle(
             color: Colors.white,
             fontSize: 22,
             fontWeight: FontWeight.w800,
           ),
           textAlign: TextAlign.center,
+          maxLines: 1,
         ),
       ),
     );
