@@ -5,8 +5,8 @@ import 'package:xeonjia/game/widgets_overlay/pause_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/util/lifepoints_color.dart';
-import 'package:xeonjia/util/screen_dimension.dart';
 
+// Box that shows points and lifepoints
 class InfoBox extends StatefulWidget {
   final _InfoBoxState state = _InfoBoxState();
 
@@ -22,14 +22,14 @@ class _InfoBoxState extends State<InfoBox> {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 0,
-      left: 0,
+      top: 12,
+      left: 12,
       child: InkWell(
         onTap: () => game.pause(mode: PauseMode.pause),
         child: Container(
-          margin: const EdgeInsets.all(4),
-          padding: const EdgeInsets.all(15),
-          width: screenSize.width / 2.2,
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+          width: MediaQuery.of(context).size.width / 2.5,
+          constraints: const BoxConstraints(maxWidth: 360),
           decoration: BoxDecoration(
               color: Colors.grey[800].withOpacity(0.7),
               borderRadius: const BorderRadius.all(Radius.circular(10))),
@@ -37,25 +37,33 @@ class _InfoBoxState extends State<InfoBox> {
             children: [
               Row(
                 children: [
-                  const Text('❤️  '),
+                  const Icon(Icons.favorite, color: Colors.white, size: 22),
                   Expanded(
-                    child: _PercentIndicator(
-                      values: game.playerOne == null
-                          ? [1, 0]
-                          : [
-                              game.playerOne.lifePoints.round(),
-                              game.playerOne.initialLifePoints.round() -
-                                  game.playerOne.lifePoints.round()
-                            ],
-                      texts: [game.playerOne?.lifePoints?.toString() ?? ''],
-                      colors: [
-                        lifePointsColor((game.playerOne?.lifePoints ?? 1) /
-                            (game.playerOne?.initialLifePoints ?? 1)),
-                        Colors.grey
-                      ],
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 15),
+                      child: _PercentIndicator(
+                        values: game.playerOne == null
+                            ? [1, 0]
+                            : [
+                                game.playerOne.lifePoints.round(),
+                                game.playerOne.initialLifePoints.round() -
+                                    game.playerOne.lifePoints.round()
+                              ],
+                        texts: [
+                          game.playerOne != null
+                              ? 'LP: ' +
+                                  game.playerOne.lifePoints.round().toString()
+                              : '',
+                        ],
+                        colors: [
+                          lifePointsColor((game.playerOne?.lifePoints ?? 1) /
+                              (game.playerOne?.initialLifePoints ?? 1)),
+                          Colors.grey
+                        ],
+                      ),
                     ),
                   ),
-                  const Text(' ▐ ▌', style: TextStyle(color: Colors.white))
+                  const Icon(Icons.pause, color: Colors.white, size: 30),
                 ],
               ),
               if (game.config.mode == GameMode.tdm) ...[
@@ -125,7 +133,11 @@ class _PercentIndicator extends StatelessWidget {
                 Expanded(
                   flex: values[i],
                   child: Container(
-                    padding: const EdgeInsets.only(left: 5, right: 5),
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                      color: colors[i].withOpacity(0.4),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    ),
                     child: Center(
                       child: Text(
                         texts.length == 2 ? texts[i] : '',
@@ -137,7 +149,6 @@ class _PercentIndicator extends StatelessWidget {
                         maxLines: 1,
                       ),
                     ),
-                    color: colors[i].withOpacity(0.4),
                   ),
                 ),
           ],
