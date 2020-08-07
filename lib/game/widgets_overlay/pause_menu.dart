@@ -39,31 +39,48 @@ class _PauseMenuState extends State<PauseMenu> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            describeEnum(pauseMode).toUpperCase(),
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 32,
-              letterSpacing: 1.4,
-            ),
-          ),
-          divider,
-          Container(
-            constraints: BoxConstraints(
-              minHeight: MediaQuery.of(context).size.height / 6,
-            ),
-            child: Center(
+          Expanded(
+            child: Container(
+              margin: const EdgeInsets.only(bottom: 5),
+              alignment: Alignment.bottomCenter,
               child: Text(
-                text,
-                style: const TextStyle(color: Colors.white, fontSize: 18),
-                textAlign: TextAlign.center,
+                describeEnum(pauseMode).toUpperCase(),
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 64,
+                  letterSpacing: 1.4,
+                ),
               ),
             ),
           ),
           divider,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: actions,
+          Expanded(
+            child: Center(
+              child: ScrollConfiguration(
+                behavior: _NoGlow(),
+                child: SingleChildScrollView(
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      text,
+                      style: const TextStyle(color: Colors.white, fontSize: 32),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          divider,
+          Expanded(
+            child: Container(
+              margin: const EdgeInsets.only(top: 5),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: actions,
+              ),
+            ),
           ),
         ],
       ),
@@ -96,18 +113,17 @@ class _PauseMenuState extends State<PauseMenu> {
     ];
     switch (pauseMode) {
       case PauseMode.pause:
-        text = '\nlifepoints: ${game.playerOne.lifePoints.round()}\n' +
+        text = 'lifepoints: ${game.playerOne.lifePoints.round()}\n' +
             (game.config.mode == GameMode.story
                 ? '''
-                \nyour level: ${mainCharacter.level}
-            \nmoney: ${mainCharacter.totalEarnedMoney}
-            \nplay time: ${mainCharacter.minutesPlayed.round()} min
-            '''
+            \nyour level: ${game.playerOne.level}
+            \nmoney: 0 ¤
+            \nplay time: ${mainCharacter.minutesPlayed.round()} min'''
                 : '''
-            \nDeaths: ${game.playerOne.deaths}
-            \nEnemies killed: ${game.playerOne.killedEnemies}
-            \nYour points: ${game.playerOne.points.toString()}
-          ''');
+            \ndeaths: ${game.playerOne.deaths}
+            \nenemies killed: ${game.playerOne.killedEnemies}
+            \nyour points: ${game.playerOne.points.toString()}
+            ''');
         actions = [
           actionButton(
             'EXIT',
@@ -150,7 +166,6 @@ class _PauseMenuState extends State<PauseMenu> {
 
   // White line that divides the children of the Column
   Widget get divider => Container(
-        margin: const EdgeInsets.symmetric(vertical: 20),
         height: 3,
         width: MediaQuery.of(context).size.width / 1.5,
         decoration: const BoxDecoration(
@@ -166,9 +181,18 @@ class _PauseMenuState extends State<PauseMenu> {
       child: Text(
         text,
         textAlign: TextAlign.center,
-        style: const TextStyle(color: Colors.white),
+        style: const TextStyle(color: Colors.white, fontSize: 32),
       ),
       onPressed: onPressed,
     );
+  }
+}
+
+// Remove scroll glow
+class _NoGlow extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
   }
 }

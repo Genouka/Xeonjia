@@ -93,11 +93,14 @@ class _DialogBoxState extends State<DialogBox> {
                   title: Text(
                     (currentMessage?.authorName ?? '') + ':',
                     style: const TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.w800),
+                      color: Colors.white,
+                      fontSize: 32,
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
                   subtitle: Text(
                     currentMessage?.text ?? '',
-                    style: const TextStyle(fontSize: 20, color: Colors.white),
+                    style: const TextStyle(fontSize: 32, color: Colors.white),
                   ),
                 ),
               ),

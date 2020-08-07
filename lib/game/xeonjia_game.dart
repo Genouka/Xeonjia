@@ -59,7 +59,7 @@ class XeonjiaGame extends BaseGame
   final _dialogBox = DialogBox();
 
   // Box with lifePoints, pause, time and team points
-  final _infoBox = InfoBox();
+  final _statusBox = StatusBox();
 
   // Timer used in multiplayer mode
   Timer _timer;
@@ -143,14 +143,14 @@ class XeonjiaGame extends BaseGame
     initGamepad();
     addWidgetOverlay('gamePad', VirtualGamePad());
     addWidgetOverlay('messageBox', _dialogBox);
-    addWidgetOverlay('infoBox', _infoBox);
+    addWidgetOverlay('statusBox', _statusBox);
 
     _timer = Timer(1, repeat: true, callback: () {
       elapsedSeconds++;
       if (config.mode != GameMode.story) {
         if (elapsedSeconds == config.maxTime) end(timeOut: true);
         if (elapsedSeconds % 10 == 0) regenerateModifiers();
-        _infoBox.state.refresh();
+        _statusBox.state.refresh();
       }
     });
     _timer.start();
@@ -264,7 +264,7 @@ class XeonjiaGame extends BaseGame
 
   // Reload LP bar
   void refreshLifePointsBar() {
-    _infoBox.state.refresh();
+    _statusBox.state.refresh();
   }
 
   // Check if someone won

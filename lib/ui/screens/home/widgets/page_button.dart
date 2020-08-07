@@ -12,8 +12,7 @@ class PageButton extends StatelessWidget {
     return Container(
       constraints: const BoxConstraints(maxWidth: 300),
       width: MediaQuery.of(context).size.width / 1.5,
-      height: 50,
-      margin: const EdgeInsets.only(bottom: 25),
+      margin: const EdgeInsets.only(bottom: 15),
       decoration: BoxDecoration(
           color: Colors.white,
           border: Border.all(color: Colors.black45),

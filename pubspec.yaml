@@ -29,3 +29,8 @@ flutter:
     - assets/maps/
     - assets/maps/arena/
     - assets/maps/rooms/
+
+  fonts:
+    - family: m5x7
+      fonts:
+        - asset: assets/fonts/m5x7.ttf

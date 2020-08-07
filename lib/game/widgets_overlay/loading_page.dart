@@ -12,11 +12,11 @@ class LoadingPage extends StatelessWidget {
           const Text(
             'Loading...\nPlease wait',
             style: TextStyle(
-                color: Colors.white, fontSize: 32, letterSpacing: 1.4),
+                color: Colors.white, fontSize: 48, letterSpacing: 1.2),
             textAlign: TextAlign.center,
           ),
           Container(height: 25),
-          const CircularProgressIndicator(),
+          const CircularProgressIndicator(backgroundColor: Colors.white),
         ],
       ),
     );

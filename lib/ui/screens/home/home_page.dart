@@ -33,27 +33,29 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             const Expanded(
-              flex: 5,
               child: Center(
                 child: Text(
                   'XEONJiA',
                   style: TextStyle(
-                    letterSpacing: 14,
-                    color: Colors.white,
-                    fontSize: 60,
-                    fontWeight: FontWeight.w600,
-                  ),
+                      letterSpacing: 14,
+                      color: Colors.white,
+                      fontSize: 80,
+                      fontFamily: 'm5x7'),
                 ),
               ),
             ),
-            for (var page in pageList)
-              PageButton(
-                title: page['title'],
-                onPressed: () {
-                  Navigator.push(context, FadeRoute(page['goto']()));
-                },
-              ),
-            const Spacer(),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                for (var page in pageList)
+                  PageButton(
+                    title: page['title'],
+                    onPressed: () {
+                      Navigator.push(context, FadeRoute(page['goto']()));
+                    },
+                  ),
+              ],
+            ),
             bottomRow(),
           ],
         ),
