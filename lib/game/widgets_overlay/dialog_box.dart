@@ -4,9 +4,9 @@ import 'package:flutter/rendering.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
-import 'package:xeonjia/util/screen_dimension.dart';
 
 class DialogBox extends StatefulWidget {
+  final bool showImage = false;
   final _DialogBoxState state = _DialogBoxState();
 
   @override
@@ -52,7 +52,7 @@ class _DialogBoxState extends State<DialogBox> {
           : strings.add(match);
     });
     return strings.fold([], (previousValue, element) {
-      previousValue.add(Message(element, message.authorName));
+      previousValue.add(Message(element, message.author));
       return previousValue;
     });
   }
@@ -76,35 +76,57 @@ class _DialogBoxState extends State<DialogBox> {
         child: Stack(
           children: [
             if (_hideMap ?? false) Container(color: Colors.black),
-            Positioned(
-              bottom: 0,
-              child: Container(
-                margin: const EdgeInsets.all(20),
-                padding: const EdgeInsets.all(20),
-                width: screenSize.width - 40,
-                height: 180,
-                decoration: BoxDecoration(
-                    color: Colors.grey[800],
-                    borderRadius: const BorderRadius.all(Radius.circular(10))),
-                child: ListTile(
-                  leading: currentMessage?.image != null
-                      ? CircleAvatar(child: Image.asset(currentMessage?.image))
-                      : null,
-                  title: Text(
-                    (currentMessage?.authorName ?? '') + ':',
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 32,
-                      fontWeight: FontWeight.w800,
-                    ),
+            if (currentMessage != null)
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  margin: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(20),
+                  constraints: const BoxConstraints(maxWidth: 500),
+                  decoration: BoxDecoration(
+                    color: Colors.grey[800].withOpacity(0.8),
+                    borderRadius: const BorderRadius.all(Radius.circular(30)),
+                    border: Border.all(color: Colors.blue, width: 3),
                   ),
-                  subtitle: Text(
-                    currentMessage?.text ?? '',
-                    style: const TextStyle(fontSize: 32, color: Colors.white),
+                  child: Row(
+                    children: [
+                      if (widget.showImage)
+                        Image.asset(
+                          currentMessage.image,
+                          height: 64,
+                          width: 64,
+                        ),
+                      Flexible(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                currentMessage.authorName + ' :',
+                                style: const TextStyle(
+                                  fontSize: 32,
+                                  letterSpacing: 1.2,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                              Text(
+                                currentMessage.text,
+                                style: const TextStyle(
+                                  fontSize: 32,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
-            ),
           ],
         ),
       ),

@@ -4,13 +4,13 @@ class Message {
   final String text;
 
   // Author (it could be authorName_mood)
-  final String _author;
+  final String author;
 
   // Author image
-  String get image => 'assets/images/$_author.png';
+  String get image => 'assets/images/$author.png';
 
   // Author name (_author without mood)
-  String get authorName => _author.split('_').first;
+  String get authorName => author.split('_').first.toUpperCase();
 
-  Message(this.text, [this._author = 'npc']);
+  Message(this.text, [this.author = 'npc']);
 }
