@@ -117,7 +117,7 @@ class _PauseMenuState extends State<PauseMenu> {
             (game.config.mode == GameMode.story
                 ? '''
             \nyour level: ${game.playerOne.level}
-            \nmoney: 0 ¤
+            \nmoney: ${game.playerOne.money} ¤
             \nplay time: ${mainCharacter.minutesPlayed.round()} min'''
                 : '''
             \ndeaths: ${game.playerOne.deaths}
