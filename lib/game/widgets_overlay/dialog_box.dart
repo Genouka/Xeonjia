@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 
 class DialogBox extends StatefulWidget {
-  final bool showImage = false;
+  final bool _showImage = true;
+  final int _timePerChar = 35;
   final _DialogBoxState state = _DialogBoxState();
 
   @override
   _DialogBoxState createState() => state;
 }
 
-class _DialogBoxState extends State<DialogBox> {
+class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   // Messages to show
   List<Message> _messages = [];
 
@@ -28,6 +28,10 @@ class _DialogBoxState extends State<DialogBox> {
   // eg. it is used for chapter change
   bool _hideMap;
 
+  // Typing text animation controller
+  AnimationController _controller;
+  Animation<int> _characterCount;
+
   // Show one or more messages
   void setMessages(List<Message> newMessages, {bool hideMap = false}) {
     if (newMessages == null) return;
@@ -37,6 +41,7 @@ class _DialogBoxState extends State<DialogBox> {
       return previousValue;
     }));
     _currentIndex = 0;
+    _animateText();
     if (mounted) setState(() {});
     game.pause(stopMusic: false);
     game.playSound(Sfx.dialog);
@@ -59,12 +64,30 @@ class _DialogBoxState extends State<DialogBox> {
 
   // Show the next message or hide dialog box if there are no message to show
   void next() {
+    if (_controller?.isAnimating ?? false) {
+      _controller.fling();
+      return;
+    }
     if (++_currentIndex >= (_messages?.length ?? 0)) {
       _messages = [];
       game.resume();
+    } else {
+      _animateText();
     }
     game.playSound(Sfx.dialog);
     if (mounted) setState(() {});
+  }
+
+  // Typing text animation
+  void _animateText() {
+    _controller = AnimationController(
+      duration: Duration(
+          milliseconds: widget._timePerChar * currentMessage.text.length),
+      vsync: this,
+    );
+    _characterCount = StepTween(begin: 0, end: currentMessage.text.length)
+        .animate(CurvedAnimation(parent: _controller, curve: Curves.linear));
+    _controller.forward().then((_) => _controller.dispose());
   }
 
   @override
@@ -89,8 +112,9 @@ class _DialogBoxState extends State<DialogBox> {
                     border: Border.all(color: Colors.blue, width: 3),
                   ),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      if (widget.showImage)
+                      if (widget._showImage)
                         Image.asset(
                           currentMessage.image,
                           height: 64,
@@ -112,12 +136,19 @@ class _DialogBoxState extends State<DialogBox> {
                                   fontWeight: FontWeight.w800,
                                 ),
                               ),
-                              Text(
-                                currentMessage.text,
-                                style: const TextStyle(
-                                  fontSize: 32,
-                                  color: Colors.white,
-                                ),
+                              AnimatedBuilder(
+                                animation: _characterCount,
+                                builder: (BuildContext context, Widget child) {
+                                  var text = currentMessage.text
+                                      .substring(0, _characterCount.value);
+                                  return Text(
+                                    text,
+                                    style: const TextStyle(
+                                      fontSize: 32,
+                                      color: Colors.white,
+                                    ),
+                                  );
+                                },
                               ),
                             ],
                           ),
