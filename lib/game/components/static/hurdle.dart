@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -13,6 +15,11 @@ class HurdleComponent extends BasicComponent {
         super.fromTile(tile);
 
   @override
-  bool isSolid({DynamicComponent otherComponent}) =>
-      otherComponent.direction != _allowedDirection;
+  Rect collisionRect(DynamicComponent otherComponent) {
+    return (otherComponent.direction == _allowedDirection ||
+            otherComponent.direction.dx * (otherComponent.x - x) > 0 ||
+            otherComponent.direction.dy * (otherComponent.y - y) > 0)
+        ? null
+        : super.collisionRect(otherComponent);
+  }
 }
