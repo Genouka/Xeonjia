@@ -6,6 +6,7 @@ import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/util/text_animation.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
+import 'package:xeonjia/models/sfx.dart';
 
 // Component able to move on the game field
 abstract class DynamicComponent extends BasicComponent with TextAnimation {
@@ -27,9 +28,6 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
 
   // If this is not moving, isStationary returns true
   bool get isStationary => direction == null;
-
-  // True if this just moved (it's stationary but it's calculating the movement)
-  bool wasStationary = true;
 
   // Map orientation : sprite
   final _sprites = <Direction, Sprite>{};
@@ -53,11 +51,11 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   // If this component was previously still update its direction and orientation
   void updateDirection(Direction newDirection, {bool forced = false}) {
     if (!isBeingDeleted && (isStationary || forced)) {
-      wasStationary = true;
       direction = newDirection;
       updateOrientation();
       animate([_walkingSprites[orientation]]);
       ++movesCounter;
+      if (isPlayerOne) game.playSound(Sfx.movement);
 
       // Decrease life points cause poison
       if (poisonQuantity > 0) lifePointsDifference(-poisonQuantity);
@@ -88,17 +86,9 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
     final overlappedComponents = <BasicComponent>[];
 
     // Distance traveled
-    final _delta = min(speed * dt, componentSize / 2 - 1);
-    final deltaX = direction.dx * _delta;
-    final deltaY = direction.dy * _delta;
-
-    // Area covered by this update
-    final motion = Rect.fromLTWH(
-      x + min(deltaX, 0),
-      y + min(deltaY, 0),
-      componentSize + deltaX.abs(),
-      componentSize + deltaY.abs(),
-    );
+    final _delta = min(speed * dt, componentSize - 1);
+    final candidatePosition =
+        toRect().translate(direction.dx * _delta, direction.dy * _delta);
 
     // Check if this is going to collide or overlap another component
     game.components.forEach((component) {
@@ -107,7 +97,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
           component != father &&
           this != component.father) {
         var componentCollisionRect = component.collisionRect(this);
-        if (componentCollisionRect?.overlaps(motion) ?? false) {
+        if (componentCollisionRect?.overlaps(candidatePosition) ?? false) {
           if (component.isSolid(otherComponent: this)) {
             collidedComponent = component;
             collidedRect = componentCollisionRect;
@@ -133,13 +123,12 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
       onCollision(collidedComponent);
     } else {
       // This component did not collide with another one
-      x += deltaX;
-      y += deltaY;
+      x = candidatePosition.left;
+      y = candidatePosition.top;
       overlappedComponents.forEach(
           (_overlappedComponent) => _overlappedComponent.overlappedBy(this));
     }
     hasMoved();
-    wasStationary = false;
   }
 
   // Function called if the component moved

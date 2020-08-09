@@ -191,6 +191,28 @@ abstract class BasicComponent extends SpriteComponent {
   // Collision area
   Rect collisionRect(DynamicComponent otherComponent) => toRect();
 
+  // Collision border based on otherComponent direction
+  // It is used if otherComponent should stop on this
+  Rect oppositeBorderRect(DynamicComponent otherComponent) {
+    // If the other component is going left or right
+    if (otherComponent.direction.dx != 0) {
+      // If otherComponent.center > this.center -> do nothing
+      // Else return a rect with width = 1 at the left or right of this
+      return otherComponent.direction.dx * (otherComponent.x - x) >= 0
+          ? null
+          : Rect.fromLTWH(
+              x + (otherComponent.direction.dx > 0 ? width : -1), y, 1, height);
+    } else {
+      // (going up or down)
+      // If otherComponent.center > this.center -> do nothing
+      // Else return a rect with height = 1 at the top or bottom of this
+      return otherComponent.direction.dy * (otherComponent.y - y) >= 0
+          ? null
+          : Rect.fromLTWH(
+              x, y + (otherComponent.direction.dy > 0 ? height : -1), width, 1);
+    }
+  }
+
   // True if this component could be collided
   // It depends on component that would collide this one
   bool isSolid({@required DynamicComponent otherComponent}) => true;

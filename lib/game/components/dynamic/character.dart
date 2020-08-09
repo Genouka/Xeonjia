@@ -164,7 +164,6 @@ class CharacterComponent extends DynamicComponent
   void hasMoved() {
     if (isPlayerOne) {
       game.updateCamera(x, y);
-      if (wasStationary) game.playSound(Sfx.movement);
     }
   }
 

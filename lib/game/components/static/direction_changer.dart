@@ -20,18 +20,6 @@ class DirectionChangerComponent extends BasicComponent {
   }
 
   @override
-  Rect collisionRect(DynamicComponent otherComponent) {
-    if (otherComponent.isFlying()) return null;
-    if (otherComponent.direction.dx != 0) {
-      return otherComponent.direction.dx * (otherComponent.x - x) >= 0
-          ? null
-          : Rect.fromLTWH(
-              x + (otherComponent.direction.dx > 0 ? width : -1), y, 1, height);
-    } else {
-      return otherComponent.direction.dy * (otherComponent.y - y) >= 0
-          ? null
-          : Rect.fromLTWH(
-              x, y + (otherComponent.direction.dy > 0 ? height : -1), width, 1);
-    }
-  }
+  Rect collisionRect(DynamicComponent otherComponent) =>
+      otherComponent.isFlying() ? null : oppositeBorderRect(otherComponent);
 }
