@@ -3,7 +3,6 @@ import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
-import 'package:xeonjia/game/components/static/static.dart';
 import 'package:xeonjia/game/util/text_animation.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -148,12 +147,10 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
 
   // Function called when this component collide another component
   void onCollision(BasicComponent collidedComponent) {
-    lifePointsDifference(-collidedComponent.atk, cause: collidedComponent);
-    if (collidedComponent is! StaticComponent) {
-      collidedComponent.lifePointsDifference(-atk,
-          cause: this, poison: poisonAtk);
-    }
     stop();
+    collidedComponent.lifePointsDifference(-atk,
+        cause: this, poison: poisonAtk);
+    collidedComponent.collidedBy(this);
   }
 
   void stop() {

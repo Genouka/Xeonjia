@@ -199,6 +199,9 @@ abstract class BasicComponent extends SpriteComponent {
   // Used if isSolid() returned false
   void overlappedBy(DynamicComponent componentAbove) {}
 
+  // Define what happens if this component has been collided by another one
+  void collidedBy(DynamicComponent otherComponent) {}
+
   // Reset life points
   void restoreLifePoints() {
     _lifePoints = initialLifePoints;
