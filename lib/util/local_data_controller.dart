@@ -32,13 +32,13 @@ Future<void> loadStoredData() async {
 
 // Save user data in shared preferences
 void saveUserData() {
-  _prefs.setString('userData', jsonEncode(mainCharacter.toJson()));
+  _prefs.setString('userData_V2', jsonEncode(mainCharacter.toJson()));
 }
 
 // Load user data from shared preferences
 void _loadUserData() {
   mainCharacter =
-      CharacterInfo(jsonDecode(_prefs.getString('userData') ?? '{}'));
+      CharacterInfo(jsonDecode(_prefs.getString('userData_V2') ?? '{}'));
 }
 
 // Save app settings in shared preferences
