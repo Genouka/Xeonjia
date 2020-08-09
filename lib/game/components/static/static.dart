@@ -4,24 +4,17 @@ import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/models/direction.dart';
 
-// Ground component
-// Other components walk on this instead of sliding
-class GroundComponent extends BasicComponent {
-  // True if this is not on the ground floor
-  final bool _flying;
-
-  GroundComponent(tile)
-      : _flying = 'true' == (tile.properties['flying'] ?? 'false'),
+// Static component
+class StaticComponent extends BasicComponent {
+  // If true: other components can walk on this, else: this is a solid component
+  final bool _walkable;
+  StaticComponent(tile, {bool walkable = false})
+      : _walkable = walkable,
         super.fromTile(tile);
 
   @override
-  bool isFlying() => _flying;
-
-  @override
-  int priority() => _flying ? 100 : 0;
-
-  @override
   Rect collisionRect(DynamicComponent otherComponent) {
+    if (!_walkable) return super.collisionRect(otherComponent);
     if (otherComponent.isFlying() != isFlying() ||
         otherComponent.wasStationary) {
       return null;

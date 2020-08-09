@@ -32,9 +32,6 @@ class SnowballComponent extends DynamicComponent {
   bool isFlying() => true;
 
   @override
-  int priority() => 5;
-
-  @override
   void onCollision(BasicComponent collidedComponent) {
     if (isBeingDeleted) return;
     x += direction.dx * componentSize / 2;

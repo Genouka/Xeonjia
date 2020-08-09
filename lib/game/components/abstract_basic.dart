@@ -7,7 +7,7 @@ import 'package:meta/meta.dart';
 
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
-import 'package:xeonjia/game/components/static/basic_static.dart';
+import 'package:xeonjia/game/components/static/static.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/team.dart';
@@ -65,6 +65,9 @@ abstract class BasicComponent extends SpriteComponent {
   // They equal to zero if the component is not moving
   Direction direction;
 
+  // True if this is not on the ground floor
+  bool _flying = false;
+
   // True if this component has to be removed from game
   bool remove = false;
 
@@ -101,6 +104,7 @@ abstract class BasicComponent extends SpriteComponent {
         atk = double.parse(tile.properties['atk'] ?? '0'),
         def = double.parse(tile.properties['def'] ?? '0'),
         poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
+        _flying = 'true' == (tile.properties['flying'] ?? 'false'),
         super.fromSprite(tile.size, tile.size, tile.sprite) {
     onCreate();
   }
@@ -168,7 +172,7 @@ abstract class BasicComponent extends SpriteComponent {
           game.teams.forEach((team) {
             if (team.id != teamId) team.basisPoints += 10;
           });
-        } else if (this is! BasicStaticComponent) {
+        } else if (this is! StaticComponent) {
           // Enemy killed
           cause?.killedEnemies++;
           cause?.experiencePoints += level;
@@ -179,7 +183,10 @@ abstract class BasicComponent extends SpriteComponent {
   }
 
   // True if this component is flying
-  bool isFlying() => false;
+  bool isFlying() => _flying;
+
+  @override
+  int priority() => _flying ? 100 : 0;
 
   // Collision area
   Rect collisionRect(DynamicComponent otherComponent) => toRect();

@@ -1,10 +1,9 @@
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/dynamic/slither_cpu.dart';
 import 'package:xeonjia/game/components/dynamic/walker_cpu.dart';
-import 'package:xeonjia/game/components/static/basic_static.dart';
 import 'package:xeonjia/game/components/static/direction_changer.dart';
 import 'package:xeonjia/game/components/static/door.dart';
-import 'package:xeonjia/game/components/static/ground.dart';
+import 'package:xeonjia/game/components/static/static.dart';
 import 'package:xeonjia/game/components/static/hurdle.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -17,7 +16,7 @@ extension CreateComponent on Tile {
   void createComponent() {
     switch (type) {
       case 'Solid':
-        BasicStaticComponent(this);
+        StaticComponent(this);
         break;
       case 'Modifier':
         var _itemId = int.parse(properties['itemId'] ?? '-1');
@@ -28,7 +27,7 @@ extension CreateComponent on Tile {
         }
         break;
       case 'Ground':
-        GroundComponent(this);
+        StaticComponent(this, walkable: true);
         break;
       case 'Door':
         if (game.config.mode == GameMode.story) {
