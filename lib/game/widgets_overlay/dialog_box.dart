@@ -6,7 +6,6 @@ import 'package:xeonjia/models/sfx.dart';
 
 class DialogBox extends StatefulWidget {
   final bool _showImage = true;
-  final int _timePerChar = 35;
   final _DialogBoxState state = _DialogBoxState();
 
   @override
@@ -31,6 +30,7 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   // Typing text animation controller
   AnimationController _controller;
   Animation<int> _characterCount;
+  final int _timePerChar = 35;
 
   // Show one or more messages
   void setMessages(List<Message> newMessages, {bool hideMap = false}) {
@@ -82,8 +82,8 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   void _animateText() {
     if (_controller?.isAnimating ?? false) return;
     _controller = AnimationController(
-      duration: Duration(
-          milliseconds: widget._timePerChar * currentMessage.text.length),
+      duration:
+          Duration(milliseconds: _timePerChar * currentMessage.text.length),
       vsync: this,
     );
     _characterCount = StepTween(begin: 0, end: currentMessage.text.length)
