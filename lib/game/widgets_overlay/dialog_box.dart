@@ -80,6 +80,7 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
 
   // Typing text animation
   void _animateText() {
+    if (_controller?.isAnimating ?? false) return;
     _controller = AnimationController(
       duration: Duration(
           milliseconds: widget._timePerChar * currentMessage.text.length),
