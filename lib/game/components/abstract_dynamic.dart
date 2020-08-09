@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/static/basic_static.dart';
+import 'package:xeonjia/game/util/text_animation.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 
 // Component able to move on the game field
-abstract class DynamicComponent extends BasicComponent {
+abstract class DynamicComponent extends BasicComponent with TextAnimation {
   DynamicComponent(Point startingPosition, String imageName,
       {double imageY = 0})
       : super(startingPosition, imageName, imageY: imageY);

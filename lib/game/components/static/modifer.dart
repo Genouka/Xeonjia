@@ -71,12 +71,9 @@ class ModifierComponent extends BasicComponent {
       componentAbove.atk += _atkDelta;
       componentAbove.def += _defDelta;
       componentAbove.poisonQuantity += _poisonDelta;
-      componentAbove.earnedMoney += _moneyDelta;
+      componentAbove.earnedMoney = _moneyDelta;
       componentAbove.selectedWeapon.powerPoints += _powerPointsDelta;
       if (_powerPointsDelta != 0) game.refreshWeaponBar();
-      if (_moneyDelta != 0 && componentAbove.isPlayerOne) {
-        game.setMessage(Message('+ $_moneyDelta \$'));
-      }
       if (_doorId != -1) {
         componentAbove.doorKeyList.add(_doorId);
       } else if (_itemId != -1) {

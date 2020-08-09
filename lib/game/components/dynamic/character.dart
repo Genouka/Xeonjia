@@ -26,7 +26,15 @@ class CharacterComponent extends DynamicComponent
   int _selectedWeaponElement = 0;
 
   // Money earned during match time
-  int earnedMoney = 0;
+  int _earnedMoney = 0;
+  int get earnedMoney => _earnedMoney;
+  set earnedMoney(int moneyDelta) {
+    _earnedMoney += moneyDelta;
+    showText('+ $moneyDelta ¤');
+  }
+
+  // Money available
+  int get money => _earnedMoney + mainCharacter.money;
 
   // List of door keys owned
   List<int> doorKeyList = [];
