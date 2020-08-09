@@ -60,15 +60,11 @@ class CharacterInfo {
   int get experienceRemaining => experienceRequired - experiencePoints;
 
   // Increase experience points earned
-  // Return true if level up, false otherwise
-  bool expGained(int exp) {
+  void expGained(int exp) {
     _experiencePoints += exp;
     if (_experiencePoints >= experienceRequired) {
       _experiencePoints = 0;
       ++level;
-      return true;
-    } else {
-      return false;
     }
   }
 

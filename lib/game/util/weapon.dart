@@ -21,7 +21,12 @@ abstract class Weapon {
   double atk;
 
   // Number of times a weapon can be used
-  double powerPoints = double.infinity;
+  double _powerPoints = double.infinity;
+  double get powerPoints => _powerPoints;
+  set powerPoints(double powerPoints) {
+    if (powerPoints != _powerPoints) game.refreshWeaponBar();
+    _powerPoints = powerPoints;
+  }
 
   // Weapon details
   String get name => weaponDetails[id]['name'];

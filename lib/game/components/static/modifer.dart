@@ -4,7 +4,6 @@ import 'package:flame/animation.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 
 // Stats modifier component
@@ -73,12 +72,10 @@ class ModifierComponent extends BasicComponent {
       componentAbove.poisonQuantity += _poisonDelta;
       componentAbove.earnedMoney = _moneyDelta;
       componentAbove.selectedWeapon.powerPoints += _powerPointsDelta;
-      if (_powerPointsDelta != 0) game.refreshWeaponBar();
       if (_doorId != -1) {
         componentAbove.doorKeyList.add(_doorId);
       } else if (_itemId != -1) {
         componentAbove.addItem(_itemId);
-        game.setMessage(Message('I found a Gem!'));
       }
       if (_regenerable ?? false) game.modifiersToBeRegenerated.add(this);
       if (explosionOnDelete) {
