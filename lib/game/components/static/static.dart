@@ -10,6 +10,7 @@ class StaticComponent extends BasicComponent {
 
   // If true: other components can walk on this
   final bool _walkable;
+
   StaticComponent(tile, {bool walkable = false})
       : _slippery = (tile.properties['slippery'] ?? 'false') == 'true',
         _walkable = walkable,
@@ -17,7 +18,12 @@ class StaticComponent extends BasicComponent {
 
   @override
   Rect collisionRect(DynamicComponent otherComponent) {
-    if (_slippery || otherComponent.isFlying() != isFlying()) return null;
-    return !_walkable ? toRect() : oppositeBorderRect(otherComponent);
+    if (_slippery) return null;
+    if (!_walkable) return super.collisionRect(otherComponent);
+    if (otherComponent.isFlying() != isFlying() ||
+        otherComponent.wasStationary) {
+      return null;
+    }
+    return oppositeBorderRect(otherComponent);
   }
 }

@@ -29,6 +29,9 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   // If this is not moving, isStationary returns true
   bool get isStationary => direction == null;
 
+  // True if this just moved (it's stationary but it's calculating the movement)
+  bool wasStationary = true;
+
   // Map orientation : sprite
   final _sprites = <Direction, Sprite>{};
   final _walkingSprites = <Direction, Sprite>{};
@@ -51,6 +54,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   // If this component was previously still update its direction and orientation
   void updateDirection(Direction newDirection, {bool forced = false}) {
     if (!isBeingDeleted && (isStationary || forced)) {
+      wasStationary = true;
       direction = newDirection;
       updateOrientation();
       animate([_walkingSprites[orientation]]);
@@ -129,6 +133,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
           (_overlappedComponent) => _overlappedComponent.overlappedBy(this));
     }
     hasMoved();
+    wasStationary = false;
   }
 
   // Function called if the component moved
