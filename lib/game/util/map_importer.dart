@@ -102,6 +102,7 @@ void importMap(String fileName) async {
     });
   });
 
+  var layerCount = 0;
   mapXml.findElements('layer').forEach((layer) {
     var mapData = <int>[];
     var gzipMapData = layer.findElements('data').single.text;
@@ -117,6 +118,7 @@ void importMap(String fileName) async {
       if (componentTile != null) {
         componentTile.position = Point(
             componentTile.size * columnCount, componentTile.size * lineCount);
+        componentTile.layer = layerCount;
         componentTile.createComponent();
       }
       ++columnCount;
@@ -125,6 +127,7 @@ void importMap(String fileName) async {
         ++lineCount;
       }
     });
+    layerCount++;
   });
 
   // Read groups

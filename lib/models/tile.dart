@@ -24,6 +24,9 @@ class Tile {
   // Tile position
   Point position;
 
+  // Map layer
+  int layer;
+
   Tile({
     this.id,
     this.type,
@@ -31,6 +34,7 @@ class Tile {
     this.sprite,
     this.size,
     this.position,
+    this.layer,
   }) {
     properties ??= {};
     size ??= componentSize;
