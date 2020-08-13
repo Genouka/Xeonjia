@@ -144,7 +144,9 @@ class CharacterComponent extends DynamicComponent
   void addItem(int itemId) {
     _itemList.add(itemId);
     if (isPlayerOne) {
-      game.setMessage(Message('* You received ${itemData[itemId].name} *'));
+      if (itemData.containsKey(itemId)) {
+        game.setMessage(Message('* You received ${itemData[itemId].name} *'));
+      }
       game.playSound(Sfx.item);
     }
   }

@@ -19,10 +19,10 @@ extension CreateComponent on Tile {
         StaticComponent(this);
         break;
       case 'Modifier':
-        var _itemId = int.parse(properties['itemId'] ?? '-1');
-        // Import item only if it is not already owned by the player
-        // or if it is not an unique item
-        if (_itemId == -1 || !mainCharacter.itemList.contains(_itemId)) {
+        var _itemId = int.parse(properties['itemId'] ?? '0');
+        // Load item only if it is not an unique item (id == 0)
+        // or if it is not already owned by the player
+        if (_itemId == 0 || !mainCharacter.itemList.contains(_itemId)) {
           ModifierComponent(this);
         }
         break;

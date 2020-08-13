@@ -18,13 +18,9 @@ class ModifierComponent extends BasicComponent {
   double _poisonDelta = 0;
 
   // Item unique id
-  // It is != 0 only if this is an unique item
-  int _itemId = -1;
-
-  // Door opened by this component
-  // Door ID is equal to the next room ID
-  // It is != 0 only if this is a key
-  int _doorId = -1;
+  // It is == 0 if this is not an unique item (this can be taken multiple times)
+  // It is < 0 if this is a common take-once item (eg money)
+  int _itemId = 0;
 
   @override
   BasicComponent father;
@@ -44,8 +40,7 @@ class ModifierComponent extends BasicComponent {
         _powerPointsDelta =
             int.parse(tile.properties['powerPointsDelta'] ?? '0'),
         _poisonDelta = double.parse(tile.properties['poisonDelta'] ?? '0'),
-        _doorId = int.parse(tile.properties['door'] ?? '-1'),
-        _itemId = int.parse(tile.properties['itemId'] ?? '-1'),
+        _itemId = int.parse(tile.properties['itemId'] ?? '0'),
         _regenerable = (tile.properties['regenerable'] ?? 'false') == 'true',
         super.fromTile(tile);
 
@@ -75,11 +70,7 @@ class ModifierComponent extends BasicComponent {
       componentAbove.poisonQuantity += _poisonDelta;
       componentAbove.earnedMoney = _moneyDelta;
       componentAbove.selectedWeapon.powerPoints += _powerPointsDelta;
-      if (_doorId != -1) {
-        componentAbove.doorKeyList.add(_doorId);
-      } else if (_itemId != -1) {
-        componentAbove.addItem(_itemId);
-      }
+      if (_itemId != 0) componentAbove.addItem(_itemId);
       if (_regenerable ?? false) game.modifiersToBeRegenerated.add(this);
       if (explosionOnDelete) {
         isBeingDeleted = true;
