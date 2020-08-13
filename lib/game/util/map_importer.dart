@@ -29,6 +29,7 @@ void importMap(String fileName) async {
   game.addLater(SpriteComponent.fromSprite(game.map.width * componentSize,
       game.map.height * componentSize, Sprite('background.png')));
 
+  // Get map properties
   var mapProperties = mapXml.findElements('properties');
   if (mapProperties.isNotEmpty) {
     mapProperties.single.children.forEach((property) {
@@ -43,7 +44,7 @@ void importMap(String fileName) async {
   // tileId : Tile
   var _tileMap = <int, Tile>{};
 
-  // Read tileset
+  // Read tilesets
   await Future.forEach(mapXml.findElements('tileset'), (tilesetElement) async {
     var firstGid = int.parse(tilesetElement.getAttribute('firstgid'));
 
@@ -72,34 +73,43 @@ void importMap(String fileName) async {
         rows: tileCount ~/ columns);
 
     // Get tiles from tileset
-    tileset.findElements('tile').forEach((tile) {
-      var newTile = Tile(
-        id: int.parse(tile.getAttribute('id')) + firstGid,
-        type: tile.getAttribute('type'),
-      );
-      newTile.properties['imageY'] =
-          (((newTile.id - firstGid) / columns).floor() * tileHeight);
-      newTile.properties['image'] = tileset
-          .findElements('image')
-          .single
-          .getAttribute('source')
-          .split('../../images/')
-          .last;
-      newTile.sprite = spriteSheet.getSprite((newTile.id - firstGid) ~/ columns,
-          (newTile.id - firstGid) % columns);
-
-      // Read tile properties
-      var properties = tile.findElements('properties');
-      if (properties.isNotEmpty) {
-        properties.single.children.forEach((property) {
-          if (property.attributes.isNotEmpty) {
-            newTile.properties[property.getAttributeNode('name').value] =
-                property.getAttributeNode('value')?.value ?? property.text;
-          }
-        });
+    if (tileset.findElements('tile').isEmpty) {
+      // Used for object groups
+      // Properties are defined in objectgroup
+      for (var i = 0; i < tileCount; i++) {
+        var newTile = Tile(id: firstGid + i);
+        newTile.sprite = spriteSheet.getSprite(i ~/ columns, i % columns);
+        newTile.properties['imageY'] =
+            (((newTile.id - firstGid) / columns).floor() * tileHeight);
+        newTile.properties['image'] = image;
+        _tileMap[newTile.id] = newTile;
       }
-      _tileMap[newTile.id] = newTile;
-    });
+    } else {
+      tileset.findElements('tile').forEach((tile) {
+        var newTile = Tile(
+          id: int.parse(tile.getAttribute('id')) + firstGid,
+          type: tile.getAttribute('type'),
+        );
+        newTile.properties['imageY'] =
+            (((newTile.id - firstGid) / columns).floor() * tileHeight);
+        newTile.properties['image'] = image;
+        newTile.sprite = spriteSheet.getSprite(
+            (newTile.id - firstGid) ~/ columns,
+            (newTile.id - firstGid) % columns);
+
+        // Read tile properties
+        var properties = tile.findElements('properties');
+        if (properties.isNotEmpty) {
+          properties.single.children.forEach((property) {
+            if (property.attributes.isNotEmpty) {
+              newTile.properties[property.getAttributeNode('name').value] =
+                  property.getAttributeNode('value')?.value ?? property.text;
+            }
+          });
+        }
+        _tileMap[newTile.id] = newTile;
+      });
+    }
   });
 
   var layerCount = 0;
@@ -130,33 +140,31 @@ void importMap(String fileName) async {
     layerCount++;
   });
 
-  // Read groups
-  mapXml.findElements('group').forEach((group) {
-    if (group.getAttributeNode('name').value == 'Spawn points') {
-      group.findElements('objectgroup').forEach((objectgroup) {
-        objectgroup.findElements('object').forEach((object) {
-          var x = int.parse(object.getAttributeNode('x').value) *
-              componentSize /
-              16;
-          var y = int.parse(object.getAttributeNode('y').value) *
-              componentSize /
-              16;
-          var properties = <String, dynamic>{};
-          object
-              .findElements('properties')
-              .single
-              .findElements('property')
-              .forEach((property) {
-            properties[property.getAttributeNode('name').value] =
-                property.getAttributeNode('value')?.value ?? property.text;
-          });
-          Tile(
-                  type: object.getAttribute('type'),
-                  position: Point(x, y),
-                  properties: properties)
-              .createComponent();
-        });
+  // Read objectgroups
+  mapXml.findElements('objectgroup').forEach((objectgroup) {
+    objectgroup.findElements('object').forEach((object) {
+      var isTileObject = (object.getAttribute('gid') != null);
+      var tile = isTileObject
+          ? _tileMap[int.parse(object.getAttribute('gid'))]
+          : Tile();
+      var x =
+          int.parse(object.getAttributeNode('x').value) / 16 * componentSize;
+      var y = (int.parse(object.getAttributeNode('y').value) / 16 -
+              (isTileObject ? 1 : 0)) *
+          componentSize;
+      var properties = <String, dynamic>{};
+      object
+          .findElements('properties')
+          .single
+          .findElements('property')
+          .forEach((property) {
+        properties[property.getAttributeNode('name').value] =
+            property.getAttributeNode('value')?.value ?? property.text;
       });
-    }
+      tile.type = object.getAttribute('type');
+      tile.position = Point(x, y);
+      tile.properties.addAll(properties);
+      tile.createComponent();
+    });
   });
 }
