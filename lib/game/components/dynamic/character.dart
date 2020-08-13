@@ -117,7 +117,7 @@ class CharacterComponent extends DynamicComponent
     eventChanged();
   }
 
-  // Non-Player Character
+  // Non-Player Character (story mode)
   CharacterComponent.npc(Tile tile) : this(tile, initialLP: double.infinity);
 
   Weapon get selectedWeapon => weaponList[_selectedWeaponElement];

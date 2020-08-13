@@ -50,6 +50,8 @@ extension CreateComponent on Tile {
             var _playerOne = game.playerOne == null && _teamId == 0;
             properties['image'] =
                 'character${_playerOne ? '' : '_cpu_$_teamId'}.png';
+            properties['friendly'] = 'false';
+            properties['quiet'] = 'false';
             CharacterComponent(
               this,
               isPlayerOne: _playerOne,
