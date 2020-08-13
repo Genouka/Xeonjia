@@ -29,6 +29,7 @@ class CharacterComponent extends DynamicComponent
   int _earnedMoney = 0;
   int get earnedMoney => _earnedMoney;
   set earnedMoney(int moneyDelta) {
+    if (moneyDelta == 0) return;
     _earnedMoney += moneyDelta;
     showText('+ $moneyDelta ¤');
   }
