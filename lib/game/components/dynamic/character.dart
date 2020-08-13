@@ -36,9 +36,6 @@ class CharacterComponent extends DynamicComponent
   // Money available
   int get money => _earnedMoney + mainCharacter.money;
 
-  // List of door keys owned
-  List<int> doorKeyList = [];
-
   // List of items owned
   // Add/remove items by using addItem() and removeItem()
   List<int> _itemList = [];
