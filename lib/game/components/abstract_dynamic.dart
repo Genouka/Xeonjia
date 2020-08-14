@@ -176,7 +176,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   }
 
   @override
-  int priority() => 105;
+  int priority() => 125;
 
   // Generate random number between -0.5 and +0.5
   // It is used to generate random direction for CPU-moved characters

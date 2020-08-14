@@ -52,7 +52,7 @@ class ModifierComponent extends BasicComponent {
   }
 
   @override
-  int priority() => 300;
+  int priority() => 50;
 
   @override
   bool isSolid({BasicComponent otherComponent}) => false;

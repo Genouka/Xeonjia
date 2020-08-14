@@ -32,7 +32,7 @@ class SnowballComponent extends DynamicComponent {
   bool isFlying() => true;
 
   @override
-  int priority() => 30;
+  int priority() => 125;
 
   @override
   void onCollision(BasicComponent collidedComponent) {
