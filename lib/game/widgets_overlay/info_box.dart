@@ -23,8 +23,9 @@ class _StatusBoxState extends State<StatusBox> {
   @override
   Widget build(BuildContext context) {
     return InfoBox(
-      0.7,
-      Column(
+      opacity: 0.7,
+      radius: game.config.mode == GameMode.tdm ? 10 : 30,
+      child: Column(
         children: [
           Row(
             children: [
@@ -33,7 +34,7 @@ class _StatusBoxState extends State<StatusBox> {
                 child: const Icon(
                   Icons.favorite,
                   color: Colors.white,
-                  size: 14,
+                  size: 15,
                 ),
               ),
               Expanded(
@@ -46,11 +47,9 @@ class _StatusBoxState extends State<StatusBox> {
                             game.playerOne.initialLifePoints.round() -
                                 game.playerOne.lifePoints.round()
                           ],
-                    texts: [
-                      game.playerOne != null
-                          ? game.playerOne.lifePoints.round().toString()
-                          : '',
-                    ],
+                    text: game.playerOne != null
+                        ? game.playerOne.lifePoints.round().toString()
+                        : '',
                     colors: [
                       lifePointsColor((game.playerOne?.lifePoints ?? 1) /
                           (game.playerOne?.initialLifePoints ?? 1)),
@@ -72,6 +71,14 @@ class _StatusBoxState extends State<StatusBox> {
             Container(height: 10),
             Row(
               children: [
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 4),
+                  child: const Icon(
+                    Icons.whatshot,
+                    color: Colors.white,
+                    size: 15,
+                  ),
+                ),
                 Expanded(
                   child: _PercentIndicator(
                     values: game.playerOne == null
@@ -80,10 +87,9 @@ class _StatusBoxState extends State<StatusBox> {
                             max(game.teams.first.points, 1),
                             max(game.teams.last.points, 1),
                           ],
-                    texts: [
-                      game.teams.first.points.toString() ?? '',
-                      game.teams.last.points.toString() ?? ''
-                    ],
+                    text: (game.teams.first.points.toString() ?? '') +
+                        ' - ' +
+                        (game.teams.last.points.toString() ?? ''),
                     colors: [
                       game.teams.first.color ?? '',
                       game.teams.last.color ?? '',
@@ -93,7 +99,7 @@ class _StatusBoxState extends State<StatusBox> {
                 Text(
                   '  ${game.remainingTime}',
                   style: const TextStyle(
-                    fontSize: 18,
+                    fontSize: 24,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
@@ -109,9 +115,10 @@ class _StatusBoxState extends State<StatusBox> {
 
 // Top left container
 class InfoBox extends StatelessWidget {
-  final child;
-  final opacity;
-  InfoBox(this.opacity, this.child);
+  final Widget child;
+  final double opacity;
+  final double radius;
+  InfoBox({this.opacity, this.child, this.radius = 30});
 
   @override
   Widget build(BuildContext context) {
@@ -126,7 +133,7 @@ class InfoBox extends StatelessWidget {
           constraints: const BoxConstraints(maxWidth: 320),
           decoration: BoxDecoration(
               color: Colors.grey[800].withOpacity(opacity),
-              borderRadius: const BorderRadius.all(Radius.circular(30))),
+              borderRadius: BorderRadius.all(Radius.circular(radius))),
           child: child,
         ),
       ),
@@ -137,13 +144,13 @@ class InfoBox extends StatelessWidget {
 // Linear percent indicator
 class _PercentIndicator extends StatelessWidget {
   final List<int> values;
-  final List<String> texts;
+  final String text;
   final List<Color> colors;
   final bool poisoned;
 
   _PercentIndicator({
     @required this.values,
-    @required this.texts,
+    @required this.text,
     this.colors = const [Colors.lightBlue, Color(0xFF81D4FA)],
     this.poisoned = false,
   }) : assert(colors.length == 2);
@@ -160,34 +167,31 @@ class _PercentIndicator extends StatelessWidget {
                 Expanded(
                   flex: values[i],
                   child: Container(
+                    height: 24,
                     padding: const EdgeInsets.symmetric(horizontal: 5),
                     decoration: BoxDecoration(
                       color: colors[i].withOpacity(0.4),
-                      borderRadius: const BorderRadius.all(Radius.circular(30)),
-                    ),
-                    child: Center(
-                      child: Text(
-                        texts.length == 2 ? texts[i] : '',
-                        style: const TextStyle(
-                          fontSize: 24,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        maxLines: 1,
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20),
                       ),
                     ),
                   ),
                 ),
           ],
         ),
-        if (texts.length == 1)
-          Center(
-            child: Text(
-              texts.single,
-              style: const TextStyle(color: Colors.white, fontSize: 24),
-              maxLines: 1,
+        Center(
+          child: Text(
+            text,
+            style: const TextStyle(
+              fontSize: 24,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.1,
             ),
+            maxLines: 1,
           ),
+        ),
       ],
     );
   }
