@@ -251,12 +251,20 @@ class XeonjiaGame extends BaseGame
 
   // Update camera position
   void updateCamera(double x, double y) {
-    camera.x = min(max(0, x - screenSize.width / 2),
-        componentSize * (map?.width ?? 0) - screenSize.width);
-    camera.y = max(
-        0,
-        min(y - screenSize.height / 2,
-            componentSize * (map?.height ?? 0) - screenSize.height));
+    if (map == null) return;
+    var _widthDiff = map.width * componentSize - screenSize.width;
+    camera.x = _widthDiff <= 0
+        ? _widthDiff / 2
+        : min(max(0, x - screenSize.width / 2),
+            componentSize * (map?.width ?? 0) - screenSize.width);
+
+    var _heightDiff = map.height * componentSize - screenSize.height;
+    camera.y = _heightDiff <= 0
+        ? _heightDiff / 2
+        : max(
+            0,
+            min(y - screenSize.height / 2,
+                componentSize * map.height - screenSize.height));
   }
 
   // Reload weapon bar
