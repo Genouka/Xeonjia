@@ -120,6 +120,7 @@ class XeonjiaGame extends BaseGame
     // Reset variables
     timeSinceUpdate = 0;
     elapsedSeconds = 0;
+    playerOne = null;
 
     // Remove previous components
     // They are removed during the next update()
