@@ -16,7 +16,12 @@ Environment setEnvironment() {
 
   // Game procedures
   _('life', 0, (Cell x) => game.playerOne.lifePoints);
-  _('place-visited', 0, (Cell x) => mainCharacter?.visitedRooms?.length ?? 0);
+  _('places-visited', 0, (Cell x) => mainCharacter.visitedRooms.length);
+  _(
+      'last-place',
+      0,
+      (Cell x) =>
+          mainCharacter.visitedRooms[mainCharacter.visitedRooms.length - 2]);
   _('move', 1, (Cell x) => (x.car as BasicComponent).x += componentSize);
   _('event-change', 1, (Cell x) => (x.car as BasicComponent).eventChanged());
   _('has-item', 1, (Cell x) => game.playerOne.itemList.contains(x.car));
