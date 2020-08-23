@@ -337,32 +337,26 @@ class XeonjiaGame extends BaseGame
 
   // Manage tap gesture
   void gestureTapInput(Offset position) {
-    // Do nothing if pause or if tapping on top bar
-    if (_pause || position.dy < 40) return;
+    if (_pause) return;
 
-    // Update orientation if not tapping on bottom bar
-    if (position.dy <=
-        screenSize.height + (config.mode != GameMode.story ? 80 : 40)) {
-      var _relativeTapX =
-          position.dx - (playerOne.x + componentSize / 2 - camera.x);
-      var _relativeTapY =
-          position.dy - (playerOne.y + componentSize / 2 - camera.y) - 40;
+    // Update orientation
+    var _relativeTapX =
+        position.dx - (playerOne.x + componentSize / 2 - camera.x);
+    var _relativeTapY =
+        position.dy - (playerOne.y + componentSize / 2 - camera.y);
 
-      // Update character orientation
-      if (position.dx < componentSize ||
-          position.dx > screenSize.width - componentSize) {
-        playerOne.updateOrientation(
-            GetDirection.fromXY(position.dx - componentSize, 0));
-      } else if (position.dy - 40 < componentSize ||
-          position.dy > screenSize.height - componentSize) {
-        playerOne.updateOrientation(
-            GetDirection.fromXY(0, position.dy - 40 - componentSize));
-      } else if (_relativeTapX.abs() > 15 || _relativeTapY.abs() > 15) {
-        _relativeTapX.abs() > _relativeTapY.abs()
-            ? playerOne.updateOrientation(GetDirection.fromXY(_relativeTapX, 0))
-            : playerOne
-                .updateOrientation(GetDirection.fromXY(0, _relativeTapY));
-      }
+    if (position.dx < componentSize ||
+        position.dx > screenSize.width - componentSize) {
+      playerOne.updateOrientation(
+          GetDirection.fromXY(position.dx - componentSize, 0));
+    } else if (position.dy < componentSize ||
+        position.dy > screenSize.height - componentSize) {
+      playerOne.updateOrientation(
+          GetDirection.fromXY(0, position.dy - componentSize));
+    } else if (_relativeTapX.abs() > 15 || _relativeTapY.abs() > 15) {
+      _relativeTapX.abs() > _relativeTapY.abs()
+          ? playerOne.updateOrientation(GetDirection.fromXY(_relativeTapX, 0))
+          : playerOne.updateOrientation(GetDirection.fromXY(0, _relativeTapY));
     }
 
     // Use weapon selected by player
