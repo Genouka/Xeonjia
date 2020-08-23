@@ -161,7 +161,7 @@ void importMap(String fileName) async {
         properties[property.getAttributeNode('name').value] =
             property.getAttributeNode('value')?.value ?? property.text;
       });
-      tile.type = object.getAttribute('type');
+      tile.type ??= object.getAttribute('type');
       tile.position = Point(x, y);
       tile.properties.addAll(properties);
       tile.createComponent();
