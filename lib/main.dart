@@ -1,4 +1,3 @@
-import 'package:flame/flame.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -11,7 +10,6 @@ void main() async {
   await loadStoredData().then((_) {
     if (settings.fullScreen) SystemChrome.setEnabledSystemUIOverlays([]);
   });
-  await Flame.images.loadAll(['basic.png', 'character.png', 'tileset_0.png']);
   return runApp(Xeonjia());
 }
 
