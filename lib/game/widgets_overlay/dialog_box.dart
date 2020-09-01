@@ -5,7 +5,6 @@ import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 
 class DialogBox extends StatefulWidget {
-  final bool _showImage = true;
   final _DialogBoxState state = _DialogBoxState();
 
   @override
@@ -115,7 +114,7 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      if (widget._showImage)
+                      if (currentMessage.image != null)
                         Image.asset(
                           currentMessage.image,
                           height: 64,
@@ -128,15 +127,16 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                             mainAxisSize: MainAxisSize.min,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                currentMessage.authorName + ' :',
-                                style: const TextStyle(
-                                  fontSize: 32,
-                                  letterSpacing: 1.2,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w800,
+                              if (currentMessage.authorName != null)
+                                Text(
+                                  currentMessage.authorName + ' :',
+                                  style: const TextStyle(
+                                    fontSize: 32,
+                                    letterSpacing: 1.2,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w800,
+                                  ),
                                 ),
-                              ),
                               AnimatedBuilder(
                                 animation: _characterCount,
                                 builder: (BuildContext context, Widget child) {

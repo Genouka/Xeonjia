@@ -27,19 +27,16 @@ Environment setEnvironment() {
   _('has-item', 1, (Cell x) => game.playerOne.itemList.contains(x.car));
   _('give-item', 1, (Cell x) => game.playerOne.addItem(x.car));
   _('take-item', 1, (Cell x) => game.playerOne.removeItem(x.car));
-  _('dialog', 1, (Cell x) {
-    game.setMessage(Message(stringify(x.car, false)));
-    return #NONE;
-  });
   _('story-dialog', 1, (Cell x) {
     game.setMessage(Message(stringify(x.car, false)), hideMap: true);
     return #NONE;
   });
-  _('dialogs', 1, (Cell x) {
+  _('dialog', 1, (Cell x) {
     var it = (x.car as Cell).iterator;
     while (it.moveNext()) {
-      game.setMessage(
-          Message((it.current as Cell).cdr.car, (it.current as Cell).car));
+      game.setMessage((it.current as Cell).length == 1
+          ? Message((it.current as Cell).car)
+          : Message((it.current as Cell).cdr.car, (it.current as Cell).car));
     }
     return #NONE;
   });

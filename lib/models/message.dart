@@ -7,10 +7,12 @@ class Message {
   final String author;
 
   // Author image
-  String get image => 'assets/images/$author.png';
+  final String image;
 
-  // Author name (_author without mood)
-  String get authorName => author.split('_').first.toUpperCase();
+  // Author name (author without mood)
+  final String authorName;
 
-  Message(this.text, [this.author = 'npc']);
+  Message(this.text, [this.author])
+      : image = author != null ? 'assets/images/heads/$author.png' : null,
+        authorName = author?.split('_')?.first?.toUpperCase();
 }
