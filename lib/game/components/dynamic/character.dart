@@ -87,7 +87,7 @@ class CharacterComponent extends DynamicComponent
         ? mainCharacter.def
         : (level ~/ 5).toDouble();
     teamId = team;
-    eventChange = tile.properties['eventChange'] ?? '';
+    actionOnEvent = tile.properties['actionOnEvent'] ?? '';
     action = tile.properties['action'] ?? '';
     // Temporary solution to remedy the functions _cpuMove() and _cpuShoot()
     jsonWeaponList ??=

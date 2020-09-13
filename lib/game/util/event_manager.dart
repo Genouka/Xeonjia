@@ -44,7 +44,7 @@ Environment setEnvironment() {
       (Cell x) => ((env.lookForValue(Sym('self')) as Intrinsic).fun(x)
               as BasicComponent)
           .delete());
-  _('event-change', 1, (Cell x) => (x.car as BasicComponent).executeAction());
+  _('fire-event', 1, (Cell x) => (x.car as BasicComponent).executeAction());
   _('has-item', 1, (Cell x) => game.playerOne.itemList.contains(x.car));
   _('give-item', 1, (Cell x) => game.playerOne.addItem(x.car));
   _('take-item', 1, (Cell x) => game.playerOne.removeItem(x.car));
