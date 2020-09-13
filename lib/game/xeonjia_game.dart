@@ -210,7 +210,7 @@ class XeonjiaGame extends BaseGame
     var newBgm = map.music ?? 'town.ogg';
     if (newBgm == currentBgm) return;
     currentBgm = newBgm;
-    _backgroundMusic.play(currentBgm);
+    _backgroundMusic.play('bgm/' + currentBgm);
   }
 
   // Start the background music

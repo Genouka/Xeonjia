@@ -4,5 +4,5 @@ import 'package:flutter/foundation.dart';
 enum Sfx { movement, item, punch, snowball, explosion, dialog }
 
 extension SfxFileName on Sfx {
-  String get fileName => describeEnum(this) + '.wav';
+  String get fileName => 'sfx/${describeEnum(this)}.wav';
 }

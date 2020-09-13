@@ -24,9 +24,11 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/audio/
+    - assets/audio/bgm/
+    - assets/audio/sfx/
     - assets/data.json
     - assets/images/
+    - assets/images/heads/
     - assets/maps/
     - assets/maps/arena/
     - assets/maps/story/
