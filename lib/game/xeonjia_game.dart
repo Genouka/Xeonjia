@@ -220,7 +220,7 @@ class XeonjiaGame extends BaseGame
   }
 
   // Save match data and load the new room
-  void changeRoom(int nextRoomId) {
+  void changeRoom(String nextRoomId) {
     pause(stopMusic: false);
 
     // Save new player data into mainCharacter
@@ -237,7 +237,8 @@ class XeonjiaGame extends BaseGame
     mainCharacter.visitedRooms.add(nextRoomId);
     mainCharacter.expGained(playerOne.experiencePoints +
         currentEventLog.length -
-        mainCharacter.eventLog.length * nextRoomId);
+        mainCharacter.eventLog.length *
+            mainCharacter.visitedRooms.toSet().length);
     mainCharacter.eventLog = Map.from(currentEventLog);
     mainCharacter.itemList = List.from(playerOne.itemList);
     saveUserData();

@@ -32,17 +32,17 @@ extension CreateComponent on Tile {
       case 'Door':
         if (game.config.mode == GameMode.story) {
           var _previousRoomId = (mainCharacter.visitedRooms.length <= 1)
-              ? 1
+              ? '1'
               : mainCharacter
                   .visitedRooms[mainCharacter.visitedRooms.length - 2];
-          if (_previousRoomId == int.parse(properties['roomId'])) {
+          if (_previousRoomId == properties['roomId']) {
             properties['image'] = 'character.png';
             CharacterComponent(this,
                 isPlayerOne: true,
                 level: mainCharacter.level,
                 jsonWeaponList: mainCharacter.jsonWeaponList);
           }
-          if (_previousRoomId != 0) DoorComponent(this);
+          if (_previousRoomId != '0') DoorComponent(this);
         } else {
           var _teamId = int.parse(properties['team'] ?? '0');
           if (game.players.where((p) => p.teamId == _teamId).length <

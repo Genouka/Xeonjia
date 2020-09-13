@@ -45,7 +45,7 @@ class CharacterInfo {
 
   // List of rooms visited by the character ordered by view time
   // A room could be stored more than once in this list
-  List<int> visitedRooms;
+  List<String> visitedRooms;
 
   // List of items owned by the character
   List<int> itemList;
@@ -88,7 +88,7 @@ class CharacterInfo {
             jsonDecode(json['jsonAvailableWeaponList'] ?? '{}'),
         itemList = (json['itemList'] ?? []).cast<int>(),
         totalEarnedMoney = json['totalEarnedMoney'] ?? 0,
-        visitedRooms = (json['viewedRooms'] ?? [1]).cast<int>(),
+        visitedRooms = (json['viewedRooms'] ?? ['1']).cast<String>(),
         minutesPlayed = json['minutesPlayed'] ?? 0,
         killedComponents = json['killedComponents'] ?? 0,
         movesCounter = json['movesCounter'] ?? 0,

@@ -5,13 +5,13 @@ import 'package:xeonjia/models/direction.dart';
 // Component that permits to change room
 class DoorComponent extends BasicComponent {
   // Next Room ID
-  final int _roomId;
+  final String _roomId;
 
   // Door offset
   final Direction _offset;
 
   DoorComponent(tile)
-      : _roomId = int.parse(tile.properties['roomId'] ?? '0'),
+      : _roomId = tile.properties['roomId'] ?? '0',
         _offset = GetDirection.fromInt(
                 int.parse(tile.properties['orientation'] ?? '0'))
             .opposite,
