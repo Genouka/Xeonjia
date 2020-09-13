@@ -51,7 +51,8 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
     var strings = <String>[];
     RegExp(r'([^.,?!]*[.,?!]*)\s*').allMatches(message.text).forEach((m) {
       var match = m.group(0);
-      (strings.isNotEmpty && strings.last.length + match.length < 90)
+      (strings.isNotEmpty && strings.last.length + match.length < 90 ||
+              match.isEmpty)
           ? strings.last += match
           : strings.add(match);
     });
