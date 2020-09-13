@@ -1,8 +1,10 @@
 import 'dart:io';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
+import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/widgets_overlay/map_box.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/util/little_scheme.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
@@ -26,8 +28,17 @@ Environment setEnvironment() {
       0,
       (Cell x) =>
           mainCharacter.visitedRooms[mainCharacter.visitedRooms.length - 2]);
-  _('move', 1, (Cell x) => (x.car as BasicComponent).x += componentSize);
-  _('event-change', 1, (Cell x) => (x.car as BasicComponent).eventChanged());
+  _(
+      'move',
+      1,
+      (Cell x) => (env.lookForValue(Sym('actor')) as BasicComponent).x +=
+          componentSize);
+  _(
+      'set-orientation',
+      1,
+      (Cell x) => (env.lookForValue(Sym('actor')) as DynamicComponent)
+          .orientation = GetDirection.fromInt(x.car));
+  _('event-change', 1, (Cell x) => (x.car as BasicComponent).executeAction());
   _('has-item', 1, (Cell x) => game.playerOne.itemList.contains(x.car));
   _('give-item', 1, (Cell x) => game.playerOne.addItem(x.car));
   _('take-item', 1, (Cell x) => game.playerOne.removeItem(x.car));

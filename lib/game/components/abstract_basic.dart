@@ -97,11 +97,13 @@ abstract class BasicComponent extends SpriteComponent {
   // Actions executed by the component
   String action = '';
   String eventChange = '';
+  String eventOnCollision = '';
 
   BasicComponent.fromTile(Tile tile)
       : startingPosition = tile.position,
         action = tile.properties['action'] ?? '',
         eventChange = tile.properties['eventChange'] ?? '',
+        eventOnCollision = tile.properties['eventOnCollision'] ?? '',
         initialLifePoints =
             double.parse(tile.properties['lifePoints'] ?? 'Infinity'),
         atk = double.parse(tile.properties['atk'] ?? '0'),
@@ -134,24 +136,23 @@ abstract class BasicComponent extends SpriteComponent {
     x = startingPosition.x;
     y = startingPosition.y;
     game.addLater(this);
-    eventChanged();
+    executeAction();
   }
 
   @mustCallSuper
   void playAction(Direction orientation) {
     if (action == '') return;
     game.environment
-        .defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => this));
+        .defineSymbol(Sym('actor'), Intrinsic('actor', 0, (Cell x) => this));
     evaluate(readFromTokens(splitStringIntoTokens(action)), game.environment);
   }
 
-  // Execute eventChange property
-  void eventChanged() {
-    if (eventChange == '') return;
-    game.environment
-        .defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => this));
-    evaluate(
-        readFromTokens(splitStringIntoTokens(eventChange)), game.environment);
+  // Execute an action
+  void executeAction([String action, BasicComponent actor]) {
+    action ??= eventChange;
+    if (action == '') return;
+    game.environment.defineSymbol( Sym('actor'), actor ?? this);
+    evaluate(readFromTokens(splitStringIntoTokens(action)), game.environment);
   }
 
   // Update LP and poison quantity
@@ -228,6 +229,7 @@ abstract class BasicComponent extends SpriteComponent {
   // Define what happens if this component has been collided by another one
   void collidedBy(DynamicComponent otherComponent) {
     otherComponent.lifePointsDifference(-atk, cause: this, poison: poisonAtk);
+    executeAction(eventOnCollision, otherComponent);
   }
 
   // Reset life points

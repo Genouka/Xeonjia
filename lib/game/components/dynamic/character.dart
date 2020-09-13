@@ -122,7 +122,7 @@ class CharacterComponent extends DynamicComponent
         _itemList = List.from(mainCharacter.itemList);
       }
     }
-    eventChanged();
+    executeAction();
   }
 
   // Non-Player Character (story mode)
