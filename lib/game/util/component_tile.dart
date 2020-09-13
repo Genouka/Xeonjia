@@ -42,7 +42,8 @@ extension CreateComponent on Tile {
                 level: mainCharacter.level,
                 jsonWeaponList: mainCharacter.jsonWeaponList);
           }
-          if (_previousRoomId != '0') DoorComponent(this);
+          if (properties['roomId'] != '1' ||
+              mainCharacter.visitedRooms.last != '1') DoorComponent(this);
         } else {
           var _teamId = int.parse(properties['team'] ?? '0');
           if (game.players.where((p) => p.teamId == _teamId).length <
