@@ -38,6 +38,12 @@ Environment setEnvironment() {
       1,
       (Cell x) => (env.lookForValue(Sym('actor')) as DynamicComponent)
           .orientation = GetDirection.fromInt(x.car));
+  _(
+      'delete',
+      0,
+      (Cell x) => ((env.lookForValue(Sym('self')) as Intrinsic).fun(x)
+              as BasicComponent)
+          .delete());
   _('event-change', 1, (Cell x) => (x.car as BasicComponent).executeAction());
   _('has-item', 1, (Cell x) => game.playerOne.itemList.contains(x.car));
   _('give-item', 1, (Cell x) => game.playerOne.addItem(x.car));
@@ -59,8 +65,15 @@ Environment setEnvironment() {
     'get',
     1,
     (Cell x) => (game.currentEventLog.containsKey(x.car.toString()))
-        ? game.currentEventLog[x.toString()]
+        ? game.currentEventLog[x.car.toString()]
         : false,
+  );
+  _(
+    '!get', // only for boolean
+    1,
+    (Cell x) => (game.currentEventLog.containsKey(x.car.toString()))
+        ? !game.currentEventLog[x.car.toString()]
+        : true,
   );
   _('set', 2, (Cell x) {
     game.currentEventLog[x.car.toString()] = x.cdr.car;
@@ -97,6 +110,8 @@ Environment setEnvironment() {
   env.defineSymbol(callccSym, #CALLCC);
   env.defineSymbol(applySym, #APPLY);
 
+  _('and', 2, (Cell x) => x.car && x.cdr.car);
+  _('or', 2, (Cell x) => x.car || x.cdr.car);
   _('+', 2, (Cell x) => add(x.car, x.cdr.car));
   _('-', 2, (Cell x) => subtract(x.car, x.cdr.car));
   _('*', 2, (Cell x) => multiply(x.car, x.cdr.car));

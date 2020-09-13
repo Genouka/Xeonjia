@@ -151,7 +151,9 @@ abstract class BasicComponent extends SpriteComponent {
   void executeAction([String action, BasicComponent actor]) {
     action ??= eventChange;
     if (action == '') return;
-    game.environment.defineSymbol( Sym('actor'), actor ?? this);
+    game.environment
+        .defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => this));
+    game.environment.defineSymbol(Sym('actor'), actor ?? this);
     evaluate(readFromTokens(splitStringIntoTokens(action)), game.environment);
   }
 
