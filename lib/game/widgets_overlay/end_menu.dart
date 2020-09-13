@@ -4,6 +4,9 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
 
 class EndMenu extends StatelessWidget {
+  final int _lostMoney;
+  EndMenu([this._lostMoney = 0]);
+
   @override
   Widget build(BuildContext context) {
     String title;
@@ -11,22 +14,30 @@ class EndMenu extends StatelessWidget {
     List<Widget> actions;
     actions = [
       FlatButton(
-        child: const Text('Yes'),
+        child: Text(
+          game.config.mode == GameMode.story ? 'Continue' : 'Yes',
+          style: const TextStyle(color: Colors.white, fontSize: 32),
+        ),
         onPressed: () {
           game.init();
           game.removeWidgetOverlay('endMenu');
         },
       ),
-      FlatButton(
-        child: const Text('No'),
-        onPressed: () {
-          Navigator.pop(context);
-          game.dispose();
-        },
-      ),
+      if (game.config.mode != GameMode.story)
+        FlatButton(
+          child: const Text(
+            'No',
+            style: TextStyle(color: Colors.white, fontSize: 32),
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+            game.dispose();
+          },
+        ),
     ];
     if (game.config.mode == GameMode.story) {
-      title = 'You have been deleted';
+      title = 'You run out of energy !';
+      content = 'You lost $_lostMoney ¤ and woke up after a short nap';
     } else {
       title = 'Your team ' +
           (game.ranking.first.id == game.playerOne.teamId ? 'won' : 'lost');
@@ -36,8 +47,8 @@ class EndMenu extends StatelessWidget {
         content =
             '${game.config.maxPoints.toString()} points have been achieved.';
       }
+      content += '\n\nDo you want to restart this game?';
     }
-    content += '\n\nDo you want to restart this game?';
 
     return Container(
       color: Colors.black87,
@@ -47,11 +58,11 @@ class EndMenu extends StatelessWidget {
           Text(
             title,
             style: const TextStyle(
-                color: Colors.white, fontSize: 32, letterSpacing: 1.4),
+                color: Colors.white, fontSize: 40, letterSpacing: 1.4),
           ),
           Text(
             content,
-            style: const TextStyle(color: Colors.white, fontSize: 18),
+            style: const TextStyle(color: Colors.white, fontSize: 32),
             textAlign: TextAlign.center,
           ),
           Container(height: 25),

@@ -292,16 +292,18 @@ class XeonjiaGame extends BaseGame
   // End of the game (defeat in single player or end match in multiplayer)
   void end({bool timeOut = false}) {
     pause();
+    var lostMoney;
     if (config.mode == GameMode.story) {
       mainCharacter.minutesPlayed += elapsedSeconds / 60;
       mainCharacter.movesCounter += playerOne.movesCounter;
       ++mainCharacter.deathCounter;
       mainCharacter.currentLifePoints = playerOne.initialLifePoints;
-      mainCharacter.money -= mainCharacter.visitedRooms.last * 10;
+      lostMoney = mainCharacter.visitedRooms.toSet().length * 10;
+      mainCharacter.money -= lostMoney;
       if (mainCharacter.money < 0) mainCharacter.money = 0;
       saveUserData();
     }
-    addWidgetOverlay('endMenu', EndMenu());
+    addWidgetOverlay('endMenu', EndMenu(lostMoney));
   }
 
   Offset _panGestureOffset;
