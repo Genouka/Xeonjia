@@ -69,7 +69,10 @@ class CharacterComponent extends DynamicComponent
     double initialLP,
     Map<String, dynamic> jsonWeaponList,
     team = 0,
-  })  : initialLifePoints = initialLP ?? (100 + 5 * level).toDouble(),
+  })  : initialLifePoints = initialLP ??
+            ((isPlayerOne && game.config.mode == GameMode.story)
+                ? mainCharacter.lifePoints
+                : (100 + 5 * level).toDouble()),
         super(tile.position, tile.properties['image'],
             imageY: tile.properties['imageY'] ?? 0) {
     orientation =
@@ -77,8 +80,12 @@ class CharacterComponent extends DynamicComponent
     _initialOrientation = orientation;
     friendly = 'true' == (tile.properties['friendly'] ?? 'true');
     quiet = 'true' == (tile.properties['quiet'] ?? 'true');
-    atk = (level + 1).toDouble();
-    def = (level ~/ 5).toDouble();
+    atk = (isPlayerOne && game.config.mode == GameMode.story)
+        ? mainCharacter.atk
+        : (level + 1).toDouble();
+    def = (isPlayerOne && game.config.mode == GameMode.story)
+        ? mainCharacter.def
+        : (level ~/ 5).toDouble();
     teamId = team;
     eventChange = tile.properties['eventChange'] ?? '';
     action = tile.properties['action'] ?? '';
@@ -104,9 +111,9 @@ class CharacterComponent extends DynamicComponent
     if (isPlayerOne) {
       game.playerOne = this;
       status(
-          mainCharacter.lifePoints <= 0
+          mainCharacter.currentLifePoints <= 0
               ? initialLifePoints
-              : mainCharacter.lifePoints,
+              : mainCharacter.currentLifePoints,
           mainCharacter.poisonQuantity);
       game.refreshWeaponBar();
       game.refreshLifePointsBar();

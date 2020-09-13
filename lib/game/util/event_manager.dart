@@ -15,7 +15,11 @@ Environment setEnvironment() {
   };
 
   // Game procedures
-  _('life', 0, (Cell x) => game.playerOne.lifePoints);
+  _('get-life', 0, (Cell x) => game.playerOne.lifePoints);
+  _('set-life-diff', 1, (Cell x) => game.playerOne.lifePointsDifference(x.car));
+  _('increase-life', 1, (Cell x) => game.playerOne.initialLifePoints += x.car);
+  _('increase-atk', 1, (Cell x) => game.playerOne.atk += x.car);
+  _('increase-def', 1, (Cell x) => game.playerOne.def += x.car);
   _('places-visited', 0, (Cell x) => mainCharacter.visitedRooms.length);
   _(
       'last-place',

@@ -164,7 +164,7 @@ abstract class BasicComponent extends SpriteComponent {
   void lifePointsDifference(double difference,
       {BasicComponent cause, double poison = 0}) {
     if (game.config.friendlyFire || teamId != (cause?.teamId ?? -99)) {
-      _lifePoints += difference < 0 ? difference + def : difference;
+      _lifePoints += difference < 0 ? min(0, difference + def) : difference;
       poisonQuantity += poison;
       if (isPlayerOne && difference != 0) {
         game.refreshLifePointsBar();
@@ -226,7 +226,9 @@ abstract class BasicComponent extends SpriteComponent {
   void overlappedBy(DynamicComponent componentAbove) {}
 
   // Define what happens if this component has been collided by another one
-  void collidedBy(DynamicComponent otherComponent) {}
+  void collidedBy(DynamicComponent otherComponent) {
+    otherComponent.lifePointsDifference(-atk, cause: this, poison: poisonAtk);
+  }
 
   // Reset life points
   void restoreLifePoints() {

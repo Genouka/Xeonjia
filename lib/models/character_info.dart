@@ -8,11 +8,14 @@ class CharacterInfo {
   // Character image
   String imageName;
 
-  // Character level
+  // Player stats
   int level;
+  double atk;
+  double def;
+  double lifePoints;
 
   // Player current status
-  double lifePoints;
+  double currentLifePoints;
   double poisonQuantity;
 
   // Experience points
@@ -74,7 +77,10 @@ class CharacterInfo {
         imageName = json['imageName'] ?? 'character-1.png',
         eventLog = jsonDecode(json['eventLog'] ?? '{}'),
         level = json['level'] ?? 0,
-        lifePoints = json['lifePoints'] ?? 0,
+        atk = json['atk'] ?? 0.0,
+        def = json['def'] ?? 0,
+        lifePoints = json['lifePoints'] ?? 100,
+        currentLifePoints = json['currentLifePoints'] ?? 0,
         poisonQuantity = json['poisonQuantity'] ?? 0,
         money = json['money'] ?? 0,
         jsonWeaponList = jsonDecode(json['jsonWeaponList'] ?? '{"0": 0}'),
@@ -96,7 +102,10 @@ class CharacterInfo {
       'name': name,
       'imageName': imageName,
       'level': level,
+      'atk': atk,
+      'def': def,
       'lifePoints': lifePoints,
+      'currentLifePoints': currentLifePoints,
       'poisonQuantity': poisonQuantity,
       'money': money,
       'jsonWeaponList': jsonEncode(jsonWeaponList),
