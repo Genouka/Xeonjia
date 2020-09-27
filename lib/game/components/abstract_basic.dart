@@ -172,6 +172,8 @@ abstract class BasicComponent extends SpriteComponent {
     if (game.config.friendlyFire || teamId != (cause?.teamId ?? -99)) {
       _lifePoints += difference < 0 ? min(0, difference + def) : difference;
       poisonQuantity += poison;
+      if (_lifePoints < 0) _lifePoints = 0;
+      if (_lifePoints > initialLifePoints) _lifePoints = initialLifePoints;
       if (isPlayerOne && difference != 0) {
         game.refreshLifePointsBar();
       }

@@ -3,9 +3,11 @@ import 'dart:io';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/widgets_overlay/map_box.dart';
+import 'package:xeonjia/game/widgets_overlay/shop_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/message.dart';
+import 'package:xeonjia/models/shop_item.dart';
 import 'package:xeonjia/util/little_scheme.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
@@ -24,7 +26,8 @@ Environment setEnvironment() {
       1,
       (Cell x) =>
           game.playerOne.lifePointsDifference((x.car as int).toDouble()));
-  _('set-life-to', 1, (Cell x) => game.playerOne.setStatus(x.car, 0));
+  _('set-life-to', 1,
+      (Cell x) => game.playerOne.setStatus((x.car as int).toDouble(), 0));
   _('restore-life', 0, (Cell x) => game.playerOne.restoreStatus());
   _('increase-life', 1, (Cell x) => game.playerOne.initialLifePoints += x.car);
   _('get-atk', 0, (Cell x) => game.playerOne.atk);
@@ -84,6 +87,20 @@ Environment setEnvironment() {
           ? Message((it.current as Cell).car)
           : Message((it.current as Cell).cdr.car, (it.current as Cell).car));
     }
+    return #NONE;
+  });
+  _('shop', 1, (Cell x) {
+    var itemList = <ShopItem>[];
+    var it = (x.car as Cell).iterator;
+    while (it.moveNext()) {
+      itemList.add(ShopItem(
+        name: (it.current as Cell).car,
+        price: (it.current as Cell).cdr.car as int,
+        action: (it.current as Cell).cdr.cdr.car,
+      ));
+    }
+    ;
+    game.addWidgetOverlay('shop', ShopMenu(itemList));
     return #NONE;
   });
   _(
