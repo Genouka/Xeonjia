@@ -10,7 +10,6 @@ import 'package:xml/xml.dart';
 
 import 'package:xeonjia/game/util/component_tile.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/models/map_properties.dart';
 import 'package:xeonjia/models/tile.dart';
 
 // Import map from a TMX file
@@ -19,11 +18,10 @@ void importMap(String fileName) async {
       XmlDocument.parse(await rootBundle.loadString(fileName)).rootElement;
 
   // Get map information
-  game.map = MapProperties(
-    width: int.parse(mapXml.getAttribute('width')),
-    height: int.parse(mapXml.getAttribute('height')),
-    music: mapXml.getAttribute('music'),
-  );
+  game.map
+    ..width = int.parse(mapXml.getAttribute('width'))
+    ..height = int.parse(mapXml.getAttribute('height'))
+    ..music = mapXml.getAttribute('music');
 
   // Add map background
   game.addLater(SpriteComponent.fromSprite(game.map.width * componentSize,

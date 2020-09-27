@@ -183,7 +183,6 @@ abstract class BasicComponent extends SpriteComponent {
             if (team.id != teamId) team.basisPoints += 10;
           });
         } else if (this is! StaticComponent) {
-          // Enemy killed
           cause?.killedEnemies++;
           cause?.experiencePoints += level;
           if (this is CharacterComponent) cause?.points += 100;

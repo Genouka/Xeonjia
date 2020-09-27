@@ -79,7 +79,9 @@ extension CreateComponent on Tile {
         WalkerCpuComponent(this);
         break;
       case 'SlitherCpu':
-        SlitherCpuComponent(this);
+        if (!(game.currentEventLog['${game.map.name}-safe'] ?? false)) {
+          SlitherCpuComponent(this);
+        }
         break;
       default:
         break;

@@ -136,9 +136,10 @@ class XeonjiaGame extends BaseGame
     modifiersToBeRegenerated.clear();
 
     // Import map and components
+    map = MapProperties(fullName: mainCharacter.visitedRooms.last);
     await importMap('assets/maps/' +
         ((config.mode == GameMode.story)
-            ? 'story/' + mainCharacter.visitedRooms.last.split('/').first
+            ? 'story/' + map.name
             : 'arena/${config.mapId}') +
         '.tmx');
 
@@ -229,6 +230,10 @@ class XeonjiaGame extends BaseGame
   // Save match data and load the new room
   void changeRoom(String nextRoomId) {
     pause(stopMusic: false);
+    if (game.components
+        .where((element) =>
+            element is BasicComponent && [-3, -2, 1].contains(element.teamId))
+        .isEmpty) currentEventLog['${map.name}-safe'] = true;
 
     // Save new player data into mainCharacter
     mainCharacter.level = playerOne.level;
@@ -265,7 +270,7 @@ class XeonjiaGame extends BaseGame
 
   // Update camera position
   void updateCamera(double x, double y) {
-    if (map == null) return;
+    if (map?.width == null) return;
     var _widthDiff = map.width * componentSize - screenSize.width;
     camera.x = _widthDiff <= 0
         ? _widthDiff / 2

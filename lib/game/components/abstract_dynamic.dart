@@ -144,7 +144,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
     stop();
     if (!isPlayerOne) {
       collidedComponent.lifePointsDifference(-atk,
-        cause: this, poison: poisonAtk);
+          cause: this, poison: poisonAtk);
     }
     collidedComponent.collidedBy(this);
   }

@@ -19,7 +19,11 @@ Environment setEnvironment() {
   // Game procedures
   _('get-life', 0, (Cell x) => game.playerOne.lifePoints);
   _('get-initial-life', 0, (Cell x) => game.playerOne.initialLifePoints);
-  _('set-life-diff', 1, (Cell x) => game.playerOne.lifePointsDifference(x.car));
+  _(
+      'set-life-diff',
+      1,
+      (Cell x) =>
+          game.playerOne.lifePointsDifference((x.car as int).toDouble()));
   _('set-life-to', 1, (Cell x) => game.playerOne.setStatus(x.car, 0));
   _('restore-life', 0, (Cell x) => game.playerOne.restoreStatus());
   _('increase-life', 1, (Cell x) => game.playerOne.initialLifePoints += x.car);

@@ -1,7 +1,8 @@
 import 'package:xeonjia/game/components/abstract_basic.dart';
-import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
+import 'package:xeonjia/models/message.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 
 // Component that permits to change room
 class DoorComponent extends BasicComponent {
@@ -23,7 +24,25 @@ class DoorComponent extends BasicComponent {
 
   @override
   bool isSolid({BasicComponent otherComponent}) =>
-      otherComponent is! CharacterComponent;
+      !otherComponent.isPlayerOne ||
+      (game.components
+              .where((element) =>
+                  element is BasicComponent &&
+                  [-3, -2, 1].contains(element.teamId))
+              .isNotEmpty &&
+          _roomId !=
+              mainCharacter
+                  .visitedRooms[mainCharacter.visitedRooms.length - 2]);
+
+  @override
+  void collidedBy(otherComponent) {
+    if (otherComponent.isPlayerOne) {
+      game.setMessage(
+          Message("There are still monsters in this room. I can't escape."));
+      otherComponent.updateOrientation(otherComponent.orientation.opposite);
+    }
+    super.collidedBy(otherComponent);
+  }
 
   @override
   void overlappedBy(BasicComponent componentAbove) {
