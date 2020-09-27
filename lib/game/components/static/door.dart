@@ -1,4 +1,5 @@
 import 'package:xeonjia/game/components/abstract_basic.dart';
+import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 
@@ -21,7 +22,8 @@ class DoorComponent extends BasicComponent {
   }
 
   @override
-  bool isSolid({BasicComponent otherComponent}) => false;
+  bool isSolid({BasicComponent otherComponent}) =>
+      otherComponent is! CharacterComponent;
 
   @override
   void overlappedBy(BasicComponent componentAbove) {

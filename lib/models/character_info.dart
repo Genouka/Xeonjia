@@ -77,7 +77,7 @@ class CharacterInfo {
         imageName = json['imageName'] ?? 'character-1.png',
         eventLog = jsonDecode(json['eventLog'] ?? '{}'),
         level = json['level'] ?? 0,
-        atk = json['atk'] ?? 0.0,
+        atk = json['atk'] ?? 1,
         def = json['def'] ?? 0,
         lifePoints = json['lifePoints'] ?? 100,
         currentLifePoints = json['currentLifePoints'] ?? 0,

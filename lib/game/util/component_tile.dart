@@ -35,7 +35,11 @@ extension CreateComponent on Tile {
               ? '1'
               : mainCharacter
                   .visitedRooms[mainCharacter.visitedRooms.length - 2];
-          if (_previousRoomId == properties['roomId']) {
+          if (_previousRoomId.split('/').first +
+                  (mainCharacter.visitedRooms.last.contains('/')
+                      ? '/' + mainCharacter.visitedRooms.last.split('/').last
+                      : '') ==
+              properties['roomId']) {
             properties['image'] = 'character.png';
             CharacterComponent(this,
                 isPlayerOne: true,

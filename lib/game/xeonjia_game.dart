@@ -138,7 +138,7 @@ class XeonjiaGame extends BaseGame
     // Import map and components
     await importMap('assets/maps/' +
         ((config.mode == GameMode.story)
-            ? 'story/' + mainCharacter.visitedRooms.last.toString()
+            ? 'story/' + mainCharacter.visitedRooms.last.split('/').first
             : 'arena/${config.mapId}') +
         '.tmx');
 
@@ -192,6 +192,13 @@ class XeonjiaGame extends BaseGame
     _pause = false;
     resumeEngine();
     _backgroundMusic?.resume();
+  }
+
+  // Execute an action
+  void executeAction([String action]) {
+    action ??= map.action ?? '';
+    if (action == '') return;
+    evaluate(readFromTokens(splitStringIntoTokens(action)), game.environment);
   }
 
   // Show a message in messageBox

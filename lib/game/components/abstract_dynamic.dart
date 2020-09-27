@@ -142,8 +142,10 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   // Function called when this component collide another component
   void onCollision(BasicComponent collidedComponent) {
     stop();
-    collidedComponent.lifePointsDifference(-atk,
+    if (!isPlayerOne) {
+      collidedComponent.lifePointsDifference(-atk,
         cause: this, poison: poisonAtk);
+    }
     collidedComponent.collidedBy(this);
   }
 

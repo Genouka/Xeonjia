@@ -18,16 +18,29 @@ Environment setEnvironment() {
 
   // Game procedures
   _('get-life', 0, (Cell x) => game.playerOne.lifePoints);
+  _('get-initial-life', 0, (Cell x) => game.playerOne.initialLifePoints);
   _('set-life-diff', 1, (Cell x) => game.playerOne.lifePointsDifference(x.car));
+  _('set-life-to', 1, (Cell x) => game.playerOne.setStatus(x.car, 0));
+  _('restore-life', 0, (Cell x) => game.playerOne.restoreStatus());
   _('increase-life', 1, (Cell x) => game.playerOne.initialLifePoints += x.car);
+  _('get-atk', 0, (Cell x) => game.playerOne.atk);
   _('increase-atk', 1, (Cell x) => game.playerOne.atk += x.car);
+  _('get-def', 0, (Cell x) => game.playerOne.def);
   _('increase-def', 1, (Cell x) => game.playerOne.def += x.car);
-  _('places-visited', 0, (Cell x) => mainCharacter.visitedRooms.length);
+  _('places-visited', 0, (Cell x) => mainCharacter.visitedRooms.toSet().length);
   _(
       'last-place',
       0,
       (Cell x) =>
           mainCharacter.visitedRooms[mainCharacter.visitedRooms.length - 2]);
+  _(
+      'first-time?',
+      0,
+      (Cell x) =>
+          mainCharacter.visitedRooms
+              .where((e) => e == mainCharacter.visitedRooms.last)
+              .length ==
+          1);
   _(
       'move',
       1,
@@ -44,9 +57,17 @@ Environment setEnvironment() {
       (Cell x) => ((env.lookForValue(Sym('self')) as Intrinsic).fun(x)
               as BasicComponent)
           .delete());
+  _(
+      'enemies-count',
+      0,
+      (Cell x) => game.components
+          .where((element) =>
+              element is BasicComponent && [-3, -2, 1].contains(element.teamId))
+          .length);
   _('fire-event', 1, (Cell x) => (x.car as BasicComponent).executeAction());
   _('has-item', 1, (Cell x) => game.playerOne.itemList.contains(x.car));
   _('give-item', 1, (Cell x) => game.playerOne.addItem(x.car));
+  _('find-item', 1, (Cell x) => game.playerOne.addItem(x.car));
   _('take-item', 1, (Cell x) => game.playerOne.removeItem(x.car));
   _('story-dialog', 1, (Cell x) {
     game.setMessage(Message(stringify(x.car, false)), hideMap: true);

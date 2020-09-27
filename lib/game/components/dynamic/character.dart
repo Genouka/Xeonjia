@@ -110,7 +110,7 @@ class CharacterComponent extends DynamicComponent
     game.players.add(this);
     if (isPlayerOne) {
       game.playerOne = this;
-      status(
+      setStatus(
           mainCharacter.currentLifePoints <= 0
               ? initialLifePoints
               : mainCharacter.currentLifePoints,
@@ -172,6 +172,11 @@ class CharacterComponent extends DynamicComponent
     if (isPlayerOne) {
       game.updateCamera(x, y);
     }
+  }
+
+  @override
+  void collidedBy(DynamicComponent componentAbove) {
+    if (!isPlayerOne) super.collidedBy(componentAbove);
   }
 
   @override

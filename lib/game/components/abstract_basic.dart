@@ -155,9 +155,15 @@ abstract class BasicComponent extends SpriteComponent {
   }
 
   // Update LP and poison quantity
-  void status(double lifePoints, double poison) {
+  void setStatus(double lifePoints, double poison) {
     _lifePoints = lifePoints;
-    poison = poison;
+    poisonQuantity = poison;
+  }
+
+  // Restore LP and poison quantity
+  void restoreStatus() {
+    _lifePoints = initialLifePoints;
+    poisonQuantity = 0;
   }
 
   // Function used to change life points
