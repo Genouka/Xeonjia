@@ -8,7 +8,7 @@ import 'package:xeonjia/util/local_data_controller.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await loadStoredData().then((_) {
-    if (settings.fullScreen) SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIOverlays([]);
   });
   return runApp(Xeonjia());
 }

@@ -91,30 +91,6 @@ class _SettingsPageState extends State<SettingsPage> {
         ),
       );
 
-  // Returns a checkbox tile. Used only for fullscreen option, for now
-  Widget checkBoxTile(String title, String subtitle) => CheckboxListTile(
-      title: Text(
-        title,
-        style: const TextStyle(
-          fontSize: 20,
-        ),
-      ),
-      activeColor: Colors.blueGrey,
-      subtitle: Text(subtitle),
-      value: settings.fullScreen,
-      onChanged: (_fullScreen) {
-        setState(() {
-          settings.fullScreen = _fullScreen;
-          if (settings.fullScreen) {
-            SystemChrome.setEnabledSystemUIOverlays([]);
-          } else {
-            SystemChrome.setEnabledSystemUIOverlays(
-                [SystemUiOverlay.top, SystemUiOverlay.bottom]);
-          }
-        });
-        saveSettings();
-      });
-
   void refresh() {
     setState(() {});
   }

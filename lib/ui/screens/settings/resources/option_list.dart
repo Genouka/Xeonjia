@@ -25,10 +25,6 @@ class OptionList extends StatelessWidget {
             gamepadSizes.keys.toList(),
             mapText: gamepadSizes,
           ),
-        SettingsPage.of(context).checkBoxTile(
-          'Fullscreen mode',
-          'Enable fullscreen',
-        ),
         CheckboxListTile(
             title: const Text(
               'Background music',
