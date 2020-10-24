@@ -71,6 +71,8 @@ class _ShopMenuState extends State<ShopMenu> {
                         onTap: game.playerOne.money >= item.price
                             ? () {
                                 setState(() {
+                                  game.playerOne.moneyDifference(-item.price,
+                                      popup: false);
                                   game.executeAction(item.action);
                                 });
                                 game.refreshLifePointsBar();

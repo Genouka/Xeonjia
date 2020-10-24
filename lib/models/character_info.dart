@@ -28,9 +28,6 @@ class CharacterInfo {
   // Available money
   int money;
 
-  // Total number of money earned by the character
-  int totalEarnedMoney;
-
   // Total number of minutes played by the character in this game
   double minutesPlayed;
 
@@ -87,7 +84,6 @@ class CharacterInfo {
         jsonAvailableWeaponList =
             jsonDecode(json['jsonAvailableWeaponList'] ?? '{}'),
         itemList = (json['itemList'] ?? []).cast<int>(),
-        totalEarnedMoney = json['totalEarnedMoney'] ?? 0,
         visitedRooms = (json['viewedRooms'] ?? ['1']).cast<String>(),
         minutesPlayed = json['minutesPlayed'] ?? 0,
         killedComponents = json['killedComponents'] ?? 0,
@@ -112,7 +108,6 @@ class CharacterInfo {
       'jsonAvailableWeaponList': jsonEncode(jsonAvailableWeaponList),
       'itemList': itemList,
       'viewedRooms': visitedRooms,
-      'totalEarnedMoney': totalEarnedMoney,
       'minutesPlayed': minutesPlayed,
       'killedComponents': killedComponents,
       'movesCounter': movesCounter,

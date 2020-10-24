@@ -68,7 +68,7 @@ class ModifierComponent extends BasicComponent {
       componentAbove.atk += _atkDelta;
       componentAbove.def += _defDelta;
       componentAbove.poisonQuantity += _poisonDelta;
-      componentAbove.earnedMoney = _moneyDelta;
+      componentAbove.moneyDifference(_moneyDelta);
       componentAbove.selectedWeapon.powerPoints += _powerPointsDelta;
       if (_itemId != 0) componentAbove.addItem(_itemId);
       if (_regenerable ?? false) game.modifiersToBeRegenerated.add(this);

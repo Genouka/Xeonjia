@@ -169,7 +169,6 @@ class XeonjiaGame extends BaseGame
     executeAction();
   }
 
-
   final debugTextconfig = TextConfig(color: const Color(0xFF000000));
   @override
   void render(Canvas canvas) {
@@ -255,8 +254,7 @@ class XeonjiaGame extends BaseGame
     mainCharacter.killedComponents += playerOne.killedEnemies;
     mainCharacter.minutesPlayed += elapsedSeconds / 60;
     mainCharacter.movesCounter += playerOne.movesCounter;
-    mainCharacter.money += playerOne.earnedMoney;
-    mainCharacter.totalEarnedMoney += playerOne.earnedMoney;
+    mainCharacter.money = playerOne.money;
     mainCharacter.visitedRooms.add(nextRoomId);
     mainCharacter.expGained(playerOne.experiencePoints +
         currentEventLog.length -

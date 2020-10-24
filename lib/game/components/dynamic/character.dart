@@ -25,17 +25,14 @@ class CharacterComponent extends DynamicComponent
   // Weapon selected from weaponList
   int _selectedWeaponElement = 0;
 
-  // Money earned during match time
-  int _earnedMoney = 0;
-  int get earnedMoney => _earnedMoney;
-  set earnedMoney(int moneyDelta) {
+  // Money earned by the player
+  int _money = mainCharacter.money;
+  int get money => _money;
+  void moneyDifference(int moneyDelta, {bool popup = true}) {
     if (moneyDelta == 0) return;
-    _earnedMoney += moneyDelta;
-    showText('+ $moneyDelta ¤');
+    _money += moneyDelta;
+    if (popup) showText('+ $moneyDelta ¤');
   }
-
-  // Money available
-  int get money => _earnedMoney + mainCharacter.money;
 
   // List of items owned
   // Add/remove items by using addItem() and removeItem()

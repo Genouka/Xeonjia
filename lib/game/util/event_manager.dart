@@ -34,6 +34,8 @@ Environment setEnvironment() {
   _('increase-atk', 1, (Cell x) => game.playerOne.atk += x.car);
   _('get-def', 0, (Cell x) => game.playerOne.def);
   _('increase-def', 1, (Cell x) => game.playerOne.def += x.car);
+  _('set-money-diff', 1,
+      (Cell x) => game.playerOne.moneyDifference((x.car as int), popup: false));
   _('places-visited', 0, (Cell x) => mainCharacter.visitedRooms.toSet().length);
   _(
       'last-place',
