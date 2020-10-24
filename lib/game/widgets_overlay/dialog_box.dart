@@ -119,8 +119,9 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                       if (currentMessage.image != null)
                         Image.asset(
                           currentMessage.image,
-                          height: 64,
-                          width: 64,
+                          height: 96,
+                          fit: BoxFit.fitHeight,
+                          filterQuality: FilterQuality.none,
                         ),
                       Flexible(
                         child: Padding(

@@ -14,8 +14,8 @@ void setScreenDimension(BuildContext context) {
   screenSize = Size(_size.width, _size.height - _padding.bottom - _padding.top);
 
   if (componentSize == null) {
-    var rawComponentSize = max(screenSize.width, screenSize.height) / 18;
-    componentSize = rawComponentSize - rawComponentSize % 4;
+    var rawComponentSize = max(screenSize.width, screenSize.height) / 16;
+    componentSize = rawComponentSize - rawComponentSize % 16;
     defaultSpeed = 10 * componentSize;
   }
 }
