@@ -4,6 +4,8 @@ import 'package:flame/bgm.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
+import 'package:flame/position.dart';
+import 'package:flame/text_config.dart';
 import 'package:flame/time.dart';
 import 'package:flutter/material.dart';
 
@@ -51,6 +53,9 @@ class XeonjiaGame extends BaseGame
     }
     init();
   }
+
+  @override
+  bool recordFps() => true;
 
   // Scheme's environment
   final environment = setEnvironment();
@@ -161,9 +166,12 @@ class XeonjiaGame extends BaseGame
     resume();
     playBackgroundMusic();
 
-    if (map.action != null) {
-      evaluate(readFromTokens(splitStringIntoTokens(map.action)), environment);
-    }
+
+  final debugTextconfig = TextConfig(color: const Color(0xFF000000));
+  @override
+  void render(Canvas canvas) {
+    super.render(canvas);
+    debugTextconfig.render(canvas, fps(120).toString(), Position(0, 50));
   }
 
   @override
