@@ -111,7 +111,7 @@ class XeonjiaGame extends BaseGame
   String currentBgm;
 
   @override
-  Color backgroundColor() => const Color(0xFF777777);
+  Color backgroundColor() => const Color(0xFF5D6872);
 
   // Reset variables and import map data
   void init() async {
