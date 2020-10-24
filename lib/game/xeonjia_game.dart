@@ -9,6 +9,7 @@ import 'package:flame/text_config.dart';
 import 'package:flame/time.dart';
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/util/event_manager.dart';
@@ -165,6 +166,8 @@ class XeonjiaGame extends BaseGame
     removeWidgetOverlay('loading');
     resume();
     playBackgroundMusic();
+    executeAction();
+  }
 
 
   final debugTextconfig = TextConfig(color: const Color(0xFF000000));

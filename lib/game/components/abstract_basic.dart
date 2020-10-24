@@ -240,7 +240,9 @@ abstract class BasicComponent extends SpriteComponent {
   // Define what happens if this component has been collided by another one
   void collidedBy(DynamicComponent otherComponent) {
     otherComponent.lifePointsDifference(-atk, cause: this, poison: poisonAtk);
-    executeAction(actionOnCollision, otherComponent);
+    if (otherComponent.isPlayerOne) {
+      executeAction(actionOnCollision, otherComponent);
+    }
   }
 
   // Reset life points
