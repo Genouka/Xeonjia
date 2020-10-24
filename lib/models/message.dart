@@ -25,7 +25,9 @@ class Message {
   Message(this.text, {this.author = '', this.component}) {
     var m = RegExp(r'([^\/]*)\/?([^_]*)_?(.*)').firstMatch(author);
     var name = m.group(2) != '' ? m.group(2) : component?.name ?? '>';
-    authorName = (m.group(1) != '' ? m.group(1) : name).toUpperCase();
+    authorName = (m.group(1) != '' ? m.group(1) : name)
+        .toUpperCase()
+        .replaceAll('-', ' ');
     var mood = m.group(3);
     var fileName = name + (mood != '' ? '_$mood' : '');
     image = authorName != '>' ? 'assets/images/heads/${fileName}.png' : null;
