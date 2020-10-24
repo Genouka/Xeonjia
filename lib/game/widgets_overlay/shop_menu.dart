@@ -104,7 +104,8 @@ class _ShopMenuState extends State<ShopMenu> {
                 onPressed: () {
                   game.removeWidgetOverlay('shop');
                   game.setMessage(Message(
-                      'Let me know if you need anything else.', 'test'));
+                      'Let me know if you need anything else.',
+                      author: 'pharmacist/elderly'));
                 },
               ),
             ),

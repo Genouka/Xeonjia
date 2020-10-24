@@ -99,6 +99,9 @@ abstract class BasicComponent extends SpriteComponent {
   String actionOnCollision = ''; // when collided
   String actionOnEvent = ''; // when the map is loaded or a new event is fired
 
+  // Component default name (eg. girl, man, hero, old-man)
+  String name;
+
   BasicComponent.fromTile(Tile tile)
       : startingPosition = tile.position,
         action = tile.properties['action'] ?? '',

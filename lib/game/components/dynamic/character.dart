@@ -89,6 +89,7 @@ class CharacterComponent extends DynamicComponent
     teamId = team;
     actionOnEvent = tile.properties['actionOnEvent'] ?? '';
     action = tile.properties['action'] ?? '';
+    name = tile.properties['name'];
     // Temporary solution to remedy the functions _cpuMove() and _cpuShoot()
     jsonWeaponList ??=
         (team == 0) ? const {'1': 5, '2': 1} : const {'1': 9, '2': 5};

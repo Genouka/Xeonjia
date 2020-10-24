@@ -84,8 +84,11 @@ Environment setEnvironment() {
     var it = (x.car as Cell).iterator;
     while (it.moveNext()) {
       game.setMessage((it.current as Cell).length == 1
-          ? Message((it.current as Cell).car)
-          : Message((it.current as Cell).cdr.car, (it.current as Cell).car));
+          ? Message((it.current as Cell).car,
+              component: (env.lookForValue(Sym('actor')) as BasicComponent))
+          : Message((it.current as Cell).cdr.car,
+              component: (env.lookForValue(Sym('actor')) as BasicComponent),
+              author: (it.current as Cell).car));
     }
     return #NONE;
   });

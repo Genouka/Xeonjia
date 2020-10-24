@@ -57,7 +57,8 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
           : strings.add(match);
     });
     return strings.fold([], (previousValue, element) {
-      previousValue.add(Message(element, message.author));
+      previousValue.add(Message(element,
+          author: message.author, component: message.component));
       return previousValue;
     });
   }
@@ -128,7 +129,7 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                             mainAxisSize: MainAxisSize.min,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              if (currentMessage.authorName != null)
+                              if ((currentMessage.authorName ?? '>') != '>')
                                 Text(
                                   currentMessage.authorName + ' :',
                                   style: const TextStyle(

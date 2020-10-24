@@ -1,18 +1,33 @@
+import 'package:xeonjia/game/components/abstract_basic.dart';
+
 // Message shown in dialog box
 class Message {
   // Text of the message
   final String text;
 
-  // Author (it could be authorName_mood)
-  final String author;
+  // Author (displayName/name_mood)
+  // If displayName is omitted: name is used
+  // If name is omitted: component.name is used
+  // If mood is omitted: no mood
+  // Examples: mom, mom/_happy, ???/girl, ???/girl_happy, /sad, /hero, /hero_sad
+  // '>' is used for thoughts and narrator voice
+  String author;
 
   // Author image
-  final String image;
+  String image;
 
-  // Author name (author without mood)
-  final String authorName;
+  // Author name (name displayed)
+  String authorName;
 
-  Message(this.text, [this.author])
-      : image = author != null ? 'assets/images/heads/$author.png' : null,
-        authorName = author?.split('_')?.first?.toUpperCase();
+  // Character speaking
+  BasicComponent component;
+
+  Message(this.text, {this.author = '', this.component}) {
+    var m = RegExp(r'([^\/]*)\/?([^_]*)_?(.*)').firstMatch(author);
+    var name = m.group(2) != '' ? m.group(2) : component?.name ?? '>';
+    authorName = (m.group(1) != '' ? m.group(1) : name).toUpperCase();
+    var mood = m.group(3);
+    var fileName = name + (mood != '' ? '_$mood' : '');
+    image = authorName != '>' ? 'assets/images/heads/${fileName}.png' : null;
+  }
 }
