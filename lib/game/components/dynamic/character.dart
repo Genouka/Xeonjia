@@ -81,7 +81,7 @@ class CharacterComponent extends DynamicComponent
         : (level + 1).toDouble();
     def = (isPlayerOne && game.config.mode == GameMode.story)
         ? mainCharacter.def
-        : (level ~/ 5).toDouble();
+        : (def != 0 ? def : (level ~/ 5).toDouble());
     teamId = team;
     // Temporary solution to remedy the functions _cpuMove() and _cpuShoot()
     jsonWeaponList ??=

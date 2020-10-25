@@ -60,6 +60,7 @@ extension CreateComponent on Tile {
                 'character${_playerOne ? '' : '_cpu_$_teamId'}.png';
             properties['friendly'] = 'false';
             properties['quiet'] = 'false';
+            properties['def'] = '4';
             CharacterComponent(
               this,
               isPlayerOne: _playerOne,
