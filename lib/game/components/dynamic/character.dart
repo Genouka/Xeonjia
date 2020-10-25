@@ -105,7 +105,8 @@ class CharacterComponent extends DynamicComponent
     if (isPlayerOne) {
       game.playerOne = this;
       setStatus(
-          mainCharacter.currentLifePoints <= 0
+          mainCharacter.currentLifePoints <= 0 ||
+                  game.config.mode != GameMode.story
               ? maxLifePoints
               : mainCharacter.currentLifePoints,
           mainCharacter.poisonQuantity);
