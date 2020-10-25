@@ -3,7 +3,7 @@
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="16" height="24">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WUzQnDMAyFPUAvTS8+FUEhK+TSogka779NLbBAFbJsOQ8eVhR98k9MIKUE1bmZ45uIoRnbWESOHFVu46P6XOB1nyu87AGTHNdpPsJy7PG99YAYcVDr8Ycxf7RPCdRbfGQ+j9+dunf1x8jT/r9Oby09R+7UzfajHBr5kXg/xBeVi2h0f2GCH9X09Frk79XP6i2tnx/ryvpJh8GPvoN83zv/2TVBx6hiTP//dxDPP7pOogIABgAA
+   H4sIAAAAAAAAA6VUSwoCMQzNAdyomy5EAoJXmI2SE4y9/21MoIVY8mnHB4+mmfeStDMMAgAyS2OPbyrGRmprVTmhhZOTh1ZTcGV+Al2GkktSv66Bk/1Q7VdnwCGO/N48qFZKtJF/M/qv1qkLesu/0i/yPwPdi/k28nL+Pag9YuxRHN1sPcmRkc/QzyP+OuRWkH2/OOHPNB4eB/1n5p15geP31/HP/ILN8GfvQT/37n92JnRIQ0zw+39Htf8CgVDwkwAGAAA=
   </data>
  </layer>
  <objectgroup id="8" name="npcs"/>
