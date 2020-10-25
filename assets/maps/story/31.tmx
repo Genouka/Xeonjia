@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="48">
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="18" height="21">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA62USQvCMBCFc/APKB56Eo8evXnR+gMqiNvBpYqIO+7rz/cFExjGjE3RBx9pX5PXMM00UEoFDpQZW6ANOqALeoJXUW41zNgHQzAyY0y8gfFj8m6+3moKZoS54PEcrj04gIkZj8RbEq+UkHMHD7AAK/Ak3pV40n6qoGaus6AAcuQ59ei30ZJqbhUKPs+hvo/se6WctNIZ+YTnPioKc2mNfbL1Ny8zr+m5B57zS33s2lC5z6GULZ0LPd/Vcz6KWI6r57TS1EnnrMEGjMEW7DzWcOnanMBZvfvwAm4p9kGzNa4+/KaI3f+rL2yWPY919fl/tmTY3IDNfwFcOyT56AUAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc"/>
+ <layer id="6" name="Tile Layer 2" width="18" height="21">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgwA5ccIgTCyjVP9iBCRCb0shsMxqZO9QALcOYHoCa8RgIxEFIOJRIfc5UdMNwA7QIG0Jpllg7bYDYFo+8N9EuggAAJqKMGugFAAA=
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="36" type="Door" x="0" y="144" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="22"/>
+   </properties>
+  </object>
+  <object id="44" type="Door" x="160" y="320" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="28"/>
+   </properties>
+  </object>
+  <object id="46" type="Door" x="160" y="80" width="16" height="16">
+   <properties>
+    <property name="roomId" value="31_house2"/>
+   </properties>
+  </object>
+  <object id="47" type="Door" x="32" y="288" width="16" height="16">
+   <properties>
+    <property name="roomId" value="31_house1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items"/>
+</map>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="44">
+ <properties>
+  <property name="action">(begin
+    (if (eq? (last-place) &quot;4&quot;)
+        (map-name &quot;MITSU FOREST&quot;))
+    (if  (first-time?)
+        (dialog '((&quot;&gt;&quot; &quot;Hey, this is the Mitsu forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here.&quot;)))))</property>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/npc.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="17" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA1NgYGDgAWIJJGzOgAn8gVgBiGWg8gpQcQUkNjqwAWJbJBoGeKC0PRa1GkhiMHlc5jNgkbfHpQgL4ARiPSDmQnMjIfvUkNiCQCwHxSJI4uh+RufjAqCwtSNCHTqwx8FWIMMsEJBAYhuQaQYM4PO7Gg5xdACLJ3KAApQGxZEQmWbA/IAtbxALJAgrgQMWBtS8gA4AG4OhOrgDAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="31" type="NPC" gid="150" x="80" y="32" width="16" height="16">
+   <properties>
+    <property name="action">(dialog
+    '((&quot;02957...\nI don't know what these figures are but before I heard someone say them out loud... Dunno why.&quot;)))</property>
+    <property name="orientation" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="43" gid="135" x="208" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;The trees of this region are admired and studied throughout the kingdom. These blues are my favorites.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="17" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA42SWQqAMAxEeww/PYTWHxdcwa33P44tGBjCxPog1KwTq85xqmg1nIxF1SbGaJNRz7hIbI92KI0vvna0NBC9s56n/ZXMkJ09mce4M3m8g5Lkh0z/X9hsRN4d9aSngJhXfY37/y9s79mTHN6D1ZcI8Jz7nkgw4pauzBJt0ZK4N2pn8Nto3atdgpbE8R6w9gT/AQCgx8y4AwAA
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="25" type="Door" x="0" y="176" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="4"/>
+   </properties>
+  </object>
+  <object id="27" type="Door" x="144" y="208" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="10"/>
+   </properties>
+  </object>
+  <object id="34" type="Door" x="192" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="9/1"/>
+   </properties>
+  </object>
+  <object id="40" type="Door" x="16" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="9/2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="29" gid="71" x="0" y="176" width="16" height="16">
+   <properties>
+    <property name="action">(dialog
+    '((&quot;&gt;&quot; &quot;'' Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right. ''&quot;)
+    (&quot;/hero&quot; &quot;Once this was a very touristy place, the kingdom tried to make money from it.&quot;)))</property>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

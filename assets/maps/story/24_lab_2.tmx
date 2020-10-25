@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="73">
+ <tileset firstgid="1" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="225" source="../tilesets/lab.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="13" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAzvDwMBwmgR8FoivAPFlPHgTGn0VqmcHCXhUD0TPHRLU3wTiu0B8iQwMACRixC4IAgAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="71" type="NPC" gid="7" x="128" y="112" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;scientist&quot; &quot;What a mess! I have to tidy up!&quot;)))"/>
+    <property name="orientation" type="int" value="1"/>
+    <property name="quiet" type="bool" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="13" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIA88BOJHWGh84DkQv0Oi3wLxC6jcYyB+CsVP0PS9B+IPaHwQeAnEr6H4FQlue4ZGM0DdAnPbCzS34QMfCCtBUUNOuH0G4i9YaGoCAJll5/AIAgAA
+  </data>
+ </layer>
+ <layer id="12" name="Tile Layer 3" width="13" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGFzgIxB/IqDmAz0cMsIAAE9NL8AIAgAA
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" type="Door" x="160" y="128" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="24_lab"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items"/>
+</map>

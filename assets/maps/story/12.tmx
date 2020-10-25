@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="17" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="41">
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="21" height="17">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA5NgYGCQQMP2WMSQMQ9UjTmUjSxnDqWpCUDmSQOxCBFqvUkwkxbutAFiWyqbScidxPoZBmBxhwx8STQDHVArPJH9Qqs4sqeymaSmeQUi1BDyuw8B/djk0c0kNd1gA7SII1j5Q01Ajjvt0GhsZsLyO77yErlsRDbTHEkOucwFACBB3piUBQAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc"/>
+ <layer id="6" name="Tile Layer 2" width="21" height="17">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGDjgPIB2g4AJEJvS2U5q+NmVCmZQAwx0/A0V4EKhPAiMhjV+YIZGYwOk5ndizKQFAAC3YsOplAUAAA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="34" type="Door" x="256" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="14"/>
+   </properties>
+  </object>
+  <object id="35" type="Door" x="0" y="32" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="13"/>
+   </properties>
+  </object>
+  <object id="36" type="Door" x="208" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="15"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="40" gid="55" x="208" y="272" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item -1200))
+    (begin
+        (dialog '((&quot;&gt;&quot; &quot;* Hero found 200 ¤  *&quot;)))
+        (give-item -1200)
+        (set-money-diff 200))
+    (dialog '((&quot;&gt;&quot; &quot;A little plant... nothing else.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

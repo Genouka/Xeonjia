@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="11" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="84">
+ <tileset firstgid="1" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="25" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="153" source="../tilesets/indoor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="11" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA9vCwMCwmQi8FYj3APFuIJ4FpXGx90LVLiACD0W1R4hUexSId2HBO3GIAwBNAOIVjAEAAA==
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs"/>
+ <layer id="6" name="Tile Layer 2" width="11" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGAXUADOpYAYANSxZ7IwBAAA=
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" type="Door" x="80" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="18"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items">
+  <object id="73" type="Modifier" gid="19" x="128" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="74" type="Modifier" gid="19" x="144" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="75" type="Modifier" gid="19" x="16" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="76" type="Modifier" gid="19" x="32" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="78" type="Modifier" gid="19" x="48" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="79" type="Modifier" gid="19" x="80" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="80" type="Modifier" gid="19" x="112" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="81" type="Modifier" gid="19" x="96" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="83" type="Modifier" gid="19" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

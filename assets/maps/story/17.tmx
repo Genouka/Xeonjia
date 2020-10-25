@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="44">
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="12" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA5NgYGCQAGIeIFaAsrFhHiQ2NqCARQyfemRgh0e9HQNuAFLrQ4T5pLqHHPU2QGyLQ705Fd3jCcReJKjHZz562NIyfGDqyY0vWPiiA2RxdPcokOkebHbBwp0a4cNCQD1yWgJhGSxiMAwA3cUTBsADAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="38" type="SlitherCpu" gid="129" x="144" y="208" width="16" height="16">
+   <properties>
+    <property name="atk" type="float" value="9"/>
+    <property name="lifePoints" type="float" value="15"/>
+   </properties>
+  </object>
+  <object id="39" type="SlitherCpu" gid="129" x="32" y="192" width="16" height="16">
+   <properties>
+    <property name="atk" type="float" value="9"/>
+    <property name="lifePoints" type="float" value="15"/>
+   </properties>
+  </object>
+  <object id="41" type="SlitherCpu" gid="129" x="96" y="224" width="16" height="16">
+   <properties>
+    <property name="atk" type="float" value="9"/>
+    <property name="lifePoints" type="float" value="15"/>
+   </properties>
+  </object>
+  <object id="43" gid="165" x="128" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;I still haven't figured out if these monsters are malicious or just stupid.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="12" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoD4wI1MOBFyo6RAKgAkQm9LBHkcgdqKSWYTClhaA3PjCFb6Uhjs292Azk5rhTghgs59a6QsAE23hiMADAAA=
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="34" type="Door" x="160" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="19"/>
+   </properties>
+  </object>
+  <object id="35" type="Door" x="32" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="20"/>
+   </properties>
+  </object>
+  <object id="36" type="Door" x="80" y="304" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="15"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items"/>
+</map>

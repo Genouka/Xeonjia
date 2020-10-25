@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="41">
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="161" source="../tilesets/monster.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="17" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA5NgYGCQIBLz4JEjFdghsUH6zdHkvUk0j1h32OGRMyfSDHzmEuMOQn6TIEINIUCqX7CpRfcLvrDDZy65YUptM9DTGD6Aza8gM0TIsNsPzQxk7I3ENkfCMDEWHOoB8mniJ7gDAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc"/>
+ <layer id="6" name="Tile Layer 2" width="17" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIB2YEZB3JsNMathLD3OJ8Rut/E8JoFXYDUZATb+64ZEjNZ6pmS4AgMl5ILgDAAA=
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="34" type="Door" x="176" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="18"/>
+   </properties>
+  </object>
+  <object id="35" type="Door" x="176" y="208" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="14"/>
+   </properties>
+  </object>
+  <object id="36" type="Door" x="0" y="192" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="15"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items"/>
+</map>

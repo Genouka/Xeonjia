@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="28" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="45">
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <layer id="12" name="Tile Layer 1" width="28" height="18">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA7VVuw5DIQhl6Niti0MHRse7ubS9H9C0//85lURSQvAWtJ7kBMQHCioIAOdKrEyC1M5N3yqL0c9jUHBTtmTIVUDVzoZtpV+SpTPmHVzz6fQbiecjuAcJ2g/Fc59Y4wgvw4bN5yy8sd/h+L5Ye/TkSSMJSZzJSwS99/CvN6nPcQF//qLvg4FKX/m/WL5R6ISR+zDiL4KR+0VzKJa3yrvR34tzL4+evCDEzzfzH/167xZOhs0bX1kXyTfX1iR0HlOavMK3rsoayvOz6mfy/A8vZCNw4AcAAA==
+  </data>
+ </layer>
+ <objectgroup id="13" name="npc"/>
+ <layer id="11" name="Tile Layer 2" width="28" height="18">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGJnAjUT1zjRwgxkFemnhHmTgSkOzSQ17XACbG6kRLpTEy2AClPiDWnE00IDW+YQcQE68wPSYALEpCfqGSzySAoZL/qUGAADzmNnV4AcAAA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="36" type="Door" x="16" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="999"/>
+   </properties>
+  </object>
+  <object id="38" type="Door" x="192" y="272" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="23"/>
+   </properties>
+  </object>
+  <object id="44" type="Door" x="432" y="144" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="24"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="items"/>
+</map>

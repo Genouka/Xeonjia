@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="23" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
+ <tileset firstgid="1" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="25" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="73" source="../tilesets/outdoor_1.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="18" height="23">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA61SsQqFMAy833P08RZxyfTo9DZd3ewXiL9rAinWYsGaHBxJSziOXAIAwomgb9L+q1UYte7KUNCKpGuFlx+q6PyddFohu1lwzesNUpZWEOxeBOmmrFjhn3tr1jlkx5vZTfv91DyLjkfusmdLXj3zozr0YP5uZmR2zIk5w5b7wPwpazotd0Dw27PXPXug9JL8hayP2R8VNWb9AfbgROB4BgAA
+  </data>
+ </layer>
+ <objectgroup id="8" name="npcs">
+  <object id="29" type="NPC" gid="57" x="256" y="256" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;On the ground it's easy to find Xeon (¤) stones that you can use to buy items in shops.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items">
+  <object id="37" type="Modifier" gid="19" x="256" y="224" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="39" type="Modifier" gid="19" x="160" y="160" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="40" type="Modifier" gid="19" x="32" y="128" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="41" type="Modifier" gid="19" x="16" y="80" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="42" gid="135" x="16" y="96" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item 1))
+    (begin
+        (dialog '((&quot;&gt;&quot; &quot;There seems to be something in the branches of this plant...&quot;)))
+        (give-item 1)
+        (dialog '((&quot;&gt;&quot; &quot;This stone is very strange... who knows what it is...&quot;))))
+    (dialog '((&quot;&gt;&quot; &quot;A little plant... nothing else.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="44" type="Modifier" gid="19" x="256" y="32" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="20"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="18" height="23">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NggIAaIK5loBy0AHErkWpnAvEsIJ4DxHORxEl1y0ogXg3Ea4B4LZluAYGNQLwJiJcB8VY0uToSzNkJxLuAeB0Q70WTayPBHBjII0MPrQAt0gkpYUsv0DvQDqABQA9ncuMS3RxS8xm1QcIA2o0NUDs9kxJP+OyGxROyGlzqQeVUPQ65diLdgg8AAODc9tB4BgAA
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="25" type="Door" x="128" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="1"/>
+   </properties>
+  </object>
+  <object id="24" type="Door" x="272" y="272" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="3"/>
+   </properties>
+  </object>
+  <object id="32" type="Door" x="240" y="80" width="16" height="16">
+   <properties>
+    <property name="roomId" value="2_house"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

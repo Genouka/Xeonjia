@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="74">
+ <tileset firstgid="1" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="12" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAzvDwMBwmgDeBaXPAvEVIL4MxVuQ2CC8CUofgtJXoep3EIkHg/qjQHyMAvPvkKD+LhBfwoEv4hAHAF88hjiwAQAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="71" type="NPC" gid="38" x="112" y="64" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;001-talk-mom&quot;)
+    (begin
+        (dialog
+            '((&quot;mom&quot; &quot;Hi dear! Be very careful and remember to check your health in the top left bar.&quot;)
+            (&quot;/hero&quot; &quot;Yea mom. Don't worry, I'll be careful.&quot;)
+            (&quot;mom&quot; &quot;When you hit the rocks you could hurt yourself, so before you leave, stop by our neighbor who should have prepared a brand new pair of shin guards for you.&quot;)))
+        (set &quot;001-talk-mom&quot; #t))
+    (if  (&lt; (get-def) 1)
+        (dialog '((&quot;mom&quot; &quot;Go get the shin guards from the neighbor, you'll need them.&quot;)))
+        (dialog '((&quot;mom&quot; &quot;The new shin guards are beautiful, they match the suit.&quot;)))))
+</property>
+    <property name="orientation" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="12" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoAxsBeJtJKjfC8T7kPj7gfgACfqPA/EJLOKbgXg3EO+BsgkBkJrDQHyESPWUgo1UMgcAdUsrc7ABAAA=
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="72" type="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items">
+  <object id="73" gid="183" x="112" y="48" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This plant seems to have been recently watered.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

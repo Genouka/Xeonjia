@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="52">
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="21" height="28">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA62WyU4DMQyGc+AFqDhUQqrm2DfIheVMuZcdhCpKC6Lsywl4dH4LW7iRPZOE/tKnROOMx56JPemHEPqKqOZDHptkTUo01pRop8Ne47NL5G8LbCfXL8ExOOHxFJwp+xEYgwPmUNmtOCP7HKv1E3Cl1nyCr4RvdX9jxD8HN+AWnPP8TtkX4J654PFBxTk0fD6CZ/AEpjx/VfY3MGOmPH605K61Dgag12ITu+yH0u/eZNho3AQbxprSPSY+/7M/ZQ+Srz0wWoFPT1LLpfd02XerovmtJaovXWfyPnJzT3sH1dpEQXUWVaxt2neuSy1dh+U6Ep+Uh9cvPFEtvYOX8FdHOncrjxxZdSbfSPJI+0GNZH9KHmk/qFFkdD/wekZJnFav856fI/kv1sTiqQl2T0rl7VHvebk5kbr+w+KzJPec3iBnjlXKOs94rIXl2ms7+/wAVY2AUDAJAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc"/>
+ <layer id="6" name="Tile Layer 2" width="21" height="28">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIA2YkaieFBAIxEFAHALEoWhyJkBsikM9CAdj0QeSjwTiKCCOAeJYLObicwcxakc6oGV6GGwAOQ06ArHTALqF3gCWJ5DzGbY8iQ9QM604k6kPmz/IAaT6fbiCGiCuHWhHDFJAbholBoykchcdDGTeAwAGKoG9MAkAAA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="38" type="Door" x="0" y="368" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="23"/>
+   </properties>
+  </object>
+  <object id="44" type="Door" x="0" y="144" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="21"/>
+   </properties>
+  </object>
+  <object id="45" type="Door" x="160" y="432" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="25"/>
+   </properties>
+  </object>
+  <object id="46" type="Door" x="48" y="320" width="16" height="16">
+   <properties>
+    <property name="roomId" value="24_lp_shop"/>
+   </properties>
+  </object>
+  <object id="47" type="Door" x="128" y="112" width="16" height="16">
+   <properties>
+    <property name="roomId" value="24_house1"/>
+   </properties>
+  </object>
+  <object id="48" type="Door" x="256" y="112" width="16" height="16">
+   <properties>
+    <property name="roomId" value="24_lab"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="51" gid="71" x="272" y="128" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;'' VANTOI LAB ''&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

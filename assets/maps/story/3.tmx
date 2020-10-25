@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="19" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="41">
+ <tileset firstgid="1" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="25" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="73" source="../tilesets/outdoor_1.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="19" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA62UOwrDMBBE94CuTKpUW5igKmVI59InML5uJLKDB2FZllcPBn139GWDiIQoNeX1ycqkxcqN+nKd8aiMg+TziRovzj9iIK9X1NPhNVmpJlA77xG4A9xzD7Ti1bLPWf7v3BpXWledHuy1OeOBiv9s7Auvdwev9WSshflGTGldlf1PeElenndkav+r5fxX8lcJ7OHbwQvxYJE973IeVmqn+pC1OY8r9f0AtjH8tfAFAAA=
+  </data>
+ </layer>
+ <objectgroup id="8" name="npcs">
+  <object id="35" type="NPC" gid="52" x="16" y="48" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;Sometimes among the branches of the plants you can find berries or objects that have remained stuck. Press the inspect button near a tree to see if there is anything.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="37" type="NPC" gid="61" x="256" y="64" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;The ice is so slippery, have you noticed? I prefer to stay quiet on the snow.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="19" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA93SzQpAQBSG4blit2HlAoiVImFC+S1yad5itmNxpmS+elZTb7M4StkXvrz7tBgJUmTCVoUaDVphq8eAAqOwtWKDxi5smQWOOn9d9PUHLHN90/lDetMTZpRYhK0Dnbpv+hS2zHy96Qsf3loW8AUAAA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="25" type="Door" x="0" y="48" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="2"/>
+   </properties>
+  </object>
+  <object id="24" type="Door" x="48" y="272" width="16" height="16">
+   <properties>
+    <property name="roomId" value="3_house1"/>
+   </properties>
+  </object>
+  <object id="32" type="Door" x="192" y="112" width="16" height="16">
+   <properties>
+    <property name="roomId" value="3_house2"/>
+   </properties>
+  </object>
+  <object id="33" type="Door" x="144" y="304" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" type="int" value="4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items">
+  <object id="36" type="Solid" gid="127" x="0" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item -300))
+    (begin
+        (dialog '((&quot;&gt;&quot; &quot;* Hero found some berries! 20 LPs have been recovered *&quot;)))
+        (give-item -300)
+        (set-life-diff 20))
+    (dialog '((&quot;&gt;&quot; &quot;A little plant... nothing else.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="38" type="Modifier" gid="19" x="272" y="32" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="39" type="Modifier" gid="19" x="240" y="240" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="40" type="Modifier" gid="19" x="144" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

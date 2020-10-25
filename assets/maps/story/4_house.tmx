@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="73">
+ <tileset firstgid="1" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAzvDwMBwmgA+C8RXgPgyEG+C0sgYJnYVqm4HATwU1N0hQt1dIL6EA19E4wMAUiw5GmgBAAA=
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="71" type="NPC" gid="7" x="48" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;The last time I went through the forest, I was attacked. I'm not going back there anymore.&quot;)))"/>
+    <property name="orientation" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="72" type="NPC" gid="20" x="96" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;If you want to enter the forest you have to be careful, my grandson risked getting hurt there.&quot;)))"/>
+    <property name="orientation" type="int" value="3"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoD7YTqYcMWA3EO8hQt1hID5CoV3Y3LoRjxw+AABUfLcAaAEAAA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" type="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items"/>
+</map>

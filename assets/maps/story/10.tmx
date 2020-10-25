@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="43">
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="17" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA42TPQvCMBCGM7goIqiLoIKLuLl20XZWrMWvwQ/cFBQcVPz/PoULHGk0feHhLunlJZejK2PMGjawhR1k0IFEYk+iJlH5Hg5whBNcTFF1Zz1Qee5xgzucJT48HlozmEvehi484QVXeMPHORMH1qnEJrScb7rnCUxV9NVp+er+KRIf22Ps8QzJzuaX3N61FsrDvkkVxlCT9bLEHWzf9h4jaMAwcM7tNZ9vpjz6pjifkPR7+OZbRvm9opK1v2bu+49S8bVzz5yaisRI7X0BhCWiFrgDAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc"/>
+ <layer id="6" name="Tile Layer 2" width="17" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoD9wBGInEvWYEeC7EmmOCRCbItHEqicVwPyI7k5qAHxmuiCxcYWJGxF2kOvv4QBI8Tux6Y7aAADaW+p2uAMAAA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="34" type="Door" x="144" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="5"/>
+   </properties>
+  </object>
+  <object id="35" type="Door" x="256" y="32" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="7"/>
+   </properties>
+  </object>
+  <object id="36" type="Door" x="192" y="208" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="8"/>
+   </properties>
+  </object>
+  <object id="37" type="Door" x="256" y="144" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="11"/>
+   </properties>
+  </object>
+  <object id="40" type="Door" x="32" y="64" width="16" height="16">
+   <properties>
+    <property name="roomId" value="10_old_shop"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="39" gid="71" x="0" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;'' Souvenir shop ''&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

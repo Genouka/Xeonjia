@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objecttypes>
- <objecttype name="DirectionChanger" color="#a0a0a4"/>
- <objecttype name="Door" color="#a0a0a4"/>
- <objecttype name="Ground" color="#a0a0a4"/>
- <objecttype name="Hurdle" color="#a0a0a4"/>
- <objecttype name="Modifier" color="#a0a0a4"/>
- <objecttype name="Solid" color="#a0a0a4"/>
+ <objecttype name="DirectionChanger" color="#a0a0a4">
+  <property name="forcedDirection" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="Door" color="#a0a0a4">
+  <property name="orientation" type="int" default="0"/>
+  <property name="roomId" type="string" default="0"/>
+  <property name="team" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="Ground" color="#a0a0a4">
+  <property name="flying" type="bool" default="false"/>
+  <property name="slippery" type="bool" default="false"/>
+ </objecttype>
+ <objecttype name="Hurdle" color="#a0a0a4">
+  <property name="allowedDirection" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="Modifier" color="#a0a0a4">
+  <property name="atkDelta" type="int" default="0"/>
+  <property name="defDelta" type="int" default="0"/>
+  <property name="itemId" type="int" default="0"/>
+  <property name="lifePointsDelta" type="float" default="0"/>
+  <property name="moneyDelta" type="int" default="0"/>
+  <property name="poisonDelta" type="float" default="0"/>
+  <property name="powerPointsDelta" type="int" default="0"/>
+  <property name="regenerable" type="bool" default="false"/>
+ </objecttype>
+ <objecttype name="NPC" color="#a0a0a4">
+  <property name="action" type="string" default="(dialog '((&quot;author&quot; &quot;text&quot;)))"/>
+  <property name="actionOnEvent" type="string"/>
+  <property name="friendly" type="bool" default="true"/>
+  <property name="name" type="string"/>
+  <property name="orientation" type="int" default="0"/>
+  <property name="quiet" type="bool" default="true"/>
+ </objecttype>
+ <objecttype name="SlitherCpu" color="#a0a0a4">
+  <property name="actionOnEvent" type="string"/>
+  <property name="atk" type="float" default="0"/>
+  <property name="lifePoints" type="float" default="0"/>
+ </objecttype>
+ <objecttype name="Solid" color="#a0a0a4">
+  <property name="action" type="string" default="(dialog '((&quot;author&quot; &quot;text&quot;)))"/>
+  <property name="actionOnCollision" type="string" default="(dialog '((&quot;author&quot; &quot;text&quot;)))"/>
+  <property name="actionOnEvent" type="string" default="(dialog '((&quot;author&quot; &quot;text&quot;)))"/>
+ </objecttype>
 </objecttypes>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="20" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="43">
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="161" source="../tilesets/monster.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="20" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA1NgYGBQAGJzKAax7aFYAQ3zYBGzx8ImBvgQoQZmLj5gTqR9MPNESFCPD9gAsS0Dcf61I9JMBSLNwwXQwwLE9wRiLyQxYsIdn/kKFOgHAeSwUKCCecgAZBa14hdmngKUjS2dERuvIABLL6SkV3TgjcaXYKBu+MHMY2FAzdfIZQMMo8tjEwdhANTFIKNgBAAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="40" type="SlitherCpu" gid="161" x="80" y="64" width="16" height="16">
+   <properties>
+    <property name="atk" type="float" value="6"/>
+    <property name="lifePoints" type="float" value="10"/>
+   </properties>
+  </object>
+  <object id="41" type="SlitherCpu" gid="161" x="80" y="144" width="16" height="16">
+   <properties>
+    <property name="atk" type="float" value="6"/>
+    <property name="lifePoints" type="float" value="10"/>
+   </properties>
+  </object>
+  <object id="42" type="SlitherCpu" gid="161" x="196" y="89" width="16" height="16">
+   <properties>
+    <property name="atk" type="float" value="6"/>
+    <property name="lifePoints" type="float" value="10"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="20" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIA64EKlusAITIDYlUq0ZLR1CADgCsRMSf6DDfSDDgtqAFL+Qkl5wAWcK9Q8HAACCqqrnYAQAAA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="34" type="Door" x="176" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="16"/>
+   </properties>
+  </object>
+  <object id="35" type="Door" x="0" y="48" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="15/2"/>
+   </properties>
+  </object>
+  <object id="36" type="Door" x="0" y="144" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="15/1"/>
+   </properties>
+  </object>
+  <object id="37" type="Door" x="16" y="208" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="12"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items"/>
+</map>

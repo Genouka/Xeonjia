@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="42">
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="177" source="../tilesets/monster.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="17" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA1NgYGCQgGIFKDZHYkvgYPuj8SkBMPtBwA9NDtlsXwJmUOoOkJ9AfucEYj0g5gJiOzzq7dH4Cki0OhDzAbEqiW6wAWJbqP36aGbA5CSQ1CswYAfCQCwIxPJEuMMTiL2wiIPMNoeaIwfEQgTsxAbsSVSPDYD0SxBSBAXmaHxY/GEzA196QgbeSGYoEFCLK734QGn0fGZHIobpBwA/yOzvuAMAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="37" type="NPC" gid="135" x="32" y="112" width="16" height="16">
+   <properties>
+    <property name="action">(if  (!get &quot;013-h-safe&quot;)
+    (if  (&gt; (enemies-count) 0)
+        (dialog '((&quot;Help me please !&quot;)))
+        (begin
+            (set &quot;013-h-safe&quot; #t)
+            (dialog
+                '((&quot;/hero&quot; &quot;Everything good?&quot;)
+                (&quot;Yes, thank you so much for saving my life! As a token of gratitude I give you this strange stone that I found a little while ago.&quot;)))
+            (give-item 2)
+            (dialog '((&quot;/hero_happy&quot; &quot;Thanks, it looks like a precious gem, I'll take care of it.&quot;)))))
+    (dialog '((&quot;Thanks for saving me, I think it's better if I go home now.&quot;))))</property>
+    <property name="actionOnEvent">(if (!get &quot;013-h-safe&quot;)
+    (begin
+        (set-orientation 3)
+        (dialog '((&quot;Please help me! Save me from this monster!\nPunch him by pressing the punch button at the bottom right.&quot;)))))</property>
+    <property name="orientation" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="39" type="SlitherCpu" gid="177" x="48" y="112" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if  (get &quot;013-safe&quot;)
+    (delete))</property>
+    <property name="atk" type="float" value="5"/>
+    <property name="lifePoints" type="float" value="15"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="17" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoB5wwyPnSkV7iAVmdLbPBIhNyZCjBDgCsRMOOXMa2EdPgC/+iE1PzlSwzwWPelIwNQEAdpV71bgDAAA=
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="35" type="Door" x="0" y="96" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="8"/>
+   </properties>
+  </object>
+  <object id="36" type="Door" x="256" y="96" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="12"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="40" type="Solid" x="272" y="96" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if  (!get &quot;013-h-safe&quot;)
+    (begin
+        (if  (&gt; (enemies-count) 0)
+            (dialog '((&quot;&gt;&quot; &quot;I can't escape, I have to defeat the monster to save that man.&quot;)))
+            (dialog '((&quot;&gt;&quot; &quot;Better if I check that the guy is okay.&quot;))))
+        (set-orientation 3))
+    (fire-event (self)))</property>
+    <property name="actionOnEvent">(if  (get &quot;013-h-safe&quot;)
+    (delete))</property>
+   </properties>
+  </object>
+  <object id="41" type="Solid" x="-16" y="96" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if  (!get &quot;013-h-safe&quot;)
+    (begin
+        (if  (&gt; (enemies-count) 0)
+            (dialog '((&quot;&gt;&quot; &quot;I can't escape, I have to defeat the monster to save that man.&quot;)))
+            (dialog '((&quot;&gt;&quot; &quot;Better if I check that the guy is okay.&quot;))))
+        (set-orientation 2))
+    (fire-event (self)))</property>
+    <property name="actionOnEvent">(if  (get &quot;013-h-safe&quot;)
+    (delete))</property>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

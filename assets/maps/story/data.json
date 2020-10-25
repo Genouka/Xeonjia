@@ -1,0 +1,14 @@
+{
+  "items": {
+    "1": {
+      "name": "Strange icosahedral blue stone",
+      "description": "-",
+      "location": "002"
+    }
+  },
+  "global-events": {
+    "000-test" : {
+      "description": "(test) event used in multiple rooms"
+    }
+  }
+}

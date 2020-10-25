@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="27" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="38">
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/npc.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="27" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA52UPQ4CIRCFKfYGWpBo7RVoFGoNatbE2s7SWBmP75CFZHwBBnjJl2UGljfLz85KqRtxJwwxV2IdMaztMvlrpi/wIh7EWy2S4lEFrw/xJL4xJ8Uj2hMHwrKchTEh9oW+XmnmmdZ3Bzk+piTT4JX2sEWSX03pzJRqwhrcoI9mTw25nBz0t64FerbW2zu/hzito+RhAa6z8C5v57xwvhWxiayF2mq+R+JUqIN743e1nHMu3PNaTb37NUE9aY4pPr36v7t4pwwbi/9gvPfbGF/Y2B/GGFZK6AUAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="36" type="NPC" gid="173" x="64" y="64" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;This is not a place for kids, go home.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="37" type="NPC" gid="176" x="176" y="32" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;Something's bugging me...&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="27" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGF7ABIhNgdgMScwMTQ2I74JDjhI78YlhU0NLQG/7RgEiTZEKzNAwMnClyEXUSd/YgCMQOxFhNy5/DQUAi09YXiInT6HrcaOCu8gBAC/mGC/oBQAA
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="25" type="Door" x="192" y="208" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="5/1"/>
+   </properties>
+  </object>
+  <object id="27" type="Door" x="352" y="208" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="7"/>
+   </properties>
+  </object>
+  <object id="35" type="Door" x="16" y="208" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="5/2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items"/>
+</map>

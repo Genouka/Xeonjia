@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA61UuwrDMAzU0KWlFFoyBPrykrHBm5c+PqBp//9zKhGJCGPHjt2DI5HlXGTrEMCIVj23/BQ6pGG+eE1iy3nZe0c+WOsJdZB/5OKdyEvdPkrrHGC6t1I49U5atkBjjdxEtF1gPabRM3fIW0DTQv5598graxHPyIO3x8Dop1xozS6QFw8uAWleArURxPf/Ap3V72/Ks9qbg5czUO8/DdHK6Yn21Wdmj54HtSjp7xwM8ohsOE71IgWqbcks8fsZ0ss9L931KqEvs1vPc4llNpI/vxyfYOpfG/nmB5tyD1tABgAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="42" type="NPC" gid="141" x="80" y="32" width="16" height="16">
+   <properties>
+    <property name="action">(begin 
+    (dialog
+        '((&quot;&gt;&quot; &quot;...&quot;)
+        (&quot;???/&quot; &quot;Oops yes sorry I'm in the middle of the road...\nAre you a tourist? There are very few nowadays.&quot;)
+        (&quot;/hero&quot; &quot;N-no, I'm Hero, this year's chosen hero. I just left home to try to defeat the King of Evil.&quot;)
+        (&quot;???/_surprised&quot; &quot;Oh, so is it you ?! Nice to meet you, I've never met a hero before.&quot;)
+        (&quot;/_happy&quot; &quot;My name is Milla, I was born and raised in this area. I too am setting out on a journey to explore the world, I want to know new places and learn new things.&quot;)
+        (&quot;/hero_happy&quot; &quot;Oh cool, then we'll probably meet again. See ya.&quot;)
+        (&quot;/_happy&quot; &quot;Byee!&quot;)))
+    (set &quot;007-milla&quot; #t)
+    (fire-event (self)))</property>
+    <property name="actionOnEvent">(if  (get &quot;007-milla&quot;)
+    (delete))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAzNhYGAwZYAAMwb6Amcy9ZHrThcy9Q1mYMKAiD9qABsgtqWiebQC/gNkL6E0i5w2B2t6c8UjR+30REtAbvmBDEgpS2gdn+Sa74bEpnf8AQApwFOcQAYAAA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="35" type="Door" x="80" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="9"/>
+   </properties>
+  </object>
+  <object id="40" type="Door" x="0" y="256" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="10"/>
+   </properties>
+  </object>
+  <object id="41" type="Door" x="176" y="304" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="11"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items"/>
+</map>

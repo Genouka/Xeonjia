@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="75">
+ <properties>
+  <property name="action" value="(map-name &quot;Lab&quot;)"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="225" source="../tilesets/lab.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="13" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAzvDwMBwmgR8FoivAPFlIvEmIL4K1bODBDyqB6LnDol67gLxJRz4Ih45AGX/7iwIAgAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="71" type="NPC" gid="18" x="128" y="64" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;scientist&quot; &quot;Excuse the mess. Thieves have entered and turned everything upside down.&quot;)))"/>
+    <property name="orientation" type="int" value="1"/>
+    <property name="quiet" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="73" gid="22" x="16" y="112" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;scientist/_sad&quot; &quot;A life's work has been destroyed...&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="13" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIA88BOJHRNDI4C0QvwDi50D8Dsp/h8R/DpXHBt6T4LbHQPwUip8A8TMcap4g8V8C8WsofoXD3JdY5LCZjS6PrAZf+OACn4H4CxINAhuxqDtJpHnYAABYIiK0CAIAAA==
+  </data>
+ </layer>
+ <layer id="12" name="Tile Layer 3" width="13" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGBrgAw42NvARiD8h0aOAMAAABzMVMAgCAAA=
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" type="Door" x="96" y="128" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="24"/>
+   </properties>
+  </object>
+  <object id="72" type="Door" x="160" y="128" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="24_lab_2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items">
+  <object id="74" gid="183" x="176" y="48" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;Someone used this plant to do some experiments.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

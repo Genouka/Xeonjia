@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="31" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="51">
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="157" source="../tilesets/npc.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="31" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA82Vyw6CMBBF78KtGiBiXQDjDpfi//+b00WTaWnJTCPBm5wQSunJDI8SACeYxdFzZi4GruLedK3UQ9hOjVsTd6D73+u+MX0GFMbvBrdTzm2YCflaB6ZVruPzMLpLfqvX58l0iHtO2Zllf43X54X4eWu80j9WekOsPf9ljnRrvu893aHuN7MwH3GddnSHdy30/oT4f0/J2Iz1PuGw3idKUHL+Bd5J4XnIBgAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="37" type="NPC" gid="142" x="224" y="96" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set &quot;999-talk-milla&quot; #t)
+    (dialog
+        '((&quot;/hero&quot; &quot;Hi Milla, are you ok? Did you get here without any problems?&quot;)
+        (&quot;Hii Hero! Yes, I managed slyly to avoid the monsters that were along the way!\nAnyway, look here! This is the tower where the King of Evil resides!&quot;)
+        (&quot;/hero&quot; &quot;Oh really? Are we there yet?&quot;)
+        (&quot;Apparently yes, but it's closed! This nice gentleman here explained to me that to access the tower you need to have 3 signets.&quot;)
+        (&quot;/hero&quot; &quot;Signets? What are? And where can I find them?&quot;)
+        (&quot;I did not understand exactly what they are, but from what I understood they are kept in crypts present in each of the 3 regions that make up the kingdom.&quot;)
+        (&quot;/hero&quot; &quot;Mm... Then I really think that I have to set out in search of these crypts...&quot;)
+        (&quot;I guess you have no other choice...\nHowever, this gentleman also told me that there is a good ice cream shop a few kilometers from here, I'll go there immediately!&quot;)
+        (&quot;/hero&quot; &quot;...\nO-ok... We'll meet again sooner or later&quot;)
+        (&quot;Yep. See ya.&quot;)))
+    (fire-event (self)))</property>
+    <property name="actionOnEvent">(if (get &quot;999-talk-milla&quot;)
+    (delete))</property>
+   </properties>
+  </object>
+  <object id="45" type="NPC" gid="201" x="256" y="96" width="16" height="16">
+   <properties>
+    <property name="action">(begin 
+    (if (get &quot;999-talk-milla&quot;)
+        (dialog '((&quot;I hate the little girl who was here before ...&quot;)))
+        (dialog '((&quot;I hate this little girl here...&quot;))))
+    (dialog '((&quot;She pestered me with a thousand questions and cried until I told her what she wanted. How impertinent.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="31" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIAxEgViMCCxOhFmkgpFq90ABURLVDye/j4JRMAqGJgAAZRaEH8gGAAA=
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="36" type="Door" x="48" y="208" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="19"/>
+   </properties>
+  </object>
+  <object id="43" type="Door" x="128" y="208" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="21"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="41" gid="71" x="288" y="96" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;'' Xeonjia Tower - Dwelling of the King of Evil. Stay away. ''&quot;)))"/>
+   </properties>
+  </object>
+  <object id="50" gid="44" x="224" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This door is closed, I need the 3 signets to be able to open it.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

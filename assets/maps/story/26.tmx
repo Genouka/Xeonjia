@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="19" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="48">
+ <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="18" height="19">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA52UOQ7CMBBF5wA0IAoq5JITQAPkAEDBVrAJIcS+7xyfP0pGMsYmTr70ZFuOvzPJt9tE1AFd0AN9UIjIaH2mYox1BmAEhmAMJhSqHLWK4sU+MzDXWERzdcvzVVCz9NnnCE5gGrXnmL2V0bIC8AQvsARr8PaoQxlj+UZZUAQ5Dw9R0+JjqpHQS/6jSyrGR+bZI++5tysf4tO0LbLIlQ/x+VeXLsnHir7zITkqefpIPu70mw85F1wv1831T0wDTWY+JPP/zoXvvxefDdiCHdiDQ4L1LEVhfi7gBq4U1v5I6CPvk/Zc2HzSqGXxCej3fgscfded+AHkndLaWAUAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="47" type="NPC" gid="155" x="208" y="208" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;I'm planning a surprise wedding for my son, I hope he doesn't find out.&quot;)))"/>
+    <property name="orientation" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="18" height="19">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoD8wAWJTLOzhBFyIUONMRbNoBQKBOAQJh6LJD6TbkAG10xHI38FIGN3f+IAZEWqIjftRgB24DrQDCAAAy4XQ5VgFAAA=
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="36" type="Door" x="112" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="25"/>
+   </properties>
+  </object>
+  <object id="44" type="Door" x="0" y="128" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="28"/>
+   </properties>
+  </object>
+  <object id="45" type="Door" x="32" y="80" width="16" height="16">
+   <properties>
+    <property name="roomId" value="26_house"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items"/>
+</map>

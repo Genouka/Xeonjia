@@ -48,8 +48,8 @@ void importMap(String fileName) async {
 
     XmlElement tileset = (tilesetElement.getAttribute('source') == null)
         ? tilesetElement
-        : XmlDocument.parse(await rootBundle.loadString('assets/maps/' +
-                tilesetElement.getAttribute('source').split('/').last))
+        : XmlDocument.parse(await rootBundle.loadString(
+                'assets/maps/story/' + tilesetElement.getAttribute('source')))
             .rootElement;
 
     var tileHeight = double.parse(tileset.getAttribute('tileheight'));

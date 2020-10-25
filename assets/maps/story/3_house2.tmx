@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="72">
+ <tileset firstgid="1" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAzvDwMBwmgA+C8RXgPgyDrwJSl+FqttBAJOq7igQH0OiKTWPGHV3iFB3F4gv4cAX0fgAhBb4cmgBAAA=
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="71" type="NPC" gid="34" x="112" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if  (&lt; (get-life) (get-initial-life))
+    (begin
+        (dialog
+            '((&quot;Hi, you look a little tired. Rest here for a moment.&quot;)
+            (&quot;&gt;&quot; &quot;* Hero rested and is now in perfect health *&quot;)
+            (&quot;Come back anytime.&quot;)))
+        (restore-life))
+    (dialog '((&quot;Be careful not to get hurt.&quot;))))</property>
+    <property name="orientation" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIB5sBeJtSDQusBeI9yHRyGA7CfbRCuwG4j1AvJmAusNAfARJHcjtGxnI8wMAGJc0D2gBAAA=
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" type="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="3"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items"/>
+</map>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="73">
+ <tileset firstgid="1" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="12" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAzvDwMBwmkh8FoivAPFlIN4EpZHxJiQM4l+Fqt9BJB4O6u+QoP4uEF/CgS/iEAcAnmPipLABAAA=
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="71" type="NPC" gid="43" x="112" y="80" width="16" height="16">
+   <properties>
+    <property name="action">(dialog
+    '((&quot;You are the chosen one for this year, right? My son was too many years ago.&quot;)
+     (&quot;/_sad&quot; &quot;Unfortunately he failed to defeat the King of Evil...&quot;)))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="12" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoAxsBeJtBNRsR6L3AvE+JDF0NYTAbiDeQ7TrGBgOA/EREtRTA2Dzy0Yi1BADADSMbqmwAQAA
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" type="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items"/>
+</map>
