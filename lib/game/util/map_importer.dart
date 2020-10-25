@@ -75,25 +75,25 @@ void importMap(String fileName) async {
       // Used for object groups
       // Properties are defined in objectgroup
       for (var i = 0; i < tileCount; i++) {
-        var newTile = Tile(id: firstGid + i);
+        var newTile = Tile(gid: firstGid + i);
         newTile.sprite = spriteSheet.getSprite(i ~/ columns, i % columns);
         newTile.properties['imageY'] =
-            (((newTile.id - firstGid) / columns).floor() * tileHeight);
+            (((newTile.gid - firstGid) / columns).floor() * tileHeight);
         newTile.properties['image'] = image;
-        _tileMap[newTile.id] = newTile;
+        _tileMap[newTile.gid] = newTile;
       }
     } else {
       tileset.findElements('tile').forEach((tile) {
         var newTile = Tile(
-          id: int.parse(tile.getAttribute('id')) + firstGid,
+          gid: int.parse(tile.getAttribute('id')) + firstGid,
           type: tile.getAttribute('type'),
         );
         newTile.properties['imageY'] =
-            (((newTile.id - firstGid) / columns).floor() * tileHeight);
+            (((newTile.gid - firstGid) / columns).floor() * tileHeight);
         newTile.properties['image'] = image;
         newTile.sprite = spriteSheet.getSprite(
-            (newTile.id - firstGid) ~/ columns,
-            (newTile.id - firstGid) % columns);
+            (newTile.gid - firstGid) ~/ columns,
+            (newTile.gid - firstGid) % columns);
 
         // Read tile properties
         var properties = tile.findElements('properties');
@@ -105,7 +105,7 @@ void importMap(String fileName) async {
             }
           });
         }
-        _tileMap[newTile.id] = newTile;
+        _tileMap[newTile.gid] = newTile;
       });
     }
   });
@@ -162,6 +162,9 @@ void importMap(String fileName) async {
       tile.type ??= object.getAttribute('type');
       tile.position = Point(x, y);
       tile.properties.addAll(properties);
+      // Add itemId value even if properties['itemId'] == null
+      tile.properties['itemId'] = properties['itemId'];
+      tile.id = int.parse(object.getAttribute('id'));
       tile.createComponent();
     });
   });

@@ -5,8 +5,9 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Class used to manage a single tile
 class Tile {
-  // Tile ID defined in the TMX file
+  // Tile id and gid defined in the TMX file
   int id;
+  int gid;
 
   // Component type
   String type;
@@ -29,6 +30,7 @@ class Tile {
 
   Tile({
     this.id,
+    this.gid,
     this.type,
     this.properties,
     this.sprite,

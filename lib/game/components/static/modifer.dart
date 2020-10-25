@@ -4,6 +4,7 @@ import 'package:flame/animation.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/sfx.dart';
 
 // Stats modifier component
@@ -17,9 +18,13 @@ class ModifierComponent extends BasicComponent {
   int _powerPointsDelta = 0;
   double _poisonDelta = 0;
 
-  // Item unique id
+  // Item unique ID
   // It is == 0 if this is not an unique item (this can be taken multiple times)
   // It is < 0 if this is a common take-once item (eg money)
+  // -> in this case it is: - roomNum * 1000 + tmx object ID (calculated)
+  // It is > 0 and < 100 if it is a gem (defined in properties)
+  // It is > 100 if it is a main item
+  // -> in this case it is: roomNum * 100 + itemId (defined in properties)
   int _itemId = 0;
 
   @override
@@ -71,7 +76,11 @@ class ModifierComponent extends BasicComponent {
       componentAbove.poisonQuantity += _poisonDelta;
       componentAbove.moneyDifference(_moneyDelta);
       componentAbove.selectedWeapon.powerPoints += _powerPointsDelta;
-      if (_itemId != 0) componentAbove.addItem(_itemId);
+      if (_itemId != 0 &&
+          componentAbove.isPlayerOne &&
+          game.config.mode == GameMode.story) {
+        componentAbove.addItem(_itemId);
+      }
       if (_regenerable ?? false) game.modifiersToBeRegenerated.add(this);
       if (explosionOnDelete) {
         isBeingDeleted = true;
