@@ -10,7 +10,7 @@ import 'package:xeonjia/ui/screens/game/game_page.dart';
 MatchConfig _config = MatchConfig(
   GameMode.tdm,
   teamSize: 5,
-  maxTime: 3,
+  maxTime: 180,
   maxPoints: 1500,
   mapId: 0,
   difficulty: 4,
@@ -136,7 +136,7 @@ class _ArenaPageState extends State<ArenaPage> {
                 items: _maxTimeOptions
                     .map<DropdownMenuItem<int>>(
                       (int value) => DropdownMenuItem<int>(
-                        value: value,
+                        value: value * 60,
                         child: Text(value.toString()),
                       ),
                     )
