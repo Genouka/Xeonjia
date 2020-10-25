@@ -38,6 +38,3 @@ This software is distributed under the GNU General Public License as published b
 ### Graphics
 
 Except where otherwise noted, all graphics of this game are licensed under the Creative Commons Attribution-ShareAlike 4.0 International License ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
-
-The following are adapted artwork from [Tuxemon](https://github.com/Tuxemon/Tuxemon) and are licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License ([CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)):
-character-\*.png, door\*.png, ground\*.png, hurdle\*.png, rock\*.png, stairs\*.png, wall\*.png

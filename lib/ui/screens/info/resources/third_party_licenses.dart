@@ -170,14 +170,6 @@ THE SOFTWARE.
 '''
   },
   {
-    'lib': 'Images',
-    'text': '''
-character-*.png, door*.png, ground*.png, hurdle*.png, rock*.png, stairs*.png, wall*.png are adapted artwork from Tuxemon.
-
-These images are licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/3.0/.
-'''
-  },
-  {
     'lib': 'm5x7 font by Daniel Linssen',
     'text': '''
 CC0 1.0 Universal
