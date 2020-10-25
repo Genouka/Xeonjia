@@ -28,12 +28,12 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA88BOJHRNDI4C0QvwDi50D8Dsp/h8R/DpXHBt6T4LbHQPwUip8A8TMcap4g8V8C8WsofoXD3JdY5LCZjS6PrAZf+OACn4H4CxINAhuxqDtJpHnYAABYIiK0CAIAAA==
+   H4sIAAAAAAAAA52QAQqAIAxFvf9tOkbHKCuzyIQ6QD/4wRhTpAePMf6conP/GODYUCUHXGGAiX0SfWCuyfCsvCWr3sOZTnAxznhmHxHudCvcE43M2q1zOVP7nxIXvEV96Yy5vnGfxQP+VgW4CAIAAA==
   </data>
  </layer>
  <layer id="12" name="Tile Layer 3" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGBrgAw42NvARiD8h0aOAMAAABzMVMAgCAAA=
+   H4sIAAAAAAAAA2NgGH7gIxB/QqJHAWEAABhDetYIAgAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
