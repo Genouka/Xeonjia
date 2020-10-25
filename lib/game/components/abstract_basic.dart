@@ -26,7 +26,7 @@ abstract class BasicComponent extends SpriteComponent {
   double imageY;
 
   // Initial life points
-  double initialLifePoints = double.infinity;
+  double maxLifePoints = double.infinity;
 
   // Component level
   int level = 0;
@@ -104,38 +104,38 @@ abstract class BasicComponent extends SpriteComponent {
 
   BasicComponent.fromTile(Tile tile)
       : startingPosition = tile.position,
+        name = tile.properties['name'],
         action = tile.properties['action'] ?? '',
         actionOnCollision = tile.properties['actionOnCollision'] ?? '',
         actionOnEvent = tile.properties['actionOnEvent'] ?? '',
-        initialLifePoints =
+        maxLifePoints =
             double.parse(tile.properties['lifePoints'] ?? 'Infinity'),
         atk = double.parse(tile.properties['atk'] ?? '0'),
         def = double.parse(tile.properties['def'] ?? '0'),
         poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
         _flying = 'true' == (tile.properties['flying'] ?? 'false'),
         _layerPriority = 100 * (tile.layer ?? 0),
-        super.fromSprite(tile.size, tile.size, tile.sprite) {
-    onCreate();
-  }
-
-  BasicComponent(this.startingPosition, this.image, {this.imageY = 0})
-      : initialLifePoints = double.infinity,
+        image = tile.properties['image'],
+        imageY = tile.properties['imageY'] ?? 0,
         super.fromSprite(
-          componentSize,
-          componentSize,
-          Sprite(image, width: 16, height: 16, y: 16.0 * imageY),
+          tile.size,
+          tile.size,
+          tile.sprite,
         ) {
     onCreate();
   }
 
-  BasicComponent.withoutImage(this.startingPosition)
-      : initialLifePoints = double.infinity {
-    onCreate();
-  }
+  BasicComponent(Point startingPosition, Map<String, dynamic> properties)
+      : this.fromTile(Tile(
+            position: startingPosition,
+            size: componentSize,
+            sprite: Sprite(properties['image'],
+                width: 16, height: 16, y: 16.0 * (properties['imageY'] ?? 0)),
+            properties: properties));
 
   @mustCallSuper
   void onCreate() {
-    _lifePoints = initialLifePoints;
+    _lifePoints = maxLifePoints;
     x = startingPosition.x;
     y = startingPosition.y;
     game.addLater(this);
@@ -166,7 +166,7 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Restore LP and poison quantity
   void restoreStatus() {
-    _lifePoints = initialLifePoints;
+    _lifePoints = maxLifePoints;
     poisonQuantity = 0;
     game.refreshLifePointsBar();
   }
@@ -178,7 +178,7 @@ abstract class BasicComponent extends SpriteComponent {
       _lifePoints += difference < 0 ? min(0, difference + def) : difference;
       poisonQuantity += poison;
       if (_lifePoints < 0) _lifePoints = 0;
-      if (_lifePoints > initialLifePoints) _lifePoints = initialLifePoints;
+      if (_lifePoints > maxLifePoints) _lifePoints = maxLifePoints;
       if (isPlayerOne && difference != 0) {
         game.refreshLifePointsBar();
       }
@@ -247,7 +247,7 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Reset life points
   void restoreLifePoints() {
-    _lifePoints = initialLifePoints;
+    _lifePoints = maxLifePoints;
     if (isPlayerOne) game.refreshLifePointsBar();
   }
 

@@ -8,7 +8,7 @@ import 'package:flame/spritesheet.dart';
 import 'package:flutter/services.dart';
 import 'package:xml/xml.dart';
 
-import 'package:xeonjia/game/util/component_tile.dart';
+import 'package:xeonjia/game/util/tile_to_component.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/tile.dart';
 

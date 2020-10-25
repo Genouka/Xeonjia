@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
+
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/match_config.dart';
-
 import 'package:xeonjia/ui/screens/arena/resources/maps.dart';
 import 'package:xeonjia/ui/screens/arena/widgets/play_button.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
 
-// List of possible options
-const List<int> _teamSizeOptions = [3, 4, 5, 6, 7];
-const List<int> _maxTimeOptions = [2, 3, 4, 5];
-const List<int> _maxPointsOptions = [1000, 1500, 2000, 2500];
-
 // Match settings
-GameMode _mode = GameMode.tdm;
-int _teamSize = 5;
-int _maxTime = 3;
-int _maxPoints = 1500;
-int _mapId = 0;
-int _difficulty = 4;
-bool _friendlyFire = true;
+MatchConfig _config = MatchConfig(
+  GameMode.tdm,
+  teamSize: 5,
+  maxTime: 3,
+  maxPoints: 1500,
+  mapId: 0,
+  difficulty: 4,
+  friendlyFire: true,
+);
 
 class ArenaPage extends StatefulWidget {
   static _ArenaPageState of(BuildContext context) =>
@@ -29,53 +26,45 @@ class ArenaPage extends StatefulWidget {
 }
 
 class _ArenaPageState extends State<ArenaPage> {
+  // List of possible options
+  final _teamSizeOptions = <int>[3, 4, 5, 6, 7];
+  final _maxTimeOptions = <int>[2, 3, 4, 5];
+  final _maxPointsOptions = <int>[1000, 1500, 2000, 2500];
+
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: const Text('ARENA'),
-          centerTitle: true,
-        ),
+        appBar: AppBar(title: const Text('ARENA'), centerTitle: true),
         body: ListView(
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 70),
           children: <Widget>[
             ListTile(
-              title: const Text(
-                'Mode',
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
+              title: const Text('Mode', style: TextStyle(fontSize: 20)),
               subtitle: const Text('Game mode'),
               trailing: DropdownButton<GameMode>(
-                value: _mode,
+                value: _config.mode,
                 onChanged: (GameMode newValue) {
                   setState(() {
-                    _mode = newValue;
+                    _config.mode = newValue;
                   });
                 },
                 items: [GameMode.tdm]
                     .map<DropdownMenuItem<GameMode>>(
                       (GameMode value) => DropdownMenuItem<GameMode>(
                         value: value,
-                        child: Text(modeNames[value]),
+                        child: Text(value.name),
                       ),
                     )
                     .toList(),
               ),
             ),
             ListTile(
-              title: const Text(
-                'Map',
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
+              title: const Text('Map', style: TextStyle(fontSize: 20)),
               subtitle: const Text('Place to play'),
               trailing: DropdownButton<int>(
-                value: _mapId,
+                value: _config.mapId,
                 onChanged: (int newValue) {
                   setState(() {
-                    _mapId = newValue;
+                    _config.mapId = newValue;
                   });
                 },
                 items: mapNames.keys
@@ -89,18 +78,13 @@ class _ArenaPageState extends State<ArenaPage> {
               ),
             ),
             ListTile(
-              title: const Text(
-                'Difficulty',
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
+              title: const Text('Difficulty', style: TextStyle(fontSize: 20)),
               subtitle: const Text('Match difficulty'),
               trailing: DropdownButton<int>(
-                value: _difficulty,
+                value: _config.difficulty,
                 onChanged: (int newValue) {
                   setState(() {
-                    _difficulty = newValue;
+                    _config.difficulty = newValue;
                   });
                 },
                 items: difficultyNames.keys
@@ -116,16 +100,14 @@ class _ArenaPageState extends State<ArenaPage> {
             ListTile(
               title: const Text(
                 'Points required',
-                style: TextStyle(
-                  fontSize: 20,
-                ),
+                style: TextStyle(fontSize: 20),
               ),
               subtitle: const Text('Points needed to win'),
               trailing: DropdownButton<int>(
-                value: _maxPoints,
+                value: _config.maxPoints,
                 onChanged: (int newValue) {
                   setState(() {
-                    _maxPoints = newValue;
+                    _config.maxPoints = newValue;
                   });
                 },
                 items: _maxPointsOptions
@@ -141,16 +123,14 @@ class _ArenaPageState extends State<ArenaPage> {
             ListTile(
               title: const Text(
                 'Time available',
-                style: TextStyle(
-                  fontSize: 20,
-                ),
+                style: TextStyle(fontSize: 20),
               ),
               subtitle: const Text('Maximum time for a match (minutes)'),
               trailing: DropdownButton<int>(
-                value: _maxTime,
+                value: _config.maxTime,
                 onChanged: (int newValue) {
                   setState(() {
-                    _maxTime = newValue;
+                    _config.maxTime = newValue;
                   });
                 },
                 items: _maxTimeOptions
@@ -164,18 +144,13 @@ class _ArenaPageState extends State<ArenaPage> {
               ),
             ),
             ListTile(
-              title: const Text(
-                'Players',
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
+              title: const Text('Players', style: TextStyle(fontSize: 20)),
               subtitle: const Text('Number of players per team'),
               trailing: DropdownButton<int>(
-                value: _teamSize,
+                value: _config.teamSize,
                 onChanged: (int newValue) {
                   setState(() {
-                    _teamSize = newValue;
+                    _config.teamSize = newValue;
                   });
                 },
                 items: _teamSizeOptions
@@ -191,31 +166,21 @@ class _ArenaPageState extends State<ArenaPage> {
             CheckboxListTile(
               title: const Text(
                 'Friendly Fire',
-                style: TextStyle(
-                  fontSize: 20,
-                ),
+                style: TextStyle(fontSize: 20),
               ),
               activeColor: Colors.blueGrey,
               subtitle:
                   const Text('If enabled, players can hit their teammates'),
-              value: _friendlyFire,
+              value: _config.friendlyFire,
               onChanged: (_newValue) {
                 setState(() {
-                  _friendlyFire = _newValue;
+                  _config.friendlyFire = _newValue;
                 });
               },
             ),
           ],
         ),
-        floatingActionButton: PlayButton(() => GamePage(MatchConfig(
-              _mode,
-              teamSize: _teamSize,
-              maxTime: _maxTime * 60,
-              maxPoints: _maxPoints,
-              mapId: _mapId,
-              difficulty: _difficulty,
-              friendlyFire: _friendlyFire,
-            ))),
+        floatingActionButton: PlayButton(() => GamePage(_config)),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       );
 }

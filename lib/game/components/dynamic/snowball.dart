@@ -23,7 +23,7 @@ class SnowballComponent extends DynamicComponent {
 
   SnowballComponent(
       Point startingPosition, this.father, this.direction, this.atk)
-      : super(startingPosition, 'snowball.png');
+      : super(startingPosition, {'image': 'snowball.png'});
 
   @override
   bool isSolid({DynamicComponent otherComponent}) => false;

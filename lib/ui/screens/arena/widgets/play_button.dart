@@ -17,8 +17,8 @@ class PlayButton extends StatelessWidget {
       child: FlatButton(
         shape: const RoundedRectangleBorder(borderRadius: circularRadius),
         child: const Text(
-          'P L A Y',
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          'PLAY',
+          style: TextStyle(color: Colors.white, fontSize: 20, letterSpacing: 6),
         ),
         onPressed: () {
           Navigator.push(context, FadeRoute(page()));

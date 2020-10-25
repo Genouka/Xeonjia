@@ -16,10 +16,6 @@ void main() async {
 class Xeonjia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        systemNavigationBarColor: Colors.lightBlue[500],
-        systemNavigationBarIconBrightness: Brightness.light));
-
     return MaterialApp(
       title: 'Xeonjia',
       theme: lightTheme,

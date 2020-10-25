@@ -5,14 +5,11 @@ class CharacterInfo {
   // Name of the character
   String name;
 
-  // Character image
-  String imageName;
-
   // Player stats
   int level;
   double atk;
   double def;
-  double lifePoints;
+  double maxLifePoints;
 
   // Player current status
   double currentLifePoints;
@@ -70,13 +67,12 @@ class CharacterInfo {
 
   // Import character data from a Json
   CharacterInfo(Map<String, dynamic> json)
-      : name = json['name'] ?? 'yourName',
-        imageName = json['imageName'] ?? 'character-1.png',
+      : name = json['name'] ?? 'Hero',
         eventLog = jsonDecode(json['eventLog'] ?? '{}'),
         level = json['level'] ?? 0,
         atk = json['atk'] ?? 1,
         def = json['def'] ?? 0,
-        lifePoints = json['lifePoints'] ?? 100,
+        maxLifePoints = json['maxLifePoints'] ?? 100,
         currentLifePoints = json['currentLifePoints'] ?? 0,
         poisonQuantity = json['poisonQuantity'] ?? 0,
         money = json['money'] ?? 0,
@@ -96,11 +92,10 @@ class CharacterInfo {
     return {
       'eventLog': jsonEncode(eventLog),
       'name': name,
-      'imageName': imageName,
       'level': level,
       'atk': atk,
       'def': def,
-      'lifePoints': lifePoints,
+      'maxLifePoints': maxLifePoints,
       'currentLifePoints': currentLifePoints,
       'poisonQuantity': poisonQuantity,
       'money': money,

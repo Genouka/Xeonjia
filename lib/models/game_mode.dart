@@ -1,7 +1,10 @@
 // Game modes
 enum GameMode { story, tdm, ctf }
-const Map<GameMode, String> modeNames = {
-  GameMode.story: 'Story Mode',
-  GameMode.tdm: 'Team Deathmatch',
-  GameMode.ctf: 'Capture the Flag',
-};
+
+extension GameModeInfo on GameMode {
+  String get name {
+    if (this == GameMode.story) return 'Story Mode';
+    if (this == GameMode.tdm) return 'Team Deathmatch';
+    return 'Capture the Flag';
+  }
+}

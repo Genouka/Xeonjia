@@ -5,9 +5,7 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/match_config.dart';
 
 class GamePage extends StatelessWidget {
-  final MatchConfig config;
-
-  GamePage(this.config) {
+  GamePage(MatchConfig config) {
     game = XeonjiaGame(config);
   }
 

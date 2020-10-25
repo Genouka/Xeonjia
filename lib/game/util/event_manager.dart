@@ -20,7 +20,7 @@ Environment setEnvironment() {
 
   // Game procedures
   _('get-life', 0, (Cell x) => game.playerOne.lifePoints);
-  _('get-initial-life', 0, (Cell x) => game.playerOne.initialLifePoints);
+  _('get-initial-life', 0, (Cell x) => game.playerOne.maxLifePoints);
   _(
       'set-life-diff',
       1,
@@ -29,7 +29,7 @@ Environment setEnvironment() {
   _('set-life-to', 1,
       (Cell x) => game.playerOne.setStatus((x.car as int).toDouble(), 0));
   _('restore-life', 0, (Cell x) => game.playerOne.restoreStatus());
-  _('increase-life', 1, (Cell x) => game.playerOne.initialLifePoints += x.car);
+  _('increase-life', 1, (Cell x) => game.playerOne.maxLifePoints += x.car);
   _('get-atk', 0, (Cell x) => game.playerOne.atk);
   _('increase-atk', 1, (Cell x) => game.playerOne.atk += x.car);
   _('get-def', 0, (Cell x) => game.playerOne.def);

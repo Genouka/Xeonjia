@@ -47,7 +47,7 @@ class CharacterComponent extends DynamicComponent
   bool quiet;
 
   @override
-  double initialLifePoints;
+  double maxLifePoints;
 
   @override
   bool isSolid({DynamicComponent otherComponent}) => !isBeingDeleted;
@@ -66,12 +66,11 @@ class CharacterComponent extends DynamicComponent
     double initialLP,
     Map<String, dynamic> jsonWeaponList,
     team = 0,
-  })  : initialLifePoints = initialLP ??
+  })  : maxLifePoints = initialLP ??
             ((isPlayerOne && game.config.mode == GameMode.story)
-                ? mainCharacter.lifePoints
+                ? mainCharacter.maxLifePoints
                 : (100 + 5 * level).toDouble()),
-        super(tile.position, tile.properties['image'],
-            imageY: tile.properties['imageY'] ?? 0) {
+        super(tile.position, tile.properties) {
     orientation =
         GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0'));
     _initialOrientation = orientation;
@@ -84,9 +83,6 @@ class CharacterComponent extends DynamicComponent
         ? mainCharacter.def
         : (level ~/ 5).toDouble();
     teamId = team;
-    actionOnEvent = tile.properties['actionOnEvent'] ?? '';
-    action = tile.properties['action'] ?? '';
-    name = tile.properties['name'];
     // Temporary solution to remedy the functions _cpuMove() and _cpuShoot()
     jsonWeaponList ??=
         (team == 0) ? const {'1': 5, '2': 1} : const {'1': 9, '2': 5};
@@ -110,7 +106,7 @@ class CharacterComponent extends DynamicComponent
       game.playerOne = this;
       setStatus(
           mainCharacter.currentLifePoints <= 0
-              ? initialLifePoints
+              ? maxLifePoints
               : mainCharacter.currentLifePoints,
           mainCharacter.poisonQuantity);
       game.refreshWeaponBar();

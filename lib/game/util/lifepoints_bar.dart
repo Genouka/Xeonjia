@@ -35,7 +35,7 @@ mixin LifePointsBar on BasicComponent {
           ..strokeWidth = 2
           ..style = PaintingStyle.fill);
 
-    var currentLifePoints = (lifePoints * width) / initialLifePoints;
+    var currentLifePoints = (lifePoints * width) / maxLifePoints;
     canvas.drawLine(
         Offset(0, -_padding),
         Offset(currentLifePoints, -_padding),

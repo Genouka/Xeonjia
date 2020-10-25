@@ -46,7 +46,8 @@ class ModifierComponent extends BasicComponent {
 
   // Constructor used for mine weapon shots
   ModifierComponent.mine(Point position, this.father, double _atk)
-      : super(position, 'mine.png', imageY: father.teamId.toDouble()) {
+      : super(position,
+            {'image': 'mine.png', 'imageY': father.teamId.toDouble()}) {
     _lifePointsDiff = -_atk;
     explosionOnDelete = true;
   }

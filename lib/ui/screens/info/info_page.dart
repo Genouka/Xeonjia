@@ -65,23 +65,15 @@ class _InfoPageState extends State<InfoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('INFO'),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: const Text('INFO'), centerTitle: true),
       body: ListView.builder(
         padding: const EdgeInsets.all(8.0),
         itemCount: infoMenuList.length,
         itemBuilder: (BuildContext context, int index) => ListTile(
-          leading: Icon(
-            infoMenuList[index]['icon'].icon,
-            size: 27,
-          ),
+          leading: Icon(infoMenuList[index]['icon'].icon, size: 27),
           title: Text(
             infoMenuList[index]['title'],
-            style: const TextStyle(
-              fontSize: 20,
-            ),
+            style: const TextStyle(fontSize: 20),
           ),
           subtitle: Text(infoMenuList[index]['subtitle']),
           onTap: () {
@@ -116,9 +108,7 @@ class _InfoPageState extends State<InfoPage> {
             title: const Text('Third Party Licenses'),
             content: Container(
                 width: double.maxFinite,
-                child: ListView(
-                  children: _licenseList,
-                )),
+                child: ListView(children: _licenseList)),
             actions: <Widget>[
               FlatButton(
                 child: const Text('Ok'),

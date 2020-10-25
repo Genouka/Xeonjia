@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
   final pageList = <Map<String, dynamic>>[
     {
       'title': 'Story mode',
-      'goto': () => GamePage(MatchConfig(GameMode.story))
+      'goto': () => GamePage(MatchConfig(GameMode.story)),
     },
     {'title': 'Arena', 'goto': () => ArenaPage()},
     {'title': 'How to play', 'goto': () => RulesPage()},
@@ -25,10 +25,7 @@ class HomePage extends StatelessWidget {
     setScreenDimension(context);
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-            gradient: Theme.of(context).brightness == Brightness.light
-                ? appGradient
-                : darkAppGradient),
+        decoration: BoxDecoration(gradient: appGradient),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -37,10 +34,11 @@ class HomePage extends StatelessWidget {
                 child: Text(
                   'XEONJiA',
                   style: TextStyle(
-                      letterSpacing: 14,
-                      color: Colors.white,
-                      fontSize: 80,
-                      fontFamily: 'm5x7'),
+                    letterSpacing: 14,
+                    color: Colors.white,
+                    fontSize: 80,
+                    fontFamily: 'm5x7',
+                  ),
                 ),
               ),
             ),

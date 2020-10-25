@@ -44,7 +44,7 @@ class _StatusBoxState extends State<StatusBox> {
                         ? [1, 0]
                         : [
                             game.playerOne.lifePoints.round(),
-                            game.playerOne.initialLifePoints.round() -
+                            game.playerOne.maxLifePoints.round() -
                                 game.playerOne.lifePoints.round()
                           ],
                     text: game.playerOne != null
@@ -52,19 +52,16 @@ class _StatusBoxState extends State<StatusBox> {
                         : '',
                     colors: [
                       lifePointsColor((game.playerOne?.lifePoints ?? 1) /
-                          (game.playerOne?.initialLifePoints ?? 1)),
+                          (game.playerOne?.maxLifePoints ?? 1)),
                       Colors.grey
                     ],
                   ),
                 ),
               ),
               Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 4),
-                  child: const Icon(
-                    Icons.pause,
-                    color: Colors.white,
-                    size: 18,
-                  )),
+                margin: const EdgeInsets.symmetric(horizontal: 4),
+                child: const Icon(Icons.pause, color: Colors.white, size: 18),
+              ),
             ],
           ),
           if (game.config.mode == GameMode.tdm) ...[

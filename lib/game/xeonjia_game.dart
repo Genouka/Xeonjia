@@ -72,9 +72,6 @@ class XeonjiaGame extends BaseGame
   int elapsedSeconds = 0;
   int get remainingTime => config.maxTime - elapsedSeconds;
 
-  // Time elapsed since last time components have been updated
-  double timeSinceUpdate;
-
   // If true, game is paused so no one can move
   bool _pause;
 
@@ -124,7 +121,6 @@ class XeonjiaGame extends BaseGame
     currentEventLog = Map.from(mainCharacter.eventLog);
 
     // Reset variables
-    timeSinceUpdate = 0;
     elapsedSeconds = 0;
     playerOne = null;
 
@@ -249,7 +245,7 @@ class XeonjiaGame extends BaseGame
     mainCharacter.level = playerOne.level;
     mainCharacter.atk = playerOne.atk;
     mainCharacter.def = playerOne.def;
-    mainCharacter.lifePoints = playerOne.initialLifePoints;
+    mainCharacter.maxLifePoints = playerOne.maxLifePoints;
     mainCharacter.currentLifePoints = playerOne.lifePoints;
     mainCharacter.killedComponents += playerOne.killedEnemies;
     mainCharacter.minutesPlayed += elapsedSeconds / 60;
@@ -319,7 +315,7 @@ class XeonjiaGame extends BaseGame
       mainCharacter.minutesPlayed += elapsedSeconds / 60;
       mainCharacter.movesCounter += playerOne.movesCounter;
       ++mainCharacter.deathCounter;
-      mainCharacter.currentLifePoints = playerOne.initialLifePoints;
+      mainCharacter.currentLifePoints = playerOne.maxLifePoints;
       lostMoney = mainCharacter.visitedRooms.toSet().length * 10;
       mainCharacter.money -= lostMoney;
       if (mainCharacter.money < 0) mainCharacter.money = 0;

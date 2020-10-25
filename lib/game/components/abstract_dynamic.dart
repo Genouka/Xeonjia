@@ -10,9 +10,8 @@ import 'package:xeonjia/models/sfx.dart';
 
 // Component able to move on the game field
 abstract class DynamicComponent extends BasicComponent with TextAnimation {
-  DynamicComponent(Point startingPosition, String imageName,
-      {double imageY = 0})
-      : super(startingPosition, imageName, imageY: imageY);
+  DynamicComponent(Point startingPosition, Map<String, dynamic> properties)
+      : super(startingPosition, properties);
 
   // Constructor used when component is imported from a tmx file
   DynamicComponent.fromTile(tile) : super.fromTile(tile);
