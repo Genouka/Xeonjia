@@ -10,7 +10,7 @@ class Settings {
   int gamepadShape;
 
   // True if rules have been read
-  bool rulesRead;
+  bool firstRun;
 
   // True if music and sounds should be played
   bool backgroundMusic;
@@ -21,7 +21,7 @@ class Settings {
       : inputMethod = json['inputMethod'] ?? 0,
         gamepadSize = json['gamepadSize'] ?? 50,
         gamepadShape = json['gamepadShape'] ?? 0,
-        rulesRead = json['rulesRead'] ?? false,
+        firstRun = json['firstRun'] ?? false,
         backgroundMusic = json['backgroundMusic'] ?? true,
         soundEffects = json['soundEffects'] ?? true;
 
@@ -30,7 +30,7 @@ class Settings {
         'inputMethod': inputMethod,
         'gamepadSize': gamepadSize,
         'gamepadShape': gamepadShape,
-        'rulesRead': rulesRead,
+        'firstRun': firstRun,
         'backgroundMusic': backgroundMusic,
         'soundEffects': soundEffects,
       };

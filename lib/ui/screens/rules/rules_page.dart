@@ -1,102 +1,150 @@
 import 'package:flutter/material.dart';
 
-import 'package:xeonjia/ui/screens/rules/resources/rules_list.dart';
+import 'package:xeonjia/ui/basic.dart';
+import 'package:xeonjia/ui/screens/rules/resources/rules.dart';
+import 'package:xeonjia/ui/screens/rules/widgets/rule_page.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 class RulesPage extends StatefulWidget {
+  final StatefulWidget homePage;
+  RulesPage([this.homePage]);
+
   @override
   _RulesPageState createState() => _RulesPageState();
 }
 
-class _RulesPageState extends State<RulesPage> {
-  // Page currently displayed
-  int _page = 0;
+class _RulesPageState extends State<RulesPage>
+    with SingleTickerProviderStateMixin {
+  TabController _controller;
 
   @override
   void initState() {
-    settings.rulesRead = true;
-    saveSettings();
+    _controller = TabController(vsync: this, length: rules().length);
+    _controller.addListener(() {
+      setState(() {});
+    });
     super.initState();
   }
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: const Text('RULES'),
-          centerTitle: true,
-        ),
-        body: GestureDetector(
-          child: Container(
-            height: MediaQuery.of(context).size.height,
-            child: SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  /*Center(
-                child: Container(
-                    padding: EdgeInsets.only(top: 35),
-                    child: Image(
-                        image: AssetImage(ruleList[_page]['image']),
-                        fit: BoxFit.fitWidth,
-                        width: MediaQuery.of(context).size.width * 2 / 3))),*/
-                  Container(
-                    color: Colors.lightBlue[500],
-                    height: 40,
-                    width: double.infinity,
-                    child: Center(
-                      child: Text(
-                        ruleList[_page]['title'],
-                        textAlign: TextAlign.center,
-                        style:
-                            const TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-                    ),
+  Widget build(BuildContext context) {
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      extendBody: true,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        leading:
+            _controller.index >= _controller.length - 1 || settings.firstRun
+                ? Container()
+                : IconButton(
+                    icon: Icon(Icons.close,
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white70
+                            : Colors.black87,
+                        size: 32),
+                    tooltip: 'Close',
+                    onPressed: () {
+                      if (widget.homePage == null) {
+                        Navigator.pop(context);
+                      } else {
+                        onExit();
+                        Navigator.pushReplacement(
+                            context, FadeRoute(widget.homePage));
+                      }
+                    },
                   ),
-                  Container(
-                    padding: const EdgeInsets.fromLTRB(20, 35, 20, 0),
-                    child: Text(
-                      ruleList[_page]['text'],
-                      style: const TextStyle(fontSize: 18),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          onHorizontalDragEnd: (DragEndDetails details) {
-            changePage(details.velocity.pixelsPerSecond.dx > 0 ? -1 : 1);
-          },
-        ),
-        bottomNavigationBar: BottomAppBar(
+      ),
+      body: TabBarView(
+          controller: _controller,
+          children: [for (var rule in rules()) RulePage(rule)]),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.transparent,
+        elevation: 0,
+        child: Container(
+          margin: const EdgeInsets.only(left: 5, right: 5),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              MaterialButton(
-                child: Row(children: const [
-                  Icon(Icons.keyboard_arrow_left),
-                  Text('Back')
-                ]),
-                onPressed: _page > 0 ? () => changePage(-1) : null,
+            children: <Widget>[
+              FlatButton(
+                child: Row(
+                  children: <Widget>[
+                    const Icon(Icons.navigate_before),
+                    const Text('Back'),
+                  ],
+                ),
+                onPressed: (_controller.index > 0)
+                    ? () {
+                        _controller.index -= (_controller.index > 0) ? 1 : 0;
+                      }
+                    : null,
               ),
-              MaterialButton(
-                  child: Row(children: const [
-                    Text('Next'),
-                    Icon(Icons.keyboard_arrow_right)
-                  ]),
-                  onPressed:
-                      _page < ruleList.length - 1 ? () => changePage(1) : null)
+              Expanded(
+                child: Container(
+                  padding: const EdgeInsets.only(left: 10, right: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      for (var i = 1; i < _controller.length - 1; i++)
+                        CircleAvatar(
+                          radius: _controller.index == i ? 4 : 3,
+                          backgroundColor: _controller.index == i
+                              ? (Theme.of(context).brightness == Brightness.dark
+                                  ? Colors.white
+                                  : Colors.black)
+                              : Colors.grey,
+                        ),
+                    ],
+                  ),
+                ),
+              ),
+              _controller.index >= _controller.length - 1
+                  ? FlatButton(
+                      color: Theme.of(context).primaryColor,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50)),
+                      child: Row(
+                        children: <Widget>[
+                          const Text(
+                            'OK',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                      onPressed: () {
+                        if (widget.homePage == null) {
+                          Navigator.pop(context);
+                        } else {
+                          onExit();
+                          Navigator.pushReplacement(
+                              context, FadeRoute(widget.homePage));
+                        }
+                      },
+                    )
+                  : FlatButton(
+                      child: Row(
+                        children: <Widget>[
+                          const Text('Next'),
+                          const Icon(Icons.navigate_next)
+                        ],
+                      ),
+                      onPressed: () {
+                        if (_controller.index < _controller.length - 1) {
+                          ++_controller.index;
+                        }
+                      },
+                    ),
             ],
           ),
         ),
-      );
+      ),
+    );
+  }
 
-  void changePage(int diff) {
-    setState(() {
-      _page += diff;
-      if (_page < 0) {
-        _page = 0;
-      } else if (_page >= ruleList.length) {
-        _page = ruleList.length - 1;
-      }
-    });
+  void onExit() {
+    if (settings.firstRun) {
+      settings.firstRun = false;
+      saveSettings();
+    }
   }
 }
