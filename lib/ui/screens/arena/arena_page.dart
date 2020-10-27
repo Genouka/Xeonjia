@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/ui/screens/arena/resources/maps.dart';
+import 'package:xeonjia/ui/screens/arena/widgets/help_dialog.dart';
 import 'package:xeonjia/ui/screens/arena/widgets/play_button.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
 
@@ -33,7 +34,21 @@ class _ArenaPageState extends State<ArenaPage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: const Text('ARENA'), centerTitle: true),
+        appBar: AppBar(
+          title: const Text('ARENA'),
+          centerTitle: true,
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.help_outline),
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) => helpDialog(context),
+                );
+              },
+            )
+          ],
+        ),
         body: ListView(
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 70),
           children: <Widget>[
