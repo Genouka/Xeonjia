@@ -138,12 +138,13 @@ class XeonjiaGame extends BaseGame
     modifiersToBeRegenerated.clear();
 
     // Import map and components
-    map = MapProperties(fullName: mainCharacter.visitedRooms.last);
-    await importMap('assets/maps/' +
-        ((config.mode == GameMode.story)
-            ? 'story/' + map.name
-            : 'arena/${config.mapId}') +
-        '.tmx');
+    if (config.mode == GameMode.story) {
+      map = MapProperties(fullName: mainCharacter.visitedRooms.last);
+      await importMap('assets/maps/story/${map.name}.tmx');
+    } else {
+      map = MapProperties(fullName: config.mapId.toString());
+      await importMap('assets/maps/arena/${config.mapId}.tmx');
+    }
 
     initGamepad();
     addWidgetOverlay('gamePad', VirtualGamePad());
