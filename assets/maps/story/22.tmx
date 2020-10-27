@@ -25,7 +25,7 @@
         (&quot;/hero&quot; &quot;Nice to meet you.&quot;)
         (&quot;Oh, by the way, I think this might help you.&quot;)
         (&quot;&gt;&quot; &quot;* Hero got a snowballs container *&quot;)
-        (&quot;It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the button at the bottom right.&quot;)
+        (&quot;It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the button at the bottom right.\nIt can contain up to 20 snowballs.&quot;)
         (&quot;/hero&quot; &quot;Wow! I'm sure it'll come in handy. Thank you.&quot;)
         (&quot;You're welcome. Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too. Well, at least it will be an equal fight.\nNow I have to leave you, I have to study a strange rock that I found a little while ago. We'll see again. Good luck!&quot;)
         (&quot;/hero&quot; &quot;Bye Shen, thanks again!&quot;)))
