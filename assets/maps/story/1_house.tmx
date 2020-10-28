@@ -15,7 +15,7 @@
     (begin
         (dialog
         '((&quot;neighbor&quot; &quot;Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones. Here's to you!&quot;)
-        (&quot;&gt;&quot; &quot;* Hero got and put on the shin guards *&quot;)
+        (&quot;&gt;&quot; &quot;* $hero got and put on the shin guards *&quot;)
         (&quot;neighbor&quot; &quot;I made them by hand. This way you will hurt yourself less, but be careful that they do not fully protect you from damage.&quot;)
         (&quot;/hero_happy&quot; &quot;Thank you very much!&quot;)))
         (increase-def 3))

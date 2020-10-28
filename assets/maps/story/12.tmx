@@ -36,7 +36,7 @@
    <properties>
     <property name="action">(if (! (has-item -1200))
     (begin
-        (dialog '((&quot;&gt;&quot; &quot;* Hero found 200 ¤  *&quot;)))
+        (dialog '((&quot;&gt;&quot; &quot;* $hero found 200 ¤  *&quot;)))
         (give-item -1200)
         (set-money-diff 200))
     (dialog '((&quot;&gt;&quot; &quot;A little plant... nothing else.&quot;))))</property>

@@ -15,7 +15,7 @@
     (set &quot;999-talk-milla&quot; #t)
     (dialog
         '((&quot;/hero&quot; &quot;Hi Milla, are you ok? Did you get here without any problems?&quot;)
-        (&quot;Hii Hero! Yes, I managed slyly to avoid the monsters that were along the way!\nAnyway, look here! This is the tower where the King of Evil resides!&quot;)
+        (&quot;Hii $hero! Yes, I managed slyly to avoid the monsters that were along the way!\nAnyway, look here! This is the tower where the King of Evil resides!&quot;)
         (&quot;/hero&quot; &quot;Oh really? Are we there yet?&quot;)
         (&quot;Apparently yes, but it's closed! This nice gentleman here explained to me that to access the tower you need to have 3 signets.&quot;)
         (&quot;/hero&quot; &quot;Signets? What are? And where can I find them?&quot;)

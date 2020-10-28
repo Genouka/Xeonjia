@@ -14,7 +14,7 @@
     (dialog
         '((&quot;&gt;&quot; &quot;...&quot;)
         (&quot;???/&quot; &quot;Oops yes sorry I'm in the middle of the road...\nAre you a tourist? There are very few nowadays.&quot;)
-        (&quot;/hero&quot; &quot;N-no, I'm Hero, this year's chosen hero. I just left home to try to defeat the King of Evil.&quot;)
+        (&quot;/hero&quot; &quot;N-no, I'm $hero, this year's chosen hero. I just left home to try to defeat the King of Evil.&quot;)
         (&quot;???/_surprised&quot; &quot;Oh, so is it you ?! Nice to meet you, I've never met a hero before.&quot;)
         (&quot;/_happy&quot; &quot;My name is Milla, I was born and raised in this area. I too am setting out on a journey to explore the world, I want to know new places and learn new things.&quot;)
         (&quot;/hero_happy&quot; &quot;Oh cool, then we'll probably meet again. See ya.&quot;)

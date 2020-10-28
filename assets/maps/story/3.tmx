@@ -54,7 +54,7 @@
    <properties>
     <property name="action">(if (! (has-item -300))
     (begin
-        (dialog '((&quot;&gt;&quot; &quot;* Hero found some berries! 20 LPs have been recovered *&quot;)))
+        (dialog '((&quot;&gt;&quot; &quot;* $hero found some berries! 20 LPs have been recovered *&quot;)))
         (give-item -300)
         (set-life-diff 20))
     (dialog '((&quot;&gt;&quot; &quot;A little plant... nothing else.&quot;))))</property>
