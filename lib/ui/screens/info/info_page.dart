@@ -15,7 +15,7 @@ class _InfoPageState extends State<InfoPage> {
     {
       'title': 'By DeepDaikon',
       'subtitle': 'App developed by DeepDaikon',
-      'url': 'https://gitlab.com/DeepDaikon/',
+      'url': 'https://deepdaikon.xyz',
       'icon': const Icon(Icons.change_history),
     },
     {
