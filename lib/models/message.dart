@@ -1,4 +1,5 @@
 import 'package:xeonjia/game/components/abstract_basic.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 
 // Message shown in dialog box
 class Message {
@@ -31,5 +32,7 @@ class Message {
     var mood = m.group(3);
     var fileName = name + (mood != '' ? '_$mood' : '');
     image = authorName != '>' ? 'assets/images/heads/${fileName}.png' : null;
+    text = text.replaceAll('\$hero', mainCharacter.name);
+    if (authorName == 'HERO') authorName = mainCharacter.name.toUpperCase();
   }
 }
