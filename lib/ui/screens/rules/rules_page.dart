@@ -7,7 +7,7 @@ import 'package:xeonjia/ui/screens/rules/widgets/rule_page.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 class RulesPage extends StatefulWidget {
-  final StatefulWidget homePage;
+  final StatelessWidget homePage;
   RulesPage([this.homePage]);
 
   @override

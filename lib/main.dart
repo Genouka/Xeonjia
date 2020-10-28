@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:xeonjia/ui/screens/home/home_page.dart';
+import 'package:xeonjia/ui/screens/rules/rules_page.dart';
 import 'package:xeonjia/ui/themes.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
@@ -19,7 +20,7 @@ class Xeonjia extends StatelessWidget {
     return MaterialApp(
       title: 'Xeonjia',
       theme: lightTheme,
-      home: HomePage(),
+      home: settings.firstRun ? RulesPage(HomePage()) : HomePage(),
     );
   }
 }
