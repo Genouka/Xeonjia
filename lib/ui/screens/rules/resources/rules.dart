@@ -51,11 +51,4 @@ Hit them several times with your weapons to defeat them; they have life points t
     ''',
         icon: Icons.adjust,
       ),
-      Rule(
-        title: "That's all",
-        subtitle:
-            'Before starting tell me your name which will be used in the game.',
-        icon: Icons.done,
-        iconSize: 210,
-      ),
     ];

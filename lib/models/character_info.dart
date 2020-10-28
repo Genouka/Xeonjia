@@ -67,7 +67,7 @@ class CharacterInfo {
 
   // Import character data from a Json
   CharacterInfo(Map<String, dynamic> json)
-      : name = json['name'] ?? 'Hero',
+      : name = json['name'] ?? '',
         eventLog = jsonDecode(json['eventLog'] ?? '{}'),
         level = json['level'] ?? 0,
         atk = json['atk'] ?? 1,

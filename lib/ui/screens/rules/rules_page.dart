@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/rules/resources/rules.dart';
+import 'package:xeonjia/ui/screens/rules/widgets/last_page.dart';
 import 'package:xeonjia/ui/screens/rules/widgets/rule_page.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
@@ -16,10 +17,13 @@ class RulesPage extends StatefulWidget {
 class _RulesPageState extends State<RulesPage>
     with SingleTickerProviderStateMixin {
   TabController _controller;
+  final _textFieldController =
+      TextEditingController(text: '${mainCharacter.name}');
+  final _formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
-    _controller = TabController(vsync: this, length: rules().length);
+    _controller = TabController(vsync: this, length: rules().length + 1);
     _controller.addListener(() {
       setState(() {});
     });
@@ -55,9 +59,10 @@ class _RulesPageState extends State<RulesPage>
                     },
                   ),
       ),
-      body: TabBarView(
-          controller: _controller,
-          children: [for (var rule in rules()) RulePage(rule)]),
+      body: TabBarView(controller: _controller, children: [
+        for (var rule in rules()) RulePage(rule),
+        LastPage(_textFieldController, _formKey),
+      ]),
       bottomNavigationBar: BottomAppBar(
         color: Colors.transparent,
         elevation: 0,
@@ -112,15 +117,16 @@ class _RulesPageState extends State<RulesPage>
                         ],
                       ),
                       onPressed: () {
-                        if (widget.homePage == null) {
-                          Navigator.pop(context);
-                        } else {
+                        if (_formKey.currentState.validate()) {
                           onExit();
-                          Navigator.pushReplacement(
-                              context, FadeRoute(widget.homePage));
+                          if (widget.homePage == null) {
+                            Navigator.pop(context);
+                          } else {
+                            Navigator.pushReplacement(
+                                context, FadeRoute(widget.homePage));
+                          }
                         }
-                      },
-                    )
+                      })
                   : FlatButton(
                       child: Row(
                         children: <Widget>[
@@ -142,6 +148,8 @@ class _RulesPageState extends State<RulesPage>
   }
 
   void onExit() {
+    mainCharacter.name = _textFieldController.text.trim();
+    saveUserData();
     if (settings.firstRun) {
       settings.firstRun = false;
       saveSettings();

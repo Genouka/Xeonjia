@@ -3,7 +3,7 @@ import 'package:xeonjia/game/components/abstract_basic.dart';
 // Message shown in dialog box
 class Message {
   // Text of the message
-  final String text;
+  String text;
 
   // Author (displayName/name_mood)
   // If displayName is omitted: name is used
