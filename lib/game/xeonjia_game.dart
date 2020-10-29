@@ -261,8 +261,6 @@ class XeonjiaGame extends BaseGame
     mainCharacter.money = playerOne.money;
     mainCharacter.visitedRooms.add(nextRoomId);
     mainCharacter.expGained(playerOne.experiencePoints +
-        currentEventLog.length -
-        mainCharacter.eventLog.length *
             mainCharacter.visitedRooms.toSet().length);
     mainCharacter.eventLog = Map.from(currentEventLog);
     mainCharacter.itemList = List.from(playerOne.itemList);
@@ -324,7 +322,7 @@ class XeonjiaGame extends BaseGame
       mainCharacter.movesCounter += playerOne.movesCounter;
       ++mainCharacter.deathCounter;
       mainCharacter.currentLifePoints = playerOne.maxLifePoints;
-      lostMoney = mainCharacter.visitedRooms.toSet().length * 10;
+      lostMoney = mainCharacter.visitedRooms.toSet().length;
       mainCharacter.money -= lostMoney;
       if (mainCharacter.money < 0) mainCharacter.money = 0;
       saveUserData();
