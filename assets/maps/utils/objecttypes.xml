@@ -42,5 +42,6 @@
   <property name="action" type="string" default="(dialog '((&quot;author&quot; &quot;text&quot;)))"/>
   <property name="actionOnCollision" type="string" default="(dialog '((&quot;author&quot; &quot;text&quot;)))"/>
   <property name="actionOnEvent" type="string" default="(dialog '((&quot;author&quot; &quot;text&quot;)))"/>
+  <property name="atk" type="int" default="0"/>
  </objecttype>
 </objecttypes>
