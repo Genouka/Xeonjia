@@ -117,7 +117,7 @@ class _RulesPageState extends State<RulesPage>
                         ],
                       ),
                       onPressed: () {
-                        if (_formKey.currentState.validate()) {
+                        if (_formKey.currentState?.validate() ?? false) {
                           onExit();
                           if (widget.homePage == null) {
                             Navigator.pop(context);
