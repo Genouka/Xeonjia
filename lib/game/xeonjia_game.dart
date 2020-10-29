@@ -19,6 +19,7 @@ import 'package:xeonjia/game/widgets_overlay/end_menu.dart';
 import 'package:xeonjia/game/widgets_overlay/info_box.dart';
 import 'package:xeonjia/game/widgets_overlay/dialog_box.dart';
 import 'package:xeonjia/game/widgets_overlay/loading_page.dart';
+import 'package:xeonjia/game/widgets_overlay/no_maps_menu.dart';
 import 'package:xeonjia/game/widgets_overlay/pause_menu.dart';
 import 'package:xeonjia/game/widgets_overlay/virtual_gamepad.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -140,6 +141,12 @@ class XeonjiaGame extends BaseGame
     // Import map and components
     if (config.mode == GameMode.story) {
       map = MapProperties(fullName: mainCharacter.visitedRooms.last);
+      if (map.name == 't1_01') {
+        removeWidgetOverlay('loading');
+        _backgroundMusic?.dispose();
+        addWidgetOverlay('noMapsMenu', NoMapsMenu());
+        return;
+      }
       await importMap('assets/maps/story/${map.name}.tmx');
     } else {
       map = MapProperties(fullName: config.mapId.toString());
@@ -390,7 +397,7 @@ class XeonjiaGame extends BaseGame
 
   void dispose() {
     _backgroundMusic?.dispose();
-    gamepad.removeListener();
+    gamepad?.removeListener();
     game = null;
   }
 }
