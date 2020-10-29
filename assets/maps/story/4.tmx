@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="9" nextobjectid="35">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="9" nextobjectid="37">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="16" height="24">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6VUSwoCMQzNAdyomy5EAoJXmI2SE4y9/21MoIVY8mnHB4+mmfeStDMMAgAyS2OPbyrGRmprVTmhhZOTh1ZTcGV+Al2GkktSv66Bk/1Q7VdnwCGO/N48qFZKtJF/M/qv1qkLesu/0i/yPwPdi/k28nL+Pag9YuxRHN1sPcmRkc/QzyP+OuRWkH2/OOHPNB4eB/1n5p15geP31/HP/ILN8GfvQT/37n92JnRIQ0zw+39Htf8CgVDwkwAGAAA=
+   H4sIAAAAAAAAA61USw4CMQjlAG7UTRfGsPIKs9H0BNr730ZIOgkSPkV9yUsp8x7QzmQQAJDYJvf4ImKc7HMdIse0cHDyMGsyzsRXoMvQcknqlzVwsR+KfXUGVHHk9+ZBsfZEG/k3o3+1zijoLX+lX+S/Bbo78WHk+fzPoLaG7tEc3Wo9znUjn2E/D/uHylWQfb+44M80//YfiVfiCb6/v1/6S2yGP3sP8rl3/6szocOu4g6f/3cU+zeAAUm8AAYAAA==
   </data>
  </layer>
- <objectgroup id="8" name="npcs"/>
+ <objectgroup id="8" name="npcs">
+  <object id="35" type="Modifier" gid="147" x="32" y="192" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="36" type="Modifier" gid="147" x="224" y="352" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="6" name="Tile Layer 2" width="16" height="24">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgoAy4UaifUmA/wPaPAtoDEyA2xSHnSk+HUAlg8w8+P4JAIBAHQXEIEIeSaGciEEcBcQwQpwBxKon6M4E4G4izgDgOiHNJ1F8IxMVAXATEaUBcSqJ+egFC8UBIfqgBAN0hwM8ABgAA

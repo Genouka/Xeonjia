@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="52">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="56">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monster.tsx"/>
  <tileset firstgid="137" source="../tilesets/npc.tsx"/>
  <layer id="1" name="Tile Layer 1" width="21" height="28">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62WyU4DMQyGc+AFqDhUQqrm2DfIheVMuZcdhCpKC6Lsywl4dH4LW7iRPZOE/tKnROOMx56JPemHEPqKqOZDHptkTUo01pRop8Ne47NL5G8LbCfXL8ExOOHxFJwp+xEYgwPmUNmtOCP7HKv1E3Cl1nyCr4RvdX9jxD8HN+AWnPP8TtkX4J654PFBxTk0fD6CZ/AEpjx/VfY3MGOmPH605K61Dgag12ITu+yH0u/eZNho3AQbxprSPSY+/7M/ZQ+Srz0wWoFPT1LLpfd02XerovmtJaovXWfyPnJzT3sH1dpEQXUWVaxt2neuSy1dh+U6Ep+Uh9cvPFEtvYOX8FdHOncrjxxZdSbfSPJI+0GNZH9KHmk/qFFkdD/wekZJnFav856fI/kv1sTiqQl2T0rl7VHvebk5kbr+w+KzJPec3iBnjlXKOs94rIXl2ms7+/wAVY2AUDAJAAA=
+   H4sIAAAAAAAAA62Wy04DMQxFs+AHqFhUQkKz7B9kw2MN7MsbhCrKS7TlzQr4dK4lX+FGzkwycKUjR3XqxDOxJ8MQwtAQzXiktknmpERnTo22C/y1MbvWErsJthL/JTgGJ2pPwZnxH4ExOFAOjd/LPWrMsZk/AVdmzif4Svg2/2+cPG7BHbgH5zp+MP4ZmCsXahdmnyMn5iN4Bk9gquNX438DN8pU7UdL7larYAMMWnz08x3VnqWmwCd2Haw5c2rPGGP2OfMUz6DE2gV7f4wZW3ys5Rp17UH8O5UxKaklqS9bZ3wepbmnvUNqbWKQOuMz6Yq5n/mdtXQdluuIMSWPXL/ISWrpHbyE3zqyuXt5lMirM74j5pH2gz7i+WQeaT/oo6jYfpDrGTX79Hpdbv0S8bvYZy85NcHvSalyZzS3XmlOoq7vMGPW5F7SG3jn+E9595kcK2G59truPj+3VjAcMAkAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="21" height="28">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA2YkaieFBAIxEFAHALEoWhyJkBsikM9CAdj0QeSjwTiKCCOAeJYLObicwcxakc6oGV6GGwAOQ06ArHTALqF3gCWJ5DzGbY8iQ9QM604k6kPmz/IAaT6fbiCGiCuHWhHDFJAbholBoykchcdDGTeAwAGKoG9MAkAAA==
+   H4sIAAAAAAAAA2NgIA2YUSiPDwQCcRAQhwBxKJJZINoEiE1xqAfhYCR9yPKRQBwFxDFAHIsmT8gdxKgd6YCS+B5qADkNOgKx0wC6hd4AlieQ8xm2PIkPUDOtOJOpD5s/yAGk+n24ghogrh1oRwxSQG4aJQaMpHIXHQxk3gMAv7fYhTAJAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

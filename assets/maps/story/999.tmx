@@ -33,7 +33,7 @@
    <properties>
     <property name="action">(begin 
     (if (get &quot;999-talk-milla&quot;)
-        (dialog '((&quot;I hate the little girl who was here before ...&quot;)))
+        (dialog '((&quot;I hate the little girl who was here before...&quot;)))
         (dialog '((&quot;I hate this little girl here...&quot;))))
     (dialog '((&quot;She pestered me with a thousand questions and cried until I told her what she wanted. How impertinent.&quot;))))</property>
    </properties>
@@ -66,7 +66,7 @@
   </object>
   <object id="50" gid="44" x="224" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This door is closed, I need the 3 signets to be able to open it.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This door is closed, I need the 3 signets to open it.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

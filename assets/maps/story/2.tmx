@@ -26,11 +26,6 @@
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="40" type="Modifier" gid="19" x="32" y="128" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="5"/>
-   </properties>
-  </object>
   <object id="41" type="Modifier" gid="19" x="16" y="80" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="20"/>

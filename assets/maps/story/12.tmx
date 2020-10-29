@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="17" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="41">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="17" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="43">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="137" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="21" height="17">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA5NgYGCQQMP2WMSQMQ9UjTmUjSxnDqWpCUDmSQOxCBFqvUkwkxbutAFiWyqbScidxPoZBmBxhwx8STQDHVArPJH9Qqs4sqeymaSmeQUi1BDyuw8B/djk0c0kNd1gA7SII1j5Q01Ajjvt0GhsZsLyO77yErlsRDbTHEkOucwFACBB3piUBQAA
@@ -34,12 +35,17 @@
  <objectgroup id="8" name="items">
   <object id="40" gid="55" x="208" y="272" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item -1200))
-    (begin
-        (dialog '((&quot;&gt;&quot; &quot;* $hero found 200 ¤  *&quot;)))
-        (give-item -1200)
-        (set-money-diff 200))
-    (dialog '((&quot;&gt;&quot; &quot;A little plant... nothing else.&quot;))))</property>
+    <property name="action" value="\"/>
+   </properties>
+  </object>
+  <object id="41" type="Modifier" gid="155" x="160" y="224" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="42" type="Modifier" gid="155" x="144" y="144" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
  </objectgroup>

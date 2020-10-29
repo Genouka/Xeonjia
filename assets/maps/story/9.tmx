@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="27" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="38">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="27" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="42">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="177" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="27" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA52UPQ4CIRCFKfYGWpBo7RVoFGoNatbE2s7SWBmP75CFZHwBBnjJl2UGljfLz85KqRtxJwwxV2IdMaztMvlrpi/wIh7EWy2S4lEFrw/xJL4xJ8Uj2hMHwrKchTEh9oW+XmnmmdZ3Bzk+piTT4JX2sEWSX03pzJRqwhrcoI9mTw25nBz0t64FerbW2zu/hzito+RhAa6z8C5v57xwvhWxiayF2mq+R+JUqIN743e1nHMu3PNaTb37NUE9aY4pPr36v7t4pwwbi/9gvPfbGF/Y2B/GGFZK6AUAAA==
@@ -16,6 +17,28 @@
   <object id="37" type="NPC" gid="176" x="176" y="32" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;Something's bugging me...&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="38" gid="189" x="96" y="176" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="40"/>
+   </properties>
+  </object>
+  <object id="39" type="Modifier" gid="195" x="256" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="40" type="Modifier" gid="195" x="384" y="160" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="41" type="Modifier" gid="195" x="144" y="144" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="20"/>
    </properties>
   </object>
  </objectgroup>
@@ -44,5 +67,4 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="8" name="items"/>
 </map>

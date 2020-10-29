@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="47">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="157" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA61UuwrDMAzU0KWlFFoyBPrykrHBm5c+PqBp//9zKhGJCGPHjt2DI5HlXGTrEMCIVj23/BQ6pGG+eE1iy3nZe0c+WOsJdZB/5OKdyEvdPkrrHGC6t1I49U5atkBjjdxEtF1gPabRM3fIW0DTQv5598graxHPyIO3x8Dop1xozS6QFw8uAWleArURxPf/Ap3V72/Ks9qbg5czUO8/DdHK6Yn21Wdmj54HtSjp7xwM8ohsOE71IgWqbcks8fsZ0ss9L931KqEvs1vPc4llNpI/vxyfYOpfG/nmB5tyD1tABgAA
@@ -23,6 +24,11 @@
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (get &quot;007-milla&quot;)
     (delete))</property>
+   </properties>
+  </object>
+  <object id="45" gid="170" x="208" y="128" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="100"/>
    </properties>
   </object>
  </objectgroup>

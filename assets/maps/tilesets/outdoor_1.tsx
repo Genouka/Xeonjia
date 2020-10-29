@@ -125,7 +125,6 @@
  <tile id="47" type="Solid">
   <properties>
    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A snowdrift&quot;)))"/>
-   <property name="atk" type="int" value="5"/>
   </properties>
  </tile>
  <tile id="48" type="Hurdle">

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="35" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="161" source="../tilesets/monster.tsx"/>
- <tileset firstgid="173" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="137" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="35">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA7WSTQrCQAyFcwA3/iy6EMlBtHu9gYoLEdGVuhD1+L5CC0GSDDHtg4+h8M2btJ2KiCrB/OdZQ2ZEdjTfi/Q56HvpujR/DTbJ/j59Hri/b9/7flY/J+bx9mbftw763iz/+N0eK1uwB7t2PRT8IzgJzgX/Bu7g0q6Pgv8Cb/AEV/ABM8dvMgYLMKHc/1qCVcBv4t3VOjmPDA/oW67mR+9zKVPD185h0R/hC9dvQbKQBgAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="40" type="SlitherCpu" gid="161" x="112" y="128" width="16" height="16">
+  <object id="40" type="SlitherCpu" gid="129" x="112" y="128" width="16" height="16">
    <properties>
     <property name="atk" type="float" value="10"/>
     <property name="lifePoints" type="float" value="15"/>
    </properties>
   </object>
-  <object id="42" type="SlitherCpu" gid="161" x="96" y="240" width="16" height="16">
+  <object id="42" type="SlitherCpu" gid="129" x="96" y="240" width="16" height="16">
    <properties>
     <property name="atk" type="float" value="10"/>
     <property name="lifePoints" type="float" value="15"/>
    </properties>
   </object>
-  <object id="43" type="SlitherCpu" gid="161" x="32" y="144" width="16" height="16">
+  <object id="43" type="SlitherCpu" gid="129" x="32" y="144" width="16" height="16">
    <properties>
     <property name="atk" type="float" value="10"/>
     <property name="lifePoints" type="float" value="15"/>
@@ -30,7 +30,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="12" height="35">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoAxsplA/tYEjEDsNtCOGMBhO4Wc20A4gAAKBOAiIg4E4BIhDB9Y5AwpMgNiURD340upgj3tyAL38NJBhBwD8yjlVkAYAAA==
+   H4sIAAAAAAAAA2NgoAz0U6if2sARiJ0G2hFDGAyn8DMbaAcQAIFAHATEwUAcAsShA+ucAQUmQGxKoh58aXWwxz05gF5+GsiwAwAlUHQpkAYAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

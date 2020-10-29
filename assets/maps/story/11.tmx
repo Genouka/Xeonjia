@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="39">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="42">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA5NgYGCQAGJ7KG0OpbFhHiQ2ujpigD0OcVLMAAEfHGaIQNl2BNTiAvZQvf4k6EEHsHAhpAYfwBYepLqJ1DBFB3ZQ/TZAbEuBObjihVQzKPELCPgx4E5/1HIHMWkNOa+h5yNPIPZiQIQ9rrwG0g8AVjII2rgDAAA=
   </data>
  </layer>
- <objectgroup id="9" name="npc"/>
+ <objectgroup id="9" name="npc">
+  <object id="40" type="Modifier" gid="147" x="176" y="144" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="6" name="Tile Layer 2" width="17" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgoC9wISBvRoJafHpHMoCFgwkQm1LZzIEAbnSwg9S0hg4cgdiJgX7hBACDb9mcuAMAAA==
