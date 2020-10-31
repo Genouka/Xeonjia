@@ -164,7 +164,10 @@ class CharacterComponent extends DynamicComponent
     _itemList.add(itemId);
     if (isPlayerOne) {
       if (itemData.containsKey(itemId)) {
-        game.setMessage(Message('* You received ${itemData[itemId].name} *'));
+        game.setMessage(Message(
+            '* \$hero puts ${itemData[itemId].name} in the backpack *'));
+      } else if (itemId > 0 && itemId <= 100) {
+        game.setMessage(Message('* \$hero puts the gem in the backpack *'));
       }
       game.playSound(Sfx.item);
     }
@@ -174,7 +177,7 @@ class CharacterComponent extends DynamicComponent
   void removeItem(int itemId) {
     _itemList.remove(itemId);
     if (isPlayerOne) {
-      game.setMessage(Message('* You gave ${itemData[itemId].name} *'));
+      game.setMessage(Message('* \$hero gives ${itemData[itemId].name} *'));
     }
   }
 
