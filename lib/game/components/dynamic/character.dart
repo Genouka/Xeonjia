@@ -22,8 +22,8 @@ class CharacterComponent extends DynamicComponent
   // List of weapon owned
   List<Weapon> weaponList = [];
 
-  // Weapon selected from weaponList
-  int _selectedWeaponElement = 0;
+  // Index of the weapon selected from weaponList
+  int _selectedWeaponIndex = 0;
 
   // Money earned by the player
   int _money = mainCharacter.money;
@@ -85,7 +85,7 @@ class CharacterComponent extends DynamicComponent
     teamId = team;
     // Temporary solution to remedy the functions _cpuMove() and _cpuShoot()
     jsonWeaponList ??=
-        (team == 0) ? const {'1': 5, '2': 1} : const {'1': 9, '2': 5};
+        (team == 0) ? const {'0': 1, '1': 5, '2': 1} : const {'1': 9, '2': 5};
     jsonWeaponList.forEach((weaponId, weaponLevel) {
       switch (int.parse(weaponId)) {
         case 0:
@@ -110,7 +110,7 @@ class CharacterComponent extends DynamicComponent
               ? maxLifePoints
               : mainCharacter.currentLifePoints,
           mainCharacter.poisonQuantity);
-      game.refreshWeaponBar();
+      game.refreshWeaponButtons();
       game.refreshLifePointsBar();
       game.updateCamera(x, y);
       if (game.config.mode == GameMode.story) {
@@ -123,17 +123,33 @@ class CharacterComponent extends DynamicComponent
   // Non-Player Character (story mode)
   CharacterComponent.npc(Tile tile) : this(tile, initialLP: double.infinity);
 
-  Weapon get selectedWeapon => weaponList[_selectedWeaponElement];
-  void shoot([Weapon weapon]) {
+  // Weapon
+  Weapon get selectedWeapon => weaponList[_selectedWeaponIndex];
+  void shoot() {
     if (isBeingDeleted) return;
-    (weapon ?? selectedWeapon).shoot(shooter: this);
+    selectedWeapon.shoot(shooter: this);
   }
+
+  // Shoot with the weapon that has weapon.id == id
+  void shootById(int id) {
+    var newWeaponIndex = weaponList.indexWhere((weapon) => weapon.id == id);
+    if (weaponList[newWeaponIndex].powerPoints > 0) {
+      _selectedWeaponIndex = newWeaponIndex;
+      shoot();
+    }
+  }
+
+  // True if this has the weapon
+  bool hasWeaponId(int id) =>
+      weaponList.where((weapon) => weapon.id == id).isNotEmpty;
+
+  // Return the weapon object by passing the id
+  Weapon getWeaponById(int id) =>
+      weaponList.firstWhere((weapon) => weapon.id == id);
 
   // Select next weapon in weapon list
   void nextWeapon() {
-    if (++_selectedWeaponElement >= weaponList.length) {
-      _selectedWeaponElement = 0;
-    }
+    if (++_selectedWeaponIndex >= weaponList.length) _selectedWeaponIndex = 0;
   }
 
   // Inspect what is in front of this
@@ -192,16 +208,16 @@ class CharacterComponent extends DynamicComponent
     restoreLifePoints();
     removeChildren();
     weaponList.forEach((weapon) {
-      weapon.resetPp();
+      weapon.restorePp();
     });
-    _selectedWeaponElement = 0;
+    _selectedWeaponIndex = 0;
     movesCounter = 0;
     isBeingDeleted = false;
     x = startingPosition.x;
     y = startingPosition.y;
     orientation = _initialOrientation;
     if (isPlayerOne) {
-      game.refreshWeaponBar();
+      game.refreshWeaponButtons();
       game.updateCamera(x, y);
     }
   }

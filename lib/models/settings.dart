@@ -1,13 +1,7 @@
 // Class used to store settings data
 class Settings {
-  // Selected input method
-  int inputMethod;
-
-  // Virtual gamepad dimension
-  double gamepadSize;
-
-  // Virtual gamepad shape
-  int gamepadShape;
+  // True if D-pad is enabled
+  bool showDPad;
 
   // True if rules have been read
   bool firstRun;
@@ -18,18 +12,14 @@ class Settings {
 
   // Import settings from a Json
   Settings(Map<String, dynamic> json)
-      : inputMethod = json['inputMethod'] ?? 0,
-        gamepadSize = json['gamepadSize'] ?? 50,
-        gamepadShape = json['gamepadShape'] ?? 0,
-        firstRun = json['firstRun'] ?? false,
+      : showDPad = json['showDPad'] ?? true,
+        firstRun = json['firstRun'] ?? true,
         backgroundMusic = json['backgroundMusic'] ?? true,
         soundEffects = json['soundEffects'] ?? true;
 
   // Export settings as a Json
   Map<String, dynamic> toJson() => {
-        'inputMethod': inputMethod,
-        'gamepadSize': gamepadSize,
-        'gamepadShape': gamepadShape,
+        'showDPad': showDPad,
         'firstRun': firstRun,
         'backgroundMusic': backgroundMusic,
         'soundEffects': soundEffects,

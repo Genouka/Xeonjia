@@ -76,6 +76,11 @@ class ModifierComponent extends BasicComponent {
       componentAbove.poisonQuantity += _poisonDelta;
       componentAbove.moneyDifference(_moneyDelta);
       componentAbove.selectedWeapon.powerPoints += _powerPointsDelta;
+      if (componentAbove.selectedWeapon.powerPoints >
+          componentAbove.selectedWeapon.maxPp) {
+        componentAbove.selectedWeapon.restorePp();
+      }
+      game.refreshWeaponButtons();
       if (_itemId != 0 &&
           componentAbove.isPlayerOne &&
           game.config.mode == GameMode.story) {

@@ -68,6 +68,9 @@ class XeonjiaGame extends BaseGame
   // Box with lifePoints, pause, time and team points
   final _statusBox = StatusBox();
 
+  // Virtual Gamepad (D-pad + buttons)
+  final _virtualGamePad = VirtualGamePad();
+
   // Timer used in multiplayer mode
   Timer _timer;
   int elapsedSeconds = 0;
@@ -154,7 +157,7 @@ class XeonjiaGame extends BaseGame
     }
 
     initGamepad();
-    addWidgetOverlay('gamePad', VirtualGamePad());
+    addWidgetOverlay('gamePad', _virtualGamePad);
     addWidgetOverlay('messageBox', _dialogBox);
     addWidgetOverlay('statusBox', _statusBox);
 
@@ -260,8 +263,8 @@ class XeonjiaGame extends BaseGame
     mainCharacter.movesCounter += playerOne.movesCounter;
     mainCharacter.money = playerOne.money;
     mainCharacter.visitedRooms.add(nextRoomId);
-    mainCharacter.expGained(playerOne.experiencePoints +
-            mainCharacter.visitedRooms.toSet().length);
+    mainCharacter.expGained(
+        playerOne.experiencePoints + mainCharacter.visitedRooms.toSet().length);
     mainCharacter.eventLog = Map.from(currentEventLog);
     mainCharacter.itemList = List.from(playerOne.itemList);
     saveUserData();
@@ -297,8 +300,10 @@ class XeonjiaGame extends BaseGame
                 componentSize * map.height - screenSize.height));
   }
 
-  // Reload weapon bar
-  void refreshWeaponBar() {}
+  // Reload weapon buttons
+  void refreshWeaponButtons() {
+    _virtualGamePad.refresh();
+  }
 
   // Reload LP bar
   void refreshLifePointsBar() {
@@ -334,9 +339,7 @@ class XeonjiaGame extends BaseGame
 
   @override
   void onPanUpdate(DragUpdateDetails upd) {
-    if (settings.inputMethod != 1 &&
-        !_pause &&
-        (upd.delta.dx.abs() > 5 || upd.delta.dy.abs() > 5)) {
+    if (!_pause && (upd.delta.dx.abs() > 5 || upd.delta.dy.abs() > 5)) {
       _panGestureOffset = upd.delta.dx.abs() > upd.delta.dy.abs()
           ? Offset(upd.delta.dx, 0)
           : Offset(0, upd.delta.dy);
@@ -346,7 +349,7 @@ class XeonjiaGame extends BaseGame
 
   @override
   void onPanEnd(DragEndDetails end) {
-    if (settings.inputMethod != 1 && !_pause && _panGestureOffset != null) {
+    if (!_pause && _panGestureOffset != null) {
       gestureDragInput(GetDirection.fromOffset(_panGestureOffset));
     }
   }
@@ -357,7 +360,7 @@ class XeonjiaGame extends BaseGame
       _dialogBox.state.next();
       return;
     }
-    if (settings.inputMethod != 1) gestureTapInput(details.globalPosition);
+    gestureTapInput(details.globalPosition);
   }
 
   // Manage drag gestures

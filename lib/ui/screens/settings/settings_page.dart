@@ -23,9 +23,7 @@ class _SettingsPageState extends State<SettingsPage> {
           IconButton(
             icon: const Icon(Icons.settings_backup_restore),
             tooltip: 'Restore',
-            onPressed: () {
-              _restoreSettingsDialog();
-            },
+            onPressed: _restoreSettingsDialog,
           ),
         ],
       ),
@@ -40,7 +38,7 @@ class _SettingsPageState extends State<SettingsPage> {
               'Are you sure you want to delete your settings and restore default ones?'),
           actions: <Widget>[
             FlatButton(
-              child: const Text('Yes'),
+              child: const Text('Restore'),
               onPressed: () {
                 SystemChrome.setEnabledSystemUIOverlays([]);
                 settings = Settings({'firstRun': false});
@@ -50,44 +48,10 @@ class _SettingsPageState extends State<SettingsPage> {
               },
             ),
             FlatButton(
-              child: const Text('No'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
+              child: const Text('Cancel'),
+              onPressed: Navigator.of(context).pop,
             ),
           ],
-        ),
-      );
-
-  // Returns a tile widget for options that use drop down button
-  Widget dropDownTile(String element, String title, String subtitle, int value,
-          List<int> list,
-          {Map<int, String> mapText}) =>
-      ListTile(
-        title: Text(
-          title,
-          style: const TextStyle(
-            fontSize: 20,
-          ),
-        ),
-        subtitle: Text(subtitle),
-        trailing: DropdownButton<int>(
-          value: value,
-          onChanged: (int newValue) {
-            updateVariables(element, newValue);
-            setState(() {
-              saveSettings();
-            });
-          },
-          items: list
-              .map<DropdownMenuItem<int>>(
-                (int value) => DropdownMenuItem<int>(
-                  value: value,
-                  child:
-                      Text(mapText != null ? mapText[value] : value.toString()),
-                ),
-              )
-              .toList(),
         ),
       );
 

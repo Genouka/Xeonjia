@@ -21,10 +21,11 @@ abstract class Weapon {
   double atk;
 
   // Number of times a weapon can be used
-  double _powerPoints = double.infinity;
+  double _powerPoints = 0;
+  double maxPp;
+  double get ppPercentage => _powerPoints / maxPp;
   double get powerPoints => _powerPoints;
   set powerPoints(double powerPoints) {
-    if (powerPoints != _powerPoints) game.refreshWeaponBar();
     _powerPoints = powerPoints;
   }
 
@@ -32,16 +33,20 @@ abstract class Weapon {
   String get name => weaponDetails[id]['name'];
   String get description => weaponDetails[id]['description'];
 
-  Weapon(this.id);
+  Weapon(this.id, this.maxPp) {
+    maxPp ??= ((10 + 5 * level).toDouble());
+    _powerPoints = maxPp;
+  }
 
-  // Set max PP for this level
-  void resetPp({double customValue}) {
-    powerPoints = customValue ?? (10 + 5 * level).toDouble();
+  // Restore PP
+  void restorePp() {
+    powerPoints = maxPp;
   }
 
   // Function used when a shoot input happens
+  @mustCallSuper
   void shoot({@required CharacterComponent shooter}) {
-    if (shooter.isPlayerOne) game.refreshWeaponBar();
+    if (shooter.isPlayerOne) game.refreshWeaponButtons();
   }
 
   // Export weapon details as a Json
@@ -53,7 +58,7 @@ class PunchWeapon extends Weapon {
   @override
   final int level;
 
-  PunchWeapon({@required this.level}) : super(0) {
+  PunchWeapon({@required this.level}) : super(0, double.infinity) {
     atk = level.toDouble();
   }
 
@@ -62,6 +67,7 @@ class PunchWeapon extends Weapon {
     shooter.componentInFront()?.lifePointsDifference(-atk, cause: shooter);
     shooter.animate([shooter.punchSprites[shooter.orientation]]);
     if (shooter.isPlayerOne) game.playSound(Sfx.punch);
+    super.shoot(shooter: shooter);
   }
 }
 
@@ -70,8 +76,8 @@ class SnowBallWeapon extends Weapon {
   @override
   final int level;
 
-  SnowBallWeapon({@required this.level, double powerPoints}) : super(1) {
-    resetPp(customValue: powerPoints);
+  SnowBallWeapon({@required this.level, double powerPoints})
+      : super(1, powerPoints) {
     atk = (10 + level * 2).toDouble();
   }
 
@@ -92,8 +98,8 @@ class MineWeapon extends Weapon {
   @override
   final int level;
 
-  MineWeapon({@required this.level, double powerPoints}) : super(2) {
-    resetPp(customValue: powerPoints);
+  MineWeapon({@required this.level, double powerPoints})
+      : super(2, powerPoints) {
     atk = (10 + level * 2).toDouble();
   }
 
