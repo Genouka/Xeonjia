@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="15" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="48">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="161" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="18">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA52UuwrCUAyGMzh26wvkLbpoz6ygzoIWBBUUHBR8fxNIIB6SY/SHj5Q0l5KEIgAUAoXBPDOd2BLE1Roq64nfjY5/3chR9UFuS8XYX3NVSOyIk7AnDlX9SNzzaHKZcyPe1uO+V+ImTMQ9+c08qwfxFC7Ei5gTC4mxe1L/kljB56y6oIe3ZwT/NjLSG/tHCN93EWlM5G4DP8+5nkPmlrUvJuI2jg+dvllhgyJ1dRf2nzAT+wb13zLxOAQAAA==

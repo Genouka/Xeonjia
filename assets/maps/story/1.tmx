@@ -59,7 +59,7 @@
    <properties>
     <property name="actionOnCollision">(if  (or (!get &quot;001-talk-dad&quot;) (!get &quot;001-talk-mom&quot;))
     (begin 
-        (dialog '((&quot;&gt;&quot; &quot;I have to say goodbye to my parents before I leave. Otherwise it would be rude.&quot;)))
+        (dialog '((&quot;&gt;&quot; &quot;I have to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude.&quot;)))
         (set-orientation 1))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (and (get &quot;001-talk-dad&quot;) (get &quot;001-talk-mom&quot;))

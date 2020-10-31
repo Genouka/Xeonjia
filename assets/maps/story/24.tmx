@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="56">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="62">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monster.tsx"/>
  <tileset firstgid="137" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="185" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="21" height="28">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62Wy04DMQxFs+AHqFhUQkKz7B9kw2MN7MsbhCrKS7TlzQr4dK4lX+FGzkwycKUjR3XqxDOxJ8MQwtAQzXiktknmpERnTo22C/y1MbvWErsJthL/JTgGJ2pPwZnxH4ExOFAOjd/LPWrMsZk/AVdmzif4Svg2/2+cPG7BHbgH5zp+MP4ZmCsXahdmnyMn5iN4Bk9gquNX438DN8pU7UdL7larYAMMWnz08x3VnqWmwCd2Haw5c2rPGGP2OfMUz6DE2gV7f4wZW3ys5Rp17UH8O5UxKaklqS9bZ3wepbmnvUNqbWKQOuMz6Yq5n/mdtXQdluuIMSWPXL/ISWrpHbyE3zqyuXt5lMirM74j5pH2gz7i+WQeaT/oo6jYfpDrGTX79Hpdbv0S8bvYZy85NcHvSalyZzS3XmlOoq7vMGPW5F7SG3jn+E9595kcK2G59truPj+3VjAcMAkAAA==
+   H4sIAAAAAAAAA62Wy04DMQxFs+AHQCwqIVWz7B9kU2AN7MsbhCpaKGp5Q1fQT+dasoUb2ZNk4EpHicYZJ57EnvRCCD1FVP0Bt00yJiUaY2q0V2Cv9Zmbi9oh2E3sN+AMnHN7AS6V/RSMwDFzouxW7JF9jtT4MbhVY77Ad8JKvd8YcdyDGXgAV9yfK/sCPDLX3D6pdQ4Mn8/gFbyACffflf1D9cl+B5bKZ9sebYI+2GqxiV32qPYsNQU2anfAtjGm9oyJzy5nXiRnkHwdgMM/+owtNsnlGuXWQPb9Sp8iyiXKL51n8j1KY09rB+XaWEF5Jt8k5/PIeS65NA3reSQ+KQ6vXniiXPoEb+E3j3TsVhwlsvJM9kjiSOtBF8n5lDgm/HzpvpFXZHQ98GpGqbxa581fIvkvdlmLpybYNSmVd0a9+UpjIuX+w+KzJvaS2iB3jv+UdZ/x2Ajrudd29/kBat8r0DAJAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
@@ -53,6 +54,21 @@
   <object id="51" gid="71" x="272" y="128" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;'' VANTOI LAB ''&quot;)))"/>
+   </properties>
+  </object>
+  <object id="59" gid="186" x="240" y="112" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;I can see the inside of the Laboratory.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="60" gid="186" x="224" y="112" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;I can see the inside of the Laboratory.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="61" gid="186" x="64" y="320" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;I can see the inside of the Pharmacy.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

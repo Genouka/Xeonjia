@@ -5,11 +5,11 @@
  <tileset firstgid="177" source="../tilesets/monster.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA1NgYGCQgGIFKDZHYkvgYPuj8SkBMPtBwA9NDtlsXwJmUOoOkJ9AfucEYj0g5gJiOzzq7dH4Cki0OhDzAbEqiW6wAWJbqP36aGbA5CSQ1CswYAfCQCwIxPJEuMMTiL2wiIPMNoeaIwfEQgTsxAbsSVSPDYD0SxBSBAXmaHxY/GEzA196QgbeSGYoEFCLK734QGn0fGZHIobpBwA/yOzvuAMAAA==
+   H4sIAAAAAAAAA1NgYGCQgGIFKDZHYkvgYPuj8SkBMPtBwA9NDtlsXwJmUOoOkJ9AfucEYj0g5gJiOzzq7dH4Cki0OhDzAbEqiW6wAWJbqP36aGbA5CSQ1CswYAfCQCwIxPJEuMMTiL2wiIPMNoeaIwfEQgTsxAbsSVSPDYD0SxBSBAXmaHxY/GEzA196QgbeSGYoEFCLK734QGn0fGYHxSC+BpQNi2dkMQUoDdMPAEFrmii4AwAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="37" type="NPC" gid="135" x="32" y="112" width="16" height="16">
+  <object id="37" type="NPC" gid="136" x="32" y="112" width="16" height="16">
    <properties>
     <property name="action">(if  (!get &quot;013-h-safe&quot;)
     (if  (&gt; (enemies-count) 0)
@@ -18,15 +18,12 @@
             (set &quot;013-h-safe&quot; #t)
             (dialog
                 '((&quot;/hero&quot; &quot;Everything good?&quot;)
-                (&quot;Yes, thank you so much for saving my life! As a token of gratitude I give you this strange stone that I found a little while ago.&quot;)))
-            (give-item 2)
-            (dialog '((&quot;/hero_happy&quot; &quot;Thanks, it looks like a precious gem, I'll take care of it.&quot;)))))
+                (&quot;Yes, thank you so much for saving my life! As a token of gratitude I give you this strange stone that I found a little while ago.&quot;)
+                (&quot;/hero_happy&quot; &quot;Thanks, it looks like a precious gem, I'll take care of it.&quot;)))
+            (give-item 2)))
     (dialog '((&quot;Thanks for saving me, I think it's better if I go home now.&quot;))))</property>
     <property name="actionOnEvent">(if (!get &quot;013-h-safe&quot;)
-    (begin
-        (set-orientation 3)
-        (dialog '((&quot;Please help me! Save me from this monster!\nPunch him by pressing the punch button at the bottom right.&quot;)))))</property>
-    <property name="orientation" type="int" value="2"/>
+    (dialog '((&quot;Please help me! Save me from this monster!\nPunch him by pressing the 'P' button at the bottom right.&quot;))))</property>
    </properties>
   </object>
   <object id="39" type="SlitherCpu" gid="177" x="48" y="112" width="16" height="16">
@@ -40,7 +37,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoB5wwyPnSkV7iAVmdLbPBIhNyZCjBDgCsRMOOXMa2EdPgC/+iE1PzlSwzwWPelIwNQEAdpV71bgDAAA=
+   H4sIAAAAAAAAA2NgoB5wwyPnSkV7iAVmdLbPBIhNyZCjBDgCsRMOOXMa2EdPgC/+iE1PzlSwzwWPejM0Pno8m6HR1AIAsXqrwrgDAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

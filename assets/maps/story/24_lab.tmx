@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="75">
  <properties>
-  <property name="action" value="(map-name &quot;Lab&quot;)"/>
+  <property name="action" value="(map-name &quot;VANTOI LAB - 1F&quot;)"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
  <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
@@ -20,7 +20,7 @@
     <property name="quiet" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="73" gid="22" x="16" y="112" width="16" height="16">
+  <object id="73" gid="22" x="32" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;scientist/_sad&quot; &quot;A life's work has been destroyed...&quot;)))"/>
    </properties>
@@ -28,7 +28,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52QAQqAIAxFvf9tOkbHKCuzyIQ6QD/4wRhTpAePMf6conP/GODYUCUHXGGAiX0SfWCuyfCsvCWr3sOZTnAxznhmHxHudCvcE43M2q1zOVP7nxIXvEV96Yy5vnGfxQP+VgW4CAIAAA==
+   H4sIAAAAAAAAA52QAQqAIAxFvf9tOkbHMEuzyAQ7QD9YMMYU8cFjjD+naMwYFi4dlXPBHQaYqE+sD5RLMrwbb8mid3AjV+iVM46ynwhP8qjcE0Wm7ZV4Mdf6nxoFPqx+TMrc3LlP4wWdpk/DCAIAAA==
   </data>
  </layer>
  <layer id="12" name="Tile Layer 3" width="13" height="10">

@@ -5,7 +5,7 @@
  <tileset firstgid="157" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA61UuwrDMAzU0KWlFFoyBPrykrHBm5c+PqBp//9zKhGJCGPHjt2DI5HlXGTrEMCIVj23/BQ6pGG+eE1iy3nZe0c+WOsJdZB/5OKdyEvdPkrrHGC6t1I49U5atkBjjdxEtF1gPabRM3fIW0DTQv5598graxHPyIO3x8Dop1xozS6QFw8uAWleArURxPf/Ap3V72/Ks9qbg5czUO8/DdHK6Yn21Wdmj54HtSjp7xwM8ohsOE71IgWqbcks8fsZ0ss9L931KqEvs1vPc4llNpI/vxyfYOpfG/nmB5tyD1tABgAA
+   H4sIAAAAAAAAA61VTQvCMAzNwYsiguJh4FcvHpXeetH5A5z+/59jwhIWSrp2nQ8eXZvsrW0eGUCPRo1HHoUB6ZgvXpO557jkPpBP1mp5XEMd5BuleGfisu8YrbFWgg6Ge6tFUM+k5Ss0lshVQjsY6ymNO3ODvBmaHsrPu0VeWIt4Qu6iHAe9n0qhNa9GXDw4BaR5NvZGEN//C3TWuL45z2pvdlHMwXz/aYhWSU20rz4jObofzEVNfcfgkAfknue5WuRAe5vSS+J6Wnql56W7XmT0pXfrfi5z6Y3kzy8M/wGpX5N45weXjkGVQAYAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
