@@ -53,7 +53,11 @@
  <tile id="21" type="Solid"/>
  <tile id="22" type="Solid"/>
  <tile id="23" type="Solid"/>
- <tile id="24" type="Ground"/>
+ <tile id="24" type="Hurdle">
+  <properties>
+   <property name="allowedDirection" type="int" value="2"/>
+  </properties>
+ </tile>
  <tile id="25" type="Hurdle">
   <properties>
    <property name="allowedDirection" type="int" value="3"/>
