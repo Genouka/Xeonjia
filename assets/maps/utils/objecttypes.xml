@@ -34,7 +34,8 @@
   <property name="quiet" type="bool" default="true"/>
  </objecttype>
  <objecttype name="SlitherCpu" color="#a0a0a4">
-  <property name="actionOnEvent" type="string"/>
+  <property name="action" type="string" default="(dialog '((&quot;author&quot; &quot;text&quot;)))"/>
+  <property name="actionOnEvent" type="string" default="(dialog '((&quot;author&quot; &quot;text&quot;)))"/>
   <property name="atk" type="float" default="0"/>
   <property name="lifePoints" type="float" default="0"/>
  </objecttype>
