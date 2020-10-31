@@ -47,7 +47,9 @@ Environment setEnvironment() {
       0,
       (Cell x) =>
           mainCharacter.visitedRooms
-              .where((e) => e == mainCharacter.visitedRooms.last)
+              .where((e) =>
+                  e.split('/').first ==
+                  mainCharacter.visitedRooms.last.split('/').first)
               .length ==
           1);
   _(

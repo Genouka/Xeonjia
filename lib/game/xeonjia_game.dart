@@ -173,7 +173,6 @@ class XeonjiaGame extends BaseGame
     removeWidgetOverlay('loading');
     resume();
     playBackgroundMusic();
-    executeAction();
   }
 
   final debugTextconfig = TextConfig(color: const Color(0xFF000000));
@@ -214,7 +213,7 @@ class XeonjiaGame extends BaseGame
 
   // Execute an action
   void executeAction([String action]) {
-    action ??= map.action ?? '';
+    action ??= (map.action ?? '');
     if (action == '') return;
     evaluate(readFromTokens(splitStringIntoTokens(action)), game.environment);
   }
