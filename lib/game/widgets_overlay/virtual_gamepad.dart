@@ -177,7 +177,7 @@ class _ButtonsState extends State<_Buttons> {
           {double percentage, bool highlight = false, Color color}) =>
       InkWell(
         child: Container(
-          margin: EdgeInsets.all(_size / 4),
+          margin: EdgeInsets.all(_size / 5),
           child: Stack(
             children: [
               CustomPaint(

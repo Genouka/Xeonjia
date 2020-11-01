@@ -9,7 +9,7 @@ class MapBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InfoBox(
-      opacity: 1.0,
+      below: true,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8),
         child: Text(

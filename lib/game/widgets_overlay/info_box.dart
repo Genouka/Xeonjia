@@ -22,7 +22,6 @@ class _StatusBoxState extends State<StatusBox> {
   @override
   Widget build(BuildContext context) {
     return InfoBox(
-      opacity: 0.7,
       radius: game.config.mode == GameMode.tdm ? 10 : 30,
       child: Column(
         children: [
@@ -113,14 +112,14 @@ class _StatusBoxState extends State<StatusBox> {
 // Top left container
 class InfoBox extends StatelessWidget {
   final Widget child;
-  final double opacity;
   final double radius;
-  InfoBox({this.opacity, this.child, this.radius = 30});
+  final bool below;
+  InfoBox({this.child, this.radius = 30, this.below = false});
 
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 6,
+      top: below ? 46 : 6,
       left: 6,
       child: InkWell(
         onTap: () => game.pause(mode: PauseMode.pause),
@@ -129,7 +128,7 @@ class InfoBox extends StatelessWidget {
           width: MediaQuery.of(context).size.width / 2.2,
           constraints: const BoxConstraints(maxWidth: 320),
           decoration: BoxDecoration(
-              color: Colors.grey[800].withOpacity(opacity),
+              color: Colors.grey[800].withOpacity(0.7),
               borderRadius: BorderRadius.all(Radius.circular(radius))),
           child: child,
         ),
@@ -160,16 +159,19 @@ class _PercentIndicator extends StatelessWidget {
       width: double.infinity,
       child: Container(
         height: 24,
-        child: Text(
-          text,
-          style: const TextStyle(
-            fontSize: 24,
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.1,
+        child: FittedBox(
+          fit: BoxFit.contain,
+          child: Text(
+            text,
+            style: const TextStyle(
+              fontSize: 24,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.1,
+            ),
+            textAlign: TextAlign.center,
+            maxLines: 1,
           ),
-          textAlign: TextAlign.center,
-          maxLines: 1,
         ),
         decoration: BoxDecoration(
           gradient: LinearGradient(
