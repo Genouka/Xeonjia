@@ -77,16 +77,18 @@ class CharacterComponent extends DynamicComponent
     _initialOrientation = orientation;
     friendly = 'true' == (tile.properties['friendly'] ?? 'true');
     quiet = 'true' == (tile.properties['quiet'] ?? 'true');
-    atk = (isPlayerOne && game.config.mode == GameMode.story)
-        ? mainCharacter.atk
-        : (level + 1).toDouble();
-    def = (isPlayerOne && game.config.mode == GameMode.story)
-        ? mainCharacter.def
-        : (def != 0 ? def : (level ~/ 5).toDouble());
+    if (isPlayerOne && game.config.mode == GameMode.story) {
+      atk = mainCharacter.atk;
+      def = mainCharacter.def;
+    } else {
+      atk = (level + 1).toDouble();
+      def = (def != 0 ? def : (level ~/ 5).toDouble());
+      jsonWeaponList = const {'0': 1, '1': 5, '2': 1};
+      _selectedWeaponIndex = 1;
+    }
     teamId = team;
-    // Temporary solution to remedy the functions _cpuMove() and _cpuShoot()
     jsonWeaponList ??=
-        (team == 0) ? const {'0': 1, '1': 5, '2': 1} : const {'1': 9, '2': 5};
+        (team == 0) ? const {'1': 5, '2': 1} : const {'1': 9, '2': 5};
     jsonWeaponList.forEach((weaponId, weaponLevel) {
       switch (int.parse(weaponId)) {
         case 0:
