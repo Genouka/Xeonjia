@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget helpDialog(BuildContext context) {
   return AlertDialog(
-    title: const Text('Arena Mode'),
+    title: const Text('Multiplayer Mode', textAlign: TextAlign.center),
     content: Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -14,6 +14,8 @@ The rules are simple:
 - The players are organized into two teams.
 - Whenever a player defeats an opponent, his team scores 100 points.
 - The team that reaches the required score wins.
+
+For now it is possible to play against CPUs.
 
 Choose the place to play and configure the game.
 When you are ready press "Play".

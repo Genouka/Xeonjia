@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
       'title': 'Story mode',
       'goto': () => GamePage(MatchConfig(GameMode.story)),
     },
-    {'title': 'Arena', 'goto': () => ArenaPage()},
+    {'title': 'Multiplayer', 'goto': () => ArenaPage()},
     {'title': 'How to play', 'goto': () => RulesPage()},
   ];
 

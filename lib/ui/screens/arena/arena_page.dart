@@ -35,7 +35,7 @@ class _ArenaPageState extends State<ArenaPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: const Text('ARENA'),
+          title: const Text('MULTIPLAYER'),
           centerTitle: true,
           actions: [
             IconButton(
