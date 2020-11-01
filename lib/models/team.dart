@@ -20,7 +20,7 @@ class Team {
   List<CharacterComponent> get members =>
       game.players.where((player) => player.teamId == id).toList();
 
-  // Team points acquired by friendly fire kills
+  // Team points acquired by friendly fire defeats
   int basisPoints = 0;
 
   // Team points (basePoints + players points)

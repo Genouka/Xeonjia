@@ -197,7 +197,7 @@ class CharacterComponent extends DynamicComponent
 
   @override
   void delete() {
-    ++deaths;
+    ++defeats;
     if (game.config.mode == GameMode.story) {
       super.delete();
       if (isPlayerOne) game.end();

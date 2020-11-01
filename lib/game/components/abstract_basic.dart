@@ -46,13 +46,13 @@ abstract class BasicComponent extends SpriteComponent {
   // It reduce life points when move
   double poisonQuantity = 0;
 
-  // Enemies killed by this component
-  int killedEnemies = 0;
+  // Enemies defeated by this component
+  int defeatedEnemies = 0;
 
-  // Number of times this died
-  int deaths = 0;
+  // Number of times this component has been defeated
+  int defeats = 0;
 
-  // Player points (100 points for each CharacterComponents killed)
+  // Player points (100 points for each CharacterComponents defeated)
   int points = 0;
 
   // Amount of damage done on collision
@@ -185,12 +185,12 @@ abstract class BasicComponent extends SpriteComponent {
       if (_lifePoints <= 0) {
         delete();
         if (teamId == (cause?.teamId ?? -99)) {
-          // Teammate killed
+          // Teammate defeated
           game.teams.forEach((team) {
             if (team.id != teamId) team.basisPoints += 10;
           });
         } else if (this is! StaticComponent) {
-          cause?.killedEnemies++;
+          cause?.defeatedEnemies++;
           cause?.experiencePoints += level;
           if (this is CharacterComponent) cause?.points += 100;
         }
@@ -275,7 +275,7 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Delete component
   void delete() {
-    ++deaths;
+    ++defeats;
     remove = true;
   }
 

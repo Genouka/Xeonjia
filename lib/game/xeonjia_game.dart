@@ -257,7 +257,7 @@ class XeonjiaGame extends BaseGame
     mainCharacter.def = playerOne.def;
     mainCharacter.maxLifePoints = playerOne.maxLifePoints;
     mainCharacter.currentLifePoints = playerOne.lifePoints;
-    mainCharacter.killedComponents += playerOne.killedEnemies;
+    mainCharacter.defeatedComponents += playerOne.defeatedEnemies;
     mainCharacter.minutesPlayed += elapsedSeconds / 60;
     mainCharacter.movesCounter += playerOne.movesCounter;
     mainCharacter.money = playerOne.money;
@@ -324,7 +324,7 @@ class XeonjiaGame extends BaseGame
     if (config.mode == GameMode.story) {
       mainCharacter.minutesPlayed += elapsedSeconds / 60;
       mainCharacter.movesCounter += playerOne.movesCounter;
-      ++mainCharacter.deathCounter;
+      ++mainCharacter.defeatsCounter;
       mainCharacter.currentLifePoints = playerOne.maxLifePoints;
       lostMoney = mainCharacter.visitedRooms.toSet().length;
       mainCharacter.money -= lostMoney;

@@ -120,8 +120,8 @@ class _PauseMenuState extends State<PauseMenu> {
             \nmoney: ${game.playerOne.money} ¤
             \nplay time: ${mainCharacter.minutesPlayed.round()} min'''
                 : '''
-            \ndeaths: ${game.playerOne.deaths}
-            \nenemies killed: ${game.playerOne.killedEnemies}
+            \nyour defeats: ${game.playerOne.defeats}
+            \nenemies defeated: ${game.playerOne.defeatedEnemies}
             \nyour points: ${game.playerOne.points.toString()}
             ''');
         actions = [

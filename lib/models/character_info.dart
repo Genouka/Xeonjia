@@ -28,14 +28,14 @@ class CharacterInfo {
   // Total number of minutes played by the character in this game
   double minutesPlayed;
 
-  // Total number of killed enemies by the character
-  int killedComponents;
+  // Total number of enemies defeated by the character
+  int defeatedComponents;
 
   // Number of moves done by the character
   int movesCounter;
 
-  // Number of deaths of the character
-  int deathCounter;
+  // Number of defeats of the character
+  int defeatsCounter;
 
   // List of rooms visited by the character ordered by view time
   // A room could be stored more than once in this list
@@ -82,9 +82,9 @@ class CharacterInfo {
         itemList = (json['itemList'] ?? []).cast<int>(),
         visitedRooms = (json['viewedRooms'] ?? ['1']).cast<String>(),
         minutesPlayed = json['minutesPlayed'] ?? 0,
-        killedComponents = json['killedComponents'] ?? 0,
+        defeatedComponents = json['defeatedComponents'] ?? 0,
         movesCounter = json['movesCounter'] ?? 0,
-        deathCounter = json['deathCounter'] ?? 0,
+        defeatsCounter = json['defeatsCounter'] ?? 0,
         _experiencePoints = json['experiencePoints'] ?? 0;
 
   // Export character data as a Json
@@ -104,9 +104,9 @@ class CharacterInfo {
       'itemList': itemList,
       'viewedRooms': visitedRooms,
       'minutesPlayed': minutesPlayed,
-      'killedComponents': killedComponents,
+      'defeatedComponents': defeatedComponents,
       'movesCounter': movesCounter,
-      'deathCounter': deathCounter,
+      'defeatsCounter': defeatsCounter,
       'experiencePoints': _experiencePoints,
     };
   }
