@@ -15,6 +15,8 @@ The rules are simple:
 - Whenever a player defeats an opponent, his team scores 100 points.
 - The team that reaches the required score wins.
 
+Your teammates are the red ones.
+
 For now it is possible to play against CPUs.
 
 Choose the place to play and configure the game.
