@@ -52,7 +52,7 @@ class _ArenaPageState extends State<ArenaPage> {
         body: ListView(
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 70),
           children: <Widget>[
-            ListTile(
+            /*ListTile(
               title: const Text('Mode', style: TextStyle(fontSize: 20)),
               subtitle: const Text('Game mode'),
               trailing: DropdownButton<GameMode>(
@@ -71,7 +71,7 @@ class _ArenaPageState extends State<ArenaPage> {
                     )
                     .toList(),
               ),
-            ),
+            ),*/
             ListTile(
               title: const Text('Map', style: TextStyle(fontSize: 20)),
               subtitle: const Text('Place to play'),
