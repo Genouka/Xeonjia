@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -41,11 +40,10 @@ class _StatusBoxState extends State<StatusBox> {
                 child: Container(
                   child: _PercentIndicator(
                     values: game.playerOne == null
-                        ? [1, 0]
+                        ? [1, 1]
                         : [
-                            game.playerOne.lifePoints.round(),
-                            game.playerOne.maxLifePoints.round() -
-                                game.playerOne.lifePoints.round()
+                            game.playerOne.lifePoints,
+                            game.playerOne.maxLifePoints
                           ],
                     text: game.playerOne != null
                         ? game.playerOne.lifePoints.round().toString()
@@ -78,11 +76,13 @@ class _StatusBoxState extends State<StatusBox> {
                 ),
                 Expanded(
                   child: _PercentIndicator(
-                    values: game.playerOne == null
-                        ? [1, 1]
+                    values: game.playerOne == null ||
+                            game.teams.first.points == game.teams.last.points
+                        ? [0.5, 1]
                         : [
-                            max(game.teams.first.points, 1),
-                            max(game.teams.last.points, 1),
+                            game.teams.first.points.toDouble(),
+                            game.teams.last.points.toDouble() +
+                                game.teams.first.points,
                           ],
                     text: (game.teams.first.points.toString() ?? '') +
                         ' - ' +
@@ -140,56 +140,55 @@ class InfoBox extends StatelessWidget {
 
 // Linear percent indicator
 class _PercentIndicator extends StatelessWidget {
-  final List<int> values;
+  final List<double> values;
   final String text;
   final List<Color> colors;
   final bool poisoned;
+  final double fillStop;
 
   _PercentIndicator({
     @required this.values,
     @required this.text,
     this.colors = const [Colors.lightBlue, Color(0xFF81D4FA)],
     this.poisoned = false,
-  }) : assert(colors.length == 2);
+  })  : assert(colors.length == 2),
+        fillStop = values[0] / values[1];
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            for (var i in [0, 1])
-              if (values[i] > 0)
-                Expanded(
-                  flex: values[i],
-                  child: Container(
-                    height: 24,
-                    padding: const EdgeInsets.symmetric(horizontal: 5),
-                    decoration: BoxDecoration(
-                      color: colors[i].withOpacity(0.4),
-                      borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        bottomRight: Radius.circular(20),
-                      ),
-                    ),
-                  ),
-                ),
-          ],
+    return SizedBox(
+      width: double.infinity,
+      child: Container(
+        height: 24,
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontSize: 24,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 1.1,
+          ),
+          textAlign: TextAlign.center,
+          maxLines: 1,
         ),
-        Center(
-          child: Text(
-            text,
-            style: const TextStyle(
-              fontSize: 24,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.1,
-            ),
-            maxLines: 1,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: <Color>[
+              colors[0].withOpacity(0.4),
+              colors[0].withOpacity(0.4),
+              colors[1].withOpacity(0.4),
+              colors[1].withOpacity(0.4),
+            ],
+            stops: [0.0, fillStop, fillStop, 1.0],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(20),
+            bottomRight: Radius.circular(20),
           ),
         ),
-      ],
+      ),
     );
   }
 }
