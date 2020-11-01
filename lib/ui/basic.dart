@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 
 // Linear gradient used in app
 final appGradient = LinearGradient(colors: [
-  Colors.blue[900],
-  Colors.blue[800],
-  Colors.blue[700],
   Colors.blue[600],
-  Colors.blue[500],
-], begin: Alignment.topLeft, end: Alignment.bottomRight);
+  Colors.blue[700],
+  Colors.blue[800],
+  Colors.blue[900],
+], begin: Alignment.topCenter, end: Alignment.bottomCenter);
 
 // Circular radius
 const circularRadius = BorderRadius.all(Radius.circular(30));
