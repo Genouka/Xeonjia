@@ -56,7 +56,7 @@
  <objectgroup id="8" name="items">
   <object id="46" gid="154" x="16" y="32" width="16" height="16">
    <properties>
-    <property name="itemId" type="int" value="2"/>
+    <property name="itemId" value="gem_2"/>
    </properties>
   </object>
  </objectgroup>

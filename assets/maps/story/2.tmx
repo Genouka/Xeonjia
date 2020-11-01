@@ -33,10 +33,10 @@
   </object>
   <object id="42" gid="135" x="16" y="96" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item 201))
+    <property name="action">(if (! (has-item &quot;2.stone&quot;))
     (begin
         (dialog '((&quot;&gt;&quot; &quot;There seems to be something in the branches of this plant...&quot;)))
-        (give-item 201)
+        (give-item &quot;2.stone&quot;)
         (dialog '((&quot;&gt;&quot; &quot;This stone is very strange... who knows what it is...&quot;))))
     (dialog '((&quot;&gt;&quot; &quot;A little plant... nothing else.&quot;))))</property>
    </properties>

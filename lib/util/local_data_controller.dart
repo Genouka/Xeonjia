@@ -17,7 +17,7 @@ CharacterInfo mainCharacter;
 
 // List of all items
 // itemId : Item info
-Map<int, Item> itemData = {};
+Map<String, Item> itemData = {};
 
 // Gamepad position
 Offset gamepadOffset;
@@ -64,6 +64,6 @@ void _loadItems() async {
   var data =
       json.decode(await rootBundle.loadString('assets/maps/story/data.json'));
   data['items'].forEach((key, value) {
-    itemData[int.parse(key)] = Item(value);
+    itemData[key] = Item(value);
   });
 }

@@ -19,13 +19,8 @@ class ModifierComponent extends BasicComponent {
   double _poisonDelta = 0;
 
   // Item unique ID
-  // It is == 0 if this is not an unique item (this can be taken multiple times)
-  // It is < 0 if this is a common take-once item (eg money)
-  // -> in this case it is: - roomNum * 1000 + tmx object ID (calculated)
-  // It is > 0 and < 100 if it is a gem (defined in properties)
-  // It is > 100 if it is a main item
-  // -> in this case it is: roomNum * 100 + itemId (defined in properties)
-  int _itemId = 0;
+  // It is "0" if this is not an unique item (this can be taken multiple times)
+  String _itemId = '0';
 
   @override
   BasicComponent father;
@@ -45,7 +40,7 @@ class ModifierComponent extends BasicComponent {
         _powerPointsDelta =
             int.parse(tile.properties['powerPointsDelta'] ?? '0'),
         _poisonDelta = double.parse(tile.properties['poisonDelta'] ?? '0'),
-        _itemId = int.parse(tile.properties['itemId'] ?? '0'),
+        _itemId = tile.properties['itemId'] ?? '0',
         _regenerable = (tile.properties['regenerable'] ?? 'false') == 'true',
         super.fromTile(tile);
 
@@ -81,7 +76,7 @@ class ModifierComponent extends BasicComponent {
         componentAbove.selectedWeapon.restorePp();
       }
       game.refreshWeaponButtons();
-      if (_itemId != 0 &&
+      if (_itemId != '0' &&
           componentAbove.isPlayerOne &&
           game.config.mode == GameMode.story) {
         componentAbove.addItem(_itemId);

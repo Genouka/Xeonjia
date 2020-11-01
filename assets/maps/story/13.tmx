@@ -20,7 +20,7 @@
                 '((&quot;/hero&quot; &quot;Everything good?&quot;)
                 (&quot;Yes, thank you so much for saving my life! As a token of gratitude I give you this strange stone that I found a little while ago.&quot;)
                 (&quot;/hero_happy&quot; &quot;Thanks, it looks like a precious gem, I'll take care of it.&quot;)))
-            (give-item 2)))
+            (give-item &quot;gem_2&quot;)))
     (dialog '((&quot;Thanks for saving me, I think it's better if I go home now.&quot;))))</property>
     <property name="actionOnEvent">(if (!get &quot;013-h-safe&quot;)
     (dialog '((&quot;Please help me! Save me from this monster!\nPunch him by pressing the 'P' button at the bottom right.&quot;))))</property>

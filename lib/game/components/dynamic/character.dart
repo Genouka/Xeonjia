@@ -37,8 +37,8 @@ class CharacterComponent extends DynamicComponent
 
   // List of items owned
   // Add/remove items by using addItem() and removeItem()
-  List<int> _itemList = [];
-  List<int> get itemList => _itemList;
+  List<String> _itemList = [];
+  List<String> get itemList => _itemList;
 
   // Initial orientation
   Direction _initialOrientation;
@@ -164,13 +164,13 @@ class CharacterComponent extends DynamicComponent
   }
 
   // Add item to _itemList
-  void addItem(int itemId) {
+  void addItem(String itemId) {
     _itemList.add(itemId);
     if (isPlayerOne) {
       if (itemData.containsKey(itemId)) {
         game.setMessage(Message(
             '* \$hero puts ${itemData[itemId].name} in the backpack *'));
-      } else if (itemId > 0 && itemId <= 100) {
+      } else if (itemId.contains('gem_')) {
         game.setMessage(Message('* \$hero puts the gem in the backpack *'));
       }
       game.playSound(Sfx.item);

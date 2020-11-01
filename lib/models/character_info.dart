@@ -42,7 +42,7 @@ class CharacterInfo {
   List<String> visitedRooms;
 
   // List of items owned by the character
-  List<int> itemList;
+  List<String> itemList;
 
   // Weapons carried by the character
   // Map structure: {weaponId : weaponLevel}
@@ -79,7 +79,7 @@ class CharacterInfo {
         jsonWeaponList = jsonDecode(json['jsonWeaponList'] ?? '{"0": 0}'),
         jsonAvailableWeaponList =
             jsonDecode(json['jsonAvailableWeaponList'] ?? '{}'),
-        itemList = (json['itemList'] ?? []).cast<int>(),
+        itemList = (json['itemList'] ?? []).cast<String>(),
         visitedRooms = (json['viewedRooms'] ?? ['1']).cast<String>(),
         minutesPlayed = json['minutesPlayed'] ?? 0,
         defeatedComponents = json['defeatedComponents'] ?? 0,

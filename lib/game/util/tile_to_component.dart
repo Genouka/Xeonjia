@@ -19,13 +19,12 @@ extension CreateComponent on Tile {
         StaticComponent(this);
         break;
       case 'Modifier':
-        properties['itemId'] ??=
-            (-(int.parse(game.map.name) * 1000 + id)).toString();
-        var _itemId = int.parse(properties['itemId']);
+        properties['itemId'] ??= '${game.map.name}.${id}';
+        var _itemId = properties['itemId'];
 
-        // Load item only if it is not an unique item (id == 0)
+        // Load item only if it is not an unique item (id == "0")
         // or if it is not already owned by the player
-        if (_itemId == 0 || !mainCharacter.itemList.contains(_itemId)) {
+        if (_itemId == '0' || !mainCharacter.itemList.contains(_itemId)) {
           ModifierComponent(this);
         }
         break;

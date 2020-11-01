@@ -52,10 +52,10 @@
  <objectgroup id="9" name="items">
   <object id="36" type="Solid" gid="127" x="0" y="48" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item -300))
+    <property name="action">(if (! (has-item &quot;3.berries&quot;))
     (begin
         (dialog '((&quot;&gt;&quot; &quot;* $hero found some berries! 20 LPs have been recovered *&quot;)))
-        (give-item -300)
+        (give-item &quot;3.berries&quot;)
         (set-life-diff 20))
     (dialog '((&quot;&gt;&quot; &quot;A little plant... nothing else.&quot;))))</property>
    </properties>

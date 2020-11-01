@@ -18,7 +18,7 @@
  <objecttype name="Modifier" color="#a0a0a4">
   <property name="atkDelta" type="int" default="0"/>
   <property name="defDelta" type="int" default="0"/>
-  <property name="itemId" type="int" default="0"/>
+  <property name="itemId" type="string" default="0"/>
   <property name="lifePointsDelta" type="float" default="0"/>
   <property name="moneyDelta" type="int" default="0"/>
   <property name="poisonDelta" type="float" default="0"/>
