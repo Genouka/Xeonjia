@@ -158,8 +158,8 @@ class XeonjiaGame extends BaseGame
 
     initGamepad();
     addWidgetOverlay('gamePad', _virtualGamePad);
-    addWidgetOverlay('messageBox', _dialogBox);
     addWidgetOverlay('statusBox', _statusBox);
+    addWidgetOverlay('messageBox', _dialogBox);
 
     _timer = Timer(1, repeat: true, callback: () {
       elapsedSeconds++;
