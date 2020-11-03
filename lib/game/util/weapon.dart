@@ -27,6 +27,7 @@ abstract class Weapon {
   double get powerPoints => _powerPoints;
   set powerPoints(double powerPoints) {
     _powerPoints = powerPoints;
+    if (_powerPoints > maxPp) restorePp();
   }
 
   // Weapon details
