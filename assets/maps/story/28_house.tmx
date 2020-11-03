@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="83">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="85">
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
  <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
@@ -32,7 +32,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGDiwGYh3A/EeItQdBuIjNHcRfrAdiDdCaVIBAFRwLQVoAQAA
+   H4sIAAAAAAAAA2NgGDiwGYh3A/EeItQdBuIjNHcRYbCRTH0Am0rB2GgBAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -43,5 +43,16 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="9" name="items"/>
+ <objectgroup id="9" name="items">
+  <object id="83" gid="183" x="80" y="128" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This vase is very heavy, I can't move it.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="84" gid="183" x="112" y="128" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This vase is very heavy, I can't move it.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

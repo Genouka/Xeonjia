@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="62">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="63">
+ <properties>
+  <property name="action" value="(map-name &quot;Melhopolis&quot;)"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="129" source="../tilesets/monster.tsx"/>
- <tileset firstgid="137" source="../tilesets/npc.tsx"/>
- <tileset firstgid="185" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="130" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="138" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="186" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="21" height="28">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62Wy04DMQxFs+AHQCwqIVWz7B9kU2AN7MsbhCpaKGp5Q1fQT+dasoUb2ZNk4EpHicYZJ57EnvRCCD1FVP0Bt00yJiUaY2q0V2Cv9Zmbi9oh2E3sN+AMnHN7AS6V/RSMwDFzouxW7JF9jtT4MbhVY77Ad8JKvd8YcdyDGXgAV9yfK/sCPDLX3D6pdQ4Mn8/gFbyACffflf1D9cl+B5bKZ9sebYI+2GqxiV32qPYsNQU2anfAtjGm9oyJzy5nXiRnkHwdgMM/+owtNsnlGuXWQPb9Sp8iyiXKL51n8j1KY09rB+XaWEF5Jt8k5/PIeS65NA3reSQ+KQ6vXniiXPoEb+E3j3TsVhwlsvJM9kjiSOtBF8n5lDgm/HzpvpFXZHQ98GpGqbxa581fIvkvdlmLpybYNSmVd0a9+UpjIuX+w+KzJvaS2iB3jv+UdZ/x2Ajrudd29/kBat8r0DAJAAA=
+   H4sIAAAAAAAAA62WyU4DMQyGc+AFQBwqIVVz7BvkwnIG7mUHoYoWiti3noBH57dkCzeyswz80qdE44xnPMmfySCEMFBE1R9x2yVjUqIxpkXbFfHWnKVnUbsJtpL4JTgGJ9yegjMVPwJjcMAcqrhVe+ScYzV+Aq7UmE/wlfCt7u+MOm7AHNyCc+7fqfg9eGAuuH1U7zkycj6BF/AMptx/U/F31af4NVionLk5WgVDsJaJSVzmqHXOu4oYtRtg3RjT93l91rxI1iDl2gV7f8wZMzHxcotK3qScO405ReQl8pf2mXyP2trT9yOvTRTkM/kmpZz7znXx0iws+0hyUh3efuGJvPQBXsOvj3TtVh01snwmcyR1pPtBH8n6lDqmfH3h3lFWZPR+4O0ZtfL2Ou/5NZL/YqtyXuqCvSel8taoJfk316rkdcnZUnvN3iBnjv+UdZ7xWAnL3sudfX4AWOAv9zAJAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="21" height="28">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA2YUSiPDwQCcRAQhwBxKJJZINoEiE1xqAfhYCR9yPKRQBwFxDFAHIsmT8gdxKgd6YCS+B5qADkNOgKx0wC6hd4AlieQ8xm2PIkPUDOtOJOpD5s/yAGk+n24ghogrh1oRwxSQG4aJQaMpHIXHQxk3gMAv7fYhTAJAAA=
+   H4sIAAAAAAAAA2NgIA2YUSiPDwQCcRAQhwBxKJJZINoEiE1xqAfhYCR9yPKRQBwFxDFAHIsmT8gdxKgd6YCS+B5qADkNOgKx0wC6BRugZVzA8gRyPsOWJ/EBarrPmUx92PxBDiDV78MV1ABx7UA7ggaAGmmV3DRKDBhJ5S46GMi8BwANWBViMAkAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -56,19 +59,24 @@
     <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;'' VANTOI LAB ''&quot;)))"/>
    </properties>
   </object>
-  <object id="59" gid="186" x="240" y="112" width="16" height="16">
+  <object id="59" gid="187" x="240" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;I can see the inside of the Laboratory.&quot;)))"/>
    </properties>
   </object>
-  <object id="60" gid="186" x="224" y="112" width="16" height="16">
+  <object id="60" gid="187" x="224" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;I can see the inside of the Laboratory.&quot;)))"/>
    </properties>
   </object>
-  <object id="61" gid="186" x="64" y="320" width="16" height="16">
+  <object id="61" gid="187" x="64" y="320" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;I can see the inside of the Pharmacy.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="62" gid="71" x="0" y="144" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;'' Melhopolis - Regional capital ''&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.4" tiledversion="2020.08.05" name="tileset_1 " tilewidth="16" tileheight="16" tilecount="128" columns="8">
- <image source="../../images/outdoor_1.png" width="128" height="256"/>
+<tileset version="1.4" tiledversion="2020.08.05" name="tileset_1 " tilewidth="16" tileheight="16" tilecount="136" columns="8">
+ <image source="../../images/outdoor_1.png" width="128" height="272"/>
  <tile id="0" type="Ground"/>
  <tile id="1" type="Ground"/>
  <tile id="2" type="Ground"/>
  <tile id="3" type="Ground"/>
  <tile id="4" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A wall.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;)))"/>
   </properties>
  </tile>
  <tile id="5" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A wall.&quot;)))"/>
+   <property name="action">(if (= (orientation) 0)
+    (dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;))))</property>
   </properties>
  </tile>
  <tile id="6" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A wall.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;)))"/>
   </properties>
  </tile>
  <tile id="7" type="Solid">
@@ -31,13 +32,15 @@
  <tile id="11" type="Ground"/>
  <tile id="12" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A wall.&quot;)))"/>
+   <property name="action">(if (= (orientation) 2)
+    (dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;))))</property>
   </properties>
  </tile>
  <tile id="13" type="Ground"/>
  <tile id="14" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A wall.&quot;)))"/>
+   <property name="action">(if (= (orientation) 3)
+    (dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;))))</property>
   </properties>
  </tile>
  <tile id="15" type="Ground"/>
@@ -47,17 +50,18 @@
  <tile id="19" type="Ground"/>
  <tile id="20" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A wall.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;)))"/>
   </properties>
  </tile>
  <tile id="21" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A wall.&quot;)))"/>
+   <property name="action">(if (= (orientation) 1)
+    (dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;))))</property>
   </properties>
  </tile>
  <tile id="22" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A wall.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;)))"/>
   </properties>
  </tile>
  <tile id="23" type="Solid">
@@ -292,12 +296,21 @@
    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;It's not a good thing to look into other people's homes.&quot;)))"/>
   </properties>
  </tile>
- <tile id="115" type="Solid"/>
+ <tile id="115" type="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This door is closed.&quot;)))"/>
+  </properties>
+ </tile>
  <tile id="116" type="Solid"/>
  <tile id="117" type="Solid"/>
  <tile id="118" type="Solid"/>
  <tile id="119" type="Solid"/>
- <tile id="120" type="Solid"/>
+ <tile id="120" type="Ground">
+  <properties>
+   <property name="flying" type="bool" value="true"/>
+   <property name="slippery" type="bool" value="true"/>
+  </properties>
+ </tile>
  <tile id="121" type="Solid"/>
  <tile id="122" type="Solid">
   <properties>
@@ -317,4 +330,5 @@
  <tile id="125" type="Solid"/>
  <tile id="126" type="Solid"/>
  <tile id="127" type="Solid"/>
+ <tile id="128" type="Solid"/>
 </tileset>

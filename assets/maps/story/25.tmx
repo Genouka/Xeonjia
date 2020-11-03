@@ -4,7 +4,7 @@
  <tileset firstgid="129" source="../tilesets/monster.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7WVuQ7CMBBEt6CkgSoFQi5T8gFAao6GqwBEgRAFV8H1/wzCFquVndjGjPTk2Iknk3WcEH2UWWjpthDjEzAFMzAHC9AFPbKr7hhfgjVY6Xaj/Y2UY57UFuwYe+HDNQBDx7kDOIIzOIFLQAauK7iBB7iDZ0meqnwN0AZN+tbfqB+RjbSHipzL7yvzxOrXPEY5pclTaGKk2LGsz1hc67t+HUpX5xQ+7zqX7XdfpXx//uUj18zXJw+coxxjVc818sxj8wn9fhgfs8/kf6Em+kr0MzbvBVJQFtl4BgAA
+   H4sIAAAAAAAAA52VuQ7CMBBEXVDSQJUCIZcp+QCOmqMJ91kgRMFVcP0/s5ItFmttHI/0FCXKjDYe2SmUUmMwAVMwA5mhYa499owoBM8KbMHaXHfqq6qSRZ4Ngzx7cGAcPV4u8szBAiyN5wTO4Aou4Gbe7YOBJ0fy3MEDvMATvCPmkTy0bjXQBPWA152Pe+z6W3UjZpFEGTrRy0UZtkOpd58kT2rvrsfXe0i+3qk76pC6jO3d9YR6D/XHPS3123uqdGIO39t2n7ZBp2SO1FfKPFJfKTm+fco1isxy92lechbtefbvu4YR2e65YVX2/LA5uZL/CxXnXjv3GfN9AHrfNZB4BgAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -17,7 +17,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="18" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzNhYGAwZRj8wBGInQbaEXgAKe4zo6VDBqG9Qx24oPGHcjiaMAyN/E4pQI+zwQacKdA7lNMfDAAAKxs/b3gGAAA=
+   H4sIAAAAAAAAA2NgIA8EAnEQEIeSqR8GIoE4BohjCahzBGInCu2iJSDFfWa0dAiRABZ/wUAcwkBcPJKjZziCwRB/xABs8WUCxKYD6Sg6AZeBdgAB4EyB3qGS/vABAG2R53V4BgAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

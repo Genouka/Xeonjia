@@ -5,7 +5,7 @@
  <tileset firstgid="137" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5NgYGCQIBLz4JEjFdghsUH6zdHkvUk0j1h32OGRMyfSDHzmEuMOQn6TIEINIUCqX7CpRfcLvrDDZy65YUptM9DTGD6Aza8gM0TIsNsPzQxk7I3ENkfCMDEWHOoB8mniJ7gDAAA=
+   H4sIAAAAAAAAA1NgYGCQAGIFKA3DGljEeND4yPK4AC45OzQ15mjy3njMxGYuzD2EgB0eOZAbNIiwC5+5GkSoR/cbunoFqBpi7MUFzEnUj00tepjiCzt85mILU3z2ogMFItURcgd6GsMHsPkV5A4RPObjAn5o6jSQsDcDIs2YI2FYvmJhQM1rsHQBABE52cu4AwAA
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>

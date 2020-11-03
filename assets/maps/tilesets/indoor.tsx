@@ -23,12 +23,14 @@
  <tile id="11" type="Solid"/>
  <tile id="12" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;It's full of books here.&quot;)))"/>
+   <property name="action">(if (= (orientation) 1)
+    (dialog '((&quot;&gt;&quot; &quot;It's full of books here.&quot;))))</property>
   </properties>
  </tile>
  <tile id="13" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;It's full of books here.&quot;)))"/>
+   <property name="action">(if (= (orientation) 1)
+    (dialog '((&quot;&gt;&quot; &quot;It's full of books here.&quot;))))</property>
   </properties>
  </tile>
  <tile id="14" type="Ground">
@@ -49,8 +51,18 @@
  </tile>
  <tile id="18" type="Solid"/>
  <tile id="19" type="Solid"/>
- <tile id="20" type="Solid"/>
- <tile id="21" type="Solid"/>
+ <tile id="20" type="Solid">
+  <properties>
+   <property name="action">(if (= (orientation) 0)
+    (dialog '((&quot;&gt;&quot; &quot;There is some food between the mattresses of this sofa.&quot;))))</property>
+  </properties>
+ </tile>
+ <tile id="21" type="Solid">
+  <properties>
+   <property name="action">(if (= (orientation) 0)
+    (dialog '((&quot;&gt;&quot; &quot;There is some food between the mattresses of this sofa.&quot;))))</property>
+  </properties>
+ </tile>
  <tile id="22" type="Solid"/>
  <tile id="23" type="Solid"/>
  <tile id="24" type="Hurdle">

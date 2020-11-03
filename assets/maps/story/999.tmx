@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="31" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="52">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="31" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="64">
+ <properties>
+  <property name="action" value="(map-name &quot;XEONJIA TOWER&quot;)"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
  <tileset firstgid="157" source="../tilesets/npc.tsx"/>
  <layer id="1" name="Tile Layer 1" width="31" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA82Vyw6CMBBF78KtGiBiXQDjDpfi//+b00WTaWnJTCPBm5wQSunJDI8SACeYxdFzZi4GruLedK3UQ9hOjVsTd6D73+u+MX0GFMbvBrdTzm2YCflaB6ZVruPzMLpLfqvX58l0iHtO2Zllf43X54X4eWu80j9WekOsPf9ljnRrvu893aHuN7MwH3GddnSHdy30/oT4f0/J2Iz1PuGw3idKUHL+Bd5J4XnIBgAA
+   H4sIAAAAAAAAA8WVwQ6CMAyG/4NXNeplHtB6w6Nyxfd/LbpDk65sZl0c/skXMmB8aQeMAATFqI6RPXNwcFRz7bOsh/A9Le5cZuajxmEjt/XGbFm3TU3dvSLrXpMTc0e+1oE5O7xXp7vk93pjHswFac8pe2fZ3+KNeSJd7xqv9t8avRJvz3+Zf7prvu+ebqn7xbyZSV2njm5516T3O6T/ezLnRqz3iYD1PlGCzHgBZboXIMgGAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -41,7 +44,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="31" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIAxEgViMCCxOhFmkgpFq90ABURLVDye/j4JRMAqGJgAAZRaEH8gGAAA=
+   H4sIAAAAAAAAAzNhYGAwZUAAEzQ+CIgCsRgRWBzNDGSzsInZALEtkhg6nxy7YWZgMwsmhgxwuYEcu2EA3a/YwhSfG8gB6O5HpwkBYtVRW+8oGAWjYBRQCgCaufPYyAYAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -75,6 +78,66 @@
     (dialog '((&quot;&gt;&quot; &quot;I should go to the tower.&quot;))))</property>
     <property name="actionOnEvent">(if (get &quot;999-talk-milla&quot;)
     (delete))</property>
+   </properties>
+  </object>
+  <object id="52" gid="21" x="128" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="53" gid="23" x="320" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="54" gid="22" x="176" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="55" gid="22" x="144" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="56" gid="22" x="160" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="57" gid="22" x="208" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="58" gid="22" x="192" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="59" gid="22" x="240" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="60" gid="22" x="272" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="61" gid="22" x="256" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="62" gid="22" x="288" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="63" gid="22" x="304" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

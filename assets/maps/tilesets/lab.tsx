@@ -17,12 +17,14 @@
  <tile id="5" type="Solid"/>
  <tile id="6" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;Test tubes and other scientific stuff.&quot;)))"/>
+   <property name="action">(if (= (orientation) 1)
+    (dialog '((&quot;&gt;&quot; &quot;Test tubes and other scientific stuff.&quot;))))</property>
   </properties>
  </tile>
  <tile id="7" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;Test tubes and other scientific stuff.&quot;)))"/>
+   <property name="action">(if (= (orientation) 1)
+    (dialog '((&quot;&gt;&quot; &quot;Test tubes and other scientific stuff.&quot;))))</property>
   </properties>
  </tile>
  <tile id="8" type="Solid"/>
@@ -31,12 +33,14 @@
  <tile id="11" type="Solid"/>
  <tile id="12" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;Someone has turned everything upside down.&quot;)))"/>
+   <property name="action">(if (= (orientation) 1)
+    (dialog '((&quot;&gt;&quot; &quot;Someone has turned everything upside down.&quot;))))</property>
   </properties>
  </tile>
  <tile id="13" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;Someone has turned everything upside down.&quot;)))"/>
+   <property name="action">(if (= (orientation) 1)
+    (dialog '((&quot;&gt;&quot; &quot;Someone has turned everything upside down.&quot;))))</property>
   </properties>
  </tile>
  <tile id="14" type="Ground"/>

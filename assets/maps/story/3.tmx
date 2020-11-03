@@ -11,7 +11,7 @@
  <objectgroup id="8" name="npcs">
   <object id="35" type="NPC" gid="52" x="16" y="48" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;Sometimes among the branches of the plants you can find berries or objects that have remained stuck. Press the inspect button near a tree to see if there is anything.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;Sometimes among the branches of the plants you can find berries or objects that have remained stuck. Press the 'A' button near a tree to see if there is anything.&quot;)))"/>
    </properties>
   </object>
   <object id="37" type="NPC" gid="61" x="256" y="64" width="16" height="16">

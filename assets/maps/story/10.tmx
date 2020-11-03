@@ -3,7 +3,7 @@
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA42TPQvCMBCGM7goIqiLoIKLuLl20XZWrMWvwQ/cFBQcVPz/PoULHGk0feHhLunlJZejK2PMGjawhR1k0IFEYk+iJlH5Hg5whBNcTFF1Zz1Qee5xgzucJT48HlozmEvehi484QVXeMPHORMH1qnEJrScb7rnCUxV9NVp+er+KRIf22Ps8QzJzuaX3N61FsrDvkkVxlCT9bLEHWzf9h4jaMAwcM7tNZ9vpjz6pjifkPR7+OZbRvm9opK1v2bu+49S8bVzz5yaisRI7X0BhCWiFrgDAAA=
+   H4sIAAAAAAAAA42SPQsCMQyGM7goIqjLgQpdxM31Fj1nxbOo5+AHbgoKDir+f99CiqHXs33hIck1DUlzayLagC0owA5okIAZ2z5bxcgzE+/BARzBCVyorKYTK+GbOjdwB2e2D08NqTlYsN8FPfAEL3AFb/Bx7mSBOGfbBh3nTM48AVNhfXlSvrx/SrmOnTHz1AwpYarkzi61FDXsm9TBGDQ4XkX0YOe2fYxACwwD99xZzX61qDGg8n5Cku/h22+MTF9pZG7Vzm0fin7/Ss517d61k1djPxXfvwMPWTi4AwAA
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>

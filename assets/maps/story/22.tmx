@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="15" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="49">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="157" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="130" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="158" source="../tilesets/monster.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgQABWIGbDg9kZcANeIObDoQ8kzk9AL0w/CCsjsflJ1IuMidELUicGxQJIbGLcjM1OZLtxAVEke9DtBWFxPHrpCSRwiAsDsTQQi+CRV6DATgMy9Sow4HYzMfbCsAISG+QWOyBmgdISaHIwtQBct+yYSAMAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="48" type="NPC" gid="154" x="112" y="64" width="16" height="16">
+  <object id="48" type="NPC" gid="155" x="112" y="64" width="16" height="16">
    <properties>
     <property name="action">(begin
     (set &quot;022-talk-shen&quot; #t)
@@ -25,7 +25,7 @@
         (&quot;/hero&quot; &quot;Nice to meet you.&quot;)
         (&quot;Oh, by the way, I think this might help you.&quot;)
         (&quot;&gt;&quot; &quot;* $hero got a snowballs container *&quot;)
-        (&quot;It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the button at the bottom right.\nIt can contain up to 20 snowballs.&quot;)
+        (&quot;It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the 'S' button.\nIt can contain up to 10 snowballs.&quot;)
         (&quot;/hero&quot; &quot;Wow! I'm sure it'll come in handy. Thank you.&quot;)
         (&quot;You're welcome. Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too. Well, at least it will be an equal fight.\nNow I have to leave you, I have to study a strange rock that I found a little while ago. We'll see again. Good luck!&quot;)
         (&quot;/hero&quot; &quot;Bye Shen, thanks again!&quot;)))

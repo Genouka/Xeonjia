@@ -41,7 +41,7 @@
   </object>
   <object id="74" gid="189" x="80" y="48" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;Here it's full of snow globes with a miniaturized Mitsu forest inside. When they were built snow was a very rare phenomenon here and much more appreciated.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;Here it's full of snow globes with a miniaturized Mitsu forest inside. When they were built snow was a very rare phenomenon here and it was much more appreciated.&quot;)))"/>
    </properties>
   </object>
   <object id="75" gid="190" x="96" y="48" width="16" height="16">
