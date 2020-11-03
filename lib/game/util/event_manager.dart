@@ -57,6 +57,7 @@ Environment setEnvironment() {
       1,
       (Cell x) => (env.lookForValue(Sym('actor')) as BasicComponent).x +=
           componentSize);
+  _('orientation', 0, (Cell x) => game.playerOne.orientation.index);
   _(
       'set-orientation',
       1,
