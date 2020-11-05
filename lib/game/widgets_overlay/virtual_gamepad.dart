@@ -201,6 +201,7 @@ class _ButtonsState extends State<_Buttons> {
           ),
         ),
         onTap: onTap,
+        enableFeedback: false,
       );
 }
 
