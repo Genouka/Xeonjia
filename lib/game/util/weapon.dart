@@ -52,6 +52,13 @@ abstract class Weapon {
 
   // Export weapon details as a Json
   Map<int, int> toJson() => {id: level};
+
+  // Return a new weapon
+  static Weapon fromId(int id) {
+    if (id == 1) return SnowBallWeapon(level: 0);
+    if (id == 2) return MineWeapon(level: 0);
+    return PunchWeapon(level: 0);
+  }
 }
 
 // Punch

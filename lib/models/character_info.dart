@@ -44,13 +44,9 @@ class CharacterInfo {
   // List of items owned by the character
   List<String> itemList;
 
-  // Weapons carried by the character
+  // Weapons owned by the character
   // Map structure: {weaponId : weaponLevel}
   Map<String, dynamic> jsonWeaponList;
-
-  // Every weapons owned by the character
-  // Map structure: {weaponId : weaponLevel}
-  Map<String, dynamic> jsonAvailableWeaponList;
 
   int get experiencePoints => _experiencePoints;
   int get experienceRequired => (level + 1) * (level + 1) * 500;
@@ -77,8 +73,6 @@ class CharacterInfo {
         poisonQuantity = json['poisonQuantity'] ?? 0,
         money = json['money'] ?? 0,
         jsonWeaponList = jsonDecode(json['jsonWeaponList'] ?? '{"0": 0}'),
-        jsonAvailableWeaponList =
-            jsonDecode(json['jsonAvailableWeaponList'] ?? '{}'),
         itemList = (json['itemList'] ?? []).cast<String>(),
         visitedRooms = (json['viewedRooms'] ?? ['1']).cast<String>(),
         minutesPlayed = json['minutesPlayed'] ?? 0,
@@ -100,7 +94,6 @@ class CharacterInfo {
       'poisonQuantity': poisonQuantity,
       'money': money,
       'jsonWeaponList': jsonEncode(jsonWeaponList),
-      'jsonAvailableWeaponList': jsonEncode(jsonAvailableWeaponList),
       'itemList': itemList,
       'viewedRooms': visitedRooms,
       'minutesPlayed': minutesPlayed,

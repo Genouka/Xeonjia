@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
+import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/widgets_overlay/map_box.dart';
 import 'package:xeonjia/game/widgets_overlay/shop_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -36,6 +37,11 @@ Environment setEnvironment() {
   _('increase-def', 1, (Cell x) => game.playerOne.def += x.car);
   _('set-money-diff', 1,
       (Cell x) => game.playerOne.moneyDifference((x.car as int), popup: false));
+  _('give-weapon', 1, (Cell x) {
+    game.playerOne.weaponList.add(Weapon.fromId((x.car as int)));
+    game.refreshWeaponButtons();
+    return #NONE;
+  });
   _('places-visited', 0, (Cell x) => mainCharacter.visitedRooms.toSet().length);
   _(
       'last-place',
