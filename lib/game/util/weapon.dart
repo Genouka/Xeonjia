@@ -26,7 +26,7 @@ abstract class Weapon {
   double get ppPercentage => _powerPoints / maxPp;
   double get powerPoints => _powerPoints;
   set powerPoints(double powerPoints) {
-    _powerPoints = powerPoints;
+    _powerPoints = (powerPoints ?? double.infinity);
     if (_powerPoints > maxPp) restorePp();
   }
 
@@ -50,13 +50,20 @@ abstract class Weapon {
     if (shooter.isPlayerOne) game.refreshWeaponButtons();
   }
 
-  // Export weapon details as a Json
-  Map<int, int> toJson() => {id: level};
+  // Export / Import weapon details
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'lv': level,
+        'pp': (powerPoints.isFinite ? powerPoints : null)
+      };
+  static Weapon fromJson(Map<String, dynamic> json) =>
+      (Weapon.fromId(json['id'], json['lv'])
+        ..powerPoints = (json['pp'] ?? double.infinity));
 
   // Return a new weapon
-  static Weapon fromId(int id) {
-    if (id == 1) return SnowBallWeapon(level: 0);
-    if (id == 2) return MineWeapon(level: 0);
+  static Weapon fromId(int id, [int level = 0]) {
+    if (id == 1) return SnowBallWeapon(level: level);
+    if (id == 2) return MineWeapon(level: level);
     return PunchWeapon(level: 0);
   }
 }

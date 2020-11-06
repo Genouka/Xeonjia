@@ -24,7 +24,7 @@ class CharacterComponent extends DynamicComponent
   List<Weapon> weaponList = [];
 
   // Index of the weapon selected from weaponList
-  int _selectedWeaponIndex = 0;
+  int selectedWeaponIndex;
 
   // Money earned by the player
   int _money = mainCharacter.money;
@@ -65,7 +65,8 @@ class CharacterComponent extends DynamicComponent
     bool isPlayerOne = false,
     int level = 0,
     double initialLP,
-    Map<String, dynamic> jsonWeaponList,
+    this.weaponList,
+    int newSelectedWeaponIndex = 0,
     team = 0,
   })  : maxLifePoints = initialLP ??
             ((isPlayerOne && game.config.mode == GameMode.story)
@@ -83,27 +84,18 @@ class CharacterComponent extends DynamicComponent
     } else {
       atk = (level + 1).toDouble();
       def = (def != 0 ? def : (level ~/ 5).toDouble());
-      jsonWeaponList = const {'0': 1, '1': 5, '2': 1};
-      _selectedWeaponIndex = 1;
+      weaponList = [
+        PunchWeapon(level: 1),
+        SnowBallWeapon(level: 5),
+        MineWeapon(level: 1),
+      ];
+      selectedWeaponIndex = 1;
     }
     teamId = team;
-    jsonWeaponList ??=
-        (team == 0) ? const {'1': 5, '2': 1} : const {'1': 9, '2': 5};
-    jsonWeaponList.forEach((weaponId, weaponLevel) {
-      switch (int.parse(weaponId)) {
-        case 0:
-          weaponList.add(PunchWeapon(level: atk.round()));
-          break;
-        case 1:
-          weaponList.add(SnowBallWeapon(level: weaponLevel));
-          break;
-        case 2:
-          weaponList.add(MineWeapon(level: weaponLevel));
-          break;
-        default:
-          break;
-      }
-    });
+    weaponList ??= (team == 0)
+        ? [SnowBallWeapon(level: 5), MineWeapon(level: 1)]
+        : [SnowBallWeapon(level: 9), MineWeapon(level: 5)];
+    selectedWeaponIndex ??= newSelectedWeaponIndex;
     game.players.add(this);
     if (isPlayerOne) {
       game.playerOne = this;
@@ -128,7 +120,7 @@ class CharacterComponent extends DynamicComponent
   CharacterComponent.npc(Tile tile) : this(tile, initialLP: double.infinity);
 
   // Weapon
-  Weapon get selectedWeapon => weaponList[_selectedWeaponIndex];
+  Weapon get selectedWeapon => weaponList[selectedWeaponIndex];
   void shoot() {
     if (isBeingDeleted) return;
     selectedWeapon.shoot(shooter: this);
@@ -138,7 +130,7 @@ class CharacterComponent extends DynamicComponent
   void shootById(int id) {
     var newWeaponIndex = weaponList.indexWhere((weapon) => weapon.id == id);
     if (weaponList[newWeaponIndex].powerPoints > 0) {
-      _selectedWeaponIndex = newWeaponIndex;
+      selectedWeaponIndex = newWeaponIndex;
       shoot();
     }
   }
@@ -153,7 +145,7 @@ class CharacterComponent extends DynamicComponent
 
   // Select next weapon in weapon list
   void nextWeapon() {
-    if (++_selectedWeaponIndex >= weaponList.length) _selectedWeaponIndex = 0;
+    if (++selectedWeaponIndex >= weaponList.length) selectedWeaponIndex = 0;
   }
 
   // Inspect what is in front of this
@@ -217,7 +209,7 @@ class CharacterComponent extends DynamicComponent
     weaponList.forEach((weapon) {
       weapon.restorePp();
     });
-    _selectedWeaponIndex = 0;
+    selectedWeaponIndex = 0;
     movesCounter = 0;
     isBeingDeleted = false;
     x = startingPosition.x;

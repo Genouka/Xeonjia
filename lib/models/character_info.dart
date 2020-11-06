@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:xeonjia/game/util/weapon.dart';
+
 // Class used to manage player data
 class CharacterInfo {
   // Name of the character
@@ -45,8 +47,8 @@ class CharacterInfo {
   List<String> itemList;
 
   // Weapons owned by the character
-  // Map structure: {weaponId : weaponLevel}
-  Map<String, dynamic> jsonWeaponList;
+  List<Weapon> weaponList = [];
+  int selectedWeaponIndex;
 
   int get experiencePoints => _experiencePoints;
   int get experienceRequired => (level + 1) * (level + 1) * 500;
@@ -72,14 +74,20 @@ class CharacterInfo {
         currentLifePoints = json['currentLifePoints'] ?? 0,
         poisonQuantity = json['poisonQuantity'] ?? 0,
         money = json['money'] ?? 0,
-        jsonWeaponList = jsonDecode(json['jsonWeaponList'] ?? '{"0": 0}'),
         itemList = (json['itemList'] ?? []).cast<String>(),
+        selectedWeaponIndex = json['selectedWeaponIndex'] ?? 0,
         visitedRooms = (json['viewedRooms'] ?? ['1']).cast<String>(),
         minutesPlayed = json['minutesPlayed'] ?? 0,
         defeatedComponents = json['defeatedComponents'] ?? 0,
         movesCounter = json['movesCounter'] ?? 0,
         defeatsCounter = json['defeatsCounter'] ?? 0,
-        _experiencePoints = json['experiencePoints'] ?? 0;
+        _experiencePoints = json['experiencePoints'] ?? 0 {
+    List<dynamic> _jsonWeaponList =
+        (jsonDecode(json['weaponList'] ?? '[{"id": 0, "lv": 0}]'));
+    _jsonWeaponList.forEach((weapon) {
+      weaponList.add(Weapon.fromJson(weapon));
+    });
+  }
 
   // Export character data as a Json
   Map<String, dynamic> toJson() {
@@ -93,7 +101,11 @@ class CharacterInfo {
       'currentLifePoints': currentLifePoints,
       'poisonQuantity': poisonQuantity,
       'money': money,
-      'jsonWeaponList': jsonEncode(jsonWeaponList),
+      'weaponList': jsonEncode(weaponList.fold(
+          <Map>[],
+          (previousValue, element) =>
+              (((previousValue as List) ?? [])..add(element.toJson())))),
+      'selectedWeaponIndex': selectedWeaponIndex,
       'itemList': itemList,
       'viewedRooms': visitedRooms,
       'minutesPlayed': minutesPlayed,

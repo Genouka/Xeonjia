@@ -46,7 +46,8 @@ extension CreateComponent on Tile {
             CharacterComponent(this,
                 isPlayerOne: true,
                 level: mainCharacter.level,
-                jsonWeaponList: mainCharacter.jsonWeaponList);
+                weaponList: List.from(mainCharacter.weaponList),
+                newSelectedWeaponIndex: mainCharacter.selectedWeaponIndex);
           }
           if (properties['roomId'] != '1' ||
               mainCharacter.visitedRooms.last != '1') DoorComponent(this);

@@ -266,9 +266,8 @@ class XeonjiaGame extends BaseGame
         playerOne.experiencePoints + mainCharacter.visitedRooms.toSet().length);
     mainCharacter.eventLog = Map.from(currentEventLog);
     mainCharacter.itemList = List.from(playerOne.itemList);
-    playerOne.weaponList.forEach((weapon) {
-      mainCharacter.jsonWeaponList[weapon.id.toString()] = weapon.level;
-    });
+    mainCharacter.weaponList = List.from(playerOne.weaponList);
+    mainCharacter.selectedWeaponIndex = playerOne.selectedWeaponIndex;
     saveUserData();
 
     // Start a new game
