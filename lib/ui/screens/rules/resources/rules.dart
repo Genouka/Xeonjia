@@ -47,7 +47,7 @@ Be aware that some weapons have few hits, so use them wisely.
         subtitle:
             '''Be careful, the world is full of dangerous enemies ready to attack you!
 
-Hit them several times with your weapons to defeat them; they have life points too.
+Hit them several times to defeat them; they have life points too.
     ''',
         icon: Icons.adjust,
       ),
