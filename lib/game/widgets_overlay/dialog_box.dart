@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
@@ -121,7 +122,7 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                       if (currentMessage.image != null)
                         Image.asset(
                           currentMessage.image,
-                          height: 96,
+                          height: 96.gridAligned,
                           fit: BoxFit.fitHeight,
                           filterQuality: FilterQuality.none,
                         ),

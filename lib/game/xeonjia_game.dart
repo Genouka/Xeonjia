@@ -13,6 +13,7 @@ import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/util/event_manager.dart';
+import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/game/util/map_importer.dart';
 import 'package:xeonjia/game/util/wireless_gamepad.dart';
 import 'package:xeonjia/game/widgets_overlay/end_menu.dart';
@@ -41,6 +42,9 @@ double defaultSpeed;
 
 // Default component dimension
 double componentSize;
+
+// Vertical offset used to translate dynamic components
+double characterOffset;
 
 // Xeonjia game class
 class XeonjiaGame extends BaseGame
@@ -286,19 +290,14 @@ class XeonjiaGame extends BaseGame
   // Update camera position
   void updateCamera(double x, double y) {
     if (map?.width == null) return;
-    var _widthDiff = map.width * componentSize - screenSize.width;
-    camera.x = _widthDiff <= 0
-        ? _widthDiff / 2
-        : min(max(0, x - screenSize.width / 2),
-            componentSize * (map?.width ?? 0) - screenSize.width);
+    double _moveCamera(double size, int mapSize, double position) {
+      var delta = mapSize * componentSize - size;
+      return (delta <= 0 ? delta / 2 : max(0, min(position - size / 2, delta)))
+          .gridAligned;
+    }
 
-    var _heightDiff = map.height * componentSize - screenSize.height;
-    camera.y = _heightDiff <= 0
-        ? _heightDiff / 2
-        : max(
-            0,
-            min(y - screenSize.height / 2,
-                componentSize * map.height - screenSize.height));
+    camera.x = _moveCamera(screenSize.width, map.width, x);
+    camera.y = _moveCamera(screenSize.height, map.height, y);
   }
 
   // Reload weapon buttons

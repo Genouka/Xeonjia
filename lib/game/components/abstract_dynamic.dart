@@ -3,6 +3,7 @@ import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
+import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/game/util/text_animation.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -100,7 +101,8 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
           component != father &&
           this != component.father) {
         var componentCollisionRect = component.collisionRect(this);
-        if (componentCollisionRect?.overlaps(candidatePosition) ?? false) {
+        if (componentCollisionRect?.approximateOverlaps(candidatePosition) ??
+            false) {
           if (component.isSolid(otherComponent: this)) {
             collidedComponent = component;
             collidedRect = componentCollisionRect;
