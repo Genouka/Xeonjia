@@ -29,6 +29,7 @@
         (&quot;/hero&quot; &quot;Wow! I'm sure it'll come in handy. Thank you.&quot;)
         (&quot;You're welcome. Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too. Well, at least it will be an equal fight.\nNow I have to leave you, I have to study a strange rock that I found a little while ago. We'll see again. Good luck!&quot;)
         (&quot;/hero&quot; &quot;Bye Shen, thanks again!&quot;)))
+    (give-weapon 1)
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if (get &quot;022-talk-shen&quot;)
     (delete))</property>
@@ -40,7 +41,7 @@
    H4sIAAAAAAAAA2NgwA3M8MhhA6xI+uyQ9LMTqR+mjwFNPzHAjgAfFxDFYg+IL04je4n1E7I6EyA2JcJsZDfA9NgAsS2R+mCAHD2DHZih0dQGAKLwInBIAwAA
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
+ <objectgroup id="2" name="spawn points" visible="0">
   <object id="36" type="Door" x="224" y="144" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>

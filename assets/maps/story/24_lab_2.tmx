@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="73">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="74">
  <properties>
   <property name="action" value="(map-name &quot;VANTOI LAB - 2F&quot;)"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
  <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="225" source="../tilesets/lab.tsx"/>
+ <tileset firstgid="178" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="226" source="../tilesets/lab.tsx"/>
  <layer id="1" name="Tile Layer 1" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvDwMBwmgR8FoivAPFlPHgTGn0VqmcHCXhUD0TPHRLU3wTiu0B8iQwMACRixC4IAgAA
+   H4sIAAAAAAAAAzvLwMBwhgR8DoivAvEVPHgzGn0NqmcnCXhUD0TPXRLU3wLie0B8mQwMAAgKp30IAgAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -23,12 +23,12 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA88BOJHWGh84DkQv0Oi3wLxC6jcYyB+CsVP0PS9B+IPaHwQeAnEr6H4FQlue4ZGM0DdAnPbCzS34QMfCCtBUUNOuH0G4i9YaGoCAJll5/AIAgAA
+   H4sIAAAAAAAAA2NgIA88AuLHWGh84AUQv0ei3wHxS6jcEyB+BsVP0fR9Q+N/gNKvgPgNlP2aBLc9R6MZoG6Bue0lmtvwgY8kqiEn3L4A8VcsNDUBAD/jugMIAgAA
   </data>
  </layer>
  <layer id="12" name="Tile Layer 3" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGFzgIxB/GmhHjEAAAK4Jaa0IAgAA
+   H4sIAAAAAAAAA2NgGFzgExB/HmhHjEAAAD8+ZAIIAgAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -39,5 +39,11 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="9" name="items"/>
+ <objectgroup id="9" name="items">
+  <object id="73" gid="236" x="160" y="64" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A broken monitor.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

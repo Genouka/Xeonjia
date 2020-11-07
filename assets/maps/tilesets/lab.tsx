@@ -57,4 +57,5 @@
  </tile>
  <tile id="18" type="Solid"/>
  <tile id="19" type="Solid"/>
+ <tile id="20" type="Ground"/>
 </tileset>

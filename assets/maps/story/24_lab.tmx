@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="75">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="77">
  <properties>
   <property name="action" value="(map-name &quot;VANTOI LAB - 1F&quot;)"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
  <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="225" source="../tilesets/lab.tsx"/>
+ <tileset firstgid="178" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="226" source="../tilesets/lab.tsx"/>
  <layer id="1" name="Tile Layer 1" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvDwMBwmgR8FoivAPFlIvEmIL4K1bODBDyqB6LnDol67gLxJRz4Ih45AGX/7iwIAgAA
+   H4sIAAAAAAAAAzvLwMBwhgR8DoivAvEVIvFmIL4G1bOTBDyqB6LnLol67gHxZRz4Eh45AFt9HuoIAgAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -28,12 +28,12 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52QAQqAIAxFvf9tOkbHMEuzyAQ7QD9YMMYU8cFjjD+naMwYFi4dlXPBHQaYqE+sD5RLMrwbb8mid3AjV+iVM46ynwhP8qjcE0Wm7ZV4Mdf6nxoFPqx+TMrc3LlP4wWdpk/DCAIAAA==
+   H4sIAAAAAAAAA2NgIA88AuLHRNDI4B0QvwTiF0D8Hsp/j8R/AZVHBx+B+AMet3xD4z8B4mdQ/BSIn2PR8wQqBwOvgPgNHjtgal4j8bGZiw6eo6nDFz64wBcg/opEg8AmLOpOEWkeNgAA/sTwnAgCAAA=
   </data>
  </layer>
  <layer id="12" name="Tile Layer 3" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGH7gIxB/QqJHAWEAABhDetYIAgAA
+   H4sIAAAAAAAAA2NgGH7gExB/RqJHAWEAAABra+AIAgAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -51,9 +51,19 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="74" gid="183" x="176" y="48" width="16" height="16">
+  <object id="74" gid="184" x="176" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;Someone used this plant to do some experiments.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="75" gid="236" x="48" y="96" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A broken monitor.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="76" gid="235" x="64" y="96" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A broken monitor.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

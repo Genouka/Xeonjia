@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="43">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="130" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA42SPQsCMQyGM7goIqjLgQpdxM31Fj1nxbOo5+AHbgoKDir+f99CiqHXs33hIck1DUlzayLagC0owA5okIAZ2z5bxcgzE+/BARzBCVyorKYTK+GbOjdwB2e2D08NqTlYsN8FPfAEL3AFb/Bx7mSBOGfbBh3nTM48AVNhfXlSvrx/SrmOnTHz1AwpYarkzi61FDXsm9TBGDQ4XkX0YOe2fYxACwwD99xZzX61qDGg8n5Cku/h22+MTF9pZG7Vzm0fin7/Ss517d61k1djPxXfvwMPWTi4AwAA
@@ -46,6 +47,16 @@
   <object id="39" gid="71" x="0" y="80" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;'' Souvenir shop ''&quot;)))"/>
+   </properties>
+  </object>
+  <object id="43" type="Modifier" gid="148" x="48" y="160" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="44" type="Modifier" gid="148" x="240" y="112" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
  </objectgroup>

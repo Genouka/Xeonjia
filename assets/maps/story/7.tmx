@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="47">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="49">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="157" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="130" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="158" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA61VTQvCMAzNwYsiguJh4FcvHpXeetH5A5z+/59jwhIWSrp2nQ8eXZvsrW0eGUCPRo1HHoUB6ZgvXpO557jkPpBP1mp5XEMd5BuleGfisu8YrbFWgg6Ge6tFUM+k5Ss0lshVQjsY6ymNO3ODvBmaHsrPu0VeWIt4Qu6iHAe9n0qhNa9GXDw4BaR5NvZGEN//C3TWuL45z2pvdlHMwXz/aYhWSU20rz4jObofzEVNfcfgkAfknue5WuRAe5vSS+J6Wnql56W7XmT0pXfrfi5z6Y3kzy8M/wGpX5N45weXjkGVQAYAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="42" type="NPC" gid="141" x="80" y="32" width="16" height="16">
+  <object id="42" type="NPC" gid="142" x="80" y="32" width="16" height="16">
    <properties>
     <property name="action">(begin 
     (dialog
@@ -28,7 +28,17 @@
   </object>
   <object id="45" gid="170" x="208" y="128" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="100"/>
+    <property name="lifePointsDelta" type="int" value="50"/>
+   </properties>
+  </object>
+  <object id="47" type="Modifier" gid="176" x="256" y="176" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="48" type="Modifier" gid="176" x="272" y="288" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
  </objectgroup>

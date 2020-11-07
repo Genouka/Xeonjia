@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="19" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="39">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="19" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="42">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="130" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc.tsx"/>
  <layer id="1" name="Tile Layer 1" width="19" height="10">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAAwtkYGAIAuJgIA4B4lAgloBiBSiGsXmA2BxJTAOJBoklAnEyFMcAcSoDduCHQ9wcSoPMzAPifCCOh9IFBPQgm22PJA5yVxkQlwNxGpSuQJJDBoT4IHN9oGw1LG6xAWJbqD5zNL49FrPRzccFsLnLF42vQaRZ+ACye5EBcnyhhzc2NTCggEc9qQCW7mBpDdmtIDFfBkSYgtSyMGCmU5g8SC0AAW5f4PgCAAA=
@@ -30,5 +32,11 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="8" name="items"/>
+ <objectgroup id="8" name="items">
+  <object id="40" type="Modifier" gid="148" x="272" y="32" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="10"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

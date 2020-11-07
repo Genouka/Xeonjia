@@ -1,117 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="39" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="6" nextobjectid="37">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="26" height="24" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="6" nextobjectid="44">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="129" source="../tilesets/basic.tsx"/>
- <layer id="1" name="Tile Layer 1" width="39" height="21">
+ <tileset firstgid="130" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="26" height="24">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA9WXUQ6EIAxEOYZH8JquHtzw0aRppsxQV3d9iYlCC2UYNK6ttfWPr87eMEvSbn2on+UwUH2MrH7PRp6ND2lXdFPJ5pqN6Si6sXozTWL+IdbUqepmXkGx6vxRO+S/it/QOKhOxe9ZzB1++yYV3TwzHprhqt/iOIYfQ9nXLI7p5nOUumd0HMW+3W9et7jOPfSxvbb3oLLPd+mmeiwS1371nLK1jDw1ykW6VeZX6qiMXdFM/VZ7luSegWpT5n/iTKu6ZXvm22O9So6B9Kiegyf49b8Au07FVd2fzAwAAA==
+   H4sIAAAAAAAAA8WWywrDIBBF3ba7dpVlln5nWv+7ESJchjtPAj0wJOiYOw+V9NZaL9oi4/9tnE0Zt2BrZGwWWizIoYx7+XiM6/lx/Kx8PG0tdsnWcvmsujPfQcaQTH9Yf5mmtg80/zth+UQ0vToxnei3ZT3kHsNvSF+tP+h3R37/7M8E8xkijiHevbspe348LL3M+UGidwHqaERzxDpq91wmF++uZLqrlj0YD1LpZSQf7WzguNTGuT2g8zjtWZhD9sssXqe9C3NRHVmH7D6erF5bOpH1DNbLqVH9p8raDwvF++nACQAA
   </data>
  </layer>
  <objectgroup id="4" name="items">
-  <object id="27" gid="145" x="336" y="128" width="16" height="16">
+  <object id="27" gid="146" x="336" y="128" width="16" height="16">
    <properties>
     <property name="powerPointsDelta" type="int" value="5"/>
     <property name="regenerable" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="28" gid="145" x="96.6667" y="256" width="16" height="16">
+  <object id="28" gid="146" x="96" y="256" width="16" height="16">
    <properties>
     <property name="powerPointsDelta" type="int" value="5"/>
     <property name="regenerable" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="29" gid="145" x="448" y="272" width="16" height="16">
+  <object id="31" gid="146" x="272" y="32" width="16" height="16">
    <properties>
     <property name="powerPointsDelta" type="int" value="5"/>
     <property name="regenerable" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="30" gid="145" x="496" y="96" width="16" height="16">
+  <object id="32" gid="141" x="144" y="32" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="regenerable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="33" gid="141" x="160" y="128" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="regenerable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="34" gid="141" x="352" y="320" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="regenerable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="36" gid="141" x="48" y="320" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="regenerable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="37" gid="141" x="240" y="192" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="regenerable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="38" gid="141" x="272" y="352" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="regenerable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="41" gid="146" x="192" y="96" width="16" height="16">
    <properties>
     <property name="powerPointsDelta" type="int" value="5"/>
     <property name="regenerable" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="31" gid="145" x="272" y="32" width="16" height="16">
+  <object id="42" gid="146" x="32" y="352" width="16" height="16">
    <properties>
     <property name="powerPointsDelta" type="int" value="5"/>
     <property name="regenerable" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="32" gid="140" x="144" y="32" width="16" height="16">
+  <object id="43" gid="146" x="192" y="320" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
-    <property name="regenerable" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="33" gid="140" x="288" y="208" width="16" height="16">
-   <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
-    <property name="regenerable" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="34" gid="140" x="352" y="320" width="16" height="16">
-   <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
-    <property name="regenerable" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="35" gid="140" x="432" y="32" width="16" height="16">
-   <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
-    <property name="regenerable" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="36" gid="140" x="48" y="320" width="16" height="16">
-   <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="powerPointsDelta" type="int" value="5"/>
     <property name="regenerable" type="bool" value="true"/>
    </properties>
   </object>
  </objectgroup>
- <layer id="5" name="Tile Layer 2" width="39" height="21">
+ <layer id="5" name="Tile Layer 2" width="26" height="24">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+2SwQ0AIAgDmcqn+49lXKBgAlZMb4CG3GEmhM9gHwCY7AMeATVi90ONuvdju0V0dCufvcnqV/EHWf1OdvTP94k6r2jjbUadV7T5tfdmAX+G1FLMDAAA
+   H4sIAAAAAAAAA2NgIB+YALEpHnkNJEwJsAFiWwJqqGEPIdCMZBctgBkSm5b+sYPSzXhVUReQ4h8zMuVIjR87MuVgdgz19IYMRv1DOhgs+QdfniAFEIofQnkCGRByE7Xihxg30SO9odtDrThBBtjMJCVOiAW0MHMU0AYAAPCFO+LACQAA
   </data>
  </layer>
  <objectgroup id="2" name="team0">
-  <object id="1" type="Door" x="592" y="32" width="16" height="16">
+  <object id="1" type="Door" x="384" y="32" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="team" type="int" value="1"/>
    </properties>
   </object>
-  <object id="2" type="Door" x="592" y="64" width="16" height="16">
+  <object id="2" type="Door" x="384" y="64" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="team" type="int" value="1"/>
    </properties>
   </object>
-  <object id="3" type="Door" x="592" y="96" width="16" height="16">
+  <object id="3" type="Door" x="384" y="96" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="team" type="int" value="1"/>
    </properties>
   </object>
-  <object id="4" type="Door" x="592" y="128" width="16" height="16">
+  <object id="4" type="Door" x="384" y="128" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="team" type="int" value="1"/>
    </properties>
   </object>
-  <object id="5" type="Door" x="592" y="160" width="16" height="16">
+  <object id="5" type="Door" x="384" y="160" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="team" type="int" value="1"/>
    </properties>
   </object>
-  <object id="7" type="Door" x="592" y="192" width="16" height="16">
+  <object id="7" type="Door" x="384" y="192" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="team" type="int" value="1"/>
    </properties>
   </object>
-  <object id="8" type="Door" x="592" y="224" width="16" height="16">
+  <object id="8" type="Door" x="384" y="224" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="team" type="int" value="1"/>
@@ -150,11 +162,6 @@
   <object id="15" type="Door" x="16" y="208" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="2"/>
-   </properties>
-  </object>
-  <object id="25" gid="140" x="592" y="272" width="16" height="16">
-   <properties>
-    <property name="lifePointsDelta" type="int" value="6"/>
    </properties>
   </object>
  </objectgroup>

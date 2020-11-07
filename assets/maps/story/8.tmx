@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="40">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="41">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="129" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="130" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA6WSQQ6AIAwE+wBvXjjyCy4KZxXj/39jG9tko6Iok2xsKK5LxRGRZwWWUyWot1Ov02eAvrzfQq9eLWTN1IKd+y+RjlmUPGrzhQ97S96Orv8lQr1WeJpHfNlXYmLNVJ6HreeHnpBUyAJ1TT67v+j5xtn3bqZfMgh211f1EmXIN7BGzefhmzhL0Q4PU3vCuAMAAA==
@@ -31,19 +31,24 @@
     <property name="roomId" value="11"/>
    </properties>
   </object>
-  <object id="37" gid="141" x="240" y="208" width="16" height="16">
+  <object id="37" gid="142" x="240" y="208" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="40"/>
+    <property name="lifePointsDelta" type="int" value="50"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="38" type="Modifier" gid="147" x="16" y="176" width="16" height="16">
+  <object id="38" type="Modifier" gid="148" x="16" y="176" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="39" type="Modifier" gid="147" x="16" y="64" width="16" height="16">
+  <object id="39" type="Modifier" gid="148" x="16" y="64" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="40" type="Modifier" gid="148" x="112" y="144" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>

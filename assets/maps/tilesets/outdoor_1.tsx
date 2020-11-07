@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.4" tiledversion="2020.08.05" name="tileset_1 " tilewidth="16" tileheight="16" tilecount="136" columns="8">
- <image source="../../images/outdoor_1.png" width="128" height="272"/>
+<tileset version="1.4" tiledversion="2020.08.05" name="tileset_1 " tilewidth="16" tileheight="16" tilecount="129" columns="8">
+ <image source="../../images/outdoor_1.png" width="128" height="256"/>
  <tile id="0" type="Ground"/>
  <tile id="1" type="Ground"/>
  <tile id="2" type="Ground"/>
@@ -128,7 +128,7 @@
  <tile id="46" type="Ground"/>
  <tile id="47" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A snowdrift&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A snowdrift.&quot;)))"/>
   </properties>
  </tile>
  <tile id="48" type="Hurdle">
@@ -330,5 +330,4 @@
  <tile id="125" type="Solid"/>
  <tile id="126" type="Solid"/>
  <tile id="127" type="Solid"/>
- <tile id="128" type="Solid"/>
 </tileset>
