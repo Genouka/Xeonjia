@@ -53,6 +53,9 @@ class XeonjiaGame extends BaseGame
   final MatchConfig config;
 
   XeonjiaGame(this.config) {
+    addWidgetOverlay('statusBox', _statusBox);
+    addWidgetOverlay('gamePad', _virtualGamePad);
+    addWidgetOverlay('messageBox', _dialogBox);
     if (settings.backgroundMusic) {
       _backgroundMusic = Bgm();
       _backgroundMusic.initialize();
@@ -130,7 +133,6 @@ class XeonjiaGame extends BaseGame
 
     // Reset variables
     elapsedSeconds = 0;
-    playerOne = null;
 
     // Remove previous components
     // They are removed during the next update()
@@ -161,9 +163,6 @@ class XeonjiaGame extends BaseGame
     }
 
     initGamepad();
-    addWidgetOverlay('gamePad', _virtualGamePad);
-    addWidgetOverlay('statusBox', _statusBox);
-    addWidgetOverlay('messageBox', _dialogBox);
 
     _timer = Timer(1, repeat: true, callback: () {
       elapsedSeconds++;

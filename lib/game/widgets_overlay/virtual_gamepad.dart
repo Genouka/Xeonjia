@@ -16,14 +16,14 @@ class VirtualGamePad extends StatelessWidget {
     _size = min(screenSize.width, screenSize.height) / 14;
   }
 
-  final buttons = _Buttons();
+  final GlobalKey<_ButtonsState> _key = GlobalKey();
 
   @override
   Widget build(BuildContext context) =>
-      Stack(children: [if (settings.showDPad) _DPad(), buttons]);
+      Stack(children: [if (settings.showDPad) _DPad(), _Buttons(_key)]);
 
   void refresh() {
-    buttons.state.refresh();
+    _key.currentState?.refresh();
   }
 }
 
@@ -111,62 +111,70 @@ class _DPad extends StatelessWidget {
 
 // Buttons (on the right)
 class _Buttons extends StatefulWidget {
-  final _ButtonsState state = _ButtonsState();
+  @override
+  final key;
+  _Buttons(this.key);
 
   @override
-  _ButtonsState createState() => state;
+  _ButtonsState createState() => _ButtonsState();
 }
 
 class _ButtonsState extends State<_Buttons> {
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      bottom: 20,
-      right: 20,
-      child: GestureDetector(
-        onTap: () {},
-        child: Container(
-          width: _size * 4,
-          height: _size * 4,
-          color: Colors.transparent,
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  button('P', () => game.playerOne.shootById(0),
-                      percentage: 1,
-                      highlight: game.playerOne.selectedWeapon.id == 0),
-                  game.playerOne.hasWeaponId(2)
-                      ? button('M', () => game.playerOne.shootById(2),
-                          percentage:
-                              game.playerOne.getWeaponById(2).ppPercentage,
-                          highlight: game.playerOne.selectedWeapon.id == 2)
-                      : const Spacer(),
-                ],
-              ),
-              const Spacer(),
-              Row(
-                children: [
-                  game.playerOne.hasWeaponId(1)
-                      ? button('S', () => game.playerOne.shootById(1),
-                          percentage:
-                              game.playerOne.getWeaponById(1).ppPercentage,
-                          highlight: game.playerOne.selectedWeapon.id == 1)
-                      : const Spacer(),
-                  if (game.config.mode == GameMode.story)
-                    button(
-                      'A',
-                      game.playerOne.inspect,
-                      percentage: 0,
-                      color: Colors.blueGrey[400],
+    return game.playerOne == null
+        ? Container()
+        : Positioned(
+            bottom: 20,
+            right: 20,
+            child: GestureDetector(
+              onTap: () {},
+              child: Container(
+                width: _size * 4,
+                height: _size * 4,
+                color: Colors.transparent,
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        button('P', () => game.playerOne.shootById(0),
+                            percentage: 1,
+                            highlight: game.playerOne.selectedWeapon.id == 0),
+                        game.playerOne.hasWeaponId(2)
+                            ? button('M', () => game.playerOne.shootById(2),
+                                percentage: game.playerOne
+                                    .getWeaponById(2)
+                                    .ppPercentage,
+                                highlight:
+                                    game.playerOne.selectedWeapon.id == 2)
+                            : const Spacer(),
+                      ],
                     ),
-                ],
+                    const Spacer(),
+                    Row(
+                      children: [
+                        game.playerOne.hasWeaponId(1)
+                            ? button('S', () => game.playerOne.shootById(1),
+                                percentage: game.playerOne
+                                    .getWeaponById(1)
+                                    .ppPercentage,
+                                highlight:
+                                    game.playerOne.selectedWeapon.id == 1)
+                            : const Spacer(),
+                        if (game.config.mode == GameMode.story)
+                          button(
+                            'A',
+                            game.playerOne.inspect,
+                            percentage: 0,
+                            color: Colors.blueGrey[400],
+                          ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ],
-          ),
-        ),
-      ),
-    );
+            ),
+          );
   }
 
   void refresh() {

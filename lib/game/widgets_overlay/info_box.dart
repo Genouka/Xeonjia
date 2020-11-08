@@ -8,10 +8,12 @@ import 'package:xeonjia/util/lifepoints_color.dart';
 
 // Box that shows points and lifepoints
 class StatusBox extends StatefulWidget {
-  final _StatusBoxState state = _StatusBoxState();
+  @override
+  final GlobalKey<_StatusBoxState> key = GlobalKey();
+  _StatusBoxState get state => key.currentState;
 
   @override
-  _StatusBoxState createState() => state;
+  _StatusBoxState createState() => _StatusBoxState();
 }
 
 class _StatusBoxState extends State<StatusBox> {
@@ -21,91 +23,90 @@ class _StatusBoxState extends State<StatusBox> {
 
   @override
   Widget build(BuildContext context) {
-    return InfoBox(
-      radius: game.config.mode == GameMode.tdm ? 10 : 30,
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 4),
-                child: const Icon(
-                  Icons.favorite,
-                  color: Colors.white,
-                  size: 15,
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  child: _PercentIndicator(
-                    values: game.playerOne == null
-                        ? [1, 1]
-                        : [
+    return game.playerOne == null
+        ? Container()
+        : InfoBox(
+            radius: game.config.mode == GameMode.tdm ? 10 : 30,
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 4),
+                      child: const Icon(
+                        Icons.favorite,
+                        color: Colors.white,
+                        size: 15,
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        child: _PercentIndicator(
+                          values: [
                             game.playerOne.lifePoints,
                             game.playerOne.maxLifePoints
                           ],
-                    text: game.playerOne != null
-                        ? game.playerOne.lifePoints.round().toString()
-                        : '',
-                    colors: [
-                      lifePointsColor((game.playerOne?.lifePoints ?? 1) /
-                          (game.playerOne?.maxLifePoints ?? 1)),
-                      Colors.grey
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 4),
-                child: const Icon(Icons.pause, color: Colors.white, size: 18),
-              ),
-            ],
-          ),
-          if (game.config.mode == GameMode.tdm) ...[
-            Container(height: 10),
-            Row(
-              children: [
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 4),
-                  child: const Icon(
-                    Icons.whatshot,
-                    color: Colors.white,
-                    size: 15,
-                  ),
-                ),
-                Expanded(
-                  child: _PercentIndicator(
-                    values: game.playerOne == null ||
-                            game.teams.first.points == game.teams.last.points
-                        ? [0.5, 1]
-                        : [
-                            game.teams.first.points.toDouble(),
-                            game.teams.last.points.toDouble() +
-                                game.teams.first.points,
+                          text: game.playerOne.lifePoints.round().toString(),
+                          colors: [
+                            lifePointsColor((game.playerOne.lifePoints) /
+                                (game.playerOne.maxLifePoints)),
+                            Colors.grey
                           ],
-                    text: (game.teams.first.points.toString() ?? '') +
-                        ' - ' +
-                        (game.teams.last.points.toString() ?? ''),
-                    colors: [
-                      game.teams.first.color ?? '',
-                      game.teams.last.color ?? '',
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 4),
+                      child: const Icon(Icons.pause,
+                          color: Colors.white, size: 18),
+                    ),
+                  ],
+                ),
+                if (game.config.mode == GameMode.tdm) ...[
+                  Container(height: 10),
+                  Row(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 4),
+                        child: const Icon(
+                          Icons.whatshot,
+                          color: Colors.white,
+                          size: 15,
+                        ),
+                      ),
+                      Expanded(
+                        child: _PercentIndicator(
+                          values:
+                              game.teams.first.points == game.teams.last.points
+                                  ? [0.5, 1]
+                                  : [
+                                      game.teams.first.points.toDouble(),
+                                      game.teams.last.points.toDouble() +
+                                          game.teams.first.points,
+                                    ],
+                          text: (game.teams.first.points.toString() ?? '') +
+                              ' - ' +
+                              (game.teams.last.points.toString() ?? ''),
+                          colors: [
+                            game.teams.first.color ?? '',
+                            game.teams.last.color ?? '',
+                          ],
+                        ),
+                      ),
+                      Text(
+                        '  ${game.remainingTime}',
+                        style: const TextStyle(
+                          fontSize: 24,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ],
                   ),
-                ),
-                Text(
-                  '  ${game.remainingTime}',
-                  style: const TextStyle(
-                    fontSize: 24,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                ],
               ],
             ),
-          ],
-        ],
-      ),
-    );
+          );
   }
 }
 

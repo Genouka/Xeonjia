@@ -6,10 +6,12 @@ import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 
 class DialogBox extends StatefulWidget {
-  final _DialogBoxState state = _DialogBoxState();
+  @override
+  final GlobalKey<_DialogBoxState> key = GlobalKey();
+  _DialogBoxState get state => key.currentState;
 
   @override
-  _DialogBoxState createState() => state;
+  _DialogBoxState createState() => _DialogBoxState();
 }
 
 class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
