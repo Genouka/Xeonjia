@@ -21,13 +21,13 @@
         (&quot;???&quot; &quot;Ah yes, I've heard of it. Beware that here is full of monsters and bad people.&quot;)
         (&quot;/hero&quot; &quot;Ok thanks, I'll be careful. But... who are you?&quot;)
         (&quot;???&quot; &quot;Oh yes sorry I forgot to introduce myself.&quot;)
-        (&quot;My name is Shen, I am a scientist.&quot;)
+        (&quot;/&quot; &quot;My name is Shen, I am a scientist.&quot;)
         (&quot;/hero&quot; &quot;Nice to meet you.&quot;)
-        (&quot;Oh, by the way, I think this might help you.&quot;)
-        (&quot;&gt;&quot; &quot;* $hero got a snowballs container *&quot;)
-        (&quot;It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the 'S' button.\nIt can contain up to 10 snowballs.&quot;)
+        (&quot;/&quot; &quot;Oh, by the way, I think this might help you.&quot;)
+        (&quot;* $hero got a snowballs container *&quot;)
+        (&quot;/&quot; &quot;It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the 'S' button.\nIt can contain up to 10 snowballs.&quot;)
         (&quot;/hero&quot; &quot;Wow! I'm sure it'll come in handy. Thank you.&quot;)
-        (&quot;You're welcome. Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too. Well, at least it will be an equal fight.\nNow I have to leave you, I have to study a strange rock that I found a little while ago. We'll see again. Good luck!&quot;)
+        (&quot;/&quot; &quot;You're welcome. Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too. Well, at least it will be an equal fight.\nNow I have to leave you, I have to study a strange rock that I found a little while ago. We'll see again. Good luck!&quot;)
         (&quot;/hero&quot; &quot;Bye Shen, thanks again!&quot;)))
     (give-weapon 1)
     (fire-event (self)))</property>
@@ -65,7 +65,7 @@
    <properties>
     <property name="actionOnCollision">(if  (!get &quot;022-tower1-ok&quot;)
     (begin 
-        (dialog '((&quot;&gt;&quot; &quot;I have to go through the crypt to get the first signet.&quot;)))
+        (dialog '((&quot;I have to go through the crypt to get the first signet.&quot;)))
         (set-orientation 1))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (get &quot;022-tower1-ok&quot;)

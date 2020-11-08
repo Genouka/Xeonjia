@@ -11,12 +11,12 @@
  <objectgroup id="10" name="npcs">
   <object id="72" type="NPC" gid="43" x="96" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;Do you think piglets will one day be a common pet?&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Do you think piglets will one day be a common pet?&quot;)))"/>
    </properties>
   </object>
   <object id="73" type="NPC" gid="19" x="48" y="64" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;I hate people who always say the same things.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I hate people who always say the same things.&quot;)))"/>
     <property name="orientation" type="int" value="1"/>
    </properties>
   </object>

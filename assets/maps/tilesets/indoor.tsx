@@ -6,14 +6,14 @@
  <tile id="2" type="Solid"/>
  <tile id="3" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A painting that depicts this area long ago.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;A painting that depicts this area long ago.&quot;)))"/>
   </properties>
  </tile>
  <tile id="4" type="Solid"/>
  <tile id="5" type="Solid"/>
  <tile id="6" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This type of plants are very fragrant.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;This type of plants are very fragrant.&quot;)))"/>
   </properties>
  </tile>
  <tile id="7" type="Ground"/>
@@ -24,13 +24,13 @@
  <tile id="12" type="Solid">
   <properties>
    <property name="action">(if (= (orientation) 1)
-    (dialog '((&quot;&gt;&quot; &quot;It's full of books here.&quot;))))</property>
+    (dialog '((&quot;It's full of books here.&quot;))))</property>
   </properties>
  </tile>
  <tile id="13" type="Solid">
   <properties>
    <property name="action">(if (= (orientation) 1)
-    (dialog '((&quot;&gt;&quot; &quot;It's full of books here.&quot;))))</property>
+    (dialog '((&quot;It's full of books here.&quot;))))</property>
   </properties>
  </tile>
  <tile id="14" type="Ground">
@@ -46,7 +46,7 @@
  <tile id="16" type="Ground"/>
  <tile id="17" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A closed door.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;A closed door.&quot;)))"/>
   </properties>
  </tile>
  <tile id="18" type="Solid"/>
@@ -54,13 +54,13 @@
  <tile id="20" type="Solid">
   <properties>
    <property name="action">(if (= (orientation) 0)
-    (dialog '((&quot;&gt;&quot; &quot;There is some food between the mattresses of this sofa.&quot;))))</property>
+    (dialog '((&quot;There is some food between the mattresses of this sofa.&quot;))))</property>
   </properties>
  </tile>
  <tile id="21" type="Solid">
   <properties>
    <property name="action">(if (= (orientation) 0)
-    (dialog '((&quot;&gt;&quot; &quot;There is some food between the mattresses of this sofa.&quot;))))</property>
+    (dialog '((&quot;There is some food between the mattresses of this sofa.&quot;))))</property>
   </properties>
  </tile>
  <tile id="22" type="Solid"/>
@@ -92,7 +92,7 @@
  <tile id="33" type="Solid"/>
  <tile id="34" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This is a wall.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;This is a wall.&quot;)))"/>
   </properties>
  </tile>
  <tile id="35" type="Solid"/>
@@ -100,7 +100,7 @@
  <tile id="39" type="Solid">
   <properties>
    <property name="action">(dialog
-    '((&quot;&gt;&quot; &quot;Oink !&quot;)
+    '((&quot;Oink !&quot;)
     (&quot;/hero_happy&quot; &quot;This pig looks very happy.&quot;)))</property>
   </properties>
  </tile>

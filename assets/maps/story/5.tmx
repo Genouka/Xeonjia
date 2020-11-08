@@ -5,7 +5,7 @@
     (if (eq? (last-place) &quot;4&quot;)
         (map-name &quot;MITSU FOREST&quot;))
     (if  (first-time?)
-        (dialog '((&quot;&gt;&quot; &quot;Hey, this is the Mitsu forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here.&quot;)))))</property>
+        (dialog '((&quot;Hey, this is the Mitsu forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here.&quot;)))))</property>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc.tsx"/>
@@ -19,13 +19,13 @@
   <object id="31" type="NPC" gid="150" x="80" y="32" width="16" height="16">
    <properties>
     <property name="action">(dialog
-    '((&quot;02957...\nI don't know what these figures are but before I heard someone say them out loud... Dunno why.&quot;)))</property>
+    '((&quot;/&quot; &quot;02957...\nI don't know what these figures are but before I heard someone say them out loud... Dunno why.&quot;)))</property>
     <property name="orientation" type="int" value="1"/>
    </properties>
   </object>
   <object id="43" gid="135" x="208" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;The trees of this region are admired and studied throughout the kingdom. These blues are my favorites.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;The trees of this region are admired and studied throughout the kingdom. These blues are my favorites.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
@@ -34,7 +34,7 @@
    <properties>
     <property name="action">(begin
     (dialog
-        '((&quot;&gt;&quot; &quot;'' Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right. ''&quot;)))
+        '((&quot;'' Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right. ''&quot;)))
     (if (!get &quot;005-read&quot;)
         (begin
             (dialog
@@ -58,7 +58,7 @@
    <properties>
     <property name="action">(begin
     (dialog
-        '((&quot;&gt;&quot; &quot;'' Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right. ''&quot;)))
+        '((&quot;'' Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right. ''&quot;)))
     (if (!get &quot;005-read&quot;)
         (begin
             (dialog

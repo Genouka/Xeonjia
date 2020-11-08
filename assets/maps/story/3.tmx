@@ -11,12 +11,12 @@
  <objectgroup id="8" name="npcs">
   <object id="35" type="NPC" gid="52" x="16" y="48" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;Sometimes among the branches of the plants you can find berries or objects that have remained stuck. Press the 'A' button near a tree to see if there is anything.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Sometimes among the branches of the plants you can find berries or objects that have remained stuck. Press the 'A' button near a tree to see if there is anything.&quot;)))"/>
    </properties>
   </object>
   <object id="37" type="NPC" gid="61" x="256" y="64" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;The ice is so slippery, have you noticed? I prefer to stay quiet on the snow.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;The ice is so slippery, have you noticed? I prefer to stay quiet on the snow.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
@@ -54,10 +54,10 @@
    <properties>
     <property name="action">(if (! (has-item &quot;3.berries&quot;))
     (begin
-        (dialog '((&quot;&gt;&quot; &quot;* $hero found some berries! 20 LPs have been recovered *&quot;)))
+        (dialog '((&quot;* $hero found some berries! 20 LPs have been recovered *&quot;)))
         (give-item &quot;3.berries&quot;)
         (set-life-diff 20))
-    (dialog '((&quot;&gt;&quot; &quot;A little plant... nothing else.&quot;))))</property>
+    (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
    </properties>
   </object>
   <object id="38" type="Modifier" gid="19" x="272" y="32" width="16" height="16">

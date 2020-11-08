@@ -12,7 +12,7 @@
   <object id="71" type="NPC" gid="43" x="112" y="80" width="16" height="16">
    <properties>
     <property name="action">(dialog
-    '((&quot;You are the chosen one for this year, right? My son was too many years ago.&quot;)
+    '((&quot;/&quot; &quot;You are the chosen one for this year, right? My son was too many years ago.&quot;)
      (&quot;/_sad&quot; &quot;Unfortunately he failed to defeat the King of Evil...&quot;)))</property>
    </properties>
   </object>

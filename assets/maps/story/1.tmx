@@ -16,7 +16,7 @@
   <object id="48" type="NPC" gid="1" x="48" y="80" width="16" height="16">
    <properties>
     <property name="action">(begin
-    (dialog '((&quot;dad&quot; &quot;Safe travels, son.\nAfter all these years of hard training I'm sure you'll handle it right.&quot;)))
+    (dialog '((&quot;dad/&quot; &quot;Safe travels, son.\nAfter all these years of hard training I'm sure you'll handle it right.&quot;)))
     (set &quot;001-talk-dad&quot; #t))</property>
    </properties>
   </object>
@@ -52,14 +52,14 @@
  <objectgroup id="9" name="items">
   <object id="66" gid="119" x="112" y="336" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;'' NATAWN - Hometown of the 62nd hero ''&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;'' NATAWN - Hometown of the 62nd hero ''&quot;)))"/>
    </properties>
   </object>
   <object id="70" type="Solid" x="80" y="112" width="16" height="16">
    <properties>
     <property name="actionOnCollision">(if  (or (!get &quot;001-talk-dad&quot;) (!get &quot;001-talk-mom&quot;))
     (begin 
-        (dialog '((&quot;&gt;&quot; &quot;I have to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude.&quot;)))
+        (dialog '((&quot;I have to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude.&quot;)))
         (set-orientation 1))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (and (get &quot;001-talk-dad&quot;) (get &quot;001-talk-mom&quot;))
@@ -70,7 +70,7 @@
    <properties>
     <property name="actionOnCollision">(if  (= (get-def) 0)
     (begin 
-        (dialog '((&quot;&gt;&quot; &quot;Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.&quot;)))
+        (dialog '((&quot;Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.&quot;)))
         (set-orientation 1))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (&gt; (get-def) 0)

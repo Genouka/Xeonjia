@@ -14,11 +14,11 @@
     <property name="action">(if  (&lt; (get-life) (get-initial-life))
     (begin
         (dialog
-            '((&quot;Hi, you look a little tired. Rest here for a moment.&quot;)
-            (&quot;&gt;&quot; &quot;* $hero rested and is now in perfect health *&quot;)
-            (&quot;Come back anytime.&quot;)))
+            '((&quot;/&quot; &quot;Hi, you look a little tired. Rest here for a moment.&quot;)
+            (&quot;* $hero rested and is now in perfect health *&quot;)
+            (&quot;/&quot; &quot;Come back anytime.&quot;)))
         (restore-life))
-    (dialog '((&quot;Be careful not to get hurt.&quot;))))</property>
+    (dialog '((&quot;/&quot; &quot;Be careful not to get hurt.&quot;))))</property>
     <property name="orientation" type="int" value="1"/>
    </properties>
   </object>

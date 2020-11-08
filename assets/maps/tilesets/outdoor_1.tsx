@@ -7,23 +7,23 @@
  <tile id="3" type="Ground"/>
  <tile id="4" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;A rocky wall.&quot;)))"/>
   </properties>
  </tile>
  <tile id="5" type="Solid">
   <properties>
    <property name="action">(if (= (orientation) 0)
-    (dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;))))</property>
+    (dialog '((&quot;A rocky wall.&quot;))))</property>
   </properties>
  </tile>
  <tile id="6" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;A rocky wall.&quot;)))"/>
   </properties>
  </tile>
  <tile id="7" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A wall.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;A wall.&quot;)))"/>
   </properties>
  </tile>
  <tile id="8" type="Ground"/>
@@ -33,14 +33,14 @@
  <tile id="12" type="Solid">
   <properties>
    <property name="action">(if (= (orientation) 2)
-    (dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;))))</property>
+    (dialog '((&quot;A rocky wall.&quot;))))</property>
   </properties>
  </tile>
  <tile id="13" type="Ground"/>
  <tile id="14" type="Solid">
   <properties>
    <property name="action">(if (= (orientation) 3)
-    (dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;))))</property>
+    (dialog '((&quot;A rocky wall.&quot;))))</property>
   </properties>
  </tile>
  <tile id="15" type="Ground"/>
@@ -50,23 +50,23 @@
  <tile id="19" type="Ground"/>
  <tile id="20" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;A rocky wall.&quot;)))"/>
   </properties>
  </tile>
  <tile id="21" type="Solid">
   <properties>
    <property name="action">(if (= (orientation) 1)
-    (dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;))))</property>
+    (dialog '((&quot;A rocky wall.&quot;))))</property>
   </properties>
  </tile>
  <tile id="22" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A rocky wall.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;A rocky wall.&quot;)))"/>
   </properties>
  </tile>
  <tile id="23" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A rock.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;A rock.&quot;)))"/>
    <property name="atk" type="int" value="5"/>
   </properties>
  </tile>
@@ -87,7 +87,7 @@
  <tile id="30" type="Ground"/>
  <tile id="31" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A rock.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;A rock.&quot;)))"/>
    <property name="atk" type="int" value="5"/>
   </properties>
  </tile>
@@ -107,7 +107,7 @@
  <tile id="38" type="Ground"/>
  <tile id="39" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A rock.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;A rock.&quot;)))"/>
    <property name="atk" type="int" value="5"/>
   </properties>
  </tile>
@@ -128,7 +128,7 @@
  <tile id="46" type="Ground"/>
  <tile id="47" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A snowdrift.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;A snowdrift.&quot;)))"/>
   </properties>
  </tile>
  <tile id="48" type="Hurdle">
@@ -166,7 +166,7 @@
  </tile>
  <tile id="54" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A little plant.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;A little plant.&quot;)))"/>
   </properties>
  </tile>
  <tile id="55" type="Solid"/>
@@ -178,7 +178,7 @@
  <tile id="61" type="Solid"/>
  <tile id="62" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A little plant without leaves.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;A little plant without leaves.&quot;)))"/>
   </properties>
  </tile>
  <tile id="63" type="Solid"/>
@@ -278,7 +278,7 @@
  <tile id="102" type="Solid"/>
  <tile id="103" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;It's not a good thing to look into other people's homes.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;It's not a good thing to look into other people's homes.&quot;)))"/>
   </properties>
  </tile>
  <tile id="104" type="Solid"/>
@@ -293,12 +293,12 @@
  <tile id="113" type="Solid"/>
  <tile id="114" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;It's not a good thing to look into other people's homes.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;It's not a good thing to look into other people's homes.&quot;)))"/>
   </properties>
  </tile>
  <tile id="115" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This door is closed.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;This door is closed.&quot;)))"/>
   </properties>
  </tile>
  <tile id="116" type="Solid"/>
@@ -314,17 +314,17 @@
  <tile id="121" type="Solid"/>
  <tile id="122" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This is a pharmacy.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;This is a pharmacy.&quot;)))"/>
   </properties>
  </tile>
  <tile id="123" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This is a pharmacy.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;This is a pharmacy.&quot;)))"/>
   </properties>
  </tile>
  <tile id="124" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This is a pharmacy.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;This is a pharmacy.&quot;)))"/>
   </properties>
  </tile>
  <tile id="125" type="Solid"/>

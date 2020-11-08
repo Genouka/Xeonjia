@@ -42,7 +42,7 @@
  <objectgroup id="9" name="items">
   <object id="73" gid="236" x="160" y="64" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A broken monitor.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;A broken monitor.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

@@ -11,7 +11,7 @@
  <objectgroup id="8" name="npcs">
   <object id="29" type="NPC" gid="57" x="256" y="256" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;On the ground it's easy to find Xeon (¤) stones that you can use to buy items in shops.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;On the ground it's easy to find Xeon (¤) stones that you can use to buy items in shops.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
@@ -35,10 +35,10 @@
    <properties>
     <property name="action">(if (! (has-item &quot;2.stone&quot;))
     (begin
-        (dialog '((&quot;&gt;&quot; &quot;There seems to be something in the branches of this plant...&quot;)))
+        (dialog '((&quot;There seems to be something in the branches of this plant...&quot;)))
         (give-item &quot;2.stone&quot;)
-        (dialog '((&quot;&gt;&quot; &quot;This stone is very strange... who knows what it is...&quot;))))
-    (dialog '((&quot;&gt;&quot; &quot;A little plant... nothing else.&quot;))))</property>
+        (dialog '((&quot;This stone is very strange... who knows what it is...&quot;))))
+    (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
    </properties>
   </object>
   <object id="44" type="Modifier" gid="19" x="256" y="32" width="16" height="16">

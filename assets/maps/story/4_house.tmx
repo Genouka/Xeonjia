@@ -11,13 +11,13 @@
  <objectgroup id="10" name="npcs">
   <object id="71" type="NPC" gid="7" x="48" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;The last time I went through the forest, I was attacked. I'm not going back there anymore.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;The last time I went through the forest, I was attacked. I'm not going back there anymore.&quot;)))"/>
     <property name="orientation" type="int" value="2"/>
    </properties>
   </object>
   <object id="72" type="NPC" gid="20" x="96" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;If you want to enter the forest you have to be careful, my grandson risked getting hurt there.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;If you want to enter the forest you have to be careful, my grandson risked getting hurt there.&quot;)))"/>
     <property name="orientation" type="int" value="3"/>
    </properties>
   </object>

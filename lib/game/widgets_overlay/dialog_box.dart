@@ -135,7 +135,7 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                             mainAxisSize: MainAxisSize.min,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              if ((currentMessage.authorName ?? '>') != '>')
+                              if ((currentMessage.authorName ?? '') != '')
                                 Text(
                                   currentMessage.authorName + ' :',
                                   style: const TextStyle(

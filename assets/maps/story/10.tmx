@@ -46,7 +46,7 @@
  <objectgroup id="8" name="items">
   <object id="39" gid="71" x="0" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;'' Souvenir shop ''&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;'' Souvenir shop ''&quot;)))"/>
    </properties>
   </object>
   <object id="43" type="Modifier" gid="148" x="48" y="160" width="16" height="16">

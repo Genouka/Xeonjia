@@ -30,7 +30,7 @@
   </object>
   <object id="43" gid="166" x="128" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;I still haven't figured out if these monsters are malicious or just stupid.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I still haven't figured out if these monsters are malicious or just stupid.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

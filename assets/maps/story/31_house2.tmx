@@ -11,7 +11,7 @@
  <objectgroup id="10" name="npcs">
   <object id="72" type="NPC" gid="10" x="64" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;Melhopolis is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Melhopolis is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though.&quot;)))"/>
     <property name="orientation" type="int" value="1"/>
    </properties>
   </object>

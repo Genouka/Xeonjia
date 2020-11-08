@@ -25,13 +25,13 @@
   <object id="74" gid="152" x="64" y="80" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
-    (dialog '((&quot;&gt;&quot; &quot;A computer turned off.&quot;))))</property>
+    (dialog '((&quot;A computer turned off.&quot;))))</property>
    </properties>
   </object>
   <object id="75" gid="153" x="80" y="80" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
-    (dialog '((&quot;&gt;&quot; &quot;A computer turned off.&quot;))))</property>
+    (dialog '((&quot;A computer turned off.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

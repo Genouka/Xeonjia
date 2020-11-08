@@ -11,12 +11,12 @@
  <objectgroup id="9" name="npc">
   <object id="36" type="NPC" gid="173" x="64" y="64" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;This is not a place for kids, go home.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;This is not a place for kids, go home.&quot;)))"/>
    </properties>
   </object>
   <object id="37" type="NPC" gid="176" x="176" y="32" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;Something's bugging me...&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Something's bugging me...&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

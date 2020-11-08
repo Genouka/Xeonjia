@@ -11,7 +11,7 @@
  <objectgroup id="9" name="npc">
   <object id="47" type="NPC" gid="155" x="208" y="208" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;I'm planning a surprise wedding for my son, I hope he doesn't find out.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I'm planning a surprise wedding for my son, I hope he doesn't find out.&quot;)))"/>
     <property name="orientation" type="int" value="1"/>
    </properties>
   </object>

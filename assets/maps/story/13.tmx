@@ -13,17 +13,17 @@
    <properties>
     <property name="action">(if  (!get &quot;013-h-safe&quot;)
     (if  (&gt; (enemies-count) 0)
-        (dialog '((&quot;Help me please !&quot;)))
+        (dialog '((&quot;/&quot; &quot;Help me please !&quot;)))
         (begin
             (set &quot;013-h-safe&quot; #t)
             (dialog
                 '((&quot;/hero&quot; &quot;Everything good?&quot;)
-                (&quot;Yes, thank you so much for saving my life! As a token of gratitude I give you this strange stone that I found a little while ago.&quot;)
+                (&quot;/&quot; &quot;Yes, thank you so much for saving my life! As a token of gratitude I give you this strange stone that I found a little while ago.&quot;)
                 (&quot;/hero_happy&quot; &quot;Thanks, it looks like a precious gem, I'll take care of it.&quot;)))
             (give-item &quot;gem_1&quot;)))
-    (dialog '((&quot;Thanks for saving me, I think it's better if I go home now.&quot;))))</property>
+    (dialog '((&quot;/&quot; &quot;Thanks for saving me, I think it's better if I go home now.&quot;))))</property>
     <property name="actionOnEvent">(if (!get &quot;013-h-safe&quot;)
-    (dialog '((&quot;Please help me! Save me from this monster!\nPunch him by pressing the 'P' button at the bottom right.&quot;))))</property>
+    (dialog '((&quot;/&quot; &quot;Please help me! Save me from this monster!\nPunch him by pressing the 'P' button at the bottom right.&quot;))))</property>
    </properties>
   </object>
   <object id="39" type="SlitherCpu" gid="177" x="48" y="112" width="16" height="16">
@@ -60,8 +60,8 @@
     <property name="actionOnCollision">(if  (!get &quot;013-h-safe&quot;)
     (begin
         (if  (&gt; (enemies-count) 0)
-            (dialog '((&quot;&gt;&quot; &quot;I can't escape, I have to defeat the monster to save that man.&quot;)))
-            (dialog '((&quot;&gt;&quot; &quot;Better if I check that the guy is okay.&quot;))))
+            (dialog '((&quot;I can't escape, I have to defeat the monster to save that man.&quot;)))
+            (dialog '((&quot;Better if I check that the guy is okay.&quot;))))
         (set-orientation 3))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (get &quot;013-h-safe&quot;)
@@ -73,8 +73,8 @@
     <property name="actionOnCollision">(if  (!get &quot;013-h-safe&quot;)
     (begin
         (if  (&gt; (enemies-count) 0)
-            (dialog '((&quot;&gt;&quot; &quot;I can't escape, I have to defeat the monster to save that man.&quot;)))
-            (dialog '((&quot;&gt;&quot; &quot;Better if I check that the guy is okay.&quot;))))
+            (dialog '((&quot;I can't escape, I have to defeat the monster to save that man.&quot;)))
+            (dialog '((&quot;Better if I check that the guy is okay.&quot;))))
         (set-orientation 2))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (get &quot;013-h-safe&quot;)

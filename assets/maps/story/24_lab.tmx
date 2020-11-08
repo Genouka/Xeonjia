@@ -53,17 +53,17 @@
  <objectgroup id="9" name="items">
   <object id="74" gid="184" x="176" y="48" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;Someone used this plant to do some experiments.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;Someone used this plant to do some experiments.&quot;)))"/>
    </properties>
   </object>
   <object id="75" gid="236" x="48" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A broken monitor.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;A broken monitor.&quot;)))"/>
    </properties>
   </object>
   <object id="76" gid="235" x="64" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;A broken monitor.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;A broken monitor.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

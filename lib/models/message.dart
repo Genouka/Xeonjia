@@ -6,12 +6,13 @@ class Message {
   // Text of the message
   String text;
 
-  // Author (displayName/name_mood)
-  // If displayName is omitted: name is used
-  // If name is omitted: component.name is used
+  // Author (name/avatar_mood)
+  // If name is omitted: avatar name is used
+  // If avatar is omitted: component.name is used
   // If mood is omitted: no mood
-  // Examples: mom, mom/_happy, ???/man, ???/girl_happy, /_sad, /hero, /hero_sad
-  // '>' is used for thoughts and narrator voice
+  // Examples: mom, mom/_happy, bob/man, ali/girl_happy, /_sad, /hero, /hero_sad
+  // Default name and default avatar: /
+  // Author null or '' is used for thoughts and narrator voice
   String author;
 
   // Author image
@@ -25,13 +26,13 @@ class Message {
 
   Message(this.text, {this.author = '', this.component}) {
     var m = RegExp(r'([^\/]*)\/?([^_]*)_?(.*)').firstMatch(author);
-    var name = m.group(2) != '' ? m.group(2) : component?.name ?? '>';
-    authorName = (m.group(1) != '' ? m.group(1) : name)
+    var name = m.group(2) != '' ? m.group(2) : component?.name ?? '';
+    authorName = (m.group(1) != '' ? m.group(1) : (author == '' ? '' : name))
         .toUpperCase()
         .replaceAll('-', ' ');
     var mood = m.group(3);
     var fileName = name + (mood != '' ? '_$mood' : '');
-    image = authorName != '>' ? 'assets/images/heads/${fileName}.png' : null;
+    image = authorName != '' ? 'assets/images/heads/${fileName}.png' : null;
     text = text.replaceAll('\$hero', mainCharacter.name);
     if (authorName == 'HERO') authorName = mainCharacter.name.toUpperCase();
   }

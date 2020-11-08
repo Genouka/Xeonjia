@@ -18,15 +18,15 @@
     (set &quot;999-talk-milla&quot; #t)
     (dialog
         '((&quot;/hero&quot; &quot;Hi Milla, are you ok? Did you get here without any problems?&quot;)
-        (&quot;Hii $hero! Yes, I managed slyly to avoid the monsters that were along the way!\nAnyway, look here! This is the tower where the King of Evil resides!&quot;)
+        (&quot;/&quot; &quot;Hii $hero! Yes, I managed slyly to avoid the monsters that were along the way!\nAnyway, look here! This is the tower where the King of Evil resides!&quot;)
         (&quot;/hero&quot; &quot;Oh really? Are we there yet?&quot;)
-        (&quot;Apparently yes, but it's closed! This nice gentleman here explained to me that to access the tower you need to have 3 signets.&quot;)
+        (&quot;/&quot; &quot;Apparently yes, but it's closed! This nice gentleman here explained to me that to access the tower you need to have 3 signets.&quot;)
         (&quot;/hero&quot; &quot;Signets? What are? And where can I find them?&quot;)
-        (&quot;I did not understand exactly what they are, but from what I understood they are kept in crypts present in each of the 3 regions that make up the kingdom.&quot;)
+        (&quot;/&quot; &quot;I did not understand exactly what they are, but from what I understood they are kept in crypts present in each of the 3 regions that make up the kingdom.&quot;)
         (&quot;/hero&quot; &quot;Mm... Then I really think that I have to set out in search of these crypts...&quot;)
-        (&quot;I guess you have no other choice...\nHowever, this gentleman also told me that there is a good ice cream shop a few kilometers from here, I'll go there immediately!&quot;)
+        (&quot;/&quot; &quot;I guess you have no other choice...\nHowever, this gentleman also told me that there is a good ice cream shop a few kilometers from here, I'll go there immediately!&quot;)
         (&quot;/hero&quot; &quot;...\nO-ok... We'll meet again sooner or later&quot;)
-        (&quot;Yep. See ya.&quot;)))
+        (&quot;/&quot; &quot;Yep. See ya.&quot;)))
     (fire-global-event))</property>
     <property name="actionOnEvent">(if (get &quot;999-talk-milla&quot;)
     (delete))</property>
@@ -36,9 +36,9 @@
    <properties>
     <property name="action">(begin 
     (if (get &quot;999-talk-milla&quot;)
-        (dialog '((&quot;I hate the little girl who was here before...&quot;)))
-        (dialog '((&quot;I hate this little girl here...&quot;))))
-    (dialog '((&quot;She pestered me with a thousand questions and cried until I told her what she wanted. How impertinent.&quot;))))</property>
+        (dialog '((&quot;/&quot; &quot;I hate the little girl who was here before...&quot;)))
+        (dialog '((&quot;/&quot; &quot;I hate this little girl here...&quot;))))
+    (dialog '((&quot;/&quot; &quot;She pestered me with a thousand questions and cried until I told her what she wanted. How impertinent.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
@@ -69,75 +69,75 @@
   </object>
   <object id="50" gid="44" x="224" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;This door is closed, I need the 3 signets to open it.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;This door is closed, I need the 3 signets to open it.&quot;)))"/>
    </properties>
   </object>
   <object id="51" type="Solid" x="128" y="224" width="16" height="16">
    <properties>
     <property name="actionOnCollision">(if (!get &quot;999-talk-milla&quot;)
-    (dialog '((&quot;&gt;&quot; &quot;I should go to the tower.&quot;))))</property>
+    (dialog '((&quot;I should go to the tower.&quot;))))</property>
     <property name="actionOnEvent">(if (get &quot;999-talk-milla&quot;)
     (delete))</property>
    </properties>
   </object>
   <object id="52" gid="21" x="128" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
   <object id="53" gid="23" x="320" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
   <object id="54" gid="22" x="176" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
   <object id="55" gid="22" x="144" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
   <object id="56" gid="22" x="160" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
   <object id="57" gid="22" x="208" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
   <object id="58" gid="22" x="192" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
   <object id="59" gid="22" x="240" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
   <object id="60" gid="22" x="272" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
   <object id="61" gid="22" x="256" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
   <object id="62" gid="22" x="288" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
   <object id="63" gid="22" x="304" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;&gt;&quot; &quot;The tower is so ugly.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
