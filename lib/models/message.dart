@@ -10,7 +10,7 @@ class Message {
   // If displayName is omitted: name is used
   // If name is omitted: component.name is used
   // If mood is omitted: no mood
-  // Examples: mom, mom/_happy, ???/girl, ???/girl_happy, /sad, /hero, /hero_sad
+  // Examples: mom, mom/_happy, ???/man, ???/girl_happy, /_sad, /hero, /hero_sad
   // '>' is used for thoughts and narrator voice
   String author;
 

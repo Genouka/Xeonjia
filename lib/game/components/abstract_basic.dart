@@ -21,7 +21,6 @@ abstract class BasicComponent extends SpriteComponent {
   Point startingPosition;
 
   // Component image file
-  // Not used if it is instantiated by BasicComponent.fromTile()
   String image;
   double imageY;
 

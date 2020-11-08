@@ -41,12 +41,9 @@ class EndMenu extends StatelessWidget {
     } else {
       title = 'Your team ' +
           (game.ranking.first.id == game.playerOne.teamId ? 'won' : 'lost');
-      if (game.remainingTime <= 0) {
-        content = 'The time is over.';
-      } else {
-        content =
-            '${game.config.maxPoints.toString()} points have been achieved.';
-      }
+      content = (game.remainingTime <= 0)
+          ? 'The time is over.'
+          : '${game.config.maxPoints.toString()} points have been achieved.';
       content += '\n\nDo you want to restart this game?';
     }
 

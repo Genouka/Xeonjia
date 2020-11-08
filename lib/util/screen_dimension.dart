@@ -9,7 +9,8 @@ Size screenSize;
 Size physicalScreenSize;
 double devicePixelRatio;
 
-// Set screenDimensions, componentSize and defaultDistancePerFrame
+// Update screen size related variables:
+// screenSize, physicalScreenSize, devicePixelRatio, componentSize, defaultSpeed
 void setScreenDimension(BuildContext context) {
   var _size = MediaQuery.of(context).size;
   var _padding = MediaQuery.of(context).padding;

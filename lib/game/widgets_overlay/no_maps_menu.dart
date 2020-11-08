@@ -24,8 +24,8 @@ class NoMapsMenu extends StatelessWidget {
           style: TextStyle(color: Colors.white, fontSize: 32),
         ),
         onPressed: () async {
-          final url =
-              Uri.encodeFull('mailto:deepdaikon@tuta.io?subject=Xeonjia Game');
+          final url = Uri.encodeFull(
+              'mailto:deepdaikon' '@' 'tuta.io?subject=Xeonjia Game');
           if (await canLaunch(url)) await launch(url);
         },
       ),
@@ -54,7 +54,8 @@ class NoMapsMenu extends StatelessWidget {
           const Text(
             'Unfortunately, the next part of the story is not yet available.\n'
             'Hopefully it will be available soon.\n\n'
-            'In the meantime you can play multiplayer mode or you can support the development of Xeonjia. If you want to give feedback click below.',
+            'In the meantime you can play multiplayer mode or you can support the development of Xeonjia.\n'
+            'If you want to give feedback click below.',
             style: TextStyle(color: Colors.white, fontSize: 32),
             textAlign: TextAlign.center,
           ),

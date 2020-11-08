@@ -112,9 +112,7 @@ class _InfoPageState extends State<InfoPage> {
             actions: <Widget>[
               FlatButton(
                 child: const Text('Ok'),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
+                onPressed: Navigator.of(context).pop,
               ),
             ],
           );

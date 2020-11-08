@@ -52,26 +52,6 @@ class _ArenaPageState extends State<ArenaPage> {
         body: ListView(
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 70),
           children: <Widget>[
-            /*ListTile(
-              title: const Text('Mode', style: TextStyle(fontSize: 20)),
-              subtitle: const Text('Game mode'),
-              trailing: DropdownButton<GameMode>(
-                value: _config.mode,
-                onChanged: (GameMode newValue) {
-                  setState(() {
-                    _config.mode = newValue;
-                  });
-                },
-                items: [GameMode.tdm]
-                    .map<DropdownMenuItem<GameMode>>(
-                      (GameMode value) => DropdownMenuItem<GameMode>(
-                        value: value,
-                        child: Text(value.name),
-                      ),
-                    )
-                    .toList(),
-              ),
-            ),*/
             ListTile(
               title: const Text('Map', style: TextStyle(fontSize: 20)),
               subtitle: const Text('Place to play'),

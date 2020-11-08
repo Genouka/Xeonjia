@@ -34,10 +34,7 @@ class OptionList extends StatelessWidget {
               saveSettings();
             }),
         CheckboxListTile(
-            title: const Text(
-              'Sound effects',
-              style: TextStyle(fontSize: 20),
-            ),
+            title: const Text('Sound effects', style: TextStyle(fontSize: 20)),
             activeColor: Colors.blueGrey,
             subtitle: const Text('Enable sound effects'),
             value: settings.soundEffects,

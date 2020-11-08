@@ -43,20 +43,12 @@ void _loadUserData() {
 
 // Save app settings in shared preferences
 void saveSettings() {
-  _prefs.setString('settings', jsonEncode(settings.toJson()));
-}
-
-// Save gamepad offset in shared preferences
-void saveGamepadOffset() {
-  _prefs.setDouble('gamepadOffsetX', gamepadOffset.dx);
-  _prefs.setDouble('gamepadOffsetY', gamepadOffset.dy);
+  _prefs.setString('settings_V2', jsonEncode(settings.toJson()));
 }
 
 // Restore app settings
 void _loadSettings() {
-  settings = Settings(jsonDecode(_prefs.getString('settings') ?? '{}'));
-  gamepadOffset = Offset(_prefs.getDouble('gamepadOffsetX') ?? 0,
-      _prefs.getDouble('gamepadOffsetY') ?? 0);
+  settings = Settings(jsonDecode(_prefs.getString('settings_V2') ?? '{}'));
 }
 
 // Load items from assets

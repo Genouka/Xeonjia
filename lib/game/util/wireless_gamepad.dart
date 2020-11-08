@@ -22,7 +22,7 @@ extension WirelessGamepad on XeonjiaGame {
             gestureDragInput(Direction.left);
             break;
           case GAMEPAD_BUTTON_A:
-            game.playerOne.shoot();
+            game.playerOne.inspect();
             break;
           case GAMEPAD_BUTTON_B:
             game.playerOne.shoot();

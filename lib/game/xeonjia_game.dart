@@ -17,7 +17,7 @@ import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/game/util/map_importer.dart';
 import 'package:xeonjia/game/util/wireless_gamepad.dart';
 import 'package:xeonjia/game/widgets_overlay/end_menu.dart';
-import 'package:xeonjia/game/widgets_overlay/info_box.dart';
+import 'package:xeonjia/game/widgets_overlay/status_box.dart';
 import 'package:xeonjia/game/widgets_overlay/dialog_box.dart';
 import 'package:xeonjia/game/widgets_overlay/loading_page.dart';
 import 'package:xeonjia/game/widgets_overlay/no_maps_menu.dart';
@@ -54,11 +54,18 @@ class XeonjiaGame extends BaseGame
 
   XeonjiaGame(this.config) {
     addWidgetOverlay('statusBox', _statusBox);
-    addWidgetOverlay('gamePad', _virtualGamePad);
-    addWidgetOverlay('messageBox', _dialogBox);
+    addWidgetOverlay('virtualGamePad', _virtualGamePad);
+    addWidgetOverlay('dialogBox', _dialogBox);
+    initGamepad();
     if (settings.backgroundMusic) {
       _backgroundMusic = Bgm();
       _backgroundMusic.initialize();
+    }
+    if (config.mode != GameMode.story) {
+      teams = [
+        Team(id: 0, name: 'Team A', color: Colors.red),
+        Team(id: 1, name: 'Team B', color: Colors.green),
+      ];
     }
     init();
   }
@@ -67,16 +74,16 @@ class XeonjiaGame extends BaseGame
   bool recordFps() => true;
 
   // Scheme's environment
-  final environment = setEnvironment();
+  final Environment environment = setEnvironment();
 
   // Dialog box
-  final _dialogBox = DialogBox();
+  final DialogBox _dialogBox = DialogBox();
 
   // Box with lifePoints, pause, time and team points
-  final _statusBox = StatusBox();
+  final StatusBox _statusBox = StatusBox();
 
   // Virtual Gamepad (D-pad + buttons)
-  final _virtualGamePad = VirtualGamePad();
+  final VirtualGamePad _virtualGamePad = VirtualGamePad();
 
   // Timer used in multiplayer mode
   Timer _timer;
@@ -110,7 +117,7 @@ class XeonjiaGame extends BaseGame
   }
 
   // List of modifier to be regenerate during the next regenerateModifiers()
-  var modifiersToBeRegenerated = <ModifierComponent>[];
+  List<ModifierComponent> modifiersToBeRegenerated = [];
 
   // Wireless gamepad
   FlameGamepad gamepad;
@@ -140,11 +147,6 @@ class XeonjiaGame extends BaseGame
       markToRemove(component);
     });
     players.clear();
-
-    teams = [
-      Team(id: 0, name: 'Team A', color: Colors.red),
-      Team(id: 1, name: 'Team B', color: Colors.green),
-    ];
     modifiersToBeRegenerated.clear();
 
     // Import map and components
@@ -161,8 +163,6 @@ class XeonjiaGame extends BaseGame
       map = MapProperties(fullName: config.mapId.toString());
       await importMap('assets/maps/arena/${config.mapId}.tmx');
     }
-
-    initGamepad();
 
     _timer = Timer(1, repeat: true, callback: () {
       elapsedSeconds++;
@@ -306,7 +306,7 @@ class XeonjiaGame extends BaseGame
 
   // Reload LP bar
   void refreshLifePointsBar() {
-    _statusBox.state.refresh();
+    _statusBox.state?.refresh();
   }
 
   // Check if someone won
@@ -355,11 +355,9 @@ class XeonjiaGame extends BaseGame
 
   @override
   void onTapDown(TapDownDetails details) {
-    if (_dialogBox.state.active) {
-      _dialogBox.state.next();
-      return;
-    }
-    gestureTapInput(details.globalPosition);
+    _dialogBox.state.active
+        ? _dialogBox.state.next()
+        : gestureTapInput(details.globalPosition);
   }
 
   // Manage drag gestures
