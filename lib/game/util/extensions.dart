@@ -18,5 +18,5 @@ extension RectOverlap on Rect {
 // Align to the physical pixel grid
 // `this` should be a size in logical pixels to make sense
 extension PixelGrid on num {
-  num get gridAligned => (this * devicePxRatio).round() / devicePxRatio;
+  num get gridAligned => (this * devicePixelRatio).round() / devicePixelRatio;
 }
