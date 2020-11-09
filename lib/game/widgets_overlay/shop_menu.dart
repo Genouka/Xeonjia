@@ -73,7 +73,7 @@ class _ShopMenuState extends State<ShopMenu> {
                                 setState(() {
                                   game.playerOne.moneyDifference(-item.price,
                                       popup: false);
-                                  game.executeAction(item.action);
+                                  game.executeAction(action: item.action);
                                 });
                                 game.refreshLifePointsBar();
                               }

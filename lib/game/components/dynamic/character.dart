@@ -11,7 +11,6 @@ import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/models/tile.dart';
-import 'package:xeonjia/util/little_scheme.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 // Dynamic component used for human-like players
@@ -111,8 +110,6 @@ class CharacterComponent extends DynamicComponent
       if (game.config.mode == GameMode.story) {
         _itemList = List.from(mainCharacter.itemList);
       }
-      game.environment.defineSymbol(Sym('actor'), this);
-      game.executeAction();
     }
   }
 

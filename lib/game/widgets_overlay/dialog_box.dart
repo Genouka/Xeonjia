@@ -15,6 +15,14 @@ class DialogBox extends StatefulWidget {
 }
 
 class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
+  @override
+  void initState() {
+    super.initState();
+    // Execute map action
+    // Placed here to make sure that DialogBox is fully mounted
+    game.executeAction(actor: game.playerOne);
+  }
+
   // Messages to show
   List<Message> _messages = [];
 

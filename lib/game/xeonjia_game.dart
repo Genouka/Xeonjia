@@ -55,7 +55,6 @@ class XeonjiaGame extends BaseGame
   XeonjiaGame(this.config) {
     addWidgetOverlay('statusBox', _statusBox);
     addWidgetOverlay('virtualGamePad', _virtualGamePad);
-    addWidgetOverlay('dialogBox', _dialogBox);
     initGamepad();
     if (settings.backgroundMusic) {
       _backgroundMusic = Bgm();
@@ -77,7 +76,7 @@ class XeonjiaGame extends BaseGame
   final Environment environment = setEnvironment();
 
   // Dialog box
-  final DialogBox _dialogBox = DialogBox();
+  DialogBox _dialogBox;
 
   // Box with lifePoints, pause, time and team points
   final StatusBox _statusBox = StatusBox();
@@ -175,6 +174,12 @@ class XeonjiaGame extends BaseGame
     _timer.start();
     removeWidgetOverlay('loading');
     resume();
+    // Temporary (and ugly) workaround to make sure that the game is ready and
+    // the dialog box is fully mounted
+    _dialogBox = DialogBox();
+    addWidgetOverlay('dialogBox', _dialogBox);
+    update(0);
+
     playBackgroundMusic();
   }
 
@@ -215,9 +220,10 @@ class XeonjiaGame extends BaseGame
   }
 
   // Execute an action
-  void executeAction([String action]) {
+  void executeAction({String action, BasicComponent actor}) {
     action ??= (map.action ?? '');
     if (action == '') return;
+    environment.defineSymbol(Sym('actor'), actor ?? playerOne);
     evaluate(readFromTokens(splitStringIntoTokens(action)), game.environment);
   }
 
