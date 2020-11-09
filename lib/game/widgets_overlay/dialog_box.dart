@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 
 class DialogBox extends StatefulWidget {
@@ -15,106 +14,54 @@ class DialogBox extends StatefulWidget {
 }
 
 class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
-  @override
-  void initState() {
-    super.initState();
-    // Execute map action
-    // Placed here to make sure that DialogBox is fully mounted
-    game.executeAction(actor: game.playerOne);
-  }
-
-  // Messages to show
-  List<Message> _messages = [];
-
-  // Message currently displayed
-  int _currentIndex;
-  Message get currentMessage => active ? _messages[_currentIndex] : null;
-
-  // True if this dialog box is visible
-  bool get active => _messages.isNotEmpty;
-
-  // If true, hide the map with a black container
-  // eg. it is used for chapter change
-  bool _hideMap;
-
-  // Typing text animation controller
-  AnimationController _controller;
-  Animation<int> _characterCount;
-  final int _timePerChar = 35;
-
-  // Show one or more messages
-  void setMessages(List<Message> newMessages, {bool hideMap = false}) {
-    if (newMessages == null) return;
-    _hideMap = hideMap;
-    _messages.addAll(newMessages.fold([], (previousValue, element) {
-      (previousValue as List<Message>).addAll(_splitMessage(element));
-      return previousValue;
-    }));
-    _currentIndex = 0;
-    _animateText();
-    if (mounted) setState(() {});
-    game.pause(stopMusic: false);
-    game.playSound(Sfx.dialog);
-  }
-
-  // Split message in sentences and group them
-  List<Message> _splitMessage(Message message) {
-    var strings = <String>[];
-    RegExp(r'([^.,?!]*[.,?!]*)\s*').allMatches(message.text).forEach((m) {
-      var match = m.group(0);
-      (strings.isNotEmpty &&
-                  !match.contains('\\n') &&
-                  strings.last.length + match.length < 90 ||
-              match.isEmpty)
-          ? strings.last += match
-          : strings.add(match.replaceAll('\\n', ''));
-    });
-    return strings.fold([], (previousValue, element) {
-      previousValue.add(Message(element,
-          author: message.author, component: message.component));
-      return previousValue;
-    });
-  }
-
   // Show the next message or hide dialog box if there are no message to show
   void next() {
     if (_controller?.isAnimating ?? false) {
       _controller.fling();
-      return;
-    }
-    if (++_currentIndex >= (_messages?.length ?? 0)) {
-      _messages = [];
-      game.resume();
     } else {
-      _animateText();
+      game.messageManager.hasOtherMessages()
+          ? _animateText()
+          : game.messageManager.clear();
+      game.playSound(Sfx.dialog);
+      if (mounted) setState(() {});
     }
-    game.playSound(Sfx.dialog);
+  }
+
+  void refresh() {
     if (mounted) setState(() {});
+    _animateText();
   }
 
   // Typing text animation
+  AnimationController _controller;
+  Animation<int> _characterCountAnimation;
   void _animateText() {
-    if (_controller?.isAnimating ?? false) return;
+    if (!game.messageManager.active || (_controller?.isAnimating ?? false)) {
+      return;
+    }
     _controller = AnimationController(
-      duration:
-          Duration(milliseconds: _timePerChar * currentMessage.text.length),
+      duration: Duration(
+          milliseconds: 35 * game.messageManager.currentMessage.text.length),
       vsync: this,
     );
-    _characterCount = StepTween(begin: 0, end: currentMessage.text.length)
+    _characterCountAnimation = StepTween(
+            begin: 0, end: game.messageManager.currentMessage.text.length)
         .animate(CurvedAnimation(parent: _controller, curve: Curves.linear));
     _controller.forward().then((_) => _controller.dispose());
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_characterCountAnimation == null) _animateText();
     return Visibility(
-      visible: active,
+      visible: game.messageManager.active,
       child: InkWell(
         onTap: next,
         child: Stack(
           children: [
-            if (_hideMap ?? false) Container(color: Colors.black),
-            if (currentMessage != null)
+            if (game.messageManager.hideMap ?? false)
+              Container(color: Colors.black),
+            if (game.messageManager.active)
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Container(
@@ -129,9 +76,9 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      if (currentMessage.image != null)
+                      if (game.messageManager.currentMessage.image != null)
                         Image.asset(
-                          currentMessage.image,
+                          game.messageManager.currentMessage.image,
                           height: 96.gridAligned,
                           fit: BoxFit.fitHeight,
                           filterQuality: FilterQuality.none,
@@ -143,9 +90,11 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                             mainAxisSize: MainAxisSize.min,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              if ((currentMessage.authorName ?? '') != '')
+                              if ((game.messageManager.currentMessage
+                                      .authorName) !=
+                                  '')
                                 Text(
-                                  currentMessage.authorName + ' :',
+                                  '${game.messageManager.currentMessage.authorName} :',
                                   style: const TextStyle(
                                     fontSize: 32,
                                     letterSpacing: 1.2,
@@ -154,12 +103,12 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                   ),
                                 ),
                               AnimatedBuilder(
-                                animation: _characterCount,
+                                animation: _characterCountAnimation,
                                 builder: (BuildContext context, Widget child) {
-                                  var text = currentMessage.text
-                                      .substring(0, _characterCount.value);
                                   return Text(
-                                    text,
+                                    game.messageManager.currentMessage.text
+                                        .substring(
+                                            0, _characterCountAnimation.value),
                                     style: const TextStyle(
                                       fontSize: 32,
                                       color: Colors.white,

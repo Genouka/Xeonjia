@@ -28,6 +28,7 @@ import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/map_properties.dart';
 import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/models/message.dart';
+import 'package:xeonjia/models/message_manager.dart';
 import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/models/team.dart';
 import 'package:xeonjia/util/little_scheme.dart';
@@ -55,6 +56,7 @@ class XeonjiaGame extends BaseGame
   XeonjiaGame(this.config) {
     addWidgetOverlay('statusBox', _statusBox);
     addWidgetOverlay('virtualGamePad', _virtualGamePad);
+    addWidgetOverlay('dialogBox', dialogBox);
     initGamepad();
     if (settings.backgroundMusic) {
       _backgroundMusic = Bgm();
@@ -76,7 +78,8 @@ class XeonjiaGame extends BaseGame
   final Environment environment = setEnvironment();
 
   // Dialog box
-  DialogBox _dialogBox;
+  final DialogBox dialogBox = DialogBox();
+  final MessageManager messageManager = MessageManager();
 
   // Box with lifePoints, pause, time and team points
   final StatusBox _statusBox = StatusBox();
@@ -174,12 +177,6 @@ class XeonjiaGame extends BaseGame
     _timer.start();
     removeWidgetOverlay('loading');
     resume();
-    // Temporary (and ugly) workaround to make sure that the game is ready and
-    // the dialog box is fully mounted
-    _dialogBox = DialogBox();
-    addWidgetOverlay('dialogBox', _dialogBox);
-    update(0);
-
     playBackgroundMusic();
   }
 
@@ -234,7 +231,7 @@ class XeonjiaGame extends BaseGame
 
   // Show a list of messages in messageBox
   void setMessages(List<Message> messages, {bool hideMap = false}) {
-    _dialogBox.state.setMessages(messages, hideMap: hideMap);
+    messageManager.setMessages(messages, hideMap: hideMap);
   }
 
   // Start the background music
@@ -361,8 +358,8 @@ class XeonjiaGame extends BaseGame
 
   @override
   void onTapDown(TapDownDetails details) {
-    _dialogBox.state.active
-        ? _dialogBox.state.next()
+    messageManager.active
+        ? dialogBox.state.next()
         : gestureTapInput(details.globalPosition);
   }
 

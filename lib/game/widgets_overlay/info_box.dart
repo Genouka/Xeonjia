@@ -16,7 +16,9 @@ class InfoBox extends StatelessWidget {
       top: below ? 46 : 6,
       left: 6,
       child: InkWell(
-        onTap: () => game.pause(mode: PauseMode.pause),
+        onTap: () => game.messageManager.active
+            ? null
+            : game.pause(mode: PauseMode.pause),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
           width: MediaQuery.of(context).size.width / 2.2,
