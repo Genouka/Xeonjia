@@ -35,7 +35,7 @@ abstract class Weapon {
   String get description => weaponDetails[id]['description'];
 
   Weapon(this.id, this.maxPp) {
-    maxPp ??= ((10 + 5 * level).toDouble());
+    maxPp ??= 10 + level * 5.0;
     _powerPoints = maxPp;
   }
 
@@ -74,7 +74,7 @@ class PunchWeapon extends Weapon {
   final int level;
 
   PunchWeapon({@required this.level}) : super(0, double.infinity) {
-    atk = level.toDouble();
+    atk = level + 1.0;
   }
 
   @override
@@ -93,7 +93,7 @@ class SnowBallWeapon extends Weapon {
 
   SnowBallWeapon({@required this.level, double powerPoints})
       : super(1, powerPoints) {
-    atk = (10 + level * 2).toDouble();
+    atk = 10 + level * 2.0;
   }
 
   @override
@@ -115,7 +115,7 @@ class MineWeapon extends Weapon {
 
   MineWeapon({@required this.level, double powerPoints})
       : super(2, powerPoints) {
-    atk = (10 + level * 2).toDouble();
+    atk = 10 + level * 2.0;
   }
 
   @override
