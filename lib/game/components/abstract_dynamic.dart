@@ -159,16 +159,16 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
     Offset offset;
     switch (orientation) {
       case Direction.down:
-        offset = Offset(x, y + componentSize * 3 / 2);
+        offset = Offset(x + componentSize / 2, y + componentSize * 3 / 2);
         break;
       case Direction.up:
-        offset = Offset(x, y - componentSize / 2);
+        offset = Offset(x + componentSize / 2, y - componentSize / 2);
         break;
       case Direction.right:
-        offset = Offset(x + componentSize * 3 / 2, y);
+        offset = Offset(x + componentSize * 3 / 2, y + componentSize / 2);
         break;
       case Direction.left:
-        offset = Offset(x - componentSize / 2, y);
+        offset = Offset(x - componentSize / 2, y + componentSize / 2);
         break;
     }
     var components = game.components.where((component) =>
