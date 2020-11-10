@@ -56,6 +56,7 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
     return Visibility(
       visible: game.messageManager.active,
       child: InkWell(
+        enableFeedback: false,
         onTap: next,
         child: Stack(
           children: [
