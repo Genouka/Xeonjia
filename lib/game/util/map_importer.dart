@@ -121,6 +121,7 @@ void importMap(String fileName) async {
 
     var lineCount = 0;
     var columnCount = 0;
+    game.playerOne = null;
     mapData.forEach((tileId) {
       var componentTile = _tileMap[tileId];
       if (componentTile != null) {
