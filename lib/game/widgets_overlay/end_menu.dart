@@ -11,30 +11,6 @@ class EndMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     String title;
     var content = '';
-    List<Widget> actions;
-    actions = [
-      FlatButton(
-        child: Text(
-          game.config.mode == GameMode.story ? 'Continue' : 'Yes',
-          style: const TextStyle(color: Colors.white, fontSize: 32),
-        ),
-        onPressed: () {
-          game.init();
-          game.removeWidgetOverlay('endMenu');
-        },
-      ),
-      if (game.config.mode != GameMode.story)
-        FlatButton(
-          child: const Text(
-            'No',
-            style: TextStyle(color: Colors.white, fontSize: 32),
-          ),
-          onPressed: () {
-            Navigator.pop(context);
-            game.dispose();
-          },
-        ),
-    ];
     if (game.config.mode == GameMode.story) {
       title = 'You run out of energy !';
       content = 'You lost $_lostMoney ¤ and woke up after a short nap';
@@ -56,6 +32,7 @@ class EndMenu extends StatelessWidget {
             title,
             style: const TextStyle(
                 color: Colors.white, fontSize: 40, letterSpacing: 1.4),
+            textAlign: TextAlign.center,
           ),
           Text(
             content,
@@ -65,7 +42,29 @@ class EndMenu extends StatelessWidget {
           Container(height: 25),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: actions,
+            children: [
+              FlatButton(
+                child: Text(
+                  game.config.mode == GameMode.story ? 'Continue' : 'Yes',
+                  style: const TextStyle(color: Colors.white, fontSize: 32),
+                ),
+                onPressed: () {
+                  game.init();
+                  game.removeWidgetOverlay('endMenu');
+                },
+              ),
+              if (game.config.mode != GameMode.story)
+                FlatButton(
+                  child: const Text(
+                    'No',
+                    style: TextStyle(color: Colors.white, fontSize: 32),
+                  ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                    game.dispose();
+                  },
+                ),
+            ],
           ),
         ],
       ),

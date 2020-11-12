@@ -46,6 +46,7 @@ class _ShopMenuState extends State<ShopMenu> {
               fontSize: 40,
               letterSpacing: 1.4,
             ),
+            textAlign: TextAlign.center,
           ),
           divider,
           Expanded(

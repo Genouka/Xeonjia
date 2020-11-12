@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/util/extensions.dart';
@@ -80,44 +81,49 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                       if (game.messageManager.currentMessage.image != null)
                         Image.asset(
                           game.messageManager.currentMessage.image,
-                          height: 96.gridAligned,
+                          height:
+                              (min(96, MediaQuery.of(context).size.width / 4))
+                                  .gridAligned,
                           fit: BoxFit.fitHeight,
                           filterQuality: FilterQuality.none,
                         ),
                       Flexible(
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              if ((game.messageManager.currentMessage
-                                      .authorName) !=
-                                  '')
-                                Text(
-                                  '${game.messageManager.currentMessage.authorName} :',
-                                  style: const TextStyle(
-                                    fontSize: 32,
-                                    letterSpacing: 1.2,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w800,
-                                  ),
-                                ),
-                              AnimatedBuilder(
-                                animation: _characterCountAnimation,
-                                builder: (BuildContext context, Widget child) {
-                                  return Text(
-                                    game.messageManager.currentMessage.text
-                                        .substring(
-                                            0, _characterCountAnimation.value),
+                          child: SingleChildScrollView(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                if ((game.messageManager.currentMessage
+                                        .authorName) !=
+                                    '')
+                                  Text(
+                                    '${game.messageManager.currentMessage.authorName} :',
                                     style: const TextStyle(
                                       fontSize: 32,
+                                      letterSpacing: 1.2,
                                       color: Colors.white,
+                                      fontWeight: FontWeight.w800,
                                     ),
-                                  );
-                                },
-                              ),
-                            ],
+                                  ),
+                                AnimatedBuilder(
+                                  animation: _characterCountAnimation,
+                                  builder:
+                                      (BuildContext context, Widget child) {
+                                    return Text(
+                                      game.messageManager.currentMessage.text
+                                          .substring(0,
+                                              _characterCountAnimation.value),
+                                      style: const TextStyle(
+                                        fontSize: 32,
+                                        color: Colors.white,
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),

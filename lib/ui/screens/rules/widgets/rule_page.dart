@@ -11,49 +11,42 @@ class RulePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         margin: const EdgeInsets.only(top: 60, bottom: 60),
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              flex: 2,
-              child: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Center(
                 child: Container(
-                  width: 275,
-                  height: 275,
                   decoration: rule.image != null
                       ? BoxDecoration(
                           image: DecorationImage(image: AssetImage(rule.image)),
                         )
                       : null,
-                  child: Icon(rule.icon, size: rule.iconSize),
+                  child: Icon(rule.icon,
+                      size: MediaQuery.of(context).size.shortestSide / 3),
                 ),
               ),
-            ),
-            Expanded(
-              child: Align(
-                alignment: FractionalOffset.bottomCenter,
-                child: Text(
-                  rule.title,
-                  style: const TextStyle(
-                      fontSize: 25, fontWeight: FontWeight.bold),
-                ),
+              Text(
+                rule.title,
+                style:
+                    const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Center(
-                child: SingleChildScrollView(
-                  child: Container(
-                    margin: const EdgeInsets.all(20),
-                    child: Text(
-                      rule.subtitle,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(fontSize: 18, height: 1.4),
-                    ),
+              Center(
+                child: Container(
+                  margin: EdgeInsets.only(
+                      left: 20,
+                      right: 20,
+                      bottom: 20,
+                      top: MediaQuery.of(context).size.longestSide / 14),
+                  child: Text(
+                    rule.subtitle,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontSize: 20, height: 1.4),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

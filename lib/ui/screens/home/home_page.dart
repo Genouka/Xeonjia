@@ -33,6 +33,7 @@ class HomePage extends StatelessWidget {
               child: Center(
                 child: Text(
                   'XEONJiA',
+                  maxLines: 1,
                   style: TextStyle(
                     letterSpacing: 14,
                     color: Colors.white,

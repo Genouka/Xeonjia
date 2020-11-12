@@ -13,13 +13,11 @@ class Rule {
 
   // Rule icon (instead of image)
   final IconData icon;
-  final double iconSize;
 
   Rule({
     @required this.title,
     @required this.subtitle,
     this.image,
     this.icon,
-    this.iconSize = 150,
   });
 }

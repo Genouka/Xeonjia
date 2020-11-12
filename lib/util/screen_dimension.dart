@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/util/extensions.dart';
@@ -20,11 +19,7 @@ void setScreenDimension(BuildContext context) {
   physicalScreenSize = Size(screenSize.width * devicePixelRatio,
       screenSize.height * devicePixelRatio);
 
-  if (componentSize == null) {
-    componentSize = max(physicalScreenSize.width, physicalScreenSize.height) /
-        16 /
-        devicePixelRatio;
-    characterOffset = -(componentSize / 8).gridAligned;
-    defaultSpeed = 9 * componentSize;
-  }
+  componentSize = physicalScreenSize.longestSide / 16 / devicePixelRatio;
+  characterOffset = -(componentSize / 8).gridAligned;
+  defaultSpeed = 9 * componentSize;
 }
