@@ -49,6 +49,12 @@ class _InfoPageState extends State<InfoPage> {
       'icon': const Icon(Icons.bug_report),
     },
     {
+      'title': 'Send email',
+      'subtitle': 'Ask for something or request a new feature',
+      'url': 'mailto:deepdaikon' '@' 'tuta.io?subject=Xeonjia Game',
+      'icon': const Icon(Icons.email),
+    },
+    {
       'title': 'View License (GPLv3)',
       'subtitle': 'Read software license',
       'url': 'https://gitlab.com/DeepDaikon/Xeonjia/blob/master/LICENSE',
@@ -76,9 +82,10 @@ class _InfoPageState extends State<InfoPage> {
             style: const TextStyle(fontSize: 20),
           ),
           subtitle: Text(infoMenuList[index]['subtitle']),
-          onTap: () {
+          onTap: () async {
             if (infoMenuList[index]['url'].length != 0) {
-              launch('${infoMenuList[index]['url']}');
+              final url = Uri.encodeFull(infoMenuList[index]['url']);
+              if (await canLaunch(url)) await launch(url);
             } else if (infoMenuList[index]['title'] == 'Third Party Licenses') {
               _licenseDialog();
             }
