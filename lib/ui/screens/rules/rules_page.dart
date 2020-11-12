@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/rules/resources/rules.dart';
@@ -52,7 +53,6 @@ class _RulesPageState extends State<RulesPage>
                       if (widget.homePage == null) {
                         Navigator.pop(context);
                       } else {
-                        onExit();
                         Navigator.pushReplacement(
                             context, FadeRoute(widget.homePage));
                       }
@@ -61,7 +61,7 @@ class _RulesPageState extends State<RulesPage>
       ),
       body: TabBarView(controller: _controller, children: [
         for (var rule in rules()) RulePage(rule),
-        LastPage(_textFieldController, _formKey),
+        LastPage(_textFieldController, _formKey, saveName),
       ]),
       bottomNavigationBar: BottomAppBar(
         color: Colors.transparent,
@@ -117,16 +117,9 @@ class _RulesPageState extends State<RulesPage>
                         ],
                       ),
                       onPressed: () {
-                        if (_formKey.currentState?.validate() ?? false) {
-                          onExit();
-                          if (widget.homePage == null) {
-                            Navigator.pop(context);
-                          } else {
-                            Navigator.pushReplacement(
-                                context, FadeRoute(widget.homePage));
-                          }
-                        }
-                      })
+                        saveName(_textFieldController.text);
+                      },
+                    )
                   : FlatButton(
                       child: Row(
                         children: <Widget>[
@@ -147,12 +140,21 @@ class _RulesPageState extends State<RulesPage>
     );
   }
 
-  void onExit() {
-    mainCharacter.name = _textFieldController.text.trim();
-    saveUserData();
-    if (settings.firstRun) {
-      settings.firstRun = false;
-      saveSettings();
+  void saveName(String text) {
+    if (_formKey.currentState?.validate() ?? false) {
+      _textFieldController.text = text.trim();
+      mainCharacter.name = _textFieldController.text;
+      saveUserData();
+      if (settings.firstRun) {
+        settings.firstRun = false;
+        saveSettings();
+      }
+      SystemChrome.restoreSystemUIOverlays();
+      if (widget.homePage == null) {
+        Navigator.pop(context);
+      } else {
+        Navigator.pushReplacement(context, FadeRoute(widget.homePage));
+      }
     }
   }
 }

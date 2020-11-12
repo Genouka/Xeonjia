@@ -4,8 +4,9 @@ import 'package:xeonjia/util/insert_name_form.dart';
 class LastPage extends StatelessWidget {
   final TextEditingController _textFieldController;
   final GlobalKey<FormState> _formKey;
+  final Function saveName;
 
-  LastPage(this._textFieldController, this._formKey);
+  LastPage(this._textFieldController, this._formKey, this.saveName);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,8 @@ class LastPage extends StatelessWidget {
               child: Center(
                 child: Container(
                   margin: const EdgeInsets.only(left: 100, right: 100),
-                  child: insertNameForm(_formKey, _textFieldController),
+                  child:
+                      insertNameForm(_formKey, _textFieldController, saveName),
                 ),
               ),
             ),
