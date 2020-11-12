@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:xeonjia/game/widgets_overlay/info_box.dart';
+import 'package:xeonjia/game/widgets/info_box.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/util/lifepoints_color.dart';

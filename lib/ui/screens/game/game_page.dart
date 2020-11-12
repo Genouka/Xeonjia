@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:xeonjia/game/widgets_overlay/pause_menu.dart';
+import 'package:xeonjia/game/widgets/pause_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/match_config.dart';
 
