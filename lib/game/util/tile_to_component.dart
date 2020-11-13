@@ -34,7 +34,7 @@ extension CreateComponent on Tile {
       case 'Door':
         if (game.config.mode == GameMode.story) {
           var _previousRoomId = (mainCharacter.visitedRooms.length <= 1)
-              ? '1'
+              ? '0'
               : mainCharacter
                   .visitedRooms[mainCharacter.visitedRooms.length - 2];
           if (_previousRoomId.split('/').first +
@@ -49,8 +49,7 @@ extension CreateComponent on Tile {
                 weaponList: List.from(mainCharacter.weaponList),
                 newSelectedWeaponIndex: mainCharacter.selectedWeaponIndex);
           }
-          if (properties['roomId'] != '1' ||
-              mainCharacter.visitedRooms.last != '1') DoorComponent(this);
+          if (properties['roomId'] != '0') DoorComponent(this);
         } else {
           var _teamId = int.parse(properties['team'] ?? '0');
           if (game.players.where((p) => p.teamId == _teamId).length <

@@ -76,7 +76,7 @@ class CharacterInfo {
         money = json['money'] ?? 0,
         itemList = (json['itemList'] ?? []).cast<String>(),
         selectedWeaponIndex = json['selectedWeaponIndex'] ?? 0,
-        visitedRooms = (json['viewedRooms'] ?? ['1']).cast<String>(),
+        visitedRooms = (json['viewedRooms'] ?? ['1_home_2']).cast<String>(),
         minutesPlayed = json['minutesPlayed'] ?? 0,
         defeatedComponents = json['defeatedComponents'] ?? 0,
         movesCounter = json['movesCounter'] ?? 0,
