@@ -84,9 +84,9 @@ class CharacterComponent extends DynamicComponent
       atk = (level + 1).toDouble();
       def = (def != 0 ? def : (level ~/ 5).toDouble());
       weaponList = [
-        PunchWeapon(level: 1),
+        PunchWeapon(level: 3),
         SnowBallWeapon(level: 5),
-        MineWeapon(level: 1),
+        MineWeapon(level: 3),
       ];
       selectedWeaponIndex = 1;
     }
