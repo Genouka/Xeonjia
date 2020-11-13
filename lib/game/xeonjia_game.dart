@@ -150,6 +150,7 @@ class XeonjiaGame extends BaseGame
     });
     players.clear();
     modifiersToBeRegenerated.clear();
+    teams?.forEach((t) => t.basisPoints = 0);
 
     // Import map and components
     if (config.mode == GameMode.story) {
@@ -334,6 +335,7 @@ class XeonjiaGame extends BaseGame
       if (mainCharacter.money < 0) mainCharacter.money = 0;
       saveUserData();
     }
+    refreshLifePointsBar();
     addWidgetOverlay('endMenu', EndMenu(lostMoney));
   }
 
