@@ -180,6 +180,8 @@ Environment setEnvironment() {
   _('<', 2, (Cell x) => compare(x.car, x.cdr.car) < 0);
   _('>', 2, (Cell x) => compare(x.car, x.cdr.car) > 0);
   _('=', 2, (Cell x) => compare(x.car, x.cdr.car) == 0);
+  _('<=', 2, (Cell x) => compare(x.car, x.cdr.car) <= 0);
+  _('>=', 2, (Cell x) => compare(x.car, x.cdr.car) >= 0);
   _('number?', 1, (Cell x) => isNumber(x.car));
   _('error', 2, (Cell x) => throw ErrorException(x.car, x.cdr.car));
   _('globals', 0, (Cell x) {
