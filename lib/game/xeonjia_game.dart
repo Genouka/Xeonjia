@@ -94,6 +94,8 @@ class XeonjiaGame extends BaseGame
 
   // If true, game is paused so no one can move
   bool _pause;
+  bool get isPaused => _pause;
+  bool get isNotPaused => !_pause;
 
   // Map properties
   MapProperties map;
@@ -353,9 +355,7 @@ class XeonjiaGame extends BaseGame
 
   @override
   void onPanEnd(DragEndDetails end) {
-    if (!_pause && _panGestureOffset != null) {
-      gestureDragInput(GetDirection.fromOffset(_panGestureOffset));
-    }
+    gestureDragInput(GetDirection.fromOffset(_panGestureOffset));
   }
 
   @override
@@ -367,7 +367,9 @@ class XeonjiaGame extends BaseGame
 
   // Manage drag gestures
   void gestureDragInput(Direction direction) {
-    playerOne?.updateDirection(direction);
+    if (!_pause && !messageManager.active && _panGestureOffset != null) {
+      playerOne?.updateDirection(direction);
+    }
   }
 
   // Manage tap gesture

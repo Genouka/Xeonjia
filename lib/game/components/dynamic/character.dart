@@ -148,7 +148,7 @@ class CharacterComponent extends DynamicComponent
 
   // Inspect what is in front of this
   void inspect() {
-    if (isStationary && !isBeingDeleted) {
+    if (game.isNotPaused && isStationary && !isBeingDeleted) {
       componentInFront()?.playAction(orientation);
     }
   }
