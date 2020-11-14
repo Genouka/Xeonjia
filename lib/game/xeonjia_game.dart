@@ -178,6 +178,7 @@ class XeonjiaGame extends BaseGame
       }
     });
     _timer.start();
+    update(0);
     removeWidgetOverlay('loading');
     resume();
     playBackgroundMusic();
