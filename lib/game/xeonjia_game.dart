@@ -358,7 +358,9 @@ class XeonjiaGame extends BaseGame
 
   @override
   void onPanEnd(DragEndDetails end) {
-    gestureDragInput(GetDirection.fromOffset(_panGestureOffset));
+    if (_panGestureOffset != null) {
+      gestureDragInput(GetDirection.fromOffset(_panGestureOffset));
+    }
   }
 
   @override
@@ -370,7 +372,7 @@ class XeonjiaGame extends BaseGame
 
   // Manage drag gestures
   void gestureDragInput(Direction direction) {
-    if (!_pause && !messageManager.active && _panGestureOffset != null) {
+    if (!_pause && !messageManager.active) {
       playerOne?.updateDirection(direction);
     }
   }
