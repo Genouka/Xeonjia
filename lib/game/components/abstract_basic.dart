@@ -12,7 +12,6 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/team.dart';
 import 'package:xeonjia/models/tile.dart';
-import 'package:xeonjia/util/little_scheme.dart';
 
 // Basic game component
 // Every game component extends this one
@@ -143,12 +142,8 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Execute an action
   void executeAction([String action, BasicComponent actor]) {
-    action ??= actionOnEvent;
-    if (action == '') return;
-    game.environment
-        .defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => this));
-    game.environment.defineSymbol(Sym('actor'), actor ?? this);
-    evaluate(readFromTokens(splitStringIntoTokens(action)), game.environment);
+    game.executeAction(
+        action: action ?? actionOnEvent, actor: actor ?? this, self: this);
   }
 
   @mustCallSuper

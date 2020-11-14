@@ -221,9 +221,11 @@ class XeonjiaGame extends BaseGame
   }
 
   // Execute an action
-  void executeAction({String action, BasicComponent actor}) {
-    action ??= (map.action ?? '');
-    if (action == '') return;
+  void executeAction(
+      {@required String action, BasicComponent actor, BasicComponent self}) {
+    if ((action ?? '') == '') return;
+    game.environment
+        .defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => self));
     environment.defineSymbol(Sym('actor'), actor ?? playerOne);
     evaluate(readFromTokens(splitStringIntoTokens(action)), game.environment);
   }

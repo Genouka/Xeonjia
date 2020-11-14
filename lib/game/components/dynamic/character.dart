@@ -110,7 +110,7 @@ class CharacterComponent extends DynamicComponent
       if (game.config.mode == GameMode.story) {
         _itemList = List.from(mainCharacter.itemList);
       }
-      game.executeAction(actor: game.playerOne);
+      game.executeAction(action: game.map.action, actor: game.playerOne);
     }
   }
 
