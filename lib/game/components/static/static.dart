@@ -10,6 +10,7 @@ class StaticComponent extends BasicComponent {
 
   // If true: other components can walk on this
   final bool _walkable;
+  bool get isFloor => _walkable;
 
   StaticComponent(tile, {bool walkable = false})
       : _slippery = (tile.properties['slippery'] ?? 'false') == 'true',

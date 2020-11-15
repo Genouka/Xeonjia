@@ -20,8 +20,7 @@ void importMap(String fileName) async {
   // Get map information
   game.map
     ..width = int.parse(mapXml.getAttribute('width'))
-    ..height = int.parse(mapXml.getAttribute('height'))
-    ..music = mapXml.getAttribute('music');
+    ..height = int.parse(mapXml.getAttribute('height'));
 
   // Add map background
   game.addLater(SpriteComponent.fromSprite(game.map.width * componentSize,
@@ -35,6 +34,9 @@ void importMap(String fileName) async {
           property.getAttributeNode('name').value == 'action') {
         game.map.action =
             property.getAttributeNode('value')?.value ?? property.text;
+      } else if (property.attributes.isNotEmpty &&
+          property.getAttributeNode('name').value == 'music') {
+        game.map.music = property.getAttributeNode('value').value;
       }
     });
   }

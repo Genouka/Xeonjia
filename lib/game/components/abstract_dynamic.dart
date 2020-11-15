@@ -3,11 +3,13 @@ import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
+import 'package:xeonjia/game/components/static/static.dart';
 import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/game/util/text_animation.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/sfx.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 
 // Component able to move on the game field
 abstract class DynamicComponent extends BasicComponent with TextAnimation {
@@ -59,7 +61,6 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
       updateOrientation();
       animate([_walkingSprites[orientation]]);
       ++movesCounter;
-      if (isPlayerOne) game.playSound(Sfx.movement);
 
       // Decrease life points cause poison
       if (poisonQuantity > 0) lifePointsDifference(-poisonQuantity);
@@ -146,6 +147,9 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
     if (!isPlayerOne) {
       collidedComponent.lifePointsDifference(-atk,
           cause: this, poison: poisonAtk);
+    } else if (settings.soundEffects && collidedComponent is! StaticComponent ||
+        !(collidedComponent as StaticComponent).isFloor) {
+      game.playSound(Sfx.collision);
     }
     collidedComponent.collidedBy(this);
   }

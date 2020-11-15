@@ -58,7 +58,7 @@ class XeonjiaGame extends BaseGame
     addWidgetOverlay('virtualGamePad', _virtualGamePad);
     addWidgetOverlay('dialogBox', dialogBox);
     initGamepad();
-    if (settings.backgroundMusic) {
+    if (settings.backgroundMusic && config.mode == GameMode.story) {
       _backgroundMusic = Bgm();
       _backgroundMusic.initialize();
     }
@@ -243,16 +243,18 @@ class XeonjiaGame extends BaseGame
   // Start the background music
   void playBackgroundMusic() {
     if (!settings.backgroundMusic) return;
-    var newBgm = map.music ?? 'town.ogg';
+    var newBgm = (map.music ?? 'road') + '.oga';
     if (newBgm == currentBgm) return;
     currentBgm = newBgm;
-    _backgroundMusic.play('bgm/' + currentBgm);
+    _backgroundMusic.stop();
+    Future.delayed(const Duration(seconds: 1), () {
+      _backgroundMusic.play('bgm/' + currentBgm);
+    });
   }
 
-  // Start the background music
+  // Play sound effect
   void playSound(Sfx sfx) {
-    if (!settings.soundEffects) return;
-    Flame.audio.play(sfx.fileName, volume: 0.2);
+    if (settings.soundEffects) Flame.audio.play(sfx.fileName, volume: 0.3);
   }
 
   // Save match data and load the new room
