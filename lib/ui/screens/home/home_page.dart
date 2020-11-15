@@ -25,7 +25,13 @@ class HomePage extends StatelessWidget {
     setScreenDimension(context);
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(gradient: appGradient),
+        decoration: const BoxDecoration(
+          color: Color(0xFF7BA1C1),
+          image: DecorationImage(
+            image: AssetImage('assets/graphics/home_background.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
