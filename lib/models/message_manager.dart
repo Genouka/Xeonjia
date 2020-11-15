@@ -19,6 +19,10 @@ class MessageManager {
   void clear() {
     _messages = [];
     game.resume();
+    if (hideMap) {
+      hideMap = false;
+      game.playBackgroundMusic();
+    }
   }
 
   // True if the dialog box is visible
@@ -29,9 +33,9 @@ class MessageManager {
   bool hideMap;
 
   // Show one or more messages
-  void setMessages(List<Message> newMessages, {bool hideMap = false}) {
+  void setMessages(List<Message> newMessages, {bool hideMap}) {
     if (newMessages == null) return;
-    this.hideMap = hideMap;
+    this.hideMap = (hideMap ?? false);
     _messages.addAll(newMessages.fold([], (previousValue, element) {
       (previousValue as List<Message>).addAll(_splitMessage(element));
       return previousValue;

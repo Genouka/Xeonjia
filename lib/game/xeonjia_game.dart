@@ -242,7 +242,7 @@ class XeonjiaGame extends BaseGame
 
   // Start the background music
   void playBackgroundMusic() {
-    if (!settings.backgroundMusic) return;
+    if (!settings.backgroundMusic || messageManager.hideMap) return;
     var newBgm = (map.music ?? 'road') + '.oga';
     if (newBgm == currentBgm) return;
     currentBgm = newBgm;
