@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="26" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="50">
+ <properties>
+  <property name="music" value="enemies"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="130" source="../tilesets/monster.tsx"/>
- <tileset firstgid="138" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="137" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="26" height="18">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA7WVPQ7DIAyFPWTM2KFDhzfmEG0ukNz/PI3VPMmi5s8hT0L8GPwBxgIigqM8zxpJX+slY7PjbMtpn535lG1HtTtjZN0tyJgz1KR3umb4nrYghzGWDK9FXjw8DoL+e9i4iUPxjvQ876N8BvhEgaOxeVT2MkK6h978QZATWRfhLLVJF3xTNn88teQlqjN+DBufljUtLK8f8c1cSN9k7o2iYOvVVLClfxv3Ocn/H7cmY+zT/jLrYWxkfAGZ00/SUAcAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="39" type="SlitherCpu" gid="130" x="224" y="160" width="16" height="16">
+  <object id="39" type="SlitherCpu" gid="129" x="224" y="160" width="16" height="16">
    <properties>
     <property name="atk" type="float" value="6"/>
     <property name="lifePoints" type="float" value="15"/>
@@ -47,17 +50,17 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="47" type="Modifier" gid="156" x="16" y="64" width="16" height="16">
+  <object id="47" type="Modifier" gid="155" x="16" y="64" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="12"/>
    </properties>
   </object>
-  <object id="48" type="Modifier" gid="156" x="352" y="224" width="16" height="16">
+  <object id="48" type="Modifier" gid="155" x="352" y="224" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
-  <object id="49" type="Modifier" gid="156" x="272" y="48" width="16" height="16">
+  <object id="49" type="Modifier" gid="155" x="272" y="48" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>

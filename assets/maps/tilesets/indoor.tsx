@@ -2,7 +2,11 @@
 <tileset version="1.4" tiledversion="2020.08.05" name="indoor" tilewidth="16" tileheight="16" tilecount="48" columns="8">
  <image source="../../images/indoor.png" width="128" height="96"/>
  <tile id="0" type="Ground"/>
- <tile id="1" type="Solid"/>
+ <tile id="1" type="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;The weather is good today.&quot;)))"/>
+  </properties>
+ </tile>
  <tile id="2" type="Solid"/>
  <tile id="3" type="Solid">
   <properties>
@@ -97,6 +101,8 @@
  </tile>
  <tile id="35" type="Solid"/>
  <tile id="36" type="Solid"/>
+ <tile id="37" type="Solid"/>
+ <tile id="38" type="Solid"/>
  <tile id="39" type="Solid">
   <properties>
    <property name="action">(dialog
@@ -109,7 +115,14 @@
    <property name="allowedDirection" type="int" value="2"/>
   </properties>
  </tile>
- <tile id="42" type="Solid"/>
+ <tile id="41" type="Solid"/>
+ <tile id="42" type="Hurdle">
+  <properties>
+   <property name="allowedDirection" type="int" value="2"/>
+  </properties>
+ </tile>
  <tile id="43" type="Solid"/>
  <tile id="44" type="Solid"/>
+ <tile id="45" type="Solid"/>
+ <tile id="46" type="Solid"/>
 </tileset>

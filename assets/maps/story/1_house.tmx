@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="72">
+ <properties>
+  <property name="action" value="(map-name &quot;NEIGHBOR'S HOUSE&quot;)"/>
+  <property name="music" value="town"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
  <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
@@ -14,12 +18,12 @@
     <property name="action">(if  (&lt; (get-def) 1)
     (begin
         (dialog
-        '((&quot;neighbor&quot; &quot;Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones. Here's to you!&quot;)
+        '((&quot;neighbor&quot; &quot;Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones.\nI made them by hand. Here's to you!&quot;)
         (&quot;* $hero got and put on the shin guards *&quot;)
-        (&quot;neighbor&quot; &quot;I made them by hand. This way you will hurt yourself less, but be careful that they do not fully protect you from damage.&quot;)
+        (&quot;neighbor&quot; &quot;This way you will hurt yourself less, but be careful that they do not fully protect you from damage.&quot;)
         (&quot;/hero_happy&quot; &quot;Thank you very much!&quot;)))
         (increase-def 3))
-    (dialog '((&quot;neighbor&quot; &quot;Since the shin guards I gave you don't fully protect you, try to think diligently about the moves you make.&quot;))))</property>
+    (dialog '((&quot;neighbor&quot; &quot;Since the shin guards I gave you do not fully protect you, try to think diligently about the moves you make.&quot;))))</property>
     <property name="orientation" type="int" value="3"/>
    </properties>
   </object>

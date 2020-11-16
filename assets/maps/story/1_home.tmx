@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="78">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="80">
+ <properties>
+  <property name="action">(if (eq? (last-place) &quot;1&quot;)
+    (map-name &quot;Home&quot;))</property>
+  <property name="music" value="town"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
  <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvDwMBwmgDeBaXPAvEVIL4MxVuQ2CC8CUofgtJXoep3EIkHg3oYINf8OySovwvEl3DgizjEAc+cIPawAQAA
+   H4sIAAAAAAAAAzvDwMBwmkh8FoivAPFlLHgTGvsWEF+Fqt9BJKanehigtvl3SFB/F4gv4cAXcYgDACVxVlGwAQAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="71" type="NPC" gid="38" x="112" y="64" width="16" height="16">
+  <object id="71" type="NPC" gid="38" x="64" y="64" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;001-talk-mom&quot;)
     (begin
         (dialog
-            '((&quot;mom&quot; &quot;Hi dear! Be very careful and remember to check your health in the top left bar.&quot;)
+            '((&quot;mom/_happy&quot; &quot;Hi $hero! Did you sleep well?&quot;)
+            (&quot;/hero_sleepy&quot; &quot;Actually not very well... I'm still a little sleepy.&quot;)
+            (&quot;mom&quot; &quot;You always are.\nAnyway, now it is time to leave, be very careful and remember to check your health in the top left bar.&quot;)
             (&quot;/hero&quot; &quot;Yea mom. Don't worry, I'll be careful.&quot;)
-            (&quot;mom&quot; &quot;When you hit the rocks you could hurt yourself, so before you leave, stop by our neighbor who should have prepared a brand new pair of shin guards for you.&quot;)))
+            (&quot;mom&quot; &quot;When you hit the rocks you could hurt yourself, so stop by our neighbor who have prepared a brand new pair of shin guards for you.&quot;)
+            (&quot;/hero&quot; &quot;Sure, I will.&quot;)
+            (&quot;/hero_happy&quot; &quot;Bye!&quot;)))
         (set &quot;001-talk-mom&quot; #t))
     (if  (&lt; (get-def) 1)
         (dialog '((&quot;mom&quot; &quot;Go get the shin guards from the neighbor, you'll need them.&quot;)))
@@ -28,7 +37,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="12" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoAxsBeJtJKjfC8T7kPj7gfgAhW4Agc1AvBuI90DZxKg/DMRHiFRPKdhIJXMAaEYv+bABAAA=
+   H4sIAAAAAAAAA2NgIA9sBeJtJKjfC8T78MjfJtMd+MBmIN4NxHugbGLUHwbiI0SqJwVspJI5ADxoOAuwAQAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -38,35 +47,34 @@
     <property name="roomId" value="1"/>
    </properties>
   </object>
-  <object id="76" gid="197" x="128" y="96" width="16" height="16">
+  <object id="79" type="Door" x="144" y="32" width="16" height="16">
    <properties>
-    <property name="action">(if (= (orientation) 0)
-    (dialog '((&quot;Unfortunately, this is not the time to lie down on the sofa.&quot;))))</property>
-   </properties>
-  </object>
-  <object id="77" gid="198" x="144" y="96" width="16" height="16">
-   <properties>
-    <property name="action">(if (= (orientation) 0)
-    (dialog '((&quot;Unfortunately, this is not the time to lie down on the sofa.&quot;))))</property>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="1_home_2"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="73" gid="183" x="112" y="48" width="16" height="16">
+  <object id="73" gid="183" x="16" y="48" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;This plant hasn't been watered for long.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="76" gid="197" x="32" y="96" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 0)
+    (dialog '((&quot;Unfortunately, this is not the time to lie down on the sofa.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="77" gid="198" x="48" y="96" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 0)
+    (dialog '((&quot;Unfortunately, this is not the time to lie down on the sofa.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="78" gid="183" x="64" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;This plant seems to have been recently watered.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="74" gid="199" x="128" y="64" width="16" height="16">
-   <properties>
-    <property name="action">(if (= (orientation) 1)
-    (dialog '((&quot;I'll miss you, TV.&quot;))))</property>
-   </properties>
-  </object>
-  <object id="75" gid="200" x="144" y="64" width="16" height="16">
-   <properties>
-    <property name="action">(if (= (orientation) 1)
-    (dialog '((&quot;I'll miss you, TV.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

@@ -6,6 +6,7 @@
         (map-name &quot;MITSU FOREST&quot;))
     (if  (first-time?)
         (dialog '((&quot;Hey, this is the Mitsu forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here.&quot;)))))</property>
+  <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc.tsx"/>

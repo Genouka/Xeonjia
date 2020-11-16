@@ -2,11 +2,12 @@
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="63">
  <properties>
   <property name="action" value="(map-name &quot;Melhopolis&quot;)"/>
+  <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="130" source="../tilesets/monster.tsx"/>
- <tileset firstgid="138" source="../tilesets/npc.tsx"/>
- <tileset firstgid="186" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="185" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="21" height="28">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA62WOU8EMQyFU/AHQBQrIaEpt6RLw1ED/XItILRiucR9bQX89H2WbOGN7BwDT/qUaJzxjCd5mQxCCANFVP0ht10yJiUaY1q0XRFvzVl6FrWbYCuJX4BjcMLtGJyq+BEYgQPmUMWt2iPnHKnxE3CpxnyB74QfdX9n1HEDbsEdOOP+vYo/gEfmnNsn9Z5DI+czeAUvYMr9dxX/UH2KX4OZypmbo2WwDlYyMYnLHLXOeVcRo3YNrBpj+j6vz5oXyRqkXLtg7485YyZG+TYa85W8STl3GnOKyEvkL+0z+R61tafvR16bKMhn8k1KOfed6+Klq7DoI8lJdXj7hSfy0id4C78+0rVbddTI8pnMkdSR7gd9JOtT6pjy9Zl7R1mR0fuBt2fUytvrvOfXSP6Lrcp5qQv2npTKW6OW5N9cq5LXJWdL7TV7g5w5/lPWecZjKSx6L3f2mQM5GDQ6MAkAAA==
@@ -59,17 +60,17 @@
     <property name="action" value="(dialog '((&quot;'' VANTOI LAB ''&quot;)))"/>
    </properties>
   </object>
-  <object id="59" gid="187" x="240" y="112" width="16" height="16">
+  <object id="59" gid="186" x="240" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;I can see the inside of the Laboratory.&quot;)))"/>
    </properties>
   </object>
-  <object id="60" gid="187" x="224" y="112" width="16" height="16">
+  <object id="60" gid="186" x="224" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;I can see the inside of the Laboratory.&quot;)))"/>
    </properties>
   </object>
-  <object id="61" gid="187" x="64" y="320" width="16" height="16">
+  <object id="61" gid="186" x="64" y="320" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;I can see the inside of the Pharmacy.&quot;)))"/>
    </properties>

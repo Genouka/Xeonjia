@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.4" tiledversion="2020.08.05" name="tileset_1 " tilewidth="16" tileheight="16" tilecount="129" columns="8">
+<tileset version="1.4" tiledversion="2020.08.05" name="tileset_1 " tilewidth="16" tileheight="16" tilecount="128" columns="8">
  <image source="../../images/outdoor_1.png" width="128" height="256"/>
  <tile id="0" type="Ground"/>
  <tile id="1" type="Ground"/>
@@ -220,13 +220,37 @@
  </tile>
  <tile id="70" type="Solid"/>
  <tile id="71" type="Solid"/>
- <tile id="72" type="Solid"/>
- <tile id="73" type="Solid"/>
- <tile id="74" type="Solid"/>
- <tile id="75" type="Solid"/>
- <tile id="76" type="Solid"/>
+ <tile id="72" type="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;I like the color of this plant.&quot;)))"/>
+  </properties>
+ </tile>
+ <tile id="73" type="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;I like the color of this plant.&quot;)))"/>
+  </properties>
+ </tile>
+ <tile id="74" type="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;I like the color of this plant.&quot;)))"/>
+  </properties>
+ </tile>
+ <tile id="75" type="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;I like the color of this plant.&quot;)))"/>
+  </properties>
+ </tile>
+ <tile id="76" type="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;This type of plant is strange.&quot;)))"/>
+  </properties>
+ </tile>
  <tile id="77" type="Solid"/>
- <tile id="78" type="Solid"/>
+ <tile id="78" type="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;This type of plant is strange.&quot;)))"/>
+  </properties>
+ </tile>
  <tile id="79" type="Solid"/>
  <tile id="80" type="Ground">
   <properties>

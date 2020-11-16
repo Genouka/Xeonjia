@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
+ <properties>
+  <property name="music" value="enemies"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="130" source="../tilesets/monster.tsx"/>
- <tileset firstgid="138" source="../tilesets/npc.tsx"/>
- <tileset firstgid="186" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="185" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="20">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA1NgYGCQAGIeIFaAYgkkWgJJHsbGBhRwiOFSjwzsoDQ28+0YcAOQ+T4EzFZDYsP8RSzA5190YAPEtjjUm1PBfBBQAGJPIPYiUj0h/6KHrQKJ7iHH/YTiC5f5sPBFB8ji6O5RIMJ8bO7BZhcs3AmZiW4+NvUseNRLMKCmJRCWwSIGwwAF0XPgwAMAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="38" type="SlitherCpu" gid="130" x="144" y="208" width="16" height="16">
+  <object id="38" type="SlitherCpu" gid="129" x="144" y="208" width="16" height="16">
    <properties>
     <property name="atk" type="float" value="6"/>
     <property name="lifePoints" type="float" value="5"/>
    </properties>
   </object>
-  <object id="39" type="SlitherCpu" gid="130" x="32" y="192" width="16" height="16">
+  <object id="39" type="SlitherCpu" gid="129" x="32" y="192" width="16" height="16">
    <properties>
     <property name="atk" type="float" value="6"/>
     <property name="lifePoints" type="float" value="5"/>
    </properties>
   </object>
-  <object id="41" type="SlitherCpu" gid="130" x="96" y="224" width="16" height="16">
+  <object id="41" type="SlitherCpu" gid="129" x="96" y="224" width="16" height="16">
    <properties>
     <property name="atk" type="float" value="6"/>
     <property name="lifePoints" type="float" value="5"/>
    </properties>
   </object>
-  <object id="43" gid="166" x="128" y="80" width="16" height="16">
+  <object id="43" gid="165" x="128" y="80" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I still haven't figured out if these monsters are malicious or just stupid.&quot;)))"/>
    </properties>
@@ -56,7 +59,7 @@
     <property name="roomId" value="15"/>
    </properties>
   </object>
-  <object id="44" type="Modifier" gid="204" x="80" y="32" width="16" height="16">
+  <object id="44" type="Modifier" gid="203" x="80" y="32" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>

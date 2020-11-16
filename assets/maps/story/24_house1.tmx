@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="78">
+ <properties>
+  <property name="music" value="shop"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="130" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="129" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5vLwMAwhwCeB8RLgXgJAbwMqq6TAB4K6tYSoW4dEC/GghdhEQMAW77MFWgBAAA=
+   H4sIAAAAAAAAA5vDwMAwmwCeC8RLgHgxAbwUqq6DAB4K6tYQoW4tEC/CghdiEQMAJrmVZmgBAAA=
   </data>
  </layer>
  <objectgroup id="10" name="npcs"/>
  <layer id="6" name="Tile Layer 2" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGBxgAhBPHGhHEABNFOgFANm4XSxoAQAA
+   H4sIAAAAAAAAA2NgGBygH4gnDLQjCIBGCvQCAEpusxZoAQAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -22,13 +25,13 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="74" gid="152" x="64" y="80" width="16" height="16">
+  <object id="74" gid="151" x="64" y="80" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;A computer turned off.&quot;))))</property>
    </properties>
   </object>
-  <object id="75" gid="153" x="80" y="80" width="16" height="16">
+  <object id="75" gid="152" x="80" y="80" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;A computer turned off.&quot;))))</property>

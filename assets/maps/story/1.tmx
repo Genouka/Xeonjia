@@ -1,72 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="20" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="75">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="20" height="22" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="75">
  <properties>
-  <property name="action">(if (&gt; (places-visited) 1)
-  (map-name &quot;NATAWN&quot;)
-  (story-dialog &quot;T-today... today is the day I have been waiting for all my life. My long journey to the tower where the ''King of Evil'' resides, the monster that froze the kingdom many years ago, is about to begin.\nThis year I am the ''hero'' in charge of trying to defeat him... After years of training I hope to be able to.&quot;))</property>
+  <property name="action" value="(map-name &quot;NATAWN&quot;)"/>
+  <property name="music" value="town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
  <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <layer id="1" name="Tile Layer 1" width="20" height="21">
+ <layer id="1" name="Tile Layer 1" width="20" height="22">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7WSSw7CMAxEfSg+G/4S0AWIbthnlw3QE0Cvji1sYaIU4siM9NTIjd1JOgC+GiOTgXdUnxrnzZEFoyW1JRKc59X6yyHzOud5pdoiu4SVWu9/9K+RE3JGGq7dkj0zJBo80cwN8jD0lKiBt8d/zkvPX6oIn/d0H9hXmhXv8/ZQf7acyFvgtWWuZO4Ir5yI6O5qMyOZ0yJv3nnxzHQH3/1ZvfeQz5aujaD8X0n+Wiaqmng7IBfkqur0vcDPlmvS+wQ+YlHFkAYAAA==
+   H4sIAAAAAAAAA7WUzQrCMBCE96H8QfEf1B4Ue/GeWy9qn0D76s7CLqZhq0mICx8NQ3czSYcS5dUMzDN7rdqCnaGPwWSgh/Vp4j5LsBL8Um0NXOF5uf4sdF5beF5s7cEhYOOtjz/6+TtfwBVUoj2CdxagSfCk2Xkl9MRURR+P/5wXnj+2Gurf03PgvdislD5vR/lns4q9OVmnzNXMnan/j+G7y82M9b9ib6XzUjLTLX33l+q9Iztbvjai+G+l+auFxtPU2wncwN3TeT8nz1o07X0DYPK7kuAGAAA=
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="48" type="NPC" gid="1" x="48" y="80" width="16" height="16">
+  <object id="48" type="NPC" gid="1" x="48" y="96" width="16" height="16">
    <properties>
-    <property name="action">(begin
-    (dialog '((&quot;dad/&quot; &quot;Safe travels, son.\nAfter all these years of hard training I'm sure you'll handle it right.&quot;)))
-    (set &quot;001-talk-dad&quot; #t))</property>
+    <property name="action">(if (!get &quot;001-talk-dad&quot;)
+    (begin
+        (dialog
+            '((&quot;dad&quot; &quot;Safe travels, son.\nMany before you have failed, but I am sure you will handle it right.&quot;)
+            (&quot;/hero&quot; &quot;I'll do my best.&quot;)))
+        (set &quot;001-talk-dad&quot; #t))
+    (dialog '((&quot;dad&quot; &quot;The tower in which the ''King of Evil'' resides should be located near the capital of the region.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
- <layer id="6" name="Tile Layer 2" width="20" height="21">
+ <layer id="6" name="Tile Layer 2" width="20" height="22">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA82TxwrDMBBE9/PyIYl9STnFd8fplZBCem+fmVksgawgWQaHZOCxB6HVLpohihWChiACLUqqCErkrikYgKGoI+28DCpaXzmD/rYP1mAHNmAM9oZ3Zd9QzMDvL7SeHjiDK7iAJbiDgmWfHmiDDuiKnlJVw52apd8BHAUTcHK451v6PcAKPCne56WceZZ7WRRQdh+kSf7XN5XX/nXLmfRupNQmfXrZVezdPpiJyj6eU9J3LNfdOD+cna2oDOfJlKO0vjI/Es7RjeIcqQoc5/uV/n0+k9Qc5uFvNYd5ZzyL3j75EDGQBgAA
+   H4sIAAAAAAAAA82U2Q6CMBBF5/P8EIUXlyd5d8EtRmNcIrjvfqa3aRsHQysoRG9y0pBhLp1ygeipBmgCX10XQYk+k/CagCGYK88yqCT0fq33QQd0QU95cmlvky9/tgu2YKcYg71hH7pPn43GZ/c44AqW4AYW4A4KlvnE2UxJns9MzeOoWtXQU7P4BSAEKzACG+Zj6nMtfgdwAkeS81xYzYntSC+PvstYnPh7zktZzV+31HTeWmxtUzR3aSTyNiCZObHy3HElnY3nLVSsSeYuTu98dd40IndniuZOyEu4v1/p3/dnEv8Os8h3mn99nnoAxakdBeAGAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="46" type="Door" x="80" y="64" width="16" height="16">
-   <properties>
-    <property name="roomId" value="1"/>
-   </properties>
-  </object>
-  <object id="47" type="Door" x="128" y="320" width="16" height="16">
+  <object id="47" type="Door" x="128" y="336" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="2"/>
    </properties>
   </object>
-  <object id="67" type="Door" x="80" y="64" width="16" height="16">
+  <object id="67" type="Door" x="80" y="80" width="16" height="16">
    <properties>
     <property name="roomId" value="1_home"/>
    </properties>
   </object>
-  <object id="68" type="Door" x="272" y="96" width="16" height="16">
+  <object id="68" type="Door" x="272" y="112" width="16" height="16">
    <properties>
     <property name="roomId" value="1_house"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="66" gid="119" x="112" y="336" width="16" height="16">
+  <object id="66" gid="119" x="112" y="352" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;'' NATAWN - Hometown of the 62nd hero ''&quot;)))"/>
    </properties>
   </object>
-  <object id="70" type="Solid" x="80" y="112" width="16" height="16">
+  <object id="70" type="Solid" x="80" y="128" width="16" height="16">
    <properties>
     <property name="actionOnCollision">(if  (or (!get &quot;001-talk-dad&quot;) (!get &quot;001-talk-mom&quot;))
     (begin 
-        (dialog '((&quot;I have to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude.&quot;)))
+        (dialog '((&quot;I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it'd be rude.&quot;)))
         (set-orientation 1))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (and (get &quot;001-talk-dad&quot;) (get &quot;001-talk-mom&quot;))
     (delete))</property>
    </properties>
   </object>
-  <object id="73" type="Solid" x="128" y="320" width="16" height="16">
+  <object id="73" type="Solid" x="128" y="336" width="16" height="16">
    <properties>
     <property name="actionOnCollision">(if  (= (get-def) 0)
     (begin 

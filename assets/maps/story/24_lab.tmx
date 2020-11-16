@@ -2,14 +2,15 @@
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="77">
  <properties>
   <property name="action" value="(map-name &quot;VANTOI LAB - 1F&quot;)"/>
+  <property name="music" value="shop"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
  <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="178" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="226" source="../tilesets/lab.tsx"/>
+ <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="225" source="../tilesets/lab.tsx"/>
  <layer id="1" name="Tile Layer 1" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvLwMBwhgR8DoivAvEVIvFmIL4G1bOTBDyqB6LnLol67gHxZRz4Eh45AFt9HuoIAgAA
+   H4sIAAAAAAAAAzvDwMBwmgR8FoivAPFlIvEmIL4K1bODBDyqB6LnDol67gLxJRz4Ih45AGX/7iwIAgAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -28,12 +29,12 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA88AuLHRNDI4B0QvwTiF0D8Hsp/j8R/AZVHBx+B+AMet3xD4z8B4mdQ/BSIn2PR8wQqBwOvgPgNHjtgal4j8bGZiw6eo6nDFz64wBcg/opEg8AmLOpOEWkeNgAA/sTwnAgCAAA=
+   H4sIAAAAAAAAA2NgIA88BOJHRNDI4C0QvwDi50D8Dsp/h8R/DpVHBx+A+D0et3xF4z8G4qdQ/ASIn2HR8xgqBwMvgfg1Hjtgal4h8bGZiw6eoanDFz64wGcg/oJEg8BGLOpOEmkeNgAA5yEdVwgCAAA=
   </data>
  </layer>
  <layer id="12" name="Tile Layer 3" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGH7gExB/RqJHAWEAAABra+AIAgAA
+   H4sIAAAAAAAAA2NgGH7gIxB/QqJHAWEAABhDetYIAgAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -51,19 +52,21 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="74" gid="184" x="176" y="48" width="16" height="16">
+  <object id="74" gid="183" x="176" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;Someone used this plant to do some experiments.&quot;)))"/>
    </properties>
   </object>
-  <object id="75" gid="236" x="48" y="96" width="16" height="16">
+  <object id="75" gid="235" x="48" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;A broken monitor.&quot;)))"/>
+    <property name="action">(if (= (orientation) 1)
+    (dialog '((&quot;A broken monitor.&quot;))))</property>
    </properties>
   </object>
-  <object id="76" gid="235" x="64" y="96" width="16" height="16">
+  <object id="76" gid="234" x="64" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;A broken monitor.&quot;)))"/>
+    <property name="action">(if (= (orientation) 1)
+    (dialog '((&quot;A broken monitor.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

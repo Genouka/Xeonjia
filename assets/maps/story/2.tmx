@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="23" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="46">
+ <properties>
+  <property name="action">(if (eq? (last-place) &quot;1&quot;)
+    (map-name &quot;ROUTE 1&quot;))</property>
+ </properties>
  <tileset firstgid="1" source="../tilesets/basic.tsx"/>
  <tileset firstgid="25" source="../tilesets/npc.tsx"/>
  <tileset firstgid="73" source="../tilesets/outdoor_1.tsx"/>

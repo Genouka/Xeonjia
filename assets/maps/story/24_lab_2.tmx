@@ -2,14 +2,15 @@
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="74">
  <properties>
   <property name="action" value="(map-name &quot;VANTOI LAB - 2F&quot;)"/>
+  <property name="music" value="shop"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
  <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="178" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="226" source="../tilesets/lab.tsx"/>
+ <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="225" source="../tilesets/lab.tsx"/>
  <layer id="1" name="Tile Layer 1" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvLwMBwhgR8DoivAvEVPHgzGn0NqmcnCXhUD0TPXRLU3wLie0B8mQwMAAgKp30IAgAA
+   H4sIAAAAAAAAAzvDwMBwmgR8FoivAPFlPHgTGn0VqmcHCXhUD0TPHRLU3wTiu0B8iQwMACRixC4IAgAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -23,12 +24,12 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA88AuLHWGh84AUQv0ei3wHxS6jcEyB+BsVP0fR9Q+N/gNKvgPgNlP2aBLc9R6MZoG6Bue0lmtvwgY8kqiEn3L4A8VcsNDUBAD/jugMIAgAA
+   H4sIAAAAAAAAA2NgIA88BOJHWGh84DkQv0Oi3wLxC6jcYyB+CsVP0PR9ReO/h9Ivgfg1lP2KBLc9Q6MZoG6Bue0FmtvwgQ8kqiEn3D4D8RcsNDUBAKoHdtQIAgAA
   </data>
  </layer>
  <layer id="12" name="Tile Layer 3" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGFzgExB/HmhHjEAAAD8+ZAIIAgAA
+   H4sIAAAAAAAAA2NgGFzgIxB/GmhHjEAAAK4Jaa0IAgAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -40,9 +41,10 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="73" gid="236" x="160" y="64" width="16" height="16">
+  <object id="73" gid="235" x="160" y="64" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;A broken monitor.&quot;)))"/>
+    <property name="action">(if (= (orientation) 1)
+    (dialog '((&quot;A broken monitor.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
