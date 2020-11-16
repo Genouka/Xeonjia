@@ -30,7 +30,7 @@ class MessageManager {
 
   // If true, hide the map with a black container
   // eg. it will be used for chapter change
-  bool hideMap;
+  bool hideMap = false;
 
   // Show one or more messages
   void setMessages(List<Message> newMessages, {bool hideMap}) {

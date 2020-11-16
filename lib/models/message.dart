@@ -34,6 +34,6 @@ class Message {
     var fileName = name + (mood != '' ? '_$mood' : '');
     image = authorName != '' ? 'assets/images/heads/${fileName}.png' : null;
     text = text.replaceAll('\$hero', mainCharacter.name);
-    if (authorName == 'HERO') authorName = mainCharacter.name.toUpperCase();
+    if (authorName == 'HERO') authorName = mainCharacter.name;
   }
 }
