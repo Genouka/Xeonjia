@@ -34,6 +34,10 @@ class CharacterComponent extends DynamicComponent
     if (popup) showText('+ $moneyDelta ¤');
   }
 
+  // Total number of minutes played by the character in this game
+  double get minutesPlayed =>
+      mainCharacter.minutesPlayed + game.elapsedSeconds / 60;
+
   // List of items owned
   // Add/remove items by using addItem() and removeItem()
   List<String> _itemList = [];

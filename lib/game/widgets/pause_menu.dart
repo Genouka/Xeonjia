@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
 
 enum PauseMode { pause, restart, exit }
 
@@ -118,7 +117,7 @@ class _PauseMenuState extends State<PauseMenu> {
                 ? '''
             \nyour level: ${game.playerOne.level}
             \nmoney: ${game.playerOne.money} ¤
-            \nplay time: ${mainCharacter.minutesPlayed.round()} min'''
+            \nplay time: ${game.playerOne.minutesPlayed.round()} min'''
                 : '''
             \nyour defeats: ${game.playerOne.defeats}
             \nenemies defeated: ${game.playerOne.defeatedEnemies}
