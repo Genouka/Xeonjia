@@ -51,7 +51,7 @@ class CharacterInfo {
   int selectedWeaponIndex;
 
   int get experiencePoints => _experiencePoints;
-  int get experienceRequired => (level + 1) * (level + 1) * 500;
+  int get experienceRequired => 50 + (level * 25);
   int get experienceRemaining => experienceRequired - experiencePoints;
 
   // Increase experience points earned
@@ -60,6 +60,7 @@ class CharacterInfo {
     if (_experiencePoints >= experienceRequired) {
       _experiencePoints = 0;
       ++level;
+      atk = level + 1.0;
     }
   }
 

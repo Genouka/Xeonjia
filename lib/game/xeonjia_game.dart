@@ -263,21 +263,20 @@ class XeonjiaGame extends BaseGame
     if (game.components
         .where((element) =>
             element is BasicComponent && [-3, -2, 1].contains(element.teamId))
-        .isEmpty) currentEventLog['${map.name}-safe'] = true;
+        .isEmpty) {
+      currentEventLog['${map.name}-safe'] = true;
+      mainCharacter.expGained(playerOne.experiencePoints);
+    }
 
     // Save new player data into mainCharacter
-    mainCharacter.level = playerOne.level;
-    mainCharacter.atk = playerOne.atk;
     mainCharacter.def = playerOne.def;
     mainCharacter.maxLifePoints = playerOne.maxLifePoints;
     mainCharacter.currentLifePoints = playerOne.lifePoints;
+    mainCharacter.money = playerOne.money;
     mainCharacter.defeatedComponents += playerOne.defeatedEnemies;
     mainCharacter.minutesPlayed += elapsedSeconds / 60;
     mainCharacter.movesCounter += playerOne.movesCounter;
-    mainCharacter.money = playerOne.money;
     mainCharacter.visitedRooms.add(nextRoomId);
-    mainCharacter.expGained(
-        playerOne.experiencePoints + mainCharacter.visitedRooms.toSet().length);
     mainCharacter.eventLog = Map.from(currentEventLog);
     mainCharacter.itemList = List.from(playerOne.itemList);
     mainCharacter.weaponList = List.from(playerOne.weaponList);
