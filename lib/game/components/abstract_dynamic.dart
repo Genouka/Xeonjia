@@ -147,8 +147,9 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
     if (!isPlayerOne) {
       collidedComponent.lifePointsDifference(-atk,
           cause: this, poison: poisonAtk);
-    } else if (settings.soundEffects && collidedComponent is! StaticComponent ||
-        !(collidedComponent as StaticComponent).isFloor) {
+    } else if (settings.soundEffects &&
+        (collidedComponent is! StaticComponent ||
+            !(collidedComponent as StaticComponent).isFloor)) {
       game.playSound(Sfx.collision);
     }
     collidedComponent.collidedBy(this);
