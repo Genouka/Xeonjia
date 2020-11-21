@@ -10,7 +10,7 @@ class Item {
   String location;
 
   Item(Map<String, dynamic> json)
-      : name = json['name'],
+      : name = (json['name'] as String).toUpperCase(),
         description = json['description'],
         location = json['location'];
 }
