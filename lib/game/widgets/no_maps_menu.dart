@@ -8,64 +8,68 @@ class NoMapsMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: MediaQuery.of(context).size.height,
       color: Colors.black87,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text(
-            'You went too far!',
-            style: TextStyle(
-                color: Colors.white, fontSize: 48, letterSpacing: 1.4),
-            textAlign: TextAlign.center,
-          ),
-          const SingleChildScrollView(
-            child: Text(
-              'Unfortunately, the next part of the story is not yet available.\n'
-              'Hopefully it will be available soon.\n\n'
-              'In the meantime you can play multiplayer mode or you can support the development of Xeonjia.\n'
-              'If you want to give feedback click below.',
-              style: TextStyle(color: Colors.white, fontSize: 32),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(height: 35),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      child: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              FlatButton(
-                child: const Text(
-                  'Report a bug / ask something',
-                  style: TextStyle(color: Colors.white, fontSize: 32),
-                  textAlign: TextAlign.center,
-                ),
-                onPressed: () {
-                  launch('https://gitlab.com/DeepDaikon/Xeonjia/issues');
-                },
+              const Text(
+                'You went too far!',
+                style: TextStyle(
+                    color: Colors.white, fontSize: 48, letterSpacing: 1.4),
+                textAlign: TextAlign.center,
               ),
-              FlatButton(
-                child: const Text(
-                  'Send email',
-                  style: TextStyle(color: Colors.white, fontSize: 32),
-                ),
-                onPressed: () async {
-                  final url = Uri.encodeFull(
-                      'mailto:deepdaikon' '@' 'tuta.io?subject=Xeonjia Game');
-                  if (await canLaunch(url)) await launch(url);
-                },
+              const Text(
+                'Unfortunately, the next part of the story is not yet available.\n'
+                'Hopefully it will be available soon.\n\n'
+                'In the meantime you can play multiplayer mode or you can support the development of Xeonjia.\n'
+                'If you want to give feedback click below.',
+                style: TextStyle(color: Colors.white, fontSize: 32),
+                textAlign: TextAlign.center,
               ),
-              FlatButton(
-                child: const Text(
-                  'Go back',
-                  style: TextStyle(color: Colors.white, fontSize: 32),
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                  game.dispose();
-                },
+              Container(height: 35),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  FlatButton(
+                    child: const Text(
+                      'Report a bug / ask something',
+                      style: TextStyle(color: Colors.white, fontSize: 32),
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      launch('https://gitlab.com/DeepDaikon/Xeonjia/issues');
+                    },
+                  ),
+                  FlatButton(
+                    child: const Text(
+                      'Send email',
+                      style: TextStyle(color: Colors.white, fontSize: 32),
+                    ),
+                    onPressed: () async {
+                      final url = Uri.encodeFull('mailto:deepdaikon'
+                          '@'
+                          'tuta.io?subject=Xeonjia Game');
+                      if (await canLaunch(url)) await launch(url);
+                    },
+                  ),
+                  FlatButton(
+                    child: const Text(
+                      'Go back',
+                      style: TextStyle(color: Colors.white, fontSize: 32),
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                      game.dispose();
+                    },
+                  ),
+                ],
               ),
             ],
           ),
-        ],
+        ),
       ),
     );
   }
