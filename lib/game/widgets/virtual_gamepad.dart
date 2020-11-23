@@ -13,7 +13,7 @@ double _size;
 // Virtual Gamepad (D-pad + buttons)
 class VirtualGamePad extends StatelessWidget {
   VirtualGamePad() {
-    _size = min(screenSize.width, screenSize.height) / 14;
+    _size = min(screenSize.width, screenSize.height) / 12;
   }
 
   final GlobalKey<_ButtonsState> _key = GlobalKey();
