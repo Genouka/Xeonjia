@@ -51,7 +51,7 @@ mixin LifePointsBar on BasicComponent {
 
   @override
   void lifePointsDifference(double difference, {cause, poison = 0.0}) {
-    _showBar();
+    if (difference != 0) _showBar();
     super.lifePointsDifference(difference, cause: cause, poison: poison);
   }
 }
