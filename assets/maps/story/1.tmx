@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="20" height="22" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="75">
  <properties>
-  <property name="action" value="(map-name &quot;NATAWN&quot;)"/>
+  <property name="action" value="(map-name &quot;Natawn&quot;)"/>
   <property name="music" value="town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>

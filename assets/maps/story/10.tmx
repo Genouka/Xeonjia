@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="46">
  <properties>
   <property name="music" value="forest"/>
  </properties>
@@ -7,7 +7,7 @@
  <tileset firstgid="129" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA42SPQsCMQyGM7goIqjLgQpdxM31Fj1nxbOo5+AHbgoKDir+f99CiqHXs33hIck1DUlzayLagC0owA5okIAZ2z5bxcgzE+/BARzBCVyorKYTK+GbOjdwB2e2D08NqTlYsN8FPfAEL3AFb/Bx7mSBOGfbBh3nTM48AVNhfXlSvrx/SrmOnTHz1AwpYarkzi61FDXsm9TBGDQ4XkX0YOe2fYxACwwD99xZzX61qDGg8n5Cku/h22+MTF9pZG7Vzm0fin7/Ss517d61k1djPxXfvwMPWTi4AwAA
+   H4sIAAAAAAAAA42SvQvCMBDFb3BRRFCXggpZxM21i9ZZsQa1Dn7gpqDgoOL/7wtc8EhTkwc/LtdcHrlc10S0AVtQgB3QIAEzjn2OipF7Jt+DAziCE7hQWU0nV2JtfG7gDs4cHx4PqTlY8LoLeuAJXuAK3uDjnMkCec6xDTrOnux5AqYi+uqkfHX/lLKP7THzeIaUMFVye5daCg/7JnUwBg3OVxF3sH3be4xACwwjzkqZ+WrhMaDyfEKS7+Gbb4zMDNLI2qqZ23so+v0rOfvauWunrsbrVHz/AsO0OtO4AwAA
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
@@ -52,7 +52,7 @@
     <property name="action" value="(dialog '((&quot;'' Souvenir shop ''&quot;)))"/>
    </properties>
   </object>
-  <object id="43" type="Modifier" gid="147" x="48" y="160" width="16" height="16">
+  <object id="43" type="Modifier" gid="148" x="48" y="160" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
    </properties>
@@ -60,6 +60,16 @@
   <object id="44" type="Modifier" gid="147" x="240" y="112" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="45" type="Solid" gid="63" x="192" y="160" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;10.berries&quot;))
+    (begin
+        (dialog '((&quot;* $hero found some berries! 15 LPs have been recovered *&quot;)))
+        (give-item &quot;10.berries&quot;)
+        (set-life-diff 15))
+    (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

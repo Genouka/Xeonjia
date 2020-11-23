@@ -38,7 +38,12 @@
  <objectgroup id="8" name="items">
   <object id="40" gid="55" x="208" y="272" width="16" height="16">
    <properties>
-    <property name="action" value="\"/>
+    <property name="action">(if (! (has-item &quot;12.money&quot;))
+    (begin
+        (dialog '((&quot;* $hero found 50 ¤ *&quot;)))
+        (give-item &quot;12.money&quot;)
+        (set-money-diff 50))
+    (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
    </properties>
   </object>
   <object id="41" type="Modifier" gid="155" x="160" y="224" width="16" height="16">

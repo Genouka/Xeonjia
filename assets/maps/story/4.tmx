@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="9" nextobjectid="37">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="38">
  <properties>
   <property name="action">(if (eq? (last-place) &quot;5&quot;)
-    (map-name &quot;ROUTE 1&quot;))</property>
+    (map-name &quot;Route 1&quot;))</property>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="16" height="24">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA61USw4CMQjlAG7UTRfGsPIKs9H0BNr730ZIOgkSPkV9yUsp8x7QzmQQAJDYJvf4ImKc7HMdIse0cHDyMGsyzsRXoMvQcknqlzVwsR+KfXUGVHHk9+ZBsfZEG/k3o3+1zijoLX+lX+S/Bbo78WHk+fzPoLaG7tEc3Wo9znUjn2E/D/uHylWQfb+44M80//YfiVfiCb6/v1/6S2yGP3sP8rl3/6szocOu4g6f/3cU+zeAAUm8AAYAAA==
+   H4sIAAAAAAAAA61USQ7DIAz0A3ppc+FQVT7lC7m04gUN//9NbYlIDvKC2440wjgzNhASBAAkls4jvosYO2sfm8gxNVyMPPSajIW4O7oIJZaEflkDJ/uhmGfXgEPs+a31oBhroPX8m9I/W6cl9Jo/08/zr47uSXwped7/26k9YuxRDN1sPc5VJR/h2A/725DLILq/OOGPNP/2X4kP4g2+P79f+ktsij96D/K5df6za0KDFc7fRoXz/x3F/AN6lCPAAAYAAA==
   </data>
  </layer>
  <objectgroup id="8" name="npcs">
@@ -43,6 +43,18 @@
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="5"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items">
+  <object id="37" type="Solid" gid="55" x="128" y="384" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;4.berries&quot;))
+    (begin
+        (dialog '((&quot;* $hero found some berries! 20 LPs have been recovered *&quot;)))
+        (give-item &quot;4.berries&quot;)
+        (set-life-diff 20))
+    (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

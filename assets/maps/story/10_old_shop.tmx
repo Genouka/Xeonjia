@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="77">
  <properties>
-  <property name="music" value="shop"/>
+  <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
  <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
@@ -34,7 +34,8 @@
  <objectgroup id="9" name="items">
   <object id="72" gid="189" x="48" y="48" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;It's full of old junk here.&quot;)))"/>
+    <property name="action">(if (= (orientation) 1)
+    (dialog '((&quot;It's full of old junk here.&quot;))))</property>
    </properties>
   </object>
   <object id="73" gid="190" x="64" y="48" width="16" height="16">
@@ -49,7 +50,8 @@
   </object>
   <object id="75" gid="190" x="96" y="48" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;There are very expensive junk here.&quot;)))"/>
+    <property name="action">(if (= (orientation) 1)
+    (dialog '((&quot;There are very expensive junk here.&quot;))))</property>
    </properties>
   </object>
   <object id="76" gid="183" x="32" y="48" width="16" height="16">

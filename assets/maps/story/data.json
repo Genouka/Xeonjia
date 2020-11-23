@@ -1,8 +1,8 @@
 {
   "items": {
     "2.stone": {
-      "name": "Strange icosahedral blue stone",
-      "description": "-",
+      "name": "A strange icosahedral stone",
+      "description": "icosahedron",
       "location": "002"
     }
   },

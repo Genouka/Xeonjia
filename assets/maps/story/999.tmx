@@ -9,43 +9,45 @@
  <tileset firstgid="157" source="../tilesets/npc.tsx"/>
  <layer id="1" name="Tile Layer 1" width="31" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA8WVwQ6CMAyG/4NXNeplHtB6w6Nyxfd/LbpDk65sZl0c/skXMmB8aQeMAATFqI6RPXNwcFRz7bOsh/A9Le5cZuajxmEjt/XGbFm3TU3dvSLrXpMTc0e+1oE5O7xXp7vk93pjHswFac8pe2fZ3+KNeSJd7xqv9t8avRJvz3+Zf7prvu+ebqn7xbyZSV2njm5516T3O6T/ezLnRqz3iYD1PlGCzHgBZboXIMgGAAA=
+   H4sIAAAAAAAAA8WUwQqDMAyGc9h1k81Ld9DFW7257f3fzYQZjFJtIwv+8NPSpPlIoAXY15V8M7jK1GMFcizI82ALn4UnsGOG68kOBWwvBZjnntOd/IJ0rw35YeA+jewtvpXL6sg1LGeOycxt/hEuq4dfz4OBq/ntQa7IOvN/6kx2yfv2ZEvfb/KH/FVxdGTL3yKzv6i9xPRZTHiY8nB1D1Vcn0sdXkczJ0feyAYAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="37" type="NPC" gid="142" x="224" y="96" width="16" height="16">
+  <object id="37" type="NPC" gid="143" x="240" y="96" width="16" height="16">
    <properties>
-    <property name="action">(begin
-    (set &quot;999-talk-milla&quot; #t)
-    (dialog
-        '((&quot;/hero&quot; &quot;Hi Milla, are you ok? Did you get here without any problems?&quot;)
-        (&quot;/&quot; &quot;Hii $hero! Yes, I managed slyly to avoid the monsters that were along the way!\nAnyway, look here! This is the tower where the King of Evil resides!&quot;)
-        (&quot;/hero&quot; &quot;Oh really? Are we there yet?&quot;)
-        (&quot;/&quot; &quot;Apparently yes, but it's closed! This nice gentleman here explained to me that to access the tower you need to have 3 signets.&quot;)
-        (&quot;/hero&quot; &quot;Signets? What are? And where can I find them?&quot;)
-        (&quot;/&quot; &quot;I did not understand exactly what they are, but from what I understood they are kept in crypts present in each of the 3 regions that make up the kingdom.&quot;)
-        (&quot;/hero&quot; &quot;Mm... Then I really think that I have to set out in search of these crypts...&quot;)
-        (&quot;/&quot; &quot;I guess you have no other choice...\nHowever, this gentleman also told me that there is a good ice cream shop a few kilometers from here, I'll go there immediately!&quot;)
-        (&quot;/hero&quot; &quot;...\nO-ok... We'll meet again sooner or later&quot;)
-        (&quot;/&quot; &quot;Yep. See ya.&quot;)))
-    (fire-global-event))</property>
-    <property name="actionOnEvent">(if (get &quot;999-talk-milla&quot;)
+    <property name="action">(if (!get &quot;999-talk-milla&quot;)
+    (begin
+        (set &quot;999-talk-milla&quot; #t)
+        (dialog
+            '((&quot;/hero&quot; &quot;Hi Milla, are you ok? Did you get here without any problems?&quot;)
+            (&quot;/_happy&quot; &quot;Hii $hero!&quot;)
+            (&quot;/&quot; &quot;Yes, I cleverly managed to avoid the monsters that were along the way!&quot;)
+            (&quot;/_happy&quot; &quot;I love those cute little green worms!&quot;)
+            (&quot;/hero_mouthless&quot; &quot;...S-such weird tastes here.&quot;)
+            (&quot;/_sad&quot; &quot;Unkind!&quot;)
+            (&quot;/&quot; &quot;Aaanyway, look here! This is the tower where the King of Evil resides!&quot;)
+            (&quot;/hero&quot; &quot;Oh really? Are we there yet?&quot;)
+            (&quot;/&quot; &quot;It seems so... but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets.&quot;)
+            (&quot;/hero&quot; &quot;Signets?&quot;)
+            (&quot;/&quot; &quot;I did not understand exactly what they are, but if I have not misunderstood they are kept in crypts present in each region of the kingdom.&quot;)
+            (&quot;/hero&quot; &quot;Mm... Then I really think that I have to set out in search of these crypts...&quot;)
+            (&quot;/&quot; &quot;I guess you have no other choice.&quot;)
+            (&quot;/_happy&quot; &quot;Good luck!&quot;)))
+        (fire-global-event))
+    (dialog '((&quot;/&quot; &quot;Do your best!&quot;))))</property>
+    <property name="actionOnEvent">(if (get &quot;022-tower1-ok&quot;)
     (delete))</property>
    </properties>
   </object>
   <object id="45" type="NPC" gid="201" x="256" y="96" width="16" height="16">
    <properties>
-    <property name="action">(begin 
-    (if (get &quot;999-talk-milla&quot;)
-        (dialog '((&quot;/&quot; &quot;I hate the little girl who was here before...&quot;)))
-        (dialog '((&quot;/&quot; &quot;I hate this little girl here...&quot;))))
-    (dialog '((&quot;/&quot; &quot;She pestered me with a thousand questions and cried until I told her what she wanted. How impertinent.&quot;))))</property>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I hate this little girl here... She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="31" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzNhYGAwZUAAEzQ+CIgCsRgRWBzNDGSzsInZALEtkhg6nxy7YWZgMwsmhgxwuYEcu2EA3a/YwhSfG8gB6O5HpwkBYtVRW+8oGAWjYBRQCgCaufPYyAYAAA==
+   H4sIAAAAAAAAAzNhYGAwZUAAEzQ+CIgCsRgRWBzNDHSz0Pk2QGyLJI7OJ8dumBm4zEYH+NSRaje6P3HZScgN5ABS7cTlBnIAJXpHwSgYBaOAUgAARkmFS8gGAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -70,13 +72,17 @@
   </object>
   <object id="50" gid="44" x="224" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;This door is closed, I need the 3 signets to open it.&quot;)))"/>
+    <property name="action">(if (! (get &quot;999-talk-milla&quot;))
+    (dialog '((&quot;This door is closed.&quot;)))
+    (dialog '((&quot;This door is closed, I need the 3 signets to open it.&quot;))))</property>
    </properties>
   </object>
   <object id="51" type="Solid" x="128" y="224" width="16" height="16">
    <properties>
     <property name="actionOnCollision">(if (!get &quot;999-talk-milla&quot;)
-    (dialog '((&quot;I should go to the tower.&quot;))))</property>
+    (begin
+        (set-orientation 1)
+        (dialog '((&quot;I should go to the tower.&quot;)))))</property>
     <property name="actionOnEvent">(if (get &quot;999-talk-milla&quot;)
     (delete))</property>
    </properties>

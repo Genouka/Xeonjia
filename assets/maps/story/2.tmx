@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="23" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="46">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="23" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="47">
  <properties>
   <property name="action">(if (eq? (last-place) &quot;1&quot;)
-    (map-name &quot;ROUTE 1&quot;))</property>
+    (map-name &quot;Route 1&quot;))</property>
  </properties>
  <tileset firstgid="1" source="../tilesets/basic.tsx"/>
  <tileset firstgid="25" source="../tilesets/npc.tsx"/>
@@ -13,39 +13,24 @@
   </data>
  </layer>
  <objectgroup id="8" name="npcs">
-  <object id="29" type="NPC" gid="57" x="256" y="256" width="16" height="16">
+  <object id="46" type="NPC" gid="45" x="256" y="256" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;On the ground it's easy to find Xeon (¤) stones that you can use to buy items in shops.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;The ice is so slippery, have you noticed?\nI feel more comfortable in the snow.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="37" type="Modifier" gid="19" x="256" y="224" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="5"/>
-   </properties>
-  </object>
-  <object id="39" type="Modifier" gid="19" x="160" y="160" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="5"/>
-   </properties>
-  </object>
-  <object id="41" type="Modifier" gid="19" x="16" y="80" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="20"/>
-   </properties>
-  </object>
   <object id="42" gid="135" x="16" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (! (has-item &quot;2.stone&quot;))
     (begin
-        (dialog '((&quot;There seems to be something in the branches of this plant...&quot;)))
+        (dialog '((&quot;There seems to be something in the branches of this plant...\nIt's a stone!&quot;)))
         (give-item &quot;2.stone&quot;)
-        (dialog '((&quot;This stone is very strange... who knows what it is...&quot;))))
+        (dialog '((&quot;This is a very strange stone... Never seen anything like this before.&quot;))))
     (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
    </properties>
   </object>
-  <object id="44" type="Modifier" gid="19" x="256" y="32" width="16" height="16">
+  <object id="44" type="Modifier" gid="21" x="256" y="32" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="20"/>
    </properties>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.4" tiledversion="2020.08.05" name="basic" tilewidth="16" tileheight="16" tilecount="45" columns="8">
+<tileset version="1.4" tiledversion="2020.08.05" name="basic" tilewidth="16" tileheight="16" tilecount="24" columns="8">
  <image source="../../images/basic.png" width="128" height="48"/>
  <tile id="0" type="DirectionChanger">
   <properties>
@@ -26,22 +26,17 @@
  <tile id="10" type="Modifier"/>
  <tile id="11" type="Modifier">
   <properties>
-   <property name="lifePointsDelta" type="int" value="5"/>
+   <property name="lifePointsDelta" type="int" value="25"/>
   </properties>
  </tile>
  <tile id="12" type="Modifier">
   <properties>
-   <property name="lifePointsDelta" type="int" value="5"/>
+   <property name="lifePointsDelta" type="int" value="50"/>
   </properties>
  </tile>
  <tile id="13" type="Modifier">
   <properties>
-   <property name="lifePointsDelta" type="int" value="5"/>
-  </properties>
- </tile>
- <tile id="14" type="Modifier">
-  <properties>
-   <property name="lifePointsDelta" type="int" value="5"/>
+   <property name="lifePointsDelta" type="int" value="100"/>
   </properties>
  </tile>
  <tile id="16" type="Modifier"/>

@@ -24,7 +24,6 @@
         (&quot;/hero_happy&quot; &quot;Thank you very much!&quot;)))
         (increase-def 3))
     (dialog '((&quot;neighbor&quot; &quot;Since the shin guards I gave you do not fully protect you, try to think diligently about the moves you make.&quot;))))</property>
-    <property name="orientation" type="int" value="3"/>
    </properties>
   </object>
  </objectgroup>

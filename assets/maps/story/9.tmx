@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="27" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="42">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="27" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="43">
  <properties>
   <property name="music" value="forest"/>
  </properties>
@@ -8,7 +8,7 @@
  <tileset firstgid="177" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="27" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52UMQ4CIRBFKfYGWpBoYeUVaBRqDWrWxNrO0lgZj+8QIRl/gAF+8gIzsPxZFnZWSl2JG2GIuRLriGF9l8lfMmOBJ3EnXuonKR5V8HoTD+ITc1I8oh2xJyzLWZgTYl8Y65Vmnml/t5Djc0oyDV7pG7ZI8qspnZlSTViDG/TRrNWQy8nBeOteoGdrvb3re4jTPkoeFuA6Cc/yfs4L11sQq8hSqK3meyCOhTq4N75Xyznnwm9eqymw6Vh7gnrSGlNsvfq/u3inDJuL/2C89+sYn9ncL9Tl7ljoBQAA
+   H4sIAAAAAAAAA6WUvQ7CIBSFGfoGOpDo4OQrsCjMGlpTE2c3R+NkfHwvEZLrCf89yRe4F8q5pdBZCHElboQi5kwsPYr1TSR/iYw5nsSdeImfSnGvnNebeBAfnyvFPToQR0KznIY5LraJsVZJ5hn2dw85PmeJwjes0RK/cGZUYhxrMJ0+krUScjEZGK/dC/Ssrbd1fQtx2MeShwa4xsKzvB/zwvVWxMazLtSW8z0R50Qd3BvfK3WmUsJvnqvJsWtYe4B6whqDb634v7t4pxSbi/9gvPdbH09s7hdDXuLX6AUAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -19,7 +19,17 @@
   </object>
   <object id="37" type="NPC" gid="176" x="176" y="32" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;Something's bugging me...&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Weird things happen in this area....&quot;)))"/>
+   </properties>
+  </object>
+  <object id="42" type="Solid" gid="55" x="272" y="80" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;9.berries&quot;))
+    (begin
+        (dialog '((&quot;* $hero found some berries! 5 LPs have been recovered *&quot;)))
+        (give-item &quot;9.berries&quot;)
+        (set-life-diff 5))
+    (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

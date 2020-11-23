@@ -3,7 +3,7 @@
  <properties>
   <property name="action">(begin
     (if (eq? (last-place) &quot;4&quot;)
-        (map-name &quot;MITSU FOREST&quot;))
+        (map-name &quot;Mitsu Forest&quot;))
     (if  (first-time?)
         (dialog '((&quot;Hey, this is the Mitsu forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here.&quot;)))))</property>
   <property name="music" value="forest"/>
@@ -20,7 +20,7 @@
   <object id="31" type="NPC" gid="150" x="80" y="32" width="16" height="16">
    <properties>
     <property name="action">(dialog
-    '((&quot;/&quot; &quot;02957...\nI don't know what these figures are but before I heard someone say them out loud... Dunno why.&quot;)))</property>
+    '((&quot;/&quot; &quot;174805...\nI don't know what these figures are but a little while ago I heard someone say them out loud...\nDunno why.&quot;)))</property>
     <property name="orientation" type="int" value="1"/>
    </properties>
   </object>

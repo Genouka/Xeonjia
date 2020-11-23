@@ -222,27 +222,27 @@
  <tile id="71" type="Solid"/>
  <tile id="72" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;I like the color of this plant.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;I like the color of this tree.&quot;)))"/>
   </properties>
  </tile>
  <tile id="73" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;I like the color of this plant.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;I like the color of this tree.&quot;)))"/>
   </properties>
  </tile>
  <tile id="74" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;I like the color of this plant.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;I like the color of this tree.&quot;)))"/>
   </properties>
  </tile>
  <tile id="75" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;I like the color of this plant.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;I like the color of this tree.&quot;)))"/>
   </properties>
  </tile>
  <tile id="76" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;This type of plant is strange.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;This type of tree is strange.&quot;)))"/>
   </properties>
  </tile>
  <tile id="77" type="Solid"/>

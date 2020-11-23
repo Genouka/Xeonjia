@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="15" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="50">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="15" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="51">
  <properties>
   <property name="music" value="forest"/>
  </properties>
@@ -8,7 +8,7 @@
  <tileset firstgid="137" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52UwQrCMAyGc/C42y4e8xa7uPWsoDsLKggqKHhQ8P39Awlkpa11P3wkZElT0q5MRAEwWILO+WIbtUGxuOXF6iKbknwbEvFtocbUZmpLCs7+W2tisAcX5QCO0fo5Sc+zqxWuhXy/nsz7Dh7KCTwr9yyzeoG3cgMfsAK95vhzsvgabGg6qybTI3XOdkfmyO7YHDH9PouchoraMROXOcdzqLnL1pcr8naJGCf61opp+p97P+i69i74N2Gh/he893CSOAQAAA==
+   H4sIAAAAAAAAA6WUsQoCMQyGMzje5uKYt7hFr7OCOgsqCCooOCj4/v6BBHKlvQvnDx8NuaYpSa5MRAkwWIDW2bI2uibF/LYvV5utJcm3ruDfDsSY5pXYiNIfsQwO4KocwcmdOyTJeXGxwm3kniap9wM8lTN4Be8stXqDj3IHX7AEK93j+2T+NdhQv1ZNJUepzzYjU2QzNkVM472oqQvE7it+qXNeh8gsW14O7NsVfFzIGxVT/z/3dtJz7V3wb8JM7R9QQ6KSOAQAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
@@ -62,6 +62,16 @@
   <object id="49" type="Modifier" gid="155" x="64" y="32" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="50" type="Solid" gid="55" x="192" y="64" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;15.berries&quot;))
+    (begin
+        (dialog '((&quot;* $hero found some berries! 30 LPs have been recovered *&quot;)))
+        (give-item &quot;15.berries&quot;)
+        (set-life-diff 30))
+    (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

@@ -67,7 +67,7 @@
   </object>
   <object id="90" gid="183" x="48" y="112" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;I hope my parents will water it when I am away.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;I hope my parents will water it when I'm away.&quot;)))"/>
    </properties>
   </object>
   <object id="98" gid="189" x="16" y="48" width="16" height="16">

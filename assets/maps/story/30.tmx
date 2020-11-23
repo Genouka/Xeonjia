@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="36" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="36" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="47">
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc.tsx"/>
  <layer id="1" name="Tile Layer 1" width="36" height="15">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA8WTywrCMBBF5xd8LLryS9S9ogVfC5UiotWu1IWon++UJhiGcZKMLV44lKSZ5PY2kwBAYpghc2SBLB3qmls5Z0lYrZGDwNbz3kcGsmL9cBwD+MVPmcHGPN09uTmKr5b6GSFj4qfrjPeKbw/NpiT35NMh+VyQawA7Aanu9sVH6uTj+nkgzwBOAlLdC5kK+VA/LaTXMJKGxA/1qhGtS9lVlWj/ZEy91odGtH9ycj7tvybE9c8ZPvc9Ng8uf22mtn/uSAHVfY/Zy7e2jwwC11rZHmojEzNX93/S7sfd5X/zBvsvfmVwCAAA
   </data>
  </layer>
- <objectgroup id="9" name="npc"/>
+ <objectgroup id="9" name="npc">
+  <object id="45" type="NPC" gid="153" x="144" y="128" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I'm planning a surprise wedding for my son, I hope he doesn't find out.&quot;)))"/>
+    <property name="orientation" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="46" type="NPC" gid="140" x="80" y="128" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;worker&quot; &quot;This part is wip&quot;)))"/>
+    <property name="orientation" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="6" name="Tile Layer 2" width="36" height="15">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgGAWDFTgCsdNAO2IIALcBtNt1AO0mFZjRwQ58cREIxCFIOJQO7qEEDMX8N5B5gVRgAsSmFOh3gdLUjqehGO9DBQAAQvbpvnAIAAA=

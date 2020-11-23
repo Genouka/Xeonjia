@@ -13,7 +13,7 @@
  <objectgroup id="9" name="npc">
   <object id="40" type="Modifier" gid="147" x="176" y="144" width="16" height="16">
    <properties>
-    <property name="moneyDelta" type="int" value="5"/>
+    <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
  </objectgroup>

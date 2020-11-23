@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="49">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="50">
  <properties>
   <property name="music" value="forest"/>
  </properties>
@@ -17,12 +17,23 @@
     <property name="action">(begin 
     (dialog
         '((&quot;...&quot;)
-        (&quot;???/&quot; &quot;Oops yes sorry I'm in the middle of the road...\nAre you a tourist? There are very few nowadays.&quot;)
+        (&quot;???/&quot; &quot;Oops... yes, sorry, I am in the middle of the road...\nAre you a tourist? There are very few nowadays.&quot;)
         (&quot;/hero&quot; &quot;N-no, I'm $hero, this year's chosen hero. I just left home to try to defeat the King of Evil.&quot;)
-        (&quot;???/_surprised&quot; &quot;Oh, so is it you ?! Nice to meet you, I've never met a hero before.&quot;)
-        (&quot;/_happy&quot; &quot;My name is Milla, I was born and raised in this area. I too am setting out on a journey to explore the world, I want to know new places and learn new things.&quot;)
-        (&quot;/hero_happy&quot; &quot;Oh cool, then we'll probably meet again. See ya.&quot;)
-        (&quot;/_happy&quot; &quot;Byee!&quot;)))
+        (&quot;???/_surprised&quot; &quot;What!? So is it you?!&quot;)
+        (&quot;???/_happy&quot; &quot;Nice to meet you, I've never met a hero before.&quot;)
+        (&quot;/&quot; &quot;My name is Milla, I was born and raised in this area. I too am setting out on a journey.&quot;)
+        (&quot;/hero_happy&quot; &quot;Oh cool! Where are you going?&quot;)
+        (&quot;/_sweatsmile&quot; &quot;I have absolutely no idea.&quot;)
+        (&quot;/&quot; &quot;I just want to explore the world, know new places and learn new things.&quot;)
+        (&quot;/hero&quot; &quot;Wow, sounds like a great idea!&quot;)
+        (&quot;/&quot; &quot;Yep, it won't be easy but I want to visit at least the whole kingdom.&quot;)
+        (&quot;/hero_surprised&quot; &quot;Are there places outside the kingdom?!&quot;)
+        (&quot;/&quot; &quot;Dunno, that's what I want to find out!&quot;)
+        (&quot;/_happy&quot; &quot;Anyway, I don't want to waste any more of your time.&quot;)
+        (&quot;/&quot; &quot;After all, you have to save the world. Not an easy task.&quot;)
+        (&quot;/&quot; &quot;I'm sure we'll meet again soon, hero.&quot;)
+        (&quot;/_happy&quot; &quot;See ya!&quot;)
+        (&quot;/hero_happy&quot; &quot;Bye!&quot;)))
     (set &quot;007-milla&quot; #t)
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (get &quot;007-milla&quot;)
@@ -39,7 +50,7 @@
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
-  <object id="48" type="Modifier" gid="175" x="272" y="288" width="16" height="16">
+  <object id="48" type="Modifier" gid="175" x="32" y="96" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
@@ -47,7 +58,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="20" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzNhYGAwZYAAMwb6Amcy9ZHrThcy9Q1mYMKAiD9qABsgtqWiebQC/gNkL6E0i5w2B2t6c8UjR+30REtAbvmBDEgpS2gdn+Sa74bEpnf8AQApwFOcQAYAAA==
+   H4sIAAAAAAAAAzNhYGAwZYAAMwb6Amcy9ZHrThcy9Q1mYMKAiD9qABsgtqWiecMNEEqzyGlzsKY3Vzxy1E5PtATklh/IgJSyhNbxSa75bkhsescfAD23nFhABgAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -69,5 +80,11 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="8" name="items"/>
+ <objectgroup id="8" name="items">
+  <object id="49" gid="71" x="224" y="144" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;'' Picnic area - Do not leave rubbish, thanks. ''&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>
