@@ -12,7 +12,7 @@ class Settings {
 
   // Import settings from a Json
   Settings(Map<String, dynamic> json)
-      : showDPad = json['showDPad'] ?? true,
+      : showDPad = json['showDPad'] ?? false,
         firstRun = json['firstRun'] ?? true,
         backgroundMusic = json['backgroundMusic'] ?? true,
         soundEffects = json['soundEffects'] ?? true;
