@@ -1,6 +1,6 @@
 # X E O N J i A
 
-Solve ice puzzles and defeat enemies in an RPG world.
+Save the world by solving ice puzzles and defeating enemies.
 
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
      alt="Get it on F-Droid"
@@ -13,9 +13,9 @@ Xeonjia is an Android game set in a frozen world.
 There are two modes:
 
 1) Story mode: the world has been frozen and your duty is to defeat the "King of Evil" and save the
-world.
+kingdom.
 
-2) Multiplayer mode: the aim of this mode is to score points and make your team win.
+2) Multiplayer mode: defeat enemies, score points and make your team win.
 
 Basically you will have to swipe your finger to move your character across the world.
 
@@ -31,10 +31,10 @@ Use your mind to figure out the best path!
 
 ## Screenshots
 
-<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/HomePage.png" height="320">
-<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/RoomGame.png" height="320">
-<img src ="fastlane/metadata/android/en-US/images/phoneScreenshots/RoomGame_2.png" height="320">
-<img src ="fastlane/metadata/android/en-US/images/phoneScreenshots/Multiplayer.png" height="320">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/0_Home.png" height="320">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1_Story.png" height="320">
+<img src ="fastlane/metadata/android/en-US/images/phoneScreenshots/2_Story.png" height="320">
+<img src ="fastlane/metadata/android/en-US/images/phoneScreenshots/3_Story.png" height="320">
 
 ## License
 

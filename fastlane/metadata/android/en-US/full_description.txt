@@ -4,10 +4,12 @@ There are two modes:
 
 2) Multiplayer mode: the aim of this mode is to score points and make your team win.
 
-Basically you will have to swipe your finger to move your character across the room; keep in mind that you can't stop yourself until you reach a wall or a boulder.
+Basically you will have to swipe your finger to move your character across the world.
 
-Over time, you will gain experience points that will allow you to increase your level and during your trip you will find money and hidden treasures that you can use to buy stuff and improve yourself.
+Keep in mind that you can't stop yourself until you reach a wall, a boulder, or any other type of obstacle.
 
-Be careful, the tower is full of dangerous enemies ready to attack you!
+Over time, you will gain experience points that will allow you to increase your level and you will find money and hidden treasures that you can use to buy stuff and improve yourself.
 
-Use your mind to figure out how to find the right path!
+Be careful, the world is full of dangerous enemies ready to attack you!
+
+Use your mind to figure out the best path!
