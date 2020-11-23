@@ -128,7 +128,8 @@ class _ButtonsState extends State<_Buttons> {
             bottom: 20,
             right: 20,
             child: GestureDetector(
-              onTap: () {},
+              onPanUpdate: (upd) => game.onPanUpdate(upd),
+              onPanEnd: (end) => game.onPanEnd(end),
               child: Container(
                 width: _size * 4,
                 height: _size * 4,
