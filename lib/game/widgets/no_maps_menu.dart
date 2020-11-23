@@ -23,9 +23,7 @@ class NoMapsMenu extends StatelessWidget {
               ),
               const Text(
                 'Unfortunately, the next part of the story is not yet available.\n'
-                'Hopefully it will be available soon.\n\n'
-                'In the meantime you can play multiplayer mode or you can support the development of Xeonjia.\n'
-                'If you want to give feedback click below.',
+                'Hopefully it will be available soon.',
                 style: TextStyle(color: Colors.white, fontSize: 32),
                 textAlign: TextAlign.center,
               ),

@@ -7,17 +7,16 @@ List<Rule> rules() => [
       Rule(
         title: 'X E O N J i A',
         subtitle:
-            'Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe to right to learn the basic concepts.',
+            'Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.',
         image: 'assets/graphics/icon_black.png',
       ),
       Rule(
         title: 'Modes',
         subtitle: '''There are two modes in Xeonjia:
 
-1) Story: the world has been frozen and your duty is to defeat the "King of Evil" and save the
-world.
+1) Story: the world has been frozen and your duty is to defeat the "King of Evil" and save the kingdom.
 
-2) Multiplayer: the aim of this mode is to score points and make your team win.''',
+2) Multiplayer: defeat enemies, score points and make your team win.''',
         icon: Icons.filter_2,
       ),
       Rule(

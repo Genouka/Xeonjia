@@ -5,7 +5,7 @@ Widget helpDialog(BuildContext context) {
     title: const Text('Multiplayer Mode', textAlign: TextAlign.center),
     content: const SingleChildScrollView(
       child: Text('''
-The aim of this mode is to score points and make your team win.
+The aim of this mode is to defeat enemies, score points and make your team win.
 
 The rules are simple:
 - The players are organized into two teams.
@@ -14,7 +14,7 @@ The rules are simple:
 
 Your teammates are the red ones.
 
-For now it is possible to play against CPUs.
+For now it's only possible to play against CPUs.
 
 Choose the place to play and configure the game.
 When you are ready press "Play".

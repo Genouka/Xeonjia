@@ -163,9 +163,9 @@ class CharacterComponent extends DynamicComponent
     if (isPlayerOne) {
       if (itemData.containsKey(itemId)) {
         game.setMessage(Message(
-            '* \$hero puts ${itemData[itemId].name} in the backpack *'));
+            '* \$hero puts ${itemData[itemId].name} in the backpack. *'));
       } else if (itemId.contains('gem_')) {
-        game.setMessage(Message('* \$hero puts the gem in the backpack *'));
+        game.setMessage(Message('* \$hero puts the gem in the backpack. *'));
       }
       game.playSound(Sfx.item);
     }
