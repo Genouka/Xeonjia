@@ -248,7 +248,7 @@ class XeonjiaGame extends BaseGame
     currentBgm = newBgm;
     _backgroundMusic.stop();
     Future.delayed(const Duration(seconds: 1), () {
-      _backgroundMusic.play('bgm/' + currentBgm);
+      if (game != null) _backgroundMusic.play('bgm/' + currentBgm);
     });
   }
 
@@ -407,6 +407,7 @@ class XeonjiaGame extends BaseGame
   }
 
   void dispose() {
+    _backgroundMusic?.stop();
     _backgroundMusic?.dispose();
     gamepad?.removeListener();
     game = null;
