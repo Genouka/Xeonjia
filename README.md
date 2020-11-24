@@ -8,6 +8,9 @@ Save the world by solving ice puzzles and defeating enemies.
 
 ## About
 
+[![ko-fi](https://img.shields.io/liberapay/patrons/deepdaikon.svg?logo=liberapay)](https://liberapay.com/deepdaikon/donate)
+[<img src="https://www.ko-fi.com/img/githubbutton_sm.svg" alt="Donate" height="20">](https://ko-fi.com/deepdaikon)
+
 Xeonjia is an Android game set in a frozen world.
 
 There are two modes:
@@ -35,6 +38,14 @@ Use your mind to figure out the best path!
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1_Story.png" height="320">
 <img src ="fastlane/metadata/android/en-US/images/phoneScreenshots/2_Story.png" height="320">
 <img src ="fastlane/metadata/android/en-US/images/phoneScreenshots/3_Story.png" height="320">
+
+## Donate
+
+If you want to support the development of Xeonjia you can donate through Liberapay or Ko-fi.
+
+[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/deepdaikon/donate)
+[<img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=2" alt="Donate" height="30">](https://ko-fi.com/deepdaikon)
+
 
 ## License
 
