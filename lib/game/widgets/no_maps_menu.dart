@@ -22,8 +22,9 @@ class NoMapsMenu extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const Text(
-                'Unfortunately, the next part of the story is not yet available.\n'
-                'Hopefully it will be available soon.',
+                'Unfortunately, the next part of the story is not yet available :(\n'
+                'Hopefully it will be available soon.\n\n'
+                'In the meantime you can support the development of Xeonjia by donating or by giving feedback.',
                 style: TextStyle(color: Colors.white, fontSize: 32),
                 textAlign: TextAlign.center,
               ),
@@ -33,7 +34,17 @@ class NoMapsMenu extends StatelessWidget {
                 children: [
                   FlatButton(
                     child: const Text(
-                      'Report a bug / ask something',
+                      'Donate',
+                      style: TextStyle(color: Colors.white, fontSize: 32),
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      launch('https://deepdaikon.xyz/donate');
+                    },
+                  ),
+                  FlatButton(
+                    child: const Text(
+                      'Report a bug or ask something',
                       style: TextStyle(color: Colors.white, fontSize: 32),
                       textAlign: TextAlign.center,
                     ),

@@ -25,6 +25,12 @@ class _InfoPageState extends State<InfoPage> {
       'icon': const Icon(Icons.looks_one),
     },
     {
+      'title': 'Donate',
+      'subtitle': 'Support the development',
+      'url': 'https://deepdaikon.xyz/donate',
+      'icon': const Icon(Icons.euro),
+    },
+    {
       'title': 'Updates',
       'subtitle': 'Search for updates on F-Droid',
       'url': 'https://f-droid.org/packages/xyz.deepdaikon.xeonjia/',
