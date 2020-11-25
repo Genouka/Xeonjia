@@ -8,8 +8,8 @@ Save the world by solving ice puzzles and defeating enemies.
 
 ## About
 
-[![ko-fi](https://img.shields.io/liberapay/patrons/deepdaikon.svg?logo=liberapay)](https://liberapay.com/deepdaikon/donate)
-[<img src="https://www.ko-fi.com/img/githubbutton_sm.svg" alt="Donate" height="20">](https://ko-fi.com/deepdaikon)
+[![Liberapay](https://img.shields.io/liberapay/patrons/deepdaikon.svg?logo=liberapay)](https://liberapay.com/deepdaikon/donate)
+[<img src="https://www.ko-fi.com/img/githubbutton_sm.svg" alt="Ko-fi" height="20">](https://ko-fi.com/deepdaikon)
 
 Xeonjia is an Android game set in a frozen world.
 
@@ -58,6 +58,16 @@ sources.
 
 ### Graphics
 
-Except where otherwise noted, all graphics of this game are licensed under the Creative Commons
+Except where otherwise noted, all the graphics of this game are licensed under the Creative Commons
 Attribution-ShareAlike 4.0 International License
 ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
+
+### Music
+
+Except where otherwise noted, all the background music of this game are licensed under the Creative
+Commons Attribution-ShareAlike 4.0 International License
+([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
+
+The following are adapted artwork from Yubatake and are licensed under the Creative Commons
+Attribution 3.0 Unported License ([CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)):
+city.oga, enemies.oga, forest.oga, road.oga, town.oga.
