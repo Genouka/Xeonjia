@@ -15,7 +15,7 @@
  <objectgroup id="8" name="npcs">
   <object id="46" type="NPC" gid="45" x="256" y="256" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;The ice is so slippery, have you noticed?\nI feel more comfortable in the snow.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;The ice is so slippery, have you noticed?\nI feel more comfortable on the snow.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

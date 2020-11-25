@@ -17,7 +17,7 @@
  <tile id="5" type="Solid"/>
  <tile id="6" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;This type of plants are very fragrant.&quot;)))"/>
+   <property name="action" value="(dialog '((&quot;This plant is very fragrant.&quot;)))"/>
   </properties>
  </tile>
  <tile id="7" type="Ground"/>

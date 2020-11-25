@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="42">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="43">
  <properties>
   <property name="music" value="enemies"/>
  </properties>
@@ -8,7 +8,7 @@
  <tileset firstgid="177" source="../tilesets/monster.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA1NgYGCQgGIFKDZHYkvgYPuj8SkBMPtBwA9NDtlsXwJmUOoOkJ9AfucEYj0g5gJiOzzq7dH4Cki0OhDzAbEqiW6wAWJbqP36aGbA5CSQ1CswYAfCQCwIxPJEuMMTiL2wiIPMNoeaIwfEQgTsxAbsSVSPDYD0SxBSBAXmaHxY/GEzA196QgbeSGYoEFCLK734QGn0fGYHxSC+BpQNi2dkMQUoDdMPAEFrmii4AwAA
+   H4sIAAAAAAAAA6WTvQ7CMAyEvcKABCyZihcEEx2z0Hbm//3fhrPkSMZyG6qe9Clx4l5sJWUiSgor2czTyPzj4iUq54vebs96vyoeS+uQnqT3FbiANegn8gcXsxlPYAOOM2u4gk7Pb51H2UsmnynWHmzB4Y86buAerIt3Vp8G7CpnRhpm5keS71MtSZVdXO4v8ph6T1YP48GV3LH38tTR/2e9IvFZ5+We7RrTby9f30HEh7gDAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -82,6 +82,16 @@
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (get &quot;013-h-safe&quot;)
     (delete))</property>
+   </properties>
+  </object>
+  <object id="42" type="Solid" gid="55" x="240" y="224" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;13.berries&quot;))
+    (begin
+        (dialog '((&quot;* $hero found some berries! 10 LPs have been recovered *&quot;)))
+        (give-item &quot;13.berries&quot;)
+        (set-life-diff 10))
+    (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

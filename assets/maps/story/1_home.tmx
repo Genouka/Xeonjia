@@ -19,7 +19,8 @@
     <property name="action">(if (!get &quot;001-talk-mom&quot;)
     (begin
         (dialog
-            '((&quot;mom/_happy&quot; &quot;Hi $hero! Did you sleep well?&quot;)
+            '((&quot;/hero_happy&quot; &quot;Good morning mom!&quot;)
+            (&quot;mom&quot; &quot;Hi $hero! Did you sleep well?&quot;)
             (&quot;/hero_sleepy&quot; &quot;Actually not very well... I'm still a little sleepy.&quot;)
             (&quot;mom&quot; &quot;You always are.\nAnyway, now it is time to leave, be very careful and remember to check your health in the top left bar.&quot;)
             (&quot;/hero&quot; &quot;Yea mom. Don't worry, I'll be careful.&quot;)
