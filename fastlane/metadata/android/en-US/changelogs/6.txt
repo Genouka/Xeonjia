@@ -1,0 +1,5 @@
+* New story mode
+* Update graphics
+* Improve UI/UX
+* Add background music and sfx
+* Bug fixes

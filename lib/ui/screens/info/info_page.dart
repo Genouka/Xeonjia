@@ -9,8 +9,6 @@ class InfoPage extends StatefulWidget {
 }
 
 class _InfoPageState extends State<InfoPage> {
-  static final version = '1.2.0';
-
   final List<Map<String, dynamic>> infoMenuList = [
     {
       'title': 'By DeepDaikon',
@@ -19,10 +17,10 @@ class _InfoPageState extends State<InfoPage> {
       'icon': const Icon(Icons.change_history),
     },
     {
-      'title': 'Version: $version',
+      'title': 'Version: 2.0.0',
       'subtitle': 'App version',
       'url': '',
-      'icon': const Icon(Icons.looks_one),
+      'icon': const Icon(Icons.looks_two),
     },
     {
       'title': 'Donate',
