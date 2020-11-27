@@ -35,7 +35,7 @@
  <objectgroup id="9" name="items">
   <object id="72" gid="195" x="80" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(shop '((&quot;Restore 50 LP&quot; 10 &quot;(set-life-diff 50)&quot;) (&quot;Restore 75 LP&quot; 25 &quot;(set-life-diff 75)&quot;)))"/>
+    <property name="action" value="(shop '((&quot;Restore 50 LP&quot; 15 &quot;(set-life-diff 50)&quot;) (&quot;Restore 75 LP&quot; 20 &quot;(set-life-diff 75)&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

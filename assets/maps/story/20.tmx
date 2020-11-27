@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="15" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="47">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="15" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="48">
  <properties>
   <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monster.tsx"/>
  <tileset firstgid="137" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="161" source="../tilesets/npc.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52TWQ6AIAxE++ENvAC34EfhABK5/22U4CRNbdle0rjODEtxROREeeWdVSvAX+PqaJF7vHWKb/G7JpEFT2hbaL6jWksf2dhAb56zuVJTSAvasJB7i+ed6rpz+HwD2Wi53MvSYt2z4qf9N5Ir90h6o8+4dnRfQess9OC5s2T6nyXHyrOxoY82qn1c7h/6D1yYOAQAAA==
+   H4sIAAAAAAAAA51T2w2AIAzshxvoAGzBj8IAkrD/NkL0kqa2vC65SIp3x6M4InKCXqlZXAH8NdwdLXLPwkvMxe+bRBY8oW1B8x3VWvrI1gb09jmbKzUVaUEbJnP3wkOpeVHj+w1kQ8vlXpYW554VP+2/kVx5R9Ibfca1o/cKtN5CDzx3Fpn+b8kxerY29NFGbx/X8QP71+LJOAQAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -36,10 +37,15 @@
     <property name="lifePoints" type="float" value="10"/>
    </properties>
   </object>
+  <object id="47" gid="196" x="160" y="160" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I advise you to take another path.\nThese monsters are too strong.&quot;)))"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="15" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoD5wJlKdCRCb4pBzIdNMQuZSUz8pbiIXoIcDMcCMDD1uRKhB9i85dhDSS2y4kxK/hOIIW/jSI16pDQiFCTnpCB8AAFiuRAo4BAAA
+   H4sIAAAAAAAAA2NgoD5wJlKdCRCb4pBzIdNMQuZSUz8pbiIXoIcDMcCM6q6AAGT/UmIHLr3Ehjsp8UsojrCFLz3ildqAUJiQk47wAQAifqb5OAQAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

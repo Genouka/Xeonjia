@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="46">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="47">
  <properties>
   <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="153" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA42SvQvCMBDFb3BRRFCXggpZxM21i9ZZsQa1Dn7gpqDgoOL/7wtc8EhTkwc/LtdcHrlc10S0AVtQgB3QIAEzjn2OipF7Jt+DAziCE7hQWU0nV2JtfG7gDs4cHx4PqTlY8LoLeuAJXuAK3uDjnMkCec6xDTrOnux5AqYi+uqkfHX/lLKP7THzeIaUMFVye5daCg/7JnUwBg3OVxF3sH3be4xACwwjzkqZ+WrhMaDyfEKS7+Gbb4zMDNLI2qqZ23so+v0rOfvauWunrsbrVHz/AsO0OtO4AwAA
+   H4sIAAAAAAAAA42SvQsCMQzFO7goIqjLgQpdxM21i56z4ln8GvzATUHBQcH/31dIMPR6tg9+pOmlj6a5tVJqA7ZgB/bAggzMKPYpakJ+c/kBHMEJnMFVldX0ci3WzucOHuBC8RnwkJqDBa27oAde4A1utP/xzuSRvKDYBh3vm+x5AqYihuqkQnX/ZMiHe8wDnjFlRJX83qWWwoPfpA7GoEH5KuEO3DffYwRaYJhwVsrN1wqPgSrPJyb5HqH5psjNwCTWVs2c76HV718pyJfnbr26Gq2N2P8CHqXHQrgDAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
@@ -70,6 +71,11 @@
         (give-item &quot;10.berries&quot;)
         (set-life-diff 15))
     (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="46" gid="115" x="48" y="64" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;I can see the inside of the shop.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
