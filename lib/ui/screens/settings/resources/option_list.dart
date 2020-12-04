@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:i18n_extension/i18n_widget.dart';
 
+import 'package:xeonjia/main.dart';
+import 'package:xeonjia/ui/screens/settings/resources/languages.dart';
 import 'package:xeonjia/ui/screens/settings/settings_page.dart';
 import 'package:xeonjia/util/insert_name_form.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
@@ -76,6 +79,38 @@ class OptionList extends StatelessWidget {
                   ],
                 );
               }).then((_) => SystemChrome.restoreSystemUIOverlays()),
+        ),
+        ListTile(
+          title: const Text('Language', style: TextStyle(fontSize: 20)),
+          subtitle: const Text('App language'),
+          trailing: DropdownButton<Locale>(
+            value: settings.useSystemLanguage ? null : settings.locale,
+            onChanged: (Locale newValue) {
+              settings.locale = newValue;
+              I18n.of(context).locale = settings.locale;
+              saveSettings();
+              SettingsPage.of(context).refresh();
+            },
+            items: () {
+              var items = <DropdownMenuItem<Locale>>[
+                const DropdownMenuItem<Locale>(
+                  value: null,
+                  child: Text('System default'),
+                )
+              ];
+              items.addAll(supportedLocales
+                  .map<DropdownMenuItem<Locale>>(
+                    (value) => DropdownMenuItem<Locale>(
+                      value: value,
+                      child: Text(languageName.containsKey(value.languageCode)
+                          ? languageName[value.languageCode][1]
+                          : 'missing name'),
+                    ),
+                  )
+                  .toList());
+              return items;
+            }(),
+          ),
         ),
       ]);
 

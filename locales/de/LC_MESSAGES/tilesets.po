@@ -1,0 +1,103 @@
+# German translation for Xeonjia
+# Copyright (C) 2020 DeepDaikon
+# This file is distributed under the same license as Xeonjia.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+#: assets/maps/tilesets/lab.tsx:
+msgid "Test tubes and other scientific stuff."
+msgstr ""
+
+#: assets/maps/tilesets/lab.tsx:
+msgid "Someone has turned everything upside down."
+msgstr ""
+
+#: assets/maps/tilesets/lab.tsx:
+msgid "A broken monitor."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor_1.tsx:
+msgid "A rocky wall."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor_1.tsx:
+msgid "A wall."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor_1.tsx:
+msgid "A rock."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor_1.tsx:
+msgid "A snowdrift."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor_1.tsx:
+msgid "A little plant."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor_1.tsx:
+msgid "A little plant without leaves."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor_1.tsx:
+msgid "I like the color of this tree."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor_1.tsx:
+msgid "This type of tree is strange."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor_1.tsx:
+msgid "This type of plant is strange."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor_1.tsx:
+msgid "It's not a good thing to look into other people's homes."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor_1.tsx:
+msgid "This door is closed."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor_1.tsx:
+msgid "This is a pharmacy."
+msgstr ""
+
+#: assets/maps/tilesets/indoor.tsx:
+msgid "The weather is good today."
+msgstr ""
+
+#: assets/maps/tilesets/indoor.tsx:
+msgid "A painting that depicts this area long ago."
+msgstr ""
+
+#: assets/maps/tilesets/indoor.tsx:
+msgid "This plant is very fragrant."
+msgstr ""
+
+#: assets/maps/tilesets/indoor.tsx:
+msgid "It's full of books here."
+msgstr ""
+
+#: assets/maps/tilesets/indoor.tsx:
+msgid "A closed door."
+msgstr ""
+
+#: assets/maps/tilesets/indoor.tsx:
+msgid "There is some food between the mattresses of this sofa."
+msgstr ""
+
+#: assets/maps/tilesets/indoor.tsx:
+msgid "This is a wall."
+msgstr ""
+
+#: assets/maps/tilesets/indoor.tsx:
+msgid "Oink !"
+msgstr ""
+
+#: assets/maps/tilesets/indoor.tsx:
+msgid "This pig looks very happy."
+msgstr ""
+

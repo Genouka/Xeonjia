@@ -1,0 +1,25 @@
+// Language code : language name
+// It contains some of the most used (?) languages
+const languageName = {
+  'zh': ['Chinese', '汉语'],
+  'es': ['Spanish', 'Español'],
+  'en': ['English', 'English'],
+  'ar': ['Arabic', 'العربية'],
+  'pt': ['Portuguese', 'Português'],
+  'ru': ['Russian', 'Русский'],
+  'ja': ['Japanese', '日本語'],
+  'de': ['German', 'Deutsch'],
+  'ko': ['Korean', '한국어'],
+  'fr': ['French', 'Français'],
+  'tr': ['Turkish', 'Türkçe'],
+  'it': ['Italian', 'Italiano'],
+  'pl': ['Polish', 'Polski'],
+  'nl': ['Dutch', 'Nederlands'],
+  'el': ['Greek', 'Ελληνικά'],
+  'no': ['Norwegian', 'Norsk'],
+  'da': ['Danish', 'Dansk'],
+  'fi': ['Finnish', 'Suomi'],
+  'eo': ['Esperanto', 'Esperanto'],
+  'ia': ['Interlingua', 'Interlingua'],
+  'template': ['INSERT LANGUAGE HERE', 'INSERT LANGUAGE HERE'],
+};

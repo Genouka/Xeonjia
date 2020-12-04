@@ -1,0 +1,739 @@
+# German translation for Xeonjia
+# Copyright (C) 2020 DeepDaikon
+# This file is distributed under the same license as Xeonjia.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+#: assets/maps/story/15.tmx:
+msgid "* $hero found some berries! 30 LPs have been recovered *"
+msgstr ""
+
+#: assets/maps/story/15.tmx:
+msgid "A little plant... nothing else."
+msgstr ""
+
+#: assets/maps/story/24_lab.tmx:
+msgid "VANTOI LAB - 1F"
+msgstr ""
+
+#: assets/maps/story/24_lab.tmx:
+msgid "Sorry about the mess. Thieves have entered and turned everything upside down."
+msgstr ""
+
+#: assets/maps/story/24_lab.tmx:
+msgid "scientist"
+msgstr ""
+
+#: assets/maps/story/24_lab.tmx:
+msgid "A life's work has been destroyed..."
+msgstr ""
+
+#: assets/maps/story/24_lab.tmx:
+msgid "Someone used this plant to do some experiments."
+msgstr ""
+
+#: assets/maps/story/24_lab.tmx:
+msgid "A broken monitor."
+msgstr ""
+
+#: assets/maps/story/1.tmx:
+msgid "Natawn"
+msgstr ""
+
+#: assets/maps/story/1.tmx:
+msgid "Safe travels, son.\nMany before you have failed, but I am sure you will handle it right."
+msgstr ""
+
+#: assets/maps/story/1.tmx:
+msgid "dad"
+msgstr ""
+
+#: assets/maps/story/1.tmx:
+msgid "I'll do my best."
+msgstr ""
+
+#: assets/maps/story/1.tmx:
+msgid "The tower in which the ''King of Evil'' resides should be located near the capital of the region."
+msgstr ""
+
+#: assets/maps/story/1.tmx:
+msgid "'' NATAWN - Hometown of the 62nd hero ''"
+msgstr ""
+
+#: assets/maps/story/1.tmx:
+msgid "I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude."
+msgstr ""
+
+#: assets/maps/story/1.tmx:
+msgid "Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks."
+msgstr ""
+
+#: assets/maps/story/17.tmx:
+msgid "I still haven't figured out if these monsters are malicious or just stupid."
+msgstr ""
+
+#: assets/maps/story/17.tmx:
+msgid "* $hero found some berries! 50 LPs have been recovered *"
+msgstr ""
+
+#: assets/maps/story/31_house1.tmx:
+msgid "I hate people who always say the same things."
+msgstr ""
+
+#: assets/maps/story/3_house2.tmx:
+msgid "Hi, you look a little tired. Rest here for a moment."
+msgstr ""
+
+#: assets/maps/story/3_house2.tmx:
+msgid "* $hero rested and is now in perfect health *"
+msgstr ""
+
+#: assets/maps/story/3_house2.tmx:
+msgid "Come back anytime."
+msgstr ""
+
+#: assets/maps/story/3_house2.tmx:
+msgid "Be careful not to get hurt."
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Help me please!\nPunch him by pressing the 'P' button."
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Everything good?"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Yes, thank you so much for saving my life!\nI have to admit, I was scared.\nAs a token of gratitude I give you this gem that I found a little while ago."
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Thanks, it seems very precious."
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Thanks for saving me, I think it's better if I go home now."
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Please help me! Save me from this monster!"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "I can't escape, I have to defeat the monster to save that man."
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Better if I check that the guy is okay."
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "* $hero found some berries! 10 LPs have been recovered *"
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "..."
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "Oops... yes, sorry, I am in the middle of the road...\nAre you a tourist? There are very few nowadays."
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "???"
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "N-no, I'm $hero, this year's chosen hero. I just left home to try to defeat the King of Evil."
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "What!? So is it you?!"
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "Nice to meet you, I've never met a hero before."
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "My name is Milla, I was born and raised in this area. I too am setting out on a journey."
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "Oh cool! Where are you going?"
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "I have absolutely no idea."
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "I just want to explore the world, know new places and learn new things."
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "Wow, sounds like a great idea!"
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "Yep, it won't be easy but I want to visit at least the whole kingdom."
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "Are there places outside the kingdom?!"
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "Dunno, that's what I want to find out!"
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "Anyway, I don't want to waste any more of your time."
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "After all, you have to save the world. Not an easy task."
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "I'm sure we'll meet again soon, hero."
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "See ya!"
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "Bye!"
+msgstr ""
+
+#: assets/maps/story/7.tmx:
+msgid "'' Picnic area - Do not leave rubbish, thanks. ''"
+msgstr ""
+
+#: assets/maps/story/1_home_2.tmx:
+msgid "I'd like to go back to bed but I can't."
+msgstr ""
+
+#: assets/maps/story/1_home_2.tmx:
+msgid "I'll miss you, TV."
+msgstr ""
+
+#: assets/maps/story/1_home_2.tmx:
+msgid "I hope my parents will water it when I'm away."
+msgstr ""
+
+#: assets/maps/story/1_home_2.tmx:
+msgid "All my books are here."
+msgstr ""
+
+#: assets/maps/story/1_home_2.tmx:
+msgid "My chair."
+msgstr ""
+
+#: assets/maps/story/1_home_2.tmx:
+msgid "From here I can see the garden."
+msgstr ""
+
+#: assets/maps/story/24.tmx:
+msgid "Melhopolis"
+msgstr ""
+
+#: assets/maps/story/24.tmx:
+msgid "'' VANTOI LAB ''"
+msgstr ""
+
+#: assets/maps/story/24.tmx:
+msgid "I can see the inside of the Laboratory."
+msgstr ""
+
+#: assets/maps/story/24.tmx:
+msgid "I can see the inside of the Pharmacy."
+msgstr ""
+
+#: assets/maps/story/24.tmx:
+msgid "'' Melhopolis - Regional capital ''"
+msgstr ""
+
+#: assets/maps/story/24.tmx:
+msgid "I can see the inside of the house."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Route 3"
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "That's the first crypt, I think."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Hey! Hi $hero!"
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "H-hi, you know me?"
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Well, you are the hero of this year, you are quite famous. Are you here to visit the crypt?"
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Yes. If I have not misunderstood, here's one of the 3 signets I need to access the Xeonjia tower."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Ah that's true, I've heard of it.\nBeware that here is full of monsters and bad people."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Ok thanks, I'll be careful.\nBut... who are you?"
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Oh, yes sorry I forgot to introduce myself."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "My name is Shen, I am a scientist."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Nice to meet you, Shen."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Oh, by the way, I think this might help you."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "* $hero got a SNOWBALLS CONTAINER *"
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the 'S' button.\nIt can contain up to 10 snowballs."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Wow! I'm sure it'll come in handy. Thank you."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "You're welcome."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Well, at least it will be an equal fight."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Ha ha, well, you're right."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Now I have to leave you, I have to study a strange rock that I found a little while ago."
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "We'll see again. Good luck!"
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "Bye Shen, thanks again!"
+msgstr ""
+
+#: assets/maps/story/22.tmx:
+msgid "I have to go through the crypt to get the first signet."
+msgstr ""
+
+#: assets/maps/story/9.tmx:
+msgid "This is not a place for kids, go home."
+msgstr ""
+
+#: assets/maps/story/9.tmx:
+msgid "Weird things happen in this area...."
+msgstr ""
+
+#: assets/maps/story/9.tmx:
+msgid "* $hero found some berries! 5 LPs have been recovered *"
+msgstr ""
+
+#: assets/maps/story/24_house1.tmx:
+msgid "A computer turned off. Looks like a key is needed to turn it on."
+msgstr ""
+
+#: assets/maps/story/21.tmx:
+msgid "Route 2"
+msgstr ""
+
+#: assets/maps/story/10_old_shop.tmx:
+msgid "Hi, I'm sorry but we're closed. Once this was a busy shop, but now it doesn't even make sense to stay open."
+msgstr ""
+
+#: assets/maps/story/10_old_shop.tmx:
+msgid "shopkeeper"
+msgstr ""
+
+#: assets/maps/story/10_old_shop.tmx:
+msgid "It's full of old junk here."
+msgstr ""
+
+#: assets/maps/story/10_old_shop.tmx:
+msgid "I've never seen so much dust."
+msgstr ""
+
+#: assets/maps/story/10_old_shop.tmx:
+msgid "Here it's full of snow globes with a miniaturized Mitsu forest inside. When they were built snow was a very rare phenomenon here and it was much more appreciated."
+msgstr ""
+
+#: assets/maps/story/10_old_shop.tmx:
+msgid "There are very expensive junk here."
+msgstr ""
+
+#: assets/maps/story/10_old_shop.tmx:
+msgid "I think this vase was placed here on purpose to block the passage."
+msgstr ""
+
+#: assets/maps/story/2_house.tmx:
+msgid "You are the chosen one for this year, right? My son was too many years ago."
+msgstr ""
+
+#: assets/maps/story/2_house.tmx:
+msgid "Unfortunately he failed to defeat the King of Evil..."
+msgstr ""
+
+#: assets/maps/story/15_lp_shop.tmx:
+msgid "Pharmacy"
+msgstr ""
+
+#: assets/maps/story/15_lp_shop.tmx:
+msgid "Welcome to my shop!"
+msgstr ""
+
+#: assets/maps/story/15_lp_shop.tmx:
+msgid "pharmacist"
+msgstr ""
+
+#: assets/maps/story/20.tmx:
+msgid "I advise you to take another path.\nThese monsters are too strong."
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "XEONJIA TOWER"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Hi Milla, are you ok? Did you get here without any problems?"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Hii $hero!"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Yes, I cleverly managed to avoid the monsters that were along the way!"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "I love those cute little green worms!"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "...S-such weird tastes here."
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Unkind!"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Aaanyway, look here! This is the tower where the King of Evil resides!"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Oh really? Are we there yet?"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "It seems so... but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets."
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Signets?"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "I did not understand exactly what they are, but if I have not misunderstood they are kept in crypts present in each region of the kingdom."
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Mm... Then I really think that I have to set out in search of these crypts..."
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "I guess you have no other choice."
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Good luck!"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Do your best!"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "I hate this little girl here... She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent."
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "'' Xeonjia Tower - Dwelling of the King of Evil. Stay away. ''"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "This door is closed."
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "This door is closed, I need the 3 signets to open it."
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "I should go to the tower."
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "The tower is so ugly."
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "Home"
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "Good morning mom!"
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "Hi $hero! Did you sleep well?"
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "mom"
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "Actually not very well... I'm still a little sleepy."
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "You always are.\nAnyway, now it is time to leave, be very careful and remember to check your health in the top left bar."
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "Yea mom. Don't worry, I'll be careful."
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "When you hit the rocks you could hurt yourself, so stop by our neighbor who have prepared a brand new pair of shin guards for you."
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "Sure, I will."
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "Go get the shin guards from the neighbor, you will need them."
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "The new shin guards are beautiful, they match the suit."
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "This plant hasn't been watered for long."
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "Unfortunately, this is not the time to lie down on the sofa."
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "This plant seems to have been recently watered."
+msgstr ""
+
+#: assets/maps/story/4_house.tmx:
+msgid "The last time I went through the forest I was attacked.\nI'm not going back there anymore."
+msgstr ""
+
+#: assets/maps/story/4_house.tmx:
+msgid "If you want to enter the forest you have to be careful, my grandson risked getting hurt there."
+msgstr ""
+
+#: assets/maps/story/26_house.tmx:
+msgid "Do you think piglets will one day be a common pet?"
+msgstr ""
+
+#: assets/maps/story/3_house1.tmx:
+msgid "A few meters from here is the Mitsu forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."
+msgstr ""
+
+#: assets/maps/story/28_house.tmx:
+msgid "Mind your own business."
+msgstr ""
+
+#: assets/maps/story/28_house.tmx:
+msgid "This vase is very heavy, I can't move it."
+msgstr ""
+
+#: assets/maps/story/1_house.tmx:
+msgid "NEIGHBOR'S HOUSE"
+msgstr ""
+
+#: assets/maps/story/1_house.tmx:
+msgid "Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones.\nI made them by hand. Here's to you!"
+msgstr ""
+
+#: assets/maps/story/1_house.tmx:
+msgid "neighbor"
+msgstr ""
+
+#: assets/maps/story/1_house.tmx:
+msgid "* $hero got and put on the shin guards *"
+msgstr ""
+
+#: assets/maps/story/1_house.tmx:
+msgid "This way you will hurt yourself less, but be careful that they do not fully protect you from damage."
+msgstr ""
+
+#: assets/maps/story/1_house.tmx:
+msgid "Thank you very much!"
+msgstr ""
+
+#: assets/maps/story/1_house.tmx:
+msgid "Since the shin guards I gave you do not fully protect you, try to think diligently about the moves you make."
+msgstr ""
+
+#: assets/maps/story/30.tmx:
+msgid "I'm planning a surprise wedding for my son, I hope he doesn't find out."
+msgstr ""
+
+#: assets/maps/story/30.tmx:
+msgid "This part is wip"
+msgstr ""
+
+#: assets/maps/story/30.tmx:
+msgid "worker"
+msgstr ""
+
+#: assets/maps/story/12.tmx:
+msgid "* $hero found 50 ¤ *"
+msgstr ""
+
+#: assets/maps/story/3.tmx:
+msgid "Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck."
+msgstr ""
+
+#: assets/maps/story/3.tmx:
+msgid "Oh, I was about to take those berries."
+msgstr ""
+
+#: assets/maps/story/3.tmx:
+msgid "No problem, you can keep them."
+msgstr ""
+
+#: assets/maps/story/3.tmx:
+msgid "I hope those berries were good."
+msgstr ""
+
+#: assets/maps/story/3.tmx:
+msgid "On the ground it's easy to find XEON (¤) stones that you can use to buy items in shops."
+msgstr ""
+
+#: assets/maps/story/3.tmx:
+msgid "* $hero found some berries! 20 LPs have been recovered *"
+msgstr ""
+
+#: assets/maps/story/3.tmx:
+msgid "It seems that once there was a path here."
+msgstr ""
+
+#: assets/maps/story/28.tmx:
+msgid "* $hero found some berries! 40 LPs have been recovered *"
+msgstr ""
+
+#: assets/maps/story/2.tmx:
+msgid "Route 1"
+msgstr ""
+
+#: assets/maps/story/2.tmx:
+msgid "The ice is so slippery, have you noticed?\nI feel more comfortable on the snow."
+msgstr ""
+
+#: assets/maps/story/2.tmx:
+msgid "There seems to be something in the branches of this plant...\nIt's a stone!"
+msgstr ""
+
+#: assets/maps/story/2.tmx:
+msgid "This is a very strange stone... Never seen anything like this before."
+msgstr ""
+
+#: assets/maps/story/24_lab_2.tmx:
+msgid "VANTOI LAB - 2F"
+msgstr ""
+
+#: assets/maps/story/24_lab_2.tmx:
+msgid "What a mess! I have to tidy up!"
+msgstr ""
+
+#: assets/maps/story/31.tmx:
+msgid "Some boulders are placed by us, the workers of the kingdom.\nIn this way it's easier to reach all places."
+msgstr ""
+
+#: assets/maps/story/10.tmx:
+msgid "'' Souvenir shop ''"
+msgstr ""
+
+#: assets/maps/story/10.tmx:
+msgid "* $hero found some berries! 15 LPs have been recovered *"
+msgstr ""
+
+#: assets/maps/story/10.tmx:
+msgid "I can see the inside of the shop."
+msgstr ""
+
+#: assets/maps/story/31_house2.tmx:
+msgid "Melhopolis is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though."
+msgstr ""
+
+#: assets/maps/story/5.tmx:
+msgid "Mitsu Forest"
+msgstr ""
+
+#: assets/maps/story/5.tmx:
+msgid "Hey, this is the Mitsu forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here."
+msgstr ""
+
+#: assets/maps/story/5.tmx:
+msgid "174805...\nI don't know what these figures are but a little while ago I heard someone say them out loud...\nDunno why."
+msgstr ""
+
+#: assets/maps/story/5.tmx:
+msgid "The trees of this region are admired and studied throughout the kingdom. These blues are my favorites."
+msgstr ""
+
+#: assets/maps/story/5.tmx:
+msgid "'' Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right. ''"
+msgstr ""
+
+#: assets/maps/story/5.tmx:
+msgid "Once this was a very touristy place, the kingdom tried to make money from it."
+msgstr ""
+

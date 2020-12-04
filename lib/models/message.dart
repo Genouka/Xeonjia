@@ -1,4 +1,5 @@
 import 'package:xeonjia/game/components/abstract_basic.dart';
+import 'package:xeonjia/i18n/maps.i18n.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 // Message shown in dialog box
@@ -27,13 +28,13 @@ class Message {
   Message(this.text, {this.author = '', this.component}) {
     var m = RegExp(r'([^\/]*)\/?([^_]*)_?(.*)').firstMatch(author);
     var name = m.group(2) != '' ? m.group(2) : component?.name ?? '';
-    authorName = (m.group(1) != '' ? m.group(1) : (author == '' ? '' : name))
-        .toUpperCase()
-        .replaceAll('-', ' ');
+    authorName = (m.group(1) != '' ? m.group(1) : (author == '' ? '' : name));
     var mood = m.group(3);
     var fileName = name + (mood != '' ? '_$mood' : '');
     image = authorName != '' ? 'assets/images/heads/${fileName}.png' : null;
-    text = text.replaceAll('\$hero', mainCharacter.name);
-    if (authorName == 'HERO') authorName = mainCharacter.name;
+    text = text.i18n.replaceAll('\$hero', mainCharacter.name);
+    authorName = authorName == 'HERO'
+        ? mainCharacter.name
+        : authorName.i18n.toUpperCase().replaceAll('-', ' ');
   }
 }
