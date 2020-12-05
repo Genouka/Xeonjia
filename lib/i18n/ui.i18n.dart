@@ -6,6 +6,12 @@ extension Localization on String {
       {
         'it': {
           '''Story mode''': '''Modalità storia''',
+          '''Sound effects''': '''Effetti sonori''',
+          '''pause''': '''pausa''',
+          '''exit''': '''esci''',
+          '''Shop''': '''Negozio''',
+          '''Punch''': '''Pugno''',
+          '''Too short.''': '''Troppo corto.''',
         },
       };
   String get i18n => localize(this, _t);

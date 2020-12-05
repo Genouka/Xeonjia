@@ -3,7 +3,7 @@ import 'package:path/path.dart';
 
 import 'translation.dart';
 
-// Map <file path (.tmx | .tsx) : [...msgids]>
+// Map <file name : [...msgids]>
 Map<String, List<Translation>> tmx2po() {
   // Find dialogs or map-names
   final regexGlobal = RegExp(
@@ -23,7 +23,7 @@ Map<String, List<Translation>> tmx2po() {
   mapsDir.listSync(recursive: true).forEach((fsEntity) {
     if (fsEntity is File &&
         ['.tmx', '.tsx'].contains(extension(fsEntity.path))) {
-      var dir = RegExp('$mapsPath(.*)/.*').firstMatch(fsEntity.path)?.group(1);
+      var name = 'story';
       var content = fsEntity.readAsStringSync();
       regexGlobal.allMatches(content).forEach((match) {
         regexText.allMatches(match.group(0)).forEach((text) {
@@ -34,16 +34,16 @@ Map<String, List<Translation>> tmx2po() {
             authorName = Translation(fsEntity.path,
                 regexAuthorName.firstMatch(author).group(1), null);
           }
-          if (!dirStringsMap.containsKey(dir)) dirStringsMap[dir] = [];
+          if (!dirStringsMap.containsKey(name)) dirStringsMap[name] = [];
           if (string.msgid != null &&
               string.msgid != '' &&
-              dirStringsMap[dir].every((element) => element != string)) {
-            dirStringsMap[dir].add(string);
+              dirStringsMap[name].every((element) => element != string)) {
+            dirStringsMap[name].add(string);
           }
           if (authorName?.msgid != null &&
               authorName.msgid != '' &&
-              dirStringsMap[dir].every((element) => element != authorName)) {
-            dirStringsMap[dir].add(authorName);
+              dirStringsMap[name].every((element) => element != authorName)) {
+            dirStringsMap[name].add(authorName);
           }
         });
       });

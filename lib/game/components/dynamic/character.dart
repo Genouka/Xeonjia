@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 
-import 'package:xeonjia/i18n/game.i18n.dart';
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/util/lifepoints_bar.dart';
 import 'package:xeonjia/game/util/respawn_animation.dart';
