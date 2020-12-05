@@ -1,5 +1,5 @@
 import 'package:xeonjia/game/components/abstract_basic.dart';
-import 'package:xeonjia/i18n/maps.i18n.dart';
+import 'package:xeonjia/i18n/story.i18n.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 // Message shown in dialog box

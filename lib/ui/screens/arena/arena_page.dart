@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/ui/screens/arena/resources/maps.dart';
@@ -35,7 +36,7 @@ class _ArenaPageState extends State<ArenaPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: const Text('MULTIPLAYER'),
+          title: Text('Multiplayer'.i18n.toUpperCase()),
           centerTitle: true,
           actions: [
             IconButton(
@@ -53,8 +54,8 @@ class _ArenaPageState extends State<ArenaPage> {
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 70),
           children: <Widget>[
             ListTile(
-              title: const Text('Map', style: TextStyle(fontSize: 20)),
-              subtitle: const Text('Place to play'),
+              title: Text('Map'.i18n, style: const TextStyle(fontSize: 20)),
+              subtitle: Text('Place to play'.i18n),
               trailing: DropdownButton<int>(
                 value: _config.mapId,
                 onChanged: (int newValue) {
@@ -73,8 +74,9 @@ class _ArenaPageState extends State<ArenaPage> {
               ),
             ),
             ListTile(
-              title: const Text('Difficulty', style: TextStyle(fontSize: 20)),
-              subtitle: const Text('Match difficulty'),
+              title:
+                  Text('Difficulty'.i18n, style: const TextStyle(fontSize: 20)),
+              subtitle: Text('Match difficulty'.i18n),
               trailing: DropdownButton<int>(
                 value: _config.difficulty,
                 onChanged: (int newValue) {
@@ -86,18 +88,18 @@ class _ArenaPageState extends State<ArenaPage> {
                     .map<DropdownMenuItem<int>>(
                       (int value) => DropdownMenuItem<int>(
                         value: value,
-                        child: Text(difficultyNames[value]),
+                        child: Text(difficultyNames[value].i18n),
                       ),
                     )
                     .toList(),
               ),
             ),
             ListTile(
-              title: const Text(
-                'Points required',
-                style: TextStyle(fontSize: 20),
+              title: Text(
+                'Points required'.i18n,
+                style: const TextStyle(fontSize: 20),
               ),
-              subtitle: const Text('Points needed to win'),
+              subtitle: Text('Points needed to win'.i18n),
               trailing: DropdownButton<int>(
                 value: _config.maxPoints,
                 onChanged: (int newValue) {
@@ -116,11 +118,11 @@ class _ArenaPageState extends State<ArenaPage> {
               ),
             ),
             ListTile(
-              title: const Text(
-                'Time available',
-                style: TextStyle(fontSize: 20),
+              title: Text(
+                'Time available'.i18n,
+                style: const TextStyle(fontSize: 20),
               ),
-              subtitle: const Text('Maximum time for a match (minutes)'),
+              subtitle: Text('Maximum time for a match (minutes)'.i18n),
               trailing: DropdownButton<int>(
                 value: _config.maxTime,
                 onChanged: (int newValue) {
@@ -139,8 +141,8 @@ class _ArenaPageState extends State<ArenaPage> {
               ),
             ),
             ListTile(
-              title: const Text('Players', style: TextStyle(fontSize: 20)),
-              subtitle: const Text('Number of players per team'),
+              title: Text('Players'.i18n, style: const TextStyle(fontSize: 20)),
+              subtitle: Text('Number of players per team'.i18n),
               trailing: DropdownButton<int>(
                 value: _config.teamSize,
                 onChanged: (int newValue) {
@@ -159,13 +161,13 @@ class _ArenaPageState extends State<ArenaPage> {
               ),
             ),
             CheckboxListTile(
-              title: const Text(
-                'Friendly Fire',
-                style: TextStyle(fontSize: 20),
+              title: Text(
+                'Friendly Fire'.i18n,
+                style: const TextStyle(fontSize: 20),
               ),
               activeColor: Colors.blueGrey,
               subtitle:
-                  const Text('If enabled, players can hit their teammates'),
+                  Text('If enabled, players can hit their teammates'.i18n),
               value: _config.friendlyFire,
               onChanged: (_newValue) {
                 setState(() {

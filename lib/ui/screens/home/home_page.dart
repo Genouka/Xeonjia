@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/ui/basic.dart';
@@ -11,14 +12,16 @@ import 'package:xeonjia/ui/screens/rules/rules_page.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
 
 class HomePage extends StatelessWidget {
-  final pageList = <Map<String, dynamic>>[
-    {
-      'title': 'Story mode',
-      'goto': () => GamePage(MatchConfig(GameMode.story)),
-    },
-    {'title': 'Multiplayer', 'goto': () => ArenaPage()},
-    {'title': 'How to play', 'goto': () => RulesPage()},
-  ];
+  List<Map<String, dynamic>> pageList() {
+    return [
+      {
+        'title': 'Story mode'.i18n,
+        'goto': () => GamePage(MatchConfig(GameMode.story)),
+      },
+      {'title': 'Multiplayer'.i18n, 'goto': () => ArenaPage()},
+      {'title': 'How to play'.i18n, 'goto': () => RulesPage()},
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +55,7 @@ class HomePage extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                for (var page in pageList)
+                for (var page in pageList())
                   PageButton(
                     title: page['title'],
                     onPressed: () {

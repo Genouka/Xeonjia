@@ -7,6 +7,7 @@ import 'package:flame/gestures.dart';
 import 'package:flame/time.dart';
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/i18n/game.i18n.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
@@ -177,7 +178,7 @@ class XeonjiaGame extends BaseGame
     });
     _timer.start();
     update(0);
-    removeWidgetOverlay('loading');
+    removeWidgetOverlay('loading'.i18n);
     resume();
     playBackgroundMusic();
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/rules/resources/rules.dart';
 import 'package:xeonjia/ui/screens/rules/widgets/last_page.dart';
@@ -48,7 +49,7 @@ class _RulesPageState extends State<RulesPage>
                             ? Colors.white70
                             : Colors.black87,
                         size: 32),
-                    tooltip: 'Close',
+                    tooltip: 'Close'.i18n,
                     onPressed: () {
                       if (widget.homePage == null) {
                         Navigator.pop(context);
@@ -75,7 +76,7 @@ class _RulesPageState extends State<RulesPage>
                 child: Row(
                   children: <Widget>[
                     const Icon(Icons.navigate_before),
-                    const Text('Back'),
+                    Text('Back'.i18n),
                   ],
                 ),
                 onPressed: (_controller.index > 0)
@@ -110,9 +111,9 @@ class _RulesPageState extends State<RulesPage>
                           borderRadius: BorderRadius.circular(50)),
                       child: Row(
                         children: <Widget>[
-                          const Text(
-                            'OK',
-                            style: TextStyle(color: Colors.white),
+                          Text(
+                            'OK'.i18n,
+                            style: const TextStyle(color: Colors.white),
                           ),
                         ],
                       ),
@@ -123,7 +124,7 @@ class _RulesPageState extends State<RulesPage>
                   : FlatButton(
                       child: Row(
                         children: <Widget>[
-                          const Text('Next'),
+                          Text('Next'.i18n),
                           const Icon(Icons.navigate_next)
                         ],
                       ),

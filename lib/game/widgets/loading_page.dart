@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/i18n/game.i18n.dart';
+
 // Page shown while the map is loading
 class LoadingPage extends StatelessWidget {
   @override
@@ -9,9 +11,9 @@ class LoadingPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            'Loading...\nPlease wait',
-            style: TextStyle(
+          Text(
+            'Loading...\nPlease wait'.i18n,
+            style: const TextStyle(
                 color: Colors.white, fontSize: 48, letterSpacing: 1.2),
             textAlign: TextAlign.center,
           ),

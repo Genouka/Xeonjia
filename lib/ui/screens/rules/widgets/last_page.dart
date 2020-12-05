@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/util/insert_name_form.dart';
 
 class LastPage extends StatelessWidget {
@@ -33,17 +35,18 @@ class LastPage extends StatelessWidget {
                     margin: const EdgeInsets.all(20),
                     child: Column(
                       children: <Widget>[
-                        const Text(
-                          'Almost done!',
-                          style: TextStyle(
+                        Text(
+                          'Almost done!'.i18n,
+                          style: const TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 20),
-                          child: const Text(
-                            'Before starting tell me your name which will be used in the game.',
+                          child: Text(
+                            'Before starting tell me your name which will be used in the game.'
+                                .i18n,
                             textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 18),
+                            style: const TextStyle(fontSize: 18),
                           ),
                         ),
                       ],

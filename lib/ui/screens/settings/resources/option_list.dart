@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:i18n_extension/i18n_widget.dart';
 
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/main.dart';
 import 'package:xeonjia/ui/screens/settings/resources/languages.dart';
 import 'package:xeonjia/ui/screens/settings/settings_page.dart';
@@ -17,9 +18,10 @@ class OptionList extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ListView(children: <Widget>[
         CheckboxListTile(
-            title: const Text('Show D-Pad', style: TextStyle(fontSize: 20)),
+            title:
+                Text('Show D-Pad'.i18n, style: const TextStyle(fontSize: 20)),
             activeColor: Colors.blueGrey,
-            subtitle: const Text('Enable directional pad'),
+            subtitle: Text('Enable directional pad'.i18n),
             value: settings.showDPad,
             onChanged: (newValue) {
               settings.showDPad = newValue;
@@ -27,12 +29,12 @@ class OptionList extends StatelessWidget {
               saveSettings();
             }),
         CheckboxListTile(
-            title: const Text(
-              'Background music',
-              style: TextStyle(fontSize: 20),
+            title: Text(
+              'Background music'.i18n,
+              style: const TextStyle(fontSize: 20),
             ),
             activeColor: Colors.blueGrey,
-            subtitle: const Text('Enable background music'),
+            subtitle: Text('Enable background music'.i18n),
             value: settings.backgroundMusic,
             onChanged: (newValue) {
               settings.backgroundMusic = newValue;
@@ -40,9 +42,10 @@ class OptionList extends StatelessWidget {
               saveSettings();
             }),
         CheckboxListTile(
-            title: const Text('Sound effects', style: TextStyle(fontSize: 20)),
+            title: Text('Sound effects'.i18n,
+                style: const TextStyle(fontSize: 20)),
             activeColor: Colors.blueGrey,
-            subtitle: const Text('Enable sound effects'),
+            subtitle: Text('Enable sound effects'.i18n),
             value: settings.soundEffects,
             onChanged: (newValue) {
               settings.soundEffects = newValue;
@@ -50,14 +53,14 @@ class OptionList extends StatelessWidget {
               saveSettings();
             }),
         ListTile(
-          title: const Text('Your name', style: TextStyle(fontSize: 20)),
+          title: Text('Your name'.i18n, style: const TextStyle(fontSize: 20)),
           subtitle:
-              const Text('Click here to change the name used in story mode'),
+              Text('Click here to change the name used in story mode'.i18n),
           onTap: () => showDialog(
               context: context,
               builder: (BuildContext context) {
                 return AlertDialog(
-                  title: const Text('Your name', textAlign: TextAlign.center),
+                  title: Text('Your name'.i18n, textAlign: TextAlign.center),
                   content: insertNameForm(_formKey, _textFieldController,
                       (String text) => saveName(context, text)),
                   actions: <Widget>[
@@ -67,22 +70,22 @@ class OptionList extends StatelessWidget {
                         Navigator.of(context).pop();
                       },
                       textColor: Theme.of(context).primaryColor,
-                      child: const Text('Discard'),
+                      child: Text('Discard'.i18n),
                     ),
                     FlatButton(
                       onPressed: () {
                         saveName(context, _textFieldController.text);
                       },
                       textColor: Theme.of(context).primaryColor,
-                      child: const Text('Save'),
+                      child: Text('Save'.i18n),
                     ),
                   ],
                 );
               }).then((_) => SystemChrome.restoreSystemUIOverlays()),
         ),
         ListTile(
-          title: const Text('Language', style: TextStyle(fontSize: 20)),
-          subtitle: const Text('App language'),
+          title: Text('Language'.i18n, style: const TextStyle(fontSize: 20)),
+          subtitle: Text('App language'.i18n),
           trailing: DropdownButton<Locale>(
             value: settings.useSystemLanguage ? null : settings.locale,
             onChanged: (Locale newValue) {
@@ -93,9 +96,9 @@ class OptionList extends StatelessWidget {
             },
             items: () {
               var items = <DropdownMenuItem<Locale>>[
-                const DropdownMenuItem<Locale>(
+                DropdownMenuItem<Locale>(
                   value: null,
-                  child: Text('System default'),
+                  child: Text('System default'.i18n),
                 )
               ];
               items.addAll(supportedLocales

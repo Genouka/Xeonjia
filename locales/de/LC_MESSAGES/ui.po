@@ -1,0 +1,323 @@
+# German translation for Xeonjia
+# Copyright (C) 2020 DeepDaikon
+# This file is distributed under the same license as Xeonjia.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+#: lib/ui/screens/home/widgets/bottom_row.dart:
+msgid "Info"
+msgstr ""
+
+#: lib/ui/screens/home/widgets/bottom_row.dart:
+msgid "Settings"
+msgstr ""
+
+#: lib/ui/screens/home/home_page.dart:
+msgid "Story mode"
+msgstr ""
+
+#: lib/ui/screens/home/home_page.dart:
+msgid "Multiplayer"
+msgstr ""
+
+#: lib/ui/screens/home/home_page.dart:
+msgid "How to play"
+msgstr ""
+
+#: lib/ui/screens/rules/widgets/last_page.dart:
+msgid "Almost done!"
+msgstr ""
+
+#: lib/ui/screens/rules/widgets/last_page.dart:
+msgid "Before starting tell me your name which will be used in the game."
+msgstr ""
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts."
+msgstr ""
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Modes"
+msgstr ""
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the "King of Evil" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win."
+msgstr ""
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Movements"
+msgstr ""
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Swipe your finger to move your character across the world.\nKeep in mind that you can\'t stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!"
+msgstr ""
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Lifepoints"
+msgstr ""
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Pay attention to your lifepoints!\nMany enemies, pitfalls and dangers will try to hurt you."
+msgstr ""
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Weapons"
+msgstr ""
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "You'll need weapons to overcome barriers and defeat enemies.\n\nTap the screen in the desired direction or press the shoot button to hit.\nBe aware that some weapons have few hits, so use them wisely."
+msgstr ""
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Enemies"
+msgstr ""
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have life points too."
+msgstr ""
+
+#: lib/ui/screens/rules/rules_page.dart:
+msgid "Close"
+msgstr ""
+
+#: lib/ui/screens/rules/rules_page.dart:
+msgid "Back"
+msgstr ""
+
+#: lib/ui/screens/rules/rules_page.dart:
+msgid "OK"
+msgstr ""
+
+#: lib/ui/screens/rules/rules_page.dart:
+msgid "Next"
+msgstr ""
+
+#: lib/ui/screens/arena/widgets/help_dialog.dart:
+msgid "Multiplayer Mode"
+msgstr ""
+
+#: lib/ui/screens/arena/widgets/help_dialog.dart:
+msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play"."
+msgstr ""
+
+#: lib/ui/screens/arena/widgets/help_dialog.dart:
+msgid "Okay, got it!"
+msgstr ""
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Map"
+msgstr ""
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Place to play"
+msgstr ""
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Difficulty"
+msgstr ""
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Match difficulty"
+msgstr ""
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Points required"
+msgstr ""
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Points needed to win"
+msgstr ""
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Time available"
+msgstr ""
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Maximum time for a match (minutes)"
+msgstr ""
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Players"
+msgstr ""
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Number of players per team"
+msgstr ""
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Friendly Fire"
+msgstr ""
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "If enabled, players can hit their teammates"
+msgstr ""
+
+#: lib/ui/screens/arena/resources/maps.dart:
+msgid "Easy"
+msgstr ""
+
+#: lib/ui/screens/arena/resources/maps.dart:
+msgid "Medium"
+msgstr ""
+
+#: lib/ui/screens/arena/resources/maps.dart:
+msgid "Hard"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Restore"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Restore default settings?"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Are you sure you want to delete your settings and restore default ones?"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Cancel"
+msgstr ""
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Show D-Pad"
+msgstr ""
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Enable directional pad"
+msgstr ""
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Background music"
+msgstr ""
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Enable background music"
+msgstr ""
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Sound effects"
+msgstr ""
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Enable sound effects"
+msgstr ""
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Your name"
+msgstr ""
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Click here to change the name used in story mode"
+msgstr ""
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Discard"
+msgstr ""
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Save"
+msgstr ""
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Language"
+msgstr ""
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "App language"
+msgstr ""
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "System default"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "By %s"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "App developed by %s"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Version: %s"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "App version"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Donate"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Support the development"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Updates"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Search for updates"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Changelog"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "View app changelog"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "View source code"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Look at the source code"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Report bugs"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Report bugs or request new feature"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Send email"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Ask for something or request a new feature"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "View License (GPLv3)"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Read software license"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Third Party Licenses"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Read third party notices"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "INFO"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Ok"
+msgstr ""
+

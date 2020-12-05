@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/i18n/game.i18n.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
 
@@ -12,15 +13,20 @@ class EndMenu extends StatelessWidget {
     String title;
     var content = '';
     if (game.config.mode == GameMode.story) {
-      title = 'You run out of energy !';
-      content = 'You lost $_lostMoney ¤ and woke up after a short nap';
+      title = 'You run out of energy !'.i18n;
+      content = 'You lost %s ¤ and woke up after a short nap'
+          .i18n
+          .fill(['$_lostMoney']);
     } else {
-      title = 'Your team ' +
-          (game.ranking.first.id == game.playerOne.teamId ? 'won' : 'lost');
+      title = (game.ranking.first.id == game.playerOne.teamId)
+          ? 'Your team won'.i18n
+          : 'Your team lost'.i18n;
       content = (game.remainingTime <= 0)
-          ? 'The time is over.'
-          : '${game.config.maxPoints.toString()} points have been achieved.';
-      content += '\n\nDo you want to restart this game?';
+          ? 'The time is over.'.i18n
+          : '%s points have been achieved.'
+              .i18n
+              .fill([game.config.maxPoints.toString()]);
+      content += '\n\n' + 'Do you want to restart this game?'.i18n;
     }
 
     return Container(
@@ -45,7 +51,9 @@ class EndMenu extends StatelessWidget {
             children: [
               FlatButton(
                 child: Text(
-                  game.config.mode == GameMode.story ? 'Continue' : 'Yes',
+                  game.config.mode == GameMode.story
+                      ? 'Continue'.i18n
+                      : 'Yes'.i18n,
                   style: const TextStyle(color: Colors.white, fontSize: 32),
                 ),
                 onPressed: () {
@@ -55,9 +63,9 @@ class EndMenu extends StatelessWidget {
               ),
               if (game.config.mode != GameMode.story)
                 FlatButton(
-                  child: const Text(
-                    'No',
-                    style: TextStyle(color: Colors.white, fontSize: 32),
+                  child: Text(
+                    'No'.i18n,
+                    style: const TextStyle(color: Colors.white, fontSize: 32),
                   ),
                   onPressed: () {
                     Navigator.pop(context);

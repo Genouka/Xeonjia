@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/i18n/game.i18n.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/shop_item.dart';
@@ -29,9 +30,9 @@ class _ShopMenuState extends State<ShopMenu> {
             child: Container(
               width: _width,
               alignment: Alignment.bottomCenter,
-              child: const Text(
-                'SHOP',
-                style: TextStyle(
+              child: Text(
+                'Shop'.i18n.toUpperCase(),
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 64,
                   letterSpacing: 1.4,
@@ -39,9 +40,9 @@ class _ShopMenuState extends State<ShopMenu> {
               ),
             ),
           ),
-          const Text(
-            'What do you need?',
-            style: TextStyle(
+          Text(
+            'What do you need?'.i18n,
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 40,
               letterSpacing: 1.4,
@@ -96,9 +97,9 @@ class _ShopMenuState extends State<ShopMenu> {
             child: Container(
               alignment: Alignment.topCenter,
               child: FlatButton(
-                child: const Text(
-                  'Close',
-                  style: TextStyle(
+                child: Text(
+                  'Close'.i18n,
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 64,
                     letterSpacing: 1.4,
@@ -107,7 +108,7 @@ class _ShopMenuState extends State<ShopMenu> {
                 onPressed: () {
                   game.removeWidgetOverlay('shop');
                   game.setMessage(Message(
-                      'Let me know if you need anything else.',
+                      'Let me know if you need anything else.'.i18n,
                       author: 'pharmacist/elderly'));
                 },
               ),

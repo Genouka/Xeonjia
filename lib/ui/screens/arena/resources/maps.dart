@@ -6,6 +6,7 @@ Map<int, String> mapNames = {
 };
 
 // Difficulty
+// i18n: 'Easy'.i18n, 'Medium'.i18n, 'Hard'.i18n
 Map<int, String> difficultyNames = {
   3: 'Easy',
   4: 'Medium',

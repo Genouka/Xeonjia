@@ -1,9 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/i18n/game.i18n.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
 
+// i18n: 'pause'.i18n, 'restart'.i18n, 'exit'.i18n
 enum PauseMode { pause, restart, exit }
 
 // In-game pause menu
@@ -43,7 +45,7 @@ class _PauseMenuState extends State<PauseMenu> {
               margin: const EdgeInsets.only(bottom: 5),
               alignment: Alignment.bottomCenter,
               child: Text(
-                describeEnum(pauseMode).toUpperCase(),
+                describeEnum(pauseMode).i18n.toUpperCase(),
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 64,
@@ -103,7 +105,7 @@ class _PauseMenuState extends State<PauseMenu> {
         },
       ),
       actionButton(
-        'CANCEL',
+        'cancel'.i18n.toUpperCase(),
         () {
           game.removeWidgetOverlay('pauseMenu');
           game.resume();
@@ -112,20 +114,31 @@ class _PauseMenuState extends State<PauseMenu> {
     ];
     switch (pauseMode) {
       case PauseMode.pause:
-        text = 'lifepoints: ${game.playerOne.lifePoints.round()}\n' +
+        text = 'lifepoints: %s'
+                .i18n
+                .fill([game.playerOne.lifePoints.round().toString()]) +
             (game.config.mode == GameMode.story
-                ? '''
-            \nyour level: ${game.playerOne.level}
-            \nmoney: ${game.playerOne.money} ¤
-            \nplay time: ${game.playerOne.minutesPlayed.round()} min'''
-                : '''
-            \nyour defeats: ${game.playerOne.defeats}
-            \nenemies defeated: ${game.playerOne.defeatedEnemies}
-            \nyour points: ${game.playerOne.points.toString()}
-            ''');
+                ? ('\n' +
+                    'your level: %s'.i18n.fill([game.playerOne.level]) +
+                    '\n' +
+                    'money: %s ¤'.i18n.fill([game.playerOne.money]) +
+                    '\n' +
+                    'play time: %s min'
+                        .i18n
+                        .fill([game.playerOne.minutesPlayed.round()]))
+                : ('\n' +
+                    'your defeats: %s'.i18n.fill([game.playerOne.defeats]) +
+                    '\n' +
+                    'enemies defeated: %s'
+                        .i18n
+                        .fill([game.playerOne.defeatedEnemies]) +
+                    '\n' +
+                    'your points: %s'
+                        .i18n
+                        .fill([game.playerOne.points.toString()])));
         actions = [
           actionButton(
-            'EXIT',
+            'exit'.i18n.toUpperCase(),
             () {
               setState(() {
                 pauseMode = PauseMode.exit;
@@ -133,12 +146,12 @@ class _PauseMenuState extends State<PauseMenu> {
               });
             },
           ),
-          actionButton('RESUME', () {
+          actionButton('resume'.i18n.toUpperCase(), () {
             game.removeWidgetOverlay('pauseMenu');
             game.resume();
           }),
           actionButton(
-            'RESTART',
+            'restart'.i18n.toUpperCase(),
             () {
               setState(() {
                 pauseMode = PauseMode.restart;
@@ -149,16 +162,18 @@ class _PauseMenuState extends State<PauseMenu> {
         ];
         break;
       case PauseMode.restart:
-        text = 'Are you sure you want to restart this match?';
+        text = 'Are you sure you want to restart this game?'.i18n;
         if (game.config.mode == GameMode.story) {
-          text += '\n\nIt will restart from the last location change.';
+          text +=
+              '\n\n' + 'It will restart from the last location change.'.i18n;
         }
         break;
       case PauseMode.exit:
-        text = 'Are you sure you want to quit this match?';
+        text = 'Are you sure you want to quit this game?'.i18n;
         if (game.config.mode == GameMode.story) {
           text +=
-              '\n\nMatch data since the last time you changed your location will be lost.';
+              '\n\nGame data since the last time you changed your location will be lost.'
+                  .i18n;
         }
     }
   }

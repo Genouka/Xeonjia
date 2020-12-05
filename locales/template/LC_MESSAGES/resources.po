@@ -1,0 +1,23 @@
+# INSERT LANGUAGE HERE translation for Xeonjia
+# Copyright (C) 2020 DeepDaikon
+# This file is distributed under the same license as Xeonjia.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+#: lib/resources/weapon_details.dart:
+msgid "Punch"
+msgstr ""
+
+#: lib/resources/weapon_details.dart:
+msgid "Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP."
+msgstr ""
+
+#: lib/resources/weapon_details.dart:
+msgid "Throw snowballs in front of you."
+msgstr ""
+
+#: lib/resources/weapon_details.dart:
+msgid "Leave explosive mines on the floor.\nA mine explodes if someone except you walks on it."
+msgstr ""
+

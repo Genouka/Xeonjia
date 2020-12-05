@@ -31,8 +31,8 @@ abstract class Weapon {
   }
 
   // Weapon details
-  String get name => weaponDetails[id]['name'];
-  String get description => weaponDetails[id]['description'];
+  String get name => weaponDetails()[id]['name'];
+  String get description => weaponDetails()[id]['description'];
 
   Weapon(this.id, this.maxPp) {
     maxPp ??= 10 + level * 5.0;

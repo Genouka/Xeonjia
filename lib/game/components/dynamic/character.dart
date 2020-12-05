@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 
+import 'package:xeonjia/i18n/game.i18n.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/util/lifepoints_bar.dart';
 import 'package:xeonjia/game/util/respawn_animation.dart';
@@ -162,10 +163,12 @@ class CharacterComponent extends DynamicComponent
     _itemList.add(itemId);
     if (isPlayerOne) {
       if (itemData.containsKey(itemId)) {
-        game.setMessage(Message(
-            '* \$hero puts ${itemData[itemId].name} in the backpack. *'));
+        game.setMessage(Message('* \$hero puts %s in the backpack. *'
+            .i18n
+            .fill([itemData[itemId].name])));
       } else if (itemId.contains('gem_')) {
-        game.setMessage(Message('* \$hero puts the gem in the backpack. *'));
+        game.setMessage(
+            Message('* \$hero puts the gem in the backpack. *'.i18n));
       }
       game.playSound(Sfx.item);
     }
@@ -175,7 +178,8 @@ class CharacterComponent extends DynamicComponent
   void removeItem(int itemId) {
     _itemList.remove(itemId);
     if (isPlayerOne) {
-      game.setMessage(Message('* \$hero gives ${itemData[itemId].name} *'));
+      game.setMessage(
+          Message('* \$hero gives %s *'.i18n.fill([itemData[itemId].name])));
     }
   }
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'package:xeonjia/i18n/game.i18n.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Menu displayed if there are no more maps to play
@@ -15,17 +16,16 @@ class NoMapsMenu extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                'You went too far!',
-                style: TextStyle(
+              Text(
+                'You went too far!'.i18n,
+                style: const TextStyle(
                     color: Colors.white, fontSize: 48, letterSpacing: 1.4),
                 textAlign: TextAlign.center,
               ),
-              const Text(
-                'Unfortunately, the next part of the story is not yet available :(\n'
-                'Hopefully it will be available soon.\n\n'
-                'In the meantime you can support the development of Xeonjia by donating or by giving feedback.',
-                style: TextStyle(color: Colors.white, fontSize: 32),
+              Text(
+                'Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback.'
+                    .i18n,
+                style: const TextStyle(color: Colors.white, fontSize: 32),
                 textAlign: TextAlign.center,
               ),
               Container(height: 35),
@@ -33,9 +33,9 @@ class NoMapsMenu extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   FlatButton(
-                    child: const Text(
-                      'Donate',
-                      style: TextStyle(color: Colors.white, fontSize: 32),
+                    child: Text(
+                      'Donate'.i18n,
+                      style: const TextStyle(color: Colors.white, fontSize: 32),
                       textAlign: TextAlign.center,
                     ),
                     onPressed: () {
@@ -43,9 +43,9 @@ class NoMapsMenu extends StatelessWidget {
                     },
                   ),
                   FlatButton(
-                    child: const Text(
-                      'Report a bug or ask something',
-                      style: TextStyle(color: Colors.white, fontSize: 32),
+                    child: Text(
+                      'Report a bug or ask something'.i18n,
+                      style: const TextStyle(color: Colors.white, fontSize: 32),
                       textAlign: TextAlign.center,
                     ),
                     onPressed: () {
@@ -53,9 +53,9 @@ class NoMapsMenu extends StatelessWidget {
                     },
                   ),
                   FlatButton(
-                    child: const Text(
-                      'Send email',
-                      style: TextStyle(color: Colors.white, fontSize: 32),
+                    child: Text(
+                      'Send email'.i18n,
+                      style: const TextStyle(color: Colors.white, fontSize: 32),
                     ),
                     onPressed: () async {
                       final url = Uri.encodeFull('mailto:deepdaikon'
@@ -65,9 +65,9 @@ class NoMapsMenu extends StatelessWidget {
                     },
                   ),
                   FlatButton(
-                    child: const Text(
-                      'Go back',
-                      style: TextStyle(color: Colors.white, fontSize: 32),
+                    child: Text(
+                      'Go back'.i18n,
+                      style: const TextStyle(color: Colors.white, fontSize: 32),
                     ),
                     onPressed: () {
                       Navigator.pop(context);

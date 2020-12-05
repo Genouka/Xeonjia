@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/ui/screens/info/info_page.dart';
 import 'package:xeonjia/ui/screens/settings/settings_page.dart';
 import 'package:xeonjia/ui/basic.dart';
@@ -11,7 +12,7 @@ class bottomRow extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(20, 0, 20, 10),
       child: Row(
         children: <Widget>[
-          _button(context, Icons.info_outline, 'Info', () => InfoPage()),
+          _button(context, Icons.info_outline, 'Info'.i18n, () => InfoPage()),
           Expanded(
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 40),
@@ -19,7 +20,8 @@ class bottomRow extends StatelessWidget {
               color: Colors.white.withOpacity(0.3),
             ),
           ),
-          _button(context, Icons.settings, 'Settings', () => SettingsPage()),
+          _button(
+              context, Icons.settings, 'Settings'.i18n, () => SettingsPage()),
         ],
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/ui/screens/info/resources/third_party_licenses.dart';
 
 class InfoPage extends StatefulWidget {
@@ -11,62 +12,62 @@ class InfoPage extends StatefulWidget {
 class _InfoPageState extends State<InfoPage> {
   final List<Map<String, dynamic>> infoMenuList = [
     {
-      'title': 'By DeepDaikon',
-      'subtitle': 'App developed by DeepDaikon',
+      'title': 'By %s'.i18n.fill(['DeepDaikon']),
+      'subtitle': 'App developed by %s'.i18n.fill(['DeepDaikon']),
       'url': 'https://deepdaikon.xyz',
       'icon': const Icon(Icons.change_history),
     },
     {
-      'title': 'Version: 2.0.0',
-      'subtitle': 'App version',
+      'title': 'Version: %s'.i18n.fill(['2.0.0']),
+      'subtitle': 'App version'.i18n,
       'url': '',
       'icon': const Icon(Icons.looks_two),
     },
     {
-      'title': 'Donate',
-      'subtitle': 'Support the development',
+      'title': 'Donate'.i18n,
+      'subtitle': 'Support the development'.i18n,
       'url': 'https://deepdaikon.xyz/donate',
       'icon': const Icon(Icons.euro),
     },
     {
-      'title': 'Updates',
-      'subtitle': 'Search for updates on F-Droid',
+      'title': 'Updates'.i18n,
+      'subtitle': 'Search for updates'.i18n,
       'url': 'https://f-droid.org/packages/xyz.deepdaikon.xeonjia/',
       'icon': const Icon(Icons.system_update),
     },
     {
-      'title': 'Changelog',
-      'subtitle': 'View app changelog',
+      'title': 'Changelog'.i18n,
+      'subtitle': 'View app changelog'.i18n,
       'url': 'https://gitlab.com/DeepDaikon/Xeonjia/blob/master/CHANGELOG',
       'icon': const Icon(Icons.playlist_add),
     },
     {
-      'title': 'View source code',
-      'subtitle': 'Look at the source code',
+      'title': 'View source code'.i18n,
+      'subtitle': 'Look at the source code'.i18n,
       'url': 'https://gitlab.com/DeepDaikon/Xeonjia',
       'icon': const Icon(Icons.developer_mode),
     },
     {
-      'title': 'Report bugs',
-      'subtitle': 'Report bugs or request new feature',
+      'title': 'Report bugs'.i18n,
+      'subtitle': 'Report bugs or request new feature'.i18n,
       'url': 'https://gitlab.com/DeepDaikon/Xeonjia/issues',
       'icon': const Icon(Icons.bug_report),
     },
     {
-      'title': 'Send email',
-      'subtitle': 'Ask for something or request a new feature',
+      'title': 'Send email'.i18n,
+      'subtitle': 'Ask for something or request a new feature'.i18n,
       'url': 'mailto:deepdaikon' '@' 'tuta.io?subject=Xeonjia Game',
       'icon': const Icon(Icons.email),
     },
     {
-      'title': 'View License (GPLv3)',
-      'subtitle': 'Read software license',
+      'title': 'View License (GPLv3)'.i18n,
+      'subtitle': 'Read software license'.i18n,
       'url': 'https://gitlab.com/DeepDaikon/Xeonjia/blob/master/LICENSE',
       'icon': const Icon(Icons.chrome_reader_mode),
     },
     {
-      'title': 'Third Party Licenses',
-      'subtitle': 'Read third party notices',
+      'title': 'Third Party Licenses'.i18n,
+      'subtitle': 'Read third party notices'.i18n,
       'url': '',
       'icon': const Icon(Icons.code),
     }
@@ -75,7 +76,7 @@ class _InfoPageState extends State<InfoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('INFO'), centerTitle: true),
+      appBar: AppBar(title: Text('INFO'.i18n), centerTitle: true),
       body: ListView.builder(
         padding: const EdgeInsets.all(8.0),
         itemCount: infoMenuList.length,
@@ -90,7 +91,8 @@ class _InfoPageState extends State<InfoPage> {
             if (infoMenuList[index]['url'].length != 0) {
               final url = Uri.encodeFull(infoMenuList[index]['url']);
               if (await canLaunch(url)) await launch(url);
-            } else if (infoMenuList[index]['title'] == 'Third Party Licenses') {
+            } else if (infoMenuList[index]['title'] ==
+                'Third Party Licenses'.i18n) {
               _licenseDialog();
             }
           },
@@ -116,13 +118,13 @@ class _InfoPageState extends State<InfoPage> {
             ));
           });
           return AlertDialog(
-            title: const Text('Third Party Licenses'),
+            title: Text('Third Party Licenses'.i18n),
             content: Container(
                 width: double.maxFinite,
                 child: ListView(children: _licenseList)),
             actions: <Widget>[
               FlatButton(
-                child: const Text('Ok'),
+                child: Text('Ok'.i18n),
                 onPressed: Navigator.of(context).pop,
               ),
             ],

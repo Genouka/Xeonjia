@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'package:xeonjia/i18n/util.i18n.dart';
+
 // Form used to insert player name
 Widget insertNameForm(GlobalKey key, TextEditingController textFieldController,
     Function onSubmitted) {
@@ -15,15 +17,15 @@ Widget insertNameForm(GlobalKey key, TextEditingController textFieldController,
           SystemChrome.restoreSystemUIOverlays();
         },
         validator: (value) {
-          if (value == '') return "What's your name?";
-          return value.trim().length < 2 ? 'Too short.' : null;
+          if (value == '') return "What's your name?".i18n;
+          return value.trim().length < 2 ? 'Too short.'.i18n : null;
         },
         inputFormatters: [
           _UpperCaseTextInputFormatter(),
           LengthLimitingTextInputFormatter(10),
           FilteringTextInputFormatter.allow(RegExp('[a-zA-Z ]')),
         ],
-        decoration: const InputDecoration(hintText: 'Insert your name here')),
+        decoration: InputDecoration(hintText: 'Insert your name here'.i18n)),
   );
 }
 

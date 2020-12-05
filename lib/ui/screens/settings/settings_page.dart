@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:xeonjia/models/settings.dart';
 
+import 'package:xeonjia/i18n/ui.i18n.dart';
+import 'package:xeonjia/models/settings.dart';
 import 'package:xeonjia/ui/screens/settings/resources/option_list.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
@@ -17,12 +18,12 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
-        title: const Text('SETTINGS'),
+        title: Text('Settings'.i18n.toUpperCase()),
         centerTitle: true,
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.settings_backup_restore),
-            tooltip: 'Restore',
+            tooltip: 'Restore'.i18n,
             onPressed: _restoreSettingsDialog,
           ),
         ],
@@ -33,12 +34,13 @@ class _SettingsPageState extends State<SettingsPage> {
   Future _restoreSettingsDialog() => showDialog(
         context: context,
         builder: (BuildContext context) => AlertDialog(
-          title: const Text('Restore default settings?'),
-          content: const Text(
-              'Are you sure you want to delete your settings and restore default ones?'),
+          title: Text('Restore default settings?'.i18n),
+          content: Text(
+              'Are you sure you want to delete your settings and restore default ones?'
+                  .i18n),
           actions: <Widget>[
             FlatButton(
-              child: const Text('Restore'),
+              child: Text('Restore'.i18n),
               onPressed: () {
                 SystemChrome.setEnabledSystemUIOverlays([]);
                 settings = Settings({'firstRun': false});
@@ -48,7 +50,7 @@ class _SettingsPageState extends State<SettingsPage> {
               },
             ),
             FlatButton(
-              child: const Text('Cancel'),
+              child: Text('Cancel'.i18n),
               onPressed: Navigator.of(context).pop,
             ),
           ],

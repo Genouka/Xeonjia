@@ -1,3 +1,4 @@
+import 'package:xeonjia/i18n/game.i18n.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -37,8 +38,8 @@ class DoorComponent extends BasicComponent {
   @override
   void collidedBy(otherComponent) {
     if (otherComponent.isPlayerOne) {
-      game.setMessage(
-          Message("There are still monsters in this room. I can't escape."));
+      game.setMessage(Message(
+          "There are still monsters in this room. I can't escape.".i18n));
       otherComponent.updateOrientation(otherComponent.orientation.opposite);
     }
     super.collidedBy(otherComponent);
