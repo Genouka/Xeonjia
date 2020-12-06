@@ -76,7 +76,7 @@ class _InfoPageState extends State<InfoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('INFO'.i18n), centerTitle: true),
+      appBar: AppBar(title: Text('Info'.i18n.toUpperCase()), centerTitle: true),
       body: ListView.builder(
         padding: const EdgeInsets.all(8.0),
         itemCount: infoMenuList.length,

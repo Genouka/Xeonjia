@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'util/get_i18n_files.dart';
 
-// Read each .po file inside locales and re-generate dart files inside lib/i18n
+// Read each .po file inside locale and re-generate dart files inside lib/i18n
 // Use this command to run the script: flutter pub run bin/update_translations
 void main() {
   var translations = getCurrentTranslations(usePoFilename: true);

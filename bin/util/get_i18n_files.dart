@@ -1,21 +1,24 @@
 import 'dart:io';
 import 'package:path/path.dart';
 
+import '../update_po_files.dart';
 import 'translation.dart';
 
 // fileName : <lang : list of translations>
 Map<String, Map<String, List<Translation>>> getCurrentTranslations(
     {bool usePoFilename = false}) {
-  var localesDir = Directory('locales');
+  var localeDir = Directory('locale');
   final exp = RegExp(r'#: (.*):\nmsgid "(.*)"\nmsgstr "([^"]*)"');
   var i18nFiles = <String, Map<String, List<Translation>>>{};
-  localesDir.listSync().forEach((locale) {
+  localeDir.listSync().forEach((locale) {
     var lang = locale.path.split('/').last;
     if (lang == 'template') return;
     var messagesDir = Directory(locale.path + '/LC_MESSAGES');
     messagesDir.listSync().forEach((poFile) {
       if (poFile is File) {
         var content = poFile.readAsStringSync();
+        metadata[poFile.path] =
+            RegExp(r'(.*?)\n\n#: ', dotAll: true).firstMatch(content).group(1);
         content = content.replaceAll('"\n"', ''); // Remove multiline strings
         exp.allMatches(content).forEach((match) {
           var fileName = usePoFilename
