@@ -10,6 +10,7 @@ Save the world by solving ice puzzles and defeating enemies.
 
 [![Liberapay](https://img.shields.io/liberapay/patrons/deepdaikon.svg?logo=liberapay)](https://liberapay.com/deepdaikon/donate)
 [<img src="https://www.ko-fi.com/img/githubbutton_sm.svg" alt="Ko-fi" height="20">](https://ko-fi.com/deepdaikon)
+[<img src="https://translate.deepdaikon.xyz/widgets/xeonjia/-/svg-badge.svg" alt="Translation status" height="20">](https://translate.deepdaikon.xyz/engage/xeonjia/)
 
 Xeonjia is an Android game set in a frozen world.
 
@@ -46,6 +47,20 @@ If you want to support the development of Xeonjia you can donate through Liberap
 [![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/deepdaikon/donate)
 [<img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=2" alt="Donate" height="30">](https://ko-fi.com/deepdaikon)
 
+## Translate
+
+You can use [Weblate](https://translate.deepdaikon.xyz/engage/xeonjia/) if you want to help with the translation of Xeonjia.
+If your language is missing click on "Start new translation".
+
+[<img src="https://translate.deepdaikon.xyz/widgets/xeonjia/-/multi-auto.svg" alt="Translation status">](https://translate.deepdaikon.xyz/engage/xeonjia/)
+
+Keep in mind that you need to be signed in Weblate to translate Xeonjia. Your username and email address will be placed in the translated files to keep track of the co-authors of the translations.
+
+You can make anonymous suggestions if you don't want to sign in.
+
+Otherwise you can manually edit each .po file in [`locales/YOUR_LOCALE/LC_MESSAGES/`](https://gitlab.com/DeepDaikon/Xeonjia/-/tree/master/locale) through git.
+
+Thank you :)
 
 ## License
 
