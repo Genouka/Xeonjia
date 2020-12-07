@@ -30,6 +30,12 @@ class _InfoPageState extends State<InfoPage> {
       'icon': const Icon(Icons.euro),
     },
     {
+      'title': 'Translate'.i18n,
+      'subtitle': 'Translate in your language'.i18n,
+      'url': 'https://translate.deepdaikon.xyz/engage/xeonjia/',
+      'icon': const Icon(Icons.translate_rounded),
+    },
+    {
       'title': 'Updates'.i18n,
       'subtitle': 'Search for updates'.i18n,
       'url': 'https://f-droid.org/packages/xyz.deepdaikon.xeonjia/',
