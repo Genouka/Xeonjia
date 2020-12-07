@@ -5,7 +5,12 @@ extension Localization on String {
   static final _t = Translations.byLocale('en_us') +
       {
         'it': {
+          '''A broken monitor.''': '''Un monitor rotto.''',
+          '''Natawn''': '''Natawn''',
           '''dad''': '''papà''',
+          '''I'll do my best.''': '''Farò del mio meglio.''',
+          '''...''': '''...''',
+          '''???''': '''???''',
         },
       };
   String get i18n => localize(this, _t);

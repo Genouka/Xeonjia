@@ -269,6 +269,14 @@ msgid "Support the development"
 msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
+msgid "Translate"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Translate in your language"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
 msgid "Updates"
 msgstr ""
 

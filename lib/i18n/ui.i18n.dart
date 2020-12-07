@@ -5,7 +5,11 @@ extension Localization on String {
   static final _t = Translations.byLocale('en_us') +
       {
         'it': {
+          '''Info''': '''Info''',
+          '''Settings''': '''Impostazioni''',
           '''Story mode''': '''Modalità storia''',
+          '''Modes''': '''Modalità''',
+          '''OK''': '''OK''',
           '''Sound effects''': '''Effetti sonori''',
           '''pause''': '''pausa''',
           '''exit''': '''esci''',
