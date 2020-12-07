@@ -2,12 +2,13 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # DeepDaikon <deepdaikon@tuta.io>, 2020.
+# Nicolò Balzarotti <anothersms@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-12-07 19:41+0000\n"
-"Last-Translator: DeepDaikon <deepdaikon@tuta.io>\n"
+"PO-Revision-Date: 2020-12-07 21:42+0000\n"
+"Last-Translator: Nicolò Balzarotti <anothersms@gmail.com>\n"
 "Language-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/"
 "story/it/>\n"
 "Language: it\n"
@@ -47,7 +48,7 @@ msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A broken monitor."
-msgstr ""
+msgstr "Un monitor rotto."
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
