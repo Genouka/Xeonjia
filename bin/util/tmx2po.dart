@@ -16,6 +16,9 @@ Map<String, List<Translation>> tmx2po() {
   // Find the author of the message
   final regexAuthorName = RegExp(r'([^\/]*)\/?([^_]*)_?(.*)');
 
+  // Find npc-names
+  final npcName = RegExp(r'property name="name" value="(.*?)"');
+
   // Map directory : list of strings
   var dirStringsMap = <String, List<Translation>>{};
   const mapsPath = 'assets/maps/';
@@ -46,6 +49,12 @@ Map<String, List<Translation>> tmx2po() {
             dirStringsMap[name].add(authorName);
           }
         });
+      });
+      npcName.allMatches(content).forEach((text) {
+        var string = Translation(fsEntity.path, text.group(1), null);
+        if (!dirStringsMap[name].contains(string)) {
+          dirStringsMap[name].add(string);
+        }
       });
     }
   });

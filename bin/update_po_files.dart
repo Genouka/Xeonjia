@@ -47,7 +47,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\\n"
 "Language: $language\\n"'''}${(() => strings.fold('', (prev, string) => prev + '''\n\n#: ${string.path}:
 msgid "${string.msgid}"
-msgstr "${_getTranslation(currentTranslations, string, language)}"'''))()}''');
+msgstr "${_getTranslation(currentTranslations, string, language)}"'''))()}
+''');
     });
   });
   print('.po files successfully updated!');

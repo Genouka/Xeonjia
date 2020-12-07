@@ -800,6 +800,62 @@ msgstr ""
 msgid "This is a pharmacy."
 msgstr ""
 
+#: assets/maps/tilesets/npc_main.tsx:
+msgid "milla"
+msgstr ""
+
+#: assets/maps/tilesets/npc_main.tsx:
+msgid "shen"
+msgstr ""
+
+#: assets/maps/tilesets/npc.tsx:
+msgid "man"
+msgstr ""
+
+#: assets/maps/tilesets/npc.tsx:
+msgid "lumberjack"
+msgstr ""
+
+#: assets/maps/tilesets/npc.tsx:
+msgid "young-girl"
+msgstr ""
+
+#: assets/maps/tilesets/npc.tsx:
+msgid "youngster"
+msgstr ""
+
+#: assets/maps/tilesets/npc.tsx:
+msgid "elderly"
+msgstr ""
+
+#: assets/maps/tilesets/npc.tsx:
+msgid "guy"
+msgstr ""
+
+#: assets/maps/tilesets/npc.tsx:
+msgid "old-man"
+msgstr ""
+
+#: assets/maps/tilesets/npc.tsx:
+msgid "adventurer"
+msgstr ""
+
+#: assets/maps/tilesets/npc.tsx:
+msgid "dude"
+msgstr ""
+
+#: assets/maps/tilesets/npc.tsx:
+msgid "girl"
+msgstr ""
+
+#: assets/maps/tilesets/npc.tsx:
+msgid "oldster"
+msgstr ""
+
+#: assets/maps/tilesets/npc.tsx:
+msgid "henchman"
+msgstr ""
+
 #: assets/maps/tilesets/indoor.tsx:
 msgid "The weather is good today."
 msgstr ""
