@@ -3,11 +3,23 @@
 # This file is distributed under the same license as Xeonjia.
 # DeepDaikon <deepdaikon@tuta.io>, 2020.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2020-12-07 21:42+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\n"
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2020-12-07 21:53+0000\n"
+"Last-Translator: DeepDaikon <deepdaikon@tuta.io>\n"
+"Language-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/"
+"it/>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Settings"
@@ -39,7 +51,7 @@ msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Modes"
-msgstr ""
+msgstr "Modalità"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the "King of Evil" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win."
@@ -87,7 +99,7 @@ msgstr ""
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "Next"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-12-07 21:42+0000\n"
-"Last-Translator: Nicolò Balzarotti <anothersms@gmail.com>\n"
+"PO-Revision-Date: 2020-12-07 21:53+0000\n"
+"Last-Translator: DeepDaikon <deepdaikon@tuta.io>\n"
 "Language-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/"
 "story/it/>\n"
 "Language: it\n"
@@ -148,7 +148,7 @@ msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: assets/maps/story/7.tmx:
 msgid "Oops... yes, sorry, I am in the middle of the road...\nAre you a tourist? There are very few nowadays."
@@ -156,7 +156,7 @@ msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "???"
-msgstr ""
+msgstr "???"
 
 #: assets/maps/story/7.tmx:
 msgid "N-no, I'm $hero, this year's chosen hero. I just left home to try to defeat the King of Evil."
