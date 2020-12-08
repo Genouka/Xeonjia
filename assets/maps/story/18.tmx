@@ -8,13 +8,13 @@
  <tileset firstgid="153" source="../tilesets/npc.tsx"/>
  <layer id="1" name="Tile Layer 1" width="19" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAwtkYGAIAuJgIA4B4lAgloBiBSiGsXmA2BxJTAOJBoklAnEyFMcAcSoDduCHQ9wcSoPMzAPifCCOh9IFBPQgm22PJA5yVxkQlwNxGpSuQJJDBoT4IHN9oGw1LG6xAWJbqD5zNL49FrPRzccFsLnLF42vQaRZ+ACye5EBcnyhhzc2NTCggEc9qQCW7mBpDdmtIDFfBkSYgtSyMGCmU5g8SC0AAW5f4PgCAAA=
+   H4sIAAAAAAAAAwtkYGAIAuJgIA4B4lAgloBiBSiGsXmA2BxJTAOJBoklAnEyFMcAcSoDduCHQ9wcSoPMzAPifCCOh9IFBPQgm22PJA5yVxkQlwNxGpSuQJJDBoT4IHN9oGw1LG6xAWJbqD5zNL49FrPRzccFsKnzRZPXINIsfADZvcgAFl92DJjhja4GGSjgUU8qgKU7WFpDditIzJcBEaYgtSwMmOkUJg9SCwAFV4Ci+AIAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="19" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA64EamOHEBLs0HABY+cCRCb4uFTE7jSwExc7iUmTGkd7ugA3a2khAe1ww4AQg5kJPgCAAA=
+   H4sIAAAAAAAAA2NgIA64EamOHEBLs0HABY+cCRCb4uFTE7jSwExc7oWFqRkevbQOd3SA7lZSwoPaYQcAaXBbSvgCAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
