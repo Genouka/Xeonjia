@@ -1,0 +1,3 @@
+* Adición de algunas animaciones
+* Habilitación de orientación horizontal
+* Arreglo de bugs

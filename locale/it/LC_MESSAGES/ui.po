@@ -2,12 +2,13 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # DeepDaikon <deepdaikon@tuta.io>, 2020.
+# no no <skariko@pm.me>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-12-07 21:53+0000\n"
-"Last-Translator: DeepDaikon <deepdaikon@tuta.io>\n"
+"PO-Revision-Date: 2020-12-10 20:56+0000\n"
+"Last-Translator: no no <skariko@pm.me>\n"
 "Language-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/"
 "it/>\n"
 "Language: it\n"
@@ -31,15 +32,15 @@ msgstr "Modalità storia"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Multiplayer"
-msgstr ""
+msgstr "Multiplayer"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "How to play"
-msgstr ""
+msgstr "Come giocare"
 
 #: lib/ui/screens/rules/widgets/last_page.dart:
 msgid "Almost done!"
-msgstr ""
+msgstr "Quasi fatto!"
 
 #: lib/ui/screens/rules/widgets/last_page.dart:
 msgid "Before starting tell me your name which will be used in the game."
@@ -83,7 +84,7 @@ msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Enemies"
-msgstr ""
+msgstr "Nemici"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have life points too."

@@ -1,0 +1,15 @@
+Il gioco ha due modalità:
+
+1) Modalità storia: sconfiggi il "Re del Male" completando tutti i livelli.
+
+2) Modalità multiplayer: lo scopo è quello di fare il maggior numero di punti e portare alla vittoria la propria squadra.
+
+Per giocare non devi fare altro che "swipare" il protagonista per poterlo muovere.
+
+Tieni a mente che sul ghiaccio scivolerai senza poterti fermare se non andando addosso ad un muro, ad una roccia o ad un qualunque altro ostacolo.
+
+Guadagna punti esperienza che ti permetteranno di incrementare il tuo livello! Vai alla ricerca di monete e di tesori nascosti per acquistare oggetti utili per la tua avventura.
+
+Fai attenzione perché il mondo è pieno di creature misteriose pronte ad attaccarti!
+
+Ragiona e pensa bene ogni movimento: cerca di trovare il percorso meno pericoloso!
