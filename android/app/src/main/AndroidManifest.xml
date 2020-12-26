@@ -5,7 +5,6 @@
     android:versionName="2.0.0"
     package="xyz.deepdaikon.xeonjia">
 
-    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29"/>
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="Xeonjia"
