@@ -25,16 +25,25 @@ class Message {
   // Character speaking
   BasicComponent component;
 
-  Message(this.text, {this.author = '', this.component}) {
+  Message(this.text,
+      {this.author = '', this.component, bool translate = true}) {
     var m = RegExp(r'([^\/]*)\/?([^_]*)_?(.*)').firstMatch(author);
     var name = m.group(2) != '' ? m.group(2) : component?.name ?? '';
     authorName = (m.group(1) != '' ? m.group(1) : (author == '' ? '' : name));
     var mood = m.group(3);
     var fileName = name + (mood != '' ? '_$mood' : '');
     image = authorName != '' ? 'assets/images/heads/${fileName}.png' : null;
-    text = text.i18n.replaceAll('\$hero', mainCharacter.name);
-    authorName = authorName == 'HERO'
-        ? mainCharacter.name
-        : authorName.i18n.toUpperCase().replaceAll('-', ' ');
+    if (authorName != '') {
+      authorName = (authorName == 'hero')
+          ? mainCharacter.name
+          : authorName.i18n.toUpperCase().replaceAll('-', ' ');
+    }
+    if (translate) {
+      text = text
+          .replaceAll('\\n', '\n')
+          .i18n
+          .replaceAll('\n', '\\n')
+          .replaceAll('{{hero}}', mainCharacter.name);
+    }
   }
 }

@@ -163,12 +163,12 @@ class CharacterComponent extends DynamicComponent
     _itemList.add(itemId);
     if (isPlayerOne) {
       if (itemData.containsKey(itemId)) {
-        game.setMessage(Message('* \$hero puts %s in the backpack. *'
+        game.setMessage(Message('* {{hero}} puts %s in the backpack. *'
             .i18n
             .fill([itemData[itemId].name])));
       } else if (itemId.contains('gem_')) {
         game.setMessage(
-            Message('* \$hero puts the gem in the backpack. *'.i18n));
+            Message('* {{hero}} puts the gem in the backpack. *'.i18n));
       }
       game.playSound(Sfx.item);
     }
@@ -179,7 +179,7 @@ class CharacterComponent extends DynamicComponent
     _itemList.remove(itemId);
     if (isPlayerOne) {
       game.setMessage(
-          Message('* \$hero gives %s *'.i18n.fill([itemData[itemId].name])));
+          Message('* {{hero}} gives %s *'.i18n.fill([itemData[itemId].name])));
     }
   }
 

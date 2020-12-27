@@ -16,7 +16,7 @@ void main() {
 // This is a generated file; do not edit
 import 'package:i18n_extension/i18n_extension.dart';
 extension Localization on String {
-  static final _t = Translations.byLocale('en_us') + {
+  static final _t = Translations.byLocale('en') + {
     ${() {
       var languagesAndTranslations = '';
       _languageTranslationsMap.forEach((_language, _translations) {

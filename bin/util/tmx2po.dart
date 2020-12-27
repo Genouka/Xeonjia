@@ -7,7 +7,7 @@ import 'translation.dart';
 Map<String, List<Translation>> tmx2po() {
   // Find dialogs or map-names
   final regexGlobal = RegExp(
-      r"\(dialog[\n ]+'\((.*?)\)\)\)|\(map-name[\n ]+(.*?)\)",
+      r"\(dialog[\n ]+'\((.*?)\)\)\)|\((?:map-name|story-dialog)[\n ]+(.*?)\)",
       dotAll: true);
 
   // Find text inside dialog or map-name
@@ -30,7 +30,8 @@ Map<String, List<Translation>> tmx2po() {
       var content = fsEntity.readAsStringSync();
       regexGlobal.allMatches(content).forEach((match) {
         regexText.allMatches(match.group(0)).forEach((text) {
-          var string = Translation(fsEntity.path, text.group(2), null);
+          var string = Translation(
+              fsEntity.path, text.group(2).replaceAll('\\&quot;', '\\"'), null);
           var author = text.group(1);
           Translation authorName;
           if (author != null) {

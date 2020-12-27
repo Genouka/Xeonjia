@@ -60,7 +60,9 @@ class MessageManager {
     });
     return strings.fold([], (previousValue, element) {
       previousValue.add(Message(element,
-          author: message.author, component: message.component));
+          author: message.author,
+          component: message.component,
+          translate: false));
       return previousValue;
     });
   }

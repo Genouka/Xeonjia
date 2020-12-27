@@ -93,7 +93,7 @@ class _PauseMenuState extends State<PauseMenu> {
     pauseMode ??= widget.mode;
     actions = [
       actionButton(
-        describeEnum(pauseMode).toUpperCase(),
+        describeEnum(pauseMode).i18n.toUpperCase(),
         () {
           if (pauseMode == PauseMode.restart) {
             game.removeWidgetOverlay('pauseMenu');

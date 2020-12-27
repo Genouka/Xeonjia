@@ -22,7 +22,7 @@ List<Rule> rules() => [
       Rule(
         title: 'Movements'.i18n,
         subtitle:
-            'Swipe your finger to move your character across the world.\nKeep in mind that you can\'t stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!'
+            "Swipe your finger to move your character across the world.\nKeep in mind that you can't stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!"
                 .i18n,
         icon: Icons.games,
       ),

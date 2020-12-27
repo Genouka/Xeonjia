@@ -1,22 +1,23 @@
 # Translation for Xeonjia
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# DeepDaikon <deepdaikon@tuta.io>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: fr\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Last-Translator: Automatically generated\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fr\n"
 
 #: assets/maps/story/15.tmx:
-msgid "* $hero found some berries! 30 LPs have been recovered *"
+msgid "* {{hero}} found some berries! 30 LPs have been recovered *"
 msgstr ""
 
 #: assets/maps/story/15.tmx:
@@ -64,11 +65,11 @@ msgid "I'll do my best."
 msgstr ""
 
 #: assets/maps/story/1.tmx:
-msgid "The tower in which the ''King of Evil'' resides should be located near the capital of the region."
+msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
 msgstr ""
 
 #: assets/maps/story/1.tmx:
-msgid "'' NATAWN - Hometown of the 62nd hero ''"
+msgid "\" NATAWN - Hometown of the 62nd hero \""
 msgstr ""
 
 #: assets/maps/story/1.tmx:
@@ -84,7 +85,7 @@ msgid "I still haven't figured out if these monsters are malicious or just stupi
 msgstr ""
 
 #: assets/maps/story/17.tmx:
-msgid "* $hero found some berries! 50 LPs have been recovered *"
+msgid "* {{hero}} found some berries! 50 LPs have been recovered *"
 msgstr ""
 
 #: assets/maps/story/31_house1.tmx:
@@ -96,7 +97,7 @@ msgid "Hi, you look a little tired. Rest here for a moment."
 msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
-msgid "* $hero rested and is now in perfect health *"
+msgid "* {{hero}} rested and is now in perfect health *"
 msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
@@ -140,7 +141,7 @@ msgid "Better if I check that the guy is okay."
 msgstr ""
 
 #: assets/maps/story/13.tmx:
-msgid "* $hero found some berries! 10 LPs have been recovered *"
+msgid "* {{hero}} found some berries! 10 LPs have been recovered *"
 msgstr ""
 
 #: assets/maps/story/7.tmx:
@@ -156,7 +157,7 @@ msgid "???"
 msgstr ""
 
 #: assets/maps/story/7.tmx:
-msgid "N-no, I'm $hero, this year's chosen hero. I just left home to try to defeat the King of Evil."
+msgid "N-no, I'm {{hero}}, this year's chosen hero. I just left home to try to defeat the King of Evil."
 msgstr ""
 
 #: assets/maps/story/7.tmx:
@@ -220,7 +221,11 @@ msgid "Bye!"
 msgstr ""
 
 #: assets/maps/story/7.tmx:
-msgid "'' Picnic area - Do not leave rubbish, thanks. ''"
+msgid "\" Picnic area - Do not leave rubbish, thanks \""
+msgstr ""
+
+#: assets/maps/story/1_home_2.tmx:
+msgid "T-today... today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the kingdom...\nAfter years of training I hope to be able to."
 msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
@@ -252,7 +257,7 @@ msgid "Melhopolis"
 msgstr ""
 
 #: assets/maps/story/24.tmx:
-msgid "'' VANTOI LAB ''"
+msgid "\" VANTOI LAB \""
 msgstr ""
 
 #: assets/maps/story/24.tmx:
@@ -264,7 +269,7 @@ msgid "I can see the inside of the Pharmacy."
 msgstr ""
 
 #: assets/maps/story/24.tmx:
-msgid "'' Melhopolis - Regional capital ''"
+msgid "\" Melhopolis - Regional capital \""
 msgstr ""
 
 #: assets/maps/story/24.tmx:
@@ -280,7 +285,7 @@ msgid "That's the first crypt, I think."
 msgstr ""
 
 #: assets/maps/story/22.tmx:
-msgid "Hey! Hi $hero!"
+msgid "Hey! Hi {{hero}}!"
 msgstr ""
 
 #: assets/maps/story/22.tmx:
@@ -320,7 +325,7 @@ msgid "Oh, by the way, I think this might help you."
 msgstr ""
 
 #: assets/maps/story/22.tmx:
-msgid "* $hero got a SNOWBALLS CONTAINER *"
+msgid "* {{hero}} got a SNOWBALLS CONTAINER *"
 msgstr ""
 
 #: assets/maps/story/22.tmx:
@@ -372,7 +377,7 @@ msgid "Weird things happen in this area...."
 msgstr ""
 
 #: assets/maps/story/9.tmx:
-msgid "* $hero found some berries! 5 LPs have been recovered *"
+msgid "* {{hero}} found some berries! 5 LPs have been recovered *"
 msgstr ""
 
 #: assets/maps/story/24_house1.tmx:
@@ -444,7 +449,7 @@ msgid "Hi Milla, are you ok? Did you get here without any problems?"
 msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "Hii $hero!"
+msgid "Hii {{hero}}!"
 msgstr ""
 
 #: assets/maps/story/999.tmx:
@@ -504,7 +509,7 @@ msgid "I hate this little girl here... She pestered me with a thousand questions
 msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "'' Xeonjia Tower - Dwelling of the King of Evil. Stay away. ''"
+msgid "\" Xeonjia Tower - Dwelling of the King of Evil. Stay away \""
 msgstr ""
 
 #: assets/maps/story/999.tmx:
@@ -532,7 +537,7 @@ msgid "Good morning mom!"
 msgstr ""
 
 #: assets/maps/story/1_home.tmx:
-msgid "Hi $hero! Did you sleep well?"
+msgid "Hi {{hero}}! Did you sleep well?"
 msgstr ""
 
 #: assets/maps/story/1_home.tmx:
@@ -616,7 +621,7 @@ msgid "neighbor"
 msgstr ""
 
 #: assets/maps/story/1_house.tmx:
-msgid "* $hero got and put on the shin guards *"
+msgid "* {{hero}} got and put on the shin guards *"
 msgstr ""
 
 #: assets/maps/story/1_house.tmx:
@@ -644,7 +649,7 @@ msgid "worker"
 msgstr ""
 
 #: assets/maps/story/12.tmx:
-msgid "* $hero found 50 ¤ *"
+msgid "* {{hero}} found 50 ¤ *"
 msgstr ""
 
 #: assets/maps/story/3.tmx:
@@ -668,7 +673,7 @@ msgid "On the ground it's easy to find XEON (¤) stones that you can use to buy 
 msgstr ""
 
 #: assets/maps/story/3.tmx:
-msgid "* $hero found some berries! 20 LPs have been recovered *"
+msgid "* {{hero}} found some berries! 20 LPs have been recovered *"
 msgstr ""
 
 #: assets/maps/story/3.tmx:
@@ -676,7 +681,7 @@ msgid "It seems that once there was a path here."
 msgstr ""
 
 #: assets/maps/story/28.tmx:
-msgid "* $hero found some berries! 40 LPs have been recovered *"
+msgid "* {{hero}} found some berries! 40 LPs have been recovered *"
 msgstr ""
 
 #: assets/maps/story/2.tmx:
@@ -708,11 +713,11 @@ msgid "Some boulders are placed by us, the workers of the kingdom.\nIn this way 
 msgstr ""
 
 #: assets/maps/story/10.tmx:
-msgid "'' Souvenir shop ''"
+msgid "\" Souvenir shop \""
 msgstr ""
 
 #: assets/maps/story/10.tmx:
-msgid "* $hero found some berries! 15 LPs have been recovered *"
+msgid "* {{hero}} found some berries! 15 LPs have been recovered *"
 msgstr ""
 
 #: assets/maps/story/10.tmx:
@@ -740,7 +745,7 @@ msgid "The trees of this region are admired and studied throughout the kingdom. 
 msgstr ""
 
 #: assets/maps/story/5.tmx:
-msgid "'' Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right. ''"
+msgid "\" Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right \""
 msgstr ""
 
 #: assets/maps/story/5.tmx:

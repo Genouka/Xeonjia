@@ -17,7 +17,8 @@ Map<String, List<Translation>> dart2po() {
       var content = fsEntity.readAsStringSync();
       regexGlobal.allMatches(content).forEach((match) {
         if (match.group(3) != null) {
-          var string = Translation(fsEntity.path, match.group(2), null);
+          var string = Translation(
+              fsEntity.path, match.group(2).replaceAll('"', '\\"'), null);
           if (!dirStringsMap.containsKey(name)) dirStringsMap[name] = [];
           if (string.msgid != null &&
               string.msgid != '' &&

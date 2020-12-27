@@ -8,7 +8,7 @@ import 'translation.dart';
 Map<String, Map<String, List<Translation>>> getCurrentTranslations(
     {bool usePoFilename = false}) {
   var localeDir = Directory('locale');
-  final exp = RegExp(r'#: (.*):\nmsgid "(.*)"\nmsgstr "([^"]*)"');
+  final exp = RegExp(r'#: (.*):\nmsgid "(.*)"\nmsgstr "(.*)"');
   var i18nFiles = <String, Map<String, List<Translation>>>{};
   localeDir.listSync().forEach((locale) {
     var lang = locale.path.split('/').last;
@@ -24,8 +24,8 @@ Map<String, Map<String, List<Translation>>> getCurrentTranslations(
           var fileName = usePoFilename
               ? basenameWithoutExtension(poFile.path)
               : match.group(1);
-          var msgid = match.group(2);
-          var msgstr = match.group(3);
+          var msgid = match.group(2).replaceAll('\\"', '\"');
+          var msgstr = match.group(3).replaceAll('\\"', '\"');
           if (msgstr.isEmpty) return;
           var translation = Translation(match.group(1), msgid, msgstr);
           if (i18nFiles.containsKey(fileName)) {

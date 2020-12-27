@@ -20,7 +20,7 @@
             '((&quot;dad&quot; &quot;Safe travels, son.\nMany before you have failed, but I am sure you will handle it right.&quot;)
             (&quot;/hero&quot; &quot;I'll do my best.&quot;)))
         (set &quot;001-talk-dad&quot; #t))
-    (dialog '((&quot;dad&quot; &quot;The tower in which the ''King of Evil'' resides should be located near the capital of the region.&quot;))))</property>
+    (dialog '((&quot;dad&quot; &quot;The tower in which the \&quot;King of Evil\&quot; resides should be located near the capital of the region.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
@@ -50,7 +50,7 @@
  <objectgroup id="9" name="items">
   <object id="66" gid="119" x="112" y="352" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;'' NATAWN - Hometown of the 62nd hero ''&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;\&quot; NATAWN - Hometown of the 62nd hero \&quot;&quot;)))"/>
    </properties>
   </object>
   <object id="70" type="Solid" x="80" y="128" width="16" height="16">

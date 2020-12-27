@@ -70,7 +70,7 @@
    <properties>
     <property name="action">(if (! (has-item &quot;17.berries&quot;))
     (begin
-        (dialog '((&quot;* $hero found some berries! 50 LPs have been recovered *&quot;)))
+        (dialog '((&quot;* {{hero}} found some berries! 50 LPs have been recovered *&quot;)))
         (give-item &quot;3.berries&quot;)
         (set-life-diff 50))
     (dialog '((&quot;A little plant... nothing else.&quot;))))</property>

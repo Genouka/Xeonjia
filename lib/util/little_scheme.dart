@@ -639,7 +639,15 @@ List<String> splitStringIntoTokens(String source) {
     var x = <String>[];
     var ss = <String>[]; // to store string literals
     var i = 0;
+    var doubleQuotesSymbol;
+    var counter = 0;
+    while (
+        line.contains((doubleQuotesSymbol = 'DOUBLE_QUOTE_SYMBOL_$counter'))) {
+      ++counter;
+    }
+    line = line.replaceAll('\\"', doubleQuotesSymbol);
     for (var e in line.split('"')) {
+      e = e.replaceAll(doubleQuotesSymbol, '\"');
       if (i % 2 == 0) {
         x.add(e);
       } else {

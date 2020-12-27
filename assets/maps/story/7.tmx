@@ -18,7 +18,7 @@
     (dialog
         '((&quot;...&quot;)
         (&quot;???/&quot; &quot;Oops... yes, sorry, I am in the middle of the road...\nAre you a tourist? There are very few nowadays.&quot;)
-        (&quot;/hero&quot; &quot;N-no, I'm $hero, this year's chosen hero. I just left home to try to defeat the King of Evil.&quot;)
+        (&quot;/hero&quot; &quot;N-no, I'm {{hero}}, this year's chosen hero. I just left home to try to defeat the King of Evil.&quot;)
         (&quot;???/_surprised&quot; &quot;What!? So is it you?!&quot;)
         (&quot;???/_happy&quot; &quot;Nice to meet you, I've never met a hero before.&quot;)
         (&quot;/&quot; &quot;My name is Milla, I was born and raised in this area. I too am setting out on a journey.&quot;)
@@ -83,7 +83,7 @@
  <objectgroup id="8" name="items">
   <object id="49" gid="71" x="224" y="144" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;'' Picnic area - Do not leave rubbish, thanks. ''&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;\&quot; Picnic area - Do not leave rubbish, thanks \&quot;&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

@@ -20,7 +20,7 @@
         (set &quot;999-talk-milla&quot; #t)
         (dialog
             '((&quot;/hero&quot; &quot;Hi Milla, are you ok? Did you get here without any problems?&quot;)
-            (&quot;/_happy&quot; &quot;Hii $hero!&quot;)
+            (&quot;/_happy&quot; &quot;Hii {{hero}}!&quot;)
             (&quot;/&quot; &quot;Yes, I cleverly managed to avoid the monsters that were along the way!&quot;)
             (&quot;/_happy&quot; &quot;I love those cute little green worms!&quot;)
             (&quot;/hero_mouthless&quot; &quot;...S-such weird tastes here.&quot;)
@@ -67,7 +67,7 @@
  <objectgroup id="8" name="items">
   <object id="41" gid="71" x="288" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;'' Xeonjia Tower - Dwelling of the King of Evil. Stay away. ''&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;\&quot; Xeonjia Tower - Dwelling of the King of Evil. Stay away \&quot;&quot;)))"/>
    </properties>
   </object>
   <object id="50" gid="44" x="224" y="80" width="16" height="16">

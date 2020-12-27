@@ -53,7 +53,7 @@ msgid "Modes"
 msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
-msgid "There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the "King of Evil" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win."
+msgid "There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the \"King of Evil\" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win."
 msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
@@ -61,7 +61,7 @@ msgid "Movements"
 msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
-msgid "Swipe your finger to move your character across the world.\nKeep in mind that you can\'t stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!"
+msgid "Swipe your finger to move your character across the world.\nKeep in mind that you can't stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!"
 msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
@@ -109,7 +109,7 @@ msgid "Multiplayer Mode"
 msgstr ""
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
-msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play"."
+msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press \"Play\"."
 msgstr ""
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
@@ -477,19 +477,15 @@ msgid "There are still monsters in this room. I can't escape."
 msgstr ""
 
 #: lib/game/components/dynamic/character.dart:
-msgid "* \$hero puts %s in the backpack. *"
+msgid "* {{hero}} puts %s in the backpack. *"
 msgstr ""
 
 #: lib/game/components/dynamic/character.dart:
-msgid "* \$hero puts the gem in the backpack. *"
+msgid "* {{hero}} puts the gem in the backpack. *"
 msgstr ""
 
 #: lib/game/components/dynamic/character.dart:
-msgid "* \$hero gives %s *"
-msgstr ""
-
-#: lib/game/xeonjia_game.dart:
-msgid "loading"
+msgid "* {{hero}} gives %s *"
 msgstr ""
 
 #: lib/resources/weapon_details.dart:

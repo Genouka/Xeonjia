@@ -40,7 +40,7 @@
    <properties>
     <property name="action">(if (! (has-item &quot;12.money&quot;))
     (begin
-        (dialog '((&quot;* $hero found 50 ¤ *&quot;)))
+        (dialog '((&quot;* {{hero}} found 50 ¤ *&quot;)))
         (give-item &quot;12.money&quot;)
         (set-money-diff 50))
     (dialog '((&quot;A little plant... nothing else.&quot;))))</property>

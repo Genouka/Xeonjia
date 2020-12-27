@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #: assets/maps/story/15.tmx:
-msgid "* $hero found some berries! 30 LPs have been recovered *"
-msgstr "* $hero ha trovato delle bacche! 30 PV sono stati recuperati *"
+msgid "* {{hero}} found some berries! 30 LPs have been recovered *"
+msgstr "* {{hero}} ha trovato delle bacche! 30 PV sono stati recuperati *"
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant... nothing else."
@@ -33,8 +33,7 @@ msgstr "VANTOI LAB - 1P"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Sorry about the mess. Thieves have entered and turned everything upside down."
-msgstr ""
-"Scusa il disordine. Sono entrati i ladri e hanno buttato tutto per aria."
+msgstr "Scusa il disordine. Sono entrati i ladri e hanno buttato tutto per aria."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "scientist"
@@ -58,9 +57,7 @@ msgstr "Natawn"
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, son.\nMany before you have failed, but I am sure you will handle it right."
-msgstr ""
-"Buon viaggio, figliolo.\n"
-"Molti hanno fallito prima di te, ma sono sicuro che tu ce la farai."
+msgstr "Buon viaggio, figliolo.\nMolti hanno fallito prima di te, ma sono sicuro che tu ce la farai."
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
@@ -71,20 +68,16 @@ msgid "I'll do my best."
 msgstr "Farò del mio meglio."
 
 #: assets/maps/story/1.tmx:
-msgid "The tower in which the ''King of Evil'' resides should be located near the capital of the region."
-msgstr ""
-"La torre in cui risiede il \"Re del Male\" dovrebbe trovarsi vicino alla "
-"capitale della regione."
+msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
+msgstr "La torre in cui risiede il \"Re del Male\" dovrebbe trovarsi vicino alla capitale della regione."
 
 #: assets/maps/story/1.tmx:
-msgid "'' NATAWN - Hometown of the 62nd hero ''"
+msgid "\" NATAWN - Hometown of the 62nd hero \""
 msgstr "\" NATAWN - Città Natale del 62esimo eroe \""
 
 #: assets/maps/story/1.tmx:
 msgid "I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude."
-msgstr ""
-"Devo dire addio ai miei genitori premendo il pulsante \"A\" prima di "
-"andarmene. Non voglio partire senza farlo."
+msgstr "Devo dire addio ai miei genitori premendo il pulsante \"A\" prima di andarmene. Non voglio partire senza farlo."
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks."
@@ -95,8 +88,8 @@ msgid "I still haven't figured out if these monsters are malicious or just stupi
 msgstr ""
 
 #: assets/maps/story/17.tmx:
-msgid "* $hero found some berries! 50 LPs have been recovered *"
-msgstr "* $hero ha trovato delle bacche! 50 PV sono stati recuperati *"
+msgid "* {{hero}} found some berries! 50 LPs have been recovered *"
+msgstr "* {{hero}} ha trovato delle bacche! 50 PV sono stati recuperati *"
 
 #: assets/maps/story/31_house1.tmx:
 msgid "I hate people who always say the same things."
@@ -107,8 +100,8 @@ msgid "Hi, you look a little tired. Rest here for a moment."
 msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
-msgid "* $hero rested and is now in perfect health *"
-msgstr "* $hero ha riposato ed è ora in perfetta salute *"
+msgid "* {{hero}} rested and is now in perfect health *"
+msgstr "* {{hero}} ha riposato ed è ora in perfetta salute *"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Come back anytime."
@@ -151,8 +144,8 @@ msgid "Better if I check that the guy is okay."
 msgstr "Meglio controllare che il ragazzo stia bene."
 
 #: assets/maps/story/13.tmx:
-msgid "* $hero found some berries! 10 LPs have been recovered *"
-msgstr "* $hero ha trovato delle bacche! 10 PV sono stati recuperati *"
+msgid "* {{hero}} found some berries! 10 LPs have been recovered *"
+msgstr "* {{hero}} ha trovato delle bacche! 10 PV sono stati recuperati *"
 
 #: assets/maps/story/7.tmx:
 msgid "..."
@@ -167,7 +160,7 @@ msgid "???"
 msgstr "???"
 
 #: assets/maps/story/7.tmx:
-msgid "N-no, I'm $hero, this year's chosen hero. I just left home to try to defeat the King of Evil."
+msgid "N-no, I'm {{hero}}, this year's chosen hero. I just left home to try to defeat the King of Evil."
 msgstr ""
 
 #: assets/maps/story/7.tmx:
@@ -231,7 +224,11 @@ msgid "Bye!"
 msgstr ""
 
 #: assets/maps/story/7.tmx:
-msgid "'' Picnic area - Do not leave rubbish, thanks. ''"
+msgid "\" Picnic area - Do not leave rubbish, thanks \""
+msgstr ""
+
+#: assets/maps/story/1_home_2.tmx:
+msgid "T-today... today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the kingdom...\nAfter years of training I hope to be able to."
 msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
@@ -263,8 +260,8 @@ msgid "Melhopolis"
 msgstr "Melhopolis"
 
 #: assets/maps/story/24.tmx:
-msgid "'' VANTOI LAB ''"
-msgstr "'' VANTOI LAB ''"
+msgid "\" VANTOI LAB \""
+msgstr "\" VANTOI LAB \""
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Laboratory."
@@ -275,7 +272,7 @@ msgid "I can see the inside of the Pharmacy."
 msgstr ""
 
 #: assets/maps/story/24.tmx:
-msgid "'' Melhopolis - Regional capital ''"
+msgid "\" Melhopolis - Regional capital \""
 msgstr ""
 
 #: assets/maps/story/24.tmx:
@@ -291,7 +288,7 @@ msgid "That's the first crypt, I think."
 msgstr ""
 
 #: assets/maps/story/22.tmx:
-msgid "Hey! Hi $hero!"
+msgid "Hey! Hi {{hero}}!"
 msgstr ""
 
 #: assets/maps/story/22.tmx:
@@ -331,7 +328,7 @@ msgid "Oh, by the way, I think this might help you."
 msgstr ""
 
 #: assets/maps/story/22.tmx:
-msgid "* $hero got a SNOWBALLS CONTAINER *"
+msgid "* {{hero}} got a SNOWBALLS CONTAINER *"
 msgstr ""
 
 #: assets/maps/story/22.tmx:
@@ -383,8 +380,8 @@ msgid "Weird things happen in this area...."
 msgstr ""
 
 #: assets/maps/story/9.tmx:
-msgid "* $hero found some berries! 5 LPs have been recovered *"
-msgstr "* $hero ha trovato delle bacche! 5 PV sono stati recuperati *"
+msgid "* {{hero}} found some berries! 5 LPs have been recovered *"
+msgstr "* {{hero}} ha trovato delle bacche! 5 PV sono stati recuperati *"
 
 #: assets/maps/story/24_house1.tmx:
 msgid "A computer turned off. Looks like a key is needed to turn it on."
@@ -455,7 +452,7 @@ msgid "Hi Milla, are you ok? Did you get here without any problems?"
 msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "Hii $hero!"
+msgid "Hii {{hero}}!"
 msgstr ""
 
 #: assets/maps/story/999.tmx:
@@ -515,7 +512,7 @@ msgid "I hate this little girl here... She pestered me with a thousand questions
 msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "'' Xeonjia Tower - Dwelling of the King of Evil. Stay away. ''"
+msgid "\" Xeonjia Tower - Dwelling of the King of Evil. Stay away \""
 msgstr ""
 
 #: assets/maps/story/999.tmx:
@@ -543,7 +540,7 @@ msgid "Good morning mom!"
 msgstr ""
 
 #: assets/maps/story/1_home.tmx:
-msgid "Hi $hero! Did you sleep well?"
+msgid "Hi {{hero}}! Did you sleep well?"
 msgstr ""
 
 #: assets/maps/story/1_home.tmx:
@@ -627,7 +624,7 @@ msgid "neighbor"
 msgstr ""
 
 #: assets/maps/story/1_house.tmx:
-msgid "* $hero got and put on the shin guards *"
+msgid "* {{hero}} got and put on the shin guards *"
 msgstr ""
 
 #: assets/maps/story/1_house.tmx:
@@ -655,8 +652,8 @@ msgid "worker"
 msgstr "operaio"
 
 #: assets/maps/story/12.tmx:
-msgid "* $hero found 50 ¤ *"
-msgstr "* $hero ha trovato 50 ¤ *"
+msgid "* {{hero}} found 50 ¤ *"
+msgstr "* {{hero}} ha trovato 50 ¤ *"
 
 #: assets/maps/story/3.tmx:
 msgid "Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck."
@@ -679,16 +676,16 @@ msgid "On the ground it's easy to find XEON (¤) stones that you can use to buy 
 msgstr ""
 
 #: assets/maps/story/3.tmx:
-msgid "* $hero found some berries! 20 LPs have been recovered *"
-msgstr "* $hero ha trovato delle bacche! 20 PV sono stati recuperati *"
+msgid "* {{hero}} found some berries! 20 LPs have been recovered *"
+msgstr "* {{hero}} ha trovato delle bacche! 20 PV sono stati recuperati *"
 
 #: assets/maps/story/3.tmx:
 msgid "It seems that once there was a path here."
 msgstr ""
 
 #: assets/maps/story/28.tmx:
-msgid "* $hero found some berries! 40 LPs have been recovered *"
-msgstr "* $hero ha trovato delle bacche! 40 PV sono stati recuperati *"
+msgid "* {{hero}} found some berries! 40 LPs have been recovered *"
+msgstr "* {{hero}} ha trovato delle bacche! 40 PV sono stati recuperati *"
 
 #: assets/maps/story/2.tmx:
 msgid "Route 1"
@@ -719,12 +716,12 @@ msgid "Some boulders are placed by us, the workers of the kingdom.\nIn this way 
 msgstr ""
 
 #: assets/maps/story/10.tmx:
-msgid "'' Souvenir shop ''"
+msgid "\" Souvenir shop \""
 msgstr ""
 
 #: assets/maps/story/10.tmx:
-msgid "* $hero found some berries! 15 LPs have been recovered *"
-msgstr "* $hero ha trovato delle bacche! 15 PV sono stati recuperati *"
+msgid "* {{hero}} found some berries! 15 LPs have been recovered *"
+msgstr "* {{hero}} ha trovato delle bacche! 15 PV sono stati recuperati *"
 
 #: assets/maps/story/10.tmx:
 msgid "I can see the inside of the shop."
@@ -751,7 +748,7 @@ msgid "The trees of this region are admired and studied throughout the kingdom. 
 msgstr ""
 
 #: assets/maps/story/5.tmx:
-msgid "'' Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right. ''"
+msgid "\" Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right \""
 msgstr ""
 
 #: assets/maps/story/5.tmx:

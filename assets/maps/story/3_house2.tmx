@@ -15,7 +15,7 @@
     (begin
         (dialog
             '((&quot;/&quot; &quot;Hi, you look a little tired. Rest here for a moment.&quot;)
-            (&quot;* $hero rested and is now in perfect health *&quot;)
+            (&quot;* {{hero}} rested and is now in perfect health *&quot;)
             (&quot;/&quot; &quot;Come back anytime.&quot;)))
         (restore-life))
     (dialog '((&quot;/&quot; &quot;Be careful not to get hurt.&quot;))))</property>

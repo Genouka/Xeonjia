@@ -6,7 +6,7 @@ import 'util/get_i18n_files.dart';
 import 'util/tmx2po.dart';
 import 'util/translation.dart';
 
-final languageList = ['de', 'es', 'it', 'template'];
+final languageList = ['de', 'es', 'fr', 'it', 'ru', 'template'];
 final appName = 'Xeonjia';
 final author = 'DeepDaikon';
 final year = '2020';
@@ -61,9 +61,12 @@ String _getTranslation(
   var translation = '';
   if (currentTranslations[string.path] != null &&
       (currentTranslations[string.path][language]?.isNotEmpty ?? false)) {
-    var translations = currentTranslations[string.path][language]
-        .where((translation) => translation.msgid == string.msgid);
-    if (translations.length == 1) translation = translations.single.msgstr;
+    var translations = currentTranslations[string.path][language].where(
+        (translation) =>
+            (translation.msgid.replaceAll('"', '\\"')) == string.msgid);
+    if (translations.length == 1) {
+      translation = translations.single.msgstr.replaceAll('"', '\\"');
+    }
   }
   return translation;
 }

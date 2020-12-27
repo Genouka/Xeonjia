@@ -22,7 +22,7 @@
     <property name="action">(begin
     (set &quot;022-talk-shen&quot; #t)
     (dialog
-        '((&quot;???/_happy&quot; &quot;Hey! Hi $hero!&quot;)
+        '((&quot;???/_happy&quot; &quot;Hey! Hi {{hero}}!&quot;)
         (&quot;/hero&quot; &quot;H-hi, you know me?&quot;)
         (&quot;???/&quot; &quot;Well, you are the hero of this year, you are quite famous. Are you here to visit the crypt?&quot;)
         (&quot;/hero&quot; &quot;Yes. If I have not misunderstood, here's one of the 3 signets I need to access the Xeonjia tower.&quot;)
@@ -32,7 +32,7 @@
         (&quot;/_happy&quot; &quot;My name is Shen, I am a scientist.&quot;)
         (&quot;/hero_happy&quot; &quot;Nice to meet you, Shen.&quot;)
         (&quot;/&quot; &quot;Oh, by the way, I think this might help you.&quot;)
-        (&quot;* $hero got a SNOWBALLS CONTAINER *&quot;)
+        (&quot;* {{hero}} got a SNOWBALLS CONTAINER *&quot;)
         (&quot;/&quot; &quot;It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the 'S' button.\nIt can contain up to 10 snowballs.&quot;)
         (&quot;/hero_happy&quot; &quot;Wow! I'm sure it'll come in handy. Thank you.&quot;)
         (&quot;/_happy&quot; &quot;You're welcome.&quot;)

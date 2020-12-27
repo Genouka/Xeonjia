@@ -58,7 +58,7 @@
  <objectgroup id="8" name="items">
   <object id="51" gid="71" x="272" y="128" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;'' VANTOI LAB ''&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;\&quot; VANTOI LAB \&quot;&quot;)))"/>
    </properties>
   </object>
   <object id="59" gid="104" x="240" y="112" width="16" height="16">
@@ -78,7 +78,7 @@
   </object>
   <object id="62" gid="71" x="0" y="144" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;'' Melhopolis - Regional capital ''&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;\&quot; Melhopolis - Regional capital \&quot;&quot;)))"/>
    </properties>
   </object>
   <object id="63" gid="115" x="144" y="112" width="16" height="16">
