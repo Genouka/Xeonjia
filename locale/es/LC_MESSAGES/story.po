@@ -4,19 +4,7 @@
 # Perro Tuerto <nika.zhenya@perrotuerto.blog>, 2020.
 # DeepDaikon <deepdaikon@tuta.io>, 2020.
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-12-18 21:10+0000\n"
-"Last-Translator: DeepDaikon <deepdaikon@tuta.io>\n"
-"Language-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/"
-"story/es/>\n"
-"Language: es\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2020-12-27 16:42+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4\n"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! 30 LPs have been recovered *"
@@ -512,7 +500,7 @@ msgstr "Odio a este pequeña niña de aquí... Me molestó con miles de pregunta
 
 #: assets/maps/story/999.tmx:
 msgid "\" Xeonjia Tower - Dwelling of the King of Evil. Stay away \""
-msgstr "\" Torre Xeonjia - Morada del Rey del Mal.  No entrar \""
+msgstr "\" Torre Xeonjia - Morada del Rey del Mal. No entrar \""
 
 #: assets/maps/story/999.tmx:
 msgid "This door is closed."

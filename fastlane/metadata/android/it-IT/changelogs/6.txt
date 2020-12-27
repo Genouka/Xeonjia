@@ -1,0 +1,5 @@
+* Nuova modalità storia
+* Grafiche aggiornate
+* Miglioramenti UI/UX
+* Aggiunta musica di sottofondo ed effetti sonori
+* Risolti bug

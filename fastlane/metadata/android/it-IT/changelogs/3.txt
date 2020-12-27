@@ -1,0 +1,3 @@
+* Aggiunta modalita multigiocatore
+* Migliorato gamepad
+* Risolti bug

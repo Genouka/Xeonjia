@@ -5,19 +5,7 @@
 # Nicolò Balzarotti <anothersms@gmail.com>, 2020.
 # no no <skariko@pm.me>, 2020.
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-12-12 10:40+0000\n"
-"Last-Translator: DeepDaikon <deepdaikon@tuta.io>\n"
-"Language-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/"
-"story/it/>\n"
-"Language: it\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2020-12-27 16:42+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4\n"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! 30 LPs have been recovered *"
@@ -273,7 +261,7 @@ msgstr ""
 
 #: assets/maps/story/24.tmx:
 msgid "\" Melhopolis - Regional capital \""
-msgstr ""
+msgstr "\" Melhopolis - Capitale regionale \""
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the house."
@@ -889,7 +877,7 @@ msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "This is a wall."
-msgstr ""
+msgstr "Questo è un muro."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "Oink !"
