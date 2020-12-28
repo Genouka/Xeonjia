@@ -11,7 +11,7 @@
  <objectgroup id="10" name="npcs">
   <object id="71" type="NPC" gid="10" x="96" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;A few meters from here is the Mitsu forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

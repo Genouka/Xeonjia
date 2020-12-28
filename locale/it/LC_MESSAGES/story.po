@@ -44,8 +44,8 @@ msgid "Natawn"
 msgstr "Natawn"
 
 #: assets/maps/story/1.tmx:
-msgid "Safe travels, son.\nMany before you have failed, but I am sure you will handle it right."
-msgstr "Buon viaggio, figliolo.\nMolti hanno fallito prima di te, ma sono sicuro che tu ce la farai."
+msgid "Safe travels, {{hero}}.\nMany before you have failed, but I am sure you will handle it right."
+msgstr "Buon viaggio, {{hero}}.\nMolti hanno fallito prima di te, ma sono sicuro che tu ce la farai"
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
@@ -180,12 +180,12 @@ msgid "Wow, sounds like a great idea!"
 msgstr "Wow, sembra un'ottima idea!"
 
 #: assets/maps/story/7.tmx:
-msgid "Yep, it won't be easy but I want to visit at least the whole kingdom."
-msgstr "Già, non sarà facile ma voglio riuscire come minimo a vedere tutto il regno."
+msgid "Yep, it won't be easy but I want to visit at least the whole Kingdom."
+msgstr "Già, non sarà facile ma voglio riuscire come minimo a vedere tutto il Regno."
 
 #: assets/maps/story/7.tmx:
-msgid "Are there places outside the kingdom?!"
-msgstr "Esistono altri posti al di fuori del regno?!"
+msgid "Are there places outside the Kingdom?!"
+msgstr "Esistono altri posti al di fuori del Regno?!"
 
 #: assets/maps/story/7.tmx:
 msgid "Dunno, that's what I want to find out!"
@@ -216,8 +216,8 @@ msgid "\" Picnic area - Do not leave rubbish, thanks \""
 msgstr "\" Area picnic - Non lasciare rifiuti, grazie \""
 
 #: assets/maps/story/1_home_2.tmx:
-msgid "T-today... today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the kingdom...\nAfter years of training I hope to be able to."
-msgstr "O-oggi... oggi è il giorno che aspetto da tutta la vita. Il mio viaggio verso la torre Xeonjia sta per iniziare.\nQuest'anno sono io l' \"eroe\" incaricato a sconfiggere il mostro che ha congelato il regno...\nDopo anni di allenamenti spero di esserne in grado."
+msgid "T-today... today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom...\nAfter years of training I hope to be able to."
+msgstr "O-oggi... oggi è il giorno che aspetto da tutta la vita. Il mio viaggio verso la torre Xeonjia sta per iniziare.\nQuest'anno sono io l' \"eroe\" incaricato a sconfiggere il mostro che ha congelato il Regno...\nDopo anni di allenamenti spero di esserne in grado."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'd like to go back to bed but I can't."
@@ -364,7 +364,7 @@ msgid "This is not a place for kids, go home."
 msgstr "Questo non è un posto per ragazzini, tornatene a casa."
 
 #: assets/maps/story/9.tmx:
-msgid "Weird things happen in this area...."
+msgid "Weird things happen in this area..."
 msgstr "Succedono cose strane in questa zona..."
 
 #: assets/maps/story/9.tmx:
@@ -396,7 +396,7 @@ msgid "I've never seen so much dust."
 msgstr "Non ho mai visto così tanta polvere."
 
 #: assets/maps/story/10_old_shop.tmx:
-msgid "Here it's full of snow globes with a miniaturized Mitsu forest inside. When they were built snow was a very rare phenomenon here and it was much more appreciated."
+msgid "Here it's full of snow globes with a miniaturized Mitsu Forest inside. When they were built snow was a very rare phenomenon here and it was much more appreciated."
 msgstr "Qui è pieno di palle di vetro con neve con all'interno il Bosco Mitsu in miniatura. Quando sono state costruite la neve era un fenomeno molto raro qui ed era molto apprezzato."
 
 #: assets/maps/story/10_old_shop.tmx:
@@ -476,8 +476,8 @@ msgid "Signets?"
 msgstr "Sigilli?"
 
 #: assets/maps/story/999.tmx:
-msgid "I did not understand exactly what they are, but if I have not misunderstood they are kept in crypts present in each region of the kingdom."
-msgstr "Non ho compreso esattamente cosa sono, ma se non ho capito male sono custoditi in cripte presenti in ciascuna regione del regno."
+msgid "I did not understand exactly what they are, but if I have not misunderstood they are kept in crypts present in each region of the Kingdom."
+msgstr "Non ho compreso esattamente cosa sono, ma se non ho capito male sono custoditi in cripte presenti in ciascuna regione del Regno."
 
 #: assets/maps/story/999.tmx:
 msgid "Mm... Then I really think that I have to set out in search of these crypts..."
@@ -588,7 +588,7 @@ msgid "Do you think piglets will one day be a common pet?"
 msgstr "Pensi che un giorno i maialini saranno un animale domestico comune?"
 
 #: assets/maps/story/3_house1.tmx:
-msgid "A few meters from here is the Mitsu forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."
+msgid "A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."
 msgstr "Ad un po' di metri da qui c'è il Bosco Mitsu. Un tempo attraeva molti turisti ed era considerato un posto sacro, ma ora è pericolo e infestato da mostri."
 
 #: assets/maps/story/28_house.tmx:
@@ -632,8 +632,8 @@ msgid "I'm planning a surprise wedding for my son, I hope he doesn't find out."
 msgstr "Sto pianificando un matrimonio a sorpresa per mio figlio, spero che non lo scopra."
 
 #: assets/maps/story/30.tmx:
-msgid "This part is wip"
-msgstr "Questa parte è ancora in costruzione"
+msgid "This part is under construction."
+msgstr "Questa parte è ancora in costruzione."
 
 #: assets/maps/story/30.tmx:
 msgid "worker"
@@ -700,8 +700,8 @@ msgid "What a mess! I have to tidy up!"
 msgstr "Che disastro! Devo ripulire!"
 
 #: assets/maps/story/31.tmx:
-msgid "Some boulders are placed by us, the workers of the kingdom.\nIn this way it's easier to reach all places."
-msgstr "Acluni massi sono piazzati da noi, gli operai del regno.\nIn questo modo è più facile raggiungere ogni posto."
+msgid "Some boulders are placed by us, the workers of the Kingdom.\nIn this way it's easier to reach all places."
+msgstr "Alcuni massi sono piazzati da noi, gli operai del Regno.\nIn questo modo è più facile raggiungere ogni posto."
 
 #: assets/maps/story/10.tmx:
 msgid "\" Souvenir shop \""
@@ -724,7 +724,7 @@ msgid "Mitsu Forest"
 msgstr "Bosco Mitsu"
 
 #: assets/maps/story/5.tmx:
-msgid "Hey, this is the Mitsu forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here."
+msgid "Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here."
 msgstr "Ehi, questo è il Bosco Mitsu. I miei genitori mi hanno raccontato molte storie su quanto fosse bello e fiorente molto tempo fa. Si dice che un tempo qua vivesse la mistica creatura protettrice del continente."
 
 #: assets/maps/story/5.tmx:
@@ -732,16 +732,16 @@ msgid "174805...\nI don't know what these figures are but a little while ago I h
 msgstr "174805...\nNon so cosa siano questi numeri, ma poco fa ho sentito qualcuno che li diceva ad alta voce.\nNon so perché."
 
 #: assets/maps/story/5.tmx:
-msgid "The trees of this region are admired and studied throughout the kingdom. These blues are my favorites."
-msgstr "Gli alberi di questa regione sono ammirati e studiati per tutto il regno. Questi blu sono i miei preferiti."
+msgid "The trees of this region are admired and studied throughout the Kingdom. These blues are my favorites."
+msgstr "Gli alberi di questa regione sono ammirati e studiati per tutto il Regno. Questi blu sono i miei preferiti."
 
 #: assets/maps/story/5.tmx:
 msgid "\" Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right \""
 msgstr "\" Bosco Mitsu - Benvenuto, rispetta la natura e ricorda di dare un'occhiata al negozio di souvenir che trovi sulla destra \""
 
 #: assets/maps/story/5.tmx:
-msgid "Once this was a very touristy place, the kingdom tried to make money from it."
-msgstr "Un tempo questo era un posto molto turistico, il regno cercava di trarne profitto."
+msgid "Once this was a very touristy place, the Kingdom tried to make money from it."
+msgstr "Un tempo questo era un posto molto turistico, il Regno cercava di trarne profitto."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Test tubes and other scientific stuff."

@@ -17,7 +17,7 @@
     <property name="action">(if (!get &quot;001-talk-dad&quot;)
     (begin
         (dialog
-            '((&quot;dad&quot; &quot;Safe travels, son.\nMany before you have failed, but I am sure you will handle it right.&quot;)
+            '((&quot;dad&quot; &quot;Safe travels, {{hero}}.\nMany before you have failed, but I am sure you will handle it right.&quot;)
             (&quot;/hero&quot; &quot;I'll do my best.&quot;)))
         (set &quot;001-talk-dad&quot; #t))
     (dialog '((&quot;dad&quot; &quot;The tower in which the \&quot;King of Evil\&quot; resides should be located near the capital of the region.&quot;))))</property>

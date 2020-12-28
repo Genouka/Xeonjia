@@ -17,7 +17,7 @@
   </object>
   <object id="46" type="NPC" gid="140" x="80" y="128" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;worker&quot; &quot;This part is wip&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;worker&quot; &quot;This part is under construction.&quot;)))"/>
     <property name="orientation" type="int" value="1"/>
    </properties>
   </object>
