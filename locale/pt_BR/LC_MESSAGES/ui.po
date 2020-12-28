@@ -1,18 +1,28 @@
 # Translation for Xeonjia
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# Hrela <6d8fd379d7b549a5+xeonjia-weblate@posteo.net>, 2020.
-# anselm-helbig <gh@mnemonikk.org>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2020-12-28 13:45+0000\nLast-Translator: anselm-helbig <gh@mnemonikk.org>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4\n"
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
-msgstr "Info"
+msgstr ""
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr ""
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Story mode"
@@ -28,11 +38,11 @@ msgstr ""
 
 #: lib/ui/screens/rules/widgets/last_page.dart:
 msgid "Almost done!"
-msgstr "Fast fertig!"
+msgstr ""
 
 #: lib/ui/screens/rules/widgets/last_page.dart:
 msgid "Before starting tell me your name which will be used in the game."
-msgstr "Bevor wir beginnen, sag mir deinen Namen. Dieser wird im Spiel verwendet."
+msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts."
@@ -56,15 +66,15 @@ msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Lifepoints"
-msgstr "Lebenspunkte"
+msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Pay attention to your lifepoints!\nMany enemies, pitfalls and dangers will try to hurt you."
-msgstr "Achte auf deine Lebenspunkte!\nViele Gegner, Fallen und Gefahren werden versuchen, dich zu verletzen."
+msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Weapons"
-msgstr "Waffen"
+msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "You'll need weapons to overcome barriers and defeat enemies.\n\nTap the screen in the desired direction or press the shoot button to hit.\nBe aware that some weapons have few hits, so use them wisely."
@@ -72,31 +82,31 @@ msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Enemies"
-msgstr "Gegner"
+msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have life points too."
-msgstr "Vorsicht, die Welt ist voller gefährlicher Gegner, die dich angreifen wollen.\nFüge ihnen mehrere Treffer zu, um sie zu besiegen. Auch sie haben Lebenspunkte."
+msgstr ""
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "Close"
-msgstr "Schließen"
+msgstr ""
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "Back"
-msgstr "Zurück"
+msgstr ""
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "Next"
-msgstr "Weiter"
+msgstr ""
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Multiplayer Mode"
-msgstr "Multiplayer-Modus"
+msgstr ""
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press \"Play\"."
@@ -220,11 +230,11 @@ msgstr ""
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Save"
-msgstr "Speichern"
+msgstr ""
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Language"
-msgstr "Sprache"
+msgstr ""
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "App language"
