@@ -44,12 +44,14 @@ class _PauseMenuState extends State<PauseMenu> {
             child: Container(
               margin: const EdgeInsets.only(bottom: 5),
               alignment: Alignment.bottomCenter,
-              child: Text(
-                describeEnum(pauseMode).i18n.toUpperCase(),
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 64,
-                  letterSpacing: 1.4,
+              child: FittedBox(
+                fit: BoxFit.fitWidth,
+                child: Text(
+                  describeEnum(pauseMode).i18n.toUpperCase(),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 64,
+                  ),
                 ),
               ),
             ),
