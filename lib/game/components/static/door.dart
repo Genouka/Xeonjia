@@ -38,8 +38,8 @@ class DoorComponent extends BasicComponent {
   @override
   void collidedBy(otherComponent) {
     if (otherComponent.isPlayerOne) {
-      game.setMessage(Message(
-          "There are still monsters in this room. I can't escape.".i18n));
+      game.setMessage(
+          Message("There are still monsters here. I can't escape.".i18n));
       otherComponent.updateOrientation(otherComponent.orientation.opposite);
     }
     super.collidedBy(otherComponent);

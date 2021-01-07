@@ -119,7 +119,7 @@ class _PauseMenuState extends State<PauseMenu> {
                 .fill([game.playerOne.lifePoints.round().toString()]) +
             (game.config.mode == GameMode.story
                 ? ('\n' +
-                    'your level: %s'.i18n.fill([game.playerOne.level]) +
+                    'level: %s'.i18n.fill([game.playerOne.level]) +
                     '\n' +
                     'money: %s ¤'.i18n.fill([game.playerOne.money]) +
                     '\n' +
