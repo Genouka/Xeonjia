@@ -13,6 +13,10 @@ msgstr "* {{hero}} encontrou algumas amoras. 30 LPs foram recuperarados *"
 msgid "A little plant... nothing else."
 msgstr "Uma pequena planta... só isso."
 
+#: assets/maps/story/15.tmx:
+msgid "\" Exit ↑ \""
+msgstr ""
+
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB - 1F"
 msgstr "LABORATÓRIO VANTOI -"
@@ -36,6 +40,10 @@ msgstr "Alguém usou essa planta para fazer alguns experimentos."
 #: assets/maps/story/24_lab.tmx:
 msgid "A broken monitor."
 msgstr "Um monitor quebrado."
+
+#: assets/maps/story/8.tmx:
+msgid "\" → \""
+msgstr "\" → \""
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
@@ -133,6 +141,10 @@ msgstr ""
 msgid "* {{hero}} found some berries! 10 LPs have been recovered *"
 msgstr ""
 
+#: assets/maps/story/14.tmx:
+msgid "\" ← Pharmacy \""
+msgstr ""
+
 #: assets/maps/story/7.tmx:
 msgid "..."
 msgstr ""
@@ -213,6 +225,10 @@ msgstr ""
 msgid "\" Picnic area - Do not leave rubbish, thanks \""
 msgstr ""
 
+#: assets/maps/story/7.tmx:
+msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
+msgstr ""
+
 #: assets/maps/story/1_home_2.tmx:
 msgid "T-today... today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom...\nAfter years of training I hope to be able to."
 msgstr ""
@@ -243,6 +259,10 @@ msgstr ""
 
 #: assets/maps/story/24.tmx:
 msgid "Melhopolis"
+msgstr ""
+
+#: assets/maps/story/24.tmx:
+msgid "The city center is a few kilometers to the south."
 msgstr ""
 
 #: assets/maps/story/24.tmx:
@@ -369,12 +389,24 @@ msgstr ""
 msgid "* {{hero}} found some berries! 5 LPs have been recovered *"
 msgstr ""
 
+#: assets/maps/story/9.tmx:
+msgid "\" If you get lost, follow the road signs \""
+msgstr ""
+
+#: assets/maps/story/19.tmx:
+msgid "\" Xeonjia Tower ↑ \""
+msgstr ""
+
 #: assets/maps/story/24_house1.tmx:
 msgid "A computer turned off. Looks like a key is needed to turn it on."
 msgstr ""
 
 #: assets/maps/story/21.tmx:
 msgid "Route 2"
+msgstr ""
+
+#: assets/maps/story/21.tmx:
+msgid "\" Melhopolis → \""
 msgstr ""
 
 #: assets/maps/story/10_old_shop.tmx:
@@ -583,6 +615,14 @@ msgstr ""
 
 #: assets/maps/story/26_house.tmx:
 msgid "Do you think piglets will one day be a common pet?"
+msgstr ""
+
+#: assets/maps/story/11.tmx:
+msgid "Hi, I'm an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I'll help you."
+msgstr ""
+
+#: assets/maps/story/11.tmx:
+msgid "Are you stuck?\nTake the path behind the blue tree."
 msgstr ""
 
 #: assets/maps/story/3_house1.tmx:

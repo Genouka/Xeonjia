@@ -14,6 +14,10 @@ msgstr "* ¡{{hero}} encontró unas bayas! 30 HP han sido recuperados *"
 msgid "A little plant... nothing else."
 msgstr "Una pequeña planta... nada más."
 
+#: assets/maps/story/15.tmx:
+msgid "\" Exit ↑ \""
+msgstr ""
+
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB - 1F"
 msgstr "VANTOI LAB - 1F"
@@ -37,6 +41,10 @@ msgstr "Alguien usó esta planta para hacer unos experimentos."
 #: assets/maps/story/24_lab.tmx:
 msgid "A broken monitor."
 msgstr "Un monitor roto."
+
+#: assets/maps/story/8.tmx:
+msgid "\" → \""
+msgstr "\" → \""
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
@@ -134,6 +142,10 @@ msgstr "Es mejor ver si este tipo está bien."
 msgid "* {{hero}} found some berries! 10 LPs have been recovered *"
 msgstr "* ¡{{hero}} encontró unas bayas! 10 HP han sido recuperados *"
 
+#: assets/maps/story/14.tmx:
+msgid "\" ← Pharmacy \""
+msgstr ""
+
 #: assets/maps/story/7.tmx:
 msgid "..."
 msgstr "..."
@@ -214,6 +226,10 @@ msgstr "¡Adiós!"
 msgid "\" Picnic area - Do not leave rubbish, thanks \""
 msgstr "\" Área de picnic - No dejes tu basura, gracias \""
 
+#: assets/maps/story/7.tmx:
+msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
+msgstr ""
+
 #: assets/maps/story/1_home_2.tmx:
 msgid "T-today... today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom...\nAfter years of training I hope to be able to."
 msgstr ""
@@ -245,6 +261,10 @@ msgstr "Desde aquí puedo ver el jardín."
 #: assets/maps/story/24.tmx:
 msgid "Melhopolis"
 msgstr "Melhopolis"
+
+#: assets/maps/story/24.tmx:
+msgid "The city center is a few kilometers to the south."
+msgstr ""
 
 #: assets/maps/story/24.tmx:
 msgid "\" VANTOI LAB \""
@@ -370,6 +390,14 @@ msgstr "Cosas extrañas pasaron en esta área..."
 msgid "* {{hero}} found some berries! 5 LPs have been recovered *"
 msgstr "* ¡{{hero}} encontró unas bayas! 5 HP han sido recuperados *"
 
+#: assets/maps/story/9.tmx:
+msgid "\" If you get lost, follow the road signs \""
+msgstr ""
+
+#: assets/maps/story/19.tmx:
+msgid "\" Xeonjia Tower ↑ \""
+msgstr ""
+
 #: assets/maps/story/24_house1.tmx:
 msgid "A computer turned off. Looks like a key is needed to turn it on."
 msgstr "Una computadora apagada. Parece que es necesaria una clave para prenderla."
@@ -377,6 +405,10 @@ msgstr "Una computadora apagada. Parece que es necesaria una clave para prenderl
 #: assets/maps/story/21.tmx:
 msgid "Route 2"
 msgstr "Ruta 2"
+
+#: assets/maps/story/21.tmx:
+msgid "\" Melhopolis → \""
+msgstr ""
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "Hi, I'm sorry but we're closed. Once this was a busy shop, but now it doesn't even make sense to stay open."
@@ -585,6 +617,14 @@ msgstr "Si quieres entrar al bosque tienes que tener cuidado, mi nieto se arries
 #: assets/maps/story/26_house.tmx:
 msgid "Do you think piglets will one day be a common pet?"
 msgstr "¿Crees que un día los cerditos serán una mascota común?"
+
+#: assets/maps/story/11.tmx:
+msgid "Hi, I'm an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I'll help you."
+msgstr ""
+
+#: assets/maps/story/11.tmx:
+msgid "Are you stuck?\nTake the path behind the blue tree."
+msgstr ""
 
 #: assets/maps/story/3_house1.tmx:
 msgid "A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."

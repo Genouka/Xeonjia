@@ -418,8 +418,8 @@ msgid "lifepoints: %s"
 msgstr "HP: %s"
 
 #: lib/game/widgets/pause_menu.dart:
-msgid "your level: %s"
-msgstr "tu nivel: %s"
+msgid "level: %s"
+msgstr "nivel: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "money: %s ¤"
@@ -474,8 +474,8 @@ msgid "Let me know if you need anything else."
 msgstr "Hazme saber si necesitas algo más."
 
 #: lib/game/components/static/door.dart:
-msgid "There are still monsters in this room. I can't escape."
-msgstr "Todavía hay monstruos en la habitación. No puedes escapar."
+msgid "There are still monsters here. I can't escape."
+msgstr "Todavía hay monstruos aquí. No puedes escapar."
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
