@@ -38,7 +38,8 @@ class _InfoPageState extends State<InfoPage> {
     {
       'title': 'Updates'.i18n,
       'subtitle': 'Search for updates'.i18n,
-      'url': 'https://f-droid.org/packages/xyz.deepdaikon.xeonjia/',
+      'url':
+          'https://play.google.com/store/apps/details?id=xyz.deepdaikon.xeonjia',
       'icon': const Icon(Icons.system_update),
     },
     {
