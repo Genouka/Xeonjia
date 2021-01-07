@@ -7,12 +7,20 @@ import 'package:xeonjia/models/direction.dart';
 
 // Basic CPU controlled enemy that slides on ice
 class SlitherCpuComponent extends DynamicComponent with LifePointsBar {
-  SlitherCpuComponent(tile) : super.fromTile(tile) {
+  SlitherCpuComponent(tile)
+      : _updatePeriod =
+            (double.parse(tile.properties['updatePeriod'] ?? '0.8')),
+        super.fromTile(tile) {
     level = atk ~/ 3;
+    _timeToNextMove = _updatePeriod;
   }
 
   @override
   int teamId = -2;
+
+  // Frequency of movements (CPU only)
+  final double _updatePeriod;
+  double _timeToNextMove;
 
   @override
   void lifePointsDifference(double difference, {cause, double poison = 0}) {
@@ -23,7 +31,10 @@ class SlitherCpuComponent extends DynamicComponent with LifePointsBar {
 
   @override
   void update(double t) {
-    if (randomDouble() > 0.4) updateDirection(GetDirection.random);
+    if ((_timeToNextMove -= t) < 0) {
+      updateDirection(GetDirection.random);
+      _timeToNextMove = _updatePeriod;
+    }
     super.update(t);
   }
 

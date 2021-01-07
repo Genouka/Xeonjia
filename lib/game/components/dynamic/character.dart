@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'dart:ui';
 
 import 'package:xeonjia/i18n/ui.i18n.dart';
@@ -50,6 +49,10 @@ class CharacterComponent extends DynamicComponent
   // NPC features: If friendly it doesn't shoot. If quiet it doesn't move.
   bool friendly;
   bool quiet;
+  final double _updatePeriod = 0.1;
+  double _timeToNextMove = 0.1;
+  final double _shootPeriod = 0.2;
+  double _timeToNextShoot = 0.2;
 
   @override
   double maxLifePoints;
@@ -118,6 +121,8 @@ class CharacterComponent extends DynamicComponent
         _itemList = List.from(mainCharacter.itemList);
       }
       game.executeAction(action: game.map.action, actor: game.playerOne);
+    } else {
+      updateDirection(_initialOrientation);
     }
   }
 
@@ -230,27 +235,18 @@ class CharacterComponent extends DynamicComponent
   @override
   void update(double t) {
     if (!isPlayerOne) {
-      if (!quiet) _cpuMove();
-      if (!friendly) _cpuShoot();
+      if (!friendly && (_timeToNextShoot -= t) < 0) {
+        if (randomDouble() > 0.1) nextWeapon();
+        if (randomDouble() > 0.1) shoot();
+        _timeToNextShoot = _shootPeriod;
+      }
+
+      if (!quiet && (_timeToNextMove -= t) < 0) {
+        if (randomDouble() > 0.2) updateDirection(GetDirection.random);
+        _timeToNextMove = _updatePeriod;
+      }
     }
     super.update(t);
-  }
-
-  // Move done if this is controlled by CPU
-  void _cpuMove() {
-    if (movesCounter == 0) {
-      updateDirection(_initialOrientation);
-    } else if (isStationary) {
-      if (randomDouble() > 0.4) updateDirection(GetDirection.random);
-    }
-  }
-
-  // Shot done if this is controlled by CPU
-  void _cpuShoot() {
-    if (Random().nextDouble() > 0.98) {
-      if (Random().nextDouble() > 0.6) nextWeapon();
-      shoot();
-    }
   }
 
   @override
