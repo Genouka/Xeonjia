@@ -88,12 +88,14 @@ class CharacterComponent extends DynamicComponent
     } else {
       atk = (level + 1).toDouble();
       def = (def != 0 ? def : (level ~/ 5).toDouble());
-      weaponList = [
-        PunchWeapon(level: 10),
-        SnowBallWeapon(level: 5),
-        MineWeapon(level: 3),
-      ];
-      selectedWeaponIndex = 1;
+      if (isPlayerOne) {
+        weaponList = [
+          PunchWeapon(level: 10),
+          SnowBallWeapon(level: 5),
+          MineWeapon(level: 3),
+        ];
+        selectedWeaponIndex = 1;
+      }
     }
     teamId = team;
     weaponList ??= (team == 0)
