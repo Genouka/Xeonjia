@@ -53,7 +53,7 @@ If you want to support the development of Xeonjia you can donate through Liberap
 ## Translate
 
 You can use [Weblate](https://translate.deepdaikon.xyz/engage/xeonjia/) if you want to help with the translation of Xeonjia.
-If your language is missing click on "Start new translation".
+If your language is missing click on the ["Start new translation"](https://translate.deepdaikon.xyz/projects/xeonjia/story/) button.
 
 [<img src="https://translate.deepdaikon.xyz/widgets/xeonjia/-/multi-auto.svg" alt="Translation status">](https://translate.deepdaikon.xyz/engage/xeonjia/)
 
