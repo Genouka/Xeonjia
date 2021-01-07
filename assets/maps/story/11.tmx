@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="42">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
  <properties>
   <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="153" source="../tilesets/npc.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5NgYGCQAGJ7KG0OpRWQsAQU8yCx0dURA+xxiMPsIBb4YBED6ReBsu0IqMUF7KF6/UnQgw5g4UJIDT4AC2NkQKqbFIhwBz5gBzXDBohtKTAHV7yQagYlfgEBPwbc6Y9a7iAmrSHnNQUGSFpQgPI9gdiLARJOEkjiMDUKSPoBd2+C9rgDAAA=
+   H4sIAAAAAAAAA5NgYGCQAGJ7KG0OpRWQsAQU8yCx0dURA+xxiMPsIBb4YBED6ReBsu0IqMUFcLmPFAALF0Jq8AFYGCMDNRLdoUCEO/ABO6gZNkBsS4E5uOKFVDMo8QsI+DFQHr+E3EFMWkPOawoMkLSggGauHZK8BJIaBST9AFVFpsC4AwAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -16,10 +17,17 @@
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
+  <object id="44" gid="201" x="64" y="112" width="16" height="16">
+   <properties>
+    <property name="action">(if (first-time?)
+    (dialog '((&quot;/&quot; &quot;Hi, I'm an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I'll help you.&quot;)))
+    (dialog '((&quot;/&quot; &quot;Are you stuck?\nTake the path behind the blue tree.&quot;))))</property>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoC9wISBvRoJafHpHMoCFgwkQm1LZzIEAbnSwg9S0hg4cgdiJgX7hBACDb9mcuAMAAA==
+   H4sIAAAAAAAAA2NgoC9wISBvRoJadOAIxE4k6kEHnkDsRaEZAw1gYWgCxKZUNnMggBsd7CA1raEDWFhTEk42QGxLpFoA57jq+rgDAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

@@ -10,7 +10,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc.tsx"/>
- <tileset firstgid="177" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="181" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA1NgYGDgAWIJJGzOgAn8gVgBiGWg8gpQcQUkNjqwAWJbJBoGeKC0PRa1GkhiMHlc5jNgkbfHpQgL4ARiPSDmQnMjIfvUkNiCQCwHxSJI4uh+RufjAqCwtSNCHTqwx8FWIMMsEJBAYhuQaQYM4PO7Gg5xdACLJ3KAApQGxZEQmWbA/IAtbxALJAgrgQMWBtS8gA4AG4OhOrgDAAA=
@@ -43,36 +43,12 @@
             (set &quot;005-read&quot; #t))))</property>
    </properties>
   </object>
-  <object id="44" type="Modifier" gid="195" x="224" y="192" width="16" height="16">
+  <object id="44" type="Modifier" gid="199" x="224" y="192" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="45" type="Modifier" gid="195" x="32" y="64" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="5"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="10" name="Copy of items">
-  <object id="46" gid="71" x="0" y="176" width="16" height="16">
-   <properties>
-    <property name="action">(begin
-    (dialog
-        '((&quot;\&quot; Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right \&quot;&quot;)))
-    (if (!get &quot;005-read&quot;)
-        (begin
-            (dialog
-                '((&quot;/hero&quot; &quot;Once this was a very touristy place, the Kingdom tried to make money from it.&quot;)))
-            (set &quot;005-read&quot; #t))))</property>
-   </properties>
-  </object>
-  <object id="47" type="Modifier" gid="195" x="224" y="192" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="5"/>
-   </properties>
-  </object>
-  <object id="48" type="Modifier" gid="195" x="32" y="64" width="16" height="16">
+  <object id="45" type="Modifier" gid="199" x="32" y="64" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>

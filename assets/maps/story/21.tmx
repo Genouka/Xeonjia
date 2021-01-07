@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="28" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="47">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="28" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="48">
  <properties>
   <property name="action">(if (! (eq? (last-place) &quot;23&quot;))
     (map-name &quot;Route 2&quot;))</property>
@@ -9,13 +9,13 @@
  <tileset firstgid="137" source="../tilesets/basic.tsx"/>
  <layer id="12" name="Tile Layer 1" width="28" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7VVuw5DIQhl6Niti0MHRse7ubS9H9C0//85lURSQvAWtJ7kBMQHCioIAOdKrEyC1M5N3yqL0c9jUHBTtmTIVUDVzoZtpV+SpTPmHVzz6fQbiecjuAcJ2g/Fc59Y4wgvw4bN5yy8sd/h+L5Ye/TkSSMJSZzJSwS99/CvN6nPcQF//qLvg4FKX/m/WL5R6ISR+zDiL4KR+0VzKJa3yrvR34tzL4+evCDEzzfzH/167xZOhs0bX1kXyTfX1iR0HlOavMK3rsoayvOz6mfy/A8vZCNw4AcAAA==
+   H4sIAAAAAAAAA7VVvQ4DIQhm6Niti0MHRsfbXNreAzTX93+cSiIpIWjl1C/5AuIPiiIIANdMzAyC1I5F3zKT0c9jUHBTtmDIVUDVjoZtpV+SqTLm41zz3enXE8+Xcw8StB+K5z6wRguHYcPicxS9sd+h/V6sPZ5BEJI4ci8e1PJhVk7qc9xgzv21gEpf+b9YvlHohJ68neHPgzPvi+ZQLB+ZT6O/FudarvXcC4L/fCP/0b98t3AxbL3xlXWRfHNtDULnManIO/zqqqyhPD+qfibP/wLuTT804AcAAA==
   </data>
  </layer>
  <objectgroup id="13" name="npc"/>
  <layer id="11" name="Tile Layer 2" width="28" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGJnAjUT1zjRwgxkFemnhHmTgSkOzSQ17XACbG6kRLpTEy2AClPiDWnE00IDW+YQcQE68wPSYALEpCfqGSzySAoZL/qUGAADzmNnV4AcAAA==
+   H4sIAAAAAAAAA2NgGJnAjUT1zjRwgxkFemnhHmTgSkOzSQ17XACbG6lhNinx4kcF+2gFKElfwwXQOp+QA8iJF5geEyA2JUEftfLaUAKj6R4BAAD6UiPgBwAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -46,6 +46,11 @@
   <object id="46" type="Modifier" gid="155" x="416" y="32" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="47" gid="71" x="160" y="176" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;\&quot; Melhopolis → \&quot;&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

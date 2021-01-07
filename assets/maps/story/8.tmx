@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="41">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
  <properties>
   <property name="music" value="forest"/>
  </properties>
@@ -7,13 +7,13 @@
  <tileset firstgid="129" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WSQQ6AIAwE+wBvXjjyCy4KZxXj/39jG9tko6Iok2xsKK5LxRGRZwWWUyWot1Ov02eAvrzfQq9eLWTN1IKd+y+RjlmUPGrzhQ97S96Orv8lQr1WeJpHfNlXYmLNVJ6HreeHnpBUyAJ1TT67v+j5xtn3bqZfMgh211f1EmXIN7BGzefhmzhL0Q4PU3vCuAMAAA==
+   H4sIAAAAAAAAA6VSQQ6AIAzbA7x54cgvuCicVYj//40sjqRBEZAmDUs2SikoItKRJlIJHdRn1ptkNdDn/SOYRWsEXjyNIN37LyzdWZQ0Wv2ZjtmStqLnu1ioQ4Nm0rCVuRK2yJ3KeXxljT0nRBxQt/hL/xc1a8h13zLt8cBIfz2IFtODvyVyFX8azsQsmRfH6mpiuAMAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGHjgMtAOAAKzgXYAAYDsPlcy9ZECHIHYiQh15MSdMxKbVuFOirmkugE5/JH9bwLEpljUExuWpAAA+MINRbgDAAA=
+   H4sIAAAAAAAAA2NgGHjgMtAOAAKzgXYAAYDsPlcy9ZECHIHYiUy9hIAzEptW4U6KuaS6ATn8kdOuCRCbYlFPi7AEADvHqxW4AwAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -54,6 +54,11 @@
   <object id="40" type="Modifier" gid="147" x="112" y="144" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="44" gid="71" x="128" y="160" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;\&quot; → \&quot;&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

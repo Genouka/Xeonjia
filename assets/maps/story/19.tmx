@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="26" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="50">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="26" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="51">
  <properties>
   <property name="music" value="forest"/>
  </properties>
@@ -8,7 +8,7 @@
  <tileset firstgid="137" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="26" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7WVPQ7DIAyFPWTM2KFDhzfmEG0ukNz/PI3VPMmi5s8hT0L8GPwBxgIigqM8zxpJX+slY7PjbMtpn535lG1HtTtjZN0tyJgz1KR3umb4nrYghzGWDK9FXjw8DoL+e9i4iUPxjvQ876N8BvhEgaOxeVT2MkK6h978QZATWRfhLLVJF3xTNn88teQlqjN+DBufljUtLK8f8c1cSN9k7o2iYOvVVLClfxv3Ocn/H7cmY+zT/jLrYWxkfAGZ00/SUAcAAA==
+   H4sIAAAAAAAAA7WVPQ7DIAyFPTB27JChwxs5RJoLtPc/T4OSJ1nE/LnhSYgfGz7AWEBEsJflrJH1Ux0LNj3Otpz2h+FP6bZXX2OMrNmC3HOGltKdbgW+pY+TwxhLgdcjKx4WB871R9iYxKF4R+k8617ekzkpNs+Gzx2CjOcPnBzPPA8ntpz+WJvS+WOpJy/R9DgYOj49c3pYVt+zNnMhf5OlN4qKbVShYsv/Nu4zyPWP27Ix9ml/qflQNjJ+PG6Iy1AHAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
@@ -56,6 +56,11 @@
   <object id="49" type="Modifier" gid="155" x="272" y="48" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="50" gid="71" x="288" y="144" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;\&quot; Xeonjia Tower ↑ \&quot;&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

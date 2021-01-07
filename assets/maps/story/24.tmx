@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="66">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="71">
  <properties>
   <property name="action">(if (! (eq? (last-place) &quot;25&quot;))
     (map-name &quot;Melhopolis&quot;))</property>
@@ -8,16 +8,23 @@
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monster.tsx"/>
  <tileset firstgid="137" source="../tilesets/npc.tsx"/>
- <tileset firstgid="185" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="189" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="237" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="21" height="28">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62WSU8DMQyFc+APgDhUQkJz7JFbLixn4F52EKpYq7aAWHoCfjrPki3cyM4y8KRPieqMZ9zkeWYQQhgoopoPeeySNSnRWNOi3Yp4a87SvWjcBjtJ/BqcgjMez8GFip+AEThijlXcqj1yzpFaPwY3as0n+Er4Vtd3Rh0P4BFMwCXPpyo+A3Pmiscn9ZxDI+czjy/gludvKv6u5hS/BwuVM7dHq2ATrGViEpc9at3zriJG4wZYN9b0vV+fMy+SM0i59sHBH3PGTIzybTXmK3mTcu415hSRl8hf2mfyf9TWnj4feW2sIJ/Jf1LKeej8Ll66C8s+kpxUh9cvPJGXPsBr+PWRrt2qo0aWz2SPpI60H/SRnE+pQ/rFwr2irMjofuD1jFp5vc67f43kvdiqnJe6YPekVN4ZtSTv5lqVvC45W2qv6Q3yzfGfsr5nPFbCsvdy3z4/gzyFazAJAAA=
+   H4sIAAAAAAAAA62WSUsDQRCF++AfUDwEBJmT5OitLy5n9R53RUJcccUlJ5Of7iuoh5Wm19GCj25SPa+n0vNqZuCcGxi8mQ917II1IT6ypiV2KvKtmqW9ZNwC20H+CpyAUx3PwLnJH4MROFSOTD5Wu1fNkVk/BhOz5hvMAubm+i5Sxx24Bw/gQuePJv8EnpVLHV/MfQ4jmq86voFrnX+Y/KeZS/4WTI1m7oyWwTpYyeSY5xm1nnlXkZNxDaxG1vTdr88zz+AzKFp7YP+Pmj6TE73NRr2SN0Vzt1GTIV4Sf1mf8f+orT28P/Ha2CA+439S0jxI/E4v3bhFH1FT6kj1i1SIl77Au/v1ka09VkdNxHzGM2IdYT/oE3w+WQf7xTR5RTm8YvtBqmfURqrXpfavCb4XWyPnpc7Fe1IYGw378d1cGyWvU7Ol9prewG+O/4zY90yKJbfovdy3zw8XOaU2MAkAAA==
   </data>
  </layer>
- <objectgroup id="9" name="npc"/>
+ <objectgroup id="9" name="npc">
+  <object id="67" gid="185" x="144" y="384" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;The city center is a few kilometers to the south.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="6" name="Tile Layer 2" width="21" height="28">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA2YUSiPDwQCcRAQhwBxKJJZINoEiE1xqAfhYCR9yPKRQBwFxDFAHIsmT8gdxKgd6YCS+B5qADkNOgKx0wC6BRugZVzA8gRyPsOWJ/EBarrPmUx92PxBDiDV78MV1ABx7UA7ggaAGmmV3DRKDBhJ5S46GMi8BwANWBViMAkAAA==
+   H4sIAAAAAAAAA2NgIA2YUSiPDwQCcRAQhwBxKJJZINoEiE1xqAfhYCR9yPKRQBwFxDFAHIsmT8gdxKgd6YCS+B5qADkNOgKx0wC6BRugZVzA8gRyPsOWJ/EBarrPmUx92PxBDiDV78MV1ABx7UA7ggZgsJdrg919tAQDmfcA00gkzjAJAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -89,6 +96,16 @@
   <object id="65" gid="115" x="96" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;I can see the inside of the house.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="69" type="Modifier" gid="255" x="304" y="96" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="70" type="Modifier" gid="255" x="304" y="176" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
  </objectgroup>

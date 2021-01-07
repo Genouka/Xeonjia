@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="27" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="43">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="27" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="44">
  <properties>
   <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc.tsx"/>
- <tileset firstgid="177" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="181" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="27" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WUvQ7CIBSFGfoGOpDo4OQrsCjMGlpTE2c3R+NkfHwvEZLrCf89yRe4F8q5pdBZCHElboQi5kwsPYr1TSR/iYw5nsSdeImfSnGvnNebeBAfnyvFPToQR0KznIY5LraJsVZJ5hn2dw85PmeJwjes0RK/cGZUYhxrMJ0+krUScjEZGK/dC/Ssrbd1fQtx2MeShwa4xsKzvB/zwvVWxMazLtSW8z0R50Qd3BvfK3WmUsJvnqvJsWtYe4B6whqDb634v7t4pxSbi/9gvPdbH09s7hdDXuLX6AUAAA==
+   H4sIAAAAAAAAA6WUuwoCMRBFU+wfaLGghZW/kEaTWonKCtZ2lmIlfr4TTGC8ZPLaC4fNJNm5s3nspJS6EjdCE1MmHgOatW2i/5IY8zyJO/FSP5XiXnmvN/EgPqGvFPdoR+wJw/oMzPGxE8ZaNTLPuL5b6ONz5ijuYY3m+MUzo4VxrMF2+vB8I2tLsjBeuxboVVtva34HcVzHkocBuE6Fd3k75YX5FsQqsCzUlvM9EEehDu6N3yWdKUm457maPJuG3APUE3MM4enU/93FO6XZXPwH471fh/jM5n4BciKx7+gFAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -34,24 +34,29 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="38" gid="189" x="96" y="176" width="16" height="16">
+  <object id="38" gid="193" x="96" y="176" width="16" height="16">
    <properties>
     <property name="lifePointsDelta" type="int" value="40"/>
    </properties>
   </object>
-  <object id="39" type="Modifier" gid="195" x="256" y="48" width="16" height="16">
+  <object id="39" type="Modifier" gid="199" x="256" y="48" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="40" type="Modifier" gid="195" x="384" y="160" width="16" height="16">
+  <object id="40" type="Modifier" gid="199" x="384" y="160" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="41" type="Modifier" gid="195" x="144" y="144" width="16" height="16">
+  <object id="41" type="Modifier" gid="199" x="144" y="144" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="43" gid="71" x="384" y="112" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;\&quot; If you get lost, follow the road signs \&quot;&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

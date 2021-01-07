@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.4" tiledversion="2020.08.05" name="npc" tilewidth="16" tileheight="16" tilecount="48" columns="4">
- <image source="../../images/npc_common.png" width="64" height="192"/>
+<tileset version="1.4" tiledversion="2020.08.05" name="npc" tilewidth="16" tileheight="16" tilecount="52" columns="4">
+ <image source="../../images/npc_common.png" width="64" height="208"/>
  <tile id="0" type="NPC">
   <properties>
    <property name="name" value="man"/>
@@ -274,6 +274,29 @@
  <tile id="47" type="NPC">
   <properties>
    <property name="name" value="henchman"/>
+   <property name="orientation" type="int" value="3"/>
+  </properties>
+ </tile>
+ <tile id="48" type="NPC">
+  <properties>
+   <property name="name" value="worker"/>
+  </properties>
+ </tile>
+ <tile id="49" type="NPC">
+  <properties>
+   <property name="name" value="worker"/>
+   <property name="orientation" type="int" value="1"/>
+  </properties>
+ </tile>
+ <tile id="50" type="NPC">
+  <properties>
+   <property name="name" value="worker"/>
+   <property name="orientation" type="int" value="2"/>
+  </properties>
+ </tile>
+ <tile id="51" type="NPC">
+  <properties>
+   <property name="name" value="worker"/>
    <property name="orientation" type="int" value="3"/>
   </properties>
  </tile>

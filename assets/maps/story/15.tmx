@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="15" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="51">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="15" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="53">
  <properties>
   <property name="music" value="forest"/>
  </properties>
@@ -8,7 +8,7 @@
  <tileset firstgid="137" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WUsQoCMQyGMzje5uKYt7hFr7OCOgsqCCooOCj4/v6BBHKlvQvnDx8NuaYpSa5MRAkwWIDW2bI2uibF/LYvV5utJcm3ruDfDsSY5pXYiNIfsQwO4KocwcmdOyTJeXGxwm3kniap9wM8lTN4Be8stXqDj3IHX7AEK93j+2T+NdhQv1ZNJUepzzYjU2QzNkVM472oqQvE7it+qXNeh8gsW14O7NsVfFzIGxVT/z/3dtJz7V3wb8JM7R9QQ6KSOAQAAA==
+   H4sIAAAAAAAAA6WUsQoCMQyGMzje5uKYt3DR66ygzoIKggoKDgq+v38ggdyReuH84aMhJE1J2jIRFcBgBubOlrXRtSjmt7i+5oEvimkD/yaRO63kZlT+yGWwBxflAI5u31+SmmeXK1wHzmmSft/BQzmBZ/LM0qsXeCs38AELsNQYPy/zr8Caur1qKjWiedsdGSO7Y2PENDyLmtpE7q7ilz73+5C5y1aXE3HbwMdB3ayYuu/c20X3tX/B/wkTtb+xyQgfOAQAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
@@ -72,6 +72,11 @@
         (give-item &quot;15.berries&quot;)
         (set-life-diff 30))
     (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="51" gid="71" x="112" y="32" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;\&quot; Exit ↑ \&quot;&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

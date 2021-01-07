@@ -8,13 +8,13 @@
  <tileset firstgid="137" source="../tilesets/npc.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52UOQ7CMBBF5wA0IAoq5JITQAPkAEDBVrAJIcS+7xyfP0pGMsYmTr70ZFuOvzPJt9tE1AFd0AN9UIjIaH2mYox1BmAEhmAMJhSqHLWK4sU+MzDXWERzdcvzVVCz9NnnCE5gGrXnmL2V0bIC8AQvsARr8PaoQxlj+UZZUAQ5Dw9R0+JjqpHQS/6jSyrGR+bZI++5tysf4tO0LbLIlQ/x+VeXLsnHir7zITkqefpIPu70mw85F1wv1831T0wDTWY+JPP/zoXvvxefDdiCHdiDQ4L1LEVhfi7gBq4U1v5I6CPvk/Zc2HzSqGXxCej3fgscfded+AHkndLaWAUAAA==
+   H4sIAAAAAAAAA52UOQ7CMBBF5wA0IAoq5JITkAbIAYCCrWCJEELs+87x+aN4pOA4xOFLT7Zl58fjfKdDRF3QA30wACVNLtJnPGMcZQjGYAQmIKBQVd0qShf7zMA8wkLPNSzra6Bu6bPPEZzAVLfnlHcro2X54AleYAnW4O1QhzLGckZ5UAYFBw9Ry+JjqpnRy0tZpxzneS9Fx3cn5UN8Ko4+SfkQH9v52CT5WNF3PiRHrvuRfNwpng+5F1wv1831B6ZBRGY+JPO/7oXrtxefDdiCHdiDQ4bnWYrC/FzADVwprP2R0Uf28++9sPn8o7bFx6f4/81P6Cf9Ez85BraRWAUAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="18" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoD8wAWJTLOzhBFyIUONMRbNoBQKBOAQJh6LJD6TbkAG10xHI38FIGN3f+IAZEWqIjftRgB24DrQDCAAAy4XQ5VgFAAA=
+   H4sIAAAAAAAAA2NgoD8wAWJTLOzhBFyIUONMhlnEmEsM8CFSXSAQhyDhUCrZT21A7XQE8ncwEibF32ZEqCE27kcBduA60A4gAACiSavgWAUAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
