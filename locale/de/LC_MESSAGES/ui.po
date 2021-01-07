@@ -3,8 +3,9 @@
 # This file is distributed under the same license as Xeonjia.
 # Hrela <6d8fd379d7b549a5+xeonjia-weblate@posteo.net>, 2020.
 # anselm-helbig <gh@mnemonikk.org>, 2020.
+# J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2020-12-28 13:45+0000\nLast-Translator: anselm-helbig <gh@mnemonikk.org>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-01-06 22:57+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -16,15 +17,15 @@ msgstr "Einstellungen"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Story mode"
-msgstr ""
+msgstr "Geschichtemodus"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Multiplayer"
-msgstr ""
+msgstr "Mehrspieler"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "How to play"
-msgstr ""
+msgstr "Wie man spielt"
 
 #: lib/ui/screens/rules/widgets/last_page.dart:
 msgid "Almost done!"
@@ -40,7 +41,7 @@ msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Modes"
-msgstr ""
+msgstr "Modi"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the \"King of Evil\" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win."
@@ -48,7 +49,7 @@ msgstr ""
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Movements"
-msgstr ""
+msgstr "Bewegungen"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Swipe your finger to move your character across the world.\nKeep in mind that you can't stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!"
@@ -300,7 +301,7 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
-msgstr ""
+msgstr "E-Mail senden"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ask for something or request a new feature"

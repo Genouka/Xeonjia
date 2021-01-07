@@ -1,0 +1,3 @@
+* Ajout d'un mode multijoueur
+* Croix directionnelle améliorée
+* Correctifs d'erreur

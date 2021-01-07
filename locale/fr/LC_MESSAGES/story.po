@@ -2,244 +2,245 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # DeepDaikon <deepdaikon@tuta.io>, 2020.
+# Swann Fournial <s.fournial@protonmail.com>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2020-12-28 13:45+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-01-07 07:42+0000\nLast-Translator: Swann Fournial <s.fournial@protonmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4\n"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! 30 LPs have been recovered *"
-msgstr ""
+msgstr "* {{hero}} a trouvé des baies ! 30 PV ont été récupérés *"
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant... nothing else."
-msgstr ""
+msgstr "Une petite plante… rien d'autre."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB - 1F"
-msgstr ""
+msgstr "VANTOI LAB – 1E"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Sorry about the mess. Thieves have entered and turned everything upside down."
-msgstr ""
+msgstr "Désolé pour le désordre. Des voleurs sont entrés et ont tout mis sans dessus dessous."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "scientist"
-msgstr ""
+msgstr "scientifique"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A life's work has been destroyed..."
-msgstr ""
+msgstr "Le travail d'une vie a été détruit…"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Someone used this plant to do some experiments."
-msgstr ""
+msgstr "Quelqu'un a utilisé cette plante pour faire des expériences."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A broken monitor."
-msgstr ""
+msgstr "Un écran cassé."
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
-msgstr ""
+msgstr "Natawn"
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nMany before you have failed, but I am sure you will handle it right."
-msgstr ""
+msgstr "Bon voyage, {{hero}}.\nBeaucoup avant vous ont échoué, mais je suis sûr que vous réussirez."
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
-msgstr ""
+msgstr "papa"
 
 #: assets/maps/story/1.tmx:
 msgid "I'll do my best."
-msgstr ""
+msgstr "Je ferai de mon mieux."
 
 #: assets/maps/story/1.tmx:
 msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
-msgstr ""
+msgstr "La tour dans laquelle le Roi du mal réside devrait être située près de la capitale de la région."
 
 #: assets/maps/story/1.tmx:
 msgid "\" NATAWN - Hometown of the 62nd hero \""
-msgstr ""
+msgstr "« NATAWN – Ville natale du 62e héros »"
 
 #: assets/maps/story/1.tmx:
 msgid "I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude."
-msgstr ""
+msgstr "Je dois dire au revoir à mes parents avec le bouton « A » avant de partir. Sinon, ce serait impoli."
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks."
-msgstr ""
+msgstr "Comme ma mère l'a dit, c'est mieux si je vais chercher les protège-tibias chez mon voisin, sinon je risque de me faire trop mal avec les rochers."
 
 #: assets/maps/story/17.tmx:
 msgid "I still haven't figured out if these monsters are malicious or just stupid."
-msgstr ""
+msgstr "Je n'ai toujours pas compris si ces monstres sont méchants ou juste stupides."
 
 #: assets/maps/story/17.tmx:
 msgid "* {{hero}} found some berries! 50 LPs have been recovered *"
-msgstr ""
+msgstr "* {{hero}} a trouvé des baies ! 50 PV ont été récupérés *"
 
 #: assets/maps/story/31_house1.tmx:
 msgid "I hate people who always say the same things."
-msgstr ""
+msgstr "Je déteste les gens qui disent toujours les même choses."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Hi, you look a little tired. Rest here for a moment."
-msgstr ""
+msgstr "Salut, tu as l'air fatigué. Repose-toi ici un moment."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "* {{hero}} rested and is now in perfect health *"
-msgstr ""
+msgstr "* {{hero}} a pris du repos et est maintenant en pleine forme *"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Come back anytime."
-msgstr ""
+msgstr "Reviens quand tu veux."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "Fais attention à ne pas te blesser."
 
 #: assets/maps/story/13.tmx:
 msgid "Help me please!\nPunch him by pressing the 'P' button."
-msgstr ""
+msgstr "Aidez-moi, s'il vous plaît !\nFrappe-le en pressant sur le bouton « P »."
 
 #: assets/maps/story/13.tmx:
 msgid "Everything good?"
-msgstr ""
+msgstr "Tout va bien ?"
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, thank you so much for saving my life!\nI have to admit, I was scared.\nAs a token of gratitude I give you this gem that I found a little while ago."
-msgstr ""
+msgstr "Oui, merci infiniment de m'avoir sauvé la vie !\nJe dois dire que j'avais peur.\nEn signe de gratitude, je te donne cette gemme que j'ai trouvée il y a quelques temps."
 
 #: assets/maps/story/13.tmx:
 msgid "Thanks, it seems very precious."
-msgstr ""
+msgstr "Merci, elle sembre très précieuse."
 
 #: assets/maps/story/13.tmx:
 msgid "Thanks for saving me, I think it's better if I go home now."
-msgstr ""
+msgstr "Merci de m'avoir sauvé, je pense que c'est mieux si je rentre à la maison."
 
 #: assets/maps/story/13.tmx:
 msgid "Please help me! Save me from this monster!"
-msgstr ""
+msgstr "S'il vous plaît, aidez-moi ! Sauvez-moi de ce monstre !"
 
 #: assets/maps/story/13.tmx:
 msgid "I can't escape, I have to defeat the monster to save that man."
-msgstr ""
+msgstr "Je ne peux pas m'échapper, je dois vaincre ce monstre pour sauver cet homme."
 
 #: assets/maps/story/13.tmx:
 msgid "Better if I check that the guy is okay."
-msgstr ""
+msgstr "Mieux vaut vérifier que ce type va bien."
 
 #: assets/maps/story/13.tmx:
 msgid "* {{hero}} found some berries! 10 LPs have been recovered *"
-msgstr ""
+msgstr "* {{hero}} a trouvé des baies ! 10 PV ont été récupérés *"
 
 #: assets/maps/story/7.tmx:
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: assets/maps/story/7.tmx:
 msgid "Oops... yes, sorry, I am in the middle of the road...\nAre you a tourist? There are very few nowadays."
-msgstr ""
+msgstr "Oups… oui, désolé, je suis au milieu de la route…\nEs-tu un touriste ? Il y en a peu ces temps-ci."
 
 #: assets/maps/story/7.tmx:
 msgid "???"
-msgstr ""
+msgstr "???"
 
 #: assets/maps/story/7.tmx:
 msgid "N-no, I'm {{hero}}, this year's chosen hero. I just left home to try to defeat the King of Evil."
-msgstr ""
+msgstr "N-non, je suis {{hero}}, le héros élu de cette année. Je viens juste de quitter ma maison pour vaincre le Roi du mal."
 
 #: assets/maps/story/7.tmx:
 msgid "What!? So is it you?!"
-msgstr ""
+msgstr "Quoi ?! Alors c'est toi !?"
 
 #: assets/maps/story/7.tmx:
 msgid "Nice to meet you, I've never met a hero before."
-msgstr ""
+msgstr "Enchantée, je n'ai jamais rencontré de héros auparavant."
 
 #: assets/maps/story/7.tmx:
 msgid "My name is Milla, I was born and raised in this area. I too am setting out on a journey."
-msgstr ""
+msgstr "Je m'appelle Milla. Je suis née et j'ai grandi dans la région. Moi aussi je pars en voyage."
 
 #: assets/maps/story/7.tmx:
 msgid "Oh cool! Where are you going?"
-msgstr ""
+msgstr "Oh, super ! Où vas-tu ?"
 
 #: assets/maps/story/7.tmx:
 msgid "I have absolutely no idea."
-msgstr ""
+msgstr "Je n'en ai pas la moindre idée."
 
 #: assets/maps/story/7.tmx:
 msgid "I just want to explore the world, know new places and learn new things."
-msgstr ""
+msgstr "Je veux juste explorer le monde, connaitre de nouveaux lieux et apprendre de nouvelles choses."
 
 #: assets/maps/story/7.tmx:
 msgid "Wow, sounds like a great idea!"
-msgstr ""
+msgstr "Ouah, ça a l'air d'être une idée géniale !"
 
 #: assets/maps/story/7.tmx:
 msgid "Yep, it won't be easy but I want to visit at least the whole Kingdom."
-msgstr ""
+msgstr "Ouais, ça va pas être facile, mais je veux au moins visiter tout le Royaume."
 
 #: assets/maps/story/7.tmx:
 msgid "Are there places outside the Kingdom?!"
-msgstr ""
+msgstr "Y a-t-il des endroits en dehors du Royaume ?!"
 
 #: assets/maps/story/7.tmx:
 msgid "Dunno, that's what I want to find out!"
-msgstr ""
+msgstr "Je sais pas, c'est ce que je veux savoir !"
 
 #: assets/maps/story/7.tmx:
 msgid "Anyway, I don't want to waste any more of your time."
-msgstr ""
+msgstr "Passons, je veux pas te faire perdre ton temps."
 
 #: assets/maps/story/7.tmx:
 msgid "After all, you have to save the world. Not an easy task."
-msgstr ""
+msgstr "Après tout, tu dois sauver le monde. Pas une tâche facile."
 
 #: assets/maps/story/7.tmx:
 msgid "I'm sure we'll meet again soon, hero."
-msgstr ""
+msgstr "Je suis sûre qu'on se reverra bientôt, héros."
 
 #: assets/maps/story/7.tmx:
 msgid "See ya!"
-msgstr ""
+msgstr "À bientôt !"
 
 #: assets/maps/story/7.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "Salut !"
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area - Do not leave rubbish, thanks \""
-msgstr ""
+msgstr "« Zone de piquenique – Ne pas laisser de déchets, merci »"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "T-today... today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom...\nAfter years of training I hope to be able to."
-msgstr ""
+msgstr "Au-aujourd'hui… c'est le jour que j'ai attendu toute ma vie. Mon voyage vers la tour Xeonjia est sur le point de commencer.\nCette année, je suis le « héros » élu pour vaincre le monstre qui a gelé le Royaume…\nAprès des années de formation, j'espère réussir."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'd like to go back to bed but I can't."
-msgstr ""
+msgstr "J'aimerais retourner au lit mais je ne peux pas."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'll miss you, TV."
-msgstr ""
+msgstr "Tu vas me manquer, la télé."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I hope my parents will water it when I'm away."
-msgstr ""
+msgstr "J'espère que mes parents l'arroseront quand je ne serai plus là."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
-msgstr ""
+msgstr "Tous mes livres sont ici."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "My chair."
-msgstr ""
+msgstr "Ma chaise."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "From here I can see the garden."
-msgstr ""
+msgstr "D'ici, je peux voir le jardin."
 
 #: assets/maps/story/24.tmx:
 msgid "Melhopolis"
@@ -247,640 +248,640 @@ msgstr "Melhopolis"
 
 #: assets/maps/story/24.tmx:
 msgid "\" VANTOI LAB \""
-msgstr "\" VANTOI LAB \""
+msgstr "« VANTOI LAB »"
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Laboratory."
-msgstr ""
+msgstr "Je peux voir l'intérieur du Laboratoire."
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Pharmacy."
-msgstr ""
+msgstr "Je peux voir l'intérieur de la Pharmacie."
 
 #: assets/maps/story/24.tmx:
 msgid "\" Melhopolis - Regional capital \""
-msgstr ""
+msgstr "« Melhopolis – capitale régionale »"
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the house."
-msgstr ""
+msgstr "Je peux voir l'intérieur de la maison."
 
 #: assets/maps/story/22.tmx:
 msgid "Route 3"
-msgstr ""
+msgstr "Route 3"
 
 #: assets/maps/story/22.tmx:
 msgid "That's the first crypt, I think."
-msgstr ""
+msgstr "Je pense que c'est la première crypte."
 
 #: assets/maps/story/22.tmx:
 msgid "Hey! Hi {{hero}}!"
-msgstr ""
+msgstr "Hé ! Salut {{hero}} !"
 
 #: assets/maps/story/22.tmx:
 msgid "H-hi, you know me?"
-msgstr ""
+msgstr "S-salut, on se connait ?"
 
 #: assets/maps/story/22.tmx:
 msgid "Well, you are the hero of this year, you are quite famous. Are you here to visit the crypt?"
-msgstr ""
+msgstr "Eh bien, tu es le héros de cette année, tu es assez célèbre. Es-tu ici pour visiter la crypte ?"
 
 #: assets/maps/story/22.tmx:
 msgid "Yes. If I have not misunderstood, here's one of the 3 signets I need to access the Xeonjia tower."
-msgstr ""
+msgstr "Oui. Si je ne me trompe pas, voici un des 3 sceaux dont j'ai besoin pour accéder à la tour Xeonjia."
 
 #: assets/maps/story/22.tmx:
 msgid "Ah that's true, I've heard of it.\nBeware that here is full of monsters and bad people."
-msgstr ""
+msgstr "Ah, c'est vrai, j'en ai entendu parler.\nFais attention, ici, il y a plein de monstres et de gens mauvais."
 
 #: assets/maps/story/22.tmx:
 msgid "Ok thanks, I'll be careful.\nBut... who are you?"
-msgstr ""
+msgstr "D'accord, merci, je ferai attention.\nMais  qui êtes-vous ?"
 
 #: assets/maps/story/22.tmx:
 msgid "Oh, yes sorry I forgot to introduce myself."
-msgstr ""
+msgstr "Oh, oui, désolée, j'ai oublié de me présenter."
 
 #: assets/maps/story/22.tmx:
 msgid "My name is Shen, I am a scientist."
-msgstr ""
+msgstr "Je m'appelle Shen, je suis scientifique."
 
 #: assets/maps/story/22.tmx:
 msgid "Nice to meet you, Shen."
-msgstr ""
+msgstr "Enchanté, Shen."
 
 #: assets/maps/story/22.tmx:
 msgid "Oh, by the way, I think this might help you."
-msgstr ""
+msgstr "Oh, au fait, je pense que ceci pourrait t'aider."
 
 #: assets/maps/story/22.tmx:
 msgid "* {{hero}} got a SNOWBALLS CONTAINER *"
-msgstr ""
+msgstr "* {{hero}} a reçu un CONTENEUR À BOULES DE NEIGE *"
 
 #: assets/maps/story/22.tmx:
 msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the 'S' button.\nIt can contain up to 10 snowballs."
-msgstr ""
+msgstr "C'est une de mes inventions. Elle te permet de transporter des boules de neige avec toi que tu peux lancer sur tes adversaires en appuyant sur le bouton « S ».\nElle peut contenir jusqu'à 10 boules de neige."
 
 #: assets/maps/story/22.tmx:
 msgid "Wow! I'm sure it'll come in handy. Thank you."
-msgstr ""
+msgstr "Ouah ! Je suis sûr que ce sera utile. Merci."
 
 #: assets/maps/story/22.tmx:
 msgid "You're welcome."
-msgstr ""
+msgstr "De rien."
 
 #: assets/maps/story/22.tmx:
 msgid "Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too."
-msgstr ""
+msgstr "Malheureusement, il y a quelque temps, tous les plans du projet ont été volés et les hommes de main du Roi du mal l'ont aussi."
 
 #: assets/maps/story/22.tmx:
 msgid "Well, at least it will be an equal fight."
-msgstr ""
+msgstr "Eh bien, au moins, on sera à armes égales."
 
 #: assets/maps/story/22.tmx:
 msgid "Ha ha, well, you're right."
-msgstr ""
+msgstr "Ha ha, tu as raison."
 
 #: assets/maps/story/22.tmx:
 msgid "Now I have to leave you, I have to study a strange rock that I found a little while ago."
-msgstr ""
+msgstr "Maintenant je dois te laisser, je dois étudier un rocher étrange que j'ai trouvé il y a peu de temps."
 
 #: assets/maps/story/22.tmx:
 msgid "We'll see again. Good luck!"
-msgstr ""
+msgstr "On se reverra. Bonne chance !"
 
 #: assets/maps/story/22.tmx:
 msgid "Bye Shen, thanks again!"
-msgstr ""
+msgstr "Au revoir Shen, merci encore !"
 
 #: assets/maps/story/22.tmx:
 msgid "I have to go through the crypt to get the first signet."
-msgstr ""
+msgstr "Je dois traverser la crypte pour obtenir le premier sceau."
 
 #: assets/maps/story/9.tmx:
 msgid "This is not a place for kids, go home."
-msgstr ""
+msgstr "Ce n'est pas un endroit pour les enfants, rentre chez toi."
 
 #: assets/maps/story/9.tmx:
 msgid "Weird things happen in this area..."
-msgstr ""
+msgstr "Des choses étranges se produisent dans cette zone…"
 
 #: assets/maps/story/9.tmx:
 msgid "* {{hero}} found some berries! 5 LPs have been recovered *"
-msgstr ""
+msgstr "* {{hero}} a trouvé des baies ! 5 PV ont été récupérés *"
 
 #: assets/maps/story/24_house1.tmx:
 msgid "A computer turned off. Looks like a key is needed to turn it on."
-msgstr ""
+msgstr "Un ordinateur éteint. On dirait qu'une clé est nécessaire pour l'allumer."
 
 #: assets/maps/story/21.tmx:
 msgid "Route 2"
-msgstr ""
+msgstr "Route 2"
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "Hi, I'm sorry but we're closed. Once this was a busy shop, but now it doesn't even make sense to stay open."
-msgstr ""
+msgstr "Salut, je suis désolé mais nous sommes fermés. Autrefois, c'était un magasin très fréquenté, mais maintenant ça n'a même plus de sens de rester ouvert."
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "shopkeeper"
-msgstr ""
+msgstr "boutiquier"
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "It's full of old junk here."
-msgstr ""
+msgstr "C'est plein de vieilles babioles ici."
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "I've never seen so much dust."
-msgstr ""
+msgstr "Je n'ai jamais vu autant de poussière."
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "Here it's full of snow globes with a miniaturized Mitsu Forest inside. When they were built snow was a very rare phenomenon here and it was much more appreciated."
-msgstr ""
+msgstr "Ici, c'est plein de boules à neige avec une Forêt Mitsu miniaturisée à l'intérieur. Quand ils ont été fabriqués, la neige était un phénomène très rare ici et c'était beaucoup plus apprécié."
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "There are very expensive junk here."
-msgstr ""
+msgstr "Il y a des babioles très chères ici."
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "I think this vase was placed here on purpose to block the passage."
-msgstr ""
+msgstr "Je pense que ce vase a été placé ici exprès pour bloquer le passage."
 
 #: assets/maps/story/2_house.tmx:
 msgid "You are the chosen one for this year, right? My son was too many years ago."
-msgstr ""
+msgstr "Tu es l'élu de cette année, non ? Mon fils l'a été il y a bien des années."
 
 #: assets/maps/story/2_house.tmx:
 msgid "Unfortunately he failed to defeat the King of Evil..."
-msgstr ""
+msgstr "Malheureusement, il a échoué à vaincre le Roi du mal…"
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "Pharmacy"
-msgstr ""
+msgstr "Pharmacie"
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "Welcome to my shop!"
-msgstr ""
+msgstr "Bienvenue dans ma boutique !"
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "pharmacist"
-msgstr ""
+msgstr "pharmacien"
 
 #: assets/maps/story/20.tmx:
 msgid "I advise you to take another path.\nThese monsters are too strong."
-msgstr ""
+msgstr "Je te conseille de prendre un autre chemin.\nCes monstres sont trop forts."
 
 #: assets/maps/story/999.tmx:
 msgid "XEONJIA TOWER"
-msgstr ""
+msgstr "TOUR XEONJIA"
 
 #: assets/maps/story/999.tmx:
 msgid "Hi Milla, are you ok? Did you get here without any problems?"
-msgstr ""
+msgstr "Salut Milla, ça va ? Es-tu arrivée ici sans problème ?"
 
 #: assets/maps/story/999.tmx:
 msgid "Hii {{hero}}!"
-msgstr ""
+msgstr "Salut {{hero}} !"
 
 #: assets/maps/story/999.tmx:
 msgid "Yes, I cleverly managed to avoid the monsters that were along the way!"
-msgstr ""
+msgstr "Oui, j'ai habilement réussi à éviter les monstres qui se trouvaient sur le chemin !"
 
 #: assets/maps/story/999.tmx:
 msgid "I love those cute little green worms!"
-msgstr ""
+msgstr "J'adore ces mignons petits vers verts !"
 
 #: assets/maps/story/999.tmx:
 msgid "...S-such weird tastes here."
-msgstr ""
+msgstr "… C'est assez spécial."
 
 #: assets/maps/story/999.tmx:
 msgid "Unkind!"
-msgstr ""
+msgstr "Méchant !"
 
 #: assets/maps/story/999.tmx:
 msgid "Aaanyway, look here! This is the tower where the King of Evil resides!"
-msgstr ""
+msgstr "Bref, regarde ici ! C'est la tour où le Roi du mal réside !"
 
 #: assets/maps/story/999.tmx:
 msgid "Oh really? Are we there yet?"
-msgstr ""
+msgstr "Oh vraiment ? On est déjà arrivés ?"
 
 #: assets/maps/story/999.tmx:
 msgid "It seems so... but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets."
-msgstr ""
+msgstr "Apparemment, oui… mais c'est fermé !\nCe gentil monsieur m'a expliqué que pour accéder à la tour, on doit avoir 3 sceaux."
 
 #: assets/maps/story/999.tmx:
 msgid "Signets?"
-msgstr ""
+msgstr "Des sceaux ?"
 
 #: assets/maps/story/999.tmx:
 msgid "I did not understand exactly what they are, but if I have not misunderstood they are kept in crypts present in each region of the Kingdom."
-msgstr ""
+msgstr "Je n'ai pas compris exactement ce que c'était, mais si je ne me trompe pas, ils sont conservés dans des cryptes présentes dans chaque région du Royaume."
 
 #: assets/maps/story/999.tmx:
 msgid "Mm... Then I really think that I have to set out in search of these crypts..."
-msgstr ""
+msgstr "Mm… Alors je pense vraiment que je dois partir à la recherche de ces cryptes…"
 
 #: assets/maps/story/999.tmx:
 msgid "I guess you have no other choice."
-msgstr ""
+msgstr "Je crois que tu n'as pas d'autre choix."
 
 #: assets/maps/story/999.tmx:
 msgid "Good luck!"
-msgstr ""
+msgstr "Bonne chance !"
 
 #: assets/maps/story/999.tmx:
 msgid "Do your best!"
-msgstr ""
+msgstr "Fais de ton mieux !"
 
 #: assets/maps/story/999.tmx:
 msgid "I hate this little girl here... She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent."
-msgstr ""
+msgstr "Je déteste cette petite fille… Elle m'a harcelé de mille questions et elle a pleuré jusqu'à ce que je lui dise ce qu'elle voulait. Quelle impertinence."
 
 #: assets/maps/story/999.tmx:
 msgid "\" Xeonjia Tower - Dwelling of the King of Evil. Stay away \""
-msgstr ""
+msgstr "« Tour Xeonjia – Demeure du Roi du mal. Passez votre chemin »"
 
 #: assets/maps/story/999.tmx:
 msgid "This door is closed."
-msgstr ""
+msgstr "Cette porte est fermée."
 
 #: assets/maps/story/999.tmx:
 msgid "This door is closed, I need the 3 signets to open it."
-msgstr ""
+msgstr "Cette porte est fermée ; j'ai besoin des 3 sceaux pour l'ouvrir."
 
 #: assets/maps/story/999.tmx:
 msgid "I should go to the tower."
-msgstr ""
+msgstr "Je devrais aller à la tour."
 
 #: assets/maps/story/999.tmx:
 msgid "The tower is so ugly."
-msgstr ""
+msgstr "La tour est si laide."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Home"
-msgstr ""
+msgstr "Maison"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Good morning mom!"
-msgstr ""
+msgstr "Bonjour, Maman !"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Hi {{hero}}! Did you sleep well?"
-msgstr ""
+msgstr "Bonjour {{hero}} ! Tu as bien dormi ?"
 
 #: assets/maps/story/1_home.tmx:
 msgid "mom"
-msgstr ""
+msgstr "maman"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Actually not very well... I'm still a little sleepy."
-msgstr ""
+msgstr "En fait, pas vraiment… Je somnole encore un peu."
 
 #: assets/maps/story/1_home.tmx:
 msgid "You always are.\nAnyway, now it is time to leave, be very careful and remember to check your health in the top left bar."
-msgstr ""
+msgstr "Comme toujours.\nBref, il est l'heure de partir maintenant, sois très prudent et souviens-toi de vérifier ta santé dans la barre supérieure gauche."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Yea mom. Don't worry, I'll be careful."
-msgstr ""
+msgstr "Oui, Maman. Ne t'inquiète pas, je ferai attention."
 
 #: assets/maps/story/1_home.tmx:
 msgid "When you hit the rocks you could hurt yourself, so stop by our neighbor who have prepared a brand new pair of shin guards for you."
-msgstr ""
+msgstr "Quand tu frappes les rochers, tu pourrais te blesser, alors arrête-toi chez notre voisin qui a préparé une toute nouvelle paire de protège-tibias pour toi."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Sure, I will."
-msgstr ""
+msgstr "D'accord, je vais y aller."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Go get the shin guards from the neighbor, you will need them."
-msgstr ""
+msgstr "Va chercher les protège-tibias chez le voisin, tu en auras besoin."
 
 #: assets/maps/story/1_home.tmx:
 msgid "The new shin guards are beautiful, they match the suit."
-msgstr ""
+msgstr "Les nouveaux protège-tibias sont magnifiques, ils vont bien avec la combinaison."
 
 #: assets/maps/story/1_home.tmx:
 msgid "This plant hasn't been watered for long."
-msgstr ""
+msgstr "Cette plante n'a pas été arrosée depuis longtemps."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Unfortunately, this is not the time to lie down on the sofa."
-msgstr ""
+msgstr "Malheureusement, ce n'est pas le moment de s'allonger sur le sofa."
 
 #: assets/maps/story/1_home.tmx:
 msgid "This plant seems to have been recently watered."
-msgstr ""
+msgstr "Cette plante semble avoir été arrosée récemment."
 
 #: assets/maps/story/4_house.tmx:
 msgid "The last time I went through the forest I was attacked.\nI'm not going back there anymore."
-msgstr ""
+msgstr "La dernière fois que j'ai traversé la forêt, j'ai été attaqué.\nJe n'y retournerai plus."
 
 #: assets/maps/story/4_house.tmx:
 msgid "If you want to enter the forest you have to be careful, my grandson risked getting hurt there."
-msgstr ""
+msgstr "Si tu veux entrer dans la forêt, tu dois faire attention ; mon petit-fils a risqué de se faire blesser là-bas."
 
 #: assets/maps/story/26_house.tmx:
 msgid "Do you think piglets will one day be a common pet?"
-msgstr ""
+msgstr "Pensez-vous que les porcelets seront un jour un animal de compagnie commun ?"
 
 #: assets/maps/story/3_house1.tmx:
 msgid "A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."
-msgstr ""
+msgstr "À quelques mètres d'ici se trouve la Forêt Mitsu. Autrefois, elle attirait de nombreux touristes car elle était considérée comme un lieu sacré, mais maintenant elle est dangereuse et infestée de monstres."
 
 #: assets/maps/story/28_house.tmx:
 msgid "Mind your own business."
-msgstr ""
+msgstr "Occupe-toi de tes affaires."
 
 #: assets/maps/story/28_house.tmx:
 msgid "This vase is very heavy, I can't move it."
-msgstr ""
+msgstr "Ce vase est très lourd ; je ne peux pas le bouger."
 
 #: assets/maps/story/1_house.tmx:
 msgid "NEIGHBOR'S HOUSE"
-msgstr ""
+msgstr "MAISON DU VOISIN"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones.\nI made them by hand. Here's to you!"
-msgstr ""
+msgstr "Bonjour mon garçon, ça va ? Je t'ai fait les protège-tibias, tu en auras besoin pour amortir les coups avec les pierres.\nJe les ai fabriqués à la main. Voici pour toi !"
 
 #: assets/maps/story/1_house.tmx:
 msgid "neighbor"
-msgstr ""
+msgstr "voisin"
 
 #: assets/maps/story/1_house.tmx:
 msgid "* {{hero}} got and put on the shin guards *"
-msgstr ""
+msgstr "* {{hero}} a obtenu et mis les protège-tibias *"
 
 #: assets/maps/story/1_house.tmx:
 msgid "This way you will hurt yourself less, but be careful that they do not fully protect you from damage."
-msgstr ""
+msgstr "De cette manière, tu te feras moins mal, mais fais attention parce qu'ils ne te protègent pas complètement des dommages."
 
 #: assets/maps/story/1_house.tmx:
 msgid "Thank you very much!"
-msgstr ""
+msgstr "Merci beaucoup !"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Since the shin guards I gave you do not fully protect you, try to think diligently about the moves you make."
-msgstr ""
+msgstr "Puisque les protège-tibias que je t'ai donnés ne te protègent pas complètement, essaye de bien réfléchir aux mouvements que tu fais."
 
 #: assets/maps/story/30.tmx:
 msgid "I'm planning a surprise wedding for my son, I hope he doesn't find out."
-msgstr ""
+msgstr "Je prépare un mariage surprise pour mon fils ; j'espère qu'il ne le découvrira pas."
 
 #: assets/maps/story/30.tmx:
 msgid "This part is under construction."
-msgstr ""
+msgstr "Cette partie est en construction."
 
 #: assets/maps/story/30.tmx:
 msgid "worker"
-msgstr ""
+msgstr "ouvrier"
 
 #: assets/maps/story/12.tmx:
 msgid "* {{hero}} found 50 ¤ *"
-msgstr ""
+msgstr "* {{hero}} a trouvé 50 ¤ *"
 
 #: assets/maps/story/3.tmx:
 msgid "Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck."
-msgstr ""
+msgstr "Parfois, parmi les branches des plantes, vous pouvez trouver des baies.\nIl m'est également arrivé de trouver des objets restés bloqués."
 
 #: assets/maps/story/3.tmx:
 msgid "Oh, I was about to take those berries."
-msgstr ""
+msgstr "Oh, j'étais sur le point de prendre ces baies."
 
 #: assets/maps/story/3.tmx:
 msgid "No problem, you can keep them."
-msgstr ""
+msgstr "Pas de problème, tu peux les garder."
 
 #: assets/maps/story/3.tmx:
 msgid "I hope those berries were good."
-msgstr ""
+msgstr "J'espère que ces baies étaient bonnes."
 
 #: assets/maps/story/3.tmx:
 msgid "On the ground it's easy to find XEON (¤) stones that you can use to buy items in shops."
-msgstr ""
+msgstr "Par terre, il est facile de trouver des pierres XEON (¤) qu'on peut utiliser pour acheter des articles dans les magasins."
 
 #: assets/maps/story/3.tmx:
 msgid "* {{hero}} found some berries! 20 LPs have been recovered *"
-msgstr ""
+msgstr "* {{hero}} a trouvé des baies ! 20 PV ont été récupérés *"
 
 #: assets/maps/story/3.tmx:
 msgid "It seems that once there was a path here."
-msgstr ""
+msgstr "Il semble qu'autrefois il y avait un chemin ici."
 
 #: assets/maps/story/28.tmx:
 msgid "* {{hero}} found some berries! 40 LPs have been recovered *"
-msgstr ""
+msgstr "* {{hero}} a trouvé des baies ! 40 PV ont été récupérés *"
 
 #: assets/maps/story/2.tmx:
 msgid "Route 1"
-msgstr ""
+msgstr "Route 1"
 
 #: assets/maps/story/2.tmx:
 msgid "The ice is so slippery, have you noticed?\nI feel more comfortable on the snow."
-msgstr ""
+msgstr "La glace est si glissante, tu as remarqué ?\nJe me sens plus à l'aise sur la neige."
 
 #: assets/maps/story/2.tmx:
 msgid "There seems to be something in the branches of this plant...\nIt's a stone!"
-msgstr ""
+msgstr "Il semble y avoir quelque chose dans les branches de cette plante…\nC'est une pierre !"
 
 #: assets/maps/story/2.tmx:
 msgid "This is a very strange stone... Never seen anything like this before."
-msgstr ""
+msgstr "C'est une pierre très étrange… jamais rien vu de pareil auparavant."
 
 #: assets/maps/story/24_lab_2.tmx:
 msgid "VANTOI LAB - 2F"
-msgstr ""
+msgstr "VANTOI LAB – 2E"
 
 #: assets/maps/story/24_lab_2.tmx:
 msgid "What a mess! I have to tidy up!"
-msgstr ""
+msgstr "Quel désordre ! Je dois nettoyer !"
 
 #: assets/maps/story/31.tmx:
 msgid "Some boulders are placed by us, the workers of the Kingdom.\nIn this way it's easier to reach all places."
-msgstr ""
+msgstr "Certains rochers sont placés par nous, les travailleurs du Royaume.\nDe cette manière, c'est plus facile d'atteindre tous les endroits."
 
 #: assets/maps/story/10.tmx:
 msgid "\" Souvenir shop \""
-msgstr ""
+msgstr "« Boutique de souvenir »"
 
 #: assets/maps/story/10.tmx:
 msgid "* {{hero}} found some berries! 15 LPs have been recovered *"
-msgstr ""
+msgstr "* {{hero}} a trouvé des baies ! 15 PV ont été récupérés *"
 
 #: assets/maps/story/10.tmx:
 msgid "I can see the inside of the shop."
-msgstr ""
+msgstr "Je peux voir l'intérieur de la boutique."
 
 #: assets/maps/story/31_house2.tmx:
 msgid "Melhopolis is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though."
-msgstr ""
+msgstr "Melhopolis est le centre administratif de la région.\nDe nos jours, la corruption, la pauvreté et la criminalité sont cependant endémiques."
 
 #: assets/maps/story/5.tmx:
 msgid "Mitsu Forest"
-msgstr ""
+msgstr "Forêt Mitsu"
 
 #: assets/maps/story/5.tmx:
 msgid "Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here."
-msgstr ""
+msgstr "Hé, c'est la Forêt Mitsu. Mes parents m'ont raconté de nombreuses histoires sur sa beauté et son épanouissement il y a longtemps. On dit qu'autrefois la créature mystique protectrice du continent vivait ici."
 
 #: assets/maps/story/5.tmx:
 msgid "174805...\nI don't know what these figures are but a little while ago I heard someone say them out loud...\nDunno why."
-msgstr ""
+msgstr "174805…\nJe ne sais pas quels sont ces chiffres mais il y a peu de temps j'ai entendu quelqu'un les dire à haute voix…\nJe ne sais pas pourquoi."
 
 #: assets/maps/story/5.tmx:
 msgid "The trees of this region are admired and studied throughout the Kingdom. These blues are my favorites."
-msgstr ""
+msgstr "Les arbres de cette région sont admirés et étudiés dans tout le Royaume. Ces bleus sont mes préférés."
 
 #: assets/maps/story/5.tmx:
 msgid "\" Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right \""
-msgstr ""
+msgstr "« Forêt Mitsu – Bienvenue, respectez la nature et n'oubliez pas de jeter un œil à la boutique de souvenirs sur la droite »"
 
 #: assets/maps/story/5.tmx:
 msgid "Once this was a very touristy place, the Kingdom tried to make money from it."
-msgstr ""
+msgstr "Autrefois, c'était un endroit très touristique, le Royaume a essayé de gagner de l'argent avec."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Test tubes and other scientific stuff."
-msgstr ""
+msgstr "Tubes à essai et autres trucs scientifiques."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Someone has turned everything upside down."
-msgstr ""
+msgstr "Quelqu'un a tout mis sans dessus dessous."
 
 #: assets/maps/tilesets/outdoor_1.tsx:
 msgid "A rocky wall."
-msgstr ""
+msgstr "Un mur rocheux."
 
 #: assets/maps/tilesets/outdoor_1.tsx:
 msgid "A wall."
-msgstr ""
+msgstr "Un mur."
 
 #: assets/maps/tilesets/outdoor_1.tsx:
 msgid "A rock."
-msgstr ""
+msgstr "Un rocher."
 
 #: assets/maps/tilesets/outdoor_1.tsx:
 msgid "A snowdrift."
-msgstr ""
+msgstr "Une congère."
 
 #: assets/maps/tilesets/outdoor_1.tsx:
 msgid "A little plant."
-msgstr ""
+msgstr "Une petite plante."
 
 #: assets/maps/tilesets/outdoor_1.tsx:
 msgid "A little plant without leaves."
-msgstr ""
+msgstr "Une petite plante sans feuille."
 
 #: assets/maps/tilesets/outdoor_1.tsx:
 msgid "I like the color of this tree."
-msgstr ""
+msgstr "J'aime bien la couleur de cet arbre."
 
 #: assets/maps/tilesets/outdoor_1.tsx:
 msgid "This type of tree is strange."
-msgstr ""
+msgstr "Ce type d'arbre est étrange."
 
 #: assets/maps/tilesets/outdoor_1.tsx:
 msgid "This type of plant is strange."
-msgstr ""
+msgstr "Ce type de plante est étrange."
 
 #: assets/maps/tilesets/outdoor_1.tsx:
 msgid "It's not a good thing to look into other people's homes."
-msgstr ""
+msgstr "Ce n'est pas bien de regarder chez les autres."
 
 #: assets/maps/tilesets/outdoor_1.tsx:
 msgid "This is a pharmacy."
-msgstr ""
+msgstr "Ceci est une pharmacie."
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "milla"
-msgstr ""
+msgstr "milla"
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "shen"
-msgstr ""
+msgstr "shen"
 
 #: assets/maps/tilesets/npc.tsx:
 msgid "man"
-msgstr ""
+msgstr "homme"
 
 #: assets/maps/tilesets/npc.tsx:
 msgid "lumberjack"
-msgstr ""
+msgstr "bucheron"
 
 #: assets/maps/tilesets/npc.tsx:
 msgid "young-girl"
-msgstr ""
+msgstr "jeune fille"
 
 #: assets/maps/tilesets/npc.tsx:
 msgid "youngster"
-msgstr ""
+msgstr "jeune"
 
 #: assets/maps/tilesets/npc.tsx:
 msgid "elderly"
-msgstr ""
+msgstr "vieillarde"
 
 #: assets/maps/tilesets/npc.tsx:
 msgid "guy"
-msgstr ""
+msgstr "gars"
 
 #: assets/maps/tilesets/npc.tsx:
 msgid "old-man"
-msgstr ""
+msgstr "vieillard"
 
 #: assets/maps/tilesets/npc.tsx:
 msgid "adventurer"
-msgstr ""
+msgstr "aventurier"
 
 #: assets/maps/tilesets/npc.tsx:
 msgid "dude"
-msgstr ""
+msgstr "mec"
 
 #: assets/maps/tilesets/npc.tsx:
 msgid "girl"
-msgstr ""
+msgstr "fille"
 
 #: assets/maps/tilesets/npc.tsx:
 msgid "oldster"
-msgstr ""
+msgstr "ancien"
 
 #: assets/maps/tilesets/npc.tsx:
 msgid "henchman"
-msgstr ""
+msgstr "homme de main"
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "The weather is good today."
-msgstr ""
+msgstr "Il fait beau aujourd'hui."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A painting that depicts this area long ago."
-msgstr ""
+msgstr "Une peinture qui représente la zone il y a longtemps."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "This plant is very fragrant."
-msgstr ""
+msgstr "Cette plante est très parfumée."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "It's full of books here."
-msgstr ""
+msgstr "C'est plein de livres ici."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A closed door."
-msgstr ""
+msgstr "Une porte fermée."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "There is some food between the mattresses of this sofa."
-msgstr ""
+msgstr "Il y a de la nourriture entre les coussins de ce sofa."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "This is a wall."
-msgstr ""
+msgstr "Ceci est un mur."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "Oink !"
-msgstr ""
+msgstr "Grouin !"
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "This pig looks very happy."
-msgstr ""
+msgstr "Ce cochon a l'air très heureux."

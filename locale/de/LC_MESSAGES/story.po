@@ -3,8 +3,10 @@
 # This file is distributed under the same license as Xeonjia.
 # anselm-helbig <gh@mnemonikk.org>, 2020.
 # DeepDaikon <deepdaikon@tuta.io>, 2020.
+# Swann Fournial <s.fournial@protonmail.com>, 2021.
+# J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2020-12-28 13:45+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-01-06 22:57+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4\n"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! 30 LPs have been recovered *"
@@ -28,7 +30,7 @@ msgstr "Wissenschaftler"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A life's work has been destroyed..."
-msgstr "Ein Lebenswerk, zerstört..."
+msgstr "Ein Lebenswerk, zerstört …"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Someone used this plant to do some experiments."
@@ -56,15 +58,15 @@ msgstr "Ich werde mein bestes geben."
 
 #: assets/maps/story/1.tmx:
 msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
-msgstr "Der Turm, in dem der „König des Bösen\" residiert, befindet sich wohl nahe der hiesigen Hauptstadt."
+msgstr "Der Turm, in dem der „König des Bösen“ residiert, befindet sich wohl nahe der hiesigen Hauptstadt."
 
 #: assets/maps/story/1.tmx:
 msgid "\" NATAWN - Hometown of the 62nd hero \""
-msgstr "„ NATAWN - Heimatort des 62ten Helden \""
+msgstr "„NATAWN – Heimatort des 62ten Helden“"
 
 #: assets/maps/story/1.tmx:
 msgid "I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude."
-msgstr "Ich muss meinen Eltern noch mit der ,A'-Tatste auf Wiedersehen sagen, das wäre sonst unhöflich."
+msgstr "Ich muss meinen Eltern noch mit der ,A‘-Taste auf Wiedersehen sagen, das wäre sonst unhöflich."
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks."
@@ -96,11 +98,11 @@ msgstr "Komm jederzeit wieder."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Be careful not to get hurt."
-msgstr "Pass aus, dass du dir nicht weh tust."
+msgstr "Pass aus, dass du dir nicht wehtust."
 
 #: assets/maps/story/13.tmx:
 msgid "Help me please!\nPunch him by pressing the 'P' button."
-msgstr "Bitte helft mir!\nUm ihn zu schlagen, drücke die Taste ,P'."
+msgstr "Bitte helft mir!\nUm ihn zu schlagen, drücke die Taste ,P‘."
 
 #: assets/maps/story/13.tmx:
 msgid "Everything good?"
@@ -140,7 +142,7 @@ msgstr "..."
 
 #: assets/maps/story/7.tmx:
 msgid "Oops... yes, sorry, I am in the middle of the road...\nAre you a tourist? There are very few nowadays."
-msgstr "Oh, ja, tut mir leid. Ich bin mitten auf der Straße...\nSind Sie Tourist? Davon gibt es heutzutage nur sehr wenige."
+msgstr "Oh, ja, tut mir leid. Ich bin mitten auf der Straße …\nSind Sie Tourist? Davon gibt es heutzutage nur sehr wenige."
 
 #: assets/maps/story/7.tmx:
 msgid "???"
@@ -248,7 +250,7 @@ msgstr "Melhopolis"
 
 #: assets/maps/story/24.tmx:
 msgid "\" VANTOI LAB \""
-msgstr "\" VANTOI LAB \""
+msgstr "„VANTOI-LAB“"
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Laboratory."
@@ -260,7 +262,7 @@ msgstr ""
 
 #: assets/maps/story/24.tmx:
 msgid "\" Melhopolis - Regional capital \""
-msgstr ""
+msgstr "„Melhopolis – Regionale Hauptstadt“"
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the house."
@@ -704,7 +706,7 @@ msgstr ""
 
 #: assets/maps/story/10.tmx:
 msgid "\" Souvenir shop \""
-msgstr ""
+msgstr "„Andenkenladen“"
 
 #: assets/maps/story/10.tmx:
 msgid "* {{hero}} found some berries! 15 LPs have been recovered *"
@@ -720,7 +722,7 @@ msgstr ""
 
 #: assets/maps/story/5.tmx:
 msgid "Mitsu Forest"
-msgstr ""
+msgstr "Mitsuwald"
 
 #: assets/maps/story/5.tmx:
 msgid "Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here."

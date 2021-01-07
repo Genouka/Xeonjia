@@ -1,0 +1,15 @@
+Il y a deux modes :
+
+1) Mode histoire : le but est d'atteindre le dernier étage de la tour et de vaincre le Roi du mal.
+
+2) Mode multijoueur : le but de ce mode est de marquer des points et de faire gagner votre équipe.
+
+En gros, vous devrez faire glisser votre doigt pour déplacer votre personnage à travers le monde.
+
+Gardez à l'esprit que vous ne pouvez pas vous arrêter jusqu'à ce que vous atteigniez un mur, un rocher ou tout autre type d'obstacle.
+
+Au fil du temps, vous gagnerez des points d'expérience qui vous permettront d'augmenter votre niveau et vous trouverez de l'argent et des trésors cachés que vous pourrez utiliser pour acheter des choses et vous améliorer.
+
+Attention, le monde regorge d'ennemis dangereux prêts à vous attaquer !
+
+Utilisez votre tête pour trouver le meilleur chemin !
