@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/ui/basic.dart';
 
 // Floating "PLAY" button
@@ -16,9 +17,10 @@ class PlayButton extends StatelessWidget {
           color: Theme.of(context).primaryColor, borderRadius: circularRadius),
       child: FlatButton(
         shape: const RoundedRectangleBorder(borderRadius: circularRadius),
-        child: const Text(
-          'PLAY',
-          style: TextStyle(color: Colors.white, fontSize: 20, letterSpacing: 6),
+        child: Text(
+          'Play'.i18n.toUpperCase(),
+          style: const TextStyle(
+              color: Colors.white, fontSize: 20, letterSpacing: 6),
         ),
         onPressed: () {
           Navigator.push(context, FadeRoute(page()));
