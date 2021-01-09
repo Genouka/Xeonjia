@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'package:path/path.dart';
 
@@ -58,6 +59,12 @@ Map<String, List<Translation>> tmx2po() {
         }
       });
     }
+  });
+  var dataJsonFileName = 'assets/maps/story/data.json';
+  var data = json.decode(File(dataJsonFileName).readAsStringSync());
+  data['items'].forEach((_, value) {
+    dirStringsMap['story']
+        .add(Translation(dataJsonFileName, value['name'], null));
   });
   return dirStringsMap;
 }
