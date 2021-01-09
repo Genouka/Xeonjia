@@ -93,6 +93,10 @@ msgstr "OK"
 msgid "Next"
 msgstr "Suivant"
 
+#: lib/ui/screens/arena/widgets/play_button.dart:
+msgid "Play"
+msgstr ""
+
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Multiplayer Mode"
 msgstr "Mode multijoueur"

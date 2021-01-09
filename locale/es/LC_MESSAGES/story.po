@@ -925,3 +925,7 @@ msgstr "Cuic!"
 #: assets/maps/tilesets/indoor.tsx:
 msgid "This pig looks very happy."
 msgstr "Este cerdo se ve muy feliz."
+
+#: assets/maps/story/data.json:
+msgid "A strange icosahedral stone"
+msgstr ""
