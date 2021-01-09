@@ -18,7 +18,6 @@
   <object id="48" type="NPC" gid="188" x="96" y="176" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;Some boulders are placed by us, the workers of the Kingdom.\nIn this way it's easier to reach all places.&quot;)))"/>
-    <property name="orientation" type="int" value="1"/>
    </properties>
   </object>
  </objectgroup>
