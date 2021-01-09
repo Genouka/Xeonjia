@@ -121,8 +121,11 @@ class CharacterComponent extends DynamicComponent
         _itemList = List.from(mainCharacter.itemList);
       }
       game.executeAction(action: game.map.action, actor: game.playerOne);
-    } else {
-      updateDirection(_initialOrientation);
+    }
+    if (game.config.mode != GameMode.story) {
+      isPlayerOne
+          ? updateOrientation(_initialOrientation)
+          : updateDirection(_initialOrientation);
     }
   }
 
