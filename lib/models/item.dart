@@ -1,16 +1,19 @@
+import 'package:xeonjia/i18n/story.i18n.dart';
+
 // Item in story mode (eg key, potion, stone, gem, ...)
 class Item {
   // Item name
-  String name;
+  final String _name;
+  String get name => _name.i18n.toUpperCase();
 
   // Item description
-  String description;
+  final String description;
 
   // Item location (tmx file)
-  String location;
+  final String location;
 
   Item(Map<String, dynamic> json)
-      : name = (json['name'] as String).toUpperCase(),
+      : _name = json['name'],
         description = json['description'],
         location = json['location'];
 }
