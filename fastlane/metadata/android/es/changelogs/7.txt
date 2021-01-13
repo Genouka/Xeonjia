@@ -1,0 +1,3 @@
+* Ajustes en la dificultad de la partida
+* Adición de traducciones al francés, español e italiano
+* Arreglo de errores
