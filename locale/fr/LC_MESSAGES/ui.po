@@ -2,8 +2,9 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Swann Fournial <s.fournial@protonmail.com>, 2021.
+# DeepDaikon <deepdaikon@tuta.io>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-01-06 22:57+0000\nLast-Translator: Swann Fournial <s.fournial@protonmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/ui/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-01-16 11:28+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/ui/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -95,7 +96,7 @@ msgstr "Suivant"
 
 #: lib/ui/screens/arena/widgets/play_button.dart:
 msgid "Play"
-msgstr ""
+msgstr "Jouer"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Multiplayer Mode"

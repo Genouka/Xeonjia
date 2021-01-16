@@ -1,10 +1,10 @@
 # Translation for Xeonjia
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# DeepDaikon <deepdaikon@tuta.io>, 2020.
+# DeepDaikon <deepdaikon@tuta.io>, 2020, 2021.
 # Swann Fournial <s.fournial@protonmail.com>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-01-07 07:42+0000\nLast-Translator: Swann Fournial <s.fournial@protonmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-01-16 11:28+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4\n"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! 30 LPs have been recovered *"
@@ -16,7 +16,7 @@ msgstr "Une petite plante… rien d'autre."
 
 #: assets/maps/story/15.tmx:
 msgid "\" Exit ↑ \""
-msgstr ""
+msgstr "\" Sortie ↑ \""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB - 1F"
@@ -144,7 +144,7 @@ msgstr "* {{hero}} a trouvé des baies ! 10 PV ont été récupérés *"
 
 #: assets/maps/story/14.tmx:
 msgid "\" ← Pharmacy \""
-msgstr ""
+msgstr "\" ← Pharmacie \""
 
 #: assets/maps/story/7.tmx:
 msgid "..."
@@ -228,7 +228,7 @@ msgstr "« Zone de piquenique – Ne pas laisser de déchets, merci »"
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
-msgstr ""
+msgstr "\" Zone de piquenique ↑ \"\n\" Centre de la Forêt ↓ \""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "T-today... today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom...\nAfter years of training I hope to be able to."
@@ -264,7 +264,7 @@ msgstr "Melhopolis"
 
 #: assets/maps/story/24.tmx:
 msgid "The city center is a few kilometers to the south."
-msgstr ""
+msgstr "Le centre-ville est à quelques kilomètres au sud."
 
 #: assets/maps/story/24.tmx:
 msgid "\" VANTOI LAB \""
@@ -392,11 +392,11 @@ msgstr "* {{hero}} a trouvé des baies ! 5 PV ont été récupérés *"
 
 #: assets/maps/story/9.tmx:
 msgid "\" If you get lost, follow the road signs \""
-msgstr ""
+msgstr "\" Si vous vous perdez, suivez les panneaux de signalisation \""
 
 #: assets/maps/story/19.tmx:
 msgid "\" Xeonjia Tower ↑ \""
-msgstr ""
+msgstr "\" Tour Xeonjia ↑ \""
 
 #: assets/maps/story/24_house1.tmx:
 msgid "A computer turned off. Looks like a key is needed to turn it on."
@@ -408,7 +408,7 @@ msgstr "Route 2"
 
 #: assets/maps/story/21.tmx:
 msgid "\" Melhopolis → \""
-msgstr ""
+msgstr "\" Melhopolis → \""
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "Hi, I'm sorry but we're closed. Once this was a busy shop, but now it doesn't even make sense to stay open."
@@ -620,11 +620,11 @@ msgstr "Pensez-vous que les porcelets seront un jour un animal de compagnie comm
 
 #: assets/maps/story/11.tmx:
 msgid "Hi, I'm an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I'll help you."
-msgstr ""
+msgstr "Salut, je suis un employé du Royaume.\nSi vous vous perdez ou si vous avez du mal à trouver votre chemin, revenez me voir et je vous aiderai."
 
 #: assets/maps/story/11.tmx:
 msgid "Are you stuck?\nTake the path behind the blue tree."
-msgstr ""
+msgstr "Êtes-vous coincé ?\nPrenez le chemin derrière l'arbre bleu."
 
 #: assets/maps/story/3_house1.tmx:
 msgid "A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."
@@ -928,4 +928,4 @@ msgstr "Ce cochon a l'air très heureux."
 
 #: assets/maps/story/data.json:
 msgid "A strange icosahedral stone"
-msgstr ""
+msgstr "Une étrange pierre icosaédrique"
