@@ -23,14 +23,14 @@
             (&quot;/_happy&quot; &quot;Hii {{hero}}!&quot;)
             (&quot;/&quot; &quot;Yes, I cleverly managed to avoid the monsters that were along the way!&quot;)
             (&quot;/_happy&quot; &quot;I love those cute little green worms!&quot;)
-            (&quot;/hero_mouthless&quot; &quot;...S-such weird tastes here.&quot;)
+            (&quot;/hero_mouthless&quot; &quot;…S-such weird tastes here.&quot;)
             (&quot;/_sad&quot; &quot;Unkind!&quot;)
             (&quot;/&quot; &quot;Aaanyway, look here! This is the tower where the King of Evil resides!&quot;)
             (&quot;/hero&quot; &quot;Oh really? Are we there yet?&quot;)
-            (&quot;/&quot; &quot;It seems so... but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets.&quot;)
+            (&quot;/&quot; &quot;It seems so… but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets.&quot;)
             (&quot;/hero&quot; &quot;Signets?&quot;)
             (&quot;/&quot; &quot;I did not understand exactly what they are, but if I have not misunderstood they are kept in crypts present in each region of the Kingdom.&quot;)
-            (&quot;/hero&quot; &quot;Mm... Then I really think that I have to set out in search of these crypts...&quot;)
+            (&quot;/hero&quot; &quot;Mm… Then I really think that I have to set out in search of these crypts…&quot;)
             (&quot;/&quot; &quot;I guess you have no other choice.&quot;)
             (&quot;/_happy&quot; &quot;Good luck!&quot;)))
         (fire-global-event))
@@ -41,7 +41,7 @@
   </object>
   <object id="45" type="NPC" gid="201" x="256" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;I hate this little girl here... She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

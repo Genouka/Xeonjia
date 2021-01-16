@@ -20,7 +20,7 @@
   <object id="31" type="NPC" gid="150" x="80" y="32" width="16" height="16">
    <properties>
     <property name="action">(dialog
-    '((&quot;/&quot; &quot;174805...\nI don't know what these figures are but a little while ago I heard someone say them out loud...\nDunno why.&quot;)))</property>
+    '((&quot;/&quot; &quot;174805…\nI don't know what these figures are but a little while ago I heard someone say them out loud…\nDunno why.&quot;)))</property>
     <property name="orientation" type="int" value="1"/>
    </properties>
   </object>

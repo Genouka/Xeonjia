@@ -67,7 +67,7 @@
         (dialog '((&quot;* {{hero}} found some berries! 20 LPs have been recovered *&quot;)))
         (give-item &quot;3.berries&quot;)
         (set-life-diff 20))
-    (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
+    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
    </properties>
   </object>
   <object id="38" type="Modifier" gid="19" x="272" y="32" width="16" height="16">

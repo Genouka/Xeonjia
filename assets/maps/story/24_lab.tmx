@@ -23,7 +23,7 @@
   </object>
   <object id="73" gid="22" x="32" y="112" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;scientist/_sad&quot; &quot;A life's work has been destroyed...&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;scientist/_sad&quot; &quot;A life's work has been destroyed…&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

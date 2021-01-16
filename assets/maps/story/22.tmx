@@ -27,7 +27,7 @@
         (&quot;???/&quot; &quot;Well, you are the hero of this year, you are quite famous. Are you here to visit the crypt?&quot;)
         (&quot;/hero&quot; &quot;Yes. If I have not misunderstood, here's one of the 3 signets I need to access the Xeonjia tower.&quot;)
         (&quot;???/&quot; &quot;Ah that's true, I've heard of it.\nBeware that here is full of monsters and bad people.&quot;)
-        (&quot;/hero&quot; &quot;Ok thanks, I'll be careful.\nBut... who are you?&quot;)
+        (&quot;/hero&quot; &quot;Ok thanks, I'll be careful.\nBut… who are you?&quot;)
         (&quot;???/&quot; &quot;Oh, yes sorry I forgot to introduce myself.&quot;)
         (&quot;/_happy&quot; &quot;My name is Shen, I am a scientist.&quot;)
         (&quot;/hero_happy&quot; &quot;Nice to meet you, Shen.&quot;)

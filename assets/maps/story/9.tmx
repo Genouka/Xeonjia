@@ -19,7 +19,7 @@
   </object>
   <object id="37" type="NPC" gid="176" x="176" y="32" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;Weird things happen in this area...&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Weird things happen in this area…&quot;)))"/>
    </properties>
   </object>
   <object id="42" type="Solid" gid="55" x="272" y="80" width="16" height="16">
@@ -29,7 +29,7 @@
         (dialog '((&quot;* {{hero}} found some berries! 5 LPs have been recovered *&quot;)))
         (give-item &quot;9.berries&quot;)
         (set-life-diff 5))
-    (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
+    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

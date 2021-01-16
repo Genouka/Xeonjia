@@ -12,7 +12,7 @@ class LoadingPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Loading...\nPlease wait'.i18n,
+            'Loading…\nPlease wait'.i18n,
             style: const TextStyle(
                 color: Colors.white, fontSize: 48, letterSpacing: 1.2),
             textAlign: TextAlign.center,

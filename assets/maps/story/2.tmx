@@ -24,10 +24,10 @@
    <properties>
     <property name="action">(if (! (has-item &quot;2.stone&quot;))
     (begin
-        (dialog '((&quot;There seems to be something in the branches of this plant...\nIt's a stone!&quot;)))
+        (dialog '((&quot;There seems to be something in the branches of this plant…\nIt's a stone!&quot;)))
         (give-item &quot;2.stone&quot;)
-        (dialog '((&quot;This is a very strange stone... Never seen anything like this before.&quot;))))
-    (dialog '((&quot;A little plant... nothing else.&quot;))))</property>
+        (dialog '((&quot;This is a very strange stone… Never seen anything like this before.&quot;))))
+    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
    </properties>
   </object>
   <object id="44" type="Modifier" gid="21" x="256" y="32" width="16" height="16">
