@@ -11,6 +11,7 @@ import 'package:xeonjia/util/local_data_controller.dart';
 const List<Locale> supportedLocales = [
   Locale('en'),
   Locale('es'),
+  Locale('fr'),
   Locale('it'),
 ];
 
