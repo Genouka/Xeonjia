@@ -11,7 +11,7 @@ msgid "* {{hero}} found some berries! 30 LPs have been recovered *"
 msgstr "* {{hero}} a trouvé des baies ! 30 PV ont été récupérés *"
 
 #: assets/maps/story/15.tmx:
-msgid "A little plant... nothing else."
+msgid "A little plant… nothing else."
 msgstr "Une petite plante… rien d'autre."
 
 #: assets/maps/story/15.tmx:
@@ -31,7 +31,7 @@ msgid "scientist"
 msgstr "scientifique"
 
 #: assets/maps/story/24_lab.tmx:
-msgid "A life's work has been destroyed..."
+msgid "A life's work has been destroyed…"
 msgstr "Le travail d'une vie a été détruit…"
 
 #: assets/maps/story/24_lab.tmx:
@@ -147,11 +147,11 @@ msgid "\" ← Pharmacy \""
 msgstr "\" ← Pharmacie \""
 
 #: assets/maps/story/7.tmx:
-msgid "..."
-msgstr "..."
+msgid "…"
+msgstr "…"
 
 #: assets/maps/story/7.tmx:
-msgid "Oops... yes, sorry, I am in the middle of the road...\nAre you a tourist? There are very few nowadays."
+msgid "Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays."
 msgstr "Oups… oui, désolé, je suis au milieu de la route…\nEs-tu un touriste ? Il y en a peu ces temps-ci."
 
 #: assets/maps/story/7.tmx:
@@ -163,8 +163,8 @@ msgid "N-no, I'm {{hero}}, this year's chosen hero. I just left home to try to d
 msgstr "N-non, je suis {{hero}}, le héros élu de cette année. Je viens juste de quitter ma maison pour vaincre le Roi du mal."
 
 #: assets/maps/story/7.tmx:
-msgid "What!? So is it you?!"
-msgstr "Quoi ?! Alors c'est toi !?"
+msgid "What?! So is it you?!"
+msgstr "Quoi ?! Alors c'est toi ?!"
 
 #: assets/maps/story/7.tmx:
 msgid "Nice to meet you, I've never met a hero before."
@@ -231,7 +231,7 @@ msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
 msgstr "\" Zone de piquenique ↑ \"\n\" Centre de la Forêt ↓ \""
 
 #: assets/maps/story/1_home_2.tmx:
-msgid "T-today... today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom...\nAfter years of training I hope to be able to."
+msgid "T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to."
 msgstr "Au-aujourd'hui… c'est le jour que j'ai attendu toute ma vie. Mon voyage vers la tour Xeonjia est sur le point de commencer.\nCette année, je suis le « héros » élu pour vaincre le monstre qui a gelé le Royaume…\nAprès des années de formation, j'espère réussir."
 
 #: assets/maps/story/1_home_2.tmx:
@@ -315,7 +315,7 @@ msgid "Ah that's true, I've heard of it.\nBeware that here is full of monsters a
 msgstr "Ah, c'est vrai, j'en ai entendu parler.\nFais attention, ici, il y a plein de monstres et de gens mauvais."
 
 #: assets/maps/story/22.tmx:
-msgid "Ok thanks, I'll be careful.\nBut... who are you?"
+msgid "Ok thanks, I'll be careful.\nBut… who are you?"
 msgstr "D'accord, merci, je ferai attention.\nMais  qui êtes-vous ?"
 
 #: assets/maps/story/22.tmx:
@@ -383,7 +383,7 @@ msgid "This is not a place for kids, go home."
 msgstr "Ce n'est pas un endroit pour les enfants, rentre chez toi."
 
 #: assets/maps/story/9.tmx:
-msgid "Weird things happen in this area..."
+msgid "Weird things happen in this area…"
 msgstr "Des choses étranges se produisent dans cette zone…"
 
 #: assets/maps/story/9.tmx:
@@ -443,7 +443,7 @@ msgid "You are the chosen one for this year, right? My son was too many years ag
 msgstr "Tu es l'élu de cette année, non ? Mon fils l'a été il y a bien des années."
 
 #: assets/maps/story/2_house.tmx:
-msgid "Unfortunately he failed to defeat the King of Evil..."
+msgid "Unfortunately he failed to defeat the King of Evil…"
 msgstr "Malheureusement, il a échoué à vaincre le Roi du mal…"
 
 #: assets/maps/story/15_lp_shop.tmx:
@@ -483,7 +483,7 @@ msgid "I love those cute little green worms!"
 msgstr "J'adore ces mignons petits vers verts !"
 
 #: assets/maps/story/999.tmx:
-msgid "...S-such weird tastes here."
+msgid "…S-such weird tastes here."
 msgstr "… C'est assez spécial."
 
 #: assets/maps/story/999.tmx:
@@ -499,7 +499,7 @@ msgid "Oh really? Are we there yet?"
 msgstr "Oh vraiment ? On est déjà arrivés ?"
 
 #: assets/maps/story/999.tmx:
-msgid "It seems so... but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets."
+msgid "It seems so… but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets."
 msgstr "Apparemment, oui… mais c'est fermé !\nCe gentil monsieur m'a expliqué que pour accéder à la tour, on doit avoir 3 sceaux."
 
 #: assets/maps/story/999.tmx:
@@ -511,7 +511,7 @@ msgid "I did not understand exactly what they are, but if I have not misundersto
 msgstr "Je n'ai pas compris exactement ce que c'était, mais si je ne me trompe pas, ils sont conservés dans des cryptes présentes dans chaque région du Royaume."
 
 #: assets/maps/story/999.tmx:
-msgid "Mm... Then I really think that I have to set out in search of these crypts..."
+msgid "Mm… Then I really think that I have to set out in search of these crypts…"
 msgstr "Mm… Alors je pense vraiment que je dois partir à la recherche de ces cryptes…"
 
 #: assets/maps/story/999.tmx:
@@ -527,7 +527,7 @@ msgid "Do your best!"
 msgstr "Fais de ton mieux !"
 
 #: assets/maps/story/999.tmx:
-msgid "I hate this little girl here... She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent."
+msgid "I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent."
 msgstr "Je déteste cette petite fille… Elle m'a harcelé de mille questions et elle a pleuré jusqu'à ce que je lui dise ce qu'elle voulait. Quelle impertinence."
 
 #: assets/maps/story/999.tmx:
@@ -567,7 +567,7 @@ msgid "mom"
 msgstr "maman"
 
 #: assets/maps/story/1_home.tmx:
-msgid "Actually not very well... I'm still a little sleepy."
+msgid "Actually not very well… I'm still a little sleepy."
 msgstr "En fait, pas vraiment… Je somnole encore un peu."
 
 #: assets/maps/story/1_home.tmx:
@@ -723,11 +723,11 @@ msgid "The ice is so slippery, have you noticed?\nI feel more comfortable on the
 msgstr "La glace est si glissante, tu as remarqué ?\nJe me sens plus à l'aise sur la neige."
 
 #: assets/maps/story/2.tmx:
-msgid "There seems to be something in the branches of this plant...\nIt's a stone!"
+msgid "There seems to be something in the branches of this plant…\nIt's a stone!"
 msgstr "Il semble y avoir quelque chose dans les branches de cette plante…\nC'est une pierre !"
 
 #: assets/maps/story/2.tmx:
-msgid "This is a very strange stone... Never seen anything like this before."
+msgid "This is a very strange stone… Never seen anything like this before."
 msgstr "C'est une pierre très étrange… jamais rien vu de pareil auparavant."
 
 #: assets/maps/story/24_lab_2.tmx:
@@ -767,7 +767,7 @@ msgid "Hey, this is the Mitsu Forest. My parents told me many stories about how 
 msgstr "Hé, c'est la Forêt Mitsu. Mes parents m'ont raconté de nombreuses histoires sur sa beauté et son épanouissement il y a longtemps. On dit qu'autrefois la créature mystique protectrice du continent vivait ici."
 
 #: assets/maps/story/5.tmx:
-msgid "174805...\nI don't know what these figures are but a little while ago I heard someone say them out loud...\nDunno why."
+msgid "174805…\nI don't know what these figures are but a little while ago I heard someone say them out loud…\nDunno why."
 msgstr "174805…\nJe ne sais pas quels sont ces chiffres mais il y a peu de temps j'ai entendu quelqu'un les dire à haute voix…\nJe ne sais pas pourquoi."
 
 #: assets/maps/story/5.tmx:

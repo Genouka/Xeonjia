@@ -21,7 +21,7 @@ msgid "* {{hero}} found some berries! 30 LPs have been recovered *"
 msgstr ""
 
 #: assets/maps/story/15.tmx:
-msgid "A little plant... nothing else."
+msgid "A little plant… nothing else."
 msgstr ""
 
 #: assets/maps/story/15.tmx:
@@ -41,7 +41,7 @@ msgid "scientist"
 msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
-msgid "A life's work has been destroyed..."
+msgid "A life's work has been destroyed…"
 msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
@@ -157,11 +157,11 @@ msgid "\" ← Pharmacy \""
 msgstr ""
 
 #: assets/maps/story/7.tmx:
-msgid "..."
+msgid "…"
 msgstr ""
 
 #: assets/maps/story/7.tmx:
-msgid "Oops... yes, sorry, I am in the middle of the road...\nAre you a tourist? There are very few nowadays."
+msgid "Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays."
 msgstr ""
 
 #: assets/maps/story/7.tmx:
@@ -173,7 +173,7 @@ msgid "N-no, I'm {{hero}}, this year's chosen hero. I just left home to try to d
 msgstr ""
 
 #: assets/maps/story/7.tmx:
-msgid "What!? So is it you?!"
+msgid "What?! So is it you?!"
 msgstr ""
 
 #: assets/maps/story/7.tmx:
@@ -241,7 +241,7 @@ msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
 msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
-msgid "T-today... today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom...\nAfter years of training I hope to be able to."
+msgid "T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to."
 msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
@@ -325,7 +325,7 @@ msgid "Ah that's true, I've heard of it.\nBeware that here is full of monsters a
 msgstr ""
 
 #: assets/maps/story/22.tmx:
-msgid "Ok thanks, I'll be careful.\nBut... who are you?"
+msgid "Ok thanks, I'll be careful.\nBut… who are you?"
 msgstr ""
 
 #: assets/maps/story/22.tmx:
@@ -393,7 +393,7 @@ msgid "This is not a place for kids, go home."
 msgstr ""
 
 #: assets/maps/story/9.tmx:
-msgid "Weird things happen in this area..."
+msgid "Weird things happen in this area…"
 msgstr ""
 
 #: assets/maps/story/9.tmx:
@@ -453,7 +453,7 @@ msgid "You are the chosen one for this year, right? My son was too many years ag
 msgstr ""
 
 #: assets/maps/story/2_house.tmx:
-msgid "Unfortunately he failed to defeat the King of Evil..."
+msgid "Unfortunately he failed to defeat the King of Evil…"
 msgstr ""
 
 #: assets/maps/story/15_lp_shop.tmx:
@@ -493,7 +493,7 @@ msgid "I love those cute little green worms!"
 msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "...S-such weird tastes here."
+msgid "…S-such weird tastes here."
 msgstr ""
 
 #: assets/maps/story/999.tmx:
@@ -509,7 +509,7 @@ msgid "Oh really? Are we there yet?"
 msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "It seems so... but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets."
+msgid "It seems so… but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets."
 msgstr ""
 
 #: assets/maps/story/999.tmx:
@@ -521,7 +521,7 @@ msgid "I did not understand exactly what they are, but if I have not misundersto
 msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "Mm... Then I really think that I have to set out in search of these crypts..."
+msgid "Mm… Then I really think that I have to set out in search of these crypts…"
 msgstr ""
 
 #: assets/maps/story/999.tmx:
@@ -537,7 +537,7 @@ msgid "Do your best!"
 msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "I hate this little girl here... She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent."
+msgid "I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent."
 msgstr ""
 
 #: assets/maps/story/999.tmx:
@@ -577,7 +577,7 @@ msgid "mom"
 msgstr ""
 
 #: assets/maps/story/1_home.tmx:
-msgid "Actually not very well... I'm still a little sleepy."
+msgid "Actually not very well… I'm still a little sleepy."
 msgstr ""
 
 #: assets/maps/story/1_home.tmx:
@@ -733,11 +733,11 @@ msgid "The ice is so slippery, have you noticed?\nI feel more comfortable on the
 msgstr ""
 
 #: assets/maps/story/2.tmx:
-msgid "There seems to be something in the branches of this plant...\nIt's a stone!"
+msgid "There seems to be something in the branches of this plant…\nIt's a stone!"
 msgstr ""
 
 #: assets/maps/story/2.tmx:
-msgid "This is a very strange stone... Never seen anything like this before."
+msgid "This is a very strange stone… Never seen anything like this before."
 msgstr ""
 
 #: assets/maps/story/24_lab_2.tmx:
@@ -777,7 +777,7 @@ msgid "Hey, this is the Mitsu Forest. My parents told me many stories about how 
 msgstr ""
 
 #: assets/maps/story/5.tmx:
-msgid "174805...\nI don't know what these figures are but a little while ago I heard someone say them out loud...\nDunno why."
+msgid "174805…\nI don't know what these figures are but a little while ago I heard someone say them out loud…\nDunno why."
 msgstr ""
 
 #: assets/maps/story/5.tmx:

@@ -279,14 +279,6 @@ msgid "Search for updates"
 msgstr "Cerca aggiornamenti"
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "Changelog"
-msgstr "Changelog"
-
-#: lib/ui/screens/info/info_page.dart:
-msgid "View app changelog"
-msgstr "Guarda il changelog dell'app"
-
-#: lib/ui/screens/info/info_page.dart:
 msgid "View source code"
 msgstr "Guarda il codice sorgente"
 
@@ -387,8 +379,8 @@ msgid "No"
 msgstr "No"
 
 #: lib/game/widgets/loading_page.dart:
-msgid "Loading...\nPlease wait"
-msgstr "Caricamento...\nAttendere prego"
+msgid "Loading…\nPlease wait"
+msgstr "Caricamento…\nAttendere prego"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "pause"
