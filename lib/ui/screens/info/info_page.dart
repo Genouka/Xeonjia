@@ -43,12 +43,6 @@ class _InfoPageState extends State<InfoPage> {
       'icon': const Icon(Icons.system_update),
     },
     {
-      'title': 'Changelog'.i18n,
-      'subtitle': 'View app changelog'.i18n,
-      'url': 'https://gitlab.com/DeepDaikon/Xeonjia/blob/master/CHANGELOG',
-      'icon': const Icon(Icons.playlist_add),
-    },
-    {
       'title': 'View source code'.i18n,
       'subtitle': 'Look at the source code'.i18n,
       'url': 'https://gitlab.com/DeepDaikon/Xeonjia',
