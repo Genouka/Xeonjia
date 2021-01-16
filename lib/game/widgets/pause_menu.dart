@@ -78,11 +78,7 @@ class _PauseMenuState extends State<PauseMenu> {
           Expanded(
             child: Container(
               margin: const EdgeInsets.only(top: 5),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: actions,
-              ),
+              child: Wrap(children: actions),
             ),
           ),
         ],
@@ -148,10 +144,6 @@ class _PauseMenuState extends State<PauseMenu> {
               });
             },
           ),
-          actionButton('resume'.i18n.toUpperCase(), () {
-            game.removeWidgetOverlay('pauseMenu');
-            game.resume();
-          }),
           actionButton(
             'restart'.i18n.toUpperCase(),
             () {
@@ -161,6 +153,10 @@ class _PauseMenuState extends State<PauseMenu> {
               });
             },
           ),
+          actionButton('resume'.i18n.toUpperCase(), () {
+            game.removeWidgetOverlay('pauseMenu');
+            game.resume();
+          }),
         ];
         break;
       case PauseMode.restart:
