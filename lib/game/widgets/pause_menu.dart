@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -78,7 +79,7 @@ class _PauseMenuState extends State<PauseMenu> {
           Expanded(
             child: Container(
               margin: const EdgeInsets.only(top: 5),
-              child: Wrap(children: actions),
+              child: Wrap(children: actions, alignment: WrapAlignment.center),
             ),
           ),
         ],
