@@ -5,7 +5,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc.tsx"/>
- <tileset firstgid="177" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="181" source="../tilesets/monster.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA6WTvQ7CMAyEvcKABCyZihcEEx2z0Hbm//3fhrPkSMZyG6qe9Clx4l5sJWUiSgor2czTyPzj4iUq54vebs96vyoeS+uQnqT3FbiANegn8gcXsxlPYAOOM2u4gk7Pb51H2UsmnynWHmzB4Y86buAerIt3Vp8G7CpnRhpm5keS71MtSZVdXO4v8ph6T1YP48GV3LH38tTR/2e9IvFZ5+We7RrTby9f30HEh7gDAAA=
@@ -29,13 +29,13 @@
     (dialog '((&quot;/&quot; &quot;Please help me! Save me from this monster!&quot;))))</property>
    </properties>
   </object>
-  <object id="39" type="SlitherCpu" gid="177" x="48" y="112" width="16" height="16">
+  <object id="39" type="SlitherCpu" gid="181" x="48" y="112" width="16" height="16">
    <properties>
     <property name="actionOnEvent">(if  (get &quot;013-safe&quot;)
     (delete))</property>
     <property name="atk" type="float" value="5"/>
     <property name="lifePoints" type="float" value="13"/>
-    <property name="updatePeriod" type="float" value="0.5"/>
+    <property name="updatePeriod" type="float" value="0.6"/>
    </properties>
   </object>
  </objectgroup>
