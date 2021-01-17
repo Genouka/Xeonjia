@@ -121,7 +121,7 @@ msgstr "Sì, grazie mille per avermi salvato la vita!\nDevo ammetterlo, ero spav
 
 #: assets/maps/story/13.tmx:
 msgid "Thanks, it seems very precious."
-msgstr "Grazie, sembra molto prezioso."
+msgstr "Grazie, sembra molto preziosa."
 
 #: assets/maps/story/13.tmx:
 msgid "Thanks for saving me, I think it's better if I go home now."
@@ -629,7 +629,7 @@ msgstr "Sei bloccato?\nPrendi il sentiero dietro l'albero blu."
 
 #: assets/maps/story/3_house1.tmx:
 msgid "A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."
-msgstr "Ad un po' di metri da qui c'è il Bosco Mitsu. Un tempo attraeva molti turisti ed era considerato un posto sacro, ma ora è pericolo e infestato da mostri."
+msgstr "Ad un po' di metri da qui c'è il Bosco Mitsu. Un tempo attraeva molti turisti ed era considerato un posto sacro, ma ora è pericoloso e infestato da mostri."
 
 #: assets/maps/story/28_house.tmx:
 msgid "Mind your own business."
@@ -709,7 +709,7 @@ msgstr "* {{hero}} ha trovato delle bacche! 20 PV sono stati recuperati *"
 
 #: assets/maps/story/3.tmx:
 msgid "It seems that once there was a path here."
-msgstr "Sembra che un tempo qua c'era un sentiero."
+msgstr "Sembra che qua un tempo ci fosse un sentiero."
 
 #: assets/maps/story/28.tmx:
 msgid "* {{hero}} found some berries! 40 LPs have been recovered *"

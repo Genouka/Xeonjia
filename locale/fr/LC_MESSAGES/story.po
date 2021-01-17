@@ -16,7 +16,7 @@ msgstr "Une petite plante… rien d'autre."
 
 #: assets/maps/story/15.tmx:
 msgid "\" Exit ↑ \""
-msgstr "\" Sortie ↑ \""
+msgstr "« Sortie ↑ »"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB - 1F"
@@ -44,7 +44,7 @@ msgstr "Un écran cassé."
 
 #: assets/maps/story/8.tmx:
 msgid "\" → \""
-msgstr "\" → \""
+msgstr "« → »"
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
@@ -144,7 +144,7 @@ msgstr "* {{hero}} a trouvé des baies ! 10 PV ont été récupérés *"
 
 #: assets/maps/story/14.tmx:
 msgid "\" ← Pharmacy \""
-msgstr "\" ← Pharmacie \""
+msgstr "« ← Pharmacie »"
 
 #: assets/maps/story/7.tmx:
 msgid "…"
@@ -228,7 +228,7 @@ msgstr "« Zone de piquenique – Ne pas laisser de déchets, merci »"
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
-msgstr "\" Zone de piquenique ↑ \"\n\" Centre de la Forêt ↓ \""
+msgstr "« Zone de piquenique ↑ »\n« Centre de la Forêt ↓ »"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to."
@@ -392,11 +392,11 @@ msgstr "* {{hero}} a trouvé des baies ! 5 PV ont été récupérés *"
 
 #: assets/maps/story/9.tmx:
 msgid "\" If you get lost, follow the road signs \""
-msgstr "\" Si vous vous perdez, suivez les panneaux de signalisation \""
+msgstr "« Si vous vous perdez, suivez les panneaux de signalisation »"
 
 #: assets/maps/story/19.tmx:
 msgid "\" Xeonjia Tower ↑ \""
-msgstr "\" Tour Xeonjia ↑ \""
+msgstr "« Tour Xeonjia ↑ »"
 
 #: assets/maps/story/24_house1.tmx:
 msgid "A computer turned off. Looks like a key is needed to turn it on."
@@ -408,7 +408,7 @@ msgstr "Route 2"
 
 #: assets/maps/story/21.tmx:
 msgid "\" Melhopolis → \""
-msgstr "\" Melhopolis → \""
+msgstr "« Melhopolis → »"
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "Hi, I'm sorry but we're closed. Once this was a busy shop, but now it doesn't even make sense to stay open."
