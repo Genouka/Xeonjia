@@ -6,12 +6,12 @@
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monster.tsx"/>
  <tileset firstgid="137" source="../tilesets/basic.tsx"/>
- <layer id="1" name="Tile Layer 1" width="20" height="14" locked="1">
+ <layer id="1" name="Tile Layer 1" width="20" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA1NgYGBQAGJzKAax7aFYAQ3zYBGzx8ImBvgQoQZmLj5gTqR9MPNESFCPD9gAsS0Dcf61I9JMBSLNwwXQwwLE9wRiLyQxYsIdn/kKFOgHAeSwoNQsdAAyj1rxCzNPAcrGls6IjVcQgKUXUtIrOvBG40swUDcMYeaxMKDma+SyAYbR5bGJgzAA4z7/T2AEAAA=
   </data>
  </layer>
- <objectgroup id="9" name="npc" locked="1">
+ <objectgroup id="9" name="npc">
   <object id="40" type="SlitherCpu" gid="129" x="80" y="64" width="16" height="16">
    <properties>
     <property name="atk" type="float" value="6"/>
@@ -25,12 +25,12 @@
    </properties>
   </object>
  </objectgroup>
- <layer id="6" name="Tile Layer 2" width="20" height="14" locked="1">
+ <layer id="6" name="Tile Layer 2" width="20" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgIA64EKlusAITIDYlUq0ZLR1CADgCsRMSf6DDfSDDgtqAFL+Qkl5wAWcK9Q8HAACCqqrnYAQAAA==
   </data>
  </layer>
- <objectgroup id="2" name="spawn points" locked="1">
+ <objectgroup id="2" name="spawn points">
   <object id="34" type="Door" x="176" y="0" width="16" height="16">
    <properties>
     <property name="roomId" value="16"/>
