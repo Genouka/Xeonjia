@@ -179,7 +179,8 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
     var components = game.components.where((component) =>
         component is BasicComponent &&
         component.toRect().contains(offset) &&
-        !component.isFlying());
+        !component.isFlying() &&
+        !component.isBeingDeleted);
     return components.isNotEmpty ? components.last : null;
   }
 
