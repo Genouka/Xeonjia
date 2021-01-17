@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'dart:ui';
 
+import 'package:xeonjia/main.dart';
+
 // Class used to store settings data
 class Settings {
   // True if D-pad is enabled
@@ -16,8 +18,11 @@ class Settings {
   // App language
   String _languageCode;
   bool get useSystemLanguage => _languageCode == null;
-  String get languageCode => _languageCode ?? Platform.localeName;
-  Locale get locale => Locale(languageCode.split('_').first);
+  String get _currentLanguageCode => _languageCode ?? Platform.localeName;
+  Locale get locale =>
+      supportedLocales.contains(Locale(_currentLanguageCode.split('_').first))
+          ? Locale(_currentLanguageCode.split('_').first)
+          : const Locale('en');
   set locale(Locale locale) {
     _languageCode = locale?.toString();
   }
