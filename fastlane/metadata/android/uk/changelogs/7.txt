@@ -1,0 +1,3 @@
+* Game difficulty adjustments
+* Add French, Spanish and Italian translations
+* Bug fixes
