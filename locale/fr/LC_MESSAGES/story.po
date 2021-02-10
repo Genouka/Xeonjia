@@ -3,8 +3,9 @@
 # This file is distributed under the same license as Xeonjia.
 # DeepDaikon <deepdaikon@tuta.io>, 2020, 2021.
 # Swann Fournial <s.fournial@protonmail.com>, 2021.
+# J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-01-16 11:28+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-02-08 19:51+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! 30 LPs have been recovered *"
@@ -52,7 +53,7 @@ msgstr "Natawn"
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nMany before you have failed, but I am sure you will handle it right."
-msgstr "Bon voyage, {{hero}}.\nBeaucoup avant vous ont échoué, mais je suis sûr que vous réussirez."
+msgstr "Bon voyage, {{hero}}.\nBeaucoup avant toi ont échoué, mais je suis sûr que tu réussiras."
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
@@ -76,7 +77,7 @@ msgstr "Je dois dire au revoir à mes parents avec le bouton « A » avant de 
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks."
-msgstr "Comme ma mère l'a dit, c'est mieux si je vais chercher les protège-tibias chez mon voisin, sinon je risque de me faire trop mal avec les rochers."
+msgstr "Comme ma mère l'a dit, c'est mieux si je vais chercher les protège-tibias chez ma voisine, sinon je risque de me faire trop mal avec les rochers."
 
 #: assets/maps/story/17.tmx:
 msgid "I still haven't figured out if these monsters are malicious or just stupid."
@@ -580,7 +581,7 @@ msgstr "Oui, Maman. Ne t'inquiète pas, je ferai attention."
 
 #: assets/maps/story/1_home.tmx:
 msgid "When you hit the rocks you could hurt yourself, so stop by our neighbor who have prepared a brand new pair of shin guards for you."
-msgstr "Quand tu frappes les rochers, tu pourrais te blesser, alors arrête-toi chez notre voisin qui a préparé une toute nouvelle paire de protège-tibias pour toi."
+msgstr "Quand tu frappes les rochers, tu pourrais te blesser, alors arrête-toi chez notre voisine qui a préparé une toute nouvelle paire de protège-tibias pour toi."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Sure, I will."
@@ -588,7 +589,7 @@ msgstr "D'accord, je vais y aller."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Go get the shin guards from the neighbor, you will need them."
-msgstr "Va chercher les protège-tibias chez le voisin, tu en auras besoin."
+msgstr "Va chercher les protège-tibias chez la voisine, tu en auras besoin."
 
 #: assets/maps/story/1_home.tmx:
 msgid "The new shin guards are beautiful, they match the suit."
@@ -640,7 +641,7 @@ msgstr "Ce vase est très lourd ; je ne peux pas le bouger."
 
 #: assets/maps/story/1_house.tmx:
 msgid "NEIGHBOR'S HOUSE"
-msgstr "MAISON DU VOISIN"
+msgstr "MAISON DE LA VOISINE"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones.\nI made them by hand. Here's to you!"
@@ -648,7 +649,7 @@ msgstr "Bonjour mon garçon, ça va ? Je t'ai fait les protège-tibias, tu en a
 
 #: assets/maps/story/1_house.tmx:
 msgid "neighbor"
-msgstr "voisin"
+msgstr "voisine"
 
 #: assets/maps/story/1_house.tmx:
 msgid "* {{hero}} got and put on the shin guards *"

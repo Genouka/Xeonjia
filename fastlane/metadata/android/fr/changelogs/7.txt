@@ -1,0 +1,3 @@
+* Ajustements de la difficulté du jeu
+* Ajout des traductions en français, en espagnol rt en italien
+* Corrections d'erreurs
