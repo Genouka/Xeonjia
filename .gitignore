@@ -18,6 +18,11 @@
 *.iws
 .idea/
 
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
 # Visual Studio Code related
 .classpath
 .project
@@ -44,6 +49,7 @@
 
 # Flutter/Dart/Pub related
 **/doc/api/
+**/ios/Flutter/.last_build_id
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
@@ -114,6 +120,9 @@ coverage/
 
 # Symbols
 app.*.symbols
+
+# Obfuscation related
+app.*.map.json
 
 # Exceptions to above rules.
 !**/ios/**/default.mode1v3
