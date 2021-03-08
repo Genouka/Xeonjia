@@ -4,8 +4,8 @@ description: Solve ice puzzles and defeat enemies in an RPG world.
 version: 2.0.1+7
 
 environment:
-  sdk: ">=2.10.0 <3.0.0"
-  flutter: ^1.22.4
+  sdk: ">=2.11.0 <3.0.0"
+  flutter: ^2.0.1
 
 dependencies:
   flutter:
@@ -13,8 +13,8 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  flame: ^0.28.0
-  i18n_extension: ^1.4.5
+  flame: ^0.29.3
+  i18n_extension: ^3.0.0
   shared_preferences: ^0.5.12+4
   url_launcher: ^5.7.10
   xml: ^4.5.1
