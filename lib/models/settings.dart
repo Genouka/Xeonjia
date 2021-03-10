@@ -17,8 +17,9 @@ class Settings {
 
   // App language
   String _languageCode;
-  bool get useSystemLanguage => _languageCode == null;
-  String get _currentLanguageCode => _languageCode ?? Platform.localeName;
+  bool get useSystemLanguage => _languageCode == 'und';
+  String get _currentLanguageCode =>
+      useSystemLanguage ? Platform.localeName : _languageCode;
   Locale get locale =>
       supportedLocales.contains(Locale(_currentLanguageCode.split('_').first))
           ? Locale(_currentLanguageCode.split('_').first)
@@ -33,7 +34,7 @@ class Settings {
         firstRun = json['firstRun'] ?? true,
         backgroundMusic = json['backgroundMusic'] ?? true,
         soundEffects = json['soundEffects'] ?? true,
-        _languageCode = json['languageCode'];
+        _languageCode = json['languageCode'] ?? 'und';
 
   // Export settings as a Json
   Map<String, dynamic> toJson() => {

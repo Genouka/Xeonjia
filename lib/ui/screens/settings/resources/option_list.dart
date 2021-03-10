@@ -91,21 +91,21 @@ class OptionList extends StatelessWidget {
           title: Text('Language'.i18n, style: const TextStyle(fontSize: 20)),
           subtitle: Text('App language'.i18n),
           trailing: DropdownButton<Locale>(
-            value: settings.useSystemLanguage ? null : settings.locale,
+            value: settings.useSystemLanguage
+                ? const Locale.fromSubtags()
+                : settings.locale,
             onChanged: (Locale newValue) {
               settings.locale = newValue;
               I18n.of(context).locale = settings.locale;
               saveSettings();
               SettingsPage.of(context).refresh();
             },
-            items: () {
-              var items = <DropdownMenuItem<Locale>>[
-                DropdownMenuItem<Locale>(
-                  value: null,
-                  child: Text('System default'.i18n),
-                )
-              ];
-              items.addAll(supportedLocales
+            items: <DropdownMenuItem<Locale>>[
+              DropdownMenuItem<Locale>(
+                value: const Locale.fromSubtags(),
+                child: Text('System default'.i18n),
+              ),
+              ...supportedLocales
                   .map<DropdownMenuItem<Locale>>(
                     (value) => DropdownMenuItem<Locale>(
                       value: value,
@@ -114,9 +114,8 @@ class OptionList extends StatelessWidget {
                           : 'missing name'),
                     ),
                   )
-                  .toList());
-              return items;
-            }(),
+                  .toList()
+            ],
           ),
         ),
       ]);
