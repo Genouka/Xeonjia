@@ -33,46 +33,46 @@ class NoMapsMenu extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   TextButton(
+                    onPressed: () {
+                      launch('https://deepdaikon.xyz/donate');
+                    },
                     child: Text(
                       'Donate'.i18n,
                       style: const TextStyle(color: Colors.white, fontSize: 32),
                       textAlign: TextAlign.center,
                     ),
-                    onPressed: () {
-                      launch('https://deepdaikon.xyz/donate');
-                    },
                   ),
                   TextButton(
+                    onPressed: () {
+                      launch('https://gitlab.com/DeepDaikon/Xeonjia/issues');
+                    },
                     child: Text(
                       'Report a bug or ask something'.i18n,
                       style: const TextStyle(color: Colors.white, fontSize: 32),
                       textAlign: TextAlign.center,
                     ),
-                    onPressed: () {
-                      launch('https://gitlab.com/DeepDaikon/Xeonjia/issues');
-                    },
                   ),
                   TextButton(
-                    child: Text(
-                      'Send email'.i18n,
-                      style: const TextStyle(color: Colors.white, fontSize: 32),
-                    ),
                     onPressed: () async {
                       final url = Uri.encodeFull('mailto:deepdaikon'
                           '@'
                           'tuta.io?subject=Xeonjia Game');
                       if (await canLaunch(url)) await launch(url);
                     },
-                  ),
-                  TextButton(
                     child: Text(
-                      'Go back'.i18n,
+                      'Send email'.i18n,
                       style: const TextStyle(color: Colors.white, fontSize: 32),
                     ),
+                  ),
+                  TextButton(
                     onPressed: () {
                       Navigator.pop(context);
                       game.dispose();
                     },
+                    child: Text(
+                      'Go back'.i18n,
+                      style: const TextStyle(color: Colors.white, fontSize: 32),
+                    ),
                   ),
                 ],
               ),

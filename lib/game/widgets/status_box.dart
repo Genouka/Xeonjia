@@ -131,20 +131,6 @@ class _PercentIndicator extends StatelessWidget {
       width: double.infinity,
       child: Container(
         height: 24,
-        child: FittedBox(
-          fit: BoxFit.contain,
-          child: Text(
-            text,
-            style: const TextStyle(
-              fontSize: 24,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.1,
-            ),
-            textAlign: TextAlign.center,
-            maxLines: 1,
-          ),
-        ),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: <Color>[
@@ -160,6 +146,20 @@ class _PercentIndicator extends StatelessWidget {
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(20),
             bottomRight: Radius.circular(20),
+          ),
+        ),
+        child: FittedBox(
+          fit: BoxFit.contain,
+          child: Text(
+            text,
+            style: const TextStyle(
+              fontSize: 24,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.1,
+            ),
+            textAlign: TextAlign.center,
+            maxLines: 1,
           ),
         ),
       ),

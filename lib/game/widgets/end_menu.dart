@@ -50,27 +50,27 @@ class EndMenu extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               TextButton(
+                onPressed: () {
+                  game.init();
+                  game.removeWidgetOverlay('endMenu');
+                },
                 child: Text(
                   game.config.mode == GameMode.story
                       ? 'Continue'.i18n
                       : 'Yes'.i18n,
                   style: const TextStyle(color: Colors.white, fontSize: 32),
                 ),
-                onPressed: () {
-                  game.init();
-                  game.removeWidgetOverlay('endMenu');
-                },
               ),
               if (game.config.mode != GameMode.story)
                 TextButton(
-                  child: Text(
-                    'No'.i18n,
-                    style: const TextStyle(color: Colors.white, fontSize: 32),
-                  ),
                   onPressed: () {
                     Navigator.pop(context);
                     game.dispose();
                   },
+                  child: Text(
+                    'No'.i18n,
+                    style: const TextStyle(color: Colors.white, fontSize: 32),
+                  ),
                 ),
             ],
           ),

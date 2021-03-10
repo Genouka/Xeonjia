@@ -32,7 +32,7 @@ class Message {
     authorName = (m.group(1) != '' ? m.group(1) : (author == '' ? '' : name));
     var mood = m.group(3);
     var fileName = name + (mood != '' ? '_$mood' : '');
-    image = authorName != '' ? 'assets/images/heads/${fileName}.png' : null;
+    image = authorName != '' ? 'assets/images/heads/$fileName.png' : null;
     if (authorName != '') {
       authorName = (authorName == 'hero')
           ? mainCharacter.name

@@ -97,6 +97,12 @@ class _ShopMenuState extends State<ShopMenu> {
             child: Container(
               alignment: Alignment.topCenter,
               child: TextButton(
+                onPressed: () {
+                  game.removeWidgetOverlay('shop');
+                  game.setMessage(Message(
+                      'Let me know if you need anything else.'.i18n,
+                      author: 'pharmacist/elderly'));
+                },
                 child: Text(
                   'Close'.i18n,
                   style: const TextStyle(
@@ -105,12 +111,6 @@ class _ShopMenuState extends State<ShopMenu> {
                     letterSpacing: 1.4,
                   ),
                 ),
-                onPressed: () {
-                  game.removeWidgetOverlay('shop');
-                  game.setMessage(Message(
-                      'Let me know if you need anything else.'.i18n,
-                      author: 'pharmacist/elderly'));
-                },
               ),
             ),
           ),

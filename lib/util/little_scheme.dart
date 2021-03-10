@@ -581,7 +581,7 @@ Object evaluate(dynamic exp, Environment env) {
   } catch (ex) {
     if (ex is ErrorException) rethrow;
     if (k.isEmpty) rethrow;
-    throw '${ex}\n\t${stringify(k)}';
+    throw '$ex\n\t${stringify(k)}';
   }
 }
 

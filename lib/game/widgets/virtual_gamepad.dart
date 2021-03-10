@@ -185,13 +185,15 @@ class _ButtonsState extends State<_Buttons> {
   Widget button(String text, VoidCallback onTap,
           {double percentage, bool highlight = false, Color color}) =>
       InkWell(
+        onTap: onTap,
+        enableFeedback: false,
         child: Container(
           margin: EdgeInsets.all(_size / 5),
           child: Stack(
             children: [
               CustomPaint(
-                child: Container(color: Colors.transparent),
                 painter: _PiePainter(percentage ?? 1),
+                child: Container(color: Colors.transparent),
               ),
               Container(
                 margin: const EdgeInsets.all(4),
@@ -209,8 +211,6 @@ class _ButtonsState extends State<_Buttons> {
             ],
           ),
         ),
-        onTap: onTap,
-        enableFeedback: false,
       );
 }
 

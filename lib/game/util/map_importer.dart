@@ -13,7 +13,7 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/tile.dart';
 
 // Import map from a TMX file
-void importMap(String fileName) async {
+Future<void> importMap(String fileName) async {
   var mapXml =
       XmlDocument.parse(await rootBundle.loadString(fileName)).rootElement;
 

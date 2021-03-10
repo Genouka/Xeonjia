@@ -19,7 +19,7 @@ extension CreateComponent on Tile {
         StaticComponent(this);
         break;
       case 'Modifier':
-        properties['itemId'] ??= '${game.map.name}.${id}';
+        properties['itemId'] ??= '${game.map.name}.$id';
         var _itemId = properties['itemId'];
 
         // Load item only if it is not an unique item (id == "0")

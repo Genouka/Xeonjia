@@ -125,8 +125,8 @@ class _InfoPageState extends State<InfoPage> {
                 child: ListView(children: _licenseList)),
             actions: <Widget>[
               TextButton(
-                child: Text('Ok'.i18n),
                 onPressed: Navigator.of(context).pop,
+                child: Text('Ok'.i18n),
               ),
             ],
           );

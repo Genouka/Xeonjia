@@ -19,14 +19,14 @@ class PlayButton extends StatelessWidget {
         style: TextButton.styleFrom(
           shape: const RoundedRectangleBorder(borderRadius: circularRadius),
         ),
+        onPressed: () {
+          Navigator.push(context, FadeRoute(page()));
+        },
         child: Text(
           'Play'.i18n.toUpperCase(),
           style: const TextStyle(
               color: Colors.white, fontSize: 20, letterSpacing: 6),
         ),
-        onPressed: () {
-          Navigator.push(context, FadeRoute(page()));
-        },
       ),
     );
   }

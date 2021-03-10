@@ -12,12 +12,14 @@ class GamePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-        child: Theme(
-            data: ThemeData(fontFamily: 'm5x7'),
-            child: Scaffold(body: game.widget)),
-        onWillPop: () {
-          game.pause(mode: PauseMode.exit);
-          return Future.value(false);
-        });
+      onWillPop: () {
+        game.pause(mode: PauseMode.exit);
+        return Future.value(false);
+      },
+      child: Theme(
+        data: ThemeData(fontFamily: 'm5x7'),
+        child: Scaffold(body: game.widget),
+      ),
+    );
   }
 }

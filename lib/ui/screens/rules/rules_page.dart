@@ -78,17 +78,17 @@ class _RulesPageState extends State<RulesPage>
                       ? Colors.white
                       : Colors.black,
                 ),
+                onPressed: (_controller.index > 0)
+                    ? () {
+                        _controller.index -= (_controller.index > 0) ? 1 : 0;
+                      }
+                    : null,
                 child: Row(
                   children: <Widget>[
                     const Icon(Icons.navigate_before),
                     Text('Back'.i18n),
                   ],
                 ),
-                onPressed: (_controller.index > 0)
-                    ? () {
-                        _controller.index -= (_controller.index > 0) ? 1 : 0;
-                      }
-                    : null,
               ),
               Expanded(
                 child: Container(
@@ -116,13 +116,13 @@ class _RulesPageState extends State<RulesPage>
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50)),
                       ),
+                      onPressed: () {
+                        saveName(_textFieldController.text);
+                      },
                       child: Text(
                         'OK'.i18n,
                         style: const TextStyle(color: Colors.white),
                       ),
-                      onPressed: () {
-                        saveName(_textFieldController.text);
-                      },
                     )
                   : TextButton(
                       style: TextButton.styleFrom(
@@ -130,17 +130,17 @@ class _RulesPageState extends State<RulesPage>
                             ? Colors.white
                             : Colors.black,
                       ),
+                      onPressed: () {
+                        if (_controller.index < _controller.length - 1) {
+                          ++_controller.index;
+                        }
+                      },
                       child: Row(
                         children: <Widget>[
                           Text('Next'.i18n),
                           const Icon(Icons.navigate_next)
                         ],
                       ),
-                      onPressed: () {
-                        if (_controller.index < _controller.length - 1) {
-                          ++_controller.index;
-                        }
-                      },
                     ),
             ],
           ),

@@ -41,7 +41,6 @@ class _SettingsPageState extends State<SettingsPage> {
                   .i18n),
           actions: <Widget>[
             TextButton(
-              child: Text('Restore'.i18n),
               style: TextButton.styleFrom(
                 primary: Theme.of(context).primaryColor,
               ),
@@ -53,13 +52,14 @@ class _SettingsPageState extends State<SettingsPage> {
                 setState(() {});
                 Navigator.of(context).pop();
               },
+              child: Text('Restore'.i18n),
             ),
             TextButton(
-              child: Text('Cancel'.i18n),
               style: TextButton.styleFrom(
                 primary: Theme.of(context).primaryColor,
               ),
               onPressed: Navigator.of(context).pop,
+              child: Text('Cancel'.i18n),
             ),
           ],
         ),
