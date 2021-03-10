@@ -15,8 +15,10 @@ class PlayButton extends StatelessWidget {
       height: 50,
       decoration: BoxDecoration(
           color: Theme.of(context).primaryColor, borderRadius: circularRadius),
-      child: FlatButton(
-        shape: const RoundedRectangleBorder(borderRadius: circularRadius),
+      child: TextButton(
+        style: TextButton.styleFrom(
+          shape: const RoundedRectangleBorder(borderRadius: circularRadius),
+        ),
         child: Text(
           'Play'.i18n.toUpperCase(),
           style: const TextStyle(

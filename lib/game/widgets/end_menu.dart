@@ -49,7 +49,7 @@ class EndMenu extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              FlatButton(
+              TextButton(
                 child: Text(
                   game.config.mode == GameMode.story
                       ? 'Continue'.i18n
@@ -62,7 +62,7 @@ class EndMenu extends StatelessWidget {
                 },
               ),
               if (game.config.mode != GameMode.story)
-                FlatButton(
+                TextButton(
                   child: Text(
                     'No'.i18n,
                     style: const TextStyle(color: Colors.white, fontSize: 32),

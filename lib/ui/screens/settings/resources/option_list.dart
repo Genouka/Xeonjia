@@ -64,19 +64,23 @@ class OptionList extends StatelessWidget {
                   content: insertNameForm(_formKey, _textFieldController,
                       (String text) => saveName(context, text)),
                   actions: <Widget>[
-                    FlatButton(
+                    TextButton(
                       onPressed: () {
                         _textFieldController.text = mainCharacter.name;
                         Navigator.of(context).pop();
                       },
-                      textColor: Theme.of(context).primaryColor,
+                      style: TextButton.styleFrom(
+                        primary: Theme.of(context).primaryColor,
+                      ),
                       child: Text('Discard'.i18n),
                     ),
-                    FlatButton(
+                    TextButton(
                       onPressed: () {
                         saveName(context, _textFieldController.text);
                       },
-                      textColor: Theme.of(context).primaryColor,
+                      style: TextButton.styleFrom(
+                        primary: Theme.of(context).primaryColor,
+                      ),
                       child: Text('Save'.i18n),
                     ),
                   ],

@@ -189,8 +189,7 @@ class _PauseMenuState extends State<PauseMenu> {
 
   // Button on the bottom row
   Widget actionButton(String text, VoidCallback onPressed) {
-    return FlatButton(
-      color: Colors.transparent,
+    return TextButton(
       child: Text(
         text,
         textAlign: TextAlign.center,

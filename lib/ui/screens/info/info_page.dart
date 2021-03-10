@@ -124,7 +124,7 @@ class _InfoPageState extends State<InfoPage> {
                 width: double.maxFinite,
                 child: ListView(children: _licenseList)),
             actions: <Widget>[
-              FlatButton(
+              TextButton(
                 child: Text('Ok'.i18n),
                 onPressed: Navigator.of(context).pop,
               ),

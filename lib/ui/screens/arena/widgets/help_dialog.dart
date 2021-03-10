@@ -11,9 +11,9 @@ Widget helpDialog(BuildContext context) {
               .i18n),
     ),
     actions: <Widget>[
-      FlatButton(
+      TextButton(
         onPressed: Navigator.of(context).pop,
-        textColor: Theme.of(context).primaryColor,
+        style: TextButton.styleFrom(primary: Theme.of(context).primaryColor),
         child: Text('Okay, got it!'.i18n),
       ),
     ],

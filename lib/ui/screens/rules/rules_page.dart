@@ -72,7 +72,12 @@ class _RulesPageState extends State<RulesPage>
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              FlatButton(
+              TextButton(
+                style: TextButton.styleFrom(
+                  primary: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white
+                      : Colors.black,
+                ),
                 child: Row(
                   children: <Widget>[
                     const Icon(Icons.navigate_before),
@@ -105,23 +110,26 @@ class _RulesPageState extends State<RulesPage>
                 ),
               ),
               _controller.index >= _controller.length - 1
-                  ? FlatButton(
-                      color: Theme.of(context).primaryColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50)),
-                      child: Row(
-                        children: <Widget>[
-                          Text(
-                            'OK'.i18n,
-                            style: const TextStyle(color: Colors.white),
-                          ),
-                        ],
+                  ? TextButton(
+                      style: TextButton.styleFrom(
+                        backgroundColor: Theme.of(context).primaryColor,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50)),
+                      ),
+                      child: Text(
+                        'OK'.i18n,
+                        style: const TextStyle(color: Colors.white),
                       ),
                       onPressed: () {
                         saveName(_textFieldController.text);
                       },
                     )
-                  : FlatButton(
+                  : TextButton(
+                      style: TextButton.styleFrom(
+                        primary: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.black,
+                      ),
                       child: Row(
                         children: <Widget>[
                           Text('Next'.i18n),

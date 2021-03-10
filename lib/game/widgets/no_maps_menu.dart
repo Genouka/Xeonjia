@@ -32,7 +32,7 @@ class NoMapsMenu extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  FlatButton(
+                  TextButton(
                     child: Text(
                       'Donate'.i18n,
                       style: const TextStyle(color: Colors.white, fontSize: 32),
@@ -42,7 +42,7 @@ class NoMapsMenu extends StatelessWidget {
                       launch('https://deepdaikon.xyz/donate');
                     },
                   ),
-                  FlatButton(
+                  TextButton(
                     child: Text(
                       'Report a bug or ask something'.i18n,
                       style: const TextStyle(color: Colors.white, fontSize: 32),
@@ -52,7 +52,7 @@ class NoMapsMenu extends StatelessWidget {
                       launch('https://gitlab.com/DeepDaikon/Xeonjia/issues');
                     },
                   ),
-                  FlatButton(
+                  TextButton(
                     child: Text(
                       'Send email'.i18n,
                       style: const TextStyle(color: Colors.white, fontSize: 32),
@@ -64,7 +64,7 @@ class NoMapsMenu extends StatelessWidget {
                       if (await canLaunch(url)) await launch(url);
                     },
                   ),
-                  FlatButton(
+                  TextButton(
                     child: Text(
                       'Go back'.i18n,
                       style: const TextStyle(color: Colors.white, fontSize: 32),

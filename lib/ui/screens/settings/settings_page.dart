@@ -40,8 +40,11 @@ class _SettingsPageState extends State<SettingsPage> {
               'Are you sure you want to delete your settings and restore default ones?'
                   .i18n),
           actions: <Widget>[
-            FlatButton(
+            TextButton(
               child: Text('Restore'.i18n),
+              style: TextButton.styleFrom(
+                primary: Theme.of(context).primaryColor,
+              ),
               onPressed: () {
                 SystemChrome.setEnabledSystemUIOverlays([]);
                 settings = Settings({'firstRun': false});
@@ -51,8 +54,11 @@ class _SettingsPageState extends State<SettingsPage> {
                 Navigator.of(context).pop();
               },
             ),
-            FlatButton(
+            TextButton(
               child: Text('Cancel'.i18n),
+              style: TextButton.styleFrom(
+                primary: Theme.of(context).primaryColor,
+              ),
               onPressed: Navigator.of(context).pop,
             ),
           ],

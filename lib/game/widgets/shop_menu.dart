@@ -96,7 +96,7 @@ class _ShopMenuState extends State<ShopMenu> {
           Expanded(
             child: Container(
               alignment: Alignment.topCenter,
-              child: FlatButton(
+              child: TextButton(
                 child: Text(
                   'Close'.i18n,
                   style: const TextStyle(
