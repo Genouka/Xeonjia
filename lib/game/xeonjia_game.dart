@@ -4,8 +4,10 @@ import 'package:flame/bgm.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
+import 'package:flame/keyboard.dart';
 import 'package:flame/time.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
@@ -47,7 +49,7 @@ double characterOffset;
 
 // Xeonjia game class
 class XeonjiaGame extends BaseGame
-    with HasWidgetsOverlay, PanDetector, TapDetector {
+    with HasWidgetsOverlay, PanDetector, TapDetector, KeyboardEvents {
   // Match settings
   final MatchConfig config;
 
@@ -395,6 +397,37 @@ class XeonjiaGame extends BaseGame
 
     // Use weapon selected by player
     playerOne.shoot();
+  }
+
+  @override
+  void onKeyEvent(e) {
+    if (e is! RawKeyUpEvent) return;
+    if (e.logicalKey == LogicalKeyboardKey.arrowDown) {
+      gestureDragInput(Direction.down);
+    } else if (e.logicalKey == LogicalKeyboardKey.arrowUp) {
+      gestureDragInput(Direction.up);
+    } else if (e.logicalKey == LogicalKeyboardKey.arrowRight) {
+      gestureDragInput(Direction.right);
+    } else if (e.logicalKey == LogicalKeyboardKey.arrowLeft) {
+      gestureDragInput(Direction.left);
+    } else if (e.logicalKey == LogicalKeyboardKey.space) {
+      playerOne.shoot();
+    } else if (e.logicalKey == LogicalKeyboardKey.keyA) {
+      playerOne.updateOrientation(Direction.left);
+    } else if (e.logicalKey == LogicalKeyboardKey.keyW) {
+      playerOne.updateOrientation(Direction.up);
+    } else if (e.logicalKey == LogicalKeyboardKey.keyD) {
+      playerOne.updateOrientation(Direction.right);
+    } else if (e.logicalKey == LogicalKeyboardKey.keyS) {
+      playerOne.updateOrientation(Direction.down);
+    } else if (e.logicalKey == LogicalKeyboardKey.escape) {
+      if (isPaused) {
+        removeWidgetOverlay('pauseMenu');
+        game.resume();
+      } else {
+        pause(mode: PauseMode.pause);
+      }
+    }
   }
 
   void dispose() {

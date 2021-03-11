@@ -16,9 +16,12 @@ class GamePage extends StatelessWidget {
         game.pause(mode: PauseMode.exit);
         return Future.value(false);
       },
-      child: Theme(
-        data: ThemeData(fontFamily: 'm5x7'),
-        child: Scaffold(body: game.widget),
+      child: Focus(
+        onKey: (data, event) => false,
+        child: Theme(
+          data: ThemeData(fontFamily: 'm5x7'),
+          child: Scaffold(body: game.widget),
+        ),
       ),
     );
   }
