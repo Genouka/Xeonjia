@@ -223,7 +223,6 @@ class CharacterComponent extends DynamicComponent
     weaponList.forEach((weapon) {
       weapon.restorePp();
     });
-    selectedWeaponIndex = 0;
     movesCounter = 0;
     isBeingDeleted = false;
     x = startingPosition.x;
