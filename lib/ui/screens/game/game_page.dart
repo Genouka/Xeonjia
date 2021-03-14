@@ -13,7 +13,7 @@ class GamePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () {
-        game.pause(mode: PauseMode.exit);
+        game.miniMapEnabled ? game.miniMap() : game.pause(mode: PauseMode.exit);
         return Future.value(false);
       },
       child: Focus(
