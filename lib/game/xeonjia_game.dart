@@ -344,8 +344,9 @@ class XeonjiaGame extends BaseGame
   // Change mini-map zoom
   void zoomMiniMap({double toValue, bool out = false, bool enable = false}) {
     var previousValue = enable ? 1.0 : _miniMapZoom;
-    _miniMapZoom = (toValue ??
+    var tempMapZoom = (toValue ??
         (out ? min(_miniMapZoom + 0.5, 3) : max(_miniMapZoom - 0.5, 0.5)));
+    _miniMapZoom = componentSize / (componentSize / tempMapZoom).gridAligned;
     var ratio = previousValue / _miniMapZoom;
     components.forEach((c) {
       if (c is SpriteComponent) {
