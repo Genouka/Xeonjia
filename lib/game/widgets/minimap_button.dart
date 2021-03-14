@@ -17,6 +17,7 @@ class MiniMapButton extends StatelessWidget {
         onTap: () => game.messageManager.active ? null : game.miniMap(),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+          height: 34,
           width:
               miniMapEnabled ? MediaQuery.of(context).size.width / 2.2 : null,
           constraints:
