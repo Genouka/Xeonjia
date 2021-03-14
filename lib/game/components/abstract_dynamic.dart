@@ -80,7 +80,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
 
   @override
   void update(double dt) {
-    if (direction != null) _move(dt);
+    if (direction != null && game.isNotPaused) _move(dt);
     super.update(dt);
   }
 

@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/util/weapon.dart';
-import 'package:xeonjia/game/widgets/map_box.dart';
+import 'package:xeonjia/game/widgets/map_name_box.dart';
 import 'package:xeonjia/game/widgets/shop_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -142,10 +142,11 @@ Environment setEnvironment() {
     return #NONE;
   });
   _('map-name', 1, (Cell x) {
-    game.addWidgetOverlay('mapBox', MapBox(stringify(x.car, false)));
+    game.map.name = stringify(x.car, false);
+    game.addWidgetOverlay('mapNameBox', MapNameBox());
     var _id = mainCharacter.visitedRooms.length;
     Future.delayed(const Duration(seconds: 3), () {
-      if (_id == mainCharacter.visitedRooms.length) {
+      if (_id == mainCharacter.visitedRooms.length && !game.miniMapEnabled) {
         game?.removeWidgetOverlay('mapBox');
       }
     });

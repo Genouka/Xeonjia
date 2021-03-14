@@ -137,39 +137,64 @@ class _ButtonsState extends State<_Buttons> {
                 child: Column(
                   children: [
                     Row(
-                      children: [
-                        button('P', () => game.playerOne.shootById(0),
-                            percentage: 1,
-                            highlight: game.playerOne.selectedWeapon.id == 0),
-                        game.playerOne.hasWeaponId(2)
-                            ? button('M', () => game.playerOne.shootById(2),
-                                percentage: game.playerOne
-                                    .getWeaponById(2)
-                                    .ppPercentage,
-                                highlight:
-                                    game.playerOne.selectedWeapon.id == 2)
-                            : const Spacer(),
-                      ],
+                      children: game.miniMapEnabled
+                          ? [
+                              const Spacer(),
+                              button(
+                                '+',
+                                () => game.zoomMiniMap(),
+                                percentage: 0,
+                                highlight: false,
+                                color: Colors.grey[800].withOpacity(0.7),
+                              ),
+                            ]
+                          : [
+                              button('P', () => game.playerOne.shootById(0),
+                                  percentage: 1,
+                                  highlight:
+                                      game.playerOne.selectedWeapon.id == 0),
+                              game.playerOne.hasWeaponId(2)
+                                  ? button(
+                                      'M', () => game.playerOne.shootById(2),
+                                      percentage: game.playerOne
+                                          .getWeaponById(2)
+                                          .ppPercentage,
+                                      highlight:
+                                          game.playerOne.selectedWeapon.id == 2)
+                                  : const Spacer(),
+                            ],
                     ),
                     const Spacer(),
                     Row(
-                      children: [
-                        game.playerOne.hasWeaponId(1)
-                            ? button('S', () => game.playerOne.shootById(1),
-                                percentage: game.playerOne
-                                    .getWeaponById(1)
-                                    .ppPercentage,
-                                highlight:
-                                    game.playerOne.selectedWeapon.id == 1)
-                            : const Spacer(),
-                        if (game.config.mode == GameMode.story)
-                          button(
-                            'A',
-                            game.playerOne.inspect,
-                            percentage: 0,
-                            color: Colors.blueGrey[400],
-                          ),
-                      ],
+                      children: game.miniMapEnabled
+                          ? [
+                              const Spacer(),
+                              button(
+                                '-',
+                                () => game.zoomMiniMap(out: true),
+                                percentage: 0,
+                                highlight: false,
+                                color: Colors.grey[800].withOpacity(0.7),
+                              ),
+                            ]
+                          : [
+                              game.playerOne.hasWeaponId(1)
+                                  ? button(
+                                      'S', () => game.playerOne.shootById(1),
+                                      percentage: game.playerOne
+                                          .getWeaponById(1)
+                                          .ppPercentage,
+                                      highlight:
+                                          game.playerOne.selectedWeapon.id == 1)
+                                  : const Spacer(),
+                              if (game.config.mode == GameMode.story)
+                                button(
+                                  'A',
+                                  game.playerOne.inspect,
+                                  percentage: 0,
+                                  color: Colors.blueGrey[400],
+                                ),
+                            ],
                     ),
                   ],
                 ),

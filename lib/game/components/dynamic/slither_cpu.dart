@@ -31,7 +31,7 @@ class SlitherCpuComponent extends DynamicComponent with LifePointsBar {
 
   @override
   void update(double t) {
-    if ((_timeToNextMove -= t) < 0) {
+    if ((_timeToNextMove -= t) < 0 && game.isNotPaused) {
       updateDirection(GetDirection.random);
       _timeToNextMove = _updatePeriod;
     }

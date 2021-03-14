@@ -1,8 +1,11 @@
 // Map properties read from the tmx file
 class MapProperties {
-  // Map name
-  String fullName;
-  String get name => fullName.split('/').first;
+  // Map id
+  final String fullId;
+  String get id => fullId.split('/').first;
+
+  // Map name (read from map action)
+  String name;
 
   // Map size
   int height;
@@ -15,5 +18,5 @@ class MapProperties {
   String music;
 
   MapProperties(
-      {this.fullName, this.width, this.height, this.action, this.music});
+      {this.fullId, this.width, this.height, this.action, this.music});
 }

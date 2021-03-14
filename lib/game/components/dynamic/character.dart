@@ -135,7 +135,7 @@ class CharacterComponent extends DynamicComponent
   // Weapon
   Weapon get selectedWeapon => weaponList[selectedWeaponIndex];
   void shoot() {
-    if (isBeingDeleted) return;
+    if (isBeingDeleted || game.isPaused) return;
     selectedWeapon.shoot(shooter: this);
   }
 
@@ -236,7 +236,7 @@ class CharacterComponent extends DynamicComponent
 
   @override
   void update(double t) {
-    if (!isPlayerOne) {
+    if (!isPlayerOne && game.isNotPaused) {
       if (!friendly && (_timeToNextShoot -= t) < 0) {
         if (randomDouble() > 0.1) nextWeapon();
         if (randomDouble() > 0.1) shoot();

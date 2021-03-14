@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flame/bgm.dart';
+import 'package:flame/components/component.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
@@ -18,6 +19,8 @@ import 'package:xeonjia/game/util/map_importer.dart';
 import 'package:xeonjia/game/util/message_manager.dart';
 import 'package:xeonjia/game/util/wireless_gamepad.dart';
 import 'package:xeonjia/game/widgets/end_menu.dart';
+import 'package:xeonjia/game/widgets/map_name_box.dart';
+import 'package:xeonjia/game/widgets/minimap_button.dart';
 import 'package:xeonjia/game/widgets/status_box.dart';
 import 'package:xeonjia/game/widgets/dialog_box.dart';
 import 'package:xeonjia/game/widgets/loading_page.dart';
@@ -62,7 +65,9 @@ class XeonjiaGame extends BaseGame
       _backgroundMusic = Bgm();
       _backgroundMusic.initialize();
     }
-    if (config.mode != GameMode.story) {
+    if (config.mode == GameMode.story) {
+      addWidgetOverlay('miniMapButton', MiniMapButton(miniMapEnabled: false));
+    } else {
       teams = [
         Team(id: 0, name: 'Team A', color: Colors.red),
         Team(id: 1, name: 'Team B', color: Colors.green),
@@ -156,20 +161,21 @@ class XeonjiaGame extends BaseGame
 
     // Import map and components
     if (config.mode == GameMode.story) {
-      map = MapProperties(fullName: mainCharacter.visitedRooms.last);
-      if (map.name == 't1_01') {
+      map = MapProperties(fullId: mainCharacter.visitedRooms.last);
+      if (map.id == 't1_01') {
         removeWidgetOverlay('loading');
         _backgroundMusic?.dispose();
         addWidgetOverlay('noMapsMenu', NoMapsMenu());
         return;
       }
-      await importMap('assets/maps/story/${map.name}.tmx');
+      await importMap('assets/maps/story/${map.id}.tmx');
     } else {
-      map = MapProperties(fullName: config.mapId.toString());
+      map = MapProperties(fullId: config.mapId.toString());
       await importMap('assets/maps/arena/${config.mapId}.tmx');
     }
 
     _timer = Timer(1, repeat: true, callback: () {
+      if (isPaused) return;
       elapsedSeconds++;
       if (config.mode != GameMode.story) {
         if (elapsedSeconds == config.maxTime) end(timeOut: true);
@@ -198,10 +204,10 @@ class XeonjiaGame extends BaseGame
   }
 
   // Pause game
-  void pause({PauseMode mode, bool stopMusic = true}) {
+  void pause({PauseMode mode, bool stopMusic = true, bool stopEngine = true}) {
     if (_pause ?? false) return;
     _pause = true;
-    pauseEngine();
+    if (stopEngine) pauseEngine();
     if (stopMusic) _backgroundMusic?.pause();
     if (mode != null) addWidgetOverlay('pauseMenu', PauseMenu(mode));
   }
@@ -257,7 +263,7 @@ class XeonjiaGame extends BaseGame
         .where((element) =>
             element is BasicComponent && [-3, -2, 1].contains(element.teamId))
         .isEmpty) {
-      currentEventLog['${map.name}-safe'] = true;
+      currentEventLog['${map.id}-safe'] = true;
       mainCharacter.expGained(playerOne.experiencePoints);
     }
 
@@ -290,16 +296,68 @@ class XeonjiaGame extends BaseGame
   }
 
   // Update camera position
-  void updateCamera(double x, double y) {
+  void updateCamera(double x, double y, [double _componentSize]) {
     if (map?.width == null) return;
-    double _moveCamera(double size, int mapSize, double position) {
-      var delta = mapSize * componentSize - size;
-      return (delta <= 0 ? delta / 2 : max(0, min(position - size / 2, delta)))
-          .gridAligned;
-    }
+    _componentSize ??= componentSize;
+    camera.x = _moveCamera(_componentSize, screenSize.width, map.width, x);
+    camera.y = _moveCamera(_componentSize, screenSize.height, map.height, y);
+  }
 
-    camera.x = _moveCamera(screenSize.width, map.width, x);
-    camera.y = _moveCamera(screenSize.height, map.height, y);
+  // Calculate camera position
+  double _moveCamera(
+      double _componentSize, double screenSize, int mapSize, double pos) {
+    var delta = mapSize * _componentSize - screenSize;
+    return (delta <= 0 ? delta / 2 : max(0, min(pos - screenSize / 2, delta)))
+        .gridAligned;
+  }
+
+  // Mini-map (componentSize = componentSize / miniMapZoom)
+  bool miniMapEnabled = false;
+  double _miniMapZoom;
+
+  // Enable/Disable mini-map view
+  void miniMap() {
+    miniMapEnabled = !miniMapEnabled;
+    if (miniMapEnabled) {
+      zoomMiniMap(toValue: _miniMapZoom ?? 2, enable: true);
+      pause(stopEngine: false, stopMusic: false);
+      _statusBox.state.refresh();
+      game.removeWidgetOverlay('mapNameBox');
+      game.addWidgetOverlay('mapNameBox', MapNameBox(below: false));
+      game.removeWidgetOverlay('miniMapButton');
+      game.addWidgetOverlay(
+          'miniMapButton', MiniMapButton(miniMapEnabled: true));
+      refreshWeaponButtons();
+    } else {
+      zoomMiniMap(toValue: 1);
+      updateCamera(playerOne.x, playerOne.y);
+      game.removeWidgetOverlay('mapNameBox');
+      game.removeWidgetOverlay('miniMapButton');
+      game.addWidgetOverlay(
+          'miniMapButton', MiniMapButton(miniMapEnabled: false));
+      refreshWeaponButtons();
+      _statusBox.state.refresh();
+      resume();
+    }
+  }
+
+  // Change mini-map zoom
+  void zoomMiniMap({double toValue, bool out = false, bool enable = false}) {
+    var previousValue = enable ? 1.0 : _miniMapZoom;
+    _miniMapZoom = (toValue ??
+        (out ? min(_miniMapZoom + 0.5, 3) : max(_miniMapZoom - 0.5, 0.5)));
+    var ratio = previousValue / _miniMapZoom;
+    components.forEach((c) {
+      if (c is SpriteComponent) {
+        c.width *= ratio;
+        c.height *= ratio;
+        c.x *= ratio;
+        c.y *= ratio;
+      }
+    });
+    if (toValue == 1) _miniMapZoom = previousValue;
+    updateCamera(playerOne.x, playerOne.y, componentSize / _miniMapZoom);
+    onPanUpdate(DragUpdateDetails(globalPosition: Offset.zero));
   }
 
   // Reload weapon buttons
@@ -347,6 +405,11 @@ class XeonjiaGame extends BaseGame
           ? Offset(upd.delta.dx, 0)
           : Offset(0, upd.delta.dy);
       playerOne?.updateOrientation(GetDirection.fromOffset(_panGestureOffset));
+    } else if (miniMapEnabled) {
+      camera.x = _moveCamera(componentSize / _miniMapZoom, screenSize.width,
+          map.width, camera.x - upd.delta.dx + screenSize.width / 2);
+      camera.y = _moveCamera(componentSize / _miniMapZoom, screenSize.height,
+          map.height, camera.y - upd.delta.dy + screenSize.height / 2);
     }
   }
 
@@ -427,7 +490,7 @@ class XeonjiaGame extends BaseGame
       } else {
         pause(mode: PauseMode.pause);
       }
-    }
+    } else if (e.logicalKey == LogicalKeyboardKey.keyL) miniMap();
   }
 
   void dispose() {

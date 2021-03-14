@@ -22,7 +22,7 @@ class _StatusBoxState extends State<StatusBox> {
 
   @override
   Widget build(BuildContext context) {
-    return game.playerOne == null
+    return game.playerOne == null || game.miniMapEnabled
         ? Container()
         : InfoBox(
             radius: game.config.mode == GameMode.tdm ? 10 : 30,
