@@ -38,7 +38,7 @@ mixin TextAnimation on BasicComponent {
             text: _text,
             style: const TextStyle(
                 fontSize: 28,
-                fontFamily: 'm5x7',
+                fontFamily: 'dd5x7',
                 color: Color(0xFF000000),
                 letterSpacing: 1.1,
                 fontWeight: FontWeight.w600)))

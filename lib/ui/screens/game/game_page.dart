@@ -19,7 +19,7 @@ class GamePage extends StatelessWidget {
       child: Focus(
         onKey: (data, event) => false,
         child: Theme(
-          data: ThemeData(fontFamily: 'm5x7'),
+          data: ThemeData(fontFamily: 'dd5x7'),
           child: Scaffold(body: game.widget),
         ),
       ),

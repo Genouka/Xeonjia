@@ -39,6 +39,6 @@ flutter:
     - assets/maps/tilesets/
 
   fonts:
-    - family: m5x7
+    - family: dd5x7
       fonts:
-        - asset: assets/fonts/m5x7.ttf
+        - asset: assets/fonts/dd5x7.ttf

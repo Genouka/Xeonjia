@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
                     letterSpacing: 14,
                     color: Colors.white,
                     fontSize: 80,
-                    fontFamily: 'm5x7',
+                    fontFamily: 'dd5x7',
                   ),
                 ),
               ),
