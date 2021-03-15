@@ -146,7 +146,8 @@ Environment setEnvironment() {
     game.addWidgetOverlay('mapNameBox', MapNameBox());
     var _id = mainCharacter.visitedRooms.length;
     Future.delayed(const Duration(seconds: 3), () {
-      if (_id == mainCharacter.visitedRooms.length && !game.miniMapEnabled) {
+      if (_id == mainCharacter.visitedRooms.length &&
+          !(game?.miniMapEnabled ?? true)) {
         game?.removeWidgetOverlay('mapBox');
       }
     });
