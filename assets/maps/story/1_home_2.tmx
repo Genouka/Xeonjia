@@ -3,20 +3,21 @@
  <properties>
   <property name="action">(if (&lt;= (places-visited) 1)
   (story-dialog &quot;T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \&quot;hero\&quot; in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to.&quot;))</property>
+  <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
- <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="9" height="8">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvDwMBwGg8+C8RXgPgyGmZAYl+FqtmBA98kQs0OKqu5Q0DNXSC+RAQGACjAricgAQAA
+   H4sIAAAAAAAAA7vAwMBwHg++CMQ3gPg6GmZAYt+EqtmDA98lQs0eKqt5QEDNQyC+RgQGADSf+cggAQAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs"/>
  <layer id="6" name="Tile Layer 2" width="9" height="8">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA5sBeJtSDQ1wX4gPkBlM6kFAFRgHt4gAQAA
+   H4sIAAAAAAAAA2NgIA7sBOJdSDQ1wWEgPkJlM6kFAEjjCzwgAQAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -33,73 +34,73 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="79" gid="214" x="16" y="96" width="16" height="16">
+  <object id="79" gid="218" x="16" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;I'd like to go back to bed but I can't.&quot;)))"/>
    </properties>
   </object>
-  <object id="80" gid="215" x="32" y="96" width="16" height="16">
+  <object id="80" gid="219" x="32" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;I'd like to go back to bed but I can't.&quot;)))"/>
    </properties>
   </object>
-  <object id="81" gid="222" x="16" y="112" width="16" height="16">
+  <object id="81" gid="226" x="16" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;I'd like to go back to bed but I can't.&quot;)))"/>
    </properties>
   </object>
-  <object id="82" gid="223" x="32" y="112" width="16" height="16">
+  <object id="82" gid="227" x="32" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;I'd like to go back to bed but I can't.&quot;)))"/>
    </properties>
   </object>
-  <object id="83" gid="199" x="96" y="80" width="16" height="16">
+  <object id="83" gid="203" x="96" y="80" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;I'll miss you, TV.&quot;))))</property>
    </properties>
   </object>
-  <object id="84" gid="200" x="112" y="80" width="16" height="16">
+  <object id="84" gid="204" x="112" y="80" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;I'll miss you, TV.&quot;))))</property>
    </properties>
   </object>
-  <object id="90" gid="183" x="48" y="112" width="16" height="16">
+  <object id="90" gid="187" x="48" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;I hope my parents will water it when I'm away.&quot;)))"/>
    </properties>
   </object>
-  <object id="98" gid="189" x="16" y="48" width="16" height="16">
+  <object id="98" gid="193" x="16" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;All my books are here.&quot;))))</property>
    </properties>
   </object>
-  <object id="99" gid="189" x="48" y="48" width="16" height="16">
+  <object id="99" gid="193" x="48" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;All my books are here.&quot;))))</property>
    </properties>
   </object>
-  <object id="100" gid="190" x="64" y="48" width="16" height="16">
+  <object id="100" gid="194" x="64" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;All my books are here.&quot;))))</property>
    </properties>
   </object>
-  <object id="101" gid="190" x="32" y="48" width="16" height="16">
+  <object id="101" gid="194" x="32" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;All my books are here.&quot;))))</property>
    </properties>
   </object>
-  <object id="102" gid="179" x="112" y="96" width="16" height="16">
+  <object id="102" gid="183" x="112" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;My chair.&quot;)))"/>
    </properties>
   </object>
-  <object id="103" gid="178" x="80" y="32" width="16" height="16">
+  <object id="103" gid="182" x="80" y="32" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;From here I can see the garden.&quot;)))"/>
    </properties>

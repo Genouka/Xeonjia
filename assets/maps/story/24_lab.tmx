@@ -2,15 +2,16 @@
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="77">
  <properties>
   <property name="action" value="(map-name &quot;VANTOI LAB - 1F&quot;)"/>
+  <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
- <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="225" source="../tilesets/lab.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="229" source="../tilesets/lab.tsx"/>
  <layer id="1" name="Tile Layer 1" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvDwMBwmgR8FoivAPFlIvEmIL4K1bODBDyqB6LnDol67gLxJRz4Ih45AGX/7iwIAgAA
+   H4sIAAAAAAAAA7vAwMBwngR8EYhvAPF1IvE2IL4J1bOHBDyqB6LnAYl6HgLxNRz4Kh45AIINUtIIAgAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -29,12 +30,12 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA88BOJHRNDI4C0QvwDi50D8Dsp/h8R/DpVHBx+A+D0et3xF4z8G4qdQ/ASIn2HR8xgqBwMvgfg1Hjtgal4h8bGZiw6eoanDFz64wGcg/oJEg8BGLOpOEmkeNgAA5yEdVwgCAAA=
+   H4sIAAAAAAAAA2NgIA88BeJnRNDI4CMQvwHi10D8Ccr/hMR/DZVHB1+A+DMet/xE4z8H4pdQ/AKIX2HR8xwqBwNvgfg9Hjtgat4h8bGZiw5eoanDFz64wHcg/oFEg8BWLOrOEmkeNgAAbghl2wgCAAA=
   </data>
  </layer>
  <layer id="12" name="Tile Layer 3" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGH7gIxB/QqJHAWEAABhDetYIAgAA
+   H4sIAAAAAAAAA2NgGH7gKxB/Q6JHAWEAAJR2rGAIAgAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -52,18 +53,18 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="74" gid="183" x="176" y="48" width="16" height="16">
+  <object id="74" gid="187" x="176" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;Someone used this plant to do some experiments.&quot;)))"/>
    </properties>
   </object>
-  <object id="75" gid="235" x="48" y="96" width="16" height="16">
+  <object id="75" gid="239" x="48" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;A broken monitor.&quot;))))</property>
    </properties>
   </object>
-  <object id="76" gid="234" x="64" y="96" width="16" height="16">
+  <object id="76" gid="238" x="64" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;A broken monitor.&quot;))))</property>

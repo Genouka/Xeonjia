@@ -2,15 +2,16 @@
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="74">
  <properties>
   <property name="action" value="(map-name &quot;VANTOI LAB - 2F&quot;)"/>
+  <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
- <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="225" source="../tilesets/lab.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="229" source="../tilesets/lab.tsx"/>
  <layer id="1" name="Tile Layer 1" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvDwMBwmgR8FoivAPFlPHgTGn0VqmcHCXhUD0TPHRLU3wTiu0B8iQwMACRixC4IAgAA
+   H4sIAAAAAAAAA7vAwMBwngR8EYhvAPF1PHgbGn0TqmcPCXhUD0TPAxLU3wXih0B8jQwMAMOQeNAIAgAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -24,12 +25,12 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA88BOJHWGh84DkQv0Oi3wLxC6jcYyB+CsVP0PR9ReO/h9Ivgfg1lP2KBLc9Q6MZoG6Bue0FmtvwgQ8kqiEn3D4D8RcsNDUBAKoHdtQIAgAA
+   H4sIAAAAAAAAA2NgIA88BeJnWGh84DUQf0KiPwLxG6jccyB+CcUv0PT9RON/htJvgfg9lP2OBLe9QqMZoG6Bue0NmtvwgS8kqiEn3L4D8Q8sNDUBAGO4KvAIAgAA
   </data>
  </layer>
  <layer id="12" name="Tile Layer 3" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGFzgIxB/GmhHjEAAAK4Jaa0IAgAA
+   H4sIAAAAAAAAA2NgGFzgKxB/G2hHjEAAADzd4VIIAgAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -41,7 +42,7 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="73" gid="235" x="160" y="64" width="16" height="16">
+  <object id="73" gid="239" x="160" y="64" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;A broken monitor.&quot;))))</property>

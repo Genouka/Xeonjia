@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="83">
  <properties>
+  <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
- <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvDwMBwmgA+C8RXgPgyEG+C0uhsEL4KVbeDAKa3uqNAfIxE8+4Qoe4uEF/CgS+i8QGZKdMJaAEAAA==
+   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6EG+D0uhsEL4JVbeHAKa3upNAfIpE8x4Qoe4hEF/Dga+i8QH5sUKDaAEAAA==
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -27,7 +28,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoBzsB+IDRKg7DsQn0MQ2A/FuIN5DhP7DQHyEJJdRH2wkUx8A1X95zWgBAAA=
+   H4sIAAAAAAAAA2NgoBwcBuIjRKg7DcRn0MS2A/F+ID5AhP7jQHyCJJdRH2wlUx8AN9spHGgBAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points"/>

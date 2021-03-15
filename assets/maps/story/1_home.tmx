@@ -3,14 +3,15 @@
  <properties>
   <property name="action">(if (eq? (last-place) &quot;1&quot;)
     (map-name &quot;Home&quot;))</property>
+  <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
- <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvDwMBwmkh8FoivAPFlLHgTGvsWEF+Fqt9BJKanehigtvl3SFB/F4gv4cAXcYgDACVxVlGwAQAA
+   H4sIAAAAAAAAA7vAwMBwnkh8EYhvAPF1LHgbGvseEN+Eqt9DJKanehigtvkPSFD/EIiv4cBXcYgDADuA6IWwAQAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -37,7 +38,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="12" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA9sBeJtJKjfC8T78MjfJtMd+MBmIN4NxHugbGLUHwbiI0SqJwVspJI5ADxoOAuwAQAA
+   H4sIAAAAAAAAA2NgIA/sBOJdJKg/CMSH8MjfJ9Md+MB2IN4PxAegbGLUHwfiE0SqJwVspZI5ABsmSBKwAQAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -55,24 +56,24 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="73" gid="183" x="16" y="48" width="16" height="16">
+  <object id="73" gid="187" x="16" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;This plant hasn't been watered for long.&quot;)))"/>
    </properties>
   </object>
-  <object id="76" gid="197" x="32" y="96" width="16" height="16">
+  <object id="76" gid="201" x="32" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 0)
     (dialog '((&quot;Unfortunately, this is not the time to lie down on the sofa.&quot;))))</property>
    </properties>
   </object>
-  <object id="77" gid="198" x="48" y="96" width="16" height="16">
+  <object id="77" gid="202" x="48" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 0)
     (dialog '((&quot;Unfortunately, this is not the time to lie down on the sofa.&quot;))))</property>
    </properties>
   </object>
-  <object id="78" gid="183" x="64" y="48" width="16" height="16">
+  <object id="78" gid="187" x="64" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;This plant seems to have been recently watered.&quot;)))"/>
    </properties>

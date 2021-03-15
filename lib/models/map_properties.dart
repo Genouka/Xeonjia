@@ -17,6 +17,15 @@ class MapProperties {
   // Background music
   String music;
 
-  MapProperties(
-      {this.fullId, this.width, this.height, this.action, this.music});
+  // Disable/Enable mini-map (enabled by default)
+  bool disableMiniMap;
+
+  MapProperties({
+    this.fullId,
+    this.width,
+    this.height,
+    this.action,
+    this.music,
+    this.disableMiniMap = false,
+  });
 }

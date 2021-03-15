@@ -2,14 +2,15 @@
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="72">
  <properties>
   <property name="action" value="(map-name &quot;NEIGHBOR'S HOUSE&quot;)"/>
+  <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
- <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvDwMBwmkh8FoivAPFlAngTlL4KVb+DSDwY1B8F4mMUmH+HBPV3gfgSDnwRhzgAkOSKf7ABAAA=
+   H4sIAAAAAAAAA7vAwMBwnkh8EYhvAPF1AngblL4JVb+HSDwY1J8E4lMUmP+ABPUPgfgaDnwVhzgAwvvom7ABAAA=
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -29,7 +30,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="12" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoAxsBeJtRKrdDsR7gXgflA0Cu4F4Dxa1m5HkNiOJHwbiIzjU45IbDGAjlcwBAPINi5iwAQAA
+   H4sIAAAAAAAAA2NgoAzsBOJdRKrdDcQHgfgQlA0C+4H4ABa125HktiOJHwfiEzjU45IbDGArlcwBAMArK3uwAQAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="73">
+ <properties>
+  <property name="disable-minimap" type="bool" value="true"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
- <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvDwMBwmkh8FoivAPFlIN4EpZHxJiQM4l+Fqt9BJB4O6u+QoP4uEF/CgS/iEAcAnmPipLABAAA=
+   H4sIAAAAAAAAA7vAwMBwnkh8EYhvAPF1IN4GpZHxNiQM4t+Eqt9DJB4O6h+QoP4hEF/Dga/iEAcA6MgL3bABAAA=
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -19,7 +22,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="12" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoAxsBeJtBNRsR6L3AvE+JDF0NYTAbiDeQ7TrGBgOA/EREtRTA2Dzy0Yi1BADADSMbqmwAQAA
+   H4sIAAAAAAAAA2NgoAzsBOJdBNTsRqIPAvEhJDF0NYTAfiA+QKzjgOA4EJ8gQT01ADa/bCVCDTEAAOZAtniwAQAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

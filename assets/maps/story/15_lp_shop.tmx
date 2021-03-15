@@ -2,14 +2,15 @@
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="73">
  <properties>
   <property name="action" value="(map-name &quot;Pharmacy&quot;)"/>
+  <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
- <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvDwMBwmgA+C8RXgPgyAXwVqm4HATwU1N0hQt1dIL6EA19E4wMAqb39IGgBAAA=
+   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6AXwTqm4PATwU1D0gQt1DIL6GA19F4wMAElYrs2gBAAA=
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -21,7 +22,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIB5sBeJteGgY2AvE+/DQyGAzDruQxXcD8R48NAwcBuIjSDQDFj4pYDsWvBGJTQoAAJkvCZtoAQAA
+   H4sIAAAAAAAAA2NgIB7sBOJdeGgYOAjEh/DQyGA7DruQxfcD8QE8NAwcB+ITSDQDFj4pYDcWvBWJTQoAADF61/RoAQAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -33,7 +34,7 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="72" gid="195" x="80" y="96" width="16" height="16">
+  <object id="72" gid="199" x="80" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(shop '((&quot;Restore 50 LP&quot; 15 &quot;(set-life-diff 50)&quot;) (&quot;Restore 75 LP&quot; 20 &quot;(set-life-diff 75)&quot;)))"/>
    </properties>

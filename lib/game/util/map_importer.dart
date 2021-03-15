@@ -37,6 +37,10 @@ Future<void> importMap(String fileName) async {
       } else if (property.attributes.isNotEmpty &&
           property.getAttributeNode('name').value == 'music') {
         game.map.music = property.getAttributeNode('value').value;
+      } else if (property.attributes.isNotEmpty &&
+          property.getAttributeNode('name').value == 'disable-minimap') {
+        game.map.disableMiniMap =
+            property.getAttributeNode('value').value == 'true';
       }
     });
   }

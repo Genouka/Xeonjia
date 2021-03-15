@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="85">
  <properties>
+  <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc.tsx"/>
- <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="177" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvDwMBwmgA+C8RXgPgyAXwVqm4HATwU1N0hQt1dIL6EBV/EIgYAkUScpmgBAAA=
+   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6AXwTqm4PATwU1D0gQt1DIL6GBV/FIgYAKq9KNWgBAAA=
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -35,7 +36,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGDiwGYh3A/EeItQdBuIjNHcRfrCRAr0AjbKc7GgBAAA=
+   H4sIAAAAAAAAA2NgGDiwHYj3A/EBItQdB+ITtHYQAbCVAr0ARv9K7GgBAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -47,12 +48,12 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="83" gid="183" x="64" y="128" width="16" height="16">
+  <object id="83" gid="187" x="64" y="128" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;This vase is very heavy, I can't move it.&quot;)))"/>
    </properties>
   </object>
-  <object id="84" gid="183" x="96" y="128" width="16" height="16">
+  <object id="84" gid="187" x="96" y="128" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;This vase is very heavy, I can't move it.&quot;)))"/>
    </properties>

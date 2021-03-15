@@ -66,7 +66,7 @@ class XeonjiaGame extends BaseGame
       _backgroundMusic.initialize();
     }
     if (config.mode == GameMode.story) {
-      addWidgetOverlay('miniMapButton', MiniMapButton(miniMapEnabled: false));
+      addWidgetOverlay('miniMapButton', MiniMapButton(miniMapIsActive: false));
     } else {
       teams = [
         Team(id: 0, name: 'Team A', color: Colors.red),
@@ -143,6 +143,7 @@ class XeonjiaGame extends BaseGame
     pause(stopMusic: false);
     addWidgetOverlay('loading', LoadingPage());
     removeWidgetOverlay('mapBox');
+    removeWidgetOverlay('miniMapButton');
 
     // Import mainCharacter.eventLog
     currentEventLog = Map.from(mainCharacter.eventLog);
@@ -169,6 +170,7 @@ class XeonjiaGame extends BaseGame
         return;
       }
       await importMap('assets/maps/story/${map.id}.tmx');
+      addWidgetOverlay('miniMapButton', MiniMapButton(miniMapIsActive: false));
     } else {
       map = MapProperties(fullId: config.mapId.toString());
       await importMap('assets/maps/arena/${config.mapId}.tmx');
@@ -326,7 +328,7 @@ class XeonjiaGame extends BaseGame
       game.addWidgetOverlay('mapNameBox', MapNameBox(below: false));
       game.removeWidgetOverlay('miniMapButton');
       game.addWidgetOverlay(
-          'miniMapButton', MiniMapButton(miniMapEnabled: true));
+          'miniMapButton', MiniMapButton(miniMapIsActive: true));
       refreshWeaponButtons();
     } else {
       zoomMiniMap(toValue: 1);
@@ -334,7 +336,7 @@ class XeonjiaGame extends BaseGame
       game.removeWidgetOverlay('mapNameBox');
       game.removeWidgetOverlay('miniMapButton');
       game.addWidgetOverlay(
-          'miniMapButton', MiniMapButton(miniMapEnabled: false));
+          'miniMapButton', MiniMapButton(miniMapIsActive: false));
       refreshWeaponButtons();
       _statusBox.state.refresh();
       resume();
