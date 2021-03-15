@@ -73,7 +73,7 @@
  <objectgroup id="8" name="items">
   <object id="49" gid="71" x="224" y="144" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;\&quot; Picnic area - Do not leave rubbish, thanks \&quot;&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;\&quot; Picnic area – Do not leave rubbish, thanks \&quot;&quot;)))"/>
    </properties>
   </object>
   <object id="51" gid="71" x="160" y="304" width="16" height="16">

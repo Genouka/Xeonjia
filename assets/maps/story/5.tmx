@@ -35,7 +35,7 @@
    <properties>
     <property name="action">(begin
     (dialog
-        '((&quot;\&quot; Mitsu Forest - Welcome, respect nature and remember to take a look at the souvenir shop on the right \&quot;&quot;)))
+        '((&quot;\&quot; Mitsu Forest – Welcome, respect nature and remember to take a look at the souvenir shop on the right \&quot;&quot;)))
     (if (!get &quot;005-read&quot;)
         (begin
             (dialog
