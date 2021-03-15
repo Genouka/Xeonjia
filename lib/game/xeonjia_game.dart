@@ -15,6 +15,7 @@ import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/util/event_manager.dart';
 import 'package:xeonjia/game/util/extensions.dart';
+import 'package:xeonjia/game/util/little_scheme.dart';
 import 'package:xeonjia/game/util/map_importer.dart';
 import 'package:xeonjia/game/util/message_manager.dart';
 import 'package:xeonjia/game/util/wireless_gamepad.dart';
@@ -34,7 +35,6 @@ import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/models/team.dart';
-import 'package:xeonjia/util/little_scheme.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 import 'package:xeonjia/util/screen_dimension.dart';
 

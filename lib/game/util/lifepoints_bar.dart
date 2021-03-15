@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
-import 'package:xeonjia/util/lifepoints_color.dart';
+import 'package:xeonjia/game/util/lifepoints_color.dart';
 
 // Draw a life point bar near the component
 // It is shown only for 2 seconds after lifePointsDifference
