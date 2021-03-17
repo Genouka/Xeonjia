@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="49">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="50">
  <properties>
   <property name="action">(begin
     (if (eq? (last-place) &quot;4&quot;)
@@ -53,10 +53,20 @@
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
+  <object id="49" type="Solid" gid="63" x="128" y="112" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;5.berries&quot;))
+    (begin
+        (dialog '((&quot;* {{hero}} found some berries! 10 LPs have been recovered *&quot;)))
+        (give-item &quot;5.berries&quot;)
+        (set-life-diff 10))
+    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA42SWQqAMAxEeww/PYTWHxdcwa33P44tGBjCxPog1KwTq85xqmg1nIxF1SbGaJNRz7hIbI92KI0vvna0NBC9s56n/ZXMkJ09mce4M3m8g5Lkh0z/X9hsRN4d9aSngJhXfY37/y9s79mTHN6D1ZcI8Jz7nkgw4pauzBJt0ZK4N2pn8Nto3atdgpbE8R6w9gT/AQCgx8y4AwAA
+   H4sIAAAAAAAAA6VSWwqAMAzbMfz0EDp/fOATfO3+x3GChVBSJxgos12a1KpzHEWMEk6GSXFv9DEGg89wkNoaY1Meb3ib0fJA6Jm1ns5noiEze6LHcCbucQd5gvsHKW159470ZFDzqq9y3/+F5Tlbcod7sPpuBHhOfU9EMOqWr2iJt3hJ3RvcEfI6RvN45+AlddwDcnfIL5qjmYG4AwAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

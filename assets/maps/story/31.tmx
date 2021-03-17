@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="51">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="54">
  <properties>
   <property name="action">(if (eq? (last-place) &quot;22&quot;)
     (map-name &quot;Melhopolis&quot;))</property>
@@ -11,13 +11,43 @@
  <tileset firstgid="189" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="21">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62USQvCMBCFc/APKB56Eo8evXnR+gMqiNvBpYqIO+7rz/cFExjGjE3RBx9pXyevadppoJQKHCgztkAbdEAX9ASvotxqmLEPhmBkxph4A+PH5N58vtUUzAhzweM5XHtwABMzHom3JF4pIecOHmABVuBJvCvxpPVUQc0cZ0EB5Mh16tF3oyXtuVUo+DyH+j6y95Vy0kpn5BOu+6go1H57h1J9mXlNzzXwnF/2x84NlfsZpGzpu9D1rp7zUcRyXD2nlWafdM4abMAYbMHOYw6X3psTOKt3H17ALcU6aLbG1YffFLHzf/WFzbLfY119/p8tGVYbsPoXmVwUe+gFAAA=
+   H4sIAAAAAAAAA62UyQrCMBRFs/AHFBddiUuX7txo/YAK4rRwqCLijPP4+d5gAo9n0ibqhUPam+Q2TfoaCCECA0K1LdAGHdAFPYtXEWY1VNsHQzBSbUy8gfJj8mw+X2sKZoS5xeM5XHtwABPVHom3JF4pJecOHmABVuBJvCvxbOupgpq6zoICyJF+6tGzcVFo8W05PtlJOb6SGfmUfhcVLWOTztA2vsy8puMaeM4v+6PnhsL8Dt+cl6nmXBSxHFPNSfnsk8xZgw0Ygy3YOczhkntzAmfxrsMLuHmsg2ZLTHWYpIjd/6sudJb+Huvi8/+sybCxARv/AqhKfdXoBQAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
   <object id="48" type="NPC" gid="188" x="96" y="176" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;Some boulders are placed by us, the workers of the Kingdom.\nIn this way it's easier to reach all places.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="51" type="Solid" gid="55" x="240" y="128" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;31.berries2&quot;))
+    (begin
+        (dialog '((&quot;* {{hero}} found some berries! 10 LPs have been recovered *&quot;)))
+        (give-item &quot;31.berries2&quot;)
+        (set-life-diff 10))
+    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="52" type="Solid" gid="55" x="48" y="112" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;31.berries&quot;))
+    (begin
+        (dialog '((&quot;* {{hero}} found some berries! 30 LPs have been recovered *&quot;)))
+        (give-item &quot;31.berries&quot;)
+        (set-life-diff 30))
+    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="53" type="Solid" gid="55" x="176" y="224" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;31.berries3&quot;))
+    (begin
+        (dialog '((&quot;* {{hero}} found some berries! 20 LPs have been recovered *&quot;)))
+        (give-item &quot;31.berries3&quot;)
+        (set-life-diff 20))
+    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="72">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="75">
  <properties>
   <property name="action">(if (! (eq? (last-place) &quot;25&quot;))
     (map-name &quot;Melhopolis&quot;))</property>
@@ -12,7 +12,7 @@
  <tileset firstgid="237" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="21" height="28">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62WSUsDQRCF++AfUDwEBJmT5OitLy5n9R53RUJcccUlJ5Of7iuoh5Wm19GCj25SPa+n0vNqZuCcGxi8mQ917II1IT6ypiV2KvKtmqW9ZNwC20H+CpyAUx3PwLnJH4MROFSOTD5Wu1fNkVk/BhOz5hvMAubm+i5Sxx24Bw/gQuePJv8EnpVLHV/MfQ4jmq86voFrnX+Y/KeZS/4WTI1m7oyWwTpYyeSY5xm1nnlXkZNxDaxG1vTdr88zz+AzKFp7YP+Pmj6TE73NRr2SN0Vzt1GTIV4Sf1mf8f+orT28P/Ha2CA+439S0jxI/E4v3bhFH1FT6kj1i1SIl77Au/v1ka09VkdNxHzGM2IdYT/oE3w+WQf7xTR5RTm8YvtBqmfURqrXpfavCb4XWyPnpc7Fe1IYGw378d1cGyWvU7Ol9prewG+O/4zY90yKJbfovdy3zw8XOaU2MAkAAA==
+   H4sIAAAAAAAAA62WOU8DMRCFXfAHQBSRkNBWKCXdNhw10HMfiqJwilMcqYCfzhs0T0wsj9de8qRPtjLeWU+8b3YHIYSBoTXzoY5NtCamTayp0VZBvDZn171k3ACbUXwEjsGJjqfgzMSPwD44UA5N3Kt9ZK6R9WMwMfFP8BXxrTH+t7FuwC24A+c6vzfxB/CoXOj4ZPY5TOR81vEFXOr8zcTfzVzi12BqcubOaBGsgqVMjHGeUe2ZNwUxGVfAcmJN3/v1eeYpPoOSawfsziGnJ8m3XnlNlzcl53a/7fx6Sfxlfcb/o7T2eH/itbFBfNaavea05/xOL12FWR8xp9Th9QtP4qUP8Br+fGRrT9VRopTPeEasI+4HfcTnk3WwX0zdK7rVKrYfeD2jVF6v+4/4XqxVzktNSPekWGsV9+O7uVRdXmfOmtpLegO/Oeap1PeMx0KY9V7u2+cHFxAuDzAJAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -111,6 +111,36 @@
   <object id="71" type="Modifier" gid="255" x="208" y="208" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="72" type="Solid" gid="55" x="64" y="80" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;24.berries&quot;))
+    (begin
+        (dialog '((&quot;* {{hero}} found some berries! 30 LPs have been recovered *&quot;)))
+        (give-item &quot;24.berries&quot;)
+        (set-life-diff 30))
+    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="73" type="Solid" gid="55" x="208" y="192" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;24.berries2&quot;))
+    (begin
+        (dialog '((&quot;* {{hero}} found some berries! 20 LPs have been recovered *&quot;)))
+        (give-item &quot;24.berries2&quot;)
+        (set-life-diff 20))
+    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="74" type="Solid" gid="55" x="160" y="352" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;24.berries3&quot;))
+    (begin
+        (dialog '((&quot;* {{hero}} found some berries! 20 LPs have been recovered *&quot;)))
+        (give-item &quot;24.berries3&quot;)
+        (set-life-diff 20))
+    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

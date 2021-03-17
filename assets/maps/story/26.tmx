@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="19" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="48">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="19" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="50">
  <properties>
   <property name="music" value="city"/>
  </properties>
@@ -8,10 +8,21 @@
  <tileset firstgid="137" source="../tilesets/npc.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52UOQ7CMBBF5wA0IAoq5JITkAbIAYCCrWCJEELs+87x+aN4pOA4xOFLT7Zl58fjfKdDRF3QA30wACVNLtJnPGMcZQjGYAQmIKBQVd0qShf7zMA8wkLPNSzra6Bu6bPPEZzAVLfnlHcro2X54AleYAnW4O1QhzLGckZ5UAYFBw9Ry+JjqpnRy0tZpxzneS9Fx3cn5UN8Ko4+SfkQH9v52CT5WNF3PiRHrvuRfNwpng+5F1wv1831B6ZBRGY+JPO/7oXrtxefDdiCHdiDQ4bnWYrC/FzADVwprP2R0Uf28++9sPn8o7bFx6f4/81P6Cf9Ez85BraRWAUAAA==
+   H4sIAAAAAAAAA52UyQ7CIBRF3we40bhwZVj6BXaj9gPUhdPCoTHGOM+zn+8l5SVIwVJvcgKk5cJrL3SIqAt6oA8GoKTIaX1JYIx1hmAMRmACIopVVa2gdEmfGZhrLNSzhuX9Gqhb+tLnCE5gqtpzytrCaKVC8AQvsARr8PaoQxhj/kZ5UAYFDw9Wy+JjqpnRK8iwvk1C20/Rc44rH+xT8fRx5YN9bN/HJs7Hir7zwTny3Q/n407JfPC5kPXKumX9kWmgycwHZ/7XufD99+yzAVuwA3twyDBfSlCcnwu4gSvFtT8y+vB+/j0XNp9/1Lb4hJS830JH33UnfgCzfCDmWAUAAA==
   </data>
  </layer>
- <objectgroup id="9" name="npc"/>
+ <objectgroup id="9" name="npc">
+  <object id="49" type="Solid" gid="55" x="112" y="128" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;26.berries&quot;))
+    (begin
+        (dialog '((&quot;* {{hero}} found some berries! 20 LPs have been recovered *&quot;)))
+        (give-item &quot;26.berries&quot;)
+        (set-life-diff 20))
+    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="6" name="Tile Layer 2" width="18" height="19">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgoD8wAWJTLOzhBFyIUONMhlnEmEsM8CFSXSAQhyDhUCrZT21A7XQE8ncwEibF32ZEqCE27kcBduA60A4gAACiSavgWAUAAA==

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="43">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="44">
  <properties>
   <property name="music" value="forest"/>
  </properties>
@@ -37,7 +37,12 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="41" gid="148" x="192" y="128" width="16" height="16">
+  <object id="41" gid="148" x="160" y="48" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="43" gid="148" x="196.5" y="121.5" width="16" height="16">
    <properties>
     <property name="lifePointsDelta" type="int" value="20"/>
    </properties>

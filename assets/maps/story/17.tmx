@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="47">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="48">
  <properties>
   <property name="music" value="enemies"/>
  </properties>
@@ -9,7 +9,7 @@
  <tileset firstgid="189" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52SMQ6AMAhFGRw9QAcHJq/gou4a738eaVISirQUf/LTppDnlxYBIJFnMhYnsSZR533WBrUQvmKGp7Oskq9rljL/cdir2PN/jcrK09JOPgL9UX4Wki/yHeBjp65ni8E8f/J799Xi83y15LnOgwN8K4/1LZ67x9R8q3/q9Ceo31L2YpyxXysBCK/AAwAA
+   H4sIAAAAAAAAA52SMQ7AIAhFGTr2AAwdmHqK1r1N73+eYiIJJaDSn/xIkDwRJQBA9sqmZlQrqn2JPVGQi+q1Sls9foFYlf8M2LuK5V6z6t3X6mCfifosv4rYF/tO8Kmzb2dLyX7+9D96r4gv87XSedsPTfC9fryzZO4jpuV79UunHuH7l6o3Jyd+AZ1jC6vAAwAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -71,7 +71,7 @@
     <property name="action">(if (! (has-item &quot;17.berries&quot;))
     (begin
         (dialog '((&quot;* {{hero}} found some berries! 50 LPs have been recovered *&quot;)))
-        (give-item &quot;3.berries&quot;)
+        (give-item &quot;17.berries&quot;)
         (set-life-diff 50))
     (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
    </properties>
@@ -79,6 +79,16 @@
   <object id="46" gid="200" x="160" y="176" width="16" height="16">
    <properties>
     <property name="lifePointsDelta" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="47" type="Solid" gid="55" x="32" y="32" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;17.berries2&quot;))
+    (begin
+        (dialog '((&quot;* {{hero}} found some berries! 10 LPs have been recovered *&quot;)))
+        (give-item &quot;17.berries2&quot;)
+        (set-life-diff 10))
+    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
