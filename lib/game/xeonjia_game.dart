@@ -225,11 +225,11 @@ class XeonjiaGame extends BaseGame
   void executeAction(
       {@required String action, BasicComponent actor, BasicComponent self}) {
     if (action?.isEmpty ?? true) return;
-    game.environment
-        .defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => self));
+    environment.defineSymbol(
+        Sym('self'), Intrinsic('self', 0, (Cell x) => self));
     environment.defineSymbol(Sym('actor'), actor ?? playerOne);
-    _actionContinuation = evaluate(
-        readFromTokens(splitStringIntoTokens(action)), game.environment);
+    _actionContinuation =
+        evaluate(readFromTokens(splitStringIntoTokens(action)), environment);
   }
 
   // Continue action execution after (wait)
@@ -241,11 +241,11 @@ class XeonjiaGame extends BaseGame
       nextActionDelay = 0;
       addLater(TimerComponent(Timer(
         delay,
-        callback: () => evaluate(null, game.environment, _actionContinuation),
+        callback: () => evaluate(null, environment, _actionContinuation),
         repeat: false,
       )..start()));
     } else {
-      game.resume();
+      resume();
     }
   }
 
@@ -279,7 +279,7 @@ class XeonjiaGame extends BaseGame
   // Save match data and load the new room
   void changeRoom(String nextRoomId) {
     pause(stopMusic: false);
-    if (game.components
+    if (components
         .where((element) =>
             element is BasicComponent && [-3, -2, 1].contains(element.teamId))
         .isEmpty) {
@@ -342,19 +342,17 @@ class XeonjiaGame extends BaseGame
       zoomMiniMap(toValue: _miniMapZoom ?? 2, enable: true);
       pause(stopEngine: false, stopMusic: false);
       _statusBox.state.refresh();
-      game.removeWidgetOverlay('mapNameBox');
-      game.addWidgetOverlay('mapNameBox', MapNameBox(below: false));
-      game.removeWidgetOverlay('miniMapButton');
-      game.addWidgetOverlay(
-          'miniMapButton', MiniMapButton(miniMapIsActive: true));
+      removeWidgetOverlay('mapNameBox');
+      addWidgetOverlay('mapNameBox', MapNameBox(below: false));
+      removeWidgetOverlay('miniMapButton');
+      addWidgetOverlay('miniMapButton', MiniMapButton(miniMapIsActive: true));
       refreshWeaponButtons();
     } else {
       zoomMiniMap(toValue: 1);
       updateCamera(playerOne.x, playerOne.y);
-      game.removeWidgetOverlay('mapNameBox');
-      game.removeWidgetOverlay('miniMapButton');
-      game.addWidgetOverlay(
-          'miniMapButton', MiniMapButton(miniMapIsActive: false));
+      removeWidgetOverlay('mapNameBox');
+      removeWidgetOverlay('miniMapButton');
+      addWidgetOverlay('miniMapButton', MiniMapButton(miniMapIsActive: false));
       refreshWeaponButtons();
       _statusBox.state.refresh();
       resume();
@@ -507,7 +505,7 @@ class XeonjiaGame extends BaseGame
     } else if (e.logicalKey == LogicalKeyboardKey.escape) {
       if (isPaused) {
         removeWidgetOverlay('pauseMenu');
-        game.resume();
+        resume();
       } else {
         pause(mode: PauseMode.pause);
       }
