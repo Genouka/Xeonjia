@@ -1,7 +1,7 @@
-import 'dart:async';
 import 'dart:math';
 import 'package:flame/bgm.dart';
 import 'package:flame/components/component.dart';
+import 'package:flame/components/timer_component.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
@@ -224,11 +224,29 @@ class XeonjiaGame extends BaseGame
   // Execute an action
   void executeAction(
       {@required String action, BasicComponent actor, BasicComponent self}) {
-    if ((action ?? '') == '') return;
+    if (action?.isEmpty ?? true) return;
     game.environment
         .defineSymbol(Sym('self'), Intrinsic('self', 0, (Cell x) => self));
     environment.defineSymbol(Sym('actor'), actor ?? playerOne);
-    evaluate(readFromTokens(splitStringIntoTokens(action)), game.environment);
+    _actionContinuation = evaluate(
+        readFromTokens(splitStringIntoTokens(action)), game.environment);
+  }
+
+  // Continue action execution after (wait)
+  Continuation _actionContinuation;
+  double nextActionDelay = 0;
+  void continueAction({double delay}) {
+    if (_actionContinuation != null) {
+      delay ??= nextActionDelay;
+      nextActionDelay = 0;
+      addLater(TimerComponent(Timer(
+        delay,
+        callback: () => evaluate(null, game.environment, _actionContinuation),
+        repeat: false,
+      )..start()));
+    } else {
+      game.resume();
+    }
   }
 
   // Show a message in messageBox

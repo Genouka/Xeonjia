@@ -18,7 +18,8 @@ class MessageManager {
   // Remove every message
   void clear() {
     _messages = [];
-    game.resume();
+    game.resumeEngine();
+    game.continueAction(delay: 0);
     if (hideMap) {
       hideMap = false;
       game.playBackgroundMusic();

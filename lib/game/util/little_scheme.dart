@@ -24,6 +24,8 @@
 * DEALINGS IN THE SOFTWARE.
 */
 
+import 'package:xeonjia/game/xeonjia_game.dart';
+
 const intBits = 63; // 53 for dart2js
 
 /// Converts [a] into an int if possible.
@@ -240,6 +242,7 @@ final defineSym = Sym('define');
 final setqSym = Sym('set!');
 final applySym = Sym('apply');
 final callccSym = Sym('call/cc');
+final waitSym = Sym('wait');
 
 //----------------------------------------------------------------------
 
@@ -327,7 +330,8 @@ enum ContOp {
   APPLY_FUN,
   EVAL_ARG,
   CONS_ARGS,
-  RESTORE_ENV
+  RESTORE_ENV,
+  WAIT,
 }
 
 /// Scheme's step in a continuation
@@ -456,8 +460,8 @@ String stringify(Object exp, [bool quote = true]) {
 //----------------------------------------------------------------------
 
 /// Evaluates an expression in an environment.
-Object evaluate(dynamic exp, Environment env) {
-  var k = Continuation();
+Continuation evaluate(dynamic exp, Environment env, [Continuation previousK]) {
+  var k = previousK ?? Continuation();
   try {
     for (;;) {
       for (;;) {
@@ -488,6 +492,10 @@ Object evaluate(dynamic exp, Environment env) {
             // (set! v e)
             exp = kdr.cdr.car;
             k.push(ContOp.SETQ, env.lookForSetter(kdr.car as Sym));
+          } else if (identical(kar, waitSym)) {
+            if (kdr?.car != null) game.nextActionDelay = kdr?.car?.toDouble();
+            exp = null;
+            k.push(ContOp.WAIT, kdr);
           } else {
             // (fun arg...)
             exp = kar;
@@ -503,12 +511,19 @@ Object evaluate(dynamic exp, Environment env) {
       }
       Loop2:
       for (;;) {
-        // stdout.write('_${k.length}');
-        if (k.isEmpty) return exp;
+        if (k.isEmpty) {
+          // execution finished
+          if (!game.messageManager.active) game.resume();
+          return null;
+        }
         var step = k.pop();
         var op = step.op;
         dynamic x = step.val;
         switch (op) {
+          case ContOp.WAIT:
+            // execution paused
+            if (game.nextActionDelay != 0) game.continueAction();
+            return k;
           case ContOp.THEN: // x is (e2 e3) of (if e1 e2 e3).
             if (exp == false) {
               if (x.cdr == null) {
