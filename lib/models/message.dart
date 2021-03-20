@@ -47,3 +47,17 @@ class Message {
     }
   }
 }
+
+// Answer shown in dialogs
+class Answer {
+  // Unique ID saved in the event log
+  String questionId;
+
+  // Text displayed
+  String text;
+
+  // Answer value
+  dynamic value;
+
+  Answer(this.questionId, this.text, this.value);
+}

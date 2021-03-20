@@ -10,14 +10,20 @@ class MessageManager {
   // Message currently displayed
   int _currentIndex;
   Message get currentMessage => active ? _messages[_currentIndex] : null;
+  void nextMessage() => _currentIndex++;
 
   // Increase currentIndex and check if there are other messages
-  bool hasOtherMessages() =>
-      ++_currentIndex < (game.messageManager._messages?.length ?? 0);
+  bool get hasOtherMessages =>
+      _currentIndex + 1 < (game.messageManager._messages?.length ?? 0);
+
+  // Answers shown at the end of the dialog
+  List<Answer> answers = [];
+  bool get isShowingAQuestion => !hasOtherMessages && answers.isNotEmpty;
 
   // Remove every message
   void clear() {
     _messages = [];
+    answers = [];
     game.resumeEngine();
     game.continueAction(delay: 0);
     if (hideMap) {

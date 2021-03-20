@@ -110,6 +110,14 @@ Environment setEnvironment() {
     }
     return #NONE;
   });
+  _('answer', 2, (Cell x) {
+    var it = (x.cdr.car as Cell).iterator;
+    while (it.moveNext()) {
+      game.messageManager.answers.add(Answer(x.car.toString(),
+          (it.current as Cell).car.toString(), (it.current as Cell).cdr));
+    }
+    return #NONE;
+  });
   _('shop', 1, (Cell x) {
     var itemList = <ShopItem>[];
     var it = (x.car as Cell).iterator;
