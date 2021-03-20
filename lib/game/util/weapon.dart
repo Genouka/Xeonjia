@@ -79,7 +79,11 @@ class PunchWeapon extends Weapon {
 
   @override
   void shoot({@required CharacterComponent shooter}) {
-    shooter.componentInFront()?.lifePointsDifference(-atk, cause: shooter);
+    var componentInFront = shooter.componentInFront();
+    if (componentInFront is CharacterComponent && componentInFront.friendly) {
+      return;
+    }
+    componentInFront?.lifePointsDifference(-atk, cause: shooter);
     shooter.animate([shooter.punchSprites[shooter.orientation]]);
     if (shooter.isPlayerOne) game.playSound(Sfx.punch);
     super.shoot(shooter: shooter);
