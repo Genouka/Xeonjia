@@ -164,10 +164,6 @@ Environment setEnvironment() {
   _('not', 1, (Cell x) => x.car == false);
   _('!', 1, (Cell x) => x.car == false);
   _('list', -1, (Cell x) => x);
-  _('newline', 0, (Cell x) {
-    stdout.writeln();
-    return #NONE;
-  });
   _('eof-object?', 1, (Cell x) => x.car == #EOF);
   _('symbol?', 1, (Cell x) => x.car is Sym);
 
