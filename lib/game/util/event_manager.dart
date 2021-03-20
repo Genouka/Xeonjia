@@ -1,4 +1,5 @@
-import 'dart:io';
+import 'package:flame/components/timer_component.dart';
+import 'package:flame/time.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
@@ -145,12 +146,16 @@ Environment setEnvironment() {
     game.map.name = stringify(x.car, false);
     game.addWidgetOverlay('mapNameBox', MapNameBox());
     var _id = mainCharacter.visitedRooms.length;
-    Future.delayed(const Duration(seconds: 3), () {
-      if (_id == mainCharacter.visitedRooms.length &&
-          !(game?.miniMapEnabled ?? true)) {
-        game?.removeWidgetOverlay('mapBox');
-      }
-    });
+    game.addLater(TimerComponent(Timer(
+      3,
+      callback: () {
+        if (_id == mainCharacter.visitedRooms.length &&
+            !(game?.miniMapEnabled ?? true)) {
+          game?.removeWidgetOverlay('mapNameBox');
+        }
+      },
+      repeat: false,
+    )..start()));
     return #NONE;
   });
 
