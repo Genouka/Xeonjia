@@ -30,17 +30,22 @@ Future<void> importMap(String fileName) async {
   var mapProperties = mapXml.findElements('properties');
   if (mapProperties.isNotEmpty) {
     mapProperties.single.children.forEach((property) {
-      if (property.attributes.isNotEmpty &&
-          property.getAttributeNode('name').value == 'action') {
-        game.map.action =
-            property.getAttributeNode('value')?.value ?? property.text;
-      } else if (property.attributes.isNotEmpty &&
-          property.getAttributeNode('name').value == 'music') {
-        game.map.music = property.getAttributeNode('value').value;
-      } else if (property.attributes.isNotEmpty &&
-          property.getAttributeNode('name').value == 'disable-minimap') {
-        game.map.disableMiniMap =
-            property.getAttributeNode('value').value == 'true';
+      if (property.attributes.isEmpty) return;
+      switch (property.getAttributeNode('name').value) {
+        case 'action':
+          game.map.action =
+              property.getAttributeNode('value')?.value ?? property.text;
+          break;
+        case 'music':
+          game.map.music = property.getAttributeNode('value').value;
+          break;
+        case 'map-name':
+          game.map.name = property.getAttributeNode('value').value;
+          break;
+        case 'disable-minimap':
+          game.map.disableMiniMap =
+              property.getAttributeNode('value').value == 'true';
+          break;
       }
     });
   }
