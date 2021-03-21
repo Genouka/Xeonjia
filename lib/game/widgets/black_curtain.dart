@@ -44,7 +44,7 @@ class _BlackCurtainState extends State<BlackCurtain> {
           });
         } else {
           game.removeWidgetOverlay('blackCurtain');
-          game.resume();
+          game.continueAction();
         }
       },
       child: Container(

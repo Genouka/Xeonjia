@@ -3,7 +3,6 @@ import 'package:flame/time.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
-import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/util/little_scheme.dart';
 import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/widgets/black_curtain.dart';
@@ -79,9 +78,12 @@ Environment setEnvironment() {
           .orientation = GetDirection.fromInt(x.car));
   _('delete', 0, (Cell x) {
     BasicComponent self = (env.lookForValue(Sym('self')) as Intrinsic).fun(x);
-    if (self is CharacterComponent) {
-      game.addWidgetOverlay('blackCurtain', BlackCurtain(self.delete));
-    }
+    self.delete();
+    return #NONE;
+  });
+  _('leave', 0, (Cell x) {
+    BasicComponent self = (env.lookForValue(Sym('self')) as Intrinsic).fun(x);
+    game.addWidgetOverlay('blackCurtain', BlackCurtain(self.delete));
     return #NONE;
   });
   _(
