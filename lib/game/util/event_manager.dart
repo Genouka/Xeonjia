@@ -33,7 +33,11 @@ Environment setEnvironment() {
           game.playerOne.lifePointsDifference((x.car as int).toDouble()));
   _('set-life-to', 1,
       (Cell x) => game.playerOne.setStatus((x.car as int).toDouble(), 0));
-  _('restore-life', 0, (Cell x) => game.playerOne.restoreStatus());
+  _('restore-life', 0, (Cell x) {
+    game.addWidgetOverlay(
+        'blackCurtain', BlackCurtain(game.playerOne.restoreStatus));
+    return #NONE;
+  });
   _('increase-life', 1, (Cell x) => game.playerOne.maxLifePoints += x.car);
   _('get-atk', 0, (Cell x) => game.playerOne.atk);
   _('increase-atk', 1, (Cell x) => game.playerOne.atk += x.car);
