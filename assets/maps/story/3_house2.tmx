@@ -16,11 +16,13 @@
    <properties>
     <property name="action">(if  (&lt; (get-life) (get-initial-life))
     (begin
+        (dialog '((&quot;/&quot; &quot;Hi, you look a little tired. Rest here for a moment.&quot;)))
+        (wait)
+        (restore-life)
+        (wait)
         (dialog
-            '((&quot;/&quot; &quot;Hi, you look a little tired. Rest here for a moment.&quot;)
-            (&quot;* {{hero}} rested and is now in perfect health *&quot;)
-            (&quot;/&quot; &quot;Come back anytime.&quot;)))
-        (restore-life))
+            '((&quot;* {{hero}} rested and is now in perfect health *&quot;)
+            (&quot;/&quot; &quot;Come back anytime.&quot;))))
     (dialog '((&quot;/&quot; &quot;Be careful not to get hurt.&quot;))))</property>
    </properties>
   </object>

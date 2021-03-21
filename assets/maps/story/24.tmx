@@ -3,6 +3,7 @@
  <properties>
   <property name="action">(if (! (eq? (last-place) &quot;25&quot;))
     (map-name &quot;Melhopolis&quot;))</property>
+  <property name="map-name" value="Melhopolis"/>
   <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
@@ -115,32 +116,42 @@
   </object>
   <object id="72" type="Solid" gid="55" x="64" y="80" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item &quot;24.berries&quot;))
-    (begin
-        (dialog '((&quot;* {{hero}} found some berries! 30 LPs have been recovered *&quot;)))
-        (give-item &quot;24.berries&quot;)
-        (set-life-diff 30))
-    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+    <property name="action">(begin
+    (define item-id &quot;24.berries&quot;)
+    (define life-diff 30)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (give-item item-id)
+            (set-life-diff life-diff))
+        (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
   <object id="73" type="Solid" gid="55" x="208" y="192" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item &quot;24.berries2&quot;))
-    (begin
-        (dialog '((&quot;* {{hero}} found some berries! 20 LPs have been recovered *&quot;)))
-        (give-item &quot;24.berries2&quot;)
-        (set-life-diff 20))
-    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+    <property name="action">(begin
+    (define item-id &quot;24.berries2&quot;)
+    (define life-diff 20)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (give-item item-id)
+            (set-life-diff life-diff))
+        (dialog '((&quot;A little plant… nothing else.&quot;)))))
+</property>
    </properties>
   </object>
   <object id="74" type="Solid" gid="55" x="160" y="352" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item &quot;24.berries3&quot;))
-    (begin
-        (dialog '((&quot;* {{hero}} found some berries! 20 LPs have been recovered *&quot;)))
-        (give-item &quot;24.berries3&quot;)
-        (set-life-diff 20))
-    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+    <property name="action">(begin
+    (define item-id &quot;24.berries3&quot;)
+    (define life-diff 20)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (give-item item-id)
+            (set-life-diff life-diff))
+        (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
  </objectgroup>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="15" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="49">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="15" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="51">
  <properties>
   <property name="action">(begin
     (if (eq? (last-place) &quot;31&quot;)
         (map-name &quot;Route 3&quot;))
     (if  (first-time?)
         (dialog '((&quot;That's the first crypt, I think.&quot;)))))</property>
+  <property name="map-name" value="Route 3"/>
   <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
@@ -17,7 +18,7 @@
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="48" type="NPC" gid="154" x="112" y="64" width="16" height="16">
+  <object id="50" type="NPC" gid="154" x="112" y="64" width="16" height="16">
    <properties>
     <property name="action">(begin
     (set &quot;022-talk-shen&quot; #t)
@@ -31,8 +32,11 @@
         (&quot;???/&quot; &quot;Oh, yes sorry I forgot to introduce myself.&quot;)
         (&quot;/_happy&quot; &quot;My name is Shen, I am a scientist.&quot;)
         (&quot;/hero_happy&quot; &quot;Nice to meet you, Shen.&quot;)
-        (&quot;/&quot; &quot;Oh, by the way, I think this might help you.&quot;)
-        (&quot;* {{hero}} got a SNOWBALLS CONTAINER *&quot;)
+        (&quot;/&quot; &quot;Oh, by the way, I think this might help you.&quot;)))
+    (wait)
+    (give-weapon 1)
+    (dialog
+        '((&quot;* {{hero}} got a SNOWBALLS CONTAINER *&quot;)
         (&quot;/&quot; &quot;It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the 'S' button.\nIt can contain up to 10 snowballs.&quot;)
         (&quot;/hero_happy&quot; &quot;Wow! I'm sure it'll come in handy. Thank you.&quot;)
         (&quot;/_happy&quot; &quot;You're welcome.&quot;)
@@ -42,8 +46,8 @@
         (&quot;/&quot; &quot;Now I have to leave you, I have to study a strange rock that I found a little while ago.&quot;)
         (&quot;/_happy&quot; &quot;We'll see again. Good luck!&quot;)
         (&quot;/hero_happy&quot; &quot;Bye Shen, thanks again!&quot;)))
-    (give-weapon 1)
-    (fire-event (self)))</property>
+    (wait)
+    (leave))</property>
     <property name="actionOnEvent">(if (get &quot;022-talk-shen&quot;)
     (delete))</property>
    </properties>
@@ -79,6 +83,7 @@
     <property name="actionOnCollision">(if  (!get &quot;022-tower1-ok&quot;)
     (begin 
         (dialog '((&quot;I have to go through the crypt to get the first signet.&quot;)))
+        (wait)
         (set-orientation 1))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (get &quot;022-tower1-ok&quot;)

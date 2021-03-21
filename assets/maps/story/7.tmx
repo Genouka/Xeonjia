@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="52">
  <properties>
+  <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
@@ -35,9 +36,9 @@
         (&quot;/_happy&quot; &quot;See ya!&quot;)
         (&quot;/hero_happy&quot; &quot;Bye!&quot;)))
     (set &quot;007-milla&quot; #t)
-    (fire-event (self)))</property>
-    <property name="actionOnEvent">(if  (get &quot;007-milla&quot;)
-    (delete))</property>
+    (wait)
+    (leave))</property>
+    <property name="actionOnEvent" value="(if  (get &quot;007-milla&quot;) (delete))"/>
    </properties>
   </object>
   <object id="45" gid="169" x="208" y="128" width="16" height="16">

@@ -15,7 +15,17 @@
  <objectgroup id="10" name="npcs">
   <object id="72" type="NPC" gid="43" x="96" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;Do you think piglets will one day be a common pet?&quot;)))"/>
+    <property name="action">(if (get &quot;026-house-talk&quot;)
+    (begin
+        (dialog '((&quot;/&quot; &quot;Do you think piglets will one day be a common pet?&quot;)))
+        (define id &quot;026-house-question-piglets&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (set &quot;026-house-talk&quot; #t)
+        (wait)
+        (if (get id)
+            (dialog '((&quot;/&quot; &quot;I think so too.&quot;)))
+            (dialog '((&quot;/&quot; &quot;Oh, I hope you are not right.&quot;)))))
+    (dialog '((&quot;/&quot; &quot;I like piglets.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

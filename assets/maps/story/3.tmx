@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="19" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="43">
+ <properties>
+  <property name="map-name" value="Route 1"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/basic.tsx"/>
  <tileset firstgid="25" source="../tilesets/npc.tsx"/>
- <tileset firstgid="73" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="77" source="../tilesets/outdoor_1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="19" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62UOwrDMBBE94CuTKpUW5igKmVI59InML5uJLKDB2FZllcPBn139GWDiIQoNeX1ycqkxcqN+nKd8aiMg+TziRovzj9iIK9X1NPhNVmpJlA77xG4A9xzD7Ti1bLPWf7v3BpXWledHuy1OeOBiv9s7Auvdwev9WSshflGTGldlf1PeElenndkav+r5fxX8lcJ7OHbwQvxYJE973IeVmqn+pC1OY8r9f0AtjH8tfAFAAA=
+   H4sIAAAAAAAAA62UPQ6AIAyFe0Qn4+TEYAyTo3Fz5ATGy0ojLzaNCAhf0vDbBy2kloisNxNM96fQsrnQnmJO2xdDYh2wzuqtz9z/Rie0Zm9jhdYUWuQFpOJ9AzlAnlug76UpuedO9zuX+sXObRUj/l2NPzBUH5vUhdbSQOv4WCth/+ETO5fz5VIbM2GtmneUpP5XSfw59SsG7rA10II/cPTUXVmHjRhzv1NjWcdlPb8Av1i42PAFAAA=
   </data>
  </layer>
  <objectgroup id="8" name="npcs">
@@ -32,7 +35,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="19" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3SywpAUBSF4fPE3sQDECNFcgnlWuTR/MWZmqxTIqu+6d8ebGP+2QUIESEWWzkKlKjEVosOKXqxNWNBjVVs2XmOOm+d//QBN3P908lF/ekBIzJMYmtDY86f3sWW3Vd/+gAHwKhp8AUAAA==
+   H4sIAAAAAAAAA+3SywpAUBSF4fPM3sQDECNFcgnlWuTB/MWZmqxTIqu+6d8ebGP+2QUIESEWWzkKlKjEVosOKXqxNWNBjVVs2XmOOm+d//QBN3P908lF/ekBIzJMYmtDY86f3sWW3Vd/+gBP+lYC8AUAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -60,14 +63,17 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="36" type="Solid" gid="127" x="0" y="48" width="16" height="16">
+  <object id="36" type="Solid" gid="131" x="0" y="48" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item &quot;3.berries&quot;))
-    (begin
-        (dialog '((&quot;* {{hero}} found some berries! 20 LPs have been recovered *&quot;)))
-        (give-item &quot;3.berries&quot;)
-        (set-life-diff 20))
-    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+    <property name="action">(begin
+    (define item-id &quot;3.berries&quot;)
+    (define life-diff 20)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (give-item item-id)
+            (set-life-diff life-diff))
+        (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
   <object id="38" type="Modifier" gid="19" x="272" y="32" width="16" height="16">
@@ -85,7 +91,7 @@
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="42" gid="135" x="128" y="16" width="16" height="16">
+  <object id="42" gid="139" x="128" y="16" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;It seems that once there was a path here.&quot;)))"/>
    </properties>

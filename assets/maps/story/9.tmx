@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="27" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="46">
  <properties>
+  <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
@@ -24,22 +25,28 @@
   </object>
   <object id="42" type="Solid" gid="55" x="272" y="80" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item &quot;9.berries&quot;))
-    (begin
-        (dialog '((&quot;* {{hero}} found some berries! 5 LPs have been recovered *&quot;)))
-        (give-item &quot;9.berries&quot;)
-        (set-life-diff 5))
-    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+    <property name="action">(begin
+    (define item-id &quot;9.berries&quot;)
+    (define life-diff 5)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (give-item item-id)
+            (set-life-diff life-diff))
+        (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
   <object id="45" type="Solid" gid="55" x="416" y="32" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item &quot;9.berries2&quot;))
-    (begin
-        (dialog '((&quot;* {{hero}} found some berries! 25 LPs have been recovered *&quot;)))
-        (give-item &quot;9.berries2&quot;)
-        (set-life-diff 5))
-    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+    <property name="action">(begin
+    (define item-id &quot;9.berries2&quot;)
+    (define life-diff 25)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (give-item item-id)
+            (set-life-diff life-diff))
+        (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
  </objectgroup>

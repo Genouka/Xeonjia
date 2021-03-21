@@ -3,6 +3,7 @@
  <properties>
   <property name="action">(if (eq? (last-place) &quot;5&quot;)
     (map-name &quot;Route 1&quot;))</property>
+  <property name="map-name" value="Route 1"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
  <tileset firstgid="129" source="../tilesets/basic.tsx"/>
@@ -49,22 +50,28 @@
  <objectgroup id="9" name="items">
   <object id="37" type="Solid" gid="55" x="128" y="384" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item &quot;4.berries&quot;))
-    (begin
-        (dialog '((&quot;* {{hero}} found some berries! 20 LPs have been recovered *&quot;)))
-        (give-item &quot;4.berries&quot;)
-        (set-life-diff 20))
-    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+    <property name="action">(begin
+    (define item-id &quot;4.berries&quot;)
+    (define life-diff 20)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (give-item item-id)
+            (set-life-diff life-diff))
+        (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
   <object id="38" type="Solid" gid="55" x="208" y="32" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item &quot;4.berries2&quot;))
-    (begin
-        (dialog '((&quot;* {{hero}} found some berries! 15 LPs have been recovered *&quot;)))
-        (give-item &quot;4.berries2&quot;)
-        (set-life-diff 15))
-    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+    <property name="action">(begin
+    (define item-id &quot;4.berries2&quot;)
+    (define life-diff 15)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (give-item item-id)
+            (set-life-diff life-diff))
+        (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
  </objectgroup>

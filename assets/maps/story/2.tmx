@@ -3,13 +3,14 @@
  <properties>
   <property name="action">(if (eq? (last-place) &quot;1&quot;)
     (map-name &quot;Route 1&quot;))</property>
+  <property name="map-name" value="Route 1"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/basic.tsx"/>
  <tileset firstgid="25" source="../tilesets/npc.tsx"/>
- <tileset firstgid="73" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="77" source="../tilesets/outdoor_1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA61SsQqFMAy833P08RZxyfTo9DZd3ewXiL9rAinWYsGaHBxJSziOXAIAwomgb9L+q1UYte7KUNCKpGuFlx+q6PyddFohu1lwzesNUpZWEOxeBOmmrFjhn3tr1jlkx5vZTfv91DyLjkfusmdLXj3zozr0YP5uZmR2zIk5w5b7wPwpazotd0Dw27PXPXug9JL8hayP2R8VNWb9AfbgROB4BgAA
+   H4sIAAAAAAAAA62SMQqAMAxFc0FHxUVcOkknN13d7AnEy5pAgjVYsCYPPklFQsj/EQAC3ER+B+57rqTE9WRFJSsy14rXPnIDzew0pxa6zQZPv/4gXlqRnFiRTFnZwd/3Wq9z6MaHfZ3q/JR2pjkevtOdLX61qI7nfMnP2z8jqkEtqBVsvg+oiVWaU5MDzzt75dkDvYvsF7M+Zd+CqinrL3tc7up4BgAA
   </data>
  </layer>
  <objectgroup id="8" name="npcs">
@@ -20,7 +21,7 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="42" gid="135" x="16" y="96" width="16" height="16">
+  <object id="42" gid="139" x="16" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (! (has-item &quot;2.stone&quot;))
     (begin
@@ -38,7 +39,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="18" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NggIAaIK5loBy0AHErkWpnAvEsIJ4DxHORxEl1y0ogXg3Ea4B4LZluAYGNQLwJiJcB8VY0uToSzNkJxLuAeB0Q70WTayPBHBjII0MPrQAt0gkpYUsv0DvQDqABQA9ncuMS3RxS8xm1QcIA2o0NUDs9kxJP+OyGxROyGlzqQeVUPQ65diLdgg8AAODc9tB4BgAA
+   H4sIAAAAAAAAA2NggIAGIG5koBx0AHEnkWrnAvE8IF4AxAuRxEl1y1ogXg/EG4B4I5luAYGtQLwNiFcB8U40uSYSzNkLxPuAeBMQH0ST6yLBHBgoIkMPrUADA/XTCSlhSy8wcaAdQAOAHs4NDOTFJbo5pOYzaoOUAbQbG6B2em5gID6e8NkNiydkNbjUg8qpZhxy3US6BR8AAKfQy8J4BgAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

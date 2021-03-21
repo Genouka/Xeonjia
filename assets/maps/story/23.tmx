@@ -3,6 +3,7 @@
  <properties>
   <property name="action">(if (eq? (last-place) &quot;24&quot;)
     (map-name &quot;Route 2&quot;))</property>
+  <property name="map-name" value="Route 1"/>
   <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>

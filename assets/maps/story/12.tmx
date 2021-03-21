@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="21" height="17" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="44">
  <properties>
+  <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
@@ -38,12 +39,15 @@
  <objectgroup id="8" name="items">
   <object id="40" gid="55" x="208" y="272" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item &quot;12.money&quot;))
-    (begin
-        (dialog '((&quot;* {{hero}} found 50 ¤ *&quot;)))
-        (give-item &quot;12.money&quot;)
-        (set-money-diff 50))
-    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+    <property name="action">(begin
+    (define item-id &quot;12.money&quot;)
+    (define money-diff 50)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found {{money-diff}} ¤ *&quot;)))
+            (give-item item-id)
+            (set-money-diff money-diff))
+        (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
   <object id="41" type="Modifier" gid="155" x="160" y="224" width="16" height="16">

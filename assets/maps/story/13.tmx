@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="43">
  <properties>
+  <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
@@ -87,12 +88,15 @@
   </object>
   <object id="42" type="Solid" gid="55" x="240" y="224" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item &quot;13.berries&quot;))
-    (begin
-        (dialog '((&quot;* {{hero}} found some berries! 10 LPs have been recovered *&quot;)))
-        (give-item &quot;13.berries&quot;)
-        (set-life-diff 10))
-    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+    <property name="action">(begin
+    (define item-id &quot;13.berries&quot;)
+    (define life-diff 10)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (give-item item-id)
+            (set-life-diff life-diff))
+        (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
  </objectgroup>
