@@ -21,6 +21,7 @@ Environment setEnvironment() {
   var _ = (String name, int arity, IntrinsicBody fun) {
     env.defineSymbol(Sym(name), Intrinsic(name, arity, fun));
   };
+  env.defineSymbol(Sym('hero'), mainCharacter.name);
 
   // Game procedures
   _('get-life', 0, (Cell x) => game.playerOne.lifePoints);

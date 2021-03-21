@@ -1,4 +1,6 @@
 import 'package:xeonjia/game/components/abstract_basic.dart';
+import 'package:xeonjia/game/util/little_scheme.dart';
+import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/i18n/story.i18n.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
@@ -43,7 +45,8 @@ class Message {
           .replaceAll('\\n', '\n')
           .i18n
           .replaceAll('\n', '\\n')
-          .replaceAll('{{hero}}', mainCharacter.name);
+          .replaceAllMapped(RegExp(r'{{(.*?)}}'),
+              (m) => game.environment.lookForValue(Sym(m[1])).toString());
     }
   }
 }
