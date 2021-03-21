@@ -20,6 +20,9 @@ Map<String, List<Translation>> tmx2po() {
   // Find npc-names
   final npcName = RegExp(r'property name="name" value="(.*?)"');
 
+  // Find answers
+  final regexAnswer = RegExp(r'(?:&quot;(.*?)&quot;)+');
+
   // Map directory : list of strings
   var dirStringsMap = <String, List<Translation>>{};
   const mapsPath = 'assets/maps/';
@@ -57,6 +60,14 @@ Map<String, List<Translation>> tmx2po() {
         if (!dirStringsMap[name].contains(string)) {
           dirStringsMap[name].add(string);
         }
+      });
+      RegExp(r'(\(answer .*\)\)\))').allMatches(content).forEach((text) {
+        regexAnswer.allMatches(text[1]).forEach((t) {
+          var string = Translation(fsEntity.path, t[1], null);
+          if (!dirStringsMap[name].contains(string)) {
+            dirStringsMap[name].add(string);
+          }
+        });
       });
     }
   });
