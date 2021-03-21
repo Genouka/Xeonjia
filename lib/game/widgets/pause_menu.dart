@@ -189,12 +189,15 @@ class _PauseMenuState extends State<PauseMenu> {
 
   // Button on the bottom row
   Widget actionButton(String text, VoidCallback onPressed) {
-    return TextButton(
-      onPressed: onPressed,
-      child: Text(
-        text,
-        textAlign: TextAlign.center,
-        style: const TextStyle(color: Colors.white, fontSize: 32),
+    return InkWell(
+      onTap: onPressed,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: Text(
+          text,
+          textAlign: TextAlign.center,
+          style: const TextStyle(color: Colors.white, fontSize: 32),
+        ),
       ),
     );
   }
