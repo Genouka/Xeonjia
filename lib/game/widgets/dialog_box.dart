@@ -123,9 +123,11 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                         game.messageManager.currentMessage.text
                                             .substring(0,
                                                 _characterCountAnimation.value),
-                                        style: const TextStyle(
+                                        style: TextStyle(
                                           fontSize: 32,
                                           color: Colors.white,
+                                          fontFamily: game.messageManager
+                                              .currentMessage.font,
                                         ),
                                       );
                                     },

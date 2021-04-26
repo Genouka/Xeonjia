@@ -120,6 +120,24 @@ Environment setEnvironment() {
     }
     return #NONE;
   });
+  _('dialog-kobi', 1, (Cell x) {
+    var it = (x.car as Cell).iterator;
+    while (it.moveNext()) {
+      game.setMessage((it.current as Cell).length == 1
+          ? Message((it.current as Cell).car,
+              component: (env.lookForValue(Sym('actor')) as BasicComponent),
+              translate: false,
+              font: 'kobi')
+          : Message(
+              (it.current as Cell).cdr.car,
+              component: (env.lookForValue(Sym('actor')) as BasicComponent),
+              author: (it.current as Cell).car,
+              translate: false,
+              font: 'kobi',
+            ));
+    }
+    return #NONE;
+  });
   _('answer', 2, (Cell x) {
     var it = (x.cdr.car as Cell).iterator;
     while (it.moveNext()) {

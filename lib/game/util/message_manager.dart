@@ -66,10 +66,13 @@ class MessageManager {
           : strings.add(match.replaceAll('\\n', ''));
     });
     return strings.fold([], (previousValue, element) {
-      previousValue.add(Message(element,
-          author: message.author,
-          component: message.component,
-          translate: false));
+      previousValue.add(Message(
+        element,
+        author: message.author,
+        component: message.component,
+        translate: false,
+        font: message.font,
+      ));
       return previousValue;
     });
   }

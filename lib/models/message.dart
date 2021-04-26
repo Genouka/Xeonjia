@@ -27,8 +27,11 @@ class Message {
   // Character speaking
   BasicComponent component;
 
+  // Font family used (null if default)
+  String font;
+
   Message(this.text,
-      {this.author = '', this.component, bool translate = true}) {
+      {this.author = '', this.component, bool translate = true, this.font}) {
     var m = RegExp(r'([^\/]*)\/?([^_]*)_?(.*)').firstMatch(author);
     var name = m.group(2) != '' ? m.group(2) : component?.name ?? '';
     authorName = (m.group(1) != '' ? m.group(1) : (author == '' ? '' : name));
