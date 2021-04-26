@@ -100,7 +100,11 @@ Environment setEnvironment() {
       (Cell x) => game.components.forEach((c) {
             if (c is BasicComponent) c.executeAction();
           }));
-  _('has-item', 1, (Cell x) => game.playerOne.itemList.contains(x.car));
+  _(
+      'has-item',
+      1,
+      (Cell x) =>
+          (game.playerOne?.itemList ?? mainCharacter.itemList).contains(x.car));
   _('give-item', 1, (Cell x) => game.playerOne.addItem(x.car));
   _('find-item', 1, (Cell x) => game.playerOne.addItem(x.car));
   _('take-item', 1, (Cell x) => game.playerOne.removeItem(x.car));
