@@ -96,13 +96,7 @@ Environment setEnvironment() {
     game.addWidgetOverlay('blackCurtain', BlackCurtain(self.delete));
     return #NONE;
   });
-  _(
-      'enemies-count',
-      0,
-      (Cell x) => game.components
-          .where((element) =>
-              element is BasicComponent && [-3, -2, 1].contains(element.teamId))
-          .length);
+  _('enemies-count', 0, (Cell x) => game.enemies);
   _('fire-event', 1, (Cell x) => (x.car as BasicComponent).executeAction());
   _(
       'fire-global-event',

@@ -26,11 +26,7 @@ class DoorComponent extends BasicComponent {
   @override
   bool isSolid({BasicComponent otherComponent}) =>
       !otherComponent.isPlayerOne ||
-      (game.components
-              .where((element) =>
-                  element is BasicComponent &&
-                  [-3, -2, 1].contains(element.teamId))
-              .isNotEmpty &&
+      (game.enemies != 0 &&
           _roomId !=
               mainCharacter
                   .visitedRooms[mainCharacter.visitedRooms.length - 2]);

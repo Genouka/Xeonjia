@@ -118,6 +118,12 @@ class XeonjiaGame extends BaseGame
   // List of teams
   List<Team> teams;
 
+  // Count enemies in the room
+  int get enemies => game.components
+      .where((element) =>
+          element is BasicComponent && [-3, -2, 1].contains(element.teamId))
+      .length;
+
   // List of teams sorted by points
   List<Team> get ranking {
     var list = List.from(teams).cast<Team>();
