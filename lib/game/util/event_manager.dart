@@ -9,6 +9,7 @@ import 'package:xeonjia/game/widgets/black_curtain.dart';
 import 'package:xeonjia/game/widgets/map_name_box.dart';
 import 'package:xeonjia/game/widgets/shop_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/shop_item.dart';
@@ -44,6 +45,15 @@ Environment setEnvironment() {
   _('increase-def', 1, (Cell x) => game.playerOne.def += x.car);
   _('set-money-diff', 1,
       (Cell x) => game.playerOne.moneyDifference((x.car as int), popup: false));
+  _('max-pp-snowballs', 0, (Cell x) {
+    var w = game.playerOne.weaponList.firstWhere((w) => w.id == 1);
+    game.setMessage(Message(w.powerPoints < w.maxPp
+        ? '* {{hero}} filled his snowballs container *'.i18n
+        : 'The snowballs container is full.'.i18n));
+    w.restorePp();
+    game.refreshWeaponButtons();
+    return #NONE;
+  });
   _('give-weapon', 1, (Cell x) {
     game.playerOne.weaponList.add(Weapon.fromId((x.car as int)));
     game.refreshWeaponButtons();
