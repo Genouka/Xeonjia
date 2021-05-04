@@ -13,8 +13,9 @@ import 'package:xeonjia/util/local_data_controller.dart';
 
 // Component able to move on the game field
 abstract class DynamicComponent extends BasicComponent with TextAnimation {
-  DynamicComponent(Point startingPosition, Map<String, dynamic> properties)
-      : super(startingPosition, properties);
+  DynamicComponent(
+      int id, Point startingPosition, Map<String, dynamic> properties)
+      : super(id, startingPosition, properties);
 
   // Constructor used when component is imported from a tmx file
   DynamicComponent.fromTile(tile) : super.fromTile(tile);

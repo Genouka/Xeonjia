@@ -118,6 +118,10 @@ class XeonjiaGame extends BaseGame
   // List of teams
   List<Team> teams;
 
+  // Get component from ID
+  BasicComponent getComponentFromId(int id) =>
+      components.firstWhere((c) => c is BasicComponent && c.id == id);
+
   // Count enemies in the room
   int get enemies => game.components
       .where((element) =>

@@ -79,7 +79,7 @@ class CharacterComponent extends DynamicComponent
             ((isPlayerOne && game.config.mode == GameMode.story)
                 ? mainCharacter.maxLifePoints
                 : (100 + 5 * level).toDouble()),
-        super(tile.position, tile.properties) {
+        super(tile.id, tile.position, tile.properties) {
     orientation =
         GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0'));
     _initialOrientation = orientation;

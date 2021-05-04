@@ -16,6 +16,9 @@ import 'package:xeonjia/models/tile.dart';
 // Basic game component
 // Every game component extends this one
 abstract class BasicComponent extends SpriteComponent {
+  // Component unique ID
+  final int id;
+
   // Component starting position
   Point startingPosition;
 
@@ -101,7 +104,8 @@ abstract class BasicComponent extends SpriteComponent {
   String name;
 
   BasicComponent.fromTile(Tile tile)
-      : startingPosition = tile.position,
+      : id = tile.id,
+        startingPosition = tile.position,
         name = tile.properties['name'],
         action = tile.properties['action'] ?? '',
         actionOnCollision = tile.properties['actionOnCollision'] ?? '',
@@ -123,8 +127,10 @@ abstract class BasicComponent extends SpriteComponent {
     onCreate();
   }
 
-  BasicComponent(Point startingPosition, Map<String, dynamic> properties)
+  BasicComponent(
+      int id, Point startingPosition, Map<String, dynamic> properties)
       : this.fromTile(Tile(
+            id: id,
             position: startingPosition,
             size: componentSize,
             sprite: Sprite(properties['image'],
