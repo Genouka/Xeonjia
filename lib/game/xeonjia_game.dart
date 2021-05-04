@@ -124,8 +124,9 @@ class XeonjiaGame extends BaseGame
 
   // Count enemies in the room
   int get enemies => game.components
-      .where((element) =>
-          element is BasicComponent && [-3, -2, 1].contains(element.teamId))
+      .where((e) =>
+          (e is BasicComponent && [-3, -2, 1].contains(e.teamId)) ||
+          (e is CharacterComponent && e.friendly == false))
       .length;
 
   // List of teams sorted by points
