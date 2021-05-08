@@ -55,12 +55,13 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   }
 
   // If this component was previously still update its direction and orientation
-  void updateDirection(Direction newDirection, {bool forced = false}) {
+  void updateDirection(Direction newDirection,
+      {bool forced = false, bool animated = true}) {
     if (!isBeingDeleted && (isStationary || forced)) {
       wasStationary = true;
       direction = newDirection;
       updateOrientation();
-      animate([_walkingSprites[orientation]]);
+      if (animated) animate([_walkingSprites[orientation]]);
       ++movesCounter;
 
       // Decrease life points cause poison
@@ -81,7 +82,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
 
   @override
   void update(double dt) {
-    if (direction != null && game.isNotPaused) _move(dt);
+    if (direction != null) _move(dt);
     super.update(dt);
   }
 

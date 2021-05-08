@@ -3,6 +3,7 @@ import 'package:flame/time.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
+import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/util/little_scheme.dart';
 import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/widgets/black_curtain.dart';
@@ -22,6 +23,15 @@ Environment setEnvironment() {
     env.defineSymbol(Sym(name), Intrinsic(name, arity, fun));
   };
   env.defineSymbol(Sym('hero'), mainCharacter.name);
+
+  // Return [actor, value] for Cells that have a default actor
+  // e.g. (move 2) and (move '(0 93))
+  List getActorAndValue(Cell x) => (x.car is Cell)
+      ? [
+          game.getComponentFromId(((x.car as Cell).cdr as Cell).car),
+          (x.car as Cell).car
+        ]
+      : [env.lookForValue(Sym('actor')), x.car];
 
   // Game procedures
   _('get-life', 0, (Cell x) => game.playerOne.lifePoints);
@@ -75,25 +85,44 @@ Environment setEnvironment() {
                   mainCharacter.visitedRooms.last.split('/').first)
               .length ==
           1);
-  _(
-      'move',
-      1,
-      (Cell x) => (env.lookForValue(Sym('actor')) as BasicComponent).x +=
-          componentSize);
+  _('move', 1, (Cell x) {
+    var actorAndValue = getActorAndValue(x);
+    DynamicComponent actor = actorAndValue[0];
+    int direction = actorAndValue[1];
+    actor.updateDirection(GetDirection.fromInt(direction), animated: false);
+    return #NONE;
+  });
   _('orientation', 0, (Cell x) => game.playerOne.orientation.index);
-  _(
-      'set-orientation',
-      1,
-      (Cell x) => (env.lookForValue(Sym('actor')) as DynamicComponent)
-          .orientation = GetDirection.fromInt(x.car));
-  _('delete', 0, (Cell x) {
+  _('set-orientation', 1, (Cell x) {
+    var actorAndValue = getActorAndValue(x);
+    DynamicComponent actor = actorAndValue[0];
+    int direction = actorAndValue[1];
+    actor.orientation = GetDirection.fromInt(direction);
+    return #NONE;
+  });
+  _('delete-me', 0, (Cell x) {
     BasicComponent self = (env.lookForValue(Sym('self')) as Intrinsic).fun(x);
     self.delete();
     return #NONE;
   });
+  _('delete', 1, (Cell x) => game.getComponentFromId(x.car).delete());
   _('leave', 0, (Cell x) {
     BasicComponent self = (env.lookForValue(Sym('self')) as Intrinsic).fun(x);
     game.addWidgetOverlay('blackCurtain', BlackCurtain(self.delete));
+    return #NONE;
+  });
+  _('friendly', 1, (Cell x) {
+    var actorAndValue = getActorAndValue(x);
+    CharacterComponent actor = actorAndValue[0];
+    bool friendly = actorAndValue[1];
+    actor.friendly = friendly;
+    return #NONE;
+  });
+  _('quiet', 1, (Cell x) {
+    var actorAndValue = getActorAndValue(x);
+    CharacterComponent actor = actorAndValue[0];
+    bool quiet = actorAndValue[1];
+    actor.quiet = quiet;
     return #NONE;
   });
   _('enemies-count', 0, (Cell x) => game.enemies);
