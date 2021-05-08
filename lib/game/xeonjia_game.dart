@@ -97,7 +97,7 @@ class XeonjiaGame extends BaseGame
   int elapsedSeconds = 0;
   int get remainingTime => config.maxTime - elapsedSeconds;
 
-  // If true, game is paused so no one can move
+  // If true the game is paused
   bool _pause;
   bool get isPaused => _pause;
   bool get isNotPaused => !_pause;
@@ -236,6 +236,7 @@ class XeonjiaGame extends BaseGame
   void executeAction(
       {@required String action, BasicComponent actor, BasicComponent self}) {
     if (action?.isEmpty ?? true) return;
+    pause(stopEngine: false);
     environment.defineSymbol(
         Sym('self'), Intrinsic('self', 0, (Cell x) => self));
     environment.defineSymbol(Sym('actor'), actor ?? playerOne);
@@ -245,9 +246,10 @@ class XeonjiaGame extends BaseGame
 
   // Continue action execution after (wait)
   Continuation _actionContinuation;
+  bool get hasAction => _actionContinuation != null;
   double nextActionDelay = 0;
   void continueAction({double delay}) {
-    if (_actionContinuation != null) {
+    if (hasAction) {
       delay ??= nextActionDelay;
       nextActionDelay = 0;
       addLater(TimerComponent(Timer(

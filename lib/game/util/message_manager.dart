@@ -24,7 +24,6 @@ class MessageManager {
   void clear() {
     _messages = [];
     answers = [];
-    game.resumeEngine();
     game.continueAction(delay: 0);
     if (hideMap) {
       hideMap = false;

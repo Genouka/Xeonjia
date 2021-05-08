@@ -522,7 +522,9 @@ Continuation evaluate(dynamic exp, Environment env, [Continuation previousK]) {
         switch (op) {
           case ContOp.WAIT:
             // execution paused
-            if (game.nextActionDelay != 0) game.continueAction();
+            if (game.nextActionDelay != 0 && game.hasAction) {
+              game.continueAction();
+            }
             return k;
           case ContOp.THEN: // x is (e2 e3) of (if e1 e2 e3).
             if (exp == false) {
