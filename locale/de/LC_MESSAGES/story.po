@@ -2,11 +2,11 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # anselm-helbig <gh@mnemonikk.org>, 2020.
-# DeepDaikon <deepdaikon@tuta.io>, 2020.
+# DeepDaikon <deepdaikon@tuta.io>, 2020, 2021.
 # Swann Fournial <s.fournial@protonmail.com>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-01-06 22:57+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-04-13 19:56+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! 30 LPs have been recovered *"
@@ -18,11 +18,11 @@ msgstr "Eine kleine Pflanze… sonst nichts."
 
 #: assets/maps/story/15.tmx:
 msgid "\" Exit ↑ \""
-msgstr ""
+msgstr "\" Ausgang ↑ \""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB - 1F"
-msgstr ""
+msgstr "VANTOI LAB - 1F"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Sorry about the mess. Thieves have entered and turned everything upside down."
@@ -146,7 +146,7 @@ msgstr "* {{hero}} hat Beeren gefunden! Es gibt 10 LP zurück *"
 
 #: assets/maps/story/14.tmx:
 msgid "\" ← Pharmacy \""
-msgstr ""
+msgstr "\" ← Apotheke \""
 
 #: assets/maps/story/7.tmx:
 msgid "…"
@@ -226,39 +226,39 @@ msgstr "Tschüss!"
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area - Do not leave rubbish, thanks \""
-msgstr ""
+msgstr "\" Picknick-Platz - Bitte sauber halten, danke \""
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
-msgstr ""
+msgstr "\" Picknick-Platz ↑ \"\n\" Wald-Center ↓ \""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to."
-msgstr ""
+msgstr "H-heute… heute ist der Tag auf den ich mein Leben lang gewartet habe. Meine Reise zum Xeonjia-Turm beginnt.\nIn diesem Jahr bin ich der auserwählte \"Held\", verantwortlich, das Monster zu besiegen, das das Königreich eingefroren hat...\nNach Jahren des Trainings hoffe ich, dass ich es schaffe."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'd like to go back to bed but I can't."
-msgstr ""
+msgstr "Ich will zurück ins Bett, aber ich kann nicht."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'll miss you, TV."
-msgstr ""
+msgstr "I werde dich vermissten, Fernseher."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I hope my parents will water it when I'm away."
-msgstr ""
+msgstr "Ich hoffe meine Eltern werden sie gießen, wenn ich weg bin."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
-msgstr ""
+msgstr "Alle meine Bücher sind hier."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "My chair."
-msgstr ""
+msgstr "Mein Stuhl."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "From here I can see the garden."
-msgstr ""
+msgstr "Von hier kann ich den Garten sehen."
 
 #: assets/maps/story/24.tmx:
 msgid "Melhopolis"
@@ -266,7 +266,7 @@ msgstr "Melhopolis"
 
 #: assets/maps/story/24.tmx:
 msgid "The city center is a few kilometers to the south."
-msgstr ""
+msgstr "Das Stadtzentrum befindet sich einige Kilometer südlich."
 
 #: assets/maps/story/24.tmx:
 msgid "\" VANTOI LAB \""
@@ -274,11 +274,11 @@ msgstr "„VANTOI-LAB“"
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Laboratory."
-msgstr ""
+msgstr "Ich kann das Innere des Labors sehen."
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Pharmacy."
-msgstr ""
+msgstr "Ich kann das Innere der Apotheke sehen."
 
 #: assets/maps/story/24.tmx:
 msgid "\" Melhopolis - Regional capital \""
@@ -286,11 +286,11 @@ msgstr "„Melhopolis – Regionale Hauptstadt“"
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the house."
-msgstr ""
+msgstr "Ich kann das Innere des Hauses sehen."
 
 #: assets/maps/story/22.tmx:
 msgid "Route 3"
-msgstr ""
+msgstr "Route 3"
 
 #: assets/maps/story/22.tmx:
 msgid "That's the first crypt, I think."

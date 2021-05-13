@@ -2,12 +2,13 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Liu Tao <lyuutau@outlook.com>, 2021.
+# KMX <kumax2048@protonmail.ch>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-02-16 15:57+0000\nLast-Translator: Liu Tao <lyuutau@outlook.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-04-11 14:59+0000\nLast-Translator: KMX <kumax2048@protonmail.ch>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! 30 LPs have been recovered *"
-msgstr ""
+msgstr "* {{hero}}发现了一些浆果！已恢复 30 点生命值 *"
 
 #: assets/maps/story/15.tmx:
 #, fuzzy
@@ -16,15 +17,16 @@ msgstr "一小株植物……仅此而已。"
 
 #: assets/maps/story/15.tmx:
 msgid "\" Exit ↑ \""
-msgstr ""
+msgstr "“出口↑”"
 
 #: assets/maps/story/24_lab.tmx:
+#, fuzzy
 msgid "VANTOI LAB - 1F"
-msgstr ""
+msgstr "VANTOI 实验室 - 1F"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Sorry about the mess. Thieves have entered and turned everything upside down."
-msgstr ""
+msgstr "抱歉，这里很乱，小偷们进来过，把一切搞得天翻地覆的。"
 
 #: assets/maps/story/24_lab.tmx:
 #, fuzzy
@@ -47,15 +49,17 @@ msgstr "一台坏显示器。"
 
 #: assets/maps/story/8.tmx:
 msgid "\" → \""
-msgstr ""
+msgstr "“→”"
 
 #: assets/maps/story/1.tmx:
+#, fuzzy
 msgid "Natawn"
-msgstr ""
+msgstr "Natawn"
 
 #: assets/maps/story/1.tmx:
+#, fuzzy
 msgid "Safe travels, {{hero}}.\nMany before you have failed, but I am sure you will handle it right."
-msgstr ""
+msgstr "路上小心，{{hero}}。\n许多人在你之前都失败了，但是我敢肯定你能摆平它。"
 
 #: assets/maps/story/1.tmx:
 #, fuzzy
@@ -69,103 +73,110 @@ msgstr "我会尽力的。"
 
 #: assets/maps/story/1.tmx:
 msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
-msgstr ""
+msgstr "“邪王”居住的塔应该位于该地区的首都附近。"
 
 #: assets/maps/story/1.tmx:
+#, fuzzy
 msgid "\" NATAWN - Hometown of the 62nd hero \""
-msgstr ""
+msgstr "“曙光镇 - 第 62 代英雄的家乡”"
 
 #: assets/maps/story/1.tmx:
+#, fuzzy
 msgid "I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude."
-msgstr ""
+msgstr "在离开之前我必须和我的父母告别。不然会显得很没有礼貌的。"
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks."
-msgstr ""
+msgstr "就像我母亲说的那样，我最好从邻居那拿到护胫板，不然有可能会被石头撞得太疼。"
 
 #: assets/maps/story/17.tmx:
 msgid "I still haven't figured out if these monsters are malicious or just stupid."
-msgstr ""
+msgstr "我还是搞不清楚这些怪物到底是恶意的还是单纯愚蠢而已。"
 
 #: assets/maps/story/17.tmx:
 msgid "* {{hero}} found some berries! 50 LPs have been recovered *"
-msgstr ""
+msgstr "* {{hero}} 发现了一些浆果！已回复 50 点生命值 *"
 
 #: assets/maps/story/31_house1.tmx:
 msgid "I hate people who always say the same things."
-msgstr ""
+msgstr "我讨厌那些总是说同样的话的人。"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Hi, you look a little tired. Rest here for a moment."
-msgstr ""
+msgstr "嘿，你看起来有些累了。在这里休息一会吧。"
 
 #: assets/maps/story/3_house2.tmx:
+#, fuzzy
 msgid "* {{hero}} rested and is now in perfect health *"
-msgstr ""
+msgstr "* {{hero}} 休息完毕并且充满了活力 *"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Come back anytime."
-msgstr ""
+msgstr "随时都可以回来。"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "小心点，别受伤了。"
 
 #: assets/maps/story/13.tmx:
+#, fuzzy
 msgid "Help me please!\nPunch him by pressing the 'P' button."
-msgstr ""
+msgstr "救救我吧！\n按 'P' 键攻击他。"
 
 #: assets/maps/story/13.tmx:
 msgid "Everything good?"
-msgstr ""
+msgstr "你还好吧？"
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, thank you so much for saving my life!\nI have to admit, I was scared.\nAs a token of gratitude I give you this gem that I found a little while ago."
-msgstr ""
+msgstr "是的，非常感谢你救了我的命！\n我必须承认，我吓坏了。\n为了表示感谢，我把这个不久前发现的宝石送给你吧。"
 
 #: assets/maps/story/13.tmx:
 msgid "Thanks, it seems very precious."
-msgstr ""
+msgstr "谢谢，看上去十分宝贵。"
 
 #: assets/maps/story/13.tmx:
 msgid "Thanks for saving me, I think it's better if I go home now."
-msgstr ""
+msgstr "谢谢你救了我，我想我现在还是回家吧。"
 
 #: assets/maps/story/13.tmx:
 msgid "Please help me! Save me from this monster!"
-msgstr ""
+msgstr "请帮帮我！把我从这个怪物手里救出来！"
 
 #: assets/maps/story/13.tmx:
 msgid "I can't escape, I have to defeat the monster to save that man."
-msgstr ""
+msgstr "我不能逃，我必须打倒怪物，然后救出那个人。"
 
 #: assets/maps/story/13.tmx:
+#, fuzzy
 msgid "Better if I check that the guy is okay."
-msgstr ""
+msgstr "我最好去确认一下那个人是否没事。"
 
 #: assets/maps/story/13.tmx:
 msgid "* {{hero}} found some berries! 10 LPs have been recovered *"
-msgstr ""
+msgstr "* {{hero}}发现了一些浆果！已恢复 10 点生命值 *"
 
 #: assets/maps/story/14.tmx:
 msgid "\" ← Pharmacy \""
-msgstr ""
+msgstr "“←药店”"
 
 #: assets/maps/story/7.tmx:
 msgid "…"
-msgstr ""
+msgstr "……"
 
 #: assets/maps/story/7.tmx:
+#, fuzzy
 msgid "Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays."
-msgstr ""
+msgstr "噢……是的，抱歉，我挡在路中央了……\n你是游客吗？现在游客已经很少见了。"
 
 #: assets/maps/story/7.tmx:
 msgid "???"
 msgstr ""
 
 #: assets/maps/story/7.tmx:
+#, fuzzy
 msgid "N-no, I'm {{hero}}, this year's chosen hero. I just left home to try to defeat the King of Evil."
-msgstr ""
+msgstr "不不，我是{{hero}}，今年被选出的英雄。我刚刚离家出走，想打败邪恶之王。"
 
 #: assets/maps/story/7.tmx:
 msgid "What?! So is it you?!"
@@ -173,123 +184,134 @@ msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Nice to meet you, I've never met a hero before."
-msgstr ""
+msgstr "很高兴认识你，我之前还从来没见到过一个英雄呢。"
 
 #: assets/maps/story/7.tmx:
+#, fuzzy
 msgid "My name is Milla, I was born and raised in this area. I too am setting out on a journey."
-msgstr ""
+msgstr "我的名字叫米拉，我是在这个地方出生和长大的。而且我也正在旅游。"
 
 #: assets/maps/story/7.tmx:
+#, fuzzy
 msgid "Oh cool! Where are you going?"
-msgstr ""
+msgstr "哦，酷！你打算去哪里？"
 
 #: assets/maps/story/7.tmx:
+#, fuzzy
 msgid "I have absolutely no idea."
-msgstr ""
+msgstr "完全没有头绪。"
 
 #: assets/maps/story/7.tmx:
 msgid "I just want to explore the world, know new places and learn new things."
-msgstr ""
+msgstr "我只是想探索世界，了解新的地方，学习新的事物。"
 
 #: assets/maps/story/7.tmx:
+#, fuzzy
 msgid "Wow, sounds like a great idea!"
-msgstr ""
+msgstr "哇哦，听起来不错！"
 
 #: assets/maps/story/7.tmx:
+#, fuzzy
 msgid "Yep, it won't be easy but I want to visit at least the whole Kingdom."
-msgstr ""
+msgstr "嗯，这不是件易事，但我至少想游遍整个王国。"
 
 #: assets/maps/story/7.tmx:
+#, fuzzy
 msgid "Are there places outside the Kingdom?!"
-msgstr ""
+msgstr "王国外面还有地方吗？！"
 
 #: assets/maps/story/7.tmx:
 msgid "Dunno, that's what I want to find out!"
-msgstr ""
+msgstr "不知道，但这就是我想去了解的地方！"
 
 #: assets/maps/story/7.tmx:
 msgid "Anyway, I don't want to waste any more of your time."
-msgstr ""
+msgstr "总之，我不想再浪费你的时间了。"
 
 #: assets/maps/story/7.tmx:
 msgid "After all, you have to save the world. Not an easy task."
-msgstr ""
+msgstr "毕竟，你必须要去拯救世界。可不是件简单的差事。"
 
 #: assets/maps/story/7.tmx:
 msgid "I'm sure we'll meet again soon, hero."
-msgstr ""
+msgstr "我相信我们还会再见面的，英雄。"
 
 #: assets/maps/story/7.tmx:
 msgid "See ya!"
-msgstr ""
+msgstr "再见！"
 
 #: assets/maps/story/7.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "拜拜！"
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area - Do not leave rubbish, thanks \""
-msgstr ""
+msgstr "“野餐区 - 请不要留下垃圾，谢谢”"
 
 #: assets/maps/story/7.tmx:
+#, fuzzy
 msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
-msgstr ""
+msgstr "“野餐区↑”\n“森林中心↓”"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to."
 msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
+#, fuzzy
 msgid "I'd like to go back to bed but I can't."
-msgstr ""
+msgstr "我想回到床上，但现在不是时候。"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'll miss you, TV."
-msgstr ""
+msgstr "我会想你的，电视。"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I hope my parents will water it when I'm away."
-msgstr ""
+msgstr "希望在我离开后我爸妈会给它浇水吧。"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
-msgstr ""
+msgstr "我的书本全都在这里。"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "My chair."
-msgstr ""
+msgstr "我的椅子。"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "From here I can see the garden."
-msgstr ""
+msgstr "在这里能看到庭院。"
 
 #: assets/maps/story/24.tmx:
+#, fuzzy
 msgid "Melhopolis"
-msgstr ""
+msgstr "梅洛波利斯"
 
 #: assets/maps/story/24.tmx:
+#, fuzzy
 msgid "The city center is a few kilometers to the south."
-msgstr ""
+msgstr "市中心离南方有些许公里。"
 
 #: assets/maps/story/24.tmx:
 msgid "\" VANTOI LAB \""
-msgstr ""
+msgstr "“VANTOI 实验室”"
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Laboratory."
-msgstr ""
+msgstr "能看到实验室的内部。"
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Pharmacy."
-msgstr ""
+msgstr "能看到药店的内部。"
 
 #: assets/maps/story/24.tmx:
+#, fuzzy
 msgid "\" Melhopolis - Regional capital \""
-msgstr ""
+msgstr "“梅洛波利斯 - 地区首府”"
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the house."
-msgstr ""
+msgstr "能看到房子的内侧。"
 
 #: assets/maps/story/22.tmx:
 msgid "Route 3"
@@ -301,11 +323,11 @@ msgstr ""
 
 #: assets/maps/story/22.tmx:
 msgid "Hey! Hi {{hero}}!"
-msgstr ""
+msgstr "嘿！你好啊，{{hero}}！"
 
 #: assets/maps/story/22.tmx:
 msgid "H-hi, you know me?"
-msgstr ""
+msgstr "嗨、嗨，你认识我？"
 
 #: assets/maps/story/22.tmx:
 msgid "Well, you are the hero of this year, you are quite famous. Are you here to visit the crypt?"
@@ -321,23 +343,25 @@ msgstr ""
 
 #: assets/maps/story/22.tmx:
 msgid "Ok thanks, I'll be careful.\nBut… who are you?"
-msgstr ""
+msgstr "好的，谢谢，我会小心的。\n不过……你是哪位？"
 
 #: assets/maps/story/22.tmx:
 msgid "Oh, yes sorry I forgot to introduce myself."
-msgstr ""
+msgstr "哦对，抱歉我还没做自我介绍。"
 
 #: assets/maps/story/22.tmx:
+#, fuzzy
 msgid "My name is Shen, I am a scientist."
-msgstr ""
+msgstr "我叫沈，是个科学家。"
 
 #: assets/maps/story/22.tmx:
+#, fuzzy
 msgid "Nice to meet you, Shen."
-msgstr ""
+msgstr "很高兴认识你，沈。"
 
 #: assets/maps/story/22.tmx:
 msgid "Oh, by the way, I think this might help you."
-msgstr ""
+msgstr "噢，顺带一提，我想这个东西能帮到你。"
 
 #: assets/maps/story/22.tmx:
 msgid "* {{hero}} got a SNOWBALLS CONTAINER *"
@@ -353,7 +377,7 @@ msgstr ""
 
 #: assets/maps/story/22.tmx:
 msgid "You're welcome."
-msgstr ""
+msgstr "不用客气。"
 
 #: assets/maps/story/22.tmx:
 msgid "Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too."
@@ -364,20 +388,22 @@ msgid "Well, at least it will be an equal fight."
 msgstr ""
 
 #: assets/maps/story/22.tmx:
+#, fuzzy
 msgid "Ha ha, well, you're right."
-msgstr ""
+msgstr "哈哈，好吧，你说得对。"
 
 #: assets/maps/story/22.tmx:
+#, fuzzy
 msgid "Now I have to leave you, I have to study a strange rock that I found a little while ago."
-msgstr ""
+msgstr "现在我得走了，我要去研究不久前发现的一个怪异的石头。"
 
 #: assets/maps/story/22.tmx:
 msgid "We'll see again. Good luck!"
-msgstr ""
+msgstr "我们会再见面的，祝你好运！"
 
 #: assets/maps/story/22.tmx:
 msgid "Bye Shen, thanks again!"
-msgstr ""
+msgstr "拜拜，沈，再次感谢！"
 
 #: assets/maps/story/22.tmx:
 msgid "I have to go through the crypt to get the first signet."
@@ -385,11 +411,12 @@ msgstr ""
 
 #: assets/maps/story/9.tmx:
 msgid "This is not a place for kids, go home."
-msgstr ""
+msgstr "这里不是小孩该来的地方，快回家吧。"
 
 #: assets/maps/story/9.tmx:
+#, fuzzy
 msgid "Weird things happen in this area…"
-msgstr ""
+msgstr "这一带发生了奇怪的事情……"
 
 #: assets/maps/story/9.tmx:
 msgid "* {{hero}} found some berries! 5 LPs have been recovered *"
@@ -412,24 +439,28 @@ msgid "Route 2"
 msgstr ""
 
 #: assets/maps/story/21.tmx:
+#, fuzzy
 msgid "\" Melhopolis → \""
-msgstr ""
+msgstr "“梅洛波利斯→”"
 
 #: assets/maps/story/10_old_shop.tmx:
+#, fuzzy
 msgid "Hi, I'm sorry but we're closed. Once this was a busy shop, but now it doesn't even make sense to stay open."
-msgstr ""
+msgstr "嗨，很抱歉我们已经关门了。曾经这里是一家繁忙的商店，但现在甚至让它开着都没有意义了。"
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "shopkeeper"
-msgstr ""
+msgstr "店长"
 
 #: assets/maps/story/10_old_shop.tmx:
+#, fuzzy
 msgid "It's full of old junk here."
-msgstr ""
+msgstr "这里堆满了旧垃圾。"
 
 #: assets/maps/story/10_old_shop.tmx:
+#, fuzzy
 msgid "I've never seen so much dust."
-msgstr ""
+msgstr "我还从来没见过这么多垃圾呢。"
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "Here it's full of snow globes with a miniaturized Mitsu Forest inside. When they were built snow was a very rare phenomenon here and it was much more appreciated."
@@ -437,7 +468,7 @@ msgstr ""
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "There are very expensive junk here."
-msgstr ""
+msgstr "这里放着贵重的垃圾。"
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "I think this vase was placed here on purpose to block the passage."
@@ -453,19 +484,20 @@ msgstr ""
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "Pharmacy"
-msgstr ""
+msgstr "药店"
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "Welcome to my shop!"
-msgstr ""
+msgstr "欢迎光临本店！"
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "pharmacist"
-msgstr ""
+msgstr "药剂师"
 
 #: assets/maps/story/20.tmx:
+#, fuzzy
 msgid "I advise you to take another path.\nThese monsters are too strong."
-msgstr ""
+msgstr "我建议你走另一条路。\n这边的怪物太过强大了。"
 
 #: assets/maps/story/999.tmx:
 msgid "XEONJIA TOWER"
@@ -476,8 +508,9 @@ msgid "Hi Milla, are you ok? Did you get here without any problems?"
 msgstr ""
 
 #: assets/maps/story/999.tmx:
+#, fuzzy
 msgid "Hii {{hero}}!"
-msgstr ""
+msgstr "你好呀，{{hero}}！"
 
 #: assets/maps/story/999.tmx:
 msgid "Yes, I cleverly managed to avoid the monsters that were along the way!"
@@ -485,23 +518,23 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "I love those cute little green worms!"
-msgstr ""
+msgstr "我喜欢这些可爱的小绿虫！"
 
 #: assets/maps/story/999.tmx:
 msgid "…S-such weird tastes here."
-msgstr ""
+msgstr "……好奇怪的品味。"
 
 #: assets/maps/story/999.tmx:
 msgid "Unkind!"
-msgstr ""
+msgstr "真没礼貌！"
 
 #: assets/maps/story/999.tmx:
 msgid "Aaanyway, look here! This is the tower where the King of Evil resides!"
-msgstr ""
+msgstr "啊总之，看这里！这里就是邪王居住的那座塔了！"
 
 #: assets/maps/story/999.tmx:
 msgid "Oh really? Are we there yet?"
-msgstr ""
+msgstr "啊真的吗？我们已经到了？"
 
 #: assets/maps/story/999.tmx:
 msgid "It seems so… but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets."
@@ -525,11 +558,11 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Good luck!"
-msgstr ""
+msgstr "祝你好运！"
 
 #: assets/maps/story/999.tmx:
 msgid "Do your best!"
-msgstr ""
+msgstr "尽力而为吧！"
 
 #: assets/maps/story/999.tmx:
 msgid "I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent."
@@ -541,7 +574,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "This door is closed."
-msgstr ""
+msgstr "这扇门是关着的。"
 
 #: assets/maps/story/999.tmx:
 msgid "This door is closed, I need the 3 signets to open it."
@@ -552,84 +585,91 @@ msgid "I should go to the tower."
 msgstr ""
 
 #: assets/maps/story/999.tmx:
+#, fuzzy
 msgid "The tower is so ugly."
-msgstr ""
+msgstr "这座塔长得也太难看了。"
 
 #: assets/maps/story/1_home.tmx:
+#, fuzzy
 msgid "Home"
-msgstr ""
+msgstr "家"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Good morning mom!"
-msgstr ""
+msgstr "早上好，妈妈！"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Hi {{hero}}! Did you sleep well?"
-msgstr ""
+msgstr "早啊，{{hero}}！睡得还好吗？"
 
 #: assets/maps/story/1_home.tmx:
 msgid "mom"
-msgstr ""
+msgstr "妈妈"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Actually not very well… I'm still a little sleepy."
-msgstr ""
+msgstr "其实不是很好……我还是有点困。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "You always are.\nAnyway, now it is time to leave, be very careful and remember to check your health in the top left bar."
-msgstr ""
+msgstr "你一直都这样。\n总之，现在是出发的时候了，要非常小心，记得在左上角的栏中查看你的健康情况。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Yea mom. Don't worry, I'll be careful."
-msgstr ""
+msgstr "是的，妈妈。不用担心，我会小心的。"
 
 #: assets/maps/story/1_home.tmx:
+#, fuzzy
 msgid "When you hit the rocks you could hurt yourself, so stop by our neighbor who have prepared a brand new pair of shin guards for you."
-msgstr ""
+msgstr "你可能会在撞到石头的时候受伤，所以在邻居那停下来吧，她为你准备了一套全新的护胫板。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Sure, I will."
-msgstr ""
+msgstr "好的，我会的。"
 
 #: assets/maps/story/1_home.tmx:
+#, fuzzy
 msgid "Go get the shin guards from the neighbor, you will need them."
-msgstr ""
+msgstr "去邻居那拿护胫板吧，你会需要它们的。"
 
 #: assets/maps/story/1_home.tmx:
+#, fuzzy
 msgid "The new shin guards are beautiful, they match the suit."
-msgstr ""
+msgstr "这些新的护胫板很漂亮，还很合身。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "This plant hasn't been watered for long."
-msgstr ""
+msgstr "这株植物已经很久没有浇过水了。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Unfortunately, this is not the time to lie down on the sofa."
-msgstr ""
+msgstr "很不幸，现在不是躺在沙发上的时候了。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "This plant seems to have been recently watered."
-msgstr ""
+msgstr "这株植物看起来在最近浇过水了。"
 
 #: assets/maps/story/4_house.tmx:
 msgid "The last time I went through the forest I was attacked.\nI'm not going back there anymore."
-msgstr ""
+msgstr "上次我穿过森林的时候被袭击了，\n我再也不想回去那里了。"
 
 #: assets/maps/story/4_house.tmx:
 msgid "If you want to enter the forest you have to be careful, my grandson risked getting hurt there."
-msgstr ""
+msgstr "你想进入森林的话必须要小心，我的孙子在那里受过伤。"
 
 #: assets/maps/story/26_house.tmx:
 msgid "Do you think piglets will one day be a common pet?"
-msgstr ""
+msgstr "你觉得小猪有一天会成为常见的宠物吗？"
 
 #: assets/maps/story/11.tmx:
+#, fuzzy
 msgid "Hi, I'm an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I'll help you."
-msgstr ""
+msgstr "你好，我是王国的员工。\n如果你迷路了或者找不到路了，再来找我，我会帮助你的。"
 
 #: assets/maps/story/11.tmx:
+#, fuzzy
 msgid "Are you stuck?\nTake the path behind the blue tree."
-msgstr ""
+msgstr "卡关了吗？\n走蓝色的树后面那条路吧。"
 
 #: assets/maps/story/3_house1.tmx:
 msgid "A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."
@@ -653,7 +693,7 @@ msgstr ""
 
 #: assets/maps/story/1_house.tmx:
 msgid "neighbor"
-msgstr ""
+msgstr "邻居"
 
 #: assets/maps/story/1_house.tmx:
 msgid "* {{hero}} got and put on the shin guards *"

@@ -1,0 +1,5 @@
+* Neuer Story-Modus
+* Grafik überarbeitet
+* Verbesserte UI/UX
+* Hintergrundmusik und Soundeffekte hinzugefügt
+* Fehler behoben

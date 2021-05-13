@@ -2,12 +2,13 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # DeepDaikon <deepdaikon@tuta.io>, 2020.
+# Tri-fan <ausa1156red@gmail.com>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2020-12-28 13:45+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-05-13 18:34+0000\nLast-Translator: Tri-fan <ausa1156red@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! 30 LPs have been recovered *"
-msgstr ""
+msgstr "* {{hero}} нашол некоторые ягоды! 30 LPs было восстановлено *"
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant… nothing else."
@@ -15,7 +16,7 @@ msgstr ""
 
 #: assets/maps/story/15.tmx:
 msgid "\" Exit ↑ \""
-msgstr ""
+msgstr "\" Выход ↑ \""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB - 1F"
@@ -55,19 +56,19 @@ msgstr ""
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
-msgstr ""
+msgstr "папа"
 
 #: assets/maps/story/1.tmx:
 msgid "I'll do my best."
-msgstr ""
+msgstr "Я постараюсь."
 
 #: assets/maps/story/1.tmx:
 msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
-msgstr ""
+msgstr "Башня в которой \"Король зла\" находится должно быть расположена услышать столицу региона."
 
 #: assets/maps/story/1.tmx:
 msgid "\" NATAWN - Hometown of the 62nd hero \""
-msgstr ""
+msgstr "\" NATAWN - Город 62-ого героя \""
 
 #: assets/maps/story/1.tmx:
 msgid "I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude."
@@ -107,7 +108,7 @@ msgstr ""
 
 #: assets/maps/story/13.tmx:
 msgid "Help me please!\nPunch him by pressing the 'P' button."
-msgstr ""
+msgstr "Помоги мне пожалуйста!\nУдарить его с помощью отжимания кнопки 'P'."
 
 #: assets/maps/story/13.tmx:
 msgid "Everything good?"

@@ -2,8 +2,9 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Liu Tao <lyuutau@outlook.com>, 2021.
+# KMX <kumax2048@protonmail.ch>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-02-16 15:57+0000\nLast-Translator: Liu Tao <lyuutau@outlook.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-04-11 14:59+0000\nLast-Translator: KMX <kumax2048@protonmail.ch>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -19,48 +20,52 @@ msgstr "故事模式"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Multiplayer"
-msgstr ""
+msgstr "多人模式"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "How to play"
-msgstr ""
+msgstr "游戏玩法"
 
 #: lib/ui/screens/rules/widgets/last_page.dart:
+#, fuzzy
 msgid "Almost done!"
-msgstr ""
+msgstr "最后一步！"
 
 #: lib/ui/screens/rules/widgets/last_page.dart:
+#, fuzzy
 msgid "Before starting tell me your name which will be used in the game."
-msgstr ""
+msgstr "在开始游戏前，先说出你想在游戏中使用的名字吧。"
 
 #: lib/ui/screens/rules/resources/rules.dart:
+#, fuzzy
 msgid "Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts."
-msgstr ""
+msgstr "在 RPG 式的世界中解决滑冰谜题，以及击败敌人。\n\n向右滑动来了解基本概念。"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Modes"
 msgstr "模式"
 
 #: lib/ui/screens/rules/resources/rules.dart:
-#, fuzzy
 msgid "There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the \"King of Evil\" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win."
-msgstr "Xeonjia 中有两种模式：\n\n1）故事：\n\n2）多人游戏：赢。"
+msgstr "Xeonjia 有两种游戏模式：\n\n1）故事模式：在一个被冰封的世界里，你的职责是打败“邪王”，然后拯救王国。\n\n2）多人模式：战胜对手，赢取分数，使队伍取得胜利。"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Movements"
-msgstr ""
+msgstr "移动"
 
 #: lib/ui/screens/rules/resources/rules.dart:
+#, fuzzy
 msgid "Swipe your finger to move your character across the world.\nKeep in mind that you can't stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!"
-msgstr ""
+msgstr "滑动手指来让你的角色走遍世界各地。\n注意，只有在你到达墙、砾岩或者其他类型的障碍物时才能停下来。\n\n动脑筋想出最佳路径吧！"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Lifepoints"
-msgstr ""
+msgstr "生命值"
 
 #: lib/ui/screens/rules/resources/rules.dart:
+#, fuzzy
 msgid "Pay attention to your lifepoints!\nMany enemies, pitfalls and dangers will try to hurt you."
-msgstr ""
+msgstr "注意你的生命值！\n许多敌人，陷阱和危机都会试图伤害你。"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Weapons"
@@ -68,15 +73,16 @@ msgstr "武器"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "You'll need weapons to overcome barriers and defeat enemies.\n\nTap the screen in the desired direction or press the shoot button to hit.\nBe aware that some weapons have few hits, so use them wisely."
-msgstr ""
+msgstr "你需要武器来克服阻碍并击败敌人。\n\n在目标方向点击屏幕，或者点击射击按钮来攻击。\n要注意某些武器只能攻击几次，所以要谨慎使用。"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Enemies"
 msgstr "敌人"
 
 #: lib/ui/screens/rules/resources/rules.dart:
+#, fuzzy
 msgid "Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have life points too."
-msgstr ""
+msgstr "小心，这个世界上充斥着准备好攻击你的危险敌人！\n只需要攻击几次就能打败他们，因为他们也有生命值。"
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "Close"
@@ -87,21 +93,18 @@ msgid "Back"
 msgstr "返回"
 
 #: lib/ui/screens/rules/rules_page.dart:
-#, fuzzy
 msgid "OK"
 msgstr "确定"
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "Next"
-msgstr ""
+msgstr "继续"
 
 #: lib/ui/screens/arena/widgets/play_button.dart:
-#, fuzzy
 msgid "Play"
-msgstr "开始"
+msgstr "开始游戏"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
-#, fuzzy
 msgid "Multiplayer Mode"
 msgstr "多人模式"
 
@@ -119,8 +122,9 @@ msgid "Map"
 msgstr "地图"
 
 #: lib/ui/screens/arena/arena_page.dart:
+#, fuzzy
 msgid "Place to play"
-msgstr ""
+msgstr "游玩的地点"
 
 #: lib/ui/screens/arena/arena_page.dart:
 #, fuzzy
@@ -129,15 +133,16 @@ msgstr "难度"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Match difficulty"
-msgstr ""
+msgstr "比赛的难度"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points required"
-msgstr ""
+msgstr "目标分数"
 
 #: lib/ui/screens/arena/arena_page.dart:
+#, fuzzy
 msgid "Points needed to win"
-msgstr ""
+msgstr "需要赢得的分数"
 
 #: lib/ui/screens/arena/arena_page.dart:
 #, fuzzy
@@ -189,7 +194,7 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Are you sure you want to delete your settings and restore default ones?"
-msgstr ""
+msgstr "你确定要删除你的设定然后恢复成默认设置？"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Cancel"
@@ -201,7 +206,7 @@ msgstr "显示十字键"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable directional pad"
-msgstr ""
+msgstr "启用方向键"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Background music"
@@ -301,8 +306,9 @@ msgid "Report bugs"
 msgstr "报告错误"
 
 #: lib/ui/screens/info/info_page.dart:
+#, fuzzy
 msgid "Report bugs or request new feature"
-msgstr ""
+msgstr "报告错误或提供建议"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
@@ -314,7 +320,7 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View License (GPLv3)"
-msgstr ""
+msgstr "查看许可证 (GPLv3)"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
@@ -353,36 +359,39 @@ msgid "You run out of energy !"
 msgstr ""
 
 #: lib/game/widgets/end_menu.dart:
+#, fuzzy
 msgid "You lost %s ¤ and woke up after a short nap"
-msgstr ""
+msgstr "你失去了 %s ¤ 并在短暂的睡眠后醒来"
 
 #: lib/game/widgets/end_menu.dart:
+#, fuzzy
 msgid "Your team won"
-msgstr ""
+msgstr "你的队伍赢了"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Your team lost"
-msgstr ""
+msgstr "你的队伍输了"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "The time is over."
-msgstr ""
+msgstr "时间到。"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "%s points have been achieved."
-msgstr ""
+msgstr "已经达到 %s 分。"
 
 #: lib/game/widgets/end_menu.dart:
+#, fuzzy
 msgid "Do you want to restart this game?"
-msgstr ""
+msgstr "你想要重新开始这次游戏吗？"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Continue"
-msgstr ""
+msgstr "继续"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "No"
@@ -390,67 +399,71 @@ msgstr ""
 
 #: lib/game/widgets/loading_page.dart:
 msgid "Loading…\nPlease wait"
-msgstr ""
+msgstr "加载中……\n请稍等"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "pause"
-msgstr ""
+msgstr "暂停"
 
 #: lib/game/widgets/pause_menu.dart:
+#, fuzzy
 msgid "restart"
-msgstr ""
+msgstr "重新开始"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "exit"
-msgstr ""
+msgstr "退出"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "cancel"
-msgstr ""
+msgstr "取消"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "lifepoints: %s"
-msgstr ""
+msgstr "生命值: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "level: %s"
-msgstr ""
+msgstr "等级: %s"
 
 #: lib/game/widgets/pause_menu.dart:
+#, fuzzy
 msgid "money: %s ¤"
-msgstr ""
+msgstr "金钱: %s ¤"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "play time: %s min"
-msgstr ""
+msgstr "游玩时长: %s 分钟"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "your defeats: %s"
-msgstr ""
+msgstr "失败次数: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "enemies defeated: %s"
-msgstr ""
+msgstr "击败敌人: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "your points: %s"
-msgstr ""
+msgstr "你的分数: %s"
 
 #: lib/game/widgets/pause_menu.dart:
+#, fuzzy
 msgid "resume"
-msgstr ""
+msgstr "继续"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "Are you sure you want to restart this game?"
-msgstr ""
+msgstr "你确定要重新开始游戏吗？"
 
 #: lib/game/widgets/pause_menu.dart:
+#, fuzzy
 msgid "It will restart from the last location change."
-msgstr ""
+msgstr "将从上一次游戏的位置重新开始。"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "Are you sure you want to quit this game?"
-msgstr ""
+msgstr "你确定要退出游戏吗？"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "\n\nGame data since the last time you changed your location will be lost."
@@ -458,11 +471,11 @@ msgstr ""
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "Shop"
-msgstr ""
+msgstr "商店"
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "What do you need?"
-msgstr ""
+msgstr "有什么需要的吗？"
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "Let me know if you need anything else."
@@ -470,44 +483,48 @@ msgstr ""
 
 #: lib/game/components/static/door.dart:
 msgid "There are still monsters here. I can't escape."
-msgstr ""
+msgstr "这里还有怪物，我不能逃。"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
-msgstr ""
+msgstr "* {{hero}} 将 %s 放入背包 *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts the gem in the backpack. *"
-msgstr ""
+msgstr "* {{hero}} 将宝石放入背包 *"
 
 #: lib/game/components/dynamic/character.dart:
+#, fuzzy
 msgid "* {{hero}} gives %s *"
-msgstr ""
+msgstr "* {{hero}} 给了 %s *"
 
 #: lib/resources/weapon_details.dart:
+#, fuzzy
 msgid "Punch"
-msgstr ""
+msgstr "攻击"
 
 #: lib/resources/weapon_details.dart:
+#, fuzzy
 msgid "Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP."
-msgstr ""
+msgstr "攻击你面前的敌人。\n这是最基本的武器，拥有无限的耐久度。"
 
 #: lib/resources/weapon_details.dart:
 msgid "Throw snowballs in front of you."
 msgstr ""
 
 #: lib/resources/weapon_details.dart:
+#, fuzzy
 msgid "Leave explosive mines on the floor.\nA mine explodes if someone except you walks on it."
-msgstr ""
+msgstr "在地面上埋下地雷。\n除了你以外的人走到地雷上时地雷将会爆炸。"
 
 #: lib/util/insert_name_form.dart:
 msgid "What's your name?"
-msgstr ""
+msgstr "你的名字是？"
 
 #: lib/util/insert_name_form.dart:
 msgid "Too short."
-msgstr ""
+msgstr "太短了。"
 
 #: lib/util/insert_name_form.dart:
 msgid "Insert your name here"
-msgstr ""
+msgstr "在这里写下你的名字"

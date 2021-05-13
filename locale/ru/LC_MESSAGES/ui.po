@@ -3,7 +3,7 @@
 # This file is distributed under the same license as Xeonjia.
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-01-24 15:19+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-04-13 19:56+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Multiplayer"
-msgstr ""
+msgstr "Сетевая игра"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "How to play"
@@ -95,7 +95,7 @@ msgstr ""
 
 #: lib/ui/screens/arena/widgets/play_button.dart:
 msgid "Play"
-msgstr ""
+msgstr "Играть"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Multiplayer Mode"
@@ -119,7 +119,7 @@ msgstr ""
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Difficulty"
-msgstr ""
+msgstr "Сложность"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Match difficulty"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points required"
-msgstr ""
+msgstr "Очков требуется"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points needed to win"
@@ -143,7 +143,7 @@ msgstr ""
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Players"
-msgstr ""
+msgstr "игроки"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Number of players per team"
@@ -171,7 +171,7 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore"
-msgstr ""
+msgstr "Восстановить"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore default settings?"
@@ -183,7 +183,7 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Show D-Pad"
@@ -239,11 +239,11 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "By %s"
-msgstr ""
+msgstr "От %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App developed by %s"
-msgstr ""
+msgstr "Приложение разработано %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version: %s"
@@ -251,7 +251,7 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
-msgstr ""
+msgstr "Версия приложения"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Donate"
@@ -279,19 +279,19 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View source code"
-msgstr ""
+msgstr "Посмотреть исходный код"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Look at the source code"
-msgstr ""
+msgstr "Посмотри на исходный код"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
-msgstr ""
+msgstr "Сообщить об ошибках"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs or request new feature"
-msgstr ""
+msgstr "Сообщить об ошибках или запросить новую функцию"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
@@ -307,15 +307,15 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
-msgstr ""
+msgstr "Прочитать лицензия приложения"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Third Party Licenses"
-msgstr ""
+msgstr "Сторонние лицензии"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read third party notices"
-msgstr ""
+msgstr "Читать сторонние лицензии"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ok"
@@ -387,7 +387,7 @@ msgstr ""
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "restart"
-msgstr ""
+msgstr "Перезапуск"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "exit"
@@ -395,7 +395,7 @@ msgstr ""
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "cancel"
-msgstr ""
+msgstr "Отмена"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "lifepoints: %s"
@@ -427,7 +427,7 @@ msgstr ""
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "resume"
-msgstr ""
+msgstr "Продолжить"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "Are you sure you want to restart this game?"

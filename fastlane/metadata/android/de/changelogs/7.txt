@@ -1,0 +1,3 @@
+* Schwierigkeitsgrad angepasst
+* Übersetzungen ins Französische, Spanische und Italienische hinzugefügt
+* Fehler behoben

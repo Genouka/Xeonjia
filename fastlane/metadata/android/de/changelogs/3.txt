@@ -1,0 +1,3 @@
+* Mehrspieler-Modus hinzugefügt
+* Verbessertes Gamepad
+* Fehler behoben
