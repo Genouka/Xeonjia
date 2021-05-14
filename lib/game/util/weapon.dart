@@ -5,6 +5,7 @@ import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/dynamic/snowball.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/resources/weapon_details.dart';
 
@@ -107,7 +108,9 @@ class SnowBallWeapon extends Weapon {
           Point(shooter.x, shooter.y), shooter, shooter.orientation, atk);
       --powerPoints;
       super.shoot(shooter: shooter);
-      shooter.animate([shooter.punchSprites[shooter.orientation]]);
+      if (shooter == game.playerOne || game.config.mode != GameMode.story) {
+        shooter.animate([shooter.punchSprites[shooter.orientation]]);
+      }
     }
   }
 }

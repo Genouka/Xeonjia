@@ -130,7 +130,16 @@ class CharacterComponent extends DynamicComponent
   }
 
   // Non-Player Character (story mode)
-  CharacterComponent.npc(Tile tile) : this(tile, initialLP: double.infinity);
+  CharacterComponent.npc(Tile tile)
+      : this(
+          tile,
+          initialLP: double.parse(tile.properties['lp'] ?? 'Infinity'),
+          team: int.parse(tile.properties['team'] ?? '0'),
+          weaponList: int.parse(tile.properties['team'] ?? '0') != 0
+              ? [SnowBallWeapon(level: 0, powerPoints: double.infinity)]
+              : [],
+          level: int.parse(tile.properties['level'] ?? '0'),
+        );
 
   // Weapon
   Weapon get selectedWeapon => weaponList[selectedWeaponIndex];
@@ -208,7 +217,9 @@ class CharacterComponent extends DynamicComponent
     ++defeats;
     if (game.config.mode == GameMode.story) {
       super.delete();
-      if (isPlayerOne) game.end();
+      isPlayerOne
+          ? game.end()
+          : game.executeAction(action: game.map.action, actor: game.playerOne);
     } else {
       stop();
       respawnAnimation();
@@ -244,7 +255,9 @@ class CharacterComponent extends DynamicComponent
       }
 
       if (!quiet && (_timeToNextMove -= t) < 0) {
-        if (randomDouble() > 0.2) updateDirection(GetDirection.random);
+        if (randomDouble() > 0.2) {
+          updateDirection(GetDirection.random, animated: false);
+        }
         _timeToNextMove = _updatePeriod;
       }
     }

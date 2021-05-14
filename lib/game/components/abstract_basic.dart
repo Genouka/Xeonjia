@@ -7,9 +7,11 @@ import 'package:meta/meta.dart';
 
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
+import 'package:xeonjia/game/components/dynamic/snowball.dart';
 import 'package:xeonjia/game/components/static/static.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
+import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/team.dart';
 import 'package:xeonjia/models/tile.dart';
 
@@ -143,7 +145,7 @@ abstract class BasicComponent extends SpriteComponent {
     x = startingPosition.x;
     y = startingPosition.y;
     game.addLater(this);
-    executeAction();
+    if (this is! SnowballComponent) executeAction();
   }
 
   // Execute an action
@@ -174,7 +176,8 @@ abstract class BasicComponent extends SpriteComponent {
   // Function used to change life points
   void lifePointsDifference(double difference,
       {BasicComponent cause, double poison = 0}) {
-    if (game.config.friendlyFire || teamId != (cause?.teamId ?? -99)) {
+    if ((game.config.mode != GameMode.story || game.config.friendlyFire) ||
+        teamId != (cause?.teamId ?? -99)) {
       _lifePoints += difference < 0 ? min(0, difference + def) : difference;
       poisonQuantity += poison;
       if (_lifePoints < 0) _lifePoints = 0;
