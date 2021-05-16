@@ -207,6 +207,8 @@ Environment setEnvironment() {
   });
   _('black-curtain', 0,
       (Cell x) => game.addWidgetOverlay('blackCurtain', BlackCurtain()));
+  _('teleport', 2,
+      (Cell x) => game.changeRoom(x.car, enterNextRoom: x.cdr.car));
   _(
     'get',
     1,

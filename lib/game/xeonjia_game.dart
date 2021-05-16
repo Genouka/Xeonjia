@@ -301,7 +301,7 @@ class XeonjiaGame extends BaseGame
   }
 
   // Save match data and load the new room
-  void changeRoom(String nextRoomId) {
+  void changeRoom(String nextRoomId, {bool enterNextRoom = true}) {
     pause(stopMusic: false);
     if (components
         .where((element) =>
@@ -326,8 +326,8 @@ class XeonjiaGame extends BaseGame
     mainCharacter.selectedWeaponIndex = playerOne.selectedWeaponIndex;
     saveUserData();
 
-    // Start a new game
-    init();
+    // Load the next room
+    if (enterNextRoom) init();
   }
 
   // Regenerate regenerable modifiers
