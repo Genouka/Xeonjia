@@ -85,6 +85,13 @@ Environment setEnvironment() {
                   mainCharacter.visitedRooms.last.split('/').first)
               .length ==
           1);
+  _('place', 3, (Cell x) {
+    var c = game.getComponentFromId(x.car);
+    c.x = x.cdr.car / 16 * componentSize;
+    c.y = x.cdr.cdr.car / 16 * componentSize;
+    if (c.isPlayerOne) game.updateCamera(game.playerOne.x, game.playerOne.y);
+    return #NONE;
+  });
   _('move', 1, (Cell x) {
     var actorAndValue = getActorAndValue(x);
     DynamicComponent actor = actorAndValue[0];
@@ -198,6 +205,8 @@ Environment setEnvironment() {
     game.addWidgetOverlay('shop', ShopMenu(itemList));
     return #NONE;
   });
+  _('black-curtain', 0,
+      (Cell x) => game.addWidgetOverlay('blackCurtain', BlackCurtain()));
   _(
     'get',
     1,

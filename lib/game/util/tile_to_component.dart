@@ -43,7 +43,11 @@ extension CreateComponent on Tile {
                       : '') ==
               properties['roomId']) {
             properties['image'] = 'character.png';
-            CharacterComponent(this,
+            CharacterComponent(
+                Tile()
+                  ..id = -1
+                  ..position = position
+                  ..properties = properties,
                 isPlayerOne: true,
                 level: mainCharacter.level,
                 weaponList: List.from(mainCharacter.weaponList),
