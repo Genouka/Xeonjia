@@ -215,31 +215,30 @@ class CharacterComponent extends DynamicComponent
 
   @override
   void delete() {
-    ++defeats;
     if (game.config.mode == GameMode.story) {
       super.delete();
-      isPlayerOne
-          ? game.end()
-          : game.executeAction(action: game.map.action, actor: game.playerOne);
+      if (isPlayerOne) {
+        game.end();
+      } else if (!game.hasAction) {
+        game.executeAction(action: game.map.action, actor: game.playerOne);
+      }
     } else {
+      ++defeats;
       stop();
       respawnAnimation();
       game.checkMatchStatus();
     }
   }
 
-  // Respawn player
+  @override
   void respawn() {
-    restoreLifePoints();
-    removeChildren();
+    super.respawn();
     weaponList.forEach((weapon) {
       weapon.restorePp();
     });
     movesCounter = 0;
-    isBeingDeleted = false;
-    x = startingPosition.x;
-    y = startingPosition.y;
     orientation = _initialOrientation;
+    direction = null;
     if (isPlayerOne) {
       game.refreshWeaponButtons();
       game.updateCamera(x, y);

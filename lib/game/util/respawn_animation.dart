@@ -2,7 +2,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
-import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Show an animation during respawn
@@ -21,7 +20,7 @@ mixin RespawnAnimation on DynamicComponent {
   void update(double dt) {
     if (_show) {
       _remainingSeconds -= dt;
-      if (_remainingSeconds <= 0) (this as CharacterComponent).respawn();
+      if (_remainingSeconds <= 0) respawn();
     } else {
       super.update(dt);
     }

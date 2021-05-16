@@ -279,6 +279,8 @@ abstract class BasicComponent extends SpriteComponent {
   // Delete component
   void delete() {
     ++defeats;
+    game.deletedComponents.add(this);
+    removeChildren();
     remove = true;
   }
 
@@ -290,5 +292,16 @@ abstract class BasicComponent extends SpriteComponent {
     game.components.forEach((c) {
       if (c is BasicComponent && c.father == this) c.delete();
     });
+  }
+
+  // Respawn component
+  @mustCallSuper
+  void respawn() {
+    remove = false;
+    isBeingDeleted = false;
+    restoreLifePoints();
+    x = startingPosition.x;
+    y = startingPosition.y;
+    game.addLater(this);
   }
 }

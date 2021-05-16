@@ -111,6 +111,7 @@ class XeonjiaGame extends BaseGame
 
   // List of CharacterComponent in game
   List<CharacterComponent> players = [];
+  List<BasicComponent> deletedComponents = [];
 
   // Main character
   CharacterComponent playerOne;
@@ -119,8 +120,15 @@ class XeonjiaGame extends BaseGame
   List<Team> teams;
 
   // Get component from ID
-  BasicComponent getComponentFromId(int id) =>
+  BasicComponent getComponentFromId(int id) {
+    var componentList = List.from(components)..addAll(deletedComponents);
+    return componentList.firstWhere((c) => c is BasicComponent && c.id == id);
+  }
+
+  BasicComponent getActiveComponentFromId(int id) =>
       components.firstWhere((c) => c is BasicComponent && c.id == id);
+  BasicComponent getDeletedComponentFromId(int id) =>
+      deletedComponents.firstWhere((c) => c.id == id);
 
   // Count enemies in the room
   int get enemies => game.components
@@ -170,6 +178,7 @@ class XeonjiaGame extends BaseGame
       markToRemove(component);
     });
     players.clear();
+    deletedComponents.clear();
     modifiersToBeRegenerated.clear();
     teams?.forEach((t) => t.basisPoints = 0);
 

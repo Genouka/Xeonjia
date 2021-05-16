@@ -106,6 +106,7 @@ Environment setEnvironment() {
     return #NONE;
   });
   _('delete', 1, (Cell x) => game.getComponentFromId(x.car).delete());
+  _('respawn', 1, (Cell x) => game.getDeletedComponentFromId(x.car).respawn());
   _('leave', 0, (Cell x) {
     BasicComponent self = (env.lookForValue(Sym('self')) as Intrinsic).fun(x);
     game.addWidgetOverlay('blackCurtain', BlackCurtain(self.delete));
