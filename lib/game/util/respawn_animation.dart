@@ -1,4 +1,6 @@
 import 'dart:ui';
+import 'package:flame/components/timer_component.dart';
+import 'package:flame/time.dart';
 import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
@@ -6,43 +8,28 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Show an animation during respawn
 mixin RespawnAnimation on DynamicComponent {
-  final _seconds = 1.0;
-  double _remainingSeconds;
-  bool get _show => isBeingDeleted;
+  Timer timer;
 
   // Start respawn animation
   void respawnAnimation() {
     isBeingDeleted = true;
-    _remainingSeconds = _seconds;
-  }
-
-  @override
-  void update(double dt) {
-    if (_show) {
-      _remainingSeconds -= dt;
-      if (_remainingSeconds <= 0) respawn();
-    } else {
-      super.update(dt);
-    }
+    timer = Timer(1, callback: respawn, repeat: false);
+    game.addLater(TimerComponent(timer..start()));
   }
 
   @override
   void render(Canvas canvas) {
-    if (_show) {
+    if (isBeingDeleted) {
       prepareCanvas(canvas);
-      _circleAnimation(canvas);
+      canvas.drawCircle(
+          Offset(componentSize / 2, componentSize / 2),
+          (1 - timer.current) * 10,
+          Paint()
+            ..color = Colors.black
+            ..strokeWidth = 2
+            ..style = PaintingStyle.stroke);
     } else {
       super.render(canvas);
     }
-  }
-
-  void _circleAnimation(Canvas canvas) {
-    canvas.drawCircle(
-        Offset(componentSize / 2, componentSize / 2),
-        _remainingSeconds * 10,
-        Paint()
-          ..color = Colors.black
-          ..strokeWidth = 2
-          ..style = PaintingStyle.stroke);
   }
 }
