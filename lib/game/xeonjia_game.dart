@@ -258,6 +258,7 @@ class XeonjiaGame extends BaseGame
   // Continue action execution after (wait)
   Continuation _actionContinuation;
   bool get hasAction => _actionContinuation != null;
+  void clearActionContinuation() => _actionContinuation = null;
   double nextActionDelay = 0;
   void continueAction({double delay}) {
     if (hasAction) {
