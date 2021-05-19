@@ -19,7 +19,9 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   // Show the next message or hide dialog box if there are no message to show
   void next({bool removeAnswers = false}) {
     if (_controller?.isAnimating ?? false) {
-      _controller.fling();
+      _controller.fling().whenComplete(() {
+        if (mounted && game.messageManager.isShowingAQuestion) setState(() {});
+      });
     } else {
       if (game.messageManager.hasOtherMessages) {
         game.messageManager.nextMessage();
@@ -52,7 +54,10 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
     _characterCountAnimation = StepTween(
             begin: 0, end: game.messageManager.currentMessage.text.length)
         .animate(CurvedAnimation(parent: _controller, curve: Curves.linear));
-    _controller.forward().then((_) => _controller.dispose());
+    _controller.forward().then((_) {
+      _controller.dispose();
+      if (mounted && game.messageManager.isShowingAQuestion) setState(() {});
+    });
   }
 
   @override
@@ -71,7 +76,8 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  if (game.messageManager.isShowingAQuestion)
+                  if (game.messageManager.isShowingAQuestion &&
+                      _characterCountAnimation.isCompleted)
                     _AnswerButtons(game.messageManager.answers,
                         () => next(removeAnswers: true)),
                   Container(
