@@ -10,7 +10,6 @@ import 'package:xeonjia/game/widgets/black_curtain.dart';
 import 'package:xeonjia/game/widgets/map_name_box.dart';
 import 'package:xeonjia/game/widgets/shop_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/shop_item.dart';
@@ -55,14 +54,14 @@ Environment setEnvironment() {
   _('increase-def', 1, (Cell x) => game.playerOne.def += x.car);
   _('set-money-diff', 1,
       (Cell x) => game.playerOne.moneyDifference((x.car as int), popup: false));
+  _('has-weapon', 1, (Cell x) => game.playerOne.hasWeaponId(x.car));
   _('max-pp-snowballs', 0, (Cell x) {
-    var w = game.playerOne.weaponList.firstWhere((w) => w.id == 1);
-    game.setMessage(Message(w.powerPoints < w.maxPp
-        ? '* {{hero}} filled his snowballs container *'.i18n
-        : 'The snowballs container is full.'.i18n));
-    w.restorePp();
+    if (!game.playerOne.hasWeaponId(1)) return false;
+    var weapon = game.playerOne.getWeaponById(1);
+    var max = weapon.powerPoints >= weapon.maxPp;
+    weapon.restorePp();
     game.refreshWeaponButtons();
-    return #NONE;
+    return max;
   });
   _('give-weapon', 1, (Cell x) {
     game.playerOne.weaponList.add(Weapon.fromId((x.car as int)));
