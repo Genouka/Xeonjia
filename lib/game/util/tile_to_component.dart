@@ -6,6 +6,7 @@ import 'package:xeonjia/game/components/static/door.dart';
 import 'package:xeonjia/game/components/static/static.dart';
 import 'package:xeonjia/game/components/static/hurdle.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
+import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/tile.dart';
@@ -50,7 +51,9 @@ extension CreateComponent on Tile {
                   ..properties = properties,
                 isPlayerOne: true,
                 level: mainCharacter.level,
-                weaponList: List.from(mainCharacter.weaponList),
+                weaponList: mainCharacter.weaponList
+                    .map((e) => Weapon.fromJson(e.toJson()))
+                    .toList(),
                 newSelectedWeaponIndex: mainCharacter.selectedWeaponIndex);
           }
           if (properties['roomId'] != '0') DoorComponent(this);
