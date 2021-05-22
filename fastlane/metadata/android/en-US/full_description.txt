@@ -13,3 +13,5 @@ Over time, you will gain experience points that will allow you to increase your 
 Be careful, the world is full of dangerous enemies ready to attack you!
 
 Use your mind to figure out the best path!
+
+<b>Note</b>: this game is currently in early beta stage.

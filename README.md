@@ -36,6 +36,8 @@ Be careful, the world is full of dangerous enemies ready to attack you!
 
 Use your mind to figure out the best path!
 
+**Note**: this game is currently in early beta stage.
+
 ## Screenshots
 
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/0_Home.png" height="320">
