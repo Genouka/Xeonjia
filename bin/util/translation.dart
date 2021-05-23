@@ -8,7 +8,10 @@ class Translation {
   // Translated string
   String msgstr;
 
-  Translation(this.path, this.msgid, this.msgstr);
+  // Translation comments
+  String comments;
+
+  Translation(this.path, this.msgid, this.msgstr, [this.comments = '']);
 
   @override
   bool operator ==(other) => msgid == other.msgid;

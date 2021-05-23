@@ -58,27 +58,23 @@ msgstr ""
 "Last-Translator: Automatically generated\\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\\n"
 "Language: $language\\n"'''}${(() => strings.fold('', (prev, string) => prev + '''\n\n#: ${string.path}:
-msgid "${string.msgid}"
-msgstr "${_getTranslation(currentTranslations, string, language)}"'''))()}
+${_getTranslation(currentTranslations, string, language).comments ?? ''}msgid "${string.msgid}"
+msgstr "${_getTranslation(currentTranslations, string, language).msgstr.replaceAll('"', '\\"')}"'''))()}
 ''');
     });
   });
   print('.po files successfully updated!');
 }
 
-String _getTranslation(
+Translation _getTranslation(
     Map<String, Map<String, List<Translation>>> currentTranslations,
     Translation string,
     String language) {
-  var translation = '';
   if (currentTranslations[string.path] != null &&
       (currentTranslations[string.path][language]?.isNotEmpty ?? false)) {
-    var translations = currentTranslations[string.path][language].where(
-        (translation) =>
-            (translation.msgid.replaceAll('"', '\\"')) == string.msgid);
-    if (translations.length == 1) {
-      translation = translations.single.msgstr.replaceAll('"', '\\"');
-    }
+    var translations = currentTranslations[string.path][language]
+        .where((t) => (t.msgid.replaceAll('"', '\\"')) == string.msgid);
+    if (translations.length == 1) return translations.single;
   }
-  return translation;
+  return Translation('', '', '');
 }
