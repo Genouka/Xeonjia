@@ -325,6 +325,10 @@ msgstr "Hinweise von Drittanbietern lesen"
 msgid "Ok"
 msgstr "Ok"
 
+#: lib/game/widgets/minimap_button.dart:
+msgid "Close map"
+msgstr ""
+
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "You went too far!"
 msgstr "Du bist zu weit gelaufen!"
@@ -383,7 +387,7 @@ msgstr "Nein"
 
 #: lib/game/widgets/loading_page.dart:
 msgid "Loading…\nPlease wait"
-msgstr "Lädt...\nBitte warten"
+msgstr "Lädt…\nBitte warten"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "pause"

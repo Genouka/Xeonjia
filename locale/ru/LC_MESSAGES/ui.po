@@ -321,6 +321,10 @@ msgstr "Читать сторонние лицензии"
 msgid "Ok"
 msgstr ""
 
+#: lib/game/widgets/minimap_button.dart:
+msgid "Close map"
+msgstr ""
+
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "You went too far!"
 msgstr ""
