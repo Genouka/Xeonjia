@@ -4,8 +4,8 @@
   <property name="action" value="(map-name &quot;Natawn&quot;)"/>
   <property name="music" value="town"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/npc.tsx"/>
- <tileset firstgid="49" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="49" source="../tilesets/outdoor-1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="20" height="22">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA7WUzQrCMBCE96H8QfEf1B4Ue/GeWy9qn0D76s7CLqZhq0mICx8NQ3czSYcS5dUMzDN7rdqCnaGPwWSgh/Vp4j5LsBL8Um0NXOF5uf4sdF5beF5s7cEhYOOtjz/6+TtfwBVUoj2CdxagSfCk2Xkl9MRURR+P/5wXnj+2Gurf03PgvdislD5vR/lns4q9OVmnzNXMnan/j+G7y82M9b9ib6XzUjLTLX33l+q9Iztbvjai+G+l+auFxtPU2wncwN3TeT8nz1o07X0DYPK7kuAGAAA=
@@ -61,7 +61,7 @@
         (set-orientation 1))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (and (get &quot;001-talk-dad&quot;) (get &quot;001-talk-mom&quot;))
-    (delete))</property>
+    (delete-me))</property>
    </properties>
   </object>
   <object id="73" type="Solid" x="128" y="336" width="16" height="16">
@@ -72,7 +72,7 @@
         (set-orientation 1))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (&gt; (get-def) 0)
-    (delete))</property>
+    (delete-me))</property>
    </properties>
   </object>
  </objectgroup>

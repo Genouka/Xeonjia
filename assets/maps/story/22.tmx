@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="15" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="51">
  <properties>
-  <property name="action">(begin
-    (if (eq? (last-place) &quot;31&quot;)
-        (map-name &quot;Route 3&quot;))
-    (if  (first-time?)
-        (dialog '((&quot;That's the first crypt, I think.&quot;)))))</property>
+  <property name="action">(if (! (eq? (last-place) &quot;27&quot;))
+    (map-name &quot;Route 3&quot;))</property>
   <property name="map-name" value="Route 3"/>
   <property name="music" value="enemies"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="157" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="157" source="../tilesets/monster-1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgQABWIGbDg9kZcANeIObDoQ8kzk9AL0w/CCsjsflJ1IuMidELUicGxQJIbGLcjM1OZLtxAVEke9DtBWFxPHrpCSRwiAsDsTQQi+CRV6DATgMy9Sow4HYzMfbCsAISG+QWOyBmgdISaHIwtQBct+yYSAMAAA==
@@ -49,7 +46,7 @@
     (wait)
     (leave))</property>
     <property name="actionOnEvent">(if (get &quot;022-talk-shen&quot;)
-    (delete))</property>
+    (delete-me))</property>
    </properties>
   </object>
  </objectgroup>
@@ -80,14 +77,14 @@
  <objectgroup id="8" name="items">
   <object id="47" type="Solid" x="112" y="224" width="16" height="16">
    <properties>
-    <property name="actionOnCollision">(if  (!get &quot;022-tower1-ok&quot;)
+    <property name="actionOnCollision">(if  (!(has-item &quot;signet-1&quot;))
     (begin 
         (dialog '((&quot;I have to go through the crypt to get the first signet.&quot;)))
         (wait)
         (set-orientation 1))
     (fire-event (self)))</property>
-    <property name="actionOnEvent">(if  (get &quot;022-tower1-ok&quot;)
-    (delete))</property>
+    <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
+    (delete-me))</property>
    </properties>
   </object>
  </objectgroup>

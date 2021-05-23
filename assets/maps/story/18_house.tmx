@@ -5,7 +5,7 @@
   <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/basic.tsx"/>
- <tileset firstgid="25" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="25" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="153" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="11" height="9">
   <data encoding="base64" compression="gzip">

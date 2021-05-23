@@ -4,11 +4,24 @@
       "name": "A strange icosahedral stone",
       "description": "icosahedron",
       "location": "002"
+    },
+    "30.package-of-the-king": {
+      "name": "Package of the King",
+      "description": "",
+      "location": "030_cityhall"
+    },
+    "signet-1": {
+      "name": "First Signet",
+      "description": "",
+      "location": "t1_06"
     }
   },
   "global-events": {
-    "000-test" : {
-      "description": "(test) event used in multiple rooms"
+	"030-cityhall-question-difficult" : {
+      "description": "Answer to: has been difficult to get the first Signet"
+    },
+    "030-oldman-missing-her" : {
+      "description": "Talked to the old man missing her wife."
     }
   }
 }

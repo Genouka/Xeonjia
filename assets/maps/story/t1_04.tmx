@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="91">
+ <properties>
+  <property name="action">(if ! (eq? (last-place) &quot;t1_03&quot;)
+    (map-name &quot;Mossy Crypt -4F&quot;))</property>
+  <property name="map-name" value="Mossy Crypt -4F"/>
+  <property name="music" value="enemy"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="229" source="../tilesets/crypt-1.tsx"/>
+ <tileset firstgid="285" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="293" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="22" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA62U0QqFMAiG7SIORTuroHr/N4xzPQ5NSJChc0Yf/FQgXyqr0AGEnK8RrPkDQGyopXry9jmLkvX2zpWaj+LFK5Jyunw/3c/ECTqJzTIoXuRXcWigNzLXJng5vO9yhpqX78NLErzR8Cbw0eq1KHdSentjv0/7lc6DdwetXg/Uw9teq188x7uQsfF9mpe+QR7PHJpX+leFyhxlDua9AJqfBQQoBQAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="84" type="SlitherCpu" gid="285" x="128" y="144" width="16" height="16">
+   <properties>
+    <property name="atk" type="float" value="7"/>
+    <property name="lifePoints" type="float" value="10"/>
+   </properties>
+  </object>
+  <object id="85" type="SlitherCpu" gid="285" x="192" y="112" width="16" height="16">
+   <properties>
+    <property name="atk" type="float" value="8"/>
+    <property name="lifePoints" type="float" value="10"/>
+   </properties>
+  </object>
+  <object id="86" type="SlitherCpu" gid="285" x="64" y="160" width="16" height="16">
+   <properties>
+    <property name="atk" type="float" value="7"/>
+    <property name="lifePoints" type="float" value="10"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="22" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGNmAg5E+9nBR0R56uXkoAaHRMBmyAFt6pmZ+oQYAAKU2ZS0oBQAA
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="80" type="Door" x="96" y="48" width="16" height="16">
+   <properties>
+    <property name="roomId" value="t1_03"/>
+   </properties>
+  </object>
+  <object id="83" type="Door" x="176" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="t1_05"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items">
+  <object id="87" gid="304" x="112" y="192" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="88" gid="304" x="288" y="224" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="89" gid="304" x="288" y="64" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="90" gid="276" x="192" y="192" width="16" height="16">
+   <properties>
+    <property name="action">(if (has-weapon 1)
+    (if (max-pp-snowballs)
+        (dialog '((&quot;The snowballs container is full.&quot;)))
+        (dialog '((&quot;* {{hero}} filled his snowballs container *&quot;))))
+    (dialog '((&quot;A snowdrift.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

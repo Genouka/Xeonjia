@@ -4,12 +4,12 @@
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="enemies"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="129" source="../tilesets/npc.tsx"/>
- <tileset firstgid="181" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="181" source="../tilesets/monster-1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WTvQ7CMAyEvcKABCyZihcEEx2z0Hbm//3fhrPkSMZyG6qe9Clx4l5sJWUiSgor2czTyPzj4iUq54vebs96vyoeS+uQnqT3FbiANegn8gcXsxlPYAOOM2u4gk7Pb51H2UsmnynWHmzB4Y86buAerIt3Vp8G7CpnRhpm5keS71MtSZVdXO4v8ph6T1YP48GV3LH38tTR/2e9IvFZ5+We7RrTby9f30HEh7gDAAA=
+   H4sIAAAAAAAAA6WTvQ7CMAyEs8KABCyewAuCCbplgXbm//3fhot0kYwVEqqe9Ml27DqOkmoIQUAHlETji/FtzdvlpkhI0svlbO9no8fUOdKZ0tln4AjmoK/UDy5WY/dgAXYjZziDC/c/uR45J6ZeQ1lrsATbP+a4glthPfWO7LMBq8aeJQ0j60tK30uriIouzvdX6lF7T1Z32o7U9Ou9PGjtPxNZ3zM+0M/3bNc0fJ/lA0joukK4AwAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -33,7 +33,7 @@
   <object id="39" type="SlitherCpu" gid="181" x="48" y="112" width="16" height="16">
    <properties>
     <property name="actionOnEvent">(if  (get &quot;013-safe&quot;)
-    (delete))</property>
+    (delete-me))</property>
     <property name="atk" type="float" value="5"/>
     <property name="lifePoints" type="float" value="13"/>
     <property name="updatePeriod" type="float" value="0.6"/>
@@ -70,7 +70,7 @@
         (set-orientation 3))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (get &quot;013-h-safe&quot;)
-    (delete))</property>
+    (delete-me))</property>
    </properties>
   </object>
   <object id="41" type="Solid" x="-16" y="96" width="16" height="16">
@@ -83,7 +83,7 @@
         (set-orientation 2))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (get &quot;013-h-safe&quot;)
-    (delete))</property>
+    (delete-me))</property>
    </properties>
   </object>
   <object id="42" type="Solid" gid="55" x="240" y="224" width="16" height="16">

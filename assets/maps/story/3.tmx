@@ -4,11 +4,11 @@
   <property name="map-name" value="Route 1"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/basic.tsx"/>
- <tileset firstgid="25" source="../tilesets/npc.tsx"/>
- <tileset firstgid="77" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="25" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="77" source="../tilesets/outdoor-1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="19" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62UPQ6AIAyFe0Qn4+TEYAyTo3Fz5ATGy0ojLzaNCAhf0vDbBy2kloisNxNM96fQsrnQnmJO2xdDYh2wzuqtz9z/Rie0Zm9jhdYUWuQFpOJ9AzlAnlug76UpuedO9zuX+sXObRUj/l2NPzBUH5vUhdbSQOv4WCth/+ETO5fz5VIbM2GtmneUpP5XSfw59SsG7rA10II/cPTUXVmHjRhzv1NjWcdlPb8Av1i42PAFAAA=
+   H4sIAAAAAAAAA61Uuw6AIAzsJzoZJycGY5wcDZsjX2D8WWnsJZWIgHDJhWePPkgXIlo8jdCqOe9PMjKdjKfaC/mFIXEOsM7m2Wfef0OntGbPsUJrkhF5AVLxvgE5QM5bIPQrRImfO911LrWLvdsqRvy7GnvAUH1sWhdaawOt4+OsBPsPm9i73BNc6mImOPc1ddRI/a+S+HP6VwzwwTbQgj3ghJaefdioNc+7YI26GXr28wsAQbdF8AUAAA==
   </data>
  </layer>
  <objectgroup id="8" name="npcs">

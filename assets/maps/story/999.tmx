@@ -5,9 +5,9 @@
   <property name="map-name" value="Xeonjia Tower"/>
   <property name="music" value="enemies"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="157" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="157" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="31" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA8WUwQqDMAyGc9hVh+5SD9N6q7dO3//dljCDUevaiMUPfpSm7UcCCvCfAlMq8ozcRxiMS9iXw81+wt7gdhFvTrdJcOfCwDL3GBWmg3Cvb0yt8DZK95Ff6yV6zAvWM7fBncf+M15igF/PXuGV/vakl9HO/ErudKd83znd3PcHM2ImUfe7E9fB/xae/UO8c02uuUD8vM9uzllRl+t8Dz2/2XOI0MgGAAA=
@@ -36,13 +36,15 @@
             (&quot;/_happy&quot; &quot;Good luck!&quot;)))
         (fire-global-event))
     (dialog '((&quot;/&quot; &quot;Do your best!&quot;))))</property>
-    <property name="actionOnEvent">(if (get &quot;022-tower1-ok&quot;)
-    (delete))</property>
+    <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
+    (delete-me))</property>
    </properties>
   </object>
   <object id="45" type="NPC" gid="201" x="256" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent.&quot;)))"/>
+    <property name="action">(if (!(has-item &quot;signet-1&quot;))
+    (dialog '((&quot;/&quot; &quot;I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent.&quot;)))
+    (dialog '((&quot;/&quot; &quot;One signet is not enough.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
@@ -85,7 +87,7 @@
         (set-orientation 1)
         (dialog '((&quot;I should go to the tower.&quot;)))))</property>
     <property name="actionOnEvent">(if (get &quot;999-talk-milla&quot;)
-    (delete))</property>
+    (delete-me))</property>
    </properties>
   </object>
   <object id="52" gid="21" x="128" y="80" width="16" height="16">

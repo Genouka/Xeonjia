@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="9" height="30" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="94">
+ <properties>
+  <property name="map-name" value="Mossy Crypt -4F"/>
+  <property name="music" value="enemy"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="229" source="../tilesets/crypt-1.tsx"/>
+ <tileset firstgid="285" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="293" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="9" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAxNkZGDgA2JeKP7AwMDAzwjBIHFBJAxTx8CAKc+HhNHVwDArknohqBoBJDF2qF4WqBwIfEIwweL8SObjAgOlhgVNLQsjphpq2IVuD7J92MxBV0+r8GHBEg4DHYaU+D0XyM5Hk4OJ0TKcP2FRIwrEYlDMBVXPgSQmTmQeJEfNCyxqAJhiTNc4BAAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs"/>
+ <layer id="6" name="Tile Layer 2" width="9" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgYGAQYmTACgTQxNHVocuPglEwCkYGAAC1hN4GOAQAAA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="87" type="Door" x="64" y="464" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="t1_04"/>
+   </properties>
+  </object>
+  <object id="88" type="Door" x="64" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="t1_06"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items">
+  <object id="89" gid="304" x="64" y="16" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="200"/>
+   </properties>
+  </object>
+  <object id="93" gid="276" x="64" y="96" width="16" height="16">
+   <properties>
+    <property name="action">(if (has-weapon 1)
+    (if (max-pp-snowballs)
+        (dialog '((&quot;The snowballs container is full.&quot;)))
+        (dialog '((&quot;* {{hero}} filled his snowballs container *&quot;))))
+    (dialog '((&quot;A snowdrift.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

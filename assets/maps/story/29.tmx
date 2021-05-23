@@ -1,50 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="14" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="44">
- <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="14" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="46">
+ <properties>
+  <property name="action" value="(map-name &quot;Mitsu Forest&quot;)"/>
+  <property name="map-name" value="Mitsu Forest"/>
+  <property name="music" value="forest"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="137" source="../tilesets/capital-1.tsx"/>
+ <tileset firstgid="201" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="253" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="14" height="21">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAwtkYGAIAuJgIA4B4lAgliACRwJxNBBHQelYBsIApC8RiJORcCqR+vKAOB+I06F0AZH6yoC4HIhLgDgDiCtwqLVD0wfiCwKxHBALEbBHAUmfBBHuwuZOGyC2JUMfqfaxkKkPFBbSePQp4NFLSbig68NnDwjAwpFa9tFLnx0ONQoE9GGTJ8Y+UgCp+hTQ9JGDAd/bRWGYBAAA
+   H4sIAAAAAAAAA51TQQ6EQAjjD3sx8cLRIw9Q77v7tt03yySSIIFKbNLMpFKK40jUx6Tkc+1gVW6nZ0CCbqvhrfwkfcwfc6t6023WKcmK+Lp9pz6bT5IZfU/0LOZltVFj0BNBXF7HbzVM9bdAPvTud35JtCpnIN65iJ/yD/KezlnlIbDL20FNppnuz2dp5GX97oDOper3Us50vWd+z45C13918ABFqm/TmAQAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="39" type="SlitherCpu" gid="129" x="192" y="256" width="16" height="16">
+  <object id="44" gid="230" x="96" y="240" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="10"/>
-    <property name="lifePoints" type="float" value="15"/>
-   </properties>
-  </object>
-  <object id="40" type="SlitherCpu" gid="129" x="112" y="128" width="16" height="16">
-   <properties>
-    <property name="atk" type="float" value="10"/>
-    <property name="lifePoints" type="float" value="15"/>
-   </properties>
-  </object>
-  <object id="42" type="SlitherCpu" gid="129" x="96" y="240" width="16" height="16">
-   <properties>
-    <property name="atk" type="float" value="10"/>
-    <property name="lifePoints" type="float" value="15"/>
-   </properties>
-  </object>
-  <object id="43" type="SlitherCpu" gid="129" x="32" y="144" width="16" height="16">
-   <properties>
-    <property name="atk" type="float" value="10"/>
-    <property name="lifePoints" type="float" value="15"/>
+    <property name="action">(begin
+    (dialog '((&quot;/&quot; &quot;Nobody knows what the writing on this stone means, it is not even known who wrote it.&quot;)))
+    (define id &quot;029-tree-story&quot;)
+    (if (get id)
+        (dialog '((&quot;/&quot; &quot;Do you want to hear the legend of this tree again?&quot;)))
+        (dialog '((&quot;/&quot; &quot;Are you interested to learn about the legend of this tree?&quot;))))
+    (answer id '((&quot;Yes please&quot; . #t) (&quot;No thanks&quot; . #f)))
+    (wait)
+    (if (get id)
+        (dialog '((&quot;/&quot; &quot;There was once a devastating war in this area and everything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all those souls.\nWhen there were seasons other than winter,\nthis tree had the particularity of withering in spring and blooming in the other seasons.\nLegend has it that every spring the souls leave this tree to make other plants bloom; at the end of spring the souls return to flourish again this tree.\nThat's all.\nI hope to have time to see the end of this winter season which has persisted for more than 60 years now.&quot;)))
+        (dialog '((&quot;/&quot; &quot;Ok, it was a long and boring story after all.&quot;)))))</property>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="14" height="21">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGF7AjACf1sAEiE3pbOdwBEM1HOmd3oYrAAAhjIrgmAQAAA==
+   H4sIAAAAAAAAA2NgIAxMgNgUjzi6vCMQOxFhLiH12MRxuQUGnElUT20wGOzrBOIuIO4G4h4SzJoIxJOAeDIQTyFB30wgngXEs4F4Dgn68AF6hyO1gNlAO4BGADk+6BE3AN+YQNqYBAAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="36" type="Door" x="208" y="144" width="16" height="16">
+  <object id="36" type="Door" x="208" y="304" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="27"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="8" name="items"/>
+ <objectgroup id="8" name="items">
+  <properties>
+   <property name="action" value="(map-name &quot;Mitsu Forest&quot;)"/>
+   <property name="map-name" value="Mitsu Forest"/>
+  </properties>
+ </objectgroup>
 </map>

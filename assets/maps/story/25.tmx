@@ -4,12 +4,12 @@
   <property name="map-name" value="Melhopolis"/>
   <property name="music" value="enemies"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
  <tileset firstgid="137" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52VuQ7CMBBEXVDSQJUCIZcp+QCOmqMJ91kgRMFVcP0/s5ItFmttHI/0FCXKjDYe2SmUUmMwAVMwA5mhYa499owoBM8KbMHaXHfqq6qSRZ4Ngzx7cGAcPV4u8szBAiyN5wTO4Aou4Gbe7YOBJ0fy3MEDvMATvCPmkTy0bjXQBPWA152Pe+z6W3UjZpFEGTrRy0UZtkOpd58kT2rvrsfXe0i+3qk76pC6jO3d9YR6D/XHPS3123uqdGIO39t2n7ZBp2SO1FfKPFJfKTm+fco1isxy92lechbtefbvu4YR2e65YVX2/LA5uZL/CxXnXjv3GfN9AHrfNZB4BgAA
+   H4sIAAAAAAAAA52VuQ7CMBBEXVDSQEWBkEvKfABHzdGE+ywQouAquP6fWclWFmttHI/0FMXKjDaZOMmVUhMwBTMwBw1D0xz7bI3IBc8a7MDGHPeqUFXJIs+WQZ4DODJOHi8XeRZgCVbGcwYXcANXcDfXDsDQkyN5HuAJ3uAFPhHzSB56bjXQAvWA152Pe+zzt+pFzCKJMnSil4sybIdS7z5JntTeXY+v95B8vVN31CF1Gdu76wn1HuqPezL123uqdGIO39t2n3ZAt2SO1FfKPFJfKTm+fco1jsxy92lWchbtWft3X6OIbPe7YVX2+2Fz2kr+L1Scc62Kd5dDvi9kQ6iteAYAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">

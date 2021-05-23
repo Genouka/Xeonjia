@@ -17,19 +17,26 @@
    <property name="orientation" type="int" value="3"/>
   </properties>
  </tile>
- <tile id="4" type="NPC"/>
+ <tile id="4" type="NPC">
+  <properties>
+   <property name="name" value="dr. lache"/>
+  </properties>
+ </tile>
  <tile id="5" type="NPC">
   <properties>
+   <property name="name" value="dr. lache"/>
    <property name="orientation" type="int" value="1"/>
   </properties>
  </tile>
  <tile id="6" type="NPC">
   <properties>
+   <property name="name" value="dr. lache"/>
    <property name="orientation" type="int" value="2"/>
   </properties>
  </tile>
  <tile id="7" type="NPC">
   <properties>
+   <property name="name" value="dr. lache"/>
    <property name="orientation" type="int" value="3"/>
   </properties>
  </tile>

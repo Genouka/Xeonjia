@@ -4,12 +4,12 @@
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
  <tileset firstgid="137" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="21" height="17">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5NgYGCQQMP2WMSQMQ9UjTmUjSxnDqWpCUDmSQOxCBFqvUkwkxbutAFiWyqbScidxPoZBmBxhwx8STQDHVArPJH9Qqs4sqeymaSmeQUi1BDyuw8B/djk0c0kNd1gA7SII1j5Q01Ajjvt0GhsZsLyO77yErlsRDbTHEkOucwFACBB3piUBQAA
+   H4sIAAAAAAAAA5NgYGCQQMP2aHwDND4PVI05lI0sZw6lqQlA5kkDsQgRar1JMJPa7gSFkw0Q21LRTGLcSayfYQAWd8jAl0Qz0AEsnVAKkP1CiziCpW9qAlLTvAIRagj53YeAfmzysHwMA6SmG2yAFnEEK3+oCchxpx0ajc1MWH7HVk6iY3M0M82R5JDLXAADLKHvlAUAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>

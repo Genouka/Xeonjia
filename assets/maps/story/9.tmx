@@ -4,12 +4,12 @@
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="129" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="181" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="27" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WUuw7CMAxFM/QPYIgEAxO/kAWSGRRARWJmY0RMiM/HEYlkruI82isdNY5d282jo1LqStwIQ4wFW0cMG7vM/CXjCzyJO/FSP9XsOXoTD+LTaE/RjtgTls1ZiAm2F3y90qxmWt8tzPGYOUp72KI59dKZMYIfe3AT6/B8mo0lOfC3rgXWau23N78HO61jrYYFuE6Vd/k4VwvzLYhVZFnprVT3QByFPnht/C7pTEnCPS/1FNh05B6gn5RjiE+v/u8u3inDYvEfjPd+He0zi/0ChPuEtOgFAAA=
+   H4sIAAAAAAAAA6WUuw7CMAxFPfQPYIgEAxNztiyQzqBAVSRmNkbEhPh8HBFLrtU8mlzpqHHs2G6adASAG3JHDDImbBUwbNzPzA+IFj7PC3kgb/grZ7fogzyRb6FdowNyRCybsyLG2y7iWyrFatLe78Ucj2nREHKVqKUenRkT8cse+so6PJ9i45h64deVtUr7Ld1rkhO2379cj76GFXBdMmv5eK5fmW+FbALrTG+puifkHOmD15bvFTtTMclvnurJs1uQuxP9UI4uPB1M7668U4bF0n3RMP2/0pptsK8s9gckYgu96AUAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">

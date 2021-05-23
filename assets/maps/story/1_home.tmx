@@ -6,8 +6,8 @@
   <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="town"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/npc.tsx"/>
- <tileset firstgid="53" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="9">
   <data encoding="base64" compression="gzip">

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="115">
+ <properties>
+  <property name="action" value="(map-name &quot;City Hall&quot;)"/>
+  <property name="disable-minimap" type="bool" value="true"/>
+  <property name="map-name" value="City Hall"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="189" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="237" source="../tilesets/capital-1.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="12" height="18">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA7vBwMBwnUh8E4gfAPF9IN5HBH4IVX+ESDyqflQ9vdW/IEH9SyC+hwXfhWJscgB1YPmEYAMAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="99" gid="187" x="64" y="272" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 2)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="100" gid="187" x="64" y="240" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 2)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="101" gid="187" x="64" y="208" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 2)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="102" gid="187" x="64" y="176" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 2)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="104" gid="188" x="112" y="272" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 3)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="105" gid="188" x="112" y="240" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 3)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="106" gid="188" x="112" y="208" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 3)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="107" gid="188" x="112" y="176" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 3)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="109" gid="187" x="64" y="144" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 2)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="110" gid="188" x="112" y="144" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 3)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="111" gid="187" x="64" y="112" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 2)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="112" gid="188" x="112" y="112" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 3)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="12" height="18">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoA14RqL653jkfgPxHzzy3IyomJA4OvgCxcSCz1A8qn5UPSEAAGm6AcFgAwAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="spawn points">
+  <object id="97" type="Door" x="96" y="256" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="30/2"/>
+   </properties>
+  </object>
+  <object id="114" type="Door" x="80" y="256" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="30/1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="82" type="Solid" gid="260" x="96" y="80" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (define talk-id &quot;030-cityhall-king-talk&quot;)
+    (if (!get talk-id)
+        (begin
+            (dialog
+                '((&quot;/hero&quot; &quot;H-Hello.&quot;)
+                (&quot;king/king-1&quot; &quot;Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region.&quot;)
+                (&quot;king/king-1_happy&quot; &quot;Do not confuse me with the King of Evil, I am good haha.&quot;)
+                (&quot;king/king-1&quot; &quot;So… tell me, how are you? Is everything okay? How is the journey going?&quot;)
+                (&quot;/hero&quot; &quot;Everything good, I just defeated the Hoarfrost Team and I got the first signet!&quot;)
+                (&quot;king/king-1_happy&quot; &quot;Oh really?! This is great news!&quot;)
+                (&quot;king/king-1&quot; &quot;It has been difficult?&quot;)))
+            (define id &quot;030-cityhall-question-difficult&quot;)
+            (answer id '((&quot;Yes, quite a lot.&quot; . #t) (&quot;Just a little.&quot; . #f)))
+            (wait)
+            (if (get id)
+                (dialog '((&quot;king/king-1&quot; &quot;Well, but if you did it, it means that you are strong!&quot;)))
+                (dialog '((&quot;king/king-1&quot; &quot;Well, congratulations! This means that you are strong!&quot;))))
+            (dialog
+                '((&quot;king/king-1&quot; &quot;I trust that you will be able to take the other two signets as well.&quot;)
+                (&quot;king/king-1&quot; &quot;Before resuming your journey, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here.&quot;)
+                (&quot;/hero&quot; &quot;Yes of course, I'll give it to him.&quot;)
+                (&quot;king/king-1&quot; &quot;Thank you very much. Here's to you.&quot;)))
+            (give-item &quot;30.package-of-the-king&quot;)
+            (dialog
+                '((&quot;king/king-1&quot; &quot;Be careful not to drop it, it is fragile.&quot;)
+                (&quot;/hero&quot; &quot;Sure, I'll be careful.&quot;)
+                (&quot;king/king-1&quot; &quot;Thank you again.\nI wish you a good journey, come back anytime.&quot;)))
+            (set talk-id #t))
+        (dialog '((&quot;king/king-1&quot; &quot;Good journey {{hero}}, I have faith in you.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="83" type="Solid" gid="259" x="80" y="80" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (define talk-id &quot;030-cityhall-king-talk&quot;)
+    (if (!get talk-id)
+        (begin
+            (dialog
+                '((&quot;/hero&quot; &quot;H-Hello.&quot;)
+                (&quot;king/king-1&quot; &quot;Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region.&quot;)
+                (&quot;king/king-1_happy&quot; &quot;Do not confuse me with the King of Evil, I am good haha.&quot;)
+                (&quot;king/king-1&quot; &quot;So… tell me, how are you? Is everything okay? How is the journey going?&quot;)
+                (&quot;/hero&quot; &quot;Everything good, I just defeated the Hoarfrost Team and I got the first signet!&quot;)
+                (&quot;king/king-1_happy&quot; &quot;Oh really?! This is great news!&quot;)
+                (&quot;king/king-1&quot; &quot;It has been difficult?&quot;)))
+            (define id &quot;030-cityhall-question-difficult&quot;)
+            (answer id '((&quot;Yes, quite a lot.&quot; . #t) (&quot;Just a little.&quot; . #f)))
+            (wait)
+            (if (get id)
+                (dialog '((&quot;king/king-1&quot; &quot;Well, but if you did it, it means that you are strong!&quot;)))
+                (dialog '((&quot;king/king-1&quot; &quot;Well, congratulations! This means that you are strong!&quot;))))
+            (dialog
+                '((&quot;king/king-1&quot; &quot;I trust that you will be able to take the other two signets as well.&quot;)
+                (&quot;king/king-1&quot; &quot;Before resuming your journey, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here.&quot;)
+                (&quot;/hero&quot; &quot;Yes of course, I'll give it to him.&quot;)
+                (&quot;king/king-1&quot; &quot;Thank you very much. Here's to you.&quot;)))
+            (give-item &quot;30.package-of-the-king&quot;)
+            (dialog
+                '((&quot;king/king-1&quot; &quot;Be careful not to drop it, it is fragile.&quot;)
+                (&quot;/hero&quot; &quot;Sure, I'll be careful.&quot;)
+                (&quot;king/king-1&quot; &quot;Thank you again.\nI wish you a good journey, come back anytime.&quot;)))
+            (set talk-id #t))
+        (dialog '((&quot;king/king-1&quot; &quot;Good journey {{hero}}, I have faith in you.&quot;)))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

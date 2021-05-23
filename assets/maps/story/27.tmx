@@ -1,36 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="35" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
- <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="129" source="../tilesets/monster.tsx"/>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="35" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="50">
+ <properties>
+  <property name="action">(if (! (eq? (last-place) &quot;30&quot;))
+    (map-name &quot;Route 3&quot;))</property>
+  <property name="map-name" value="Route 3"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
  <tileset firstgid="137" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="185" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="237" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="35">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7WSTQrCQAyFcwA3/iy6EMlBtHu9gYoLEdGVuhD1+L5CC0GSDDHtg4+h8M2btJ2KiCrB/OdZQ2ZEdjTfi/Q56HvpujR/DTbJ/j59Hri/b9/7flY/J+bx9mbftw763iz/+N0eK1uwB7t2PRT8IzgJzgX/Bu7g0q6Pgv8Cb/AEV/ABM8dvMgYLMKHc/1qCVcBv4t3VOjmPDA/oW67mR+9zKVPD185h0R/hC9dvQbKQBgAA
+   H4sIAAAAAAAAA51VwQkDMQzLAP21j0D78Ag3wF3+7f4D1X0YhLAduwLB5VBkOThkjjEm8KU86B8TcRsxPH0G1EtRX4F5eXneys8mz6m8inmyTEJrT88arL3zP5p5GP/os/OL/KWh556yvZXzRPy8F6xXJASvSesMnAf13kyxfwTba/e0CgnqZvrMH73sWxp5uvcd+630weefzeoa/rx1/A3S0N+VT+Uj0HNmz9sys/dunrP77tWxrFFe3o9vhvXBbwm/NV/J/jEtkAYAAA==
   </data>
  </layer>
- <objectgroup id="9" name="npc">
-  <object id="40" type="SlitherCpu" gid="129" x="112" y="128" width="16" height="16">
-   <properties>
-    <property name="atk" type="float" value="10"/>
-    <property name="lifePoints" type="float" value="15"/>
-   </properties>
-  </object>
-  <object id="42" type="SlitherCpu" gid="129" x="96" y="240" width="16" height="16">
-   <properties>
-    <property name="atk" type="float" value="10"/>
-    <property name="lifePoints" type="float" value="15"/>
-   </properties>
-  </object>
-  <object id="43" type="SlitherCpu" gid="129" x="32" y="144" width="16" height="16">
-   <properties>
-    <property name="atk" type="float" value="10"/>
-    <property name="lifePoints" type="float" value="15"/>
-   </properties>
-  </object>
- </objectgroup>
+ <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="12" height="35">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoAz0U6if2sARiJ0G2hFDGAyn8DMbaAcQAIFAHATEwUAcAsShA+ucAQUmQGxKoh58aXWwxz05gF5+GsiwAwAlUHQpkAYAAA==
+   H4sIAAAAAAAAA2NgGFzAjET1dmh8RyB2IqDHBIhNSbSHWmAg7SYGEBN+IEBpPNEKmOFg0xpQEq8DpRefWfRKp7A4ItY+5HSEL63SM+5JAcTmLxggNT3TK5+R6g9iAQATiNAkkAYAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -40,7 +28,7 @@
     <property name="roomId" value="30"/>
    </properties>
   </object>
-  <object id="38" type="Door" x="0" y="368" width="16" height="16">
+  <object id="38" type="Door" x="0" y="528" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="29"/>
@@ -52,5 +40,24 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="8" name="items"/>
+ <objectgroup id="8" name="items">
+  <properties>
+   <property name="action">(begin
+    (if (eq? (last-place) &quot;31&quot;)
+        (map-name &quot;Route 3&quot;))
+    (if  (first-time?)
+        (dialog '((&quot;That's the first crypt, I think.&quot;)))))</property>
+   <property name="map-name" value="Route 3"/>
+  </properties>
+  <object id="45" gid="71" x="80" y="544" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;\&quot; ← Sacred Tree \&quot;\n\&quot; Melhopolis City Center → \&quot;&quot;)))"/>
+   </properties>
+  </object>
+  <object id="49" gid="248" x="64" y="32" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="100"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

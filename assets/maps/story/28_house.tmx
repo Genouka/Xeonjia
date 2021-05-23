@@ -4,8 +4,8 @@
   <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="enemies"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/npc.tsx"/>
- <tileset firstgid="53" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="10" height="9">
   <data encoding="base64" compression="gzip">
@@ -15,28 +15,42 @@
  <objectgroup id="10" name="npcs">
   <object id="78" type="NPC" gid="12" x="64" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+    <property name="action">(if (!(has-item &quot;gem_3&quot;))
+    (begin
+        (dialog '((&quot;/&quot; &quot;Hoarfrost Team members came to our house because they wanted a gem that I found on the ground.\nWe managed to keep it hidden from them but we don't want to have problems anymore.\nWe don't even need it after all, can we give it to you?&quot;)))
+        (define id &quot;028-house-question-gem&quot;)
+        (answer id '((&quot;Yes thanks&quot; . #t) (&quot;No thanks&quot; . #f)))
+        (wait)
+        (if (get id)
+            (begin
+                (dialog '((&quot;/&quot; &quot;Here's to you!&quot;)))
+                (give-item &quot;gem_3&quot;)
+                (dialog '((&quot;/hero_happy&quot; &quot;Thank you!&quot;))))
+            (dialog '((&quot;/&quot; &quot;Oh, ok. Then I'll have to think about what to do with this gem.&quot;)))))
+    (dialog '((&quot;/&quot; &quot;Protect that gem well.&quot;))))</property>
    </properties>
   </object>
   <object id="79" type="NPC" gid="8" x="64" y="64" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Be careful when dealing with the Hoarfrost Team.&quot;)))"/>
    </properties>
   </object>
   <object id="81" type="NPC" gid="46" x="80" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;Mind your own business.&quot;)))"/>
+    <property name="actionOnEvent" value="(if (has-item &quot;signet-1&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="82" type="NPC" gid="45" x="48" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+    <property name="actionOnEvent" value="(if (has-item &quot;signet-1&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGDiwHYj3A/EBItQdB+ITtHYQAbCVAr0ARv9K7GgBAAA=
+   H4sIAAAAAAAAA2NgoAzsBOJdRKg7CMSH0MS2A/F+ID5AQC9I3XEgPkGq46gMtlKgFwDfn20haAEAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -50,12 +64,16 @@
  <objectgroup id="9" name="items">
   <object id="83" gid="187" x="64" y="128" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;This vase is very heavy, I can't move it.&quot;)))"/>
+    <property name="action">(if (has-item &quot;signet-1&quot;)
+    (dialog '((&quot;This plant is very fragrant.&quot;)))
+    (dialog '((&quot;This vase is very heavy, I can't move it.&quot;))))</property>
    </properties>
   </object>
   <object id="84" gid="187" x="96" y="128" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;This vase is very heavy, I can't move it.&quot;)))"/>
+    <property name="action">(if (has-item &quot;signet-1&quot;)
+    (dialog '((&quot;This plant is very fragrant.&quot;)))
+    (dialog '((&quot;This vase is very heavy, I can't move it.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

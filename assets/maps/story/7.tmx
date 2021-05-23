@@ -4,7 +4,7 @@
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
  <tileset firstgid="157" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="20" height="20">
@@ -38,7 +38,7 @@
     (set &quot;007-milla&quot; #t)
     (wait)
     (leave))</property>
-    <property name="actionOnEvent" value="(if  (get &quot;007-milla&quot;) (delete))"/>
+    <property name="actionOnEvent" value="(if  (get &quot;007-milla&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="45" gid="169" x="208" y="128" width="16" height="16">

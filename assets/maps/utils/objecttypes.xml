@@ -26,12 +26,17 @@
   <property name="regenerable" type="bool" default="false"/>
  </objecttype>
  <objecttype name="NPC" color="#a0a0a4">
-  <property name="action" type="string" default="(dialog '((&quot;/&quot; &quot;text&quot;)))"/>
+  <property name="action" type="string" default="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
   <property name="actionOnEvent" type="string"/>
   <property name="friendly" type="bool" default="true"/>
+  <property name="level" type="int" default="0"/>
+  <property name="lp" type="float" default="0"/>
+  <property name="movementPattern" type="string"/>
   <property name="name" type="string"/>
   <property name="orientation" type="int" default="0"/>
   <property name="quiet" type="bool" default="true"/>
+  <property name="shootPattern" type="string"/>
+  <property name="team" type="int" default="0"/>
  </objecttype>
  <objecttype name="SlitherCpu" color="#a0a0a4">
   <property name="action" type="string" default="(dialog '((&quot;text&quot;)))"/>

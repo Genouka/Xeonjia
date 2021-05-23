@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="98">
+ <properties>
+  <property name="action" value="(map-name &quot;Mossy Crypt -2F&quot;)"/>
+  <property name="map-name" value="Mossy Crypt -2F"/>
+  <property name="music" value="enemy"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="229" source="../tilesets/crypt-1.tsx"/>
+ <tileset firstgid="285" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="293" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="22" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA72T3QqEIBCFFart336ooHfqEXr/+673Yg1GOgxaulEDBwdGPo/jWEsh6ocVa7WkBHIuW22m9WPhVlpi141QwMto7bU2qpcOfnRxLnJb9HsReF6q85F85fLgInvvbRfYA8V7aOH6eOXRwLt1jFt5cL+Bd/DlhsRdrusOxct+z3ppZrc82cu5A8ygiynlwVocexT49J21DfKV8cwfmSzcgWr/yPAy0g8OTFxVKAUAAA==
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="84" type="SlitherCpu" gid="285" x="80" y="144" width="16" height="16">
+   <properties>
+    <property name="atk" type="float" value="6"/>
+    <property name="lifePoints" type="float" value="4"/>
+   </properties>
+  </object>
+  <object id="85" type="SlitherCpu" gid="285" x="144" y="96" width="16" height="16">
+   <properties>
+    <property name="atk" type="float" value="6"/>
+    <property name="lifePoints" type="float" value="4"/>
+   </properties>
+  </object>
+  <object id="86" type="SlitherCpu" gid="285" x="176" y="160" width="16" height="16">
+   <properties>
+    <property name="atk" type="float" value="6"/>
+    <property name="lifePoints" type="float" value="4"/>
+   </properties>
+  </object>
+  <object id="87" gid="45" x="256" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+    <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+  <object id="88" gid="47" x="16" y="64" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+    <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+  <object id="89" gid="45" x="80" y="48" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;We're watching you.&quot;)))"/>
+    <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="22" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIA68wSL2h0T1gxlwMEJoLkbqmikANU+IiubSElDT/6NgeAAWKqcJgSGSxmBlAogGAJ8mf24oBQAA
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="80" type="Door" x="176" y="208" width="16" height="16">
+   <properties>
+    <property name="roomId" value="t1_01"/>
+   </properties>
+  </object>
+  <object id="83" type="Door" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="roomId" value="t1_03"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items">
+  <object id="90" gid="304" x="48" y="192" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="91" gid="304" x="304" y="48" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="92" gid="304" x="160" y="128" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="95" gid="276" x="128" y="224" width="16" height="16">
+   <properties>
+    <property name="action">(if (has-weapon 1)
+    (if (max-pp-snowballs)
+        (dialog '((&quot;The snowballs container is full.&quot;)))
+        (dialog '((&quot;* {{hero}} filled his snowballs container *&quot;))))
+    (dialog '((&quot;A snowdrift.&quot;))))</property>
+    <property name="actionOnCollision">(begin
+    (define event-id &quot;t1_02-snow-collision&quot;)
+    (if (!get event-id)
+        (begin
+            (dialog '((&quot;/&quot; &quot;Hmm, I think that from this snowdrift I can obtain material to make new snowballs by pressing the 'A' key.&quot;)))
+            (set event-id #t))))</property>
+   </properties>
+  </object>
+  <object id="97" gid="268" x="80" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (define item-id &quot;t1_02.money&quot;)
+    (define money-diff 100)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found {{money-diff}} ¤ *&quot;)))
+            (give-item item-id)
+            (set-money-diff money-diff))
+        (dialog '((&quot;A rock covered by moss.&quot;)))))</property>
+    <property name="actionOnEvent">(if (! (has-item &quot;signet-1&quot;))
+    (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

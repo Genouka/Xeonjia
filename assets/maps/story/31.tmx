@@ -6,13 +6,13 @@
   <property name="map-name" value="Melhopolis"/>
   <property name="music" value="city"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="129" source="../tilesets/monster.tsx"/>
- <tileset firstgid="137" source="../tilesets/npc.tsx"/>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="189" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="21">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62UyQrCMBRFs/AHFBddiUuX7txo/YAK4rRwqCLijPP4+d5gAo9n0ibqhUPam+Q2TfoaCCECA0K1LdAGHdAFPYtXEWY1VNsHQzBSbUy8gfJj8mw+X2sKZoS5xeM5XHtwABPVHom3JF4pJecOHmABVuBJvCvxbOupgpq6zoICyJF+6tGzcVFo8W05PtlJOb6SGfmUfhcVLWOTztA2vsy8puMaeM4v+6PnhsL8Dt+cl6nmXBSxHFPNSfnsk8xZgw0Ygy3YOczhkntzAmfxrsMLuHmsg2ZLTHWYpIjd/6sudJb+Huvi8/+sybCxARv/AqhKfdXoBQAA
+   H4sIAAAAAAAAA62UyQrCMBRFs/AHFBddiUuX3bnR+gEVxGnhUEXEGefx873BBB6PpE3UC4dnb5PbNOkzEEIEhFBVoWobdEAX9EDf4lWFWU1VB2AExqomxBsqPyHP5vO1ZmBOWFi80LIerQM4gqmqJ+KtiFfJyHmAJ1iCNXgR70Y8/l5aNVBXv/OgBArkPvX0Gbkqsvi2HJ/stBxfyYxixn0XlS1j087QNp5/Py3HNfCcX/ZHz42E+R2+OS9Tz7koZjmmnpPy2SeZswFbMAE7sHeYwyX35gwu4tOHV3D3WAfNlpj6ME0xu/5XX+gs/T02WDb9z86xsQEb/wbkL9YY6AUAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">

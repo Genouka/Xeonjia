@@ -1,31 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="36" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="47">
- <tileset firstgid="1" source="../tilesets/outdoor_1.tsx"/>
- <tileset firstgid="129" source="../tilesets/monster.tsx"/>
- <tileset firstgid="137" source="../tilesets/npc.tsx"/>
- <layer id="1" name="Tile Layer 1" width="36" height="15">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="25" height="34" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="66">
+ <properties>
+  <property name="action" value="(map-name &quot;Melhopolis&quot;)"/>
+  <property name="map-name" value="Melhopolis"/>
+  <property name="music" value="city"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="189" source="../tilesets/capital-1.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="25" height="34">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA8WTywrCMBBF5xd8LLryS9S9ogVfC5UiotWu1IWon++UJhiGcZKMLV44lKSZ5PY2kwBAYpghc2SBLB3qmls5Z0lYrZGDwNbz3kcGsmL9cBwD+MVPmcHGPN09uTmKr5b6GSFj4qfrjPeKbw/NpiT35NMh+VyQawA7Aanu9sVH6uTj+nkgzwBOAlLdC5kK+VA/LaTXMJKGxA/1qhGtS9lVlWj/ZEy91odGtH9ycj7tvybE9c8ZPvc9Ng8uf22mtn/uSAHVfY/Zy7e2jwwC11rZHmojEzNX93/S7sfd5X/zBvsvfmVwCAAA
+   H4sIAAAAAAAAA92WuU4DQQyGXXAIJAKEs6JDdIhuG44a3iAcQogjqYACAR3PBx2UPA0e7Vj5MZ4LZht+6dOuHNmW1/ZMiFqtKyY9UwVMe3SsXWaPOWSOaKw5j9Mxc+Kf+I5Pp3mPxHQ68HlQ8jvmuMoAc6B0LSjM8ZKBztFA3GWy9dccug5R00GOhn72Q+foMXfAK/PGDJW9R+GeW73QOUYep3fmg/kE+0jlQO34PKk6csnpB9H32V1hVg0WAvY1lUN2Dvus6yipAWtJ1SEK1RCrQ2rROUI9X2Q2fkEfYkjsUB21ZJ1XNSX7p8/bmpJvJfth7ckMs13ArBEjNldOW1Q2t5uJerrKsUTteRJS6fz2jRjuO+Ged9H/2NleS6me15DrRaznlkJnKApjuhoGNP4Pc8qcBWyWcn0vmEvgOmCzlOt7S+19fO6f92Abgs1Sru8j88TcUHsvP4PtAWyWcn1dT2TXcIcsm6WUb+yOqqX/OFc4B6VzlfK15sCy7Xsm4D3X9wsPuoYxSA0AAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="45" type="NPC" gid="153" x="144" y="128" width="16" height="16">
+  <object id="49" gid="186" x="192" y="528" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;I'm planning a surprise wedding for my son, I hope he doesn't find out.&quot;)))"/>
-    <property name="orientation" type="int" value="1"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I'm sorry but this road is closed.\nWork is underway to restore the railway system.&quot;)))"/>
    </properties>
   </object>
-  <object id="46" type="NPC" gid="140" x="80" y="128" width="16" height="16">
+  <object id="56" gid="185" x="224" y="144" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;worker&quot; &quot;This part is under construction.&quot;)))"/>
-    <property name="orientation" type="int" value="1"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Welcome to the City Hall.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="57" gid="141" x="112" y="464" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+   </properties>
+  </object>
+  <object id="59" gid="161" x="224" y="304" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (dialog
+        '((&quot;/&quot; &quot;I can't wait till they finish to restore the railway system, it no longer work since the ice arrival.&quot;)
+        (&quot;/_sad&quot; &quot;My wife remained blocked on the other side of the kingdom,&quot;)
+        (&quot;/&quot; &quot;I wonder if I will ever see her again.&quot;)))
+    (set &quot;030-oldman-missing-her&quot; #t))</property>
    </properties>
   </object>
  </objectgroup>
- <layer id="6" name="Tile Layer 2" width="36" height="15">
+ <layer id="6" name="Tile Layer 2" width="25" height="34">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWDFTgCsdNAO2IIALcBtNt1AO0mFZjRwQ58cREIxCFIOJQO7qEEDMX8N5B5gVRgAsSmFOh3gdLUjqehGO9DBQAAQvbpvnAIAAA=
+   H4sIAAAAAAAAAzNhYGAwBWJHIHZiwASBQBxEAIcAcSiSHhOombgAunwkHrXIIJaAPD57KbGDkH9goI5IOxqIVDeU7EAPI0JhlkekHQVEqsMGyoDYDIqxAZhcBQlmYvOXHRRjA/jkcOU5ZGDGgN8PpKrDBuwY8LuTWHW44pxUt2FTTyg9EesHctVTGxAT9+QCYsuroQKGm39AgJbxPxwALeIc3UxQ2yYECYfiEMMGKNE7CgYO0KMsGU1X1AfI7QFy2zm0BACVlvfNSA0AAA==
   </data>
  </layer>
- <objectgroup id="8" name="items"/>
+ <objectgroup id="10" name="spawn points">
+  <object id="51" type="Door" x="0" y="64" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="27"/>
+   </properties>
+  </object>
+  <object id="52" type="Door" x="384" y="288" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="32"/>
+   </properties>
+  </object>
+  <object id="55" type="Door" x="208" y="128" width="16" height="16">
+   <properties>
+    <property name="roomId" value="30_cityhall/2"/>
+   </properties>
+  </object>
+  <object id="63" type="Door" x="192" y="128" width="16" height="16">
+   <properties>
+    <property name="roomId" value="30_cityhall/1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="47" gid="71" x="224" y="208" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;\&quot; City Hall ↑ \&quot;&quot;)))"/>
+   </properties>
+  </object>
+  <object id="50" gid="71" x="384" y="288" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;\&quot; Route 4 → \&quot;&quot;)))"/>
+   </properties>
+  </object>
+  <object id="62" type="Solid" x="400" y="288" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if  (!get &quot;030-cityhall-king-talk&quot;)
+    (begin 
+        (dialog '((&quot;Before continuing I'd like to visit the City Hall.&quot;)))
+        (wait)
+        (set-orientation 3))
+    (fire-event (self)))</property>
+    <property name="actionOnEvent">(if  (get &quot;030-cityhall-king-talk&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+  <object id="64" gid="104" x="176" y="128" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;The City Hall seems spacious.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

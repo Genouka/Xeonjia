@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="19" height="19" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="108">
+ <properties>
+  <property name="action">(if (and (! (has-item &quot;signet-1&quot;)) (and (eq? (enemies-count) 0) (and (get &quot;t1_06-talk&quot;) (! (get &quot;t1_06-ok&quot;)))))
+    (begin
+        (set &quot;t1_06-ok&quot; #t)
+        (dialog '((&quot;…&quot;)))
+        (friendly '(#t 90))
+        (friendly '(#t 91))
+        (quiet '(#t 90))
+        (quiet '(#t 91))
+        (wait)
+        (respawn 90)
+        (respawn 91)
+        (set-orientation '(0 90))
+        (set-orientation '(0 91))
+        (place 90 144 192)
+        (place 91 160 192)
+        (place -1 144 208)
+        (black-curtain)
+        (dialog '((&quot;/iosa&quot; &quot;You're lucky, but it doesn't end there, rest assured.&quot;)))
+        (wait)
+        (delete 90)
+        (delete 91)))</property>
+  <property name="map-name" value="Mossy Crypt -4F"/>
+  <property name="music" value="enemy"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="229" source="../tilesets/crypt-1.tsx"/>
+ <tileset firstgid="285" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="293" source="../tilesets/npc_main.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="19" height="19">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA52U6wrCMAxGO3AowjYV1Bfcw4vokIEXZDJTaOCzS7LWwPmRXs6+0rKycG5L1IEy9IiveGwJe7ivYKwWeo1G6Ksoi5RtdHIm7NklZcO6/bZiJnRhll3kimsjZEIXZhlg35V4E52T55sZF9adOBMPJWOqa1HYfW4uX70+leQa5K2T8ZxcT+JDvP7IdTHOg8XrUnPxe2C66RLT1cI6fg8Mvos2wZVbOS5/b73T71Vy7YmDwDp8Y6XMHyOX5sF/Bv8bLN+cx3OCs1i+L9zwsjKkBQAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="90" gid="46" x="128" y="176" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I will defeat you.&quot;)))"/>
+    <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
+    (delete-me))</property>
+    <property name="level" type="int" value="1"/>
+    <property name="lp" type="float" value="100"/>
+    <property name="movementPattern" value="0,1"/>
+    <property name="name" value="iosa"/>
+    <property name="shootPattern" value="2|0.5"/>
+    <property name="team" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="91" gid="46" x="160" y="176" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;You will not escape me.&quot;)))"/>
+    <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
+    (delete-me))</property>
+    <property name="level" type="int" value="1"/>
+    <property name="lp" type="float" value="100"/>
+    <property name="movementPattern" value="0,1"/>
+    <property name="name" value="joza"/>
+    <property name="shootPattern" value="3|0.5"/>
+    <property name="team" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="93" gid="298" x="144" y="176" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+    <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
+    (delete-me))</property>
+    <property name="team" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="19" height="19">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NggAAhRgaygACZ+kgFxLqPXu4ZBaNgFIwcwIVWrnCQWc6gm0OMeQAMiXPvpAUAAA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="88" type="Door" x="144" y="288" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="t1_05"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items">
+  <object id="96" type="Solid" x="144" y="304" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if  (!(has-item &quot;signet-1&quot;))
+    (begin 
+        (dialog '((&quot;I can't escape. I have to take the first signet.&quot;)))
+        (wait)
+        (set-orientation 1))
+    (fire-event (self)))</property>
+    <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+  <object id="98" gid="280" x="144" y="32" width="16" height="16">
+   <properties>
+    <property name="action">(if (eq? (enemies-count) 0)
+    (begin 
+        (dialog '((&quot;/hero&quot; &quot;Here it is, this is the first signet!&quot;)))
+        (wait)
+        (give-item &quot;signet-1&quot;)
+        (delete-me)
+        (wait)
+        (dialog '((&quot;/hero&quot; &quot;I can get out of here now.&quot;)))
+        (wait)
+        (teleport &quot;t1_01&quot; #f)
+        (teleport &quot;22&quot; #t))
+    (dialog '((&quot;/hero&quot; &quot;The henchmen are after me! I'll get the signet later.&quot;))))</property>
+    <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+  <object id="100" type="Ground" x="144" y="208" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(begin
+    (delete-me)
+    (dialog '((&quot;…&quot;)))
+    (wait 1)
+    (set-orientation '(0 93))
+    (wait 1)
+    (set-orientation '(0 90))
+    (set-orientation '(0 91))
+    (wait 1.5)
+    (move '(0 93))
+    (wait 1)
+    (move '(0 90))
+    (move '(0 91))
+    (wait 1)
+    (dialog
+        '((&quot;???/lache&quot; &quot;I didn't think you would get this far, kid.&quot;)
+        (&quot;/hero&quot; &quot;W-Who are you? Who are you guys?&quot;)
+        (&quot;???/lache&quot; &quot;I'm surprised that my name is not known among the woods of your village.&quot;)
+        (&quot;dr. lache/lache&quot; &quot;Anyway, I'm Dr.Lache and I'm the leader of the Hoarfrost Team.&quot;)
+        (&quot;/hero_angry&quot; &quot;S-So you're the one who spread terror and violence through the henchmen as ordered by the King of Evil?&quot;)
+        (&quot;dr. lache/lache_happy&quot; &quot;As ordered by the King of Evil? HAHAHA&quot;)
+        (&quot;dr. lache/lache&quot; &quot;I don't take orders from anyone. Among me and the King of Evil there is a peer collaboration.&quot;)
+        (&quot;/hero&quot; &quot;Be that as it may, I won't let you continue your plans.&quot;)
+        (&quot;/hero&quot; &quot;I'm {{hero}}, I'm the chos-&quot;)
+        (&quot;dr. lache/lache&quot; &quot;I know very well who you are, you're the chosen hero and blah, blah, blah.\nI don't have time for this.&quot;)
+        (&quot;dr. lache/lache&quot; &quot;I know you're interested in the signet, defeat my henchmen and it's yours.\nNow get out of my way.&quot;)
+        (&quot;/hero&quot; &quot;I won't let you go so eas-&quot;)))
+    (wait)
+    (move 2)
+    (set-orientation 1)
+    (wait 0.7)
+    (move '(0 93))
+    (set-orientation 3)
+    (wait 0.5)
+    (move '(0 93))
+    (set-orientation 0)
+    (wait 0.5)
+    (move '(0 93))
+    (wait 0.5)
+    (delete 93)
+    (wait 0.5)
+    (move '(2 90))
+    (wait 0.5)
+    (set-orientation '(0 90))
+    (dialog '((&quot;???/iosa&quot; &quot;Well, well, well… you'll have to deal with us now.&quot;)))
+    (wait)
+    (set-orientation 1)
+    (dialog
+        '((&quot;/iosa&quot; &quot;I'm Iosa.&quot;)
+        (&quot;/joza&quot; &quot;And I'm Joza.&quot;)
+        (&quot;/iosa&quot; &quot;We are the Iosa&amp;Joza brothers and we will be your worst nightmare.&quot;)
+        (&quot;/hero&quot; &quot;I'm not scared of you, let's see what you are capable of!&quot;)
+        (&quot;/joza&quot; &quot;Now you will see.&quot;)
+        (&quot;iosa&amp;joza/iosa_and_joza&quot; &quot;Let's fight!&quot;)))
+    (wait)
+    (move '(3 90))
+    (move '(2 91))
+    (wait 1)
+    (move '(3 90))
+    (move '(2 91))
+    (wait 1)
+    (move '(3 90))
+    (friendly '(#f 90))
+    (friendly '(#f 91))
+    (quiet '(#f 90))
+    (quiet '(#f 91))
+    (set &quot;t1_06-talk&quot; #t))</property>
+    <property name="actionOnEvent">(if  (get &quot;t1_06-talk&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+  <object id="107" gid="262" x="144" y="16" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (define item-id &quot;t1_06.money&quot;)
+    (define money-diff 500)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found {{money-diff}} ¤ *&quot;)))
+            (give-item item-id)
+            (set-money-diff money-diff))
+        (dialog '((&quot;A rocky wall covered by moss.&quot;)))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

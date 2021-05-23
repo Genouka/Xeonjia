@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.4" tiledversion="2020.08.05" name="tileset_1 " tilewidth="16" tileheight="16" tilecount="128" columns="8">
- <image source="../../images/outdoor_1.png" width="128" height="256"/>
+<tileset version="1.4" tiledversion="2020.08.05" name="outdoor-1" tilewidth="16" tileheight="16" tilecount="128" columns="8">
+ <image source="../../images/outdoor-1.png" width="128" height="256"/>
  <tile id="0" type="Ground"/>
  <tile id="1" type="Ground"/>
  <tile id="2" type="Ground"/>
@@ -128,7 +128,10 @@
  <tile id="46" type="Ground"/>
  <tile id="47" type="Solid">
   <properties>
-   <property name="action" value="(dialog '((&quot;A snowdrift.&quot;)))"/>
+   <property name="action">(if (has-weapon 1)
+    (if (max-pp-snowballs)
+        (dialog '((&quot;The snowballs container is full.&quot;))))
+    (dialog '((&quot;A snowdrift.&quot;))))</property>
   </properties>
  </tile>
  <tile id="48" type="Hurdle">

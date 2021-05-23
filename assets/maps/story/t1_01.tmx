@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="87">
+ <properties>
+  <property name="action" value="(map-name &quot;Mossy Crypt -1F&quot;)"/>
+  <property name="map-name" value="Mossy Crypt - 1F"/>
+  <property name="music" value="enemy"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="229" source="../tilesets/crypt-1.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="22" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA62U3QrCMAxGu4tVsdippRP0+dSn1wfwRlNIWIhJnXaBQ7utnH70Z7FzLgJbbJdgYP3i7YE94llfon07YbsCgvAWWmvAvD3OX9xpIW8Q6yrzruF5rLBRclBe8pbch+5zTDScWg7Nq40JYm851n6QN82YW/OmhrzkpLP0clO/ZR2srDyztXY17w7enVlWzzJ7ZZ/n5v2npDcb55HqAlyBW8VZzvsRvblyL3jdgSfwMHwjOvl/J3+5V79S/G9IvPiZKAUAAA==
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="82" gid="45" x="192" y="128" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (define event-id &quot;t1_01-talk&quot;)
+    (if (!get event-id)
+        (begin
+            (dialog '((&quot;/&quot; &quot;I advise you not to continue, you are running into big trouble.\nI'll report your presence to my boss.&quot;)))
+            (set event-id #t))
+        (dialog '((&quot;/&quot; &quot;If you decide to continue you will regret it.&quot;)))))</property>
+    <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="22" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIA68wSL2h0T1QwEIMQ60C6gDOJD8gRxPXFTyH8hMRkb8aYAcM/HxyQECOPw7XOKZHoCFRmFFdFocBHEFABV1vo8oBQAA
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points">
+  <object id="80" type="Door" x="176" y="112" width="16" height="16">
+   <properties>
+    <property name="roomId" value="22"/>
+   </properties>
+  </object>
+  <object id="84" type="Door" x="160" y="208" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="t1_02"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="items"/>
+</map>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="25" height="26" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="52">
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="25" height="26">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+2WvQqEMBCE8wqKhdW9l3+FHMdZqYWoj+8EXNhiN2wKc8Vl4CMwWZgiO5DaOVcn4EnljJyRM/4jowEdaEEPBsUjxc77jBG8GR/FI8XO+4wZLOB7n6vikWLnfcYODrCBCZyKR4qdpzcvwAuU7E7yQnfafKq9qh7O+WU/JFl7IXmh3eay9kLyQrvNZe2F5IV2m8vaC8nT+iHJ2gvupfi7eS5LZofpKAoAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="45" type="NPC" gid="153" x="144" y="368" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I'm planning a surprise wedding for my son, I hope he doesn't find out.&quot;)))"/>
+    <property name="orientation" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="46" type="NPC" gid="188" x="32" y="304" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;This part is under construction.&quot;)))"/>
+    <property name="orientation" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="25" height="26">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGAWjYBSMAspBIBCHIOFQHGLkqh8Fo2AoA2LTNrH5YjSvjAJ6AQCkYgSVKAoAAA==
+  </data>
+ </layer>
+ <objectgroup id="10" name="spawn points">
+  <object id="51" type="Door" x="0" y="288" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="30"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items"/>
+</map>
