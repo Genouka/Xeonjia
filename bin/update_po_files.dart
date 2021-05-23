@@ -6,10 +6,22 @@ import 'util/get_i18n_files.dart';
 import 'util/tmx2po.dart';
 import 'util/translation.dart';
 
-final languageList = ['de', 'es', 'fr', 'it', 'pt_BR', 'ru', 'zh_Hant', 'template'];
+final languageList = [
+  'de',
+  'es',
+  'fr',
+  'it',
+  'pl',
+  'pt_BR',
+  'ru',
+  'uk',
+  'zh_Hans',
+  'zh_Hant',
+  'template',
+];
 final appName = 'Xeonjia';
 final author = 'DeepDaikon';
-final year = '2020';
+final year = '2020, 2021';
 
 var metadata = <String, String>{};
 
