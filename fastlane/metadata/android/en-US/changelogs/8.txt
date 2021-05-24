@@ -1,0 +1,4 @@
+* Add a new part of the story
+* Various improvements and new features
+* Update translations and add new languages (beta)
+* Bug fixes
