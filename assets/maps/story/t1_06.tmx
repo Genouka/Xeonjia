@@ -18,7 +18,7 @@
         (place 91 160 192)
         (place -1 144 208)
         (black-curtain)
-        (dialog '((&quot;/iosa&quot; &quot;You're lucky, but it doesn't end there, rest assured.&quot;)))
+        (dialog '((&quot;/iosa&quot; &quot;You're lucky, but it doesn't end here, guaranteed.&quot;)))
         (wait)
         (delete 90)
         (delete 91)))</property>

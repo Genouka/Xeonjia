@@ -35,8 +35,7 @@
     <property name="action">(begin
     (dialog
         '((&quot;/&quot; &quot;I can't wait till they finish to restore the railway system, it no longer work since the ice arrival.&quot;)
-        (&quot;/_sad&quot; &quot;My wife remained blocked on the other side of the kingdom,&quot;)
-        (&quot;/&quot; &quot;I wonder if I will ever see her again.&quot;)))
+        (&quot;/_sad&quot; &quot;My wife remained blocked on the other side of the kingdom, I wonder if I will ever see her again.&quot;)))
     (set &quot;030-oldman-missing-her&quot; #t))</property>
    </properties>
   </object>

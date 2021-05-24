@@ -27,7 +27,7 @@
     (answer id '((&quot;Yes please&quot; . #t) (&quot;No thanks&quot; . #f)))
     (wait)
     (if (get id)
-        (dialog '((&quot;/&quot; &quot;There was once a devastating war in this area and everything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all those souls.\nWhen there were seasons other than winter,\nthis tree had the particularity of withering in spring and blooming in the other seasons.\nLegend has it that every spring the souls leave this tree to make other plants bloom; at the end of spring the souls return to flourish again this tree.\nThat's all.\nI hope to have time to see the end of this winter season which has persisted for more than 60 years now.&quot;)))
+        (dialog '((&quot;/&quot; &quot;There was once a devastating war in this area and everything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all the souls who left us.\nIt has the particularity of withering in spring and blooming in the other seasons.\nEvery spring the souls leave this tree to make other plants bloom and then, at the end of spring, the souls return to flourish again this tree.\nThat's all I know about this tree.\nI hope to have time to see the end of this winter season which has persisted for more than 60 years now.&quot;)))
         (dialog '((&quot;/&quot; &quot;Ok, it was a long and boring story after all.&quot;)))))</property>
    </properties>
   </object>
