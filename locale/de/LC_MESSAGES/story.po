@@ -61,7 +61,7 @@ msgid "I trust that you will be able to take the other two signets as well."
 msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
-msgid "Before resuming your journey, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here."
+msgid "Since you're heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here."
 msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
@@ -89,11 +89,11 @@ msgid "Good journey {{hero}}, I have faith in you."
 msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
-msgid "Yes, quite a lot."
+msgid "Yes, quite a lot"
 msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
-msgid "Just a little."
+msgid "Just a little"
 msgstr ""
 
 #: assets/maps/story/15.tmx:
@@ -521,7 +521,7 @@ msgid "Are you interested to learn about the legend of this tree?"
 msgstr ""
 
 #: assets/maps/story/29.tmx:
-msgid "There was once a devastating war in this area and everything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all those souls.\nWhen there were seasons other than winter,\nthis tree had the particularity of withering in spring and blooming in the other seasons.\nLegend has it that every spring the souls leave this tree to make other plants bloom; at the end of spring the souls return to flourish again this tree.\nThat's all.\nI hope to have time to see the end of this winter season which has persisted for more than 60 years now."
+msgid "There was once a devastating war in this area and everything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all the souls who left us.\nIt has the particularity of withering in spring and blooming in the other seasons.\nEvery spring the souls leave this tree to make other plants bloom and then, at the end of spring, the souls return to flourish again this tree.\nThat's all I know about this tree.\nI hope to have time to see the end of this winter season which has persisted for more than 60 years now."
 msgstr ""
 
 #: assets/maps/story/29.tmx:
@@ -897,11 +897,7 @@ msgid "I can't wait till they finish to restore the railway system, it no longer
 msgstr ""
 
 #: assets/maps/story/30.tmx:
-msgid "My wife remained blocked on the other side of the kingdom,"
-msgstr ""
-
-#: assets/maps/story/30.tmx:
-msgid "I wonder if I will ever see her again."
+msgid "My wife remained blocked on the other side of the kingdom, I wonder if I will ever see her again."
 msgstr ""
 
 #: assets/maps/story/30.tmx:
@@ -921,7 +917,7 @@ msgid "The City Hall seems spacious."
 msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
-msgid "You're lucky, but it doesn't end there, rest assured."
+msgid "You're lucky, but it doesn't end here, guaranteed."
 msgstr ""
 
 #: assets/maps/story/t1_06.tmx:

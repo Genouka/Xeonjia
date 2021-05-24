@@ -60,8 +60,8 @@ msgid "I trust that you will be able to take the other two signets as well."
 msgstr "Sono sicuro che riuscirai ad ottenere anche gli altri due sigilli."
 
 #: assets/maps/story/30_cityhall.tmx:
-msgid "Before resuming your journey, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here."
-msgstr "Prima di riprendere il viaggio, mi puoi fare un favore? Potresti consegnare questo pacco al Re della Regione dell'Acqua? È ad un po' di chilometri ad est da qui."
+msgid "Since you're heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here."
+msgstr "Dato che ti stai dirigendo verso est, mi puoi fare un favore? Potresti consegnare questo pacco al Re della Regione dell'Acqua? È ad un po' di chilometri ad est da qui."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes of course, I'll give it to him."
@@ -88,12 +88,12 @@ msgid "Good journey {{hero}}, I have faith in you."
 msgstr "Buon viaggio {{hero}}, ho fiducia in te."
 
 #: assets/maps/story/30_cityhall.tmx:
-msgid "Yes, quite a lot."
-msgstr "Sì, parecchio."
+msgid "Yes, quite a lot"
+msgstr "Sì, parecchio"
 
 #: assets/maps/story/30_cityhall.tmx:
-msgid "Just a little."
-msgstr "Solo un po'."
+msgid "Just a little"
+msgstr "Solo un po'"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! {{life-diff}} LPs have been recovered *"
@@ -520,8 +520,8 @@ msgid "Are you interested to learn about the legend of this tree?"
 msgstr "Sei interessato a conoscere la leggenda su questo albero?"
 
 #: assets/maps/story/29.tmx:
-msgid "There was once a devastating war in this area and everything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all those souls.\nWhen there were seasons other than winter,\nthis tree had the particularity of withering in spring and blooming in the other seasons.\nLegend has it that every spring the souls leave this tree to make other plants bloom; at the end of spring the souls return to flourish again this tree.\nThat's all.\nI hope to have time to see the end of this winter season which has persisted for more than 60 years now."
-msgstr "Un tempo ci fu una guerra devastante in questa zona e tutto venne raso al suolo.\nNon rimase niente e nessuno, tranne questo albero.\nSi dice che questo albero racchiuda tutte quelle anime.\nQuando c'erano altre stagioni oltre che all'inverno,\nquesto albero aveva la particolarità di appassire in primavera e di fiorire nelle altre stagioni.\nLa leggenda narra che ad ogni primavera le anime lasciano questo albero per far fiorire altre piante; alla fine della primavera le anime fanno ritorno per far rifiorire questo albero.\nE questo è tutto.\nSpero di avere il tempo di vedere la fine di questa stagione invernale che dura ormai da più di 60 anni."
+msgid "There was once a devastating war in this area and everything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all the souls who left us.\nIt has the particularity of withering in spring and blooming in the other seasons.\nEvery spring the souls leave this tree to make other plants bloom and then, at the end of spring, the souls return to flourish again this tree.\nThat's all I know about this tree.\nI hope to have time to see the end of this winter season which has persisted for more than 60 years now."
+msgstr "Un tempo ci fu una guerra devastante in questa zona e tutto venne raso al suolo.\nNon rimase niente e nessuno, tranne questo albero.\nSi dice che questo albero racchiuda le anime che ci lasciarono.\nQuesto albero ha la particolarità di appassire in primavera e di fiorire nelle altre stagioni.\nAd ogni primavera le anime lasciano questo albero per far fiorire altre piante e poi, alla fine della primavera, le anime fanno ritorno per far rifiorire questo albero.\nE questo è tutto quello che so.\nSpero di avere il tempo di vedere la fine di questa stagione invernale che dura ormai da più di 60 anni."
 
 #: assets/maps/story/29.tmx:
 msgid "Ok, it was a long and boring story after all."
@@ -896,12 +896,8 @@ msgid "I can't wait till they finish to restore the railway system, it no longer
 msgstr "Non vedo l'ora che finiscano di ripristinare il sistema ferroviario, non funziona più da quando arrivò il ghiaccio."
 
 #: assets/maps/story/30.tmx:
-msgid "My wife remained blocked on the other side of the kingdom,"
-msgstr "Mia moglie è rimasta bloccata dall'altra parte del regno,"
-
-#: assets/maps/story/30.tmx:
-msgid "I wonder if I will ever see her again."
-msgstr "Mi chiedo se mai la rivedrò."
+msgid "My wife remained blocked on the other side of the kingdom, I wonder if I will ever see her again."
+msgstr "Mia moglie è rimasta bloccata dall'altra parte del regno, mi chiedo se mai la rivedrò."
 
 #: assets/maps/story/30.tmx:
 msgid "\" City Hall ↑ \""
@@ -920,7 +916,7 @@ msgid "The City Hall seems spacious."
 msgstr "Il Municipio sembra spazioso."
 
 #: assets/maps/story/t1_06.tmx:
-msgid "You're lucky, but it doesn't end there, rest assured."
+msgid "You're lucky, but it doesn't end here, guaranteed."
 msgstr "Sei stato fortunato, ma non finisce qui, stanne certo."
 
 #: assets/maps/story/t1_06.tmx:
