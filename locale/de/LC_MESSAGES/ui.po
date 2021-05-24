@@ -7,7 +7,7 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
 # zwergwolf <sadness@gmx.de>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-04-23 12:00+0000\nLast-Translator: zwergwolf <sadness@gmx.de>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-05-24 20:38+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -351,7 +351,7 @@ msgstr "Du verlierst Energie!"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "You lost %s ¤ and woke up after a short nap"
-msgstr "Du hast  %s ¤ verloren und bist nach einem Nickerchen wieder aufgewacht"
+msgstr "Du hast %s ¤ verloren und bist nach einem Nickerchen wieder aufgewacht"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Your team won"
@@ -507,4 +507,4 @@ msgstr "Zu kurz."
 
 #: lib/util/insert_name_form.dart:
 msgid "Insert your name here"
-msgstr "Schreibe deinen Namen hier hinein."
+msgstr "Schreibe deinen Namen hier hinein"

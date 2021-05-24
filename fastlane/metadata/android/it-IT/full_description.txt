@@ -13,3 +13,5 @@ Guadagna punti esperienza che ti permetteranno di incrementare il tuo livello! V
 Fai attenzione perché il mondo è pieno di creature misteriose pronte ad attaccarti!
 
 Ragiona e pensa bene ogni movimento: cerca di trovare il percorso meno pericoloso!
+
+<b>Nota</b>: questo gioco è attualmente in versione beta.
