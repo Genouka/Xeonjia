@@ -21,7 +21,8 @@ class Settings {
   String get _currentLanguageCode =>
       useSystemLanguage ? Platform.localeName : _languageCode;
   Locale get locale =>
-      supportedLocales.contains(Locale(_currentLanguageCode.split('_').first))
+      enabledLocales.contains(Locale(_currentLanguageCode.split('_').first)) ||
+              !useSystemLanguage
           ? Locale(_currentLanguageCode.split('_').first)
           : const Locale('en');
   set locale(Locale locale) {

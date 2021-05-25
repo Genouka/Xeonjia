@@ -8,11 +8,20 @@ import 'package:xeonjia/ui/screens/rules/rules_page.dart';
 import 'package:xeonjia/ui/themes.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
-const List<Locale> supportedLocales = [
+const List<Locale> enabledLocales = [
   Locale('en'),
   Locale('es'),
   Locale('fr'),
   Locale('it'),
+];
+const List<Locale> supportedLocales = [
+  Locale('de'),
+  Locale('en'),
+  Locale('es'),
+  Locale('fr'),
+  Locale('it'),
+  Locale('uk'),
+  Locale('zh'),
 ];
 
 void main() async {
