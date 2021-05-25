@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/i18n/story.i18n.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 
@@ -185,7 +186,7 @@ class _AnswerButtons extends StatelessWidget {
                   child: Container(
                     constraints: const BoxConstraints(minWidth: 120),
                     child: Text(
-                      answer.text,
+                      answer.text.i18n,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         fontSize: 24,
