@@ -24,7 +24,7 @@ extension Localization on String {
           '$_language': {
             ${_translations.fold('', (previousValue, element) {
           return previousValue +
-              """'''${element.msgid}''':'''${element.msgstr}''',""";
+              """'''${element.msgid.replaceAll("'", "\\'")}''':'''${element.msgstr.replaceAll("'", "\\'")}''',""";
         })}
         },""";
       });
