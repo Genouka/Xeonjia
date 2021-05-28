@@ -513,7 +513,7 @@ Continuation evaluate(dynamic exp, Environment env, [Continuation previousK]) {
       for (;;) {
         if (k.isEmpty) {
           // execution finished
-         game.clearActionContinuation();
+          game.clearActionContinuation();
           if (!game.messageManager.active) game.resume();
           return null;
         }
