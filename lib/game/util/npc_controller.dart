@@ -19,10 +19,6 @@ class NpcController {
   _CpuShot get _nextShot => _shotPattern[_shotPatternIndex];
   bool get _hasShots => _shotPattern.isNotEmpty;
 
-  // Time until next operations
-  double _timeToNextMove = 0.1;
-  double _timeToNextShoot = 0.2;
-
   // Read and import patterns
   // movementPatternString: is a list of: direction
   // shotPatternString:     is a list of: direction | frequency
@@ -54,39 +50,42 @@ class NpcController {
   //}
 
   // Move
-  void move(CharacterComponent npc, double t) {
-    if (!npc.quiet) {
-      if (_hasMovements && npc.isStationary) {
-        game.addLater(TimerComponent(Timer(
-          0.5,
-          callback: () => npc.updateDirection(_nextDirection, animated: false),
-          repeat: false,
-        )..start()));
-      } else if ((_timeToNextMove -= t) < 0 && npc.randomDouble() > 0.2) {
-        npc.updateDirection(GetDirection.random, animated: false);
-        _timeToNextMove = 0.1;
-      }
+  bool _movementInQueue = false;
+  void move(CharacterComponent npc) {
+    if (!npc.quiet && npc.isStationary && !_movementInQueue) {
+      _movementInQueue = true;
+      game.addLater(TimerComponent(Timer(0.5, callback: () {
+        _movementInQueue = false;
+        npc.updateDirection(
+            _hasMovements ? _nextDirection : GetDirection.random,
+            animated: false);
+      })
+        ..start()));
     }
   }
 
   // Shoot
-  void shoot(CharacterComponent npc, double t) {
-    if (!npc.friendly && (_timeToNextShoot -= t) < 0) {
-      if (_hasShots) {
-        npc.updateOrientation(_nextShot.direction);
-        _timeToNextShoot = _nextShot.frequency;
-      } else {
-        _timeToNextShoot = 0.2;
-      }
-      if (game.playerOne.x == npc.x) {
-        npc.updateOrientation(
-            game.playerOne.y > npc.y ? Direction.down : Direction.up);
-      } else if (game.playerOne.y == npc.y) {
-        npc.updateOrientation(
-            game.playerOne.x > npc.x ? Direction.right : Direction.left);
-      }
-      if (npc.randomDouble() > 0.1) npc.nextWeapon();
-      if (npc.randomDouble() > 0.1) npc.shoot();
+  bool _shotInQueue = false;
+  void shoot(CharacterComponent npc) {
+    if (!npc.friendly && !_shotInQueue) {
+      _shotInQueue = true;
+      game.addLater(TimerComponent(
+          Timer(_hasShots ? _nextShot.frequency : 0.5, callback: () {
+        _shotInQueue = false;
+        if (_hasShots) npc.updateOrientation(_nextShot.direction);
+        if (npc.teamId != game.playerOne.teamId) {
+          if (game.playerOne.x == npc.x) {
+            npc.updateOrientation(
+                game.playerOne.y > npc.y ? Direction.down : Direction.up);
+          } else if (game.playerOne.y == npc.y) {
+            npc.updateOrientation(
+                game.playerOne.x > npc.x ? Direction.right : Direction.left);
+          }
+        }
+        if (npc.randomDouble() > 0.1) npc.nextWeapon();
+        if (npc.randomDouble() > 0.3) npc.shoot();
+      })
+            ..start()));
     }
   }
 }

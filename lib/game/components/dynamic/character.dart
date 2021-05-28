@@ -248,8 +248,8 @@ class CharacterComponent extends DynamicComponent
   @override
   void update(double t) {
     if (!isPlayerOne && game.isNotPaused) {
-      npcController.shoot(this, t);
-      npcController.move(this, t);
+      npcController.shoot(this);
+      npcController.move(this);
     }
     super.update(t);
   }
