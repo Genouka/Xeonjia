@@ -302,6 +302,6 @@ abstract class BasicComponent extends SpriteComponent {
     restoreLifePoints();
     x = startingPosition.x;
     y = startingPosition.y;
-    game.addLater(this);
+    if (!game.components.contains(this)) game.addLater(this);
   }
 }
