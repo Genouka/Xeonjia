@@ -19,20 +19,20 @@
  <objectgroup id="10" name="npcs">
   <object id="84" type="SlitherCpu" gid="285" x="80" y="144" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="6"/>
-    <property name="lifePoints" type="float" value="4"/>
+    <property name="atk" type="float" value="10"/>
+    <property name="lifePoints" type="float" value="20"/>
    </properties>
   </object>
   <object id="85" type="SlitherCpu" gid="285" x="144" y="96" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="6"/>
-    <property name="lifePoints" type="float" value="4"/>
+    <property name="atk" type="float" value="10"/>
+    <property name="lifePoints" type="float" value="20"/>
    </properties>
   </object>
   <object id="86" type="SlitherCpu" gid="285" x="176" y="160" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="6"/>
-    <property name="lifePoints" type="float" value="4"/>
+    <property name="atk" type="float" value="10"/>
+    <property name="lifePoints" type="float" value="20"/>
    </properties>
   </object>
   <object id="87" gid="45" x="256" y="80" width="16" height="16">
@@ -76,16 +76,6 @@
  </objectgroup>
  <objectgroup id="9" name="items">
   <object id="90" gid="304" x="48" y="192" width="16" height="16">
-   <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
-   </properties>
-  </object>
-  <object id="91" gid="304" x="304" y="48" width="16" height="16">
-   <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
-   </properties>
-  </object>
-  <object id="92" gid="304" x="160" y="128" width="16" height="16">
    <properties>
     <property name="lifePointsDelta" type="int" value="20"/>
    </properties>

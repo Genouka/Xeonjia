@@ -15,7 +15,7 @@
  <objectgroup id="10" name="npcs">
   <object id="72" type="NPC" gid="43" x="96" y="80" width="16" height="16">
    <properties>
-    <property name="action">(if (get &quot;026-house-talk&quot;)
+    <property name="action">(if (! (get &quot;026-house-talk&quot;))
     (begin
         (dialog '((&quot;/&quot; &quot;Do you think piglets will one day be a common pet?&quot;)))
         (define id &quot;026-house-question-piglets&quot;)

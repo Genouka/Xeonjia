@@ -5,10 +5,10 @@
   <property name="music" value="town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="49" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="20" height="22">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7WUzQrCMBCE96H8QfEf1B4Ue/GeWy9qn0D76s7CLqZhq0mICx8NQ3czSYcS5dUMzDN7rdqCnaGPwWSgh/Vp4j5LsBL8Um0NXOF5uf4sdF5beF5s7cEhYOOtjz/6+TtfwBVUoj2CdxagSfCk2Xkl9MRURR+P/5wXnj+2Gurf03PgvdislD5vR/lns4q9OVmnzNXMnan/j+G7y82M9b9ib6XzUjLTLX33l+q9Iztbvjai+G+l+auFxtPU2wncwN3TeT8nz1o07X0DYPK7kuAGAAA=
+   H4sIAAAAAAAAA7WUyw7CIBBF57N8ROM7UbuosRv37Nio/QLtj3tJmHRKpgoEJzkpuWGGAW4hyosFWGbmarEHB0WfgtlIjtPnieuswcYjg7UtMIXr5fanwfXawvVi4whOATsxPv/Id/d8BTdQee0ZzFkBm9ATe+edkBMTFfU9/rNeuP/YsDQ8p9fIvFivlN5vR/l708L1xv9mSl323IWGb4w7u1zPaO+VofJ+Kenplr73l9p7R7q3pDah+Lti/zUeKzTurQZ38BC6W8/4b+M1zv0AWT+X5uAGAAA=
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -26,7 +26,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="20" height="22">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA82U2Q6CMBBF5/P8EIUXlyd5d8EtRmNcIrjvfqa3aRsHQysoRG9y0pBhLp1ygeipBmgCX10XQYk+k/CagCGYK88yqCT0fq33QQd0QU95cmlvky9/tgu2YKcYg71hH7pPn43GZ/c44AqW4AYW4A4KlvnE2UxJns9MzeOoWtXQU7P4BSAEKzACG+Zj6nMtfgdwAkeS81xYzYntSC+PvstYnPh7zktZzV+31HTeWmxtUzR3aSTyNiCZObHy3HElnY3nLVSsSeYuTu98dd40IndniuZOyEu4v1/p3/dnEv8Os8h3mn99nnoAxakdBeAGAAA=
+   H4sIAAAAAAAAA82U2Q6CMBBF5wP9EIUXlyd5d8EtRmNcIrjvfqS3aRsHQysoRG9y0pBhLp1ygeipBmgCX10XQYk+k/CagCGYK88yqCT0fq33QQd0QU95cmlvky9/tgu2YKcYg71hH7pPn43GZ/c44AqW4AYW4A4KlvnE2UxJns9MzeOoWtXQU7P4BSAEKzACG+Zj6nMtfgdwAkeS81xYzYntSC+PvstYnPh7zktZzV+31HTeWmxtUzR3aSTyNiCZObHy3HElnY3nLVSsSeYuTu98dd40IndniuZOyEu4v1/p3/dnEv8Os8h3mn99nnoAKeJo/uAGAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -48,7 +48,7 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="66" gid="119" x="112" y="352" width="16" height="16">
+  <object id="66" gid="123" x="112" y="352" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;\&quot; NATAWN – Hometown of the 62nd hero \&quot;&quot;)))"/>
    </properties>
@@ -58,6 +58,7 @@
     <property name="actionOnCollision">(if  (or (!get &quot;001-talk-dad&quot;) (!get &quot;001-talk-mom&quot;))
     (begin 
         (dialog '((&quot;I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude.&quot;)))
+        (wait)
         (set-orientation 1))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (and (get &quot;001-talk-dad&quot;) (get &quot;001-talk-mom&quot;))
@@ -69,6 +70,7 @@
     <property name="actionOnCollision">(if  (= (get-def) 0)
     (begin 
         (dialog '((&quot;Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.&quot;)))
+        (wait)
         (set-orientation 1))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if  (&gt; (get-def) 0)

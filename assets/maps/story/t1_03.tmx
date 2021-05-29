@@ -19,20 +19,20 @@
  <objectgroup id="10" name="npcs">
   <object id="84" type="SlitherCpu" gid="285" x="128" y="144" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="7"/>
-    <property name="lifePoints" type="float" value="6"/>
+    <property name="atk" type="float" value="10"/>
+    <property name="lifePoints" type="float" value="30"/>
    </properties>
   </object>
   <object id="85" type="SlitherCpu" gid="285" x="192" y="112" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="7"/>
-    <property name="lifePoints" type="float" value="6"/>
+    <property name="atk" type="float" value="10"/>
+    <property name="lifePoints" type="float" value="30"/>
    </properties>
   </object>
   <object id="86" type="SlitherCpu" gid="285" x="64" y="160" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="7"/>
-    <property name="lifePoints" type="float" value="6"/>
+    <property name="atk" type="float" value="10"/>
+    <property name="lifePoints" type="float" value="30"/>
    </properties>
   </object>
   <object id="87" gid="48" x="304" y="176" width="16" height="16">

@@ -24,6 +24,7 @@
                 '((&quot;/hero&quot; &quot;Everything good?&quot;)
                 (&quot;/&quot; &quot;Yes, thank you so much for saving my life!\nI have to admit, I was scared.\nAs a token of gratitude I give you this gem that I found a little while ago.&quot;)
                 (&quot;/hero_happy&quot; &quot;Thanks, it seems very precious.&quot;)))
+            (wait)
             (give-item &quot;gem_1&quot;)))
     (dialog '((&quot;/&quot; &quot;Thanks for saving me, I think it's better if I go home now.&quot;))))</property>
     <property name="actionOnEvent">(if (!get &quot;013-h-safe&quot;)

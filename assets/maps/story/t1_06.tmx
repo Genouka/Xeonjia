@@ -42,11 +42,11 @@
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I will defeat you.&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
     (delete-me))</property>
-    <property name="level" type="int" value="1"/>
+    <property name="level" type="int" value="8"/>
     <property name="lp" type="float" value="100"/>
     <property name="movementPattern" value="0,1"/>
     <property name="name" value="iosa"/>
-    <property name="shootPattern" value="2|0.5"/>
+    <property name="shootPattern" value="2|0.2"/>
     <property name="team" type="int" value="1"/>
    </properties>
   </object>
@@ -55,11 +55,11 @@
     <property name="action" value="(dialog '((&quot;/&quot; &quot;You will not escape me.&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
     (delete-me))</property>
-    <property name="level" type="int" value="1"/>
+    <property name="level" type="int" value="8"/>
     <property name="lp" type="float" value="100"/>
     <property name="movementPattern" value="0,1"/>
     <property name="name" value="joza"/>
-    <property name="shootPattern" value="3|0.5"/>
+    <property name="shootPattern" value="3|0.2"/>
     <property name="team" type="int" value="1"/>
    </properties>
   </object>

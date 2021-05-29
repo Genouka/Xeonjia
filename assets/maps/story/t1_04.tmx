@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="91">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="92">
  <properties>
   <property name="action">(if ! (eq? (last-place) &quot;t1_03&quot;)
     (map-name &quot;Mossy Crypt -4F&quot;))</property>
@@ -20,20 +20,20 @@
  <objectgroup id="10" name="npcs">
   <object id="84" type="SlitherCpu" gid="285" x="128" y="144" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="7"/>
-    <property name="lifePoints" type="float" value="10"/>
+    <property name="atk" type="float" value="11"/>
+    <property name="lifePoints" type="float" value="35"/>
    </properties>
   </object>
   <object id="85" type="SlitherCpu" gid="285" x="192" y="112" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="8"/>
-    <property name="lifePoints" type="float" value="10"/>
+    <property name="atk" type="float" value="11"/>
+    <property name="lifePoints" type="float" value="35"/>
    </properties>
   </object>
   <object id="86" type="SlitherCpu" gid="285" x="64" y="160" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="7"/>
-    <property name="lifePoints" type="float" value="10"/>
+    <property name="atk" type="float" value="11"/>
+    <property name="lifePoints" type="float" value="35"/>
    </properties>
   </object>
  </objectgroup>
@@ -77,6 +77,11 @@
         (dialog '((&quot;The snowballs container is full.&quot;)))
         (dialog '((&quot;* {{hero}} filled his snowballs container *&quot;))))
     (dialog '((&quot;A snowdrift.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="91" gid="304" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="20"/>
    </properties>
   </object>
  </objectgroup>
