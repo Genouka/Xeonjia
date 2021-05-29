@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:xeonjia/i18n/story.i18n.dart';
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Button used to enable/disable the mini-map view
