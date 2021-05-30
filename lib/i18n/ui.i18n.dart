@@ -573,6 +573,163 @@ extension Localization on String {
           '''cancel''': '''Отмена''',
           '''resume''': '''Продолжить''',
         },
+        'vi': {
+          '''Info''': '''Thông tin''',
+          '''Settings''': '''Cài đặt''',
+          '''Story mode''': '''Chế độ cốt truyện''',
+          '''Multiplayer''': '''Nhiều người chơi''',
+          '''How to play''': '''Cách chơi''',
+          '''Almost done!''': '''Sắp xong rồi!''',
+          '''Before starting tell me your name which will be used in the game.''':
+              '''Trước khi bắt đầu, hãy nói cho tôi biết tên của bạn, nó sẽ được sử dụng trong trò chơi.''',
+          '''Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.''':
+              '''Giải các vấn đề về băng và đánh bại các kẻ thù trong một thế giới RPG.\n\nVuốt phải để học các ý tưởng cơ bản.''',
+          '''Modes''': '''Chế độ''',
+          '''There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the "King of Evil" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win.''':
+              '''Có hai chế độ trong Xeonjia:\n\n1) Cốt truyện: Thế giới đã bị đóng băng và nhiệm vụ của bạn là đánh bại "Vua Xấu xa" và cứu vương quốc.\n\n2) Nhiều người chơi: Đánh bại các kẻ thù, đạt điểm số và làm cho đội của bạn thắng.''',
+          '''Movements''': '''Di chuyển''',
+          '''Swipe your finger to move your character across the world.\nKeep in mind that you can\'t stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!''':
+              '''Vuốt ngón tay để di chuyển nhân vật qua khắp thế giới.\nChú ý rằng bạn không thể tự dừng lại cho đến khi bạn gặp một bức tường, tảng đá, hoặc bất kỳ loại chướng ngại vật nào khác.\n\nHãy sử dụng tâm trí của bạn để tìm ra con đường tốt nhất!''',
+          '''Lifepoints''': '''HP''',
+          '''Pay attention to your lifepoints!\nMany enemies, pitfalls and dangers will try to hurt you.''':
+              '''Hãy chú ý đến HP của bạn!\nNhiều kẻ thù, cạm bẫy và mối nguy hiểm sẽ cố làm hại bạn.''',
+          '''Weapons''': '''Vũ khí''',
+          '''You\'ll need weapons to overcome barriers and defeat enemies.\n\nTap the screen in the desired direction or press the shoot button to hit.\nBe aware that some weapons have few hits, so use them wisely.''':
+              '''Bạn sẽ cần các vũ khí để vuợt qua các rào cản và đánh bại các kẻ thù.\n\nNhấn vào màn hình theo hướng mong muốn hoặc nhấn nút bắn để đánh.\nHãy chú ý rằng một số vũ khí có rất ít lượt đánh, nên hãy sử dụng chúng một cách sáng suốt.''',
+          '''Enemies''': '''Kẻ thù''',
+          '''Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have life points too.''':
+              '''Hãy cẩn thận, thế giới có đầy các kẻ thù nguy hiểm sẵn sàng tấn công bạn!\nHãy đánh chúng nhiều lần để đánh bại chúng; chúng cũng có HP.''',
+          '''Close''': '''Đóng''',
+          '''Back''': '''Quay lại''',
+          '''OK''': '''OK''',
+          '''Next''': '''Tiếp''',
+          '''Play''': '''Chơi''',
+          '''Multiplayer Mode''': '''Chế độ Nhiều người chơi''',
+          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play".''':
+              '''Mục đích của chế độ này là đánh bại các kẻ thù, đạt điểm số và làm cho đội của bạn thắng.\n\nLuật chơi rất đơn giản:\n- Những người chơi được xếp làm hai đội.\n- Bất cứ khi nào một người chơi đánh bại một đối phương, đội của anh ấy được 100 điểm.\n- Đội mà đạt được số điểm được yêu cầu sẽ giành chiến thắng.\n\nCác đồng đội của bạn là những người màu đỏ.\n\nHiện tại bạn chỉ có thể chơi với CPU.\n\nChọn địa điểm để chơi và thiết lập trò chơi.\nKhi bạn đã sẵn sàng, hãy nhấn "Chơi".''',
+          '''Okay, got it!''': '''OK, hiểu rồi!''',
+          '''Map''': '''Bản đồ''',
+          '''Place to play''': '''Địa điểm để chơi''',
+          '''Difficulty''': '''Độ khó''',
+          '''Match difficulty''': '''Độ khó trận đấu''',
+          '''Points required''': '''Điểm được yêu cầu''',
+          '''Points needed to win''': '''Điểm được cần để thắng''',
+          '''Time available''': '''Thời gian có sẵn''',
+          '''Maximum time for a match (minutes)''':
+              '''Thời gian tối đa cho một trận đấu (phút)''',
+          '''Players''': '''Người chơi''',
+          '''Number of players per team''': '''Số người chơi cho mỗi đội''',
+          '''Friendly Fire''': '''Đánh đồng đội''',
+          '''If enabled, players can hit their teammates''':
+              '''Nếu được bật, những người chơi có thể đánh đồng đội của họ''',
+          '''Easy''': '''Dễ''',
+          '''Medium''': '''Trung bình''',
+          '''Hard''': '''Khó''',
+          '''Restore''': '''Khôi phục''',
+          '''Restore default settings?''': '''Khôi phục cài đặt mặc định?''',
+          '''Are you sure you want to delete your settings and restore default ones?''':
+              '''Bạn có chắc bạn muốn xoá cài đặt của bạn và khôi phục cài đặt mặc định không?''',
+          '''Cancel''': '''Huỷ''',
+          '''Show D-Pad''': '''Hiện D-Pad''',
+          '''Enable directional pad''': '''Bật điều khiển theo hướng''',
+          '''Background music''': '''Nhạc nền''',
+          '''Enable background music''': '''Bật nhạc nền''',
+          '''Sound effects''': '''Hiệu ứng âm thanh''',
+          '''Enable sound effects''': '''Bật hiệu ứng âm thanh''',
+          '''Your name''': '''Tên của bạn''',
+          '''Click here to change the name used in story mode''':
+              '''Nhấn vào đây để đổi tên được sử dụng trong chế độ cốt truyện''',
+          '''Discard''': '''Bỏ''',
+          '''Save''': '''Lưu''',
+          '''Language''': '''Ngôn ngữ''',
+          '''App language''': '''Ngôn ngữ ứng dụng''',
+          '''System default''': '''Mặc định hệ thống''',
+          '''By %s''': '''Bởi %s''',
+          '''App developed by %s''': '''Ứng dụng được phát triển bởi %s''',
+          '''Version: %s''': '''Phiên bản: %s''',
+          '''App version''': '''Phiên bản ứng dụng''',
+          '''Donate''': '''Quyên góp''',
+          '''Support the development''': '''Hỗ trợ sự phát triển''',
+          '''Translate''': '''Phiên dịch''',
+          '''Translate in your language''':
+              '''Phiên dịch ra ngôn ngữ của bạn''',
+          '''Updates''': '''Cập nhật''',
+          '''Search for updates''': '''Tìm kiếm các bản cập nhật''',
+          '''View source code''': '''Xem mã nguồn''',
+          '''Look at the source code''': '''Nhìn vào mã nguồn''',
+          '''Report bugs''': '''Báo cáo lỗi''',
+          '''Report bugs or request new feature''':
+              '''Báo cáo lỗi hoặc yêu cầu tính năng mới''',
+          '''Send email''': '''Gửi email''',
+          '''Ask for something or request a new feature''':
+              '''Hỏi điều gì đó hoặc yêu cầu tính năng mới''',
+          '''View License (GPLv3)''': '''Xem giấy phép (GPLv3)''',
+          '''Read software license''': '''Đọc giấy phép phần mềm''',
+          '''Third Party Licenses''': '''Giấy phép bên thứ ba''',
+          '''Read third party notices''': '''Đọc các thông báo bên thứ ba''',
+          '''Ok''': '''OK''',
+          '''Close map''': '''Đóng bản đồ''',
+          '''You went too far!''': '''Bạn đi quá xa rồi!''',
+          '''Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback.''':
+              '''Không may mắn là phần tiếp theo của cốt truyện chưa có sẵn :(\nHy vọng là nó sẽ sắp có.\n\nTrong lúc đó, bạn có thể hỗ trợ sự phát triển của Xeonjia bằng cách quyên góp hoặc đưa ra phản hồi.''',
+          '''Report a bug or ask something''':
+              '''Báo cáo lỗi hoặc hỏi điều gì đó''',
+          '''Go back''': '''Quay lại''',
+          '''You run out of energy !''': '''Bạn hết năng lượng rồi!''',
+          '''You lost %s ¤ and woke up after a short nap''':
+              '''Bạn đã mất %s ¤ và tỉnh dậy sau một giấc ngủ ngắn''',
+          '''Your team won''': '''Đội của bạn thắng''',
+          '''Your team lost''': '''Đội của bạn thua''',
+          '''The time is over.''': '''Hết thời gian.''',
+          '''%s points have been achieved.''': '''%s điểm đã được đạt.''',
+          '''Do you want to restart this game?''':
+              '''Bạn có muốn bắt đầu lại trò chơi này không?''',
+          '''Continue''': '''Tiếp tục''',
+          '''Yes''': '''Có''',
+          '''No''': '''Không''',
+          '''Loading…\nPlease wait''': '''Đang tải…\nVui lòng đợi''',
+          '''pause''': '''tạm dừng''',
+          '''restart''': '''bắt đầu lại''',
+          '''exit''': '''thoát''',
+          '''cancel''': '''huỷ''',
+          '''lifepoints: %s''': '''HP: %s''',
+          '''level: %s''': '''cấp: %s''',
+          '''money: %s ¤''': '''tiền: %s ¤''',
+          '''play time: %s min''': '''thời gian chơi: %s phút''',
+          '''your defeats: %s''': '''lần bạn bị đánh bại: %s''',
+          '''enemies defeated: %s''': '''kẻ thù đã đánh bại: %s''',
+          '''your points: %s''': '''điểm của bạn: %s''',
+          '''resume''': '''tiếp tục''',
+          '''Are you sure you want to restart this game?''':
+              '''Bạn có chắc bạn muốn bắt đầu lại trò chơi này không?''',
+          '''It will restart from the last location change.''':
+              '''Nó sẽ bắt đầu lại từ lần thay đổi vị trí cuối.''',
+          '''Are you sure you want to quit this game?''':
+              '''Bạn có chắc bạn muốn thoát trò chơi này không?''',
+          '''\n\nGame data since the last time you changed your location will be lost.''':
+              '''\n\nDữ liệu chơi từ lần cuối bạn thay đổi vị trí sẽ bị mất.''',
+          '''Shop''': '''Cửa hàng''',
+          '''What do you need?''': '''Bạn cần gì?''',
+          '''Let me know if you need anything else.''':
+              '''Hãy cho tôi biết nếu bạn cần thứ gì đó khác.''',
+          '''There are still monsters here. I can\'t escape.''':
+              '''Ở đây vẫn có quái vật. Tôi không thể trốn thoát được.''',
+          '''* {{hero}} puts %s in the backpack. *''':
+              '''* {{hero}} đặt %s vào ba lô. *''',
+          '''* {{hero}} puts the gem in the backpack. *''':
+              '''* {{hero}} đặt viên đá quý vào ba lô. *''',
+          '''* {{hero}} gives %s *''': '''* {{hero}} đưa %s *''',
+          '''Punch''': '''Đấm''',
+          '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
+              '''Đánh kẻ thù ở trước mặt bạn.\nĐây là vũ khí cơ bản nhất. Bạn có PP vô hạn.''',
+          '''Throw snowballs in front of you.''':
+              '''Ném bóng tuyết ra trước mặt bạn.''',
+          '''Leave explosive mines on the floor.\nA mine explodes if someone except you walks on it.''':
+              '''Để lại các quả mìn nổ trên sàn nhà.\nMột quả mìn sẽ nổ nếu có ai đó trừ bạn bước lên nó.''',
+          '''What\'s your name?''': '''Tên của bạn là gì?''',
+          '''Too short.''': '''Quá ngắn.''',
+          '''Insert your name here''': '''Nhập tên của bạn ở đây''',
+        },
         'zh_Hans': {
           '''Info''': '''信息''',
           '''Settings''': '''设置''',

@@ -8,7 +8,7 @@ extension Localization on String {
           '''…''': '''…''',
           '''* {{hero}} found some berries! {{life-diff}} LPs have been recovered *''':
               '''* {{hero}} encontrou algumas amoras. {{life-diff}} LPs foram recuperarados *''',
-          '''A little p'lant… nothing else.''':
+          '''A little plant… nothing else.''':
               '''Uma pequena planta… só isso.''',
           '''VANTOI LAB – 1F''': '''LABORATÓRIO VANTOI – 1F''',
           '''Sorry about the mess. Thieves have entered and turned everything upside down.''':
@@ -816,13 +816,13 @@ extension Localization on String {
               '''Bene, bene, bene… dovrai vedertela con noi adesso.''',
           '''I\'m Iosa.''': '''Sono Iosa.''',
           '''And I\'m Joza.''': '''E io sono Joza.''',
-          '''We are the Iosa&amp;Joza brothers and we will be your worst nightmare.''':
-              '''Siamo i fratelli Iosa&amp;Joza e saremo il tuo peggior incubo.''',
+          '''We are the Iosa&Joza brothers and we will be your worst nightmare.''':
+              '''Siamo i fratelli Iosa&Joza e saremo il tuo peggior incubo.''',
           '''I\'m not scared of you, let\'s see what you are capable of!''':
               '''Non ho paura di voi, vediamo di cosa siete capaci!''',
           '''Now you will see.''': '''Ora vedrai.''',
           '''Let\'s fight!''': '''Combattiamo!''',
-          '''iosa&amp;joza''': '''iosa&amp;joza''',
+          '''iosa&joza''': '''iosa&joza''',
           '''A rocky wall covered by moss.''':
               '''Una parete rocciosa coperta di muschio.''',
           '''iosa''': '''iosa''',
@@ -1377,6 +1377,91 @@ extension Localization on String {
           '''A broken monitor.''': '''Popsuty monitor.''',
           '''" → "''': '''" → "''',
           '''Natawn''': '''Natawn''',
+        },
+        'vi': {
+          '''City Hall''': '''Toà thị chính''',
+          '''…''': '''…''',
+          '''H-Hello.''': '''X-Xin chào.''',
+          '''Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region.''':
+              '''Xin chào, ngươi chắc hẳn là {{hero}}! Rất vui được gặp ngươi. Ta nghe nói là ngươi đang đi đến những vùng đất này.\nTên ta là Xe III và ta là Vua của Khu vực này.''',
+          '''king''': '''vua''',
+          '''Do not confuse me with the King of Evil, I am good haha.''':
+              '''Đừng nhầm lẫn ta với Vua Xấu xa, ta là người tốt mà, haha.''',
+          '''So… tell me, how are you? Is everything okay? How is the journey going?''':
+              '''Vậy… hãy nói cho ta, ngươi thế nào rồi? Mọi thứ có ổn không? Hành trình thế nào rồi?''',
+          '''Everything good, I just defeated the Hoarfrost Team and I got the first signet!''':
+              '''Mọi thứ đều tốt, thần vừa đánh bại Nhóm Hoarfrost và thần đã lấy được ấn dấu đầu tiên!''',
+          '''Oh really?! This is great news!''':
+              '''Ồ thật à?! Đây là một tin rất tốt!''',
+          '''It has been difficult?''': '''Việc đó có khó không?''',
+          '''I trust that you will be able to take the other two signets as well.''':
+              '''Ta tin rằng ngươi cũng sẽ có thể lấy hai cái ấn dấu còn lại.''',
+          '''Since you\'re heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here.''':
+              '''Vì ngươi đang đi đến phía Đông, ngươi có thể làm giúp ta một việc không? Ngươi có thể giao gói hàng này cho Vua của Khu vực Nước không? Nơi đó cách đây một vài ki lô mét về phía Đông.''',
+          '''Yes of course, I\'ll give it to him.''':
+              '''Tất nhiên là được rồi, thần sẽ đưa nó cho ông ấy.''',
+          '''Thank you very much. Here\'s to you.''':
+              '''Cảm ơn ngươi rất nhiều. Ta đưa ngươi này.''',
+          '''Be careful not to drop it, it is fragile.''':
+              '''Hãy cẩn thận đừng làm rơi nó, nó dễ vỡ đấy.''',
+          '''Sure, I\'ll be careful.''': '''Chắc chắn rồi, thần sẽ cẩn thận.''',
+          '''Thank you again.\nI wish you a good journey, come back anytime.''':
+              '''Cảm ơn ngươi lần nữa.\nTa chúc ngươi một hành trình tốt đẹp, hãy quay lại bất cứ lúc nào.''',
+          '''Good journey {{hero}}, I have faith in you.''':
+              '''Chúc {{hero}} một hành trình tốt đẹp, ta tin vào ngươi.''',
+          '''A broken monitor.''': '''Một cái màn hình bị vỡ.''',
+          '''" → "''': '''" → "''',
+          '''Natawn''': '''Natawn''',
+          '''Yes''': '''Có''',
+          '''No''': '''Không''',
+          '''This vase is very heavy, I can\'t move it.''':
+              '''Cái bình này rất nặng, tôi không thể di chuyển nó.''',
+          '''NEIGHBOR\'S HOUSE''': '''NHÀ HÀNG XÓM''',
+          '''* {{hero}} got and put on the shin guards *''':
+              '''* {{hero}} nhận và đeo tấm bảo vệ ống chân *''',
+          '''I can\'t escape. I have to take the first signet.''':
+              '''Tôi không thể trốn thoát. Tôi phải lấy ấn dấu đầu tiên.''',
+          '''Let\'s fight!''': '''Đánh nhau nào!''',
+          '''I hope those berries were good.''':
+              '''Tôi hy vọng những quả dâu đó là tốt.''',
+          '''It seems that once there was a path here.''':
+              '''Có vẻ là ở đây đã từng có một con đường.''',
+          '''There seems to be something in the branches of this plant…\nIt\'s a stone!''':
+              '''Có vẻ là có gì đó trong các cành của cây con này…\nĐó là một viên đá!''',
+          '''This is a very strange stone… Never seen anything like this before.''':
+              '''Đây là một viên đá rất lạ… Tôi chưa bao giờ thấy thứ gì như thế này trước đây.''',
+          '''What a mess! I have to tidy up!''':
+              '''Lộn xộn quá! Tôi phải dọn dẹp thôi!''',
+          '''Some boulders are placed by us, the workers of the Kingdom.\nIn this way it\'s easier to reach all places.''':
+              '''Một số tảng đá được đặt bởi chúng tôi, những công nhân của Vương quốc.\nTheo cách này thì việc đi đến tất cả địa điểm trở nên dễ hơn.''',
+          '''" Souvenir shop "''': '''"Cửa hàng đồ lưu niệm"''',
+          '''I can see the inside of the shop.''':
+              '''Tôi có thể thấy bên trong cửa hàng.''',
+          '''A rocky wall.''': '''Một bức tường gồ ghề.''',
+          '''A wall.''': '''Một bức tường.''',
+          '''A rock.''': '''Một cục đá.''',
+          '''A little plant.''': '''Một cái cây nhỏ.''',
+          '''A little plant without leaves.''':
+              '''Một cái cây nhỏ không có lá.''',
+          '''I like the color of this tree.''':
+              '''Tôi thích màu của cái cây này.''',
+          '''This type of tree is strange.''': '''Loại cây này rất lạ.''',
+          '''This type of plant is strange.''': '''Loại cây con này rất lạ.''',
+          '''It\'s not a good thing to look into other people\'s homes.''':
+              '''Việc nhìn vào nhà của những người khác là không tốt đâu.''',
+          '''This is a pharmacy.''': '''Đây là một hiệu thuốc.''',
+          '''man''': '''người đàn ông''',
+          '''lumberjack''': '''thợ đốn củi''',
+          '''guy''': '''anh chàng''',
+          '''It\'s full of books here.''': '''Có đầy các quyển sách ở đây.''',
+          '''A closed door.''': '''Một cánh cửa đóng.''',
+          '''There is some food between the mattresses of this sofa.''':
+              '''Có một ít thức ăn ở giữa các tấm nệm của chiếc ghế sofa này.''',
+          '''This is a wall.''': '''Đây là một bức tường.''',
+          '''Oink !''': '''Ủn ỉn!''',
+          '''This pig looks very happy.''': '''Con lợn này trông rất vui.''',
+          '''Package of the King''': '''Gói hàng của Vua''',
+          '''First Signet''': '''Ấn dấu đầu tiên''',
         },
         'zh_Hans': {
           '''…''': '''……''',
