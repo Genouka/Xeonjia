@@ -304,10 +304,7 @@ class XeonjiaGame extends BaseGame
   // Save match data and load the new room
   void changeRoom(String nextRoomId, {bool enterNextRoom = true}) {
     pause(stopMusic: false);
-    if (components
-        .where((element) =>
-            element is BasicComponent && [-3, -2, 1].contains(element.teamId))
-        .isEmpty) {
+    if (game.enemies == 0) {
       currentEventLog['${map.id}-safe'] = true;
       mainCharacter.expGained(playerOne.experiencePoints);
     }
