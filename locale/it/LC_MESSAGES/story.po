@@ -1008,8 +1008,8 @@ msgid "And I'm Joza."
 msgstr "E io sono Joza."
 
 #: assets/maps/story/t1_06.tmx:
-msgid "We are the Iosa&amp;Joza brothers and we will be your worst nightmare."
-msgstr "Siamo i fratelli Iosa&amp;Joza e saremo il tuo peggior incubo."
+msgid "We are the Iosa&Joza brothers and we will be your worst nightmare."
+msgstr "Siamo i fratelli Iosa&Joza e saremo il tuo peggior incubo."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm not scared of you, let's see what you are capable of!"
@@ -1024,8 +1024,8 @@ msgid "Let's fight!"
 msgstr "Combattiamo!"
 
 #: assets/maps/story/t1_06.tmx:
-msgid "iosa&amp;joza"
-msgstr "iosa&amp;joza"
+msgid "iosa&joza"
+msgstr "iosa&joza"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "A rocky wall covered by moss."

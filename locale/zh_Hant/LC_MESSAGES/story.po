@@ -1016,7 +1016,7 @@ msgid "And I'm Joza."
 msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
-msgid "We are the Iosa&amp;Joza brothers and we will be your worst nightmare."
+msgid "We are the Iosa&Joza brothers and we will be your worst nightmare."
 msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
@@ -1032,7 +1032,7 @@ msgid "Let's fight!"
 msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
-msgid "iosa&amp;joza"
+msgid "iosa&joza"
 msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
