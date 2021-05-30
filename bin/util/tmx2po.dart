@@ -35,8 +35,13 @@ Map<String, List<Translation>> tmx2po() {
       regexGlobal.allMatches(content).forEach((match) {
         regexText.allMatches(match.group(0)).forEach((text) {
           var string = Translation(
-              fsEntity.path, text.group(2).replaceAll('\\&quot;', '\\"'), null);
-          var author = text.group(1);
+              fsEntity.path,
+              text
+                  .group(2)
+                  .replaceAll('\\&quot;', '\\"')
+                  .replaceAll('&amp;', '&'),
+              null);
+          var author = text.group(1)?.replaceAll('&amp;', '&');
           Translation authorName;
           if (author != null) {
             authorName = Translation(fsEntity.path,
@@ -56,7 +61,8 @@ Map<String, List<Translation>> tmx2po() {
         });
       });
       npcName.allMatches(content).forEach((text) {
-        var string = Translation(fsEntity.path, text.group(1), null);
+        var string = Translation(
+            fsEntity.path, text.group(1).replaceAll('&amp;', '&'), null);
         if (!dirStringsMap[name].contains(string)) {
           dirStringsMap[name].add(string);
         }
