@@ -75,83 +75,92 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
             if (game.messageManager.hideMap ?? false)
               Container(color: Colors.black),
             if (game.messageManager.active)
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  if (game.messageManager.isShowingAQuestion &&
-                      _characterCountAnimation.isCompleted)
-                    _AnswerButtons(game.messageManager.answers,
-                        () => next(removeAnswers: true)),
-                  Container(
-                    margin: const EdgeInsets.all(20),
-                    padding: const EdgeInsets.all(20),
-                    constraints: const BoxConstraints(maxWidth: 500),
-                    decoration: BoxDecoration(
-                      color: Colors.grey[800].withOpacity(0.8),
-                      borderRadius: const BorderRadius.all(Radius.circular(30)),
-                      border: Border.all(color: Colors.blue, width: 3),
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        if (game.messageManager.currentMessage.image != null)
-                          Image.asset(
-                            game.messageManager.currentMessage.image,
-                            height:
-                                (min(96, MediaQuery.of(context).size.width / 4))
-                                    .gridAligned,
-                            fit: BoxFit.fitHeight,
-                            filterQuality: FilterQuality.none,
-                          ),
-                        Flexible(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: SingleChildScrollView(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  if ((game.messageManager.currentMessage
-                                          .authorName) !=
-                                      '')
-                                    Text(
-                                      '${game.messageManager.currentMessage.authorName} :',
-                                      style: const TextStyle(
-                                        fontSize: 32,
-                                        letterSpacing: 1.2,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w800,
-                                      ),
-                                    ),
-                                  AnimatedBuilder(
-                                    animation: _characterCountAnimation,
-                                    builder:
-                                        (BuildContext context, Widget child) {
-                                      return Text(
-                                        game.messageManager.currentMessage.text
-                                            .substring(0,
-                                                _characterCountAnimation.value),
-                                        style: TextStyle(
-                                          fontSize: settings.locale ==
-                                                  const Locale('zh')
-                                              ? 24
-                                              : 32,
+              Container(
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    if (game.messageManager.isShowingAQuestion &&
+                        _characterCountAnimation.isCompleted)
+                      _AnswerButtons(game.messageManager.answers,
+                          () => next(removeAnswers: true)),
+                    Container(
+                      margin: const EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
+                      constraints: const BoxConstraints(maxWidth: 500),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[800].withOpacity(0.8),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(30)),
+                        border: Border.all(color: Colors.blue, width: 3),
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          if (game.messageManager.currentMessage.image != null)
+                            Image.asset(
+                              game.messageManager.currentMessage.image,
+                              height: (min(96,
+                                      MediaQuery.of(context).size.width / 4))
+                                  .gridAligned,
+                              fit: BoxFit.fitHeight,
+                              filterQuality: FilterQuality.none,
+                            ),
+                          Flexible(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20),
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    if ((game.messageManager.currentMessage
+                                            .authorName) !=
+                                        '')
+                                      Text(
+                                        '${game.messageManager.currentMessage.authorName} :',
+                                        style: const TextStyle(
+                                          fontSize: 32,
+                                          letterSpacing: 1.2,
                                           color: Colors.white,
-                                          fontFamily: game.messageManager
-                                              .currentMessage.font,
+                                          fontWeight: FontWeight.w800,
                                         ),
-                                      );
-                                    },
-                                  ),
-                                ],
+                                      ),
+                                    AnimatedBuilder(
+                                      animation: _characterCountAnimation,
+                                      builder:
+                                          (BuildContext context, Widget child) {
+                                        return Text(
+                                          game.messageManager.currentMessage
+                                              .text
+                                              .substring(
+                                                  0,
+                                                  _characterCountAnimation
+                                                      .value),
+                                          style: TextStyle(
+                                            fontSize: settings.locale ==
+                                                    const Locale('zh')
+                                                ? 24
+                                                : 32,
+                                            color: Colors.white,
+                                            fontFamily: game.messageManager
+                                                .currentMessage.font,
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
           ],
         ),
@@ -167,43 +176,37 @@ class _AnswerButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomRight,
-      child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 20),
-        decoration: BoxDecoration(
-          color: Colors.grey[800].withOpacity(0.8),
-          borderRadius: const BorderRadius.all(Radius.circular(30)),
-          border: Border.all(color: Colors.blue, width: 3),
-        ),
-        child: IntrinsicWidth(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              for (var answer in answers)
-                TextButton(
-                  onPressed: () {
-                    game.currentEventLog[answer.questionId] = answer.value;
-                    game.messageManager.clear();
-                    callback();
-                  },
-                  child: Container(
-                    constraints: const BoxConstraints(minWidth: 120),
-                    child: Text(
-                      answer.text.i18n,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        fontSize: 24,
-                        letterSpacing: 1.2,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    ),
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 20),
+      decoration: BoxDecoration(
+        color: Colors.grey[800].withOpacity(0.8),
+        borderRadius: const BorderRadius.all(Radius.circular(30)),
+        border: Border.all(color: Colors.blue, width: 3),
+      ),
+      child: Column(
+        children: [
+          for (var answer in answers)
+            TextButton(
+              onPressed: () {
+                game.currentEventLog[answer.questionId] = answer.value;
+                game.messageManager.clear();
+                callback();
+              },
+              child: Container(
+                constraints: const BoxConstraints(minWidth: 120),
+                child: Text(
+                  answer.text.i18n,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 24,
+                    letterSpacing: 1.2,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w800,
                   ),
                 ),
-            ],
-          ),
-        ),
+              ),
+            ),
+        ],
       ),
     );
   }
