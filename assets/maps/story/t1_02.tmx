@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="98">
+<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="99">
  <properties>
   <property name="action" value="(map-name &quot;Mossy Crypt -2F&quot;)"/>
   <property name="map-name" value="Mossy Crypt -2F"/>
@@ -108,6 +108,11 @@
         (dialog '((&quot;A rock covered by moss.&quot;)))))</property>
     <property name="actionOnEvent">(if (! (has-item &quot;signet-1&quot;))
     (delete-me))</property>
+   </properties>
+  </object>
+  <object id="98" gid="304" x="208" y="224" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="50"/>
    </properties>
   </object>
  </objectgroup>
