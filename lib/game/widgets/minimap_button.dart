@@ -31,17 +31,16 @@ class MiniMapButton extends StatelessWidget {
                     borderRadius: const BorderRadius.all(Radius.circular(30))),
                 child: miniMapIsActive
                     ? Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          const Spacer(),
-                          Text(
-                            'Close map'.i18n.toUpperCase(),
-                            style: const TextStyle(
-                                color: Colors.white, fontSize: 24),
-                            textAlign: TextAlign.center,
-                            maxLines: 1,
+                          Expanded(
+                            child: Text(
+                              'Close map'.i18n.toUpperCase(),
+                              style: const TextStyle(
+                                  color: Colors.white, fontSize: 24),
+                              textAlign: TextAlign.center,
+                              maxLines: 1,
+                            ),
                           ),
-                          const Spacer(),
                           const Icon(Icons.close, color: Colors.white),
                         ],
                       )
