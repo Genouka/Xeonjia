@@ -6,6 +6,7 @@ const languageName = {
   'fr': ['French', 'Français (BETA)'],
   'de': ['German', 'Deutsch (ALPHA)'],
   'zh': ['Chinese (Simplified)', '简体中文 (ALPHA)'],
+  'vi': ['Vietnamese', 'Tiếng Việt (ALPHA)'],
   'uk': ['Ukrainian', 'Українська (ALPHA)'],
   'ar': ['Arabic', 'العربية'],
   'pt': ['Portuguese', 'Português'],
@@ -21,5 +22,4 @@ const languageName = {
   'fi': ['Finnish', 'Suomi'],
   'eo': ['Esperanto', 'Esperanto'],
   'ia': ['Interlingua', 'Interlingua'],
-  'template': ['INSERT LANGUAGE HERE', 'INSERT LANGUAGE HERE'],
 };

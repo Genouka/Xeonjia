@@ -15,6 +15,7 @@ final languageList = [
   'pt_BR',
   'ru',
   'uk',
+  'vi',
   'zh_Hans',
   'zh_Hant',
   'template',

@@ -21,6 +21,7 @@ const List<Locale> supportedLocales = [
   Locale('fr'),
   Locale('it'),
   Locale('uk'),
+  Locale('vi'),
   Locale('zh'),
 ];
 
