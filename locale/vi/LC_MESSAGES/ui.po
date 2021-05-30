@@ -1,0 +1,506 @@
+# Translation for Xeonjia
+# Copyright (C) 2020, 2021 DeepDaikon
+# This file is distributed under the same license as Xeonjia.
+# Quang Trung <quangtrung02hn16@gmail.com>, 2021.
+msgid ""
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-05-30 09:13+0000\nLast-Translator: Quang Trung <quangtrung02hn16@gmail.com>\nLanguage-Team: Vietnamese <https://translate.deepdaikon.xyz/projects/xeonjia/ui/vi/>\nLanguage: vi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+
+#: lib/ui/screens/home/widgets/bottom_row.dart:
+msgid "Info"
+msgstr "Thông tin"
+
+#: lib/ui/screens/home/widgets/bottom_row.dart:
+msgid "Settings"
+msgstr "Cài đặt"
+
+#: lib/ui/screens/home/home_page.dart:
+msgid "Story mode"
+msgstr "Chế độ cốt truyện"
+
+#: lib/ui/screens/home/home_page.dart:
+msgid "Multiplayer"
+msgstr "Nhiều người chơi"
+
+#: lib/ui/screens/home/home_page.dart:
+msgid "How to play"
+msgstr "Cách chơi"
+
+#: lib/ui/screens/rules/widgets/last_page.dart:
+msgid "Almost done!"
+msgstr "Sắp xong rồi!"
+
+#: lib/ui/screens/rules/widgets/last_page.dart:
+msgid "Before starting tell me your name which will be used in the game."
+msgstr "Trước khi bắt đầu, hãy nói cho tôi biết tên của bạn, nó sẽ được sử dụng trong trò chơi."
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts."
+msgstr "Giải các vấn đề về băng và đánh bại các kẻ thù trong một thế giới RPG.\n\nVuốt phải để học các ý tưởng cơ bản."
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Modes"
+msgstr "Chế độ"
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the \"King of Evil\" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win."
+msgstr "Có hai chế độ trong Xeonjia:\n\n1) Cốt truyện: Thế giới đã bị đóng băng và nhiệm vụ của bạn là đánh bại \"Vua Xấu xa\" và cứu vương quốc.\n\n2) Nhiều người chơi: Đánh bại các kẻ thù, đạt điểm số và làm cho đội của bạn thắng."
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Movements"
+msgstr "Di chuyển"
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Swipe your finger to move your character across the world.\nKeep in mind that you can't stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!"
+msgstr "Vuốt ngón tay để di chuyển nhân vật qua khắp thế giới.\nChú ý rằng bạn không thể tự dừng lại cho đến khi bạn gặp một bức tường, tảng đá, hoặc bất kỳ loại chướng ngại vật nào khác.\n\nHãy sử dụng tâm trí của bạn để tìm ra con đường tốt nhất!"
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Lifepoints"
+msgstr "HP"
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Pay attention to your lifepoints!\nMany enemies, pitfalls and dangers will try to hurt you."
+msgstr "Hãy chú ý đến HP của bạn!\nNhiều kẻ thù, cạm bẫy và mối nguy hiểm sẽ cố làm hại bạn."
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Weapons"
+msgstr "Vũ khí"
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "You'll need weapons to overcome barriers and defeat enemies.\n\nTap the screen in the desired direction or press the shoot button to hit.\nBe aware that some weapons have few hits, so use them wisely."
+msgstr "Bạn sẽ cần các vũ khí để vuợt qua các rào cản và đánh bại các kẻ thù.\n\nNhấn vào màn hình theo hướng mong muốn hoặc nhấn nút bắn để đánh.\nHãy chú ý rằng một số vũ khí có rất ít lượt đánh, nên hãy sử dụng chúng một cách sáng suốt."
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Enemies"
+msgstr "Kẻ thù"
+
+#: lib/ui/screens/rules/resources/rules.dart:
+msgid "Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have life points too."
+msgstr "Hãy cẩn thận, thế giới có đầy các kẻ thù nguy hiểm sẵn sàng tấn công bạn!\nHãy đánh chúng nhiều lần để đánh bại chúng; chúng cũng có HP."
+
+#: lib/ui/screens/rules/rules_page.dart:
+msgid "Close"
+msgstr "Đóng"
+
+#: lib/ui/screens/rules/rules_page.dart:
+msgid "Back"
+msgstr "Quay lại"
+
+#: lib/ui/screens/rules/rules_page.dart:
+msgid "OK"
+msgstr "OK"
+
+#: lib/ui/screens/rules/rules_page.dart:
+msgid "Next"
+msgstr "Tiếp"
+
+#: lib/ui/screens/arena/widgets/play_button.dart:
+msgid "Play"
+msgstr "Chơi"
+
+#: lib/ui/screens/arena/widgets/help_dialog.dart:
+msgid "Multiplayer Mode"
+msgstr "Chế độ Nhiều người chơi"
+
+#: lib/ui/screens/arena/widgets/help_dialog.dart:
+msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press \"Play\"."
+msgstr "Mục đích của chế độ này là đánh bại các kẻ thù, đạt điểm số và làm cho đội của bạn thắng.\n\nLuật chơi rất đơn giản:\n- Những người chơi được xếp làm hai đội.\n- Bất cứ khi nào một người chơi đánh bại một đối phương, đội của anh ấy được 100 điểm.\n- Đội mà đạt được số điểm được yêu cầu sẽ giành chiến thắng.\n\nCác đồng đội của bạn là những người màu đỏ.\n\nHiện tại bạn chỉ có thể chơi với CPU.\n\nChọn địa điểm để chơi và thiết lập trò chơi.\nKhi bạn đã sẵn sàng, hãy nhấn \"Chơi\"."
+
+#: lib/ui/screens/arena/widgets/help_dialog.dart:
+msgid "Okay, got it!"
+msgstr "OK, hiểu rồi!"
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Map"
+msgstr "Bản đồ"
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Place to play"
+msgstr "Địa điểm để chơi"
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Difficulty"
+msgstr "Độ khó"
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Match difficulty"
+msgstr "Độ khó trận đấu"
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Points required"
+msgstr "Điểm được yêu cầu"
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Points needed to win"
+msgstr "Điểm được cần để thắng"
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Time available"
+msgstr "Thời gian có sẵn"
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Maximum time for a match (minutes)"
+msgstr "Thời gian tối đa cho một trận đấu (phút)"
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Players"
+msgstr "Người chơi"
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Number of players per team"
+msgstr "Số người chơi cho mỗi đội"
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "Friendly Fire"
+msgstr "Đánh đồng đội"
+
+#: lib/ui/screens/arena/arena_page.dart:
+msgid "If enabled, players can hit their teammates"
+msgstr "Nếu được bật, những người chơi có thể đánh đồng đội của họ"
+
+#: lib/ui/screens/arena/resources/maps.dart:
+msgid "Easy"
+msgstr "Dễ"
+
+#: lib/ui/screens/arena/resources/maps.dart:
+msgid "Medium"
+msgstr "Trung bình"
+
+#: lib/ui/screens/arena/resources/maps.dart:
+msgid "Hard"
+msgstr "Khó"
+
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Restore"
+msgstr "Khôi phục"
+
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Restore default settings?"
+msgstr "Khôi phục cài đặt mặc định?"
+
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Are you sure you want to delete your settings and restore default ones?"
+msgstr "Bạn có chắc bạn muốn xoá cài đặt của bạn và khôi phục cài đặt mặc định không?"
+
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Cancel"
+msgstr "Huỷ"
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Show D-Pad"
+msgstr "Hiện D-Pad"
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Enable directional pad"
+msgstr "Bật điều khiển theo hướng"
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Background music"
+msgstr "Nhạc nền"
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Enable background music"
+msgstr "Bật nhạc nền"
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Sound effects"
+msgstr "Hiệu ứng âm thanh"
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Enable sound effects"
+msgstr "Bật hiệu ứng âm thanh"
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Your name"
+msgstr "Tên của bạn"
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Click here to change the name used in story mode"
+msgstr "Nhấn vào đây để đổi tên được sử dụng trong chế độ cốt truyện"
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Discard"
+msgstr "Bỏ"
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Save"
+msgstr "Lưu"
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "App language"
+msgstr "Ngôn ngữ ứng dụng"
+
+#: lib/ui/screens/settings/resources/option_list.dart:
+msgid "System default"
+msgstr "Mặc định hệ thống"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "By %s"
+msgstr "Bởi %s"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "App developed by %s"
+msgstr "Ứng dụng được phát triển bởi %s"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Version: %s"
+msgstr "Phiên bản: %s"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "App version"
+msgstr "Phiên bản ứng dụng"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Donate"
+msgstr "Quyên góp"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Support the development"
+msgstr "Hỗ trợ sự phát triển"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Translate"
+msgstr "Phiên dịch"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Translate in your language"
+msgstr "Phiên dịch ra ngôn ngữ của bạn"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Updates"
+msgstr "Cập nhật"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Search for updates"
+msgstr "Tìm kiếm các bản cập nhật"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "View source code"
+msgstr "Xem mã nguồn"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Look at the source code"
+msgstr "Nhìn vào mã nguồn"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Report bugs"
+msgstr "Báo cáo lỗi"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Report bugs or request new feature"
+msgstr "Báo cáo lỗi hoặc yêu cầu tính năng mới"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Send email"
+msgstr "Gửi email"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Ask for something or request a new feature"
+msgstr "Hỏi điều gì đó hoặc yêu cầu tính năng mới"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "View License (GPLv3)"
+msgstr "Xem giấy phép (GPLv3)"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Read software license"
+msgstr "Đọc giấy phép phần mềm"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Third Party Licenses"
+msgstr "Giấy phép bên thứ ba"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Read third party notices"
+msgstr "Đọc các thông báo bên thứ ba"
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Ok"
+msgstr "OK"
+
+#: lib/game/widgets/minimap_button.dart:
+msgid "Close map"
+msgstr "Đóng bản đồ"
+
+#: lib/game/widgets/no_maps_menu.dart:
+msgid "You went too far!"
+msgstr "Bạn đi quá xa rồi!"
+
+#: lib/game/widgets/no_maps_menu.dart:
+msgid "Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback."
+msgstr "Không may mắn là phần tiếp theo của cốt truyện chưa có sẵn :(\nHy vọng là nó sẽ sắp có.\n\nTrong lúc đó, bạn có thể hỗ trợ sự phát triển của Xeonjia bằng cách quyên góp hoặc đưa ra phản hồi."
+
+#: lib/game/widgets/no_maps_menu.dart:
+msgid "Report a bug or ask something"
+msgstr "Báo cáo lỗi hoặc hỏi điều gì đó"
+
+#: lib/game/widgets/no_maps_menu.dart:
+msgid "Go back"
+msgstr "Quay lại"
+
+#: lib/game/widgets/end_menu.dart:
+msgid "You run out of energy !"
+msgstr "Bạn hết năng lượng rồi!"
+
+#: lib/game/widgets/end_menu.dart:
+msgid "You lost %s ¤ and woke up after a short nap"
+msgstr "Bạn đã mất %s ¤ và tỉnh dậy sau một giấc ngủ ngắn"
+
+#: lib/game/widgets/end_menu.dart:
+msgid "Your team won"
+msgstr "Đội của bạn thắng"
+
+#: lib/game/widgets/end_menu.dart:
+msgid "Your team lost"
+msgstr "Đội của bạn thua"
+
+#: lib/game/widgets/end_menu.dart:
+msgid "The time is over."
+msgstr "Hết thời gian."
+
+#: lib/game/widgets/end_menu.dart:
+msgid "%s points have been achieved."
+msgstr "%s điểm đã được đạt."
+
+#: lib/game/widgets/end_menu.dart:
+msgid "Do you want to restart this game?"
+msgstr "Bạn có muốn bắt đầu lại trò chơi này không?"
+
+#: lib/game/widgets/end_menu.dart:
+msgid "Continue"
+msgstr "Tiếp tục"
+
+#: lib/game/widgets/end_menu.dart:
+msgid "Yes"
+msgstr "Có"
+
+#: lib/game/widgets/end_menu.dart:
+msgid "No"
+msgstr "Không"
+
+#: lib/game/widgets/loading_page.dart:
+msgid "Loading…\nPlease wait"
+msgstr "Đang tải…\nVui lòng đợi"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "pause"
+msgstr "tạm dừng"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "restart"
+msgstr "bắt đầu lại"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "exit"
+msgstr "thoát"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "cancel"
+msgstr "huỷ"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "lifepoints: %s"
+msgstr "HP: %s"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "level: %s"
+msgstr "cấp: %s"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "money: %s ¤"
+msgstr "tiền: %s ¤"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "play time: %s min"
+msgstr "thời gian chơi: %s phút"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "your defeats: %s"
+msgstr "lần bạn bị đánh bại: %s"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "enemies defeated: %s"
+msgstr "kẻ thù đã đánh bại: %s"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "your points: %s"
+msgstr "điểm của bạn: %s"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "resume"
+msgstr "tiếp tục"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "Are you sure you want to restart this game?"
+msgstr "Bạn có chắc bạn muốn bắt đầu lại trò chơi này không?"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "It will restart from the last location change."
+msgstr "Nó sẽ bắt đầu lại từ lần thay đổi vị trí cuối."
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "Are you sure you want to quit this game?"
+msgstr "Bạn có chắc bạn muốn thoát trò chơi này không?"
+
+#: lib/game/widgets/pause_menu.dart:
+msgid "\n\nGame data since the last time you changed your location will be lost."
+msgstr "\n\nDữ liệu chơi từ lần cuối bạn thay đổi vị trí sẽ bị mất."
+
+#: lib/game/widgets/shop_menu.dart:
+msgid "Shop"
+msgstr "Cửa hàng"
+
+#: lib/game/widgets/shop_menu.dart:
+msgid "What do you need?"
+msgstr "Bạn cần gì?"
+
+#: lib/game/widgets/shop_menu.dart:
+msgid "Let me know if you need anything else."
+msgstr "Hãy cho tôi biết nếu bạn cần thứ gì đó khác."
+
+#: lib/game/components/static/door.dart:
+msgid "There are still monsters here. I can't escape."
+msgstr "Ở đây vẫn có quái vật. Tôi không thể trốn thoát được."
+
+#: lib/game/components/dynamic/character.dart:
+msgid "* {{hero}} puts %s in the backpack. *"
+msgstr "* {{hero}} đặt %s vào ba lô. *"
+
+#: lib/game/components/dynamic/character.dart:
+msgid "* {{hero}} puts the gem in the backpack. *"
+msgstr "* {{hero}} đặt viên đá quý vào ba lô. *"
+
+#: lib/game/components/dynamic/character.dart:
+msgid "* {{hero}} gives %s *"
+msgstr "* {{hero}} đưa %s *"
+
+#: lib/resources/weapon_details.dart:
+msgid "Punch"
+msgstr "Đấm"
+
+#: lib/resources/weapon_details.dart:
+msgid "Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP."
+msgstr "Đánh kẻ thù ở trước mặt bạn.\nĐây là vũ khí cơ bản nhất. Bạn có PP vô hạn."
+
+#: lib/resources/weapon_details.dart:
+msgid "Throw snowballs in front of you."
+msgstr "Ném bóng tuyết ra trước mặt bạn."
+
+#: lib/resources/weapon_details.dart:
+msgid "Leave explosive mines on the floor.\nA mine explodes if someone except you walks on it."
+msgstr "Để lại các quả mìn nổ trên sàn nhà.\nMột quả mìn sẽ nổ nếu có ai đó trừ bạn bước lên nó."
+
+#: lib/util/insert_name_form.dart:
+msgid "What's your name?"
+msgstr "Tên của bạn là gì?"
+
+#: lib/util/insert_name_form.dart:
+msgid "Too short."
+msgstr "Quá ngắn."
+
+#: lib/util/insert_name_form.dart:
+msgid "Insert your name here"
+msgstr "Nhập tên của bạn ở đây"
