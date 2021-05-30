@@ -36,13 +36,12 @@ class EndMenu extends StatelessWidget {
         children: [
           Text(
             title,
-            style: const TextStyle(
-                color: Colors.white, fontSize: 40, letterSpacing: 1.4),
+            style: Theme.of(context).textTheme.subtitle1,
             textAlign: TextAlign.center,
           ),
           Text(
             content,
-            style: const TextStyle(color: Colors.white, fontSize: 32),
+            style: Theme.of(context).textTheme.bodyText2,
             textAlign: TextAlign.center,
           ),
           Container(height: 25),
@@ -58,7 +57,7 @@ class EndMenu extends StatelessWidget {
                   game.config.mode == GameMode.story
                       ? 'Continue'.i18n
                       : 'Yes'.i18n,
-                  style: const TextStyle(color: Colors.white, fontSize: 32),
+                  style: Theme.of(context).textTheme.bodyText2,
                 ),
               ),
               if (game.config.mode != GameMode.story)
@@ -69,7 +68,7 @@ class EndMenu extends StatelessWidget {
                   },
                   child: Text(
                     'No'.i18n,
-                    style: const TextStyle(color: Colors.white, fontSize: 32),
+                    style: Theme.of(context).textTheme.bodyText2,
                   ),
                 ),
             ],

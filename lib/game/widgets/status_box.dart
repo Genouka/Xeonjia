@@ -94,11 +94,7 @@ class _StatusBoxState extends State<StatusBox> {
                       ),
                       Text(
                         '  ${game.remainingTime}',
-                        style: const TextStyle(
-                          fontSize: 24,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: Theme.of(context).textTheme.button,
                       ),
                     ],
                   ),
@@ -152,12 +148,7 @@ class _PercentIndicator extends StatelessWidget {
           fit: BoxFit.contain,
           child: Text(
             text,
-            style: const TextStyle(
-              fontSize: 24,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.1,
-            ),
+            style: Theme.of(context).textTheme.button,
             textAlign: TextAlign.center,
             maxLines: 1,
           ),

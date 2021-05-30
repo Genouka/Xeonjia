@@ -30,6 +30,7 @@ void main() async {
   await loadStoredData().then((_) {
     SystemChrome.setEnabledSystemUIOverlays([]);
   });
+  updateGameTheme();
   return runApp(Xeonjia());
 }
 
@@ -40,7 +41,7 @@ class Xeonjia extends StatelessWidget {
       initialLocale: settings.locale,
       child: MaterialApp(
         title: 'Xeonjia',
-        theme: lightTheme,
+        theme: appTheme,
         home: settings.firstRun ? RulesPage(HomePage()) : HomePage(),
         localizationsDelegates: [
           GlobalMaterialLocalizations.delegate,

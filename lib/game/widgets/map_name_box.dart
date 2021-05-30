@@ -19,7 +19,7 @@ class MapNameBox extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8),
               child: Text(
                 text.i18n.toUpperCase(),
-                style: const TextStyle(color: Colors.white, fontSize: 24),
+                style: Theme.of(context).textTheme.button,
                 textAlign: TextAlign.center,
                 maxLines: 1,
               ),

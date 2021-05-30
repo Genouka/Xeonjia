@@ -32,21 +32,13 @@ class _ShopMenuState extends State<ShopMenu> {
               alignment: Alignment.bottomCenter,
               child: Text(
                 'Shop'.i18n.toUpperCase(),
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 64,
-                  letterSpacing: 1.4,
-                ),
+                style: Theme.of(context).textTheme.headline2,
               ),
             ),
           ),
           Text(
             'What do you need?'.i18n,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 40,
-              letterSpacing: 1.4,
-            ),
+            style: Theme.of(context).textTheme.subtitle1,
             textAlign: TextAlign.center,
           ),
           divider,
@@ -59,16 +51,16 @@ class _ShopMenuState extends State<ShopMenu> {
                   children: [
                     for (var item in widget._items)
                       ListTile(
-                        title: Text(item.name,
-                            style: const TextStyle(
-                                color: Colors.white, fontSize: 32)),
+                        title: Text(
+                          item.name,
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
                         trailing: Text(
                           '${item.price} ¤',
-                          style: TextStyle(
+                          style: Theme.of(context).textTheme.bodyText2.copyWith(
                               color: game.playerOne.money >= item.price
                                   ? Colors.white
-                                  : Colors.red,
-                              fontSize: 32),
+                                  : Colors.red),
                         ),
                         onTap: game.playerOne.money >= item.price
                             ? () {
@@ -91,7 +83,7 @@ class _ShopMenuState extends State<ShopMenu> {
             margin: const EdgeInsets.only(top: 5),
             child: Text(
                 '${game.playerOne.lifePoints.round()} LP  -  ${game.playerOne.money} ¤',
-                style: const TextStyle(color: Colors.white, fontSize: 40)),
+                style: Theme.of(context).textTheme.subtitle2),
           ),
           Expanded(
             child: Container(
@@ -103,14 +95,8 @@ class _ShopMenuState extends State<ShopMenu> {
                       'Let me know if you need anything else.'.i18n,
                       author: 'pharmacist/elderly'));
                 },
-                child: Text(
-                  'Close'.i18n,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 64,
-                    letterSpacing: 1.4,
-                  ),
-                ),
+                child: Text('Close'.i18n,
+                    style: Theme.of(context).textTheme.headline2),
               ),
             ),
           ),

@@ -6,7 +6,6 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/i18n/story.i18n.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
 
 class DialogBox extends StatefulWidget {
   @override
@@ -121,12 +120,9 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                         '')
                                       Text(
                                         '${game.messageManager.currentMessage.authorName} :',
-                                        style: const TextStyle(
-                                          fontSize: 32,
-                                          letterSpacing: 1.2,
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w800,
-                                        ),
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodyText1,
                                       ),
                                     AnimatedBuilder(
                                       animation: _characterCountAnimation,
@@ -139,15 +135,13 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                                   0,
                                                   _characterCountAnimation
                                                       .value),
-                                          style: TextStyle(
-                                            fontSize: settings.locale ==
-                                                    const Locale('zh')
-                                                ? 24
-                                                : 32,
-                                            color: Colors.white,
-                                            fontFamily: game.messageManager
-                                                .currentMessage.font,
-                                          ),
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyText2
+                                              .copyWith(
+                                                fontFamily: game.messageManager
+                                                    .currentMessage.font,
+                                              ),
                                         );
                                       },
                                     ),
@@ -197,12 +191,7 @@ class _AnswerButtons extends StatelessWidget {
                 child: Text(
                   answer.text.i18n,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 24,
-                    letterSpacing: 1.2,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w800,
-                  ),
+                  style: Theme.of(context).textTheme.button,
                 ),
               ),
             ),

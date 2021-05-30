@@ -18,14 +18,13 @@ class NoMapsMenu extends StatelessWidget {
             children: [
               Text(
                 'You went too far!'.i18n,
-                style: const TextStyle(
-                    color: Colors.white, fontSize: 48, letterSpacing: 1.4),
+                style: Theme.of(context).textTheme.headline6,
                 textAlign: TextAlign.center,
               ),
               Text(
                 'Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback.'
                     .i18n,
-                style: const TextStyle(color: Colors.white, fontSize: 32),
+                style: Theme.of(context).textTheme.bodyText2,
                 textAlign: TextAlign.center,
               ),
               Container(height: 35),
@@ -38,7 +37,7 @@ class NoMapsMenu extends StatelessWidget {
                     },
                     child: Text(
                       'Donate'.i18n,
-                      style: const TextStyle(color: Colors.white, fontSize: 32),
+                      style: Theme.of(context).textTheme.bodyText2,
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -48,7 +47,7 @@ class NoMapsMenu extends StatelessWidget {
                     },
                     child: Text(
                       'Report a bug or ask something'.i18n,
-                      style: const TextStyle(color: Colors.white, fontSize: 32),
+                      style: Theme.of(context).textTheme.bodyText2,
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -61,7 +60,7 @@ class NoMapsMenu extends StatelessWidget {
                     },
                     child: Text(
                       'Send email'.i18n,
-                      style: const TextStyle(color: Colors.white, fontSize: 32),
+                      style: Theme.of(context).textTheme.bodyText2,
                     ),
                   ),
                   TextButton(
@@ -71,7 +70,7 @@ class NoMapsMenu extends StatelessWidget {
                     },
                     child: Text(
                       'Go back'.i18n,
-                      style: const TextStyle(color: Colors.white, fontSize: 32),
+                      style: Theme.of(context).textTheme.bodyText2,
                     ),
                   ),
                 ],

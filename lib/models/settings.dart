@@ -29,6 +29,8 @@ class Settings {
     _languageCode = locale?.toString();
   }
 
+  bool get useSystemFont => ['vi', 'zh'].contains(locale.languageCode);
+
   // Import settings from a Json
   Settings(Map<String, dynamic> json)
       : showDPad = json['showDPad'] ?? false,

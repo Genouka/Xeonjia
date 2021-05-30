@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
+import 'package:xeonjia/ui/themes.dart';
 
 // i18n: 'pause'.i18n, 'restart'.i18n, 'exit'.i18n
 enum PauseMode { pause, restart, exit }
@@ -49,10 +50,7 @@ class _PauseMenuState extends State<PauseMenu> {
                 fit: BoxFit.fitWidth,
                 child: Text(
                   describeEnum(pauseMode).i18n.toUpperCase(),
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 64,
-                  ),
+                  style: Theme.of(context).textTheme.headline3,
                 ),
               ),
             ),
@@ -67,7 +65,7 @@ class _PauseMenuState extends State<PauseMenu> {
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Text(
                       text,
-                      style: const TextStyle(color: Colors.white, fontSize: 32),
+                      style: Theme.of(context).textTheme.bodyText2,
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -196,7 +194,7 @@ class _PauseMenuState extends State<PauseMenu> {
         child: Text(
           text,
           textAlign: TextAlign.center,
-          style: const TextStyle(color: Colors.white, fontSize: 32),
+          style: gameTheme.textTheme.bodyText2,
         ),
       ),
     );

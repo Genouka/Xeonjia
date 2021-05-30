@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/widgets/pause_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/match_config.dart';
+import 'package:xeonjia/ui/themes.dart';
 
 class GamePage extends StatelessWidget {
   GamePage(MatchConfig config) {
@@ -19,7 +20,7 @@ class GamePage extends StatelessWidget {
       child: Focus(
         onKey: (data, event) => false,
         child: Theme(
-          data: ThemeData(fontFamily: 'dd5x7'),
+          data: gameTheme,
           child: Scaffold(body: game.widget),
         ),
       ),

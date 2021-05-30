@@ -6,6 +6,7 @@ import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/main.dart';
 import 'package:xeonjia/ui/screens/settings/resources/languages.dart';
 import 'package:xeonjia/ui/screens/settings/settings_page.dart';
+import 'package:xeonjia/ui/themes.dart';
 import 'package:xeonjia/util/insert_name_form.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
@@ -97,6 +98,7 @@ class OptionList extends StatelessWidget {
             onChanged: (Locale newValue) {
               settings.locale = newValue;
               I18n.of(context).locale = settings.locale;
+              updateGameTheme();
               saveSettings();
               SettingsPage.of(context).refresh();
             },
