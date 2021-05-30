@@ -22,6 +22,7 @@
         (wait)
         (delete 90)
         (delete 91)))</property>
+  <property name="disable-minimap" type="bool" value="true"/>
   <property name="map-name" value="Mossy Crypt -4F"/>
   <property name="music" value="enemy"/>
  </properties>
