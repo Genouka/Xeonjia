@@ -290,9 +290,9 @@ class XeonjiaGame extends BaseGame
     var newBgm = (map.music ?? 'road') + '.oga';
     if (newBgm == currentBgm) return;
     currentBgm = newBgm;
-    _backgroundMusic.stop();
+    _backgroundMusic?.stop();
     Future.delayed(const Duration(seconds: 1), () {
-      if (game != null) _backgroundMusic.play('bgm/' + currentBgm);
+      if (game != null) _backgroundMusic?.play('bgm/' + currentBgm);
     });
   }
 
