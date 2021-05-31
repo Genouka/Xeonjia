@@ -247,7 +247,7 @@ class XeonjiaGame extends BaseGame
   void executeAction(
       {@required String action, BasicComponent actor, BasicComponent self}) {
     if (action?.isEmpty ?? true) return;
-    pause(stopEngine: false);
+    pause(stopEngine: false, stopMusic: false);
     environment.defineSymbol(
         Sym('self'), Intrinsic('self', 0, (Cell x) => self));
     environment.defineSymbol(Sym('actor'), actor ?? playerOne);
