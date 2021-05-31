@@ -4,6 +4,7 @@
   <property name="action" value="(map-name &quot;City Hall&quot;)"/>
   <property name="disable-minimap" type="bool" value="true"/>
   <property name="map-name" value="City Hall"/>
+  <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
