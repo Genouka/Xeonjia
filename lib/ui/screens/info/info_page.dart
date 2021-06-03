@@ -18,7 +18,7 @@ class _InfoPageState extends State<InfoPage> {
       'icon': const Icon(Icons.change_history),
     },
     {
-      'title': 'Version: %s'.i18n.fill(['2.0.1']),
+      'title': 'Version: %s'.i18n.fill(['2.1.0']),
       'subtitle': 'App version'.i18n,
       'url': '',
       'icon': const Icon(Icons.looks_two),
