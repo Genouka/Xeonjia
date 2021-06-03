@@ -41,14 +41,6 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <properties>
-   <property name="action">(begin
-    (if (eq? (last-place) &quot;31&quot;)
-        (map-name &quot;Route 3&quot;))
-    (if  (first-time?)
-        (dialog '((&quot;That's the first crypt, I think.&quot;)))))</property>
-   <property name="map-name" value="Route 3"/>
-  </properties>
   <object id="45" gid="71" x="80" y="544" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;\&quot; ← Sacred Tree \&quot;\n\&quot; Melhopolis City Center → \&quot;&quot;)))"/>
