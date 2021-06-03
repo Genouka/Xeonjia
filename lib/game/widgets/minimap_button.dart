@@ -16,7 +16,9 @@ class MiniMapButton extends StatelessWidget {
             top: 6,
             right: 6,
             child: InkWell(
-              onTap: () => game.messageManager.active ? null : game.miniMap(),
+              onTap: () => game.messageManager.active || game.hasAction
+                  ? null
+                  : game.miniMap(),
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                 height: 34,
