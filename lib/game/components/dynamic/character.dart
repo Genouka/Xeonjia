@@ -226,6 +226,7 @@ class CharacterComponent extends DynamicComponent
       ++defeats;
       stop();
       respawnAnimation();
+      removeChildren();
       game.checkMatchStatus();
     }
   }
