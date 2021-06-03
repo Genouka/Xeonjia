@@ -604,10 +604,6 @@ msgid "pharmacist"
 msgstr "farmacista"
 
 #: assets/maps/story/27.tmx:
-msgid "That's the first crypt, I think."
-msgstr "Penso che quella sia la prima cripta."
-
-#: assets/maps/story/27.tmx:
 msgid "\" ← Sacred Tree \"\n\" Melhopolis City Center → \""
 msgstr "\" ← Albero Sacro \"\n\" Centro di Melhopolis → \""
 

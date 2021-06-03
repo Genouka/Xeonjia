@@ -227,8 +227,6 @@ extension Localization on String {
           '''Pharmacy''': '''Pharmacie''',
           '''Welcome to my shop!''': '''Bienvenue dans ma boutique !''',
           '''pharmacist''': '''pharmacien''',
-          '''That\'s the first crypt, I think.''':
-              '''Je pense que c\'est la première crypte.''',
           '''I advise you to take another path.\nThese monsters are too strong.''':
               '''Je te conseille de prendre un autre chemin.\nCes monstres sont trop forts.''',
           '''Xeonjia Tower''': '''Tour Xeonjia''',
@@ -651,8 +649,6 @@ extension Localization on String {
           '''Pharmacy''': '''Farmacia''',
           '''Welcome to my shop!''': '''Benvenuto nel mio negozio!''',
           '''pharmacist''': '''farmacista''',
-          '''That\'s the first crypt, I think.''':
-              '''Penso che quella sia la prima cripta.''',
           '''" ← Sacred Tree "\n" Melhopolis City Center → "''':
               '''" ← Albero Sacro "\n" Centro di Melhopolis → "''',
           '''I advise you to take another path.\nThese monsters are too strong.''':
@@ -1116,8 +1112,6 @@ extension Localization on String {
           '''Pharmacy''': '''Farmacia''',
           '''Welcome to my shop!''': '''¡Te doy la bienvenida a mi tienda!''',
           '''pharmacist''': '''farmacólogo''',
-          '''That\'s the first crypt, I think.''':
-              '''Pienso que es la primera cripta.''',
           '''I advise you to take another path.\nThese monsters are too strong.''':
               '''Te recomiendo que tomes otro camino.\nAquí hay monstruos muy fuertes.''',
           '''Xeonjia Tower''': '''Torre Xeonjia''',
