@@ -7,7 +7,7 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
 # zwergwolf <sadness@gmx.de>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-05-24 20:38+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-11 21:21+0000\nLast-Translator: zwergwolf <sadness@gmx.de>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -155,7 +155,7 @@ msgstr "Anzahl der Spieler pro Team"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Friendly Fire"
-msgstr "Friendly Fire"
+msgstr "Eigener Beschuss"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "If enabled, players can hit their teammates"
@@ -195,7 +195,7 @@ msgstr "D-Pad anzeigen"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable directional pad"
-msgstr ""
+msgstr "Steuerkreuz aktivieren"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Background music"
@@ -207,11 +207,11 @@ msgstr "Hintergrundmusik einschalten"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Sound effects"
-msgstr "Soundeffekte"
+msgstr "Toneffekte"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable sound effects"
-msgstr "Soundeffekte einschalten"
+msgstr "Toneffekte einschalten"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Your name"
@@ -247,7 +247,7 @@ msgstr "Von %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App developed by %s"
-msgstr "App entwickelt von %s"
+msgstr "Anwendung entwickelt von %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version: %s"
@@ -275,7 +275,7 @@ msgstr "Übersetze in deine Sprache"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Updates"
-msgstr "Updates"
+msgstr "Aktualisierungen"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Search for updates"
@@ -323,11 +323,11 @@ msgstr "Hinweise von Drittanbietern lesen"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ok"
-msgstr "Ok"
+msgstr "OK"
 
 #: lib/game/widgets/minimap_button.dart:
 msgid "Close map"
-msgstr ""
+msgstr "Karte schließen"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "You went too far!"
@@ -335,7 +335,7 @@ msgstr "Du bist zu weit gelaufen!"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback."
-msgstr "Die Fortsetzung der Geschichte ist noch in Arbeit und wird hoffentlich bald verfügbar sein.\n\nBis dahin kannst du uns bei der Entwicklung von Xeonija durch Spenden oder Feedback unterstützen."
+msgstr "Die Fortsetzung der Geschichte ist noch in Arbeit und wird hoffentlich bald verfügbar sein.\n\nBis dahin kannst du uns bei der Entwicklung von Xeonija durch Spenden oder Rückmeldung unterstützen."
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Report a bug or ask something"
@@ -359,7 +359,7 @@ msgstr "Dein Team hat gewonnen"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Your team lost"
-msgstr "Dein Team hat verloren!"
+msgstr "Dein Team hat verloren"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "The time is over."
@@ -395,15 +395,15 @@ msgstr "Pause"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "restart"
-msgstr "Neustarten"
+msgstr "neu starten"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "exit"
-msgstr "Verlassen"
+msgstr "verlassen"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "cancel"
-msgstr "Abbrechen"
+msgstr "abbrechen"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "lifepoints: %s"
@@ -455,19 +455,19 @@ msgstr ""
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "Shop"
-msgstr ""
+msgstr "Geschäft"
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "What do you need?"
-msgstr ""
+msgstr "Was brauchst du?"
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "Let me know if you need anything else."
-msgstr ""
+msgstr "Melde dich, wenn du sonst noch etwas brauchst."
 
 #: lib/game/components/static/door.dart:
 msgid "There are still monsters here. I can't escape."
-msgstr ""
+msgstr "Es sind immer noch Monster hier, ich komme hier nicht weg."
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"

@@ -13,3 +13,5 @@ Au fil du temps, vous gagnerez des points d'expérience qui vous permettront d'a
 Attention, le monde regorge d'ennemis dangereux prêts à vous attaquer !
 
 Utilisez votre tête pour trouver le meilleur chemin !
+
+<b>Note</b> : ce jeu est actuellement en bêta.

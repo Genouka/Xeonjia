@@ -6,11 +6,11 @@
 # Swann Fournial <s.fournial@protonmail.com>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-04-13 19:56+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-12 09:09+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
-msgstr ""
+msgstr "Rathaus"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "…"
@@ -18,7 +18,7 @@ msgstr "…"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "H-Hello."
-msgstr ""
+msgstr "G-Guten Tag."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
@@ -26,7 +26,7 @@ msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "king"
-msgstr ""
+msgstr "König"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Do not confuse me with the King of Evil, I am good haha."
@@ -66,7 +66,7 @@ msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes of course, I'll give it to him."
-msgstr ""
+msgstr "Ja, natürlich. Ich werde es ihm geben."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Thank you very much. Here's to you."
@@ -306,7 +306,7 @@ msgstr "\" Picknick-Platz – Bitte sauber halten, danke \""
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
-msgstr "\" Picknick-Platz ↑ \"\n\" Wald-Center ↓ \""
+msgstr "\" Picknick-Platz ↑ \"\n\" Waldzentrum ↓ \""
 
 #: assets/maps/story/t1_04.tmx:
 msgid "Mossy Crypt -4F"
@@ -786,11 +786,11 @@ msgstr ""
 
 #: assets/maps/story/26_house.tmx:
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: assets/maps/story/26_house.tmx:
 msgid "No"
-msgstr ""
+msgstr "Nein"
 
 #: assets/maps/story/t1_03.tmx:
 msgid "Mossy Crypt -3F"
@@ -1154,7 +1154,7 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A little plant."
-msgstr ""
+msgstr "Eine kleine Pflanze."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A little plant without leaves."
@@ -1178,11 +1178,11 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "This is a pharmacy."
-msgstr ""
+msgstr "Dies ist eine Apotheke."
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "man"
-msgstr ""
+msgstr "Mann"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "lumberjack"
@@ -1214,11 +1214,11 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "dude"
-msgstr ""
+msgstr "Kerl"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "girl"
-msgstr ""
+msgstr "Mädchen"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "oldster"
@@ -1262,7 +1262,7 @@ msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A closed door."
-msgstr ""
+msgstr "Eine geschlossene Tür."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "There is some food between the mattresses of this sofa."

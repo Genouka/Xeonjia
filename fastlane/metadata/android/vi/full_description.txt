@@ -1,0 +1,17 @@
+Có hai chế độ chơi:
+
+1) Chế độ cốt truyện: mục đích là đạt đến tầng cuối của toà tháp và đánh bại "Vua xấu xa".
+
+2) Chế độ nhiều người chơi: mục đích là đạt điểm số và làm cho đội của bạn thắng.
+
+Về cơ bản thì bạn sẽ phải vuốt ngón tay để di chuyển nhân vật qua khắp thế giới.
+
+Chú ý rằng bạn không thể tự dừng lại cho đến khi bạn gặp một bức tường, tảng đá, hoặc bất kỳ loại chướng ngại vật nào khác.
+
+Theo thời gian, bạn sẽ đạt được điểm kinh nghiệm cho phép bạn tăng cấp và bạn sẽ tìm thấy tiền và kho báu ẩn mà bạn có thể sử dụng để mua đồ và cải thiện bản thân.
+
+Hãy cẩn thận, thế giới có đầy các kẻ thù nguy hiểm sẵn sàng tấn công bạn!
+
+Hãy sử dụng tâm trí của bạn để tìm ra con đường tốt nhất!
+
+<b>Lưu ý</b>: trò chơi này hiện đang trong giai đoạn đầu beta.

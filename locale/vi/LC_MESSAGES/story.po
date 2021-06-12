@@ -3,7 +3,7 @@
 # This file is distributed under the same license as Xeonjia.
 # Quang Trung <quangtrung02hn16@gmail.com>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-05-30 09:13+0000\nLast-Translator: Quang Trung <quangtrung02hn16@gmail.com>\nLanguage-Team: Vietnamese <https://translate.deepdaikon.xyz/projects/xeonjia/story/vi/>\nLanguage: vi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-11 21:21+0000\nLast-Translator: Quang Trung <quangtrung02hn16@gmail.com>\nLanguage-Team: Vietnamese <https://translate.deepdaikon.xyz/projects/xeonjia/story/vi/>\nLanguage: vi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -47,11 +47,11 @@ msgstr "Việc đó có khó không?"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Well, but if you did it, it means that you are strong!"
-msgstr ""
+msgstr "Nhưng nếu ngươi đã làm được, thì điều đó có nghĩa là ngươi rất mạnh!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Well, congratulations! This means that you are strong!"
-msgstr ""
+msgstr "Chúc mừng! Điều đó có nghĩa là ngươi rất mạnh!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "I trust that you will be able to take the other two signets as well."
@@ -87,43 +87,43 @@ msgstr "Chúc {{hero}} một hành trình tốt đẹp, ta tin vào ngươi."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes, quite a lot"
-msgstr ""
+msgstr "Vâng, khá nhiều"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Just a little"
-msgstr ""
+msgstr "Chỉ một tí thôi"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! {{life-diff}} LPs have been recovered *"
-msgstr ""
+msgstr "* {{hero}} đã tìm thấy một số quả dâu! {{life-diff}} HP đã được hồi *"
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant… nothing else."
-msgstr ""
+msgstr "Một cái cây nhỏ… không còn gì khác cả."
 
 #: assets/maps/story/15.tmx:
 msgid "\" Exit ↑ \""
-msgstr ""
+msgstr "\" Lối ra ↑ \""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB – 1F"
-msgstr ""
+msgstr "PHÒNG THÍ NGHIỆM VANTOI – 1F"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Sorry about the mess. Thieves have entered and turned everything upside down."
-msgstr ""
+msgstr "Xin lỗi về đống lộn xộn này. Những tên trộm đã vào và lật tung tất cả mọi thứ."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "scientist"
-msgstr ""
+msgstr "nhà khoa học"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A life's work has been destroyed…"
-msgstr ""
+msgstr "Một công trình cả đời đã bị phá huỷ…"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Someone used this plant to do some experiments."
-msgstr ""
+msgstr "Có ai đó đã sử dụng cây con này để làm một số thí nghiệm."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A broken monitor."
@@ -139,647 +139,647 @@ msgstr "Natawn"
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nMany before you have failed, but I am sure you will handle it right."
-msgstr ""
+msgstr "Chúc chuyến đi an toàn nhé, {{hero}}.\nNhiều người trước con đã thất bại, nhưng bố chắc chắn là con sẽ xử lý đúng."
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
-msgstr ""
+msgstr "bố"
 
 #: assets/maps/story/1.tmx:
 msgid "I'll do my best."
-msgstr ""
+msgstr "Con sẽ làm tốt nhất có thể."
 
 #: assets/maps/story/1.tmx:
 msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
-msgstr ""
+msgstr "Toà tháp mà \"Vua Xấu xa\" ở trong đó có khả năng cao là ở gần thủ đô của khu vực."
 
 #: assets/maps/story/1.tmx:
 msgid "\" NATAWN – Hometown of the 62nd hero \""
-msgstr ""
+msgstr "\" NATAWN – Quê của anh hùng thứ 62 \""
 
 #: assets/maps/story/1.tmx:
 msgid "I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude."
-msgstr ""
+msgstr "Tôi phải chào tạm biệt bố mẹ tôi bằng nút 'A' trước khi tôi rời đi. Nếu không thì sẽ rất thô lỗ đấy."
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks."
-msgstr ""
+msgstr "Như mẹ tôi đã nói, nếu tôi đi lấy tấm bảo vệ ống chân từ nhà hàng xóm thì sẽ tốt hơn đấy, nếu không thì tôi sẽ chịu rủi ro bị thương quá nhiều từ các tảng đá."
 
 #: assets/maps/story/17.tmx:
 msgid "I still haven't figured out if these monsters are malicious or just stupid."
-msgstr ""
+msgstr "Tôi vẫn chưa nhận ra là những con quái vật này là có hại hay chỉ là ngu ngốc thôi."
 
 #: assets/maps/story/31_house1.tmx:
 msgid "I hate people who always say the same things."
-msgstr ""
+msgstr "Tôi ghét những người luôn luôn nói những điều giống nhau."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Hi, you look a little tired. Rest here for a moment."
-msgstr ""
+msgstr "Xin chào, bạn trông hơi mệt một chút. Hãy nghỉ tại đây một lúc."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "* {{hero}} rested and is now in perfect health *"
-msgstr ""
+msgstr "* {{hero}} đã nghỉ ngơi và bây giờ đã có sức khoẻ hoàn hảo *"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Come back anytime."
-msgstr ""
+msgstr "Hãy quay lại đây bất cứ lúc nào."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "Hãy cẩn thận đừng để bị thương."
 
 #: assets/maps/story/13.tmx:
 msgid "Help me please!\nPunch him by pressing the 'P' button."
-msgstr ""
+msgstr "Hãy vui lòng giúp tôi!\nĐấm thằng đó bằng cách nhấn nút 'P'."
 
 #: assets/maps/story/13.tmx:
 msgid "Everything good?"
-msgstr ""
+msgstr "Mọi thứ ổn chứ?"
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, thank you so much for saving my life!\nI have to admit, I was scared.\nAs a token of gratitude I give you this gem that I found a little while ago."
-msgstr ""
+msgstr "Có, cảm ơn bạn rất nhiều vì đã cứu mạng tôi!\nTôi phải thừa nhận là tôi đã rất sợ.\nĐể tỏ lòng biết ơn, tôi sẽ đưa cho bạn viên đá quý mà tôi đã tìm thấy một lúc trước."
 
 #: assets/maps/story/13.tmx:
 msgid "Thanks, it seems very precious."
-msgstr ""
+msgstr "Cảm ơn, nó có vẻ rất quý giá."
 
 #: assets/maps/story/13.tmx:
 msgid "Thanks for saving me, I think it's better if I go home now."
-msgstr ""
+msgstr "Cảm ơn vì đã cứu tôi, tôi nghĩ là nếu tôi về nhà ngay thì sẽ tốt hơn."
 
 #: assets/maps/story/13.tmx:
 msgid "Please help me! Save me from this monster!"
-msgstr ""
+msgstr "Hãy vui lòng giúp tôi! Cứu tôi khỏi con quái vật này!"
 
 #: assets/maps/story/13.tmx:
 msgid "I can't escape, I have to defeat the monster to save that man."
-msgstr ""
+msgstr "Tôi không thể chạy trốn, tôi phải đánh bại con quái vật để cứu người đàn ông kia."
 
 #: assets/maps/story/13.tmx:
 msgid "Better if I check that the guy is okay."
-msgstr ""
+msgstr "Tốt hơn là tôi kiểm tra xem anh chàng đó đã ổn."
 
 #: assets/maps/story/14.tmx:
 msgid "\" ← Pharmacy \""
-msgstr ""
+msgstr "\" ← Hiệu thuốc \""
 
 #: assets/maps/story/7.tmx:
 msgid "Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays."
-msgstr ""
+msgstr "Ối… xin lỗi, tôi đang ở giữa đường…\nBạn là một du khách à? Hiện nay có rất ít du khách."
 
 #: assets/maps/story/7.tmx:
 msgid "???"
-msgstr ""
+msgstr "???"
 
 #: assets/maps/story/7.tmx:
 msgid "N-no, I'm {{hero}}, this year's chosen hero. I just left home to try to defeat the King of Evil."
-msgstr ""
+msgstr "K-không, tôi là {{hero}}, anh hùng được chọn của năm nay. Tôi vừa rời khỏi nhà để cố gắng đánh bại Vua Xấu xa."
 
 #: assets/maps/story/7.tmx:
 msgid "What?! So is it you?!"
-msgstr ""
+msgstr "Cái gì?! Vậy đó là bạn à?!"
 
 #: assets/maps/story/7.tmx:
 msgid "Nice to meet you, I've never met a hero before."
-msgstr ""
+msgstr "Rất vui được gặp bạn, tôi chưa từng gặp một anh hùng bao giờ."
 
 #: assets/maps/story/7.tmx:
 msgid "My name is Milla, I was born and raised in this area. I too am setting out on a journey."
-msgstr ""
+msgstr "Tên tôi là Milla, tôi được sinh ra và nuôi lớn trong khu vực này. Tôi cũng đang chuẩn bị cho một cuộc hành trình."
 
 #: assets/maps/story/7.tmx:
 msgid "Oh cool! Where are you going?"
-msgstr ""
+msgstr "Ồ tuyệt! Cô sẽ đi đâu vậy?"
 
 #: assets/maps/story/7.tmx:
 msgid "I have absolutely no idea."
-msgstr ""
+msgstr "Tôi cũng không biết gì hết."
 
 #: assets/maps/story/7.tmx:
 msgid "I just want to explore the world, know new places and learn new things."
-msgstr ""
+msgstr "Tôi chỉ muốn khám phá thế giới, biết các địa điểm mới và học những điều mới."
 
 #: assets/maps/story/7.tmx:
 msgid "Wow, sounds like a great idea!"
-msgstr ""
+msgstr "Ồ, nghe như một ý tưởng tuyệt vời đấy!"
 
 #: assets/maps/story/7.tmx:
 msgid "Yep, it won't be easy but I want to visit at least the whole Kingdom."
-msgstr ""
+msgstr "Đúng đấy, việc này sẽ không dễ nhưng tôi muốn ghé thăm ít nhất là toàn bộ Vương quốc."
 
 #: assets/maps/story/7.tmx:
 msgid "Are there places outside the Kingdom?!"
-msgstr ""
+msgstr "Có địa điểm nào ở ngoài Vương quốc không?!"
 
 #: assets/maps/story/7.tmx:
 msgid "Dunno, that's what I want to find out!"
-msgstr ""
+msgstr "Tôi không biết, đó là điều tôi muốn tìm ra!"
 
 #: assets/maps/story/7.tmx:
 msgid "Anyway, I don't want to waste any more of your time."
-msgstr ""
+msgstr "Dù sao đi nữa, tôi không muốn lãng phí thêm thời gian của bạn."
 
 #: assets/maps/story/7.tmx:
 msgid "After all, you have to save the world. Not an easy task."
-msgstr ""
+msgstr "Bạn cũng phải cứu thế giới mà. Không phải là một nhiệm vụ dễ đâu."
 
 #: assets/maps/story/7.tmx:
 msgid "I'm sure we'll meet again soon, hero."
-msgstr ""
+msgstr "Tôi chắc chắn là chúng ta sẽ gặp lại sớm thôi, anh hùng ạ."
 
 #: assets/maps/story/7.tmx:
 msgid "See ya!"
-msgstr ""
+msgstr "Gặp lại lần sau!"
 
 #: assets/maps/story/7.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "Tạm biệt!"
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area – Do not leave rubbish, thanks \""
-msgstr ""
+msgstr "\" Khu vực picnic – Đừng để lại rác, cảm ơn \""
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
-msgstr ""
+msgstr "\" Khu vực picnic ↑ \"\n\" Trung tâm khu rừng ↓ \""
 
 #: assets/maps/story/t1_04.tmx:
 msgid "Mossy Crypt -4F"
-msgstr ""
+msgstr "Hầm mộ nhiều rêu -4F"
 
 #: assets/maps/story/t1_04.tmx:
 msgid "The snowballs container is full."
-msgstr ""
+msgstr "Thùng chứa bóng tuyết đã đầy."
 
 #: assets/maps/story/t1_04.tmx:
 msgid "* {{hero}} filled his snowballs container *"
-msgstr ""
+msgstr "* {{hero}} đã làm đầy thùng chứa bóng tuyết của anh ấy *"
 
 #: assets/maps/story/t1_04.tmx:
 msgid "A snowdrift."
-msgstr ""
+msgstr "Một đống tuyết."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "Mossy Crypt -2F"
-msgstr ""
+msgstr "Hầm mộ nhiều rêu -2F"
 
 #: assets/maps/story/t1_02.tmx:
 msgid "We're watching you."
-msgstr ""
+msgstr "Chúng tôi đang theo dõi bạn."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "Hmm, I think that from this snowdrift I can obtain material to make new snowballs by pressing the 'A' key."
-msgstr ""
+msgstr "Hừm, tôi nghĩ là từ đống tuyết này tôi có thể lấy vật liệu để làm bóng tuyết mới bằng cách nhấn phím 'A'."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "* {{hero}} found {{money-diff}} ¤ *"
-msgstr ""
+msgstr "* {{hero}} đã tìm thấy {{money-diff}} ¤ *"
 
 #: assets/maps/story/t1_02.tmx:
 msgid "A rock covered by moss."
-msgstr ""
+msgstr "Một tảng đá được rêu bao phủ."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to."
-msgstr ""
+msgstr "H-hôm nay… hôm nay là ngày mà tôi đã mong đợi suốt cả đời. Hành trình của tôi đến toà tháp Xeonjia sắp bắt đầu.\nNăm nay tôi là \"anh hùng\" được chọn được giao việc đánh bại con quái vật đã đóng băng Vương quốc…\nSau hàng năm tập luyện, tôi hy vọng có thể làm vậy."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'd like to go back to bed but I can't."
-msgstr ""
+msgstr "Tôi muốn quay lại ngủ nhưng tôi không thể."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'll miss you, TV."
-msgstr ""
+msgstr "Tao sẽ nhớ mày, TV à."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I hope my parents will water it when I'm away."
-msgstr ""
+msgstr "Tôi hy vọng bố mẹ tôi sẽ tưới nước cho nó khi tôi đi vắng."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
-msgstr ""
+msgstr "Tất cả quyển sách của tôi đều ở đây."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "My chair."
-msgstr ""
+msgstr "Chiếc ghế của tôi."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "From here I can see the garden."
-msgstr ""
+msgstr "Từ đây tôi có thể thấy khu vườn."
 
 #: assets/maps/story/24.tmx:
 msgid "Melhopolis"
-msgstr ""
+msgstr "Melhopolis"
 
 #: assets/maps/story/24.tmx:
 msgid "The city center is a few kilometers to the south."
-msgstr ""
+msgstr "Trung tâm thành phố cách đây một vài ki lô mét về phía nam."
 
 #: assets/maps/story/24.tmx:
 msgid "\" VANTOI LAB \""
-msgstr ""
+msgstr "\" PHÒNG THÍ NGHIỆM VANTOI \""
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Laboratory."
-msgstr ""
+msgstr "Tôi có thể nhìn thấy bên trong Phòng thí nghiệm."
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Pharmacy."
-msgstr ""
+msgstr "Tôi có thể nhìn thấy bên trong Hiệu thuốc."
 
 #: assets/maps/story/24.tmx:
 msgid "\" Melhopolis – Regional capital \""
-msgstr ""
+msgstr "\" Melhopolis – Thủ đô khu vực \""
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the house."
-msgstr ""
+msgstr "Tôi có thể nhìn thấy bên trong căn nhà."
 
 #: assets/maps/story/22.tmx:
 msgid "Route 3"
-msgstr ""
+msgstr "Đường 3"
 
 #: assets/maps/story/22.tmx:
 msgid "Hey! Hi {{hero}}!"
-msgstr ""
+msgstr "Này! Xin chào {{hero}}!"
 
 #: assets/maps/story/22.tmx:
 msgid "H-hi, you know me?"
-msgstr ""
+msgstr "C-chào, bạn biết tôi à?"
 
 #: assets/maps/story/22.tmx:
 msgid "Well, you are the hero of this year, you are quite famous. Are you here to visit the crypt?"
-msgstr ""
+msgstr "Bạn là anh hùng của năm nay mà, bạn khá nổi tiếng đấy. Bạn đến đây để ghé thăm hầm mộ à?"
 
 #: assets/maps/story/22.tmx:
 msgid "Yes. If I have not misunderstood, here's one of the 3 signets I need to access the Xeonjia tower."
-msgstr ""
+msgstr "Đúng. Nếu tôi không hiểu nhầm, đây là một trong số 3 ấn dấu mà tôi cần để truy cập toà tháp Xeonjia."
 
 #: assets/maps/story/22.tmx:
 msgid "Ah that's true, I've heard of it.\nBeware that here is full of monsters and bad people."
-msgstr ""
+msgstr "À điều đó là đúng đấy, tôi đã nghe đến nó rồi.\nHãy cẩn thận rằng nơi này đầy rẫy quái vật và người xấu."
 
 #: assets/maps/story/22.tmx:
 msgid "Ok thanks, I'll be careful.\nBut… who are you?"
-msgstr ""
+msgstr "OK cảm ơn, tôi sẽ cẩn thận.\nNhưng… cô là ai?"
 
 #: assets/maps/story/22.tmx:
 msgid "Oh, yes sorry I forgot to introduce myself."
-msgstr ""
+msgstr "Ồ, xin lỗi, tôi quên giới thiệu mình."
 
 #: assets/maps/story/22.tmx:
 msgid "My name is Shen, I am a scientist."
-msgstr ""
+msgstr "Tên tôi là Shen, tôi là một nhà khoa học."
 
 #: assets/maps/story/22.tmx:
 msgid "Nice to meet you, Shen."
-msgstr ""
+msgstr "Rất vui được gặp cô, Shen."
 
 #: assets/maps/story/22.tmx:
 msgid "Oh, by the way, I think this might help you."
-msgstr ""
+msgstr "Ồ, nhân tiện, tôi nghĩ cái này có thể giúp bạn."
 
 #: assets/maps/story/22.tmx:
 msgid "* {{hero}} got a SNOWBALLS CONTAINER *"
-msgstr ""
+msgstr "* {{hero}} đã nhận THÙNG CHỨA BÓNG TUYẾT *"
 
 #: assets/maps/story/22.tmx:
 msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the 'S' button.\nIt can contain up to 10 snowballs."
-msgstr ""
+msgstr "Đây là một phát minh của tôi. Nó cho phép bạn mang những quả bóng tuyết theo bạn, bạn có thể ném chúng vào đối phương bằng cách nhấn nút 'S'.\nNó có thể chứa tối đa 10 quả bóng tuyết."
 
 #: assets/maps/story/22.tmx:
 msgid "Wow! I'm sure it'll come in handy. Thank you."
-msgstr ""
+msgstr "Wow! Tôi chắc chắn là nó sẽ có ích đấy. Cảm ơn cô."
 
 #: assets/maps/story/22.tmx:
 msgid "You're welcome."
-msgstr ""
+msgstr "Không có gì."
 
 #: assets/maps/story/22.tmx:
 msgid "Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too."
-msgstr ""
+msgstr "Không may mắn là một thời gian trước tất cả bản vẽ thiết kế của dự án đã bị trộm và vậy nên những tay sai của Vua Xấu xa cũng có nó."
 
 #: assets/maps/story/22.tmx:
 msgid "Well, at least it will be an equal fight."
-msgstr ""
+msgstr "Ít nhất là trận chiến này sẽ là cân bằng."
 
 #: assets/maps/story/22.tmx:
 msgid "Ha ha, well, you're right."
-msgstr ""
+msgstr "Ha ha, bạn đúng đấy."
 
 #: assets/maps/story/22.tmx:
 msgid "Now I have to leave you, I have to study a strange rock that I found a little while ago."
-msgstr ""
+msgstr "Bây giờ thì tôi phải rời khỏi bạn, tôi phải nghiên cứu một hòn đá lạ mà tôi tìm thấy một lúc trước."
 
 #: assets/maps/story/22.tmx:
 msgid "We'll see again. Good luck!"
-msgstr ""
+msgstr "Chúng ta sẽ gặp lại. Chúc may mắn!"
 
 #: assets/maps/story/22.tmx:
 msgid "Bye Shen, thanks again!"
-msgstr ""
+msgstr "Tạm biệt, Shen, cảm ơn lần nữa!"
 
 #: assets/maps/story/22.tmx:
 msgid "I have to go through the crypt to get the first signet."
-msgstr ""
+msgstr "Tôi phải đi qua hầm mộ để lấy ấn dấu đầu tiên."
 
 #: assets/maps/story/9.tmx:
 msgid "This is not a place for kids, go home."
-msgstr ""
+msgstr "Đây không phải là chỗ cho trẻ con, về nhà đi."
 
 #: assets/maps/story/9.tmx:
 msgid "Weird things happen in this area…"
-msgstr ""
+msgstr "Những thứ lạ thường xảy ra trong khu vực này…"
 
 #: assets/maps/story/9.tmx:
 msgid "\" If you get lost, follow the road signs \""
-msgstr ""
+msgstr "\" Nếu bạn bị lạc, hãy đi theo biển chỉ dẫn đường \""
 
 #: assets/maps/story/19.tmx:
 msgid "\" Xeonjia Tower ↑ \""
-msgstr ""
+msgstr "\" Toà tháp Xeonjia ↑ \""
 
 #: assets/maps/story/29.tmx:
 msgid "Mitsu Forest"
-msgstr ""
+msgstr "Rừng Mitsu"
 
 #: assets/maps/story/29.tmx:
 msgid "Nobody knows what the writing on this stone means, it is not even known who wrote it."
-msgstr ""
+msgstr "Không ai biết chữ viết trên hòn đá này nghĩa là gì, thậm chí họ còn không biết ai đã viết nó."
 
 #: assets/maps/story/29.tmx:
 msgid "Do you want to hear the legend of this tree again?"
-msgstr ""
+msgstr "Bạn có muốn nghe lại truyền thuyết về cây này không?"
 
 #: assets/maps/story/29.tmx:
 msgid "Are you interested to learn about the legend of this tree?"
-msgstr ""
+msgstr "Bạn có hứng thú về việc tìm hiểu về truyền thuyết về cây này không?"
 
 #: assets/maps/story/29.tmx:
 msgid "There was once a devastating war in this area and everything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all the souls who left us.\nIt has the particularity of withering in spring and blooming in the other seasons.\nEvery spring the souls leave this tree to make other plants bloom and then, at the end of spring, the souls return to flourish again this tree.\nThat's all I know about this tree.\nI hope to have time to see the end of this winter season which has persisted for more than 60 years now."
-msgstr ""
+msgstr "Ở khu vực này đã từng có một cuộc chiến tranh thảm khốc và mọi thứ đều bị san bằng.\nKhông có gì và không một ai sống sót cả, trừ cái cây này.\nNgười ta nói rằng cái cây này chứa tất cả linh hồn đã rời bỏ chúng ta.\nNó có điều lạ là nó héo vào mùa xuân và nở hoa vào tất cả những mùa khác.\nMỗi mùa xuân, những linh hồn rời khỏi cái cây này để làm cho các cây con khác nở hoa và sau đó, vào cuối mùa xuân, những linh hồn đó quay lại để làm cây này nảy nở lại.\nĐó là tất cả những gì tôi biết về cái cây này.\nTôi hy vọng là có thời gian để thấy hồi kết của mùa đông đã tồn tại liên tục 60 năm này."
 
 #: assets/maps/story/29.tmx:
 msgid "Ok, it was a long and boring story after all."
-msgstr ""
+msgstr "OK, sau tất cả thì đó cũng là một câu chuyện dài và nhàm chán."
 
 #: assets/maps/story/29.tmx:
 msgid "Yes please"
-msgstr ""
+msgstr "Có chứ"
 
 #: assets/maps/story/29.tmx:
 msgid "No thanks"
-msgstr ""
+msgstr "Không, cảm ơn"
 
 #: assets/maps/story/24_house1.tmx:
 msgid "A computer turned off. Looks like a key is needed to turn it on."
-msgstr ""
+msgstr "Một chiếc máy tính đã tắt. Có vẻ như muốn bật nó lên thì phải cần một chiếc chìa khoá."
 
 #: assets/maps/story/21.tmx:
 msgid "Route 2"
-msgstr ""
+msgstr "Đường 2"
 
 #: assets/maps/story/21.tmx:
 msgid "\" Melhopolis → \""
-msgstr ""
+msgstr "\" Melhopolis → \""
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "Hi, I'm sorry but we're closed. Once this was a busy shop, but now it doesn't even make sense to stay open."
-msgstr ""
+msgstr "Xin chào, tôi xin lỗi nhưng chúng tôi đóng cửa rồi. Đây đã từng là một cửa hàng bận rộn, nhưng bây giờ thì việc mở cửa thậm chí là còn không hợp lý."
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "shopkeeper"
-msgstr ""
+msgstr "người bán hàng"
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "It's full of old junk here."
-msgstr ""
+msgstr "Ở đây có đầy rác cũ."
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "I've never seen so much dust."
-msgstr ""
+msgstr "Tôi chưa bao giờ nhìn thấy nhiều bụi như thế này."
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "Here it's full of snow globes with a miniaturized Mitsu Forest inside. When they were built snow was a very rare phenomenon here and it was much more appreciated."
-msgstr ""
+msgstr "Ở đây có đầy quả cầu tuyết với một mô hình Rừng Mitsu thu nhỏ ở bên trong. Khi chúng đã được tạo, tuyết đã là một hiện tượng rất hiếm ở đây và nó đã được đánh giá cao hơn nhiều."
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "There are very expensive junk here."
-msgstr ""
+msgstr "Ở đây có rác rất đắt tiền."
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "I think this vase was placed here on purpose to block the passage."
-msgstr ""
+msgstr "Tôi nghĩ là chiếc bình này đã được cố tình đặt ở đây để chặn lối đi."
 
 #: assets/maps/story/2_house.tmx:
 msgid "You are the chosen one for this year, right? My son was too many years ago."
-msgstr ""
+msgstr "Cháu là người được chọn của năm nay, phải không? Con trai của ông cũng được chọn nhiều năm trước."
 
 #: assets/maps/story/2_house.tmx:
 msgid "Unfortunately he failed to defeat the King of Evil…"
-msgstr ""
+msgstr "Không may mắn là nó đã không thể đánh bại Vua Xấu xa…"
 
 #: assets/maps/story/32.tmx:
 msgid "I'm planning a surprise wedding for my son, I hope he doesn't find out."
-msgstr ""
+msgstr "Bác đang lên kế hoạch cho một đám cưới bất ngờ cho con trai của bác, bác hy vọng là nó không nhận ra."
 
 #: assets/maps/story/32.tmx:
 msgid "This part is under construction."
-msgstr ""
+msgstr "Phần này đang được xây dựng."
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "Pharmacy"
-msgstr ""
+msgstr "Hiệu thuốc"
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "Welcome to my shop!"
-msgstr ""
+msgstr "Chào mừng đến cửa hàng của tôi!"
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "pharmacist"
-msgstr ""
+msgstr "dược sĩ"
 
 #: assets/maps/story/27.tmx:
 msgid "\" ← Sacred Tree \"\n\" Melhopolis City Center → \""
-msgstr ""
+msgstr "\" ← Cây thiêng liêng \"\n\" Trung tâm thành phố Melhopolis → \""
 
 #: assets/maps/story/20.tmx:
 msgid "I advise you to take another path.\nThese monsters are too strong."
-msgstr ""
+msgstr "Tôi khuyên bạn đi con đường khác.\nNhững con quái vật này quá mạnh."
 
 #: assets/maps/story/999.tmx:
 msgid "Xeonjia Tower"
-msgstr ""
+msgstr "Toà tháp Xeonjia"
 
 #: assets/maps/story/999.tmx:
 msgid "Hi Milla, are you ok? Did you get here without any problems?"
-msgstr ""
+msgstr "Chào Milla, cô ổn không? Cô đến đây mà không gặp vấn đề gì à?"
 
 #: assets/maps/story/999.tmx:
 msgid "Hii {{hero}}!"
-msgstr ""
+msgstr "Chào {{hero}}!"
 
 #: assets/maps/story/999.tmx:
 msgid "Yes, I cleverly managed to avoid the monsters that were along the way!"
-msgstr ""
+msgstr "Đúng rồi, tôi đã tránh những con quái vật trên đường một cách khôn khéo!"
 
 #: assets/maps/story/999.tmx:
 msgid "I love those cute little green worms!"
-msgstr ""
+msgstr "Tôi rất thích những con giun xanh lá nhỏ bé đáng yêu này!"
 
 #: assets/maps/story/999.tmx:
 msgid "…S-such weird tastes here."
-msgstr ""
+msgstr "…Sở thích l-lạ quá."
 
 #: assets/maps/story/999.tmx:
 msgid "Unkind!"
-msgstr ""
+msgstr "Không tốt bụng!"
 
 #: assets/maps/story/999.tmx:
 msgid "Aaanyway, look here! This is the tower where the King of Evil resides!"
-msgstr ""
+msgstr "Dù sao thì cũng nhìn này! Đây là toà tháp nơi Vua Xấu xa cư trú!"
 
 #: assets/maps/story/999.tmx:
 msgid "Oh really? Are we there yet?"
-msgstr ""
+msgstr "Ồ thật à? Chúng ta đã đến đó chưa?"
 
 #: assets/maps/story/999.tmx:
 msgid "It seems so… but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets."
-msgstr ""
+msgstr "Có vẻ vậy… nhưng nó đóng cửa rồi!\nQuý ông tốt bụng này đã giải thích với tôi rằng để truy cập toà tháp thì cần phải có 3 ấn dấu."
 
 #: assets/maps/story/999.tmx:
 msgid "Signets?"
-msgstr ""
+msgstr "Ấn dấu?"
 
 #: assets/maps/story/999.tmx:
 msgid "I did not understand exactly what they are, but if I have not misunderstood they are kept in crypts present in each region of the Kingdom."
-msgstr ""
+msgstr "Tôi không hiểu chính xác là chúng là gì, nhưng nếu tôi không hiểu nhầm thì chúng được giữ trong các hầm mộ ở mỗi khu vực của Vương quốc."
 
 #: assets/maps/story/999.tmx:
 msgid "Mm… Then I really think that I have to set out in search of these crypts…"
-msgstr ""
+msgstr "Mm… Thế thì tôi thực sự nghĩ là tôi phải bắt đầu đi tìm kiếm các hầm mộ đó…"
 
 #: assets/maps/story/999.tmx:
 msgid "I guess you have no other choice."
-msgstr ""
+msgstr "Tôi đoán là bạn không có lựa chọn nào khác."
 
 #: assets/maps/story/999.tmx:
 msgid "Good luck!"
-msgstr ""
+msgstr "Chúc may mắn!"
 
 #: assets/maps/story/999.tmx:
 msgid "Do your best!"
-msgstr ""
+msgstr "Hãy làm tốt nhất có thể nhé!"
 
 #: assets/maps/story/999.tmx:
 msgid "I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent."
-msgstr ""
+msgstr "Tôi ghét đứa con gái nhỏ này… Con này quấy rầy tôi bằng một nghìn câu hỏi và nó khóc cho đến khi tôi nói với nó những gì nó muốn. Thật là láo."
 
 #: assets/maps/story/999.tmx:
 msgid "One signet is not enough."
-msgstr ""
+msgstr "Một ấn dấu là không đủ."
 
 #: assets/maps/story/999.tmx:
 msgid "\" Xeonjia Tower – Dwelling of the King of Evil. Stay away \""
-msgstr ""
+msgstr "\" Toà tháp Xeonjia – Nơi cư trú của Vua Xấu xa. Hãy tránh xa \""
 
 #: assets/maps/story/999.tmx:
 msgid "This door is closed."
-msgstr ""
+msgstr "Cánh cửa này đang đóng."
 
 #: assets/maps/story/999.tmx:
 msgid "This door is closed, I need the 3 signets to open it."
-msgstr ""
+msgstr "Cánh cửa này đang đóng, tôi cần 3 ấn dấu để mở nó."
 
 #: assets/maps/story/999.tmx:
 msgid "I should go to the tower."
-msgstr ""
+msgstr "Tôi nên đi đến toà tháp."
 
 #: assets/maps/story/999.tmx:
 msgid "The tower is so ugly."
-msgstr ""
+msgstr "Toà tháp thật là xấu xí."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Home"
-msgstr ""
+msgstr "Nhà"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Good morning mom!"
-msgstr ""
+msgstr "Chào buổi sáng, mẹ ạ!"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Hi {{hero}}! Did you sleep well?"
-msgstr ""
+msgstr "Chào {{hero}}! Con có ngủ ngon không?"
 
 #: assets/maps/story/1_home.tmx:
 msgid "mom"
-msgstr ""
+msgstr "mẹ"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Actually not very well… I'm still a little sleepy."
-msgstr ""
+msgstr "Thực ra thì không ngon lắm… Con vẫn hơi buồn ngủ."
 
 #: assets/maps/story/1_home.tmx:
 msgid "You always are.\nAnyway, now it is time to leave, be very careful and remember to check your health in the top left bar."
-msgstr ""
+msgstr "Con luôn thế mà.\nDù sao thì bây giờ cũng là lúc rời đi rồi, hãy rất cẩn thận và nhớ kiểm tra máu của con trong thanh ở phía trên bên trái."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Yea mom. Don't worry, I'll be careful."
-msgstr ""
+msgstr "Được rồi mẹ. Đừng lo, con sẽ cẩn thận."
 
 #: assets/maps/story/1_home.tmx:
 msgid "When you hit the rocks you could hurt yourself, so stop by our neighbor who have prepared a brand new pair of shin guards for you."
-msgstr ""
+msgstr "Khi con đâm trúng các tảng đá thì con có thể sẽ bị thương, vậy hãy ghé qua nhà hàng xóm, họ đã chuẩn bị một đôi tấm bảo vệ ống chân mới tinh cho con."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Sure, I will."
-msgstr ""
+msgstr "Chắc chắn rồi, con sẽ làm vậy."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Go get the shin guards from the neighbor, you will need them."
-msgstr ""
+msgstr "Hãy đi lấy tấm bảo vệ ống chân từ nhà hàng xóm, con sẽ cần chúng đấy."
 
 #: assets/maps/story/1_home.tmx:
 msgid "The new shin guards are beautiful, they match the suit."
-msgstr ""
+msgstr "Tấm bảo vệ ống chân mới rất đẹp, chúng hợp với bộ đồ."
 
 #: assets/maps/story/1_home.tmx:
 msgid "This plant hasn't been watered for long."
-msgstr ""
+msgstr "Cây con này chưa được tưới nước đã lâu rồi."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Unfortunately, this is not the time to lie down on the sofa."
-msgstr ""
+msgstr "Không may mắn là đây không phải lúc để nằm xuống ghế sofa."
 
 #: assets/maps/story/1_home.tmx:
 msgid "This plant seems to have been recently watered."
-msgstr ""
+msgstr "Cây con này có vẻ là đã được tưới nước vào gần đây."
 
 #: assets/maps/story/4_house.tmx:
 msgid "The last time I went through the forest I was attacked.\nI'm not going back there anymore."
-msgstr ""
+msgstr "Lần cuối tôi đi qua khu rừng, tôi đã bị tấn công.\nTôi sẽ không quay lại đó nữa đâu."
 
 #: assets/maps/story/4_house.tmx:
 msgid "If you want to enter the forest you have to be careful, my grandson risked getting hurt there."
-msgstr ""
+msgstr "Nếu cháu muốn vào khu rừng thì cháu phải cẩn thận, cháu của bà đã chịu rủi ro bị thương ở đó."
 
 #: assets/maps/story/26_house.tmx:
 msgid "Do you think piglets will one day be a common pet?"
-msgstr ""
+msgstr "Bạn có nghĩ là lợn con sẽ một ngày nào đó trở thành vật nuôi phổ biến không?"
 
 #: assets/maps/story/26_house.tmx:
 msgid "I think so too."
-msgstr ""
+msgstr "Tôi cũng nghĩ vậy."
 
 #: assets/maps/story/26_house.tmx:
 msgid "Oh, I hope you are not right."
-msgstr ""
+msgstr "Ồ, tôi hy vọng bạn không đúng."
 
 #: assets/maps/story/26_house.tmx:
 msgid "I like piglets."
-msgstr ""
+msgstr "Tôi thích lợn con."
 
 #: assets/maps/story/26_house.tmx:
 msgid "Yes"
@@ -791,55 +791,55 @@ msgstr "Không"
 
 #: assets/maps/story/t1_03.tmx:
 msgid "Mossy Crypt -3F"
-msgstr ""
+msgstr "Hầm mộ nhiều rêu -3F"
 
 #: assets/maps/story/t1_03.tmx:
 msgid "My work is so boring…"
-msgstr ""
+msgstr "Công việc của tôi nhàm chán quá…"
 
 #: assets/maps/story/11.tmx:
 msgid "Hi, I'm an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I'll help you."
-msgstr ""
+msgstr "Xin chào, tôi là một nhân viên của Vương quốc.\nNếu bạn bị lạc hoặc gặp vấn đề khi tìm đường, hãy quay lại tôi và tôi sẽ giúp bạn."
 
 #: assets/maps/story/11.tmx:
 msgid "Are you stuck?\nTake the path behind the blue tree."
-msgstr ""
+msgstr "Bạn bị lạc à?\nHãy đi con đường đằng sau cái cây màu xanh."
 
 #: assets/maps/story/3_house1.tmx:
 msgid "A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."
-msgstr ""
+msgstr "Một vài mét từ đây là Rừng Mitsu. Nó đã từng thu hút nhiều khách du lịch vì nó đã được coi là một nơi thiêng liêng, nhưng bây giờ thì nó rất nguy hiểm và có đầy quái vật."
 
 #: assets/maps/story/28_house.tmx:
 msgid "Hoarfrost Team members came to our house because they wanted a gem that I found on the ground.\nWe managed to keep it hidden from them but we don't want to have problems anymore.\nWe don't even need it after all, can we give it to you?"
-msgstr ""
+msgstr "Các thành viên của Nhóm Hoarfrost đã đến nhà chúng tôi vì họ muốn một viên đá quý mà tôi tìm thấy dưới đất.\nChúng tôi đã giấu được nó khỏi họ nhưng chúng tôi không muốn gặp vấn đề nữa.\nSau tất cả thì chúng tôi thậm chí còn không cần nó, chúng tôi có thể đưa nó cho bạn không?"
 
 #: assets/maps/story/28_house.tmx:
 msgid "Here's to you!"
-msgstr ""
+msgstr "Đưa bạn này!"
 
 #: assets/maps/story/28_house.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "Cảm ơn!"
 
 #: assets/maps/story/28_house.tmx:
 msgid "Oh, ok. Then I'll have to think about what to do with this gem."
-msgstr ""
+msgstr "Ồ, ok. Vậy thì tôi sẽ phải nghĩ về những điều phải làm với viên đá quý này."
 
 #: assets/maps/story/28_house.tmx:
 msgid "Protect that gem well."
-msgstr ""
+msgstr "Hãy bảo vệ viên đá quý đó thật tốt."
 
 #: assets/maps/story/28_house.tmx:
 msgid "Be careful when dealing with the Hoarfrost Team."
-msgstr ""
+msgstr "Hãy cẩn thận khi đối mặt với Nhóm Hoarfrost."
 
 #: assets/maps/story/28_house.tmx:
 msgid "Mind your own business."
-msgstr ""
+msgstr "Để tâm vào việc của bạn đi."
 
 #: assets/maps/story/28_house.tmx:
 msgid "This plant is very fragrant."
-msgstr ""
+msgstr "Cây con này rất thơm."
 
 #: assets/maps/story/28_house.tmx:
 msgid "This vase is very heavy, I can't move it."
@@ -847,7 +847,7 @@ msgstr "Cái bình này rất nặng, tôi không thể di chuyển nó."
 
 #: assets/maps/story/28_house.tmx:
 msgid "Yes thanks"
-msgstr ""
+msgstr "Vâng, cảm ơn"
 
 #: assets/maps/story/1_house.tmx:
 msgid "NEIGHBOR'S HOUSE"
@@ -855,11 +855,11 @@ msgstr "NHÀ HÀNG XÓM"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones.\nI made them by hand. Here's to you!"
-msgstr ""
+msgstr "Xin chào anh chàng, bạn có ổn không? Tôi đã làm cho bạn tấm bảo vệ ống chân, bạn sẽ cần nó để đỡ đệm cho sự va chạm với các tảng đá.\nTôi làm thủ công đấy. Của bạn này!"
 
 #: assets/maps/story/1_house.tmx:
 msgid "neighbor"
-msgstr ""
+msgstr "người hàng xóm"
 
 #: assets/maps/story/1_house.tmx:
 msgid "* {{hero}} got and put on the shin guards *"
@@ -867,59 +867,59 @@ msgstr "* {{hero}} nhận và đeo tấm bảo vệ ống chân *"
 
 #: assets/maps/story/1_house.tmx:
 msgid "This way you will hurt yourself less, but be careful that they do not fully protect you from damage."
-msgstr ""
+msgstr "Theo cách này bạn sẽ bị thương ít hơn, nhưng hãy cẩn thận rằng chúng không hoàn toàn bảo vệ bạn khỏi sát thương."
 
 #: assets/maps/story/1_house.tmx:
 msgid "Thank you very much!"
-msgstr ""
+msgstr "Cảm ơn rất nhiều!"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Since the shin guards I gave you do not fully protect you, try to think diligently about the moves you make."
-msgstr ""
+msgstr "Vì tấm bảo vệ ống chân mà tôi đưa cho bạn không hoàn toàn bảo vệ bạn, hãy cố gắng nghĩ sâu về những nước đi bạn thực hiện."
 
 #: assets/maps/story/30.tmx:
 msgid "I'm sorry but this road is closed.\nWork is underway to restore the railway system."
-msgstr ""
+msgstr "Tôi xin lỗi nhưng đường này bị cấm.\nChúng tôi đang làm việc để khôi phục hệ thống đường ray."
 
 #: assets/maps/story/30.tmx:
 msgid "Welcome to the City Hall."
-msgstr ""
+msgstr "Chào mừng đến Toà thị chính."
 
 #: assets/maps/story/30.tmx:
 msgid "I can't wait till they finish to restore the railway system, it no longer work since the ice arrival."
-msgstr ""
+msgstr "Tôi không thể đợi được cho đến lúc họ hoàn thành việc khôi phục hệ thống đường ray, nó không hoạt động nữa từ lúc băng đến."
 
 #: assets/maps/story/30.tmx:
 msgid "My wife remained blocked on the other side of the kingdom, I wonder if I will ever see her again."
-msgstr ""
+msgstr "Vợ tôi vẫn bị chặn ở phía bên kia của vương quốc, tôi tự hỏi rằng tôi có được gặp cô ấy nữa không."
 
 #: assets/maps/story/30.tmx:
 msgid "\" City Hall ↑ \""
-msgstr ""
+msgstr "\" Toà thị chính ↑ \""
 
 #: assets/maps/story/30.tmx:
 msgid "\" Route 4 → \""
-msgstr ""
+msgstr "\" Đường 4 → \""
 
 #: assets/maps/story/30.tmx:
 msgid "Before continuing I'd like to visit the City Hall."
-msgstr ""
+msgstr "Trước khi tiếp tục thì tôi muốn ghé thăm Toà thị chính."
 
 #: assets/maps/story/30.tmx:
 msgid "The City Hall seems spacious."
-msgstr ""
+msgstr "Toà thị chính có vẻ rất rộng rãi."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "You're lucky, but it doesn't end here, guaranteed."
-msgstr ""
+msgstr "Ngươi may mắn đấy, nhưng chuyện không kết thúc ở đây đâu, chắc chắn vậy."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I will defeat you."
-msgstr ""
+msgstr "Ta sẽ đánh bại ngươi."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "You will not escape me."
-msgstr ""
+msgstr "Ngươi sẽ không chạy trốn khỏi ta."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I can't escape. I have to take the first signet."
@@ -927,91 +927,91 @@ msgstr "Tôi không thể trốn thoát. Tôi phải lấy ấn dấu đầu ti�
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Here it is, this is the first signet!"
-msgstr ""
+msgstr "Đây rồi, đây là ấn dấu đầu tiên!"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I can get out of here now."
-msgstr ""
+msgstr "Bây giờ thì tôi có thể thoát khỏi đây."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "The henchmen are after me! I'll get the signet later."
-msgstr ""
+msgstr "Những tên tay sai đang đuổi theo tôi! Tôi sẽ lấy ấn dấu vào lúc sau."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I didn't think you would get this far, kid."
-msgstr ""
+msgstr "Ta không nghĩ là ngươi lại tiến được xa như vậy, nhóc ạ."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "W-Who are you? Who are you guys?"
-msgstr ""
+msgstr "N-Ngươi là ai? Các ngươi là ai vậy?"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm surprised that my name is not known among the woods of your village."
-msgstr ""
+msgstr "Ta rất ngạc nhiên là tên ta không được biết đến trong khu rừng của làng ngươi."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Anyway, I'm Dr.Lache and I'm the leader of the Hoarfrost Team."
-msgstr ""
+msgstr "Ta là Dr.Lache và ta là thủ lĩnh của Nhóm Hoarfrost."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "dr. lache"
-msgstr ""
+msgstr "dr. lache"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "S-So you're the one who spread terror and violence through the henchmen as ordered by the King of Evil?"
-msgstr ""
+msgstr "V-Vậy ngươi là người lan rộng sự kinh hãi và bạo lực qua những tay sai như được Vua Xấu xa chỉ đạo à?"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "As ordered by the King of Evil? HAHAHA"
-msgstr ""
+msgstr "Như được Vua Xấu xa chỉ đạo? HAHAHA"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I don't take orders from anyone. Among me and the King of Evil there is a peer collaboration."
-msgstr ""
+msgstr "Ta không nhận lệnh của bất kỳ ai cả. Giữa ta và Vua Xấu xa có sự hợp tác."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Be that as it may, I won't let you continue your plans."
-msgstr ""
+msgstr "Dù sao thì ta sẽ không để cho ngươi tiếp tục kế hoạch của ngươi."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm {{hero}}, I'm the chos-"
-msgstr ""
+msgstr "Ta là {{hero}}, ta là người được ch-"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I know very well who you are, you're the chosen hero and blah, blah, blah.\nI don't have time for this."
-msgstr ""
+msgstr "Ta biết rất rõ ngươi là ai, ngươi là anh hùng được chọn và bla, bla, bla.\nTa không có thời gian cho việc này đâu."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I know you're interested in the signet, defeat my henchmen and it's yours.\nNow get out of my way."
-msgstr ""
+msgstr "Ta biết là ngươi có hứng thú về ấn dấu, cứ đánh bại những tay sai của ta và nó sẽ là của ngươi.\nBây giờ hãy tránh đường cho ta."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I won't let you go so eas-"
-msgstr ""
+msgstr "Ta sẽ không để ngươi thoát dễ th-"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Well, well, well… you'll have to deal with us now."
-msgstr ""
+msgstr "Vậy… bây giờ ngươi sẽ phải đối mặt với chúng ta."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm Iosa."
-msgstr ""
+msgstr "Ta là Iosa."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "And I'm Joza."
-msgstr ""
+msgstr "Còn ta là Joza."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "We are the Iosa&Joza brothers and we will be your worst nightmare."
-msgstr ""
+msgstr "Bọn ta là anh em Iosa&Joza và bọn ta sẽ là ác mộng tệ nhất của ngươi."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm not scared of you, let's see what you are capable of!"
-msgstr ""
+msgstr "Ta không sợ ngươi đâu, hãy xem ngươi có khả năng như thế nào!"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Now you will see."
-msgstr ""
+msgstr "Bây giờ ngươi sẽ thấy."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Let's fight!"
@@ -1019,31 +1019,31 @@ msgstr "Đánh nhau nào!"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "iosa&joza"
-msgstr ""
+msgstr "iosa&joza"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "A rocky wall covered by moss."
-msgstr ""
+msgstr "Một bức tường gồ ghề được rêu che phủ."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "iosa"
-msgstr ""
+msgstr "iosa"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "joza"
-msgstr ""
+msgstr "joza"
 
 #: assets/maps/story/3.tmx:
 msgid "Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck."
-msgstr ""
+msgstr "Đôi khi ở giữa những cành cây của cây con, cháu có thể tìm thấy một ít quả dâu.\nÔng cũng đã tình cờ tìm thấy những đồ vật bị kẹt trong đó."
 
 #: assets/maps/story/3.tmx:
 msgid "Oh, I was about to take those berries."
-msgstr ""
+msgstr "Ồ, ông sắp sửa lấy những quả dâu đó rồi."
 
 #: assets/maps/story/3.tmx:
 msgid "No problem, you can keep them."
-msgstr ""
+msgstr "Không vấn đề gì, cháu có thể giữ chúng."
 
 #: assets/maps/story/3.tmx:
 msgid "I hope those berries were good."
@@ -1051,7 +1051,7 @@ msgstr "Tôi hy vọng những quả dâu đó là tốt."
 
 #: assets/maps/story/3.tmx:
 msgid "On the ground it's easy to find XEON (¤) stones that you can use to buy items in shops."
-msgstr ""
+msgstr "Trên mặt đất, bạn có thể dễ dàng tìm thấy những hòn đá XEON (¤) mà bạn có thể sử dụng để mua đồ trong các cửa hàng."
 
 #: assets/maps/story/3.tmx:
 msgid "It seems that once there was a path here."
@@ -1059,23 +1059,23 @@ msgstr "Có vẻ là ở đây đã từng có một con đường."
 
 #: assets/maps/story/t1_01.tmx:
 msgid "Mossy Crypt -1F"
-msgstr ""
+msgstr "Hầm mộ nhiều rêu -1F"
 
 #: assets/maps/story/t1_01.tmx:
 msgid "I advise you not to continue, you are running into big trouble.\nI'll report your presence to my boss."
-msgstr ""
+msgstr "Ta khuyên ngươi đừng tiếp tục, ngươi đang gặp rắc rối lớn đấy.\nTa sẽ báo cáo sự hiện diện của ngươi đến ông chủ của ta."
 
 #: assets/maps/story/t1_01.tmx:
 msgid "If you decide to continue you will regret it."
-msgstr ""
+msgstr "Nếu ngươi quyết định tiếp tục thì ngươi sẽ hối hận đấy."
 
 #: assets/maps/story/2.tmx:
 msgid "Route 1"
-msgstr ""
+msgstr "Đường 1"
 
 #: assets/maps/story/2.tmx:
 msgid "The ice is so slippery, have you noticed?\nI feel more comfortable on the snow."
-msgstr ""
+msgstr "Lớp băng này trơn quá, bạn đã để ý chưa?\nTôi cảm thấy thoải mái hơn trên tuyết."
 
 #: assets/maps/story/2.tmx:
 msgid "There seems to be something in the branches of this plant…\nIt's a stone!"
@@ -1087,7 +1087,7 @@ msgstr "Đây là một viên đá rất lạ… Tôi chưa bao giờ thấy th�
 
 #: assets/maps/story/24_lab_2.tmx:
 msgid "VANTOI LAB – 2F"
-msgstr ""
+msgstr "PHÒNG THÍ NGHIỆM VANTOI – 2F"
 
 #: assets/maps/story/24_lab_2.tmx:
 msgid "What a mess! I have to tidy up!"
@@ -1099,7 +1099,7 @@ msgstr "Một số tảng đá được đặt bởi chúng tôi, những công 
 
 #: assets/maps/story/10.tmx:
 msgid "\" Souvenir shop \""
-msgstr "\"Cửa hàng đồ lưu niệm\""
+msgstr "\" Cửa hàng đồ lưu niệm \""
 
 #: assets/maps/story/10.tmx:
 msgid "I can see the inside of the shop."
@@ -1107,35 +1107,35 @@ msgstr "Tôi có thể thấy bên trong cửa hàng."
 
 #: assets/maps/story/31_house2.tmx:
 msgid "Melhopolis is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though."
-msgstr ""
+msgstr "Melhopolis là trung tâm quản trị của khu vực này.\nTuy nhiên thì hiện nay là tham nhũng, nghèo đói và tội phạm đang ở mọi nơi."
 
 #: assets/maps/story/5.tmx:
 msgid "Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here."
-msgstr ""
+msgstr "Này, đây là Rừng Mitsu. Bố mẹ tôi đã kể cho tôi nhiều câu chuyện về việc cách đây lâu rồi nó đẹp và phát triển đến mức nào. Người ta nói rằng ngày xưa có một sinh vật bảo hộ thần bí của lục địa đã sống ở đây."
 
 #: assets/maps/story/5.tmx:
 msgid "174805…\nI don't know what these figures are but a little while ago I heard someone say them out loud…\nDunno why."
-msgstr ""
+msgstr "174805…\nTôi không biết những con số đó là gì nhưng một lúc trước tôi nghe thấy ai đó nói to chúng lên…\nChẳng biết tại sao nữa."
 
 #: assets/maps/story/5.tmx:
 msgid "The trees of this region are admired and studied throughout the Kingdom. These blues are my favorites."
-msgstr ""
+msgstr "Những cái cây của khu vực này được ngưỡng mộ và nghiên cứu trên khắp Vương quốc. Những cây màu xanh là cây yêu thích của tôi."
 
 #: assets/maps/story/5.tmx:
 msgid "\" Mitsu Forest – Welcome, respect nature and remember to take a look at the souvenir shop on the right \""
-msgstr ""
+msgstr "\" Rừng Mitsu – Chào mừng, hãy tôn trọng thiên nhiên và nhớ ghé qua cửa hàng đồ lưu niệm ở bên phải \""
 
 #: assets/maps/story/5.tmx:
 msgid "Once this was a very touristy place, the Kingdom tried to make money from it."
-msgstr ""
+msgstr "Nơi đây đã từng là một nơi rất nhiều du khách, Vương quốc đã cố kiếm tiền từ nó."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Test tubes and other scientific stuff."
-msgstr ""
+msgstr "Ống nghiệm và những thứ khoa học khác."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Someone has turned everything upside down."
-msgstr ""
+msgstr "Ai đó đã đảo lộn mọi thứ."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A rocky wall."
@@ -1187,15 +1187,15 @@ msgstr "thợ đốn củi"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "young-girl"
-msgstr ""
+msgstr "đứa con gái trẻ"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "youngster"
-msgstr ""
+msgstr "người trẻ"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "elderly"
-msgstr ""
+msgstr "bà già"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "guy"
@@ -1203,55 +1203,55 @@ msgstr "anh chàng"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "old-man"
-msgstr ""
+msgstr "ông già"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "adventurer"
-msgstr ""
+msgstr "nhà thám hiểm"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "dude"
-msgstr ""
+msgstr "anh chàng"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "girl"
-msgstr ""
+msgstr "cô gái"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "oldster"
-msgstr ""
+msgstr "ông già"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "henchman"
-msgstr ""
+msgstr "tay sai"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "worker"
-msgstr ""
+msgstr "công nhân"
 
 #: assets/maps/tilesets/capital-1.tsx:
 msgid "I don't know what this means."
-msgstr ""
+msgstr "Tôi không biết cái này có nghĩa là gì."
 
 #: assets/maps/tilesets/capital-1.tsx:
 msgid "I can't go beyond this."
-msgstr ""
+msgstr "Tôi không thể đi xa hơn chỗ này."
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "milla"
-msgstr ""
+msgstr "milla"
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "shen"
-msgstr ""
+msgstr "shen"
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "The weather is good today."
-msgstr ""
+msgstr "Thời tiết hôm nay rất đẹp."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A painting that depicts this area long ago."
-msgstr ""
+msgstr "Một bức tranh miêu tả khu vực này vào lúc cách đây đã lâu rồi."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "It's full of books here."
@@ -1279,7 +1279,7 @@ msgstr "Con lợn này trông rất vui."
 
 #: assets/maps/story/data.json:
 msgid "A strange icosahedral stone"
-msgstr ""
+msgstr "Một hòn đá hình tứ diện kỳ lạ"
 
 #: assets/maps/story/data.json:
 msgid "Package of the King"

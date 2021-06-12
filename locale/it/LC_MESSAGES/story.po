@@ -4,8 +4,9 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2020, 2021.
 # Nicolò Balzarotti <anothersms@gmail.com>, 2020.
 # no no <skariko@pm.me>, 2020.
+# J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-05-24 20:38+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-12 09:09+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -153,7 +154,7 @@ msgstr "Farò del mio meglio."
 
 #: assets/maps/story/1.tmx:
 msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
-msgstr "La torre in cui risiede il \"Re del Male\" dovrebbe trovarsi vicino alla capitale della regione."
+msgstr "La torre in cui risiede il Re del Male dovrebbe trovarsi vicino alla capitale della regione."
 
 #: assets/maps/story/1.tmx:
 msgid "\" NATAWN – Hometown of the 62nd hero \""
@@ -161,7 +162,7 @@ msgstr "\" NATAWN – Città Natale del 62esimo eroe \""
 
 #: assets/maps/story/1.tmx:
 msgid "I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude."
-msgstr "Devo dire addio ai miei genitori premendo il tasto \"A\" prima di andarmene. Non voglio partire senza farlo."
+msgstr "Devo dire addio ai miei genitori premendo il tasto A prima di andarmene. Non voglio partire senza farlo."
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks."
@@ -193,7 +194,7 @@ msgstr "Attento a non farti male."
 
 #: assets/maps/story/13.tmx:
 msgid "Help me please!\nPunch him by pressing the 'P' button."
-msgstr "Aiutami, ti prego!\nColpiscilo premendo il tasto 'P'."
+msgstr "Aiutami, ti prego!\nColpiscilo premendo il tasto P."
 
 #: assets/maps/story/13.tmx:
 msgid "Everything good?"
@@ -229,7 +230,7 @@ msgstr "\" ← Farmacia \""
 
 #: assets/maps/story/7.tmx:
 msgid "Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays."
-msgstr "Oops… sì, scusa, sono in mezzo alla strada…\nSei un turista? Ce ne sono pochi ultimamente."
+msgstr "Ops… sì, scusa, sono in mezzo alla strada…\nSei un turista? Ce ne sono pochi ultimamente."
 
 #: assets/maps/story/7.tmx:
 msgid "???"
@@ -345,7 +346,7 @@ msgstr "Una roccia coperta di muschio."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to."
-msgstr "O-oggi… oggi è il giorno che aspetto da tutta la vita. Il mio viaggio verso la torre Xeonjia sta per iniziare.\nQuest'anno sono io l' \"eroe\" incaricato a sconfiggere il mostro che ha congelato il Regno…\nDopo anni di allenamenti spero di esserne in grado."
+msgstr "O-oggi… oggi è il giorno che aspetto da tutta la vita. Il mio viaggio verso la torre Xeonjia sta per iniziare.\nQuest'anno sono io l'«eroe» incaricato a sconfiggere il mostro che ha congelato il Regno…\nDopo anni di allenamenti spero di esserne in grado."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'd like to go back to bed but I can't."
