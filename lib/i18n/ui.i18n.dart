@@ -99,6 +99,7 @@ extension Localization on String {
           '''Third Party Licenses''': '''Licences tierces''',
           '''Read third party notices''': '''Lire les notices des tiers''',
           '''Ok''': '''OK''',
+          '''Close map''': '''Fermer la carte''',
           '''You went too far!''': '''Vous êtes allé·e trop loin !''',
           '''Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback.''':
               '''Malheureusement, la prochaine partie de l\'histoire n\'est pas encore disponible :(\nEspérons qu\'elle sera bientôt disponible.\n\nEn attendant, vous pouvez soutenir le développement de Xeonjia en faisant un don ou en faisant des remarques.''',
@@ -895,7 +896,7 @@ extension Localization on String {
               '''Maximale Rundenzeit (Minuten)''',
           '''Players''': '''Spieler''',
           '''Number of players per team''': '''Anzahl der Spieler pro Team''',
-          '''Friendly Fire''': '''Friendly Fire''',
+          '''Friendly Fire''': '''Eigener Beschuss''',
           '''If enabled, players can hit their teammates''':
               '''Wenn aktiviert können auch Mitspieler des eigenen Teams getroffen werden''',
           '''Easy''': '''Einfach''',
@@ -908,10 +909,11 @@ extension Localization on String {
               '''Bist du dir sicher, dass du deine Einstellungen löschen und sie auf die Standardeinstellungen zurücksetzen willst?''',
           '''Cancel''': '''Abbrechen''',
           '''Show D-Pad''': '''D-Pad anzeigen''',
+          '''Enable directional pad''': '''Steuerkreuz aktivieren''',
           '''Background music''': '''Hintergrundmusik''',
           '''Enable background music''': '''Hintergrundmusik einschalten''',
-          '''Sound effects''': '''Soundeffekte''',
-          '''Enable sound effects''': '''Soundeffekte einschalten''',
+          '''Sound effects''': '''Toneffekte''',
+          '''Enable sound effects''': '''Toneffekte einschalten''',
           '''Your name''': '''Dein Name''',
           '''Click here to change the name used in story mode''':
               '''Klicke hier, um den Namen der im Story-Modus benutzt wird zu ändern''',
@@ -921,14 +923,14 @@ extension Localization on String {
           '''App language''': '''App-Sprache''',
           '''System default''': '''Systemstandard''',
           '''By %s''': '''Von %s''',
-          '''App developed by %s''': '''App entwickelt von %s''',
+          '''App developed by %s''': '''Anwendung entwickelt von %s''',
           '''Version: %s''': '''Version: %s''',
           '''App version''': '''App-Version''',
           '''Donate''': '''Spenden''',
           '''Support the development''': '''Unterstütze die Entwicklung''',
           '''Translate''': '''Übersetzen''',
           '''Translate in your language''': '''Übersetze in deine Sprache''',
-          '''Updates''': '''Updates''',
+          '''Updates''': '''Aktualisierungen''',
           '''Search for updates''': '''Suche nach Aktualisierungen''',
           '''View source code''': '''Quellcode anzeigen''',
           '''Look at the source code''': '''Schau dir den Quellcode an''',
@@ -943,10 +945,11 @@ extension Localization on String {
           '''Third Party Licenses''': '''Drittanbieterlizenzen''',
           '''Read third party notices''':
               '''Hinweise von Drittanbietern lesen''',
-          '''Ok''': '''Ok''',
+          '''Ok''': '''OK''',
+          '''Close map''': '''Karte schließen''',
           '''You went too far!''': '''Du bist zu weit gelaufen!''',
           '''Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback.''':
-              '''Die Fortsetzung der Geschichte ist noch in Arbeit und wird hoffentlich bald verfügbar sein.\n\nBis dahin kannst du uns bei der Entwicklung von Xeonija durch Spenden oder Feedback unterstützen.''',
+              '''Die Fortsetzung der Geschichte ist noch in Arbeit und wird hoffentlich bald verfügbar sein.\n\nBis dahin kannst du uns bei der Entwicklung von Xeonija durch Spenden oder Rückmeldung unterstützen.''',
           '''Report a bug or ask something''':
               '''Einen Fehler melden oder eine Frage stellen''',
           '''Go back''': '''Zurück''',
@@ -954,7 +957,7 @@ extension Localization on String {
           '''You lost %s ¤ and woke up after a short nap''':
               '''Du hast %s ¤ verloren und bist nach einem Nickerchen wieder aufgewacht''',
           '''Your team won''': '''Dein Team hat gewonnen''',
-          '''Your team lost''': '''Dein Team hat verloren!''',
+          '''Your team lost''': '''Dein Team hat verloren''',
           '''The time is over.''': '''Die Zeit ist abgelaufen.''',
           '''%s points have been achieved.''':
               '''Es wurden %s Punkte erzielt.''',
@@ -965,9 +968,9 @@ extension Localization on String {
           '''No''': '''Nein''',
           '''Loading…\nPlease wait''': '''Lädt…\nBitte warten''',
           '''pause''': '''Pause''',
-          '''restart''': '''Neustarten''',
-          '''exit''': '''Verlassen''',
-          '''cancel''': '''Abbrechen''',
+          '''restart''': '''neu starten''',
+          '''exit''': '''verlassen''',
+          '''cancel''': '''abbrechen''',
           '''lifepoints: %s''': '''Lebensenergie: %s''',
           '''level: %s''': '''Level: %s''',
           '''money: %s ¤''': '''Geld: %s ¤''',
@@ -978,6 +981,12 @@ extension Localization on String {
               '''Bist du sicher, dass du dieses Spiel neu beginnen magst?''',
           '''Are you sure you want to quit this game?''':
               '''Bist du sicher, dass du dieses Spiel verlassen magst?''',
+          '''Shop''': '''Geschäft''',
+          '''What do you need?''': '''Was brauchst du?''',
+          '''Let me know if you need anything else.''':
+              '''Melde dich, wenn du sonst noch etwas brauchst.''',
+          '''There are still monsters here. I can\'t escape.''':
+              '''Es sind immer noch Monster hier, ich komme hier nicht weg.''',
           '''* {{hero}} puts %s in the backpack. *''':
               '''* {{hero}} packt %s in den Rucksack. *''',
           '''* {{hero}} puts the gem in the backpack. *''':

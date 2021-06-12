@@ -966,7 +966,7 @@ msgid "As ordered by the King of Evil? HAHAHA"
 msgstr "Như được Vua Xấu xa chỉ đạo? HAHAHA"
 
 #: assets/maps/story/t1_06.tmx:
-msgid "I don't take orders from anyone. Among me and the King of Evil there is a peer collaboration."
+msgid "I don't take orders from anyone. Between me and the King of Evil there is a peer collaboration."
 msgstr "Ta không nhận lệnh của bất kỳ ai cả. Giữa ta và Vua Xấu xa có sự hợp tác."
 
 #: assets/maps/story/t1_06.tmx:

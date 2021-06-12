@@ -976,7 +976,7 @@ msgid "As ordered by the King of Evil? HAHAHA"
 msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
-msgid "I don't take orders from anyone. Among me and the King of Evil there is a peer collaboration."
+msgid "I don't take orders from anyone. Between me and the King of Evil there is a peer collaboration."
 msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
