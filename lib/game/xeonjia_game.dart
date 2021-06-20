@@ -188,7 +188,7 @@ class XeonjiaGame extends BaseGame
       if (map.id == '32') {
         removeWidgetOverlay('loading');
         _backgroundMusic?.dispose();
-        addWidgetOverlay('noMapsMenu', NoMapsMenu());
+        addWidgetOverlay('noMapsMenu', NoMapsMenu('30'));
         return;
       }
       await importMap('assets/maps/story/${map.id}.tmx');

@@ -3,9 +3,13 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 
 // Menu displayed if there are no more maps to play
 class NoMapsMenu extends StatelessWidget {
+  final String previousMapId;
+  NoMapsMenu(this.previousMapId);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -65,11 +69,22 @@ class NoMapsMenu extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
+                      mainCharacter.visitedRooms.add(previousMapId);
+                      game.init();
+                      game.removeWidgetOverlay('noMapsMenu');
+                    },
+                    child: Text(
+                      'Go back'.i18n,
+                      style: Theme.of(context).textTheme.bodyText2,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {
                       Navigator.pop(context);
                       game.dispose();
                     },
                     child: Text(
-                      'Go back'.i18n,
+                      'Back to menu'.i18n,
                       style: Theme.of(context).textTheme.bodyText2,
                     ),
                   ),
