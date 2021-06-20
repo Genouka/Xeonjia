@@ -353,6 +353,10 @@ msgstr ""
 msgid "Go back"
 msgstr ""
 
+#: lib/game/widgets/no_maps_menu.dart:
+msgid "Back to menu"
+msgstr ""
+
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"
 msgstr ""

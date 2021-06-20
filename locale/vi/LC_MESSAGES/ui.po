@@ -341,6 +341,10 @@ msgstr "Báo cáo lỗi hoặc hỏi điều gì đó"
 msgid "Go back"
 msgstr "Quay lại"
 
+#: lib/game/widgets/no_maps_menu.dart:
+msgid "Back to menu"
+msgstr ""
+
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"
 msgstr "Bạn hết năng lượng rồi!"
