@@ -3,8 +3,9 @@
 # This file is distributed under the same license as Xeonjia.
 # Liu Tao <lyuutau@outlook.com>, 2021.
 # KMX <kumax2048@protonmail.ch>, 2021.
+# DeepDaikon <deepdaikon@tuta.io>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-04-11 14:59+0000\nLast-Translator: KMX <kumax2048@protonmail.ch>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-21 14:19+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -176,7 +177,6 @@ msgid "Easy"
 msgstr "简单"
 
 #: lib/ui/screens/arena/resources/maps.dart:
-#, fuzzy
 msgid "Medium"
 msgstr "中等"
 

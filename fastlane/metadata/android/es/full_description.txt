@@ -13,3 +13,5 @@ Con el tiempo ganarás puntos de experiencia (XP) que te permitirán incrementar
 Ten cuidado, ¡el mundo está lleno de peligrosos enemigos listos para atacarte!
 
 ¡Usa tu intelecto para encontrar el mejor camino!
+
+<b>Nota</b>: este juego actualmente está en una fase beta temprana.

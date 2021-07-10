@@ -3,7 +3,7 @@
 # This file is distributed under the same license as Xeonjia.
 # Quang Trung <quangtrung02hn16@gmail.com>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-05-30 09:13+0000\nLast-Translator: Quang Trung <quangtrung02hn16@gmail.com>\nLanguage-Team: Vietnamese <https://translate.deepdaikon.xyz/projects/xeonjia/ui/vi/>\nLanguage: vi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-07-10 07:54+0000\nLast-Translator: Quang Trung <quangtrung02hn16@gmail.com>\nLanguage-Team: Vietnamese <https://translate.deepdaikon.xyz/projects/xeonjia/ui/vi/>\nLanguage: vi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -343,7 +343,7 @@ msgstr "Quay lại"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Back to menu"
-msgstr ""
+msgstr "Quay về menu"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"

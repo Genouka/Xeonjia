@@ -1,11 +1,11 @@
 # Translation for Xeonjia
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# Perro Tuerto <nika.zhenya@perrotuerto.blog>, 2020.
+# Perro Tuerto <nika.zhenya@perrotuerto.blog>, 2020, 2021.
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-20 20:13+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-28 17:26+0000\nLast-Translator: Perro Tuerto <nika.zhenya@perrotuerto.blog>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -345,7 +345,7 @@ msgstr "Regresar"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Back to menu"
-msgstr ""
+msgstr "Regresar al menú"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"

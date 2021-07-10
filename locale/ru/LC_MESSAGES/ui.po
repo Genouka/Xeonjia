@@ -2,8 +2,9 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
+# Denis Proleev <denproleev@gmail.com>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-04-13 19:56+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-25 16:13+0000\nLast-Translator: Denis Proleev <denproleev@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -15,7 +16,7 @@ msgstr "Настройки"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Story mode"
-msgstr ""
+msgstr "Сюжетная линия"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Multiplayer"
@@ -23,75 +24,75 @@ msgstr "Сетевая игра"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "How to play"
-msgstr ""
+msgstr "Как играть"
 
 #: lib/ui/screens/rules/widgets/last_page.dart:
 msgid "Almost done!"
-msgstr ""
+msgstr "Почти готово!"
 
 #: lib/ui/screens/rules/widgets/last_page.dart:
 msgid "Before starting tell me your name which will be used in the game."
-msgstr ""
+msgstr "Перед тем как начать, скажи мне своё имя, которое будет использоваться в игре."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts."
-msgstr ""
+msgstr "Решай ледяные головоломки и побеждай врагов в РПГ мире.\n\nПроведи пальцем вправо, чтобы узнать базовые понятия."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Modes"
-msgstr ""
+msgstr "Режимы игры"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the \"King of Evil\" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win."
-msgstr ""
+msgstr "В Xeonjia есть два режима игры:\n\n1) Сюжетная линия: мир был заморожен, и твоя задача - победить \"Короля Зла\" и спасти королевство.\n\n2) Сетевая игра: побеждай врагов, набирай очки и веди свою команду к победе."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Movements"
-msgstr ""
+msgstr "Перемещения"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Swipe your finger to move your character across the world.\nKeep in mind that you can't stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!"
-msgstr ""
+msgstr "Перемещай своего персонажа по миру, проводя пальцем по экрану.\nИмей в виду, что ты не сможешь остановиться, скользя по льду, пока не достигнешь стены, валуна или другого препятствия.\n\nПодумай, как лучше построить свой путь!"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Lifepoints"
-msgstr ""
+msgstr "Здоровье"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Pay attention to your lifepoints!\nMany enemies, pitfalls and dangers will try to hurt you."
-msgstr ""
+msgstr "Обращай внимание на своё здоровье.\nМножество врагов, ловушек и опасностей попытаются причинить тебе вред."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Weapons"
-msgstr ""
+msgstr "Оружие"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "You'll need weapons to overcome barriers and defeat enemies.\n\nTap the screen in the desired direction or press the shoot button to hit.\nBe aware that some weapons have few hits, so use them wisely."
-msgstr ""
+msgstr "Тебе понадобится оружие, чтобы преодолевать преграды и побеждать врагов.\n\nКоснись экрана в нужном направлении или нажми кнопку удара, чтобы ударить цель.\nИмей в виду, что у некоторых видов оружия лишь небольшое количество использований, поэтому используй их с умом."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Enemies"
-msgstr ""
+msgstr "Враги"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have life points too."
-msgstr ""
+msgstr "Будь осторожен! Мир наполнен опасными врагами, готовыми атаковать тебя!\nУдарь их несколько раз, чтобы уничтожить, ведь они тоже имеют здоровье."
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "Close"
-msgstr ""
+msgstr "Закрыть"
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "OK"
-msgstr ""
+msgstr "ОК"
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "Next"
-msgstr ""
+msgstr "Далее"
 
 #: lib/ui/screens/arena/widgets/play_button.dart:
 msgid "Play"
@@ -99,23 +100,23 @@ msgstr "Играть"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Multiplayer Mode"
-msgstr ""
+msgstr "Сетевая игра"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press \"Play\"."
-msgstr ""
+msgstr "Цель этого режима игры - побеждать врагов, набирать очки и вести свою команду к победе.\n\nПравила просты:\n- Игроки разбиты на две команды.\n- Каждый раз, когда игрок побеждает соперника, его команда получает 100 очков.\n- Побеждает команда, набравшая необходимое количество очков.\n\nТы в команде красных.\n\nПока что можно играть против компьютера.\n\nВыбери место для игры и задай другие параметры.\nКогда ты будешь готов, нажми \"Играть\"."
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Okay, got it!"
-msgstr ""
+msgstr "Хорошо, я понял!"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Map"
-msgstr ""
+msgstr "Место"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Place to play"
-msgstr ""
+msgstr "для игры"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Difficulty"
@@ -123,63 +124,63 @@ msgstr "Сложность"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Match difficulty"
-msgstr ""
+msgstr "раунда"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points required"
-msgstr "Очков требуется"
+msgstr "Количество очков"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points needed to win"
-msgstr ""
+msgstr "необходимых для победы"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Time available"
-msgstr ""
+msgstr "Время в запасе"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Maximum time for a match (minutes)"
-msgstr ""
+msgstr "Максимальное время раунда (в минутах)"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Players"
-msgstr "игроки"
+msgstr "Количество игроков"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Number of players per team"
-msgstr ""
+msgstr "в команде"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Friendly Fire"
-msgstr ""
+msgstr "Ранить своих"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "If enabled, players can hit their teammates"
-msgstr ""
+msgstr "Игроки могут наносить урон товарищам по команде"
 
 #: lib/ui/screens/arena/resources/maps.dart:
 msgid "Easy"
-msgstr ""
+msgstr "Лёгкий"
 
 #: lib/ui/screens/arena/resources/maps.dart:
 msgid "Medium"
-msgstr ""
+msgstr "Средний"
 
 #: lib/ui/screens/arena/resources/maps.dart:
 msgid "Hard"
-msgstr ""
+msgstr "Сложный"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore"
-msgstr "Восстановить"
+msgstr "Сбросить настройки"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore default settings?"
-msgstr ""
+msgstr "Восстановить настройки по умолчанию?"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Are you sure you want to delete your settings and restore default ones?"
-msgstr ""
+msgstr "Ты уверен, что хочешь сбросить свои настройки и восстановить значения по умолчанию?"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Cancel"
@@ -187,67 +188,67 @@ msgstr "Отмена"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Show D-Pad"
-msgstr ""
+msgstr "Показывать D-Pad"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable directional pad"
-msgstr ""
+msgstr "Включить крестовину"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Background music"
-msgstr ""
+msgstr "Фоновая музыка"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable background music"
-msgstr ""
+msgstr "Включить фоновую музыку"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Sound effects"
-msgstr ""
+msgstr "Звуковые эффекты"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable sound effects"
-msgstr ""
+msgstr "Включить звуковые эффекты"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Your name"
-msgstr ""
+msgstr "Твоё имя"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Click here to change the name used in story mode"
-msgstr ""
+msgstr "Нажми здесь, чтобы изменить имя, используемое в сюжетной линии"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Discard"
-msgstr ""
+msgstr "Отмена"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Save"
-msgstr ""
+msgstr "Сохранить"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Language"
-msgstr ""
+msgstr "Язык"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "App language"
-msgstr ""
+msgstr "Язык приложения"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "System default"
-msgstr ""
+msgstr "Системный"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "By %s"
-msgstr "От %s"
+msgstr "by %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App developed by %s"
-msgstr "Приложение разработано %s"
+msgstr "Разработчик приложения"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version: %s"
-msgstr ""
+msgstr "%s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
@@ -255,27 +256,27 @@ msgstr "Версия приложения"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Donate"
-msgstr ""
+msgstr "Внести пожертвование"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Support the development"
-msgstr ""
+msgstr "поддержав разработку"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate"
-msgstr ""
+msgstr "Перевести игру"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate in your language"
-msgstr ""
+msgstr "на свой язык"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Updates"
-msgstr ""
+msgstr "Проверить обновления"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Search for updates"
-msgstr ""
+msgstr "в Google Play"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View source code"
@@ -283,7 +284,7 @@ msgstr "Посмотреть исходный код"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Look at the source code"
-msgstr "Посмотри на исходный код"
+msgstr "на gitlab.com"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
@@ -291,39 +292,39 @@ msgstr "Сообщить об ошибках"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs or request new feature"
-msgstr "Сообщить об ошибках или запросить новую функцию"
+msgstr "или предложить новую функциональность"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
-msgstr ""
+msgstr "Связаться по электронной почте"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ask for something or request a new feature"
-msgstr ""
+msgstr "Спросить что-то или предложить новую функциональность"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View License (GPLv3)"
-msgstr ""
+msgstr "Посмотреть лицензию"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
-msgstr "Прочитать лицензия приложения"
+msgstr "GPLv3"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Third Party Licenses"
-msgstr "Сторонние лицензии"
+msgstr "Лицензии третьих лиц"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read third party notices"
-msgstr "Читать сторонние лицензии"
+msgstr " "
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ok"
-msgstr ""
+msgstr "ОК"
 
 #: lib/game/widgets/minimap_button.dart:
 msgid "Close map"
-msgstr ""
+msgstr "Закрыть карту"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "You went too far!"
@@ -387,71 +388,71 @@ msgstr ""
 
 #: lib/game/widgets/loading_page.dart:
 msgid "Loading…\nPlease wait"
-msgstr ""
+msgstr "Загрузка...\nПодождите, пожалуйста"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "pause"
-msgstr ""
+msgstr "пауза"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "restart"
-msgstr "Перезапуск"
+msgstr "перезапустить"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "exit"
-msgstr ""
+msgstr "выход"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "cancel"
-msgstr "Отмена"
+msgstr "отмена"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "lifepoints: %s"
-msgstr ""
+msgstr "здоровье: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "level: %s"
-msgstr ""
+msgstr "уровень: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "money: %s ¤"
-msgstr ""
+msgstr "деньги: %s ¤"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "play time: %s min"
-msgstr ""
+msgstr "время в игре: %s мин"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "your defeats: %s"
-msgstr ""
+msgstr "твоих смертей %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "enemies defeated: %s"
-msgstr ""
+msgstr "убито врагов: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "your points: %s"
-msgstr ""
+msgstr "набрано очков: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "resume"
-msgstr "Продолжить"
+msgstr "продолжить"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "Are you sure you want to restart this game?"
-msgstr ""
+msgstr "Ты уверен, что хочешь перезапустить игру?"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "It will restart from the last location change."
-msgstr ""
+msgstr "Перезапуск выполнится с последней посещённой локации."
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "Are you sure you want to quit this game?"
-msgstr ""
+msgstr "Ты уверен, что хочешь выйти из игры?"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "\n\nGame data since the last time you changed your location will be lost."
-msgstr ""
+msgstr "\n\nИгровые данные будут утеряны с последней посещённой локации."
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "Shop"
@@ -499,12 +500,12 @@ msgstr ""
 
 #: lib/util/insert_name_form.dart:
 msgid "What's your name?"
-msgstr ""
+msgstr "Как тебя зовут?"
 
 #: lib/util/insert_name_form.dart:
 msgid "Too short."
-msgstr ""
+msgstr "Слишком коротко."
 
 #: lib/util/insert_name_form.dart:
 msgid "Insert your name here"
-msgstr ""
+msgstr "Введи здесь своё имя"

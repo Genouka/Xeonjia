@@ -4,7 +4,7 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2020, 2021.
 # no no <skariko@pm.me>, 2020.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-05-23 20:05+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-21 14:19+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -340,11 +340,11 @@ msgstr "Riporta un bug o chiedi qualcosa"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Go back"
-msgstr "Indietro"
+msgstr "Torna indietro"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Back to menu"
-msgstr ""
+msgstr "Torna al menu"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"

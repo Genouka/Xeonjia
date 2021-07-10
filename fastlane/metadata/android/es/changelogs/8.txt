@@ -1,0 +1,4 @@
+* Adición de nuevas partes de la historia
+* Varias mejoras y nuevas características
+* Actualización de las traducción y adición de nuevos lenguajes (beta)
+* Arreglo de errores
