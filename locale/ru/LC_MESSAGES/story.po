@@ -5,7 +5,7 @@
 # Tri-fan <ausa1156red@gmail.com>, 2021.
 # Denis Proleev <denproleev@gmail.com>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-22 16:13+0000\nLast-Translator: Denis Proleev <denproleev@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-07-25 02:14+0000\nLast-Translator: Denis Proleev <denproleev@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -101,7 +101,7 @@ msgstr "* {{hero}} нашёл несколько ягод! Здоровье бы
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant… nothing else."
-msgstr ""
+msgstr "Маленькое растение… ничего более."
 
 #: assets/maps/story/15.tmx:
 msgid "\" Exit ↑ \""
@@ -177,19 +177,19 @@ msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Hi, you look a little tired. Rest here for a moment."
-msgstr ""
+msgstr "Привет, ты выглядишь слегка уставшим. Отдохни здесь немного."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "* {{hero}} rested and is now in perfect health *"
-msgstr ""
+msgstr "* {{hero}} отдохнул и теперь в отличной форме *"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Come back anytime."
-msgstr ""
+msgstr "Приходи, когда захочешь."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "Будь осторожен, не поранься."
 
 #: assets/maps/story/13.tmx:
 msgid "Help me please!\nPunch him by pressing the 'P' button."
@@ -197,23 +197,23 @@ msgstr "Пожалуйста, помоги мне!\nУдарь его, нажа�
 
 #: assets/maps/story/13.tmx:
 msgid "Everything good?"
-msgstr ""
+msgstr "Ты в порядке?"
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, thank you so much for saving my life!\nI have to admit, I was scared.\nAs a token of gratitude I give you this gem that I found a little while ago."
-msgstr ""
+msgstr "Да, спасибо большое, что спас мне жизнь!\nПризнаюсь, я испугался.\nВ знак благодарности я дарю тебе этот драгоценный камень, который я недавно нашёл."
 
 #: assets/maps/story/13.tmx:
 msgid "Thanks, it seems very precious."
-msgstr ""
+msgstr "Спасибо, я это очень ценю."
 
 #: assets/maps/story/13.tmx:
 msgid "Thanks for saving me, I think it's better if I go home now."
-msgstr ""
+msgstr "Спасибо, что спас меня. Думаю, сейчас лучше пойду домой."
 
 #: assets/maps/story/13.tmx:
 msgid "Please help me! Save me from this monster!"
-msgstr ""
+msgstr "Пожалуйста, помоги мне! Спаси меня от этого монстра!"
 
 #: assets/maps/story/13.tmx:
 msgid "I can't escape, I have to defeat the monster to save that man."
@@ -229,71 +229,71 @@ msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays."
-msgstr ""
+msgstr "Ой… да, простите, я посреди дороги…\nВы турист? Нынче их совсем немного."
 
 #: assets/maps/story/7.tmx:
 msgid "???"
-msgstr ""
+msgstr "???"
 
 #: assets/maps/story/7.tmx:
 msgid "N-no, I'm {{hero}}, this year's chosen hero. I just left home to try to defeat the King of Evil."
-msgstr ""
+msgstr "Н-нет. Меня зовут {{hero}}, избранный герой в этом году. Я только что покинул дом, чтобы попытаться одолеть Короля Зла."
 
 #: assets/maps/story/7.tmx:
 msgid "What?! So is it you?!"
-msgstr ""
+msgstr "Что?! Так это ты?!"
 
 #: assets/maps/story/7.tmx:
 msgid "Nice to meet you, I've never met a hero before."
-msgstr ""
+msgstr "Приятно познакомиться с тобой. Я никогда раньше не встречала героев."
 
 #: assets/maps/story/7.tmx:
 msgid "My name is Milla, I was born and raised in this area. I too am setting out on a journey."
-msgstr ""
+msgstr "Меня зовут Мила. Я родилась и выросла в этой местности. Я тоже отправляюсь в путешествие."
 
 #: assets/maps/story/7.tmx:
 msgid "Oh cool! Where are you going?"
-msgstr ""
+msgstr "Здорово! Куда ты направляешься?"
 
 #: assets/maps/story/7.tmx:
 msgid "I have absolutely no idea."
-msgstr ""
+msgstr "Я совершенно не представляю."
 
 #: assets/maps/story/7.tmx:
 msgid "I just want to explore the world, know new places and learn new things."
-msgstr ""
+msgstr "Я просто хочу исследовать мир, разведывать новые места и учиться чему-то новому."
 
 #: assets/maps/story/7.tmx:
 msgid "Wow, sounds like a great idea!"
-msgstr ""
+msgstr "Ух ты, звучит как отличная идея!"
 
 #: assets/maps/story/7.tmx:
 msgid "Yep, it won't be easy but I want to visit at least the whole Kingdom."
-msgstr ""
+msgstr "Да, это будет непросто, но я хочу посетить как минимум всё Королевство."
 
 #: assets/maps/story/7.tmx:
 msgid "Are there places outside the Kingdom?!"
-msgstr ""
+msgstr "Разве что-то есть за пределами Королевства?!"
 
 #: assets/maps/story/7.tmx:
 msgid "Dunno, that's what I want to find out!"
-msgstr ""
+msgstr "Без понятия. Это я и хочу узнать!"
 
 #: assets/maps/story/7.tmx:
 msgid "Anyway, I don't want to waste any more of your time."
-msgstr ""
+msgstr "Так или иначе, я больше не хочу тебя задерживать."
 
 #: assets/maps/story/7.tmx:
 msgid "After all, you have to save the world. Not an easy task."
-msgstr ""
+msgstr "В конце концов, ты должен спасти мир. Задача не из лёгких."
 
 #: assets/maps/story/7.tmx:
 msgid "I'm sure we'll meet again soon, hero."
-msgstr ""
+msgstr "Я уверена, что скоро мы ещё встретимся, герой."
 
 #: assets/maps/story/7.tmx:
 msgid "See ya!"
-msgstr ""
+msgstr "Увидимся!"
 
 #: assets/maps/story/7.tmx:
 msgid "Bye!"
@@ -301,11 +301,11 @@ msgstr "Пока!"
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area – Do not leave rubbish, thanks \""
-msgstr ""
+msgstr "\" Место для пикника - Соблюдайте чистоту, спасибо \""
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
-msgstr ""
+msgstr "\" Место для пикника ↑ \"\n\" Центр леса ↓ \""
 
 #: assets/maps/story/t1_04.tmx:
 msgid "Mossy Crypt -4F"
@@ -321,7 +321,7 @@ msgstr ""
 
 #: assets/maps/story/t1_04.tmx:
 msgid "A snowdrift."
-msgstr ""
+msgstr "Сугроб."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "Mossy Crypt -2F"
@@ -489,15 +489,15 @@ msgstr ""
 
 #: assets/maps/story/9.tmx:
 msgid "This is not a place for kids, go home."
-msgstr ""
+msgstr "Это не место для детей, возвращайся домой."
 
 #: assets/maps/story/9.tmx:
 msgid "Weird things happen in this area…"
-msgstr ""
+msgstr "Здесь происходят странные вещи…"
 
 #: assets/maps/story/9.tmx:
 msgid "\" If you get lost, follow the road signs \""
-msgstr ""
+msgstr "\" Следуй дорожным знакам, если заблудишься \""
 
 #: assets/maps/story/19.tmx:
 msgid "\" Xeonjia Tower ↑ \""
@@ -505,7 +505,7 @@ msgstr "\" Башня Ксеония ↑ \""
 
 #: assets/maps/story/29.tmx:
 msgid "Mitsu Forest"
-msgstr ""
+msgstr "Лес Мицу"
 
 #: assets/maps/story/29.tmx:
 msgid "Nobody knows what the writing on this stone means, it is not even known who wrote it."
@@ -705,7 +705,7 @@ msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "Home"
-msgstr ""
+msgstr "Дом"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Good morning mom!"
@@ -745,7 +745,7 @@ msgstr "Не забудь взять у соседа наколенники, о�
 
 #: assets/maps/story/1_home.tmx:
 msgid "The new shin guards are beautiful, they match the suit."
-msgstr ""
+msgstr "Новые наколенники прекрасны. Они сочетаются с костюмом."
 
 #: assets/maps/story/1_home.tmx:
 msgid "This plant hasn't been watered for long."
@@ -761,11 +761,11 @@ msgstr "Кажется, это растение недавно поливали.
 
 #: assets/maps/story/4_house.tmx:
 msgid "The last time I went through the forest I was attacked.\nI'm not going back there anymore."
-msgstr ""
+msgstr "В прошлый раз на меня напали, когда я шёл через лес.\nЯ туда больше не вернусь."
 
 #: assets/maps/story/4_house.tmx:
 msgid "If you want to enter the forest you have to be careful, my grandson risked getting hurt there."
-msgstr ""
+msgstr "Если хочешь пойти в лес, то будь осторожен: мой внук там пострадал."
 
 #: assets/maps/story/26_house.tmx:
 msgid "Do you think piglets will one day be a common pet?"
@@ -801,7 +801,7 @@ msgstr ""
 
 #: assets/maps/story/11.tmx:
 msgid "Hi, I'm an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I'll help you."
-msgstr ""
+msgstr "Привет, я - рабочий Королевства.\nЕсли ты заблудишься или у тебя возникнут трудности с поиском дороги; возвращайся ко мне, и я тебе помогу."
 
 #: assets/maps/story/11.tmx:
 msgid "Are you stuck?\nTake the path behind the blue tree."
@@ -809,7 +809,7 @@ msgstr ""
 
 #: assets/maps/story/3_house1.tmx:
 msgid "A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."
-msgstr ""
+msgstr "В нескольких метрах отсюда располагается лес Мицу. Когда-то он привлекал немало туристов, так как он считался священным местом, но теперь он опасен и кишит монстрами."
 
 #: assets/maps/story/28_house.tmx:
 msgid "Hoarfrost Team members came to our house because they wanted a gem that I found on the ground.\nWe managed to keep it hidden from them but we don't want to have problems anymore.\nWe don't even need it after all, can we give it to you?"
@@ -853,7 +853,7 @@ msgstr ""
 
 #: assets/maps/story/1_house.tmx:
 msgid "NEIGHBOR'S HOUSE"
-msgstr ""
+msgstr "ДОМ СОСЕДА"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones.\nI made them by hand. Here's to you!"
@@ -1053,11 +1053,11 @@ msgstr "Надеюсь, эти ягоды были вкусными."
 
 #: assets/maps/story/3.tmx:
 msgid "On the ground it's easy to find XEON (¤) stones that you can use to buy items in shops."
-msgstr ""
+msgstr "На земле часто попадаются камни КСЕОН (¤), на которые ты можешь купить вещи в магазинах."
 
 #: assets/maps/story/3.tmx:
 msgid "It seems that once there was a path here."
-msgstr ""
+msgstr "Кажется, когда-то здесь была тропинка."
 
 #: assets/maps/story/t1_01.tmx:
 msgid "Mossy Crypt -1F"
@@ -1073,7 +1073,7 @@ msgstr ""
 
 #: assets/maps/story/2.tmx:
 msgid "Route 1"
-msgstr ""
+msgstr "Дорога 1"
 
 #: assets/maps/story/2.tmx:
 msgid "The ice is so slippery, have you noticed?\nI feel more comfortable on the snow."
@@ -1081,11 +1081,11 @@ msgstr "Лёд такой скользкий, ты заметил?\nМне ко�
 
 #: assets/maps/story/2.tmx:
 msgid "There seems to be something in the branches of this plant…\nIt's a stone!"
-msgstr ""
+msgstr "Кажется, что-то скрывается в ветвях этого растения…\nЭто камень!"
 
 #: assets/maps/story/2.tmx:
 msgid "This is a very strange stone… Never seen anything like this before."
-msgstr ""
+msgstr "Это очень странный камень… Ничего подобного я раньше не видел."
 
 #: assets/maps/story/24_lab_2.tmx:
 msgid "VANTOI LAB – 2F"
@@ -1113,23 +1113,23 @@ msgstr "Меллополис - административный центр ре�
 
 #: assets/maps/story/5.tmx:
 msgid "Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here."
-msgstr ""
+msgstr "Это же лес Мицу. Мои родители рассказывали мне много историй о том, каким красивым и процветающим он был много лет назад. Говорят, что когда-то здесь проживало мистическое существо, охраняющее материк."
 
 #: assets/maps/story/5.tmx:
 msgid "174805…\nI don't know what these figures are but a little while ago I heard someone say them out loud…\nDunno why."
-msgstr ""
+msgstr "174805…\nЯ не знаю, что это за цифры, но недавно я услышал, как кто-то произнёс их вслух…\nНе знаю почему."
 
 #: assets/maps/story/5.tmx:
 msgid "The trees of this region are admired and studied throughout the Kingdom. These blues are my favorites."
-msgstr ""
+msgstr "Деревья этого региона ценят и изучают во всём Королевстве. Эти синие - мои любимые."
 
 #: assets/maps/story/5.tmx:
 msgid "\" Mitsu Forest – Welcome, respect nature and remember to take a look at the souvenir shop on the right \""
-msgstr ""
+msgstr "\" Лес Мицу - Добро пожаловать, уважайте природу и не забудьте посетить сувенирную лавку справа \""
 
 #: assets/maps/story/5.tmx:
 msgid "Once this was a very touristy place, the Kingdom tried to make money from it."
-msgstr ""
+msgstr "Когда-то это место было популярным среди туристов, и Королевство пыталось на этом заработать."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Test tubes and other scientific stuff."
@@ -1161,7 +1161,7 @@ msgstr "Маленькое растение без листьев."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "I like the color of this tree."
-msgstr ""
+msgstr "Мне нравится цвет этого дерева."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "This type of tree is strange."
@@ -1185,11 +1185,11 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "lumberjack"
-msgstr ""
+msgstr "лесоруб"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "young-girl"
-msgstr ""
+msgstr "молодая девушка"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "youngster"
@@ -1197,7 +1197,7 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "elderly"
-msgstr ""
+msgstr "пожилая женщина"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "guy"
@@ -1213,7 +1213,7 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "dude"
-msgstr ""
+msgstr "приятель"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "girl"
@@ -1221,15 +1221,15 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "oldster"
-msgstr "старик"
+msgstr "пожилой мужчина"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "henchman"
-msgstr ""
+msgstr "паж"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "worker"
-msgstr ""
+msgstr "рабочий"
 
 #: assets/maps/tilesets/capital-1.tsx:
 msgid "I don't know what this means."
@@ -1241,7 +1241,7 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "milla"
-msgstr ""
+msgstr "мила"
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "shen"
@@ -1249,11 +1249,11 @@ msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "The weather is good today."
-msgstr "Погода сегодня хорошая."
+msgstr "Хорошая погода сегодня."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A painting that depicts this area long ago."
-msgstr ""
+msgstr "Картина отражает эту местность в прошлом."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "It's full of books here."
@@ -1281,7 +1281,7 @@ msgstr ""
 
 #: assets/maps/story/data.json:
 msgid "A strange icosahedral stone"
-msgstr ""
+msgstr "Странный икосаэдральный камень"
 
 #: assets/maps/story/data.json:
 msgid "Package of the King"

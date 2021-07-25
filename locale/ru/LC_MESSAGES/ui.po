@@ -4,7 +4,7 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
 # Denis Proleev <denproleev@gmail.com>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-25 16:13+0000\nLast-Translator: Denis Proleev <denproleev@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-07-25 02:14+0000\nLast-Translator: Denis Proleev <denproleev@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -456,7 +456,7 @@ msgstr "\n\nИгровые данные будут утеряны с после�
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "Shop"
-msgstr ""
+msgstr "Магазин"
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "What do you need?"
@@ -472,15 +472,15 @@ msgstr ""
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
-msgstr ""
+msgstr "* {{hero}} кладёт %s в рюкзак. *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts the gem in the backpack. *"
-msgstr ""
+msgstr "* {{hero}} кладёт драгоценный камень в рюкзак. *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} gives %s *"
-msgstr ""
+msgstr "* {{hero}} отдаёт %s *"
 
 #: lib/resources/weapon_details.dart:
 msgid "Punch"
