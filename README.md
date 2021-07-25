@@ -63,8 +63,6 @@ Keep in mind that you need to be signed in Weblate to translate Xeonjia. Your us
 
 You can make anonymous suggestions if you don't want to sign in.
 
-Otherwise you can manually edit each .po file in [`locale/YOUR_LOCALE/LC_MESSAGES/`](https://gitlab.com/DeepDaikon/Xeonjia/-/tree/master/locale) through git.
-
 Thank you :)
 
 ## License
