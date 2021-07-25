@@ -13,16 +13,15 @@ const List<Locale> enabledLocales = [
   Locale('es'),
   Locale('fr'),
   Locale('it'),
-];
-const List<Locale> supportedLocales = [
-  Locale('de'),
-  Locale('en'),
-  Locale('es'),
-  Locale('fr'),
-  Locale('it'),
-  Locale('uk'),
   Locale('vi'),
-  Locale('zh'),
+];
+final List<Locale> supportedLocales = [
+  ...enabledLocales,
+  const Locale('de'),
+  const Locale('id'),
+  const Locale('ru'),
+  const Locale('uk'),
+  const Locale('zh'),
 ];
 
 void main() async {
