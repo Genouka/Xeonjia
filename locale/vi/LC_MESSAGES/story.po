@@ -950,8 +950,8 @@ msgid "I'm surprised that my name is not known among the woods of your village."
 msgstr "Ta rất ngạc nhiên là tên ta không được biết đến trong khu rừng của làng ngươi."
 
 #: assets/maps/story/t1_06.tmx:
-msgid "Anyway, I'm Dr.Lache and I'm the leader of the Hoarfrost Team."
-msgstr "Ta là Dr.Lache và ta là thủ lĩnh của Nhóm Hoarfrost."
+msgid "Anyway, I'm Dr. Lache and I'm the leader of the Hoarfrost Team."
+msgstr "Ta là Dr. Lache và ta là thủ lĩnh của Nhóm Hoarfrost."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "dr. lache"

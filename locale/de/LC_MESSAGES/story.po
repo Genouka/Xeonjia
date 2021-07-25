@@ -953,7 +953,7 @@ msgid "I'm surprised that my name is not known among the woods of your village."
 msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
-msgid "Anyway, I'm Dr.Lache and I'm the leader of the Hoarfrost Team."
+msgid "Anyway, I'm Dr. Lache and I'm the leader of the Hoarfrost Team."
 msgstr ""
 
 #: assets/maps/story/t1_06.tmx:

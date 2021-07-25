@@ -952,7 +952,7 @@ msgid "I'm surprised that my name is not known among the woods of your village."
 msgstr "Me sorprende que mi nombre no sea conocido entre los bosques de tu villa."
 
 #: assets/maps/story/t1_06.tmx:
-msgid "Anyway, I'm Dr.Lache and I'm the leader of the Hoarfrost Team."
+msgid "Anyway, I'm Dr. Lache and I'm the leader of the Hoarfrost Team."
 msgstr "Como sea, soy el Dr. Lache y soy el líder del Equipo Escarcha."
 
 #: assets/maps/story/t1_06.tmx:

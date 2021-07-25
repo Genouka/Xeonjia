@@ -953,8 +953,8 @@ msgid "I'm surprised that my name is not known among the woods of your village."
 msgstr "Sono sorpreso che il mio nome non sia conosciuto tra i legni del tuo villaggio."
 
 #: assets/maps/story/t1_06.tmx:
-msgid "Anyway, I'm Dr.Lache and I'm the leader of the Hoarfrost Team."
-msgstr "Ad ogni modo, sono Dr.Lache e sono il leader del Team Brina."
+msgid "Anyway, I'm Dr. Lache and I'm the leader of the Hoarfrost Team."
+msgstr "Ad ogni modo, sono Dr. Lache e sono il leader del Team Brina."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "dr. lache"
