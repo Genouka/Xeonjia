@@ -2,8 +2,9 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Sergiy Borodych <sergiy.borodych@gmail.com>, 2021.
+# DeepDaikon <deepdaikon@tuta.io>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-01-30 22:23+0000\nLast-Translator: Sergiy Borodych <sergiy.borodych@gmail.com>\nLanguage-Team: Ukrainian <https://translate.deepdaikon.xyz/projects/xeonjia/story/uk/>\nLanguage: uk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-07-26 10:14+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Ukrainian <https://translate.deepdaikon.xyz/projects/xeonjia/story/uk/>\nLanguage: uk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -95,7 +96,7 @@ msgstr ""
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! {{life-diff}} LPs have been recovered *"
-msgstr "* {{герой}} знайшов кілька ягід! Відновлено {{life-diff}} ОЖ *"
+msgstr "* {{hero}} знайшов кілька ягід! Відновлено {{life-diff}} ОЖ *"
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant… nothing else."
@@ -179,7 +180,7 @@ msgstr "Привіт, ти виглядаєш трохи втомленим. В�
 
 #: assets/maps/story/3_house2.tmx:
 msgid "* {{hero}} rested and is now in perfect health *"
-msgstr "* {{герой}} відпочив і зараз у чудовому стані *"
+msgstr "* {{hero}} відпочив і зараз у чудовому стані *"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Come back anytime."

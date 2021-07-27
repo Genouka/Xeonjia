@@ -4,7 +4,7 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
 # Denis Proleev <denproleev@gmail.com>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-07-25 02:14+0000\nLast-Translator: Denis Proleev <denproleev@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-07-27 20:42+0000\nLast-Translator: Denis Proleev <denproleev@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -44,7 +44,7 @@ msgstr "Режимы игры"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the \"King of Evil\" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win."
-msgstr "В Xeonjia есть два режима игры:\n\n1) Сюжетная линия: мир был заморожен, и твоя задача - победить \"Короля Зла\" и спасти королевство.\n\n2) Сетевая игра: побеждай врагов, набирай очки и веди свою команду к победе."
+msgstr "В Xeonjia есть два режима игры:\n\n1) Сюжетная линия: мир был заморожен, и твоя задача - победить \"Короля Зла\" и спасти королевство.\n\n2) Мультиплеер: побеждай врагов, набирай очки и веди свою команду к победе."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Movements"
@@ -68,7 +68,7 @@ msgstr "Оружие"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "You'll need weapons to overcome barriers and defeat enemies.\n\nTap the screen in the desired direction or press the shoot button to hit.\nBe aware that some weapons have few hits, so use them wisely."
-msgstr "Тебе понадобится оружие, чтобы преодолевать преграды и побеждать врагов.\n\nКоснись экрана в нужном направлении или нажми кнопку удара, чтобы ударить цель.\nИмей в виду, что у некоторых видов оружия лишь небольшое количество использований, поэтому используй их с умом."
+msgstr "Тебе понадобится оружие, чтобы преодолевать преграды и побеждать врагов.\n\nКоснись экрана в нужном направлении или нажми кнопку удара, чтобы поразить цель.\nИмей в виду, что у некоторых видов оружия лишь небольшое количество использований, поэтому используй их с умом."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Enemies"
@@ -244,11 +244,11 @@ msgstr "by %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App developed by %s"
-msgstr "Разработчик приложения"
+msgstr "Приложение разработал %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version: %s"
-msgstr "%s"
+msgstr "Версия: %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
@@ -260,7 +260,7 @@ msgstr "Внести пожертвование"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Support the development"
-msgstr "поддержав разработку"
+msgstr "Поддержать разработку"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate"
@@ -268,15 +268,15 @@ msgstr "Перевести игру"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate in your language"
-msgstr "на свой язык"
+msgstr "Перевести на свой язык"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Updates"
-msgstr "Проверить обновления"
+msgstr "Обновления"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Search for updates"
-msgstr "в Google Play"
+msgstr "Найти обновления"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View source code"
@@ -284,7 +284,7 @@ msgstr "Посмотреть исходный код"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Look at the source code"
-msgstr "на gitlab.com"
+msgstr "Посмотреть исходный код на gitlab.com"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
@@ -292,7 +292,7 @@ msgstr "Сообщить об ошибках"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs or request new feature"
-msgstr "или предложить новую функциональность"
+msgstr "Сообщить об ошибках или предложить новую функциональность"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
@@ -304,11 +304,11 @@ msgstr "Спросить что-то или предложить новую фу
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View License (GPLv3)"
-msgstr "Посмотреть лицензию"
+msgstr "Посмотреть лицензию (GPLv3)"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
-msgstr "GPLv3"
+msgstr "Прочитать лицензию ПО"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Third Party Licenses"
@@ -316,7 +316,7 @@ msgstr "Лицензии третьих лиц"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read third party notices"
-msgstr " "
+msgstr "Прочитать предупреждения третьих лиц"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ok"
@@ -328,63 +328,63 @@ msgstr "Закрыть карту"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "You went too far!"
-msgstr ""
+msgstr "Ты зашёл слишком далеко!"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback."
-msgstr ""
+msgstr "К сожалению, продолжение истории ещё не доступно :(\nНадеюсь, он вскоре станет доступен.\n\nА пока ты можешь поддержать развитие Xeonjia, внеся пожертвование или оставив отзыв."
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Report a bug or ask something"
-msgstr ""
+msgstr "Сообщить об ошибке или что-то спросить"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Go back"
-msgstr ""
+msgstr "Возвращайся"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Back to menu"
-msgstr ""
+msgstr "Вернуться в меню"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"
-msgstr ""
+msgstr "Твои силы иссякли !"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "You lost %s ¤ and woke up after a short nap"
-msgstr ""
+msgstr "Ты потерял %s ¤ и очнулся после короткого сна"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Your team won"
-msgstr ""
+msgstr "Ваша команда выиграла"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Your team lost"
-msgstr ""
+msgstr "Ваша команда проиграла"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "The time is over."
-msgstr ""
+msgstr "Время вышло."
 
 #: lib/game/widgets/end_menu.dart:
 msgid "%s points have been achieved."
-msgstr ""
+msgstr "Набрано %s очков."
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Do you want to restart this game?"
-msgstr ""
+msgstr "Вы хотите перезапустить эту игру?"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Continue"
-msgstr ""
+msgstr "Продолжить"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 #: lib/game/widgets/loading_page.dart:
 msgid "Loading…\nPlease wait"
@@ -460,15 +460,15 @@ msgstr "Магазин"
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "What do you need?"
-msgstr ""
+msgstr "Что Вам нужно?"
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "Let me know if you need anything else."
-msgstr ""
+msgstr "Дайте знать, если Вам понадобится что-нибудь ещё."
 
 #: lib/game/components/static/door.dart:
 msgid "There are still monsters here. I can't escape."
-msgstr ""
+msgstr "Здесь по-прежнему есть монстры. Я не могу убежать."
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
@@ -484,19 +484,19 @@ msgstr "* {{hero}} отдаёт %s *"
 
 #: lib/resources/weapon_details.dart:
 msgid "Punch"
-msgstr ""
+msgstr "Удар"
 
 #: lib/resources/weapon_details.dart:
 msgid "Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP."
-msgstr ""
+msgstr "Бей врага перед собой.\nЭто самое простое оружие. Ограничений на использование нет."
 
 #: lib/resources/weapon_details.dart:
 msgid "Throw snowballs in front of you."
-msgstr ""
+msgstr "Кидай снежки перед собой."
 
 #: lib/resources/weapon_details.dart:
 msgid "Leave explosive mines on the floor.\nA mine explodes if someone except you walks on it."
-msgstr ""
+msgstr "Оставляй под собой взрывные мины.\nМина взорвётся, если по ней пройдёт кто-то, кроме тебя."
 
 #: lib/util/insert_name_form.dart:
 msgid "What's your name?"

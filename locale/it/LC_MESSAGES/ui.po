@@ -4,7 +4,7 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2020, 2021.
 # no no <skariko@pm.me>, 2020.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-21 14:19+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-07-26 10:14+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -480,7 +480,7 @@ msgstr "* {{hero}} mette la gemma nello zaino. *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} gives %s *"
-msgstr "* {{hero} dà %s *"
+msgstr "* {{hero}} dà %s *"
 
 #: lib/resources/weapon_details.dart:
 msgid "Punch"
