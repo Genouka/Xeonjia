@@ -1,7 +1,7 @@
 name: xeonjia
 description: Solve ice puzzles and defeat enemies in an RPG world.
 
-version: 2.1.0+8
+version: 2.1.1+9
 
 environment:
   sdk: ">=2.11.0 <3.0.0"
