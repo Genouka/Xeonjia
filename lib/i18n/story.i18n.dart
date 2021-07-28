@@ -1107,7 +1107,7 @@ extension Localization on String {
           '''Thank you again.\nI wish you a good journey, come back anytime.''':
               '''De nuevo gracias.\nTe deseo un buen viaje, regresa cuando quieras.''',
           '''Good journey {{hero}}, I have faith in you.''':
-              '''Buen viaje, {{herp}}, tengo fe en ti.''',
+              '''Buen viaje, {{hero}}, tengo fe en ti.''',
           '''Yes, quite a lot''': '''Sí, bastante''',
           '''Just a little''': '''Solo un poco''',
           '''* {{hero}} found some berries! {{life-diff}} LPs have been recovered *''':
@@ -1593,7 +1593,7 @@ extension Localization on String {
         'uk': {
           '''…''': '''…''',
           '''* {{hero}} found some berries! {{life-diff}} LPs have been recovered *''':
-              '''* {{герой}} знайшов кілька ягід! Відновлено {{life-diff}} ОЖ *''',
+              '''* {{hero}} знайшов кілька ягід! Відновлено {{life-diff}} ОЖ *''',
           '''A little plant… nothing else.''':
               '''Маленька рослина … і нічого іншого.''',
           '''" Exit ↑ "''': '''" Вихід ↑ "''',
@@ -1627,7 +1627,7 @@ extension Localization on String {
           '''Hi, you look a little tired. Rest here for a moment.''':
               '''Привіт, ти виглядаєш трохи втомленим. Відпочиньте тут на мить.''',
           '''* {{hero}} rested and is now in perfect health *''':
-              '''* {{герой}} відпочив і зараз у чудовому стані *''',
+              '''* {{hero}} відпочив і зараз у чудовому стані *''',
           '''Come back anytime.''': '''Повертайтеся будь-коли.''',
           '''Be careful not to get hurt.''':
               '''Будьте обережні, щоб не поранитися.''',
@@ -1642,6 +1642,7 @@ extension Localization on String {
               '''Дякую, що врятували мене, я думаю, що краще, якщо я зараз піду додому.''',
         },
         'ru': {
+          '''City Hall''': '''Мэрия''',
           '''…''': '''…''',
           '''H-Hello.''': '''З-здравствуйте.''',
           '''Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region.''':
@@ -1652,19 +1653,45 @@ extension Localization on String {
           '''So… tell me, how are you? Is everything okay? How is the journey going?''':
               '''Итак… рассказывай, как ты? Всё нормально? Как продвигается твоё путешествие?''',
           '''Everything good, I just defeated the Hoarfrost Team and I got the first signet!''':
-              '''Всё отлично. Я победил отряд Инея и получил первую печать!''',
+              '''Всё отлично. Я одолел отряд Инея и получил первую печать!''',
           '''Oh really?! This is great news!''':
               '''Правда?! Это отличные новости!''',
           '''It has been difficult?''': '''Это было тяжело?''',
           '''Well, but if you did it, it means that you are strong!''':
               '''Ну, раз ты это провернул, значит ты силён!''',
+          '''Well, congratulations! This means that you are strong!''':
+              '''Что ж, похвально! Значит ты силён!''',
+          '''I trust that you will be able to take the other two signets as well.''':
+              '''Надеюсь, ты сможешь достать и две другие печатки.''',
           '''Since you\'re heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here.''':
               '''Раз уж ты держишь путь на восток, то можешь оказать мне любезность? Не мог бы ты доставить этот свёрток Королю Водного региона? Это в нескольких километрах к востоку отсюда.''',
+          '''Yes of course, I\'ll give it to him.''':
+              '''Да, конечно, я передам ему это.''',
+          '''Thank you very much. Here\'s to you.''':
+              '''Спасибо большое. Держи.''',
+          '''Be careful not to drop it, it is fragile.''':
+              '''Будь осторожен. Не урони его. Он хрупкий.''',
+          '''Sure, I\'ll be careful.''': '''Конечно, я буду осторожен.''',
+          '''Thank you again.\nI wish you a good journey, come back anytime.''':
+              '''Ещё раз спасибо.\nЖелаю счастливого пути, тебе всегда тут будут рады.''',
+          '''Good journey {{hero}}, I have faith in you.''':
+              '''Счастливого пути, {{hero}}. Я в тебя верю.''',
+          '''Yes, quite a lot''': '''Да, совсем непросто''',
+          '''Just a little''': '''Самую малость''',
           '''* {{hero}} found some berries! {{life-diff}} LPs have been recovered *''':
               '''* {{hero}} нашёл несколько ягод! Здоровье было восстановлено на {{life-diff}} *''',
           '''A little plant… nothing else.''':
               '''Маленькое растение… ничего более.''',
           '''" Exit ↑ "''': '''" Выход ↑ "''',
+          '''VANTOI LAB – 1F''': '''VANTOI LAB – 1 этаж''',
+          '''Sorry about the mess. Thieves have entered and turned everything upside down.''':
+              '''Извини за беспорядок. Грабители проникли и перевернули всё с ног на голову.''',
+          '''scientist''': '''учёный''',
+          '''A life\'s work has been destroyed…''':
+              '''Труды всей моей жизни уничтожены…''',
+          '''Someone used this plant to do some experiments.''':
+              '''Кто-то использовал это растение для экспериментов.''',
+          '''A broken monitor.''': '''Сломанный монитор.''',
           '''" → "''': '''" → "''',
           '''Natawn''': '''Натаун''',
           '''Safe travels, {{hero}}.\nMany before you have failed, but I am sure you will handle it right.''':
@@ -1679,6 +1706,10 @@ extension Localization on String {
               '''Перед моим уходом я должен попрощаться со своими родителями, нажав кнопку \'A\'. Иначе это будет выглядеть невежливо.''',
           '''Like my mother said, it\'s better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.''':
               '''Как сказала моя мама, будет лучше, если я зайду к соседу за наколенниками. Иначе я рискую сильно пораниться камнями.''',
+          '''I still haven\'t figured out if these monsters are malicious or just stupid.''':
+              '''Я до сих пор не понял: злые ли эти монстры или просто глупые.''',
+          '''I hate people who always say the same things.''':
+              '''Я ненавижу людей, которые говорят одно и то же.''',
           '''Hi, you look a little tired. Rest here for a moment.''':
               '''Привет, ты выглядишь слегка уставшим. Отдохни здесь немного.''',
           '''* {{hero}} rested and is now in perfect health *''':
@@ -1689,13 +1720,18 @@ extension Localization on String {
               '''Пожалуйста, помоги мне!\nУдарь его, нажав кнопку \'P\'.''',
           '''Everything good?''': '''Ты в порядке?''',
           '''Yes, thank you so much for saving my life!\nI have to admit, I was scared.\nAs a token of gratitude I give you this gem that I found a little while ago.''':
-              '''Да, спасибо большое, что спас мне жизнь!\nПризнаюсь, я испугался.\nВ знак благодарности я дарю тебе этот драгоценный камень, который я недавно нашёл.''',
+              '''Да, спасибо большое, что спас мне жизнь!\nПризнаюсь, я испугался.\nВ знак благодарности я дарю тебе этот самоцвет, который я недавно нашёл.''',
           '''Thanks, it seems very precious.''':
               '''Спасибо, я это очень ценю.''',
           '''Thanks for saving me, I think it\'s better if I go home now.''':
               '''Спасибо, что спас меня. Думаю, сейчас лучше пойду домой.''',
           '''Please help me! Save me from this monster!''':
               '''Пожалуйста, помоги мне! Спаси меня от этого монстра!''',
+          '''I can\'t escape, I have to defeat the monster to save that man.''':
+              '''Я не могу убежать. Я должен одолеть монстра, чтобы спасти этого человека.''',
+          '''Better if I check that the guy is okay.''':
+              '''Лучше, если я проверю, что с парнем всё в порядке.''',
+          '''" ← Pharmacy "''': '''" ← Аптека "''',
           '''Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays.''':
               '''Ой… да, простите, я посреди дороги…\nВы турист? Нынче их совсем немного.''',
           '''???''': '''???''',
@@ -1731,7 +1767,16 @@ extension Localization on String {
               '''" Место для пикника - Соблюдайте чистоту, спасибо "''',
           '''" Picnic area ↑ "\n" Forest Center ↓ "''':
               '''" Место для пикника ↑ "\n" Центр леса ↓ "''',
+          '''Mossy Crypt -4F''': '''Мшистый Склеп - 4 этаж''',
+          '''The snowballs container is full.''':
+              '''Контейнер для снежков полон.''',
+          '''* {{hero}} filled his snowballs container *''':
+              '''* {{hero}} наполнил контейнер снежками *''',
           '''A snowdrift.''': '''Сугроб.''',
+          '''Mossy Crypt -2F''': '''Мшистый Склеп - 2 этаж''',
+          '''We\'re watching you.''': '''Мы наблюдаем за тобой.''',
+          '''Hmm, I think that from this snowdrift I can obtain material to make new snowballs by pressing the \'A\' key.''':
+              '''Хм. Я думаю, что из этого сугроба я смогу набрать снега и пополнить запас снежков, нажав кнопку \'A\'.''',
           '''* {{hero}} found {{money-diff}} ¤ *''':
               '''* {{hero}} нашёл {{money-diff}} ¤ *''',
           '''A rock covered by moss.''': '''Камень, покрытый мхом.''',
@@ -1746,9 +1791,53 @@ extension Localization on String {
           '''My chair.''': '''Моё кресло.''',
           '''From here I can see the garden.''': '''Отсюда мне виден сад.''',
           '''Melhopolis''': '''Меллополис''',
+          '''The city center is a few kilometers to the south.''':
+              '''Центр города находится в нескольких километрах к югу.''',
           '''" VANTOI LAB "''': '''" VANTOI LAB "''',
+          '''I can see the inside of the Laboratory.''':
+              '''Я могу разглядеть врутреннюю часть лаборатории.''',
+          '''I can see the inside of the Pharmacy.''':
+              '''Я могу разглядеть врутреннюю часть аптеки.''',
           '''" Melhopolis – Regional capital "''':
-              '''" Меллополис – региональная столица "''',
+              '''" Меллополис – Региональная столица "''',
+          '''I can see the inside of the house.''':
+              '''Я могу разглядеть врутреннюю часть дома.''',
+          '''Route 3''': '''Дорога 3''',
+          '''Hey! Hi {{hero}}!''': '''Эй! Привет, {{hero}}!''',
+          '''H-hi, you know me?''': '''П-привет, ты меня знаешь?''',
+          '''Well, you are the hero of this year, you are quite famous. Are you here to visit the crypt?''':
+              '''Ну, ты герой в этом году, ты очень знаменит. Вы здесь, чтобы посетить склеп?''',
+          '''Yes. If I have not misunderstood, here\'s one of the 3 signets I need to access the Xeonjia tower.''':
+              '''Да. Если я не ошибся, то здесь одна из 3 печатей, которые мне необходимы для входа в башню Ксеонии.''',
+          '''Ah that\'s true, I\'ve heard of it.\nBeware that here is full of monsters and bad people.''':
+              '''Ну, это правда. Я слышала об этом.\nОстерегайся, здесь полно монстров и плохих людей.''',
+          '''Ok thanks, I\'ll be careful.\nBut… who are you?''':
+              '''Ясно, спасибо, я буду аккуратен.\nНо… как тебя зовут?''',
+          '''Oh, yes sorry I forgot to introduce myself.''':
+              '''Ой, да, извини. Я забыла представиться.''',
+          '''My name is Shen, I am a scientist.''':
+              '''Меня зовут Шен, я учёная.''',
+          '''Nice to meet you, Shen.''': '''Приятно познакомиться, Шен.''',
+          '''Oh, by the way, I think this might help you.''':
+              '''О, кстати, думаю, это тебе пригодится.''',
+          '''* {{hero}} got a SNOWBALLS CONTAINER *''':
+              '''* {{hero}} получил КОНТЕЙНЕР ДЛЯ СНЕЖКОВ *''',
+          '''It\'s an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \'S\' button.\nIt can contain up to 10 snowballs.''':
+              '''Это моё изобретение. Оно позволит тебе носить с собой снежки, которые ты можешь метать в своих противников, нажав кнопку \'S\'.\nКонтейнер вмещает в себя 10 снежков.''',
+          '''Wow! I\'m sure it\'ll come in handy. Thank you.''':
+              '''Вау! Я уверен, это пригодится. Спасибо.''',
+          '''You\'re welcome.''': '''Пожалуйста.''',
+          '''Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too.''':
+              '''К сожалению, не так давно все чертежи проекта были украдены, а значит, они есть и у приспешников Короля Зла.''',
+          '''Well, at least it will be an equal fight.''':
+              '''Что ж, по крайней мере, мы на равных.''',
+          '''Ha ha, well, you\'re right.''': '''Ха ха, ну, ты прав.''',
+          '''Now I have to leave you, I have to study a strange rock that I found a little while ago.''':
+              '''Сейчас мне придётся оставить тебя. Мне нужно изучить странный камень, который я недавно нашла.''',
+          '''We\'ll see again. Good luck!''': '''Ещё увидимся. Удачи!''',
+          '''Bye Shen, thanks again!''': '''Пока, Шен, ещё раз спасибо!''',
+          '''I have to go through the crypt to get the first signet.''':
+              '''Мне нужно пройти через склеп, чтобы получить первую печатку.''',
           '''This is not a place for kids, go home.''':
               '''Это не место для детей, возвращайся домой.''',
           '''Weird things happen in this area…''':
@@ -1757,15 +1846,84 @@ extension Localization on String {
               '''" Следуй дорожным знакам, если заблудишься "''',
           '''" Xeonjia Tower ↑ "''': '''" Башня Ксеония ↑ "''',
           '''Mitsu Forest''': '''Лес Мицу''',
+          '''Nobody knows what the writing on this stone means, it is not even known who wrote it.''':
+              '''Никто не знает, что означает эта надпись на этом камне. Неизвестно даже, кто её написал.''',
+          '''Do you want to hear the legend of this tree again?''':
+              '''Хочешь услышать легенду об это дереве ещё раз?''',
+          '''Are you interested to learn about the legend of this tree?''':
+              '''Тебе интересно узнать легенду об это дереве?''',
+          '''There was once a devastating war in this area and everything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all the souls who left us.\nIt has the particularity of withering in spring and blooming in the other seasons.\nEvery spring the souls leave this tree to make other plants bloom and then, at the end of spring, the souls return to flourish again this tree.\nThat\'s all I know about this tree.\nI hope to have time to see the end of this winter season which has persisted for more than 60 years now.''':
+              '''Однажды в этом районе шла разрушительная война, и всё сровняли с землёй.\nНикого и ничего не сохранилось, кроме этого дерева.\nГоворят, что это дерево заключает в себе все души, покинувшие нас.\nВесной оно вянет, а в остальные времена года цветёт.\nКаждую весну души покидают это дерево, чтобы заставить цвести другие растения, а затем, в конце весны, души возвращаются, чтобы это дерево снова расцвело.\nЭто всё, что я знаю об этом дереве.\nЯ надеюсь, что успею увидеть конец этой зимы, которая длится уже более 60 лет.''',
+          '''Ok, it was a long and boring story after all.''':
+              '''Ладно, всё-таки это длинная и скучная история.''',
+          '''Yes please''': '''Да, пожалуйста''',
+          '''No thanks''': '''Нет, спасибо''',
+          '''A computer turned off. Looks like a key is needed to turn it on.''':
+              '''Компьютер выключен. Похоже, чтобы его включить, нужен ключ.''',
+          '''Route 2''': '''Дорога 2''',
           '''" Melhopolis → "''': '''" Меллополис → "''',
+          '''Hi, I\'m sorry but we\'re closed. Once this was a busy shop, but now it doesn\'t even make sense to stay open.''':
+              '''Привет. Извини, но мы закрыты. Когда-то этот магазин был посещаемым, но теперь нет смысла даже оставаться открытыми.''',
+          '''shopkeeper''': '''торговец''',
+          '''It\'s full of old junk here.''':
+              '''Здесь полно всякого барахла.''',
+          '''I\'ve never seen so much dust.''':
+              '''Я никогда не видел столько пыли.''',
+          '''Here it\'s full of snow globes with a miniaturized Mitsu Forest inside. When they were built snow was a very rare phenomenon here and it was much more appreciated.''':
+              '''Тут полно снежных шаров с миниатюрным лесом Мицу внутри. Когда они были изготовлены, снег здесь был очень редким явлением и ценился гораздо больше.''',
+          '''There are very expensive junk here.''':
+              '''Здесь очень дорогой хлам.''',
+          '''I think this vase was placed here on purpose to block the passage.''':
+              '''Думаю, эту вазу здесь поставили нарочно, чтобы загородить проход.''',
           '''You are the chosen one for this year, right? My son was too many years ago.''':
               '''Ты же избранный в этом году, верно? Мой сын тоже был избран несколько лет назад.''',
           '''Unfortunately he failed to defeat the King of Evil…''':
               '''К сожалению, ему не удалось победить Короля Зла…''',
+          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
+              '''Я запланировал неожиданную свадьбу своему сыну. Надеюсь, он не узнает.''',
+          '''This part is under construction.''':
+              '''Эта часть находится в стадии разработки.''',
+          '''Pharmacy''': '''Аптека''',
+          '''Welcome to my shop!''': '''Добро пожаловать в мой магазин!''',
+          '''pharmacist''': '''аптекарь''',
           '''" ← Sacred Tree "\n" Melhopolis City Center → "''':
               '''" ← Священное дерево "\n" Центр города Меллополис → "''',
+          '''I advise you to take another path.\nThese monsters are too strong.''':
+              '''Советую пойти другим путём.\nЭти монстры слишком сильны.''',
           '''Xeonjia Tower''': '''Башня Ксеония''',
+          '''Hi Milla, are you ok? Did you get here without any problems?''':
+              '''Привет, Мила, ты в порядке? Ты попала сюда без каких-либо проблем?''',
+          '''Hii {{hero}}!''': '''Привееет, {{hero}}!''',
+          '''Yes, I cleverly managed to avoid the monsters that were along the way!''':
+              '''Да, мне удалось ловко избежать монстров, которые встретились мне по пути!''',
+          '''I love those cute little green worms!''':
+              '''Обожаю этих симпатичных зелёных червячков!''',
+          '''…S-such weird tastes here.''': '''…К-как здесь странно пахнет.''',
+          '''Unkind!''': '''Недружелюбно!''',
+          '''Aaanyway, look here! This is the tower where the King of Evil resides!''':
+              '''Не вааажно, смотри сюда! Это башня, где обитает Король Зла!''',
+          '''Oh really? Are we there yet?''': '''О, правда? Мы уже на месте?''',
+          '''It seems so… but it\'s closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets.''':
+              '''Похоже… но закрыто!\nЭтот милый джентльмен объяснил мне, что для того, чтобы попасть в башню, нужны 3 печатки.''',
+          '''Signets?''': '''Печатки?''',
+          '''I did not understand exactly what they are, but if I have not misunderstood they are kept in crypts present in each region of the Kingdom.''':
+              '''Я не совсем поняла, что это такое, но точно уверена, что они хранятся в склепах, которые расположены в каждом регионе Королевства.''',
+          '''Mm… Then I really think that I have to set out in search of these crypts…''':
+              '''Мм… Теперь я и вправду задумался, чтобы отправиться на поиски этих склепов…''',
+          '''I guess you have no other choice.''':
+              '''Думаю, что у тебя нет другого выбора.''',
+          '''Good luck!''': '''Удачи!''',
+          '''Do your best!''': '''Сделай всё возможное!''',
+          '''I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent.''':
+              '''Я ненавижу эту маленькую девочку… Она донимала меня тысячей вопросов и плакала, пока я не сказал ей, чего она хотела. Как это неуместно.''',
+          '''One signet is not enough.''': '''Одной печатки недостаточно.''',
+          '''" Xeonjia Tower – Dwelling of the King of Evil. Stay away "''':
+              '''" Башня Ксеония – Обитель Короля Зла. Держитесь подальше "''',
           '''This door is closed.''': '''Эта дверь закрыта.''',
+          '''This door is closed, I need the 3 signets to open it.''':
+              '''Эта дверь закрыта. Мне потребуются 3 печатки, чтобы её открыть.''',
+          '''I should go to the tower.''': '''Я долже пойти в башню.''',
+          '''The tower is so ugly.''': '''Башня такая мерзкая.''',
           '''Home''': '''Дом''',
           '''Good morning mom!''': '''Доброе утро, мам!''',
           '''Hi {{hero}}! Did you sleep well?''':
@@ -1794,12 +1952,36 @@ extension Localization on String {
               '''В прошлый раз на меня напали, когда я шёл через лес.\nЯ туда больше не вернусь.''',
           '''If you want to enter the forest you have to be careful, my grandson risked getting hurt there.''':
               '''Если хочешь пойти в лес, то будь осторожен: мой внук там пострадал.''',
+          '''Do you think piglets will one day be a common pet?''':
+              '''Как ты думаешь, будут ли поросята широко распространены как домашние питомцы?''',
+          '''I think so too.''': '''Я тоже так считаю.''',
+          '''Oh, I hope you are not right.''': '''Оу, надеюсь, ты не прав.''',
+          '''I like piglets.''': '''Мне нравятся поросята.''',
+          '''Yes''': '''Да''',
+          '''No''': '''Нет''',
+          '''Mossy Crypt -3F''': '''Мшистый Склеп - 3 этаж''',
+          '''My work is so boring…''': '''Моя работа так скучна…''',
           '''Hi, I\'m an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I\'ll help you.''':
               '''Привет, я - рабочий Королевства.\nЕсли ты заблудишься или у тебя возникнут трудности с поиском дороги; возвращайся ко мне, и я тебе помогу.''',
+          '''Are you stuck?\nTake the path behind the blue tree.''':
+              '''Ты застрял?\nСтупай по тропинке после синего дерева.''',
           '''A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it\'s dangerous and infested with monsters.''':
               '''В нескольких метрах отсюда располагается лес Мицу. Когда-то он привлекал немало туристов, так как он считался священным местом, но теперь он опасен и кишит монстрами.''',
+          '''Hoarfrost Team members came to our house because they wanted a gem that I found on the ground.\nWe managed to keep it hidden from them but we don\'t want to have problems anymore.\nWe don\'t even need it after all, can we give it to you?''':
+              '''Члены отряда Инея пришли в наш дом, потому что им нужен был самоцвет, который я нашёл на земле.\nМы смогли скрыть его от них, но нам больше не нужны проблемы.\nВ конце концов, он нам даже не нужен. Можем ли мы его отдать тебе?''',
+          '''Here\'s to you!''': '''Вот, держи!''',
+          '''Thank you!''': '''Спасибо!''',
+          '''Oh, ok. Then I\'ll have to think about what to do with this gem.''':
+              '''Ну, ладно. Тогда мне придётся придумать, что делать с этим самоцветом.''',
+          '''Protect that gem well.''': '''Хорошо охраняйте этот самоцвет.''',
+          '''Be careful when dealing with the Hoarfrost Team.''':
+              '''Будь осторожен, имея дело с отрядом Инея.''',
+          '''Mind your own business.''': '''Занимайтесь своим делом.''',
           '''This plant is very fragrant.''':
               '''Это растение очень ароматное.''',
+          '''This vase is very heavy, I can\'t move it.''':
+              '''Эта ваза очень тяжёлая. Я не могу её сдвинуть.''',
+          '''Yes thanks''': '''Да, спасибо''',
           '''NEIGHBOR\'S HOUSE''': '''ДОМ СОСЕДА''',
           '''Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones.\nI made them by hand. Here\'s to you!''':
               '''Здравствуй, юноша, как ты? Я изготовил для тебя наколенники. Они понадобятся тебе, чтобы смягчать удары о камни.\nЯ сделал их своими руками. Вот, держи!''',
@@ -1811,6 +1993,68 @@ extension Localization on String {
           '''Thank you very much!''': '''Спасибо Вам большое!''',
           '''Since the shin guards I gave you do not fully protect you, try to think diligently about the moves you make.''':
               '''Поскольку наколенники, которые я тебе выдал, не полностью тебя защитят, постарайся тщательно обдумывать свой путь.''',
+          '''I\'m sorry but this road is closed.\nWork is underway to restore the railway system.''':
+              '''Извините, но эта дорога закрыта.\nВедутся восстановительные работы железной дороги.''',
+          '''Welcome to the City Hall.''': '''Добро пожаловать в мэрию.''',
+          '''I can\'t wait till they finish to restore the railway system, it no longer work since the ice arrival.''':
+              '''Жду не дождусь, когда закончат восстанавливать железную дорогу. Она перестала работать с момента появления льда.''',
+          '''My wife remained blocked on the other side of the kingdom, I wonder if I will ever see her again.''':
+              '''Моя жена оказалась заблокированной с другой стороны королевства. Не знаю, смогу ли я увидеть её вновь.''',
+          '''" City Hall ↑ "''': '''" Мэрия ↑ "''',
+          '''" Route 4 → "''': '''" Дорога 4 → "''',
+          '''Before continuing I\'d like to visit the City Hall.''':
+              '''Прежде чем продолжить, я бы хотел посетить мэрию.''',
+          '''The City Hall seems spacious.''': '''Мэрия кажется просторной.''',
+          '''You\'re lucky, but it doesn\'t end here, guaranteed.''':
+              '''Тебе повезло, но это ещё не конец, гарантирую.''',
+          '''I will defeat you.''': '''Я тебя уничтожу.''',
+          '''You will not escape me.''': '''Тебе от меня не сбежать.''',
+          '''I can\'t escape. I have to take the first signet.''':
+              '''Я не могу уйти. Я должен забрать первую печатку.''',
+          '''Here it is, this is the first signet!''':
+              '''Вот она, это первая печатка!''',
+          '''I can get out of here now.''': '''Надо выбираться отсюда.''',
+          '''The henchmen are after me! I\'ll get the signet later.''':
+              '''На меня охотятся приспешники! Я заберу печатку позже.''',
+          '''I didn\'t think you would get this far, kid.''':
+              '''Я не думал, что ты зайдёшь так далеко, малыш.''',
+          '''W-Who are you? Who are you guys?''': '''Вы к-кто? Вы кто такие?''',
+          '''I\'m surprised that my name is not known among the woods of your village.''':
+              '''Я удивлён, что моё имя не известно в лесах твоей деревни.''',
+          '''Anyway, I\'m Dr. Lache and I\'m the leader of the Hoarfrost Team.''':
+              '''В общем, я доктор Лэйч, предводитель отряда Инея.''',
+          '''dr. lache''': '''доктор лэйч''',
+          '''S-So you\'re the one who spread terror and violence through the henchmen as ordered by the King of Evil?''':
+              '''Т-так Вы тот, кто сеет насилие и ужас благодаря приспешникам по приказам Короля Зла?''',
+          '''As ordered by the King of Evil? HAHAHA''':
+              '''По приказам Короля Зла? АХАХА''',
+          '''I don\'t take orders from anyone. Between me and the King of Evil there is a peer collaboration.''':
+              '''Я никому не подчиняюсь. Между мной и Королём Зла взаимное сотрудничество.''',
+          '''Be that as it may, I won\'t let you continue your plans.''':
+              '''Как бы то ни было, я не позволю Вам продолжать воплощать свои планы в жизнь.''',
+          '''I\'m {{hero}}, I\'m the chos-''':
+              '''Меня зовут {{hero}}. Меня избра-''',
+          '''I know very well who you are, you\'re the chosen hero and blah, blah, blah.\nI don\'t have time for this.''':
+              '''Мне хорошо известно кто та, ты избранный герой и бла-бла-бла.\nУ меня нет на это времени.''',
+          '''I know you\'re interested in the signet, defeat my henchmen and it\'s yours.\nNow get out of my way.''':
+              '''Я знаю, что тебя интересует печатка. Победи моих преспешников и она твоя.\nА теперь прочь с моего пути.''',
+          '''I won\'t let you go so eas-''':
+              '''Я не позволю тебе уйти так про-''',
+          '''Well, well, well… you\'ll have to deal with us now.''':
+              '''Так, так, так… теперь ты будешь иметь дело с нами.''',
+          '''I\'m Iosa.''': '''Я Йоза.''',
+          '''And I\'m Joza.''': '''А я Джоза.''',
+          '''We are the Iosa&Joza brothers and we will be your worst nightmare.''':
+              '''Мы браться Йоза и Джоза, и мы – твой худший кошмар.''',
+          '''I\'m not scared of you, let\'s see what you are capable of!''':
+              '''Я вас не боюсь. Посмотрим, на что вы способны!''',
+          '''Now you will see.''': '''Сейчас увидишь.''',
+          '''Let\'s fight!''': '''Сражайся!''',
+          '''iosa&joza''': '''йоза&джоза''',
+          '''A rocky wall covered by moss.''':
+              '''Каменная стена, покрытая мхом.''',
+          '''iosa''': '''йоза''',
+          '''joza''': '''джоза''',
           '''Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck.''':
               '''Иногда среди веток растений ты можешь найти несколько ягод.\nОднажды мне довелось найти даже потерянные вещи.''',
           '''Oh, I was about to take those berries.''':
@@ -1823,6 +2067,11 @@ extension Localization on String {
               '''На земле часто попадаются камни КСЕОН (¤), на которые ты можешь купить вещи в магазинах.''',
           '''It seems that once there was a path here.''':
               '''Кажется, когда-то здесь была тропинка.''',
+          '''Mossy Crypt -1F''': '''Мшистый Склеп - 1 этаж''',
+          '''I advise you not to continue, you are running into big trouble.\nI\'ll report your presence to my boss.''':
+              '''Не советую оставаться, у Вас большие проблемы.\nЯ сообщу о Вашем присутствии своему боссу.''',
+          '''If you decide to continue you will regret it.''':
+              '''Если не остановишься, то пожалеешь об этом.''',
           '''Route 1''': '''Дорога 1''',
           '''The ice is so slippery, have you noticed?\nI feel more comfortable on the snow.''':
               '''Лёд такой скользкий, ты заметил?\nМне комфортнее на снегу.''',
@@ -1830,6 +2079,14 @@ extension Localization on String {
               '''Кажется, что-то скрывается в ветвях этого растения…\nЭто камень!''',
           '''This is a very strange stone… Never seen anything like this before.''':
               '''Это очень странный камень… Ничего подобного я раньше не видел.''',
+          '''VANTOI LAB – 2F''': '''VANTOI LAB – 2 этаж''',
+          '''What a mess! I have to tidy up!''':
+              '''Какой бардак! Я должен прибраться!''',
+          '''Some boulders are placed by us, the workers of the Kingdom.\nIn this way it\'s easier to reach all places.''':
+              '''Некоторые валуны кладём мы, рабочие Королевства.\nТаким образом легче добраться до любого места.''',
+          '''" Souvenir shop "''': '''" Сувенирная лавка "''',
+          '''I can see the inside of the shop.''':
+              '''Я могу разглядеть врутреннюю часть магазина.''',
           '''Melhopolis is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though.''':
               '''Меллополис - административный центр региона.\nОднако в настоящее время процветают коррупция, бедность и преступность.''',
           '''Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here.''':
@@ -1842,6 +2099,13 @@ extension Localization on String {
               '''" Лес Мицу - Добро пожаловать, уважайте природу и не забудьте посетить сувенирную лавку справа "''',
           '''Once this was a very touristy place, the Kingdom tried to make money from it.''':
               '''Когда-то это место было популярным среди туристов, и Королевство пыталось на этом заработать.''',
+          '''Test tubes and other scientific stuff.''':
+              '''Пробирки и другие научные вещи.''',
+          '''Someone has turned everything upside down.''':
+              '''Кто-то перевернул всё вверх дном.''',
+          '''A rocky wall.''': '''Каменная стена.''',
+          '''A wall.''': '''Стена.''',
+          '''A rock.''': '''Камень.''',
           '''A little plant.''': '''Маленькое растение.''',
           '''A little plant without leaves.''':
               '''Маленькое растение без листьев.''',
@@ -1851,25 +2115,40 @@ extension Localization on String {
           '''This type of plant is strange.''': '''Странная форма растения.''',
           '''It\'s not a good thing to look into other people\'s homes.''':
               '''Невежливо заглядывать в чужие дома.''',
+          '''This is a pharmacy.''': '''Это аптека.''',
+          '''man''': '''мужчина''',
           '''lumberjack''': '''лесоруб''',
-          '''young-girl''': '''молодая девушка''',
+          '''young-girl''': '''девчонка''',
+          '''youngster''': '''мальчик''',
           '''elderly''': '''пожилая женщина''',
           '''guy''': '''парень''',
           '''old-man''': '''старик''',
+          '''adventurer''': '''путешественник''',
           '''dude''': '''приятель''',
+          '''girl''': '''девочка''',
           '''oldster''': '''пожилой мужчина''',
           '''henchman''': '''паж''',
           '''worker''': '''рабочий''',
+          '''I don\'t know what this means.''':
+              '''Я не знаю, что это значит.''',
+          '''I can\'t go beyond this.''': '''Я не могу пройти дальше.''',
           '''milla''': '''мила''',
+          '''shen''': '''шен''',
           '''The weather is good today.''': '''Хорошая погода сегодня.''',
           '''A painting that depicts this area long ago.''':
               '''Картина отражает эту местность в прошлом.''',
           '''It\'s full of books here.''': '''Здесь полно книг.''',
+          '''A closed door.''': '''Закрытая дверь.''',
           '''There is some food between the mattresses of this sofa.''':
               '''В складках этого дивана виднеются кусочки еды.''',
           '''This is a wall.''': '''Это стена.''',
+          '''Oink !''': '''Хрю !''',
+          '''This pig looks very happy.''':
+              '''Эта свинка выглядит очень счастливой.''',
           '''A strange icosahedral stone''':
               '''Странный икосаэдральный камень''',
+          '''Package of the King''': '''Свёрток Короля''',
+          '''First Signet''': '''Первая печатка''',
         },
         'pl': {
           '''…''': '''…''',

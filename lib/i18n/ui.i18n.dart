@@ -311,7 +311,7 @@ extension Localization on String {
               '''* {{hero}} mette %s nello zaino. *''',
           '''* {{hero}} puts the gem in the backpack. *''':
               '''* {{hero}} mette la gemma nello zaino. *''',
-          '''* {{hero}} gives %s *''': '''* {{hero} dà %s *''',
+          '''* {{hero}} gives %s *''': '''* {{hero}} dà %s *''',
           '''Punch''': '''Pugno''',
           '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
               '''Colpisci il nemico di fronte a te.\nQuesta è l\'arma più semplice. Hai infiniti PP.''',
@@ -566,7 +566,7 @@ extension Localization on String {
               '''Решай ледяные головоломки и побеждай врагов в РПГ мире.\n\nПроведи пальцем вправо, чтобы узнать базовые понятия.''',
           '''Modes''': '''Режимы игры''',
           '''There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the "King of Evil" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win.''':
-              '''В Xeonjia есть два режима игры:\n\n1) Сюжетная линия: мир был заморожен, и твоя задача - победить "Короля Зла" и спасти королевство.\n\n2) Сетевая игра: побеждай врагов, набирай очки и веди свою команду к победе.''',
+              '''В Xeonjia есть два режима игры:\n\n1) Сюжетная линия: мир был заморожен, и твоя задача - победить "Короля Зла" и спасти королевство.\n\n2) Мультиплеер: побеждай врагов, набирай очки и веди свою команду к победе.''',
           '''Movements''': '''Перемещения''',
           '''Swipe your finger to move your character across the world.\nKeep in mind that you can\'t stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!''':
               '''Перемещай своего персонажа по миру, проводя пальцем по экрану.\nИмей в виду, что ты не сможешь остановиться, скользя по льду, пока не достигнешь стены, валуна или другого препятствия.\n\nПодумай, как лучше построить свой путь!''',
@@ -575,7 +575,7 @@ extension Localization on String {
               '''Обращай внимание на своё здоровье.\nМножество врагов, ловушек и опасностей попытаются причинить тебе вред.''',
           '''Weapons''': '''Оружие''',
           '''You\'ll need weapons to overcome barriers and defeat enemies.\n\nTap the screen in the desired direction or press the shoot button to hit.\nBe aware that some weapons have few hits, so use them wisely.''':
-              '''Тебе понадобится оружие, чтобы преодолевать преграды и побеждать врагов.\n\nКоснись экрана в нужном направлении или нажми кнопку удара, чтобы ударить цель.\nИмей в виду, что у некоторых видов оружия лишь небольшое количество использований, поэтому используй их с умом.''',
+              '''Тебе понадобится оружие, чтобы преодолевать преграды и побеждать врагов.\n\nКоснись экрана в нужном направлении или нажми кнопку удара, чтобы поразить цель.\nИмей в виду, что у некоторых видов оружия лишь небольшое количество использований, поэтому используй их с умом.''',
           '''Enemies''': '''Враги''',
           '''Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have life points too.''':
               '''Будь осторожен! Мир наполнен опасными врагами, готовыми атаковать тебя!\nУдарь их несколько раз, чтобы уничтожить, ведь они тоже имеют здоровье.''',
@@ -626,29 +626,50 @@ extension Localization on String {
           '''App language''': '''Язык приложения''',
           '''System default''': '''Системный''',
           '''By %s''': '''by %s''',
-          '''App developed by %s''': '''Разработчик приложения''',
-          '''Version: %s''': '''%s''',
+          '''App developed by %s''': '''Приложение разработал %s''',
+          '''Version: %s''': '''Версия: %s''',
           '''App version''': '''Версия приложения''',
           '''Donate''': '''Внести пожертвование''',
-          '''Support the development''': '''поддержав разработку''',
+          '''Support the development''': '''Поддержать разработку''',
           '''Translate''': '''Перевести игру''',
-          '''Translate in your language''': '''на свой язык''',
-          '''Updates''': '''Проверить обновления''',
-          '''Search for updates''': '''в Google Play''',
+          '''Translate in your language''': '''Перевести на свой язык''',
+          '''Updates''': '''Обновления''',
+          '''Search for updates''': '''Найти обновления''',
           '''View source code''': '''Посмотреть исходный код''',
-          '''Look at the source code''': '''на gitlab.com''',
+          '''Look at the source code''':
+              '''Посмотреть исходный код на gitlab.com''',
           '''Report bugs''': '''Сообщить об ошибках''',
           '''Report bugs or request new feature''':
-              '''или предложить новую функциональность''',
+              '''Сообщить об ошибках или предложить новую функциональность''',
           '''Send email''': '''Связаться по электронной почте''',
           '''Ask for something or request a new feature''':
               '''Спросить что-то или предложить новую функциональность''',
-          '''View License (GPLv3)''': '''Посмотреть лицензию''',
-          '''Read software license''': '''GPLv3''',
+          '''View License (GPLv3)''': '''Посмотреть лицензию (GPLv3)''',
+          '''Read software license''': '''Прочитать лицензию ПО''',
           '''Third Party Licenses''': '''Лицензии третьих лиц''',
-          '''Read third party notices''': ''' ''',
+          '''Read third party notices''':
+              '''Прочитать предупреждения третьих лиц''',
           '''Ok''': '''ОК''',
           '''Close map''': '''Закрыть карту''',
+          '''You went too far!''': '''Ты зашёл слишком далеко!''',
+          '''Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback.''':
+              '''К сожалению, продолжение истории ещё не доступно :(\nНадеюсь, он вскоре станет доступен.\n\nА пока ты можешь поддержать развитие Xeonjia, внеся пожертвование или оставив отзыв.''',
+          '''Report a bug or ask something''':
+              '''Сообщить об ошибке или что-то спросить''',
+          '''Go back''': '''Возвращайся''',
+          '''Back to menu''': '''Вернуться в меню''',
+          '''You run out of energy !''': '''Твои силы иссякли !''',
+          '''You lost %s ¤ and woke up after a short nap''':
+              '''Ты потерял %s ¤ и очнулся после короткого сна''',
+          '''Your team won''': '''Ваша команда выиграла''',
+          '''Your team lost''': '''Ваша команда проиграла''',
+          '''The time is over.''': '''Время вышло.''',
+          '''%s points have been achieved.''': '''Набрано %s очков.''',
+          '''Do you want to restart this game?''':
+              '''Вы хотите перезапустить эту игру?''',
+          '''Continue''': '''Продолжить''',
+          '''Yes''': '''Да''',
+          '''No''': '''Нет''',
           '''Loading…\nPlease wait''': '''Загрузка...\nПодождите, пожалуйста''',
           '''pause''': '''пауза''',
           '''restart''': '''перезапустить''',
@@ -671,11 +692,23 @@ extension Localization on String {
           '''\n\nGame data since the last time you changed your location will be lost.''':
               '''\n\nИгровые данные будут утеряны с последней посещённой локации.''',
           '''Shop''': '''Магазин''',
+          '''What do you need?''': '''Что Вам нужно?''',
+          '''Let me know if you need anything else.''':
+              '''Дайте знать, если Вам понадобится что-нибудь ещё.''',
+          '''There are still monsters here. I can\'t escape.''':
+              '''Здесь по-прежнему есть монстры. Я не могу убежать.''',
           '''* {{hero}} puts %s in the backpack. *''':
               '''* {{hero}} кладёт %s в рюкзак. *''',
           '''* {{hero}} puts the gem in the backpack. *''':
               '''* {{hero}} кладёт драгоценный камень в рюкзак. *''',
           '''* {{hero}} gives %s *''': '''* {{hero}} отдаёт %s *''',
+          '''Punch''': '''Удар''',
+          '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
+              '''Бей врага перед собой.\nЭто самое простое оружие. Ограничений на использование нет.''',
+          '''Throw snowballs in front of you.''':
+              '''Кидай снежки перед собой.''',
+          '''Leave explosive mines on the floor.\nA mine explodes if someone except you walks on it.''':
+              '''Оставляй под собой взрывные мины.\nМина взорвётся, если по ней пройдёт кто-то, кроме тебя.''',
           '''What\'s your name?''': '''Как тебя зовут?''',
           '''Too short.''': '''Слишком коротко.''',
           '''Insert your name here''': '''Введи здесь своё имя''',
