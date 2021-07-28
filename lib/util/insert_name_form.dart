@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:xeonjia/i18n/ui.i18n.dart';
+import 'package:xeonjia/util/local_data_controller.dart';
 
 // Form used to insert player name
 Widget insertNameForm(GlobalKey key, TextEditingController textFieldController,
@@ -17,7 +18,10 @@ Widget insertNameForm(GlobalKey key, TextEditingController textFieldController,
           SystemChrome.restoreSystemUIOverlays();
         },
         validator: (value) {
-          if (value == '') return "What's your name?".i18n;
+          if (value == '') {
+            return "What's your name?".i18n +
+                (settings.useSystemFont ? ' [A-Z]' : '');
+          }
           return value.trim().length < 2 ? 'Too short.'.i18n : null;
         },
         inputFormatters: [
