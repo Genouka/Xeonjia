@@ -10,7 +10,7 @@ const languageName = {
   'uk': ['Ukrainian', 'Українська (ALPHA)'],
   'ar': ['Arabic', 'العربية'],
   'pt': ['Portuguese', 'Português'],
-  'ru': ['Russian', 'Русский (BETA)'],
+  'ru': ['Russian', 'Русский'],
   'ja': ['Japanese', '日本語'],
   'ko': ['Korean', '한국어'],
   'tr': ['Turkish', 'Türkçe'],

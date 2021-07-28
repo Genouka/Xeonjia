@@ -13,13 +13,13 @@ const List<Locale> enabledLocales = [
   Locale('es'),
   Locale('fr'),
   Locale('it'),
+  Locale('ru'),
   Locale('vi'),
 ];
 final List<Locale> supportedLocales = [
   ...enabledLocales,
   const Locale('de'),
   const Locale('id'),
-  const Locale('ru'),
   const Locale('uk'),
   const Locale('zh'),
 ];
