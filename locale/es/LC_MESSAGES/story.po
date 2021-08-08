@@ -5,7 +5,7 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2020, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-07-26 10:14+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-08-07 09:27+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -933,7 +933,7 @@ msgstr "Aquí lo tienes, ¡el primer medallón!"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I can get out of here now."
-msgstr "No puedo salir de aquí."
+msgstr "Ahora puedo salir de aquí."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "The henchmen are after me! I'll get the signet later."

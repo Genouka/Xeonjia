@@ -1,0 +1,4 @@
+* Neuen Teil der Geschichte hinzugefügt
+* Diverse Verbesserungen und neue Funktionen
+* Aktualisierte Übersetzungen und weitere Sprachen (beta)
+* Fehlerbehebungen

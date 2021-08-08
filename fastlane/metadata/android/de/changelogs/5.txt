@@ -1,0 +1,3 @@
+* Animationen hinzugefügt
+* Querformat
+* Fehlerbehebungen

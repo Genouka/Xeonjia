@@ -6,8 +6,9 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
 # zwergwolf <sadness@gmx.de>, 2021.
+# araccaine <arac.caine@posteo.de>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-25 16:13+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-08-08 21:14+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -39,7 +40,7 @@ msgstr "Bevor wir beginnen, sag mir deinen Namen. Dieser wird im Spiel verwendet
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts."
-msgstr "Löse Eis Puzzel und besiege deine Gegner in einer RPG Welt.\n\nWische nach Rechts, um die Grundlagen zu erlernen."
+msgstr "Löse Eispuzzles und besiege deine Gegner in einer Rollenspielwelt.\n\nWische nach Rechts, um die Grundlagen zu erlernen."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Modes"
@@ -47,7 +48,7 @@ msgstr "Modi"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the \"King of Evil\" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win."
-msgstr "In Xeonjia gibt es zwei Spielmodi:\n\n1) Story-Mode: Die Welt ist von einer Eisschicht bedeckt und es ist deine Aufgabe den \"König des Bösen\" zu besiegen und das Königreich zu retten.\n\n2)Multiplayer: Besiege Gegner, sammel Punkte und führe dein Team zum Sieg."
+msgstr "In Xeonjia gibt es zwei Spielmodi:\n\n1) Geschichte-Modus: Die Welt ist von einer Eisschicht bedeckt und es ist deine Aufgabe den „König des Bösen“ zu besiegen und das Königreich zu retten.\n\n2)Mehrspieler: Besiege Gegner, sammel Punkte und führe dein Team zum Sieg."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Movements"
@@ -103,11 +104,11 @@ msgstr "Spiel starten"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Multiplayer Mode"
-msgstr "Multiplayer-Modus"
+msgstr "Mehrspieler-Modus"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press \"Play\"."
-msgstr ""
+msgstr "Das Ziel dieses Modus ist es, Gegner zu besiegen, Punkte zu sammeln und dein Team zum Sieg zu führen.\n\nDie Regeln sind einfach:\n- Die Spieler werden in zwei Teams eingeteilt.\n- Jedes Mal, wenn ein Spieler einen Gegner besiegt, erhält dessen Team 100 Punkte.\n- Das Team, das die erforderliche Punktzahl erreicht, gewinnt.\n\nDeine Mannschaftskameraden sind die Roten.\n\nIm Moment ist es nur möglich, gegen Computergesteurte Gegner zu spielen.\n\nWähle den Spielort und konfiguriere das Spiel.\nWenn du bereit bist, drücke „Spiel starten“."
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Okay, got it!"
@@ -119,7 +120,7 @@ msgstr "Karte"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Place to play"
-msgstr ""
+msgstr "Spielort"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Difficulty"
@@ -219,7 +220,7 @@ msgstr "Dein Name"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Click here to change the name used in story mode"
-msgstr "Klicke hier, um den Namen der im Story-Modus benutzt wird zu ändern"
+msgstr "Klicke hier, um den Namen der im Geschichte-Modus benutzt wird zu ändern"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Discard"
@@ -391,7 +392,7 @@ msgstr "Nein"
 
 #: lib/game/widgets/loading_page.dart:
 msgid "Loading…\nPlease wait"
-msgstr "Lädt…\nBitte warten"
+msgstr "Lädt …\nBitte warten"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "pause"
@@ -427,11 +428,11 @@ msgstr "Spielzeit: %s min"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "your defeats: %s"
-msgstr ""
+msgstr "Deine Niederlagen: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "enemies defeated: %s"
-msgstr ""
+msgstr "Besiegte Gegner: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "your points: %s"
@@ -447,7 +448,7 @@ msgstr "Bist du sicher, dass du dieses Spiel neu beginnen magst?"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "It will restart from the last location change."
-msgstr ""
+msgstr "Es wird ab der letzten Ortsveränderung neu gestartet."
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "Are you sure you want to quit this game?"
@@ -455,7 +456,7 @@ msgstr "Bist du sicher, dass du dieses Spiel verlassen magst?"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "\n\nGame data since the last time you changed your location will be lost."
-msgstr ""
+msgstr "\n\nDie Spieldaten seit dem letzten Ortswechsel gehen verloren."
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "Shop"
@@ -483,15 +484,15 @@ msgstr "* {{hero}} packt den Juwel in den Rucksack. *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} gives %s *"
-msgstr ""
+msgstr "* {{hero}} gibt %s *"
 
 #: lib/resources/weapon_details.dart:
 msgid "Punch"
-msgstr ""
+msgstr "Schlag"
 
 #: lib/resources/weapon_details.dart:
 msgid "Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP."
-msgstr ""
+msgstr "Schlage den Gegner vor Dir.\nDas ist die einfachste Waffe. Du hast unendlich viel PP."
 
 #: lib/resources/weapon_details.dart:
 msgid "Throw snowballs in front of you."

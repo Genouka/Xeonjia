@@ -3,8 +3,9 @@
 # This file is distributed under the same license as Xeonjia.
 # DeepDaikon <deepdaikon@tuta.io>, 2020, 2021.
 # no no <skariko@pm.me>, 2020.
+# J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-07-26 10:14+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-08-08 21:14+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -180,7 +181,7 @@ msgstr "Ripristinare le impostazioni predefinite?"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Are you sure you want to delete your settings and restore default ones?"
-msgstr "Sei sicuro di voler eliminare le tue impostazioni e ripristinare quelle predefinite?"
+msgstr "Sei sicuro/a di voler eliminare le tue impostazioni e ripristinare quelle predefinite?"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Cancel"
@@ -440,7 +441,7 @@ msgstr "riprendi"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "Are you sure you want to restart this game?"
-msgstr "Sei sicuro di voler ricominciare questa partita?"
+msgstr "Sei sicuro/a di voler ricominciare questa partita?"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "It will restart from the last location change."
@@ -448,7 +449,7 @@ msgstr "Rinizierà dall'ultimo cambio di stanza."
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "Are you sure you want to quit this game?"
-msgstr "Sei sicuro di voler uscire da questa partita?"
+msgstr "Sei sicuro/a di voler uscire da questa partita?"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "\n\nGame data since the last time you changed your location will be lost."

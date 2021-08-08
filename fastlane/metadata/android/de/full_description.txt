@@ -1,0 +1,17 @@
+Es gibt zwei Modi:
+
+1) Story-Modus: Das Ziel ist es, die letzte Etage des Turms zu erreichen und den "König des Bösen" zu besiegen.
+
+2) Multiplayer-Modus: In diesem Modus geht es darum, Punkte zu sammeln und sein Team zum Sieg zu führen.
+
+Du musst nur mit Deinem Finger wischen, um deine Figur durch die Welt zu bewegen.
+
+Denk daran, dass Du Dich nicht selbst bremsen kannst, bis du eine Wand, einen Felsen oder ein anderes Hindernis erreichst.
+
+Mit der Zeit erhältst du Erfahrungspunkte, mit denen Du Deine Stufe erhöhen kannst. Du wirst Geld und versteckte Schätze finden, mit denen du Dinge kaufen und dich verbessern kannst.
+
+Sei vorsichtig, die Welt ist voller gefährlicher Feinde, die bereit sind, dich anzugreifen!
+
+Benutze deinen Verstand, um den besten Weg zu finden!
+
+<b>Hinweis</b>: Dieses Spiel befindet sich derzeit in einer frühen Betaphase.
