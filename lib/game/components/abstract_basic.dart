@@ -126,6 +126,8 @@ abstract class BasicComponent extends SpriteComponent {
           tile.size,
           tile.sprite,
         ) {
+    animate(tile.animationSprites,
+        stepTime: tile.animationStepTime, loop: true);
     onCreate();
   }
 
@@ -255,8 +257,10 @@ abstract class BasicComponent extends SpriteComponent {
   }
 
   // Animate this component
-  void animate(List<Sprite> sprites) {
-    animation = Animation.spriteList(sprites, stepTime: 0.15, loop: false);
+  void animate(List<Sprite> sprites,
+      {double stepTime = 0.15, bool loop = false}) {
+    if (sprites.isEmpty) return;
+    animation = Animation.spriteList(sprites, stepTime: stepTime, loop: loop);
   }
 
   @override
