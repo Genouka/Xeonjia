@@ -120,6 +120,8 @@ class _PauseMenuState extends State<PauseMenu> {
                     '\n' +
                     'money: %s ¤'.i18n.fill([game.playerOne.money]) +
                     '\n' +
+                    'gems: %s'.i18n.fill([game.playerOne.gemCount]) +
+                    '\n' +
                     'play time: %s min'
                         .i18n
                         .fill([game.playerOne.minutesPlayed.round()]))

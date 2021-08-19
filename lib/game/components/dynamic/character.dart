@@ -44,9 +44,10 @@ class CharacterComponent extends DynamicComponent
   // Add/remove items by using addItem() and removeItem()
   List<String> _itemList = [];
   List<String> get itemList => _itemList;
-  List<Item> get backpackItems => itemList.fold([],
+  List<Item> get backpackItems => _itemList.fold([],
       (p, e) => itemData.keys.contains(e) ? (p..add(itemData[e]..id = e)) : p)
     ..sort((a, b) => a.name.compareTo(b.name));
+  int get gemCount => _itemList.where((e) => e.startsWith('gem_')).length;
 
   // Initial orientation
   Direction _initialOrientation;
@@ -190,7 +191,7 @@ class CharacterComponent extends DynamicComponent
         game.setMessage(Message('* {{hero}} puts %s in the backpack. *'
             .i18n
             .fill([itemData[itemId].name])));
-      } else if (itemId.contains('gem_')) {
+      } else if (itemId.startsWith('gem_')) {
         game.setMessage(
             Message('* {{hero}} puts the gem in the backpack. *'.i18n));
       }
