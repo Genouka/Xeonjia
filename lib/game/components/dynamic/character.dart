@@ -184,16 +184,16 @@ class CharacterComponent extends DynamicComponent
   }
 
   // Add item to _itemList
+  // i18n: '* {{hero}} puts %s in the backpack. *'.i18n
   void addItem(String itemId) {
     _itemList.add(itemId);
     if (isPlayerOne) {
       if (itemData.containsKey(itemId)) {
         game.setMessage(Message('* {{hero}} puts %s in the backpack. *'
-            .i18n
             .fill([itemData[itemId].name])));
       } else if (itemId.startsWith('gem_')) {
-        game.setMessage(
-            Message('* {{hero}} puts the gem in the backpack. *'.i18n));
+        game.setMessage(Message('* {{hero}} puts %s in the backpack. *'
+            .fill(['the gem'.i18n.toUpperCase()])));
       }
       game.playSound(Sfx.item);
     }
