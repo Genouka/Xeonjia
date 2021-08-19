@@ -1,12 +1,11 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/game/util/little_scheme.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/item.dart';
-import 'package:xeonjia/ui/themes.dart';
+import 'package:xeonjia/ui/basic.dart';
 
 // Backpack menu
 class BackpackMenu extends StatefulWidget {
@@ -45,7 +44,7 @@ class _BackpackMenuState extends State<BackpackMenu> {
               ),
             ),
           ),
-          divider,
+          divider(context),
           Expanded(
             child: Center(
               child: selectedItem == null
@@ -73,7 +72,7 @@ class _BackpackMenuState extends State<BackpackMenu> {
                       ),
                     )
                   : ScrollConfiguration(
-                      behavior: _NoGlow(),
+                      behavior: NoGlow(),
                       child: SingleChildScrollView(
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -87,7 +86,7 @@ class _BackpackMenuState extends State<BackpackMenu> {
                     ),
             ),
           ),
-          divider,
+          divider(context),
           Expanded(
             child: Container(
               margin: const EdgeInsets.only(top: 5),
@@ -146,39 +145,5 @@ class _BackpackMenuState extends State<BackpackMenu> {
         ),
       ];
     }
-  }
-
-  // White line that divides the children of the Column
-  Widget get divider => Container(
-        height: 3,
-        width: MediaQuery.of(context).size.width / 1.5,
-        decoration: const BoxDecoration(
-          color: Colors.white54,
-          borderRadius: BorderRadius.all(Radius.circular(30)),
-        ),
-      );
-
-  // Button on the bottom row
-  Widget actionButton(String text, VoidCallback onPressed) {
-    return InkWell(
-      onTap: onPressed,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: Text(
-          text,
-          textAlign: TextAlign.center,
-          style: gameTheme.textTheme.bodyText2,
-        ),
-      ),
-    );
-  }
-}
-
-// Remove scroll glow
-class _NoGlow extends ScrollBehavior {
-  @override
-  Widget buildViewportChrome(
-      BuildContext context, Widget child, AxisDirection axisDirection) {
-    return child;
   }
 }
