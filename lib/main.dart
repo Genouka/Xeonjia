@@ -48,6 +48,7 @@ class Xeonjia extends StatelessWidget {
           GlobalCupertinoLocalizations.delegate,
         ],
         supportedLocales: supportedLocales,
+        debugShowCheckedModeBanner: false,
       ),
     );
   }
