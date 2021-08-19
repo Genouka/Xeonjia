@@ -410,7 +410,7 @@ class XeonjiaGame extends BaseGame
 
   // Open backpack
   void backpack() {
-    pause(stopEngine: false, stopMusic: false);
+    pause(stopMusic: false);
     addWidgetOverlay('backpackMenu', BackpackMenu());
   }
 
