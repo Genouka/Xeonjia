@@ -51,6 +51,7 @@ class _BackpackMenuState extends State<BackpackMenu> {
                   ? Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
                       child: ListView(
+                        shrinkWrap: true,
                         children: [
                           for (var i in items.entries)
                             InkWell(
