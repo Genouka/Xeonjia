@@ -68,7 +68,9 @@ class _BackpackMenuState extends State<BackpackMenu> {
                                   Text(i.key.name),
                                 ],
                               ),
-                            )
+                            ),
+                          if (items.entries.isEmpty)
+                            Center(child: Text('No items here'.i18n))
                         ],
                       ),
                     )
