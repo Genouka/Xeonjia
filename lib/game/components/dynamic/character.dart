@@ -9,6 +9,7 @@ import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
+import 'package:xeonjia/models/item.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/models/tile.dart';
@@ -43,6 +44,9 @@ class CharacterComponent extends DynamicComponent
   // Add/remove items by using addItem() and removeItem()
   List<String> _itemList = [];
   List<String> get itemList => _itemList;
+  List<Item> get backpackItems => itemList.fold([],
+      (p, e) => itemData.keys.contains(e) ? (p..add(itemData[e]..id = e)) : p)
+    ..sort((a, b) => a.name.compareTo(b.name));
 
   // Initial orientation
   Direction _initialOrientation;
@@ -195,11 +199,14 @@ class CharacterComponent extends DynamicComponent
   }
 
   // Remove item from _itemList
-  void removeItem(int itemId) {
+  // i18n: '* {{hero}} used {{selected-item-name}} *'.i18n
+  // i18n: ''* {{hero}} gives %s *'.i18n
+  void removeItem(String itemId, {bool used = true}) {
     _itemList.remove(itemId);
     if (isPlayerOne) {
-      game.setMessage(
-          Message('* {{hero}} gives %s *'.i18n.fill([itemData[itemId].name])));
+      game.setMessage(Message((used
+          ? '* {{hero}} used {{selected-item-name}} *'
+          : '* {{hero}} gives %s *'.fill([itemData[itemId].name]))));
     }
   }
 
