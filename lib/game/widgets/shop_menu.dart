@@ -101,11 +101,10 @@ class _ShopMenuState extends State<ShopMenu> {
     );
   }
 
-  // i18n: 'Let me know if you need anything else.'.i18n
   void closeMenu() {
     game.removeWidgetOverlay('shop');
-    game.setMessage(Message('Let me know if you need anything else.',
-        author: 'pharmacist/elderly'));
+    game.setMessage(Message('Let me know if you need anything else.'.i18n,
+        translate: false, author: 'pharmacist/elderly'));
   }
 
   // White line that divides the children of the Column
