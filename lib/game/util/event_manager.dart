@@ -201,7 +201,6 @@ Environment setEnvironment() {
         action: (it.current as Cell).cdr.cdr.car,
       ));
     }
-    ;
     game.addWidgetOverlay('shop', ShopMenu(itemList));
     return #NONE;
   });
