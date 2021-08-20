@@ -70,6 +70,7 @@ class _ShopMenuState extends State<ShopMenu> {
                                   game.executeAction(action: item.action);
                                 });
                                 game.refreshLifePointsBar();
+                                closeMenu();
                               }
                             : null,
                       ),
@@ -89,12 +90,7 @@ class _ShopMenuState extends State<ShopMenu> {
             child: Container(
               alignment: Alignment.topCenter,
               child: TextButton(
-                onPressed: () {
-                  game.removeWidgetOverlay('shop');
-                  game.setMessage(Message(
-                      'Let me know if you need anything else.'.i18n,
-                      author: 'pharmacist/elderly'));
-                },
+                onPressed: closeMenu,
                 child: Text('Close'.i18n,
                     style: Theme.of(context).textTheme.headline2),
               ),
@@ -103,6 +99,13 @@ class _ShopMenuState extends State<ShopMenu> {
         ],
       ),
     );
+  }
+
+  // i18n: 'Let me know if you need anything else.'.i18n
+  void closeMenu() {
+    game.removeWidgetOverlay('shop');
+    game.setMessage(Message('Let me know if you need anything else.',
+        author: 'pharmacist/elderly'));
   }
 
   // White line that divides the children of the Column
