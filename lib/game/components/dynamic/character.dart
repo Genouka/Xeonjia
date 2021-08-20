@@ -184,15 +184,16 @@ class CharacterComponent extends DynamicComponent
   }
 
   // Add item to _itemList
-  // i18n: '* {{hero}} puts %s in the backpack. *'.i18n
   void addItem(String itemId) {
     _itemList.add(itemId);
     if (isPlayerOne) {
       if (itemData.containsKey(itemId)) {
         game.setMessage(Message('* {{hero}} puts %s in the backpack. *'
+            .i18n
             .fill([itemData[itemId].name])));
       } else if (itemId.startsWith('gem_')) {
         game.setMessage(Message('* {{hero}} puts %s in the backpack. *'
+            .i18n
             .fill(['the gem'.i18n.toUpperCase()])));
       }
       game.playSound(Sfx.item);
@@ -200,14 +201,12 @@ class CharacterComponent extends DynamicComponent
   }
 
   // Remove item from _itemList
-  // i18n: '* {{hero}} used {{selected-item-name}} *'.i18n
-  // i18n: ''* {{hero}} gives %s *'.i18n
   void removeItem(String itemId, {bool used = true}) {
     _itemList.remove(itemId);
     if (isPlayerOne) {
       game.setMessage(Message((used
-          ? '* {{hero}} used {{selected-item-name}} *'
-          : '* {{hero}} gives %s *'.fill([itemData[itemId].name]))));
+          ? '* {{hero}} used {{selected-item-name}} *'.i18n
+          : '* {{hero}} gives %s *'.i18n.fill([itemData[itemId].name]))));
     }
   }
 
