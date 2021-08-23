@@ -147,8 +147,7 @@ Environment setEnvironment() {
           (game.playerOne?.itemList ?? mainCharacter.itemList).contains(x.car));
   _('give-item', 1, (Cell x) => game.playerOne.addItem(x.car));
   _('find-item', 1, (Cell x) => game.playerOne.addItem(x.car));
-  _('take-item', 1, (Cell x) => game.playerOne.removeItem(x.car, used: false));
-  _('use-item', 1, (Cell x) => game.playerOne.removeItem(x.car));
+  _('take-item', 1, (Cell x) => game.playerOne.removeItem(x.car));
   _('story-dialog', 1, (Cell x) {
     game.setMessage(Message(stringify(x.car, false)), hideMap: true);
     return #NONE;
@@ -201,6 +200,7 @@ Environment setEnvironment() {
         action: (it.current as Cell).cdr.cdr.car,
       ));
     }
+    ;
     game.addWidgetOverlay('shop', ShopMenu(itemList));
     return #NONE;
   });

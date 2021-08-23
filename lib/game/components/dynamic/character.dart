@@ -9,7 +9,6 @@ import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
-import 'package:xeonjia/models/item.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/models/tile.dart';
@@ -44,10 +43,6 @@ class CharacterComponent extends DynamicComponent
   // Add/remove items by using addItem() and removeItem()
   List<String> _itemList = [];
   List<String> get itemList => _itemList;
-  List<Item> get backpackItems => _itemList.fold([],
-      (p, e) => itemData.keys.contains(e) ? (p..add(itemData[e]..id = e)) : p)
-    ..sort((a, b) => a.name.compareTo(b.name));
-  int get gemCount => _itemList.where((e) => e.startsWith('gem_')).length;
 
   // Initial orientation
   Direction _initialOrientation;
@@ -191,22 +186,20 @@ class CharacterComponent extends DynamicComponent
         game.setMessage(Message('* {{hero}} puts %s in the backpack. *'
             .i18n
             .fill([itemData[itemId].name])));
-      } else if (itemId.startsWith('gem_')) {
-        game.setMessage(Message('* {{hero}} puts %s in the backpack. *'
-            .i18n
-            .fill(['the gem'.i18n.toUpperCase()])));
+      } else if (itemId.contains('gem_')) {
+        game.setMessage(
+            Message('* {{hero}} puts the gem in the backpack. *'.i18n));
       }
       game.playSound(Sfx.item);
     }
   }
 
   // Remove item from _itemList
-  void removeItem(String itemId, {bool used = true}) {
+  void removeItem(int itemId) {
     _itemList.remove(itemId);
     if (isPlayerOne) {
-      game.setMessage(Message((used
-          ? '* {{hero}} used {{selected-item-name}} *'.i18n
-          : '* {{hero}} gives %s *'.i18n.fill([itemData[itemId].name]))));
+      game.setMessage(
+          Message('* {{hero}} gives %s *'.i18n.fill([itemData[itemId].name])));
     }
   }
 

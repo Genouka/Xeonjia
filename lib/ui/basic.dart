@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/ui/themes.dart';
 
 // Circular radius
 const circularRadius = BorderRadius.all(Radius.circular(30));
@@ -25,37 +24,3 @@ class FadeRoute extends PageRouteBuilder {
               FadeTransition(opacity: animation, child: child),
         );
 }
-
-// Remove scroll glow
-class NoGlow extends ScrollBehavior {
-  @override
-  Widget buildViewportChrome(
-      BuildContext context, Widget child, AxisDirection axisDirection) {
-    return child;
-  }
-}
-
-// Button in pauseMenu and backpackMenu
-Widget actionButton(String text, VoidCallback onPressed) {
-  return InkWell(
-    onTap: onPressed,
-    child: Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: Text(
-        text,
-        textAlign: TextAlign.center,
-        style: gameTheme.textTheme.bodyText2,
-      ),
-    ),
-  );
-}
-
-// White line that divides children of Columns in pauseMenu and backpackMenu
-Widget divider(BuildContext context) => Container(
-      height: 3,
-      width: MediaQuery.of(context).size.width / 1.5,
-      decoration: const BoxDecoration(
-        color: Colors.white54,
-        borderRadius: BorderRadius.all(Radius.circular(30)),
-      ),
-    );

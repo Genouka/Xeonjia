@@ -116,20 +116,6 @@ Future<void> importMap(String fileName) async {
             }
           });
         }
-
-        // Load animation
-        var animation = tile.findElements('animation');
-        if (animation.isNotEmpty) {
-          animation.single.findElements('frame').forEach((frame) {
-            var id = int.parse(frame.getAttributeNode('tileid').value);
-            // All frames have the same duration (it uses the last value)
-            newTile.animationStepTime =
-                double.parse(frame.getAttributeNode('duration').value) / 1000;
-            newTile.animationSprites
-                .add(spriteSheet.getSprite(id ~/ columns, id % columns));
-          });
-        }
-
         _tileMap[newTile.gid] = newTile;
       });
     }
