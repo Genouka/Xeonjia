@@ -1,0 +1,2 @@
+* Aggiornate traduzioni
+* Risolti bug
