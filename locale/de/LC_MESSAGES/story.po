@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # araccaine <arac.caine@posteo.de>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-08-07 09:27+0000\nLast-Translator: araccaine <arac.caine@posteo.de>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-08-23 21:33+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -155,11 +155,11 @@ msgstr "Ich werde mein bestes geben."
 
 #: assets/maps/story/1.tmx:
 msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
-msgstr "Der Turm, in dem der „König des Bösen“ residiert, befindet sich wohl nahe der hiesigen Hauptstadt."
+msgstr "Der Turm, in dem der \"König des Bösen\" residiert, befindet sich wohl nahe der hiesigen Hauptstadt."
 
 #: assets/maps/story/1.tmx:
 msgid "\" NATAWN – Hometown of the 62nd hero \""
-msgstr "„NATAWN – Heimatort des 62ten Helden“"
+msgstr "\"NATAWN – Heimatort des 62ten Helden\""
 
 #: assets/maps/story/1.tmx:
 msgid "I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude."
@@ -383,7 +383,7 @@ msgstr "Das Stadtzentrum befindet sich einige Kilometer südlich."
 
 #: assets/maps/story/24.tmx:
 msgid "\" VANTOI LAB \""
-msgstr "„VANTOI-LAB“"
+msgstr "\"VANTOI-LAB\""
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Laboratory."
@@ -395,7 +395,7 @@ msgstr "Ich kann das Innere der Apotheke sehen."
 
 #: assets/maps/story/24.tmx:
 msgid "\" Melhopolis – Regional capital \""
-msgstr "„Melhopolis – Regionale Hauptstadt“"
+msgstr "\"Melhopolis – Regionale Hauptstadt\""
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the house."
@@ -1103,7 +1103,7 @@ msgstr "Einige Steine wurden von uns, den Mitarbeitern des Königreichs, gelegt.
 
 #: assets/maps/story/10.tmx:
 msgid "\" Souvenir shop \""
-msgstr "„Andenkenladen“"
+msgstr "\"Andenkenladen\""
 
 #: assets/maps/story/10.tmx:
 msgid "I can see the inside of the shop."

@@ -8,7 +8,7 @@
 # zwergwolf <sadness@gmx.de>, 2021.
 # araccaine <arac.caine@posteo.de>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-08-08 21:14+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-08-23 21:33+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -48,7 +48,7 @@ msgstr "Modi"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the \"King of Evil\" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win."
-msgstr "In Xeonjia gibt es zwei Spielmodi:\n\n1) Geschichte-Modus: Die Welt ist von einer Eisschicht bedeckt und es ist deine Aufgabe den „König des Bösen“ zu besiegen und das Königreich zu retten.\n\n2)Mehrspieler: Besiege Gegner, sammel Punkte und führe dein Team zum Sieg."
+msgstr "In Xeonjia gibt es zwei Spielmodi:\n\n1) Geschichte-Modus: Die Welt ist von einer Eisschicht bedeckt und es ist deine Aufgabe den \"König des Bösen\" zu besiegen und das Königreich zu retten.\n\n2)Mehrspieler: Besiege Gegner, sammel Punkte und führe dein Team zum Sieg."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Movements"
@@ -108,7 +108,7 @@ msgstr "Mehrspieler-Modus"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press \"Play\"."
-msgstr "Das Ziel dieses Modus ist es, Gegner zu besiegen, Punkte zu sammeln und dein Team zum Sieg zu führen.\n\nDie Regeln sind einfach:\n- Die Spieler werden in zwei Teams eingeteilt.\n- Jedes Mal, wenn ein Spieler einen Gegner besiegt, erhält dessen Team 100 Punkte.\n- Das Team, das die erforderliche Punktzahl erreicht, gewinnt.\n\nDeine Mannschaftskameraden sind die Roten.\n\nIm Moment ist es nur möglich, gegen Computergesteurte Gegner zu spielen.\n\nWähle den Spielort und konfiguriere das Spiel.\nWenn du bereit bist, drücke „Spiel starten“."
+msgstr "Das Ziel dieses Modus ist es, Gegner zu besiegen, Punkte zu sammeln und dein Team zum Sieg zu führen.\n\nDie Regeln sind einfach:\n- Die Spieler werden in zwei Teams eingeteilt.\n- Jedes Mal, wenn ein Spieler einen Gegner besiegt, erhält dessen Team 100 Punkte.\n- Das Team, das die erforderliche Punktzahl erreicht, gewinnt.\n\nDeine Mannschaftskameraden sind die Roten.\n\nIm Moment ist es nur möglich, gegen Computergesteurte Gegner zu spielen.\n\nWähle den Spielort und konfiguriere das Spiel.\nWenn du bereit bist, drücke \"Spiel starten\"."
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Okay, got it!"
