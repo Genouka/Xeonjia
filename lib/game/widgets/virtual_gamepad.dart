@@ -17,31 +17,43 @@ class VirtualGamePad extends StatelessWidget {
   }
 
   final GlobalKey<_ButtonsState> _key = GlobalKey();
+  final GlobalKey<_DPadState> _DPadKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) =>
-      Stack(children: [if (settings.showDPad) _DPad(), _Buttons(_key)]);
+      Stack(children: [if (settings.showDPad) _DPad(_DPadKey), _Buttons(_key)]);
 
   void refresh() {
+    if (settings.showDPad) _DPadKey.currentState?.refresh();
     _key.currentState?.refresh();
   }
 }
 
 // Virtual D-pad (on the left)
-class _DPad extends StatelessWidget {
-  final Color buttonColor = Colors.grey.withOpacity(0.4);
+class _DPad extends StatefulWidget {
+  @override
+  final key;
   static final Color arrowColor = Colors.white;
 
-  // Map direction-button icon
+  _DPad(this.key);
+
+  @override
+  _DPadState createState() => _DPadState();
+}
+
+class _DPadState extends State<_DPad> {
+  final Color buttonColor = Colors.grey.withOpacity(0.4);
+
   final Map<Direction, dynamic> arrowIconMap = {
-    Direction.up: Icon(Icons.keyboard_arrow_up, color: arrowColor),
-    Direction.down: Icon(Icons.keyboard_arrow_down, color: arrowColor),
-    Direction.left: Icon(Icons.keyboard_arrow_left, color: arrowColor),
-    Direction.right: Icon(Icons.keyboard_arrow_right, color: arrowColor),
+    Direction.up: Icon(Icons.keyboard_arrow_up, color: _DPad.arrowColor),
+    Direction.down: Icon(Icons.keyboard_arrow_down, color: _DPad.arrowColor),
+    Direction.left: Icon(Icons.keyboard_arrow_left, color: _DPad.arrowColor),
+    Direction.right: Icon(Icons.keyboard_arrow_right, color: _DPad.arrowColor),
   };
 
   @override
   Widget build(BuildContext context) {
+    if (game.miniMapEnabled) return Container();
     return Positioned(
       left: 20,
       bottom: 20,
@@ -89,7 +101,7 @@ class _DPad extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         game.playerOne.isStationary
-            ? game.playerOne.updateDirection(direction)
+            ? game.gestureDragInput(direction)
             : game.playerOne.updateOrientation(direction);
       },
       onLongPress: () {
@@ -107,6 +119,10 @@ class _DPad extends StatelessWidget {
   }
 
   Widget separator() => Container(width: _size, height: _size);
+
+  void refresh() {
+    if (mounted) setState(() {});
+  }
 }
 
 // Buttons (on the right)
