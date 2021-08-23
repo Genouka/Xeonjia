@@ -26,7 +26,6 @@ import 'package:xeonjia/game/widgets/map_name_box.dart';
 import 'package:xeonjia/game/widgets/minimap_button.dart';
 import 'package:xeonjia/game/widgets/status_box.dart';
 import 'package:xeonjia/game/widgets/dialog_box.dart';
-import 'package:xeonjia/game/widgets/loading_page.dart';
 import 'package:xeonjia/game/widgets/no_maps_menu.dart';
 import 'package:xeonjia/game/widgets/pause_menu.dart';
 import 'package:xeonjia/game/widgets/virtual_gamepad.dart';
@@ -165,7 +164,6 @@ class XeonjiaGame extends BaseGame
   // Reset variables and import map data
   void init() async {
     pause(stopMusic: false);
-    addWidgetOverlay('loading', LoadingPage());
     removeWidgetOverlay('mapNameBox');
     removeWidgetOverlay('miniMapButton');
     removeWidgetOverlay('backpackButton');
@@ -178,9 +176,7 @@ class XeonjiaGame extends BaseGame
 
     // Remove previous components
     // They are removed during the next update()
-    components.forEach((component) {
-      markToRemove(component);
-    });
+    components.forEach((component) => markToRemove(component));
     players.clear();
     deletedComponents.clear();
     modifiersToBeRegenerated.clear();
@@ -214,7 +210,6 @@ class XeonjiaGame extends BaseGame
     });
     _timer.start();
     update(0);
-    removeWidgetOverlay('loading');
     resume();
     playBackgroundMusic();
   }
