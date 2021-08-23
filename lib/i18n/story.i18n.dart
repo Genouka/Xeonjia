@@ -416,7 +416,7 @@ extension Localization on String {
           '''Here it is, this is the first signet!''':
               '''Le voici, c\'est le premier sceau !''',
           '''I can get out of here now.''':
-              '''Je ne peux pas sortir d\'ici maintenant.''',
+              '''Je peux sortir d\'ici maintenant.''',
           '''The henchmen are after me! I\'ll get the signet later.''':
               '''Les hommes de main sont après moi ! J\'irai chercher le sceau plus tard.''',
           '''I didn\'t think you would get this far, kid.''':
@@ -1454,7 +1454,7 @@ extension Localization on String {
               '''No puedo escapar. Tengo que conseguir el primer medallón.''',
           '''Here it is, this is the first signet!''':
               '''Aquí lo tienes, ¡el primer medallón!''',
-          '''I can get out of here now.''': '''No puedo salir de aquí.''',
+          '''I can get out of here now.''': '''Ahora puedo salir de aquí.''',
           '''The henchmen are after me! I\'ll get the signet later.''':
               '''¡Sus secuaces están detrás de mí! Después conseguiré el medallón.''',
           '''I didn\'t think you would get this far, kid.''':
@@ -2935,9 +2935,40 @@ extension Localization on String {
           '''City Hall''': '''Rathaus''',
           '''…''': '''…''',
           '''H-Hello.''': '''G-Guten Tag.''',
+          '''Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region.''':
+              '''Hallo, du musst {{hero}} sein! Schön Dich kennen zu lernen. Ich hörte schon, dass Du in diese Gegend kommst.\nMein Name ist Xe III. Ich bin der König hier.''',
           '''king''': '''König''',
+          '''Do not confuse me with the King of Evil, I am good haha.''':
+              '''Verwechsle mich nicht mit dem König des Bösen, ich bin gut, haha.''',
+          '''So… tell me, how are you? Is everything okay? How is the journey going?''':
+              '''Na, wie gehts Dir? Alles okay? Wie läuft die Reise?''',
+          '''Everything good, I just defeated the Hoarfrost Team and I got the first signet!''':
+              '''Alles gut, ich habe gerade Team Raureif besiegt und das erste Siegel erhalten!''',
+          '''Oh really?! This is great news!''':
+              '''Echt jetzt?! Das sind ja tolle Neuigkeiten!''',
+          '''It has been difficult?''': '''Es ist schwierig gewesen?''',
+          '''Well, but if you did it, it means that you are strong!''':
+              '''Schon, aber da du es geschafft hast bedeutet das, dass du stark bist!''',
+          '''Well, congratulations! This means that you are strong!''':
+              '''Nun, Glückwunsch! Das bedeutet dass du stark bist!''',
+          '''I trust that you will be able to take the other two signets as well.''':
+              '''Ich vertraue darauf, dass Du die anderen beiden Siegel auch noch bekommst.''',
+          '''Since you\'re heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here.''':
+              '''Da Du eh auf dem Weg nach Osten bist, könntest Du mir einen Gefallen tun? Könntest Du dieses Paket an den König des Wasserlandes liefern? Er wohnt ein paar Kilometer östlich von hier.''',
           '''Yes of course, I\'ll give it to him.''':
               '''Ja, natürlich. Ich werde es ihm geben.''',
+          '''Thank you very much. Here\'s to you.''':
+              '''Ich danke Dir vielmals. Auf Dein Wohl.''',
+          '''Be careful not to drop it, it is fragile.''':
+              '''Lass es nicht fallen, es ist zerbrechlich.''',
+          '''Sure, I\'ll be careful.''':
+              '''Geht klar, ich werd vorsichtig sein.''',
+          '''Thank you again.\nI wish you a good journey, come back anytime.''':
+              '''Danke nochmal.\nGute Reise und komm gern jederzeit wieder vorbei.''',
+          '''Good journey {{hero}}, I have faith in you.''':
+              '''Gute Reise {{hero}}, ich glaube an Dich.''',
+          '''Yes, quite a lot''': '''Ja, ziemlich viele''',
+          '''Just a little''': '''Nur ein paar''',
           '''* {{hero}} found some berries! {{life-diff}} LPs have been recovered *''':
               '''* {{hero}} hat Beeren gefunden! Es gibt {{life-diff}} LP zurück *''',
           '''A little plant… nothing else.''':
@@ -2959,9 +2990,9 @@ extension Localization on String {
           '''dad''': '''Papa''',
           '''I\'ll do my best.''': '''Ich werde mein bestes geben.''',
           '''The tower in which the "King of Evil" resides should be located near the capital of the region.''':
-              '''Der Turm, in dem der „König des Bösen“ residiert, befindet sich wohl nahe der hiesigen Hauptstadt.''',
+              '''Der Turm, in dem der "König des Bösen" residiert, befindet sich wohl nahe der hiesigen Hauptstadt.''',
           '''" NATAWN – Hometown of the 62nd hero "''':
-              '''„NATAWN – Heimatort des 62ten Helden“''',
+              '''"NATAWN – Heimatort des 62ten Helden"''',
           '''I\'ve to say goodbye to my parents with the \'A\' button before I leave. Otherwise it would be rude.''':
               '''Ich muss meinen Eltern noch mit der ,A‘-Taste auf Wiedersehen sagen, das wäre sonst unhöflich.''',
           '''Like my mother said, it\'s better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.''':
@@ -3027,6 +3058,19 @@ extension Localization on String {
               '''" Picknick-Platz – Bitte sauber halten, danke "''',
           '''" Picnic area ↑ "\n" Forest Center ↓ "''':
               '''" Picknick-Platz ↑ "\n" Waldzentrum ↓ "''',
+          '''Mossy Crypt -4F''': '''Moosbewachsene Krypta -4.UG''',
+          '''The snowballs container is full.''':
+              '''Der Behälter für Schneebälle ist voll.''',
+          '''* {{hero}} filled his snowballs container *''':
+              '''* Schneeballbehälter von {{hero}} aufgefüllt *''',
+          '''A snowdrift.''': '''Eine Schneewehe.''',
+          '''Mossy Crypt -2F''': '''Moosbewachsene Krypta -2.UG''',
+          '''We\'re watching you.''': '''Wir beobachten Dich.''',
+          '''Hmm, I think that from this snowdrift I can obtain material to make new snowballs by pressing the \'A\' key.''':
+              '''Hmm, ich denke, dass ich aus dieser Schneewehe Material für neue Schneebälle gewinnen kann, wenn ich die Taste \'A\' drücke.''',
+          '''* {{hero}} found {{money-diff}} ¤ *''':
+              '''* {{hero}} fand {{money-diff}} ¤ *''',
+          '''A rock covered by moss.''': '''Ein moosbewachsener Stein.''',
           '''T-today… today is the day I\'ve been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I\'m the chosen "hero" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to.''':
               '''H-heute… heute ist der Tag auf den ich mein Leben lang gewartet habe. Meine Reise zum Xeonjia-Turm beginnt.\nIn diesem Jahr bin ich der auserwählte "Held", verantwortlich, das Monster zu besiegen, das das Königreich eingefroren hat…\nNach Jahren des Trainings hoffe ich, dass ich es schaffe.''',
           '''I\'d like to go back to bed but I can\'t.''':
@@ -3041,26 +3085,370 @@ extension Localization on String {
           '''Melhopolis''': '''Melhopolis''',
           '''The city center is a few kilometers to the south.''':
               '''Das Stadtzentrum befindet sich einige Kilometer südlich.''',
-          '''" VANTOI LAB "''': '''„VANTOI-LAB“''',
+          '''" VANTOI LAB "''': '''"VANTOI-LAB"''',
           '''I can see the inside of the Laboratory.''':
               '''Ich kann das Innere des Labors sehen.''',
           '''I can see the inside of the Pharmacy.''':
               '''Ich kann das Innere der Apotheke sehen.''',
           '''" Melhopolis – Regional capital "''':
-              '''„Melhopolis – Regionale Hauptstadt“''',
+              '''"Melhopolis – Regionale Hauptstadt"''',
           '''I can see the inside of the house.''':
               '''Ich kann das Innere des Hauses sehen.''',
           '''Route 3''': '''Route 3''',
+          '''Hey! Hi {{hero}}!''': '''Hey! Hi {{hero}}!''',
+          '''H-hi, you know me?''': '''H-hallo, Du kennst mich?''',
+          '''Well, you are the hero of this year, you are quite famous. Are you here to visit the crypt?''':
+              '''Nun, Du bist der Held des Jahres und ziemlich berühmt. Bist Du hier, um die Krypta zu besuchen?''',
+          '''Yes. If I have not misunderstood, here\'s one of the 3 signets I need to access the Xeonjia tower.''':
+              '''Ja. Wenn ich das richtig verstanden habe, ist hier eines der 3 Siegel, die ich brauche, um den Xeonjia-Turm zu betreten.''',
+          '''Ah that\'s true, I\'ve heard of it.\nBeware that here is full of monsters and bad people.''':
+              '''Ah, das stimmt, ich habe davon gehört.\nSieh Dich vor, hier ist alles voller Monster und schlechter Menschen.''',
+          '''Ok thanks, I\'ll be careful.\nBut… who are you?''':
+              '''Danke, ich werde vorsichtig sein.\nAber...wer bist Du?''',
+          '''Oh, yes sorry I forgot to introduce myself.''':
+              '''Oh, Verzeihung, ich vergaß, mich vorzustellen.''',
+          '''My name is Shen, I am a scientist.''':
+              '''Mein Name ist Shen. Ich bin Wissenschaftlerin.''',
+          '''Nice to meet you, Shen.''': '''Schön Dich kennenzulernen, Shen.''',
+          '''Oh, by the way, I think this might help you.''':
+              '''Übrigens, ich glaube das könnte Dir helfen.''',
+          '''* {{hero}} got a SNOWBALLS CONTAINER *''':
+              '''* {{hero}} erhält einen BEHÄLTER FÜR SCHNEEBÄLLE *''',
+          '''It\'s an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \'S\' button.\nIt can contain up to 10 snowballs.''':
+              '''Das ist eine Erfindung von mir. Damit kann man Schneebälle bei sich tragen, die man durch Drücken der S-Taste auf seine Gegner werfen kann.\nEr kann bis zu 10 Schneebälle enthalten.''',
+          '''Wow! I\'m sure it\'ll come in handy. Thank you.''':
+              '''Wow! Das wird sicher nützlich sein. Dankeschön.''',
+          '''You\'re welcome.''': '''Gern geschehen.''',
+          '''Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too.''':
+              '''Leider wurden vor einiger Zeit alle Projektpläne gestohlen, und so bekamen die Schergen des Königs des Bösen auch dieses Projekt.''',
+          '''Well, at least it will be an equal fight.''':
+              '''Na zumindest wird es ebenbürtiger Kampf.''',
+          '''Ha ha, well, you\'re right.''': '''Ha ha, da hast Du Recht.''',
+          '''Now I have to leave you, I have to study a strange rock that I found a little while ago.''':
+              '''Jetzt muss ich euch verlassen, ich muss einen seltsamen Stein untersuchen, den ich vor kurzem gefunden habe.''',
+          '''We\'ll see again. Good luck!''':
+              '''Wir sehen uns wieder. Viel Glück!''',
+          '''Bye Shen, thanks again!''':
+              '''Mach\'s gut, Shen, und nochmals vielen Dank!''',
+          '''I have to go through the crypt to get the first signet.''':
+              '''Ich muss durch die Krypta gehen, um das erste Siegel zu bekommen.''',
+          '''This is not a place for kids, go home.''':
+              '''Das ist kein Ort für Kinder, geh nach Hause.''',
+          '''Weird things happen in this area…''':
+              '''In dieser Gegend passieren merkwürdige Dinge…''',
+          '''" If you get lost, follow the road signs "''':
+              '''" Falls Du Dich verläufst, folge einfach den Straßenschildern "''',
+          '''" Xeonjia Tower ↑ "''': '''" Xeonjia Turm ↑ "''',
           '''Mitsu Forest''': '''Mitsuwald''',
+          '''Nobody knows what the writing on this stone means, it is not even known who wrote it.''':
+              '''Niemand weiß, was die Schrift auf diesem Stein bedeutet. Es ist nicht einmal bekannt, wer sie geschrieben hat.''',
+          '''Do you want to hear the legend of this tree again?''':
+              '''Möchtest Du die Legende dieses Baumes noch einmal hören?''',
+          '''Are you interested to learn about the legend of this tree?''':
+              '''Möchtest Du mehr über die Legende dieses Baumes erfahren?''',
+          '''There was once a devastating war in this area and everything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all the souls who left us.\nIt has the particularity of withering in spring and blooming in the other seasons.\nEvery spring the souls leave this tree to make other plants bloom and then, at the end of spring, the souls return to flourish again this tree.\nThat\'s all I know about this tree.\nI hope to have time to see the end of this winter season which has persisted for more than 60 years now.''':
+              '''In dieser Gegend tobte einst ein verheerender Krieg, und alles wurde dem Erdboden gleichgemacht.\nNichts und niemand blieb übrig, außer diesem Baum.\nEs heißt, dass dieser Baum alle Seelen beherbergt, die uns verlassen haben.\nEr hat die Besonderheit, im Frühjahr zu verwelken und in den anderen Jahreszeiten zu blühen.\nJeden Frühling verlassen die Seelen diesen Baum, um andere Pflanzen zum Blühen zu bringen, und dann, am Ende des Frühlings, kehren die Seelen zurück, um diesen Baum wieder zum Blühen zu bringen.\nDas ist alles, was ich über diesen Baum weiß.\nIch hoffe, dass ich Zeit haben werde, das Ende dieser Wintersaison zu erleben, die nun schon seit mehr als 60 Jahren andauert.''',
+          '''Ok, it was a long and boring story after all.''':
+              '''Das war eine echt lange und öde Geschichte.''',
+          '''Yes please''': '''Ja bitte''',
+          '''No thanks''': '''Nein danke''',
+          '''A computer turned off. Looks like a key is needed to turn it on.''':
+              '''Ein ausgeschalteter Computer. Es scheint, als wäre ein Schlüssel erforderlich, um ihn einzuschalten.''',
+          '''Route 2''': '''Route 2''',
+          '''" Melhopolis → "''': '''" Melhopolis → "''',
+          '''Hi, I\'m sorry but we\'re closed. Once this was a busy shop, but now it doesn\'t even make sense to stay open.''':
+              '''Hallo, es tut mir leid, aber wir haben geschlossen. Früher war der Laden gut besucht, aber jetzt lohnt es sich nicht mehr, ihn zu öffnen.''',
+          '''shopkeeper''': '''Geschäftsinhaber''',
+          '''It\'s full of old junk here.''':
+              '''Hier ist alles voll mit altem Schrott.''',
+          '''I\'ve never seen so much dust.''':
+              '''Ich hab noch nie so viel Staub gesehen.''',
+          '''Here it\'s full of snow globes with a miniaturized Mitsu Forest inside. When they were built snow was a very rare phenomenon here and it was much more appreciated.''':
+              '''Hier sind überall Schneekugeln mit einer Miniatur des Mitsu Waldes darin. Als sie hergestellt wurden, war Schnee hier ein sehr seltenes Phänomen und man schätzte ihn viel mehr.''',
+          '''There are very expensive junk here.''':
+              '''Hier gibt es sehr teuren Ramsch.''',
+          '''I think this vase was placed here on purpose to block the passage.''':
+              '''Ich glaube, diese Vase wurde absichtlich hier platziert, um den Durchgang zu versperren.''',
+          '''You are the chosen one for this year, right? My son was too many years ago.''':
+              '''Du bist der Auserwählte für dieses Jahr, richtig? Mein Sohn war das vor vielen Jahren auch mal.''',
+          '''Unfortunately he failed to defeat the King of Evil…''':
+              '''Leider gelang es ihm nicht, den König des Bösen zu besiegen…''',
+          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
+              '''Ich plane eine Überraschungshochzeit für meinen Sohn. Ich hoffe, er findet es nicht heraus.''',
+          '''This part is under construction.''':
+              '''Dieser Abschnitt befindet sich noch im Aufbau.''',
+          '''Pharmacy''': '''Apotheke''',
+          '''Welcome to my shop!''': '''Willkommen in meinem Laden!''',
+          '''pharmacist''': '''Apotheker''',
+          '''" ← Sacred Tree "\n" Melhopolis City Center → "''':
+              '''" ← Heiliger Baum "\n" Melhopolis Stadtzentrum → "''',
+          '''I advise you to take another path.\nThese monsters are too strong.''':
+              '''Ich rate Dir, einen anderen Weg zu nehmen.\nDiese Monster sind zu stark.''',
+          '''Xeonjia Tower''': '''Xeonjia Turm''',
+          '''Hi Milla, are you ok? Did you get here without any problems?''':
+              '''Hi Milla, bist du in Ordnung? Hast du problemlos hergefunden?''',
+          '''Hii {{hero}}!''': '''Hii {{hero}}!''',
+          '''Yes, I cleverly managed to avoid the monsters that were along the way!''':
+              '''Ja, ich habe auf meinem Weg hierher geschickt die Monster vermieden!''',
+          '''I love those cute little green worms!''':
+              '''Ich liebe diese süßen kleinen grünen Würmchen!''',
+          '''…S-such weird tastes here.''':
+              '''…So ausgefallene Geschmäcker hier.''',
+          '''Unkind!''': '''Scheußlich!''',
+          '''Aaanyway, look here! This is the tower where the King of Evil resides!''':
+              '''Wie auch immer, schau her! Das ist der Turm, in dem der König des Bösen haust!''',
+          '''Oh really? Are we there yet?''': '''Echt? Sind wir schon da?''',
+          '''It seems so… but it\'s closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets.''':
+              '''Es scheint so...aber sie ist verschlossen!\nDer nette Mann hier erklärte mir, dass man 3 Siegel braucht, um den Turm zu betreten.''',
+          '''Signets?''': '''Siegel?''',
+          '''I did not understand exactly what they are, but if I have not misunderstood they are kept in crypts present in each region of the Kingdom.''':
+              '''Ich habe nicht genau verstanden, worum es sich dabei handelt. Aber wenn ich mich nicht irre, werden sie in Krypten in jeder Region des Königreichs aufbewahrt.''',
+          '''Mm… Then I really think that I have to set out in search of these crypts…''':
+              '''Hm... Ich glaube, ich muss wirklich nach diesen Krypten suchen…''',
+          '''I guess you have no other choice.''':
+              '''Ich fürchte Du hast keine andere Wahl.''',
+          '''Good luck!''': '''Viel Glück!''',
+          '''Do your best!''': '''Gib Dein Bestes!''',
+          '''I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent.''':
+              '''Ich hasse dieses kleine Mädchen... Sie hat mich mit tausend Fragen gelöchert und geweint, bis ich ihr gesagt habe, was sie wollte. Was für eine Unverschämtheit.''',
+          '''One signet is not enough.''': '''Ein Siegel reicht nicht aus.''',
+          '''" Xeonjia Tower – Dwelling of the King of Evil. Stay away "''':
+              '''" Xeonjia Turm – Wohnsitz des König des Bösen. Halte Dich fern "''',
+          '''This door is closed.''': '''Diese Tür ist verschlossen.''',
+          '''This door is closed, I need the 3 signets to open it.''':
+              '''Diese Tür ist verschlossen. Ich brauche 3 Siegel, um sie zu öffnen.''',
+          '''I should go to the tower.''': '''Ich sollte zum Turm gehen.''',
+          '''The tower is so ugly.''': '''Dieser Turm ist so hässlich.''',
+          '''Home''': '''Zuhause''',
+          '''Good morning mom!''': '''Guten Morgen Mama!''',
+          '''Hi {{hero}}! Did you sleep well?''':
+              '''Hi {{hero}}! Gut geschlafen?''',
+          '''mom''': '''Mama''',
+          '''Actually not very well… I\'m still a little sleepy.''':
+              '''Ehrlich gesagt nicht so gut...Ich bin immer noch etwas verschlafen.''',
+          '''You always are.\nAnyway, now it is time to leave, be very careful and remember to check your health in the top left bar.''':
+              '''Wie immer.\nWie dem auch sei, jetzt ist es Zeit zu gehen. Sei sehr vorsichtig und vergiss nicht, deine Gesundheit in der Leiste oben links zu überprüfen.''',
+          '''Yea mom. Don\'t worry, I\'ll be careful.''':
+              '''Jaja Mama, keine Sorge. Ich werde vorsichtig sein.''',
+          '''When you hit the rocks you could hurt yourself, so stop by our neighbor who have prepared a brand new pair of shin guards for you.''':
+              '''Wenn du auf die Felsen triffst, könntest du dich verletzen. Schau also bei unserem Nachbarn vorbei, der ein brandneues Paar Schienbeinschoner für dich vorbereitet hat.''',
+          '''Sure, I will.''': '''Klar, werde ich.''',
+          '''Go get the shin guards from the neighbor, you will need them.''':
+              '''Los, hol die Schienbeinschoner vom Nachbarn. Du wirst sie brauchen.''',
+          '''The new shin guards are beautiful, they match the suit.''':
+              '''Die neuen Schienbeinschoner sind schön, sie passen gut zum Anzug.''',
+          '''This plant hasn\'t been watered for long.''':
+              '''Diese Pflanze wurde ewig nicht mehr gegossen.''',
+          '''Unfortunately, this is not the time to lie down on the sofa.''':
+              '''Leider ist jetzt nicht der richtige Zeitpunkt, um auf dem Sofa zu liegen.''',
+          '''This plant seems to have been recently watered.''':
+              '''Diese Pflanze scheint kürzlich gegossen worden zu sein.''',
+          '''The last time I went through the forest I was attacked.\nI\'m not going back there anymore.''':
+              '''Das letzte Mal, als ich durch den Wald ging, wurde ich angegriffen.\nIch werde dort nicht mehr hingehen.''',
+          '''If you want to enter the forest you have to be careful, my grandson risked getting hurt there.''':
+              '''Wenn Du in Wald möchtest solltest du vorsichtig sein. Mein Enkelsohn wurde dort fast verletzt.''',
+          '''Do you think piglets will one day be a common pet?''':
+              '''Glaubst Du, dass Ferkel eines Tages ein normales Haustier sein werden?''',
+          '''I think so too.''': '''Das glaube ich auch.''',
+          '''Oh, I hope you are not right.''':
+              '''Oh, ich hoffe Du irrst Dich.''',
+          '''I like piglets.''': '''Ich mag Ferkel.''',
           '''Yes''': '''Ja''',
           '''No''': '''Nein''',
-          '''" Souvenir shop "''': '''„Andenkenladen“''',
+          '''Mossy Crypt -3F''': '''Moosbewachsene Krypta -3.UG''',
+          '''My work is so boring…''': '''Meine Arbeit ist so öde…''',
+          '''Hi, I\'m an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I\'ll help you.''':
+              '''Hallo, ich bin ein Beamter des Königreichs.\nWenn du dich verirrst oder Probleme hast, den Weg zu finden, komm zu mir und ich werde dir helfen.''',
+          '''Are you stuck?\nTake the path behind the blue tree.''':
+              '''Kommst Du nicht weiter?\nNimm den Pfad hinter dem blauen Baum.''',
+          '''A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it\'s dangerous and infested with monsters.''':
+              '''Nur wenige Meter von hier entfernt befindet sich der Mitsu Wald. Früher zog er viele Touristen an, da er als heiliger Ort galt, aber jetzt ist er gefährlich und von Monstern befallen.''',
+          '''Hoarfrost Team members came to our house because they wanted a gem that I found on the ground.\nWe managed to keep it hidden from them but we don\'t want to have problems anymore.\nWe don\'t even need it after all, can we give it to you?''':
+              '''Einige Mitglieder von Team Raureif kamen zu unserem Haus, weil sie einen Edelstein haben wollten, den ich auf dem Boden gefunden hatte.\nWir konnten ihn vor denen verbergen, aber wir wollen keinen weiteren Ärger.\nWir brauchen ihn auch gar nicht. Können wir ihn Dir geben?''',
+          '''Here\'s to you!''': '''Auf Dein Wohl!''',
+          '''Thank you!''': '''Danke!''',
+          '''Oh, ok. Then I\'ll have to think about what to do with this gem.''':
+              '''Ach ja, richtig. Dann muss ich mir überlegen, was ich mit diesem Schmuckstück anfangen soll.''',
+          '''Protect that gem well.''': '''Schütze dieses Schmuckstück gut.''',
+          '''Be careful when dealing with the Hoarfrost Team.''':
+              '''Sei vorsichtig, wenn du auf Team Raureif triffst.''',
+          '''Mind your own business.''':
+              '''Kümmer Dich um deinen eigenen Kram.''',
+          '''This plant is very fragrant.''': '''Diese Pflanze duftet gut.''',
+          '''This vase is very heavy, I can\'t move it.''':
+              '''Diese Vase ist sehr schwer. Ich kann sie nicht bewegen.''',
+          '''Yes thanks''': '''Ja danke''',
+          '''NEIGHBOR\'S HOUSE''': '''NACHBARHAUS''',
+          '''Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones.\nI made them by hand. Here\'s to you!''':
+              '''Hallo Kumpel, wie geht es Dir? Ich habe Dir diese Schienbeinschoner gemacht. Du wirst sie brauchen, um den Aufprall auf die Steine zu dämpfen.\nIch habe sie selbst handgefertigt. Hier, bitte sehr!''',
+          '''neighbor''': '''Nachbar''',
+          '''* {{hero}} got and put on the shin guards *''':
+              '''* {{hero}} hat Schienbeinschoner erhalten und angelegt *''',
+          '''This way you will hurt yourself less, but be careful that they do not fully protect you from damage.''':
+              '''Dadurch wirst Du Dich weniger verletzen. Aber sei vorsichtig, sie schützen nicht vollständig vor Schäden.''',
+          '''Thank you very much!''': '''Vielen Dank!''',
+          '''Since the shin guards I gave you do not fully protect you, try to think diligently about the moves you make.''':
+              '''Da die Schienbeinschoner, die ich dir gegeben habe, dich nicht vollständig schützen, solltest du dir deine Bewegungen gut überlegen.''',
+          '''I\'m sorry but this road is closed.\nWork is underway to restore the railway system.''':
+              '''Es tut mir leid, aber diese Straße ist gesperrt.\nZurzeit wird das Schienensystem wieder aufgebaut.''',
+          '''Welcome to the City Hall.''': '''Willkommen im Rathaus.''',
+          '''I can\'t wait till they finish to restore the railway system, it no longer work since the ice arrival.''':
+              '''Ich kann es kaum erwarten, dass sie die Restaurierung der Eisenbahn beenden, die seit dem Eiseinbruch nicht mehr funktioniert.''',
+          '''My wife remained blocked on the other side of the kingdom, I wonder if I will ever see her again.''':
+              '''Meine Frau sitzt auf der anderen Seite des Königreichs fest und ich frage mich, ob ich sie jemals wiedersehen werde.''',
+          '''" City Hall ↑ "''': '''" Rathaus ↑ "''',
+          '''" Route 4 → "''': '''" Route 4 → "''',
+          '''Before continuing I\'d like to visit the City Hall.''':
+              '''Ich möchte vorher noch das Rathaus besuchen.''',
+          '''The City Hall seems spacious.''':
+              '''Das Rathaus scheint geräumig zu sein.''',
+          '''You\'re lucky, but it doesn\'t end here, guaranteed.''':
+              '''Du hattest Glück, aber es ist noch nicht vorbei.''',
+          '''I will defeat you.''': '''Ich werde Dich besiegen.''',
+          '''You will not escape me.''': '''Du wirst mir nicht entkommen.''',
+          '''I can\'t escape. I have to take the first signet.''':
+              '''Ich komme nicht mehr raus. Ich muss das erste Siegel bekommen.''',
+          '''Here it is, this is the first signet!''':
+              '''Da ist es, das erste Siegel!''',
+          '''I can get out of here now.''': '''Endlich kann ich hier raus.''',
+          '''The henchmen are after me! I\'ll get the signet later.''':
+              '''Die Schergen sind hinter mir her! Ich werde das Siegel später holen.''',
+          '''I didn\'t think you would get this far, kid.''':
+              '''Ich hätte nicht gedacht, dass du so weit kommst, Kindchen.''',
+          '''W-Who are you? Who are you guys?''':
+              '''W-Wer seid Du? Wer seid ihr Typen?''',
+          '''I\'m surprised that my name is not known among the woods of your village.''':
+              '''Ich bin überrascht, dass mein Name in den Wäldern deines Dorfes nicht bekannt ist.''',
+          '''Anyway, I\'m Dr. Lache and I\'m the leader of the Hoarfrost Team.''':
+              '''Wie auch immer, ich bin Dr. Lache und der Leiter von Team Raureif.''',
+          '''dr. lache''': '''Dr. Lache''',
+          '''S-So you\'re the one who spread terror and violence through the henchmen as ordered by the King of Evil?''':
+              '''S-Sie sind also derjenige, der auf Geheiß des Königs des Bösen mit seinen Schergen Terror verbreitet?''',
+          '''As ordered by the King of Evil? HAHAHA''':
+              '''Auf Befehl des Königs des Bösen? HAHAHA''',
+          '''I don\'t take orders from anyone. Between me and the King of Evil there is a peer collaboration.''':
+              '''Ich nehme keine Befehle von irgendjemandem an. Zwischen mir und dem König des Bösen besteht eine gewisse Zusammenarbeit.''',
+          '''Be that as it may, I won\'t let you continue your plans.''':
+              '''Auf jeden Fall werde ich nicht erlauben, dass Sie mit Ihren Plänen weitermachen.''',
+          '''I\'m {{hero}}, I\'m the chos-''':
+              '''Ich bin {{hero}}, ich bin der Auserwä-''',
+          '''I know very well who you are, you\'re the chosen hero and blah, blah, blah.\nI don\'t have time for this.''':
+              '''Ich weiß genau, wer Du bist, Du bist der auserwählte Held und blah, blah, blah.\nIch habe keine Zeit für so etwas.''',
+          '''I know you\'re interested in the signet, defeat my henchmen and it\'s yours.\nNow get out of my way.''':
+              '''Ich weiß, dass Du an dem Siegel interessiert bist. Besiege meine Gefolgsleute und es gehört dir.\nUnd jetzt geh mir aus dem Weg.''',
+          '''I won\'t let you go so eas-''':
+              '''So einfach lasse ich Dich nicht davonko-''',
+          '''Well, well, well… you\'ll have to deal with us now.''':
+              '''Sieh an, sieh an, sieh an...jetzt wirst Du Dich mit uns rumschlagen müssen.''',
+          '''I\'m Iosa.''': '''Ich bin Iosa.''',
+          '''And I\'m Joza.''': '''Und ich bin Joza.''',
+          '''We are the Iosa&Joza brothers and we will be your worst nightmare.''':
+              '''Wir sind die Gebrüder Iosa & Joza und dein schlimmster Albtraum.''',
+          '''I\'m not scared of you, let\'s see what you are capable of!''':
+              '''Ich habe keine Angst vor euch. Los, zeigt was ihr könnt!''',
+          '''Now you will see.''': '''Du wirst gleich sehen.''',
+          '''Let\'s fight!''': '''Kämpfen wir!''',
+          '''iosa&joza''': '''Iosa & Joza''',
+          '''A rocky wall covered by moss.''':
+              '''Eine steinige, moosbewachsene Wand.''',
+          '''iosa''': '''Iosa''',
+          '''joza''': '''Joza''',
+          '''Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck.''':
+              '''Manchmal findet man zwischen den Zweigen der Pflanzen einige Beeren.\nIch habe auch schon Gegenstände gefunden, die stecken geblieben sind.''',
+          '''Oh, I was about to take those berries.''':
+              '''Oh, ich wollte gerade diese Beeren nehmen.''',
+          '''No problem, you can keep them.''':
+              '''Kein Problem, du kannst sie behalten.''',
+          '''I hope those berries were good.''':
+              '''Ich hoffe, die Beeren waren gut.''',
+          '''On the ground it\'s easy to find XEON (¤) stones that you can use to buy items in shops.''':
+              '''Auf dem Boden kann man leicht XEON-Steine (¤) finden, mit denen man in Geschäften Gegenstände kaufen kann.''',
+          '''It seems that once there was a path here.''':
+              '''Es scheint, dass hier einst ein Weg war.''',
+          '''Mossy Crypt -1F''': '''Moosbewachsene Krypta -1.UG''',
+          '''I advise you not to continue, you are running into big trouble.\nI\'ll report your presence to my boss.''':
+              '''Ich rate Ihnen, nicht weiterzugehen. Sie werden große Schwierigkeiten bekommen.\nIch werde Sie bei meinem Chef melden.''',
+          '''If you decide to continue you will regret it.''':
+              '''Sie werden es bereuen, hier weiterzumachen.''',
+          '''Route 1''': '''Route 1''',
+          '''The ice is so slippery, have you noticed?\nI feel more comfortable on the snow.''':
+              '''Das Eis ist so rutschig, hat du das bemerkt?\nIch fühle mich auf dem Schnee viel wohler.''',
+          '''There seems to be something in the branches of this plant…\nIt\'s a stone!''':
+              '''Da scheint was zwischen den Ästen des Baumes zu sein...\nEs ist ein Stein!''',
+          '''This is a very strange stone… Never seen anything like this before.''':
+              '''Das ist ein sehr eigenartiger Stein...So etwas habe ich noch nie zuvor gesehen.''',
+          '''VANTOI LAB – 2F''': '''VANTOI LAB – 2.UG''',
+          '''What a mess! I have to tidy up!''':
+              '''Was für ein Chaos! Ich muss das aufräumen!''',
+          '''Some boulders are placed by us, the workers of the Kingdom.\nIn this way it\'s easier to reach all places.''':
+              '''Einige Steine wurden von uns, den Mitarbeitern des Königreichs, gelegt.\nAuf diese Weise ist es einfacher, alle Orte zu erreichen.''',
+          '''" Souvenir shop "''': '''"Andenkenladen"''',
+          '''I can see the inside of the shop.''':
+              '''Ich kann das Innere des Ladens sehen.''',
+          '''Melhopolis is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though.''':
+              '''Melhopolis ist das Verwaltungszentrum der Region.\nHeute jedoch sind Korruption, Armut und Kriminalität allgegenwärtig.''',
+          '''Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here.''':
+              '''Hey, das ist der Mitsu Wald. Meine Eltern haben mir viele Geschichten über seine Schönheit und seine Blütezeit vor langer Zeit erzählt. Es heißt, dass hier einst der sagenumwobene Beschützer des Kontinents lebte.''',
+          '''174805…\nI don\'t know what these figures are but a little while ago I heard someone say them out loud…\nDunno why.''':
+              '''174805...\nIch weiß nicht, was diese Zahlen bedeuten, aber vor nicht allzu langer Zeit habe ich jemanden gehört, der sie laut aussprach...\nIch weiß nicht, warum.''',
+          '''The trees of this region are admired and studied throughout the Kingdom. These blues are my favorites.''':
+              '''Die Bäume dieser Gegend werden im ganzen Königreich bewundert und studiert. Diese Blauen sind meine Favoriten.''',
+          '''" Mitsu Forest – Welcome, respect nature and remember to take a look at the souvenir shop on the right "''':
+              '''" Mitsu Wald - Willkommen, respektieren Sie die Natur und vergessen Sie nicht, den Souvenirladen auf der rechten Seite zu besuchen "''',
+          '''Once this was a very touristy place, the Kingdom tried to make money from it.''':
+              '''In der Vergangenheit war es ein sehr touristischer Ort. Das Königreich versuchte, Profit daraus zu schlagen.''',
+          '''Test tubes and other scientific stuff.''':
+              '''Reagenzgläser und anderes wissenschaftliches Zeug.''',
+          '''Someone has turned everything upside down.''':
+              '''Jemand hat alles auf den Kopf gestellt.''',
+          '''A rocky wall.''': '''Eine Steinwand.''',
+          '''A wall.''': '''Eine Wand.''',
+          '''A rock.''': '''Ein Stein.''',
           '''A little plant.''': '''Eine kleine Pflanze.''',
+          '''A little plant without leaves.''':
+              '''Eine kleine Pflanze ohne Blätter.''',
+          '''I like the color of this tree.''':
+              '''Ich mag die Farbe dieses Baumes.''',
+          '''This type of tree is strange.''':
+              '''Diese Baumart ist eigenartig.''',
+          '''This type of plant is strange.''':
+              '''Diese Pflanzenart ist eigenartig.''',
+          '''It\'s not a good thing to look into other people\'s homes.''':
+              '''Es ist unangebracht, sich die Häuser anderer Leute anzuschauen.''',
           '''This is a pharmacy.''': '''Dies ist eine Apotheke.''',
           '''man''': '''Mann''',
+          '''lumberjack''': '''Holzfäller''',
+          '''young-girl''': '''Mädchen''',
+          '''youngster''': '''Jüngling''',
+          '''elderly''': '''Seniorin''',
+          '''guy''': '''Typ''',
+          '''old-man''': '''Greis''',
+          '''adventurer''': '''Abenteurer''',
           '''dude''': '''Kerl''',
           '''girl''': '''Mädchen''',
+          '''oldster''': '''Ältester''',
+          '''henchman''': '''Scherge''',
+          '''worker''': '''Arbeiter''',
+          '''I don\'t know what this means.''':
+              '''Ich habe keine Ahnung, was das bedeutet.''',
+          '''I can\'t go beyond this.''': '''Ich kann hier nicht weiter.''',
+          '''milla''': '''milla''',
+          '''shen''': '''Shen''',
+          '''The weather is good today.''': '''Heute ist gutes Wetter.''',
+          '''A painting that depicts this area long ago.''':
+              '''Ein Gemälde, das die Gegend vor langer Zeit darstellt.''',
+          '''It\'s full of books here.''': '''Hier ist es voller Bücher.''',
           '''A closed door.''': '''Eine geschlossene Tür.''',
+          '''There is some food between the mattresses of this sofa.''':
+              '''Zwischen den Sofakissen befindet sich irgendwelches Essen.''',
+          '''This is a wall.''': '''Das ist eine Wand.''',
+          '''Oink !''': '''Oink!''',
+          '''This pig looks very happy.''':
+              '''Das Schwein sieht sehr glücklich aus.''',
+          '''A strange icosahedral stone''':
+              '''Ein seltsamer, ikosaedrischer Stein''',
+          '''Package of the King''': '''Paket des Königs''',
+          '''First Signet''': '''Erstes Siegel''',
         },
       };
   String get i18n => localize(this, _t);

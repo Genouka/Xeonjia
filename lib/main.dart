@@ -9,6 +9,7 @@ import 'package:xeonjia/ui/themes.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 const List<Locale> enabledLocales = [
+  Locale('de'),
   Locale('en'),
   Locale('es'),
   Locale('fr'),
@@ -18,7 +19,6 @@ const List<Locale> enabledLocales = [
 ];
 final List<Locale> supportedLocales = [
   ...enabledLocales,
-  const Locale('de'),
   const Locale('id'),
   const Locale('uk'),
   const Locale('zh'),

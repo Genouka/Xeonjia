@@ -219,7 +219,7 @@ extension Localization on String {
           '''Restore default settings?''':
               '''Ripristinare le impostazioni predefinite?''',
           '''Are you sure you want to delete your settings and restore default ones?''':
-              '''Sei sicuro di voler eliminare le tue impostazioni e ripristinare quelle predefinite?''',
+              '''Sei sicuro/a di voler eliminare le tue impostazioni e ripristinare quelle predefinite?''',
           '''Cancel''': '''Annulla''',
           '''Show D-Pad''': '''Mostra D-Pad''',
           '''Enable directional pad''': '''Abilita controller direzionale''',
@@ -294,11 +294,11 @@ extension Localization on String {
           '''your points: %s''': '''tuoi punti: %s''',
           '''resume''': '''riprendi''',
           '''Are you sure you want to restart this game?''':
-              '''Sei sicuro di voler ricominciare questa partita?''',
+              '''Sei sicuro/a di voler ricominciare questa partita?''',
           '''It will restart from the last location change.''':
               '''Rinizierà dall\'ultimo cambio di stanza.''',
           '''Are you sure you want to quit this game?''':
-              '''Sei sicuro di voler uscire da questa partita?''',
+              '''Sei sicuro/a di voler uscire da questa partita?''',
           '''\n\nGame data since the last time you changed your location will be lost.''':
               '''\n\nI dati di questa partita dall\'ultimo cambio di stanza verranno persi.''',
           '''Shop''': '''Negozio''',
@@ -1067,10 +1067,10 @@ extension Localization on String {
           '''Before starting tell me your name which will be used in the game.''':
               '''Bevor wir beginnen, sag mir deinen Namen. Dieser wird im Spiel verwendet.''',
           '''Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.''':
-              '''Löse Eis Puzzel und besiege deine Gegner in einer RPG Welt.\n\nWische nach Rechts, um die Grundlagen zu erlernen.''',
+              '''Löse Eispuzzles und besiege deine Gegner in einer Rollenspielwelt.\n\nWische nach Rechts, um die Grundlagen zu erlernen.''',
           '''Modes''': '''Modi''',
           '''There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the "King of Evil" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win.''':
-              '''In Xeonjia gibt es zwei Spielmodi:\n\n1) Story-Mode: Die Welt ist von einer Eisschicht bedeckt und es ist deine Aufgabe den "König des Bösen" zu besiegen und das Königreich zu retten.\n\n2)Multiplayer: Besiege Gegner, sammel Punkte und führe dein Team zum Sieg.''',
+              '''In Xeonjia gibt es zwei Spielmodi:\n\n1) Geschichte-Modus: Die Welt ist von einer Eisschicht bedeckt und es ist deine Aufgabe den "König des Bösen" zu besiegen und das Königreich zu retten.\n\n2)Mehrspieler: Besiege Gegner, sammel Punkte und führe dein Team zum Sieg.''',
           '''Movements''': '''Bewegungen''',
           '''Swipe your finger to move your character across the world.\nKeep in mind that you can\'t stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!''':
               '''Wische mit deinem Finger, um deinen Charakter durch die Welt zu bewegen.\nBedenke aber, dass du nicht anhalten kannst, bis du auf eine Wand, einen Felsen oder ein anderes Hindernis triffst. \n\nNutze deinen Verstand, um den besten Weg zu finden!''',
@@ -1088,9 +1088,12 @@ extension Localization on String {
           '''OK''': '''OK''',
           '''Next''': '''Weiter''',
           '''Play''': '''Spiel starten''',
-          '''Multiplayer Mode''': '''Multiplayer-Modus''',
+          '''Multiplayer Mode''': '''Mehrspieler-Modus''',
+          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play".''':
+              '''Das Ziel dieses Modus ist es, Gegner zu besiegen, Punkte zu sammeln und dein Team zum Sieg zu führen.\n\nDie Regeln sind einfach:\n- Die Spieler werden in zwei Teams eingeteilt.\n- Jedes Mal, wenn ein Spieler einen Gegner besiegt, erhält dessen Team 100 Punkte.\n- Das Team, das die erforderliche Punktzahl erreicht, gewinnt.\n\nDeine Mannschaftskameraden sind die Roten.\n\nIm Moment ist es nur möglich, gegen Computergesteurte Gegner zu spielen.\n\nWähle den Spielort und konfiguriere das Spiel.\nWenn du bereit bist, drücke "Spiel starten".''',
           '''Okay, got it!''': '''Alles klar!''',
           '''Map''': '''Karte''',
+          '''Place to play''': '''Spielort''',
           '''Difficulty''': '''Schwierigkeitsgrad''',
           '''Match difficulty''': '''Schwierigkeitsgrad''',
           '''Points required''': '''Punkte benötigt''',
@@ -1121,7 +1124,7 @@ extension Localization on String {
           '''Enable sound effects''': '''Toneffekte einschalten''',
           '''Your name''': '''Dein Name''',
           '''Click here to change the name used in story mode''':
-              '''Klicke hier, um den Namen der im Story-Modus benutzt wird zu ändern''',
+              '''Klicke hier, um den Namen der im Geschichte-Modus benutzt wird zu ändern''',
           '''Discard''': '''Verwerfen''',
           '''Save''': '''Speichern''',
           '''Language''': '''Sprache''',
@@ -1172,7 +1175,7 @@ extension Localization on String {
           '''Continue''': '''Fortsetzen''',
           '''Yes''': '''Ja''',
           '''No''': '''Nein''',
-          '''Loading…\nPlease wait''': '''Lädt…\nBitte warten''',
+          '''Loading…\nPlease wait''': '''Lädt …\nBitte warten''',
           '''pause''': '''Pause''',
           '''restart''': '''neu starten''',
           '''exit''': '''verlassen''',
@@ -1181,12 +1184,18 @@ extension Localization on String {
           '''level: %s''': '''Level: %s''',
           '''money: %s ¤''': '''Geld: %s ¤''',
           '''play time: %s min''': '''Spielzeit: %s min''',
+          '''your defeats: %s''': '''Deine Niederlagen: %s''',
+          '''enemies defeated: %s''': '''Besiegte Gegner: %s''',
           '''your points: %s''': '''Deine Punkte: %s''',
           '''resume''': '''Fortsetzen''',
           '''Are you sure you want to restart this game?''':
               '''Bist du sicher, dass du dieses Spiel neu beginnen magst?''',
+          '''It will restart from the last location change.''':
+              '''Es wird ab der letzten Ortsveränderung neu gestartet.''',
           '''Are you sure you want to quit this game?''':
               '''Bist du sicher, dass du dieses Spiel verlassen magst?''',
+          '''\n\nGame data since the last time you changed your location will be lost.''':
+              '''\n\nDie Spieldaten seit dem letzten Ortswechsel gehen verloren.''',
           '''Shop''': '''Geschäft''',
           '''What do you need?''': '''Was brauchst du?''',
           '''Let me know if you need anything else.''':
@@ -1197,6 +1206,10 @@ extension Localization on String {
               '''* {{hero}} packt %s in den Rucksack. *''',
           '''* {{hero}} puts the gem in the backpack. *''':
               '''* {{hero}} packt den Juwel in den Rucksack. *''',
+          '''* {{hero}} gives %s *''': '''* {{hero}} gibt %s *''',
+          '''Punch''': '''Schlag''',
+          '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
+              '''Schlage den Gegner vor Dir.\nDas ist die einfachste Waffe. Du hast unendlich viel PP.''',
           '''Throw snowballs in front of you.''':
               '''Wirf Schneebälle vor dich.''',
           '''Leave explosive mines on the floor.\nA mine explodes if someone except you walks on it.''':

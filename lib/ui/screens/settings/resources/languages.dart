@@ -4,7 +4,7 @@ const languageName = {
   'it': ['Italian', 'Italiano'],
   'es': ['Spanish', 'Español'],
   'fr': ['French', 'Français'],
-  'de': ['German', 'Deutsch (BETA)'],
+  'de': ['German', 'Deutsch'],
   'zh': ['Chinese (Simplified)', '简体中文 (ALPHA)'],
   'vi': ['Vietnamese', 'Tiếng Việt'],
   'uk': ['Ukrainian', 'Українська (ALPHA)'],
