@@ -22,10 +22,14 @@ class PlayButton extends StatelessWidget {
         onPressed: () {
           Navigator.push(context, FadeRoute(page()));
         },
-        child: Text(
-          'Play'.i18n.toUpperCase(),
-          style: const TextStyle(
-              color: Colors.white, fontSize: 20, letterSpacing: 6),
+        child: FittedBox(
+          fit: BoxFit.fitWidth,
+          child: Text(
+            'Play'.i18n.toUpperCase(),
+            maxLines: 1,
+            style: const TextStyle(
+                color: Colors.white, fontSize: 20, letterSpacing: 6),
+          ),
         ),
       ),
     );
