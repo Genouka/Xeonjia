@@ -5,7 +5,7 @@
 # KMX <kumax2048@protonmail.ch>, 2021.
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-21 14:19+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-08-24 18:56+0000\nLast-Translator: KMX <kumax2048@protonmail.ch>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -38,9 +38,8 @@ msgid "Before starting tell me your name which will be used in the game."
 msgstr "在开始游戏前，先说出你想在游戏中使用的名字吧。"
 
 #: lib/ui/screens/rules/resources/rules.dart:
-#, fuzzy
 msgid "Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts."
-msgstr "在 RPG 式的世界中解决滑冰谜题，以及击败敌人。\n\n向右滑动来了解基本概念。"
+msgstr "在 RPG 式的世界中解决滑冰谜题，并击败敌人。\n\n向右滑动来了解基本概念。"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Modes"
@@ -81,9 +80,8 @@ msgid "Enemies"
 msgstr "敌人"
 
 #: lib/ui/screens/rules/resources/rules.dart:
-#, fuzzy
 msgid "Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have life points too."
-msgstr "小心，这个世界上充斥着准备好攻击你的危险敌人！\n只需要攻击几次就能打败他们，因为他们也有生命值。"
+msgstr "小心，这个世界上充斥着准备好攻击你的危险敌人！\n只需要攻击几次就能打败他们，他们也有生命值。"
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "Close"

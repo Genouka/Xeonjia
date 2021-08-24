@@ -4,7 +4,7 @@
 # Liu Tao <lyuutau@outlook.com>, 2021.
 # KMX <kumax2048@protonmail.ch>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-04-11 14:59+0000\nLast-Translator: KMX <kumax2048@protonmail.ch>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-08-24 18:56+0000\nLast-Translator: KMX <kumax2048@protonmail.ch>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -16,7 +16,7 @@ msgstr "……"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "H-Hello."
-msgstr ""
+msgstr "你、你好。"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
@@ -133,7 +133,7 @@ msgstr "某人用这株植物做实验"
 #: assets/maps/story/24_lab.tmx:
 #, fuzzy
 msgid "A broken monitor."
-msgstr "一台坏显示器。"
+msgstr "一台被砸坏的显示器。"
 
 #: assets/maps/story/8.tmx:
 msgid "\" → \""
@@ -238,7 +238,7 @@ msgstr "我最好去确认一下那个人是否没事。"
 
 #: assets/maps/story/14.tmx:
 msgid "\" ← Pharmacy \""
-msgstr "“←药店”"
+msgstr "“← 药店”"
 
 #: assets/maps/story/7.tmx:
 #, fuzzy
@@ -263,9 +263,8 @@ msgid "Nice to meet you, I've never met a hero before."
 msgstr "很高兴认识你，我之前还从来没见到过一个英雄呢。"
 
 #: assets/maps/story/7.tmx:
-#, fuzzy
 msgid "My name is Milla, I was born and raised in this area. I too am setting out on a journey."
-msgstr "我的名字叫米拉，我是在这个地方出生和长大的。而且我也正在旅游。"
+msgstr "我的名字叫米拉，是在这个地方出生和长大的。而且我也正好在旅游。"
 
 #: assets/maps/story/7.tmx:
 #, fuzzy
@@ -298,7 +297,7 @@ msgstr "王国外面还有地方吗？！"
 
 #: assets/maps/story/7.tmx:
 msgid "Dunno, that's what I want to find out!"
-msgstr "不知道，但这就是我想去了解的地方！"
+msgstr "不知道，但这正是我所想了解的！"
 
 #: assets/maps/story/7.tmx:
 msgid "Anyway, I don't want to waste any more of your time."
