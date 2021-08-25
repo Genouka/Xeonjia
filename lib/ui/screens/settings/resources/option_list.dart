@@ -13,8 +13,7 @@ import 'package:xeonjia/util/local_data_controller.dart';
 // List of available options displayed in settings page
 class OptionList extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
-  final _textFieldController =
-      TextEditingController(text: '${mainCharacter.name}');
+  final _textFieldController = TextEditingController(text: mainCharacter.name);
 
   @override
   Widget build(BuildContext context) => ListView(children: <Widget>[

@@ -119,7 +119,8 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                             .authorName) !=
                                         '')
                                       Text(
-                                        '${game.messageManager.currentMessage.authorName} :',
+                                        '${game.messageManager.currentMessage.authorName} :'
+                                            .toUpperCase(),
                                         style: Theme.of(context)
                                             .textTheme
                                             .bodyText1,

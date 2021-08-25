@@ -41,7 +41,7 @@ class Message {
     if (authorName != '') {
       authorName = (authorName == 'hero')
           ? mainCharacter.name
-          : authorName.i18n.toUpperCase().replaceAll('-', ' ');
+          : authorName.i18n.replaceAll('-', ' ');
     }
     if (translate) {
       text = text
