@@ -18,10 +18,7 @@ Widget insertNameForm(GlobalKey key, TextEditingController textFieldController,
           SystemChrome.restoreSystemUIOverlays();
         },
         validator: (value) {
-          if (value == '') {
-            return "What's your name?".i18n +
-                (settings.useSystemFont ? ' [A-Z]' : '');
-          }
+          if (value == '') return "What's your name?".i18n + ' [A-Z]';
           return value.trim().length < 2 ? 'Too short.'.i18n : null;
         },
         inputFormatters: [
