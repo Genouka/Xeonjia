@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/match_config.dart';
@@ -9,7 +10,6 @@ import 'package:xeonjia/ui/screens/arena/arena_page.dart';
 import 'package:xeonjia/ui/screens/home/widgets/bottom_row.dart';
 import 'package:xeonjia/ui/screens/home/widgets/page_button.dart';
 import 'package:xeonjia/ui/screens/rules/rules_page.dart';
-import 'package:xeonjia/util/screen_dimension.dart';
 
 class HomePage extends StatelessWidget {
   List<Map<String, dynamic>> pageList() {
@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    setScreenDimension(context);
+    devicePixelRatio = MediaQuery.of(context).devicePixelRatio;
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(

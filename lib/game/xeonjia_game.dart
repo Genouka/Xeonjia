@@ -1,17 +1,18 @@
 import 'dart:math';
 import 'package:flame/bgm.dart';
-import 'package:flame/components/component.dart';
 import 'package:flame/components/timer_component.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
 import 'package:flame/keyboard.dart';
+import 'package:flame/sprite.dart';
 import 'package:flame/time.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
+import 'package:xeonjia/game/components/static/background.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/util/event_manager.dart';
 import 'package:xeonjia/game/util/extensions.dart';
@@ -36,19 +37,21 @@ import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/models/team.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
-import 'package:xeonjia/util/screen_dimension.dart';
 
 // Main game variable
 XeonjiaGame game;
 
 // Default component speed (componentSize per second)
-double defaultSpeed;
+double get defaultSpeed => componentSize * 8;
 
 // Default component dimension
 double componentSize;
 
-// Vertical offset used to translate dynamic components
-double characterOffset;
+// Vertical offset used to translate characters
+double get characterOffset => -(componentSize *
+        ((game?.miniMapEnabled ?? false) ? game.miniMapZoom : 1) /
+        8)
+    .gridAligned;
 
 // Xeonjia game class
 class XeonjiaGame extends BaseGame
@@ -208,6 +211,7 @@ class XeonjiaGame extends BaseGame
       }
     });
     _timer.start();
+    game.addLater(BackgroundComponent(0, 0, Sprite('background.png')));
     update(0);
     removeWidgetOverlay('loading');
     resume();
@@ -222,9 +226,10 @@ class XeonjiaGame extends BaseGame
 
   @override
   void resize(Size size) {
-    screenSize = size;
-    updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
+    componentSize = (size.longestSide / 16).round16.gridAligned;
+    miniMapZoom = 1;
     super.resize(size);
+    updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
   }
 
   // Pause game
@@ -339,10 +344,10 @@ class XeonjiaGame extends BaseGame
 
   // Update camera position
   void updateCamera(double x, double y, [double _componentSize]) {
-    if (map?.width == null) return;
+    if (map?.width == null || size == null) return;
     _componentSize ??= componentSize;
-    camera.x = _moveCamera(_componentSize, screenSize.width, map.width, x);
-    camera.y = _moveCamera(_componentSize, screenSize.height, map.height, y);
+    camera.x = _moveCamera(_componentSize, size.width, map.width, x);
+    camera.y = _moveCamera(_componentSize, size.height, map.height, y);
   }
 
   // Calculate camera position
@@ -353,15 +358,15 @@ class XeonjiaGame extends BaseGame
         .gridAligned;
   }
 
-  // Mini-map (componentSize = componentSize / miniMapZoom)
+  // Mini-map (componentSize = componentSize * miniMapZoom)
   bool miniMapEnabled = false;
-  double _miniMapZoom;
+  double miniMapZoom = 1;
 
   // Enable/Disable mini-map view
   void miniMap() {
     miniMapEnabled = !miniMapEnabled;
     if (miniMapEnabled) {
-      zoomMiniMap(toValue: _miniMapZoom ?? 2, enable: true);
+      zoomMiniMap(toValue: miniMapZoom, enable: true);
       pause(stopEngine: false, stopMusic: false);
       _statusBox.state.refresh();
       removeWidgetOverlay('mapNameBox');
@@ -370,7 +375,6 @@ class XeonjiaGame extends BaseGame
       addWidgetOverlay('miniMapButton', MiniMapButton(miniMapIsActive: true));
       refreshWeaponButtons();
     } else {
-      zoomMiniMap(toValue: 1);
       updateCamera(playerOne.x, playerOne.y);
       removeWidgetOverlay('mapNameBox');
       removeWidgetOverlay('miniMapButton');
@@ -383,21 +387,14 @@ class XeonjiaGame extends BaseGame
 
   // Change mini-map zoom
   void zoomMiniMap({double toValue, bool out = false, bool enable = false}) {
-    var previousValue = enable ? 1.0 : _miniMapZoom;
-    var tempMapZoom = (toValue ??
-        (out ? min(_miniMapZoom + 0.5, 3) : max(_miniMapZoom - 0.5, 0.5)));
-    _miniMapZoom = componentSize / (componentSize / tempMapZoom).gridAligned;
-    var ratio = previousValue / _miniMapZoom;
-    components.forEach((c) {
-      if (c is SpriteComponent) {
-        c.width *= ratio;
-        c.height *= ratio;
-        c.x *= ratio;
-        c.y *= ratio;
-      }
-    });
-    if (toValue == 1) _miniMapZoom = previousValue;
-    updateCamera(playerOne.x, playerOne.y, componentSize / _miniMapZoom);
+    var previousValue = enable ? 1.0 : miniMapZoom;
+    var delta = 16 / componentSize;
+    miniMapZoom = (toValue ??
+        (out
+            ? max(previousValue - delta, delta)
+            : min(previousValue + delta, 2)));
+    updateCamera(playerOne.x * miniMapZoom, playerOne.y * miniMapZoom,
+        (componentSize * miniMapZoom).gridAligned);
     onPanUpdate(DragUpdateDetails(globalPosition: Offset.zero));
   }
 
@@ -447,10 +444,10 @@ class XeonjiaGame extends BaseGame
           : Offset(0, upd.delta.dy);
       playerOne?.updateOrientation(GetDirection.fromOffset(_panGestureOffset));
     } else if (miniMapEnabled) {
-      camera.x = _moveCamera(componentSize / _miniMapZoom, screenSize.width,
-          map.width, camera.x - upd.delta.dx + screenSize.width / 2);
-      camera.y = _moveCamera(componentSize / _miniMapZoom, screenSize.height,
-          map.height, camera.y - upd.delta.dy + screenSize.height / 2);
+      camera.x = _moveCamera(componentSize * miniMapZoom, size.width, map.width,
+          camera.x - upd.delta.dx + size.width / 2);
+      camera.y = _moveCamera(componentSize * miniMapZoom, size.height,
+          map.height, camera.y - upd.delta.dy + size.height / 2);
     }
   }
 
@@ -486,11 +483,11 @@ class XeonjiaGame extends BaseGame
         position.dy - (playerOne.y + componentSize / 2 - camera.y);
 
     if (position.dx < componentSize ||
-        position.dx > screenSize.width - componentSize) {
+        position.dx > size.width - componentSize) {
       playerOne.updateOrientation(
           GetDirection.fromXY(position.dx - componentSize, 0));
     } else if (position.dy < componentSize ||
-        position.dy > screenSize.height - componentSize) {
+        position.dy > size.height - componentSize) {
       playerOne.updateOrientation(
           GetDirection.fromXY(0, position.dy - componentSize));
     } else if (_relativeTapX.abs() > 15 || _relativeTapY.abs() > 15) {

@@ -24,7 +24,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   Direction orientation = Direction.down;
 
   // Component speed (componentSize per second)
-  double speed = defaultSpeed;
+  double get speed => defaultSpeed;
 
   // Number of moves done
   int movesCounter = 0;
@@ -94,8 +94,13 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
 
     // Distance traveled
     final _delta = min(speed * dt, componentSize - 1);
-    final candidatePosition =
+    final candidatePositionTemp =
         toRect().translate(direction.dx * _delta, direction.dy * _delta);
+    final candidatePosition = Rect.fromLTWH(
+        candidatePositionTemp.left.gridAligned,
+        candidatePositionTemp.top.gridAligned,
+        candidatePositionTemp.width,
+        candidatePositionTemp.height);
 
     // Check if this is going to collide or overlap another component
     game.components.forEach((component) {

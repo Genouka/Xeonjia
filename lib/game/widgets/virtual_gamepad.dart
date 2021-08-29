@@ -5,23 +5,20 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
-import 'package:xeonjia/util/screen_dimension.dart';
-
-// Gamepad size
-double _size;
 
 // Virtual Gamepad (D-pad + buttons)
 class VirtualGamePad extends StatelessWidget {
-  VirtualGamePad() {
-    _size = min(screenSize.width, screenSize.height) / 12;
-  }
-
   final GlobalKey<_ButtonsState> _key = GlobalKey();
   final GlobalKey<_DPadState> _DPadKey = GlobalKey();
+  static double _size = 0;
 
   @override
-  Widget build(BuildContext context) =>
-      Stack(children: [if (settings.showDPad) _DPad(_DPadKey), _Buttons(_key)]);
+  Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
+    _size = min(screenSize.width, screenSize.height) / 12;
+    return Stack(
+        children: [if (settings.showDPad) _DPad(_DPadKey), _Buttons(_key)]);
+  }
 
   void refresh() {
     if (settings.showDPad) _DPadKey.currentState?.refresh();
@@ -60,8 +57,8 @@ class _DPadState extends State<_DPad> {
       child: InkWell(
         onTap: () {},
         child: Container(
-          width: _size * 4,
-          height: _size * 4,
+          width: VirtualGamePad._size * 4,
+          height: VirtualGamePad._size * 4,
           color: Colors.transparent,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -109,16 +106,20 @@ class _DPadState extends State<_DPad> {
       },
       child: direction != null
           ? Container(
-              width: _size,
-              height: _size,
+              width: VirtualGamePad._size,
+              height: VirtualGamePad._size,
               color: buttonColor,
               child: arrowIconMap[direction],
             )
-          : Container(width: _size, height: _size, color: buttonColor),
+          : Container(
+              width: VirtualGamePad._size,
+              height: VirtualGamePad._size,
+              color: buttonColor),
     );
   }
 
-  Widget separator() => Container(width: _size, height: _size);
+  Widget separator() =>
+      Container(width: VirtualGamePad._size, height: VirtualGamePad._size);
 
   void refresh() {
     if (mounted) setState(() {});
@@ -147,8 +148,8 @@ class _ButtonsState extends State<_Buttons> {
               onPanUpdate: (upd) => game.onPanUpdate(upd),
               onPanEnd: (end) => game.onPanEnd(end),
               child: Container(
-                width: _size * 4,
-                height: _size * 4,
+                width: VirtualGamePad._size * 4,
+                height: VirtualGamePad._size * 4,
                 color: Colors.transparent,
                 child: Column(
                   children: [
@@ -229,7 +230,7 @@ class _ButtonsState extends State<_Buttons> {
         onTap: onTap,
         enableFeedback: false,
         child: Container(
-          margin: EdgeInsets.all(_size / 5),
+          margin: EdgeInsets.all(VirtualGamePad._size / 5),
           child: Stack(
             children: [
               CustomPaint(
@@ -239,13 +240,13 @@ class _ButtonsState extends State<_Buttons> {
               Container(
                 margin: const EdgeInsets.all(4),
                 child: CircleAvatar(
-                  radius: _size / 1.7,
+                  radius: VirtualGamePad._size / 1.7,
                   backgroundColor:
                       highlight ? Colors.blue[700] : (color ?? Colors.grey),
                   foregroundColor: Colors.white,
                   child: Text(
                     text,
-                    style: TextStyle(fontSize: _size / 2 + 4),
+                    style: TextStyle(fontSize: VirtualGamePad._size / 2 + 4),
                   ),
                 ),
               ),
@@ -269,7 +270,8 @@ class _PiePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     canvas.drawPath(
-        path(_size / 1.7 + 4, 1.5 * pi, 2 * pi * (percentage - 0.0001)),
+        path(VirtualGamePad._size / 1.7 + 4, 1.5 * pi,
+            2 * pi * (percentage - 0.0001)),
         (Paint()..color = Colors.blue));
   }
 

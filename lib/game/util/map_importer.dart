@@ -1,9 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
-import 'package:flame/components/component.dart';
 import 'package:flame/flame.dart';
-import 'package:flame/sprite.dart';
 import 'package:flame/spritesheet.dart';
 import 'package:flutter/services.dart';
 import 'package:xml/xml.dart';
@@ -21,10 +19,6 @@ Future<void> importMap(String fileName) async {
   game.map
     ..width = int.parse(mapXml.getAttribute('width'))
     ..height = int.parse(mapXml.getAttribute('height'));
-
-  // Add map background
-  game.addLater(SpriteComponent.fromSprite(game.map.width * componentSize,
-      game.map.height * componentSize, Sprite('background.png')));
 
   // Get map properties
   var mapProperties = mapXml.findElements('properties');
@@ -136,8 +130,7 @@ Future<void> importMap(String fileName) async {
     mapData.forEach((tileId) {
       var componentTile = _tileMap[tileId];
       if (componentTile != null) {
-        componentTile.position = Point(
-            componentTile.size * columnCount, componentTile.size * lineCount);
+        componentTile.position = Point(columnCount, lineCount);
         componentTile.layer = layerCount;
         componentTile.createComponent();
       }
@@ -157,11 +150,9 @@ Future<void> importMap(String fileName) async {
       var tile = isTileObject
           ? _tileMap[int.parse(object.getAttribute('gid'))]
           : Tile();
-      var x =
-          int.parse(object.getAttributeNode('x').value) / 16 * componentSize;
+      var x = int.parse(object.getAttributeNode('x').value) / 16;
       var y = (int.parse(object.getAttributeNode('y').value) / 16 -
-              (isTileObject ? 1 : 0)) *
-          componentSize;
+          (isTileObject ? 1 : 0));
       var properties = <String, dynamic>{};
       object
           .findElements('properties')

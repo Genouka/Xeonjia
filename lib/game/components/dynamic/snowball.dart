@@ -19,11 +19,15 @@ class SnowballComponent extends DynamicComponent {
   final double atk;
 
   @override
-  double speed = defaultSpeed * 2;
+  double get speed => defaultSpeed * 2;
 
   SnowballComponent(
       Point startingPosition, this.father, this.direction, this.atk)
-      : super(null, startingPosition, {'image': 'snowball.png'});
+      : super(
+            null,
+            Point(startingPosition.x / componentSize,
+                startingPosition.y / componentSize),
+            {'image': 'snowball.png'});
 
   @override
   bool isSolid({DynamicComponent otherComponent}) => false;
