@@ -2762,6 +2762,7 @@ extension Localization on String {
         },
         'zh_Hans': {
           '''…''': '''……''',
+          '''H-Hello.''': '''你、你好。''',
           '''* {{hero}} found some berries! {{life-diff}} LPs have been recovered *''':
               '''* {{hero}}发现了一些浆果！已恢复 {{life-diff}} 点生命值 *''',
           '''A little plant… nothing else.''': '''一小株植物……仅此而已。''',
@@ -2772,7 +2773,7 @@ extension Localization on String {
           '''scientist''': '''科研人员''',
           '''Someone used this plant to do some experiments.''':
               '''某人用这株植物做实验''',
-          '''A broken monitor.''': '''一台坏显示器。''',
+          '''A broken monitor.''': '''一台被砸坏的显示器。''',
           '''" → "''': '''“→”''',
           '''Natawn''': '''Natawn''',
           '''Safe travels, {{hero}}.\nMany before you have failed, but I am sure you will handle it right.''':
@@ -2810,7 +2811,7 @@ extension Localization on String {
           '''I can\'t escape, I have to defeat the monster to save that man.''':
               '''我不能逃，我必须打倒怪物，然后救出那个人。''',
           '''Better if I check that the guy is okay.''': '''我最好去确认一下那个人是否没事。''',
-          '''" ← Pharmacy "''': '''“←药店”''',
+          '''" ← Pharmacy "''': '''“← 药店”''',
           '''Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays.''':
               '''噢……是的，抱歉，我挡在路中央了……\n你是游客吗？现在游客已经很少见了。''',
           '''N-no, I\'m {{hero}}, this year\'s chosen hero. I just left home to try to defeat the King of Evil.''':
@@ -2818,7 +2819,7 @@ extension Localization on String {
           '''Nice to meet you, I\'ve never met a hero before.''':
               '''很高兴认识你，我之前还从来没见到过一个英雄呢。''',
           '''My name is Milla, I was born and raised in this area. I too am setting out on a journey.''':
-              '''我的名字叫米拉，我是在这个地方出生和长大的。而且我也正在旅游。''',
+              '''我的名字叫米拉，是在这个地方出生和长大的。而且我也正好在旅游。''',
           '''Oh cool! Where are you going?''': '''哦，酷！你打算去哪里？''',
           '''I have absolutely no idea.''': '''完全没有头绪。''',
           '''I just want to explore the world, know new places and learn new things.''':
@@ -2827,8 +2828,7 @@ extension Localization on String {
           '''Yep, it won\'t be easy but I want to visit at least the whole Kingdom.''':
               '''嗯，这不是件易事，但我至少想游遍整个王国。''',
           '''Are there places outside the Kingdom?!''': '''王国外面还有地方吗？！''',
-          '''Dunno, that\'s what I want to find out!''':
-              '''不知道，但这就是我想去了解的地方！''',
+          '''Dunno, that\'s what I want to find out!''': '''不知道，但这正是我所想了解的！''',
           '''Anyway, I don\'t want to waste any more of your time.''':
               '''总之，我不想再浪费你的时间了。''',
           '''After all, you have to save the world. Not an easy task.''':
@@ -2994,7 +2994,7 @@ extension Localization on String {
           '''" NATAWN – Hometown of the 62nd hero "''':
               '''"NATAWN – Heimatort des 62ten Helden"''',
           '''I\'ve to say goodbye to my parents with the \'A\' button before I leave. Otherwise it would be rude.''':
-              '''Ich muss meinen Eltern noch mit der ,A‘-Taste auf Wiedersehen sagen, das wäre sonst unhöflich.''',
+              '''Ich muss meinen Eltern noch mit der "A"-Taste auf Wiedersehen sagen, das wäre sonst unhöflich.''',
           '''Like my mother said, it\'s better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.''':
               '''Wie meine Mutter sagte: es wäre besser, wenn ich mir die Schienbeinschützer von meinem Nachbarn hole. Sonst könnte ich mir zu sehr an den Felsen verletzen.''',
           '''I still haven\'t figured out if these monsters are malicious or just stupid.''':
@@ -3009,7 +3009,7 @@ extension Localization on String {
           '''Be careful not to get hurt.''':
               '''Pass aus, dass du dir nicht wehtust.''',
           '''Help me please!\nPunch him by pressing the \'P\' button.''':
-              '''Bitte helft mir!\nUm ihn zu schlagen, drücke die Taste ,P‘.''',
+              '''Bitte helft mir!\nUm ihn zu schlagen, drücke die Taste "P".''',
           '''Everything good?''': '''Alles in Ordnung?''',
           '''Yes, thank you so much for saving my life!\nI have to admit, I was scared.\nAs a token of gratitude I give you this gem that I found a little while ago.''':
               '''Ja, vielen Danke, dass ihr mein Leben gerettet habt!\nIch muss zugeben, ich hatte wirklich Angst.\nNehmt diesen Edelstein als Zeichen meiner Dankbarkeit. Ich habe ihn vor kurzem gefunden.''',

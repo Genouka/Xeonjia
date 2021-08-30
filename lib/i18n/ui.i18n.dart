@@ -946,7 +946,7 @@ extension Localization on String {
           '''Before starting tell me your name which will be used in the game.''':
               '''在开始游戏前，先说出你想在游戏中使用的名字吧。''',
           '''Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.''':
-              '''在 RPG 式的世界中解决滑冰谜题，以及击败敌人。\n\n向右滑动来了解基本概念。''',
+              '''在 RPG 式的世界中解决滑冰谜题，并击败敌人。\n\n向右滑动来了解基本概念。''',
           '''Modes''': '''模式''',
           '''There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the "King of Evil" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win.''':
               '''Xeonjia 有两种游戏模式：\n\n1）故事模式：在一个被冰封的世界里，你的职责是打败“邪王”，然后拯救王国。\n\n2）多人模式：战胜对手，赢取分数，使队伍取得胜利。''',
@@ -961,7 +961,7 @@ extension Localization on String {
               '''你需要武器来克服阻碍并击败敌人。\n\n在目标方向点击屏幕，或者点击射击按钮来攻击。\n要注意某些武器只能攻击几次，所以要谨慎使用。''',
           '''Enemies''': '''敌人''',
           '''Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have life points too.''':
-              '''小心，这个世界上充斥着准备好攻击你的危险敌人！\n只需要攻击几次就能打败他们，因为他们也有生命值。''',
+              '''小心，这个世界上充斥着准备好攻击你的危险敌人！\n只需要攻击几次就能打败他们，他们也有生命值。''',
           '''Close''': '''关闭''',
           '''Back''': '''返回''',
           '''OK''': '''确定''',
