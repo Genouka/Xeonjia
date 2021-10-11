@@ -22,6 +22,10 @@ class Tile {
   // Component size
   double size;
 
+  // Component animation
+  List<Sprite> animationSprites;
+  double animationStepTime;
+
   // Tile position
   Point position;
 
@@ -35,10 +39,13 @@ class Tile {
     this.properties,
     this.sprite,
     this.size,
+    this.animationSprites,
+    this.animationStepTime,
     this.position,
     this.layer,
   }) {
     properties ??= {};
     size ??= componentSize;
+    animationSprites ??= [];
   }
 }

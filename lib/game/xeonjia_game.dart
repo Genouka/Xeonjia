@@ -20,12 +20,13 @@ import 'package:xeonjia/game/util/little_scheme.dart';
 import 'package:xeonjia/game/util/map_importer.dart';
 import 'package:xeonjia/game/util/message_manager.dart';
 import 'package:xeonjia/game/util/wireless_gamepad.dart';
+import 'package:xeonjia/game/widgets/backpack_button.dart';
+import 'package:xeonjia/game/widgets/backpack_menu.dart';
 import 'package:xeonjia/game/widgets/end_menu.dart';
 import 'package:xeonjia/game/widgets/map_name_box.dart';
 import 'package:xeonjia/game/widgets/minimap_button.dart';
 import 'package:xeonjia/game/widgets/status_box.dart';
 import 'package:xeonjia/game/widgets/dialog_box.dart';
-import 'package:xeonjia/game/widgets/loading_page.dart';
 import 'package:xeonjia/game/widgets/no_maps_menu.dart';
 import 'package:xeonjia/game/widgets/pause_menu.dart';
 import 'package:xeonjia/game/widgets/virtual_gamepad.dart';
@@ -70,6 +71,7 @@ class XeonjiaGame extends BaseGame
     }
     if (config.mode == GameMode.story) {
       addWidgetOverlay('miniMapButton', MiniMapButton(miniMapIsActive: false));
+      addWidgetOverlay('backpackButton', BackpackButton());
     } else {
       teams = [
         Team(id: 0, name: 'Team A', color: Colors.red),
@@ -165,9 +167,9 @@ class XeonjiaGame extends BaseGame
   // Reset variables and import map data
   void init() async {
     pause(stopMusic: false);
-    addWidgetOverlay('loading', LoadingPage());
     removeWidgetOverlay('mapNameBox');
     removeWidgetOverlay('miniMapButton');
+    removeWidgetOverlay('backpackButton');
 
     // Import mainCharacter.eventLog
     currentEventLog = Map.from(mainCharacter.eventLog);
@@ -177,9 +179,7 @@ class XeonjiaGame extends BaseGame
 
     // Remove previous components
     // They are removed during the next update()
-    components.forEach((component) {
-      markToRemove(component);
-    });
+    components.forEach((component) => markToRemove(component));
     players.clear();
     deletedComponents.clear();
     modifiersToBeRegenerated.clear();
@@ -196,6 +196,7 @@ class XeonjiaGame extends BaseGame
       }
       await importMap('assets/maps/story/${map.id}.tmx');
       addWidgetOverlay('miniMapButton', MiniMapButton(miniMapIsActive: false));
+      addWidgetOverlay('backpackButton', BackpackButton());
     } else {
       map = MapProperties(fullId: config.mapId.toString());
       await importMap('assets/maps/arena/${config.mapId}.tmx');
@@ -213,7 +214,6 @@ class XeonjiaGame extends BaseGame
     _timer.start();
     game.addLater(BackgroundComponent(0, 0, Sprite('background.png')));
     update(0);
-    removeWidgetOverlay('loading');
     resume();
     playBackgroundMusic();
   }
@@ -373,12 +373,14 @@ class XeonjiaGame extends BaseGame
       addWidgetOverlay('mapNameBox', MapNameBox(below: false));
       removeWidgetOverlay('miniMapButton');
       addWidgetOverlay('miniMapButton', MiniMapButton(miniMapIsActive: true));
+      removeWidgetOverlay('backpackButton');
       refreshWeaponButtons();
     } else {
       updateCamera(playerOne.x, playerOne.y);
       removeWidgetOverlay('mapNameBox');
       removeWidgetOverlay('miniMapButton');
       addWidgetOverlay('miniMapButton', MiniMapButton(miniMapIsActive: false));
+      addWidgetOverlay('backpackButton', BackpackButton());
       refreshWeaponButtons();
       _statusBox.state.refresh();
       resume();
@@ -396,6 +398,12 @@ class XeonjiaGame extends BaseGame
     updateCamera(playerOne.x * miniMapZoom, playerOne.y * miniMapZoom,
         (componentSize * miniMapZoom).gridAligned);
     onPanUpdate(DragUpdateDetails(globalPosition: Offset.zero));
+  }
+
+  // Open backpack
+  void backpack() {
+    pause(stopMusic: false);
+    addWidgetOverlay('backpackMenu', BackpackMenu());
   }
 
   // Reload weapon buttons
