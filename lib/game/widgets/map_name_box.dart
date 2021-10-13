@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'package:xeonjia/i18n/story.i18n.dart';
 import 'package:xeonjia/game/widgets/info_box.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/i18n/story.i18n.dart';
 
 // Map name shown on the top left of the screen
 class MapNameBox extends StatelessWidget {
@@ -30,7 +29,7 @@ class MapNameBox extends StatelessWidget {
 
 class Marquee extends StatefulWidget {
   final Widget child;
-  Marquee({@required this.child});
+  const Marquee({@required this.child});
 
   @override
   _MarqueeState createState() => _MarqueeState();

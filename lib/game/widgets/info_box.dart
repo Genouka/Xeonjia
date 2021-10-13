@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:xeonjia/game/widgets/pause_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
@@ -8,7 +7,7 @@ class InfoBox extends StatelessWidget {
   final Widget child;
   final double radius;
   final bool below;
-  InfoBox({this.child, this.radius = 30, this.below = false});
+  const InfoBox({this.child, this.radius = 30, this.below = false});
 
   @override
   Widget build(BuildContext context) {

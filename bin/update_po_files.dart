@@ -21,9 +21,9 @@ final languageList = [
   'zh_Hant',
   'template',
 ];
-final appName = 'Xeonjia';
-final author = 'DeepDaikon';
-final year = '2020, 2021';
+const appName = 'Xeonjia';
+const author = 'DeepDaikon';
+const year = '2020, 2021';
 
 var metadata = <String, String>{};
 
@@ -37,7 +37,7 @@ void main() {
 
   var currentTranslations = getCurrentTranslations();
   Directory('locale').listSync().forEach((f) => f.deleteSync(recursive: true));
-  languageList.forEach((language) {
+  for (var language in languageList) {
     dirStringsMap.forEach((fileName, strings) {
       var newPoFile = File('locale/$language/LC_MESSAGES/$fileName.po')
         ..createSync(recursive: true);
@@ -64,7 +64,7 @@ ${_getTranslation(currentTranslations, string, language).comments ?? ''}msgid "$
 msgstr "${_getTranslation(currentTranslations, string, language).msgstr.replaceAll('"', '\\"')}"'''))()}
 ''');
     });
-  });
+  }
   print('.po files successfully updated!');
 }
 

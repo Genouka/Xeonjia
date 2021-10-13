@@ -23,6 +23,7 @@
 * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 * DEALINGS IN THE SOFTWARE.
 */
+// ignore_for_file: constant_identifier_names
 
 import 'package:xeonjia/game/xeonjia_game.dart';
 
@@ -657,7 +658,7 @@ List<String> splitStringIntoTokens(String source) {
     var x = <String>[];
     var ss = <String>[]; // to store string literals
     var i = 0;
-    var doubleQuotesSymbol;
+    String doubleQuotesSymbol;
     var counter = 0;
     while (
         line.contains((doubleQuotesSymbol = 'DOUBLE_QUOTE_SYMBOL_$counter'))) {
@@ -665,7 +666,7 @@ List<String> splitStringIntoTokens(String source) {
     }
     line = line.replaceAll('\\"', doubleQuotesSymbol);
     for (var e in line.split('"')) {
-      e = e.replaceAll(doubleQuotesSymbol, '\"');
+      e = e.replaceAll(doubleQuotesSymbol, '"');
       if (i % 2 == 0) {
         x.add(e);
       } else {

@@ -1,6 +1,6 @@
 import 'dart:math';
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
@@ -8,31 +8,30 @@ import 'package:xeonjia/util/local_data_controller.dart';
 
 // Virtual Gamepad (D-pad + buttons)
 class VirtualGamePad extends StatelessWidget {
-  final GlobalKey<_ButtonsState> _key = GlobalKey();
-  final GlobalKey<_DPadState> _DPadKey = GlobalKey();
+  final GlobalKey<_ButtonsState> _buttonsKey = GlobalKey();
+  final GlobalKey<_DPadState> _dPadKey = GlobalKey();
   static double _size = 0;
 
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     _size = min(screenSize.width, screenSize.height) / 12;
-    return Stack(
-        children: [if (settings.showDPad) _DPad(_DPadKey), _Buttons(_key)]);
+    return Stack(children: [
+      if (settings.showDPad) _DPad(_dPadKey),
+      _Buttons(_buttonsKey),
+    ]);
   }
 
   void refresh() {
-    if (settings.showDPad) _DPadKey.currentState?.refresh();
-    _key.currentState?.refresh();
+    if (settings.showDPad) _dPadKey.currentState?.refresh();
+    _buttonsKey.currentState?.refresh();
   }
 }
 
 // Virtual D-pad (on the left)
 class _DPad extends StatefulWidget {
-  @override
-  final key;
-  static final Color arrowColor = Colors.white;
-
-  _DPad(this.key);
+  static const Color arrowColor = Colors.white;
+  const _DPad(Key key) : super(key: key);
 
   @override
   _DPadState createState() => _DPadState();
@@ -42,10 +41,13 @@ class _DPadState extends State<_DPad> {
   final Color buttonColor = Colors.grey.withOpacity(0.4);
 
   final Map<Direction, dynamic> arrowIconMap = {
-    Direction.up: Icon(Icons.keyboard_arrow_up, color: _DPad.arrowColor),
-    Direction.down: Icon(Icons.keyboard_arrow_down, color: _DPad.arrowColor),
-    Direction.left: Icon(Icons.keyboard_arrow_left, color: _DPad.arrowColor),
-    Direction.right: Icon(Icons.keyboard_arrow_right, color: _DPad.arrowColor),
+    Direction.up: const Icon(Icons.keyboard_arrow_up, color: _DPad.arrowColor),
+    Direction.down:
+        const Icon(Icons.keyboard_arrow_down, color: _DPad.arrowColor),
+    Direction.left:
+        const Icon(Icons.keyboard_arrow_left, color: _DPad.arrowColor),
+    Direction.right:
+        const Icon(Icons.keyboard_arrow_right, color: _DPad.arrowColor),
   };
 
   @override
@@ -119,7 +121,7 @@ class _DPadState extends State<_DPad> {
   }
 
   Widget separator() =>
-      Container(width: VirtualGamePad._size, height: VirtualGamePad._size);
+      SizedBox(width: VirtualGamePad._size, height: VirtualGamePad._size);
 
   void refresh() {
     if (mounted) setState(() {});
@@ -128,9 +130,7 @@ class _DPadState extends State<_DPad> {
 
 // Buttons (on the right)
 class _Buttons extends StatefulWidget {
-  @override
-  final key;
-  _Buttons(this.key);
+  const _Buttons(Key key) : super(key: key);
 
   @override
   _ButtonsState createState() => _ButtonsState();

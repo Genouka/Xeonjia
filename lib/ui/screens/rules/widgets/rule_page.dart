@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:xeonjia/ui/screens/rules/util/rule.dart';
 
 class RulePage extends StatelessWidget {

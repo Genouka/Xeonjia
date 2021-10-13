@@ -1,12 +1,12 @@
 import 'dart:ui';
 
-import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/util/lifepoints_bar.dart';
 import 'package:xeonjia/game/util/npc_controller.dart';
 import 'package:xeonjia/game/util/respawn_animation.dart';
 import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/item.dart';
@@ -216,8 +216,8 @@ class CharacterComponent extends DynamicComponent
   }
 
   @override
-  void collidedBy(DynamicComponent componentAbove) {
-    if (!isPlayerOne) super.collidedBy(componentAbove);
+  void collidedBy(DynamicComponent otherComponent) {
+    if (!isPlayerOne) super.collidedBy(otherComponent);
   }
 
   @override
@@ -241,9 +241,9 @@ class CharacterComponent extends DynamicComponent
   @override
   void respawn() {
     super.respawn();
-    weaponList.forEach((weapon) {
+    for (var weapon in weaponList) {
       weapon.restorePp();
-    });
+    }
     movesCounter = 0;
     orientation = _initialOrientation;
     direction = null;
@@ -254,12 +254,12 @@ class CharacterComponent extends DynamicComponent
   }
 
   @override
-  void update(double t) {
+  void update(double dt) {
     if (!isPlayerOne && game.isNotPaused) {
       npcController.shoot(this);
       npcController.move(this);
     }
-    super.update(t);
+    super.update(dt);
   }
 
   @override

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/rules/resources/rules.dart';
@@ -10,7 +9,7 @@ import 'package:xeonjia/util/local_data_controller.dart';
 
 class RulesPage extends StatefulWidget {
   final StatelessWidget homePage;
-  RulesPage([this.homePage]);
+  const RulesPage([this.homePage]);
 
   @override
   _RulesPageState createState() => _RulesPageState();
@@ -19,8 +18,7 @@ class RulesPage extends StatefulWidget {
 class _RulesPageState extends State<RulesPage>
     with SingleTickerProviderStateMixin {
   TabController _controller;
-  final _textFieldController =
-      TextEditingController(text: '${mainCharacter.name}');
+  final _textFieldController = TextEditingController(text: mainCharacter.name);
   final _formKey = GlobalKey<FormState>();
 
   @override

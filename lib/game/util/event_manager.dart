@@ -1,6 +1,5 @@
 import 'package:flame/components/timer_component.dart';
 import 'package:flame/time.dart';
-
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
@@ -18,9 +17,10 @@ import 'package:xeonjia/util/local_data_controller.dart';
 // Set scheme's environment
 Environment setEnvironment() {
   var env = Environment(null, null, null);
-  var _ = (String name, int arity, IntrinsicBody fun) {
+  void _(String name, int arity, IntrinsicBody fun) {
     env.defineSymbol(Sym(name), Intrinsic(name, arity, fun));
-  };
+  }
+
   env.defineSymbol(Sym('hero'), mainCharacter.name);
 
   // Return [actor, value] for Cells that have a default actor
@@ -134,12 +134,12 @@ Environment setEnvironment() {
   });
   _('enemies-count', 0, (Cell x) => game.enemies);
   _('fire-event', 1, (Cell x) => (x.car as BasicComponent).executeAction());
-  _(
-      'fire-global-event',
-      0,
-      (Cell x) => game.components.forEach((c) {
-            if (c is BasicComponent) c.executeAction();
-          }));
+  _('fire-global-event', 0, (Cell x) {
+    for (var c in game.components) {
+      if (c is BasicComponent) c.executeAction();
+    }
+    return #NONE;
+  });
   _(
       'has-item',
       1,
@@ -205,7 +205,7 @@ Environment setEnvironment() {
     return #NONE;
   });
   _('black-curtain', 0,
-      (Cell x) => game.addWidgetOverlay('blackCurtain', BlackCurtain()));
+      (Cell x) => game.addWidgetOverlay('blackCurtain', const BlackCurtain()));
   _('teleport', 2,
       (Cell x) => game.changeRoom(x.car, enterNextRoom: x.cdr.car));
   _(

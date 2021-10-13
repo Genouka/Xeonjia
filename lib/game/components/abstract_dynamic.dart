@@ -1,7 +1,7 @@
 import 'dart:math';
+
 import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
-
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/static/static.dart';
 import 'package:xeonjia/game/util/extensions.dart';
@@ -42,15 +42,15 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
 
   @override
   void onCreate() {
-    final size = 16.0;
-    Direction.values.forEach((d) {
+    const size = 16.0;
+    for (var d in Direction.values) {
       _sprites[d] = Sprite(image,
           x: d.index * size, y: imageY, width: size, height: size);
       _walkingSprites[d] =
           Sprite(image, x: d.index * size, y: size, width: size, height: size);
       punchSprites[d] = Sprite(image,
           x: d.index * size, y: size * 2, width: size, height: size);
-    });
+    }
     super.onCreate();
   }
 
@@ -103,7 +103,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
         candidatePositionTemp.height);
 
     // Check if this is going to collide or overlap another component
-    game.components.forEach((component) {
+    for (var component in game.components) {
       if (component is BasicComponent &&
           component != this &&
           component != father &&
@@ -114,13 +114,13 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
           if (component.isSolid(otherComponent: this)) {
             collidedComponent = component;
             collidedRect = componentCollisionRect;
-            return;
+            break;
           } else {
             overlappedComponents.add(component);
           }
         }
       }
-    });
+    }
 
     if (collidedRect != null) {
       // This component collided another one
@@ -138,8 +138,9 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
       // This component did not collide with another one
       x = candidatePosition.left;
       y = candidatePosition.top;
-      overlappedComponents.forEach(
-          (_overlappedComponent) => _overlappedComponent.overlappedBy(this));
+      for (var _overlappedComponent in overlappedComponents) {
+        _overlappedComponent.overlappedBy(this);
+      }
     }
     hasMoved();
     wasStationary = false;

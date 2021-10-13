@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
@@ -26,9 +25,9 @@ class Team {
   // Team points (basePoints + players points)
   int get points {
     var _points = 0;
-    members.forEach((member) {
+    for (var member in members) {
       _points += member.points;
-    });
+    }
     return _points + basisPoints;
   }
 }

@@ -85,9 +85,9 @@ class CharacterInfo {
         _experiencePoints = json['experiencePoints'] ?? 0 {
     List<dynamic> _jsonWeaponList =
         (jsonDecode(json['weaponList'] ?? '[{"id": 0, "lv": 0}]'));
-    _jsonWeaponList.forEach((weapon) {
+    for (var weapon in _jsonWeaponList) {
       weaponList.add(Weapon.fromJson(weapon));
-    });
+    }
   }
 
   // Export character data as a Json

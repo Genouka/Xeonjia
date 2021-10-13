@@ -1,6 +1,6 @@
 import 'dart:math';
-import 'package:flame/sprite.dart';
 
+import 'package:flame/sprite.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Class used to manage a single tile

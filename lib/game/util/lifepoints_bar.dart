@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/util/lifepoints_color.dart';
 

@@ -1,6 +1,6 @@
-import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/util/local_data_controller.dart';

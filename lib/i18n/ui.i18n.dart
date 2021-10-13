@@ -1,4 +1,5 @@
 // This is a generated file; do not edit
+// ignore_for_file: unnecessary_string_escapes
 import 'package:i18n_extension/i18n_extension.dart';
 
 extension Localization on String {

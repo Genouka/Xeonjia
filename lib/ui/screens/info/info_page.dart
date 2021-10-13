@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/ui/screens/info/resources/third_party_licenses.dart';
 
@@ -109,7 +108,7 @@ class _InfoPageState extends State<InfoPage> {
       builder: (BuildContext context) => StatefulBuilder(
         builder: (context, setState) {
           var _licenseList = <Widget>[];
-          licenses.forEach((license) {
+          for (var license in licenses) {
             _licenseList.add(ExpansionTile(
               title: Text(license['lib']),
               initiallyExpanded: true,
@@ -117,10 +116,10 @@ class _InfoPageState extends State<InfoPage> {
                 SingleChildScrollView(child: Text(license['text'])),
               ],
             ));
-          });
+          }
           return AlertDialog(
             title: Text('Third Party Licenses'.i18n),
-            content: Container(
+            content: SizedBox(
                 width: double.maxFinite,
                 child: ListView(children: _licenseList)),
             actions: <Widget>[

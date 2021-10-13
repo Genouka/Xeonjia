@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:xeonjia/game/util/lifepoints_color.dart';
 import 'package:xeonjia/game/widgets/info_box.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
-import 'package:xeonjia/game/util/lifepoints_color.dart';
 
 // Box that shows points and lifepoints
 class StatusBox extends StatefulWidget {
@@ -39,19 +38,17 @@ class _StatusBoxState extends State<StatusBox> {
                       ),
                     ),
                     Expanded(
-                      child: Container(
-                        child: _PercentIndicator(
-                          values: [
-                            game.playerOne.lifePoints,
-                            game.playerOne.maxLifePoints
-                          ],
-                          text: game.playerOne.lifePoints.round().toString(),
-                          colors: [
-                            lifePointsColor(game.playerOne.lifePoints /
-                                game.playerOne.maxLifePoints),
-                            Colors.grey
-                          ],
-                        ),
+                      child: _PercentIndicator(
+                        values: [
+                          game.playerOne.lifePoints,
+                          game.playerOne.maxLifePoints
+                        ],
+                        text: game.playerOne.lifePoints.round().toString(),
+                        colors: [
+                          lifePointsColor(game.playerOne.lifePoints /
+                              game.playerOne.maxLifePoints),
+                          Colors.grey
+                        ],
                       ),
                     ),
                     Container(

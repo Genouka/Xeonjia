@@ -25,8 +25,8 @@ Map<String, Map<String, List<Translation>>> getCurrentTranslations(
               ? basenameWithoutExtension(poFile.path)
               : match.group(1);
           var comments = match.group(2);
-          var msgid = match.group(3).replaceAll('\\"', '\"');
-          var msgstr = match.group(4).replaceAll('\\"', '\"');
+          var msgid = match.group(3).replaceAll('\\"', '"');
+          var msgstr = match.group(4).replaceAll('\\"', '"');
           if (msgstr.isEmpty) return;
           var translation =
               Translation(match.group(1), msgid, msgstr, comments);

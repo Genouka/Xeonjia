@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:i18n_extension/i18n_widget.dart';
-
 import 'package:xeonjia/ui/screens/home/home_page.dart';
 import 'package:xeonjia/ui/screens/rules/rules_page.dart';
 import 'package:xeonjia/ui/themes.dart';
@@ -27,7 +26,7 @@ final List<Locale> supportedLocales = [
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await loadStoredData().then((_) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
   });
   updateGameTheme();
   return runApp(Xeonjia());
@@ -42,7 +41,7 @@ class Xeonjia extends StatelessWidget {
         title: 'Xeonjia',
         theme: appTheme,
         home: settings.firstRun ? RulesPage(HomePage()) : HomePage(),
-        localizationsDelegates: [
+        localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,

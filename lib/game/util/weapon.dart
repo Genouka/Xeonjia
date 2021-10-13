@@ -1,6 +1,6 @@
 import 'dart:math';
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/dynamic/snowball.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';

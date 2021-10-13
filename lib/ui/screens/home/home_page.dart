@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-
 import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/ui/basic.dart';
-import 'package:xeonjia/ui/screens/game/game_page.dart';
 import 'package:xeonjia/ui/screens/arena/arena_page.dart';
+import 'package:xeonjia/ui/screens/game/game_page.dart';
 import 'package:xeonjia/ui/screens/home/widgets/bottom_row.dart';
 import 'package:xeonjia/ui/screens/home/widgets/page_button.dart';
 import 'package:xeonjia/ui/screens/rules/rules_page.dart';
@@ -19,7 +18,7 @@ class HomePage extends StatelessWidget {
         'goto': () => GamePage(MatchConfig(GameMode.story)),
       },
       {'title': 'Multiplayer'.i18n, 'goto': () => ArenaPage()},
-      {'title': 'How to play'.i18n, 'goto': () => RulesPage()},
+      {'title': 'How to play'.i18n, 'goto': () => const RulesPage()},
     ];
   }
 
@@ -64,7 +63,7 @@ class HomePage extends StatelessWidget {
                   ),
               ],
             ),
-            bottomRow(),
+            BottomRow(),
           ],
         ),
       ),

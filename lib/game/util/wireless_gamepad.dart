@@ -1,5 +1,4 @@
 import 'package:flutter/services.dart';
-
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 
@@ -78,6 +77,7 @@ extension WirelessGamepad on XeonjiaGame {
 * SOFTWARE.
 */
 
+// ignore_for_file: constant_identifier_names
 const GAMEPAD_BUTTON_UP = 'UP';
 const GAMEPAD_BUTTON_DOWN = 'DOWN';
 

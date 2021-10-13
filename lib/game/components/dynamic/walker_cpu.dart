@@ -12,11 +12,11 @@ class WalkerCpuComponent extends DynamicComponent {
   int teamId = -3;
 
   @override
-  void update(double t) {
+  void update(double dt) {
     if (randomDouble() > 0.2 && game.isNotPaused) {
       updateDirection(Direction.values[Random().nextInt(4)]);
       if (randomDouble() > 0.2) stop();
-      super.update(t);
+      super.update(dt);
     }
   }
 }

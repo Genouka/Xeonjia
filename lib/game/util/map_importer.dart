@@ -1,14 +1,14 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
+
 import 'package:flame/flame.dart';
 import 'package:flame/spritesheet.dart';
 import 'package:flutter/services.dart';
-import 'package:xml/xml.dart';
-
 import 'package:xeonjia/game/util/tile_to_component.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/tile.dart';
+import 'package:xml/xml.dart';
 
 // Import map from a TMX file
 Future<void> importMap(String fileName) async {
@@ -23,8 +23,8 @@ Future<void> importMap(String fileName) async {
   // Get map properties
   var mapProperties = mapXml.findElements('properties');
   if (mapProperties.isNotEmpty) {
-    mapProperties.single.children.forEach((property) {
-      if (property.attributes.isEmpty) return;
+    for (var property in mapProperties.single.children) {
+      if (property.attributes.isEmpty) continue;
       switch (property.getAttributeNode('name').value) {
         case 'action':
           game.map.action =
@@ -41,7 +41,7 @@ Future<void> importMap(String fileName) async {
               property.getAttributeNode('value').value == 'true';
           break;
       }
-    });
+    }
   }
 
   // tileId : Tile
@@ -103,12 +103,12 @@ Future<void> importMap(String fileName) async {
         // Read tile properties
         var properties = tile.findElements('properties');
         if (properties.isNotEmpty) {
-          properties.single.children.forEach((property) {
+          for (var property in properties.single.children) {
             if (property.attributes.isNotEmpty) {
               newTile.properties[property.getAttributeNode('name').value] =
                   property.getAttributeNode('value')?.value ?? property.text;
             }
-          });
+          }
         }
 
         // Load animation
@@ -141,7 +141,7 @@ Future<void> importMap(String fileName) async {
     var lineCount = 0;
     var columnCount = 0;
     game.playerOne = null;
-    mapData.forEach((tileId) {
+    for (var tileId in mapData) {
       var componentTile = _tileMap[tileId];
       if (componentTile != null) {
         componentTile.position = Point(columnCount, lineCount);
@@ -153,7 +153,7 @@ Future<void> importMap(String fileName) async {
         columnCount = 0;
         ++lineCount;
       }
-    });
+    }
     layerCount++;
   });
 

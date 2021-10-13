@@ -1,6 +1,6 @@
 import 'dart:math';
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
 import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/i18n/story.i18n.dart';
@@ -8,9 +8,8 @@ import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 
 class DialogBox extends StatefulWidget {
-  @override
-  final GlobalKey<_DialogBoxState> key = GlobalKey();
-  _DialogBoxState get state => key.currentState;
+  DialogBox() : super(key: GlobalKey());
+  _DialogBoxState get state => (key as GlobalKey).currentState;
 
   @override
   _DialogBoxState createState() => _DialogBoxState();
@@ -74,7 +73,7 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
             if (game.messageManager.hideMap ?? false)
               Container(color: Colors.black),
             if (game.messageManager.active)
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -167,7 +166,7 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
 class _AnswerButtons extends StatelessWidget {
   final List<Answer> answers;
   final VoidCallback callback;
-  _AnswerButtons(this.answers, this.callback);
+  const _AnswerButtons(this.answers, this.callback);
 
   @override
   Widget build(BuildContext context) {

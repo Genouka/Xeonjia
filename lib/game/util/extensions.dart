@@ -1,4 +1,5 @@
 import 'dart:ui';
+
 import 'package:flutter/foundation.dart';
 
 // Whether other has a nonzero area of overlap with this rectangle

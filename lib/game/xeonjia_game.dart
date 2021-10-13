@@ -1,4 +1,5 @@
 import 'dart:math';
+
 import 'package:flame/bgm.dart';
 import 'package:flame/components/timer_component.dart';
 import 'package:flame/flame.dart';
@@ -9,7 +10,6 @@ import 'package:flame/sprite.dart';
 import 'package:flame/time.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/static/background.dart';
@@ -22,13 +22,13 @@ import 'package:xeonjia/game/util/message_manager.dart';
 import 'package:xeonjia/game/util/wireless_gamepad.dart';
 import 'package:xeonjia/game/widgets/backpack_button.dart';
 import 'package:xeonjia/game/widgets/backpack_menu.dart';
+import 'package:xeonjia/game/widgets/dialog_box.dart';
 import 'package:xeonjia/game/widgets/end_menu.dart';
 import 'package:xeonjia/game/widgets/map_name_box.dart';
 import 'package:xeonjia/game/widgets/minimap_button.dart';
-import 'package:xeonjia/game/widgets/status_box.dart';
-import 'package:xeonjia/game/widgets/dialog_box.dart';
 import 'package:xeonjia/game/widgets/no_maps_menu.dart';
 import 'package:xeonjia/game/widgets/pause_menu.dart';
+import 'package:xeonjia/game/widgets/status_box.dart';
 import 'package:xeonjia/game/widgets/virtual_gamepad.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
@@ -179,11 +179,15 @@ class XeonjiaGame extends BaseGame
 
     // Remove previous components
     // They are removed during the next update()
-    components.forEach((component) => markToRemove(component));
+    for (var component in components) {
+      markToRemove(component);
+    }
     players.clear();
     deletedComponents.clear();
     modifiersToBeRegenerated.clear();
-    teams?.forEach((t) => t.basisPoints = 0);
+    for (var t in (teams ?? [])) {
+      t.basisPoints = 0;
+    }
 
     // Import map and components
     if (config.mode == GameMode.story) {
@@ -191,7 +195,7 @@ class XeonjiaGame extends BaseGame
       if (map.id == '32') {
         removeWidgetOverlay('loading');
         _backgroundMusic?.dispose();
-        addWidgetOverlay('noMapsMenu', NoMapsMenu('30'));
+        addWidgetOverlay('noMapsMenu', const NoMapsMenu('30'));
         return;
       }
       await importMap('assets/maps/story/${map.id}.tmx');
@@ -219,9 +223,9 @@ class XeonjiaGame extends BaseGame
   }
 
   @override
-  void update(double dt) {
-    _timer?.update(dt);
-    super.update(dt);
+  void update(double t) {
+    _timer?.update(t);
+    super.update(t);
   }
 
   @override
@@ -335,10 +339,10 @@ class XeonjiaGame extends BaseGame
 
   // Regenerate regenerable modifiers
   void regenerateModifiers() {
-    modifiersToBeRegenerated.forEach((modifier) {
+    for (var modifier in modifiersToBeRegenerated) {
       modifier.remove = false;
       components.add(modifier);
-    });
+    }
     modifiersToBeRegenerated.clear();
   }
 
@@ -427,7 +431,7 @@ class XeonjiaGame extends BaseGame
   // End of the game (defeat in single player or end match in multiplayer)
   void end({bool timeOut = false}) {
     pause();
-    var lostMoney;
+    int lostMoney;
     if (config.mode == GameMode.story) {
       mainCharacter.minutesPlayed += elapsedSeconds / 60;
       mainCharacter.movesCounter += playerOne.movesCounter;
@@ -445,22 +449,23 @@ class XeonjiaGame extends BaseGame
   Offset _panGestureOffset;
 
   @override
-  void onPanUpdate(DragUpdateDetails upd) {
-    if (!_pause && (upd.delta.dx.abs() > 5 || upd.delta.dy.abs() > 5)) {
-      _panGestureOffset = upd.delta.dx.abs() > upd.delta.dy.abs()
-          ? Offset(upd.delta.dx, 0)
-          : Offset(0, upd.delta.dy);
+  void onPanUpdate(DragUpdateDetails details) {
+    if (!_pause && (details.delta.dx.abs() > 5 || details.delta.dy.abs() > 5)) {
+      _panGestureOffset = details.delta.dx.abs() > details.delta.dy.abs()
+          ? Offset(details.delta.dx, 0)
+          : Offset(0, details.delta.dy);
       playerOne?.updateOrientation(GetDirection.fromOffset(_panGestureOffset));
     } else if (miniMapEnabled) {
       camera.x = _moveCamera(componentSize * miniMapZoom, size.width, map.width,
-          camera.x - upd.delta.dx + size.width / 2);
+          camera.x - details.delta.dx + size.width / 2);
       camera.y = _moveCamera(componentSize * miniMapZoom, size.height,
-          map.height, camera.y - upd.delta.dy + size.height / 2);
+          map.height, camera.y - details.delta.dy + size.height / 2);
     }
   }
 
   @override
-  void onPanEnd(DragEndDetails end) {
+  // ignore: avoid_renaming_method_parameters
+  void onPanEnd(DragEndDetails _) {
     if (_panGestureOffset != null) {
       gestureDragInput(GetDirection.fromOffset(_panGestureOffset));
     }
@@ -509,34 +514,36 @@ class XeonjiaGame extends BaseGame
   }
 
   @override
-  void onKeyEvent(e) {
-    if (e is! RawKeyUpEvent) return;
-    if (e.logicalKey == LogicalKeyboardKey.arrowDown) {
+  void onKeyEvent(event) {
+    if (event is! RawKeyUpEvent) return;
+    if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
       gestureDragInput(Direction.down);
-    } else if (e.logicalKey == LogicalKeyboardKey.arrowUp) {
+    } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
       gestureDragInput(Direction.up);
-    } else if (e.logicalKey == LogicalKeyboardKey.arrowRight) {
+    } else if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
       gestureDragInput(Direction.right);
-    } else if (e.logicalKey == LogicalKeyboardKey.arrowLeft) {
+    } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
       gestureDragInput(Direction.left);
-    } else if (e.logicalKey == LogicalKeyboardKey.space) {
+    } else if (event.logicalKey == LogicalKeyboardKey.space) {
       playerOne.shoot();
-    } else if (e.logicalKey == LogicalKeyboardKey.keyA) {
+    } else if (event.logicalKey == LogicalKeyboardKey.keyA) {
       playerOne.updateOrientation(Direction.left);
-    } else if (e.logicalKey == LogicalKeyboardKey.keyW) {
+    } else if (event.logicalKey == LogicalKeyboardKey.keyW) {
       playerOne.updateOrientation(Direction.up);
-    } else if (e.logicalKey == LogicalKeyboardKey.keyD) {
+    } else if (event.logicalKey == LogicalKeyboardKey.keyD) {
       playerOne.updateOrientation(Direction.right);
-    } else if (e.logicalKey == LogicalKeyboardKey.keyS) {
+    } else if (event.logicalKey == LogicalKeyboardKey.keyS) {
       playerOne.updateOrientation(Direction.down);
-    } else if (e.logicalKey == LogicalKeyboardKey.escape) {
+    } else if (event.logicalKey == LogicalKeyboardKey.escape) {
       if (isPaused) {
         removeWidgetOverlay('pauseMenu');
         resume();
       } else {
         pause(mode: PauseMode.pause);
       }
-    } else if (e.logicalKey == LogicalKeyboardKey.keyL) miniMap();
+    } else if (event.logicalKey == LogicalKeyboardKey.keyL) {
+      miniMap();
+    }
   }
 
   void dispose() {

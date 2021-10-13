@@ -1,6 +1,5 @@
 import 'package:flame/components/timer_component.dart';
 import 'package:flame/time.dart';
-
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';

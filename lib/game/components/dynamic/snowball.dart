@@ -1,6 +1,6 @@
 import 'dart:math';
-import 'package:flame/animation.dart';
 
+import 'package:flame/animation.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';

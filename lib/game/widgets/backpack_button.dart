@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Button used to open the backpack

@@ -1,5 +1,4 @@
 import 'package:flutter/painting.dart';
-
 import 'package:xeonjia/game/components/abstract_basic.dart';
 
 // Show a text above the component for a few seconds

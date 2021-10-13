@@ -72,9 +72,9 @@ class ModifierComponent extends BasicComponent {
       componentAbove.def += _defDelta;
       componentAbove.poisonQuantity += _poisonDelta;
       componentAbove.moneyDifference(_moneyDelta);
-      componentAbove.weaponList.forEach((weapon) {
+      for (var weapon in componentAbove.weaponList) {
         weapon.powerPoints += _powerPointsDelta;
-      });
+      }
       game.refreshWeaponButtons();
       if (_itemId != '0' &&
           componentAbove.isPlayerOne &&

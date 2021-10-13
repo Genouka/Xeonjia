@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/game_mode.dart';
@@ -13,7 +12,7 @@ enum PauseMode { pause, restart, exit }
 // In-game pause menu
 class PauseMenu extends StatefulWidget {
   final PauseMode mode;
-  PauseMenu(this.mode);
+  const PauseMenu(this.mode);
 
   @override
   _PauseMenuState createState() => _PauseMenuState();

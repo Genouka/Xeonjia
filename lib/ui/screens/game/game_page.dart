@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:xeonjia/game/widgets/pause_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/match_config.dart';
@@ -18,7 +17,7 @@ class GamePage extends StatelessWidget {
         return Future.value(false);
       },
       child: Focus(
-        onKey: (data, event) => false,
+        onKey: (data, event) => KeyEventResult.handled,
         child: Theme(
           data: gameTheme,
           child: Scaffold(body: game.widget),

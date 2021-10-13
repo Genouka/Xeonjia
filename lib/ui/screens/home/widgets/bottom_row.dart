@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'package:xeonjia/i18n/ui.i18n.dart';
+import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/info/info_page.dart';
 import 'package:xeonjia/ui/screens/settings/settings_page.dart';
-import 'package:xeonjia/ui/basic.dart';
 
-class bottomRow extends StatelessWidget {
+class BottomRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

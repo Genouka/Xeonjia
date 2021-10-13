@@ -15,8 +15,8 @@ class DirectionChangerComponent extends BasicComponent {
         super.fromTile(tile);
 
   @override
-  void collidedBy(DynamicComponent componentAbove) {
-    componentAbove.updateDirection(_forcedDirection, forced: true);
+  void collidedBy(DynamicComponent otherComponent) {
+    otherComponent.updateDirection(_forcedDirection, forced: true);
   }
 
   @override

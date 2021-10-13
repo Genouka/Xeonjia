@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-
-import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/shop_item.dart';
 
 // Menu used to buy items in stores
 class ShopMenu extends StatefulWidget {
   final List<ShopItem> _items;
-  ShopMenu(this._items);
+  const ShopMenu(this._items);
 
   @override
   _ShopMenuState createState() => _ShopMenuState();
@@ -43,7 +42,7 @@ class _ShopMenuState extends State<ShopMenu> {
           ),
           divider,
           Expanded(
-            child: Container(
+            child: SizedBox(
               width: _width,
               child: ScrollConfiguration(
                 behavior: _NoGlow(),

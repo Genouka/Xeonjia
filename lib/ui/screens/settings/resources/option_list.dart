@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:i18n_extension/i18n_widget.dart';
-
 import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/main.dart';
 import 'package:xeonjia/ui/screens/settings/resources/languages.dart';

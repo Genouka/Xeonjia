@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:i18n_extension/i18n_widget.dart';
-
 import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/settings.dart';
 import 'package:xeonjia/ui/screens/settings/resources/option_list.dart';
@@ -45,7 +44,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 primary: Theme.of(context).primaryColor,
               ),
               onPressed: () {
-                SystemChrome.setEnabledSystemUIOverlays([]);
+                SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
                 settings = Settings({'firstRun': false});
                 I18n.of(context).locale = settings.locale;
                 saveSettings();

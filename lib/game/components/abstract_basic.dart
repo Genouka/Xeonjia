@@ -1,10 +1,10 @@
 import 'dart:math';
 import 'dart:ui';
+
 import 'package:flame/animation.dart';
 import 'package:flame/components/component.dart';
 import 'package:flame/sprite.dart';
 import 'package:meta/meta.dart';
-
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/dynamic/snowball.dart';
@@ -192,9 +192,9 @@ abstract class BasicComponent extends SpriteComponent {
         delete();
         if (teamId == (cause?.teamId ?? -99)) {
           // Teammate defeated
-          game.teams.forEach((team) {
+          for (var team in game.teams) {
             if (team.id != teamId) team.basisPoints += 10;
-          });
+          }
         } else if (this is! StaticComponent) {
           cause?.defeatedEnemies++;
           cause?.experiencePoints += level;
@@ -286,6 +286,7 @@ abstract class BasicComponent extends SpriteComponent {
   }
 
   @override
+  // ignore: avoid_renaming_method_parameters
   void resize(Size _) {
     var ratio = componentSize / width;
     width = componentSize;
@@ -307,9 +308,9 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Delete every son of this component
   void removeChildren() {
-    game.components.forEach((c) {
+    for (var c in game.components) {
       if (c is BasicComponent && c.father == this) c.delete();
-    });
+    }
   }
 
   // Respawn component

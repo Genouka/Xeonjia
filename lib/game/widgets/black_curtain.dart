@@ -1,13 +1,12 @@
 import 'package:flame/components/timer_component.dart';
 import 'package:flame/time.dart';
 import 'package:flutter/material.dart';
-
 import 'package:xeonjia/game/xeonjia_game.dart';
 
 // AnimatedOpacity widget shown while executing (delete)
 class BlackCurtain extends StatefulWidget {
   final VoidCallback callback;
-  BlackCurtain([this.callback]);
+  const BlackCurtain([this.callback]);
 
   @override
   _BlackCurtainState createState() => _BlackCurtainState();
@@ -40,7 +39,7 @@ class _BlackCurtainState extends State<BlackCurtain> {
         if (visible) {
           setState(() {
             widget.callback?.call();
-            return visible = !visible;
+            visible = !visible;
           });
         } else {
           game.removeWidgetOverlay('blackCurtain');

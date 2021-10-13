@@ -1,11 +1,11 @@
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:xeonjia/models/character_info.dart';
 import 'package:xeonjia/models/item.dart';
 import 'package:xeonjia/models/settings.dart';
-import 'package:xeonjia/models/character_info.dart';
 
 SharedPreferences _prefs;
 

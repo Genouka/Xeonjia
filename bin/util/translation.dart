@@ -15,4 +15,7 @@ class Translation {
 
   @override
   bool operator ==(other) => msgid == other.msgid;
+
+  @override
+  int get hashCode => super.hashCode;
 }
