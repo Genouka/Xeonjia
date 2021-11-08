@@ -1,0 +1,17 @@
+Két módban játszató:
+
+1) Történet mód: a cél a torony utolsó emeletének elérése és a "Gonosz Király" legyőzése.
+
+2) Többjátékosos mód: ebben a módban a cél a pontgyűjtés és a csapat győzelme.
+
+Alapvetően az ujjaddal kell majd mozgatnod a karakteredet a világban.
+
+Ne feledd, hogy nem állhatsz meg, amíg nem érsz el egy falat, sziklát vagy bármilyen más típusú akadályt.
+
+Idővel tapasztalati pontokat fogsz szerezni, amelyekkel növelheted a szinted, és pénzt és rejtett kincseket találsz, amiket arra használhatsz, hogy dolgokat vásárolj és fejleszd magad.
+
+Légy óvatos, a világ tele van veszélyes ellenségekkel, akik készen állnak arra, hogy megtámadjanak!
+
+Használd az eszed, hogy kitaláld a legjobb utat!
+
+<b>Megjegyzés</b>: ez a játék jelenleg korai béta fázisban van.

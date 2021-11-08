@@ -1,0 +1,3 @@
+* Néhány új animáció
+* Játék fekvőmódban
+* Hibajavítások

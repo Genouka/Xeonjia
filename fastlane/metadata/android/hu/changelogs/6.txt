@@ -1,0 +1,5 @@
+* Új történet mód
+* Frissített grafika
+* UI/UX javítása
+* Háttérzene és sfx hozzáadása
+* Hibajavítások
