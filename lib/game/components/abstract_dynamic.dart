@@ -1,9 +1,11 @@
 import 'dart:math';
 
+import 'package:collection/collection.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/static/static.dart';
+import 'package:xeonjia/game/components/static/thin_wall.dart';
 import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/game/util/text_animation.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -160,15 +162,37 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
             !(collidedComponent as StaticComponent).isFloor)) {
       game.playSound(Sfx.collision);
     }
-    collidedComponent.collidedBy(this);
+    if (_wallInFront() != null) {
+      collidedComponent.collidedBy(this);
+    }
   }
 
   void stop() {
     direction = null;
   }
 
+  // Get components under this one
+  List<BasicComponent> componentsUnder() {
+    return game.components
+        .where((component) =>
+            (component is StaticComponent || component is ThinWallComponent) &&
+            (component as BasicComponent)
+                .toRect()
+                .contains(Offset(x + componentSize / 2, y + componentSize / 2)))
+        .toList()
+        .cast<BasicComponent>();
+  }
+
+  // Workaround waiting for the priority/layers + collision fix
+  ThinWallComponent _wallInFront() {
+    return componentsUnder().firstWhereOrNull(
+        (c) => c is ThinWallComponent && c.isBlocking(orientation));
+  }
+
   // Get component in front of this
   BasicComponent componentInFront() {
+    var wall = _wallInFront();
+    if (wall != null) return wall;
     Offset offset;
     switch (orientation) {
       case Direction.down:
@@ -184,12 +208,14 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
         offset = Offset(x - componentSize / 2, y + componentSize / 2);
         break;
     }
-    var components = game.components.where((component) =>
-        component is BasicComponent &&
-        component.toRect().contains(offset) &&
-        !component.isFlying() &&
-        !component.isBeingDeleted);
-    return components.isNotEmpty ? components.last : null;
+    return game.components
+        .where((component) =>
+            component is BasicComponent &&
+            component.toRect().contains(offset) &&
+            !component.isFlying() &&
+            !component.isBeingDeleted)
+        .sorted((a, b) => a.priority().compareTo(b.priority()))
+        .lastOrNull;
   }
 
   @override

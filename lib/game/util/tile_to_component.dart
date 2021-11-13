@@ -6,6 +6,7 @@ import 'package:xeonjia/game/components/static/door.dart';
 import 'package:xeonjia/game/components/static/hurdle.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/game/components/static/static.dart';
+import 'package:xeonjia/game/components/static/thin_wall.dart';
 import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
@@ -75,6 +76,9 @@ extension CreateComponent on Tile {
             );
           }
         }
+        break;
+      case 'ThinWall':
+        ThinWallComponent(this);
         break;
       case 'NPC':
         CharacterComponent.npc(this);
