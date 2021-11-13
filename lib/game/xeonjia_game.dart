@@ -192,10 +192,10 @@ class XeonjiaGame extends BaseGame
     // Import map and components
     if (config.mode == GameMode.story) {
       map = MapProperties(fullId: mainCharacter.visitedRooms.last);
-      if (map.id == '32') {
+      if (map.id == '44') {
         removeWidgetOverlay('loading');
         _backgroundMusic?.dispose();
-        addWidgetOverlay('noMapsMenu', const NoMapsMenu('30'));
+        addWidgetOverlay('noMapsMenu', const NoMapsMenu('43'));
         return;
       }
       await importMap('assets/maps/story/${map.id}.tmx');
