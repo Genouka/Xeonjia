@@ -72,6 +72,9 @@ abstract class BasicComponent extends SpriteComponent {
   // True if this is not on the ground floor
   bool _flying = false;
 
+  // Component priority
+  int _customPriority = 0;
+
   // Priority based on tile's layer
   int _layerPriority = 0;
 
@@ -120,6 +123,7 @@ abstract class BasicComponent extends SpriteComponent {
         poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
         _flying = 'true' == (tile.properties['flying'] ?? 'false'),
         _layerPriority = 100 * (tile.layer ?? 0),
+        _customPriority = int.parse(tile.properties['priority'] ?? '0'),
         image = tile.properties['image'],
         imageY = tile.properties['imageY'] ?? 0,
         super.fromSprite(
@@ -208,7 +212,9 @@ abstract class BasicComponent extends SpriteComponent {
   bool isFlying() => _flying;
 
   @override
-  int priority() => _layerPriority + (_flying ? 50 : 0);
+  int priority() => _customPriority != 0
+      ? _customPriority
+      : (_layerPriority + (_flying ? 50 : 0));
 
   // Collision area
   Rect collisionRect(DynamicComponent otherComponent) => toRect();
