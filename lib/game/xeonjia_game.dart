@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:collection/collection.dart';
 import 'package:flame/bgm.dart';
 import 'package:flame/components/timer_component.dart';
 import 'package:flame/flame.dart';
@@ -127,7 +128,8 @@ class XeonjiaGame extends BaseGame
   // Get component from ID
   BasicComponent getComponentFromId(int id) {
     var componentList = List.from(components)..addAll(deletedComponents);
-    return componentList.firstWhere((c) => c is BasicComponent && c.id == id);
+    return componentList
+        .firstWhereOrNull((c) => c is BasicComponent && c.id == id);
   }
 
   BasicComponent getActiveComponentFromId(int id) =>
