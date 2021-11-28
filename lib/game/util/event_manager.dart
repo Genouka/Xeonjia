@@ -33,6 +33,7 @@ Environment setEnvironment() {
       : [env.lookForValue(Sym('actor')), x.car];
 
   // Game procedures
+  _('define-symbol', 2, (Cell x) => env.defineSymbol(Sym(x.car), x.cdr.car));
   _('get-life', 0, (Cell x) => game.playerOne.lifePoints);
   _('get-initial-life', 0, (Cell x) => game.playerOne.maxLifePoints);
   _(
@@ -85,7 +86,8 @@ Environment setEnvironment() {
               .length ==
           1);
   _('place', 3, (Cell x) {
-    var c = game.getComponentFromId(x.car);
+    BasicComponent c = game.getComponentFromId(x.car) ??
+        (env.lookForValue(Sym('self')) as Intrinsic).fun(x);
     c.x = x.cdr.car / 16 * componentSize;
     c.y = x.cdr.cdr.car / 16 * componentSize;
     if (c.isPlayerOne) game.updateCamera(game.playerOne.x, game.playerOne.y);
@@ -106,6 +108,17 @@ Environment setEnvironment() {
     actor.orientation = GetDirection.fromInt(direction);
     return #NONE;
   });
+  _('is-visible', 1,
+      (Cell x) => game.getComponentFromId(x.car)?.isVisible ?? false);
+  _('show', 1, (Cell x) => game.getComponentFromId(x.car)?.show());
+  _('show-me', 0, (Cell x) {
+    ((env.lookForValue(Sym('self')) as Intrinsic).fun(x) as BasicComponent)
+        .show();
+    return #NONE;
+  });
+  _('hide', 1, (Cell x) => game.getComponentFromId(x.car)?.hide());
+  _('invert-visibility', 1,
+      (Cell x) => game.getComponentFromId(x.car).invertVisibility());
   _('delete-me', 0, (Cell x) {
     BasicComponent self = (env.lookForValue(Sym('self')) as Intrinsic).fun(x);
     self.delete();
@@ -140,6 +153,7 @@ Environment setEnvironment() {
     }
     return #NONE;
   });
+  _('gem-count', 0, (Cell x) => game.playerOne.gemCount);
   _(
       'has-item',
       1,
