@@ -69,6 +69,13 @@ abstract class BasicComponent extends SpriteComponent {
   // They equal to zero if the component is not moving
   Direction direction;
 
+  // True if rendered
+  bool _visible = true;
+  bool get isVisible => _visible;
+  void hide() => _visible = false;
+  void show() => _visible = true;
+  void invertVisibility() => _visible = !_visible;
+
   // True if this is not on the ground floor
   bool _flying = false;
 
@@ -121,6 +128,7 @@ abstract class BasicComponent extends SpriteComponent {
         atk = double.parse(tile.properties['atk'] ?? '0'),
         def = double.parse(tile.properties['def'] ?? '0'),
         poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
+        _visible = 'true' == (tile.properties['visible'] ?? 'true'),
         _flying = 'true' == (tile.properties['flying'] ?? 'false'),
         _layerPriority = 100 * (tile.layer ?? 0),
         _customPriority = int.parse(tile.properties['priority'] ?? '0'),
@@ -277,7 +285,9 @@ abstract class BasicComponent extends SpriteComponent {
   }
 
   @override
+  @mustCallSuper
   void render(Canvas canvas) {
+    if (!_visible) return;
     if (game?.miniMapEnabled ?? false) {
       canvas.scale(
           (componentSize * game.miniMapZoom).gridAligned / componentSize);
