@@ -162,7 +162,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
             !(collidedComponent as StaticComponent).isFloor)) {
       game.playSound(Sfx.collision);
     }
-    if (_wallInFront() != null) {
+    if (_wallInFront() == null) {
       collidedComponent.collidedBy(this);
     }
   }
