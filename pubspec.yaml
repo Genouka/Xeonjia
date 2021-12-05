@@ -5,7 +5,7 @@ version: 2.1.2+10
 
 environment:
   sdk: ">=2.11.0 <3.0.0"
-  flutter: ^2.5.2
+  flutter: ^2.5.3
 
 dependencies:
   flutter:
@@ -15,8 +15,8 @@ dependencies:
 
   flame: ^0.29.4
   i18n_extension: ^4.0.0
-  shared_preferences: ^2.0.5
-  url_launcher: ^6.0.4
+  shared_preferences: ^2.0.9
+  url_launcher: ^6.0.17
   xml: ^4.5.1
 
 dev_dependencies:
