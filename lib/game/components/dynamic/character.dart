@@ -141,9 +141,11 @@ class CharacterComponent extends DynamicComponent
           tile,
           initialLP: double.parse(tile.properties['lp'] ?? 'Infinity'),
           team: int.parse(tile.properties['team'] ?? '0'),
-          weaponList: int.parse(tile.properties['team'] ?? '0') != 0
-              ? [SnowBallWeapon(level: 0, powerPoints: double.infinity)]
-              : [],
+          weaponList: [
+            SnowBallWeapon(
+                level: int.parse(tile.properties['weaponLevel'] ?? '0'),
+                powerPoints: double.infinity)
+          ],
           level: int.parse(tile.properties['level'] ?? '0'),
         );
 
