@@ -214,7 +214,13 @@ class CharacterComponent extends DynamicComponent
 
   @override
   void hasMoved() {
-    isPlayerOne ? game.updateCamera(x, y) : npcController.updateMovement();
+    if (isPlayerOne) game.updateCamera(x, y);
+  }
+
+  @override
+  void stop() {
+    super.stop();
+    if (!isPlayerOne) npcController.updateMovement();
   }
 
   @override

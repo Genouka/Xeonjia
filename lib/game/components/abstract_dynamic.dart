@@ -167,6 +167,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
     }
   }
 
+  @mustCallSuper
   void stop() {
     direction = null;
   }
