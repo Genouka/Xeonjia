@@ -2,8 +2,9 @@
 # Copyright (C) 2020, 2021 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Quang Trung <quangtrung02hn16@gmail.com>, 2021.
+# DeepDaikon <deepdaikon@tuta.io>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-11 21:21+0000\nLast-Translator: Quang Trung <quangtrung02hn16@gmail.com>\nLanguage-Team: Vietnamese <https://translate.deepdaikon.xyz/projects/xeonjia/story/vi/>\nLanguage: vi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-06 23:17+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Vietnamese <https://translate.deepdaikon.xyz/projects/xeonjia/story/vi/>\nLanguage: vi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -195,11 +196,11 @@ msgstr ""
 
 #: assets/maps/story/34.tmx:
 msgid "* {{hero}} found {{money-diff}} ¤ *"
-msgstr ""
+msgstr "* {{hero}} đã tìm thấy {{money-diff}} ¤ *"
 
 #: assets/maps/story/34.tmx:
 msgid "A rock."
-msgstr ""
+msgstr "Một cục đá."
 
 #: assets/maps/story/34.tmx:
 msgid "\" Hexa Cave \""
@@ -563,11 +564,11 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes"
-msgstr ""
+msgstr "Có"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "No"
-msgstr ""
+msgstr "Không"
 
 #: assets/maps/story/t1_04.tmx:
 msgid "Mossy Crypt -4F"
@@ -639,7 +640,7 @@ msgstr "Trung tâm thành phố cách đây một vài ki lô mét về phía na
 
 #: assets/maps/story/24.tmx:
 msgid "I'm planning a surprise wedding for my son, I hope he doesn't find out."
-msgstr ""
+msgstr "Bác đang lên kế hoạch cho một đám cưới bất ngờ cho con trai của bác, bác hy vọng là nó không nhận ra."
 
 #: assets/maps/story/24.tmx:
 msgid "\" VANTOI LAB \""
@@ -1167,7 +1168,7 @@ msgstr ""
 
 #: assets/maps/story/39.tmx:
 msgid "I will defeat you."
-msgstr ""
+msgstr "Ta sẽ đánh bại ngươi."
 
 #: assets/maps/story/39.tmx:
 msgid "I have to train harder."
@@ -1175,7 +1176,7 @@ msgstr ""
 
 #: assets/maps/story/39.tmx:
 msgid "This is a very strange stone… Never seen anything like this before."
-msgstr ""
+msgstr "Đây là một viên đá rất lạ… Tôi chưa bao giờ thấy thứ gì như thế này trước đây."
 
 #: assets/maps/story/11.tmx:
 msgid "Hi, I'm an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I'll help you."
@@ -1451,7 +1452,7 @@ msgstr ""
 
 #: assets/maps/story/61.tmx:
 msgid "This part is under construction."
-msgstr ""
+msgstr "Phần này đang được xây dựng."
 
 #: assets/maps/story/3.tmx:
 msgid "Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck."
@@ -1583,11 +1584,11 @@ msgstr "Ai đó đã đảo lộn mọi thứ."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A rocky wall."
-msgstr ""
+msgstr "Một bức tường gồ ghề."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A wall."
-msgstr ""
+msgstr "Một bức tường."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "An empty vase."
@@ -1627,11 +1628,11 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "It's not a good thing to look into other people's homes."
-msgstr ""
+msgstr "Việc nhìn vào nhà của những người khác là không tốt đâu."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "This is a pharmacy."
-msgstr ""
+msgstr "Đây là một hiệu thuốc."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A little plant."
@@ -1771,7 +1772,7 @@ msgstr ""
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Package of the King"
-msgstr ""
+msgstr "Gói hàng của Vua"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Package given to me by the King."
@@ -1819,7 +1820,7 @@ msgstr ""
 
 #: assets/maps/utils/items-and-events.json:
 msgid "First Signet"
-msgstr ""
+msgstr "Ấn dấu đầu tiên"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "First out of 3 signets required to enter the Xeonjia tower."

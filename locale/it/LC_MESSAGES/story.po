@@ -6,7 +6,7 @@
 # no no <skariko@pm.me>, 2020.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-06 22:25+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-06 23:17+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -206,7 +206,7 @@ msgstr "Una roccia."
 
 #: assets/maps/story/34.tmx:
 msgid "\" Hexa Cave \""
-msgstr ""
+msgstr "\" Grotta Hexa \""
 
 #: assets/maps/story/38.tmx:
 msgid "Zamelis Village"
@@ -406,7 +406,7 @@ msgstr "\" Area picnic ↑ \"\n\" Centro del bosco ↓ \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hexa Cave"
-msgstr ""
+msgstr "Grotta Hexa"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
@@ -418,11 +418,11 @@ msgstr "Non so cosa hai fatto ma sembra che abbia funzionato."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \""
-msgstr ""
+msgstr "\" #3: Sono verde se #5 e #6 sono tra di loro dello stesso colore. Altrimenti sono rosso. \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "There is a button, do I press it?"
-msgstr ""
+msgstr "C'è un bottone, lo premo?"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I no longer need to press the button."
@@ -430,23 +430,23 @@ msgstr "Non ho più bisogno di premere il pulsante."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #5: I'm red if #1 is red. Otherwise I'm green. \""
-msgstr ""
+msgstr "\" #5: Sono rosso se #1 è rosso. Altrimenti sono verde. \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #4: I'm green if #3 is green. Otherwise I'm red. \""
-msgstr ""
+msgstr "\" #4: Sono verde se #3 è verde. Altrimenti sono rosso. \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #2: I'm green if #4 is red. Otherwise I'm red. \""
-msgstr ""
+msgstr "\" #2: Sono verde se #4 è rosso. Altrimenti sono rosso. \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #1: I'm red if #4 is green. Otherwise I'm green. \""
-msgstr ""
+msgstr "\" #1: Sono rosso se #4 è verde. Altrimenti sono verde. \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #6: I'm red if #2 is green. Otherwise I'm green. \""
-msgstr ""
+msgstr "\" #6: Sono rosso se #2 è verde. Altrimenti sono verde. \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "!!!"
@@ -494,7 +494,7 @@ msgstr "È l'antica scrittura usata da queste parti molto tempo fa.\nQui c'è sc
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Slooosh!"
-msgstr ""
+msgstr "Slooosh!"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hi, I'm the spirit of water.\nIs there anything you need?\nI don't have much time, with this cold I quickly become ice. And I'd say there's enough ice here."
@@ -882,11 +882,11 @@ msgstr "farmacista"
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "* {{hero}} ate some berries *"
-msgstr ""
+msgstr "* {{hero}} ha mangiato delle bacche *"
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "* {{life-diff}} LPs have been recovered *"
-msgstr ""
+msgstr "* {{life-diff}} PV sono stati recuperati *"
 
 #: assets/maps/story/35.tmx:
 msgid "This boulder is very heavy."
@@ -902,7 +902,7 @@ msgstr "Una roccia pesante."
 
 #: assets/maps/story/35.tmx:
 msgid "\" ↑ Hexa Cave \"\n\" Zamelis Village → \""
-msgstr ""
+msgstr "\" ↑ Grotta Hexa \"\n\" Villaggio Zamelis → \""
 
 #: assets/maps/story/27.tmx:
 msgid "\" ← Sacred Tree \"\n\" Melhopolis City Center → \""
@@ -1150,7 +1150,7 @@ msgstr "Sono questi i tuoi occhiali?"
 
 #: assets/maps/story/39.tmx:
 msgid "Yes! Thank you so much!"
-msgstr ""
+msgstr "Sì! Grazie mille!"
 
 #: assets/maps/story/39.tmx:
 msgid "As a reward I give you this gem that I found while I was looking for the glasses."
@@ -1490,7 +1490,7 @@ msgstr "Una volta mi è capitato di vedere uno strano buco in mezzo al mare."
 
 #: assets/maps/story/43.tmx:
 msgid "\" Hana's Tunnel \""
-msgstr ""
+msgstr "\" Tunnel di Hana \""
 
 #: assets/maps/story/43.tmx:
 msgid "\" Observation Tower \""

@@ -5,7 +5,7 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2020, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-08-07 09:27+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-06 23:17+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -197,11 +197,11 @@ msgstr ""
 
 #: assets/maps/story/34.tmx:
 msgid "* {{hero}} found {{money-diff}} ¤ *"
-msgstr ""
+msgstr "* {{hero}} encontró {{money-diff}} ¤ *"
 
 #: assets/maps/story/34.tmx:
 msgid "A rock."
-msgstr ""
+msgstr "Una roca."
 
 #: assets/maps/story/34.tmx:
 msgid "\" Hexa Cave \""
@@ -449,7 +449,7 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "!!!"
-msgstr ""
+msgstr "!!!"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hi {{hero}}! How are you doing? Were you able to get the first signet?"
@@ -565,11 +565,11 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes"
-msgstr ""
+msgstr "Sí"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: assets/maps/story/t1_04.tmx:
 msgid "Mossy Crypt -4F"
@@ -641,7 +641,7 @@ msgstr "El centro de la ciudad está a un par de kilómetros al sur."
 
 #: assets/maps/story/24.tmx:
 msgid "I'm planning a surprise wedding for my son, I hope he doesn't find out."
-msgstr ""
+msgstr "Estoy planeando una boda sorpresa para mi hijo, espero que no se dé cuenta."
 
 #: assets/maps/story/24.tmx:
 msgid "\" VANTOI LAB \""
@@ -1169,7 +1169,7 @@ msgstr ""
 
 #: assets/maps/story/39.tmx:
 msgid "I will defeat you."
-msgstr ""
+msgstr "Te derrotaré."
 
 #: assets/maps/story/39.tmx:
 msgid "I have to train harder."
@@ -1585,11 +1585,11 @@ msgstr "Alguien ha hecho un revoltijo aquí."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A rocky wall."
-msgstr ""
+msgstr "Un muro pedregoso."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A wall."
-msgstr ""
+msgstr "Un muro."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "An empty vase."
@@ -1629,11 +1629,11 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "It's not a good thing to look into other people's homes."
-msgstr ""
+msgstr "No es bien visto mirar las casas ajenas."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "This is a pharmacy."
-msgstr ""
+msgstr "Esto es una farmacia."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A little plant."
@@ -1773,7 +1773,7 @@ msgstr ""
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Package of the King"
-msgstr ""
+msgstr "Paquete del Rey"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Package given to me by the King."
@@ -1821,7 +1821,7 @@ msgstr ""
 
 #: assets/maps/utils/items-and-events.json:
 msgid "First Signet"
-msgstr ""
+msgstr "Primer Medallón"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "First out of 3 signets required to enter the Xeonjia tower."
