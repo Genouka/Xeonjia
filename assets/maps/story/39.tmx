@@ -62,7 +62,8 @@
             (dialog
                 '((&quot;/&quot; &quot;I lost my glasses. I hardly see anything.&quot;)
                 (&quot;/hero&quot; &quot;Are these your glasses?&quot;)
-                (&quot;/_happy&quot; &quot;!!!\nYes! Thank you so much!&quot;)))
+                (&quot;/_happy&quot; &quot;!!!&quot;)
+                (&quot;/_happy&quot; &quot;Yes! Thank you so much!&quot;)))
             (take-item &quot;40.eyeglasses&quot;)
             (dialog
                 '((&quot;/&quot; &quot;As a reward I give you this gem that I found while I was looking for the glasses.&quot;)

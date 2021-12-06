@@ -37,7 +37,7 @@
   <object id="72" gid="199" x="80" y="96" width="16" height="16">
    <properties>
     <property name="action">(shop
-    '((&quot;Berries (10 LPs)&quot; 5 &quot;(begin (define life-diff 10) (dialog '((\&quot;* {{hero}} ate some berries *\&quot;))) (if (&lt; (get-life) (get-initial-life)) (dialog '((\&quot;* {{life-diff}} LPs have been recovered *\&quot;)))) (set-life-diff life-diff))&quot;)
+    '((&quot;Berries (10 LPs)&quot; 5 &quot;(begin (define life-diff 10) (dialog '((&quot;* {{hero}} ate some berries *&quot;))) (if (&lt; (get-life) (get-initial-life)) (dialog '((&quot;* {{life-diff}} LPs have been recovered *&quot;)))) (set-life-diff life-diff))&quot;)
     (&quot;Fresh Water&quot; 15 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
     (&quot;Pomegranate juice&quot; 50 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)))</property>
    </properties>
