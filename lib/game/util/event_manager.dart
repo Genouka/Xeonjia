@@ -131,6 +131,11 @@ Environment setEnvironment() {
     game.addWidgetOverlay('blackCurtain', BlackCurtain(self.delete));
     return #NONE;
   });
+  _('leave-npc', 1, (Cell x) {
+    game.addWidgetOverlay(
+        'blackCurtain', BlackCurtain(game.getComponentFromId(x.car).delete));
+    return #NONE;
+  });
   _('is-friendly', 1, (Cell x) {
     return (game.getComponentFromId(x.car) as CharacterComponent).friendly;
   });
