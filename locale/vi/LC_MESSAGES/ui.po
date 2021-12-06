@@ -345,6 +345,18 @@ msgstr "Quay lại"
 msgid "Back to menu"
 msgstr "Quay về menu"
 
+#: lib/game/widgets/backpack_menu.dart:
+msgid "No items here"
+msgstr ""
+
+#: lib/game/widgets/backpack_menu.dart:
+msgid "Backpack"
+msgstr ""
+
+#: lib/game/widgets/backpack_menu.dart:
+msgid "Use"
+msgstr ""
+
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"
 msgstr "Bạn hết năng lượng rồi!"
@@ -418,6 +430,10 @@ msgid "money: %s ¤"
 msgstr "tiền: %s ¤"
 
 #: lib/game/widgets/pause_menu.dart:
+msgid "gems: %s"
+msgstr ""
+
+#: lib/game/widgets/pause_menu.dart:
 msgid "play time: %s min"
 msgstr "thời gian chơi: %s phút"
 
@@ -466,16 +482,24 @@ msgid "Let me know if you need anything else."
 msgstr "Hãy cho tôi biết nếu bạn cần thứ gì đó khác."
 
 #: lib/game/components/static/door.dart:
-msgid "There are still monsters here. I can't escape."
-msgstr "Ở đây vẫn có quái vật. Tôi không thể trốn thoát được."
+msgid "There is still 1 monster here. I can't escape."
+msgstr ""
+
+#: lib/game/components/static/door.dart:
+msgid "There are still %s monsters here. I can't escape."
+msgstr ""
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
 msgstr "* {{hero}} đặt %s vào ba lô. *"
 
 #: lib/game/components/dynamic/character.dart:
-msgid "* {{hero}} puts the gem in the backpack. *"
-msgstr "* {{hero}} đặt viên đá quý vào ba lô. *"
+msgid "the gem"
+msgstr ""
+
+#: lib/game/components/dynamic/character.dart:
+msgid "* {{hero}} used {{selected-item-name}} *"
+msgstr ""
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} gives %s *"

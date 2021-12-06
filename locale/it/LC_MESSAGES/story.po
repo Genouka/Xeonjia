@@ -417,7 +417,11 @@ msgid "I don't know what you did but it seems to have worked."
 msgstr "Non so cosa hai fatto ma sembra che abbia funzionato."
 
 #: assets/maps/story/34_cave.tmx:
-msgid "\" #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \"\nThere is a button, do I press it?"
+msgid "\" #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \""
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "There is a button, do I press it?"
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
@@ -425,23 +429,23 @@ msgid "I no longer need to press the button."
 msgstr "Non ho più bisogno di premere il pulsante."
 
 #: assets/maps/story/34_cave.tmx:
-msgid "\" #5: I'm red if #1 is red. Otherwise I'm green. \"\nThere is a button, do I press it?"
+msgid "\" #5: I'm red if #1 is red. Otherwise I'm green. \""
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "\" #4: I'm green if #3 is green. Otherwise I'm red. \"\nThere is a button, do I press it?"
+msgid "\" #4: I'm green if #3 is green. Otherwise I'm red. \""
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "\" #2: I'm green if #4 is red. Otherwise I'm red. \"\nThere is a button, do I press it?"
+msgid "\" #2: I'm green if #4 is red. Otherwise I'm red. \""
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "\" #1: I'm red if #4 is green. Otherwise I'm green. \"\nThere is a button, do I press it?"
+msgid "\" #1: I'm red if #4 is green. Otherwise I'm green. \""
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "\" #6: I'm red if #2 is green. Otherwise I'm green. \"\nThere is a button, do I press it?"
+msgid "\" #6: I'm red if #2 is green. Otherwise I'm green. \""
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
@@ -489,7 +493,7 @@ msgid "It is the ancient writing used in these areas long ago.\nHere it says:"
 msgstr "È l'antica scrittura usata da queste parti molto tempo fa.\nQui c'è scritto:"
 
 #: assets/maps/story/34_cave.tmx:
-msgid "!!!\nSlooosh!"
+msgid "Slooosh!"
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
@@ -877,11 +881,11 @@ msgid "pharmacist"
 msgstr "farmacista"
 
 #: assets/maps/story/15_lp_shop.tmx:
-msgid "* {{hero}} ate some berries *\"
+msgid "* {{hero}} ate some berries *"
 msgstr ""
 
 #: assets/maps/story/15_lp_shop.tmx:
-msgid "* {{life-diff}} LPs have been recovered *\"
+msgid "* {{life-diff}} LPs have been recovered *"
 msgstr ""
 
 #: assets/maps/story/35.tmx:
@@ -1145,7 +1149,7 @@ msgid "Are these your glasses?"
 msgstr "Sono questi i tuoi occhiali?"
 
 #: assets/maps/story/39.tmx:
-msgid "!!!\nYes! Thank you so much!"
+msgid "Yes! Thank you so much!"
 msgstr ""
 
 #: assets/maps/story/39.tmx:

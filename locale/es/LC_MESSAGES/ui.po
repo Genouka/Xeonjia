@@ -347,6 +347,18 @@ msgstr "Regresar"
 msgid "Back to menu"
 msgstr "Regresar al menú"
 
+#: lib/game/widgets/backpack_menu.dart:
+msgid "No items here"
+msgstr ""
+
+#: lib/game/widgets/backpack_menu.dart:
+msgid "Backpack"
+msgstr ""
+
+#: lib/game/widgets/backpack_menu.dart:
+msgid "Use"
+msgstr ""
+
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"
 msgstr "¡Te quedaste sin HP!"
@@ -420,6 +432,10 @@ msgid "money: %s ¤"
 msgstr "dinero: %s ¤"
 
 #: lib/game/widgets/pause_menu.dart:
+msgid "gems: %s"
+msgstr ""
+
+#: lib/game/widgets/pause_menu.dart:
 msgid "play time: %s min"
 msgstr "tiempo de juego: %s min"
 
@@ -468,16 +484,24 @@ msgid "Let me know if you need anything else."
 msgstr "Hazme saber si necesitas algo más."
 
 #: lib/game/components/static/door.dart:
-msgid "There are still monsters here. I can't escape."
-msgstr "Todavía hay monstruos aquí. No puedes escapar."
+msgid "There is still 1 monster here. I can't escape."
+msgstr ""
+
+#: lib/game/components/static/door.dart:
+msgid "There are still %s monsters here. I can't escape."
+msgstr ""
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
 msgstr "* {{hero}} pone %s en su mochila. *"
 
 #: lib/game/components/dynamic/character.dart:
-msgid "* {{hero}} puts the gem in the backpack. *"
-msgstr "* {{hero}} pone la gema en su mochila. *"
+msgid "the gem"
+msgstr ""
+
+#: lib/game/components/dynamic/character.dart:
+msgid "* {{hero}} used {{selected-item-name}} *"
+msgstr ""
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} gives %s *"

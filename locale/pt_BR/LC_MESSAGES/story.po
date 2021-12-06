@@ -105,6 +105,26 @@ msgstr "Uma pequena planta… só isso."
 msgid "\" Exit ↑ \""
 msgstr ""
 
+#: assets/maps/story/33.tmx:
+msgid "In the distance can be seen the other part of the region."
+msgstr ""
+
+#: assets/maps/story/33.tmx:
+msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
+msgstr ""
+
+#: assets/maps/story/33.tmx:
+msgid "Hey, there are items in here!"
+msgstr ""
+
+#: assets/maps/story/33.tmx:
+msgid "There are still items in here but I've already taken one."
+msgstr ""
+
+#: assets/maps/story/33.tmx:
+msgid "I can see a city in the distance."
+msgstr ""
+
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB – 1F"
 msgstr "LABORATÓRIO VANTOI – 1F"
@@ -165,6 +185,38 @@ msgstr "Tenho que dizer tchau para meus pais com o botão 'A' antes de sair. Sen
 msgid "Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks."
 msgstr "Como minha mãe dizia, é melhor se eu fosse pegar os protetores de canela do meu vizinho, senão arriscaria me machucar muito com as pedras."
 
+#: assets/maps/story/34.tmx:
+msgid "Route 4"
+msgstr ""
+
+#: assets/maps/story/34.tmx:
+msgid "This vase is empty."
+msgstr ""
+
+#: assets/maps/story/34.tmx:
+msgid "* {{hero}} found {{money-diff}} ¤ *"
+msgstr ""
+
+#: assets/maps/story/34.tmx:
+msgid "A rock."
+msgstr ""
+
+#: assets/maps/story/34.tmx:
+msgid "\" Hexa Cave \""
+msgstr ""
+
+#: assets/maps/story/38.tmx:
+msgid "Zamelis Village"
+msgstr ""
+
+#: assets/maps/story/38.tmx:
+msgid "I want to reach the capital quickly but the only way is traveling by land."
+msgstr ""
+
+#: assets/maps/story/38.tmx:
+msgid "I really needed a pomegranate juice."
+msgstr ""
+
 #: assets/maps/story/17.tmx:
 msgid "I still haven't figured out if these monsters are malicious or just stupid."
 msgstr "Eu ainda não descobri se esses monstros são maliciosos ou só idiotas."
@@ -219,6 +271,50 @@ msgstr ""
 
 #: assets/maps/story/13.tmx:
 msgid "Better if I check that the guy is okay."
+msgstr ""
+
+#: assets/maps/story/37.tmx:
+msgid "The prices for an LP UP are too high for me."
+msgstr ""
+
+#: assets/maps/story/37.tmx:
+msgid "I would love to leave for a long journey but I don't have the strength anymore."
+msgstr ""
+
+#: assets/maps/story/37.tmx:
+msgid "\" Zamelis Village \""
+msgstr ""
+
+#: assets/maps/story/37.tmx:
+msgid "{{hero}}, there you are. Finally! I heard a rumor that you were coming here."
+msgstr ""
+
+#: assets/maps/story/37.tmx:
+msgid "September! Long time no see! Last time was when we battled each other to be proclaimed HERO, we were 5 years old."
+msgstr ""
+
+#: assets/maps/story/37.tmx:
+msgid "I remember well, you got lucky that time.\nBut now it would go differently.\nI challenge you now. Show me that you are better than me.\nSee you on the north-east side of the village. I will wait for you there."
+msgstr ""
+
+#: assets/maps/story/37.tmx:
+msgid "W-Wait a moment, September!"
+msgstr ""
+
+#: assets/maps/story/37.tmx:
+msgid "How are you? Everything good? I haven't seen you for 16 years… We have so much to talk about."
+msgstr ""
+
+#: assets/maps/story/37.tmx:
+msgid "I don't have time to mess around.\nSee you where I told you."
+msgstr ""
+
+#: assets/maps/story/37.tmx:
+msgid "O-Ok… see you later."
+msgstr ""
+
+#: assets/maps/story/37.tmx:
+msgid "I remembered her less surly."
 msgstr ""
 
 #: assets/maps/story/14.tmx:
@@ -305,6 +401,174 @@ msgstr ""
 msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
 msgstr ""
 
+#: assets/maps/story/34_cave.tmx:
+msgid "Hexa Cave"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I don't know what you did but it seems to have worked."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "\" #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \""
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "There is a button, do I press it?"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I no longer need to press the button."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "\" #5: I'm red if #1 is red. Otherwise I'm green. \""
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "\" #4: I'm green if #3 is green. Otherwise I'm red. \""
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "\" #2: I'm green if #4 is red. Otherwise I'm red. \""
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "\" #1: I'm red if #4 is green. Otherwise I'm green. \""
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "\" #6: I'm red if #2 is green. Otherwise I'm green. \""
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "!!!"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Hi {{hero}}! How are you doing? Were you able to get the first signet?"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Hi Shen! Yes I did it!"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "But it was not easy."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I didn't have any big problems."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Great! I had no doubt you would make it.\nDid you find the snowballs helpful?"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Yes, I couldn't do it without them, thank you!\nWhat is this place?"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think it is an ancient cave.\nLook at this inscription."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Everything originated from water, everything will return to water."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "What does it say? What does it mean?"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "It is the ancient writing used in these areas long ago.\nHere it says:"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Slooosh!"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Hi, I'm the spirit of water.\nIs there anything you need?\nI don't have much time, with this cold I quickly become ice. And I'd say there's enough ice here."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "{{hero}} what could we ask him? I have plenty of questions, but if you agree I would ask him if he knows anything about the King of Evil."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I agree! I have to defeat him but I don't even know why he's here or what his purpose is."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "The King of Evil, as you know, came to us 64 years ago freezing the Kingdom and instilling fear.\nI don't know exactly where he comes from, but what I do know is that his goal is to collect gems that are scattered around the world to get energy to completely freeze our world."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Completely?!"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Yes, we are lucky we still have seas and a bearable temperature, but if he succeeds in his plan the Kingdom will no longer be livable for us."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "And why would he want that??"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Because he and his fellows need very low temperatures to live, temperatures so low that right now there are only in the Xeonjia tower."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "So he's making our Kingdom unlivable for us to make it livable for him?!"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Exactly.\nThe only way to stop him is to find as many gems as possible and finally defeat him, of course.\nHe uses the Hoarfrost Team to search for gems precisely because he cannot leave the tower.\nThis is what I know about the King of Evil. Now I must leave you to avoid becoming an ice pop, but we will see each other again in the future.\nI will appear to you when you need me."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "So gems are more important than I thought… And they can be used as an energy source.\nI only have one, how many have you found so far?"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I only have one too, a guy I rescued in the Mitsu Forest gave it to me."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Not quite enough."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I have found {{gem_count}} so far."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Well, it's a start."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "We need to be more careful and look for them better.\nNow I'll leave you and continue my studies on the gem I have.\nSee you!"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Bye Shen, be careful!"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Yes"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "No"
+msgstr ""
+
 #: assets/maps/story/t1_04.tmx:
 msgid "Mossy Crypt -4F"
 msgstr ""
@@ -331,10 +595,6 @@ msgstr ""
 
 #: assets/maps/story/t1_02.tmx:
 msgid "Hmm, I think that from this snowdrift I can obtain material to make new snowballs by pressing the 'A' key."
-msgstr ""
-
-#: assets/maps/story/t1_02.tmx:
-msgid "* {{hero}} found {{money-diff}} ¤ *"
 msgstr ""
 
 #: assets/maps/story/t1_02.tmx:
@@ -375,6 +635,10 @@ msgstr ""
 
 #: assets/maps/story/24.tmx:
 msgid "The city center is a few kilometers to the south."
+msgstr ""
+
+#: assets/maps/story/24.tmx:
+msgid "I'm planning a surprise wedding for my son, I hope he doesn't find out."
 msgstr ""
 
 #: assets/maps/story/24.tmx:
@@ -582,11 +846,23 @@ msgid "Unfortunately he failed to defeat the King of Evil…"
 msgstr ""
 
 #: assets/maps/story/32.tmx:
-msgid "I'm planning a surprise wedding for my son, I hope he doesn't find out."
+msgid "\" Relax and enjoy the sea \""
 msgstr ""
 
 #: assets/maps/story/32.tmx:
-msgid "This part is under construction."
+msgid "Wow! I've never seen the sea!"
+msgstr ""
+
+#: assets/maps/story/32.tmx:
+msgid "It's very nice and vast."
+msgstr ""
+
+#: assets/maps/story/32.tmx:
+msgid "The sea is very calm and relaxing."
+msgstr ""
+
+#: assets/maps/story/32.tmx:
+msgid "\" Welcome to the Water Region! Enjoy your stay. \""
 msgstr ""
 
 #: assets/maps/story/15_lp_shop.tmx:
@@ -599,6 +875,30 @@ msgstr ""
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "pharmacist"
+msgstr ""
+
+#: assets/maps/story/15_lp_shop.tmx:
+msgid "* {{hero}} ate some berries *"
+msgstr ""
+
+#: assets/maps/story/15_lp_shop.tmx:
+msgid "* {{life-diff}} LPs have been recovered *"
+msgstr ""
+
+#: assets/maps/story/35.tmx:
+msgid "This boulder is very heavy."
+msgstr ""
+
+#: assets/maps/story/35.tmx:
+msgid "We are trying to move this boulder.\nI'm sorry but it's going to take a while."
+msgstr ""
+
+#: assets/maps/story/35.tmx:
+msgid "A heavy rock."
+msgstr ""
+
+#: assets/maps/story/35.tmx:
+msgid "\" ↑ Hexa Cave \"\n\" Zamelis Village → \""
 msgstr ""
 
 #: assets/maps/story/27.tmx:
@@ -701,6 +1001,18 @@ msgstr ""
 msgid "The tower is so ugly."
 msgstr ""
 
+#: assets/maps/story/16.tmx:
+msgid "Why am I here? What am I supposed to do?"
+msgstr ""
+
+#: assets/maps/story/37_house.tmx:
+msgid "I love studying history and literature."
+msgstr ""
+
+#: assets/maps/story/37_house.tmx:
+msgid "\"[…] but half of the army defected, made a deal with the King of Evil and founded the Hoarfrost Team. That moment decreed our defeat.\"\nThis book tells what happened 64 years ago."
+msgstr ""
+
 #: assets/maps/story/1_home.tmx:
 msgid "Home"
 msgstr ""
@@ -781,20 +1093,88 @@ msgstr ""
 msgid "I like piglets."
 msgstr ""
 
-#: assets/maps/story/26_house.tmx:
-msgid "Yes"
-msgstr ""
-
-#: assets/maps/story/26_house.tmx:
-msgid "No"
-msgstr ""
-
 #: assets/maps/story/t1_03.tmx:
 msgid "Mossy Crypt -3F"
 msgstr ""
 
 #: assets/maps/story/t1_03.tmx:
 msgid "My work is so boring…"
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "Route 5"
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "Ok, you were better than me.\nI still have room for improvement, I will continue to train."
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "Anyway, it was great seeing you."
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "It was good to see you too, I felt like I was going back to when we were kids."
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "Hehe, you are right… we spent a lot of hours playing and training as kids.\nI'll leave you now, see you in the Xeonjia Tower."
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "Are you going to the tower too?"
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "Yes, of course!\nI will go there and I will defeat the King of Evil!\nEven though you are the protagonist and the so-called \"Hero\" it will be me who will defeat the King of Evil and be remembered as the savior of the world hehe."
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "Wait, wait, wait, don't steal my job! Haha"
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "Anyway, be careful not to get hurt, bye!"
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "I lost my glasses. I hardly see anything."
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "Are these your glasses?"
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "Yes! Thank you so much!"
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "As a reward I give you this gem that I found while I was looking for the glasses."
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "Oh, thank you so much!"
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "I missed being able to see the sea."
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "I can't believe it took you this long!\nLet's fight!"
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "I will defeat you."
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "I have to train harder."
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "This is a very strange stone… Never seen anything like this before."
 msgstr ""
 
 #: assets/maps/story/11.tmx:
@@ -847,6 +1227,10 @@ msgstr ""
 
 #: assets/maps/story/28_house.tmx:
 msgid "Yes thanks"
+msgstr ""
+
+#: assets/maps/story/43_tower_1.tmx:
+msgid "Observation Tower"
 msgstr ""
 
 #: assets/maps/story/1_house.tmx:
@@ -911,10 +1295,6 @@ msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
 msgid "You're lucky, but it doesn't end here, guaranteed."
-msgstr ""
-
-#: assets/maps/story/t1_06.tmx:
-msgid "I will defeat you."
 msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
@@ -1033,6 +1413,46 @@ msgstr ""
 msgid "joza"
 msgstr ""
 
+#: assets/maps/story/38_house.tmx:
+msgid "I just cooked a cake. Do you want some?"
+msgstr ""
+
+#: assets/maps/story/38_house.tmx:
+msgid "Here you go!"
+msgstr ""
+
+#: assets/maps/story/38_house.tmx:
+msgid "* {{hero}} eats a piece of cake *"
+msgstr ""
+
+#: assets/maps/story/38_house.tmx:
+msgid "Oh, ok. Then I'll eat it all."
+msgstr ""
+
+#: assets/maps/story/38_house.tmx:
+msgid "I love cooking cakes and sweets."
+msgstr ""
+
+#: assets/maps/story/40.tmx:
+msgid "Today I really can't find any fish."
+msgstr ""
+
+#: assets/maps/story/40.tmx:
+msgid "But somehow I caught a pair of glasses. Do you want them?"
+msgstr ""
+
+#: assets/maps/story/40.tmx:
+msgid "Oh, ok. Then I'll try to look for the owner."
+msgstr ""
+
+#: assets/maps/story/40.tmx:
+msgid "Fishing is relaxing."
+msgstr ""
+
+#: assets/maps/story/61.tmx:
+msgid "This part is under construction."
+msgstr ""
+
 #: assets/maps/story/3.tmx:
 msgid "Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck."
 msgstr ""
@@ -1055,6 +1475,30 @@ msgstr ""
 
 #: assets/maps/story/3.tmx:
 msgid "It seems that once there was a path here."
+msgstr ""
+
+#: assets/maps/story/43.tmx:
+msgid "To reach the other shore you have to go through the submarine tunnel but is currently guarded by the Hoarfrost Team.\nIf they don't leave, I'll try to cross the sea with the boat."
+msgstr ""
+
+#: assets/maps/story/43.tmx:
+msgid "Once I happened to see a strange hole in the middle of the sea."
+msgstr ""
+
+#: assets/maps/story/43.tmx:
+msgid "\" Hana's Tunnel \""
+msgstr ""
+
+#: assets/maps/story/43.tmx:
+msgid "\" Observation Tower \""
+msgstr ""
+
+#: assets/maps/story/43.tmx:
+msgid "The sea is calm today."
+msgstr ""
+
+#: assets/maps/story/42.tmx:
+msgid "Nope, there's only trash here."
 msgstr ""
 
 #: assets/maps/story/t1_01.tmx:
@@ -1081,8 +1525,8 @@ msgstr ""
 msgid "There seems to be something in the branches of this plant…\nIt's a stone!"
 msgstr ""
 
-#: assets/maps/story/2.tmx:
-msgid "This is a very strange stone… Never seen anything like this before."
+#: assets/maps/story/41.tmx:
+msgid "As long as the tunnel is blocked we must organize differently to get goods and people from one side to another."
 msgstr ""
 
 #: assets/maps/story/24_lab_2.tmx:
@@ -1137,16 +1581,56 @@ msgstr ""
 msgid "Someone has turned everything upside down."
 msgstr ""
 
-#: assets/maps/tilesets/outdoor-1.tsx:
+#: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A rocky wall."
 msgstr ""
 
-#: assets/maps/tilesets/outdoor-1.tsx:
+#: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A wall."
 msgstr ""
 
-#: assets/maps/tilesets/outdoor-1.tsx:
-msgid "A rock."
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "An empty vase."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "A plant without berries."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "A flag."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "A vase with many fragrant flowers."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "A barrel."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "A little boat."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "This is a common tree in this area."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "A street lamp."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "A small plant."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "It's not a good thing to look into other people's homes."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "This is a pharmacy."
 msgstr ""
 
 #: assets/maps/tilesets/outdoor-1.tsx:
@@ -1167,14 +1651,6 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "This type of plant is strange."
-msgstr ""
-
-#: assets/maps/tilesets/outdoor-1.tsx:
-msgid "It's not a good thing to look into other people's homes."
-msgstr ""
-
-#: assets/maps/tilesets/outdoor-1.tsx:
-msgid "This is a pharmacy."
 msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
@@ -1230,6 +1706,10 @@ msgid "worker"
 msgstr ""
 
 #: assets/maps/tilesets/capital-1.tsx:
+msgid "Life always finds a way."
+msgstr ""
+
+#: assets/maps/tilesets/capital-1.tsx:
 msgid "I don't know what this means."
 msgstr ""
 
@@ -1243,6 +1723,10 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "shen"
+msgstr ""
+
+#: assets/maps/tilesets/npc_main.tsx:
+msgid "september"
 msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
@@ -1277,14 +1761,82 @@ msgstr ""
 msgid "This pig looks very happy."
 msgstr ""
 
-#: assets/maps/story/data.json:
-msgid "A strange icosahedral stone"
+#: assets/maps/utils/items-and-events.json:
+msgid "Icosahedron"
 msgstr ""
 
-#: assets/maps/story/data.json:
+#: assets/maps/utils/items-and-events.json:
+msgid "A strange blue icosahedral stone."
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
 msgid "Package of the King"
 msgstr ""
 
-#: assets/maps/story/data.json:
+#: assets/maps/utils/items-and-events.json:
+msgid "Package given to me by the King."
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "Tetrahedron"
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "A strange red tetrahedral stone."
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "A pair of glasses"
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "Eyeglasses given to me by a girl."
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "Cube"
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "A strange green cubic stone."
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "Octahedron"
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "A strange white octahedral stone."
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "Dodecahedron"
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "A strange multicolored dodecahedral stone."
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
 msgid "First Signet"
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "First out of 3 signets required to enter the Xeonjia tower."
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "Fresh Water"
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "A bottle of water.\nIt restores 20 LPs."
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "Pomegranate juice"
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "A bottle of pomegranate juice.\nIt restores 50 LPs."
 msgstr ""

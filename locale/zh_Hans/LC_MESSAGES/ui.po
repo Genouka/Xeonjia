@@ -360,6 +360,18 @@ msgstr ""
 msgid "Back to menu"
 msgstr ""
 
+#: lib/game/widgets/backpack_menu.dart:
+msgid "No items here"
+msgstr ""
+
+#: lib/game/widgets/backpack_menu.dart:
+msgid "Backpack"
+msgstr ""
+
+#: lib/game/widgets/backpack_menu.dart:
+msgid "Use"
+msgstr ""
+
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"
 msgstr ""
@@ -438,6 +450,10 @@ msgid "money: %s ¤"
 msgstr "金钱: %s ¤"
 
 #: lib/game/widgets/pause_menu.dart:
+msgid "gems: %s"
+msgstr ""
+
+#: lib/game/widgets/pause_menu.dart:
 msgid "play time: %s min"
 msgstr "游玩时长: %s 分钟"
 
@@ -488,16 +504,24 @@ msgid "Let me know if you need anything else."
 msgstr ""
 
 #: lib/game/components/static/door.dart:
-msgid "There are still monsters here. I can't escape."
-msgstr "这里还有怪物，我不能逃。"
+msgid "There is still 1 monster here. I can't escape."
+msgstr ""
+
+#: lib/game/components/static/door.dart:
+msgid "There are still %s monsters here. I can't escape."
+msgstr ""
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
 msgstr "* {{hero}} 将 %s 放入背包 *"
 
 #: lib/game/components/dynamic/character.dart:
-msgid "* {{hero}} puts the gem in the backpack. *"
-msgstr "* {{hero}} 将宝石放入背包 *"
+msgid "the gem"
+msgstr ""
+
+#: lib/game/components/dynamic/character.dart:
+msgid "* {{hero}} used {{selected-item-name}} *"
+msgstr ""
 
 #: lib/game/components/dynamic/character.dart:
 #, fuzzy
