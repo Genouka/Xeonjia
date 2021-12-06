@@ -53,8 +53,8 @@ void _loadSettings() {
 
 // Load items from assets
 void _loadItems() async {
-  var data =
-      json.decode(await rootBundle.loadString('assets/maps/story/data.json'));
+  var data = json.decode(
+      await rootBundle.loadString('assets/maps/utils/items-and-events.json'));
   data['items'].forEach((key, value) {
     itemData[key] = Item(value);
   });

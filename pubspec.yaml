@@ -37,6 +37,7 @@ flutter:
     - assets/maps/arena/
     - assets/maps/story/
     - assets/maps/tilesets/
+    - assets/maps/utils/
 
   fonts:
     - family: dd5x7
