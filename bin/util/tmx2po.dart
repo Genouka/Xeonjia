@@ -8,7 +8,7 @@ import 'translation.dart';
 Map<String, List<Translation>> tmx2po() {
   // Find dialogs or map-names
   final regexGlobal = RegExp(
-      r"\(dialog[\n ]+'\((.*?)\)\)\)|\((?:map-name|story-dialog)[\n ]+(.*?)\)",
+      r"\((?:dialog|dialog-kobi)[\n ]+'\((.*?)\)\)\)|\((?:map-name|story-dialog)[\n ]+(.*?)\)",
       dotAll: true);
 
   // Find text inside dialog or map-name
@@ -82,6 +82,8 @@ Map<String, List<Translation>> tmx2po() {
   data['items'].forEach((_, value) {
     dirStringsMap['story']
         .add(Translation(dataJsonFileName, value['name'], null));
+    dirStringsMap['story']
+        .add(Translation(dataJsonFileName, value['description'], null));
   });
   return dirStringsMap;
 }
