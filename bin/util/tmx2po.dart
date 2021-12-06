@@ -82,8 +82,8 @@ Map<String, List<Translation>> tmx2po() {
   data['items'].forEach((_, value) {
     dirStringsMap['story']
         .add(Translation(dataJsonFileName, value['name'], null));
-    dirStringsMap['story']
-        .add(Translation(dataJsonFileName, value['description'], null));
+    dirStringsMap['story'].add(Translation(
+        dataJsonFileName, value['description'].replaceAll('\n', '\\n'), null));
   });
   return dirStringsMap;
 }

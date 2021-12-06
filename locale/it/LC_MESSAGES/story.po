@@ -1829,8 +1829,7 @@ msgid "Fresh Water"
 msgstr ""
 
 #: assets/maps/utils/items-and-events.json:
-msgid "A bottle of water.
-It restores 20 LPs."
+msgid "A bottle of water.\nIt restores 20 LPs."
 msgstr ""
 
 #: assets/maps/utils/items-and-events.json:
@@ -1838,6 +1837,5 @@ msgid "Pomegranate juice"
 msgstr ""
 
 #: assets/maps/utils/items-and-events.json:
-msgid "A bottle of pomegranate juice.
-It restores 50 LPs."
+msgid "A bottle of pomegranate juice.\nIt restores 50 LPs."
 msgstr ""
