@@ -91,7 +91,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   // Recalculate component position
   void _move(double dt) {
     Rect collidedRect;
-    BasicComponent collidedComponent;
+    List<BasicComponent> collidedComponents = [];
     final overlappedComponents = <BasicComponent>[];
 
     // Distance traveled
@@ -114,9 +114,8 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
         if (componentCollisionRect?.approximateOverlaps(candidatePosition) ??
             false) {
           if (component.isSolid(otherComponent: this)) {
-            collidedComponent = component;
+            collidedComponents.add(component);
             collidedRect = componentCollisionRect;
-            break;
           } else {
             overlappedComponents.add(component);
           }
@@ -135,7 +134,9 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
       } else if (direction.dy > 0) {
         y = collidedRect.top - height;
       }
-      onCollision(collidedComponent);
+      for (var e in collidedComponents) {
+        onCollision(e);
+      }
     } else {
       // This component did not collide with another one
       x = candidatePosition.left;
