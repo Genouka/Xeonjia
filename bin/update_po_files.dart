@@ -10,6 +10,7 @@ final languageList = [
   'de',
   'es',
   'fr',
+  'hu',
   'id',
   'it',
   'pl',

@@ -12,6 +12,7 @@ const List<Locale> enabledLocales = [
   Locale('en'),
   Locale('es'),
   Locale('fr'),
+  Locale('hu'),
   Locale('it'),
   Locale('ru'),
   Locale('vi'),
