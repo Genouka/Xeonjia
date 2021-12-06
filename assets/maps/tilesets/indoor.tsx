@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.4" tiledversion="2020.08.05" name="indoor" tilewidth="16" tileheight="16" tilecount="48" columns="8">
+<tileset version="1.5" tiledversion="1.7.2" name="indoor" tilewidth="16" tileheight="16" tilecount="48" columns="8">
  <image source="../../images/indoor.png" width="128" height="96"/>
  <tile id="0" type="Ground"/>
  <tile id="1" type="Solid">
@@ -82,6 +82,7 @@
  <tile id="26" type="Solid"/>
  <tile id="27" type="Solid"/>
  <tile id="28" type="Solid"/>
+ <tile id="29" type="Solid"/>
  <tile id="30" type="Ground">
   <properties>
    <property name="flying" type="bool" value="true"/>
@@ -125,4 +126,5 @@
  <tile id="44" type="Solid"/>
  <tile id="45" type="Solid"/>
  <tile id="46" type="Solid"/>
+ <tile id="47" type="Solid"/>
 </tileset>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="15" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="72">
+ <properties>
+  <property name="action">(if (== (last-place) &quot;35&quot;)
+    (map-name &quot;Zamelis Village&quot;))</property>
+  <property name="map-name" value="Zamelis Village"/>
+  <property name="music" value="town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="189" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="349" source="../tilesets/npc_main.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="15" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+NmZGB4w8DAcAeITwDxFSjbFSjuAsTuQIwL3MEhjqzXHIgtkLAlI/F6TYFYBgmb4XELNfVqAbE2FEsDsQ4Jeo2A2BiIVYBYCYhNoHp/M0DCFxmwM6LqZUey5waSuito+s4D8QUg9gWq9wNifyB+hCSPbA+2cAbZYwu11x7NXmQ7uXH4m1DaeIPFzcTq/UyBXljaJUfvHwrsBen9TYbeP1B8nQESn6Tay4DDXnzpChl4MmLHXlC9HjjkPaHyA4EBQh+c1LAEAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="63" gid="157" x="176" y="112" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;The prices for an LP UP are too high for me.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="64" gid="153" x="160" y="272" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I would love to leave for a long journey but I don't have the strength anymore.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="70" gid="379" x="80" y="176" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+    <property name="actionOnEvent">(if  (get &quot;037-talk&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="15" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGBhgzsjAYAHElozEqZdAUmcKZMsAsRmRepGBFlCPNBDrkKHXCKhHCYhNkPT+R1MTBpQLR5L/AMQfSbcKDH4A8U8ccuj2ovNBgJuAHwPICINRQBvwF4j/IfHxxi8w3hiBmAkaf6xAmo3IuOQAquMEYq4hGvcAlbHkarAEAAA=
+  </data>
+ </layer>
+ <layer id="11" name="Tile Layer 3" width="15" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGAXUBP8H2gGjYBQMYwAA+COffbAEAAA=
+  </data>
+ </layer>
+ <objectgroup id="10" name="spawn points">
+  <object id="51" type="Door" x="48" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="38"/>
+   </properties>
+  </object>
+  <object id="55" type="Door" x="0" y="240" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="35"/>
+   </properties>
+  </object>
+  <object id="57" type="Door" x="16" y="96" width="16" height="16">
+   <properties>
+    <property name="roomId" value="37_house"/>
+   </properties>
+  </object>
+  <object id="58" type="Door" x="192" y="96" width="16" height="16">
+   <properties>
+    <property name="roomId" value="37_shop"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="56" gid="259" x="16" y="240" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;\&quot; Zamelis Village \&quot;&quot;)))"/>
+   </properties>
+  </object>
+  <object id="71" type="Ground" x="32" y="240" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(begin
+    (delete-me)
+    (dialog '((&quot;…&quot;)))
+    (wait)
+    (set-orientation '(0 70))
+    (wait 1)
+    (move '(0 70))
+    (wait 1)
+    (move '(3 70))
+    (wait 1)
+    (dialog
+        '((&quot;/september&quot; &quot;{{hero}}, there you are. Finally! I heard a rumor that you were coming here.&quot;)
+        (&quot;/hero_happy&quot; &quot;September! Long time no see! Last time was when we battled each other to be proclaimed HERO, we were 5 years old.&quot;)
+        (&quot;/september&quot; &quot;I remember well, you got lucky that time.\nBut now it would go differently.\nI challenge you now. Show me that you are better than me.\nSee you on the north-east side of the village. I will wait for you there.&quot;)))
+    (wait)
+    (set-orientation '(2 70))
+    (wait 0.7)
+    (dialog '((&quot;/hero&quot; &quot;W-Wait a moment, September!&quot;)))
+    (wait)
+    (set-orientation '(3 70))
+    (wait 0.5)
+    (dialog
+        '((&quot;/hero&quot; &quot;How are you? Everything good? I haven't seen you for 16 years… We have so much to talk about.&quot;)
+        (&quot;/september&quot; &quot;I don't have time to mess around.\nSee you where I told you.&quot;)
+        (&quot;/hero&quot; &quot;O-Ok… see you later.&quot;)))
+    (wait)
+    (leave-npc 70)
+    (wait 2)
+    (dialog '((&quot;I remembered her less surly.&quot;)))
+    (set &quot;037-talk&quot; #t))</property>
+    <property name="actionOnEvent">(if  (get &quot;037-talk&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

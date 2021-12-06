@@ -1,19 +1,62 @@
 {
   "items": {
     "2.stone": {
-      "name": "A strange icosahedral stone",
-      "description": "icosahedron",
+      "name": "Icosahedron",
+      "description": "A strange blue icosahedral stone.",
+      "keyItem": true,
       "location": "002"
     },
     "30.package-of-the-king": {
       "name": "Package of the King",
-      "description": "",
+      "description": "Package given to me by the King.",
+      "keyItem": true,
       "location": "030_cityhall"
+    },
+    "39.stone2": {
+      "name": "Tetrahedron",
+      "description": "A strange red tetrahedral stone.",
+      "keyItem": true,
+      "location": "039"
+    },
+    "40.eyeglasses": {
+      "name": "A pair of glasses",
+      "description": "Eyeglasses given to me by a girl.",
+      "keyItem": true,
+      "location": "040"
+    },
+    "xxx.stone3": {
+      "name": "Cube",
+      "description": "A strange green cubic stone.",
+      "keyItem": true,
+      "location": "xxx"
+    },
+    "xxx.stone4": {
+      "name": "Octahedron",
+      "description": "A strange white octahedral stone.",
+      "keyItem": true,
+      "location": "xxx"
+    },
+    "xxx.stone5": {
+      "name": "Dodecahedron",
+      "description": "A strange multicolored dodecahedral stone.",
+      "keyItem": true,
+      "location": "xxx"
     },
     "signet-1": {
       "name": "First Signet",
-      "description": "",
+      "description": "First out of 3 signets required to enter the Xeonjia tower.",
+      "keyItem": true,
       "location": "t1_06"
+    },
+    "fresh-water": {
+      "name": "Fresh Water",
+      "description": "A bottle of water.\nIt restores 20 LPs.",
+      "action": "(if (< (get-life) (get-initial-life)) (begin (set-life-diff 20) (use-item selected-item-id)) (dialog '((\"I'm already healthy, I don't need {{selected-item-name}} right now.\"))))"
+    },
+    "pomegranate-juice": {
+      "name": "Pomegranate juice",
+      "description": "A bottle of pomegranate juice.\nIt restores 50 LPs.",
+      "action": "(if (< (get-life) (get-initial-life)) (begin (set-life-diff 50) (use-item selected-item-id)) (dialog '((\"I'm already healthy, I don't need {{selected-item-name}} right now.\"))))"
     }
   },
   "global-events": {

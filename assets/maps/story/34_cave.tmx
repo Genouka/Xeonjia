@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="88">
+ <properties>
+  <property name="action" value="(map-name &quot;Hexa Cave&quot;)"/>
+  <property name="map-name" value="Hexa Cave"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="189" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="349" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="381" source="../tilesets/crypt-2.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="15" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA5vLyMCwEgnPg+KVWMSR+fOBeCkQtwExKaAVqH45VG8niXq7kfT2kai3F0kvOWA5Hv8eBOJDQHwYiz5C/j0JxKeA+DQWvYT8exGILwHxZSx6Cfm3Hyg+FYgn4JCnVVjhA4M5bTTgkQPpXQvE67DgRUA8DYgX4JBfD8QA6LYHeYQDAAA=
+  </data>
+ </layer>
+ <layer id="6" name="Tile Layer 2" width="15" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGAXUAIsZyde7mgK9o2DoAwBkNXp4hAMAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="62" gid="374" x="112" y="144" width="16" height="16">
+   <properties>
+    <property name="action">(if (not (is-visible 64))
+    (dialog '((&quot;/&quot; &quot;I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how.&quot;)))
+    (dialog '((&quot;/&quot; &quot;I don't know what you did but it seems to have worked.&quot;))))</property>
+    <property name="actionOnEvent">(if  (get &quot;34-cave-spirit&quot;)
+    (delete-me)
+    (if  (get &quot;34-cave-talk&quot;)
+        (place 62 96 128)))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="61" type="Door" x="112" y="224" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="34"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="64" gid="404" x="112" y="96" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (and (and (!get &quot;34-cave-spirit&quot;) (is-visible 74)) (and (is-visible 77) (and (is-visible 78) (and (is-visible 81) (and (is-visible 83) (is-visible 76))))))
+    (show 64)
+    (hide 64))</property>
+    <property name="priority" type="int" value="999"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="72" gid="396" x="32" y="112" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;34-cave-spirit&quot;)
+    (begin
+        (dialog '((&quot;\&quot; #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \&quot;\nThere is a button, do I press it?&quot;)))
+        (define id &quot;34-cave-button&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (wait)
+        (if (get id)
+            (begin
+                (invert-visibility 72)
+                (invert-visibility 77)))
+        (fire-global-event))
+    (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="74" gid="396" x="32" y="192" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;34-cave-spirit&quot;)
+    (begin
+        (dialog '((&quot;\&quot; #5: I'm red if #1 is red. Otherwise I'm green. \&quot;\nThere is a button, do I press it?&quot;)))
+        (define id &quot;34-cave-button&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (wait)
+        (if (get id)
+                (begin
+                    (invert-visibility 74)
+                    (invert-visibility 84)))
+        (fire-global-event))
+    (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="75" gid="396" x="192" y="112" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;34-cave-spirit&quot;)
+    (begin
+        (dialog '((&quot;\&quot; #4: I'm green if #3 is green. Otherwise I'm red. \&quot;\nThere is a button, do I press it?&quot;)))
+        (define id &quot;34-cave-button&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (wait)
+        (if (get id)
+            (begin
+                (invert-visibility 75)
+                (invert-visibility 83)))
+        (fire-global-event))
+    (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="76" gid="396" x="192" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;34-cave-spirit&quot;)
+    (begin
+        (dialog '((&quot;\&quot; #2: I'm green if #4 is red. Otherwise I'm red. \&quot;\nThere is a button, do I press it?&quot;)))
+        (define id &quot;34-cave-button&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (wait)
+        (if (get id)
+            (begin
+                (invert-visibility 76)
+                (invert-visibility 82)))
+        (fire-global-event))
+    (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="77" gid="388" x="32" y="112" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;34-cave-spirit&quot;)
+    (begin
+        (dialog '((&quot;\&quot; #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \&quot;\nThere is a button, do I press it?&quot;)))
+        (define id &quot;34-cave-button&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (wait)
+        (if (get id)
+            (begin
+                (invert-visibility 72)
+                (invert-visibility 77)))
+        (fire-global-event))
+    (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="78" gid="396" x="32" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;34-cave-spirit&quot;)
+    (begin
+        (dialog '((&quot;\&quot; #1: I'm red if #4 is green. Otherwise I'm green. \&quot;\nThere is a button, do I press it?&quot;)))
+        (define id &quot;34-cave-button&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (wait)
+        (if (get id)
+            (begin
+                (invert-visibility 78)
+                (invert-visibility 79)))
+        (fire-global-event))
+    (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="79" gid="388" x="32" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;34-cave-spirit&quot;)
+    (begin
+        (dialog '((&quot;\&quot; #1: I'm red if #4 is green. Otherwise I'm green. \&quot;\nThere is a button, do I press it?&quot;)))
+        (define id &quot;34-cave-button&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (wait)
+        (if (get id)
+            (begin
+                (invert-visibility 78)
+                (invert-visibility 79)))
+        (fire-global-event))
+    (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="80" gid="396" x="192" y="192" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;34-cave-spirit&quot;)
+    (begin
+        (dialog '((&quot;\&quot; #6: I'm red if #2 is green. Otherwise I'm green. \&quot;\nThere is a button, do I press it?&quot;)))
+        (define id &quot;34-cave-button&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (wait)
+        (if (get id)
+            (begin
+                (invert-visibility 80)
+                (invert-visibility 81)))
+        (fire-global-event))
+    (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="81" gid="388" x="192" y="192" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;34-cave-spirit&quot;)
+    (begin
+        (dialog '((&quot;\&quot; #6: I'm red if #2 is green. Otherwise I'm green. \&quot;\nThere is a button, do I press it?&quot;)))
+        (define id &quot;34-cave-button&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (wait)
+        (if (get id)
+            (begin
+                (invert-visibility 80)
+                (invert-visibility 81)))
+        (fire-global-event))
+    (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="82" gid="388" x="192" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;34-cave-spirit&quot;)
+    (begin
+        (dialog '((&quot;\&quot; #2: I'm green if #4 is red. Otherwise I'm red. \&quot;\nThere is a button, do I press it?&quot;)))
+        (define id &quot;34-cave-button&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (wait)
+        (if (get id)
+            (begin
+                (invert-visibility 76)
+                (invert-visibility 82)))
+        (fire-global-event))
+    (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="83" gid="388" x="192" y="112" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;34-cave-spirit&quot;)
+    (begin
+        (dialog '((&quot;\&quot; #4: I'm green if #3 is green. Otherwise I'm red. \&quot;\nThere is a button, do I press it?&quot;)))
+        (define id &quot;34-cave-button&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (wait)
+        (if (get id)
+            (begin
+                (invert-visibility 75)
+                (invert-visibility 83)))
+        (fire-global-event))
+    (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="84" gid="388" x="32" y="192" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;34-cave-spirit&quot;)
+    (begin
+        (dialog '((&quot;\&quot; #5: I'm red if #1 is red. Otherwise I'm green. \&quot;\nThere is a button, do I press it?&quot;)))
+        (define id &quot;34-cave-button&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (wait)
+        (if (get id)
+                (begin
+                    (invert-visibility 74)
+                    (invert-visibility 84)))
+        (fire-global-event))
+    (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="86" type="Solid" x="112" y="208" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(begin
+    (set &quot;34-cave-talk&quot; #t)
+    (delete-me)
+    (dialog '((&quot;!!!&quot;)))
+    (wait)
+    (move 1)
+    (wait 0.4)
+    (move 1)
+    (wait 1)
+    (set-orientation '(0 62))
+    (wait 0.3)
+    (dialog
+        '((&quot;/shen_happy&quot; &quot;Hi {{hero}}! How are you doing? Were you able to get the first signet?&quot;)
+        (&quot;/hero_happy&quot; &quot;Hi Shen! Yes I did it!&quot;)))
+    (if (get &quot;030-cityhall-question-difficult&quot;)
+        (dialog '((&quot;/hero&quot; &quot;But it was not easy.&quot;)))
+        (dialog '((&quot;/hero&quot; &quot;I didn't have any big problems.&quot;))))
+    (dialog
+        '((&quot;/shen_happy&quot; &quot;Great! I had no doubt you would make it.\nDid you find the snowballs helpful?&quot;)
+        (&quot;/hero&quot; &quot;Yes, I couldn't do it without them, thank you!\nWhat is this place?&quot;)
+        (&quot;/shen&quot; &quot;I think it is an ancient cave.\nLook at this inscription.&quot;)))
+    (wait)
+    (move '(3 62))
+    (wait 0.7)
+    (set-orientation '(2 62))
+    (move 1)
+    (wait 0.5)
+    (dialog-kobi '((&quot;/&quot; &quot;Everything originated from water, everything will return to water.&quot;)))
+    (wait)
+    (set-orientation 3)
+    (wait 0.5)
+    (dialog
+        '((&quot;/hero&quot; &quot;What does it say? What does it mean?&quot;)
+        (&quot;/shen&quot; &quot;It is the ancient writing used in these areas long ago.\nHere it says:&quot;)
+        (&quot;/shen&quot; &quot;Everything originated from water, everything will return to water.&quot;)
+        (&quot;/shen&quot; &quot;I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how.&quot;)))
+    (wait)
+    (set-orientation '(1 62)))</property>
+    <property name="actionOnEvent">(if  (get &quot;34-cave-talk&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+  <object id="87" gid="433" x="112" y="128" width="16" height="16">
+   <properties>
+    <property name="action">(if (not (is-visible 64))
+    (dialog-kobi '((&quot;/&quot; &quot;Everything originated from water, everything will return to water.&quot;)))
+    (begin
+        (set-orientation '(1 62))
+        (dialog
+            '((&quot;&quot; &quot;!!!\nSlooosh!&quot;)
+            (&quot;/water-spirit&quot; &quot;Hi, I'm the spirit of water.\nIs there anything you need?\nI don't have much time, with this cold I quickly become ice. And I'd say there's enough ice here.&quot;)))
+        (wait)
+        (set-orientation '(2 62))
+        (set-orientation '(3 -1))
+        (dialog
+            '((&quot;/shen&quot; &quot;{{hero}} what could we ask him? I have plenty of questions, but if you agree I would ask him if he knows anything about the King of Evil.&quot;)
+            (&quot;/hero&quot; &quot;I agree! I have to defeat him but I don't even know why he's here or what his purpose is.&quot;)))
+        (wait)
+        (set-orientation '(1 62))
+        (set-orientation '(1 -1))
+        (dialog
+            '((&quot;/water-spirit&quot; &quot;The King of Evil, as you know, came to us 64 years ago freezing the Kingdom and instilling fear.\nI don't know exactly where he comes from, but what I do know is that his goal is to collect gems that are scattered around the world to get energy to completely freeze our world.&quot;)
+            (&quot;/hero&quot; &quot;Completely?!&quot;)
+            (&quot;/water-spirit&quot; &quot;Yes, we are lucky we still have seas and a bearable temperature, but if he succeeds in his plan the Kingdom will no longer be livable for us.&quot;)
+            (&quot;/hero&quot; &quot;And why would he want that??&quot;)
+            (&quot;/water-spirit&quot; &quot;Because he and his fellows need very low temperatures to live, temperatures so low that right now there are only in the Xeonjia tower.&quot;)
+            (&quot;/shen&quot; &quot;So he's making our Kingdom unlivable for us to make it livable for him?!&quot;)
+            (&quot;/water-spirit&quot; &quot;Exactly.\nThe only way to stop him is to find as many gems as possible and finally defeat him, of course.\nHe uses the Hoarfrost Team to search for gems precisely because he cannot leave the tower.\nThis is what I know about the King of Evil. Now I must leave you to avoid becoming an ice pop, but we will see each other again in the future.\nI will appear to you when you need me.&quot;)))
+        (wait)
+        (hide 64)
+        (wait 1)
+        (set-orientation '(2 62))
+        (set-orientation '(3 -1))
+        (dialog '((&quot;/shen&quot; &quot;So gems are more important than I thought… And they can be used as an energy source.\nI only have one, how many have you found so far?&quot;)))
+        (define-symbol &quot;gem_count&quot; (gem-count))
+        (if (= (gem-count) 1)
+            (dialog
+                '((&quot;/hero&quot; &quot;I only have one too, a guy I rescued in the Mitsu Forest gave it to me.&quot;)
+                (&quot;/shen&quot; &quot;Not quite enough.&quot;)))
+            (dialog
+                '((&quot;/hero&quot; &quot;I have found {{gem_count}} so far.&quot;)
+                (&quot;/shen&quot; &quot;Well, it's a start.&quot;))))
+        (dialog
+            '((&quot;/shen&quot; &quot;We need to be more careful and look for them better.\nNow I'll leave you and continue my studies on the gem I have.\nSee you!&quot;)
+            (&quot;/hero&quot; &quot;Bye Shen, be careful!&quot;)))
+        (wait)
+        (leave-npc 62)
+        (set &quot;34-cave-spirit&quot; #t)))</property>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

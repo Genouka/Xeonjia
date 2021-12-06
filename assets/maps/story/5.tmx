@@ -2,7 +2,7 @@
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="50">
  <properties>
   <property name="action">(begin
-    (if (eq? (last-place) &quot;4&quot;)
+    (if (== (last-place) &quot;4&quot;)
         (map-name &quot;Mitsu Forest&quot;))
     (if  (first-time?)
         (dialog '((&quot;Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here.&quot;)))))</property>

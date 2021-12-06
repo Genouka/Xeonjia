@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.4" tiledversion="2020.08.05" name="capital-1" tilewidth="16" tileheight="16" tilecount="64" columns="8">
- <image source="../../images/capital-1.png" width="128" height="128"/>
+<tileset version="1.5" tiledversion="1.7.2" name="capital-1" tilewidth="16" tileheight="16" tilecount="32" columns="8">
+ <image source="../../images/capital-1.png" width="128" height="64"/>
  <tile id="0" type="Ground">
   <properties>
    <property name="flying" type="bool" value="true"/>
@@ -30,7 +30,7 @@
   <properties>
    <property name="action">(if (= (orientation) 1)
     (begin
-        (dialog-kobi '((&quot;qhen rstali notevhing tevhing pumki&quot;)))
+        (dialog-kobi '((&quot;Life always finds a way.&quot;)))
         (dialog '((&quot;/hero&quot; &quot;I don't know what this means.&quot;)))))</property>
   </properties>
  </tile>

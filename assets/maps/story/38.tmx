@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="15" height="22" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="64">
+ <properties>
+  <property name="action">(if (== (last-place) &quot;39&quot;)
+    (map-name &quot;Zamelis Village&quot;))</property>
+  <property name="map-name" value="Zamelis Village"/>
+  <property name="music" value="town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="189" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="349" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="381" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="15" height="22">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA8WSPQvCMBCGk1kcXHSwIDj4hd+omyiiOIi6OPpjO3Zz6eDQ0TFbxzr4ll7pEdMacfCFB3rNPVyaZiuF2P6BUw4bWl8X9ITCnB25e/AUCTxxbeOa4v/oBqyeo88BC5nvprMioNj7HvrqoF/gprlpc6foa4KZhRvRvnntWX6v0uby2JzVA7ja+7g+0v8/S/O6T3jamk2dzjVlSXtesT2X2HPsqjcrCf/eMqgyKnSXbc7qQE6N+Wkcw1ly9woaGkXh7gW0QBt0QJe5Y3oORXZfuTsAQzCSSe9EZuf1aW5euOt+6QYiuyN3qpWl+wJJt14yKAUAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="59" gid="166" x="48" y="48" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I want to reach the capital quickly but the only way is traveling by land.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="60" gid="177" x="192" y="96" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I really needed a pomegranate juice.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="15" height="22">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIB/8J0IMlxp2RkxxdDEQ/w+IAaQZgZiJEbs+fIADqJ4TiLlI1EcImAPNswBiS0bixNGBBBZ5U6CYDBCbkeFWLaAeZSDWIUOvEVCPARCbEKGXmPjFBbDFLz0ANdwcwIjKB4G/QPyPBLOcgXr5gJgfiAWAWAFqFjFpRhRNThLKB6UZCQJpRhYoJ4eEFaFqyU0zoPAjJs1gCx9i45wVqI6NTumDGAAA/DDZ/CgFAAA=
+  </data>
+ </layer>
+ <objectgroup id="10" name="spawn points">
+  <object id="51" type="Door" x="48" y="336" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="37"/>
+   </properties>
+  </object>
+  <object id="54" type="Door" x="224" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="39"/>
+   </properties>
+  </object>
+  <object id="58" type="Door" x="64" y="144" width="16" height="16">
+   <properties>
+    <property name="roomId" value="38_house"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="62" gid="243" x="16" y="64" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (define event-id &quot;38.vase1&quot;)
+    (define item-id &quot;pomegranate-juice&quot;)
+    (if (!get event-id)
+        (begin
+            (dialog '((&quot;Hey, there are items in here!&quot;)))
+            (give-item item-id)
+            (set event-id #t))
+        (dialog '((&quot;There are still items in here but I've already taken one.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="63" gid="243" x="48" y="304" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (define item-id &quot;38.vase2&quot;)
+    (define money-diff 75)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found {{money-diff}} ¤ *&quot;)))
+            (give-item item-id)
+            (set-money-diff money-diff))
+        (dialog '((&quot;This vase is empty.&quot;)))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

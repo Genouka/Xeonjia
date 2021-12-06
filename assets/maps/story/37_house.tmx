@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="85">
+ <properties>
+  <property name="disable-minimap" type="bool" value="true"/>
+  <property name="music" value="city"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6EG+D0uhsEL4JVbeHAB4K6h4Qoe4hEF/Dga+i8QFArWvlaAEAAA==
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="79" type="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="37"/>
+   </properties>
+  </object>
+  <object id="82" type="NPC" gid="34" x="112" y="64" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I love studying history and literature.&quot;)))"/>
+    <property name="orientation" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoBzsBOJdRKg7iEVsOxDvB+IDUDYuAJI7DsQnCKijNdhKpj4AytFXWWgBAAA=
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points"/>
+ <objectgroup id="9" name="items">
+  <object id="84" gid="194" x="128" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 1)
+    (dialog '((&quot;\&quot;[…] but half of the army defected, made a deal with the King of Evil and founded the Hoarfrost Team. That moment decreed our defeat.\&quot;\nThis book tells what happened 64 years ago.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

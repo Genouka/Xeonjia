@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="75">
+ <properties>
+  <property name="action">(begin
+    (if (== (last-place) &quot;38&quot;)
+        (map-name &quot;Route 5&quot;))
+    (if (and (eq? (enemies-count) 0) (and (get &quot;039-september-talk&quot;) (!get &quot;039-september-ok&quot;)))
+        (begin
+            (quiet '(#t 64))
+            (friendly '(#t 64))
+            (set &quot;039-september-ok&quot; #t)
+            (dialog '((&quot;…&quot;)))
+            (wait)
+            (respawn 64)
+            (set-orientation '(3 64))
+            (set-orientation '(2 -1))
+            (place 64 96 64)
+            (place -1 80 64)
+            (black-curtain)
+            (dialog
+                '((&quot;/september&quot; &quot;Ok, you were better than me.\nI still have room for improvement, I will continue to train.&quot;)
+                (&quot;/september_happy&quot; &quot;Anyway, it was great seeing you.&quot;)
+                (&quot;/hero_happy&quot; &quot;It was good to see you too, I felt like I was going back to when we were kids.&quot;)
+                (&quot;/september&quot; &quot;Hehe, you are right… we spent a lot of hours playing and training as kids.\nI'll leave you now, see you in the Xeonjia Tower.&quot;)
+                (&quot;/hero&quot; &quot;Are you going to the tower too?&quot;)
+                (&quot;/september&quot; &quot;Yes, of course!\nI will go there and I will defeat the King of Evil!\nEven though you are the protagonist and the so-called \&quot;Hero\&quot; it will be me who will defeat the King of Evil and be remembered as the savior of the world hehe.&quot;)
+                (&quot;/hero_happy&quot; &quot;Wait, wait, wait, don't steal my job! Haha&quot;)
+                (&quot;/hero&quot; &quot;Anyway, be careful not to get hurt, bye!&quot;)))
+            (wait)
+            (set-team '(0 64))
+            (delete 72))))</property>
+  <property name="map-name" value="Route 5"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="189" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="349" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="381" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="25" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA3NhZGBwGSTYB4jF0LAPkXr9sOATDJhi3khmiyOxnYiw4w0DcSAGqFYeC/aFugGfXSA7HhEwHySvClSrBsXqQCwFxJqMCDX47MLmD2x26gLV6gGxPhQrAbEhI6Y6bHZdAYq/BeJ3OPB7HH47gUVMAoddF3CYAQNqDMTHGTbgC/UHL5Z0KYglHMgBV6A0rnQpgVc3cQAWBrjSJTIg1z6YPwilS2KAAQ7x81AaV7q8gkMfsQAUTjAzfgDxTyS5G0hsdDliASxsr6CZcQVqN8iOOwyo/oDJXUHD2MTQMQDiHMZM3AUAAA==
+  </data>
+ </layer>
+ <layer id="6" name="Tile Layer 2" width="25" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGDyAl5GBgQ+K+YFYAIgFGYnT+waLmB8WvaJYxCSJtINYIAs0Tw4NK1LZjlFAewBLU85Y0qUCleNzNF0SDz4A8Ucy5Khh/lACAMA44oHcBQAA
+  </data>
+ </layer>
+ <layer id="11" name="Tile Layer 3" width="25" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGDzAmRFTTAGL2CgYBaNgFIwC/AAAcIuDgNwFAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="61" gid="158" x="224" y="32" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;gem_4&quot;))
+    (if (! (has-item &quot;40.eyeglasses&quot;))
+        (dialog '((&quot;/&quot; &quot;I lost my glasses. I hardly see anything.&quot;)))
+        (begin
+            (dialog
+                '((&quot;/&quot; &quot;I lost my glasses. I hardly see anything.&quot;)
+                (&quot;/hero&quot; &quot;Are these your glasses?&quot;)
+                (&quot;/_happy&quot; &quot;!!!\nYes! Thank you so much!&quot;)))
+            (take-item &quot;40.eyeglasses&quot;)
+            (dialog
+                '((&quot;/&quot; &quot;As a reward I give you this gem that I found while I was looking for the glasses.&quot;)
+                (&quot;/hero_happy&quot; &quot;Oh, thank you so much!&quot;)))
+            (wait)
+            (give-item &quot;gem_4&quot;)))
+    (dialog '((&quot;/&quot; &quot;I missed being able to see the sea.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="64" gid="379" x="16" y="128" width="16" height="16">
+   <properties>
+    <property name="action">(if (and (is-friendly 64) (!get &quot;039-september-ok&quot;))
+    (begin
+        (set &quot;039-september-talk&quot; #t)
+        (dialog '((&quot;/&quot; &quot;I can't believe it took you this long!\nLet's fight!&quot;)))
+        (wait)
+        (move '(2 64))
+        (wait 0.4)
+        (move '(2 -1))
+        (wait 1)
+        (move '(1 64))
+        (wait 0.4)
+        (move '(1 -1))
+        (set-orientation '(3 64))
+        (set-orientation '(2 -1))
+        (wait 1)
+        (move '(2 64))
+        (wait 0.5)
+        (move '(0 64))
+        (set-team '(1 64))
+        (set-life-diff 100)
+        (friendly '(#f 64))
+        (quiet '(#f 64)))
+    (if (!get &quot;039-september-ok&quot;)
+        (dialog '((&quot;/&quot; &quot;I will defeat you.&quot;)))
+        (dialog '((&quot;/&quot; &quot;I have to train harder.&quot;)))))</property>
+    <property name="actionOnEvent">(if  (get &quot;039-september-ok&quot;)
+    (delete-me))</property>
+    <property name="level" type="int" value="12"/>
+    <property name="lp" type="float" value="120"/>
+    <property name="movementPattern" value="1,2,2,0,0,3,3,1"/>
+    <property name="weaponLevel" type="int" value="4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="51" type="Door" x="0" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="38"/>
+   </properties>
+  </object>
+  <object id="52" type="Door" x="80" y="208" width="16" height="16">
+   <properties>
+    <property name="roomId" value="39_house2"/>
+   </properties>
+  </object>
+  <object id="62" type="Door" x="80" y="224" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="40"/>
+   </properties>
+  </object>
+  <object id="63" type="Door" x="384" y="176" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="43"/>
+   </properties>
+  </object>
+  <object id="65" type="Door" x="224" y="96" width="16" height="16">
+   <properties>
+    <property name="roomId" value="39_house1"/>
+   </properties>
+  </object>
+  <object id="66" type="Door" x="192" y="32" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="39_house1/up"/>
+   </properties>
+  </object>
+  <object id="67" type="Door" x="48" y="144" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="39_house2/up"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="68" gid="243" x="80" y="160" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;39.stone2&quot;))
+    (begin
+        (dialog '((&quot;Hey, there are items in here!&quot;)))
+        (give-item &quot;39.stone2&quot;)
+        (dialog '((&quot;This is a very strange stone… Never seen anything like this before.&quot;))))
+    (dialog '((&quot;This vase is empty.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="72" gid="48" x="144" y="112" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (get &quot;039-september-ok&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+  <object id="73" type="Modifier" gid="399" x="272" y="64" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="30"/>
+   </properties>
+  </object>
+  <object id="74" gid="394" x="160" y="112" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="100"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

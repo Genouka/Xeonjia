@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="28" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="50">
  <properties>
-  <property name="action">(if (! (eq? (last-place) &quot;23&quot;))
+  <property name="action">(if (! (== (last-place) &quot;23&quot;))
     (map-name &quot;Route 2&quot;))</property>
   <property name="map-name" value="Route 2"/>
  </properties>

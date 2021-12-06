@@ -219,10 +219,213 @@
         },
         {
             "fileName": "32.tmx",
-            "height": 416,
+            "height": 240,
             "width": 400,
             "x": 2288,
-            "y": 1552
+            "y": 1728
+        },
+        {
+            "fileName": "33.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 2688,
+            "y": 1728
+        },
+        {
+            "fileName": "34.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 2688,
+            "y": 1968
+        },
+        {
+            "fileName": "35.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 2688,
+            "y": 2208
+        },
+        {
+            "fileName": "36.tmx",
+            "height": 432,
+            "width": 240,
+            "x": 2448,
+            "y": 1968
+        },
+        {
+            "fileName": "37.tmx",
+            "height": 320,
+            "width": 256,
+            "x": 3088,
+            "y": 2080
+        },
+        {
+            "fileName": "38.tmx",
+            "height": 352,
+            "width": 288,
+            "x": 3088,
+            "y": 1728
+        },
+        {
+            "fileName": "39.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 3328,
+            "y": 1728
+        },
+        {
+            "fileName": "40.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 3328,
+            "y": 1968
+        },
+        {
+            "fileName": "41.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 3328,
+            "y": 2208
+        },
+        {
+            "fileName": "42.tmx",
+            "height": 240,
+            "width": 240,
+            "x": 3728,
+            "y": 2096
+        },
+        {
+            "fileName": "43.tmx",
+            "height": 368,
+            "width": 176,
+            "x": 3728,
+            "y": 1728
+        },
+        {
+            "fileName": "44.tmx",
+            "height": 144,
+            "width": 400,
+            "x": 3792,
+            "y": 1984
+        },
+        {
+            "fileName": "45.tmx",
+            "height": 144,
+            "width": 400,
+            "x": 4192,
+            "y": 1984
+        },
+        {
+            "fileName": "46.tmx",
+            "height": 320,
+            "width": 288,
+            "x": 4464,
+            "y": 1904
+        },
+        {
+            "fileName": "47.tmx",
+            "height": 288,
+            "width": 400,
+            "x": 4544,
+            "y": 2224
+        },
+        {
+            "fileName": "48.tmx",
+            "height": 272,
+            "width": 400,
+            "x": 4752,
+            "y": 1952
+        },
+        {
+            "fileName": "49.tmx",
+            "height": 288,
+            "width": 400,
+            "x": 4752,
+            "y": 1664
+        },
+        {
+            "fileName": "50.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 4352,
+            "y": 1664
+        },
+        {
+            "fileName": "51.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 4752,
+            "y": 1424
+        },
+        {
+            "fileName": "52.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 4752,
+            "y": 1184
+        },
+        {
+            "fileName": "53.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 4352,
+            "y": 1184
+        },
+        {
+            "fileName": "54.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 3952,
+            "y": 1184
+        },
+        {
+            "fileName": "55.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 3552,
+            "y": 1184
+        },
+        {
+            "fileName": "56.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 3152,
+            "y": 1184
+        },
+        {
+            "fileName": "57.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 2752,
+            "y": 1184
+        },
+        {
+            "fileName": "58.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 2608,
+            "y": 944
+        },
+        {
+            "fileName": "59.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 3008,
+            "y": 944
+        },
+        {
+            "fileName": "60.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 3408,
+            "y": 944
+        },
+        {
+            "fileName": "61.tmx",
+            "height": 240,
+            "width": 400,
+            "x": 3408,
+            "y": 704
         }
     ],
     "onlyShowAdjacentMaps": false,

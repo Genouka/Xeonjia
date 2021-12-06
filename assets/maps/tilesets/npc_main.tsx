@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.4" tiledversion="2020.08.05" name="npc_main" tilewidth="16" tileheight="16" tilecount="28" columns="4">
- <image source="../../images/npc_main.png" width="64" height="112"/>
+<tileset version="1.5" tiledversion="1.7.2" name="npc_main" tilewidth="16" tileheight="16" tilecount="32" columns="4">
+ <image source="../../images/npc_main.png" width="64" height="128"/>
  <tile id="0" type="NPC"/>
  <tile id="1" type="NPC">
   <properties>
@@ -131,6 +131,29 @@
  <tile id="27" type="NPC">
   <properties>
    <property name="name" value="shen"/>
+   <property name="orientation" type="int" value="3"/>
+  </properties>
+ </tile>
+ <tile id="28" type="NPC">
+  <properties>
+   <property name="name" value="september"/>
+  </properties>
+ </tile>
+ <tile id="29" type="NPC">
+  <properties>
+   <property name="name" value="september"/>
+   <property name="orientation" type="int" value="1"/>
+  </properties>
+ </tile>
+ <tile id="30" type="NPC">
+  <properties>
+   <property name="name" value="september"/>
+   <property name="orientation" type="int" value="2"/>
+  </properties>
+ </tile>
+ <tile id="31" type="NPC">
+  <properties>
+   <property name="name" value="september"/>
    <property name="orientation" type="int" value="3"/>
   </properties>
  </tile>

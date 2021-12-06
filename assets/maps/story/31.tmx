@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="54">
  <properties>
-  <property name="action">(if (eq? (last-place) &quot;22&quot;)
+  <property name="action">(if (== (last-place) &quot;22&quot;)
     (map-name &quot;Melhopolis&quot;))</property>
   <property name="map-name" value="Melhopolis"/>
   <property name="music" value="city"/>

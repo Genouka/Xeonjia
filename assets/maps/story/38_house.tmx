@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="83">
+ <properties>
+  <property name="disable-minimap" type="bool" value="true"/>
+  <property name="music" value="city"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6EG+D0uhsEL4JVbeHAKa3upNAfIpE8x4Qoe4hEF/Dga+i8QH5sUKDaAEAAA==
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="79" type="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="38"/>
+   </properties>
+  </object>
+  <object id="82" type="NPC" gid="15" x="32" y="80" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (get &quot;038-house-talk&quot;))
+    (begin
+        (dialog '((&quot;/&quot; &quot;I just cooked a cake. Do you want some?&quot;)))
+        (define id &quot;038-house-question-cake&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (set &quot;038-house-talk&quot; #t)
+        (wait)
+        (if (get id)
+            (begin
+                (dialog
+                    '((&quot;/&quot; &quot;Here you go!&quot;)
+                    (&quot;/hero_happy&quot; &quot;Thank you!&quot;)
+                    (&quot;* {{hero}} eats a piece of cake *&quot;)))
+                (set-life-diff 30))
+             (dialog '((&quot;/&quot; &quot;Oh, ok. Then I'll eat it all.&quot;)))))
+    (dialog '((&quot;/&quot; &quot;I love cooking cakes and sweets.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoBwcBuIjRKg7DcRn0MS2A/F+ID4AZeMDx4H4BBHqaAm2kqkPAO/vmPtoAQAA
+  </data>
+ </layer>
+ <objectgroup id="2" name="spawn points"/>
+ <objectgroup id="9" name="items"/>
+</map>

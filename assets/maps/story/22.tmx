@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="15" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="51">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="15" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="51">
  <properties>
-  <property name="action">(if (eq? (last-place) &quot;31&quot;)
+  <property name="action">(if (! (== (last-place) &quot;27&quot;))
     (map-name &quot;Route 3&quot;))</property>
   <property name="map-name" value="Route 3"/>
   <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="157" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="161" source="../tilesets/monster-1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgQABWIGbDg9kZcANeIObDoQ8kzk9AL0w/CCsjsflJ1IuMidELUicGxQJIbGLcjM1OZLtxAVEke9DtBWFxPHrpCSRwiAsDsTQQi+CRV6DATgMy9Sow4HYzMfbCsAISG+QWOyBmgdISaHIwtQBct+yYSAMAAA==

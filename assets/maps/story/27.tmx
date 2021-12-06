@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="12" height="35" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="53">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="12" height="35" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="53">
  <properties>
-  <property name="action">(if (! (eq? (last-place) &quot;30&quot;))
+  <property name="action">(if (! (== (last-place) &quot;22&quot;))
     (map-name &quot;Route 3&quot;))</property>
   <property name="map-name" value="Route 3"/>
  </properties>
@@ -46,7 +46,7 @@
     <property name="action" value="(dialog '((&quot;\&quot; ← Sacred Tree \&quot;\n\&quot; Melhopolis City Center → \&quot;&quot;)))"/>
    </properties>
   </object>
-  <object id="49" gid="248" x="64" y="32" width="16" height="16">
+  <object id="49" gid="250" x="64" y="32" width="16" height="16">
    <properties>
     <property name="lifePointsDelta" type="int" value="100"/>
    </properties>

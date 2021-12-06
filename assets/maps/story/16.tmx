@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="44">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
  <properties>
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
@@ -7,12 +7,19 @@
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
  <tileset firstgid="137" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="161" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA1NgYGCQAGIFKA3DGljEeND4yPK4AC45OzQ15mjy3njMxGYuzD2EgB0eOZAbNIiwC5+5GkSoR/cbunoFqBpi7MUFzEnUj00tepjiCzt85mILU3z2ogMFItURcgd6GsMHsPkV5A4RPObjAn5o6jSQsDcDIs2YI2FYvmJhQM1rsHQBABE52cu4AwAA
+   H4sIAAAAAAAAA41TMQrAMAh06NixQ0enkh9kywcC/f9z2kCkVvTigQT1OM+QMBGdb/A8JYpT202u+xGiXjOcavodaHq64meFBnrDQ0nMQrolwbe7WT5PzpWYG6EmfCAPUmOVo7tDut6dorkWnOStfNg3huDtOnwcQD/CbXhFRafvzVQV8q82+v+1Ps8HfEeg/rgDAAA=
   </data>
  </layer>
- <objectgroup id="9" name="npc"/>
+ <objectgroup id="9" name="npc">
+  <object id="44" gid="188" x="16" y="112" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Why am I here? What am I supposed to do?&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="6" name="Tile Layer 2" width="17" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgIB2YEZB3JsNMathLD3OJ8Rut/E8JoFXYDUZATb+64ZEjNZ6pmS4AgMl5ILgDAAA=
