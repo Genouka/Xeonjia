@@ -51,7 +51,6 @@ extension CreateComponent on Tile {
                   ..position = position
                   ..properties = properties,
                 isPlayerOne: true,
-                level: mainCharacter.level,
                 weaponList: mainCharacter.weaponList
                     .map((e) => Weapon.fromJson(e.toJson()))
                     .toList(),

@@ -11,7 +11,6 @@ class SlitherCpuComponent extends DynamicComponent with LifePointsBar {
       : _updatePeriod =
             (double.parse(tile.properties['updatePeriod'] ?? '0.8')),
         super.fromTile(tile) {
-    level = atk ~/ 3;
     _timeToNextMove = _updatePeriod;
   }
 

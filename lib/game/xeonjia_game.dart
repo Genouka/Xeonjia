@@ -317,7 +317,6 @@ class XeonjiaGame extends BaseGame
     pause(stopMusic: false);
     if (game.enemies == 0) {
       currentEventLog['${map.id}-safe'] = true;
-      mainCharacter.expGained(playerOne.experiencePoints);
     }
 
     // Save new player data into mainCharacter

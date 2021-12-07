@@ -8,7 +8,6 @@ class CharacterInfo {
   String name;
 
   // Player stats
-  int level;
   double atk;
   double def;
   double maxLifePoints;
@@ -16,9 +15,6 @@ class CharacterInfo {
   // Player current status
   double currentLifePoints;
   double poisonQuantity;
-
-  // Experience points
-  int _experiencePoints;
 
   // Store story events (eg. things done, info acquired)
   // event name : value (bool or int)
@@ -50,25 +46,10 @@ class CharacterInfo {
   List<Weapon> weaponList = [];
   int selectedWeaponIndex;
 
-  int get experiencePoints => _experiencePoints;
-  int get experienceRequired => 50 + (level * 25);
-  int get experienceRemaining => experienceRequired - experiencePoints;
-
-  // Increase experience points earned
-  void expGained(int exp) {
-    _experiencePoints += exp;
-    if (_experiencePoints >= experienceRequired) {
-      _experiencePoints = 0;
-      ++level;
-      atk = level + 1.0;
-    }
-  }
-
   // Import character data from a Json
   CharacterInfo(Map<String, dynamic> json)
       : name = json['name'] ?? '',
         eventLog = jsonDecode(json['eventLog'] ?? '{}'),
-        level = json['level'] ?? 0,
         atk = json['atk'] ?? 1,
         def = json['def'] ?? 0,
         maxLifePoints = json['maxLifePoints'] ?? 100,
@@ -81,8 +62,7 @@ class CharacterInfo {
         minutesPlayed = json['minutesPlayed'] ?? 0,
         defeatedComponents = json['defeatedComponents'] ?? 0,
         movesCounter = json['movesCounter'] ?? 0,
-        defeatsCounter = json['defeatsCounter'] ?? 0,
-        _experiencePoints = json['experiencePoints'] ?? 0 {
+        defeatsCounter = json['defeatsCounter'] ?? 0 {
     List<dynamic> _jsonWeaponList =
         (jsonDecode(json['weaponList'] ?? '[{"id": 0, "lv": 0}]'));
     for (var weapon in _jsonWeaponList) {
@@ -95,7 +75,6 @@ class CharacterInfo {
     return {
       'eventLog': jsonEncode(eventLog),
       'name': name,
-      'level': level,
       'atk': atk,
       'def': def,
       'maxLifePoints': maxLifePoints,
@@ -113,7 +92,6 @@ class CharacterInfo {
       'defeatedComponents': defeatedComponents,
       'movesCounter': movesCounter,
       'defeatsCounter': defeatsCounter,
-      'experiencePoints': _experiencePoints,
     };
   }
 }

@@ -32,12 +32,6 @@ abstract class BasicComponent extends SpriteComponent {
   // Initial life points
   double maxLifePoints = double.infinity;
 
-  // Component level
-  int level = 0;
-
-  // Experience points gained during match
-  int experiencePoints = 0;
-
   // Current life points
   // Value edited by using lifePointsDifference() method
   double _lifePoints;
@@ -209,7 +203,6 @@ abstract class BasicComponent extends SpriteComponent {
           }
         } else if (this is! StaticComponent) {
           cause?.defeatedEnemies++;
-          cause?.experiencePoints += level;
           if (this is CharacterComponent) cause?.points += 100;
         }
       }
