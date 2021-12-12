@@ -39,7 +39,8 @@ Map<String, List<Translation>> tmx2po() {
               text
                   .group(2)
                   .replaceAll('\\&quot;', '\\"')
-                  .replaceAll('&amp;', '&'),
+                  .replaceAll('&amp;', '&')
+                  .replaceAll('*\\', '*'),
               null);
           var author = text.group(1)?.replaceAll('&amp;', '&');
           Translation authorName;
@@ -82,8 +83,10 @@ Map<String, List<Translation>> tmx2po() {
   data['items'].forEach((_, value) {
     dirStringsMap['story']
         .add(Translation(dataJsonFileName, value['name'], null));
-    dirStringsMap['story'].add(Translation(
-        dataJsonFileName, value['description'].replaceAll('\n', '\\n'), null));
+    if (value['description'] != null) {
+      dirStringsMap['story'].add(Translation(dataJsonFileName,
+          value['description'].replaceAll('\n', '\\n'), null));
+    }
   });
   return dirStringsMap;
 }

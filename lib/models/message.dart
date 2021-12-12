@@ -50,6 +50,16 @@ class Message {
           .replaceAll('\n', '\\n')
           .replaceAllMapped(RegExp(r'{{(.*?)}}'),
               (m) => game.environment.lookForValue(Sym(m[1])).toString());
+      if (font == 'kobi') {
+        const diacritics =
+            'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
+        const nonDiacritics =
+            'AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz';
+        text = text.splitMapJoin('',
+            onNonMatch: (char) => char.isNotEmpty && diacritics.contains(char)
+                ? nonDiacritics[diacritics.indexOf(char)]
+                : char);
+      }
     }
   }
 }

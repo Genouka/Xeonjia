@@ -191,13 +191,11 @@ Environment setEnvironment() {
       game.setMessage((it.current as Cell).length == 1
           ? Message((it.current as Cell).car,
               component: (env.lookForValue(Sym('actor')) as BasicComponent),
-              translate: false,
               font: 'kobi')
           : Message(
               (it.current as Cell).cdr.car,
               component: (env.lookForValue(Sym('actor')) as BasicComponent),
               author: (it.current as Cell).car,
-              translate: false,
               font: 'kobi',
             ));
     }
@@ -216,7 +214,7 @@ Environment setEnvironment() {
     var it = (x.car as Cell).iterator;
     while (it.moveNext()) {
       itemList.add(ShopItem(
-        name: (it.current as Cell).car,
+        (it.current as Cell).car,
         price: (it.current as Cell).cdr.car as int,
         action: (it.current as Cell).cdr.cdr.car,
       ));

@@ -4,14 +4,14 @@ import 'package:xeonjia/i18n/story.i18n.dart';
 class Item {
   // Item name
   final String _name;
-  String _i18nName;
-  String get name => _i18nName.toUpperCase();
+  String get name => _name.i18n.toUpperCase();
 
   // Item ID
   String id;
 
   // Item description
-  final String description;
+  final String _description;
+  String get description => _description.i18n;
 
   // Item location (tmx file) - only if keyItem == true
   final String location;
@@ -24,10 +24,8 @@ class Item {
 
   Item(Map<String, dynamic> json)
       : _name = json['name'],
-        description = json['description'],
+        _description = json['description'],
         action = json['action'],
         keyItem = json['keyItem'] ?? false,
-        location = json['location'] {
-    _i18nName = _name.i18n;
-  }
+        location = json['location'];
 }
