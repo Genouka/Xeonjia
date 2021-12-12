@@ -1,3 +1,5 @@
+import 'dart:io';
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -26,8 +28,13 @@ final List<Locale> supportedLocales = [
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  var androidInfo =
+      Platform.isAndroid ? await DeviceInfoPlugin().androidInfo : null;
   await loadStoredData().then((_) {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+    Platform.isAndroid && androidInfo.version.sdkInt < 19
+        ? SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+            overlays: [SystemUiOverlay.bottom])
+        : SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
   });
   updateGameTheme();
   return runApp(Xeonjia());

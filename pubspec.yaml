@@ -13,6 +13,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
+  device_info_plus: ^3.1.1
   flame: ^0.29.4
   i18n_extension: ^4.0.0
   shared_preferences: ^2.0.9

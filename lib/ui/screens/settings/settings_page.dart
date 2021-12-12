@@ -44,7 +44,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 primary: Theme.of(context).primaryColor,
               ),
               onPressed: () {
-                SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+                SystemChrome.restoreSystemUIOverlays();
                 settings = Settings({'firstRun': false});
                 I18n.of(context).locale = settings.locale;
                 saveSettings();
