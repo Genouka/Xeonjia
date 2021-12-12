@@ -6,7 +6,7 @@
 # no no <skariko@pm.me>, 2020.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-06 23:17+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-12 21:43+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -502,7 +502,7 @@ msgstr "Ciao, sono lo spirito dell'acqua.\nAvete bisogno di qualcosa?\nNon ho mo
 
 #: assets/maps/story/34_cave.tmx:
 msgid "water spirit"
-msgstr ""
+msgstr "spirito dell'acqua"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "{{hero}} what could we ask him? I have plenty of questions, but if you agree I would ask him if he knows anything about the King of Evil."
@@ -1834,7 +1834,7 @@ msgstr "Primo dei 3 sigilli richiesti per entrare nella Torre Xeonjia."
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Berries"
-msgstr ""
+msgstr "Bacche"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Fresh Water"
