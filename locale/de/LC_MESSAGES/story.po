@@ -502,6 +502,10 @@ msgid "Hi, I'm the spirit of water.\nIs there anything you need?\nI don't have m
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
+msgid "water spirit"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
 msgid "{{hero}} what could we ask him? I have plenty of questions, but if you agree I would ask him if he knows anything about the King of Evil."
 msgstr ""
 
@@ -1827,6 +1831,10 @@ msgstr "Erstes Siegel"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "First out of 3 signets required to enter the Xeonjia tower."
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
+msgid "Berries"
 msgstr ""
 
 #: assets/maps/utils/items-and-events.json:

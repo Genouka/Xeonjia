@@ -501,6 +501,10 @@ msgid "Hi, I'm the spirit of water.\nIs there anything you need?\nI don't have m
 msgstr "Ciao, sono lo spirito dell'acqua.\nAvete bisogno di qualcosa?\nNon ho molto tempo, con questo freddo congelo rapidamente. E direi che qui c'è già abbastanza ghiaccio."
 
 #: assets/maps/story/34_cave.tmx:
+msgid "water spirit"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
 msgid "{{hero}} what could we ask him? I have plenty of questions, but if you agree I would ask him if he knows anything about the King of Evil."
 msgstr "{{hero}} cosa potremmo chiedergli? Ho un sacco di domande, ma se sei d'accordo gli chiederei se sa qualcosa sul Re del Male."
 
@@ -1827,6 +1831,10 @@ msgstr "Primo Sigillo"
 #: assets/maps/utils/items-and-events.json:
 msgid "First out of 3 signets required to enter the Xeonjia tower."
 msgstr "Primo dei 3 sigilli richiesti per entrare nella Torre Xeonjia."
+
+#: assets/maps/utils/items-and-events.json:
+msgid "Berries"
+msgstr ""
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Fresh Water"
