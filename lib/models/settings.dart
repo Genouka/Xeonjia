@@ -14,6 +14,7 @@ class Settings {
   // True if music and sounds should be played
   bool backgroundMusic;
   bool soundEffects;
+  bool audioSupported = true;
 
   // App language
   String _languageCode;

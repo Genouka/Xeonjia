@@ -35,6 +35,12 @@ void main() async {
         ? SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
             overlays: [SystemUiOverlay.bottom])
         : SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+    if (Platform.isAndroid && androidInfo.version.sdkInt < 23) {
+      settings.soundEffects = false;
+      settings.backgroundMusic = false;
+      settings.audioSupported = false;
+      saveSettings();
+    }
   });
   updateGameTheme();
   return runApp(Xeonjia());

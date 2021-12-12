@@ -27,30 +27,32 @@ class OptionList extends StatelessWidget {
               SettingsPage.of(context).refresh();
               saveSettings();
             }),
-        CheckboxListTile(
-            title: Text(
-              'Background music'.i18n,
-              style: const TextStyle(fontSize: 20),
-            ),
-            activeColor: Colors.blueGrey,
-            subtitle: Text('Enable background music'.i18n),
-            value: settings.backgroundMusic,
-            onChanged: (newValue) {
-              settings.backgroundMusic = newValue;
-              SettingsPage.of(context).refresh();
-              saveSettings();
-            }),
-        CheckboxListTile(
-            title: Text('Sound effects'.i18n,
-                style: const TextStyle(fontSize: 20)),
-            activeColor: Colors.blueGrey,
-            subtitle: Text('Enable sound effects'.i18n),
-            value: settings.soundEffects,
-            onChanged: (newValue) {
-              settings.soundEffects = newValue;
-              SettingsPage.of(context).refresh();
-              saveSettings();
-            }),
+        if (settings.audioSupported)
+          CheckboxListTile(
+              title: Text(
+                'Background music'.i18n,
+                style: const TextStyle(fontSize: 20),
+              ),
+              activeColor: Colors.blueGrey,
+              subtitle: Text('Enable background music'.i18n),
+              value: settings.backgroundMusic,
+              onChanged: (newValue) {
+                settings.backgroundMusic = newValue;
+                SettingsPage.of(context).refresh();
+                saveSettings();
+              }),
+        if (settings.audioSupported)
+          CheckboxListTile(
+              title: Text('Sound effects'.i18n,
+                  style: const TextStyle(fontSize: 20)),
+              activeColor: Colors.blueGrey,
+              subtitle: Text('Enable sound effects'.i18n),
+              value: settings.soundEffects,
+              onChanged: (newValue) {
+                settings.soundEffects = newValue;
+                SettingsPage.of(context).refresh();
+                saveSettings();
+              }),
         ListTile(
           title: Text('Your name'.i18n, style: const TextStyle(fontSize: 20)),
           subtitle:
