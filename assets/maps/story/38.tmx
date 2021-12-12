@@ -14,7 +14,7 @@
  <tileset firstgid="381" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="22">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA8WSPQvCMBCGk1kcXHSwIDj4hd+omyiiOIi6OPpjO3Zz6eDQ0TFbxzr4ll7pEdMacfCFB3rNPVyaZiuF2P6BUw4bWl8X9ITCnB25e/AUCTxxbeOa4v/oBqyeo88BC5nvprMioNj7HvrqoF/gprlpc6foa4KZhRvRvnntWX6v0uby2JzVA7ja+7g+0v8/S/O6T3jamk2dzjVlSXtesT2X2HPsqjcrCf/eMqgyKnSXbc7qQE6N+Wkcw1ly9woaGkXh7gW0QBt0QJe5Y3oORXZfuTsAQzCSSe9EZuf1aW5euOt+6QYiuyN3qpWl+wJJt14yKAUAAA==
+   H4sIAAAAAAAAA8WSPQvCMBCGk1kcXHSwIDjUD/xG3USRioOoi6M/tmM3lw4OHR27dayDb+mVHjGtEQdfeKDX3MOlaRwphPMHTgVsaX1T0hMJfXbk7sFTpPAktYmri/+jG7B6gT4LLGWxm82KQcje99HXBIMSN8tNmTtDXxvMDdyY9s1rz/B7Q2Uuj8lZPYCrvE/qI/3/s9Sv+4SnrJnU2VxdVrTnNdtzhT0nbvhmpeHfWwV1Ro3usnpWtsY9kNNgfhZLc5bcvYKWQlm4ewE26IAu6DF3Qs+RyO8rd4dgBMYy7Z3K/Lw+zS0Kd90v3UDkd+ROdWjovgBfoxMbKAUAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="28" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="53">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="28" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="55">
  <properties>
   <property name="action">(if (== (last-place) &quot;24&quot;)
     (map-name &quot;Route 2&quot;))</property>
@@ -11,7 +11,7 @@
  <tileset firstgid="137" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="28" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5NgYGCQQMMMUFoDjQZhHjS19khqFIDYHEoboOmDycPMRwZ2WMSoAZD9QylQgNIGeNRoEJAnBngT4QZkvj2J5lMS1ujhic+txJqHDwgzQMIUHdgAsS2FdmMLB5B7FCg0FxfAZi656ZPcOFRgwMzrCgyI/GqORR6GzZH0g2hQutNgQORxAwbMsgKEAUZjQsBgBAAA
+   H4sIAAAAAAAAA5NgYGCQQMMMUFoDjQZhGTS19khqFIDYHEoboOmDycPMRwZ2WMRggAePHCGA7B9KgQKUNsCjRoOAPDHAmwg3IPPtSTQfX1gTAujhic+txJqHDwgzQMIUHdgAsS2FdmMLB5B7FCg0FxfAZi656ZPcOFRgwMzrCgyI/GqORR6GzZH0g2hQutNgQORxAwbMsgKEAQlYlwBgBAAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -71,6 +71,16 @@
   <object id="52" gid="63" x="416" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;It seems that once there was a path here.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="53" gid="148" x="112" y="32" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="25"/>
+   </properties>
+  </object>
+  <object id="54" gid="148" x="96" y="144" width="16" height="16">
+   <properties>
+    <property name="lifePointsDelta" type="int" value="25"/>
    </properties>
   </object>
  </objectgroup>

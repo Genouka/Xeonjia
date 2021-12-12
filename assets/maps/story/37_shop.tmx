@@ -3,7 +3,7 @@
  <properties>
   <property name="action" value="(map-name &quot;Pharmacy&quot;)"/>
   <property name="disable-minimap" type="bool" value="true"/>
-  <property name="music" value="city"/>
+  <property name="music" value="town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
@@ -38,7 +38,7 @@
    <properties>
     <property name="action">(if (= (get-initial-life) 100)
     (shop
-        '((&quot;LP UP +5&quot; 110 &quot;(increase-life 5)&quot;)
+        '((&quot;LP UP +5&quot; 110 &quot;(begin (increase-life 5) (set-life-diff 105))&quot;)
         (&quot;Fresh Water&quot; 15 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
         (&quot;Pomegranate juice&quot; 50 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)))
     (shop

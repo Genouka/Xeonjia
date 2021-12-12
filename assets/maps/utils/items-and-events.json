@@ -48,6 +48,9 @@
       "keyItem": true,
       "location": "t1_06"
     },
+    "berries-shop": {
+      "name": "Berries"
+    },
     "fresh-water": {
       "name": "Fresh Water",
       "description": "A bottle of water.\nIt restores 20 LPs.",

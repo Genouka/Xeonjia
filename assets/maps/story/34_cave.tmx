@@ -3,6 +3,7 @@
  <properties>
   <property name="action" value="(map-name &quot;Hexa Cave&quot;)"/>
   <property name="map-name" value="Hexa Cave"/>
+  <property name="music" value="enemy"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
@@ -47,6 +48,7 @@
     <property name="actionOnEvent">(if (and (and (!get &quot;34-cave-spirit&quot;) (is-visible 74)) (and (is-visible 77) (and (is-visible 78) (and (is-visible 81) (and (is-visible 83) (is-visible 76))))))
     (show 64)
     (hide 64))</property>
+    <property name="name" value="water spirit"/>
     <property name="priority" type="int" value="999"/>
     <property name="visible" type="bool" value="false"/>
    </properties>
@@ -326,7 +328,7 @@
         (dialog
             '((&quot;!!!&quot;)
             (&quot;Slooosh!&quot;)
-            (&quot;/water-spirit&quot; &quot;Hi, I'm the spirit of water.\nIs there anything you need?\nI don't have much time, with this cold I quickly become ice. And I'd say there's enough ice here.&quot;)))
+            (&quot;water spirit/water-spirit&quot; &quot;Hi, I'm the spirit of water.\nIs there anything you need?\nI don't have much time, with this cold I quickly become ice. And I'd say there's enough ice here.&quot;)))
         (wait)
         (set-orientation '(2 62))
         (set-orientation '(3 -1))
@@ -337,13 +339,13 @@
         (set-orientation '(1 62))
         (set-orientation '(1 -1))
         (dialog
-            '((&quot;/water-spirit&quot; &quot;The King of Evil, as you know, came to us 64 years ago freezing the Kingdom and instilling fear.\nI don't know exactly where he comes from, but what I do know is that his goal is to collect gems that are scattered around the world to get energy to completely freeze our world.&quot;)
+            '((&quot;water spirit/water-spirit&quot; &quot;The King of Evil, as you know, came to us 64 years ago freezing the Kingdom and instilling fear.\nI don't know exactly where he comes from, but what I do know is that his goal is to collect gems that are scattered around the world to get energy to completely freeze our world.&quot;)
             (&quot;/hero&quot; &quot;Completely?!&quot;)
-            (&quot;/water-spirit&quot; &quot;Yes, we are lucky we still have seas and a bearable temperature, but if he succeeds in his plan the Kingdom will no longer be livable for us.&quot;)
+            (&quot;water spirit/water-spirit&quot; &quot;Yes, we are lucky we still have seas and a bearable temperature, but if he succeeds in his plan the Kingdom will no longer be livable for us.&quot;)
             (&quot;/hero&quot; &quot;And why would he want that??&quot;)
-            (&quot;/water-spirit&quot; &quot;Because he and his fellows need very low temperatures to live, temperatures so low that right now there are only in the Xeonjia tower.&quot;)
+            (&quot;water spirit/water-spirit&quot; &quot;Because he and his fellows need very low temperatures to live, temperatures so low that right now there are only in the Xeonjia tower.&quot;)
             (&quot;/shen&quot; &quot;So he's making our Kingdom unlivable for us to make it livable for him?!&quot;)
-            (&quot;/water-spirit&quot; &quot;Exactly.\nThe only way to stop him is to find as many gems as possible and finally defeat him, of course.\nHe uses the Hoarfrost Team to search for gems precisely because he cannot leave the tower.\nThis is what I know about the King of Evil. Now I must leave you to avoid becoming an ice pop, but we will see each other again in the future.\nI will appear to you when you need me.&quot;)))
+            (&quot;water spirit/water-spirit&quot; &quot;Exactly.\nThe only way to stop him is to find as many gems as possible and finally defeat him, of course.\nHe uses the Hoarfrost Team to search for gems precisely because he cannot leave the tower.\nThis is what I know about the King of Evil. Now I must leave you to avoid becoming an ice pop, but we will see each other again in the future.\nI will appear to you when you need me.&quot;)))
         (wait)
         (hide 64)
         (wait 1)
