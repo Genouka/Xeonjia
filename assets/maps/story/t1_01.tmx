@@ -3,7 +3,7 @@
  <properties>
   <property name="action" value="(map-name &quot;Mossy Crypt -1F&quot;)"/>
   <property name="map-name" value="Mossy Crypt - 1F"/>
-  <property name="music" value="enemy"/>
+  <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
