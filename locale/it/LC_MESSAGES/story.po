@@ -6,7 +6,7 @@
 # no no <skariko@pm.me>, 2020.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-12 21:43+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-14 22:02+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -1134,7 +1134,7 @@ msgstr "Stai andando anche tu alla torre?"
 
 #: assets/maps/story/39.tmx:
 msgid "Yes, of course!\nI will go there and I will defeat the King of Evil!\nEven though you are the protagonist and the so-called \"Hero\" it will be me who will defeat the King of Evil and be remembered as the savior of the world hehe."
-msgstr "Certo!\nAndrò lì e sconfiggerò il Re del Male!\nAnche se tu sei il protagonista è il cosiddetto \"Eroe\", sarò io che sconfiggerò il Re del male e verrò ricordata come salvatrice del mondo hehe."
+msgstr "Certo!\nAndrò lì e sconfiggerò il Re del Male!\nAnche se tu sei il protagonista e il cosiddetto \"Eroe\", sarò io che sconfiggerò il Re del male e verrò ricordata come salvatrice del mondo hehe."
 
 #: assets/maps/story/39.tmx:
 msgid "Wait, wait, wait, don't steal my job! Haha"
