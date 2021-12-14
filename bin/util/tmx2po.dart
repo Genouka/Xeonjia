@@ -87,6 +87,27 @@ Map<String, List<Translation>> tmx2po() {
       dirStringsMap['story'].add(Translation(dataJsonFileName,
           value['description'].replaceAll('\n', '\\n'), null));
     }
+    if (value['action'] != null) {
+      regexGlobal.allMatches(value['action']).forEach((match) {
+        regexText
+            .allMatches(match.group(0).replaceAll('"', '&quot;'))
+            .forEach((text) {
+          var string = Translation(
+              dataJsonFileName,
+              text
+                  .group(2)
+                  .replaceAll('\\&quot;', '\\"')
+                  .replaceAll('&amp;', '&')
+                  .replaceAll('*\\', '*'),
+              null);
+          if (string.msgid != null &&
+              string.msgid != '' &&
+              dirStringsMap['story'].every((element) => element != string)) {
+            dirStringsMap['story'].add(string);
+          }
+        });
+      });
+    }
   });
   return dirStringsMap;
 }

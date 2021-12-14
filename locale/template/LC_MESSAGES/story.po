@@ -1853,6 +1853,10 @@ msgid "A bottle of water.\nIt restores 20 LPs."
 msgstr ""
 
 #: assets/maps/utils/items-and-events.json:
+msgid "I'm already healthy, I don't need {{selected-item-name}} right now."
+msgstr ""
+
+#: assets/maps/utils/items-and-events.json:
 msgid "Pomegranate juice"
 msgstr ""
 
