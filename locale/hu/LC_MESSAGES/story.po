@@ -4,7 +4,7 @@
 # Viktória Nagy <tindykmp@protonmail.ch>, 2021.
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-06 23:17+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-18 11:05+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -96,7 +96,7 @@ msgstr "Csak egy kicsit"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! {{life-diff}} LPs have been recovered *"
-msgstr "* {{{hero}} talált néhány bogyót! {{life-diff}} életpontot gyógyult *"
+msgstr "* {{hero}} talált néhány bogyót! {{life-diff}} életpontot gyógyult *"
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant… nothing else."
@@ -196,7 +196,7 @@ msgstr ""
 
 #: assets/maps/story/34.tmx:
 msgid "* {{hero}} found {{money-diff}} ¤ *"
-msgstr "* {{{hero}} talált {{money-diff}} ¤ *"
+msgstr "* {{hero}} talált {{money-diff}} ¤ *"
 
 #: assets/maps/story/34.tmx:
 msgid "A rock."
@@ -232,7 +232,7 @@ msgstr "Szia, egy kicsit fáradtnak tűnsz. Pihenj itt egy kicsit."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "* {{hero}} rested and is now in perfect health *"
-msgstr "* {{{hero}} kipihente magát és most tökéletes egészségnek örvend *"
+msgstr "* {{hero}} kipihente magát és most tökéletes egészségnek örvend *"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Come back anytime."
@@ -584,7 +584,7 @@ msgstr "A hógolyók tartálya megtelt."
 
 #: assets/maps/story/t1_04.tmx:
 msgid "* {{hero}} filled his snowballs container *"
-msgstr "* {{{hero}} megtöltötte a hógolyó tartályát *"
+msgstr "* {{hero}} megtöltötte a hógolyó tartályát *"
 
 #: assets/maps/story/t1_04.tmx:
 msgid "A snowdrift."
@@ -672,7 +672,7 @@ msgstr "3. útvonal"
 
 #: assets/maps/story/22.tmx:
 msgid "Hey! Hi {{hero}}!"
-msgstr "Hé! Szia {{{hero}}!"
+msgstr "Hé! Szia {{hero}}!"
 
 #: assets/maps/story/22.tmx:
 msgid "H-hi, you know me?"
@@ -712,7 +712,7 @@ msgstr "Ó, egyébként, azt hiszem, ez segíthet neked."
 
 #: assets/maps/story/22.tmx:
 msgid "* {{hero}} got a SNOWBALLS CONTAINER *"
-msgstr "* {{{hero}} kapott egy hógolyó tartályt *"
+msgstr "* {{hero}} kapott egy hógolyó tartályt *"
 
 #: assets/maps/story/22.tmx:
 msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the 'S' button.\nIt can contain up to 10 snowballs."
@@ -924,7 +924,7 @@ msgstr "Szia Milla, jól vagy? Minden gond nélkül ideértél?"
 
 #: assets/maps/story/999.tmx:
 msgid "Hii {{hero}}!"
-msgstr "Heló {{{hero}}!"
+msgstr "Heló {{hero}}!"
 
 #: assets/maps/story/999.tmx:
 msgid "Yes, I cleverly managed to avoid the monsters that were along the way!"
@@ -1028,7 +1028,7 @@ msgstr "Jó reggelt anya!"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Hi {{hero}}! Did you sleep well?"
-msgstr "Szia {{{hero}}! Jól aludtál?"
+msgstr "Szia {{hero}}! Jól aludtál?"
 
 #: assets/maps/story/1_home.tmx:
 msgid "mom"
@@ -1252,7 +1252,7 @@ msgstr "szomszéd"
 
 #: assets/maps/story/1_house.tmx:
 msgid "* {{hero}} got and put on the shin guards *"
-msgstr "* {{{hero}} megkapta és felvette a sípcsontvédőt *"
+msgstr "* {{hero}} megkapta és felvette a sípcsontvédőt *"
 
 #: assets/maps/story/1_house.tmx:
 msgid "This way you will hurt yourself less, but be careful that they do not fully protect you from damage."
