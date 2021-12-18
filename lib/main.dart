@@ -34,7 +34,8 @@ void main() async {
     Platform.isAndroid && androidInfo.version.sdkInt < 19
         ? SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
             overlays: [SystemUiOverlay.bottom])
-        : SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+        : SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+            overlays: []);
     if (Platform.isAndroid && androidInfo.version.sdkInt < 23) {
       settings.soundEffects = false;
       settings.backgroundMusic = false;
