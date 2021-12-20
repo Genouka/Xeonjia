@@ -5,7 +5,7 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-28 17:26+0000\nLast-Translator: Perro Tuerto <nika.zhenya@perrotuerto.blog>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-20 20:46+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -353,11 +353,11 @@ msgstr ""
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "Backpack"
-msgstr ""
+msgstr "Mochila"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "Use"
-msgstr ""
+msgstr "Usa"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"
@@ -433,7 +433,7 @@ msgstr "dinero: %s ¤"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "gems: %s"
-msgstr ""
+msgstr "gemas: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "play time: %s min"
@@ -497,11 +497,11 @@ msgstr "* {{hero}} pone %s en su mochila. *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "the gem"
-msgstr ""
+msgstr "la gema"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} used {{selected-item-name}} *"
-msgstr ""
+msgstr "* {{hero}} usó {{selected-item-name}} *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} gives %s *"
