@@ -37,6 +37,512 @@ extension Localization on String {
           '''I still haven\'t figured out if these monsters are malicious or just stupid.''':
               '''Eu ainda não descobri se esses monstros são maliciosos ou só idiotas.''',
         },
+        'hu': {
+          '''City Hall''': '''Városháza''',
+          '''…''': '''…''',
+          '''H-Hello.''': '''H-Helló.''',
+          '''Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region.''':
+              '''Helló, te biztosan {{hero}} vagy! Örülök, hogy megismerhetlek. Hallottam, hogy errefelé tartasz.\nA nevem Xe III, és én vagyok ennek a régiónak a királya.''',
+          '''king''': '''király''',
+          '''Do not confuse me with the King of Evil, I am good haha.''':
+              '''Ne keverjetek össze a Gonosz Királyával, én jó vagyok, haha.''',
+          '''So… tell me, how are you? Is everything okay? How is the journey going?''':
+              '''Szóval... mondd csak, hogy vagy? Minden rendben van? Hogy megy az vándorlás?''',
+          '''Everything good, I just defeated the Hoarfrost Team and I got the first signet!''':
+              '''Minden jó, most győztem le a Hoarfrost csapatot és megkaptam az első jelvényt!''',
+          '''Oh really?! This is great news!''':
+              '''Tényleg?! Ez nagyszerű hír!''',
+          '''It has been difficult?''': '''Nehéz volt?''',
+          '''Well, but if you did it, it means that you are strong!''':
+              '''Nos, ha megtetted, az azt jelenti, hogy erős vagy!''',
+          '''Well, congratulations! This means that you are strong!''':
+              '''Nos, gratulálok! Ez azt jelenti, hogy erős vagy!''',
+          '''I trust that you will be able to take the other two signets as well.''':
+              '''Bízom benne, hogy a másik két jelvényt is meg tudod szerezni.''',
+          '''Since you\'re heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here.''':
+              '''Ha már kelet felé tartasz, megtennél nekem egy szívességet? El tudnád vinni ezt a csomagot a Vízvidék Királyának? Az néhány kilométerre keletre van innen.''',
+          '''Yes of course, I\'ll give it to him.''':
+              '''Igen, persze, odaadom neki.''',
+          '''Thank you very much. Here\'s to you.''':
+              '''Köszönöm szépen. Tessék.''',
+          '''Be careful not to drop it, it is fragile.''':
+              '''Vigyázz, nehogy leejtsd, mert törékeny.''',
+          '''Sure, I\'ll be careful.''': '''Persze, óvatos leszek.''',
+          '''Thank you again.\nI wish you a good journey, come back anytime.''':
+              '''Még egyszer köszönöm.\nJó utat kívánok, jöjj vissza bármikor.''',
+          '''Good journey {{hero}}, I have faith in you.''':
+              '''Jó utat {{hero}}, bízom benned.''',
+          '''Yes, quite a lot''': '''Igen, elég sokat''',
+          '''Just a little''': '''Csak egy kicsit''',
+          '''* {{hero}} found some berries! {{life-diff}} LPs have been recovered *''':
+              '''* {{hero}} talált néhány bogyót! {{life-diff}} életpontot gyógyult *''',
+          '''A little plant… nothing else.''':
+              '''Egy kis növény... semmi más.''',
+          '''" Exit ↑ "''': '''" Kijárat ↑ "''',
+          '''VANTOI LAB – 1F''': '''VANTOI LABOR - 1F''',
+          '''Sorry about the mess. Thieves have entered and turned everything upside down.''':
+              '''Elnézést a rendetlenségért. A tolvajok behatoltak és mindent felforgattak.''',
+          '''scientist''': '''tudós''',
+          '''A life\'s work has been destroyed…''':
+              '''Egy élet munkája ment tönkre…''',
+          '''Someone used this plant to do some experiments.''':
+              '''Valaki ezt a növényt használta néhány kísérlethez.''',
+          '''A broken monitor.''': '''Egy elromlott monitor.''',
+          '''" → "''': '''" → "''',
+          '''Natawn''': '''Natawn''',
+          '''Safe travels, {{hero}}.\nMany before you have failed, but I am sure you will handle it right.''':
+              '''Jó utat, {{hero}}.\nSokan elbuktak már előtted, de biztos vagyok benne, hogy neked sikerülni fog.''',
+          '''dad''': '''apa''',
+          '''I\'ll do my best.''': '''Megteszem, amit tudok.''',
+          '''The tower in which the "King of Evil" resides should be located near the capital of the region.''':
+              '''A toronynak, amelyben a "Gonosz Királya" lakik, a régió fővárosának közelében kell lennie.''',
+          '''" NATAWN – Hometown of the 62nd hero "''':
+              '''" NATAWN - A 62. hős szülővárosa "''',
+          '''I\'ve to say goodbye to my parents with the \'A\' button before I leave. Otherwise it would be rude.''':
+              '''El kell búcsúznom a szüleimtől az "A" gombbal, mielőtt elmegyek. Máskülönben udvariatlanság lenne.''',
+          '''Like my mother said, it\'s better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.''':
+              '''Ahogy anyám mondta, jobb, ha elmegyek a sípcsontvédőért a szomszédba, különben azt kockáztatom, hogy megsebesítem magam a sziklákkal.''',
+          '''* {{hero}} found {{money-diff}} ¤ *''':
+              '''* {{hero}} talált {{money-diff}} ¤ *''',
+          '''A rock.''': '''Egy szikla.''',
+          '''I still haven\'t figured out if these monsters are malicious or just stupid.''':
+              '''Még mindig nem jöttem rá, hogy ezek a szörnyek rosszindulatúak vagy csak ostobák.''',
+          '''I hate people who always say the same things.''':
+              '''Utálom azokat az embereket, akik mindig ugyanazt mondják.''',
+          '''Hi, you look a little tired. Rest here for a moment.''':
+              '''Szia, egy kicsit fáradtnak tűnsz. Pihenj itt egy kicsit.''',
+          '''* {{hero}} rested and is now in perfect health *''':
+              '''* {{hero}} kipihente magát és most tökéletes egészségnek örvend *''',
+          '''Come back anytime.''': '''Gyere vissza bármikor.''',
+          '''Be careful not to get hurt.''': '''Vigyázz, nehogy megsérülj.''',
+          '''Help me please!\nPunch him by pressing the \'P\' button.''':
+              '''Segíts, kérlek!\nÜsd meg őt a \'P\' gomb megnyomásával.''',
+          '''Everything good?''': '''Minden rendben?''',
+          '''Yes, thank you so much for saving my life!\nI have to admit, I was scared.\nAs a token of gratitude I give you this gem that I found a little while ago.''':
+              '''Igen, nagyon köszönöm, hogy megmentetted az életemet!\nBe kell vallanom, hogy megijedtem.\nHálám jeléül átadom neked ezt a gyöngyszemet, amit nemrég találtam.''',
+          '''Thanks, it seems very precious.''':
+              '''Köszönöm, nagyon értékesnek tűnik.''',
+          '''Thanks for saving me, I think it\'s better if I go home now.''':
+              '''Köszönöm, hogy megmentettél, azt hiszem, jobb, ha most hazamegyek.''',
+          '''Please help me! Save me from this monster!''':
+              '''Kérlek, segíts! Ments meg ettől a szörnyetegtől!''',
+          '''I can\'t escape, I have to defeat the monster to save that man.''':
+              '''Nem menekülhetek, le kell győznöm a szörnyet, hogy megmentsem azt az embert.''',
+          '''Better if I check that the guy is okay.''':
+              '''Jobb, ha ellenőrzöm, hogy a fickó jól van-e.''',
+          '''" ← Pharmacy "''': '''" ← Gyógyszertár"''',
+          '''Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays.''':
+              '''Hoppá... igen, bocsánat, az út közepén vagyok...\nTe egy turista vagy? Manapság nagyon kevesen vannak.''',
+          '''???''': '''???''',
+          '''N-no, I\'m {{hero}}, this year\'s chosen hero. I just left home to try to defeat the King of Evil.''':
+              '''Nem, én vagyok {{hero}}, az idei év kiválasztott hőse. Most indultam el otthonról, hogy megpróbáljam legyőzni a Gonosz Királyt.''',
+          '''What?! So is it you?!''': '''Micsoda?! Szóval te vagy az?!''',
+          '''Nice to meet you, I\'ve never met a hero before.''':
+              '''Örülök, hogy megismerhetlek, még sosem találkoztam hősökkel.''',
+          '''My name is Milla, I was born and raised in this area. I too am setting out on a journey.''':
+              '''A nevem Milla, ezen a területen születtem és nőttem fel. Én is útnak indulok.''',
+          '''Oh cool! Where are you going?''': '''Ó, király! Hova mész?''',
+          '''I have absolutely no idea.''': '''Fogalmam sincs.''',
+          '''I just want to explore the world, know new places and learn new things.''':
+              '''Csak szeretném felfedezni a világot, új helyeket megismerni és új dolgokat tanulni.''',
+          '''Wow, sounds like a great idea!''':
+              '''Hű, ez remek ötletnek hangzik!''',
+          '''Yep, it won\'t be easy but I want to visit at least the whole Kingdom.''':
+              '''Igen, nem lesz könnyű, de legalább az egész királyságot meg akarom látogatni.''',
+          '''Are there places outside the Kingdom?!''':
+              '''Vannak helyek a Királyságon kívül is?!''',
+          '''Dunno, that\'s what I want to find out!''':
+              '''Nem tudom, ezt szeretném kideríteni!''',
+          '''Anyway, I don\'t want to waste any more of your time.''':
+              '''Mindegy, nem akarom tovább vesztegetni az idődet.''',
+          '''After all, you have to save the world. Not an easy task.''':
+              '''Végül is meg kell mentened a világot. Nem könnyű feladat.''',
+          '''I\'m sure we\'ll meet again soon, hero.''':
+              '''Biztos vagyok benne, hogy hamarosan újra találkozunk, hős.''',
+          '''See ya!''': '''Szia!''',
+          '''Bye!''': '''Szia!''',
+          '''" Picnic area – Do not leave rubbish, thanks "''':
+              '''" Piknik terület - Ne hagy itt szemetet, köszönöm "''',
+          '''" Picnic area ↑ "\n" Forest Center ↓ "''':
+              '''" Piknikezőhely ↑ "\n" Erdei központ ↓ "''',
+          '''Yes''': '''Igen''',
+          '''No''': '''Nem''',
+          '''Mossy Crypt -4F''': '''Mossy Kripta -4F''',
+          '''The snowballs container is full.''':
+              '''A hógolyók tartálya megtelt.''',
+          '''* {{hero}} filled his snowballs container *''':
+              '''* {{hero}} megtöltötte a hógolyó tartályát *''',
+          '''A snowdrift.''': '''Egy hótorlasz.''',
+          '''Mossy Crypt -2F''': '''Mossy Kripta -2F''',
+          '''We\'re watching you.''': '''Figyelünk téged.''',
+          '''Hmm, I think that from this snowdrift I can obtain material to make new snowballs by pressing the \'A\' key.''':
+              '''Hmm, azt hiszem, hogy ebből a hótorlaszból az \'A\' billentyű megnyomásával új hógolyók készítéséhez szükséges anyagot tudok szerezni.''',
+          '''A rock covered by moss.''': '''Egy mohával borított szikla.''',
+          '''T-today… today is the day I\'ve been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I\'m the chosen "hero" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to.''':
+              '''Ma... ma van az a nap, amire egész életemben vártam. Az utazásom a Xeonjia toronyba hamarosan elkezdődik.\nEbben az évben én vagyok a kiválasztott "hős", akinek az a feladata, hogy legyőzze a szörnyet, amely befagyasztotta a királyságot...\nÉvekig tartó felkészülés után remélem, hogy képes leszek rá.''',
+          '''I\'d like to go back to bed but I can\'t.''':
+              '''Szeretnék visszamenni az ágyba, de nem lehet.''',
+          '''I\'ll miss you, TV.''': '''Hiányozni fogsz, TV.''',
+          '''I hope my parents will water it when I\'m away.''':
+              '''Remélem, hogy a szüleim megöntözik, amikor távol vagyok.''',
+          '''All my books are here.''': '''Az összes könyvem itt van.''',
+          '''My chair.''': '''A székem.''',
+          '''From here I can see the garden.''': '''Innen láthatom a kertet.''',
+          '''Melhopolis''': '''Melhopolis''',
+          '''The city center is a few kilometers to the south.''':
+              '''A városközpont néhány kilométerre délre található.''',
+          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
+              '''Meglepetés esküvőt tervezek a fiamnak, remélem, nem jön rá.''',
+          '''" VANTOI LAB "''': '''" VANTOI LABOR "''',
+          '''I can see the inside of the Laboratory.''':
+              '''Látom a laboratórium belsejét.''',
+          '''I can see the inside of the Pharmacy.''':
+              '''Látom a gyógyszertár belsejét.''',
+          '''" Melhopolis – Regional capital "''':
+              '''" Melhopolis - Regionális főváros "''',
+          '''I can see the inside of the house.''': '''Látom a ház belsejét.''',
+          '''Route 3''': '''3. útvonal''',
+          '''Hey! Hi {{hero}}!''': '''Hé! Szia {{hero}}!''',
+          '''H-hi, you know me?''': '''H-helló, ismersz engem?''',
+          '''Well, you are the hero of this year, you are quite famous. Are you here to visit the crypt?''':
+              '''Nos, te vagy az idei év hőse, elég híres vagy. Azért jöttél, hogy meglátogasd a kriptát?''',
+          '''Yes. If I have not misunderstood, here\'s one of the 3 signets I need to access the Xeonjia tower.''':
+              '''Igen. Ha nem értettem félre, itt van a 3 jelvény egyike, amire szükségem van a Xeonjia toronyhoz való hozzáféréshez.''',
+          '''Ah that\'s true, I\'ve heard of it.\nBeware that here is full of monsters and bad people.''':
+              '''Ez igaz, hallottam már róla.\nLégy óvatos, mert itt tele van szörnyekkel és rossz emberekkel.''',
+          '''Ok thanks, I\'ll be careful.\nBut… who are you?''':
+              '''Oké, köszönöm, óvatos leszek.\nDe... ki vagy te?''',
+          '''Oh, yes sorry I forgot to introduce myself.''':
+              '''Ó, igen, bocsánat, elfelejtettem bemutatkozni.''',
+          '''My name is Shen, I am a scientist.''':
+              '''A nevem Shen, és tudós vagyok.''',
+          '''Nice to meet you, Shen.''': '''Örülök, hogy találkoztunk, Shen.''',
+          '''Oh, by the way, I think this might help you.''':
+              '''Ó, egyébként, azt hiszem, ez segíthet neked.''',
+          '''* {{hero}} got a SNOWBALLS CONTAINER *''':
+              '''* {{hero}} kapott egy hógolyó tartályt *''',
+          '''It\'s an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \'S\' button.\nIt can contain up to 10 snowballs.''':
+              '''Ez az én találmányom. Lehetővé teszi, hogy hógolyókat hordj magadnál, amelyeket az \'S\' gomb megnyomásával dobhatsz az ellenfeleidre.\nAkár 10 hógolyót is tarthatsz benne.''',
+          '''Wow! I\'m sure it\'ll come in handy. Thank you.''':
+              '''Hűha! Biztos vagyok benne, hogy jól fog jönni. Köszönöm.''',
+          '''You\'re welcome.''': '''Szívesen.''',
+          '''Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too.''':
+              '''Sajnos nemrég az összes tervrajzot ellopták, így a Gonosz Király csatlósai is megkaparintották.''',
+          '''Well, at least it will be an equal fight.''':
+              '''Nos, legalább egyenlő küzdelem lesz.''',
+          '''Ha ha, well, you\'re right.''': '''Ha ha, nos, igazad van.''',
+          '''Now I have to leave you, I have to study a strange rock that I found a little while ago.''':
+              '''Most el kell mennem, tanulmányoznom kell egy furcsa követ, amit nemrég találtam.''',
+          '''We\'ll see again. Good luck!''': '''Viszlát később. Sok sikert!''',
+          '''Bye Shen, thanks again!''':
+              '''Viszlát Shen, még egyszer köszönöm!''',
+          '''I have to go through the crypt to get the first signet.''':
+              '''Át kell mennem a kriptán, hogy megszerezzem az első kitűzőt.''',
+          '''This is not a place for kids, go home.''':
+              '''Ez nem gyerekeknek való hely, menj haza.''',
+          '''Weird things happen in this area…''':
+              '''Furcsa dolgok történnek ezen a területen…''',
+          '''" If you get lost, follow the road signs "''':
+              '''" Ha eltévedsz, kövesd az útjelző táblákat "''',
+          '''" Xeonjia Tower ↑ "''': '''" Xeonjia torony ↑ "''',
+          '''Mitsu Forest''': '''Mitsu erdő''',
+          '''Nobody knows what the writing on this stone means, it is not even known who wrote it.''':
+              '''Senki sem tudja, mit jelent az írás ezen a sziklán, még azt sem tudni, ki írta.''',
+          '''Do you want to hear the legend of this tree again?''':
+              '''Szeretnéd újra hallani ennek a fának a legendáját?''',
+          '''Are you interested to learn about the legend of this tree?''':
+              '''Érdekel a fa legendája?''',
+          '''There was once a devastating war in this area and everything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all the souls who left us.\nIt has the particularity of withering in spring and blooming in the other seasons.\nEvery spring the souls leave this tree to make other plants bloom and then, at the end of spring, the souls return to flourish again this tree.\nThat\'s all I know about this tree.\nI hope to have time to see the end of this winter season which has persisted for more than 60 years now.''':
+              '''Egyszer pusztító háború volt ezen a területen, és mindent a földdel tettek egyenlővé.\nSemmi és senki sem maradt, kivéve ezt a fát.\nAzt mondják, hogy ez a fa magába zárja az összes lelket, aki elhagyott minket.\nKülönlegessége, hogy tavasszal elszárad, a többi évszakban pedig virágzik.\nMinden tavasszal a lelkek elhagyják ezt a fát, hogy más növényeket virágoztassanak, majd a tavasz végén a lelkek visszatérnek, hogy újra kivirágoztassák ezt a fát.\nEnnyit tudok erről a fáról.\nRemélem, lesz időm megnézni ennek a téli évszaknak a végét, amely már több mint 60 éve tart.''',
+          '''Ok, it was a long and boring story after all.''':
+              '''Oké, végül is ez egy hosszú és unalmas történet lett volna.''',
+          '''Yes please''': '''Igen, kérem''',
+          '''No thanks''': '''Nem, köszönöm''',
+          '''A computer turned off. Looks like a key is needed to turn it on.''':
+              '''Egy kikapcsolt számítógép. Úgy tűnik, hogy a bekapcsoláshoz kulcsra van szükséged.''',
+          '''Route 2''': '''2. útvonal''',
+          '''" Melhopolis → "''': '''" Melhopolis → "''',
+          '''Hi, I\'m sorry but we\'re closed. Once this was a busy shop, but now it doesn\'t even make sense to stay open.''':
+              '''Üdvözöllek, sajnálom, de zárva vagyunk. Valaha ez egy forgalmas üzlet volt, de most már nincs értelme nyitva tartani.''',
+          '''shopkeeper''': '''boltos''',
+          '''It\'s full of old junk here.''':
+              '''Tele van itt régi kacatokkal.''',
+          '''I\'ve never seen so much dust.''':
+              '''Soha nem láttam még ennyi port.''',
+          '''Here it\'s full of snow globes with a miniaturized Mitsu Forest inside. When they were built snow was a very rare phenomenon here and it was much more appreciated.''':
+              '''Itt tele van hógömbökkel, amelyekben egy miniatürizált Mitsu Erdő van. Amikor ezeket építették, a hó nagyon ritka jelenség volt itt, és sokkal jobban megbecsülték.''',
+          '''There are very expensive junk here.''':
+              '''Itt nagyon drága kacatok vannak.''',
+          '''I think this vase was placed here on purpose to block the passage.''':
+              '''Szerintem ezt a vázát szándékosan rakták ide, hogy elzárja a lejáratot.''',
+          '''You are the chosen one for this year, right? My son was too many years ago.''':
+              '''Te vagy a kiválasztott ebben az évben, igaz? Az én fiam is az volt sok évvel ezelőtt.''',
+          '''Unfortunately he failed to defeat the King of Evil…''':
+              '''Sajnos nem sikerült legyőznie a Gonosz Királyát…''',
+          '''Pharmacy''': '''Gyógyszertár''',
+          '''Welcome to my shop!''': '''Üdvözöllek a boltomban!''',
+          '''pharmacist''': '''gyógyszerész''',
+          '''" ← Sacred Tree "\n" Melhopolis City Center → "''':
+              '''" ← Szent fa "\n" Melhopolis Városközpont → "''',
+          '''I advise you to take another path.\nThese monsters are too strong.''':
+              '''Azt tanácsolom, hogy válassz más utat.\nEzek a szörnyek túl erősek.''',
+          '''Xeonjia Tower''': '''Xeonjia torony''',
+          '''Hi Milla, are you ok? Did you get here without any problems?''':
+              '''Szia Milla, jól vagy? Minden gond nélkül ideértél?''',
+          '''Hii {{hero}}!''': '''Heló {{hero}}!''',
+          '''Yes, I cleverly managed to avoid the monsters that were along the way!''':
+              '''Igen, ügyesen sikerült kikerülnöm a szörnyeket, amelyek az út mentén voltak!''',
+          '''I love those cute little green worms!''':
+              '''Imádom azokat az aranyos kis zöld kukacokat!''',
+          '''…S-such weird tastes here.''': '''...Olyan furcsa az ízlése.''',
+          '''Unkind!''': '''Udvariatlan!''',
+          '''Aaanyway, look here! This is the tower where the King of Evil resides!''':
+              '''Mindegy, nézz ide! Ez az a torony, ahol a Gonosz Király lakik!''',
+          '''Oh really? Are we there yet?''': '''Tényleg? Ott vagyunk már?''',
+          '''It seems so… but it\'s closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets.''':
+              '''Úgy tűnik... de zárva van!\nEz a kedves úriember itt elmagyarázta nekem, hogy a toronyba való bejutáshoz 3 jelvényre van szükséged.''',
+          '''Signets?''': '''Jelvények?''',
+          '''I did not understand exactly what they are, but if I have not misunderstood they are kept in crypts present in each region of the Kingdom.''':
+              '''Nem értettem pontosan, hogy mik ezek, de ha nem értettem félre, akkor a Királyság minden régiójában található kriptákban őrzik őket.''',
+          '''Mm… Then I really think that I have to set out in search of these crypts…''':
+              '''Mm... Akkor tényleg azt hiszem, hogy el kell indulnom megkeresni ezeket a kriptákat…''',
+          '''I guess you have no other choice.''':
+              '''Azt hiszem, nincs más választásod.''',
+          '''Good luck!''': '''Sok szerencsét!''',
+          '''Do your best!''': '''Tegyél meg minden tőled telhetőt!''',
+          '''I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent.''':
+              '''Utálom ezt a kislányt... Ezer kérdéssel zaklatott, és addig sírt, amíg meg nem mondtam neki, amit akart. Milyen szemtelen.''',
+          '''One signet is not enough.''': '''Egy jelvény nem elég.''',
+          '''" Xeonjia Tower – Dwelling of the King of Evil. Stay away "''':
+              '''" Xeonjia torony - A gonosz király lakhelye. Maradj távol "''',
+          '''This door is closed.''': '''Ez az ajtó zárva van.''',
+          '''This door is closed, I need the 3 signets to open it.''':
+              '''Ez az ajtó zárva van, szükségem van a 3 jelvényre, hogy kinyissam.''',
+          '''I should go to the tower.''': '''A toronyba kell mennem.''',
+          '''The tower is so ugly.''': '''A torony annyira csúnya.''',
+          '''Home''': '''Otthon''',
+          '''Good morning mom!''': '''Jó reggelt anya!''',
+          '''Hi {{hero}}! Did you sleep well?''':
+              '''Szia {{hero}}! Jól aludtál?''',
+          '''mom''': '''anya''',
+          '''Actually not very well… I\'m still a little sleepy.''':
+              '''Igazából nem túl jól... Még mindig kicsit álmos vagyok.''',
+          '''You always are.\nAnyway, now it is time to leave, be very careful and remember to check your health in the top left bar.''':
+              '''Mindig is az voltál.\nMindenesetre most már ideje indulni, légy nagyon óvatos, és ne felejtsd el ellenőrizni az életerődet a felső sarokban.''',
+          '''Yea mom. Don\'t worry, I\'ll be careful.''':
+              '''Igen, anya. Ne aggódj, óvatos leszek.''',
+          '''When you hit the rocks you could hurt yourself, so stop by our neighbor who have prepared a brand new pair of shin guards for you.''':
+              '''A szikláknak ütközve megsérülhetsz, ezért állj meg a szomszédunknál, aki vadonatúj sípcsontvédővel készült neked.''',
+          '''Sure, I will.''': '''Persze, hogy meg fogok.''',
+          '''Go get the shin guards from the neighbor, you will need them.''':
+              '''Menj a sípcsontvédőért a szomszédba, szükséged lesz rá.''',
+          '''The new shin guards are beautiful, they match the suit.''':
+              '''Az új sípcsontvédő gyönyörű, illik a ruhámhoz.''',
+          '''This plant hasn\'t been watered for long.''':
+              '''Ezt a növényt már régóta nem öntözték.''',
+          '''Unfortunately, this is not the time to lie down on the sofa.''':
+              '''Sajnos most nincs idő lefeküdni a kanapéra.''',
+          '''This plant seems to have been recently watered.''':
+              '''Úgy tűnik, hogy ezt a növényt nemrég öntözték.''',
+          '''The last time I went through the forest I was attacked.\nI\'m not going back there anymore.''':
+              '''Legutóbb, amikor az erdőben jártam, megtámadtak.\nTöbbé nem megyek oda vissza.''',
+          '''If you want to enter the forest you have to be careful, my grandson risked getting hurt there.''':
+              '''Ha be akarsz menni az erdőbe, óvatosnak kell lenned, az unokám kockáztatta, hogy ott megsérül.''',
+          '''Do you think piglets will one day be a common pet?''':
+              '''Szerinted a malacok egy nap gyakori háziállatok lesznek?''',
+          '''I think so too.''': '''Én is így gondolom.''',
+          '''Oh, I hope you are not right.''': '''Ó, remélem, nincs igazad.''',
+          '''I like piglets.''': '''Szeretem a malacokat.''',
+          '''Mossy Crypt -3F''': '''Mossy Kripta -3F''',
+          '''My work is so boring…''': '''A munkám annyira unalmas…''',
+          '''I will defeat you.''': '''Legyőzlek.''',
+          '''This is a very strange stone… Never seen anything like this before.''':
+              '''Ez egy nagyon furcsa kő... Soha nem láttam még ilyet.''',
+          '''Hi, I\'m an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I\'ll help you.''':
+              '''Üdvözöllek, a Királyság alkalmazottja vagyok.\nHa eltévedsz, vagy problémád van az útkereséssel, gyere vissza hozzám, és segítek neked.''',
+          '''Are you stuck?\nTake the path behind the blue tree.''':
+              '''Elakadtál?\nMenj a kék fa mögötti ösvényen.''',
+          '''A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it\'s dangerous and infested with monsters.''':
+              '''Néhány méterre innen található a Mitsu Erdő. Valaha sok turistát vonzott, mivel szent helynek számított, de ma már veszélyes és szörnyekkel fertőzött.''',
+          '''Hoarfrost Team members came to our house because they wanted a gem that I found on the ground.\nWe managed to keep it hidden from them but we don\'t want to have problems anymore.\nWe don\'t even need it after all, can we give it to you?''':
+              '''A Hoarfrost Team tagjai eljöttek hozzánk, mert egy drágakövet akartak, amit a földön találtam.\nSikerült elrejtenünk előlük, de nem akarunk több problémát.\nVégül is nincs is rá szükségünk, odaadhatjuk neked?''',
+          '''Here\'s to you!''': '''Tessék itt van!''',
+          '''Thank you!''': '''Köszönöm!''',
+          '''Oh, ok. Then I\'ll have to think about what to do with this gem.''':
+              '''Ó, oké. Akkor el kell gondolkodnom, hogy mit kezdjek ezzel a gyöngyszemmel.''',
+          '''Protect that gem well.''': '''Védd meg jól ezt a drágakövet.''',
+          '''Be careful when dealing with the Hoarfrost Team.''':
+              '''Légy óvatos, amikor a Hoarfrost csapattal foglalkozol.''',
+          '''Mind your own business.''': '''Törődj a saját dolgoddal.''',
+          '''This plant is very fragrant.''': '''Ez a növény nagyon illatos.''',
+          '''This vase is very heavy, I can\'t move it.''':
+              '''Ez a váza nagyon nehéz, nem tudom megmozdítani.''',
+          '''Yes thanks''': '''Igen, köszönöm''',
+          '''NEIGHBOR\'S HOUSE''': '''A SZOMSZÉD HÁZA''',
+          '''Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones.\nI made them by hand. Here\'s to you!''':
+              '''Helló, fiam, jól vagy? Elkészítettem neked a sípcsontvédőket, szükséged lesz rájuk, hogy tompítsd az ütődéseket a kövekkel.\nKézzel készítettem őket. Tessék itt van!''',
+          '''neighbor''': '''szomszéd''',
+          '''* {{hero}} got and put on the shin guards *''':
+              '''* {{hero}} megkapta és felvette a sípcsontvédőt *''',
+          '''This way you will hurt yourself less, but be careful that they do not fully protect you from damage.''':
+              '''Így kevésbé fogsz megsérülni, de vigyázz, mert nem véd meg teljesen a sérüléstől.''',
+          '''Thank you very much!''': '''Köszönöm szépen!''',
+          '''Since the shin guards I gave you do not fully protect you, try to think diligently about the moves you make.''':
+              '''Mivel a sípcsontvédő, amit adtam neked, nem véd meg teljesen, próbáld meg alaposan átgondolni a mozdulataidat.''',
+          '''I\'m sorry but this road is closed.\nWork is underway to restore the railway system.''':
+              '''Sajnálom, de ez az út le van zárva.\nA vasúti rendszer helyreállítása folyamatban van.''',
+          '''Welcome to the City Hall.''': '''Üdvözlünk a városházában.''',
+          '''I can\'t wait till they finish to restore the railway system, it no longer work since the ice arrival.''':
+              '''Alig várom, hogy befejezzék a vasúti rendszer helyreállítását, a jég megérkezése óta már nem működik.''',
+          '''My wife remained blocked on the other side of the kingdom, I wonder if I will ever see her again.''':
+              '''A feleségem elzárva maradt az ország másik felén, vajon látom még valaha.''',
+          '''" City Hall ↑ "''': '''" Városháza ↑ "''',
+          '''" Route 4 → "''': '''" 4. útvonal → "''',
+          '''Before continuing I\'d like to visit the City Hall.''':
+              '''Mielőtt folytatnám, szeretném meglátogatni a városházát.''',
+          '''The City Hall seems spacious.''':
+              '''A városháza tágasnak tűnik.''',
+          '''You\'re lucky, but it doesn\'t end here, guaranteed.''':
+              '''Szerencsés vagy, de itt még nincs vége, garantáltan.''',
+          '''You will not escape me.''': '''Nem menekülsz előlem.''',
+          '''I can\'t escape. I have to take the first signet.''':
+              '''Nem tudok elmenekülni. El kell vennem az első jelvényt.''',
+          '''Here it is, this is the first signet!''':
+              '''Itt van, az első jelvény!''',
+          '''I can get out of here now.''': '''Most már elmehetek innen.''',
+          '''The henchmen are after me! I\'ll get the signet later.''':
+              '''A csatlósok a nyomomban vannak! Később megszerzem a jelvényt.''',
+          '''I didn\'t think you would get this far, kid.''':
+              '''Nem gondoltam, hogy idáig eljutsz, kölyök.''',
+          '''W-Who are you? Who are you guys?''':
+              '''Ki maga? Kik vagytok ti?''',
+          '''I\'m surprised that my name is not known among the woods of your village.''':
+              '''Meglep, hogy a nevemet nem ismerik a falu erdői között.''',
+          '''Anyway, I\'m Dr. Lache and I\'m the leader of the Hoarfrost Team.''':
+              '''Egyébként Dr. Lache vagyok, és én vagyok a Hoarfrost csapat vezetője.''',
+          '''dr. lache''': '''dr. lache''',
+          '''S-So you\'re the one who spread terror and violence through the henchmen as ordered by the King of Evil?''':
+              '''Sz-szóval te vagy az, aki a Gonosz Király parancsára terrort és erőszakot terjesztett a csatlósokon keresztül?''',
+          '''As ordered by the King of Evil? HAHAHA''':
+              '''A Gonosz Király parancsára? HAHAHA''',
+          '''I don\'t take orders from anyone. Between me and the King of Evil there is a peer collaboration.''':
+              '''Nem fogadok el parancsokat senkitől. Köztem és a Gonosz Királya között egyenrangú együttműködés van.''',
+          '''Be that as it may, I won\'t let you continue your plans.''':
+              '''Akárhogy is van, nem hagyom, hogy folytasd a terveidet.''',
+          '''I\'m {{hero}}, I\'m the chos-''':
+              '''Én vagyok {{hero}}, én vagyok a főnök-''',
+          '''I know very well who you are, you\'re the chosen hero and blah, blah, blah.\nI don\'t have time for this.''':
+              '''Nagyon jól tudom, hogy ki vagy, te vagy a kiválasztott hős és bla, bla, bla, bla.\nErre nincs időm.''',
+          '''I know you\'re interested in the signet, defeat my henchmen and it\'s yours.\nNow get out of my way.''':
+              '''Tudom, hogy akarod a jelvényt, győzd le a csatlósaimat, és a tiéd lesz.\nMost pedig tűnj az utamból.''',
+          '''I won\'t let you go so eas-''':
+              '''Nem engedlek el olyan könnyen-''',
+          '''Well, well, well… you\'ll have to deal with us now.''':
+              '''Nocsak, nocsak, ... most már velünk kell foglalkoznod.''',
+          '''I\'m Iosa.''': '''Én vagyok Iosa.''',
+          '''And I\'m Joza.''': '''Én pedig Joza vagyok.''',
+          '''We are the Iosa&Joza brothers and we will be your worst nightmare.''':
+              '''Mi vagyunk a Iosa és Joza testvérek, és mi leszünk a legrosszabb rémálmod.''',
+          '''I\'m not scared of you, let\'s see what you are capable of!''':
+              '''Nem félek tőled, lássuk, mire vagy képes!''',
+          '''Now you will see.''': '''Most meglátod.''',
+          '''Let\'s fight!''': '''Harcoljunk!''',
+          '''iosa&joza''': '''losa és joza''',
+          '''A rocky wall covered by moss.''':
+              '''Egy mohával borított sziklafal.''',
+          '''iosa''': '''losa''',
+          '''joza''': '''joza''',
+          '''This part is under construction.''':
+              '''Ez a rész építés alatt áll.''',
+          '''Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck.''':
+              '''Néha a növények ágai között bogyókat is találhatsz.\nNéha találtam olyan tárgyakat is amelyek bennragadtak.''',
+          '''Oh, I was about to take those berries.''':
+              '''Ó, épp el akartam venni azokat a bogyókat.''',
+          '''No problem, you can keep them.''':
+              '''Nem probléma, megtarthatod őket.''',
+          '''I hope those berries were good.''':
+              '''Remélem, hogy azok a bogyók jók voltak.''',
+          '''On the ground it\'s easy to find XEON (¤) stones that you can use to buy items in shops.''':
+              '''A földön könnyű XEON (¤) köveket találni, amelyekkel tárgyakat vásárolhatsz a boltokban.''',
+          '''It seems that once there was a path here.''':
+              '''Úgy tűnik, hogy valaha volt itt egy ösvény.''',
+          '''Mossy Crypt -1F''': '''Mossy Kripta -1F''',
+          '''I advise you not to continue, you are running into big trouble.\nI\'ll report your presence to my boss.''':
+              '''Azt tanácsolom, hogy ne folytasd, nagy bajba kerülsz.\nJelenteni fogom a jelenlétedet a főnökömnek.''',
+          '''If you decide to continue you will regret it.''':
+              '''Ha úgy döntesz, hogy folytatod, meg fogod bánni.''',
+          '''Route 1''': '''1. útvonal''',
+          '''The ice is so slippery, have you noticed?\nI feel more comfortable on the snow.''':
+              '''A jég olyan csúszós, észrevetted?\nÉn jobban érzem magam a havon.''',
+          '''There seems to be something in the branches of this plant…\nIt\'s a stone!''':
+              '''Úgy tűnik, van valami ennek a növénynek az ágaiban...\nEz egy kő!''',
+          '''VANTOI LAB – 2F''': '''VANTOI LABOR - 2F''',
+          '''What a mess! I have to tidy up!''':
+              '''Micsoda rendetlenség! Ki kell takarítanom!''',
+          '''Some boulders are placed by us, the workers of the Kingdom.\nIn this way it\'s easier to reach all places.''':
+              '''Néhány sziklát mi, az Ország munkásai helyezünk el.\nÍgy könnyebb minden helyre eljutni.''',
+          '''" Souvenir shop "''': '''" Szuvenírbolt "''',
+          '''I can see the inside of the shop.''': '''Látom a bolt belsejét.''',
+          '''Melhopolis is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though.''':
+              '''Melhopolis a régió közigazgatási központja.\nNapjainkban azonban a korrupció, a szegénység és a bűnözés burjánzik.''',
+          '''Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here.''':
+              '''Hé, ez itt a Mitsu Erdő. A szüleim sok történetet meséltek nekem arról, hogy milyen szép és virágzó volt régen. Azt mondják, hogy valamikor réges-régen itt élt a kontinens misztikus védelmező lénye.''',
+          '''174805…\nI don\'t know what these figures are but a little while ago I heard someone say them out loud…\nDunno why.''':
+              '''174805...\nNem tudom, mik ezek a számok, de nemrég hallottam valakit hangosan kimondani őket...\nNem tudom miért.''',
+          '''The trees of this region are admired and studied throughout the Kingdom. These blues are my favorites.''':
+              '''A régió fáit az egész királyságban csodálják és tanulmányozzák. Ezek a kékek a kedvenceim.''',
+          '''" Mitsu Forest – Welcome, respect nature and remember to take a look at the souvenir shop on the right "''':
+              '''" Mitsu Erdő - Üdvözölünk, tiszteljük a természetet, és ne feledjük, hogy vessünk egy pillantást a szuvenír boltban a jobb oldalon "''',
+          '''Once this was a very touristy place, the Kingdom tried to make money from it.''':
+              '''Egykor ez egy nagyon turisztikai hely volt, a királyság megpróbált pénzt csinálni belőle.''',
+          '''Test tubes and other scientific stuff.''':
+              '''Kémcsövek és egyéb tudományos dolgok.''',
+          '''Someone has turned everything upside down.''':
+              '''Valaki mindent felforgatott.''',
+          '''A rocky wall.''': '''Egy sziklafal.''',
+          '''A wall.''': '''Egy fal.''',
+          '''It\'s not a good thing to look into other people\'s homes.''':
+              '''Nem szép dolog benézni mások otthonába.''',
+          '''This is a pharmacy.''': '''Ez egy gyógyszertár.''',
+          '''A little plant.''': '''Egy kis növény.''',
+          '''A little plant without leaves.''':
+              '''Egy levél nélküli kis növény.''',
+          '''I like the color of this tree.''':
+              '''Tetszik ennek a fának a színe.''',
+          '''This type of tree is strange.''': '''Ez a fajta fa különös.''',
+          '''This type of plant is strange.''':
+              '''Ez a fajta növény különös.''',
+          '''man''': '''férfi''',
+          '''lumberjack''': '''favágó''',
+          '''young-girl''': '''fiatal lány''',
+          '''youngster''': '''fiatalember''',
+          '''elderly''': '''idős''',
+          '''guy''': '''srác''',
+          '''old-man''': '''öregember''',
+          '''adventurer''': '''kalandor''',
+          '''dude''': '''haver''',
+          '''girl''': '''lány''',
+          '''oldster''': '''öregember''',
+          '''henchman''': '''csatlós''',
+          '''worker''': '''munkás''',
+          '''I don\'t know what this means.''': '''Nem tudom, mit jelent ez.''',
+          '''I can\'t go beyond this.''': '''Nem tudok tovább menni.''',
+          '''milla''': '''milla''',
+          '''shen''': '''shen''',
+          '''The weather is good today.''': '''Ma jó idő van.''',
+          '''A painting that depicts this area long ago.''':
+              '''Egy festmény, amely ezt a területet ábrázolja régen.''',
+          '''It\'s full of books here.''': '''Tele van itt könyvekkel.''',
+          '''A closed door.''': '''Egy zárt ajtó.''',
+          '''There is some food between the mattresses of this sofa.''':
+              '''A kanapé matracai között van némi étel.''',
+          '''This is a wall.''': '''Ez egy fal.''',
+          '''Oink !''': '''Röf röf!''',
+          '''This pig looks very happy.''':
+              '''Ez a malac nagyon boldognak tűnik.''',
+          '''Package of the King''': '''A király csomagja''',
+          '''First Signet''': '''Az első jelvény''',
+        },
         'fr': {
           '''City Hall''': '''Hôtel de ville''',
           '''…''': '''…''',
@@ -102,6 +608,9 @@ extension Localization on String {
               '''Je dois dire au revoir à mes parents avec le bouton « A » avant de partir. Sinon, ce serait impoli.''',
           '''Like my mother said, it\'s better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.''':
               '''Comme ma mère l\'a dit, c\'est mieux si je vais chercher les protège-tibias chez ma voisine, sinon je risque de me faire trop mal avec les rochers.''',
+          '''* {{hero}} found {{money-diff}} ¤ *''':
+              '''* {{hero}} a trouvé {{money-diff}} ¤ *''',
+          '''A rock.''': '''Un rocher.''',
           '''I still haven\'t figured out if these monsters are malicious or just stupid.''':
               '''Je n\'ai toujours pas compris si ces monstres sont méchants ou juste stupides.''',
           '''I hate people who always say the same things.''':
@@ -164,6 +673,8 @@ extension Localization on String {
               '''« Zone de piquenique – Ne pas laisser de déchets, merci »''',
           '''" Picnic area ↑ "\n" Forest Center ↓ "''':
               '''« Zone de piquenique ↑ »\n« Centre de la Forêt ↓ »''',
+          '''Yes''': '''Oui''',
+          '''No''': '''Non''',
           '''Mossy Crypt -4F''': '''Crypte moussue -4E''',
           '''The snowballs container is full.''':
               '''Le conteneur à boules de neige est plein.''',
@@ -174,8 +685,6 @@ extension Localization on String {
           '''We\'re watching you.''': '''Nous te surveillons.''',
           '''Hmm, I think that from this snowdrift I can obtain material to make new snowballs by pressing the \'A\' key.''':
               '''Hmm, je crois que je peux obtenir des matériaux de cette congère pour faire de nouvelles boules de neige en appuyant sur A.''',
-          '''* {{hero}} found {{money-diff}} ¤ *''':
-              '''* {{hero}} a trouvé {{money-diff}} ¤ *''',
           '''A rock covered by moss.''': '''Un rocher couvert de mousse.''',
           '''T-today… today is the day I\'ve been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I\'m the chosen "hero" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to.''':
               '''Au-aujourd\'hui… c\'est le jour que j\'ai attendu toute ma vie. Mon voyage vers la tour Xeonjia est sur le point de commencer.\nCette année, je suis le « héros » élu pour vaincre le monstre qui a gelé le Royaume…\nAprès des années de formation, j\'espère réussir.''',
@@ -191,6 +700,8 @@ extension Localization on String {
           '''Melhopolis''': '''Melhopolis''',
           '''The city center is a few kilometers to the south.''':
               '''Le centre-ville est à quelques kilomètres au sud.''',
+          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
+              '''Je prépare un mariage surprise pour mon fils ; j\'espère qu\'il ne le découvrira pas.''',
           '''" VANTOI LAB "''': '''« VANTOI LAB »''',
           '''I can see the inside of the Laboratory.''':
               '''Je peux voir l\'intérieur du Laboratoire.''',
@@ -278,10 +789,6 @@ extension Localization on String {
               '''Tu es l\'élu de cette année, non ? Mon fils l\'a été il y a bien des années.''',
           '''Unfortunately he failed to defeat the King of Evil…''':
               '''Malheureusement, il a échoué à vaincre le Roi du Mal…''',
-          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
-              '''Je prépare un mariage surprise pour mon fils ; j\'espère qu\'il ne le découvrira pas.''',
-          '''This part is under construction.''':
-              '''Cette partie est en construction.''',
           '''Pharmacy''': '''Pharmacie''',
           '''Welcome to my shop!''': '''Bienvenue dans ma boutique !''',
           '''pharmacist''': '''pharmacien''',
@@ -359,10 +866,9 @@ extension Localization on String {
           '''Oh, I hope you are not right.''':
               '''Oh, j\'espère que ce n\'est pas le cas.''',
           '''I like piglets.''': '''J\'aime les porcelets.''',
-          '''Yes''': '''Oui''',
-          '''No''': '''Non''',
           '''Mossy Crypt -3F''': '''Crypte moussue -3E''',
           '''My work is so boring…''': '''Mon travail est si ennuyant…''',
+          '''I will defeat you.''': '''Je te vaincrai.''',
           '''Hi, I\'m an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I\'ll help you.''':
               '''Salut, je suis un employé du Royaume.\nSi vous vous perdez ou si vous avez du mal à trouver votre chemin, revenez me voir et je vous aiderai.''',
           '''Are you stuck?\nTake the path behind the blue tree.''':
@@ -410,7 +916,6 @@ extension Localization on String {
               '''L\'Hôtel de ville semble spacieux.''',
           '''You\'re lucky, but it doesn\'t end here, guaranteed.''':
               '''Tu as de la chance, mais ce n\'est pas fini, garanti.''',
-          '''I will defeat you.''': '''Je te vaincrai.''',
           '''You will not escape me.''': '''Tu ne m\'échapperas pas.''',
           '''I can\'t escape. I have to take the first signet.''':
               '''Je ne peux pas m\'échapper. Je dois récupérer le premier sceau.''',
@@ -460,6 +965,8 @@ extension Localization on String {
               '''Un mur de roche couvert de mousse.''',
           '''iosa''': '''iosa''',
           '''joza''': '''joza''',
+          '''This part is under construction.''':
+              '''Cette partie est en construction.''',
           '''Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck.''':
               '''Parfois, parmi les branches des plantes, vous pouvez trouver des baies.\nIl m\'est également arrivé de trouver des objets restés bloqués.''',
           '''Oh, I was about to take those berries.''':
@@ -482,8 +989,6 @@ extension Localization on String {
               '''La glace est si glissante, tu as remarqué ?\nJe me sens plus à l\'aise sur la neige.''',
           '''There seems to be something in the branches of this plant…\nIt\'s a stone!''':
               '''Il semble y avoir quelque chose dans les branches de cette plante…\nC\'est une pierre !''',
-          '''This is a very strange stone… Never seen anything like this before.''':
-              '''C\'est une pierre très étrange… jamais rien vu de pareil auparavant.''',
           '''VANTOI LAB – 2F''': '''VANTOI LAB – 2E''',
           '''What a mess! I have to tidy up!''':
               '''Quel désordre ! Je dois nettoyer !''',
@@ -510,7 +1015,9 @@ extension Localization on String {
               '''Quelqu\'un a tout mis sans dessus dessous.''',
           '''A rocky wall.''': '''Un mur rocheux.''',
           '''A wall.''': '''Un mur.''',
-          '''A rock.''': '''Un rocher.''',
+          '''It\'s not a good thing to look into other people\'s homes.''':
+              '''Ce n\'est pas bien de regarder chez les autres.''',
+          '''This is a pharmacy.''': '''Ceci est une pharmacie.''',
           '''A little plant.''': '''Une petite plante.''',
           '''A little plant without leaves.''':
               '''Une petite plante sans feuille.''',
@@ -520,9 +1027,6 @@ extension Localization on String {
               '''Ce type d\'arbre est étrange.''',
           '''This type of plant is strange.''':
               '''Ce type de plante est étrange.''',
-          '''It\'s not a good thing to look into other people\'s homes.''':
-              '''Ce n\'est pas bien de regarder chez les autres.''',
-          '''This is a pharmacy.''': '''Ceci est une pharmacie.''',
           '''man''': '''homme''',
           '''lumberjack''': '''bucheron''',
           '''young-girl''': '''jeune fille''',
@@ -552,8 +1056,6 @@ extension Localization on String {
           '''Oink !''': '''Grouin !''',
           '''This pig looks very happy.''':
               '''Ce cochon a l\'air très heureux.''',
-          '''A strange icosahedral stone''':
-              '''Une étrange pierre icosaédrique''',
           '''Package of the King''': '''Paquet du Roi''',
           '''First Signet''': '''Premier Sceau''',
         },
@@ -599,6 +1101,15 @@ extension Localization on String {
           '''A little plant… nothing else.''':
               '''Solo una piccola pianta… nient\'altro.''',
           '''" Exit ↑ "''': '''" Uscita ↑ "''',
+          '''In the distance can be seen the other part of the region.''':
+              '''In lontananza si riesce a vedere l\'altra parte della regione.''',
+          '''The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts.''':
+              '''Gli abitanti di questa regione lasciano doni in questi vasi per i viaggiatori e i marinai che sbarcano qui.\nÈ una tradizione antica.\nSentiti libero di prendere i doni anche tu.''',
+          '''Hey, there are items in here!''': '''Ehi, ci sono oggetti qui!''',
+          '''There are still items in here but I\'ve already taken one.''':
+              '''Ci sono ancora oggetti qui dentro, ma ne ho già preso uno.''',
+          '''I can see a city in the distance.''':
+              '''Riesco a vedere una città in lontananza.''',
           '''VANTOI LAB – 1F''': '''VANTOI LAB – 1P''',
           '''Sorry about the mess. Thieves have entered and turned everything upside down.''':
               '''Scusa il disordine. Sono entrati i ladri e hanno buttato tutto per aria.''',
@@ -622,6 +1133,17 @@ extension Localization on String {
               '''Devo dire addio ai miei genitori premendo il tasto A prima di andarmene. Non voglio partire senza farlo.''',
           '''Like my mother said, it\'s better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.''':
               '''Come ha detto mia madre, è meglio se vado a prendere i parastinchi dal mio vicino di casa, altrimenti rischio di farmi troppo male con le rocce.''',
+          '''Route 4''': '''Percorso 4''',
+          '''This vase is empty.''': '''Questo vaso è vuoto.''',
+          '''* {{hero}} found {{money-diff}} ¤ *''':
+              '''* {{hero}} ha trovato {{money-diff}} ¤ *''',
+          '''A rock.''': '''Una roccia.''',
+          '''" Hexa Cave "''': '''" Grotta Hexa "''',
+          '''Zamelis Village''': '''Villaggio Zamelis''',
+          '''I want to reach the capital quickly but the only way is traveling by land.''':
+              '''Vorrei raggiungere rapidamente la capitale ma l\'unico modo è via terra.''',
+          '''I really needed a pomegranate juice.''':
+              '''Avevo davvero bisogno di un succo di melograno.''',
           '''I still haven\'t figured out if these monsters are malicious or just stupid.''':
               '''Non ho ancora capito se questi mostri sono cattivi o semplicemente stupidi.''',
           '''I hate people who always say the same things.''':
@@ -647,6 +1169,26 @@ extension Localization on String {
               '''Non posso scappare, devo sconfiggere il mostro per salvare quell\'uomo.''',
           '''Better if I check that the guy is okay.''':
               '''Meglio controllare che il ragazzo stia bene.''',
+          '''The prices for an LP UP are too high for me.''':
+              '''I prezzi per un PV UP sono troppo alti per me.''',
+          '''I would love to leave for a long journey but I don\'t have the strength anymore.''':
+              '''Mi piacerebbe partire per un lungo viaggio ma non ne ho più la forza.''',
+          '''" Zamelis Village "''': '''" Villaggio Zamelis "''',
+          '''{{hero}}, there you are. Finally! I heard a rumor that you were coming here.''':
+              '''{{hero}}, eccoti qua. Finalmente! Avevo sentito dire che stavi venendo qui.''',
+          '''September! Long time no see! Last time was when we battled each other to be proclaimed HERO, we were 5 years old.''':
+              '''Settembre! Da quanto tempo non ci vediamo! L\'ultima volta è stato quando ci siamo sfidati per essere proclamati EROI, avevamo 5 anni.''',
+          '''I remember well, you got lucky that time.\nBut now it would go differently.\nI challenge you now. Show me that you are better than me.\nSee you on the north-east side of the village. I will wait for you there.''':
+              '''Mi ricordo bene, sei stato fortunato quella volta.\nMa adesso andrebbe diversamente.\nTi sfido ora. Dimostrami che sei migliore di me.\nCi vediamo sul lato nord-est del villaggio. Ti aspetterò lì.''',
+          '''W-Wait a moment, September!''':
+              '''A-Aspetta un momento, Settembre!''',
+          '''How are you? Everything good? I haven\'t seen you for 16 years… We have so much to talk about.''':
+              '''Come stai? Tutto bene? Non ci vediamo da 16 anni… Abbiamo tante cose di cui parlare.''',
+          '''I don\'t have time to mess around.\nSee you where I told you.''':
+              '''Non ho tempo da perdere.\nCi vediamo dove ti ho detto.''',
+          '''O-Ok… see you later.''': '''O-Ok… a dopo.''',
+          '''I remembered her less surly.''':
+              '''Me la ricordavo meno scontrosa.''',
           '''" ← Pharmacy "''': '''" ← Farmacia "''',
           '''Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays.''':
               '''Ops… sì, scusa, sono in mezzo alla strada…\nSei un turista? Ce ne sono pochi ultimamente.''',
@@ -683,6 +1225,89 @@ extension Localization on String {
               '''" Area picnic – Non lasciare rifiuti, grazie "''',
           '''" Picnic area ↑ "\n" Forest Center ↓ "''':
               '''" Area picnic ↑ "\n" Centro del bosco ↓ "''',
+          '''Hexa Cave''': '''Grotta Hexa''',
+          '''I think somehow it\'s possible to invoke the protective spirit of this region. We just have to figure out how.''':
+              '''Penso che in qualche modo sia possibile invocare lo spirito protettivo di questa regione. Dobbiamo solo capire come.''',
+          '''Let me know if you need help.''':
+              '''Fammi sapere se hai bisogno di aiuto.''',
+          '''I think that all the writings on the six stones must be true to invoke the spirit.''':
+              '''Penso che tutte le scritte presenti sulle sei pietre debbano essere vere per invocare lo spirito.''',
+          '''I think that #1 should be green.''':
+              '''Penso che #1 debba essere verde.''',
+          '''Do you need help?''': '''Hai bisogno di aiuto?''',
+          '''It doesn\'t seem difficult to solve.''':
+              '''Non sembra difficile da risolvere.''',
+          '''I don\'t know what you did but it seems to have worked.''':
+              '''Non so cosa hai fatto ma sembra che abbia funzionato.''',
+          '''" #3: I\'m green if #5 and #6 are both the same color. Otherwise I\'m red. "''':
+              '''" #3: Sono verde se #5 e #6 sono tra di loro dello stesso colore. Altrimenti sono rosso. "''',
+          '''There is a button, do I press it?''':
+              '''C\'è un bottone, lo premo?''',
+          '''I no longer need to press the button.''':
+              '''Non ho più bisogno di premere il pulsante.''',
+          '''" #5: I\'m red if #1 is red. Otherwise I\'m green. "''':
+              '''" #5: Sono rosso se #1 è rosso. Altrimenti sono verde. "''',
+          '''" #4: I\'m green if #3 is green. Otherwise I\'m red. "''':
+              '''" #4: Sono verde se #3 è verde. Altrimenti sono rosso. "''',
+          '''" #2: I\'m green if #4 is red. Otherwise I\'m red. "''':
+              '''" #2: Sono verde se #4 è rosso. Altrimenti sono rosso. "''',
+          '''" #1: I\'m red if #4 is green. Otherwise I\'m green. "''':
+              '''" #1: Sono rosso se #4 è verde. Altrimenti sono verde. "''',
+          '''" #6: I\'m red if #2 is green. Otherwise I\'m green. "''':
+              '''" #6: Sono rosso se #2 è verde. Altrimenti sono verde. "''',
+          '''!!!''': '''!!!''',
+          '''Hi {{hero}}! How are you doing? Were you able to get the first signet?''':
+              '''Ciao {{hero}}! Come va? Sei riuscito a ottenere il primo sigillo?''',
+          '''Hi Shen! Yes I did it!''': '''Ciao Shen! Sì, ce l\'ho fatta!''',
+          '''But it was not easy.''': '''Ma non è stato facile.''',
+          '''I didn\'t have any big problems.''':
+              '''Non ho avuto grandi problemi.''',
+          '''Great! I had no doubt you would make it.\nDid you find the snowballs helpful?''':
+              '''Grande! Non avevo dubbi che ce l\'avresti fatta.\nHai trovato utili le palle di neve?''',
+          '''Yes, I couldn\'t do it without them, thank you!\nWhat is this place?''':
+              '''Sì, non ce l\'avrei fatta senza, grazie!\nChe cos\'è sto posto?''',
+          '''I think it is an ancient cave.\nLook at this inscription.''':
+              '''Credo che sia un\'antica grotta.\nGuarda questa scritta.''',
+          '''Everything originated from water, everything will return to water.''':
+              '''Tutto ha avuto origine dall\'acqua, tutto all\'acqua ritornerà.''',
+          '''What does it say? What does it mean?''':
+              '''Che cosa c\'è scritto? Che cosa significa?''',
+          '''It is the ancient writing used in these areas long ago.\nHere it says:''':
+              '''È l\'antica scrittura usata da queste parti molto tempo fa.\nQui c\'è scritto:''',
+          '''Slooosh!''': '''Slooosh!''',
+          '''Hi, I\'m the spirit of water.\nIs there anything you need?\nI don\'t have much time, with this cold I quickly become ice. And I\'d say there\'s enough ice here.''':
+              '''Ciao, sono lo spirito dell\'acqua.\nAvete bisogno di qualcosa?\nNon ho molto tempo, con questo freddo congelo rapidamente. E direi che qui c\'è già abbastanza ghiaccio.''',
+          '''water spirit''': '''spirito dell\'acqua''',
+          '''{{hero}} what could we ask him? I have plenty of questions, but if you agree I would ask him if he knows anything about the King of Evil.''':
+              '''{{hero}} cosa potremmo chiedergli? Ho un sacco di domande, ma se sei d\'accordo gli chiederei se sa qualcosa sul Re del Male.''',
+          '''I agree! I have to defeat him but I don\'t even know why he\'s here or what his purpose is.''':
+              '''Sono d\'accordo! Devo sconfiggerlo ma non so né perché sia qui né tantomeno quale sia il suo scopo.''',
+          '''The King of Evil, as you know, came to us 64 years ago freezing the Kingdom and instilling fear.\nI don\'t know exactly where he comes from, but what I do know is that his goal is to collect gems that are scattered around the world to get energy to completely freeze our world.''':
+              '''Il Re del Male, come sapete, è venuto da noi 64 anni fa congelando il Regno e incutendo paura.\nNon so esattamente da dove venga, ma quello che so è che il suo obiettivo è quello di raccogliere le gemme che sono sparse per il mondo in modo da ottenere energia per congelare completamente il nostro mondo.''',
+          '''Completely?!''': '''Completamente?!''',
+          '''Yes, we are lucky we still have seas and a bearable temperature, but if he succeeds in his plan the Kingdom will no longer be livable for us.''':
+              '''Sì, siamo fortunati ad avere ancora il mare e una temperatura sopportabile, ma se riesce nel suo piano il Regno non sarà più vivibile per noi.''',
+          '''And why would he want that??''':
+              '''E perché mai dovrebbe volerlo?''',
+          '''Because he and his fellows need very low temperatures to live, temperatures so low that right now there are only in the Xeonjia tower.''':
+              '''Perché lui e i suoi compagni hanno bisogno di temperature molto basse per vivere, temperature così basse che in questo momento ci sono solo nella Torre Xeonjia.''',
+          '''So he\'s making our Kingdom unlivable for us to make it livable for him?!''':
+              '''Quindi sta rendendo il nostro regno invivibile per noi per renderlo vivibile per lui?!''',
+          '''Exactly.\nThe only way to stop him is to find as many gems as possible and finally defeat him, of course.\nHe uses the Hoarfrost Team to search for gems precisely because he cannot leave the tower.\nThis is what I know about the King of Evil. Now I must leave you to avoid becoming an ice pop, but we will see each other again in the future.\nI will appear to you when you need me.''':
+              '''Esattamente.\nL\'unico modo per fermarlo è trovare più gemme possibili e infine sconfiggerlo, ovviamente.\nFa affidamento al Team Brina per cercare le gemme proprio perché lui non può lasciare la torre.\nQuesto è quello che so del Re del Male. Ora devo lasciarvi per evitare di diventare un ghiacciolo, ma ci rivedremo in futuro.\nApparirò quando avrete bisogno di me.''',
+          '''So gems are more important than I thought… And they can be used as an energy source.\nI only have one, how many have you found so far?''':
+              '''Quindi le gemme sono più importanti di quanto pensassi… E possono essere usate come fonte di energia.\nIo ne ho solo una, tu quante ne hai trovate finora?''',
+          '''I only have one too, a guy I rescued in the Mitsu Forest gave it to me.''':
+              '''Anch\'io ne ho solo una, me l\'ha data un ragazzo che ho salvato nel Bosco Mitsu.''',
+          '''Not quite enough.''': '''Non è abbastanza.''',
+          '''I have found {{gem_count}} so far.''':
+              '''Ho trovato {{gem_count}} per adesso.''',
+          '''Well, it\'s a start.''': '''Beh, è un inizio.''',
+          '''We need to be more careful and look for them better.\nNow I\'ll leave you and continue my studies on the gem I have.\nSee you!''':
+              '''Dobbiamo stare più attenti e cercarle meglio.\nOra ti lascio e continuo i miei studi sulla gemma che ho.\nA presto!''',
+          '''Bye Shen, be careful!''': '''A presto Shen, stai attenta!''',
+          '''Yes''': '''Sì''',
+          '''No''': '''No''',
           '''Mossy Crypt -4F''': '''Cripta Muschiosa -4P''',
           '''The snowballs container is full.''':
               '''Il contenitore di palle di neve è pieno.''',
@@ -693,8 +1318,6 @@ extension Localization on String {
           '''We\'re watching you.''': '''Ti teniamo d\'occhio.''',
           '''Hmm, I think that from this snowdrift I can obtain material to make new snowballs by pressing the \'A\' key.''':
               '''Hmm, penso che da questo cumulo di neve posso ottenere materiale per creare nuove palle di neve premendo il tasto \'A\'.''',
-          '''* {{hero}} found {{money-diff}} ¤ *''':
-              '''* {{hero}} ha trovato {{money-diff}} ¤ *''',
           '''A rock covered by moss.''': '''Una roccia coperta di muschio.''',
           '''T-today… today is the day I\'ve been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I\'m the chosen "hero" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to.''':
               '''O-oggi… oggi è il giorno che aspetto da tutta la vita. Il mio viaggio verso la torre Xeonjia sta per iniziare.\nQuest\'anno sono io l\'«eroe» incaricato a sconfiggere il mostro che ha congelato il Regno…\nDopo anni di allenamenti spero di esserne in grado.''',
@@ -710,6 +1333,8 @@ extension Localization on String {
           '''Melhopolis''': '''Melhopolis''',
           '''The city center is a few kilometers to the south.''':
               '''Il centro della città è a pochi chilometri a sud.''',
+          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
+              '''Sto pianificando un matrimonio a sorpresa per mio figlio, spero che non lo scopra.''',
           '''" VANTOI LAB "''': '''" VANTOI LAB "''',
           '''I can see the inside of the Laboratory.''':
               '''Posso vedere l\'interno del Laboratorio.''',
@@ -797,13 +1422,29 @@ extension Localization on String {
               '''Sei il prescelto di quest\'anno, giusto? Anche mio figlio lo fu molti anni fa.''',
           '''Unfortunately he failed to defeat the King of Evil…''':
               '''Ma purtroppo non riuscì a sconfiggere il Re del Male…''',
-          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
-              '''Sto pianificando un matrimonio a sorpresa per mio figlio, spero che non lo scopra.''',
-          '''This part is under construction.''':
-              '''Questa parte è ancora in costruzione.''',
+          '''" Relax and enjoy the sea "''':
+              '''" Rilassati e goditi il mare "''',
+          '''Wow! I\'ve never seen the sea!''':
+              '''Wow! Non avevo mai visto il mare!''',
+          '''It\'s very nice and vast.''': '''È molto bello e vasto.''',
+          '''The sea is very calm and relaxing.''':
+              '''Il mare è molto calmo e rilassante.''',
+          '''" Welcome to the Water Region! Enjoy your stay. "''':
+              '''" Benvenuti nella Regione dell\'Acqua! Buona permanenza. "''',
           '''Pharmacy''': '''Farmacia''',
           '''Welcome to my shop!''': '''Benvenuto nel mio negozio!''',
           '''pharmacist''': '''farmacista''',
+          '''* {{hero}} ate some berries *''':
+              '''* {{hero}} ha mangiato delle bacche *''',
+          '''* {{life-diff}} LPs have been recovered *''':
+              '''* {{life-diff}} PV sono stati recuperati *''',
+          '''This boulder is very heavy.''':
+              '''Questo masso è molto pesante.''',
+          '''We are trying to move this boulder.\nI\'m sorry but it\'s going to take a while.''':
+              '''Stiamo cercando di spostare questo masso.\nMi dispiace ma ci vorrà ancora un po\' di tempo.''',
+          '''A heavy rock.''': '''Una roccia pesante.''',
+          '''" ↑ Hexa Cave "\n" Zamelis Village → "''':
+              '''" ↑ Grotta Hexa "\n" Villaggio Zamelis → "''',
           '''" ← Sacred Tree "\n" Melhopolis City Center → "''':
               '''" ← Albero Sacro "\n" Centro di Melhopolis → "''',
           '''I advise you to take another path.\nThese monsters are too strong.''':
@@ -843,6 +1484,12 @@ extension Localization on String {
               '''Questa porta è chiusa, servono i 3 sigilli per aprirla.''',
           '''I should go to the tower.''': '''Devo andare alla torre.''',
           '''The tower is so ugly.''': '''Questa torre è brutta brutta.''',
+          '''Why am I here? What am I supposed to do?''':
+              '''Perché sono qui? Quale è il mio scopo?''',
+          '''I love studying history and literature.''':
+              '''Amo studiare la storia e la letteratura.''',
+          '''"[…] but half of the army defected, made a deal with the King of Evil and founded the Hoarfrost Team. That moment decreed our defeat."\nThis book tells what happened 64 years ago.''':
+              '''"[…] ma metà dell\'esercito disertò, fece un accordo con il Re del Male e fondò il Team Brina. Quel momento decretò la nostra sconfitta".\nQuesto libro racconta quello che successe 64 anni fa.''',
           '''Home''': '''Casa''',
           '''Good morning mom!''': '''Buongiorno mamma!''',
           '''Hi {{hero}}! Did you sleep well?''':
@@ -877,10 +1524,40 @@ extension Localization on String {
           '''Oh, I hope you are not right.''':
               '''Oh, spero che tu non abbia ragione.''',
           '''I like piglets.''': '''Mi piacciono i maialini.''',
-          '''Yes''': '''Sì''',
-          '''No''': '''No''',
           '''Mossy Crypt -3F''': '''Cripta Muschiosa -3P''',
           '''My work is so boring…''': '''Il mio lavoro è così noioso…''',
+          '''Route 5''': '''Percorso 5''',
+          '''Ok, you were better than me.\nI still have room for improvement, I will continue to train.''':
+              '''Ok, sei stato più bravo di me.\nHo ancora margine di miglioramento, continuerò ad allenarmi.''',
+          '''Anyway, it was great seeing you.''':
+              '''Ad ogni modo, è stato bello rivederti.''',
+          '''It was good to see you too, I felt like I was going back to when we were kids.''':
+              '''È stato bello anche per me, mi è sembrato di tornare a quando eravamo bambini.''',
+          '''Hehe, you are right… we spent a lot of hours playing and training as kids.\nI\'ll leave you now, see you in the Xeonjia Tower.''':
+              '''Hehe, hai ragione… abbiamo passato un sacco di ore a giocare e ad allenarci da bambini.\nOra ti lascio, ci vediamo alla Torre Xeonjia.''',
+          '''Are you going to the tower too?''':
+              '''Stai andando anche tu alla torre?''',
+          '''Yes, of course!\nI will go there and I will defeat the King of Evil!\nEven though you are the protagonist and the so-called "Hero" it will be me who will defeat the King of Evil and be remembered as the savior of the world hehe.''':
+              '''Certo!\nAndrò lì e sconfiggerò il Re del Male!\nAnche se tu sei il protagonista e il cosiddetto "Eroe", sarò io che sconfiggerò il Re del male e verrò ricordata come salvatrice del mondo hehe.''',
+          '''Wait, wait, wait, don\'t steal my job! Haha''':
+              '''Ehi, ehi, ehi, non rubarmi il lavoro! Haha''',
+          '''Anyway, be careful not to get hurt, bye!''':
+              '''Comunque, stai attenta a non farti male, ciao!''',
+          '''I lost my glasses. I hardly see anything.''':
+              '''Ho perso i miei occhiali. Non vedo quasi niente.''',
+          '''Are these your glasses?''': '''Sono questi i tuoi occhiali?''',
+          '''Yes! Thank you so much!''': '''Sì! Grazie mille!''',
+          '''As a reward I give you this gem that I found while I was looking for the glasses.''':
+              '''Come ricompensa ti do questa gemma che ho trovato mentre cercavo gli occhiali.''',
+          '''Oh, thank you so much!''': '''Oh, grazie mille!''',
+          '''I missed being able to see the sea.''':
+              '''Mi è mancato poter vedere il mare.''',
+          '''I can\'t believe it took you this long!\nLet\'s fight!''':
+              '''Non posso credere che tu ci abbia messo così tanto!\nCombattiamo!''',
+          '''I will defeat you.''': '''Ti sconfiggerò.''',
+          '''I have to train harder.''': '''Devo allenarmi di più.''',
+          '''This is a very strange stone… Never seen anything like this before.''':
+              '''Questa è una pietra molto strana… Non ho mai visto nulla di simile.''',
           '''Hi, I\'m an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I\'ll help you.''':
               '''Ciao, sono un impiegato del Regno.\nSe ti perdi o se hai problemi a trovare la strada torna da me che ti aiuto.''',
           '''Are you stuck?\nTake the path behind the blue tree.''':
@@ -902,6 +1579,7 @@ extension Localization on String {
           '''This vase is very heavy, I can\'t move it.''':
               '''Questo vaso è molto pesante, non posso muoverlo.''',
           '''Yes thanks''': '''Sì grazie''',
+          '''Observation Tower''': '''Torre di Osservazione''',
           '''NEIGHBOR\'S HOUSE''': '''CASA DEL VICINO''',
           '''Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones.\nI made them by hand. Here\'s to you!''':
               '''Ciao giovanotto, tutto bene? Ho fatto per te questi parastinchi, ti serviranno per attutire i colpi con i sassi.\nLi ho fatti a mano, ecco a te!''',
@@ -929,7 +1607,6 @@ extension Localization on String {
               '''Il Municipio sembra spazioso.''',
           '''You\'re lucky, but it doesn\'t end here, guaranteed.''':
               '''Sei stato fortunato, ma non finisce qui, stanne certo.''',
-          '''I will defeat you.''': '''Ti sconfiggerò.''',
           '''You will not escape me.''': '''Non mi sfuggirai.''',
           '''I can\'t escape. I have to take the first signet.''':
               '''Non posso scappare. Devo prendere il primo sigillo.''',
@@ -978,6 +1655,24 @@ extension Localization on String {
               '''Una parete rocciosa coperta di muschio.''',
           '''iosa''': '''iosa''',
           '''joza''': '''joza''',
+          '''I just cooked a cake. Do you want some?''':
+              '''Ho appena cucinato una torta. Ne vuoi un po\'?''',
+          '''Here you go!''': '''Ecco a te!''',
+          '''* {{hero}} eats a piece of cake *''':
+              '''* {{hero}} mangia un pezzo di torta *''',
+          '''Oh, ok. Then I\'ll eat it all.''':
+              '''Oh, ok. Allora me la mangio tutta io.''',
+          '''I love cooking cakes and sweets.''':
+              '''Adoro cucinare torte e dolci.''',
+          '''Today I really can\'t find any fish.''':
+              '''Oggi non riesco proprio a trovare nessun pesce.''',
+          '''But somehow I caught a pair of glasses. Do you want them?''':
+              '''Ma in qualche modo ho preso un paio di occhiali. Li vuoi?''',
+          '''Oh, ok. Then I\'ll try to look for the owner.''':
+              '''Ah, ok. Allora proverò io a cercare il proprietario.''',
+          '''Fishing is relaxing.''': '''La pesca è rilassante.''',
+          '''This part is under construction.''':
+              '''Questa parte è ancora in costruzione.''',
           '''Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck.''':
               '''A volte tra i rami delle piante puoi trovare delle bacche.\nA me è anche capitato di trovare oggetti che erano rimasti intrappolati.''',
           '''Oh, I was about to take those berries.''':
@@ -990,6 +1685,15 @@ extension Localization on String {
               '''Per terra è facile trovare pietre XEON (¤) che puoi usare per comprare cose nei negozi.''',
           '''It seems that once there was a path here.''':
               '''Sembra che qua un tempo ci fosse un sentiero.''',
+          '''To reach the other shore you have to go through the submarine tunnel but is currently guarded by the Hoarfrost Team.\nIf they don\'t leave, I\'ll try to cross the sea with the boat.''':
+              '''Per raggiungere l\'altra riva bisogna passare attraverso il tunnel sottomarino ma è attualmente sorvegliato dal Team Brina.\nSe non se ne vanno proverò ad attraversare il mare con la barca.''',
+          '''Once I happened to see a strange hole in the middle of the sea.''':
+              '''Una volta mi è capitato di vedere uno strano buco in mezzo al mare.''',
+          '''" Hana\'s Tunnel "''': '''" Tunnel di Hana "''',
+          '''" Observation Tower "''': '''" Torre di Osservazione "''',
+          '''The sea is calm today.''': '''Il mare è calmo oggi.''',
+          '''Nope, there\'s only trash here.''':
+              '''No, qui c\'è solo spazzatura.''',
           '''Mossy Crypt -1F''': '''Cripta Muschiosa -1P''',
           '''I advise you not to continue, you are running into big trouble.\nI\'ll report your presence to my boss.''':
               '''Ti consiglio di non continuare, andrai incontro a guai molto grossi.\nSegnalerò la tua presenza al mio capo.''',
@@ -1000,8 +1704,8 @@ extension Localization on String {
               '''Il ghiaccio è molto scivoloso, l\'hai notato?\nIo me ne sto bello tranquillo sulla neve.''',
           '''There seems to be something in the branches of this plant…\nIt\'s a stone!''':
               '''Sembra che ci sia qualcosa tra i rami di questa pianta.\nÈ una pietra!''',
-          '''This is a very strange stone… Never seen anything like this before.''':
-              '''Questa è una pietra molto strana… Non ho mai visto nulla di simile.''',
+          '''As long as the tunnel is blocked we must organize differently to get goods and people from one side to another.''':
+              '''Finché il tunnel è bloccato dobbiamo organizzarci diversamente per portare merci e persone da una parte all\'altra.''',
           '''VANTOI LAB – 2F''': '''VANTOI LAB – 2P''',
           '''What a mess! I have to tidy up!''':
               '''Che disastro! Devo ripulire!''',
@@ -1028,7 +1732,20 @@ extension Localization on String {
               '''Qualcuno ha buttato tutto per aria.''',
           '''A rocky wall.''': '''Un muro roccioso.''',
           '''A wall.''': '''Un muro.''',
-          '''A rock.''': '''Una roccia.''',
+          '''An empty vase.''': '''Un vaso vuoto.''',
+          '''A plant without berries.''': '''Una pianta senza bacche.''',
+          '''A flag.''': '''Una bandiera.''',
+          '''A vase with many fragrant flowers.''':
+              '''Un vaso con molti fiori profumati.''',
+          '''A barrel.''': '''Un barile.''',
+          '''A little boat.''': '''Una barchetta.''',
+          '''This is a common tree in this area.''':
+              '''Questo è un albero comune in questa zona.''',
+          '''A street lamp.''': '''Un lampione.''',
+          '''A small plant.''': '''Una piccola pianta.''',
+          '''It\'s not a good thing to look into other people\'s homes.''':
+              '''Non è una buona cosa guardare nelle case degli altri.''',
+          '''This is a pharmacy.''': '''Questa è una farmacia.''',
           '''A little plant.''': '''Una piccola pianta.''',
           '''A little plant without leaves.''':
               '''Una piccola pianta senza foglie.''',
@@ -1038,9 +1755,6 @@ extension Localization on String {
               '''Questo tipo di albero è strano.''',
           '''This type of plant is strange.''':
               '''Questo tipo di pianta è strano.''',
-          '''It\'s not a good thing to look into other people\'s homes.''':
-              '''Non è una buona cosa guardare nelle case degli altri.''',
-          '''This is a pharmacy.''': '''Questa è una farmacia.''',
           '''man''': '''uomo''',
           '''lumberjack''': '''boscaiolo''',
           '''young-girl''': '''ragazzina''',
@@ -1054,10 +1768,12 @@ extension Localization on String {
           '''oldster''': '''anziano''',
           '''henchman''': '''scagnozzo''',
           '''worker''': '''operaio''',
+          '''Life always finds a way.''': '''La vita trova sempre una via.''',
           '''I don\'t know what this means.''': '''Non so cosa significhi.''',
           '''I can\'t go beyond this.''': '''Non posso andare oltre.''',
           '''milla''': '''milla''',
           '''shen''': '''shen''',
+          '''september''': '''Settembre''',
           '''The weather is good today.''': '''C\'è bel tempo oggi.''',
           '''A painting that depicts this area long ago.''':
               '''Un dipinto che raffigura questa zona tempo fa.''',
@@ -1069,10 +1785,38 @@ extension Localization on String {
           '''Oink !''': '''Oink !''',
           '''This pig looks very happy.''':
               '''Questo maialino sembra molto felice.''',
-          '''A strange icosahedral stone''':
-              '''Una strana pietra icosaedrica''',
+          '''Icosahedron''': '''Icosaedro''',
+          '''A strange blue icosahedral stone.''':
+              '''Una strana pietra icosaedrica blu.''',
           '''Package of the King''': '''Pacchetto del Re''',
+          '''Package given to me by the King.''':
+              '''Pacchetto datomi dal Re.''',
+          '''Tetrahedron''': '''Tetraedro''',
+          '''A strange red tetrahedral stone.''':
+              '''Una strana pietra tetraedrica rossa.''',
+          '''A pair of glasses''': '''Un paio di occhiali''',
+          '''Eyeglasses given to me by a girl.''':
+              '''Occhiali consegnatomi da una ragazza.''',
+          '''Cube''': '''Cubo''',
+          '''A strange green cubic stone.''': '''Una strana pietra verde.''',
+          '''Octahedron''': '''Ottaedro''',
+          '''A strange white octahedral stone.''':
+              '''Una strana pietra ottaedrica bianca.''',
+          '''Dodecahedron''': '''Dodecaedro''',
+          '''A strange multicolored dodecahedral stone.''':
+              '''Una strana pietra dodecaedrica multicolore.''',
           '''First Signet''': '''Primo Sigillo''',
+          '''First out of 3 signets required to enter the Xeonjia tower.''':
+              '''Primo dei 3 sigilli richiesti per entrare nella Torre Xeonjia.''',
+          '''Berries''': '''Bacche''',
+          '''Fresh Water''': '''Acqua Fresca''',
+          '''A bottle of water.\nIt restores 20 LPs.''':
+              '''Una bottiglia d\'acqua.\nRipristina 20 PV.''',
+          '''I\'m already healthy, I don\'t need {{selected-item-name}} right now.''':
+              '''Sono già in salute, non ho bisogno di {{selected-item-name}} in questo momento.''',
+          '''Pomegranate juice''': '''Succo di Melograno''',
+          '''A bottle of pomegranate juice.\nIt restores 50 LPs.''':
+              '''Una bottiglia di succo di melograno.\nRipristina 50 PV.''',
         },
         'es': {
           '''City Hall''': '''Ayuntamiento''',
@@ -1139,6 +1883,9 @@ extension Localization on String {
               '''Tengo que decir adiós a mis padres antes de irme con el botón «A». De lo contrario sería grosero.''',
           '''Like my mother said, it\'s better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.''':
               '''Como dijo mi madre, es mejor si voy por las espinilleras con mi vecino, de lo contrario me arriesgo a lastimarme mucho con las rocas.''',
+          '''* {{hero}} found {{money-diff}} ¤ *''':
+              '''* {{hero}} encontró {{money-diff}} ¤ *''',
+          '''A rock.''': '''Una roca.''',
           '''I still haven\'t figured out if these monsters are malicious or just stupid.''':
               '''Todavía no sé si estos monstruos son maliciosos o solo tontos.''',
           '''I hate people who always say the same things.''':
@@ -1201,6 +1948,9 @@ extension Localization on String {
               '''" Área de picnic – No dejes tu basura, gracias "''',
           '''" Picnic area ↑ "\n" Forest Center ↓ "''':
               '''" Área para pícnics ↑ "\n" Centro forestal ↓ "''',
+          '''!!!''': '''!!!''',
+          '''Yes''': '''Sí''',
+          '''No''': '''No''',
           '''Mossy Crypt -4F''': '''Cripta Musgosa -4F''',
           '''The snowballs container is full.''':
               '''El contenedor de bolas de nieve está lleno.''',
@@ -1211,8 +1961,6 @@ extension Localization on String {
           '''We\'re watching you.''': '''Te estamos observando.''',
           '''Hmm, I think that from this snowdrift I can obtain material to make new snowballs by pressing the \'A\' key.''':
               '''Mmm, pienso que de este nevero puedo hacer nuevas bolas de nieva si presiono a el botón «A».''',
-          '''* {{hero}} found {{money-diff}} ¤ *''':
-              '''* {{hero}} encontró {{money-diff}} ¤ *''',
           '''A rock covered by moss.''': '''Una piedra cubierta de musgo.''',
           '''T-today… today is the day I\'ve been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I\'m the chosen "hero" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to.''':
               '''Hoy… Hoy es el día que he esperado toda mi vida. Mi viaje a la torre Xeonjia está por comenzar.\nEste año soy el «héroe» elegido para derrotar al monstruo que congeló el Reino…\nDespués de años de entrenamiento espero poder lograrlo.''',
@@ -1228,6 +1976,8 @@ extension Localization on String {
           '''Melhopolis''': '''Melhopolis''',
           '''The city center is a few kilometers to the south.''':
               '''El centro de la ciudad está a un par de kilómetros al sur.''',
+          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
+              '''Estoy planeando una boda sorpresa para mi hijo, espero que no se dé cuenta.''',
           '''" VANTOI LAB "''': '''" VANTOI LAB "''',
           '''I can see the inside of the Laboratory.''':
               '''Puedo ver el interior del Laboratorio.''',
@@ -1317,10 +2067,6 @@ extension Localization on String {
               '''A ti te eligieron este año, ¿cierto? Mi hijo lo fue hace muchos años.''',
           '''Unfortunately he failed to defeat the King of Evil…''':
               '''Por desgracia él falló en derrotar al Rey del Mal…''',
-          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
-              '''Estoy planeando una boda sorpresa para mi hijo, espero que no se dé cuenta.''',
-          '''This part is under construction.''':
-              '''Esta parte está en construcción.''',
           '''Pharmacy''': '''Farmacia''',
           '''Welcome to my shop!''': '''¡Te doy la bienvenida a mi tienda!''',
           '''pharmacist''': '''farmacólogo''',
@@ -1398,10 +2144,9 @@ extension Localization on String {
           '''Oh, I hope you are not right.''':
               '''Oh, espero que te equivoques.''',
           '''I like piglets.''': '''Me gustan los lechones.''',
-          '''Yes''': '''Sí''',
-          '''No''': '''No''',
           '''Mossy Crypt -3F''': '''Cripta Musgosa -3F''',
           '''My work is so boring…''': '''Mi trabajo es muy aburrido…''',
+          '''I will defeat you.''': '''Te derrotaré.''',
           '''Hi, I\'m an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I\'ll help you.''':
               '''Hola, trabajo en el Reino.\nSi te pierdes o tienes problemas para encontrar el camino, regresa aquí para ayudarte.''',
           '''Are you stuck?\nTake the path behind the blue tree.''':
@@ -1449,7 +2194,6 @@ extension Localization on String {
               '''El Ayuntamiento es muy amplio.''',
           '''You\'re lucky, but it doesn\'t end here, guaranteed.''':
               '''Tienes suerte, pero no termina aquí, te lo aseguro.''',
-          '''I will defeat you.''': '''Te derrotaré.''',
           '''You will not escape me.''': '''No escaparás.''',
           '''I can\'t escape. I have to take the first signet.''':
               '''No puedo escapar. Tengo que conseguir el primer medallón.''',
@@ -1518,8 +2262,6 @@ extension Localization on String {
               '''El hielo es muy resbaladizo, ¿ya te diste cuenta?\nEstoy más cómodo sobre la nieve.''',
           '''There seems to be something in the branches of this plant…\nIt\'s a stone!''':
               '''Al parecer hay algo dentro de esta planta.\n¡Es una piedra!''',
-          '''This is a very strange stone… Never seen anything like this before.''':
-              '''Esta es una piedra extraña… Nunca antes había visto algo como esto.''',
           '''VANTOI LAB – 2F''': '''VANTOI LAB – 2F''',
           '''What a mess! I have to tidy up!''':
               '''¡Vaya revoltijo! ¡Tengo que poner orden!''',
@@ -1546,7 +2288,9 @@ extension Localization on String {
               '''Alguien ha hecho un revoltijo aquí.''',
           '''A rocky wall.''': '''Un muro pedregoso.''',
           '''A wall.''': '''Un muro.''',
-          '''A rock.''': '''Una roca.''',
+          '''It\'s not a good thing to look into other people\'s homes.''':
+              '''No es bien visto mirar las casas ajenas.''',
+          '''This is a pharmacy.''': '''Esto es una farmacia.''',
           '''A little plant.''': '''Una pequeña planta.''',
           '''A little plant without leaves.''':
               '''Una pequeña planta sin hojas.''',
@@ -1556,9 +2300,6 @@ extension Localization on String {
               '''Este tipo de árbol es extraño.''',
           '''This type of plant is strange.''':
               '''Este tipo de planta es extraña.''',
-          '''It\'s not a good thing to look into other people\'s homes.''':
-              '''No es bien visto mirar las casas ajenas.''',
-          '''This is a pharmacy.''': '''Esto es una farmacia.''',
           '''man''': '''hombre''',
           '''lumberjack''': '''leñador''',
           '''young-girl''': '''jovencita''',
@@ -1587,7 +2328,6 @@ extension Localization on String {
           '''This is a wall.''': '''Esto es un muro.''',
           '''Oink !''': '''Cuic!''',
           '''This pig looks very happy.''': '''Este cerdo se ve muy feliz.''',
-          '''A strange icosahedral stone''': '''Una extraña roca icosaédrica''',
           '''Package of the King''': '''Paquete del Rey''',
           '''First Signet''': '''Primer Medallón''',
         },
@@ -1707,6 +2447,9 @@ extension Localization on String {
               '''Перед моим уходом я должен попрощаться со своими родителями, нажав кнопку \'A\'. Иначе это будет выглядеть невежливо.''',
           '''Like my mother said, it\'s better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.''':
               '''Как сказала моя мама, будет лучше, если я зайду к соседу за наколенниками. Иначе я рискую сильно пораниться камнями.''',
+          '''* {{hero}} found {{money-diff}} ¤ *''':
+              '''* {{hero}} нашёл {{money-diff}} ¤ *''',
+          '''A rock.''': '''Камень.''',
           '''I still haven\'t figured out if these monsters are malicious or just stupid.''':
               '''Я до сих пор не понял: злые ли эти монстры или просто глупые.''',
           '''I hate people who always say the same things.''':
@@ -1768,6 +2511,8 @@ extension Localization on String {
               '''" Место для пикника - Соблюдайте чистоту, спасибо "''',
           '''" Picnic area ↑ "\n" Forest Center ↓ "''':
               '''" Место для пикника ↑ "\n" Центр леса ↓ "''',
+          '''Yes''': '''Да''',
+          '''No''': '''Нет''',
           '''Mossy Crypt -4F''': '''Мшистый Склеп - 4 этаж''',
           '''The snowballs container is full.''':
               '''Контейнер для снежков полон.''',
@@ -1778,8 +2523,6 @@ extension Localization on String {
           '''We\'re watching you.''': '''Мы наблюдаем за тобой.''',
           '''Hmm, I think that from this snowdrift I can obtain material to make new snowballs by pressing the \'A\' key.''':
               '''Хм. Я думаю, что из этого сугроба я смогу набрать снега и пополнить запас снежков, нажав кнопку \'A\'.''',
-          '''* {{hero}} found {{money-diff}} ¤ *''':
-              '''* {{hero}} нашёл {{money-diff}} ¤ *''',
           '''A rock covered by moss.''': '''Камень, покрытый мхом.''',
           '''T-today… today is the day I\'ve been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I\'m the chosen "hero" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to.''':
               '''С-сегодня… сегодня тот день, которого я ждал всю свою жизнь. Моё путешествие к башне Ксеонии вот-вот начнётся.\nМеня избрали как "героя" в этом году, ответственным за победу над чудовищем, заморозившим Королевство...\nПосле многолетних тренировок я надеюсь, что смогу.''',
@@ -1794,6 +2537,8 @@ extension Localization on String {
           '''Melhopolis''': '''Меллополис''',
           '''The city center is a few kilometers to the south.''':
               '''Центр города находится в нескольких километрах к югу.''',
+          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
+              '''Я запланировал неожиданную свадьбу своему сыну. Надеюсь, он не узнает.''',
           '''" VANTOI LAB "''': '''" VANTOI LAB "''',
           '''I can see the inside of the Laboratory.''':
               '''Я могу разглядеть врутреннюю часть лаборатории.''',
@@ -1880,10 +2625,6 @@ extension Localization on String {
               '''Ты же избранный в этом году, верно? Мой сын тоже был избран несколько лет назад.''',
           '''Unfortunately he failed to defeat the King of Evil…''':
               '''К сожалению, ему не удалось победить Короля Зла…''',
-          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
-              '''Я запланировал неожиданную свадьбу своему сыну. Надеюсь, он не узнает.''',
-          '''This part is under construction.''':
-              '''Эта часть находится в стадии разработки.''',
           '''Pharmacy''': '''Аптека''',
           '''Welcome to my shop!''': '''Добро пожаловать в мой магазин!''',
           '''pharmacist''': '''аптекарь''',
@@ -1958,10 +2699,11 @@ extension Localization on String {
           '''I think so too.''': '''Я тоже так считаю.''',
           '''Oh, I hope you are not right.''': '''Оу, надеюсь, ты не прав.''',
           '''I like piglets.''': '''Мне нравятся поросята.''',
-          '''Yes''': '''Да''',
-          '''No''': '''Нет''',
           '''Mossy Crypt -3F''': '''Мшистый Склеп - 3 этаж''',
           '''My work is so boring…''': '''Моя работа так скучна…''',
+          '''I will defeat you.''': '''Я тебя уничтожу.''',
+          '''This is a very strange stone… Never seen anything like this before.''':
+              '''Это очень странный камень… Ничего подобного я раньше не видел.''',
           '''Hi, I\'m an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I\'ll help you.''':
               '''Привет, я - рабочий Королевства.\nЕсли ты заблудишься или у тебя возникнут трудности с поиском дороги; возвращайся ко мне, и я тебе помогу.''',
           '''Are you stuck?\nTake the path behind the blue tree.''':
@@ -2008,7 +2750,6 @@ extension Localization on String {
           '''The City Hall seems spacious.''': '''Мэрия кажется просторной.''',
           '''You\'re lucky, but it doesn\'t end here, guaranteed.''':
               '''Тебе повезло, но это ещё не конец, гарантирую.''',
-          '''I will defeat you.''': '''Я тебя уничтожу.''',
           '''You will not escape me.''': '''Тебе от меня не сбежать.''',
           '''I can\'t escape. I have to take the first signet.''':
               '''Я не могу уйти. Я должен забрать первую печатку.''',
@@ -2056,6 +2797,8 @@ extension Localization on String {
               '''Каменная стена, покрытая мхом.''',
           '''iosa''': '''йоза''',
           '''joza''': '''джоза''',
+          '''This part is under construction.''':
+              '''Эта часть находится в стадии разработки.''',
           '''Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck.''':
               '''Иногда среди веток растений ты можешь найти несколько ягод.\nОднажды мне довелось найти даже потерянные вещи.''',
           '''Oh, I was about to take those berries.''':
@@ -2078,8 +2821,6 @@ extension Localization on String {
               '''Лёд такой скользкий, ты заметил?\nМне комфортнее на снегу.''',
           '''There seems to be something in the branches of this plant…\nIt\'s a stone!''':
               '''Кажется, что-то скрывается в ветвях этого растения…\nЭто камень!''',
-          '''This is a very strange stone… Never seen anything like this before.''':
-              '''Это очень странный камень… Ничего подобного я раньше не видел.''',
           '''VANTOI LAB – 2F''': '''VANTOI LAB – 2 этаж''',
           '''What a mess! I have to tidy up!''':
               '''Какой бардак! Я должен прибраться!''',
@@ -2106,7 +2847,9 @@ extension Localization on String {
               '''Кто-то перевернул всё вверх дном.''',
           '''A rocky wall.''': '''Каменная стена.''',
           '''A wall.''': '''Стена.''',
-          '''A rock.''': '''Камень.''',
+          '''It\'s not a good thing to look into other people\'s homes.''':
+              '''Невежливо заглядывать в чужие дома.''',
+          '''This is a pharmacy.''': '''Это аптека.''',
           '''A little plant.''': '''Маленькое растение.''',
           '''A little plant without leaves.''':
               '''Маленькое растение без листьев.''',
@@ -2114,9 +2857,6 @@ extension Localization on String {
               '''Мне нравится цвет этого дерева.''',
           '''This type of tree is strange.''': '''Странная форма дерева.''',
           '''This type of plant is strange.''': '''Странная форма растения.''',
-          '''It\'s not a good thing to look into other people\'s homes.''':
-              '''Невежливо заглядывать в чужие дома.''',
-          '''This is a pharmacy.''': '''Это аптека.''',
           '''man''': '''мужчина''',
           '''lumberjack''': '''лесоруб''',
           '''young-girl''': '''девчонка''',
@@ -2146,8 +2886,6 @@ extension Localization on String {
           '''Oink !''': '''Хрю !''',
           '''This pig looks very happy.''':
               '''Эта свинка выглядит очень счастливой.''',
-          '''A strange icosahedral stone''':
-              '''Странный икосаэдральный камень''',
           '''Package of the King''': '''Свёрток Короля''',
           '''First Signet''': '''Первая печатка''',
         },
@@ -2234,6 +2972,9 @@ extension Localization on String {
               '''Tôi phải chào tạm biệt bố mẹ tôi bằng nút \'A\' trước khi tôi rời đi. Nếu không thì sẽ rất thô lỗ đấy.''',
           '''Like my mother said, it\'s better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.''':
               '''Như mẹ tôi đã nói, nếu tôi đi lấy tấm bảo vệ ống chân từ nhà hàng xóm thì sẽ tốt hơn đấy, nếu không thì tôi sẽ chịu rủi ro bị thương quá nhiều từ các tảng đá.''',
+          '''* {{hero}} found {{money-diff}} ¤ *''':
+              '''* {{hero}} đã tìm thấy {{money-diff}} ¤ *''',
+          '''A rock.''': '''Một cục đá.''',
           '''I still haven\'t figured out if these monsters are malicious or just stupid.''':
               '''Tôi vẫn chưa nhận ra là những con quái vật này là có hại hay chỉ là ngu ngốc thôi.''',
           '''I hate people who always say the same things.''':
@@ -2295,6 +3036,8 @@ extension Localization on String {
               '''" Khu vực picnic – Đừng để lại rác, cảm ơn "''',
           '''" Picnic area ↑ "\n" Forest Center ↓ "''':
               '''" Khu vực picnic ↑ "\n" Trung tâm khu rừng ↓ "''',
+          '''Yes''': '''Có''',
+          '''No''': '''Không''',
           '''Mossy Crypt -4F''': '''Hầm mộ nhiều rêu -4F''',
           '''The snowballs container is full.''':
               '''Thùng chứa bóng tuyết đã đầy.''',
@@ -2305,8 +3048,6 @@ extension Localization on String {
           '''We\'re watching you.''': '''Chúng tôi đang theo dõi bạn.''',
           '''Hmm, I think that from this snowdrift I can obtain material to make new snowballs by pressing the \'A\' key.''':
               '''Hừm, tôi nghĩ là từ đống tuyết này tôi có thể lấy vật liệu để làm bóng tuyết mới bằng cách nhấn phím \'A\'.''',
-          '''* {{hero}} found {{money-diff}} ¤ *''':
-              '''* {{hero}} đã tìm thấy {{money-diff}} ¤ *''',
           '''A rock covered by moss.''': '''Một tảng đá được rêu bao phủ.''',
           '''T-today… today is the day I\'ve been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I\'m the chosen "hero" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to.''':
               '''H-hôm nay… hôm nay là ngày mà tôi đã mong đợi suốt cả đời. Hành trình của tôi đến toà tháp Xeonjia sắp bắt đầu.\nNăm nay tôi là "anh hùng" được chọn được giao việc đánh bại con quái vật đã đóng băng Vương quốc…\nSau hàng năm tập luyện, tôi hy vọng có thể làm vậy.''',
@@ -2323,6 +3064,8 @@ extension Localization on String {
           '''Melhopolis''': '''Melhopolis''',
           '''The city center is a few kilometers to the south.''':
               '''Trung tâm thành phố cách đây một vài ki lô mét về phía nam.''',
+          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
+              '''Bác đang lên kế hoạch cho một đám cưới bất ngờ cho con trai của bác, bác hy vọng là nó không nhận ra.''',
           '''" VANTOI LAB "''': '''" PHÒNG THÍ NGHIỆM VANTOI "''',
           '''I can see the inside of the Laboratory.''':
               '''Tôi có thể nhìn thấy bên trong Phòng thí nghiệm.''',
@@ -2409,10 +3152,6 @@ extension Localization on String {
               '''Cháu là người được chọn của năm nay, phải không? Con trai của ông cũng được chọn nhiều năm trước.''',
           '''Unfortunately he failed to defeat the King of Evil…''':
               '''Không may mắn là nó đã không thể đánh bại Vua Xấu xa…''',
-          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
-              '''Bác đang lên kế hoạch cho một đám cưới bất ngờ cho con trai của bác, bác hy vọng là nó không nhận ra.''',
-          '''This part is under construction.''':
-              '''Phần này đang được xây dựng.''',
           '''Pharmacy''': '''Hiệu thuốc''',
           '''Welcome to my shop!''': '''Chào mừng đến cửa hàng của tôi!''',
           '''pharmacist''': '''dược sĩ''',
@@ -2489,10 +3228,11 @@ extension Localization on String {
           '''Oh, I hope you are not right.''':
               '''Ồ, tôi hy vọng bạn không đúng.''',
           '''I like piglets.''': '''Tôi thích lợn con.''',
-          '''Yes''': '''Có''',
-          '''No''': '''Không''',
           '''Mossy Crypt -3F''': '''Hầm mộ nhiều rêu -3F''',
           '''My work is so boring…''': '''Công việc của tôi nhàm chán quá…''',
+          '''I will defeat you.''': '''Ta sẽ đánh bại ngươi.''',
+          '''This is a very strange stone… Never seen anything like this before.''':
+              '''Đây là một viên đá rất lạ… Tôi chưa bao giờ thấy thứ gì như thế này trước đây.''',
           '''Hi, I\'m an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I\'ll help you.''':
               '''Xin chào, tôi là một nhân viên của Vương quốc.\nNếu bạn bị lạc hoặc gặp vấn đề khi tìm đường, hãy quay lại tôi và tôi sẽ giúp bạn.''',
           '''Are you stuck?\nTake the path behind the blue tree.''':
@@ -2540,7 +3280,6 @@ extension Localization on String {
               '''Toà thị chính có vẻ rất rộng rãi.''',
           '''You\'re lucky, but it doesn\'t end here, guaranteed.''':
               '''Ngươi may mắn đấy, nhưng chuyện không kết thúc ở đây đâu, chắc chắn vậy.''',
-          '''I will defeat you.''': '''Ta sẽ đánh bại ngươi.''',
           '''You will not escape me.''':
               '''Ngươi sẽ không chạy trốn khỏi ta.''',
           '''I can\'t escape. I have to take the first signet.''':
@@ -2591,6 +3330,8 @@ extension Localization on String {
               '''Một bức tường gồ ghề được rêu che phủ.''',
           '''iosa''': '''iosa''',
           '''joza''': '''joza''',
+          '''This part is under construction.''':
+              '''Phần này đang được xây dựng.''',
           '''Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck.''':
               '''Đôi khi ở giữa những cành cây của cây con, cháu có thể tìm thấy một ít quả dâu.\nÔng cũng đã tình cờ tìm thấy những đồ vật bị kẹt trong đó.''',
           '''Oh, I was about to take those berries.''':
@@ -2613,8 +3354,6 @@ extension Localization on String {
               '''Lớp băng này trơn quá, bạn đã để ý chưa?\nTôi cảm thấy thoải mái hơn trên tuyết.''',
           '''There seems to be something in the branches of this plant…\nIt\'s a stone!''':
               '''Có vẻ là có gì đó trong các cành của cây con này…\nĐó là một viên đá!''',
-          '''This is a very strange stone… Never seen anything like this before.''':
-              '''Đây là một viên đá rất lạ… Tôi chưa bao giờ thấy thứ gì như thế này trước đây.''',
           '''VANTOI LAB – 2F''': '''PHÒNG THÍ NGHIỆM VANTOI – 2F''',
           '''What a mess! I have to tidy up!''':
               '''Lộn xộn quá! Tôi phải dọn dẹp thôi!''',
@@ -2641,7 +3380,9 @@ extension Localization on String {
               '''Ai đó đã đảo lộn mọi thứ.''',
           '''A rocky wall.''': '''Một bức tường gồ ghề.''',
           '''A wall.''': '''Một bức tường.''',
-          '''A rock.''': '''Một cục đá.''',
+          '''It\'s not a good thing to look into other people\'s homes.''':
+              '''Việc nhìn vào nhà của những người khác là không tốt đâu.''',
+          '''This is a pharmacy.''': '''Đây là một hiệu thuốc.''',
           '''A little plant.''': '''Một cái cây nhỏ.''',
           '''A little plant without leaves.''':
               '''Một cái cây nhỏ không có lá.''',
@@ -2649,9 +3390,6 @@ extension Localization on String {
               '''Tôi thích màu của cái cây này.''',
           '''This type of tree is strange.''': '''Loại cây này rất lạ.''',
           '''This type of plant is strange.''': '''Loại cây con này rất lạ.''',
-          '''It\'s not a good thing to look into other people\'s homes.''':
-              '''Việc nhìn vào nhà của những người khác là không tốt đâu.''',
-          '''This is a pharmacy.''': '''Đây là một hiệu thuốc.''',
           '''man''': '''người đàn ông''',
           '''lumberjack''': '''thợ đốn củi''',
           '''young-girl''': '''đứa con gái trẻ''',
@@ -2681,8 +3419,6 @@ extension Localization on String {
           '''This is a wall.''': '''Đây là một bức tường.''',
           '''Oink !''': '''Ủn ỉn!''',
           '''This pig looks very happy.''': '''Con lợn này trông rất vui.''',
-          '''A strange icosahedral stone''':
-              '''Một hòn đá hình tứ diện kỳ lạ''',
           '''Package of the King''': '''Gói hàng của Vua''',
           '''First Signet''': '''Ấn dấu đầu tiên''',
         },
@@ -2998,6 +3734,9 @@ extension Localization on String {
               '''Ich muss meinen Eltern noch mit der "A"-Taste auf Wiedersehen sagen, das wäre sonst unhöflich.''',
           '''Like my mother said, it\'s better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.''':
               '''Wie meine Mutter sagte: es wäre besser, wenn ich mir die Schienbeinschützer von meinem Nachbarn hole. Sonst könnte ich mir zu sehr an den Felsen verletzen.''',
+          '''* {{hero}} found {{money-diff}} ¤ *''':
+              '''* {{hero}} fand {{money-diff}} ¤ *''',
+          '''A rock.''': '''Ein Stein.''',
           '''I still haven\'t figured out if these monsters are malicious or just stupid.''':
               '''Ich habe noch nicht herausgefunden, ob diese Monster bösartig oder einfach nur dumm sind.''',
           '''I hate people who always say the same things.''':
@@ -3059,6 +3798,8 @@ extension Localization on String {
               '''" Picknick-Platz – Bitte sauber halten, danke "''',
           '''" Picnic area ↑ "\n" Forest Center ↓ "''':
               '''" Picknick-Platz ↑ "\n" Waldzentrum ↓ "''',
+          '''Yes''': '''Ja''',
+          '''No''': '''Nein''',
           '''Mossy Crypt -4F''': '''Moosbewachsene Krypta -4.UG''',
           '''The snowballs container is full.''':
               '''Der Behälter für Schneebälle ist voll.''',
@@ -3069,8 +3810,6 @@ extension Localization on String {
           '''We\'re watching you.''': '''Wir beobachten Dich.''',
           '''Hmm, I think that from this snowdrift I can obtain material to make new snowballs by pressing the \'A\' key.''':
               '''Hmm, ich denke, dass ich aus dieser Schneewehe Material für neue Schneebälle gewinnen kann, wenn ich die Taste \'A\' drücke.''',
-          '''* {{hero}} found {{money-diff}} ¤ *''':
-              '''* {{hero}} fand {{money-diff}} ¤ *''',
           '''A rock covered by moss.''': '''Ein moosbewachsener Stein.''',
           '''T-today… today is the day I\'ve been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I\'m the chosen "hero" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to.''':
               '''H-heute… heute ist der Tag auf den ich mein Leben lang gewartet habe. Meine Reise zum Xeonjia-Turm beginnt.\nIn diesem Jahr bin ich der auserwählte "Held", verantwortlich, das Monster zu besiegen, das das Königreich eingefroren hat…\nNach Jahren des Trainings hoffe ich, dass ich es schaffe.''',
@@ -3086,6 +3825,8 @@ extension Localization on String {
           '''Melhopolis''': '''Melhopolis''',
           '''The city center is a few kilometers to the south.''':
               '''Das Stadtzentrum befindet sich einige Kilometer südlich.''',
+          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
+              '''Ich plane eine Überraschungshochzeit für meinen Sohn. Ich hoffe, er findet es nicht heraus.''',
           '''" VANTOI LAB "''': '''"VANTOI-LAB"''',
           '''I can see the inside of the Laboratory.''':
               '''Ich kann das Innere des Labors sehen.''',
@@ -3174,10 +3915,6 @@ extension Localization on String {
               '''Du bist der Auserwählte für dieses Jahr, richtig? Mein Sohn war das vor vielen Jahren auch mal.''',
           '''Unfortunately he failed to defeat the King of Evil…''':
               '''Leider gelang es ihm nicht, den König des Bösen zu besiegen…''',
-          '''I\'m planning a surprise wedding for my son, I hope he doesn\'t find out.''':
-              '''Ich plane eine Überraschungshochzeit für meinen Sohn. Ich hoffe, er findet es nicht heraus.''',
-          '''This part is under construction.''':
-              '''Dieser Abschnitt befindet sich noch im Aufbau.''',
           '''Pharmacy''': '''Apotheke''',
           '''Welcome to my shop!''': '''Willkommen in meinem Laden!''',
           '''pharmacist''': '''Apotheker''',
@@ -3254,10 +3991,11 @@ extension Localization on String {
           '''Oh, I hope you are not right.''':
               '''Oh, ich hoffe Du irrst Dich.''',
           '''I like piglets.''': '''Ich mag Ferkel.''',
-          '''Yes''': '''Ja''',
-          '''No''': '''Nein''',
           '''Mossy Crypt -3F''': '''Moosbewachsene Krypta -3.UG''',
           '''My work is so boring…''': '''Meine Arbeit ist so öde…''',
+          '''I will defeat you.''': '''Ich werde Dich besiegen.''',
+          '''This is a very strange stone… Never seen anything like this before.''':
+              '''Das ist ein sehr eigenartiger Stein...So etwas habe ich noch nie zuvor gesehen.''',
           '''Hi, I\'m an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I\'ll help you.''':
               '''Hallo, ich bin ein Beamter des Königreichs.\nWenn du dich verirrst oder Probleme hast, den Weg zu finden, komm zu mir und ich werde dir helfen.''',
           '''Are you stuck?\nTake the path behind the blue tree.''':
@@ -3305,7 +4043,6 @@ extension Localization on String {
               '''Das Rathaus scheint geräumig zu sein.''',
           '''You\'re lucky, but it doesn\'t end here, guaranteed.''':
               '''Du hattest Glück, aber es ist noch nicht vorbei.''',
-          '''I will defeat you.''': '''Ich werde Dich besiegen.''',
           '''You will not escape me.''': '''Du wirst mir nicht entkommen.''',
           '''I can\'t escape. I have to take the first signet.''':
               '''Ich komme nicht mehr raus. Ich muss das erste Siegel bekommen.''',
@@ -3354,6 +4091,8 @@ extension Localization on String {
               '''Eine steinige, moosbewachsene Wand.''',
           '''iosa''': '''Iosa''',
           '''joza''': '''Joza''',
+          '''This part is under construction.''':
+              '''Dieser Abschnitt befindet sich noch im Aufbau.''',
           '''Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck.''':
               '''Manchmal findet man zwischen den Zweigen der Pflanzen einige Beeren.\nIch habe auch schon Gegenstände gefunden, die stecken geblieben sind.''',
           '''Oh, I was about to take those berries.''':
@@ -3376,8 +4115,6 @@ extension Localization on String {
               '''Das Eis ist so rutschig, hat du das bemerkt?\nIch fühle mich auf dem Schnee viel wohler.''',
           '''There seems to be something in the branches of this plant…\nIt\'s a stone!''':
               '''Da scheint was zwischen den Ästen des Baumes zu sein...\nEs ist ein Stein!''',
-          '''This is a very strange stone… Never seen anything like this before.''':
-              '''Das ist ein sehr eigenartiger Stein...So etwas habe ich noch nie zuvor gesehen.''',
           '''VANTOI LAB – 2F''': '''VANTOI LAB – 2.UG''',
           '''What a mess! I have to tidy up!''':
               '''Was für ein Chaos! Ich muss das aufräumen!''',
@@ -3404,7 +4141,9 @@ extension Localization on String {
               '''Jemand hat alles auf den Kopf gestellt.''',
           '''A rocky wall.''': '''Eine Steinwand.''',
           '''A wall.''': '''Eine Wand.''',
-          '''A rock.''': '''Ein Stein.''',
+          '''It\'s not a good thing to look into other people\'s homes.''':
+              '''Es ist unangebracht, sich die Häuser anderer Leute anzuschauen.''',
+          '''This is a pharmacy.''': '''Dies ist eine Apotheke.''',
           '''A little plant.''': '''Eine kleine Pflanze.''',
           '''A little plant without leaves.''':
               '''Eine kleine Pflanze ohne Blätter.''',
@@ -3414,9 +4153,6 @@ extension Localization on String {
               '''Diese Baumart ist eigenartig.''',
           '''This type of plant is strange.''':
               '''Diese Pflanzenart ist eigenartig.''',
-          '''It\'s not a good thing to look into other people\'s homes.''':
-              '''Es ist unangebracht, sich die Häuser anderer Leute anzuschauen.''',
-          '''This is a pharmacy.''': '''Dies ist eine Apotheke.''',
           '''man''': '''Mann''',
           '''lumberjack''': '''Holzfäller''',
           '''young-girl''': '''Mädchen''',
@@ -3446,8 +4182,6 @@ extension Localization on String {
           '''Oink !''': '''Oink!''',
           '''This pig looks very happy.''':
               '''Das Schwein sieht sehr glücklich aus.''',
-          '''A strange icosahedral stone''':
-              '''Ein seltsamer, ikosaedrischer Stein''',
           '''Package of the King''': '''Paket des Königs''',
           '''First Signet''': '''Erstes Siegel''',
         },

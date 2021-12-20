@@ -5,6 +5,162 @@ import 'package:i18n_extension/i18n_extension.dart';
 extension Localization on String {
   static final _t = Translations.byLocale('en') +
       {
+        'hu': {
+          '''Info''': '''Infó''',
+          '''Settings''': '''Beállítás''',
+          '''Story mode''': '''Történet mód''',
+          '''Multiplayer''': '''Többjátékos''',
+          '''How to play''': '''Hogy kell játszani''',
+          '''Almost done!''': '''Majdnem kész!''',
+          '''Before starting tell me your name which will be used in the game.''':
+              '''Mielőtt elkezdenéd, mondd meg a neved, amit a játékban használni fogunk.''',
+          '''Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.''':
+              '''Oldj meg jégrejtvényeket és győzd le az ellenséget egy RPG világban.\n\nLapozz jobbra az alapfogalmak elsajátításához.''',
+          '''Modes''': '''Módok''',
+          '''There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the "King of Evil" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win.''':
+              '''A Xeonjia kétféle üzemmódból áll:\n\n1. A te feladatod, hogy legyőzd a "Gonosz Királyát" és megmentsd a királyságot.\n\n2. Többjátékos mód: győzd le az ellenséget, szerezz pontokat és tedd győztessé a csapatodat.''',
+          '''Movements''': '''Mozdulatok''',
+          '''Swipe your finger to move your character across the world.\nKeep in mind that you can\'t stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!''':
+              '''Mozgasd az ujjaddal a karakteredet a világban.\nNe feledd, hogy nem állhatsz meg, amíg nem érsz el egy falat, egy sziklát vagy bármilyen más típusú akadályt.\n\nHasználd az eszed, hogy kitaláld a legjobb utat!''',
+          '''Lifepoints''': '''Életpontok''',
+          '''Pay attention to your lifepoints!\nMany enemies, pitfalls and dangers will try to hurt you.''':
+              '''Figyelj az életpontjaidra!\nSok ellenség, buktató és veszély próbál majd ártani neked.''',
+          '''Weapons''': '''Fegyverek''',
+          '''You\'ll need weapons to overcome barriers and defeat enemies.\n\nTap the screen in the desired direction or press the shoot button to hit.\nBe aware that some weapons have few hits, so use them wisely.''':
+              '''Fegyverekre lesz szükséged az akadályok leküzdéséhez és az ellenség legyőzéséhez.\n\nÉrintsd meg a képernyőt a kívánt irányba, vagy nyomd meg a lövés gombot a találathoz.\nLégy tudatában annak, hogy egyes fegyverek kevés találatot adnak, ezért bölcsen használd őket.''',
+          '''Enemies''': '''Ellenségek''',
+          '''Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have life points too.''':
+              '''Légy óvatos, a világ tele van veszélyes ellenségekkel, akik készen állnak arra, hogy megtámadjanak!\nÜsd meg őket többször, hogy legyőzd őket; nekik is vannak életpontjaik.''',
+          '''Close''': '''Bezár''',
+          '''Back''': '''Vissza''',
+          '''OK''': '''OK''',
+          '''Next''': '''Következő''',
+          '''Play''': '''Játék''',
+          '''Multiplayer Mode''': '''Többjátékos mód''',
+          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play".''':
+              '''Ennek a módnak a célja az ellenség legyőzése, a pontszerzés és a csapatod győzelemre juttatása.\n\nA szabályok egyszerűek:\n- A játékosok két csapatba szerveződnek.\n- Amikor egy játékos legyőz egy ellenfelet, csapata 100 pontot kap.\n- Az a csapat nyer, amelyik eléri a kívánt pontszámot.\n\nA csapattársaid a pirosak.\n\nEgyelőre csak CPU-k ellen lehet játszani.\n\nVálaszd ki a játék helyszínét és konfiguráld a játékot.\nHa készen állsz, nyomd meg a "Játék" gombot.''',
+          '''Okay, got it!''': '''Oké, értem!''',
+          '''Map''': '''Térkép''',
+          '''Place to play''': '''A játék helye''',
+          '''Difficulty''': '''Nehézségi szint''',
+          '''Match difficulty''': '''A mérkőzés nehézsége''',
+          '''Points required''': '''Szükséges pontszám''',
+          '''Points needed to win''': '''A győzelemhez szükséges pontok''',
+          '''Time available''': '''Rendelkezésre álló idő''',
+          '''Maximum time for a match (minutes)''':
+              '''Egy mérkőzés maximális időtartama (perc)''',
+          '''Players''': '''Játékosok''',
+          '''Number of players per team''':
+              '''A játékosok száma csapatonként''',
+          '''Friendly Fire''': '''Baráti tűz''',
+          '''If enabled, players can hit their teammates''':
+              '''Ha engedélyezve van, a játékosok megüthetik csapattársaikat''',
+          '''Easy''': '''Könnyű''',
+          '''Medium''': '''Nehéz''',
+          '''Hard''': '''Legnehezebb''',
+          '''Restore''': '''Visszaállítás''',
+          '''Restore default settings?''':
+              '''Alapértelmezett beállítások visszaállítása?''',
+          '''Are you sure you want to delete your settings and restore default ones?''':
+              '''Biztos, hogy törölni szeretnéd a beállításaidat és visszaállítani az alapértelmezetteket?''',
+          '''Cancel''': '''Mégsem''',
+          '''Show D-Pad''': '''D-Pad megjelenítése''',
+          '''Enable directional pad''': '''Irányváltó pad engedélyezése''',
+          '''Background music''': '''Háttérzene''',
+          '''Enable background music''': '''Háttérzene engedélyezése''',
+          '''Sound effects''': '''Hangeffektek''',
+          '''Enable sound effects''': '''Hangeffektusok engedélyezése''',
+          '''Your name''': '''A neved''',
+          '''Click here to change the name used in story mode''':
+              '''Kattints ide a történet módban használt név megváltoztatásához''',
+          '''Discard''': '''Dobja el''',
+          '''Save''': '''Mentés''',
+          '''Language''': '''Nyelv''',
+          '''App language''': '''Az alkalmazás nyelve''',
+          '''System default''': '''Alapértelmezett rendszer''',
+          '''By %s''': '''Készítette %s''',
+          '''App developed by %s''': '''Az alkalmazás fejlesztője %s''',
+          '''Version: %s''': '''Verzió: %s''',
+          '''App version''': '''Az alkalmazás verziója''',
+          '''Donate''': '''Adományozás''',
+          '''Support the development''': '''A fejlesztés támogatása''',
+          '''Translate''': '''Fordítsd le''',
+          '''Translate in your language''': '''Fordíts le a saját nyelvedre''',
+          '''Updates''': '''Frissítések''',
+          '''Search for updates''': '''Frissítések keresése''',
+          '''View source code''': '''A forráskód megtekintése''',
+          '''Look at the source code''': '''Nézd meg a forrás kódot''',
+          '''Report bugs''': '''Hibák jelentése''',
+          '''Report bugs or request new feature''':
+              '''Hibák jelentése vagy új funkció kérése''',
+          '''Send email''': '''E-mail küldése''',
+          '''Ask for something or request a new feature''':
+              '''Kérj valamit vagy kérj egy új funkciót''',
+          '''View License (GPLv3)''': '''Licenc megtekintése (GPLv3)''',
+          '''Read software license''': '''Szoftverlicenc olvasása''',
+          '''Third Party Licenses''': '''Harmadik fél licencek''',
+          '''Read third party notices''':
+              '''Harmadik felek értesítéseinek elolvasása''',
+          '''Ok''': '''Ok''',
+          '''Close map''': '''Térkép bezárása''',
+          '''You went too far!''': '''Túl messzire mentél!''',
+          '''Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback.''':
+              '''Sajnos a történet következő része még nem elérhető :(\nRemélhetőleg hamarosan elérhető lesz.\n\nAddig is támogathatod a Xeonjia fejlesztését adományozással vagy visszajelzéssel.''',
+          '''Report a bug or ask something''':
+              '''Jelents hibát vagy kérdezz valamit''',
+          '''Go back''': '''Menj vissza''',
+          '''Back to menu''': '''Vissza a menübe''',
+          '''You run out of energy !''': '''Kifogytál az energiából !''',
+          '''You lost %s ¤ and woke up after a short nap''':
+              '''Elvesztetted a %s ¤ és felébredtél egy rövid szunyókálás után''',
+          '''Your team won''': '''A csapatod nyert''',
+          '''Your team lost''': '''A csapatod vesztett''',
+          '''The time is over.''': '''Az idő lejárt.''',
+          '''%s points have been achieved.''': '''%s pontot sikerült elérni.''',
+          '''Do you want to restart this game?''':
+              '''Újra akarod kezdeni a játékot?''',
+          '''Continue''': '''Folytatás''',
+          '''Yes''': '''Igen''',
+          '''No''': '''Nem''',
+          '''Loading…\nPlease wait''': '''Betöltés...\nKérlek, várj''',
+          '''pause''': '''szünet''',
+          '''restart''': '''újrajátszás''',
+          '''exit''': '''kilépés''',
+          '''cancel''': '''mégsem''',
+          '''lifepoints: %s''': '''életpontok: %s''',
+          '''level: %s''': '''szint: %s''',
+          '''money: %s ¤''': '''pénz: %s ¤''',
+          '''play time: %s min''': '''játékidő: %s perc''',
+          '''your defeats: %s''': '''a vereségeitek: %s''',
+          '''enemies defeated: %s''': '''legyőzött ellenségek: %s''',
+          '''your points: %s''': '''a pontjaid: %s''',
+          '''resume''': '''folytasd''',
+          '''Are you sure you want to restart this game?''':
+              '''Biztos, hogy újra akarod kezdeni a játékot?''',
+          '''It will restart from the last location change.''':
+              '''Az utolsó helyváltástól indul újra.''',
+          '''Are you sure you want to quit this game?''':
+              '''Biztos, hogy ki akarsz szállni ebből a játékból?''',
+          '''\n\nGame data since the last time you changed your location will be lost.''':
+              '''\n\nA legutóbbi helyváltoztatás óta eltelt játékadatok elvesznek.''',
+          '''Shop''': '''Bolt''',
+          '''What do you need?''': '''Mire van szükséged?''',
+          '''Let me know if you need anything else.''':
+              '''Szólj, ha szükséged van még valamire.''',
+          '''* {{hero}} puts %s in the backpack. *''':
+              '''* {{hero}} %s -t tesz a hátizsákba. *''',
+          '''* {{hero}} gives %s *''': '''* {{hero}} ad %s *''',
+          '''Punch''': '''Ütés''',
+          '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
+              '''Üsd az előtted lévő ellenséget.\nEz a legalapvetőbb fegyver. Végtelen PP-vel rendelkezel.''',
+          '''Throw snowballs in front of you.''':
+              '''Dobálj hógolyókat magad elé.''',
+          '''Leave explosive mines on the floor.\nA mine explodes if someone except you walks on it.''':
+              '''Hagyj robbanóaknákat a padlón.\nAz akna felrobban, ha rajtad kívül valaki rálép.''',
+          '''What\'s your name?''': '''Mi a neved?''',
+          '''Too short.''': '''Túl rövid.''',
+          '''Insert your name here''': '''Írd be a neved ide''',
+        },
         'fr': {
           '''Info''': '''Infos''',
           '''Settings''': '''Paramètres''',
@@ -145,12 +301,8 @@ extension Localization on String {
           '''What do you need?''': '''De quoi avez-vous besoin ?''',
           '''Let me know if you need anything else.''':
               '''Faites-moi savoir si vous avez besoin d\'autre chose.''',
-          '''There are still monsters here. I can\'t escape.''':
-              '''Il y a encore des monstres ici. Je ne peux pas m\'échapper.''',
           '''* {{hero}} puts %s in the backpack. *''':
               '''* {{hero}} met %s dans le sac à dos. *''',
-          '''* {{hero}} puts the gem in the backpack. *''':
-              '''* {{hero}} met la gemme dans le sac à dos. *''',
           '''* {{hero}} gives %s *''': '''* {{hero}} donne %s *''',
           '''Punch''': '''Poing''',
           '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
@@ -268,6 +420,9 @@ extension Localization on String {
               '''Riporta un bug o chiedi qualcosa''',
           '''Go back''': '''Torna indietro''',
           '''Back to menu''': '''Torna al menu''',
+          '''No items here''': '''Nessuno strumento qui''',
+          '''Backpack''': '''Zaino''',
+          '''Use''': '''Usa''',
           '''You run out of energy !''': '''Hai finito le energie !''',
           '''You lost %s ¤ and woke up after a short nap''':
               '''Hai perso %s ¤ e ti sei svegliato dopo un pisolino''',
@@ -289,6 +444,7 @@ extension Localization on String {
           '''lifepoints: %s''': '''punti vita: %s''',
           '''level: %s''': '''livello: %s''',
           '''money: %s ¤''': '''soldi: %s ¤''',
+          '''gems: %s''': '''gemme: %s''',
           '''play time: %s min''': '''tempo di gioco: %s min''',
           '''your defeats: %s''': '''tue sconfitte: %s''',
           '''enemies defeated: %s''': '''nemici sconfitti: %s''',
@@ -306,12 +462,15 @@ extension Localization on String {
           '''What do you need?''': '''Di cosa hai bisogno?''',
           '''Let me know if you need anything else.''':
               '''Fammi sapere se serve altro.''',
-          '''There are still monsters here. I can\'t escape.''':
-              '''Ci sono ancora mostri qui. Non posso scappare.''',
+          '''There is still 1 monster here. I can\'t escape.''':
+              '''C\'è ancora 1 mostro qui. Non posso scappare.''',
+          '''There are still %s monsters here. I can\'t escape.''':
+              '''Ci sono ancora %s mostri qui. Non posso scappare.''',
           '''* {{hero}} puts %s in the backpack. *''':
               '''* {{hero}} mette %s nello zaino. *''',
-          '''* {{hero}} puts the gem in the backpack. *''':
-              '''* {{hero}} mette la gemma nello zaino. *''',
+          '''the gem''': '''la gemma''',
+          '''* {{hero}} used {{selected-item-name}} *''':
+              '''* {{hero}} usa {{selected-item-name}} *''',
           '''* {{hero}} gives %s *''': '''* {{hero}} dà %s *''',
           '''Punch''': '''Pugno''',
           '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
@@ -428,6 +587,8 @@ extension Localization on String {
               '''Reporta un bug o pregunta algo''',
           '''Go back''': '''Regresar''',
           '''Back to menu''': '''Regresar al menú''',
+          '''Backpack''': '''Mochila''',
+          '''Use''': '''Usa''',
           '''You run out of energy !''': '''¡Te quedaste sin HP!''',
           '''You lost %s ¤ and woke up after a short nap''':
               '''Perdiste %s ¤ y despiertas después de una corta siesta''',
@@ -448,6 +609,7 @@ extension Localization on String {
           '''lifepoints: %s''': '''HP: %s''',
           '''level: %s''': '''nivel: %s''',
           '''money: %s ¤''': '''dinero: %s ¤''',
+          '''gems: %s''': '''gemas: %s''',
           '''play time: %s min''': '''tiempo de juego: %s min''',
           '''your defeats: %s''': '''tus derrotas: %s''',
           '''enemies defeated: %s''': '''enemigos derrotados: %s''',
@@ -465,12 +627,11 @@ extension Localization on String {
           '''What do you need?''': '''¿Qué necesitas?''',
           '''Let me know if you need anything else.''':
               '''Hazme saber si necesitas algo más.''',
-          '''There are still monsters here. I can\'t escape.''':
-              '''Todavía hay monstruos aquí. No puedes escapar.''',
           '''* {{hero}} puts %s in the backpack. *''':
               '''* {{hero}} pone %s en su mochila. *''',
-          '''* {{hero}} puts the gem in the backpack. *''':
-              '''* {{hero}} pone la gema en su mochila. *''',
+          '''the gem''': '''la gema''',
+          '''* {{hero}} used {{selected-item-name}} *''':
+              '''* {{hero}} usó {{selected-item-name}} *''',
           '''* {{hero}} gives %s *''': '''* {{hero}} da %s *''',
           '''Punch''': '''Golpear''',
           '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
@@ -659,6 +820,9 @@ extension Localization on String {
               '''Сообщить об ошибке или что-то спросить''',
           '''Go back''': '''Возвращайся''',
           '''Back to menu''': '''Вернуться в меню''',
+          '''No items here''': '''Нет вещей тут''',
+          '''Backpack''': '''Рюкзак''',
+          '''Use''': '''Использовать''',
           '''You run out of energy !''': '''Твои силы иссякли !''',
           '''You lost %s ¤ and woke up after a short nap''':
               '''Ты потерял %s ¤ и очнулся после короткого сна''',
@@ -679,6 +843,7 @@ extension Localization on String {
           '''lifepoints: %s''': '''здоровье: %s''',
           '''level: %s''': '''уровень: %s''',
           '''money: %s ¤''': '''деньги: %s ¤''',
+          '''gems: %s''': '''Гемы: %s''',
           '''play time: %s min''': '''время в игре: %s мин''',
           '''your defeats: %s''': '''твоих смертей %s''',
           '''enemies defeated: %s''': '''убито врагов: %s''',
@@ -696,12 +861,15 @@ extension Localization on String {
           '''What do you need?''': '''Что Вам нужно?''',
           '''Let me know if you need anything else.''':
               '''Дайте знать, если Вам понадобится что-нибудь ещё.''',
-          '''There are still monsters here. I can\'t escape.''':
-              '''Здесь по-прежнему есть монстры. Я не могу убежать.''',
+          '''There is still 1 monster here. I can\'t escape.''':
+              '''Здесь один монстр. Я не могу сбежать.''',
+          '''There are still %s monsters here. I can\'t escape.''':
+              '''Тут %s монстров. Я не могу сбежать.''',
           '''* {{hero}} puts %s in the backpack. *''':
               '''* {{hero}} кладёт %s в рюкзак. *''',
-          '''* {{hero}} puts the gem in the backpack. *''':
-              '''* {{hero}} кладёт драгоценный камень в рюкзак. *''',
+          '''the gem''': '''Гем''',
+          '''* {{hero}} used {{selected-item-name}} *''':
+              '''* {{hero}} использовал {{selected-item-name}} *''',
           '''* {{hero}} gives %s *''': '''* {{hero}} отдаёт %s *''',
           '''Punch''': '''Удар''',
           '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
@@ -854,12 +1022,8 @@ extension Localization on String {
           '''What do you need?''': '''Bạn cần gì?''',
           '''Let me know if you need anything else.''':
               '''Hãy cho tôi biết nếu bạn cần thứ gì đó khác.''',
-          '''There are still monsters here. I can\'t escape.''':
-              '''Ở đây vẫn có quái vật. Tôi không thể trốn thoát được.''',
           '''* {{hero}} puts %s in the backpack. *''':
               '''* {{hero}} đặt %s vào ba lô. *''',
-          '''* {{hero}} puts the gem in the backpack. *''':
-              '''* {{hero}} đặt viên đá quý vào ba lô. *''',
           '''* {{hero}} gives %s *''': '''* {{hero}} đưa %s *''',
           '''Punch''': '''Đấm''',
           '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
@@ -1042,12 +1206,8 @@ extension Localization on String {
           '''Are you sure you want to quit this game?''': '''你确定要退出游戏吗？''',
           '''Shop''': '''商店''',
           '''What do you need?''': '''有什么需要的吗？''',
-          '''There are still monsters here. I can\'t escape.''':
-              '''这里还有怪物，我不能逃。''',
           '''* {{hero}} puts %s in the backpack. *''':
               '''* {{hero}} 将 %s 放入背包 *''',
-          '''* {{hero}} puts the gem in the backpack. *''':
-              '''* {{hero}} 将宝石放入背包 *''',
           '''* {{hero}} gives %s *''': '''* {{hero}} 给了 %s *''',
           '''Punch''': '''攻击''',
           '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
@@ -1201,12 +1361,8 @@ extension Localization on String {
           '''What do you need?''': '''Was brauchst du?''',
           '''Let me know if you need anything else.''':
               '''Melde dich, wenn du sonst noch etwas brauchst.''',
-          '''There are still monsters here. I can\'t escape.''':
-              '''Es sind immer noch Monster hier, ich komme hier nicht weg.''',
           '''* {{hero}} puts %s in the backpack. *''':
               '''* {{hero}} packt %s in den Rucksack. *''',
-          '''* {{hero}} puts the gem in the backpack. *''':
-              '''* {{hero}} packt den Juwel in den Rucksack. *''',
           '''* {{hero}} gives %s *''': '''* {{hero}} gibt %s *''',
           '''Punch''': '''Schlag''',
           '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
