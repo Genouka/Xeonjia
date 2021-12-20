@@ -420,6 +420,26 @@ msgid "I think somehow it's possible to invoke the protective spirit of this reg
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
+msgid "Let me know if you need help."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think that all the writings on the six stones must be true to invoke the spirit."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think that #1 should be green."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Do you need help?"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "It doesn't seem difficult to solve."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
 msgid "I don't know what you did but it seems to have worked."
 msgstr ""
 
