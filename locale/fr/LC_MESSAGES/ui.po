@@ -3,9 +3,9 @@
 # This file is distributed under the same license as Xeonjia.
 # Swann Fournial <s.fournial@protonmail.com>, 2021.
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
-# J. Lavoie <j.lavoie@net-c.ca>, 2021.
+# J. Lavoie <j.lavoie@net-c.ca>, 2021, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-06-25 16:13+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/ui/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-01-07 16:03+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/ui/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -337,7 +337,7 @@ msgstr "Malheureusement, la prochaine partie de l'histoire n'est pas encore disp
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Report a bug or ask something"
-msgstr "Signalez un problème ou demandez quelque chose"
+msgstr "Signaler un problème ou demander quelque chose"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Go back"
@@ -349,15 +349,15 @@ msgstr "Retour au menu"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "No items here"
-msgstr ""
+msgstr "Aucun élément ici"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "Backpack"
-msgstr ""
+msgstr "Sac à dos"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "Use"
-msgstr ""
+msgstr "Utiliser"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"
@@ -365,7 +365,7 @@ msgstr "Vous n'avez plus d'énergie !"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "You lost %s ¤ and woke up after a short nap"
-msgstr "Vous avez perdu %s ¤ et vous êtes réveillé·e après un petit somme"
+msgstr "Vous avez perdu %s ¤ et vous vous êtes réveillé après un petit somme"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Your team won"
@@ -433,7 +433,7 @@ msgstr "argent : %s ¤"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "gems: %s"
-msgstr ""
+msgstr "gemmes : %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "play time: %s min"
@@ -485,11 +485,11 @@ msgstr "Faites-moi savoir si vous avez besoin d'autre chose."
 
 #: lib/game/components/static/door.dart:
 msgid "There is still 1 monster here. I can't escape."
-msgstr ""
+msgstr "Il y a encore 1 monstre ici. Je ne peux pas m'échapper."
 
 #: lib/game/components/static/door.dart:
 msgid "There are still %s monsters here. I can't escape."
-msgstr ""
+msgstr "Il y a encore %s monstres ici. Je ne peux pas m'échapper."
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
@@ -497,11 +497,11 @@ msgstr "* {{hero}} met %s dans le sac à dos. *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "the gem"
-msgstr ""
+msgstr "la gemme"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} used {{selected-item-name}} *"
-msgstr ""
+msgstr "* {{hero}} a utilisé {{selected-item-name}} *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} gives %s *"

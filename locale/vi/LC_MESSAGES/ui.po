@@ -1,9 +1,9 @@
 # Translation for Xeonjia
 # Copyright (C) 2020, 2021 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# Quang Trung <quangtrung02hn16@gmail.com>, 2021.
+# Quang Trung <quangtrung02hn16@gmail.com>, 2021, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-07-10 07:54+0000\nLast-Translator: Quang Trung <quangtrung02hn16@gmail.com>\nLanguage-Team: Vietnamese <https://translate.deepdaikon.xyz/projects/xeonjia/ui/vi/>\nLanguage: vi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-01-07 16:03+0000\nLast-Translator: Quang Trung <quangtrung02hn16@gmail.com>\nLanguage-Team: Vietnamese <https://translate.deepdaikon.xyz/projects/xeonjia/ui/vi/>\nLanguage: vi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -347,15 +347,15 @@ msgstr "Quay về menu"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "No items here"
-msgstr ""
+msgstr "Không có vật phẩm ở đây"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "Backpack"
-msgstr ""
+msgstr "Ba lô"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "Use"
-msgstr ""
+msgstr "Sử dụng"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"
@@ -431,7 +431,7 @@ msgstr "tiền: %s ¤"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "gems: %s"
-msgstr ""
+msgstr "đá quý: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "play time: %s min"
@@ -483,11 +483,11 @@ msgstr "Hãy cho tôi biết nếu bạn cần thứ gì đó khác."
 
 #: lib/game/components/static/door.dart:
 msgid "There is still 1 monster here. I can't escape."
-msgstr ""
+msgstr "Ở đây vẫn còn 1 con quái. Tôi không thể trốn thoát."
 
 #: lib/game/components/static/door.dart:
 msgid "There are still %s monsters here. I can't escape."
-msgstr ""
+msgstr "Ở đây vẫn còn %s con quái. Tôi không thể trốn thoát."
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
@@ -495,11 +495,11 @@ msgstr "* {{hero}} đặt %s vào ba lô. *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "the gem"
-msgstr ""
+msgstr "đá quý"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} used {{selected-item-name}} *"
-msgstr ""
+msgstr "* {{hero}} sử dụng {{selected-item-name}} *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} gives %s *"

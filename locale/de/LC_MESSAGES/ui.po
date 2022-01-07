@@ -8,7 +8,7 @@
 # zwergwolf <sadness@gmx.de>, 2021.
 # araccaine <arac.caine@posteo.de>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-08-23 21:33+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-28 09:31+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -352,15 +352,15 @@ msgstr "Zurück zum Menü"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "No items here"
-msgstr ""
+msgstr "Keine Elemente hier"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "Backpack"
-msgstr ""
+msgstr "Rucksack"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "Use"
-msgstr ""
+msgstr "Nutzen"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"
@@ -436,7 +436,7 @@ msgstr "Geld: %s ¤"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "gems: %s"
-msgstr ""
+msgstr "Edelsteine: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "play time: %s min"
@@ -488,11 +488,11 @@ msgstr "Melde dich, wenn du sonst noch etwas brauchst."
 
 #: lib/game/components/static/door.dart:
 msgid "There is still 1 monster here. I can't escape."
-msgstr ""
+msgstr "Es ist immer noch 1 Ungeheuer hier. Ich komme hier nicht weg."
 
 #: lib/game/components/static/door.dart:
 msgid "There are still %s monsters here. I can't escape."
-msgstr ""
+msgstr "Es sind immer noch %s Ungeheuer hier. Ich komme hier nicht weg."
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
@@ -500,11 +500,11 @@ msgstr "* {{hero}} packt %s in den Rucksack. *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "the gem"
-msgstr ""
+msgstr "den Edelstein"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} used {{selected-item-name}} *"
-msgstr ""
+msgstr "* {{hero}} hat {{selected-item-name}} genutzt *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} gives %s *"
