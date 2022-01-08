@@ -52,6 +52,14 @@ If you want to support the development of Xeonjia you can donate through Liberap
 [![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/deepdaikon/donate)
 [<img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=2" alt="Donate" height="30">](https://ko-fi.com/deepdaikon)
 
+## Contribute
+
+Xeonjia is still in an early stage of development, so any contribution is highly appreciated.
+
+Are you a pixel artist? A musician? A storywriter? A developer? None of these but you just want to help?
+
+Write me an email at: deepdaikon@tuta.io :)
+
 ## Translate
 
 You can use [Weblate](https://translate.deepdaikon.xyz/engage/xeonjia/) if you want to help with the translation of Xeonjia.
