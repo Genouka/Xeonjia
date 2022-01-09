@@ -261,12 +261,15 @@ extension Localization on String {
           '''Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback.''':
               '''Malheureusement, la prochaine partie de l\'histoire n\'est pas encore disponible :(\nEspérons qu\'elle sera bientôt disponible.\n\nEn attendant, vous pouvez soutenir le développement de Xeonjia en faisant un don ou en faisant des remarques.''',
           '''Report a bug or ask something''':
-              '''Signalez un problème ou demandez quelque chose''',
+              '''Signaler un problème ou demander quelque chose''',
           '''Go back''': '''Retour''',
           '''Back to menu''': '''Retour au menu''',
+          '''No items here''': '''Aucun élément ici''',
+          '''Backpack''': '''Sac à dos''',
+          '''Use''': '''Utiliser''',
           '''You run out of energy !''': '''Vous n\'avez plus d\'énergie !''',
           '''You lost %s ¤ and woke up after a short nap''':
-              '''Vous avez perdu %s ¤ et vous êtes réveillé·e après un petit somme''',
+              '''Vous avez perdu %s ¤ et vous vous êtes réveillé après un petit somme''',
           '''Your team won''': '''Votre équipe a gagné''',
           '''Your team lost''': '''Votre équipe a perdu''',
           '''The time is over.''': '''Le temps est fini.''',
@@ -284,6 +287,7 @@ extension Localization on String {
           '''lifepoints: %s''': '''points de vie : %s''',
           '''level: %s''': '''niveau : %s''',
           '''money: %s ¤''': '''argent : %s ¤''',
+          '''gems: %s''': '''gemmes : %s''',
           '''play time: %s min''': '''temps de jeu : %s min''',
           '''your defeats: %s''': '''vos défaites : %s''',
           '''enemies defeated: %s''': '''ennemies vaincus : %s''',
@@ -301,8 +305,15 @@ extension Localization on String {
           '''What do you need?''': '''De quoi avez-vous besoin ?''',
           '''Let me know if you need anything else.''':
               '''Faites-moi savoir si vous avez besoin d\'autre chose.''',
+          '''There is still 1 monster here. I can\'t escape.''':
+              '''Il y a encore 1 monstre ici. Je ne peux pas m\'échapper.''',
+          '''There are still %s monsters here. I can\'t escape.''':
+              '''Il y a encore %s monstres ici. Je ne peux pas m\'échapper.''',
           '''* {{hero}} puts %s in the backpack. *''':
               '''* {{hero}} met %s dans le sac à dos. *''',
+          '''the gem''': '''la gemme''',
+          '''* {{hero}} used {{selected-item-name}} *''':
+              '''* {{hero}} a utilisé {{selected-item-name}} *''',
           '''* {{hero}} gives %s *''': '''* {{hero}} donne %s *''',
           '''Punch''': '''Poing''',
           '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
@@ -714,6 +725,101 @@ extension Localization on String {
           '''Discard''': '''Відмовитися''',
           '''Save''': '''Зберегти''',
           '''Language''': '''Мова''',
+          '''App language''': '''Мова додатку''',
+          '''System default''': '''Налаштування за замовчуванням''',
+          '''By %s''': '''Автор %s''',
+          '''App developed by %s''': '''Додаток розробив %s''',
+          '''Version: %s''': '''Версія: %s''',
+          '''App version''': '''Версія додатку''',
+          '''Donate''': '''Донат''',
+          '''Support the development''': '''Підтримати розробку''',
+          '''Translate''': '''Перекласти гру''',
+          '''Translate in your language''': '''Перекласти на свою мову''',
+          '''Updates''': '''Оновлення''',
+          '''Search for updates''': '''Пошук оновлень''',
+          '''View source code''': '''Переглянути вихідний код''',
+          '''Look at the source code''': '''Подивитися вихідний код''',
+          '''Report bugs''': '''Повідомити про помилки''',
+          '''Report bugs or request new feature''':
+              '''Повідомити про помилки або запропонувати нову функціональність''',
+          '''Send email''': '''Зв\'язок через електронну пошту''',
+          '''Ask for something or request a new feature''':
+              '''Запитати щось або запропонувати нову функціональність''',
+          '''View License (GPLv3)''': '''Подивитися ліцензію (GPLv3)''',
+          '''Read software license''': '''Прочитати ліцензію на ПЗ''',
+          '''Third Party Licenses''': '''Ліцензії третіх сторін''',
+          '''Read third party notices''': '''Читати сповіщення третіх осіб''',
+          '''Ok''': '''ОК''',
+          '''Close map''': '''Закрити карту''',
+          '''You went too far!''': '''Ти зайшов надто далеко!''',
+          '''Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback.''':
+              '''На жаль, наступна частина історії ще не доступна: (\nСподіваємось, вона буде доступна найближчим часом.\n\nА поки що ви можете підтримати розвиток Xeonjia, зробивши пожертвування або залишивши відгук.''',
+          '''Report a bug or ask something''':
+              '''Повідомити про помилку або запитати щось''',
+          '''Go back''': '''Повертайся''',
+          '''Back to menu''': '''Повернутися до меню''',
+          '''No items here''': '''Тут немає предметів''',
+          '''Backpack''': '''Рюкзак''',
+          '''Use''': '''Використати''',
+          '''You run out of energy !''': '''Твоя енергія вичерпалася !''',
+          '''You lost %s ¤ and woke up after a short nap''':
+              '''Ти втратив %s ¤ та прокинувся після короткого сну''',
+          '''Your team won''': '''Ваша команда перемогла''',
+          '''Your team lost''': '''Ваша команда програла''',
+          '''The time is over.''': '''Час закінчився.''',
+          '''%s points have been achieved.''': '''Отримано %s очків.''',
+          '''Do you want to restart this game?''':
+              '''Ви хочете перезапустити цю гру?''',
+          '''Continue''': '''Продовжити''',
+          '''Yes''': '''Так''',
+          '''No''': '''Ні''',
+          '''Loading…\nPlease wait''':
+              '''Завантаження...\nБудь ласка, зачекайте''',
+          '''pause''': '''пауза''',
+          '''restart''': '''перезапустити''',
+          '''exit''': '''вихід''',
+          '''cancel''': '''скасувати''',
+          '''lifepoints: %s''': '''здоров\'я: %s''',
+          '''level: %s''': '''рівень: %s''',
+          '''money: %s ¤''': '''гроші: %s ¤''',
+          '''gems: %s''': '''геми: %s''',
+          '''play time: %s min''': '''час гри: %s хв''',
+          '''your defeats: %s''': '''ваших поразок: %s''',
+          '''enemies defeated: %s''': '''переможені вороги: %s''',
+          '''your points: %s''': '''набрано очків: %s''',
+          '''resume''': '''продовжити''',
+          '''Are you sure you want to restart this game?''':
+              '''Ти впевнений, що хочеш перезапустити цю гру?''',
+          '''It will restart from the last location change.''':
+              '''Перезапуск виконується з останньої зміни розташування.''',
+          '''Are you sure you want to quit this game?''':
+              '''Ти впевнений, що хочеш вийти з цієї гри?''',
+          '''\n\nGame data since the last time you changed your location will be lost.''':
+              '''\n\nІгрові дані з моменту останньої зміни розташування будуть втрачені.''',
+          '''Shop''': '''Магазин''',
+          '''What do you need?''': '''Що Вам потрібно?''',
+          '''Let me know if you need anything else.''':
+              '''Дайте мені знати, якщо вам ще щось потрібно.''',
+          '''There is still 1 monster here. I can\'t escape.''':
+              '''Тут ще є 1 монстр. Я не можу втекти.''',
+          '''There are still %s monsters here. I can\'t escape.''':
+              '''Тут ще є %s монстрів. Я не можу втекти.''',
+          '''* {{hero}} puts %s in the backpack. *''':
+              '''* {{hero}} кладе %s у рюкзак. *''',
+          '''the gem''': '''гем''',
+          '''* {{hero}} used {{selected-item-name}} *''':
+              '''* {{hero}} використав {{selected-item-name}} *''',
+          '''* {{hero}} gives %s *''': '''* {{hero}} дає %s *''',
+          '''Punch''': '''Удар''',
+          '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
+              '''Бийте ворога, що знаходиться перед вами.\nЦе базова зброя. Обмежень використання немає.''',
+          '''Throw snowballs in front of you.''':
+              '''Кидайте сніжки перед собою.''',
+          '''Leave explosive mines on the floor.\nA mine explodes if someone except you walks on it.''':
+              '''Залишай на підлозі вибухові міни.\nМіна вибухне, якщо по ній пройде хтось, крім тебе.''',
+          '''What\'s your name?''': '''Як тебе звати?''',
+          '''Too short.''': '''Занадто коротко.''',
+          '''Insert your name here''': '''Введіть тут своє ім\'я''',
         },
         'ru': {
           '''Info''': '''Информация''',
@@ -985,6 +1091,9 @@ extension Localization on String {
               '''Báo cáo lỗi hoặc hỏi điều gì đó''',
           '''Go back''': '''Quay lại''',
           '''Back to menu''': '''Quay về menu''',
+          '''No items here''': '''Không có vật phẩm ở đây''',
+          '''Backpack''': '''Ba lô''',
+          '''Use''': '''Sử dụng''',
           '''You run out of energy !''': '''Bạn hết năng lượng rồi!''',
           '''You lost %s ¤ and woke up after a short nap''':
               '''Bạn đã mất %s ¤ và tỉnh dậy sau một giấc ngủ ngắn''',
@@ -1005,6 +1114,7 @@ extension Localization on String {
           '''lifepoints: %s''': '''HP: %s''',
           '''level: %s''': '''cấp: %s''',
           '''money: %s ¤''': '''tiền: %s ¤''',
+          '''gems: %s''': '''đá quý: %s''',
           '''play time: %s min''': '''thời gian chơi: %s phút''',
           '''your defeats: %s''': '''lần bạn bị đánh bại: %s''',
           '''enemies defeated: %s''': '''kẻ thù đã đánh bại: %s''',
@@ -1022,8 +1132,15 @@ extension Localization on String {
           '''What do you need?''': '''Bạn cần gì?''',
           '''Let me know if you need anything else.''':
               '''Hãy cho tôi biết nếu bạn cần thứ gì đó khác.''',
+          '''There is still 1 monster here. I can\'t escape.''':
+              '''Ở đây vẫn còn 1 con quái. Tôi không thể trốn thoát.''',
+          '''There are still %s monsters here. I can\'t escape.''':
+              '''Ở đây vẫn còn %s con quái. Tôi không thể trốn thoát.''',
           '''* {{hero}} puts %s in the backpack. *''':
               '''* {{hero}} đặt %s vào ba lô. *''',
+          '''the gem''': '''đá quý''',
+          '''* {{hero}} used {{selected-item-name}} *''':
+              '''* {{hero}} sử dụng {{selected-item-name}} *''',
           '''* {{hero}} gives %s *''': '''* {{hero}} đưa %s *''',
           '''Punch''': '''Đấm''',
           '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
@@ -1323,6 +1440,9 @@ extension Localization on String {
               '''Einen Fehler melden oder eine Frage stellen''',
           '''Go back''': '''Zurück''',
           '''Back to menu''': '''Zurück zum Menü''',
+          '''No items here''': '''Keine Elemente hier''',
+          '''Backpack''': '''Rucksack''',
+          '''Use''': '''Nutzen''',
           '''You run out of energy !''': '''Du verlierst Energie!''',
           '''You lost %s ¤ and woke up after a short nap''':
               '''Du hast %s ¤ verloren und bist nach einem Nickerchen wieder aufgewacht''',
@@ -1344,6 +1464,7 @@ extension Localization on String {
           '''lifepoints: %s''': '''Lebensenergie: %s''',
           '''level: %s''': '''Level: %s''',
           '''money: %s ¤''': '''Geld: %s ¤''',
+          '''gems: %s''': '''Edelsteine: %s''',
           '''play time: %s min''': '''Spielzeit: %s min''',
           '''your defeats: %s''': '''Deine Niederlagen: %s''',
           '''enemies defeated: %s''': '''Besiegte Gegner: %s''',
@@ -1361,8 +1482,15 @@ extension Localization on String {
           '''What do you need?''': '''Was brauchst du?''',
           '''Let me know if you need anything else.''':
               '''Melde dich, wenn du sonst noch etwas brauchst.''',
+          '''There is still 1 monster here. I can\'t escape.''':
+              '''Es ist immer noch 1 Ungeheuer hier. Ich komme hier nicht weg.''',
+          '''There are still %s monsters here. I can\'t escape.''':
+              '''Es sind immer noch %s Ungeheuer hier. Ich komme hier nicht weg.''',
           '''* {{hero}} puts %s in the backpack. *''':
               '''* {{hero}} packt %s in den Rucksack. *''',
+          '''the gem''': '''den Edelstein''',
+          '''* {{hero}} used {{selected-item-name}} *''':
+              '''* {{hero}} hat {{selected-item-name}} genutzt *''',
           '''* {{hero}} gives %s *''': '''* {{hero}} gibt %s *''',
           '''Punch''': '''Schlag''',
           '''Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP.''':
