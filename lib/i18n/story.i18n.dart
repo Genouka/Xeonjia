@@ -1940,7 +1940,7 @@ extension Localization on String {
               '''Per raggiungere l\'altra riva bisogna passare attraverso il tunnel sottomarino ma è attualmente sorvegliato dal Team Brina.\nSe non se ne vanno proverò ad attraversare il mare con la barca.''',
           '''Once I happened to see a strange hole in the middle of the sea.''':
               '''Una volta mi è capitato di vedere uno strano buco in mezzo al mare.''',
-          '''" Hana\'s Tunnel "''': '''" Tunnel di Hana "''',
+          '''" Hana\'s Tunnel "''': '''" Tunnel Hana "''',
           '''" Observation Tower "''': '''" Torre di Osservazione "''',
           '''The sea is calm today.''': '''Il mare è calmo oggi.''',
           '''Nope, there\'s only trash here.''':
@@ -4789,7 +4789,7 @@ extension Localization on String {
               '''Du musst den Unterseetunnel benutzen, um auf die andere Seite zu kommen. Leider lässt Team Raureif gerade niemanden durch.\nWenn das so weitergeht, werde ich wohl versuchen, mit dem Boot rüberzufahren.''',
           '''Once I happened to see a strange hole in the middle of the sea.''':
               '''Ich habe mal ein seltsames Loch in der Mitte des Meeres gesehen.''',
-          '''" Hana\'s Tunnel "''': '''„ Hanas Tunnel“''',
+          '''" Hana\'s Tunnel "''': '''„Hanas Tunnel“''',
           '''" Observation Tower "''': '''„Aussichtsturm“''',
           '''The sea is calm today.''': '''Das Meer ist heute ruhig.''',
           '''Nope, there\'s only trash here.''':
