@@ -52,9 +52,9 @@ class Message {
               (m) => game.environment.lookForValue(Sym(m[1])).toString());
       if (font == 'kobi') {
         const diacritics =
-            'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
+            'ÀÁÂÃÄÅàáâãäåắạÒÓÔÕÕÖØòóôõöøốọồớÈÉÊËèéêëềẽðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüựứừưÑñŠšŸÿýŽžđ';
         const nonDiacritics =
-            'AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz';
+            'AAAAAAaaaaaaaaOOOOOOOooooooooooEEEEeeeeeeeCcDIIIIiiiiUUUUuuuuuuuuNnSsYyyZzd';
         text = text.splitMapJoin('',
             onNonMatch: (char) => char.isNotEmpty && diacritics.contains(char)
                 ? nonDiacritics[diacritics.indexOf(char)]
