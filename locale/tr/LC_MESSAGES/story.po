@@ -1,26 +1,36 @@
 # Translation for Xeonjia
-# Copyright (C) 2020 DeepDaikon
+# Copyright (C) 2020, 2021 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# Patryk <kikson91@yandex.com>, 2021.
-# DeepDaikon <deepdaikon@tuta.io>, 2021, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-02-06 08:29+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Polish <https://translate.deepdaikon.xyz/projects/xeonjia/story/pl/>\nLanguage: pl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
-msgstr "Ratusz"
+msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "…"
-msgstr "…"
+msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "H-Hello."
-msgstr "Dź-Dzień dobry"
+msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
-msgstr "Witaj, zapewne jesteś {{hero}}! Miło mi ciebie poznać. Słyszałem, że wybierasz się w te strony. Na imię mi Xe III, jestem królem tego regionu."
+msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "king"
@@ -96,15 +106,15 @@ msgstr ""
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! {{life-diff}} LPs have been recovered *"
-msgstr "* {{hero}} znalazł kilka jagód! Odnowiono {{life-diff}} pż*"
+msgstr ""
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant… nothing else."
-msgstr "Mała roślina… nic więcej."
+msgstr ""
 
 #: assets/maps/story/15.tmx:
 msgid "\" Exit ↑ \""
-msgstr "\" Wyjście ↑ \""
+msgstr ""
 
 #: assets/maps/story/33.tmx:
 msgid "In the distance can be seen the other part of the region."
@@ -128,36 +138,35 @@ msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB – 1F"
-msgstr "LABOLATORIUM VANTOI – 1F"
+msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Sorry about the mess. Thieves have entered and turned everything upside down."
-msgstr "Przepraszam za bałagan. Złodzieje weszli i wywrócili wszystko do góry nogami."
+msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "scientist"
-msgstr "naukowiec"
+msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A life's work has been destroyed…"
-msgstr "Dzieło życia zostało zniszczone…"
+msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Someone used this plant to do some experiments."
-msgstr "Ktoś użył tej rośliny do kilku eksperymentów."
+msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A broken monitor."
-msgstr "Popsuty monitor."
+msgstr ""
 
 #: assets/maps/story/8.tmx:
-#, fuzzy
 msgid "\" → \""
-msgstr "\" → \""
+msgstr ""
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
-msgstr "Natawn"
+msgstr ""
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nMany before you have failed, but I am sure you will handle it right."

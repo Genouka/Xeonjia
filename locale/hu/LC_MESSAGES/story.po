@@ -3,8 +3,9 @@
 # This file is distributed under the same license as Xeonjia.
 # Viktória Nagy <tindykmp@protonmail.ch>, 2021.
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
+# Kempelen <lion@cmsbazar.hu>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-18 11:05+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-01-23 13:14+0000\nLast-Translator: Kempelen <lion@cmsbazar.hu>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -252,7 +253,7 @@ msgstr "Minden rendben?"
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, thank you so much for saving my life!\nI have to admit, I was scared.\nAs a token of gratitude I give you this gem that I found a little while ago."
-msgstr "Igen, nagyon köszönöm, hogy megmentetted az életemet!\nBe kell vallanom, hogy megijedtem.\nHálám jeléül átadom neked ezt a gyöngyszemet, amit nemrég találtam."
+msgstr "Igen, nagyon köszönöm, hogy megmentetted az életemet!\nBe kell vallanom, hogy megijedtem.\nHálám jeléül átadom neked ezt a drágakövet, amit nemrég találtam."
 
 #: assets/maps/story/13.tmx:
 msgid "Thanks, it seems very precious."
@@ -348,7 +349,7 @@ msgstr "A nevem Milla, ezen a területen születtem és nőttem fel. Én is útn
 
 #: assets/maps/story/7.tmx:
 msgid "Oh cool! Where are you going?"
-msgstr "Ó, király! Hova mész?"
+msgstr "Ó, nagyszerű! Hova mész?"
 
 #: assets/maps/story/7.tmx:
 msgid "I have absolutely no idea."
@@ -732,7 +733,7 @@ msgstr "Ó, egyébként, azt hiszem, ez segíthet neked."
 
 #: assets/maps/story/22.tmx:
 msgid "* {{hero}} got a SNOWBALLS CONTAINER *"
-msgstr "* {{hero}} kapott egy hógolyó tartályt *"
+msgstr "* {{hero}} kapott egy HÓGOLYÓ TARTÁLYT *"
 
 #: assets/maps/story/22.tmx:
 msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the 'S' button.\nIt can contain up to 10 snowballs."
@@ -772,7 +773,7 @@ msgstr "Viszlát Shen, még egyszer köszönöm!"
 
 #: assets/maps/story/22.tmx:
 msgid "I have to go through the crypt to get the first signet."
-msgstr "Át kell mennem a kriptán, hogy megszerezzem az első kitűzőt."
+msgstr "Át kell mennem a kriptán, hogy megszerezzem az első jelvényt."
 
 #: assets/maps/story/9.tmx:
 msgid "This is not a place for kids, go home."
@@ -956,7 +957,7 @@ msgstr "Imádom azokat az aranyos kis zöld kukacokat!"
 
 #: assets/maps/story/999.tmx:
 msgid "…S-such weird tastes here."
-msgstr "...Olyan furcsa az ízlése."
+msgstr "...Olyan furcsa ízlés."
 
 #: assets/maps/story/999.tmx:
 msgid "Unkind!"
@@ -1060,7 +1061,7 @@ msgstr "Igazából nem túl jól... Még mindig kicsit álmos vagyok."
 
 #: assets/maps/story/1_home.tmx:
 msgid "You always are.\nAnyway, now it is time to leave, be very careful and remember to check your health in the top left bar."
-msgstr "Mindig is az voltál.\nMindenesetre most már ideje indulni, légy nagyon óvatos, és ne felejtsd el ellenőrizni az életerődet a felső sarokban."
+msgstr "Mindig is az vagy.\nMindenesetre most már ideje indulni, légy nagyon óvatos, és ne felejtsd el figyelni az életerődet a felső sarokban."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Yea mom. Don't worry, I'll be careful."
@@ -1228,7 +1229,7 @@ msgstr "Köszönöm!"
 
 #: assets/maps/story/28_house.tmx:
 msgid "Oh, ok. Then I'll have to think about what to do with this gem."
-msgstr "Ó, oké. Akkor el kell gondolkodnom, hogy mit kezdjek ezzel a gyöngyszemmel."
+msgstr "Ó, oké. Akkor el kell gondolkodnom, hogy mit kezdjek ezzel a drágakővel."
 
 #: assets/maps/story/28_house.tmx:
 msgid "Protect that gem well."
@@ -1300,7 +1301,7 @@ msgstr "Alig várom, hogy befejezzék a vasúti rendszer helyreállítását, a 
 
 #: assets/maps/story/30.tmx:
 msgid "My wife remained blocked on the other side of the kingdom, I wonder if I will ever see her again."
-msgstr "A feleségem elzárva maradt az ország másik felén, vajon látom még valaha."
+msgstr "A feleségem elzárva maradt az ország másik felén, vajon látom-e még valaha."
 
 #: assets/maps/story/30.tmx:
 msgid "\" City Hall ↑ \""
@@ -1348,7 +1349,7 @@ msgstr "Nem gondoltam, hogy idáig eljutsz, kölyök."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "W-Who are you? Who are you guys?"
-msgstr "Ki maga? Kik vagytok ti?"
+msgstr "K-Ki vagy? Kik vagytok ti?"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm surprised that my name is not known among the woods of your village."
@@ -1380,7 +1381,7 @@ msgstr "Akárhogy is van, nem hagyom, hogy folytasd a terveidet."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm {{hero}}, I'm the chos-"
-msgstr "Én vagyok {{hero}}, én vagyok a főnök-"
+msgstr "Én vagyok {{hero}}, én vagyok a kivá-"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I know very well who you are, you're the chosen hero and blah, blah, blah.\nI don't have time for this."
@@ -1392,7 +1393,7 @@ msgstr "Tudom, hogy akarod a jelvényt, győzd le a csatlósaimat, és a tiéd l
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I won't let you go so eas-"
-msgstr "Nem engedlek el olyan könnyen-"
+msgstr "Nem engedlek el olyan könnye-"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Well, well, well… you'll have to deal with us now."
@@ -1412,7 +1413,7 @@ msgstr "Mi vagyunk a Iosa és Joza testvérek, és mi leszünk a legrosszabb ré
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm not scared of you, let's see what you are capable of!"
-msgstr "Nem félek tőled, lássuk, mire vagy képes!"
+msgstr "Nem félek tőletek, lássuk, mire vagytok képesek!"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Now you will see."
@@ -1568,7 +1569,7 @@ msgstr "Néhány sziklát mi, az Ország munkásai helyezünk el.\nÍgy könnyeb
 
 #: assets/maps/story/10.tmx:
 msgid "\" Souvenir shop \""
-msgstr "\" Szuvenírbolt \""
+msgstr "\" Ajándékbolt \""
 
 #: assets/maps/story/10.tmx:
 msgid "I can see the inside of the shop."
@@ -1592,11 +1593,11 @@ msgstr "A régió fáit az egész királyságban csodálják és tanulmányozzá
 
 #: assets/maps/story/5.tmx:
 msgid "\" Mitsu Forest – Welcome, respect nature and remember to take a look at the souvenir shop on the right \""
-msgstr "\" Mitsu Erdő - Üdvözölünk, tiszteljük a természetet, és ne feledjük, hogy vessünk egy pillantást a szuvenír boltban a jobb oldalon \""
+msgstr "\" Mitsu Erdő - Üdvözölünk, tiszteld a természetet, és ne feledd, hogy térj be az ajándékboltba a jobb oldalon \""
 
 #: assets/maps/story/5.tmx:
 msgid "Once this was a very touristy place, the Kingdom tried to make money from it."
-msgstr "Egykor ez egy nagyon turisztikai hely volt, a királyság megpróbált pénzt csinálni belőle."
+msgstr "Egykor ez egy felkapott turisztikai hely volt, a királyság megpróbált pénzt csinálni belőle."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Test tubes and other scientific stuff."
