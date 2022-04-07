@@ -1,0 +1,5 @@
+* Yeni hikaye modu eklendi
+* Grafikler güncellendi
+* UI/UX iyileştirildi
+* Fon müziği ve sfx eklendi
+* Hata düzeltmeleri yapıldı

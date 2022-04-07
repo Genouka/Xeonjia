@@ -1,0 +1,3 @@
+* Bazı animasyonlar eklendi
+* Yatay yönlendirme etkinleştirildi
+* Hata düzeltmeleri yapıldı

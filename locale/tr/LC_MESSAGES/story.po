@@ -1,120 +1,109 @@
 # Translation for Xeonjia
 # Copyright (C) 2020, 2021 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Muha Aliss <muhaaliss@gmail.com>, 2022.
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: tr\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-04-07 16:35+0000\nLast-Translator: Muha Aliss <muhaaliss@gmail.com>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
-msgstr ""
+msgstr "Belediye Binası"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "H-Hello."
-msgstr ""
+msgstr "M-Merhaba."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
-msgstr ""
+msgstr "Merhaba, sen {{hero}} olmalısın! Tanıştığıma memnun oldum. Bu taraflara gideceğini duydum.\nBenim adım III Xe ve ben bu bölgenin kralıyım."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "king"
-msgstr ""
+msgstr "kral"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Do not confuse me with the King of Evil, I am good haha."
-msgstr ""
+msgstr "Beni Kötülüğün Kralı ile karıştırmayın, ben iyiyim haha."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "So… tell me, how are you? Is everything okay? How is the journey going?"
-msgstr ""
+msgstr "Peki… söyle bana, nasılsın? Her şey yolunda mı? Yolculuk nasıl gidiyor?"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Everything good, I just defeated the Hoarfrost Team and I got the first signet!"
-msgstr ""
+msgstr "Her şey yolunda, Kırağı Takımını yendim ve ilk mührü aldım!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Oh really?! This is great news!"
-msgstr ""
+msgstr "Gerçekten mi?! Bu harika bir haber!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "It has been difficult?"
-msgstr ""
+msgstr "Zordu sanırım?"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Well, but if you did it, it means that you are strong!"
-msgstr ""
+msgstr "Ama başardıysan güçlüsün demektir!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Well, congratulations! This means that you are strong!"
-msgstr ""
+msgstr "Tebrikler! Bu, güçlü olduğun anlamına gelir!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "I trust that you will be able to take the other two signets as well."
-msgstr ""
+msgstr "Diğer iki mührü de alabileceğine inanıyorum."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Since you're heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here."
-msgstr ""
+msgstr "Doğuya gittiğine göre bana bir iyilik yapar mısın? Bu paketi Su Bölgesi Kralı'na teslim edebilir misin? Buranın birkaç kilometre doğusunda."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes of course, I'll give it to him."
-msgstr ""
+msgstr "Evet tabiki ona veririm."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Thank you very much. Here's to you."
-msgstr ""
+msgstr "Çok teşekkürler. İşte senin için."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Be careful not to drop it, it is fragile."
-msgstr ""
+msgstr "Düşürmemeye dikkat et, kırılgandır."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Sure, I'll be careful."
-msgstr ""
+msgstr "Tabii, dikkatli olacağım."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Thank you again.\nI wish you a good journey, come back anytime."
-msgstr ""
+msgstr "Tekrar teşekkürler.\nİyi yolculuklar dilerim, istediğin zaman geri gelebilirsin."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Good journey {{hero}}, I have faith in you."
-msgstr ""
+msgstr "İyi yolculuklar {{hero}}, sana güveniyorum."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes, quite a lot"
-msgstr ""
+msgstr "Evet, oldukça fazla"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Just a little"
-msgstr ""
+msgstr "Sadece biraz"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! {{life-diff}} LPs have been recovered *"
-msgstr ""
+msgstr "* {{hero}} biraz böğürtlen buldu! {{life-diff}} LP doldurdu *"
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant… nothing else."
-msgstr ""
+msgstr "Küçük bir bitki… başka bir şey değil."
 
 #: assets/maps/story/15.tmx:
 msgid "\" Exit ↑ \""
-msgstr ""
+msgstr "\"Çıkış ↑\""
 
 #: assets/maps/story/33.tmx:
 msgid "In the distance can be seen the other part of the region."
@@ -598,11 +587,11 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes"
-msgstr ""
+msgstr "Evet"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "No"
-msgstr ""
+msgstr "Hayır"
 
 #: assets/maps/story/t1_04.tmx:
 msgid "Mossy Crypt -4F"

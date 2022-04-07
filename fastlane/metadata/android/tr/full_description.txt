@@ -1,0 +1,17 @@
+İki mod var:
+
+1) Hikaye modu: Amaç kulenin son katına ulaşmak ve "Kötülük Kralı"nı yenmektir.
+
+2) Çok oyunculu mod: Bu modun amacı puan toplamak ve takımınızın kazanmasını sağlamaktır.
+
+Basitçe karakterini dünya içerisinde hareket ettirmek için parmağını kaydırman gerekecek.
+
+Duvara, kayaya veya başka bir engele ulaşana kadar karakterini durduramayacağını unutma.
+
+Zamanla, seviyeni yükseltmeni sağlayacak deneyim puanları kazanacak, bir şeyler satın almak ve kendini geliştirmek için kullanabileceğin para ve gizli hazineler bulacaksın.
+
+Dikkatli ol, dünya sana saldırmaya hazır tehlikeli düşmanlarla dolu!
+
+En iyi yolu bulmak için aklını kullan!
+
+<b>Not</b>: Bu oyun şu anda erken beta aşamasındadır.

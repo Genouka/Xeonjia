@@ -2,543 +2,534 @@
 # Copyright (C) 2020, 2021 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # deepdaikon <deepdaikon@tuta.io>, 2022.
+# Muha Aliss <muhaaliss@gmail.com>, 2022.
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: tr\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-04-07 16:35+0000\nLast-Translator: Muha Aliss <muhaaliss@gmail.com>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
-msgstr ""
+msgstr "Bilgi"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Settings"
-msgstr ""
+msgstr "Ayarlar"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Story mode"
-msgstr ""
+msgstr "Hikaye modu"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Multiplayer"
-msgstr ""
+msgstr "Çok oyunculu"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "How to play"
-msgstr ""
+msgstr "Nasıl oynanır"
 
 #: lib/ui/screens/rules/widgets/last_page.dart:
 msgid "Almost done!"
-msgstr ""
+msgstr "Neredeyse bitti!"
 
 #: lib/ui/screens/rules/widgets/last_page.dart:
 msgid "Before starting tell me your name which will be used in the game."
-msgstr ""
+msgstr "Başlamadan önce oyuncu ismini söyle."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts."
-msgstr ""
+msgstr "RPG dünyasında özel bulmacaları çöz ve düşmanları alt et.\n\nTemel kavramları öğrenmek için sağa kaydır."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Modes"
-msgstr ""
+msgstr "Modlar"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "There are two modes in Xeonjia:\n\n1) Story: the world has been frozen and your duty is to defeat the \"King of Evil\" and save the kingdom.\n\n2) Multiplayer: defeat enemies, score points and make your team win."
-msgstr ""
+msgstr "Xeonjia'da iki mod vardır:\n\n1) Hikaye: donmuş dünyada senin görevin \"Kötülüğün Kralını\" yenmek ve krallığı kurtarmak.\n\n 2) Çok oyunculu: düşmanları alt et, puan topla ve takımının kazanmasını sağla."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Movements"
-msgstr ""
+msgstr "Hareketler"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Swipe your finger to move your character across the world.\nKeep in mind that you can't stop yourself until you reach a wall, a boulder, or any other type of obstacle.\n\nUse your mind to figure out the best path!"
-msgstr ""
+msgstr "Karakterini dünya içinde hareket ettirmek için parmağını kaydır.\nDuvara, kayaya veya başka bir engele ulaşana kadar karakterini durduramayacağını unutma.\n\nEn iyi yolu bulmak için aklını kullan!"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Lifepoints"
-msgstr ""
+msgstr "Yaşam puanları"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Pay attention to your lifepoints!\nMany enemies, pitfalls and dangers will try to hurt you."
-msgstr ""
+msgstr "Yaşam puanına dikkat et!\nBirçok düşman, tuzak ve tehlike sana zarar vermeye çalışacak."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Weapons"
-msgstr ""
+msgstr "Silahlar"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "You'll need weapons to overcome barriers and defeat enemies.\n\nTap the screen in the desired direction or press the shoot button to hit.\nBe aware that some weapons have few hits, so use them wisely."
-msgstr ""
+msgstr "Engelleri aşmak ve düşmanları yenmek için silahlara ihtiyacın olacak.\n\nİstediğin yönde ekrana dokunun veya vurmak için ateş düğmesine bas.\nBazı silahların çok az isabet aldığını unutma, bu yüzden onları akıllıca kulan."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Enemies"
-msgstr ""
+msgstr "Düşmanlar"
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have life points too."
-msgstr ""
+msgstr "Dikkatli ol, dünya sana saldırmaya hazır tehlikeli düşmanlarla dolu!\nOnları yenmek için birkaç kez vur, onların da yaşam puanları var."
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "Close"
-msgstr ""
+msgstr "Kapat"
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "Back"
-msgstr ""
+msgstr "Geri"
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "OK"
-msgstr ""
+msgstr "Tamam"
 
 #: lib/ui/screens/rules/rules_page.dart:
 msgid "Next"
-msgstr ""
+msgstr "Sonraki"
 
 #: lib/ui/screens/arena/widgets/play_button.dart:
 msgid "Play"
-msgstr ""
+msgstr "Oyna"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Multiplayer Mode"
-msgstr ""
+msgstr "Çok Oyunculu Mod"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press \"Play\"."
-msgstr ""
+msgstr "Bu modun amacı düşmanları yenmek, puan toplamak ve takımının kazanmasını sağlamaktır.\n\nKurallar basit:\n - Oyuncular iki takıma ayrılır.\n - Bir oyuncu rakibini yendiğinde, takımı 100 puan alır.\n - Gerekli puana ulaşan takım kazanır.\n\nTakım arkadaşların kırmızı renkli olanlar.\n\nŞimdilik sadece yapay zekaya karşı oynamak mümkün.\n\nOynayacağınız yeri seçin ve oyunu yapılandırın.\nHazır olduğunuzda \"Oynat\"a basın."
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Okay, got it!"
-msgstr ""
+msgstr "Tamam anladım!"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Map"
-msgstr ""
+msgstr "Harita"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Place to play"
-msgstr ""
+msgstr "Oyun alanı"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Difficulty"
-msgstr ""
+msgstr "Zorluk"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Match difficulty"
-msgstr ""
+msgstr "Maç zorluğu"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points required"
-msgstr ""
+msgstr "Puan gerekli"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points needed to win"
-msgstr ""
+msgstr "Kazanmak için gereken puan"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Time available"
-msgstr ""
+msgstr "Kalan zaman"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Maximum time for a match (minutes)"
-msgstr ""
+msgstr "Bir maç için maksimum süre (dakika)"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Players"
-msgstr ""
+msgstr "Oyuncular"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Number of players per team"
-msgstr ""
+msgstr "Takım başına oyuncu sayısı"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Friendly Fire"
-msgstr ""
+msgstr "Dost ateşi"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "If enabled, players can hit their teammates"
-msgstr ""
+msgstr "Etkinleştirilirse, oyuncular takım arkadaşlarına saldırabilir"
 
 #: lib/ui/screens/arena/resources/maps.dart:
 msgid "Easy"
-msgstr ""
+msgstr "Kolay"
 
 #: lib/ui/screens/arena/resources/maps.dart:
 msgid "Medium"
-msgstr ""
+msgstr "Orta"
 
 #: lib/ui/screens/arena/resources/maps.dart:
 msgid "Hard"
-msgstr ""
+msgstr "Zor"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore"
-msgstr ""
+msgstr "Onar"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore default settings?"
-msgstr ""
+msgstr "Ayarları varsayılan duruma getirmek istiyor musunuz?"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Are you sure you want to delete your settings and restore default ones?"
-msgstr ""
+msgstr "Ayarları silmek ve varsayılanları geri yüklemek istediğinden emin misin?"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Cancel"
-msgstr ""
+msgstr "İptal"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Show D-Pad"
-msgstr ""
+msgstr "D-Pad'i göster"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable directional pad"
-msgstr ""
+msgstr "Yön padı etkinleştir"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Background music"
-msgstr ""
+msgstr "Arka plan müziği"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable background music"
-msgstr ""
+msgstr "Arka plan müziğini etkinleştir"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Sound effects"
-msgstr ""
+msgstr "Ses efektleri"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable sound effects"
-msgstr ""
+msgstr "Ses efektlerini etkinleştir"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Your name"
-msgstr ""
+msgstr "Adınız"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Click here to change the name used in story mode"
-msgstr ""
+msgstr "Hikaye modunda kullanılan adı değiştirmek için buraya tıklayın"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Discard"
-msgstr ""
+msgstr "At"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Save"
-msgstr ""
+msgstr "Kaydet"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Language"
-msgstr ""
+msgstr "Dil"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "App language"
-msgstr ""
+msgstr "Uygulama dili"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "System default"
-msgstr ""
+msgstr "Sistem varsayılanı"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "By %s"
-msgstr ""
+msgstr "%s tarafından"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App developed by %s"
-msgstr ""
+msgstr "%s tarafından geliştirildi"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version: %s"
-msgstr ""
+msgstr "Versiyon: %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
-msgstr ""
+msgstr "Uygulama sürümü"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Donate"
-msgstr ""
+msgstr "Bağış"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Support the development"
-msgstr ""
+msgstr "Gelişimi destekleyin"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate"
-msgstr ""
+msgstr "Yerelleştir"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate in your language"
-msgstr ""
+msgstr "Kendi dilinize çevirin"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Updates"
-msgstr ""
+msgstr "Güncellemeler"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Search for updates"
-msgstr ""
+msgstr "Güncellemeleri ara"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View source code"
-msgstr ""
+msgstr "Kaynak kodu görüntüle"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Look at the source code"
-msgstr ""
+msgstr "Kaynak kodu incele"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
-msgstr ""
+msgstr "Hata bildir"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs or request new feature"
-msgstr ""
+msgstr "Hataları bildirin veya yeni özellik isteyin"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
-msgstr ""
+msgstr "Eposta gönder"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ask for something or request a new feature"
-msgstr ""
+msgstr "Bir şey isteyin veya yeni bir özellik isteyin"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View License (GPLv3)"
-msgstr ""
+msgstr "Lisansı Görüntüle (GPLv3)"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
-msgstr ""
+msgstr "Yazılım lisansını oku"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Third Party Licenses"
-msgstr ""
+msgstr "Üçüncü Taraf Lisansları"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read third party notices"
-msgstr ""
+msgstr "Üçüncü taraf bildirimlerini okuyun"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ok"
-msgstr ""
+msgstr "Tamam"
 
 #: lib/game/widgets/minimap_button.dart:
 msgid "Close map"
-msgstr ""
+msgstr "Haritayı kapat"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "You went too far!"
-msgstr ""
+msgstr "Çok ileri gittin!"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback."
-msgstr ""
+msgstr "Ne yazık ki, hikayenin bir sonraki bölümü henüz mevcut değil :(\nUmarım yakında kullanılabilir olacak.\n\nBu arada bağış yaparak veya geri bildirimde bulunarak Xeonjia'nın gelişimine destek olabilirsin."
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Report a bug or ask something"
-msgstr ""
+msgstr "Bir hatayı bildirin veya bir şey sorun"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Go back"
-msgstr ""
+msgstr "Geri dön"
 
 #: lib/game/widgets/no_maps_menu.dart:
 msgid "Back to menu"
-msgstr ""
+msgstr "Menüye dön"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "No items here"
-msgstr ""
+msgstr "Burada öğe yok"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "Backpack"
-msgstr ""
+msgstr "Sırt çantası"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "Use"
-msgstr ""
+msgstr "Kullan"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "You run out of energy !"
-msgstr ""
+msgstr "Enerjin bitti!"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "You lost %s ¤ and woke up after a short nap"
-msgstr ""
+msgstr "%s ¤ kaybettin ve kısa bir uykudan sonra uyandın"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Your team won"
-msgstr ""
+msgstr "Takımın kazandı"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Your team lost"
-msgstr ""
+msgstr "Takımın kaybetti"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "The time is over."
-msgstr ""
+msgstr "Süre bitti."
 
 #: lib/game/widgets/end_menu.dart:
 msgid "%s points have been achieved."
-msgstr ""
+msgstr "%s puana ulaşıldı."
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Do you want to restart this game?"
-msgstr ""
+msgstr "Oyunu yeniden başlatmak istiyor musun?"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Continue"
-msgstr ""
+msgstr "Devam et"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "Yes"
-msgstr ""
+msgstr "Evet"
 
 #: lib/game/widgets/end_menu.dart:
 msgid "No"
-msgstr ""
+msgstr "Hayır"
 
 #: lib/game/widgets/loading_page.dart:
 msgid "Loading…\nPlease wait"
-msgstr ""
+msgstr "Yükleniyor…\nLütfen bekle"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "pause"
-msgstr ""
+msgstr "duraklat"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "restart"
-msgstr ""
+msgstr "tekrar başlat"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "exit"
-msgstr ""
+msgstr "çık"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "cancel"
-msgstr ""
+msgstr "iptal"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "lifepoints: %s"
-msgstr ""
+msgstr "yaşam puanı: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "level: %s"
-msgstr ""
+msgstr "seviye: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "money: %s ¤"
-msgstr ""
+msgstr "para: %s ¤"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "gems: %s"
-msgstr ""
+msgstr "gemler: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "play time: %s min"
-msgstr ""
+msgstr "oynama süresi: %s dk"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "your defeats: %s"
-msgstr ""
+msgstr "yenilgi: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "enemies defeated: %s"
-msgstr ""
+msgstr "mağlup edilen düşman: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "your points: %s"
-msgstr ""
+msgstr "puanın: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "resume"
-msgstr ""
+msgstr "devam"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "Are you sure you want to restart this game?"
-msgstr ""
+msgstr "Oyunu yeniden başlatmak istediğinden emin misin?"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "It will restart from the last location change."
-msgstr ""
+msgstr "Son ziyaret ettiğin yerden yeniden başlayacak."
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "Are you sure you want to quit this game?"
-msgstr ""
+msgstr "Oyundan çıkmak istediğinden emin misin?"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "\n\nGame data since the last time you changed your location will be lost."
-msgstr ""
+msgstr "\n\nKonum değiştirdiğinizden bu yana oluşan oyun verileri kaybolacak."
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "Shop"
-msgstr ""
+msgstr "Dükkan"
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "What do you need?"
-msgstr ""
+msgstr "Ne istiyorsun?"
 
 #: lib/game/widgets/shop_menu.dart:
 msgid "Let me know if you need anything else."
-msgstr ""
+msgstr "Başka bir şeye ihtiyacın olursa bana haber ver."
 
 #: lib/game/components/static/door.dart:
 msgid "There is still 1 monster here. I can't escape."
-msgstr ""
+msgstr "Burada hala 1 canavar var. Çıkamam."
 
 #: lib/game/components/static/door.dart:
 msgid "There are still %s monsters here. I can't escape."
-msgstr ""
+msgstr "Burada hala %s canavar var. Çıkamam."
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
-msgstr ""
+msgstr "* {{hero}}, %s sırt çantasına koydu. *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "the gem"
-msgstr ""
+msgstr "mücevher"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} used {{selected-item-name}} *"
-msgstr ""
+msgstr "* {{hero}} {{selected-item-name}} kullandı *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} gives %s *"
-msgstr ""
+msgstr "* {{hero}} %s verir *"
 
 #: lib/resources/weapon_details.dart:
 msgid "Punch"
-msgstr ""
+msgstr "Yumruk"
 
 #: lib/resources/weapon_details.dart:
 msgid "Hit the enemy in front of you.\nThis is the most basic weapon. You have infite PP."
-msgstr ""
+msgstr "Önündeki düşmanı vur. \nBu temel silah. Sonsuz PP var."
 
 #: lib/resources/weapon_details.dart:
 msgid "Throw snowballs in front of you."
-msgstr ""
+msgstr "Önüne kar topu at."
 
 #: lib/resources/weapon_details.dart:
 msgid "Leave explosive mines on the floor.\nA mine explodes if someone except you walks on it."
-msgstr ""
+msgstr "Patlayıcı mayınları yerde bırak.\nBaşka biri üzerine basarsa mayın patlar."
 
 #: lib/util/insert_name_form.dart:
 msgid "What's your name?"
-msgstr ""
+msgstr "Adınız?"
 
 #: lib/util/insert_name_form.dart:
 msgid "Too short."
-msgstr ""
+msgstr "Çok kısa."
 
 #: lib/util/insert_name_form.dart:
 msgid "Insert your name here"
-msgstr ""
+msgstr "İsminizi buraya girin"

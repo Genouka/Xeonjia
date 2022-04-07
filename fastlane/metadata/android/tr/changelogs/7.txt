@@ -1,0 +1,3 @@
+* Oyun zorluk ayarlamaları yapıldı
+* Fransızca, İspanyolca ve İtalyanca çeviriler eklendi
+* Hata düzeltmeleri yapıldı

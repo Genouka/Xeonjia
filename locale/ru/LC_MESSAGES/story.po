@@ -3,9 +3,9 @@
 # This file is distributed under the same license as Xeonjia.
 # DeepDaikon <deepdaikon@tuta.io>, 2020, 2021.
 # Tri-fan <ausa1156red@gmail.com>, 2021.
-# Denis Proleev <denproleev@gmail.com>, 2021.
+# Denis Proleev <denproleev@gmail.com>, 2021, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-06 23:17+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-02-17 04:14+0000\nLast-Translator: Denis Proleev <denproleev@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -109,23 +109,23 @@ msgstr "\" Выход ↑ \""
 
 #: assets/maps/story/33.tmx:
 msgid "In the distance can be seen the other part of the region."
-msgstr ""
+msgstr "Вдалеке виднеется другая часть региона."
 
 #: assets/maps/story/33.tmx:
 msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
-msgstr ""
+msgstr "Жители этого региона оставляют в этих вазах сувениры путешественникам и морякам, которые высаживаются здесь.\nЭто древняя традиция.\nСмело забирай подарки."
 
 #: assets/maps/story/33.tmx:
 msgid "Hey, there are items in here!"
-msgstr ""
+msgstr "Эй, здесь есть вещи!"
 
 #: assets/maps/story/33.tmx:
 msgid "There are still items in here but I've already taken one."
-msgstr ""
+msgstr "Здесь есть ещё предметы, но я уже взял один."
 
 #: assets/maps/story/33.tmx:
 msgid "I can see a city in the distance."
-msgstr ""
+msgstr "Я вижу город вдалеке."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB – 1F"
@@ -189,11 +189,11 @@ msgstr "Как сказала моя мама, будет лучше, если �
 
 #: assets/maps/story/34.tmx:
 msgid "Route 4"
-msgstr ""
+msgstr "Дорога 4"
 
 #: assets/maps/story/34.tmx:
 msgid "This vase is empty."
-msgstr ""
+msgstr "Эта ваза пуста."
 
 #: assets/maps/story/34.tmx:
 msgid "* {{hero}} found {{money-diff}} ¤ *"

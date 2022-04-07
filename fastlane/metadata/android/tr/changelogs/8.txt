@@ -1,0 +1,4 @@
+* Hikayeye yeni bir bölüm eklendi
+* Çeşitli iyileştirmeler uygulandı ve yeni özellikler eklendi
+* Çeviriler güncellendi ve yeni diller eklendi (beta)
+* Hata düzeltmeleri yapıldı
