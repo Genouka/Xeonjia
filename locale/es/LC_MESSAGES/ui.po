@@ -2,10 +2,10 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Perro Tuerto <nika.zhenya@perrotuerto.blog>, 2020, 2021.
-# DeepDaikon <deepdaikon@tuta.io>, 2021.
+# DeepDaikon <deepdaikon@tuta.io>, 2021, 2022.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-20 20:46+0000\nLast-Translator: DeepDaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-04-15 21:48+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -349,7 +349,7 @@ msgstr "Regresar al menú"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "No items here"
-msgstr ""
+msgstr "No hay objetos aquí"
 
 #: lib/game/widgets/backpack_menu.dart:
 msgid "Backpack"
@@ -485,11 +485,11 @@ msgstr "Hazme saber si necesitas algo más."
 
 #: lib/game/components/static/door.dart:
 msgid "There is still 1 monster here. I can't escape."
-msgstr ""
+msgstr "Todavía hay un monstruo aquí. No puedo escapar."
 
 #: lib/game/components/static/door.dart:
 msgid "There are still %s monsters here. I can't escape."
-msgstr ""
+msgstr "Todavía hay %s monstruos aquí. No puedo escapar."
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
