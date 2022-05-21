@@ -1,11 +1,11 @@
 # Translation for Xeonjia
 # Copyright (C) 2020, 2021 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# Viktória Nagy <tindykmp@protonmail.ch>, 2021.
+# Viktória Nagy <tindykmp@protonmail.ch>, 2021, 2022.
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
 # Kempelen <lion@cmsbazar.hu>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-01-23 13:14+0000\nLast-Translator: Kempelen <lion@cmsbazar.hu>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-05-21 14:11+0000\nLast-Translator: Viktória Nagy <tindykmp@protonmail.ch>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -433,7 +433,7 @@ msgstr "pénz: %s ¤"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "gems: %s"
-msgstr ""
+msgstr "drágakövek: %s"
 
 #: lib/game/widgets/pause_menu.dart:
 msgid "play time: %s min"
@@ -497,7 +497,7 @@ msgstr "* {{hero}} %s -t tesz a hátizsákba. *"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "the gem"
-msgstr ""
+msgstr "a drágakő"
 
 #: lib/game/components/dynamic/character.dart:
 msgid "* {{hero}} used {{selected-item-name}} *"

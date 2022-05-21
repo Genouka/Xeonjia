@@ -1,0 +1,3 @@
+* Adj hozzá egy új részt a történethez
+* Fordítások frissítése
+* Hibajavítások

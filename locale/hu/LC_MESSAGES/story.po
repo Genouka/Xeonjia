@@ -1,11 +1,11 @@
 # Translation for Xeonjia
 # Copyright (C) 2020, 2021 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# Viktória Nagy <tindykmp@protonmail.ch>, 2021.
+# Viktória Nagy <tindykmp@protonmail.ch>, 2021, 2022.
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
 # Kempelen <lion@cmsbazar.hu>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-01-23 13:14+0000\nLast-Translator: Kempelen <lion@cmsbazar.hu>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-05-21 14:11+0000\nLast-Translator: Viktória Nagy <tindykmp@protonmail.ch>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -109,23 +109,23 @@ msgstr "\" Kijárat ↑ \""
 
 #: assets/maps/story/33.tmx:
 msgid "In the distance can be seen the other part of the region."
-msgstr ""
+msgstr "A távolban látható a régió másik része."
 
 #: assets/maps/story/33.tmx:
 msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
-msgstr ""
+msgstr "E vidék lakói ezekben a vázákban hagynak ajándékokat az itt partra szálló utazóknak és tengerészeknek.\nEz egy ősi szokás.\nNyugodtan vidd el az ajándékokat."
 
 #: assets/maps/story/33.tmx:
 msgid "Hey, there are items in here!"
-msgstr ""
+msgstr "Hé, itt vannak tárgyak!"
 
 #: assets/maps/story/33.tmx:
 msgid "There are still items in here but I've already taken one."
-msgstr ""
+msgstr "Vannak még itt tárgyak, de egyet már elvettem."
 
 #: assets/maps/story/33.tmx:
 msgid "I can see a city in the distance."
-msgstr ""
+msgstr "A távolban látok egy várost."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB – 1F"
@@ -189,11 +189,11 @@ msgstr "Ahogy anyám mondta, jobb, ha elmegyek a sípcsontvédőért a szomszéd
 
 #: assets/maps/story/34.tmx:
 msgid "Route 4"
-msgstr ""
+msgstr "4-es útvonal"
 
 #: assets/maps/story/34.tmx:
 msgid "This vase is empty."
-msgstr ""
+msgstr "4-es útvonal."
 
 #: assets/maps/story/34.tmx:
 msgid "* {{hero}} found {{money-diff}} ¤ *"
@@ -205,19 +205,19 @@ msgstr "Egy szikla."
 
 #: assets/maps/story/34.tmx:
 msgid "\" Hexa Cave \""
-msgstr ""
+msgstr "\" Hexa barlang \""
 
 #: assets/maps/story/38.tmx:
 msgid "Zamelis Village"
-msgstr ""
+msgstr "Zamelis falu"
 
 #: assets/maps/story/38.tmx:
 msgid "I want to reach the capital quickly but the only way is traveling by land."
-msgstr ""
+msgstr "Gyorsan el akarok jutni a fővárosba, de csak szárazföldön tudok utazni."
 
 #: assets/maps/story/38.tmx:
 msgid "I really needed a pomegranate juice."
-msgstr ""
+msgstr "Nagyon kellett egy gránátalmalé."
 
 #: assets/maps/story/17.tmx:
 msgid "I still haven't figured out if these monsters are malicious or just stupid."
@@ -277,47 +277,47 @@ msgstr "Jobb, ha ellenőrzöm, hogy a fickó jól van-e."
 
 #: assets/maps/story/37.tmx:
 msgid "The prices for an LP UP are too high for me."
-msgstr ""
+msgstr "Az LP UP árai túl magasak számomra."
 
 #: assets/maps/story/37.tmx:
 msgid "I would love to leave for a long journey but I don't have the strength anymore."
-msgstr ""
+msgstr "Szeretnék hosszú útra indulni, de már nincs hozzá erőm."
 
 #: assets/maps/story/37.tmx:
 msgid "\" Zamelis Village \""
-msgstr ""
+msgstr "\" Zamelis Falu\""
 
 #: assets/maps/story/37.tmx:
 msgid "{{hero}}, there you are. Finally! I heard a rumor that you were coming here."
-msgstr ""
+msgstr "{{{hero}}, hát itt vagy. Végre! Hallottam a pletykát, hogy idejössz."
 
 #: assets/maps/story/37.tmx:
 msgid "September! Long time no see! Last time was when we battled each other to be proclaimed HERO, we were 5 years old."
-msgstr ""
+msgstr "September! Rég nem láttalak! Utoljára akkor láttalak amikor 5 évesek voltunk és egymás ellen küzdöttünk, hogy ki legyen a HŐS."
 
 #: assets/maps/story/37.tmx:
 msgid "I remember well, you got lucky that time.\nBut now it would go differently.\nI challenge you now. Show me that you are better than me.\nSee you on the north-east side of the village. I will wait for you there."
-msgstr ""
+msgstr "Jól emlékszem, akkor szerencséd volt.\nDe most másképp alakulna.\nMost kihívlak. Mutasd meg, hogy jobb vagy nálam.\nTalálkozunk a falu észak-keleti oldalán. Ott fogok várni rád."
 
 #: assets/maps/story/37.tmx:
 msgid "W-Wait a moment, September!"
-msgstr ""
+msgstr "V-Várj egy percet,September!"
 
 #: assets/maps/story/37.tmx:
 msgid "How are you? Everything good? I haven't seen you for 16 years… We have so much to talk about."
-msgstr ""
+msgstr "Hogy vagy? Minden rendben? 16 éve nem láttalak... Annyi mindenről kell beszélnünk."
 
 #: assets/maps/story/37.tmx:
 msgid "I don't have time to mess around.\nSee you where I told you."
-msgstr ""
+msgstr "Nincs időm szórakozni.\nOtt találkozunk, ahol mondtam."
 
 #: assets/maps/story/37.tmx:
 msgid "O-Ok… see you later."
-msgstr ""
+msgstr "O-Oké... később találkozunk."
 
 #: assets/maps/story/37.tmx:
 msgid "I remembered her less surly."
-msgstr ""
+msgstr "Kevésbé mogorvára emlékeztem."
 
 #: assets/maps/story/14.tmx:
 msgid "\" ← Pharmacy \""
@@ -405,187 +405,187 @@ msgstr "\" Piknikezőhely ↑ \"\n\" Erdei központ ↓ \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hexa Cave"
-msgstr ""
+msgstr "Hexa Barlang"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
-msgstr ""
+msgstr "Azt hiszem, valahogyan meg lehet idézni ennek a vidéknek a védőszellemét. Csak ki kell találnunk, hogyan."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Let me know if you need help."
-msgstr ""
+msgstr "Szólj, ha segítségre van szükséged."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I think that all the writings on the six stones must be true to invoke the spirit."
-msgstr ""
+msgstr "Úgy gondolom, hogy a hat kövön lévő összes írásnak igaznak kell lennie ahhoz, hogy megidézzük a szellemet."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I think that #1 should be green."
-msgstr ""
+msgstr "Szerintem az 1-esnek zöldnek kellene lennie."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Do you need help?"
-msgstr ""
+msgstr "Segítségre van szükséged?"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "It doesn't seem difficult to solve."
-msgstr ""
+msgstr "Nem tűnik nehéznek a megoldás."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I don't know what you did but it seems to have worked."
-msgstr ""
+msgstr "Nem tudom, mit csináltál, de úgy tűnik, működött."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \""
-msgstr ""
+msgstr "\" #3: Zöld vagyok, ha az #5 és #6 egyforma színű. Egyébként piros vagyok. \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "There is a button, do I press it?"
-msgstr ""
+msgstr "Itt van egy gomb, megnyomjam?"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I no longer need to press the button."
-msgstr ""
+msgstr "Többé nem kell megnyomnom a gombot."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #5: I'm red if #1 is red. Otherwise I'm green. \""
-msgstr ""
+msgstr "\" #5: Piros vagyok, ha az #1 piros. Egyébként zöld vagyok. \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #4: I'm green if #3 is green. Otherwise I'm red. \""
-msgstr ""
+msgstr "\" #4: Zöld vagyok, ha a #3 zöld. Egyébként piros vagyok. \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #2: I'm green if #4 is red. Otherwise I'm red. \""
-msgstr ""
+msgstr "\" #2: Én zöld vagyok, ha a 4-es piros. Egyébként piros vagyok. \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #1: I'm red if #4 is green. Otherwise I'm green. \""
-msgstr ""
+msgstr "\" #1: Én piros vagyok, ha a 4-es zöld. Egyébként zöld vagyok. \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #6: I'm red if #2 is green. Otherwise I'm green. \""
-msgstr ""
+msgstr "\" #6: Én piros vagyok, ha a #2 zöld. Egyébként zöld vagyok. \""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "!!!"
-msgstr ""
+msgstr "!!!"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hi {{hero}}! How are you doing? Were you able to get the first signet?"
-msgstr ""
+msgstr "Szia {{{hero}}! Hogy vagy? Sikerült megszerezned az első jelvényt?"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hi Shen! Yes I did it!"
-msgstr ""
+msgstr "Szia Shen! Igen, megcsináltam!"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "But it was not easy."
-msgstr ""
+msgstr "De nem volt könnyű."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I didn't have any big problems."
-msgstr ""
+msgstr "Nem voltak nagy problémáim."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Great! I had no doubt you would make it.\nDid you find the snowballs helpful?"
-msgstr ""
+msgstr "Nagyszerű! Nem kételkedtem benne, hogy sikerülni fog.\nHasznosnak találtad a hógolyókat?"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes, I couldn't do it without them, thank you!\nWhat is this place?"
-msgstr ""
+msgstr "Igen, nélkülük nem tudtam volna megcsinálni, köszönöm!\nMi ez a hely?"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I think it is an ancient cave.\nLook at this inscription."
-msgstr ""
+msgstr "Azt hiszem, ez egy ősi barlang.\nNézd meg ezt a feliratot."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Everything originated from water, everything will return to water."
-msgstr ""
+msgstr "Minden a vízből származik, minden visszatér a vízbe."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "What does it say? What does it mean?"
-msgstr ""
+msgstr "Mi áll benne? Mit jelent?"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "It is the ancient writing used in these areas long ago.\nHere it says:"
-msgstr ""
+msgstr "Ez az ősi írás, amelyet ezeken a területeken régen használtak.\nItt ez áll:"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Slooosh!"
-msgstr ""
+msgstr "Slooosh!"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hi, I'm the spirit of water.\nIs there anything you need?\nI don't have much time, with this cold I quickly become ice. And I'd say there's enough ice here."
-msgstr ""
+msgstr "Szia, én vagyok a víz szelleme.\nSzükséged van valamire?\nNincs sok időm, ebben a hidegben gyorsan jéggé válok. És azt mondanám, hogy van itt elég jég."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "water spirit"
-msgstr ""
+msgstr "vízszellem"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "{{hero}} what could we ask him? I have plenty of questions, but if you agree I would ask him if he knows anything about the King of Evil."
-msgstr ""
+msgstr "{{hero}}Mit kérdezhetnénk tőle? Rengeteg kérdésem van, de ha egyetértesz, megkérdezném tőle, hogy tud-e valamit a Gonoszok Királyáról."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I agree! I have to defeat him but I don't even know why he's here or what his purpose is."
-msgstr ""
+msgstr "Egyetértek! Le kell győznöm őt, de még azt sem tudom, hogy miért van itt, vagy mi a célja."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "The King of Evil, as you know, came to us 64 years ago freezing the Kingdom and instilling fear.\nI don't know exactly where he comes from, but what I do know is that his goal is to collect gems that are scattered around the world to get energy to completely freeze our world."
-msgstr ""
+msgstr "A Gonoszok Királya, mint tudjátok, 64 évvel ezelőtt jött el hozzánk, befagyasztva a Királyságot és félelmet keltve.\nNem tudom pontosan, honnan jött, de azt tudom, hogy a célja az, hogy összegyűjtse a világban szétszórt drágaköveket, hogy energiát szerezzen, amivel teljesen befagyaszthatja a világunkat."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Completely?!"
-msgstr ""
+msgstr "Teljesen?!"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes, we are lucky we still have seas and a bearable temperature, but if he succeeds in his plan the Kingdom will no longer be livable for us."
-msgstr ""
+msgstr "Igen, szerencsések vagyunk, hogy még mindig van tengerünk és elviselhető hőmérsékletünk, de ha sikerrel jár a tervel, a Királyság többé nem lesz élhető számunkra."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "And why would he want that??"
-msgstr ""
+msgstr "És miért akarja ezt?"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Because he and his fellows need very low temperatures to live, temperatures so low that right now there are only in the Xeonjia tower."
-msgstr ""
+msgstr "Mert neki és társainak nagyon alacsony hőmérsékletre van szükségük az élethez, olyan alacsonyra, hogy jelenleg csak a Xeonjia-toronyban vannak."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "So he's making our Kingdom unlivable for us to make it livable for him?!"
-msgstr ""
+msgstr "Tehát élhetetlenné teszi számunkra a királyságunkat, hogy élhetővé tegye számára?!"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Exactly.\nThe only way to stop him is to find as many gems as possible and finally defeat him, of course.\nHe uses the Hoarfrost Team to search for gems precisely because he cannot leave the tower.\nThis is what I know about the King of Evil. Now I must leave you to avoid becoming an ice pop, but we will see each other again in the future.\nI will appear to you when you need me."
-msgstr ""
+msgstr "Pontosan.\nAz egyetlen módja annak, hogy megállítsuk őt, természetesen az, hogy minél több drágakövet találjunk, és végül legyőzzük őt.\nA Hoarfrost csapatot éppen azért használja a drágakövek keresésére, mert nem tudja elhagyni a tornyot.\nEzt tudom a Gonoszok Királyáról. Most el kell mennem, hogy ne váljak jéggé, de a jövőben még találkozunk.\nMeg fogok jelenni neked, ha szükséged lesz rám."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "So gems are more important than I thought… And they can be used as an energy source.\nI only have one, how many have you found so far?"
-msgstr ""
+msgstr "Tehát a drágakövek fontosabbak, mint gondoltam... És energiaforrásként is felhasználhatók.\nNekem csak egy van, te hányat találtál eddig?"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I only have one too, a guy I rescued in the Mitsu Forest gave it to me."
-msgstr ""
+msgstr "Nekem is csak egy van, egy sráctól kaptam, akit a Mitsu-erdőben mentettem meg."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Not quite enough."
-msgstr ""
+msgstr "Nem elég."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I have found {{gem_count}} so far."
-msgstr ""
+msgstr "Eddig {{gem_count}} találtam."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Well, it's a start."
-msgstr ""
+msgstr "Nos, ez is egy kezdet."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "We need to be more careful and look for them better.\nNow I'll leave you and continue my studies on the gem I have.\nSee you!"
-msgstr ""
+msgstr "Óvatosabbnak kell lennünk, és jobban kell keresnünk őket.\nMost itt hagylak benneteket, és folytatom a tanulmányaimat a nálam lévő drágakővel.\nViszlát!"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Bye Shen, be careful!"
-msgstr ""
+msgstr "Viszlát Shen, légy óvatos!"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes"
@@ -873,23 +873,23 @@ msgstr "Sajnos nem sikerült legyőznie a Gonosz Királyát…"
 
 #: assets/maps/story/32.tmx:
 msgid "\" Relax and enjoy the sea \""
-msgstr ""
+msgstr "\" Pihenjen és élvezze a tengert \""
 
 #: assets/maps/story/32.tmx:
 msgid "Wow! I've never seen the sea!"
-msgstr ""
+msgstr "Hűha! Még sosem láttam a tengert!"
 
 #: assets/maps/story/32.tmx:
 msgid "It's very nice and vast."
-msgstr ""
+msgstr "Nagyon szép és hatalmas."
 
 #: assets/maps/story/32.tmx:
 msgid "The sea is very calm and relaxing."
-msgstr ""
+msgstr "A tenger nagyon nyugodt és pihentető."
 
 #: assets/maps/story/32.tmx:
 msgid "\" Welcome to the Water Region! Enjoy your stay. \""
-msgstr ""
+msgstr "\" Üdvözöljük a Vízvidéken! Kellemes időtöltést kívánunk. \""
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "Pharmacy"
@@ -905,27 +905,27 @@ msgstr "gyógyszerész"
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "* {{hero}} ate some berries *"
-msgstr ""
+msgstr "* {{{hero}} evett néhány bogyót *"
 
 #: assets/maps/story/15_lp_shop.tmx:
 msgid "* {{life-diff}} LPs have been recovered *"
-msgstr ""
+msgstr "* {{{life-diff}} LP-ket visszaszereztek *"
 
 #: assets/maps/story/35.tmx:
 msgid "This boulder is very heavy."
-msgstr ""
+msgstr "Ez a szikla nagyon nehéz."
 
 #: assets/maps/story/35.tmx:
 msgid "We are trying to move this boulder.\nI'm sorry but it's going to take a while."
-msgstr ""
+msgstr "Megpróbáljuk elmozdítani ezt a sziklát.\nSajnálom, de ez eltart egy darabig."
 
 #: assets/maps/story/35.tmx:
 msgid "A heavy rock."
-msgstr ""
+msgstr "Egy nehéz szikla."
 
 #: assets/maps/story/35.tmx:
 msgid "\" ↑ Hexa Cave \"\n\" Zamelis Village → \""
-msgstr ""
+msgstr "\" ↑ Hexa barlang \"\n\" Zamelis falu → \""
 
 #: assets/maps/story/27.tmx:
 msgid "\" ← Sacred Tree \"\n\" Melhopolis City Center → \""
@@ -1029,15 +1029,15 @@ msgstr "A torony annyira csúnya."
 
 #: assets/maps/story/16.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "Miért vagyok itt? Mit kellene tennem?"
 
 #: assets/maps/story/37_house.tmx:
 msgid "I love studying history and literature."
-msgstr ""
+msgstr "Szeretek történelmet és irodalmat tanulni."
 
 #: assets/maps/story/37_house.tmx:
 msgid "\"[…] but half of the army defected, made a deal with the King of Evil and founded the Hoarfrost Team. That moment decreed our defeat.\"\nThis book tells what happened 64 years ago."
-msgstr ""
+msgstr "\"[...] de a sereg fele disszidált, alkut kötött a Gonosz Királlyal, és megalapította a Hoarfrost Csapatot. Ez a pillanat elrendelte a vereségünket.\"\nEz a könyv elmeséli, mi történt 64 évvel ezelőtt."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Home"
@@ -1129,67 +1129,67 @@ msgstr "A munkám annyira unalmas…"
 
 #: assets/maps/story/39.tmx:
 msgid "Route 5"
-msgstr ""
+msgstr "5-ös útvonal"
 
 #: assets/maps/story/39.tmx:
 msgid "Ok, you were better than me.\nI still have room for improvement, I will continue to train."
-msgstr ""
+msgstr "Oké, jobb voltál nálam.\nMég mindig van hova fejlődnöm, folytatom az edzéseket."
 
 #: assets/maps/story/39.tmx:
 msgid "Anyway, it was great seeing you."
-msgstr ""
+msgstr "Mindenesetre jó volt látni téged."
 
 #: assets/maps/story/39.tmx:
 msgid "It was good to see you too, I felt like I was going back to when we were kids."
-msgstr ""
+msgstr "Jó volt látni téged is, úgy éreztem, mintha visszamennék a gyerekkorunkba."
 
 #: assets/maps/story/39.tmx:
 msgid "Hehe, you are right… we spent a lot of hours playing and training as kids.\nI'll leave you now, see you in the Xeonjia Tower."
-msgstr ""
+msgstr "Hehe, igazad van... gyerekként sok órát töltöttünk játékkal és edzéssel.\nMost elmegyek, találkozunk a Xeonjia toronyban."
 
 #: assets/maps/story/39.tmx:
 msgid "Are you going to the tower too?"
-msgstr ""
+msgstr "Te is mész a toronyba?"
 
 #: assets/maps/story/39.tmx:
 msgid "Yes, of course!\nI will go there and I will defeat the King of Evil!\nEven though you are the protagonist and the so-called \"Hero\" it will be me who will defeat the King of Evil and be remembered as the savior of the world hehe."
-msgstr ""
+msgstr "Igen, természetesen!\nElmegyek oda, és legyőzöm a Gonoszok Királyát!\nBár te vagy a főszereplő és az úgynevezett \"Hős\", én leszek az, aki legyőzi a Gonoszok Királyát, és akire úgy emlékeznek majd, mint a világ megmentőjére, hehe."
 
 #: assets/maps/story/39.tmx:
 msgid "Wait, wait, wait, don't steal my job! Haha"
-msgstr ""
+msgstr "Várj, várj, várj, várj, ne lopd el a munkámat! Haha"
 
 #: assets/maps/story/39.tmx:
 msgid "Anyway, be careful not to get hurt, bye!"
-msgstr ""
+msgstr "Mindenesetre vigyázz, nehogy megsérülj, szia!"
 
 #: assets/maps/story/39.tmx:
 msgid "I lost my glasses. I hardly see anything."
-msgstr ""
+msgstr "Elvesztettem a szemüvegem. Alig látok valamit."
 
 #: assets/maps/story/39.tmx:
 msgid "Are these your glasses?"
-msgstr ""
+msgstr "Ez a szemüveged?"
 
 #: assets/maps/story/39.tmx:
 msgid "Yes! Thank you so much!"
-msgstr ""
+msgstr "Igen! Köszönöm szépen!"
 
 #: assets/maps/story/39.tmx:
 msgid "As a reward I give you this gem that I found while I was looking for the glasses."
-msgstr ""
+msgstr "Jutalmul oda adom neked ezt a drágakövet, amit akkor találtam, amikor a szemüveget kerestem."
 
 #: assets/maps/story/39.tmx:
 msgid "Oh, thank you so much!"
-msgstr ""
+msgstr "Ó, nagyon szépen köszönöm!"
 
 #: assets/maps/story/39.tmx:
 msgid "I missed being able to see the sea."
-msgstr ""
+msgstr "Hiányzott, hogy láthassam a tengert."
 
 #: assets/maps/story/39.tmx:
 msgid "I can't believe it took you this long!\nLet's fight!"
-msgstr ""
+msgstr "Nem hiszem el, hogy ilyen sokáig tartott!\nHarcoljunk!"
 
 #: assets/maps/story/39.tmx:
 msgid "I will defeat you."
@@ -1197,7 +1197,7 @@ msgstr "Legyőzlek."
 
 #: assets/maps/story/39.tmx:
 msgid "I have to train harder."
-msgstr ""
+msgstr "Keményebben kell edzenem."
 
 #: assets/maps/story/39.tmx:
 msgid "This is a very strange stone… Never seen anything like this before."
@@ -1257,7 +1257,7 @@ msgstr "Igen, köszönöm"
 
 #: assets/maps/story/43_tower_1.tmx:
 msgid "Observation Tower"
-msgstr ""
+msgstr "Megfigyelő torony"
 
 #: assets/maps/story/1_house.tmx:
 msgid "NEIGHBOR'S HOUSE"
@@ -1441,39 +1441,39 @@ msgstr "joza"
 
 #: assets/maps/story/38_house.tmx:
 msgid "I just cooked a cake. Do you want some?"
-msgstr ""
+msgstr "Most sütöttem egy tortát. Kérsz belőle?"
 
 #: assets/maps/story/38_house.tmx:
 msgid "Here you go!"
-msgstr ""
+msgstr "Tessék, itt van!"
 
 #: assets/maps/story/38_house.tmx:
 msgid "* {{hero}} eats a piece of cake *"
-msgstr ""
+msgstr "* {{{hero}} eszik egy szelet tortát *"
 
 #: assets/maps/story/38_house.tmx:
 msgid "Oh, ok. Then I'll eat it all."
-msgstr ""
+msgstr "Ó, oké. Akkor megeszem az egészet."
 
 #: assets/maps/story/38_house.tmx:
 msgid "I love cooking cakes and sweets."
-msgstr ""
+msgstr "Szeretek süteményeket és édességeket sütni."
 
 #: assets/maps/story/40.tmx:
 msgid "Today I really can't find any fish."
-msgstr ""
+msgstr "Ma tényleg nem találok halat."
 
 #: assets/maps/story/40.tmx:
 msgid "But somehow I caught a pair of glasses. Do you want them?"
-msgstr ""
+msgstr "De valahogy elkaptam egy szemüveget. Kéred?"
 
 #: assets/maps/story/40.tmx:
 msgid "Oh, ok. Then I'll try to look for the owner."
-msgstr ""
+msgstr "Ó, oké. Akkor megpróbálom megkeresni a tulajdonost."
 
 #: assets/maps/story/40.tmx:
 msgid "Fishing is relaxing."
-msgstr ""
+msgstr "A horgászás pihentető."
 
 #: assets/maps/story/61.tmx:
 msgid "This part is under construction."
@@ -1505,27 +1505,27 @@ msgstr "Úgy tűnik, hogy valaha volt itt egy ösvény."
 
 #: assets/maps/story/43.tmx:
 msgid "To reach the other shore you have to go through the submarine tunnel but is currently guarded by the Hoarfrost Team.\nIf they don't leave, I'll try to cross the sea with the boat."
-msgstr ""
+msgstr "A másik partra a tengeralattjáró alagúton keresztül kell átmenned, de azt jelenleg a Hoarfrost csapat őrzi.\nHa nem mennek el, akkor megpróbálok átkelni a tengeren a csónakkal."
 
 #: assets/maps/story/43.tmx:
 msgid "Once I happened to see a strange hole in the middle of the sea."
-msgstr ""
+msgstr "Egyszer véletlenül megláttam egy furcsa lyukat a tenger közepén."
 
 #: assets/maps/story/43.tmx:
 msgid "\" Hana's Tunnel \""
-msgstr ""
+msgstr "\" Hana alagútja \""
 
 #: assets/maps/story/43.tmx:
 msgid "\" Observation Tower \""
-msgstr ""
+msgstr "\" Megfigyelőtorony \""
 
 #: assets/maps/story/43.tmx:
 msgid "The sea is calm today."
-msgstr ""
+msgstr "A tenger ma nyugodt."
 
 #: assets/maps/story/42.tmx:
 msgid "Nope, there's only trash here."
-msgstr ""
+msgstr "Nem, itt csak szemét van."
 
 #: assets/maps/story/t1_01.tmx:
 msgid "Mossy Crypt -1F"
@@ -1553,7 +1553,7 @@ msgstr "Úgy tűnik, van valami ennek a növénynek az ágaiban...\nEz egy kő!"
 
 #: assets/maps/story/41.tmx:
 msgid "As long as the tunnel is blocked we must organize differently to get goods and people from one side to another."
-msgstr ""
+msgstr "Amíg az alagút el van zárva, másképp kell megszerveznünk, hogy az árukat és az embereket az egyik oldalról a másikra juttassuk."
 
 #: assets/maps/story/24_lab_2.tmx:
 msgid "VANTOI LAB – 2F"
@@ -1617,39 +1617,39 @@ msgstr "Egy fal."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "An empty vase."
-msgstr ""
+msgstr "Egy üres váza."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A plant without berries."
-msgstr ""
+msgstr "Bogyó nélküli növény."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A flag."
-msgstr ""
+msgstr "Egy zászló."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A vase with many fragrant flowers."
-msgstr ""
+msgstr "Egy váza sok illatos virággal."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A barrel."
-msgstr ""
+msgstr "Egy hordó."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A little boat."
-msgstr ""
+msgstr "Egy kis hajó."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "This is a common tree in this area."
-msgstr ""
+msgstr "Ez egy gyakori fa ezen a területen."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A street lamp."
-msgstr ""
+msgstr "Egy utcai lámpa."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A small plant."
-msgstr ""
+msgstr "Egy kis növény."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "It's not a good thing to look into other people's homes."
@@ -1733,7 +1733,7 @@ msgstr "munkás"
 
 #: assets/maps/tilesets/capital-1.tsx:
 msgid "Life always finds a way."
-msgstr ""
+msgstr "Az élet mindig megtalálja a módját."
 
 #: assets/maps/tilesets/capital-1.tsx:
 msgid "I don't know what this means."
@@ -1753,7 +1753,7 @@ msgstr "shen"
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "september"
-msgstr ""
+msgstr "september"
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "The weather is good today."
@@ -1789,11 +1789,11 @@ msgstr "Ez a malac nagyon boldognak tűnik."
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Icosahedron"
-msgstr ""
+msgstr "Ikozaéder"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "A strange blue icosahedral stone."
-msgstr ""
+msgstr "Egy különös kék ikozaéderes kő."
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Package of the King"
@@ -1801,47 +1801,47 @@ msgstr "A király csomagja"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Package given to me by the King."
-msgstr ""
+msgstr "Csomagot kaptam a királytól."
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Tetrahedron"
-msgstr ""
+msgstr "Tetraéder"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "A strange red tetrahedral stone."
-msgstr ""
+msgstr "Egy furcsa vörös tetraéderes kő."
 
 #: assets/maps/utils/items-and-events.json:
 msgid "A pair of glasses"
-msgstr ""
+msgstr "Egy szemüveg"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Eyeglasses given to me by a girl."
-msgstr ""
+msgstr "Egy lánytól kaptam egy szemüveget."
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Cube"
-msgstr ""
+msgstr "Kocka"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "A strange green cubic stone."
-msgstr ""
+msgstr "Egy furcsa zöld kockakő."
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Octahedron"
-msgstr ""
+msgstr "Oktaéder"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "A strange white octahedral stone."
-msgstr ""
+msgstr "Egy furcsa, fehér, oktaéderes kő."
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Dodecahedron"
-msgstr ""
+msgstr "Dodekaéder"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "A strange multicolored dodecahedral stone."
-msgstr ""
+msgstr "Különös, sokszínű, dodekaéderes kő."
 
 #: assets/maps/utils/items-and-events.json:
 msgid "First Signet"
@@ -1849,28 +1849,28 @@ msgstr "Az első jelvény"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "First out of 3 signets required to enter the Xeonjia tower."
-msgstr ""
+msgstr "A Xeonjia toronyba való belépéshez szükséges 3 jelvény közül az első."
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Berries"
-msgstr ""
+msgstr "Bogyók"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Fresh Water"
-msgstr ""
+msgstr "Friss Víz"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "A bottle of water.\nIt restores 20 LPs."
-msgstr ""
+msgstr "Egy üveg víz.\n20 LP-t állít helyre."
 
 #: assets/maps/utils/items-and-events.json:
 msgid "I'm already healthy, I don't need {{selected-item-name}} right now."
-msgstr ""
+msgstr "Már így is egészséges vagyok, most nincs szükségem {{selected-item-name}}."
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Pomegranate juice"
-msgstr ""
+msgstr "Gránátalma lé"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "A bottle of pomegranate juice.\nIt restores 50 LPs."
-msgstr ""
+msgstr "Egy üveg gránátalmalé.\n50 LP-t állít helyre."
