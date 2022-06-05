@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flame/components/timer_component.dart';
 import 'package:flame/time.dart';
 import 'package:flutter/material.dart';
