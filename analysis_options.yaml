@@ -4,12 +4,32 @@ analyzer:
   errors:
     overridden_fields: ignore
     prefer_const_constructors_in_immutables: ignore
+    prefer_interpolation_to_compose_strings: ignore
     use_key_in_widget_constructors: ignore
 
 linter:
   rules:
     - always_declare_return_types
+    - always_put_required_named_parameters_first
     - avoid_classes_with_only_static_members
     - avoid_positional_boolean_parameters
     - directives_ordering
+    - leading_newlines_in_multiline_strings
+    - missing_whitespace_between_adjacent_strings
+    - noop_primitive_operations
+    - prefer_final_in_for_each
+    - prefer_if_elements_to_conditional_expressions
+    - prefer_int_literals
+    - prefer_null_aware_method_calls
     - prefer_single_quotes
+    - sized_box_shrink_expand
+    - sort_constructors_first
+    - sort_unnamed_constructors_first
+    - unnecessary_await_in_return
+    - unnecessary_lambdas
+    - unnecessary_parenthesis
+    - unnecessary_raw_strings
+    - use_decorated_box
+    - use_named_constants
+    - use_raw_strings
+    - use_to_and_as_if_applicable
