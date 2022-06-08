@@ -70,7 +70,7 @@ class NoMapsMenu extends StatelessWidget {
                     onPressed: () {
                       mainCharacter.visitedRooms.add(previousMapId);
                       game.init();
-                      game.removeWidgetOverlay('noMapsMenu');
+                      game.overlays.remove('noMapsMenu');
                     },
                     child: Text(
                       'Go back'.i18n,

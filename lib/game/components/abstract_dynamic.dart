@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:collection/collection.dart';
-import 'package:flame/sprite.dart';
+import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/static/static.dart';
@@ -46,12 +46,15 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   void onCreate() {
     const size = 16.0;
     for (var d in Direction.values) {
-      _sprites[d] = Sprite(image,
-          x: d.index * size, y: imageY, width: size, height: size);
-      _walkingSprites[d] =
-          Sprite(image, x: d.index * size, y: size, width: size, height: size);
-      punchSprites[d] = Sprite(image,
-          x: d.index * size, y: size * 2, width: size, height: size);
+      _sprites[d] = Sprite(game.images.fromCache(image),
+          srcPosition: Vector2(d.index * size, size),
+          srcSize: Vector2.all(size));
+      _walkingSprites[d] = Sprite(game.images.fromCache(image),
+          srcPosition: Vector2(d.index * size, size),
+          srcSize: Vector2.all(size));
+      punchSprites[d] = Sprite(game.images.fromCache(image),
+          srcPosition: Vector2(d.index * size, size * 2),
+          srcSize: Vector2.all(size));
     }
     super.onCreate();
   }
@@ -105,7 +108,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
         candidatePositionTemp.height);
 
     // Check if this is going to collide or overlap another component
-    for (var component in game.components) {
+    for (var component in game.children) {
       if (component is BasicComponent &&
           component != this &&
           component != father &&
@@ -175,7 +178,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
 
   // Get components under this one
   List<BasicComponent> componentsUnder() {
-    return game.components
+    return game.children
         .where((component) =>
             (component is StaticComponent || component is ThinWallComponent) &&
             (component as BasicComponent)
@@ -210,18 +213,18 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
         offset = Offset(x - componentSize / 2, y + componentSize / 2);
         break;
     }
-    return game.components
+    return game.children
         .where((component) =>
             component is BasicComponent &&
             component.toRect().contains(offset) &&
             !component.isFlying() &&
             !component.isBeingDeleted)
-        .sorted((a, b) => a.priority().compareTo(b.priority()))
+        .sorted((a, b) => a.priority.compareTo(b.priority))
         .lastOrNull;
   }
 
   @override
-  int priority() => 125;
+  int get priority => 125;
 
   // Generate random number between -0.5 and +0.5
   // It is used to generate random direction for CPU-moved characters

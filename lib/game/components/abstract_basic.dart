@@ -1,9 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 
-import 'package:flame/animation.dart';
-import 'package:flame/components/component.dart';
-import 'package:flame/sprite.dart';
+import 'package:flame/components.dart';
 import 'package:meta/meta.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
@@ -80,7 +78,7 @@ abstract class BasicComponent extends SpriteComponent {
   int _layerPriority = 0;
 
   // True if this component has to be removed from game
-  bool remove = false;
+  bool deleted = false;
 
   // Component that generated this one
   // A component can't collide with its father
@@ -97,7 +95,7 @@ abstract class BasicComponent extends SpriteComponent {
   bool get isPlayerOne => false;
 
   // Sprite animation
-  Animation animation;
+  SpriteAnimation animation;
 
   // True if this is doing the deletion animation
   bool isBeingDeleted = false;
@@ -128,10 +126,9 @@ abstract class BasicComponent extends SpriteComponent {
         _customPriority = int.parse(tile.properties['priority'] ?? '0'),
         image = tile.properties['image'],
         imageY = tile.properties['imageY'] ?? 0,
-        super.fromSprite(
-          tile.size,
-          tile.size,
-          tile.sprite,
+        super(
+          size: Vector2(tile.size, tile.size),
+          sprite: tile.sprite,
         ) {
     animate(tile.animationSprites,
         stepTime: tile.animationStepTime, loop: true);
@@ -145,7 +142,7 @@ abstract class BasicComponent extends SpriteComponent {
             position: startingPosition,
             size: componentSize,
             sprite: Sprite(properties['image'],
-                width: 16, height: 16, y: 16.0 * (properties['imageY'] ?? 0)),
+                srcSize: Vector2.all(16) * (properties['imageY'] ?? 0)),
             properties: properties));
 
   @mustCallSuper
@@ -153,7 +150,7 @@ abstract class BasicComponent extends SpriteComponent {
     _lifePoints = maxLifePoints;
     x = startingPosition.x * componentSize;
     y = startingPosition.y * componentSize;
-    game.addLater(this);
+    game.add(this);
     if (this is! SnowballComponent) executeAction();
   }
 
@@ -213,7 +210,7 @@ abstract class BasicComponent extends SpriteComponent {
   bool isFlying() => _flying;
 
   @override
-  int priority() => _customPriority != 0
+  int get priority => _customPriority != 0
       ? _customPriority
       : (_layerPriority + (_flying ? 50 : 0));
 
@@ -268,7 +265,8 @@ abstract class BasicComponent extends SpriteComponent {
   void animate(List<Sprite> sprites,
       {double stepTime = 0.15, bool loop = false}) {
     if (sprites.isEmpty) return;
-    animation = Animation.spriteList(sprites, stepTime: stepTime, loop: loop);
+    animation =
+        SpriteAnimation.spriteList(sprites, stepTime: stepTime, loop: loop);
   }
 
   @override
@@ -288,20 +286,18 @@ abstract class BasicComponent extends SpriteComponent {
     if (animation?.done() ?? true) {
       super.render(canvas);
     } else {
-      prepareCanvas(canvas);
-      animation.getSprite().render(canvas,
-          width: width, height: height, overridePaint: overridePaint);
+      animation.getSprite().render(canvas, size: Vector2(width, height));
     }
   }
 
   @override
-  // ignore: avoid_renaming_method_parameters
-  void resize(Size _) {
+  void handleResize(Vector2 size) {
     var ratio = componentSize / width;
     width = componentSize;
     height = componentSize;
     x *= ratio;
     y *= ratio;
+    super.onGameResize(size);
   }
 
   // Delete component
@@ -309,15 +305,13 @@ abstract class BasicComponent extends SpriteComponent {
     ++defeats;
     game.deletedComponents.add(this);
     removeChildren();
-    remove = true;
+    deleted = true;
+    remove(this);
   }
-
-  @override
-  bool destroy() => remove;
 
   // Delete every son of this component
   void removeChildren() {
-    for (var c in game.components) {
+    for (var c in game.children) {
       if (c is BasicComponent && c.father == this) c.delete();
     }
   }
@@ -325,11 +319,11 @@ abstract class BasicComponent extends SpriteComponent {
   // Respawn component
   @mustCallSuper
   void respawn() {
-    remove = false;
+    deleted = false;
     isBeingDeleted = false;
     restoreLifePoints();
     x = startingPosition.x * componentSize;
     y = startingPosition.y * componentSize;
-    if (!game.components.contains(this)) game.addLater(this);
+    if (!game.children.contains(this)) game.add(this);
   }
 }

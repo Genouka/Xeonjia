@@ -1,12 +1,10 @@
-import 'package:flame/components/timer_component.dart';
-import 'package:flame/time.dart';
+import 'package:flame/components.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/util/little_scheme.dart';
 import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/widgets/black_curtain.dart';
-import 'package:xeonjia/game/widgets/map_name_box.dart';
 import 'package:xeonjia/game/widgets/shop_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -43,7 +41,7 @@ Environment setEnvironment() {
   _('set-life-to', 1,
       (Cell x) => game.playerOne.setStatus((x.car as int).toDouble(), 0));
   _('restore-life', 0, (Cell x) {
-    game.addWidgetOverlay(
+    game.addCustomWidgetOverlay(
         'blackCurtain', BlackCurtain(game.playerOne.restoreStatus));
     return #NONE;
   });
@@ -128,11 +126,11 @@ Environment setEnvironment() {
   _('respawn', 1, (Cell x) => game.getDeletedComponentFromId(x.car).respawn());
   _('leave', 0, (Cell x) {
     BasicComponent self = (env.lookForValue(Sym('self')) as Intrinsic).fun(x);
-    game.addWidgetOverlay('blackCurtain', BlackCurtain(self.delete));
+    game.addCustomWidgetOverlay('blackCurtain', BlackCurtain(self.delete));
     return #NONE;
   });
   _('leave-npc', 1, (Cell x) {
-    game.addWidgetOverlay(
+    game.addCustomWidgetOverlay(
         'blackCurtain', BlackCurtain(game.getComponentFromId(x.car).delete));
     return #NONE;
   });
@@ -156,7 +154,7 @@ Environment setEnvironment() {
   _('enemies-count', 0, (Cell x) => game.enemies);
   _('fire-event', 1, (Cell x) => (x.car as BasicComponent).executeAction());
   _('fire-global-event', 0, (Cell x) {
-    for (var c in game.components) {
+    for (var c in game.children) {
       if (c is BasicComponent) c.executeAction();
     }
     return #NONE;
@@ -219,11 +217,14 @@ Environment setEnvironment() {
         action: (it.current as Cell).cdr.cdr.car,
       ));
     }
-    game.addWidgetOverlay('shop', ShopMenu(itemList));
+    game.addCustomWidgetOverlay('shop', ShopMenu(itemList));
     return #NONE;
   });
-  _('black-curtain', 0,
-      (Cell x) => game.addWidgetOverlay('blackCurtain', const BlackCurtain()));
+  _(
+      'black-curtain',
+      0,
+      (Cell x) =>
+          game.addCustomWidgetOverlay('blackCurtain', const BlackCurtain()));
   _('teleport', 2,
       (Cell x) => game.changeRoom(x.car, enterNextRoom: x.cdr.car));
   _(
@@ -246,18 +247,18 @@ Environment setEnvironment() {
   });
   _('map-name', 1, (Cell x) {
     game.map.name = stringify(x.car, false);
-    game.addWidgetOverlay('mapNameBox', MapNameBox());
+    game.overlays.add('mapNameBox');
     var _id = mainCharacter.visitedRooms.length;
-    game.addLater(TimerComponent(Timer(
-      3,
-      callback: () {
+    game.add(TimerComponent(
+      period: 3000,
+      removeOnFinish: true,
+      onTick: () {
         if (_id == mainCharacter.visitedRooms.length &&
             !(game?.miniMapEnabled ?? true)) {
-          game?.removeWidgetOverlay('mapNameBox');
+          game?.overlays?.remove('mapNameBox');
         }
       },
-      repeat: false,
-    )..start()));
+    ));
     return #NONE;
   });
 

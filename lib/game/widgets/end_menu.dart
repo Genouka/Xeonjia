@@ -50,7 +50,7 @@ class EndMenu extends StatelessWidget {
               TextButton(
                 onPressed: () {
                   game.init();
-                  game.removeWidgetOverlay('endMenu');
+                  game.overlays.remove('endMenu');
                 },
                 child: Text(
                   game.config.mode == GameMode.story

@@ -1,5 +1,4 @@
-import 'package:flame/components/timer_component.dart';
-import 'package:flame/time.dart';
+import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
@@ -18,15 +17,10 @@ class _BlackCurtainState extends State<BlackCurtain> {
   @override
   void initState() {
     game.pause(stopMusic: false, stopEngine: false);
-    game.addLater(TimerComponent(Timer(
-      0.2,
-      callback: () {
-        setState(() {
-          visible = true;
-        });
-      },
-      repeat: false,
-    )..start()));
+    game.add(TimerComponent(
+      period: 200,
+      onTick: () => setState(() => visible = true),
+    ));
     super.initState();
   }
 
@@ -42,7 +36,7 @@ class _BlackCurtainState extends State<BlackCurtain> {
             visible = !visible;
           });
         } else {
-          game.removeWidgetOverlay('blackCurtain');
+          game.overlays.remove('blackCurtain');
           game.continueAction();
         }
       },

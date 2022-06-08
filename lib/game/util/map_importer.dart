@@ -3,7 +3,7 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:flame/flame.dart';
-import 'package:flame/spritesheet.dart';
+import 'package:flame/sprite.dart';
 import 'package:flutter/services.dart';
 import 'package:xeonjia/game/util/tile_to_component.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -68,10 +68,8 @@ Future<void> importMap(String fileName) async {
         .split('../../images/')
         .last;
     await Flame.images.load(image);
-    var spriteSheet = SpriteSheet(
-        imageName: image,
-        textureWidth: 16,
-        textureHeight: 16,
+    var spriteSheet = SpriteSheet.fromColumnsAndRows(
+        image: game.images.fromCache(image),
         columns: columns,
         rows: tileCount ~/ columns);
 

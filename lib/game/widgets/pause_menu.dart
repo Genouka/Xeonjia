@@ -91,7 +91,7 @@ class _PauseMenuState extends State<PauseMenu> {
         describeEnum(pauseMode).i18n.toUpperCase(),
         () {
           if (pauseMode == PauseMode.restart) {
-            game.removeWidgetOverlay('pauseMenu');
+            game.overlays.remove('pauseMenu');
             game.init();
           } else {
             Navigator.pop(context);
@@ -102,7 +102,7 @@ class _PauseMenuState extends State<PauseMenu> {
       actionButton(
         'cancel'.i18n.toUpperCase(),
         () {
-          game.removeWidgetOverlay('pauseMenu');
+          game.overlays.remove('pauseMenu');
           game.resume();
         },
       ),
@@ -151,7 +151,7 @@ class _PauseMenuState extends State<PauseMenu> {
             },
           ),
           actionButton('resume'.i18n.toUpperCase(), () {
-            game.removeWidgetOverlay('pauseMenu');
+            game.overlays.remove('pauseMenu');
             game.resume();
           }),
         ];

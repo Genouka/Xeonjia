@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -145,8 +146,10 @@ class _ButtonsState extends State<_Buttons> {
             bottom: 20,
             right: 20,
             child: GestureDetector(
-              onPanUpdate: (upd) => game.onPanUpdate(upd),
-              onPanEnd: (end) => game.onPanEnd(end),
+              onPanUpdate: (upd) =>
+                  game.onPanUpdate(DragUpdateInfo.fromDetails(game, upd)),
+              onPanEnd: (end) =>
+                  game.onPanEnd(DragEndInfo.fromDetails(game, end)),
               child: Container(
                 width: VirtualGamePad._size * 4,
                 height: VirtualGamePad._size * 4,

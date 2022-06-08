@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:flame/animation.dart';
+import 'package:flame/components.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -36,7 +36,7 @@ class SnowballComponent extends DynamicComponent {
   bool isFlying() => true;
 
   @override
-  int priority() => 125;
+  int get priority => 125;
 
   @override
   void onCollision(BasicComponent collidedComponent) {
@@ -46,16 +46,16 @@ class SnowballComponent extends DynamicComponent {
     stop();
     game.playSound(Sfx.snowball);
     isBeingDeleted = true;
-    animation = Animation.sequenced(
-      image,
-      4,
-      textureX: 16,
-      textureY: 16.0 * father.teamId,
-      textureWidth: 16,
-      textureHeight: 16,
-      stepTime: 0.02,
-      loop: false,
-    )..onCompleteAnimation = delete;
+    animation = SpriteAnimation.fromFrameData(
+        game.images.fromCache(image),
+        SpriteAnimationData.sequenced(
+          amount: 4,
+          texturePosition: Vector2(16, 16.0 * father.teamId),
+          textureSize: Vector2.all(16),
+          stepTime: 0.02,
+          loop: false,
+        ))
+      ..onComplete = delete;
     if (game.config.friendlyFire || collidedComponent.teamId != father.teamId) {
       collidedComponent?.lifePointsDifference(-atk, cause: father);
     }

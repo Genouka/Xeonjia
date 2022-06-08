@@ -1,5 +1,4 @@
-import 'package:flame/components/timer_component.dart';
-import 'package:flame/time.dart';
+import 'package:flame/components.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -53,13 +52,14 @@ class NpcController {
   void move(CharacterComponent npc) {
     if (!npc.quiet && npc.isStationary && !_movementInQueue) {
       _movementInQueue = true;
-      game.addLater(TimerComponent(Timer(0.5, callback: () {
-        _movementInQueue = false;
-        npc.updateDirection(
-            _hasMovements ? _nextDirection : GetDirection.random,
-            animated: false);
-      })
-        ..start()));
+      game.add(TimerComponent(
+          period: 500,
+          onTick: () {
+            _movementInQueue = false;
+            npc.updateDirection(
+                _hasMovements ? _nextDirection : GetDirection.random,
+                animated: false);
+          }));
     }
   }
 
@@ -68,23 +68,24 @@ class NpcController {
   void shoot(CharacterComponent npc) {
     if (!npc.friendly && !_shotInQueue) {
       _shotInQueue = true;
-      game.addLater(TimerComponent(
-          Timer(_hasShots ? _nextShot.frequency : 0.5, callback: () {
-        _shotInQueue = false;
-        if (_hasShots) npc.updateOrientation(_nextShot.direction);
-        if (npc.teamId != game.playerOne.teamId) {
-          if (game.playerOne.x == npc.x) {
-            npc.updateOrientation(
-                game.playerOne.y > npc.y ? Direction.down : Direction.up);
-          } else if (game.playerOne.y == npc.y) {
-            npc.updateOrientation(
-                game.playerOne.x > npc.x ? Direction.right : Direction.left);
-          }
-        }
-        if (npc.randomDouble() > 0.1) npc.nextWeapon();
-        if (npc.randomDouble() > 0.3) npc.shoot();
-      })
-            ..start()));
+      game.add(TimerComponent(
+          period: (_hasShots ? _nextShot.frequency : 0.5) * 1000,
+          onTick: () {
+            _shotInQueue = false;
+            if (_hasShots) npc.updateOrientation(_nextShot.direction);
+            if (npc.teamId != game.playerOne.teamId) {
+              if (game.playerOne.x == npc.x) {
+                npc.updateOrientation(
+                    game.playerOne.y > npc.y ? Direction.down : Direction.up);
+              } else if (game.playerOne.y == npc.y) {
+                npc.updateOrientation(game.playerOne.x > npc.x
+                    ? Direction.right
+                    : Direction.left);
+              }
+            }
+            if (npc.randomDouble() > 0.1) npc.nextWeapon();
+            if (npc.randomDouble() > 0.3) npc.shoot();
+          }));
     }
   }
 }

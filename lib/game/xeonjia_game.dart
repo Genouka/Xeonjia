@@ -1,14 +1,11 @@
 import 'dart:math';
 
 import 'package:collection/collection.dart';
-import 'package:flame/bgm.dart';
-import 'package:flame/components/timer_component.dart';
-import 'package:flame/flame.dart';
+import 'package:flame/components.dart';
 import 'package:flame/game.dart';
-import 'package:flame/gestures.dart';
-import 'package:flame/keyboard.dart';
-import 'package:flame/sprite.dart';
-import 'package:flame/time.dart';
+import 'package:flame/input.dart';
+import 'package:flame_audio/bgm.dart';
+import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
@@ -56,23 +53,50 @@ double get characterOffset => -(componentSize *
     .gridAligned;
 
 // Xeonjia game class
-class XeonjiaGame extends BaseGame
-    with HasWidgetsOverlay, PanDetector, TapDetector, KeyboardEvents {
+class XeonjiaGame extends FlameGame
+    with KeyboardEvents, PanDetector, SingleGameInstance, TapDetector {
   // Match settings
   final MatchConfig config;
 
   XeonjiaGame(this.config) {
-    addWidgetOverlay('statusBox', _statusBox);
-    addWidgetOverlay('virtualGamePad', _virtualGamePad);
-    addWidgetOverlay('dialogBox', dialogBox);
+    overlayMap = {
+      'statusBox': (BuildContext context, XeonjiaGame game) {
+        return _statusBox;
+      },
+      'backpackButton': (BuildContext context, XeonjiaGame game) {
+        return BackpackButton();
+      },
+      'backpackMenu': (BuildContext context, XeonjiaGame game) {
+        return BackpackMenu();
+      },
+      'noMapsMenu': (BuildContext context, XeonjiaGame game) {
+        return const NoMapsMenu('43');
+      },
+      'miniMapButton': (BuildContext context, XeonjiaGame game) {
+        return MiniMapButton(miniMapIsActive: game.miniMapActive);
+      },
+      'mapNameBox': (BuildContext context, XeonjiaGame game) {
+        return MapNameBox();
+      },
+      'virtualGamePad': (BuildContext context, XeonjiaGame game) {
+        return _virtualGamePad;
+      },
+      'dialogBox': (BuildContext context, XeonjiaGame game) {
+        return game.dialogBox;
+      },
+    };
+    overlays.add('statusBox');
+    overlays.add('virtualGamePad');
+    overlays.add('dialogBox');
     initGamepad();
     if (settings.backgroundMusic && config.mode == GameMode.story) {
       _backgroundMusic = Bgm();
       _backgroundMusic.initialize();
     }
     if (config.mode == GameMode.story) {
-      addWidgetOverlay('miniMapButton', MiniMapButton(miniMapIsActive: false));
-      addWidgetOverlay('backpackButton', BackpackButton());
+      miniMapActive = false;
+      overlays.add('miniMapButton');
+      overlays.add('backpackButton');
     } else {
       teams = [
         Team(id: 0, name: 'Team A', color: Colors.red),
@@ -82,8 +106,14 @@ class XeonjiaGame extends BaseGame
     init();
   }
 
-  @override
-  bool recordFps() => true;
+  // Map with widgets overlay
+  Map overlayMap;
+  void addCustomWidgetOverlay(String overlayName, Widget widget) {
+    overlayMap[overlayName] = (BuildContext context, XeonjiaGame game) {
+      return widget;
+    };
+    overlays.add(overlayName);
+  }
 
   // Scheme's environment
   final Environment environment = setEnvironment();
@@ -127,23 +157,23 @@ class XeonjiaGame extends BaseGame
 
   // Get component from ID
   BasicComponent getComponentFromId(int id) {
-    var componentList = List.from(components)..addAll(deletedComponents);
+    var componentList = List.from(children)..addAll(deletedComponents);
     return componentList
         .firstWhereOrNull((c) => c is BasicComponent && c.id == id);
   }
 
   BasicComponent getActiveComponentFromId(int id) =>
-      components.firstWhere((c) => c is BasicComponent && c.id == id);
+      children.firstWhere((c) => c is BasicComponent && c.id == id);
   BasicComponent getDeletedComponentFromId(int id) =>
       deletedComponents.firstWhere((c) => c.id == id);
 
   // Count enemies in the room
-  int get enemies => game.components
+  int get enemies => game.children
       .where((e) =>
           (e is BasicComponent &&
               [-3, -2, 1].contains(e.teamId) &&
-              !e.remove) ||
-          (e is CharacterComponent && e.friendly == false && !e.remove))
+              !e.deleted) ||
+          (e is CharacterComponent && e.friendly == false && !e.deleted))
       .length;
 
   // List of teams sorted by points
@@ -169,9 +199,9 @@ class XeonjiaGame extends BaseGame
   // Reset variables and import map data
   void init() async {
     pause(stopMusic: false);
-    removeWidgetOverlay('mapNameBox');
-    removeWidgetOverlay('miniMapButton');
-    removeWidgetOverlay('backpackButton');
+    overlays.remove('mapNameBox');
+    overlays.remove('miniMapButton');
+    overlays.remove('backpackButton');
 
     // Import mainCharacter.eventLog
     currentEventLog = Map.from(mainCharacter.eventLog);
@@ -181,8 +211,8 @@ class XeonjiaGame extends BaseGame
 
     // Remove previous components
     // They are removed during the next update()
-    for (var component in components) {
-      markToRemove(component);
+    for (var component in children) {
+      remove(component);
     }
     players.clear();
     deletedComponents.clear();
@@ -195,20 +225,21 @@ class XeonjiaGame extends BaseGame
     if (config.mode == GameMode.story) {
       map = MapProperties(fullId: mainCharacter.visitedRooms.last);
       if (map.id == '44') {
-        removeWidgetOverlay('loading');
+        overlays.remove('loading');
         _backgroundMusic?.dispose();
-        addWidgetOverlay('noMapsMenu', const NoMapsMenu('43'));
+        overlays.add('noMapsMenu');
         return;
       }
       await importMap('assets/maps/story/${map.id}.tmx');
-      addWidgetOverlay('miniMapButton', MiniMapButton(miniMapIsActive: false));
-      addWidgetOverlay('backpackButton', BackpackButton());
+      miniMapActive = false;
+      overlays.add('miniMapButton');
+      overlays.add('backpackButton');
     } else {
       map = MapProperties(fullId: config.mapId.toString());
       await importMap('assets/maps/arena/${config.mapId}.tmx');
     }
 
-    _timer = Timer(1, repeat: true, callback: () {
+    _timer = Timer(1, repeat: true, onTick: () {
       if (isPaused) return;
       elapsedSeconds++;
       if (config.mode != GameMode.story) {
@@ -218,23 +249,23 @@ class XeonjiaGame extends BaseGame
       }
     });
     _timer.start();
-    game.addLater(BackgroundComponent(0, 0, Sprite('background.png')));
+    game.add(BackgroundComponent(
+        0, 0, Sprite(game.images.fromCache('background.png'))));
     update(0);
     resume();
     playBackgroundMusic();
   }
 
   @override
-  void update(double t) {
-    _timer?.update(t);
-    super.update(t);
+  void update(double dt) {
+    _timer?.update(dt);
+    super.update(dt);
   }
 
   @override
-  void resize(Size size) {
-    componentSize = (size.longestSide / 16).round16.gridAligned;
+  void handleResize(Vector2 size) {
+    componentSize = (size.toSize().longestSide / 16).round16.gridAligned;
     miniMapZoom = 1;
-    super.resize(size);
     updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
   }
 
@@ -244,7 +275,7 @@ class XeonjiaGame extends BaseGame
     _pause = true;
     if (stopEngine) pauseEngine();
     if (stopMusic) _backgroundMusic?.pause();
-    if (mode != null) addWidgetOverlay('pauseMenu', PauseMenu(mode));
+    if (mode != null) addCustomWidgetOverlay('pauseMenu', PauseMenu(mode));
   }
 
   // Resume game
@@ -275,11 +306,10 @@ class XeonjiaGame extends BaseGame
     if (hasAction) {
       delay ??= nextActionDelay;
       nextActionDelay = 0;
-      addLater(TimerComponent(Timer(
-        delay,
-        callback: () => evaluate(null, environment, _actionContinuation),
-        repeat: false,
-      )..start()));
+      this.add(TimerComponent(
+        period: delay * 1000,
+        onTick: () => evaluate(null, environment, _actionContinuation),
+      ));
     } else {
       resume();
     }
@@ -309,7 +339,7 @@ class XeonjiaGame extends BaseGame
 
   // Play sound effect
   void playSound(Sfx sfx) {
-    if (settings.soundEffects) Flame.audio.play(sfx.fileName, volume: 0.3);
+    if (settings.soundEffects) FlameAudio.play(sfx.fileName, volume: 0.3);
   }
 
   // Save match data and load the new room
@@ -341,8 +371,8 @@ class XeonjiaGame extends BaseGame
   // Regenerate regenerable modifiers
   void regenerateModifiers() {
     for (var modifier in modifiersToBeRegenerated) {
-      modifier.remove = false;
-      components.add(modifier);
+      modifier.deleted = false;
+      game.add(modifier);
     }
     modifiersToBeRegenerated.clear();
   }
@@ -351,8 +381,8 @@ class XeonjiaGame extends BaseGame
   void updateCamera(double x, double y, [double _componentSize]) {
     if (map?.width == null || size == null) return;
     _componentSize ??= componentSize;
-    camera.x = _moveCamera(_componentSize, size.width, map.width, x);
-    camera.y = _moveCamera(_componentSize, size.height, map.height, y);
+    camera.position.x = _moveCamera(_componentSize, size.x, map.width, x);
+    camera.position.y = _moveCamera(_componentSize, size.y, map.height, y);
   }
 
   // Calculate camera position
@@ -366,6 +396,7 @@ class XeonjiaGame extends BaseGame
   // Mini-map (componentSize = componentSize * miniMapZoom)
   bool miniMapEnabled = false;
   double miniMapZoom = 1;
+  bool miniMapActive = false;
 
   // Enable/Disable mini-map view
   void miniMap() {
@@ -374,22 +405,23 @@ class XeonjiaGame extends BaseGame
       zoomMiniMap(toValue: miniMapZoom, enable: true);
       pause(stopEngine: false, stopMusic: false);
       _statusBox.state.refresh();
-      removeWidgetOverlay('mapNameBox');
-      addWidgetOverlay('mapNameBox', MapNameBox(below: false));
-      removeWidgetOverlay('miniMapButton');
-      addWidgetOverlay('miniMapButton', MiniMapButton(miniMapIsActive: true));
-      removeWidgetOverlay('backpackButton');
+      overlays.remove('mapNameBox');
+      overlays.add('mapNameBox');
+      overlays.remove('miniMapButton');
+      overlays.remove('backpackButton');
       refreshWeaponButtons();
+      miniMapActive = true;
     } else {
       updateCamera(playerOne.x, playerOne.y);
-      removeWidgetOverlay('mapNameBox');
-      removeWidgetOverlay('miniMapButton');
-      addWidgetOverlay('miniMapButton', MiniMapButton(miniMapIsActive: false));
-      addWidgetOverlay('backpackButton', BackpackButton());
+      overlays.remove('mapNameBox');
+      overlays.remove('miniMapButton');
+      overlays.add('backpackButton');
       refreshWeaponButtons();
       _statusBox.state.refresh();
       resume();
+      miniMapActive = false;
     }
+    overlays.add('miniMapButton');
   }
 
   // Change mini-map zoom
@@ -402,13 +434,14 @@ class XeonjiaGame extends BaseGame
             : min(previousValue + delta, 2)));
     updateCamera(playerOne.x * miniMapZoom, playerOne.y * miniMapZoom,
         (componentSize * miniMapZoom).gridAligned);
-    onPanUpdate(DragUpdateDetails(globalPosition: Offset.zero));
+    onPanUpdate(DragUpdateInfo.fromDetails(
+        game, DragUpdateDetails(globalPosition: Offset.zero)));
   }
 
   // Open backpack
   void backpack() {
     pause(stopMusic: false);
-    addWidgetOverlay('backpackMenu', BackpackMenu());
+    overlays.add('backpackMenu');
   }
 
   // Reload weapon buttons
@@ -444,39 +477,40 @@ class XeonjiaGame extends BaseGame
       saveUserData();
     }
     refreshLifePointsBar();
-    addWidgetOverlay('endMenu', EndMenu(lostMoney));
+    addCustomWidgetOverlay('endMenu', EndMenu(lostMoney));
   }
 
   Offset _panGestureOffset;
 
   @override
-  void onPanUpdate(DragUpdateDetails details) {
-    if (!_pause && (details.delta.dx.abs() > 5 || details.delta.dy.abs() > 5)) {
-      _panGestureOffset = details.delta.dx.abs() > details.delta.dy.abs()
-          ? Offset(details.delta.dx, 0)
-          : Offset(0, details.delta.dy);
+  void onPanUpdate(DragUpdateInfo info) {
+    if (!_pause &&
+        (info.raw.delta.dx.abs() > 5 || info.raw.delta.dy.abs() > 5)) {
+      _panGestureOffset = info.raw.delta.dx.abs() > info.raw.delta.dy.abs()
+          ? Offset(info.raw.delta.dx, 0)
+          : Offset(0, info.raw.delta.dy);
       playerOne?.updateOrientation(GetDirection.fromOffset(_panGestureOffset));
     } else if (miniMapEnabled) {
-      camera.x = _moveCamera(componentSize * miniMapZoom, size.width, map.width,
-          camera.x - details.delta.dx + size.width / 2);
-      camera.y = _moveCamera(componentSize * miniMapZoom, size.height,
-          map.height, camera.y - details.delta.dy + size.height / 2);
+      camera.position.x = _moveCamera(componentSize * miniMapZoom, size.x,
+          map.width, camera.position.x - info.raw.delta.dx + size.x / 2);
+      camera.position.y = _moveCamera(componentSize * miniMapZoom, size.y,
+          map.height, camera.position.y - info.raw.delta.dy + size.y / 2);
     }
   }
 
   @override
   // ignore: avoid_renaming_method_parameters
-  void onPanEnd(DragEndDetails _) {
+  void onPanEnd(DragEndInfo _) {
     if (_panGestureOffset != null) {
       gestureDragInput(GetDirection.fromOffset(_panGestureOffset));
     }
   }
 
   @override
-  void onTapDown(TapDownDetails details) {
+  void onTapDown(TapDownInfo info) {
     messageManager.active
         ? dialogBox.state.next()
-        : gestureTapInput(details.globalPosition);
+        : gestureTapInput(info.raw.globalPosition);
   }
 
   // Manage drag gestures
@@ -492,16 +526,15 @@ class XeonjiaGame extends BaseGame
 
     // Update orientation
     var _relativeTapX =
-        position.dx - (playerOne.x + componentSize / 2 - camera.x);
+        position.dx - (playerOne.x + componentSize / 2 - camera.position.x);
     var _relativeTapY =
-        position.dy - (playerOne.y + componentSize / 2 - camera.y);
+        position.dy - (playerOne.y + componentSize / 2 - camera.position.y);
 
-    if (position.dx < componentSize ||
-        position.dx > size.width - componentSize) {
+    if (position.dx < componentSize || position.dx > size.x - componentSize) {
       playerOne.updateOrientation(
           GetDirection.fromXY(position.dx - componentSize, 0));
     } else if (position.dy < componentSize ||
-        position.dy > size.height - componentSize) {
+        position.dy > size.y - componentSize) {
       playerOne.updateOrientation(
           GetDirection.fromXY(0, position.dy - componentSize));
     } else if (_relativeTapX.abs() > 15 || _relativeTapY.abs() > 15) {
@@ -515,8 +548,8 @@ class XeonjiaGame extends BaseGame
   }
 
   @override
-  void onKeyEvent(event) {
-    if (event is! RawKeyUpEvent) return;
+  KeyEventResult onKeyEvent(event, keysPressed) {
+    if (event is! RawKeyUpEvent) return KeyEventResult.handled;
     if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
       gestureDragInput(Direction.down);
     } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
@@ -537,7 +570,7 @@ class XeonjiaGame extends BaseGame
       playerOne.updateOrientation(Direction.down);
     } else if (event.logicalKey == LogicalKeyboardKey.escape) {
       if (isPaused) {
-        removeWidgetOverlay('pauseMenu');
+        overlays.remove('pauseMenu');
         resume();
       } else {
         pause(mode: PauseMode.pause);
@@ -545,6 +578,7 @@ class XeonjiaGame extends BaseGame
     } else if (event.logicalKey == LogicalKeyboardKey.keyL) {
       miniMap();
     }
+    return KeyEventResult.handled;
   }
 
   void dispose() {

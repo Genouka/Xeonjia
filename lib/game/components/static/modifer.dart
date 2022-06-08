@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:flame/animation.dart';
+import 'package:flame/components.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -55,7 +55,7 @@ class ModifierComponent extends BasicComponent {
   }
 
   @override
-  int priority() => 50;
+  int get priority => 50;
 
   @override
   bool isSolid({BasicComponent otherComponent}) => false;
@@ -85,16 +85,16 @@ class ModifierComponent extends BasicComponent {
       if (explosionOnDelete) {
         isBeingDeleted = true;
         game.playSound(Sfx.explosion);
-        animation = Animation.sequenced(
-          image,
-          4,
-          textureX: 16,
-          textureY: 16.0 * father.teamId,
-          textureWidth: 16,
-          textureHeight: 16,
-          stepTime: 0.05,
-          loop: false,
-        )..onCompleteAnimation = delete;
+        animation = SpriteAnimation.fromFrameData(
+            game.images.fromCache(image),
+            SpriteAnimationData.sequenced(
+              amount: 4,
+              texturePosition: Vector2(16, 16.0 * father.teamId),
+              textureSize: Vector2.all(16),
+              stepTime: 0.05,
+              loop: false,
+            ))
+          ..onComplete = delete;
       } else {
         delete();
       }

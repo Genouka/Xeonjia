@@ -7,7 +7,7 @@ import 'package:xeonjia/i18n/story.i18n.dart';
 class MapNameBox extends StatelessWidget {
   final String text;
   final bool below;
-  MapNameBox({this.below = true}) : text = game.map.name;
+  MapNameBox({this.below = false}) : text = game.map.name;
 
   @override
   Widget build(BuildContext context) {

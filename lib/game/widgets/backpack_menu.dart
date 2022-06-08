@@ -112,7 +112,7 @@ class _BackpackMenuState extends State<BackpackMenu> {
         actionButton(
           'Back'.i18n.toUpperCase(),
           () {
-            game.removeWidgetOverlay('backpackMenu');
+            game.overlays.remove('backpackMenu');
             game.resume();
           },
         ),
@@ -129,7 +129,7 @@ class _BackpackMenuState extends State<BackpackMenu> {
                     .defineSymbol(Sym('selected-item-id'), selectedItem.id);
                 game.environment
                     .defineSymbol(Sym('selected-item-name'), selectedItem.name);
-                game.removeWidgetOverlay('backpackMenu');
+                game.overlays.remove('backpackMenu');
                 game.resume();
                 game.executeAction(action: selectedItem.action);
               });

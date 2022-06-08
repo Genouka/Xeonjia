@@ -1,3 +1,4 @@
+import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/widgets/pause_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -20,7 +21,9 @@ class GamePage extends StatelessWidget {
         onKey: (data, event) => KeyEventResult.handled,
         child: Theme(
           data: gameTheme,
-          child: Scaffold(body: game.widget),
+          child: Scaffold(
+            body: GameWidget(game: game, overlayBuilderMap: game.overlayMap),
+          ),
         ),
       ),
     );
