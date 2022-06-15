@@ -8,11 +8,11 @@ import 'package:xeonjia/ui/screens/rules/widgets/rule_page.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 class RulesPage extends StatefulWidget {
-  final StatelessWidget homePage;
   const RulesPage([this.homePage]);
+  final StatelessWidget homePage;
 
   @override
-  _RulesPageState createState() => _RulesPageState();
+  State<RulesPage> createState() => _RulesPageState();
 }
 
 class _RulesPageState extends State<RulesPage>
@@ -107,39 +107,40 @@ class _RulesPageState extends State<RulesPage>
                   ),
                 ),
               ),
-              _controller.index >= _controller.length - 1
-                  ? TextButton(
-                      style: TextButton.styleFrom(
-                        backgroundColor: Theme.of(context).primaryColor,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(50)),
-                      ),
-                      onPressed: () {
-                        saveName(_textFieldController.text);
-                      },
-                      child: Text(
-                        'OK'.i18n,
-                        style: const TextStyle(color: Colors.white),
-                      ),
-                    )
-                  : TextButton(
-                      style: TextButton.styleFrom(
-                        primary: Theme.of(context).brightness == Brightness.dark
-                            ? Colors.white
-                            : Colors.black,
-                      ),
-                      onPressed: () {
-                        if (_controller.index < _controller.length - 1) {
-                          ++_controller.index;
-                        }
-                      },
-                      child: Row(
-                        children: <Widget>[
-                          Text('Next'.i18n),
-                          const Icon(Icons.navigate_next)
-                        ],
-                      ),
-                    ),
+              if (_controller.index >= _controller.length - 1)
+                TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Theme.of(context).primaryColor,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50)),
+                  ),
+                  onPressed: () {
+                    saveName(_textFieldController.text);
+                  },
+                  child: Text(
+                    'OK'.i18n,
+                    style: const TextStyle(color: Colors.white),
+                  ),
+                )
+              else
+                TextButton(
+                  style: TextButton.styleFrom(
+                    primary: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.white
+                        : Colors.black,
+                  ),
+                  onPressed: () {
+                    if (_controller.index < _controller.length - 1) {
+                      ++_controller.index;
+                    }
+                  },
+                  child: Row(
+                    children: <Widget>[
+                      Text('Next'.i18n),
+                      const Icon(Icons.navigate_next)
+                    ],
+                  ),
+                ),
             ],
           ),
         ),

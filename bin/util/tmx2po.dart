@@ -12,16 +12,16 @@ Map<String, List<Translation>> tmx2po() {
       dotAll: true);
 
   // Find text inside dialog or map-name
-  final regexText = RegExp(r'(?:&quot;(.*)&quot; )?(?:&quot;(.*)&quot;)+');
+  final regexText = RegExp('(?:&quot;(.*)&quot; )?(?:&quot;(.*)&quot;)+');
 
   // Find the author of the message
   final regexAuthorName = RegExp(r'([^\/]*)\/?([^_]*)_?(.*)');
 
   // Find npc-names
-  final npcName = RegExp(r'property name="name" value="(.*?)"');
+  final npcName = RegExp('property name="name" value="(.*?)"');
 
   // Find answers
-  final regexAnswer = RegExp(r'(?:&quot;(.*?)&quot;)+');
+  final regexAnswer = RegExp('(?:&quot;(.*?)&quot;)+');
 
   // Map directory : list of strings
   var dirStringsMap = <String, List<Translation>>{};
@@ -38,9 +38,9 @@ Map<String, List<Translation>> tmx2po() {
               fsEntity.path,
               text
                   .group(2)
-                  .replaceAll('\\&quot;', '\\"')
+                  .replaceAll(r'\&quot;', r'\"')
                   .replaceAll('&amp;', '&')
-                  .replaceAll('*\\', '*'),
+                  .replaceAll(r'*\', '*'),
               null);
           var author = text.group(1)?.replaceAll('&amp;', '&');
           Translation authorName;
@@ -85,7 +85,7 @@ Map<String, List<Translation>> tmx2po() {
         .add(Translation(dataJsonFileName, value['name'], null));
     if (value['description'] != null) {
       dirStringsMap['story'].add(Translation(dataJsonFileName,
-          value['description'].replaceAll('\n', '\\n'), null));
+          value['description'].replaceAll('\n', r'\n'), null));
     }
     if (value['action'] != null) {
       regexGlobal.allMatches(value['action']).forEach((match) {
@@ -96,9 +96,9 @@ Map<String, List<Translation>> tmx2po() {
               dataJsonFileName,
               text
                   .group(2)
-                  .replaceAll('\\&quot;', '\\"')
+                  .replaceAll(r'\&quot;', r'\"')
                   .replaceAll('&amp;', '&')
-                  .replaceAll('*\\', '*'),
+                  .replaceAll(r'*\', '*'),
               null);
           if (string.msgid != null &&
               string.msgid != '' &&

@@ -12,6 +12,11 @@ import 'package:xeonjia/resources/weapon_details.dart';
 // Abstract class used to manage weapons inside game
 // It defines what happens if someone use a weapon
 abstract class Weapon {
+  Weapon(this.id, this.maxPp) {
+    maxPp ??= 10 + level * 5.0;
+    _powerPoints = maxPp;
+  }
+
   // Weapon id
   final int id;
 
@@ -27,18 +32,13 @@ abstract class Weapon {
   double get ppPercentage => _powerPoints / maxPp;
   double get powerPoints => _powerPoints;
   set powerPoints(double powerPoints) {
-    _powerPoints = (powerPoints ?? double.infinity);
+    _powerPoints = powerPoints ?? double.infinity;
     if (_powerPoints > maxPp) restorePp();
   }
 
   // Weapon details
   String get name => weaponDetails()[id]['name'];
   String get description => weaponDetails()[id]['description'];
-
-  Weapon(this.id, this.maxPp) {
-    maxPp ??= 10 + level * 5.0;
-    _powerPoints = maxPp;
-  }
 
   // Restore PP
   void restorePp() {
@@ -52,11 +52,8 @@ abstract class Weapon {
   }
 
   // Export / Import weapon details
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'lv': level,
-        'pp': (powerPoints.isFinite ? powerPoints : null)
-      };
+  Map<String, dynamic> toJson() =>
+      {'id': id, 'lv': level, 'pp': powerPoints.isFinite ? powerPoints : null};
   static Weapon fromJson(Map<String, dynamic> json) =>
       (Weapon.fromId(json['id'], json['lv'])
         ..powerPoints = (json['pp'] ?? double.infinity));
@@ -71,12 +68,12 @@ abstract class Weapon {
 
 // Punch
 class PunchWeapon extends Weapon {
-  @override
-  final int level;
-
   PunchWeapon({@required this.level}) : super(0, double.infinity) {
     atk = level + 1.0;
   }
+
+  @override
+  final int level;
 
   @override
   void shoot({@required CharacterComponent shooter}) {
@@ -93,13 +90,13 @@ class PunchWeapon extends Weapon {
 
 // Snowball
 class SnowBallWeapon extends Weapon {
-  @override
-  final int level;
-
   SnowBallWeapon({@required this.level, double powerPoints})
       : super(1, powerPoints) {
     atk = 10 + level * 2.0;
   }
+
+  @override
+  final int level;
 
   @override
   void shoot({@required CharacterComponent shooter}) {
@@ -117,13 +114,13 @@ class SnowBallWeapon extends Weapon {
 
 // Mine
 class MineWeapon extends Weapon {
-  @override
-  final int level;
-
   MineWeapon({@required this.level, double powerPoints})
       : super(2, powerPoints) {
     atk = 10 + level * 2.0;
   }
+
+  @override
+  final int level;
 
   @override
   void shoot({@required CharacterComponent shooter}) {

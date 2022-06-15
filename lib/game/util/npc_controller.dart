@@ -5,18 +5,6 @@ import 'package:xeonjia/models/direction.dart';
 
 // Manage movements and shots (NPC)
 class NpcController {
-  // Pattern defined in tile.properties['movementPattern']
-  final List<Direction> _movementPattern = [];
-  int _movementPatternIndex = 0;
-  Direction get _nextDirection => _movementPattern[_movementPatternIndex];
-  bool get _hasMovements => _movementPattern.isNotEmpty;
-
-  // Pattern defined in tile.properties['shotPattern']
-  final List<_CpuShot> _shotPattern = [];
-  final int _shotPatternIndex = 0;
-  _CpuShot get _nextShot => _shotPattern[_shotPatternIndex];
-  bool get _hasShots => _shotPattern.isNotEmpty;
-
   // Read and import patterns
   // movementPatternString: is a list of: direction
   // shotPatternString:     is a list of: direction | frequency
@@ -34,6 +22,17 @@ class NpcController {
       });
     }
   }
+  // Pattern defined in tile.properties['movementPattern']
+  final List<Direction> _movementPattern = [];
+  int _movementPatternIndex = 0;
+  Direction get _nextDirection => _movementPattern[_movementPatternIndex];
+  bool get _hasMovements => _movementPattern.isNotEmpty;
+
+  // Pattern defined in tile.properties['shotPattern']
+  final List<_CpuShot> _shotPattern = [];
+  final int _shotPatternIndex = 0;
+  _CpuShot get _nextShot => _shotPattern[_shotPatternIndex];
+  bool get _hasShots => _shotPattern.isNotEmpty;
 
   // Increase _movementPatternIndex
   void updateMovement() {
@@ -91,7 +90,7 @@ class NpcController {
 }
 
 class _CpuShot {
+  _CpuShot(this.direction, this.frequency);
   Direction direction;
   double frequency;
-  _CpuShot(this.direction, this.frequency);
 }

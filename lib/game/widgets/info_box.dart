@@ -4,10 +4,10 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Top left container
 class InfoBox extends StatelessWidget {
+  const InfoBox({this.child, this.radius = 30, this.below = false});
   final Widget child;
   final double radius;
   final bool below;
-  const InfoBox({this.child, this.radius = 30, this.below = false});
 
   @override
   Widget build(BuildContext context) {

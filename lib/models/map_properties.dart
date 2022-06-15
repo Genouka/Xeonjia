@@ -1,5 +1,14 @@
 // Map properties read from the tmx file
 class MapProperties {
+  MapProperties({
+    this.fullId,
+    this.width,
+    this.height,
+    this.action,
+    this.music,
+    this.disableMiniMap = false,
+  });
+
   // Map id
   final String fullId;
   String get id => fullId.split('/').first;
@@ -19,13 +28,4 @@ class MapProperties {
 
   // Disable/Enable mini-map (enabled by default)
   bool disableMiniMap;
-
-  MapProperties({
-    this.fullId,
-    this.width,
-    this.height,
-    this.action,
-    this.music,
-    this.disableMiniMap = false,
-  });
 }

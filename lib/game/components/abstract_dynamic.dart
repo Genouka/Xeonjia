@@ -45,7 +45,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   @override
   void onCreate() {
     const size = 16.0;
-    for (var d in Direction.values) {
+    for (final d in Direction.values) {
       _sprites[d] = Sprite(game.images.fromCache(image),
           srcPosition: Vector2(d.index * size, size),
           srcSize: Vector2.all(size));
@@ -76,7 +76,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
 
   // Update component orientation
   void updateOrientation([Direction newDirection]) {
-    orientation = (newDirection ?? direction ?? orientation);
+    orientation = newDirection ?? direction ?? orientation;
   }
 
   @override
@@ -98,9 +98,9 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
     final overlappedComponents = <BasicComponent>[];
 
     // Distance traveled
-    final _delta = min(speed * dt, componentSize - 1);
+    final delta = min(speed * dt, componentSize - 1);
     final candidatePositionTemp =
-        toRect().translate(direction.dx * _delta, direction.dy * _delta);
+        toRect().translate(direction.dx * delta, direction.dy * delta);
     final candidatePosition = Rect.fromLTWH(
         candidatePositionTemp.left.gridAligned,
         candidatePositionTemp.top.gridAligned,
@@ -108,7 +108,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
         candidatePositionTemp.height);
 
     // Check if this is going to collide or overlap another component
-    for (var component in game.children) {
+    for (final component in game.children) {
       if (component is BasicComponent &&
           component != this &&
           component != father &&
@@ -137,15 +137,15 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
       } else if (direction.dy > 0) {
         y = collidedRect.top - height;
       }
-      for (var e in collidedComponents) {
+      for (final e in collidedComponents) {
         onCollision(e);
       }
     } else {
       // This component did not collide with another one
       x = candidatePosition.left;
       y = candidatePosition.top;
-      for (var _overlappedComponent in overlappedComponents) {
-        _overlappedComponent.overlappedBy(this);
+      for (final overlappedComponent in overlappedComponents) {
+        overlappedComponent.overlappedBy(this);
       }
     }
     hasMoved();

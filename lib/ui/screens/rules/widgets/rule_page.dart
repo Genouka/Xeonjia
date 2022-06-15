@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/ui/screens/rules/util/rule.dart';
 
 class RulePage extends StatelessWidget {
-  final Rule rule;
   RulePage(this.rule) : assert(rule.image != null || rule.icon != null);
+  final Rule rule;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class RulePage extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               Center(
-                child: Container(
+                child: DecoratedBox(
                   decoration: rule.image != null
                       ? BoxDecoration(
                           image: DecorationImage(image: AssetImage(rule.image)),

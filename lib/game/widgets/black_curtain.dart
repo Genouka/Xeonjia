@@ -4,11 +4,11 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 // AnimatedOpacity widget shown while executing (delete)
 class BlackCurtain extends StatefulWidget {
-  final VoidCallback callback;
   const BlackCurtain([this.callback]);
+  final VoidCallback callback;
 
   @override
-  _BlackCurtainState createState() => _BlackCurtainState();
+  State<BlackCurtain> createState() => _BlackCurtainState();
 }
 
 class _BlackCurtainState extends State<BlackCurtain> {

@@ -3,11 +3,11 @@ import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/util/insert_name_form.dart';
 
 class LastPage extends StatelessWidget {
+  const LastPage(this._textFieldController, this._formKey, this.saveName);
+
   final TextEditingController _textFieldController;
   final GlobalKey<FormState> _formKey;
   final Function saveName;
-
-  const LastPage(this._textFieldController, this._formKey, this.saveName);
 
   @override
   Widget build(BuildContext context) {

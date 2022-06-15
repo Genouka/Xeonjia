@@ -1,4 +1,6 @@
 class Translation {
+  Translation(this.path, this.msgid, this.msgstr, [this.comments = '']);
+
   // File path
   String path;
 
@@ -10,8 +12,6 @@ class Translation {
 
   // Translation comments
   String comments;
-
-  Translation(this.path, this.msgid, this.msgstr, [this.comments = '']);
 
   @override
   bool operator ==(other) => msgid == other.msgid;

@@ -6,11 +6,11 @@ import 'package:xeonjia/models/shop_item.dart';
 
 // Menu used to buy items in stores
 class ShopMenu extends StatefulWidget {
-  final List<ShopItem> _items;
   const ShopMenu(this._items);
+  final List<ShopItem> _items;
 
   @override
-  _ShopMenuState createState() => _ShopMenuState();
+  State<ShopMenu> createState() => _ShopMenuState();
 }
 
 class _ShopMenuState extends State<ShopMenu> {

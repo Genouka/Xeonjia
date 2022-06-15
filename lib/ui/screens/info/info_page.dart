@@ -5,7 +5,7 @@ import 'package:xeonjia/ui/screens/info/resources/third_party_licenses.dart';
 
 class InfoPage extends StatefulWidget {
   @override
-  _InfoPageState createState() => _InfoPageState();
+  State<InfoPage> createState() => _InfoPageState();
 }
 
 class _InfoPageState extends State<InfoPage> {
@@ -78,7 +78,7 @@ class _InfoPageState extends State<InfoPage> {
     return Scaffold(
       appBar: AppBar(title: Text('Info'.i18n.toUpperCase()), centerTitle: true),
       body: ListView.builder(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8),
         itemCount: infoMenuList.length,
         itemBuilder: (BuildContext context, int index) => ListTile(
           leading: Icon(infoMenuList[index]['icon'].icon, size: 27),
@@ -89,8 +89,10 @@ class _InfoPageState extends State<InfoPage> {
           subtitle: Text(infoMenuList[index]['subtitle']),
           onTap: () async {
             if (infoMenuList[index]['url'].length != 0) {
-              final url = Uri.encodeFull(infoMenuList[index]['url']);
-              if (await canLaunch(url)) await launch(url);
+              final url = Uri.parse(infoMenuList[index]['url']);
+              if (await canLaunchUrl(url)) {
+                await launchUrl(url, mode: LaunchMode.externalApplication);
+              }
             } else if (infoMenuList[index]['title'] ==
                 'Third Party Licenses'.i18n) {
               _licenseDialog();
@@ -107,9 +109,9 @@ class _InfoPageState extends State<InfoPage> {
       context: context,
       builder: (BuildContext context) => StatefulBuilder(
         builder: (context, setState) {
-          var _licenseList = <Widget>[];
-          for (var license in licenses) {
-            _licenseList.add(ExpansionTile(
+          var licenseList = <Widget>[];
+          for (final license in licenses) {
+            licenseList.add(ExpansionTile(
               title: Text(license['lib']),
               initiallyExpanded: true,
               children: <Widget>[
@@ -121,7 +123,7 @@ class _InfoPageState extends State<InfoPage> {
             title: Text('Third Party Licenses'.i18n),
             content: SizedBox(
                 width: double.maxFinite,
-                child: ListView(children: _licenseList)),
+                child: ListView(children: licenseList)),
             actions: <Widget>[
               TextButton(
                 onPressed: Navigator.of(context).pop,

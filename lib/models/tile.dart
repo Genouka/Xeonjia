@@ -5,6 +5,23 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Class used to manage a single tile
 class Tile {
+  Tile({
+    this.id,
+    this.gid,
+    this.type,
+    this.properties,
+    this.sprite,
+    this.size,
+    this.animationSprites,
+    this.animationStepTime,
+    this.position,
+    this.layer,
+  }) {
+    properties ??= {};
+    size ??= componentSize;
+    animationSprites ??= [];
+  }
+
   // Tile id and gid defined in the TMX file
   int id;
   int gid;
@@ -31,21 +48,4 @@ class Tile {
 
   // Map layer
   int layer;
-
-  Tile({
-    this.id,
-    this.gid,
-    this.type,
-    this.properties,
-    this.sprite,
-    this.size,
-    this.animationSprites,
-    this.animationStepTime,
-    this.position,
-    this.layer,
-  }) {
-    properties ??= {};
-    size ??= componentSize;
-    animationSprites ??= [];
-  }
 }

@@ -7,14 +7,14 @@ import 'package:xeonjia/models/game_mode.dart';
 // Box that shows points and lifepoints
 class StatusBox extends StatefulWidget {
   @override
-  final GlobalKey<_StatusBoxState> key = GlobalKey();
-  _StatusBoxState get state => key.currentState;
+  final GlobalKey<State<StatusBox>> key = GlobalKey();
+  StatusBoxState get state => key.currentState;
 
   @override
-  _StatusBoxState createState() => _StatusBoxState();
+  State<StatusBox> createState() => StatusBoxState();
 }
 
-class _StatusBoxState extends State<StatusBox> {
+class StatusBoxState extends State<StatusBox> {
   void refresh() {
     if (mounted) setState(() {});
   }
@@ -104,12 +104,6 @@ class _StatusBoxState extends State<StatusBox> {
 
 // Linear percent indicator
 class _PercentIndicator extends StatelessWidget {
-  final List<double> values;
-  final String text;
-  final List<Color> colors;
-  final bool poisoned;
-  final double fillStop;
-
   _PercentIndicator({
     @required this.values,
     @required this.text,
@@ -118,6 +112,12 @@ class _PercentIndicator extends StatelessWidget {
     this.poisoned = false,
   })  : assert(colors.length == 2),
         fillStop = values[0] / values[1];
+
+  final List<double> values;
+  final String text;
+  final List<Color> colors;
+  final bool poisoned;
+  final double fillStop;
 
   @override
   Widget build(BuildContext context) {

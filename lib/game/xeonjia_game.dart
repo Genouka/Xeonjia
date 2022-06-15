@@ -55,9 +55,6 @@ double get characterOffset => -(componentSize *
 // Xeonjia game class
 class XeonjiaGame extends FlameGame
     with KeyboardEvents, PanDetector, SingleGameInstance, TapDetector {
-  // Match settings
-  final MatchConfig config;
-
   XeonjiaGame(this.config) {
     overlayMap = {
       'statusBox': (BuildContext context, XeonjiaGame game) {
@@ -105,6 +102,9 @@ class XeonjiaGame extends FlameGame
     }
     init();
   }
+
+  // Match settings
+  final MatchConfig config;
 
   // Map with widgets overlay
   Map overlayMap;
@@ -211,13 +211,13 @@ class XeonjiaGame extends FlameGame
 
     // Remove previous components
     // They are removed during the next update()
-    for (var component in children) {
+    for (final component in children) {
       remove(component);
     }
     players.clear();
     deletedComponents.clear();
     modifiersToBeRegenerated.clear();
-    for (var t in (teams ?? [])) {
+    for (final t in teams ?? []) {
       t.basisPoints = 0;
     }
 
@@ -370,7 +370,7 @@ class XeonjiaGame extends FlameGame
 
   // Regenerate regenerable modifiers
   void regenerateModifiers() {
-    for (var modifier in modifiersToBeRegenerated) {
+    for (final modifier in modifiersToBeRegenerated) {
       modifier.deleted = false;
       game.add(modifier);
     }
@@ -378,17 +378,17 @@ class XeonjiaGame extends FlameGame
   }
 
   // Update camera position
-  void updateCamera(double x, double y, [double _componentSize]) {
+  void updateCamera(double x, double y, [double componentSize]) {
     if (map?.width == null || size == null) return;
-    _componentSize ??= componentSize;
-    camera.position.x = _moveCamera(_componentSize, size.x, map.width, x);
-    camera.position.y = _moveCamera(_componentSize, size.y, map.height, y);
+    componentSize ??= componentSize;
+    camera.position.x = _moveCamera(componentSize, size.x, map.width, x);
+    camera.position.y = _moveCamera(componentSize, size.y, map.height, y);
   }
 
   // Calculate camera position
   double _moveCamera(
-      double _componentSize, double screenSize, int mapSize, double pos) {
-    var delta = mapSize * _componentSize - screenSize;
+      double componentSize, double screenSize, int mapSize, double pos) {
+    var delta = mapSize * componentSize - screenSize;
     return (delta <= 0 ? delta / 2 : max(0, min(pos - screenSize / 2, delta)))
         .gridAligned;
   }
@@ -428,10 +428,10 @@ class XeonjiaGame extends FlameGame
   void zoomMiniMap({double toValue, bool out = false, bool enable = false}) {
     var previousValue = enable ? 1.0 : miniMapZoom;
     var delta = 16 / componentSize;
-    miniMapZoom = (toValue ??
+    miniMapZoom = toValue ??
         (out
             ? max(previousValue - delta, delta)
-            : min(previousValue + delta, 2)));
+            : min(previousValue + delta, 2));
     updateCamera(playerOne.x * miniMapZoom, playerOne.y * miniMapZoom,
         (componentSize * miniMapZoom).gridAligned);
     onPanUpdate(DragUpdateInfo.fromDetails(
@@ -525,9 +525,9 @@ class XeonjiaGame extends FlameGame
     if (_pause) return;
 
     // Update orientation
-    var _relativeTapX =
+    var relativeTapX =
         position.dx - (playerOne.x + componentSize / 2 - camera.position.x);
-    var _relativeTapY =
+    var relativeTapY =
         position.dy - (playerOne.y + componentSize / 2 - camera.position.y);
 
     if (position.dx < componentSize || position.dx > size.x - componentSize) {
@@ -537,10 +537,10 @@ class XeonjiaGame extends FlameGame
         position.dy > size.y - componentSize) {
       playerOne.updateOrientation(
           GetDirection.fromXY(0, position.dy - componentSize));
-    } else if (_relativeTapX.abs() > 15 || _relativeTapY.abs() > 15) {
-      _relativeTapX.abs() > _relativeTapY.abs()
-          ? playerOne.updateOrientation(GetDirection.fromXY(_relativeTapX, 0))
-          : playerOne.updateOrientation(GetDirection.fromXY(0, _relativeTapY));
+    } else if (relativeTapX.abs() > 15 || relativeTapY.abs() > 15) {
+      relativeTapX.abs() > relativeTapY.abs()
+          ? playerOne.updateOrientation(GetDirection.fromXY(relativeTapX, 0))
+          : playerOne.updateOrientation(GetDirection.fromXY(0, relativeTapY));
     }
 
     // Use weapon selected by player

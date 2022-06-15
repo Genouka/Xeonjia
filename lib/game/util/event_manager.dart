@@ -51,7 +51,7 @@ Environment setEnvironment() {
   _('get-def', 0, (Cell x) => game.playerOne.def);
   _('increase-def', 1, (Cell x) => game.playerOne.def += x.car);
   _('set-money-diff', 1,
-      (Cell x) => game.playerOne.moneyDifference((x.car as int), popup: false));
+      (Cell x) => game.playerOne.moneyDifference(x.car as int, popup: false));
   _('has-weapon', 1, (Cell x) => game.playerOne.hasWeaponId(x.car));
   _('max-pp-snowballs', 0, (Cell x) {
     if (!game.playerOne.hasWeaponId(1)) return false;
@@ -62,7 +62,7 @@ Environment setEnvironment() {
     return max;
   });
   _('give-weapon', 1, (Cell x) {
-    game.playerOne.weaponList.add(Weapon.fromId((x.car as int)));
+    game.playerOne.weaponList.add(Weapon.fromId(x.car as int));
     game.refreshWeaponButtons();
     return #NONE;
   });
@@ -154,7 +154,7 @@ Environment setEnvironment() {
   _('enemies-count', 0, (Cell x) => game.enemies);
   _('fire-event', 1, (Cell x) => (x.car as BasicComponent).executeAction());
   _('fire-global-event', 0, (Cell x) {
-    for (var c in game.children) {
+    for (final c in game.children) {
       if (c is BasicComponent) c.executeAction();
     }
     return #NONE;
@@ -176,9 +176,9 @@ Environment setEnvironment() {
     while (it.moveNext()) {
       game.setMessage((it.current as Cell).length == 1
           ? Message((it.current as Cell).car,
-              component: (env.lookForValue(Sym('actor')) as BasicComponent))
+              component: env.lookForValue(Sym('actor')) as BasicComponent)
           : Message((it.current as Cell).cdr.car,
-              component: (env.lookForValue(Sym('actor')) as BasicComponent),
+              component: env.lookForValue(Sym('actor')) as BasicComponent,
               author: (it.current as Cell).car));
     }
     return #NONE;
@@ -188,11 +188,11 @@ Environment setEnvironment() {
     while (it.moveNext()) {
       game.setMessage((it.current as Cell).length == 1
           ? Message((it.current as Cell).car,
-              component: (env.lookForValue(Sym('actor')) as BasicComponent),
+              component: env.lookForValue(Sym('actor')) as BasicComponent,
               font: 'kobi')
           : Message(
               (it.current as Cell).cdr.car,
-              component: (env.lookForValue(Sym('actor')) as BasicComponent),
+              component: env.lookForValue(Sym('actor')) as BasicComponent,
               author: (it.current as Cell).car,
               font: 'kobi',
             ));
@@ -248,12 +248,12 @@ Environment setEnvironment() {
   _('map-name', 1, (Cell x) {
     game.map.name = stringify(x.car, false);
     game.overlays.add('mapNameBox');
-    var _id = mainCharacter.visitedRooms.length;
+    var id = mainCharacter.visitedRooms.length;
     game.add(TimerComponent(
       period: 3000,
       removeOnFinish: true,
       onTick: () {
-        if (_id == mainCharacter.visitedRooms.length &&
+        if (id == mainCharacter.visitedRooms.length &&
             !(game?.miniMapEnabled ?? true)) {
           game?.overlays?.remove('mapNameBox');
         }
@@ -293,7 +293,7 @@ Environment setEnvironment() {
   _('error', 2, (Cell x) => throw ErrorException(x.car, x.cdr.car));
   _('globals', 0, (Cell x) {
     Cell j;
-    for (var symbol in game.environment.names) {
+    for (final symbol in game.environment.names) {
       j = Cell(symbol, j);
     }
     return j;

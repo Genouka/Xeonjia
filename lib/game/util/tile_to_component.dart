@@ -22,11 +22,11 @@ extension CreateComponent on Tile {
         break;
       case 'Modifier':
         properties['itemId'] ??= '${game.map.id}.$id';
-        var _itemId = properties['itemId'];
+        var itemId = properties['itemId'];
 
         // Load item only if it is not an unique item (id == "0")
         // or if it is not already owned by the player
-        if (_itemId == '0' || !mainCharacter.itemList.contains(_itemId)) {
+        if (itemId == '0' || !mainCharacter.itemList.contains(itemId)) {
           ModifierComponent(this);
         }
         break;
@@ -35,11 +35,11 @@ extension CreateComponent on Tile {
         break;
       case 'Door':
         if (game.config.mode == GameMode.story) {
-          var _previousRoomId = (mainCharacter.visitedRooms.length <= 1)
+          var previousRoomId = (mainCharacter.visitedRooms.length <= 1)
               ? '0'
               : mainCharacter
                   .visitedRooms[mainCharacter.visitedRooms.length - 2];
-          if (_previousRoomId.split('/').first +
+          if (previousRoomId.split('/').first +
                   (mainCharacter.visitedRooms.last.contains('/')
                       ? '/' + mainCharacter.visitedRooms.last.split('/').last
                       : '') ==
@@ -58,20 +58,20 @@ extension CreateComponent on Tile {
           }
           if (properties['roomId'] != '0') DoorComponent(this);
         } else {
-          var _teamId = int.parse(properties['team'] ?? '0');
-          if (game.players.where((p) => p.teamId == _teamId).length <
+          var teamId = int.parse(properties['team'] ?? '0');
+          if (game.players.where((p) => p.teamId == teamId).length <
               game.config.teamSize) {
-            var _playerOne = game.playerOne == null && _teamId == 0;
+            var playerOne = game.playerOne == null && teamId == 0;
             properties['image'] =
-                'character${_playerOne ? '' : '_cpu_$_teamId'}.png';
+                'character${playerOne ? '' : '_cpu_$teamId'}.png';
             properties['friendly'] = 'false';
             properties['quiet'] = 'false';
             properties['def'] = '4';
             CharacterComponent(
               this,
-              isPlayerOne: _playerOne,
-              team: _teamId,
-              level: _teamId * game.config.difficulty,
+              isPlayerOne: playerOne,
+              team: teamId,
+              level: teamId * game.config.difficulty,
             );
           }
         }

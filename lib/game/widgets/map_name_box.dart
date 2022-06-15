@@ -5,9 +5,9 @@ import 'package:xeonjia/i18n/story.i18n.dart';
 
 // Map name shown on the top left of the screen
 class MapNameBox extends StatelessWidget {
+  MapNameBox({this.below = false}) : text = game.map.name;
   final String text;
   final bool below;
-  MapNameBox({this.below = false}) : text = game.map.name;
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +28,11 @@ class MapNameBox extends StatelessWidget {
 }
 
 class Marquee extends StatefulWidget {
-  final Widget child;
   const Marquee({@required this.child});
+  final Widget child;
 
   @override
-  _MarqueeState createState() => _MarqueeState();
+  State<Marquee> createState() => _MarqueeState();
 }
 
 class _MarqueeState extends State<Marquee> {

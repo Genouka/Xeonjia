@@ -38,7 +38,7 @@ void main() {
 
   var currentTranslations = getCurrentTranslations();
   Directory('locale').listSync().forEach((f) => f.deleteSync(recursive: true));
-  for (var language in languageList) {
+  for (final language in languageList) {
     dirStringsMap.forEach((fileName, strings) {
       var newPoFile = File('locale/$language/LC_MESSAGES/$fileName.po')
         ..createSync(recursive: true);
@@ -60,9 +60,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Last-Translator: Automatically generated\\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\\n"
-"Language: $language\\n"'''}${(() => strings.fold('', (prev, string) => prev + '''\n\n#: ${string.path}:
+"Language: $language\\n"'''}${(() => strings.fold('', (prev, string) => prev + '''
+\n\n#: ${string.path}:
 ${_getTranslation(currentTranslations, string, language).comments ?? ''}msgid "${string.msgid}"
-msgstr "${_getTranslation(currentTranslations, string, language).msgstr.replaceAll('"', '\\"')}"'''))()}
+msgstr "${_getTranslation(currentTranslations, string, language).msgstr.replaceAll('"', r'\"')}"'''))()}
 ''');
     });
   }
@@ -76,7 +77,7 @@ Translation _getTranslation(
   if (currentTranslations[string.path] != null &&
       (currentTranslations[string.path][language]?.isNotEmpty ?? false)) {
     var translations = currentTranslations[string.path][language]
-        .where((t) => (t.msgid.replaceAll('"', '\\"')) == string.msgid);
+        .where((t) => (t.msgid.replaceAll('"', r'\"')) == string.msgid);
     if (translations.length == 1) return translations.single;
   }
   return Translation('', '', '');

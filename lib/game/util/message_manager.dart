@@ -41,7 +41,7 @@ class MessageManager {
   // Show one or more messages
   void setMessages(List<Message> newMessages, {bool hideMap}) {
     if (newMessages == null) return;
-    this.hideMap = (hideMap ?? false);
+    this.hideMap = hideMap ?? false;
     _messages.addAll(newMessages.fold([], (previousValue, element) {
       (previousValue as List<Message>).addAll(_splitMessage(element));
       return previousValue;
@@ -60,11 +60,11 @@ class MessageManager {
         .forEach((m) {
       var match = m.group(0);
       (strings.isNotEmpty &&
-              !match.contains('\\n') &&
+              !match.contains(r'\n') &&
               (strings.last.length + match.length < 90 ||
                   (match.length < 3 && strings.isNotEmpty)))
           ? strings.last += match
-          : strings.add(match.replaceAll('\\n', ''));
+          : strings.add(match.replaceAll(r'\n', ''));
     });
     return strings.fold([], (previousValue, element) {
       previousValue.add(Message(

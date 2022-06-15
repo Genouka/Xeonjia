@@ -7,14 +7,14 @@ import 'package:xeonjia/ui/screens/settings/resources/option_list.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 class SettingsPage extends StatefulWidget {
-  static _SettingsPageState of(BuildContext context) =>
+  static SettingsPageState of(BuildContext context) =>
       context.findAncestorStateOfType();
 
   @override
-  _SettingsPageState createState() => _SettingsPageState();
+  State<SettingsPage> createState() => SettingsPageState();
 }
 
-class _SettingsPageState extends State<SettingsPage> {
+class SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(

@@ -10,6 +10,29 @@ import 'package:xeonjia/models/sfx.dart';
 // Stats modifier component
 // It increases/decreases character stats
 class ModifierComponent extends BasicComponent {
+  ModifierComponent(tile, {this.father})
+      : _moneyDelta = int.parse(tile.properties['moneyDelta'] ?? '0'),
+        _atkDelta = int.parse(tile.properties['atkDelta'] ?? '0'),
+        _defDelta = int.parse(tile.properties['defDelta'] ?? '0'),
+        _lifePointsDiff =
+            double.parse(tile.properties['lifePointsDelta'] ?? '0'),
+        _powerPointsDelta =
+            int.parse(tile.properties['powerPointsDelta'] ?? '0'),
+        _poisonDelta = double.parse(tile.properties['poisonDelta'] ?? '0'),
+        _itemId = tile.properties['itemId'] ?? '0',
+        _regenerable = (tile.properties['regenerable'] ?? 'false') == 'true',
+        super.fromTile(tile);
+
+  // Constructor used for mine weapon shots
+  ModifierComponent.mine(Point position, this.father, double atk)
+      : super(
+            null,
+            Point(position.x / componentSize, position.y / componentSize),
+            {'image': 'mine.png', 'imageY': father.teamId.toDouble()}) {
+    _lifePointsDiff = -atk;
+    explosionOnDelete = true;
+  }
+
   // Stats difference caused by this component
   int _moneyDelta = 0;
   int _atkDelta = 0;
@@ -31,29 +54,6 @@ class ModifierComponent extends BasicComponent {
   // True if this should show an explosion animation on destruction
   bool explosionOnDelete = false;
 
-  ModifierComponent(tile, {this.father})
-      : _moneyDelta = int.parse(tile.properties['moneyDelta'] ?? '0'),
-        _atkDelta = int.parse(tile.properties['atkDelta'] ?? '0'),
-        _defDelta = int.parse(tile.properties['defDelta'] ?? '0'),
-        _lifePointsDiff =
-            double.parse(tile.properties['lifePointsDelta'] ?? '0'),
-        _powerPointsDelta =
-            int.parse(tile.properties['powerPointsDelta'] ?? '0'),
-        _poisonDelta = double.parse(tile.properties['poisonDelta'] ?? '0'),
-        _itemId = tile.properties['itemId'] ?? '0',
-        _regenerable = (tile.properties['regenerable'] ?? 'false') == 'true',
-        super.fromTile(tile);
-
-  // Constructor used for mine weapon shots
-  ModifierComponent.mine(Point position, this.father, double _atk)
-      : super(
-            null,
-            Point(position.x / componentSize, position.y / componentSize),
-            {'image': 'mine.png', 'imageY': father.teamId.toDouble()}) {
-    _lifePointsDiff = -_atk;
-    explosionOnDelete = true;
-  }
-
   @override
   int get priority => 50;
 
@@ -72,7 +72,7 @@ class ModifierComponent extends BasicComponent {
       componentAbove.def += _defDelta;
       componentAbove.poisonQuantity += _poisonDelta;
       componentAbove.moneyDifference(_moneyDelta);
-      for (var weapon in componentAbove.weaponList) {
+      for (final weapon in componentAbove.weaponList) {
         weapon.powerPoints += _powerPointsDelta;
       }
       game.refreshWeaponButtons();

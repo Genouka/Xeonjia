@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     devicePixelRatio = MediaQuery.of(context).devicePixelRatio;
     return Scaffold(
-      body: Container(
+      body: DecoratedBox(
         decoration: const BoxDecoration(
           color: Color(0xFF7BA1C1),
           image: DecorationImage(

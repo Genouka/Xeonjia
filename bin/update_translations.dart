@@ -10,8 +10,8 @@ void main() {
   Directory('lib/i18n').listSync().forEach((f) {
     f.deleteSync(recursive: true);
   });
-  translations.forEach((_fileName, _languageTranslationsMap) {
-    var newI18nFile = File('lib/i18n/$_fileName.i18n.dart')..createSync();
+  translations.forEach((fileName, languageTranslationsMap) {
+    var newI18nFile = File('lib/i18n/$fileName.i18n.dart')..createSync();
     newI18nFile.writeAsStringSync("""
 // This is a generated file; do not edit
 // ignore_for_file: unnecessary_string_escapes
@@ -20,12 +20,12 @@ extension Localization on String {
   static final _t = Translations.byLocale('en') + {
     ${() {
       var languagesAndTranslations = '';
-      _languageTranslationsMap.forEach((_language, _translations) {
+      languageTranslationsMap.forEach((language, translations) {
         languagesAndTranslations += """
-          '$_language': {
-            ${_translations.fold('', (previousValue, element) {
+          '$language': {
+            ${translations.fold('', (previousValue, element) {
           return previousValue +
-              """'''${element.msgid.replaceAll("'", "\\'")}''':'''${element.msgstr.replaceAll("'", "\\'")}''',""";
+              """'''${element.msgid.replaceAll("'", r"\'")}''':'''${element.msgstr.replaceAll("'", r"\'")}''',""";
         })}
         },""";
       });

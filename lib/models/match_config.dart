@@ -2,14 +2,6 @@ import 'package:xeonjia/models/game_mode.dart';
 
 // Match parameters
 class MatchConfig {
-  GameMode mode;
-  int teamSize;
-  int maxTime;
-  int maxPoints;
-  int mapId;
-  int difficulty;
-  bool friendlyFire;
-
   MatchConfig(
     this.mode, {
     this.teamSize = 0,
@@ -19,4 +11,12 @@ class MatchConfig {
     this.difficulty = 0,
     this.friendlyFire = false,
   });
+
+  GameMode mode;
+  int teamSize;
+  int maxTime;
+  int maxPoints;
+  int mapId;
+  int difficulty;
+  bool friendlyFire;
 }

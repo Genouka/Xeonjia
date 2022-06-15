@@ -18,57 +18,6 @@ import 'package:xeonjia/util/local_data_controller.dart';
 // Dynamic component used for human-like players
 class CharacterComponent extends DynamicComponent
     with LifePointsBar, RespawnAnimation {
-  @override
-  bool get isPlayerOne => this == game?.playerOne;
-
-  // List of weapon owned
-  List<Weapon> weaponList = [];
-
-  // Index of the weapon selected from weaponList
-  int selectedWeaponIndex;
-
-  // Money earned by the player
-  int _money = mainCharacter.money;
-  int get money => _money;
-  void moneyDifference(int moneyDelta, {bool popup = true}) {
-    if (moneyDelta == 0) return;
-    _money += moneyDelta;
-    if (popup) showText('+ $moneyDelta ¤');
-  }
-
-  // Total number of minutes played by the character in this game
-  double get minutesPlayed =>
-      mainCharacter.minutesPlayed + game.elapsedSeconds / 60;
-
-  // List of items owned
-  // Add/remove items by using addItem() and removeItem()
-  List<String> _itemList = [];
-  List<String> get itemList => _itemList;
-  List<Item> get backpackItems => _itemList.fold([],
-      (p, e) => itemData.keys.contains(e) ? (p..add(itemData[e]..id = e)) : p)
-    ..sort((a, b) => a.name.compareTo(b.name));
-  int get gemCount => _itemList.where((e) => e.startsWith('gem_')).length;
-
-  // Initial orientation
-  Direction _initialOrientation;
-
-  // NPC features: If friendly it doesn't shoot. If quiet it doesn't move.
-  bool friendly;
-  bool quiet;
-  NpcController npcController;
-
-  @override
-  double maxLifePoints;
-
-  @override
-  bool isSolid({DynamicComponent otherComponent}) => !isBeingDeleted;
-
-  @override
-  void playAction(Direction orientation) {
-    this.orientation = orientation.opposite;
-    super.playAction(orientation);
-  }
-
   // Create character from input details
   CharacterComponent(
     Tile tile, {
@@ -93,7 +42,7 @@ class CharacterComponent extends DynamicComponent
       def = mainCharacter.def;
     } else {
       atk = (level + 1).toDouble();
-      def = (def != 0 ? def : (level ~/ 5).toDouble());
+      def = def != 0 ? def : (level ~/ 5).toDouble();
       if (isPlayerOne) {
         weaponList = [
           PunchWeapon(level: 10),
@@ -148,6 +97,57 @@ class CharacterComponent extends DynamicComponent
           ],
           level: int.parse(tile.properties['level'] ?? '0'),
         );
+
+  @override
+  bool get isPlayerOne => this == game?.playerOne;
+
+  // List of weapon owned
+  List<Weapon> weaponList = [];
+
+  // Index of the weapon selected from weaponList
+  int selectedWeaponIndex;
+
+  // Money earned by the player
+  int _money = mainCharacter.money;
+  int get money => _money;
+  void moneyDifference(int moneyDelta, {bool popup = true}) {
+    if (moneyDelta == 0) return;
+    _money += moneyDelta;
+    if (popup) showText('+ $moneyDelta ¤');
+  }
+
+  // Total number of minutes played by the character in this game
+  double get minutesPlayed =>
+      mainCharacter.minutesPlayed + game.elapsedSeconds / 60;
+
+  // List of items owned
+  // Add/remove items by using addItem() and removeItem()
+  List<String> _itemList = [];
+  List<String> get itemList => _itemList;
+  List<Item> get backpackItems => _itemList.fold([],
+      (p, e) => itemData.keys.contains(e) ? (p..add(itemData[e]..id = e)) : p)
+    ..sort((a, b) => a.name.compareTo(b.name));
+  int get gemCount => _itemList.where((e) => e.startsWith('gem_')).length;
+
+  // Initial orientation
+  Direction _initialOrientation;
+
+  // NPC features: If friendly it doesn't shoot. If quiet it doesn't move.
+  bool friendly;
+  bool quiet;
+  NpcController npcController;
+
+  @override
+  double maxLifePoints;
+
+  @override
+  bool isSolid({DynamicComponent otherComponent}) => !isBeingDeleted;
+
+  @override
+  void playAction(Direction orientation) {
+    this.orientation = orientation.opposite;
+    super.playAction(orientation);
+  }
 
   // Weapon
   Weapon get selectedWeapon => weaponList[selectedWeaponIndex];
@@ -206,9 +206,9 @@ class CharacterComponent extends DynamicComponent
   void removeItem(String itemId, {bool used = true}) {
     _itemList.remove(itemId);
     if (isPlayerOne) {
-      game.setMessage(Message((used
+      game.setMessage(Message(used
           ? '* {{hero}} used {{selected-item-name}} *'.i18n
-          : '* {{hero}} gives %s *'.i18n.fill([itemData[itemId].name]))));
+          : '* {{hero}} gives %s *'.i18n.fill([itemData[itemId].name])));
     }
   }
 
@@ -249,7 +249,7 @@ class CharacterComponent extends DynamicComponent
   @override
   void respawn() {
     super.respawn();
-    for (var weapon in weaponList) {
+    for (final weapon in weaponList) {
       weapon.restorePp();
     }
     movesCounter = 0;

@@ -4,6 +4,30 @@ import 'package:xeonjia/game/util/weapon.dart';
 
 // Class used to manage player data
 class CharacterInfo {
+  // Import character data from a Json
+  CharacterInfo(Map<String, dynamic> json)
+      : name = json['name'] ?? '',
+        eventLog = jsonDecode(json['eventLog'] ?? '{}'),
+        atk = json['atk'] ?? 1,
+        def = json['def'] ?? 0,
+        maxLifePoints = json['maxLifePoints'] ?? 100,
+        currentLifePoints = json['currentLifePoints'] ?? 0,
+        poisonQuantity = json['poisonQuantity'] ?? 0,
+        money = json['money'] ?? 0,
+        itemList = (json['itemList'] ?? []).cast<String>(),
+        selectedWeaponIndex = json['selectedWeaponIndex'] ?? 0,
+        visitedRooms = (json['viewedRooms'] ?? ['1_home_2']).cast<String>(),
+        minutesPlayed = json['minutesPlayed'] ?? 0,
+        defeatedComponents = json['defeatedComponents'] ?? 0,
+        movesCounter = json['movesCounter'] ?? 0,
+        defeatsCounter = json['defeatsCounter'] ?? 0 {
+    List<dynamic> jsonWeaponList =
+        jsonDecode(json['weaponList'] ?? '[{"id": 0, "lv": 0}]');
+    for (final weapon in jsonWeaponList) {
+      weaponList.add(Weapon.fromJson(weapon));
+    }
+  }
+
   // Name of the character
   String name;
 
@@ -45,30 +69,6 @@ class CharacterInfo {
   // Weapons owned by the character
   List<Weapon> weaponList = [];
   int selectedWeaponIndex;
-
-  // Import character data from a Json
-  CharacterInfo(Map<String, dynamic> json)
-      : name = json['name'] ?? '',
-        eventLog = jsonDecode(json['eventLog'] ?? '{}'),
-        atk = json['atk'] ?? 1,
-        def = json['def'] ?? 0,
-        maxLifePoints = json['maxLifePoints'] ?? 100,
-        currentLifePoints = json['currentLifePoints'] ?? 0,
-        poisonQuantity = json['poisonQuantity'] ?? 0,
-        money = json['money'] ?? 0,
-        itemList = (json['itemList'] ?? []).cast<String>(),
-        selectedWeaponIndex = json['selectedWeaponIndex'] ?? 0,
-        visitedRooms = (json['viewedRooms'] ?? ['1_home_2']).cast<String>(),
-        minutesPlayed = json['minutesPlayed'] ?? 0,
-        defeatedComponents = json['defeatedComponents'] ?? 0,
-        movesCounter = json['movesCounter'] ?? 0,
-        defeatsCounter = json['defeatsCounter'] ?? 0 {
-    List<dynamic> _jsonWeaponList =
-        (jsonDecode(json['weaponList'] ?? '[{"id": 0, "lv": 0}]'));
-    for (var weapon in _jsonWeaponList) {
-      weaponList.add(Weapon.fromJson(weapon));
-    }
-  }
 
   // Export character data as a Json
   Map<String, dynamic> toJson() {

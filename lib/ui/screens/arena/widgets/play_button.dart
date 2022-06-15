@@ -4,8 +4,8 @@ import 'package:xeonjia/ui/basic.dart';
 
 // Floating "PLAY" button
 class PlayButton extends StatelessWidget {
-  final Function page;
   const PlayButton(this.page);
+  final Function page;
 
   @override
   Widget build(BuildContext context) {

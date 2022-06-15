@@ -175,10 +175,9 @@ Object tryParse(String s) {
 
 /// Cons cell
 class Cell extends Iterable<Object> {
+  Cell(this.car, this.cdr);
   final Object car;
   dynamic cdr;
-
-  Cell(this.car, this.cdr);
 
   /// Yields car, cadr, caddr and so on.
   @override
@@ -186,10 +185,9 @@ class Cell extends Iterable<Object> {
 }
 
 class _CellIterator extends Iterator<Object> {
+  _CellIterator(this.k);
   Cell j;
   dynamic k;
-
-  _CellIterator(this.k);
 
   @override
   Object get current => j?.car;
@@ -210,29 +208,28 @@ class _CellIterator extends Iterator<Object> {
 
 /// Exception which means that the last tail of the list is not null
 class ImproperListException implements Exception {
-  final Object tail;
-
   ImproperListException(this.tail);
+  final Object tail;
 }
 
 //----------------------------------------------------------------------
 
 /// Scheme's symbol
 class Sym {
-  final String name;
+  /// Constructs an interned symbol.
+  factory Sym(String name) =>
+      symbols.putIfAbsent(name, () => Sym.notInterned(name));
 
   /// Constructs a symbol that is not interned yet.
   const Sym.notInterned(this.name);
+
+  final String name;
 
   @override
   String toString() => name;
 
   /// The table of interned symbols
   static final Map<String, Sym> symbols = {};
-
-  /// Constructs an interned symbol.
-  factory Sym(String name) =>
-      symbols.putIfAbsent(name, () => Sym.notInterned(name));
 }
 
 final quoteSym = Sym('quote');
@@ -251,13 +248,9 @@ typedef Setter = void Function(Object val);
 
 /// List of frames which map symbols to values
 class Environment {
-  List<Sym> _names;
-  List<Object> _values;
-  Environment _next;
-
   /// Construct a new frame on the [next] (= current) environment or null.
   Environment(Cell symbols, Cell data, Environment next) {
-    var names = symbols?.map((e) => (e as Sym))?.toList() ?? [];
+    var names = symbols?.map((e) => e as Sym)?.toList() ?? [];
     var values = data?.toList() ?? [];
     if (names?.length != values?.length) {
       throw 'arity not matched: $names and $values';
@@ -266,6 +259,10 @@ class Environment {
     _values = values;
     _next = next;
   }
+
+  List<Sym> _names;
+  List<Object> _values;
+  Environment _next;
 
   /// Searches the environment for [symbol] and returns its setter.
   Setter lookForSetter(Sym symbol) {
@@ -337,10 +334,9 @@ enum ContOp {
 
 /// Scheme's step in a continuation
 class Step {
+  Step(this.op, this.val);
   final ContOp op;
   final Object val;
-
-  Step(this.op, this.val);
 }
 
 // Scheme's continuation as a stack of steps
@@ -353,7 +349,7 @@ class Continuation extends Iterable<Step> {
   int get length => _stack.length;
 
   Iterable<Step> _iter() sync* {
-    for (var step in _stack) {
+    for (final step in _stack) {
       yield step;
     }
   }
@@ -387,32 +383,31 @@ class Continuation extends Iterable<Step> {
 
 /// Lambda expression with its environment
 class Closure {
+  Closure(this.params, this.body, this.env);
   final Cell params;
   final Cell body;
   final Environment env;
-
-  Closure(this.params, this.body, this.env);
 }
 
 typedef IntrinsicBody = Object Function(Cell args);
 
 /// Built-in function
 class Intrinsic {
+  Intrinsic(this.name, this.arity, this.fun);
   final String name;
   final int arity;
   final IntrinsicBody fun;
 
-  Intrinsic(this.name, this.arity, this.fun);
   @override
   String toString() => '#<$name:$arity>';
 }
 
 /// Exception thrown by error procedure of SRFI-23
 class ErrorException implements Exception {
+  ErrorException(this.reason, this.arg);
   final Object reason;
   final Object arg;
 
-  ErrorException(this.reason, this.arg);
   @override
   String toString() => stringify(reason, false) + ': ' + stringify(arg);
 }
@@ -432,7 +427,7 @@ String stringify(Object exp, [bool quote = true]) {
   if (exp is Cell) {
     var ss = <String>[];
     try {
-      for (var e in exp) {
+      for (final e in exp) {
         ss.add(stringify(e, quote));
       }
     } on ImproperListException catch (ex) {
@@ -443,7 +438,7 @@ String stringify(Object exp, [bool quote = true]) {
   }
   if (exp is Continuation) {
     var ss = <String>[];
-    for (var step in exp) {
+    for (final step in exp) {
       ss.add('${step.op} ${stringify(step.val)}');
     }
     return '#<' + ss.join('\n\t  ') + '>';
@@ -605,10 +600,9 @@ Continuation evaluate(dynamic exp, Environment env, [Continuation previousK]) {
 }
 
 class REPair {
+  REPair(this.result, this.env);
   final Object result;
   final Environment env;
-
-  REPair(this.result, this.env);
 }
 
 /// Applies a function to arguments with a continuation.
@@ -660,11 +654,10 @@ List<String> splitStringIntoTokens(String source) {
     var i = 0;
     String doubleQuotesSymbol;
     var counter = 0;
-    while (
-        line.contains((doubleQuotesSymbol = 'DOUBLE_QUOTE_SYMBOL_$counter'))) {
+    while (line.contains(doubleQuotesSymbol = 'DOUBLE_QUOTE_SYMBOL_$counter')) {
       ++counter;
     }
-    line = line.replaceAll('\\"', doubleQuotesSymbol);
+    line = line.replaceAll(r'\"', doubleQuotesSymbol);
     for (var e in line.split('"')) {
       e = e.replaceAll(doubleQuotesSymbol, '"');
       if (i % 2 == 0) {
@@ -678,7 +671,7 @@ List<String> splitStringIntoTokens(String source) {
     var s = x.join(' ').split(';')[0]; // Ignores ;-comment.
     s = s.replaceAll("'", " ' ").replaceAll(')', ' ) ').replaceAll('(', ' ( ');
     x = s.split(_anySpaces);
-    for (var e in x) {
+    for (final e in x) {
       if (e == '#s') {
         result.add(ss.removeAt(0));
       } else if (e != '') {

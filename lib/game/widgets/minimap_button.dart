@@ -4,8 +4,8 @@ import 'package:xeonjia/i18n/ui.i18n.dart';
 
 // Button used to enable/disable the mini-map view
 class MiniMapButton extends StatelessWidget {
-  final bool miniMapIsActive;
   MiniMapButton({@required this.miniMapIsActive});
+  final bool miniMapIsActive;
 
   @override
   Widget build(BuildContext context) {

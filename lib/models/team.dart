@@ -4,6 +4,8 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Group of players
 class Team {
+  Team({@required this.id, this.name = 'Team', this.color = Colors.blue});
+
   // Team id
   final int id;
 
@@ -12,8 +14,6 @@ class Team {
 
   // Team color
   final Color color;
-
-  Team({@required this.id, this.name = 'Team', this.color = Colors.blue});
 
   // Team members
   List<CharacterComponent> get members =>
@@ -24,10 +24,10 @@ class Team {
 
   // Team points (basePoints + players points)
   int get points {
-    var _points = 0;
-    for (var member in members) {
-      _points += member.points;
+    var points = 0;
+    for (final member in members) {
+      points += member.points;
     }
-    return _points + basisPoints;
+    return points + basisPoints;
   }
 }

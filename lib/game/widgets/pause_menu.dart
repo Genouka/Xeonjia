@@ -10,11 +10,11 @@ enum PauseMode { pause, restart, exit }
 
 // In-game pause menu
 class PauseMenu extends StatefulWidget {
-  final PauseMode mode;
   const PauseMenu(this.mode);
+  final PauseMode mode;
 
   @override
-  _PauseMenuState createState() => _PauseMenuState();
+  State<PauseMenu> createState() => _PauseMenuState();
 }
 
 class _PauseMenuState extends State<PauseMenu> {

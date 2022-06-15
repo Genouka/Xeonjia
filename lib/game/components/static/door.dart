@@ -7,12 +7,6 @@ import 'package:xeonjia/util/local_data_controller.dart';
 
 // Component that permits to change room
 class DoorComponent extends BasicComponent {
-  // Next Room ID
-  final String _roomId;
-
-  // Door offset
-  final Direction _offset;
-
   DoorComponent(tile)
       : _roomId = tile.properties['roomId'] ?? '0',
         _offset = GetDirection.fromInt(
@@ -22,6 +16,12 @@ class DoorComponent extends BasicComponent {
     x += componentSize * _offset.dx;
     y += componentSize * _offset.dy;
   }
+
+  // Next Room ID
+  final String _roomId;
+
+  // Door offset
+  final Direction _offset;
 
   @override
   bool isSolid({BasicComponent otherComponent}) =>

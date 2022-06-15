@@ -19,11 +19,11 @@ MatchConfig _config = MatchConfig(
 );
 
 class ArenaPage extends StatefulWidget {
-  static _ArenaPageState of(BuildContext context) =>
+  static State<ArenaPage> of(BuildContext context) =>
       context.findAncestorStateOfType();
 
   @override
-  _ArenaPageState createState() => _ArenaPageState();
+  State<ArenaPage> createState() => _ArenaPageState();
 }
 
 class _ArenaPageState extends State<ArenaPage> {
@@ -40,12 +40,8 @@ class _ArenaPageState extends State<ArenaPage> {
           actions: [
             IconButton(
               icon: const Icon(Icons.help_outline),
-              onPressed: () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) => helpDialog(context),
-                );
-              },
+              onPressed: () =>
+                  showDialog(context: context, builder: helpDialog),
             )
           ],
         ),
@@ -168,9 +164,9 @@ class _ArenaPageState extends State<ArenaPage> {
               subtitle:
                   Text('If enabled, players can hit their teammates'.i18n),
               value: _config.friendlyFire,
-              onChanged: (_newValue) {
+              onChanged: (newValue) {
                 setState(() {
-                  _config.friendlyFire = _newValue;
+                  _config.friendlyFire = newValue;
                 });
               },
             ),

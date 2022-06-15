@@ -7,12 +7,11 @@ import 'package:xeonjia/models/direction.dart';
 // Direction changer component
 // Change the direction of the components that walk over this
 class DirectionChangerComponent extends BasicComponent {
-  final Direction _forcedDirection;
-
   DirectionChangerComponent(tile)
       : _forcedDirection = GetDirection.fromInt(
             int.parse(tile.properties['forcedDirection'] ?? '0')),
         super.fromTile(tile);
+  final Direction _forcedDirection;
 
   @override
   void collidedBy(DynamicComponent otherComponent) {

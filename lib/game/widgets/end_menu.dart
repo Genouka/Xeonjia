@@ -4,8 +4,8 @@ import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/game_mode.dart';
 
 class EndMenu extends StatelessWidget {
-  final int _lostMoney;
   const EndMenu([this._lostMoney = 0]);
+  final int _lostMoney;
 
   @override
   Widget build(BuildContext context) {

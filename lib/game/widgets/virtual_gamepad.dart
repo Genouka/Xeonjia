@@ -31,8 +31,8 @@ class VirtualGamePad extends StatelessWidget {
 
 // Virtual D-pad (on the left)
 class _DPad extends StatefulWidget {
-  static const Color arrowColor = Colors.white;
   const _DPad(Key key) : super(key: key);
+  static const Color arrowColor = Colors.white;
 
   @override
   _DPadState createState() => _DPadState();
@@ -173,15 +173,15 @@ class _ButtonsState extends State<_Buttons> {
                                   percentage: 1,
                                   highlight:
                                       game.playerOne.selectedWeapon.id == 0),
-                              game.playerOne.hasWeaponId(2)
-                                  ? button(
-                                      'M', () => game.playerOne.shootById(2),
-                                      percentage: game.playerOne
-                                          .getWeaponById(2)
-                                          .ppPercentage,
-                                      highlight:
-                                          game.playerOne.selectedWeapon.id == 2)
-                                  : const Spacer(),
+                              if (game.playerOne.hasWeaponId(2))
+                                button('M', () => game.playerOne.shootById(2),
+                                    percentage: game.playerOne
+                                        .getWeaponById(2)
+                                        .ppPercentage,
+                                    highlight:
+                                        game.playerOne.selectedWeapon.id == 2)
+                              else
+                                const Spacer(),
                             ],
                     ),
                     const Spacer(),
@@ -198,15 +198,15 @@ class _ButtonsState extends State<_Buttons> {
                               ),
                             ]
                           : [
-                              game.playerOne.hasWeaponId(1)
-                                  ? button(
-                                      'S', () => game.playerOne.shootById(1),
-                                      percentage: game.playerOne
-                                          .getWeaponById(1)
-                                          .ppPercentage,
-                                      highlight:
-                                          game.playerOne.selectedWeapon.id == 1)
-                                  : const Spacer(),
+                              if (game.playerOne.hasWeaponId(1))
+                                button('S', () => game.playerOne.shootById(1),
+                                    percentage: game.playerOne
+                                        .getWeaponById(1)
+                                        .ppPercentage,
+                                    highlight:
+                                        game.playerOne.selectedWeapon.id == 1)
+                              else
+                                const Spacer(),
                               if (game.config.mode == GameMode.story)
                                 button(
                                   'A',
@@ -261,8 +261,8 @@ class _ButtonsState extends State<_Buttons> {
 
 // Paint a pie chart
 class _PiePainter extends CustomPainter {
-  final double percentage;
   _PiePainter(this.percentage);
+  final double percentage;
 
   Path path(double size, double fromRadius, double toRadius) => Path()
     ..moveTo(size, size)

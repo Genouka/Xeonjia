@@ -17,6 +17,43 @@ import 'package:xeonjia/models/tile.dart';
 // Basic game component
 // Every game component extends this one
 abstract class BasicComponent extends SpriteComponent {
+  BasicComponent(
+      int id, Point startingPosition, Map<String, dynamic> properties)
+      : this.fromTile(Tile(
+            id: id,
+            position: startingPosition,
+            size: componentSize,
+            sprite: Sprite(properties['image'],
+                srcSize: Vector2.all(16) * (properties['imageY'] ?? 0)),
+            properties: properties));
+
+  BasicComponent.fromTile(Tile tile)
+      : id = tile.id,
+        startingPosition = tile.position,
+        name = tile.properties['name'],
+        action = tile.properties['action'] ?? '',
+        actionOnCollision = tile.properties['actionOnCollision'] ?? '',
+        actionOnEvent = tile.properties['actionOnEvent'] ?? '',
+        maxLifePoints =
+            double.parse(tile.properties['lifePoints'] ?? 'Infinity'),
+        atk = double.parse(tile.properties['atk'] ?? '0'),
+        def = double.parse(tile.properties['def'] ?? '0'),
+        poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
+        _visible = 'true' == (tile.properties['visible'] ?? 'true'),
+        _flying = 'true' == (tile.properties['flying'] ?? 'false'),
+        _layerPriority = 100 * (tile.layer ?? 0),
+        _customPriority = int.parse(tile.properties['priority'] ?? '0'),
+        image = tile.properties['image'],
+        imageY = tile.properties['imageY'] ?? 0,
+        super(
+          size: Vector2(tile.size, tile.size),
+          sprite: tile.sprite,
+        ) {
+    animate(tile.animationSprites,
+        stepTime: tile.animationStepTime, loop: true);
+    onCreate();
+  }
+
   // Component unique ID
   final int id;
 
@@ -108,43 +145,6 @@ abstract class BasicComponent extends SpriteComponent {
   // Component default name (eg. girl, man, hero, old-man)
   String name;
 
-  BasicComponent.fromTile(Tile tile)
-      : id = tile.id,
-        startingPosition = tile.position,
-        name = tile.properties['name'],
-        action = tile.properties['action'] ?? '',
-        actionOnCollision = tile.properties['actionOnCollision'] ?? '',
-        actionOnEvent = tile.properties['actionOnEvent'] ?? '',
-        maxLifePoints =
-            double.parse(tile.properties['lifePoints'] ?? 'Infinity'),
-        atk = double.parse(tile.properties['atk'] ?? '0'),
-        def = double.parse(tile.properties['def'] ?? '0'),
-        poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
-        _visible = 'true' == (tile.properties['visible'] ?? 'true'),
-        _flying = 'true' == (tile.properties['flying'] ?? 'false'),
-        _layerPriority = 100 * (tile.layer ?? 0),
-        _customPriority = int.parse(tile.properties['priority'] ?? '0'),
-        image = tile.properties['image'],
-        imageY = tile.properties['imageY'] ?? 0,
-        super(
-          size: Vector2(tile.size, tile.size),
-          sprite: tile.sprite,
-        ) {
-    animate(tile.animationSprites,
-        stepTime: tile.animationStepTime, loop: true);
-    onCreate();
-  }
-
-  BasicComponent(
-      int id, Point startingPosition, Map<String, dynamic> properties)
-      : this.fromTile(Tile(
-            id: id,
-            position: startingPosition,
-            size: componentSize,
-            sprite: Sprite(properties['image'],
-                srcSize: Vector2.all(16) * (properties['imageY'] ?? 0)),
-            properties: properties));
-
   @mustCallSuper
   void onCreate() {
     _lifePoints = maxLifePoints;
@@ -195,7 +195,7 @@ abstract class BasicComponent extends SpriteComponent {
         delete();
         if (teamId == (cause?.teamId ?? -99)) {
           // Teammate defeated
-          for (var team in game.teams) {
+          for (final team in game.teams) {
             if (team.id != teamId) team.basisPoints += 10;
           }
         } else if (this is! StaticComponent) {
@@ -311,7 +311,7 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Delete every son of this component
   void removeChildren() {
-    for (var c in game.children) {
+    for (final c in game.children) {
       if (c is BasicComponent && c.father == this) c.delete();
     }
   }

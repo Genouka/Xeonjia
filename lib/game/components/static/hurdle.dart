@@ -6,13 +6,13 @@ import 'package:xeonjia/models/direction.dart';
 
 // Component that can be bypassed only if coming from the allowed direction
 class HurdleComponent extends BasicComponent {
-  // Other components direction that permits to jump over this component
-  final Direction _allowedDirection;
-
   HurdleComponent(tile)
       : _allowedDirection = GetDirection.fromInt(
             int.parse(tile.properties['allowedDirection'] ?? '0')),
         super.fromTile(tile);
+
+  // Other components direction that permits to jump over this component
+  final Direction _allowedDirection;
 
   @override
   Rect collisionRect(DynamicComponent otherComponent) {

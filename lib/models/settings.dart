@@ -5,6 +5,14 @@ import 'package:xeonjia/main.dart';
 
 // Class used to store settings data
 class Settings {
+  // Import settings from a Json
+  Settings(Map<String, dynamic> json)
+      : showDPad = json['showDPad'] ?? false,
+        firstRun = json['firstRun'] ?? true,
+        backgroundMusic = json['backgroundMusic'] ?? true,
+        soundEffects = json['soundEffects'] ?? true,
+        _languageCode = json['languageCode'] ?? 'und';
+
   // True if D-pad is enabled
   bool showDPad;
 
@@ -32,14 +40,6 @@ class Settings {
 
   bool get useSystemFont =>
       ['ru', 'uk', 'vi', 'zh'].contains(locale.languageCode);
-
-  // Import settings from a Json
-  Settings(Map<String, dynamic> json)
-      : showDPad = json['showDPad'] ?? false,
-        firstRun = json['firstRun'] ?? true,
-        backgroundMusic = json['backgroundMusic'] ?? true,
-        soundEffects = json['soundEffects'] ?? true,
-        _languageCode = json['languageCode'] ?? 'und';
 
   // Export settings as a Json
   Map<String, dynamic> toJson() => {

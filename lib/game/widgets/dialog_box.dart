@@ -9,13 +9,13 @@ import 'package:xeonjia/models/sfx.dart';
 
 class DialogBox extends StatefulWidget {
   DialogBox() : super(key: GlobalKey());
-  _DialogBoxState get state => (key as GlobalKey).currentState;
+  DialogBoxState get state => (key as GlobalKey).currentState;
 
   @override
-  _DialogBoxState createState() => _DialogBoxState();
+  State<DialogBox> createState() => DialogBoxState();
 }
 
-class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
+class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   // Show the next message or hide dialog box if there are no message to show
   void next({bool removeAnswers = false}) {
     if (_controller?.isAnimating ?? false) {
@@ -164,9 +164,9 @@ class _DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
 }
 
 class _AnswerButtons extends StatelessWidget {
+  const _AnswerButtons(this.answers, this.callback);
   final List<Answer> answers;
   final VoidCallback callback;
-  const _AnswerButtons(this.answers, this.callback);
 
   @override
   Widget build(BuildContext context) {

@@ -6,8 +6,8 @@ import 'package:xeonjia/util/local_data_controller.dart';
 
 // Menu displayed if there are no more maps to play
 class NoMapsMenu extends StatelessWidget {
-  final String previousMapId;
   const NoMapsMenu(this.previousMapId);
+  final String previousMapId;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,8 @@ class NoMapsMenu extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      launch('https://deepdaikon.xyz/donate');
+                      launchUrl(Uri.parse('https://deepdaikon.xyz/donate'),
+                          mode: LaunchMode.externalApplication);
                     },
                     child: Text(
                       'Donate'.i18n,
@@ -46,7 +47,10 @@ class NoMapsMenu extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      launch('https://gitlab.com/DeepDaikon/Xeonjia/issues');
+                      launchUrl(
+                          Uri.parse(
+                              'https://gitlab.com/DeepDaikon/Xeonjia/issues'),
+                          mode: LaunchMode.externalApplication);
                     },
                     child: Text(
                       'Report a bug or ask something'.i18n,
@@ -56,10 +60,13 @@ class NoMapsMenu extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () async {
-                      final url = Uri.encodeFull('mailto:deepdaikon'
+                      final url = Uri.parse(Uri.encodeFull('mailto:deepdaikon'
                           '@'
-                          'tuta.io?subject=Xeonjia Game');
-                      if (await canLaunch(url)) await launch(url);
+                          'tuta.io?subject=Xeonjia Game'));
+                      if (await canLaunchUrl(url)) {
+                        await launchUrl(url,
+                            mode: LaunchMode.externalApplication);
+                      }
                     },
                     child: Text(
                       'Send email'.i18n,

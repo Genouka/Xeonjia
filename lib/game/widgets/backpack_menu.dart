@@ -8,7 +8,7 @@ import 'package:xeonjia/ui/basic.dart';
 // Backpack menu
 class BackpackMenu extends StatefulWidget {
   @override
-  _BackpackMenuState createState() => _BackpackMenuState();
+  State<BackpackMenu> createState() => _BackpackMenuState();
 }
 
 class _BackpackMenuState extends State<BackpackMenu> {

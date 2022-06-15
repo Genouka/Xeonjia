@@ -6,11 +6,11 @@ import 'package:xeonjia/models/direction.dart';
 
 // Thin wall with one solid side
 class ThinWallComponent extends BasicComponent {
-  final Direction _solidSide;
   ThinWallComponent(tile)
       : _solidSide = GetDirection.fromInt(
             int.parse(tile.properties['solidSide'] ?? '0')),
         super.fromTile(tile);
+  final Direction _solidSide;
 
   bool isBlocking(Direction direction) =>
       (_solidSide.dx != 0 && _solidSide.dx.sign == direction.dx.sign) ||
