@@ -13,7 +13,7 @@ class WalkerCpuComponent extends DynamicComponent {
 
   @override
   void update(double dt) {
-    if (randomDouble() > 0.2 && game.isNotPaused) {
+    if (randomDouble() > 0.2 && game!.isNotPaused) {
       updateDirection(Direction.values[Random().nextInt(4)]);
       if (randomDouble() > 0.2) stop();
       super.update(dt);

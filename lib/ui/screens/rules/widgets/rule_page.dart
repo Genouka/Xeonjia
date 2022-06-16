@@ -16,11 +16,11 @@ class RulePage extends StatelessWidget {
             children: <Widget>[
               Center(
                 child: DecoratedBox(
-                  decoration: rule.image != null
-                      ? BoxDecoration(
-                          image: DecorationImage(image: AssetImage(rule.image)),
-                        )
-                      : null,
+                  decoration: BoxDecoration(
+                    image: rule.image != null
+                        ? DecorationImage(image: AssetImage(rule.image!))
+                        : null,
+                  ),
                   child: Icon(rule.icon,
                       size: MediaQuery.of(context).size.shortestSide / 3),
                 ),

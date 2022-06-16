@@ -166,7 +166,7 @@ Object multiply(Object a, Object b) {
 
 /// Tries to parse a string as an int, a BigInt or a double.
 /// Returns null if [s] was not parsed successfully.
-Object tryParse(String s) {
+Object? tryParse(String s) {
   var r = BigInt.tryParse(s);
   return (r == null) ? double.tryParse(s) : normalize(r);
 }
@@ -176,7 +176,7 @@ Object tryParse(String s) {
 /// Cons cell
 class Cell extends Iterable<Object> {
   Cell(this.car, this.cdr);
-  final Object car;
+  final Object? car;
   dynamic cdr;
 
   /// Yields car, cadr, caddr and so on.
@@ -186,11 +186,11 @@ class Cell extends Iterable<Object> {
 
 class _CellIterator extends Iterator<Object> {
   _CellIterator(this.k);
-  Cell j;
+  late Cell j;
   dynamic k;
 
   @override
-  Object get current => j?.car;
+  Object get current => j.car!;
 
   @override
   bool moveNext() {
@@ -249,10 +249,10 @@ typedef Setter = void Function(Object val);
 /// List of frames which map symbols to values
 class Environment {
   /// Construct a new frame on the [next] (= current) environment or null.
-  Environment(Cell symbols, Cell data, Environment next) {
-    var names = symbols?.map((e) => e as Sym)?.toList() ?? [];
+  Environment(Cell? symbols, Cell? data, Environment? next) {
+    var names = symbols?.map((e) => e as Sym).toList() ?? [];
     var values = data?.toList() ?? [];
-    if (names?.length != values?.length) {
+    if (names.length != values.length) {
       throw 'arity not matched: $names and $values';
     }
     _names = names;
@@ -260,18 +260,18 @@ class Environment {
     _next = next;
   }
 
-  List<Sym> _names;
-  List<Object> _values;
-  Environment _next;
+  late List<Sym> _names;
+  late List<Object> _values;
+  Environment? _next;
 
   /// Searches the environment for [symbol] and returns its setter.
   Setter lookForSetter(Sym symbol) {
-    var frame = this;
+    Environment? frame = this;
     do {
-      var i = frame._names.indexOf(symbol);
+      var i = frame!._names.indexOf(symbol);
       if (i >= 0) {
         return (Object val) {
-          frame._values[i] = val;
+          frame!._values[i] = val;
         };
       }
       frame = frame._next;
@@ -281,9 +281,9 @@ class Environment {
 
   /// Searches the environment for [symbol] and returns its value.
   Object lookForValue(Sym symbol) {
-    var frame = this;
+    Environment? frame = this;
     do {
-      var i = frame._names.indexOf(symbol);
+      var i = frame!._names.indexOf(symbol);
       if (i >= 0) return frame._values[i];
       frame = frame._next;
     } while (frame != null);
@@ -307,9 +307,9 @@ class Environment {
   @override
   String toString() {
     var ss = <String>[];
-    var frame = this;
+    Environment? frame = this;
     do {
-      ss.add(frame._names.toString());
+      ss.add(frame!._names.toString());
       frame = frame._next;
     } while (frame != null);
     return '#<' + ss.join('|') + '>';
@@ -336,7 +336,7 @@ enum ContOp {
 class Step {
   Step(this.op, this.val);
   final ContOp op;
-  final Object val;
+  final Object? val;
 }
 
 // Scheme's continuation as a stack of steps
@@ -359,7 +359,7 @@ class Continuation extends Iterable<Step> {
   Iterator<Step> get iterator => _iter().iterator;
 
   /// Appends a step to the tail of the continuation.
-  void push(ContOp op, Object value) => _stack.add(Step(op, value));
+  void push(ContOp op, Object? value) => _stack.add(Step(op, value));
 
   /// Pops a step from the tail of the continuation.
   Step pop() => _stack.removeLast();
@@ -396,7 +396,7 @@ class Intrinsic {
   Intrinsic(this.name, this.arity, this.fun);
   final String name;
   final int arity;
-  final IntrinsicBody fun;
+  final IntrinsicBody? fun;
 
   @override
   String toString() => '#<$name:$arity>';
@@ -416,7 +416,7 @@ class ErrorException implements Exception {
 
 /// Converts an expression to a string.
 // ignore: avoid_positional_boolean_parameters
-String stringify(Object exp, [bool quote = true]) {
+String stringify(Object? exp, [bool quote = true]) {
   if (exp == true) return '#t';
   if (exp == false) return '#f';
   if (exp == #NONE) return '#<VOID>';
@@ -456,13 +456,14 @@ String stringify(Object exp, [bool quote = true]) {
 //----------------------------------------------------------------------
 
 /// Evaluates an expression in an environment.
-Continuation evaluate(dynamic exp, Environment env, [Continuation previousK]) {
+Continuation? evaluate(dynamic exp, Environment env,
+    [Continuation? previousK]) {
   var k = previousK ?? Continuation();
   try {
     for (;;) {
       for (;;) {
         if (exp is Cell) {
-          Object kar = exp.car;
+          Object? kar = exp.car;
           dynamic kdr = exp.cdr;
           if (identical(kar, quoteSym)) {
             // (quote e)
@@ -489,7 +490,7 @@ Continuation evaluate(dynamic exp, Environment env, [Continuation previousK]) {
             exp = kdr.cdr.car;
             k.push(ContOp.SETQ, env.lookForSetter(kdr.car as Sym));
           } else if (identical(kar, waitSym)) {
-            if (kdr?.car != null) game.nextActionDelay = kdr?.car?.toDouble();
+            if (kdr?.car != null) game!.nextActionDelay = kdr?.car?.toDouble();
             exp = null;
             k.push(ContOp.WAIT, kdr);
           } else {
@@ -498,7 +499,7 @@ Continuation evaluate(dynamic exp, Environment env, [Continuation previousK]) {
             k.push(ContOp.APPLY, kdr);
           }
         } else if (exp is Sym) {
-          exp = env.lookForValue(exp as Sym);
+          exp = env.lookForValue(exp);
           break;
         } else {
           // a number, #t, #f etc.
@@ -509,8 +510,8 @@ Continuation evaluate(dynamic exp, Environment env, [Continuation previousK]) {
       for (;;) {
         if (k.isEmpty) {
           // execution finished
-          game.clearActionContinuation();
-          if (!game.messageManager.active) game.resume();
+          game!.clearActionContinuation();
+          if (!game!.messageManager.active) game!.resume();
           return null;
         }
         var step = k.pop();
@@ -519,8 +520,8 @@ Continuation evaluate(dynamic exp, Environment env, [Continuation previousK]) {
         switch (op) {
           case ContOp.WAIT:
             // execution paused
-            if (game.nextActionDelay != 0 && game.hasAction) {
-              game.continueAction();
+            if (game!.nextActionDelay != 0 && game!.hasAction) {
+              game!.continueAction();
             }
             return k;
           case ContOp.THEN: // x is (e2 e3) of (if e1 e2 e3).
@@ -607,17 +608,17 @@ class REPair {
 
 /// Applies a function to arguments with a continuation.
 /// [env] will be referred to push [ContOp.RESTORE_ENV] to the continuation.
-REPair applyFunction(Object fun, Cell arg, Continuation k, Environment env) {
+REPair applyFunction(Object? fun, Cell? arg, Continuation k, Environment env) {
   for (;;) {
     if (fun == #CALLCC) {
       k.pushRestoreEnv(env);
-      fun = arg.car;
+      fun = arg?.car;
       var cont = Continuation();
       cont.copyFrom(k);
       arg = Cell(cont, null);
     } else if (fun == #APPLY) {
-      fun = arg.car;
-      arg = arg.cdr.car as Cell;
+      fun = arg?.car;
+      arg = arg?.cdr.car as Cell;
     } else {
       break;
     }
@@ -628,14 +629,14 @@ REPair applyFunction(Object fun, Cell arg, Continuation k, Environment env) {
         throw 'arity not matched: $fun and ${stringify(arg)}';
       }
     }
-    return REPair(fun.fun(arg), env);
+    return REPair(fun.fun!(arg!), env);
   } else if (fun is Closure) {
     k.pushRestoreEnv(env);
     k.push(ContOp.BEGIN, fun.body);
     return REPair(#NONE, Environment(fun.params, arg, fun.env));
   } else if (fun is Continuation) {
     k.copyFrom(fun);
-    return REPair(arg.car, env);
+    return REPair(arg!.car!, env);
   } else {
     throw 'not a function: ${stringify(fun)} with ${stringify(arg)}';
   }

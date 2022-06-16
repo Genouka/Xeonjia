@@ -21,7 +21,7 @@ extension CreateComponent on Tile {
         StaticComponent(this);
         break;
       case 'Modifier':
-        properties['itemId'] ??= '${game.map.id}.$id';
+        properties['itemId'] ??= '${game!.map.id}.$id';
         var itemId = properties['itemId'];
 
         // Load item only if it is not an unique item (id == "0")
@@ -34,7 +34,7 @@ extension CreateComponent on Tile {
         StaticComponent(this, walkable: true);
         break;
       case 'Door':
-        if (game.config.mode == GameMode.story) {
+        if (game!.config.mode == GameMode.story) {
           var previousRoomId = (mainCharacter.visitedRooms.length <= 1)
               ? '0'
               : mainCharacter
@@ -51,7 +51,7 @@ extension CreateComponent on Tile {
                   ..position = position
                   ..properties = properties,
                 isPlayerOne: true,
-                weaponList: mainCharacter.weaponList
+                inputWeaponList: mainCharacter.weaponList
                     .map((e) => Weapon.fromJson(e.toJson()))
                     .toList(),
                 newSelectedWeaponIndex: mainCharacter.selectedWeaponIndex);
@@ -59,9 +59,9 @@ extension CreateComponent on Tile {
           if (properties['roomId'] != '0') DoorComponent(this);
         } else {
           var teamId = int.parse(properties['team'] ?? '0');
-          if (game.players.where((p) => p.teamId == teamId).length <
-              game.config.teamSize) {
-            var playerOne = game.playerOne == null && teamId == 0;
+          if (game!.players.where((p) => p.teamId == teamId).length <
+              game!.config.teamSize) {
+            var playerOne = game!.playerOne == null && teamId == 0;
             properties['image'] =
                 'character${playerOne ? '' : '_cpu_$teamId'}.png';
             properties['friendly'] = 'false';
@@ -71,7 +71,7 @@ extension CreateComponent on Tile {
               this,
               isPlayerOne: playerOne,
               team: teamId,
-              level: teamId * game.config.difficulty,
+              level: teamId * game!.config.difficulty,
             );
           }
         }
@@ -92,7 +92,7 @@ extension CreateComponent on Tile {
         WalkerCpuComponent(this);
         break;
       case 'SlitherCpu':
-        if (!(game.currentEventLog['${game.map.id}-safe'] ?? false)) {
+        if (!(game!.currentEventLog['${game!.map.id}-safe'] ?? false)) {
           SlitherCpuComponent(this);
         }
         break;

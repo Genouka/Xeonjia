@@ -5,13 +5,13 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Show an animation during respawn
 mixin RespawnAnimation on DynamicComponent {
-  TimerComponent timer;
+  late TimerComponent timer;
 
   // Start respawn animation
   void respawnAnimation() {
     isBeingDeleted = true;
     timer = TimerComponent(period: 1000, onTick: respawn);
-    game.add(timer);
+    game!.add(timer);
   }
 
   @override

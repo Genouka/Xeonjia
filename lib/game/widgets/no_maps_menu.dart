@@ -76,8 +76,8 @@ class NoMapsMenu extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       mainCharacter.visitedRooms.add(previousMapId);
-                      game.init();
-                      game.overlays.remove('noMapsMenu');
+                      game!.init();
+                      game!.overlays.remove('noMapsMenu');
                     },
                     child: Text(
                       'Go back'.i18n,
@@ -87,7 +87,7 @@ class NoMapsMenu extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       Navigator.pop(context);
-                      game.dispose();
+                      game!.dispose();
                     },
                     child: Text(
                       'Back to menu'.i18n,

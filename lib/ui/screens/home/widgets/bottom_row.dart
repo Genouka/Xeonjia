@@ -11,7 +11,7 @@ class BottomRow extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(20, 0, 20, 10),
       child: Row(
         children: <Widget>[
-          _button(context, Icons.info_outline, 'Info'.i18n, () => InfoPage()),
+          _button(context, Icons.info_outline, 'Info'.i18n, InfoPage.new),
           Expanded(
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 40),
@@ -19,8 +19,7 @@ class BottomRow extends StatelessWidget {
               color: Colors.white.withOpacity(0.3),
             ),
           ),
-          _button(
-              context, Icons.settings, 'Settings'.i18n, () => SettingsPage()),
+          _button(context, Icons.settings, 'Settings'.i18n, SettingsPage.new),
         ],
       ),
     );

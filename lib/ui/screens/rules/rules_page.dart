@@ -9,7 +9,7 @@ import 'package:xeonjia/util/local_data_controller.dart';
 
 class RulesPage extends StatefulWidget {
   const RulesPage([this.homePage]);
-  final StatelessWidget homePage;
+  final StatelessWidget? homePage;
 
   @override
   State<RulesPage> createState() => _RulesPageState();
@@ -17,7 +17,7 @@ class RulesPage extends StatefulWidget {
 
 class _RulesPageState extends State<RulesPage>
     with SingleTickerProviderStateMixin {
-  TabController _controller;
+  late TabController _controller;
   final _textFieldController = TextEditingController(text: mainCharacter.name);
   final _formKey = GlobalKey<FormState>();
 
@@ -53,7 +53,7 @@ class _RulesPageState extends State<RulesPage>
                         Navigator.pop(context);
                       } else {
                         Navigator.pushReplacement(
-                            context, FadeRoute(widget.homePage));
+                            context, FadeRoute(widget.homePage!));
                       }
                     },
                   ),
@@ -161,7 +161,7 @@ class _RulesPageState extends State<RulesPage>
       if (widget.homePage == null) {
         Navigator.pop(context);
       } else {
-        Navigator.pushReplacement(context, FadeRoute(widget.homePage));
+        Navigator.pushReplacement(context, FadeRoute(widget.homePage!));
       }
     }
   }

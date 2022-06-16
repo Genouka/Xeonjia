@@ -15,10 +15,10 @@ class HurdleComponent extends BasicComponent {
   final Direction _allowedDirection;
 
   @override
-  Rect collisionRect(DynamicComponent otherComponent) {
+  Rect? collisionRect(DynamicComponent otherComponent) {
     return (otherComponent.direction == _allowedDirection ||
-            otherComponent.direction.dx * (otherComponent.x - x) > 0 ||
-            otherComponent.direction.dy * (otherComponent.y - y) > 0)
+            otherComponent.direction!.dx * (otherComponent.x - x) > 0 ||
+            otherComponent.direction!.dy * (otherComponent.y - y) > 0)
         ? null
         : super.collisionRect(otherComponent);
   }

@@ -1,4 +1,5 @@
 import 'dart:io';
+// ignore: depend_on_referenced_packages
 import 'package:path/path.dart';
 
 import 'translation.dart';
@@ -18,12 +19,11 @@ Map<String, List<Translation>> dart2po() {
       regexGlobal.allMatches(content).forEach((match) {
         if (match.group(3) != null) {
           var string = Translation(
-              fsEntity.path, match.group(2).replaceAll('"', r'\"'), null);
+              fsEntity.path, match.group(2)!.replaceAll('"', r'\"'), null);
           if (!dirStringsMap.containsKey(name)) dirStringsMap[name] = [];
-          if (string.msgid != null &&
-              string.msgid != '' &&
-              dirStringsMap[name].every((element) => element != string)) {
-            dirStringsMap[name].add(string);
+          if (string.msgid != '' &&
+              dirStringsMap[name]!.every((element) => element != string)) {
+            dirStringsMap[name]!.add(string);
           }
         }
       });

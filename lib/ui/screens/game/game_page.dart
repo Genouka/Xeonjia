@@ -14,7 +14,9 @@ class GamePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () {
-        game.miniMapEnabled ? game.miniMap() : game.pause(mode: PauseMode.exit);
+        game!.miniMapEnabled
+            ? game!.miniMap()
+            : game!.pause(mode: PauseMode.exit);
         return Future.value(false);
       },
       child: Focus(
@@ -22,7 +24,7 @@ class GamePage extends StatelessWidget {
         child: Theme(
           data: gameTheme,
           child: Scaffold(
-            body: GameWidget(game: game, overlayBuilderMap: game.overlayMap),
+            body: GameWidget(game: game!, overlayBuilderMap: game!.overlayMap),
           ),
         ),
       ),

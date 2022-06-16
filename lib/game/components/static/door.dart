@@ -24,9 +24,9 @@ class DoorComponent extends BasicComponent {
   final Direction _offset;
 
   @override
-  bool isSolid({BasicComponent otherComponent}) =>
-      !otherComponent.isPlayerOne ||
-      (game.enemies != 0 &&
+  bool isSolid({BasicComponent? otherComponent}) =>
+      !otherComponent!.isPlayerOne ||
+      (game!.enemies != 0 &&
           _roomId !=
               mainCharacter
                   .visitedRooms[mainCharacter.visitedRooms.length - 2]);
@@ -34,8 +34,8 @@ class DoorComponent extends BasicComponent {
   @override
   void collidedBy(otherComponent) {
     if (otherComponent.isPlayerOne) {
-      var count = game.enemies;
-      game.setMessage(Message(count == 1
+      var count = game!.enemies;
+      game!.setMessage(Message(count == 1
           ? "There is still 1 monster here. I can't escape.".i18n
           : ("There are still %s monsters here. I can't escape."
               .i18n
@@ -47,6 +47,6 @@ class DoorComponent extends BasicComponent {
 
   @override
   void overlappedBy(BasicComponent componentAbove) {
-    if (componentAbove.isPlayerOne) game.changeRoom(_roomId);
+    if (componentAbove.isPlayerOne) game!.changeRoom(_roomId);
   }
 }

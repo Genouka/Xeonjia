@@ -8,13 +8,13 @@ class MessageManager {
   List<Message> _messages = [];
 
   // Message currently displayed
-  int _currentIndex;
-  Message get currentMessage => active ? _messages[_currentIndex] : null;
+  late int _currentIndex;
+  Message? get currentMessage => active ? _messages[_currentIndex] : null;
   void nextMessage() => _currentIndex++;
 
   // Increase currentIndex and check if there are other messages
   bool get hasOtherMessages =>
-      _currentIndex + 1 < (game.messageManager._messages?.length ?? 0);
+      _currentIndex + 1 < (game!.messageManager._messages.length);
 
   // Answers shown at the end of the dialog
   List<Answer> answers = [];
@@ -24,10 +24,10 @@ class MessageManager {
   void clear() {
     _messages = [];
     answers = [];
-    game.continueAction(delay: 0);
+    game!.continueAction(delay: 0);
     if (hideMap) {
       hideMap = false;
-      game.playBackgroundMusic();
+      game!.playBackgroundMusic();
     }
   }
 
@@ -39,7 +39,7 @@ class MessageManager {
   bool hideMap = false;
 
   // Show one or more messages
-  void setMessages(List<Message> newMessages, {bool hideMap}) {
+  void setMessages(List<Message>? newMessages, {bool? hideMap}) {
     if (newMessages == null) return;
     this.hideMap = hideMap ?? false;
     _messages.addAll(newMessages.fold([], (previousValue, element) {
@@ -47,9 +47,9 @@ class MessageManager {
       return previousValue;
     }));
     _currentIndex = 0;
-    game.dialogBox.state?.refresh();
-    game.pause(stopMusic: false);
-    game.playSound(Sfx.dialog);
+    game!.dialogBox.state.refresh();
+    game!.pause(stopMusic: false);
+    game!.playSound(Sfx.dialog);
   }
 
   // Split message in sentences and group them
@@ -60,11 +60,11 @@ class MessageManager {
         .forEach((m) {
       var match = m.group(0);
       (strings.isNotEmpty &&
-              !match.contains(r'\n') &&
+              !match!.contains(r'\n') &&
               (strings.last.length + match.length < 90 ||
                   (match.length < 3 && strings.isNotEmpty)))
           ? strings.last += match
-          : strings.add(match.replaceAll(r'\n', ''));
+          : strings.add(match!.replaceAll(r'\n', ''));
     });
     return strings.fold([], (previousValue, element) {
       previousValue.add(Message(

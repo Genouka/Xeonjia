@@ -23,7 +23,7 @@ class OptionList extends StatelessWidget {
             subtitle: Text('Enable directional pad'.i18n),
             value: settings.showDPad,
             onChanged: (newValue) {
-              settings.showDPad = newValue;
+              settings.showDPad = newValue!;
               SettingsPage.of(context).refresh();
               saveSettings();
             }),
@@ -37,7 +37,7 @@ class OptionList extends StatelessWidget {
               subtitle: Text('Enable background music'.i18n),
               value: settings.backgroundMusic,
               onChanged: (newValue) {
-                settings.backgroundMusic = newValue;
+                settings.backgroundMusic = newValue!;
                 SettingsPage.of(context).refresh();
                 saveSettings();
               }),
@@ -49,7 +49,7 @@ class OptionList extends StatelessWidget {
               subtitle: Text('Enable sound effects'.i18n),
               value: settings.soundEffects,
               onChanged: (newValue) {
-                settings.soundEffects = newValue;
+                settings.soundEffects = newValue!;
                 SettingsPage.of(context).refresh();
                 saveSettings();
               }),
@@ -95,7 +95,7 @@ class OptionList extends StatelessWidget {
             value: settings.useSystemLanguage
                 ? const Locale.fromSubtags()
                 : settings.locale,
-            onChanged: (Locale newValue) {
+            onChanged: (Locale? newValue) {
               settings.locale = newValue;
               I18n.of(context).locale = settings.locale;
               updateGameTheme();
@@ -112,7 +112,7 @@ class OptionList extends StatelessWidget {
                     (value) => DropdownMenuItem<Locale>(
                       value: value,
                       child: Text(languageName.containsKey(value.languageCode)
-                          ? languageName[value.languageCode][1]
+                          ? languageName[value.languageCode]![1]
                           : 'missing name'),
                     ),
                   )
@@ -123,7 +123,7 @@ class OptionList extends StatelessWidget {
       ]);
 
   void saveName(BuildContext context, String text) {
-    if (_formKey.currentState.validate()) {
+    if (_formKey.currentState!.validate()) {
       Navigator.of(context).pop();
       _textFieldController.text = text.trim();
       mainCharacter.name = _textFieldController.text;

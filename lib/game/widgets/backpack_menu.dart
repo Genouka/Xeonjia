@@ -12,9 +12,9 @@ class BackpackMenu extends StatefulWidget {
 }
 
 class _BackpackMenuState extends State<BackpackMenu> {
-  String title;
-  List<Widget> actions;
-  Item selectedItem;
+  late String title;
+  late List<Widget> actions;
+  Item? selectedItem;
 
   @override
   void initState() {
@@ -78,7 +78,7 @@ class _BackpackMenuState extends State<BackpackMenu> {
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10),
                           child: Text(
-                            selectedItem.description,
+                            selectedItem!.description!,
                             style: Theme.of(context).textTheme.bodyText2,
                             textAlign: TextAlign.center,
                           ),
@@ -99,8 +99,8 @@ class _BackpackMenuState extends State<BackpackMenu> {
     );
   }
 
-  Map<Item, int> get items => game.playerOne.backpackItems.fold({}, (p, e) {
-        p[e] = p.containsKey(e) ? p[e] + 1 : 1;
+  Map<Item, int> get items => game!.playerOne!.backpackItems.fold({}, (p, e) {
+        p[e] = p.containsKey(e) ? p[e]! + 1 : 1;
         return p;
       });
 
@@ -112,26 +112,26 @@ class _BackpackMenuState extends State<BackpackMenu> {
         actionButton(
           'Back'.i18n.toUpperCase(),
           () {
-            game.overlays.remove('backpackMenu');
-            game.resume();
+            game!.overlays.remove('backpackMenu');
+            game!.resume();
           },
         ),
       ];
     } else {
-      title = selectedItem.name;
+      title = selectedItem!.name;
       actions = [
-        if (selectedItem.action != null)
+        if (selectedItem!.action != null)
           actionButton(
             'Use'.i18n.toUpperCase(),
             () {
               setState(() {
-                game.environment
-                    .defineSymbol(Sym('selected-item-id'), selectedItem.id);
-                game.environment
-                    .defineSymbol(Sym('selected-item-name'), selectedItem.name);
-                game.overlays.remove('backpackMenu');
-                game.resume();
-                game.executeAction(action: selectedItem.action);
+                game!.environment
+                    .defineSymbol(Sym('selected-item-id'), selectedItem!.id!);
+                game!.environment.defineSymbol(
+                    Sym('selected-item-name'), selectedItem!.name);
+                game!.overlays.remove('backpackMenu');
+                game!.resume();
+                game!.executeAction(action: selectedItem!.action!);
               });
             },
           ),

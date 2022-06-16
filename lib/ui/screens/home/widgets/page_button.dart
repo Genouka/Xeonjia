@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/ui/basic.dart';
 
 class PageButton extends StatelessWidget {
-  const PageButton({@required this.title, @required this.onPressed});
+  const PageButton({required this.title, required this.onPressed});
   final String title;
   final VoidCallback onPressed;
 

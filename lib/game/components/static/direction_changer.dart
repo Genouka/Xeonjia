@@ -19,7 +19,7 @@ class DirectionChangerComponent extends BasicComponent {
   }
 
   @override
-  Rect collisionRect(DynamicComponent otherComponent) =>
+  Rect? collisionRect(DynamicComponent otherComponent) =>
       otherComponent.isFlying() ||
               otherComponent.wasStationary ||
               otherComponent.direction == _forcedDirection

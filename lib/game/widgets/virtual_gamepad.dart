@@ -53,7 +53,7 @@ class _DPadState extends State<_DPad> {
 
   @override
   Widget build(BuildContext context) {
-    if (game.miniMapEnabled) return Container();
+    if (game!.miniMapEnabled) return Container();
     return Positioned(
       left: 20,
       bottom: 20,
@@ -97,15 +97,15 @@ class _DPadState extends State<_DPad> {
     );
   }
 
-  Widget arrowButton(Direction direction) {
+  Widget arrowButton(Direction? direction) {
     return GestureDetector(
       onTap: () {
-        game.playerOne.isStationary
-            ? game.gestureDragInput(direction)
-            : game.playerOne.updateOrientation(direction);
+        game!.playerOne!.isStationary
+            ? game!.gestureDragInput(direction!)
+            : game!.playerOne!.updateOrientation(direction);
       },
       onLongPress: () {
-        game.playerOne.updateOrientation(direction);
+        game!.playerOne!.updateOrientation(direction);
       },
       child: direction != null
           ? Container(
@@ -140,16 +140,16 @@ class _Buttons extends StatefulWidget {
 class _ButtonsState extends State<_Buttons> {
   @override
   Widget build(BuildContext context) {
-    return game.playerOne == null
+    return game!.playerOne == null
         ? Container()
         : Positioned(
             bottom: 20,
             right: 20,
             child: GestureDetector(
               onPanUpdate: (upd) =>
-                  game.onPanUpdate(DragUpdateInfo.fromDetails(game, upd)),
+                  game!.onPanUpdate(DragUpdateInfo.fromDetails(game!, upd)),
               onPanEnd: (end) =>
-                  game.onPanEnd(DragEndInfo.fromDetails(game, end)),
+                  game!.onPanEnd(DragEndInfo.fromDetails(game!, end)),
               child: Container(
                 width: VirtualGamePad._size * 4,
                 height: VirtualGamePad._size * 4,
@@ -157,60 +157,60 @@ class _ButtonsState extends State<_Buttons> {
                 child: Column(
                   children: [
                     Row(
-                      children: game.miniMapEnabled
+                      children: game!.miniMapEnabled
                           ? [
                               const Spacer(),
                               button(
                                 '+',
-                                () => game.zoomMiniMap(),
+                                () => game!.zoomMiniMap(),
                                 percentage: 0,
                                 highlight: false,
-                                color: Colors.grey[800].withOpacity(0.7),
+                                color: Colors.grey.shade800.withOpacity(0.7),
                               ),
                             ]
                           : [
-                              button('P', () => game.playerOne.shootById(0),
+                              button('P', () => game!.playerOne!.shootById(0),
                                   percentage: 1,
                                   highlight:
-                                      game.playerOne.selectedWeapon.id == 0),
-                              if (game.playerOne.hasWeaponId(2))
-                                button('M', () => game.playerOne.shootById(2),
-                                    percentage: game.playerOne
+                                      game!.playerOne!.selectedWeapon.id == 0),
+                              if (game!.playerOne!.hasWeaponId(2))
+                                button('M', () => game!.playerOne!.shootById(2),
+                                    percentage: game!.playerOne!
                                         .getWeaponById(2)
                                         .ppPercentage,
                                     highlight:
-                                        game.playerOne.selectedWeapon.id == 2)
+                                        game!.playerOne!.selectedWeapon.id == 2)
                               else
                                 const Spacer(),
                             ],
                     ),
                     const Spacer(),
                     Row(
-                      children: game.miniMapEnabled
+                      children: game!.miniMapEnabled
                           ? [
                               const Spacer(),
                               button(
                                 '-',
-                                () => game.zoomMiniMap(out: true),
+                                () => game!.zoomMiniMap(out: true),
                                 percentage: 0,
                                 highlight: false,
-                                color: Colors.grey[800].withOpacity(0.7),
+                                color: Colors.grey.shade800.withOpacity(0.7),
                               ),
                             ]
                           : [
-                              if (game.playerOne.hasWeaponId(1))
-                                button('S', () => game.playerOne.shootById(1),
-                                    percentage: game.playerOne
+                              if (game!.playerOne!.hasWeaponId(1))
+                                button('S', () => game!.playerOne!.shootById(1),
+                                    percentage: game!.playerOne!
                                         .getWeaponById(1)
                                         .ppPercentage,
                                     highlight:
-                                        game.playerOne.selectedWeapon.id == 1)
+                                        game!.playerOne!.selectedWeapon.id == 1)
                               else
                                 const Spacer(),
-                              if (game.config.mode == GameMode.story)
+                              if (game!.config.mode == GameMode.story)
                                 button(
                                   'A',
-                                  game.playerOne.inspect,
+                                  game!.playerOne!.inspect,
                                   percentage: 0,
                                   color: Colors.blueGrey[400],
                                 ),
@@ -228,7 +228,7 @@ class _ButtonsState extends State<_Buttons> {
   }
 
   Widget button(String text, VoidCallback onTap,
-          {double percentage, bool highlight = false, Color color}) =>
+          {double? percentage, bool highlight = false, Color? color}) =>
       InkWell(
         onTap: onTap,
         enableFeedback: false,

@@ -6,7 +6,7 @@ Widget helpDialog(BuildContext context) {
     title: Text('Multiplayer Mode'.i18n, textAlign: TextAlign.center),
     content: SingleChildScrollView(
       child: Text(
-          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play".'''
+          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game!.\nWhen you are ready press "Play".'''
               .i18n),
     ),
     actions: <Widget>[

@@ -6,25 +6,10 @@ import 'util/get_i18n_files.dart';
 import 'util/tmx2po.dart';
 import 'util/translation.dart';
 
-final languageList = [
-  'de',
-  'es',
-  'fr',
-  'hu',
-  'id',
-  'it',
-  'pl',
-  'pt_BR',
-  'ru',
-  'uk',
-  'vi',
-  'zh_Hans',
-  'zh_Hant',
-  'template',
-];
-const appName = 'Xeonjia';
+List<String> languageList = [];
+const String appName = 'Xeonjia';
 const author = 'DeepDaikon';
-const year = '2020, 2021';
+const year = '2020, 2021, 2022';
 
 var metadata = <String, String>{};
 
@@ -35,9 +20,11 @@ void main() {
   var dirStringsMap = <String, List<Translation>>{};
   dirStringsMap.addAll(dart2po());
   dirStringsMap.addAll(tmx2po());
-
   var currentTranslations = getCurrentTranslations();
-  Directory('locale').listSync().forEach((f) => f.deleteSync(recursive: true));
+  Directory('locale').listSync().forEach((f) {
+    languageList.add(f.path.split('/').last);
+    f.deleteSync(recursive: true);
+  });
   for (final language in languageList) {
     dirStringsMap.forEach((fileName, strings) {
       var newPoFile = File('locale/$language/LC_MESSAGES/$fileName.po')
@@ -60,10 +47,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Last-Translator: Automatically generated\\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\\n"
-"Language: $language\\n"'''}${(() => strings.fold('', (prev, string) => prev + '''
+"Language: $language\\n"'''}${(() => strings.fold('', (prev, string) => (prev as String) + '''
 \n\n#: ${string.path}:
 ${_getTranslation(currentTranslations, string, language).comments ?? ''}msgid "${string.msgid}"
-msgstr "${_getTranslation(currentTranslations, string, language).msgstr.replaceAll('"', r'\"')}"'''))()}
+msgstr "${_getTranslation(currentTranslations, string, language).msgstr!.replaceAll('"', r'\"')}"'''))()}
 ''');
     });
   }
@@ -75,8 +62,8 @@ Translation _getTranslation(
     Translation string,
     String language) {
   if (currentTranslations[string.path] != null &&
-      (currentTranslations[string.path][language]?.isNotEmpty ?? false)) {
-    var translations = currentTranslations[string.path][language]
+      (currentTranslations[string.path]![language]?.isNotEmpty ?? false)) {
+    var translations = currentTranslations[string.path]![language]!
         .where((t) => (t.msgid.replaceAll('"', r'\"')) == string.msgid);
     if (translations.length == 1) return translations.single;
   }

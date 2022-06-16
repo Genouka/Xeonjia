@@ -8,7 +8,7 @@ class NpcController {
   // Read and import patterns
   // movementPatternString: is a list of: direction
   // shotPatternString:     is a list of: direction | frequency
-  NpcController(String movementPatternString, String shotPatternString) {
+  NpcController(String? movementPatternString, String? shotPatternString) {
     if (movementPatternString != null) {
       movementPatternString.split(',').forEach((m) {
         _movementPattern.add(GetDirection.fromInt(int.parse(m)));
@@ -51,7 +51,7 @@ class NpcController {
   void move(CharacterComponent npc) {
     if (!npc.quiet && npc.isStationary && !_movementInQueue) {
       _movementInQueue = true;
-      game.add(TimerComponent(
+      game!.add(TimerComponent(
           period: 500,
           onTick: () {
             _movementInQueue = false;
@@ -67,17 +67,17 @@ class NpcController {
   void shoot(CharacterComponent npc) {
     if (!npc.friendly && !_shotInQueue) {
       _shotInQueue = true;
-      game.add(TimerComponent(
+      game!.add(TimerComponent(
           period: (_hasShots ? _nextShot.frequency : 0.5) * 1000,
           onTick: () {
             _shotInQueue = false;
             if (_hasShots) npc.updateOrientation(_nextShot.direction);
-            if (npc.teamId != game.playerOne.teamId) {
-              if (game.playerOne.x == npc.x) {
+            if (npc.teamId != game!.playerOne!.teamId) {
+              if (game!.playerOne!.x == npc.x) {
                 npc.updateOrientation(
-                    game.playerOne.y > npc.y ? Direction.down : Direction.up);
-              } else if (game.playerOne.y == npc.y) {
-                npc.updateOrientation(game.playerOne.x > npc.x
+                    game!.playerOne!.y > npc.y ? Direction.down : Direction.up);
+              } else if (game!.playerOne!.y == npc.y) {
+                npc.updateOrientation(game!.playerOne!.x > npc.x
                     ? Direction.right
                     : Direction.left);
               }

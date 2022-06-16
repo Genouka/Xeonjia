@@ -33,46 +33,45 @@ Map<String, List<Translation>> tmx2po() {
       var name = 'story';
       var content = fsEntity.readAsStringSync();
       regexGlobal.allMatches(content).forEach((match) {
-        regexText.allMatches(match.group(0)).forEach((text) {
+        regexText.allMatches(match.group(0)!).forEach((text) {
           var string = Translation(
               fsEntity.path,
               text
-                  .group(2)
+                  .group(2)!
                   .replaceAll(r'\&quot;', r'\"')
                   .replaceAll('&amp;', '&')
                   .replaceAll(r'*\', '*'),
               null);
           var author = text.group(1)?.replaceAll('&amp;', '&');
-          Translation authorName;
+          Translation? authorName;
           if (author != null) {
             authorName = Translation(fsEntity.path,
-                regexAuthorName.firstMatch(author).group(1), null);
+                regexAuthorName.firstMatch(author)!.group(1)!, null);
           }
           if (!dirStringsMap.containsKey(name)) dirStringsMap[name] = [];
-          if (string.msgid != null &&
-              string.msgid != '' &&
-              dirStringsMap[name].every((element) => element != string)) {
-            dirStringsMap[name].add(string);
+          if (string.msgid != '' &&
+              dirStringsMap[name]!.every((element) => element != string)) {
+            dirStringsMap[name]!.add(string);
           }
           if (authorName?.msgid != null &&
-              authorName.msgid != '' &&
-              dirStringsMap[name].every((element) => element != authorName)) {
-            dirStringsMap[name].add(authorName);
+              authorName?.msgid != '' &&
+              dirStringsMap[name]!.every((element) => element != authorName)) {
+            dirStringsMap[name]!.add(authorName!);
           }
         });
       });
       npcName.allMatches(content).forEach((text) {
         var string = Translation(
-            fsEntity.path, text.group(1).replaceAll('&amp;', '&'), null);
-        if (!dirStringsMap[name].contains(string)) {
-          dirStringsMap[name].add(string);
+            fsEntity.path, text.group(1)!.replaceAll('&amp;', '&'), null);
+        if (!dirStringsMap[name]!.contains(string)) {
+          dirStringsMap[name]!.add(string);
         }
       });
       RegExp(r'(\(answer .*\)\)\))').allMatches(content).forEach((text) {
-        regexAnswer.allMatches(text[1]).forEach((t) {
-          var string = Translation(fsEntity.path, t[1], null);
-          if (!dirStringsMap[name].contains(string)) {
-            dirStringsMap[name].add(string);
+        regexAnswer.allMatches(text[1]!).forEach((t) {
+          var string = Translation(fsEntity.path, t[1]!, null);
+          if (!dirStringsMap[name]!.contains(string)) {
+            dirStringsMap[name]!.add(string);
           }
         });
       });
@@ -81,29 +80,28 @@ Map<String, List<Translation>> tmx2po() {
   var dataJsonFileName = 'assets/maps/utils/items-and-events.json';
   var data = json.decode(File(dataJsonFileName).readAsStringSync());
   data['items'].forEach((_, value) {
-    dirStringsMap['story']
+    dirStringsMap['story']!
         .add(Translation(dataJsonFileName, value['name'], null));
     if (value['description'] != null) {
-      dirStringsMap['story'].add(Translation(dataJsonFileName,
+      dirStringsMap['story']!.add(Translation(dataJsonFileName,
           value['description'].replaceAll('\n', r'\n'), null));
     }
     if (value['action'] != null) {
       regexGlobal.allMatches(value['action']).forEach((match) {
         regexText
-            .allMatches(match.group(0).replaceAll('"', '&quot;'))
+            .allMatches(match.group(0)!.replaceAll('"', '&quot;'))
             .forEach((text) {
           var string = Translation(
               dataJsonFileName,
               text
-                  .group(2)
+                  .group(2)!
                   .replaceAll(r'\&quot;', r'\"')
                   .replaceAll('&amp;', '&')
                   .replaceAll(r'*\', '*'),
               null);
-          if (string.msgid != null &&
-              string.msgid != '' &&
-              dirStringsMap['story'].every((element) => element != string)) {
-            dirStringsMap['story'].add(string);
+          if (string.msgid != '' &&
+              dirStringsMap['story']!.every((element) => element != string)) {
+            dirStringsMap['story']!.add(string);
           }
         });
       });

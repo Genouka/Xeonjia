@@ -18,7 +18,7 @@ import 'package:xeonjia/models/tile.dart';
 // Every game component extends this one
 abstract class BasicComponent extends SpriteComponent {
   BasicComponent(
-      int id, Point startingPosition, Map<String, dynamic> properties)
+      int? id, Point startingPosition, Map<String, dynamic> properties)
       : this.fromTile(Tile(
             id: id,
             position: startingPosition,
@@ -28,8 +28,8 @@ abstract class BasicComponent extends SpriteComponent {
             properties: properties));
 
   BasicComponent.fromTile(Tile tile)
-      : id = tile.id,
-        startingPosition = tile.position,
+      : id = tile.id!,
+        startingPosition = tile.position!,
         name = tile.properties['name'],
         action = tile.properties['action'] ?? '',
         actionOnCollision = tile.properties['actionOnCollision'] ?? '',
@@ -46,11 +46,11 @@ abstract class BasicComponent extends SpriteComponent {
         image = tile.properties['image'],
         imageY = tile.properties['imageY'] ?? 0,
         super(
-          size: Vector2(tile.size, tile.size),
+          size: Vector2(tile.size!, tile.size!),
           sprite: tile.sprite,
         ) {
-    animate(tile.animationSprites,
-        stepTime: tile.animationStepTime, loop: true);
+    animate(tile.animationSprites!,
+        stepTime: tile.animationStepTime!, loop: true);
     onCreate();
   }
 
@@ -69,7 +69,7 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Current life points
   // Value edited by using lifePointsDifference() method
-  double _lifePoints;
+  late double _lifePoints;
   double get lifePoints => _lifePoints;
 
   // Poison released to enemies during collision
@@ -96,7 +96,7 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Direction values
   // They equal to zero if the component is not moving
-  Direction direction;
+  Direction? direction;
 
   // True if rendered
   bool _visible = true;
@@ -120,19 +120,19 @@ abstract class BasicComponent extends SpriteComponent {
   // Component that generated this one
   // A component can't collide with its father
   // Mainly used for weapon shot
-  BasicComponent father;
+  BasicComponent? father;
 
   // This component's team
   // It is used to avoid friendly fire among components of the same species
   // It is also used in multiplayer matches to manage team membership
   int teamId = -1;
-  Team get team => game.teams.firstWhere((team) => team.id == teamId);
+  Team get team => game!.teams!.firstWhere((team) => team.id == teamId);
 
   // Check if this is player one (a player can only be a CharacterComponent)
   bool get isPlayerOne => false;
 
   // Sprite animation
-  SpriteAnimation animation;
+  SpriteAnimation? animation;
 
   // True if this is doing the deletion animation
   bool isBeingDeleted = false;
@@ -150,13 +150,13 @@ abstract class BasicComponent extends SpriteComponent {
     _lifePoints = maxLifePoints;
     x = startingPosition.x * componentSize;
     y = startingPosition.y * componentSize;
-    game.add(this);
+    game!.add(this);
     if (this is! SnowballComponent) executeAction();
   }
 
   // Execute an action
-  void executeAction([String action, BasicComponent actor]) {
-    game.executeAction(
+  void executeAction([String? action, BasicComponent? actor]) {
+    game!.executeAction(
         action: action ?? actionOnEvent, actor: actor ?? this, self: this);
   }
 
@@ -169,33 +169,33 @@ abstract class BasicComponent extends SpriteComponent {
   void setStatus(double lifePoints, double poison) {
     _lifePoints = lifePoints;
     poisonQuantity = poison;
-    game.refreshLifePointsBar();
+    game!.refreshLifePointsBar();
   }
 
   // Restore LP and poison quantity
   void restoreStatus() {
     _lifePoints = maxLifePoints;
     poisonQuantity = 0;
-    game.refreshLifePointsBar();
+    game!.refreshLifePointsBar();
   }
 
   // Function used to change life points
   void lifePointsDifference(double difference,
-      {BasicComponent cause, double poison = 0}) {
-    if ((game.config.mode != GameMode.story || game.config.friendlyFire) ||
+      {BasicComponent? cause, double poison = 0}) {
+    if ((game!.config.mode != GameMode.story || game!.config.friendlyFire) ||
         teamId != (cause?.teamId ?? -99)) {
       _lifePoints += difference < 0 ? min(0, difference + def) : difference;
       poisonQuantity += poison;
       if (_lifePoints < 0) _lifePoints = 0;
       if (_lifePoints > maxLifePoints) _lifePoints = maxLifePoints;
       if (isPlayerOne && difference != 0) {
-        game.refreshLifePointsBar();
+        game!.refreshLifePointsBar();
       }
       if (_lifePoints <= 0) {
         delete();
         if (teamId == (cause?.teamId ?? -99)) {
           // Teammate defeated
-          for (final team in game.teams) {
+          for (final team in game!.teams!) {
             if (team.id != teamId) team.basisPoints += 10;
           }
         } else if (this is! StaticComponent) {
@@ -215,33 +215,33 @@ abstract class BasicComponent extends SpriteComponent {
       : (_layerPriority + (_flying ? 50 : 0));
 
   // Collision area
-  Rect collisionRect(DynamicComponent otherComponent) => toRect();
+  Rect? collisionRect(DynamicComponent otherComponent) => toRect();
 
   // Collision border based on otherComponent direction
   // It is used if otherComponent should stop on this
-  Rect oppositeBorderRect(DynamicComponent otherComponent) {
+  Rect? oppositeBorderRect(DynamicComponent otherComponent) {
     // If the other component is going left or right
-    if (otherComponent.direction.dx != 0) {
+    if (otherComponent.direction?.dx != 0) {
       // If otherComponent.center > this.center -> do nothing
       // Else return a rect with width = 1 at the left or right of this
-      return otherComponent.direction.dx * (otherComponent.x - x) > 0
+      return otherComponent.direction!.dx * (otherComponent.x - x) > 0
           ? null
-          : Rect.fromLTWH(
-              x + (otherComponent.direction.dx > 0 ? width : -1), y, 1, height);
+          : Rect.fromLTWH(x + (otherComponent.direction!.dx > 0 ? width : -1),
+              y, 1, height);
     } else {
       // (going up or down)
       // If otherComponent.center > this.center -> do nothing
       // Else return a rect with height = 1 at the top or bottom of this
-      return otherComponent.direction.dy * (otherComponent.y - y) > 0
+      return otherComponent.direction!.dy * (otherComponent.y - y) > 0
           ? null
-          : Rect.fromLTWH(
-              x, y + (otherComponent.direction.dy > 0 ? height : -1), width, 1);
+          : Rect.fromLTWH(x,
+              y + (otherComponent.direction!.dy > 0 ? height : -1), width, 1);
     }
   }
 
   // True if this component could be collided
   // It depends on component that would collide this one
-  bool isSolid({@required DynamicComponent otherComponent}) => true;
+  bool isSolid({required DynamicComponent otherComponent}) => true;
 
   // Define what happens if this component has been overlapped by another one
   // Used if isSolid() returned false
@@ -258,7 +258,7 @@ abstract class BasicComponent extends SpriteComponent {
   // Reset life points
   void restoreLifePoints() {
     _lifePoints = maxLifePoints;
-    if (isPlayerOne) game.refreshLifePointsBar();
+    if (isPlayerOne) game!.refreshLifePointsBar();
   }
 
   // Animate this component
@@ -281,12 +281,12 @@ abstract class BasicComponent extends SpriteComponent {
     if (!_visible) return;
     if (game?.miniMapEnabled ?? false) {
       canvas.scale(
-          (componentSize * game.miniMapZoom).gridAligned / componentSize);
+          (componentSize * game!.miniMapZoom).gridAligned / componentSize);
     }
     if (animation?.done() ?? true) {
       super.render(canvas);
     } else {
-      animation.getSprite().render(canvas, size: Vector2(width, height));
+      animation!.getSprite().render(canvas, size: Vector2(width, height));
     }
   }
 
@@ -303,7 +303,7 @@ abstract class BasicComponent extends SpriteComponent {
   // Delete component
   void delete() {
     ++defeats;
-    game.deletedComponents.add(this);
+    game!.deletedComponents.add(this);
     removeChildren();
     deleted = true;
     remove(this);
@@ -311,7 +311,7 @@ abstract class BasicComponent extends SpriteComponent {
 
   // Delete every son of this component
   void removeChildren() {
-    for (final c in game.children) {
+    for (final c in game!.children) {
       if (c is BasicComponent && c.father == this) c.delete();
     }
   }
@@ -324,6 +324,6 @@ abstract class BasicComponent extends SpriteComponent {
     restoreLifePoints();
     x = startingPosition.x * componentSize;
     y = startingPosition.y * componentSize;
-    if (!game.children.contains(this)) game.add(this);
+    if (!game!.children.contains(this)) game!.add(this);
   }
 }

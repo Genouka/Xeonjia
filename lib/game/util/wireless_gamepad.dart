@@ -21,28 +21,28 @@ extension WirelessGamepad on XeonjiaGame {
             gestureDragInput(Direction.left);
             break;
           case GAMEPAD_BUTTON_A:
-            game.playerOne.inspect();
+            game!.playerOne!.inspect();
             break;
           case GAMEPAD_BUTTON_B:
-            game.playerOne.shoot();
+            game!.playerOne!.shoot();
             break;
           case GAMEPAD_BUTTON_X:
-            game.playerOne.shoot();
+            game!.playerOne!.shoot();
             break;
           case GAMEPAD_BUTTON_Y:
-            game.playerOne.shoot();
+            game!.playerOne!.shoot();
             break;
           case GAMEPAD_BUTTON_L1:
-            game.playerOne.nextWeapon();
+            game!.playerOne!.nextWeapon();
             break;
           case GAMEPAD_BUTTON_L2:
-            game.playerOne.nextWeapon();
+            game!.playerOne!.nextWeapon();
             break;
           case GAMEPAD_BUTTON_R1:
-            game.playerOne.nextWeapon();
+            game!.playerOne!.nextWeapon();
             break;
           case GAMEPAD_BUTTON_R2:
-            game.playerOne.nextWeapon();
+            game!.playerOne!.nextWeapon();
             break;
           case GAMEPAD_BUTTON_START:
             break;
@@ -121,7 +121,7 @@ const ANDROID_MAPPING = {
 };
 
 class FlameGamepad {
-  KeyListener listener;
+  late KeyListener listener;
 
   static Future<bool> get isGamepadConnected async {
     final isConnected = await _channel.invokeMethod('isGamepadConnected');

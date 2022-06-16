@@ -7,20 +7,20 @@ import 'package:xeonjia/models/character_info.dart';
 import 'package:xeonjia/models/item.dart';
 import 'package:xeonjia/models/settings.dart';
 
-SharedPreferences _prefs;
+late SharedPreferences _prefs;
 
 // Stored app settings
-Settings settings;
+late Settings settings;
 
 // Main character data
-CharacterInfo mainCharacter;
+late CharacterInfo mainCharacter;
 
 // List of all items
 // itemId : Item info
 Map<String, Item> itemData = {};
 
 // Gamepad position
-Offset gamepadOffset;
+late Offset gamepadOffset;
 
 // Import all data from shared preferences
 Future<void> loadStoredData() async {

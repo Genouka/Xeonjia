@@ -84,7 +84,7 @@ class CharacterInfo {
       'weaponList': jsonEncode(weaponList.fold(
           <Map>[],
           (previousValue, element) =>
-              (((previousValue as List) ?? [])..add(element.toJson())))),
+              (((previousValue as List?) ?? [])..add(element.toJson())))),
       'selectedWeaponIndex': selectedWeaponIndex,
       'itemList': itemList,
       'viewedRooms': visitedRooms,

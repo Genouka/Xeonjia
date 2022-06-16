@@ -9,7 +9,7 @@ class Tile {
     this.id,
     this.gid,
     this.type,
-    this.properties,
+    Map<String, dynamic>? properties,
     this.sprite,
     this.size,
     this.animationSprites,
@@ -17,35 +17,35 @@ class Tile {
     this.position,
     this.layer,
   }) {
-    properties ??= {};
+    this.properties = properties ?? {};
     size ??= componentSize;
     animationSprites ??= [];
   }
 
   // Tile id and gid defined in the TMX file
-  int id;
-  int gid;
+  int? id;
+  int? gid;
 
   // Component type
-  String type;
+  String? type;
 
   // List of tile properties
   // Properties define component features and stats (eg: atk, def, lifePoints)
-  Map<String, dynamic> properties;
+  late Map<String, dynamic> properties;
 
   // Component sprite
-  Sprite sprite;
+  Sprite? sprite;
 
   // Component size
-  double size;
+  double? size;
 
   // Component animation
-  List<Sprite> animationSprites;
-  double animationStepTime;
+  List<Sprite>? animationSprites;
+  double? animationStepTime;
 
   // Tile position
-  Point position;
+  Point? position;
 
   // Map layer
-  int layer;
+  int? layer;
 }

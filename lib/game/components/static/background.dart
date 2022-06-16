@@ -12,15 +12,15 @@ class BackgroundComponent extends SpriteComponent {
 
   @override
   void handleResize(Vector2 size) {
-    width = game.map.width * componentSize;
-    height = game.map.height * componentSize;
+    width = game!.map.width * componentSize;
+    height = game!.map.height * componentSize;
   }
 
   @override
   void render(Canvas canvas) {
     if (game?.miniMapEnabled ?? false) {
       canvas.scale(
-          (componentSize * game.miniMapZoom).gridAligned / componentSize);
+          (componentSize * game!.miniMapZoom).gridAligned / componentSize);
     }
     super.render(canvas);
   }

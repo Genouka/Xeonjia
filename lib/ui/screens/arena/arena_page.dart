@@ -20,7 +20,7 @@ MatchConfig _config = MatchConfig(
 
 class ArenaPage extends StatefulWidget {
   static State<ArenaPage> of(BuildContext context) =>
-      context.findAncestorStateOfType();
+      context.findAncestorStateOfType()!;
 
   @override
   State<ArenaPage> createState() => _ArenaPageState();
@@ -53,16 +53,14 @@ class _ArenaPageState extends State<ArenaPage> {
               subtitle: Text('Place to play'.i18n),
               trailing: DropdownButton<int>(
                 value: _config.mapId,
-                onChanged: (int newValue) {
-                  setState(() {
-                    _config.mapId = newValue;
-                  });
+                onChanged: (int? newValue) {
+                  setState(() => _config.mapId = newValue!);
                 },
                 items: mapNames.keys
                     .map<DropdownMenuItem<int>>(
                       (int value) => DropdownMenuItem<int>(
                         value: value,
-                        child: Text(mapNames[value]),
+                        child: Text(mapNames[value]!),
                       ),
                     )
                     .toList(),
@@ -74,16 +72,14 @@ class _ArenaPageState extends State<ArenaPage> {
               subtitle: Text('Match difficulty'.i18n),
               trailing: DropdownButton<int>(
                 value: _config.difficulty,
-                onChanged: (int newValue) {
-                  setState(() {
-                    _config.difficulty = newValue;
-                  });
+                onChanged: (int? newValue) {
+                  setState(() => _config.difficulty = newValue!);
                 },
                 items: difficultyNames.keys
                     .map<DropdownMenuItem<int>>(
                       (int value) => DropdownMenuItem<int>(
                         value: value,
-                        child: Text(difficultyNames[value].i18n),
+                        child: Text(difficultyNames[value]!.i18n),
                       ),
                     )
                     .toList(),
@@ -97,10 +93,8 @@ class _ArenaPageState extends State<ArenaPage> {
               subtitle: Text('Points needed to win'.i18n),
               trailing: DropdownButton<int>(
                 value: _config.maxPoints,
-                onChanged: (int newValue) {
-                  setState(() {
-                    _config.maxPoints = newValue;
-                  });
+                onChanged: (int? newValue) {
+                  setState(() => _config.maxPoints = newValue!);
                 },
                 items: _maxPointsOptions
                     .map<DropdownMenuItem<int>>(
@@ -120,10 +114,8 @@ class _ArenaPageState extends State<ArenaPage> {
               subtitle: Text('Maximum time for a match (minutes)'.i18n),
               trailing: DropdownButton<int>(
                 value: _config.maxTime,
-                onChanged: (int newValue) {
-                  setState(() {
-                    _config.maxTime = newValue;
-                  });
+                onChanged: (int? newValue) {
+                  setState(() => _config.maxTime = newValue!);
                 },
                 items: _maxTimeOptions
                     .map<DropdownMenuItem<int>>(
@@ -140,10 +132,8 @@ class _ArenaPageState extends State<ArenaPage> {
               subtitle: Text('Number of players per team'.i18n),
               trailing: DropdownButton<int>(
                 value: _config.teamSize,
-                onChanged: (int newValue) {
-                  setState(() {
-                    _config.teamSize = newValue;
-                  });
+                onChanged: (int? newValue) {
+                  setState(() => _config.teamSize = newValue!);
                 },
                 items: _teamSizeOptions
                     .map<DropdownMenuItem<int>>(
@@ -166,7 +156,7 @@ class _ArenaPageState extends State<ArenaPage> {
               value: _config.friendlyFire,
               onChanged: (newValue) {
                 setState(() {
-                  _config.friendlyFire = newValue;
+                  _config.friendlyFire = newValue!;
                 });
               },
             ),

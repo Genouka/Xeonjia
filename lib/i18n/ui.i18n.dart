@@ -12,7 +12,7 @@ extension Localization on String {
           '''Multiplayer''': '''Többjátékos''',
           '''How to play''': '''Hogy kell játszani''',
           '''Almost done!''': '''Majdnem kész!''',
-          '''Before starting tell me your name which will be used in the game.''':
+          '''Before starting tell me your name which will be used in the game!.''':
               '''Mielőtt elkezdenéd, mondd meg a neved, amit a játékban használni fogunk.''',
           '''Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.''':
               '''Oldj meg jégrejtvényeket és győzd le az ellenséget egy RPG világban.\n\nLapozz jobbra az alapfogalmak elsajátításához.''',
@@ -37,7 +37,7 @@ extension Localization on String {
           '''Next''': '''Következő''',
           '''Play''': '''Játék''',
           '''Multiplayer Mode''': '''Többjátékos mód''',
-          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play".''':
+          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game!.\nWhen you are ready press "Play".''':
               '''Ennek a módnak a célja az ellenség legyőzése, a pontszerzés és a csapatod győzelemre juttatása.\n\nA szabályok egyszerűek:\n- A játékosok két csapatba szerveződnek.\n- Amikor egy játékos legyőz egy ellenfelet, csapata 100 pontot kap.\n- Az a csapat nyer, amelyik eléri a kívánt pontszámot.\n\nA csapattársaid a pirosak.\n\nEgyelőre csak CPU-k ellen lehet játszani.\n\nVálaszd ki a játék helyszínét és konfiguráld a játékot.\nHa készen állsz, nyomd meg a "Játék" gombot.''',
           '''Okay, got it!''': '''Oké, értem!''',
           '''Map''': '''Térkép''',
@@ -168,7 +168,7 @@ extension Localization on String {
           '''Multiplayer''': '''Multijoueur''',
           '''How to play''': '''Comment joueur''',
           '''Almost done!''': '''Presque fini !''',
-          '''Before starting tell me your name which will be used in the game.''':
+          '''Before starting tell me your name which will be used in the game!.''':
               '''Avant de commencer, dites-moi votre nom. Il sera utilisé dans le jeu.''',
           '''Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.''':
               '''Résolvez des énigmes glaciales et battez des ennemis dans un monde de jeu de rôle.\n\nBalayez vers la droite pour apprendre les concepts de base.''',
@@ -193,7 +193,7 @@ extension Localization on String {
           '''Next''': '''Suivant''',
           '''Play''': '''Jouer''',
           '''Multiplayer Mode''': '''Mode multijoueur''',
-          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play".''':
+          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game!.\nWhen you are ready press "Play".''':
               '''Le but de ce mode est de vaincre les ennemis, marquer des points et faire gagner votre équipe.\n\nLes règles sont simples :\n- Les joueurs sont divisés en deux équipes.\n- Chaque fois qu\'un joueur bat un adversaire, son équipe marque 100 points.\n- L\'équipe qui atteint le score nécessaire gagne.\n\nVos coéquipiers sont les rouges.\n\nPour l\'instant, il n\'est possible de jouer que contre des processeurs.\n\nChoisissez l\'endroit où jouer et configurez le jeu.\nQuand vous êtes prêt·e, appuyez sur « Jouer ».''',
           '''Okay, got it!''': '''D\'accord, compris !''',
           '''Map''': '''Carte''',
@@ -333,7 +333,7 @@ extension Localization on String {
           '''Multiplayer''': '''Multiplayer''',
           '''How to play''': '''Come giocare''',
           '''Almost done!''': '''Quasi fatto!''',
-          '''Before starting tell me your name which will be used in the game.''':
+          '''Before starting tell me your name which will be used in the game!.''':
               '''Prima di iniziare, dimmi come vuoi essere chiamato nel gioco.''',
           '''Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.''':
               '''Risolvi puzzle glaciali e sconfiggi tutti i nemici in questo RPG. \n\nScorri a destra per imparare i concetti base.''',
@@ -358,7 +358,7 @@ extension Localization on String {
           '''Next''': '''Avanti''',
           '''Play''': '''Gioca''',
           '''Multiplayer Mode''': '''Modalità multigiocatore''',
-          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play".''':
+          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game!.\nWhen you are ready press "Play".''':
               '''L\'obiettivo di questa modalità è quello di sconfiggere nemici, segnare punti e far vincere la tua squadra.\n\nLe regole sono semplici:\n- I giocatori sono suddivisi in due squadre.\n- Ogni volta che un giocatore sconfigge un avversario, la sua squadra fa 100 punti.\n- La squadra che raggiunge i punti richiesti vince.\n\nI tuoi compagni di squadra sono quelli vestiti di rosso.\n\nPer ora è possibile giocare solamente contro la CPU.\n\nScegli il posto in cui giocare e configura il gioco.\nQuando sei pronto premi "Gioca".''',
           '''Okay, got it!''': '''Ok, capito!''',
           '''Map''': '''Mappa''',
@@ -501,7 +501,7 @@ extension Localization on String {
           '''Multiplayer''': '''Multijugador''',
           '''How to play''': '''Cómo jugar''',
           '''Almost done!''': '''¡Casi listo!''',
-          '''Before starting tell me your name which will be used in the game.''':
+          '''Before starting tell me your name which will be used in the game!.''':
               '''Antes de comenzar dime el nombre que quieres usar en el juego.''',
           '''Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.''':
               '''Resuelve rompecabezas gélidos y derrota enemigos en un mundo RPG.\n\nDesliza a la derecha para aprender los conceptos básicos.''',
@@ -526,7 +526,7 @@ extension Localization on String {
           '''Next''': '''Siguiente''',
           '''Play''': '''Jugar''',
           '''Multiplayer Mode''': '''Multijugador''',
-          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play".''':
+          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game!.\nWhen you are ready press "Play".''':
               '''El objetivo de esta modalidad es derrotar a los enemigos y anotar puntos para hacer ganar a tu equipo.\n\nLas reglas son sencillas:\n- Los jugadores están organizados en dos equipos.\n- Cada vez que un jugador derrota a un oponente, el equipo anota 100 puntos.\n- El equipo que tenga más puntos gana la partida.\n\nTus compañeros de equipo están vestidos de rojo.\n\nPor el momento solo es posible jugar en contra de mobs.\n\nEscoge un lugar para jugar y configura la partida.\nCuando estés listo presiona «Jugar».''',
           '''Okay, got it!''': '''¡Entendido!''',
           '''Map''': '''Mapa''',
@@ -662,7 +662,7 @@ extension Localization on String {
           '''Multiplayer''': '''Багатокористувацька гра''',
           '''How to play''': '''Як грати''',
           '''Almost done!''': '''Майже готово!''',
-          '''Before starting tell me your name which will be used in the game.''':
+          '''Before starting tell me your name which will be used in the game!.''':
               '''Перед початком скажіть своє ім\'я, яке буде використано у грі.''',
           '''Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.''':
               '''Розв\'язуйте крижані головоломки та перемагайте ворогів у світі RPG.\n\nПроведіть пальцем праворуч, щоб вивчити основні поняття.''',
@@ -687,7 +687,7 @@ extension Localization on String {
           '''Next''': '''Далі''',
           '''Play''': '''Грати''',
           '''Multiplayer Mode''': '''Багатокористувацький режим''',
-          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play".''':
+          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game!.\nWhen you are ready press "Play".''':
               '''Мета цього режиму - перемагати ворогів, набирати очки та привести вашу команду до перемоги.\n\nПравила прості:\n- Гравці об’єднані у дві команди.\n- Всякий раз, коли гравець перемагає суперника, його команда набирає 100 очок.\n- Перемагає команда, яка досягне необхідного рахунку.\n\nТвої товариші по команді - червоні.\n\nНаразі можна грати лише проти CPU.\n\nВиберіть місце для гри та налаштуйте гру.\nКоли ви будете готові, натисніть "Грати".''',
           '''Okay, got it!''': '''Гаразд, зрозумів!''',
           '''Map''': '''Карта''',
@@ -828,7 +828,7 @@ extension Localization on String {
           '''Multiplayer''': '''Сетевая игра''',
           '''How to play''': '''Как играть''',
           '''Almost done!''': '''Почти готово!''',
-          '''Before starting tell me your name which will be used in the game.''':
+          '''Before starting tell me your name which will be used in the game!.''':
               '''Перед тем как начать, скажи мне своё имя, которое будет использоваться в игре.''',
           '''Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.''':
               '''Решай ледяные головоломки и побеждай врагов в РПГ мире.\n\nПроведи пальцем вправо, чтобы узнать базовые понятия.''',
@@ -853,7 +853,7 @@ extension Localization on String {
           '''Next''': '''Далее''',
           '''Play''': '''Играть''',
           '''Multiplayer Mode''': '''Сетевая игра''',
-          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play".''':
+          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game!.\nWhen you are ready press "Play".''':
               '''Цель этого режима игры - побеждать врагов, набирать очки и вести свою команду к победе.\n\nПравила просты:\n- Игроки разбиты на две команды.\n- Каждый раз, когда игрок побеждает соперника, его команда получает 100 очков.\n- Побеждает команда, набравшая необходимое количество очков.\n\nТы в команде красных.\n\nПока что можно играть против компьютера.\n\nВыбери место для игры и задай другие параметры.\nКогда ты будешь готов, нажми "Играть".''',
           '''Okay, got it!''': '''Хорошо, я понял!''',
           '''Map''': '''Место''',
@@ -995,7 +995,7 @@ extension Localization on String {
           '''Multiplayer''': '''Nhiều người chơi''',
           '''How to play''': '''Cách chơi''',
           '''Almost done!''': '''Sắp xong rồi!''',
-          '''Before starting tell me your name which will be used in the game.''':
+          '''Before starting tell me your name which will be used in the game!.''':
               '''Trước khi bắt đầu, hãy nói cho tôi biết tên của bạn, nó sẽ được sử dụng trong trò chơi.''',
           '''Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.''':
               '''Giải các vấn đề về băng và đánh bại các kẻ thù trong một thế giới RPG.\n\nVuốt phải để học các ý tưởng cơ bản.''',
@@ -1020,7 +1020,7 @@ extension Localization on String {
           '''Next''': '''Tiếp''',
           '''Play''': '''Chơi''',
           '''Multiplayer Mode''': '''Chế độ Nhiều người chơi''',
-          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play".''':
+          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game!.\nWhen you are ready press "Play".''':
               '''Mục đích của chế độ này là đánh bại các kẻ thù, đạt điểm số và làm cho đội của bạn thắng.\n\nLuật chơi rất đơn giản:\n- Những người chơi được xếp làm hai đội.\n- Bất cứ khi nào một người chơi đánh bại một đối phương, đội của anh ấy được 100 điểm.\n- Đội mà đạt được số điểm được yêu cầu sẽ giành chiến thắng.\n\nCác đồng đội của bạn là những người màu đỏ.\n\nHiện tại bạn chỉ có thể chơi với CPU.\n\nChọn địa điểm để chơi và thiết lập trò chơi.\nKhi bạn đã sẵn sàng, hãy nhấn "Chơi".''',
           '''Okay, got it!''': '''OK, hiểu rồi!''',
           '''Map''': '''Bản đồ''',
@@ -1160,7 +1160,7 @@ extension Localization on String {
           '''Multiplayer''': '''Multi-pemain''',
           '''How to play''': '''Cara bermain''',
           '''Almost done!''': '''Hampir selesai!''',
-          '''Before starting tell me your name which will be used in the game.''':
+          '''Before starting tell me your name which will be used in the game!.''':
               '''Sebelum mulai beritahu namamu yang akan digunakan pada permainan ini.''',
           '''Modes''': '''Mode-mode''',
           '''Movements''': '''Gerakan''',
@@ -1172,7 +1172,7 @@ extension Localization on String {
           '''Next''': '''Lanjut''',
           '''Play''': '''Main''',
           '''Multiplayer Mode''': '''Mode Multi-pemain''',
-          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play".''':
+          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game!.\nWhen you are ready press "Play".''':
               '''Tujuan dari mode ini adalah mengalahkan musuh, mendapatkan poin dan buat tim kamu menang.\n\nPeraturannya sederhana:\n- Para pemain diatur menjadi dua tim.\n- Setiap kali seorang pemain mengalahkan musuhnya, timnya mendapatkan 100 poin.\n- Tim yang mencapai skor yang dibutuhkan menang.\n\nTim kamu adalah yang berwarna merah.\n\nUntuk sekarang hanya memungkinkan bermain dengan CPU.\n\nPilih tempat bermain dan konfigurasi permainannya.\nJika kamu sudah siap tekan "Main".''',
           '''Okay, got it!''': '''Oke, mengerti!''',
           '''Map''': '''Peta''',
@@ -1225,7 +1225,7 @@ extension Localization on String {
           '''Multiplayer''': '''多人模式''',
           '''How to play''': '''游戏玩法''',
           '''Almost done!''': '''最后一步！''',
-          '''Before starting tell me your name which will be used in the game.''':
+          '''Before starting tell me your name which will be used in the game!.''':
               '''在开始游戏前，先说出你想在游戏中使用的名字吧。''',
           '''Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.''':
               '''在 RPG 式的世界中解决滑冰谜题，并击败敌人。\n\n向右滑动来了解基本概念。''',
@@ -1342,7 +1342,7 @@ extension Localization on String {
           '''Multiplayer''': '''Mehrspieler''',
           '''How to play''': '''Wie man spielt''',
           '''Almost done!''': '''Fast fertig!''',
-          '''Before starting tell me your name which will be used in the game.''':
+          '''Before starting tell me your name which will be used in the game!.''':
               '''Bevor wir beginnen, sag mir deinen Namen. Dieser wird im Spiel verwendet.''',
           '''Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts.''':
               '''Löse Eispuzzles und besiege deine Gegner in einer Rollenspielwelt.\n\nWische nach Rechts, um die Grundlagen zu erlernen.''',
@@ -1367,7 +1367,7 @@ extension Localization on String {
           '''Next''': '''Weiter''',
           '''Play''': '''Spiel starten''',
           '''Multiplayer Mode''': '''Mehrspieler-Modus''',
-          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press "Play".''':
+          '''The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it\'s only possible to play against CPUs.\n\nChoose the place to play and configure the game!.\nWhen you are ready press "Play".''':
               '''Das Ziel dieses Modus ist es, Gegner zu besiegen, Punkte zu sammeln und dein Team zum Sieg zu führen.\n\nDie Regeln sind einfach:\n- Die Spieler werden in zwei Teams eingeteilt.\n- Jedes Mal, wenn ein Spieler einen Gegner besiegt, erhält dessen Team 100 Punkte.\n- Das Team, das die erforderliche Punktzahl erreicht, gewinnt.\n\nDeine Mannschaftskameraden sind die Roten.\n\nIm Moment ist es nur möglich, gegen Computergesteurte Gegner zu spielen.\n\nWähle den Spielort und konfiguriere das Spiel.\nWenn du bereit bist, drücke "Spiel starten".''',
           '''Okay, got it!''': '''Alles klar!''',
           '''Map''': '''Karte''',

@@ -11,7 +11,7 @@ final appTheme = ThemeData(
   ),
 );
 
-ThemeData gameTheme;
+late ThemeData gameTheme;
 void updateGameTheme() => gameTheme = ThemeData(
       fontFamily: settings.useSystemFont ? null : 'dd5x7',
       textTheme: TextTheme(

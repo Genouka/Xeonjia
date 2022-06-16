@@ -16,7 +16,7 @@ extension RectOverlap on Rect {
 }
 
 // The number of device pixels for each logical pixel
-double devicePixelRatio;
+late double devicePixelRatio;
 
 // Align to the physical pixel grid
 // `this` should be a size in logical pixels to make sense

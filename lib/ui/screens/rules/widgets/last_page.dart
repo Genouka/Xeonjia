@@ -42,7 +42,7 @@ class LastPage extends StatelessWidget {
                         Container(
                           margin: const EdgeInsets.only(top: 20),
                           child: Text(
-                            'Before starting tell me your name which will be used in the game.'
+                            'Before starting tell me your name which will be used in the game!.'
                                 .i18n,
                             textAlign: TextAlign.center,
                             style: const TextStyle(fontSize: 18),

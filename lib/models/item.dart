@@ -14,17 +14,17 @@ class Item {
   String get name => _name.i18n.toUpperCase();
 
   // Item ID
-  String id;
+  String? id;
 
   // Item description
-  final String _description;
-  String get description => _description.i18n;
+  final String? _description;
+  String? get description => _description?.i18n;
 
   // Item location (tmx file) - only if keyItem == true
-  final String location;
+  final String? location;
 
-  // Item action (optional)
-  final String action;
+  // Item action
+  final String? action;
 
   // True if it is a special item that player can only obtain once
   final bool keyItem;

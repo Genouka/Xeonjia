@@ -28,7 +28,7 @@ class ModifierComponent extends BasicComponent {
       : super(
             null,
             Point(position.x / componentSize, position.y / componentSize),
-            {'image': 'mine.png', 'imageY': father.teamId.toDouble()}) {
+            {'image': 'mine.png', 'imageY': father!.teamId.toDouble()}) {
     _lifePointsDiff = -atk;
     explosionOnDelete = true;
   }
@@ -46,10 +46,10 @@ class ModifierComponent extends BasicComponent {
   String _itemId = '0';
 
   @override
-  BasicComponent father;
+  BasicComponent? father;
 
   // True if this is capable of being regenerated
-  bool _regenerable;
+  bool? _regenerable;
 
   // True if this should show an explosion animation on destruction
   bool explosionOnDelete = false;
@@ -58,13 +58,13 @@ class ModifierComponent extends BasicComponent {
   int get priority => 50;
 
   @override
-  bool isSolid({BasicComponent otherComponent}) => false;
+  bool isSolid({BasicComponent? otherComponent}) => false;
 
   @override
   void overlappedBy(BasicComponent componentAbove) {
     if (!isBeingDeleted &&
         componentAbove is CharacterComponent &&
-        (game.config.friendlyFire ||
+        (game!.config.friendlyFire ||
             (father?.teamId ?? -99) != componentAbove.teamId)) {
       componentAbove.lifePointsDifference(_lifePointsDiff,
           cause: father ?? this);
@@ -75,21 +75,21 @@ class ModifierComponent extends BasicComponent {
       for (final weapon in componentAbove.weaponList) {
         weapon.powerPoints += _powerPointsDelta;
       }
-      game.refreshWeaponButtons();
+      game!.refreshWeaponButtons();
       if (_itemId != '0' &&
           componentAbove.isPlayerOne &&
-          game.config.mode == GameMode.story) {
+          game!.config.mode == GameMode.story) {
         componentAbove.addItem(_itemId);
       }
-      if (_regenerable ?? false) game.modifiersToBeRegenerated.add(this);
+      if (_regenerable ?? false) game!.modifiersToBeRegenerated.add(this);
       if (explosionOnDelete) {
         isBeingDeleted = true;
-        game.playSound(Sfx.explosion);
+        game!.playSound(Sfx.explosion);
         animation = SpriteAnimation.fromFrameData(
-            game.images.fromCache(image),
+            game!.images.fromCache(image),
             SpriteAnimationData.sequenced(
               amount: 4,
-              texturePosition: Vector2(16, 16.0 * father.teamId),
+              texturePosition: Vector2(16, 16.0 * father!.teamId),
               textureSize: Vector2.all(16),
               stepTime: 0.05,
               loop: false,

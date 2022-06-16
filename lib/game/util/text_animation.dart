@@ -4,9 +4,9 @@ import 'package:xeonjia/game/components/abstract_basic.dart';
 // Show a text above the component for a few seconds
 mixin TextAnimation on BasicComponent {
   final _seconds = 0.4;
-  double _remainingSeconds;
+  late double _remainingSeconds;
   bool get _show => _text != null;
-  String _text;
+  String? _text;
 
   // Show text for _seconds
   void showText(String text) {

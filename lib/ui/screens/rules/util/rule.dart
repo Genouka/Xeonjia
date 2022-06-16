@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 // Game rule
 class Rule {
   Rule({
-    @required this.title,
-    @required this.subtitle,
+    required this.title,
+    required this.subtitle,
     this.image,
     this.icon,
   });
@@ -16,8 +16,8 @@ class Rule {
   final String subtitle;
 
   // Rule image
-  final String image;
+  final String? image;
 
   // Rule icon (instead of image)
-  final IconData icon;
+  final IconData? icon;
 }

@@ -11,7 +11,7 @@ class Settings {
         firstRun = json['firstRun'] ?? true,
         backgroundMusic = json['backgroundMusic'] ?? true,
         soundEffects = json['soundEffects'] ?? true,
-        _languageCode = json['languageCode'] ?? 'und';
+        _languageCode = json['languageCode'];
 
   // True if D-pad is enabled
   bool showDPad;
@@ -25,18 +25,16 @@ class Settings {
   bool audioSupported = true;
 
   // App language
-  String _languageCode;
-  bool get useSystemLanguage => _languageCode == 'und';
+  String? _languageCode;
+  bool get useSystemLanguage => _languageCode == null;
   String get _currentLanguageCode =>
-      useSystemLanguage ? Platform.localeName : _languageCode;
-  Locale get locale =>
-      enabledLocales.contains(Locale(_currentLanguageCode.split('_').first)) ||
-              !useSystemLanguage
-          ? Locale(_currentLanguageCode.split('_').first)
-          : const Locale('en');
-  set locale(Locale locale) {
-    _languageCode = locale?.toString();
-  }
+      useSystemLanguage ? Platform.localeName : _languageCode!;
+  Locale get locale => supportedLocales
+              .contains(Locale(_currentLanguageCode.split('_').first)) ||
+          !useSystemLanguage
+      ? Locale(_currentLanguageCode.split('_').first)
+      : const Locale('en');
+  set locale(Locale? locale) => _languageCode = locale?.toString();
 
   bool get useSystemFont =>
       ['ru', 'uk', 'vi', 'zh'].contains(locale.languageCode);

@@ -8,14 +8,14 @@ class Translation {
   String msgid;
 
   // Translated string
-  String msgstr;
+  String? msgstr;
 
   // Translation comments
-  String comments;
+  String? comments;
 
   @override
-  bool operator ==(other) => msgid == other.msgid;
+  bool operator ==(other) => msgid == (other as Translation).msgid;
 
   @override
-  int get hashCode => super.hashCode;
+  int get hashCode => msgid.hashCode;
 }

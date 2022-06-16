@@ -17,35 +17,33 @@ class ThinWallComponent extends BasicComponent {
       (_solidSide.dy != 0 && _solidSide.dy.sign == direction.dy.sign);
 
   @override
-  Rect collisionRect(DynamicComponent otherComponent) {
+  Rect? collisionRect(DynamicComponent otherComponent) {
     switch (_solidSide) {
       case Direction.down:
-        return otherComponent.direction.dy != 0
+        return otherComponent.direction!.dy != 0
             ? Rect.fromLTWH(
                 x,
-                y + height + (otherComponent.direction.dy > 0 ? 0 : -1),
+                y + height + (otherComponent.direction!.dy > 0 ? 0 : -1),
                 width,
                 1)
             : null;
-        break;
       case Direction.up:
-        return otherComponent.direction.dy != 0
+        return otherComponent.direction!.dy != 0
             ? Rect.fromLTWH(
-                x, y + (otherComponent.direction.dy > 0 ? 0 : -1), width, 1)
+                x, y + (otherComponent.direction!.dy > 0 ? 0 : -1), width, 1)
             : null;
-        break;
       case Direction.right:
-        return otherComponent.direction.dx != 0
+        return otherComponent.direction!.dx != 0
             ? Rect.fromLTWH(
-                x + width + (otherComponent.direction.dx > 0 ? 0 : -1),
+                x + width + (otherComponent.direction!.dx > 0 ? 0 : -1),
                 y,
                 1,
                 height)
             : null;
       case Direction.left:
-        return otherComponent.direction.dx != 0
+        return otherComponent.direction!.dx != 0
             ? Rect.fromLTWH(
-                x + (otherComponent.direction.dx > 0 ? 0 : -1), y, 1, height)
+                x + (otherComponent.direction!.dx > 0 ? 0 : -1), y, 1, height)
             : null;
       default:
         return null;

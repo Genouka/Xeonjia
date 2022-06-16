@@ -12,26 +12,26 @@ import 'package:xeonjia/resources/weapon_details.dart';
 // Abstract class used to manage weapons inside game
 // It defines what happens if someone use a weapon
 abstract class Weapon {
-  Weapon(this.id, this.maxPp) {
-    maxPp ??= 10 + level * 5.0;
-    _powerPoints = maxPp;
+  Weapon(this.id, double? maxPp) {
+    this.maxPp = maxPp ?? 10 + level * 5.0;
+    _powerPoints = this.maxPp;
   }
 
   // Weapon id
   final int id;
 
   // Weapon level
-  int level;
+  late int level;
 
   // Weapon attack value
-  double atk;
+  late double atk;
 
   // Number of times a weapon can be used
   double _powerPoints = 0;
-  double maxPp;
+  late double maxPp;
   double get ppPercentage => _powerPoints / maxPp;
   double get powerPoints => _powerPoints;
-  set powerPoints(double powerPoints) {
+  set powerPoints(double? powerPoints) {
     _powerPoints = powerPoints ?? double.infinity;
     if (_powerPoints > maxPp) restorePp();
   }
@@ -47,8 +47,8 @@ abstract class Weapon {
 
   // Function used when a shoot input happens
   @mustCallSuper
-  void shoot({@required CharacterComponent shooter}) {
-    if (shooter.isPlayerOne) game.refreshWeaponButtons();
+  void shoot({required CharacterComponent shooter}) {
+    if (shooter.isPlayerOne) game!.refreshWeaponButtons();
   }
 
   // Export / Import weapon details
@@ -68,7 +68,7 @@ abstract class Weapon {
 
 // Punch
 class PunchWeapon extends Weapon {
-  PunchWeapon({@required this.level}) : super(0, double.infinity) {
+  PunchWeapon({required this.level}) : super(0, double.infinity) {
     atk = level + 1.0;
   }
 
@@ -76,21 +76,21 @@ class PunchWeapon extends Weapon {
   final int level;
 
   @override
-  void shoot({@required CharacterComponent shooter}) {
+  void shoot({required CharacterComponent shooter}) {
     var componentInFront = shooter.componentInFront();
     if (componentInFront is CharacterComponent && componentInFront.friendly) {
       return;
     }
     componentInFront?.lifePointsDifference(-atk, cause: shooter);
-    shooter.animate([shooter.punchSprites[shooter.orientation]]);
-    if (shooter.isPlayerOne) game.playSound(Sfx.punch);
+    shooter.animate([shooter.punchSprites[shooter.orientation]!]);
+    if (shooter.isPlayerOne) game!.playSound(Sfx.punch);
     super.shoot(shooter: shooter);
   }
 }
 
 // Snowball
 class SnowBallWeapon extends Weapon {
-  SnowBallWeapon({@required this.level, double powerPoints})
+  SnowBallWeapon({required this.level, double? powerPoints})
       : super(1, powerPoints) {
     atk = 10 + level * 2.0;
   }
@@ -99,14 +99,14 @@ class SnowBallWeapon extends Weapon {
   final int level;
 
   @override
-  void shoot({@required CharacterComponent shooter}) {
+  void shoot({required CharacterComponent shooter}) {
     if (powerPoints > 0) {
       SnowballComponent(
           Point(shooter.x, shooter.y), shooter, shooter.orientation, atk);
       --powerPoints;
       super.shoot(shooter: shooter);
-      if (shooter == game.playerOne || game.config.mode != GameMode.story) {
-        shooter.animate([shooter.punchSprites[shooter.orientation]]);
+      if (shooter == game!.playerOne || game!.config.mode != GameMode.story) {
+        shooter.animate([shooter.punchSprites[shooter.orientation]!]);
       }
     }
   }
@@ -114,7 +114,7 @@ class SnowBallWeapon extends Weapon {
 
 // Mine
 class MineWeapon extends Weapon {
-  MineWeapon({@required this.level, double powerPoints})
+  MineWeapon({required this.level, double? powerPoints})
       : super(2, powerPoints) {
     atk = 10 + level * 2.0;
   }
@@ -123,7 +123,7 @@ class MineWeapon extends Weapon {
   final int level;
 
   @override
-  void shoot({@required CharacterComponent shooter}) {
+  void shoot({required CharacterComponent shooter}) {
     if (powerPoints > 0) {
       ModifierComponent.mine(Point(shooter.x, shooter.y), shooter, atk);
       --powerPoints;

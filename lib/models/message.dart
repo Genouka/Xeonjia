@@ -8,9 +8,9 @@ import 'package:xeonjia/util/local_data_controller.dart';
 class Message {
   Message(this.text,
       {this.author = '', this.component, bool translate = true, this.font}) {
-    var m = RegExp(r'([^\/]*)\/?([^_]*)_?(.*)').firstMatch(author);
-    var name = m.group(2) != '' ? m.group(2) : component?.name ?? '';
-    authorName = m.group(1) != '' ? m.group(1) : (author == '' ? '' : name);
+    var m = RegExp(r'([^\/]*)\/?([^_]*)_?(.*)').firstMatch(author)!;
+    var name = m.group(2) != '' ? m.group(2)! : component?.name ?? '';
+    authorName = m.group(1) != '' ? m.group(1)! : (author == '' ? '' : name);
     var mood = m.group(3);
     var fileName = name + (mood != '' ? '_$mood' : '');
     image = authorName != '' ? 'assets/images/heads/$fileName.png' : null;
@@ -25,7 +25,7 @@ class Message {
           .i18n
           .replaceAll('\n', r'\n')
           .replaceAllMapped(RegExp('{{(.*?)}}'),
-              (m) => game.environment.lookForValue(Sym(m[1])).toString());
+              (m) => game!.environment.lookForValue(Sym(m[1]!)).toString());
       if (font == 'kobi') {
         const diacritics =
             'ÀÁÂÃÄÅàáâãäåắạÒÓÔÕÕÖØòóôõöøốọồớÈÉÊËèéêëềẽðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüựứừưÑñŠšŸÿýŽžđ';
@@ -52,16 +52,16 @@ class Message {
   String author;
 
   // Author image
-  String image;
+  String? image;
 
   // Author name (name displayed)
-  String authorName;
+  late String authorName;
 
   // Character speaking
-  BasicComponent component;
+  BasicComponent? component;
 
   // Font family used (null if default)
-  String font;
+  String? font;
 }
 
 // Answer shown in dialogs

@@ -7,11 +7,9 @@ import 'package:xeonjia/game/util/lifepoints_color.dart';
 mixin LifePointsBar on BasicComponent {
   final _padding = 5.0;
   final _seconds = 2.0;
-  double _remainingSeconds;
+  double _remainingSeconds = -1;
   bool get _show =>
-      !isPlayerOne &&
-      lifePoints != maxLifePoints &&
-      (_remainingSeconds ?? -1) >= 0;
+      !isPlayerOne && lifePoints != maxLifePoints && _remainingSeconds >= 0;
 
   @override
   void render(Canvas canvas) {

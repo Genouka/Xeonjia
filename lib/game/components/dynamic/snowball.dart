@@ -18,10 +18,10 @@ class SnowballComponent extends DynamicComponent {
             {'image': 'snowball.png'});
 
   @override
-  BasicComponent father;
+  BasicComponent? father;
 
   @override
-  Direction direction;
+  Direction? direction;
 
   @override
   final double atk;
@@ -30,7 +30,7 @@ class SnowballComponent extends DynamicComponent {
   double get speed => defaultSpeed * 2;
 
   @override
-  bool isSolid({DynamicComponent otherComponent}) => false;
+  bool isSolid({DynamicComponent? otherComponent}) => false;
 
   @override
   bool isFlying() => true;
@@ -39,24 +39,25 @@ class SnowballComponent extends DynamicComponent {
   int get priority => 125;
 
   @override
-  void onCollision(BasicComponent collidedComponent) {
+  void onCollision(BasicComponent? collidedComponent) {
     if (isBeingDeleted) return;
-    x += direction.dx * componentSize / 2;
-    y += direction.dy * componentSize / 2;
+    x += direction!.dx * componentSize / 2;
+    y += direction!.dy * componentSize / 2;
     stop();
-    game.playSound(Sfx.snowball);
+    game!.playSound(Sfx.snowball);
     isBeingDeleted = true;
     animation = SpriteAnimation.fromFrameData(
-        game.images.fromCache(image),
+        game!.images.fromCache(image),
         SpriteAnimationData.sequenced(
           amount: 4,
-          texturePosition: Vector2(16, 16.0 * father.teamId),
+          texturePosition: Vector2(16, 16.0 * father!.teamId),
           textureSize: Vector2.all(16),
           stepTime: 0.02,
           loop: false,
         ))
       ..onComplete = delete;
-    if (game.config.friendlyFire || collidedComponent.teamId != father.teamId) {
+    if (game!.config.friendlyFire ||
+        collidedComponent?.teamId != father!.teamId) {
       collidedComponent?.lifePointsDifference(-atk, cause: father);
     }
   }

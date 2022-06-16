@@ -13,15 +13,15 @@ Widget insertNameForm(GlobalKey<FormState> key,
         keyboardType: TextInputType.text,
         textCapitalization: TextCapitalization.characters,
         onFieldSubmitted: (String text) {
-          onSubmitted(text?.trim());
+          onSubmitted(text.trim());
           SystemChrome.restoreSystemUIOverlays();
         },
         onChanged: (String input) {
-          if (input.isEmpty) key.currentState.validate();
+          if (input.isEmpty) key.currentState?.validate();
         },
         validator: (value) {
           if (value == '') return "What's your name?".i18n + ' [A-Z]';
-          return value.trim().length < 2 ? 'Too short.'.i18n : null;
+          return value!.trim().length < 2 ? 'Too short.'.i18n : null;
         },
         inputFormatters: [
           LengthLimitingTextInputFormatter(10),

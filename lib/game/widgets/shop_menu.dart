@@ -14,7 +14,7 @@ class ShopMenu extends StatefulWidget {
 }
 
 class _ShopMenuState extends State<ShopMenu> {
-  double _width;
+  late double _width;
 
   @override
   Widget build(BuildContext context) {
@@ -56,19 +56,22 @@ class _ShopMenuState extends State<ShopMenu> {
                         ),
                         trailing: Text(
                           '${item.price} ¤',
-                          style: Theme.of(context).textTheme.bodyText2.copyWith(
-                              color: game.playerOne.money >= item.price
-                                  ? Colors.white
-                                  : Colors.red),
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyText2!
+                              .copyWith(
+                                  color: game!.playerOne!.money >= item.price
+                                      ? Colors.white
+                                      : Colors.red),
                         ),
-                        onTap: game.playerOne.money >= item.price
+                        onTap: game!.playerOne!.money >= item.price
                             ? () {
                                 setState(() {
-                                  game.playerOne.moneyDifference(-item.price,
+                                  game!.playerOne!.moneyDifference(-item.price,
                                       popup: false);
-                                  game.executeAction(action: item.action);
+                                  game!.executeAction(action: item.action);
                                 });
-                                game.refreshLifePointsBar();
+                                game!.refreshLifePointsBar();
                                 closeMenu();
                               }
                             : null,
@@ -82,7 +85,7 @@ class _ShopMenuState extends State<ShopMenu> {
           Container(
             margin: const EdgeInsets.only(top: 5),
             child: Text(
-                '${game.playerOne.lifePoints.round()} LP  -  ${game.playerOne.money} ¤',
+                '${game!.playerOne!.lifePoints.round()} LP  -  ${game!.playerOne!.money} ¤',
                 style: Theme.of(context).textTheme.subtitle2),
           ),
           Expanded(
@@ -101,8 +104,8 @@ class _ShopMenuState extends State<ShopMenu> {
   }
 
   void closeMenu() {
-    game.overlays.remove('shop');
-    game.setMessage(Message('Let me know if you need anything else.'.i18n,
+    game!.overlays.remove('shop');
+    game!.setMessage(Message('Let me know if you need anything else.'.i18n,
         translate: false, author: 'pharmacist/elderly'));
   }
 

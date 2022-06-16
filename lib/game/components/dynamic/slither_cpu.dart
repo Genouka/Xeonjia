@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/util/lifepoints_bar.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -18,18 +19,19 @@ class SlitherCpuComponent extends DynamicComponent with LifePointsBar {
 
   // Frequency of movements (CPU only)
   final double _updatePeriod;
-  double _timeToNextMove;
+  late double _timeToNextMove;
 
   @override
-  void lifePointsDifference(double difference, {cause, double poison = 0}) {
-    if (cause.isPlayerOne) {
-      super.lifePointsDifference(difference, cause: cause, poison: poison);
+  void lifePointsDifference(double difference,
+      {BasicComponent? cause, double poison = 0}) {
+    if (cause?.isPlayerOne ?? false) {
+      super.lifePointsDifference(difference, cause: cause!, poison: poison);
     }
   }
 
   @override
   void update(double dt) {
-    if ((_timeToNextMove -= dt) < 0 && game.isNotPaused) {
+    if ((_timeToNextMove -= dt) < 0 && game!.isNotPaused) {
       updateDirection(GetDirection.random);
       _timeToNextMove = _updatePeriod;
     }

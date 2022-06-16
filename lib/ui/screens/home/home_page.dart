@@ -17,8 +17,8 @@ class HomePage extends StatelessWidget {
         'title': 'Story mode'.i18n,
         'goto': () => GamePage(MatchConfig(GameMode.story)),
       },
-      {'title': 'Multiplayer'.i18n, 'goto': () => ArenaPage()},
-      {'title': 'How to play'.i18n, 'goto': () => const RulesPage()},
+      {'title': 'Multiplayer'.i18n, 'goto': ArenaPage.new},
+      {'title': 'How to play'.i18n, 'goto': RulesPage.new},
     ];
   }
 

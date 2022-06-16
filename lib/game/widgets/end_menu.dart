@@ -11,20 +11,20 @@ class EndMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     String title;
     var content = '';
-    if (game.config.mode == GameMode.story) {
+    if (game!.config.mode == GameMode.story) {
       title = 'You run out of energy !'.i18n;
       content = 'You lost %s ¤ and woke up after a short nap'
           .i18n
           .fill(['$_lostMoney']);
     } else {
-      title = (game.ranking.first.id == game.playerOne.teamId)
+      title = (game!.ranking.first.id == game!.playerOne!.teamId)
           ? 'Your team won'.i18n
           : 'Your team lost'.i18n;
-      content = (game.remainingTime <= 0)
+      content = (game!.remainingTime <= 0)
           ? 'The time is over.'.i18n
           : '%s points have been achieved.'
               .i18n
-              .fill([game.config.maxPoints.toString()]);
+              .fill([game!.config.maxPoints.toString()]);
       content += '\n\n' + 'Do you want to restart this game?'.i18n;
     }
 
@@ -49,21 +49,21 @@ class EndMenu extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {
-                  game.init();
-                  game.overlays.remove('endMenu');
+                  game!.init();
+                  game!.overlays.remove('endMenu');
                 },
                 child: Text(
-                  game.config.mode == GameMode.story
+                  game!.config.mode == GameMode.story
                       ? 'Continue'.i18n
                       : 'Yes'.i18n,
                   style: Theme.of(context).textTheme.bodyText2,
                 ),
               ),
-              if (game.config.mode != GameMode.story)
+              if (game!.config.mode != GameMode.story)
                 TextButton(
                   onPressed: () {
                     Navigator.pop(context);
-                    game.dispose();
+                    game!.dispose();
                   },
                   child: Text(
                     'No'.i18n,

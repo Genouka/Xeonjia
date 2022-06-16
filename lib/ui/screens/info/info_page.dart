@@ -112,10 +112,10 @@ class _InfoPageState extends State<InfoPage> {
           var licenseList = <Widget>[];
           for (final license in licenses) {
             licenseList.add(ExpansionTile(
-              title: Text(license['lib']),
+              title: Text(license['lib']!),
               initiallyExpanded: true,
               children: <Widget>[
-                SingleChildScrollView(child: Text(license['text'])),
+                SingleChildScrollView(child: Text(license['text']!)),
               ],
             ));
           }

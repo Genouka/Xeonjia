@@ -16,7 +16,7 @@ import 'package:xeonjia/util/local_data_controller.dart';
 // Component able to move on the game field
 abstract class DynamicComponent extends BasicComponent with TextAnimation {
   DynamicComponent(
-      int id, Point startingPosition, Map<String, dynamic> properties)
+      int? id, Point startingPosition, Map<String, dynamic> properties)
       : super(id, startingPosition, properties);
 
   // Constructor used when component is imported from a tmx file
@@ -46,13 +46,13 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   void onCreate() {
     const size = 16.0;
     for (final d in Direction.values) {
-      _sprites[d] = Sprite(game.images.fromCache(image),
+      _sprites[d] = Sprite(game!.images.fromCache(image),
           srcPosition: Vector2(d.index * size, size),
           srcSize: Vector2.all(size));
-      _walkingSprites[d] = Sprite(game.images.fromCache(image),
+      _walkingSprites[d] = Sprite(game!.images.fromCache(image),
           srcPosition: Vector2(d.index * size, size),
           srcSize: Vector2.all(size));
-      punchSprites[d] = Sprite(game.images.fromCache(image),
+      punchSprites[d] = Sprite(game!.images.fromCache(image),
           srcPosition: Vector2(d.index * size, size * 2),
           srcSize: Vector2.all(size));
     }
@@ -66,7 +66,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
       wasStationary = true;
       direction = newDirection;
       updateOrientation();
-      if (animated) animate([_walkingSprites[orientation]]);
+      if (animated) animate([_walkingSprites[orientation]!]);
       ++movesCounter;
 
       // Decrease life points cause poison
@@ -75,7 +75,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   }
 
   // Update component orientation
-  void updateOrientation([Direction newDirection]) {
+  void updateOrientation([Direction? newDirection]) {
     orientation = newDirection ?? direction ?? orientation;
   }
 
@@ -93,22 +93,22 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
 
   // Recalculate component position
   void _move(double dt) {
-    Rect collidedRect;
+    Rect? collidedRect;
     List<BasicComponent> collidedComponents = [];
     final overlappedComponents = <BasicComponent>[];
 
     // Distance traveled
     final delta = min(speed * dt, componentSize - 1);
     final candidatePositionTemp =
-        toRect().translate(direction.dx * delta, direction.dy * delta);
+        toRect().translate(direction!.dx * delta, direction!.dy * delta);
     final candidatePosition = Rect.fromLTWH(
-        candidatePositionTemp.left.gridAligned,
-        candidatePositionTemp.top.gridAligned,
+        candidatePositionTemp.left.gridAligned.toDouble(),
+        candidatePositionTemp.top.gridAligned.toDouble(),
         candidatePositionTemp.width,
         candidatePositionTemp.height);
 
     // Check if this is going to collide or overlap another component
-    for (final component in game.children) {
+    for (final component in game!.children) {
       if (component is BasicComponent &&
           component != this &&
           component != father &&
@@ -128,13 +128,13 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
 
     if (collidedRect != null) {
       // This component collided another one
-      if (direction.dx < 0) {
+      if (direction!.dx < 0) {
         x = collidedRect.right;
-      } else if (direction.dx > 0) {
+      } else if (direction!.dx > 0) {
         x = collidedRect.left - width;
-      } else if (direction.dy < 0) {
+      } else if (direction!.dy < 0) {
         y = collidedRect.bottom;
-      } else if (direction.dy > 0) {
+      } else if (direction!.dy > 0) {
         y = collidedRect.top - height;
       }
       for (final e in collidedComponents) {
@@ -162,9 +162,8 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
       collidedComponent.lifePointsDifference(-atk,
           cause: this, poison: poisonAtk);
     } else if (settings.soundEffects &&
-        (collidedComponent is! StaticComponent ||
-            !(collidedComponent as StaticComponent).isFloor)) {
-      game.playSound(Sfx.collision);
+        (collidedComponent is! StaticComponent || !collidedComponent.isFloor)) {
+      game!.playSound(Sfx.collision);
     }
     if (_wallInFront() == null) {
       collidedComponent.collidedBy(this);
@@ -172,13 +171,11 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   }
 
   @mustCallSuper
-  void stop() {
-    direction = null;
-  }
+  void stop() => direction = null;
 
   // Get components under this one
   List<BasicComponent> componentsUnder() {
-    return game.children
+    return game!.children
         .where((component) =>
             (component is StaticComponent || component is ThinWallComponent) &&
             (component as BasicComponent)
@@ -189,13 +186,12 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   }
 
   // Workaround waiting for the priority/layers + collision fix
-  ThinWallComponent _wallInFront() {
-    return componentsUnder().firstWhereOrNull(
-        (c) => c is ThinWallComponent && c.isBlocking(orientation));
-  }
+  ThinWallComponent? _wallInFront() => componentsUnder().firstWhereOrNull(
+          (c) => c is ThinWallComponent && c.isBlocking(orientation))
+      as ThinWallComponent?;
 
   // Get component in front of this
-  BasicComponent componentInFront() {
+  BasicComponent? componentInFront() {
     var wall = _wallInFront();
     if (wall != null) return wall;
     Offset offset;
@@ -213,14 +209,14 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
         offset = Offset(x - componentSize / 2, y + componentSize / 2);
         break;
     }
-    return game.children
+    return game!.children
         .where((component) =>
             component is BasicComponent &&
             component.toRect().contains(offset) &&
             !component.isFlying() &&
             !component.isBeingDeleted)
         .sorted((a, b) => a.priority.compareTo(b.priority))
-        .lastOrNull;
+        .lastOrNull as BasicComponent?;
   }
 
   @override

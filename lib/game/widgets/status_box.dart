@@ -8,7 +8,7 @@ import 'package:xeonjia/models/game_mode.dart';
 class StatusBox extends StatefulWidget {
   @override
   final GlobalKey<State<StatusBox>> key = GlobalKey();
-  StatusBoxState get state => key.currentState;
+  StatusBoxState get state => key.currentState as StatusBoxState;
 
   @override
   State<StatusBox> createState() => StatusBoxState();
@@ -21,10 +21,10 @@ class StatusBoxState extends State<StatusBox> {
 
   @override
   Widget build(BuildContext context) {
-    return game.playerOne == null || game.miniMapEnabled
+    return game!.playerOne == null || game!.miniMapEnabled
         ? Container()
         : InfoBox(
-            radius: game.config.mode == GameMode.tdm ? 10 : 30,
+            radius: game!.config.mode == GameMode.tdm ? 10 : 30,
             child: Column(
               children: [
                 Row(
@@ -40,13 +40,13 @@ class StatusBoxState extends State<StatusBox> {
                     Expanded(
                       child: _PercentIndicator(
                         values: [
-                          game.playerOne.lifePoints,
-                          game.playerOne.maxLifePoints
+                          game!.playerOne!.lifePoints,
+                          game!.playerOne!.maxLifePoints
                         ],
-                        text: game.playerOne.lifePoints.round().toString(),
+                        text: game!.playerOne!.lifePoints.round().toString(),
                         colors: [
-                          lifePointsColor(game.playerOne.lifePoints /
-                              game.playerOne.maxLifePoints),
+                          lifePointsColor(game!.playerOne!.lifePoints /
+                              game!.playerOne!.maxLifePoints),
                           Colors.grey
                         ],
                       ),
@@ -58,7 +58,7 @@ class StatusBoxState extends State<StatusBox> {
                     ),
                   ],
                 ),
-                if (game.config.mode == GameMode.tdm) ...[
+                if (game!.config.mode == GameMode.tdm) ...[
                   Container(height: 10),
                   Row(
                     children: [
@@ -72,25 +72,25 @@ class StatusBoxState extends State<StatusBox> {
                       ),
                       Expanded(
                         child: _PercentIndicator(
-                          values:
-                              game.teams.first.points == game.teams.last.points
-                                  ? [0.5, 1]
-                                  : [
-                                      game.teams.first.points.toDouble(),
-                                      game.teams.last.points.toDouble() +
-                                          game.teams.first.points,
-                                    ],
-                          text: (game.teams.first.points.toString() ?? '') +
+                          values: game!.teams!.first.points ==
+                                  game!.teams!.last.points
+                              ? [0.5, 1]
+                              : [
+                                  game!.teams!.first.points.toDouble(),
+                                  game!.teams!.last.points.toDouble() +
+                                      game!.teams!.first.points,
+                                ],
+                          text: game!.teams!.first.points.toString() +
                               ' - ' +
-                              (game.teams.last.points.toString() ?? ''),
+                              game!.teams!.last.points.toString(),
                           colors: [
-                            game.teams.first.color ?? '',
-                            game.teams.last.color ?? '',
+                            game!.teams!.first.color,
+                            game!.teams!.last.color,
                           ],
                         ),
                       ),
                       Text(
-                        '  ${game.remainingTime}',
+                        '  ${game!.remainingTime}',
                         style: Theme.of(context).textTheme.button,
                       ),
                     ],
@@ -105,8 +105,8 @@ class StatusBoxState extends State<StatusBox> {
 // Linear percent indicator
 class _PercentIndicator extends StatelessWidget {
   _PercentIndicator({
-    @required this.values,
-    @required this.text,
+    required this.values,
+    required this.text,
     this.colors = const [Colors.lightBlue, Color(0xFF81D4FA)],
     // ignore: unused_element
     this.poisoned = false,
