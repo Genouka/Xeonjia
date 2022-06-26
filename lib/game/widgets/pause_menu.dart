@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
@@ -47,7 +46,7 @@ class _PauseMenuState extends State<PauseMenu> {
               child: FittedBox(
                 fit: BoxFit.fitWidth,
                 child: Text(
-                  describeEnum(pauseMode!).i18n.toUpperCase(),
+                  pauseMode!.name.i18n.toUpperCase(),
                   style: Theme.of(context).textTheme.headline3,
                 ),
               ),
@@ -88,7 +87,7 @@ class _PauseMenuState extends State<PauseMenu> {
     pauseMode ??= widget.mode;
     actions = [
       actionButton(
-        describeEnum(pauseMode!).i18n.toUpperCase(),
+        pauseMode!.name.i18n.toUpperCase(),
         () {
           if (pauseMode == PauseMode.restart) {
             game!.overlays.remove('pauseMenu');

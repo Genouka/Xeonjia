@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:xeonjia/i18n/ui.i18n.dart';
+import 'package:xeonjia/util/i18n.dart';
 
 // Form used to insert player name
 Widget insertNameForm(GlobalKey<FormState> key,
