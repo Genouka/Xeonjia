@@ -1,4 +1,4 @@
-import 'package:xeonjia/i18n/ui.i18n.dart';
+import 'package:xeonjia/util/i18n.dart';
 
 // List of every weapon available in this game
 // id == list index

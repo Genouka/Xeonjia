@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/ui/screens/rules/util/rule.dart';
+import 'package:xeonjia/util/i18n.dart';
 
 // Global rules
 List<Rule> rules() => [

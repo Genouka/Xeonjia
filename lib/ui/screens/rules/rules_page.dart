@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/rules/resources/rules.dart';
 import 'package:xeonjia/ui/screens/rules/widgets/last_page.dart';
 import 'package:xeonjia/ui/screens/rules/widgets/rule_page.dart';
+import 'package:xeonjia/util/i18n.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 class RulesPage extends StatefulWidget {

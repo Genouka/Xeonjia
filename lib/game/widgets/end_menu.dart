@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/game_mode.dart';
+import 'package:xeonjia/util/i18n.dart';
 
 class EndMenu extends StatelessWidget {
   const EndMenu([this._lostMoney = 0]);

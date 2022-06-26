@@ -1,4 +1,4 @@
-import 'package:xeonjia/i18n/story.i18n.dart';
+import 'package:xeonjia/util/i18n.dart';
 
 // Item in story mode (eg key, potion, stone, gem, ...)
 class Item {

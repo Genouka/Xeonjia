@@ -6,13 +6,13 @@ import 'package:xeonjia/game/util/npc_controller.dart';
 import 'package:xeonjia/game/util/respawn_animation.dart';
 import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/item.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/models/tile.dart';
+import 'package:xeonjia/util/i18n.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 // Dynamic component used for human-like players

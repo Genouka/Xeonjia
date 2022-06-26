@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/util/little_scheme.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/item.dart';
 import 'package:xeonjia/ui/basic.dart';
+import 'package:xeonjia/util/i18n.dart';
 
 // Backpack menu
 class BackpackMenu extends StatefulWidget {

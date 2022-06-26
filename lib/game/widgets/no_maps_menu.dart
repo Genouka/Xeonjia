@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/i18n/ui.i18n.dart';
+import 'package:xeonjia/util/i18n.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 // Menu displayed if there are no more maps to play

@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:ui';
 
-import 'package:xeonjia/main.dart';
+import 'package:xeonjia/util/i18n.dart';
 
 // Class used to store settings data
 class Settings {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/i18n/ui.i18n.dart';
+import 'package:xeonjia/util/i18n.dart';
 
 // Page shown while the map is loading
 class LoadingPage extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/i18n/ui.i18n.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/shop_item.dart';
+import 'package:xeonjia/util/i18n.dart';
 
 // Menu used to buy items in stores
 class ShopMenu extends StatefulWidget {

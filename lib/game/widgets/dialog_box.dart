@@ -3,9 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/i18n/story.i18n.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
+import 'package:xeonjia/util/i18n.dart';
 
 class DialogBox extends StatefulWidget {
   DialogBox() : super(key: GlobalKey());

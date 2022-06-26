@@ -1,5 +1,4 @@
 import 'dart:io';
-// ignore: depend_on_referenced_packages
 import 'package:path/path.dart';
 
 import '../update_po_files.dart';

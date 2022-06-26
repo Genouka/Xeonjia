@@ -7,24 +7,8 @@ import 'package:i18n_extension/i18n_widget.dart';
 import 'package:xeonjia/ui/screens/home/home_page.dart';
 import 'package:xeonjia/ui/screens/rules/rules_page.dart';
 import 'package:xeonjia/ui/themes.dart';
+import 'package:xeonjia/util/i18n.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
-
-const List<Locale> enabledLocales = [
-  Locale('de'),
-  Locale('en'),
-  Locale('es'),
-  Locale('fr'),
-  Locale('hu'),
-  Locale('it'),
-  Locale('ru'),
-  Locale('vi'),
-];
-final List<Locale> supportedLocales = [
-  ...enabledLocales,
-  const Locale('id'),
-  const Locale('uk'),
-  const Locale('zh'),
-];
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
