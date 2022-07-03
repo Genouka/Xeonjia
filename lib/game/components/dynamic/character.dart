@@ -73,7 +73,7 @@ class CharacterComponent extends DynamicComponent
       if (game!.config.mode == GameMode.story) {
         _itemList = List.from(mainCharacter.itemList);
       }
-      game!.executeAction(action: game!.map.action!, actor: game!.playerOne!);
+      game!.executeAction(action: game!.map.action, actor: game!.playerOne!);
     } else {
       npcController = NpcController(
           tile.properties['movementPattern'], tile.properties['shootPattern']);
@@ -236,7 +236,7 @@ class CharacterComponent extends DynamicComponent
       if (isPlayerOne) {
         game!.end();
       } else if (!game!.hasAction) {
-        game!.executeAction(action: game!.map.action!, actor: game!.playerOne!);
+        game!.executeAction(action: game!.map.action!, actor: game!.playerOne);
       }
     } else {
       ++defeats;

@@ -22,7 +22,7 @@ class OptionList extends StatelessWidget {
             value: settings.showDPad,
             onChanged: (newValue) {
               settings.showDPad = newValue!;
-              SettingsPage.of(context).refresh();
+              (SettingsPage.of(context) as SettingsPageState).refresh();
               saveSettings();
             }),
         if (settings.audioSupported)
@@ -36,7 +36,7 @@ class OptionList extends StatelessWidget {
               value: settings.backgroundMusic,
               onChanged: (newValue) {
                 settings.backgroundMusic = newValue!;
-                SettingsPage.of(context).refresh();
+                (SettingsPage.of(context) as SettingsPageState).refresh();
                 saveSettings();
               }),
         if (settings.audioSupported)
@@ -48,7 +48,7 @@ class OptionList extends StatelessWidget {
               value: settings.soundEffects,
               onChanged: (newValue) {
                 settings.soundEffects = newValue!;
-                SettingsPage.of(context).refresh();
+                (SettingsPage.of(context) as SettingsPageState).refresh();
                 saveSettings();
               }),
         ListTile(
@@ -98,7 +98,7 @@ class OptionList extends StatelessWidget {
               I18n.of(context).locale = settings.locale;
               updateGameTheme();
               saveSettings();
-              SettingsPage.of(context).refresh();
+              (SettingsPage.of(context) as SettingsPageState).refresh();
             },
             items: <DropdownMenuItem<Locale>>[
               DropdownMenuItem<Locale>(

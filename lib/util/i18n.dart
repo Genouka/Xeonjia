@@ -54,8 +54,8 @@ extension Localization on String {
     for (final locale in supportedLocales) {
       var language = locale.languageCode;
       if (language == 'en') continue;
-      if (language == 'zh') language += '-Hans';
-      if (language == 'pt') language += '-BR';
+      if (language == 'zh') language += '_Hans';
+      if (language == 'pt') language += '_BR';
       for (final fileName in ['story', 'ui']) {
         _translations += await GettextImporter().fromAssetFile(
             locale.languageCode, 'locale/$language/LC_MESSAGES/$fileName.po');

@@ -11,9 +11,10 @@ class BackgroundComponent extends SpriteComponent {
   int get priority => -999;
 
   @override
-  void handleResize(Vector2 size) {
+  void onGameResize(Vector2 size) {
     width = game!.map.width * componentSize;
     height = game!.map.height * componentSize;
+    super.onGameResize(size);
   }
 
   @override

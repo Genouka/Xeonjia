@@ -7,8 +7,8 @@ import 'package:xeonjia/util/i18n.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 class SettingsPage extends StatefulWidget {
-  static SettingsPageState of(BuildContext context) =>
-      context.findAncestorStateOfType() as SettingsPageState;
+  static State<SettingsPage> of(BuildContext context) =>
+      context.findAncestorStateOfType()!;
 
   @override
   State<SettingsPage> createState() => SettingsPageState();

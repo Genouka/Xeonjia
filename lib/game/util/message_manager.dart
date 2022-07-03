@@ -47,7 +47,7 @@ class MessageManager {
       return previousValue;
     }));
     _currentIndex = 0;
-    game!.dialogBox.state.refresh();
+    game!.dialogBox.state?.refresh();
     game!.pause(stopMusic: false);
     game!.playSound(Sfx.dialog);
   }

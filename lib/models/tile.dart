@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
@@ -12,14 +13,13 @@ class Tile {
     Map<String, dynamic>? properties,
     this.sprite,
     this.size,
-    this.animationSprites,
     this.animationStepTime,
     this.position,
     this.layer,
   }) {
     this.properties = properties ?? {};
+    sprite ??= Sprite(Flame.images.fromCache('background.png'));
     size ??= componentSize;
-    animationSprites ??= [];
   }
 
   // Tile id and gid defined in the TMX file
@@ -40,7 +40,7 @@ class Tile {
   double? size;
 
   // Component animation
-  List<Sprite>? animationSprites;
+  List<Sprite> animationSprites = [];
   double? animationStepTime;
 
   // Tile position

@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
+import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/services.dart';
@@ -68,11 +69,8 @@ Future<void> importMap(String fileName) async {
         .getAttribute('source')!
         .split('../../images/')
         .last;
-    await Flame.images.load(image);
-    var spriteSheet = SpriteSheet.fromColumnsAndRows(
-        image: game!.images.fromCache(image),
-        columns: columns,
-        rows: tileCount ~/ columns);
+    var spriteSheet = SpriteSheet(
+        srcSize: Vector2.all(16), image: Flame.images.fromCache(image));
 
     // Get tiles from tileset
     if (tileset.findElements('tile').isEmpty) {
@@ -118,7 +116,7 @@ Future<void> importMap(String fileName) async {
             // All frames have the same duration (it uses the last value)
             newTile.animationStepTime =
                 double.parse(frame.getAttributeNode('duration')!.value) / 1000;
-            newTile.animationSprites!
+            newTile.animationSprites
                 .add(spriteSheet.getSprite(id ~/ columns, id % columns));
           });
         }

@@ -389,7 +389,7 @@ class Closure {
   final Environment env;
 }
 
-typedef IntrinsicBody = Object Function(Cell args);
+typedef IntrinsicBody = Object Function(Cell? args);
 
 /// Built-in function
 class Intrinsic {
@@ -629,7 +629,7 @@ REPair applyFunction(Object? fun, Cell? arg, Continuation k, Environment env) {
         throw 'arity not matched: $fun and ${stringify(arg)}';
       }
     }
-    return REPair(fun.fun!(arg!), env);
+    return REPair(fun.fun!(arg), env);
   } else if (fun is Closure) {
     k.pushRestoreEnv(env);
     k.push(ContOp.BEGIN, fun.body);

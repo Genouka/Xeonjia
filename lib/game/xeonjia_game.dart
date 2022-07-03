@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:collection/collection.dart';
 import 'package:flame/components.dart';
+import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flame/input.dart';
 import 'package:flame_audio/bgm.dart';
@@ -73,9 +74,6 @@ class XeonjiaGame extends FlameGame
       'miniMapButton': (BuildContext context, XeonjiaGame game) {
         return MiniMapButton(miniMapIsActive: game.miniMapActive);
       },
-      'mapNameBox': (BuildContext context, XeonjiaGame game) {
-        return MapNameBox();
-      },
       'virtualGamePad': (BuildContext context, XeonjiaGame game) {
         return _virtualGamePad;
       },
@@ -101,7 +99,6 @@ class XeonjiaGame extends FlameGame
         Team(id: 1, name: 'Team B', color: Colors.green),
       ];
     }
-    init();
   }
 
   // Match settings
@@ -216,6 +213,8 @@ class XeonjiaGame extends FlameGame
     for (final component in children) {
       remove(component);
     }
+    game!.add(BackgroundComponent(
+        0, 0, Sprite(Flame.images.fromCache('background.png'))));
     players.clear();
     deletedComponents.clear();
     modifiersToBeRegenerated.clear();
@@ -247,12 +246,11 @@ class XeonjiaGame extends FlameGame
       if (config.mode != GameMode.story) {
         if (elapsedSeconds == config.maxTime) end(timeOut: true);
         if (elapsedSeconds % 10 == 0) regenerateModifiers();
-        _statusBox.state.refresh();
+        _statusBox.state?.refresh();
       }
     });
     _timer?.start();
-    game!.add(BackgroundComponent(
-        0, 0, Sprite(game!.images.fromCache('background.png'))));
+
     update(0);
     resume();
     playBackgroundMusic();
@@ -265,9 +263,10 @@ class XeonjiaGame extends FlameGame
   }
 
   @override
-  void handleResize(Vector2 size) {
+  void onGameResize(Vector2 canvasSize) {
+    super.onGameResize(canvasSize);
     componentSize =
-        (size.toSize().longestSide / 16).round16.gridAligned.toDouble();
+        (canvasSize.toSize().longestSide / 16).round16.gridAligned.toDouble();
     miniMapZoom = 1;
     updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
   }
@@ -294,7 +293,7 @@ class XeonjiaGame extends FlameGame
     if (action?.isEmpty ?? true) return;
     pause(stopEngine: false, stopMusic: false);
     environment.defineSymbol(
-        Sym('self'), Intrinsic('self', 0, (Cell x) => self!));
+        Sym('self'), Intrinsic('self', 0, (Cell? x) => self!));
     environment.defineSymbol(Sym('actor'), actor ?? playerOne!);
     _actionContinuation =
         evaluate(readFromTokens(splitStringIntoTokens(action!)), environment);
@@ -384,8 +383,9 @@ class XeonjiaGame extends FlameGame
   void updateCamera(double x, double y, [double? customComponentSize]) {
     if (map.width == 0) return;
     customComponentSize ??= componentSize;
-    camera.position.x = _moveCamera(customComponentSize, size.x, map.width, x);
-    camera.position.y = _moveCamera(customComponentSize, size.y, map.height, y);
+    camera.snapTo(Vector2(
+        _moveCamera(customComponentSize, size.x, map.width, x),
+        _moveCamera(customComponentSize, size.y, map.height, y)));
   }
 
   // Calculate camera position
@@ -408,9 +408,9 @@ class XeonjiaGame extends FlameGame
     if (miniMapEnabled) {
       zoomMiniMap(toValue: miniMapZoom, enable: true);
       pause(stopEngine: false, stopMusic: false);
-      _statusBox.state.refresh();
+      _statusBox.state?.refresh();
       overlays.remove('mapNameBox');
-      overlays.add('mapNameBox');
+      addCustomWidgetOverlay('mapNameBox', MapNameBox());
       overlays.remove('miniMapButton');
       overlays.remove('backpackButton');
       refreshWeaponButtons();
@@ -421,7 +421,7 @@ class XeonjiaGame extends FlameGame
       overlays.remove('miniMapButton');
       overlays.add('backpackButton');
       refreshWeaponButtons();
-      _statusBox.state.refresh();
+      _statusBox.state?.refresh();
       resume();
       miniMapActive = false;
     }
@@ -455,7 +455,7 @@ class XeonjiaGame extends FlameGame
 
   // Reload LP bar
   void refreshLifePointsBar() {
-    _statusBox.state.refresh();
+    _statusBox.state?.refresh();
   }
 
   // Check if someone won
@@ -513,7 +513,7 @@ class XeonjiaGame extends FlameGame
   @override
   void onTapDown(TapDownInfo info) {
     messageManager.active
-        ? dialogBox.state.next()
+        ? dialogBox.state!.next()
         : gestureTapInput(info.raw.globalPosition);
   }
 

@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:device_info_plus/device_info_plus.dart';
+import 'package:flame/flame.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -28,6 +29,8 @@ void main() async {
     }
   });
   updateGameTheme();
+  await Localization.loadTranslations();
+  await Flame.images.loadAllImages();
   return runApp(Xeonjia());
 }
 

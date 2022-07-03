@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:collection/collection.dart';
 import 'package:flame/components.dart';
+import 'package:flame/flame.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/static/static.dart';
@@ -46,13 +47,13 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   void onCreate() {
     const size = 16.0;
     for (final d in Direction.values) {
-      _sprites[d] = Sprite(game!.images.fromCache(image),
+      _sprites[d] = Sprite(Flame.images.fromCache(image),
+          srcPosition: Vector2(d.index * size, imageY),
+          srcSize: Vector2.all(size));
+      _walkingSprites[d] = Sprite(Flame.images.fromCache(image),
           srcPosition: Vector2(d.index * size, size),
           srcSize: Vector2.all(size));
-      _walkingSprites[d] = Sprite(game!.images.fromCache(image),
-          srcPosition: Vector2(d.index * size, size),
-          srcSize: Vector2.all(size));
-      punchSprites[d] = Sprite(game!.images.fromCache(image),
+      punchSprites[d] = Sprite(Flame.images.fromCache(image),
           srcPosition: Vector2(d.index * size, size * 2),
           srcSize: Vector2.all(size));
     }

@@ -8,8 +8,9 @@ import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/util/i18n.dart';
 
 class DialogBox extends StatefulWidget {
-  DialogBox() : super(key: GlobalKey());
-  DialogBoxState get state => (key as GlobalKey).currentState as DialogBoxState;
+  @override
+  final GlobalKey<State<DialogBox>> key = GlobalKey();
+  DialogBoxState? get state => key.currentState as DialogBoxState?;
 
   @override
   State<DialogBox> createState() => DialogBoxState();

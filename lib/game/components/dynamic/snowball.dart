@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flame/components.dart';
+import 'package:flame/flame.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -47,7 +48,7 @@ class SnowballComponent extends DynamicComponent {
     game!.playSound(Sfx.snowball);
     isBeingDeleted = true;
     animation = SpriteAnimation.fromFrameData(
-        game!.images.fromCache(image),
+        Flame.images.fromCache(image),
         SpriteAnimationData.sequenced(
           amount: 4,
           texturePosition: Vector2(16, 16.0 * father!.teamId),

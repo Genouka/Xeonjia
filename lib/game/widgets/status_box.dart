@@ -8,7 +8,7 @@ import 'package:xeonjia/models/game_mode.dart';
 class StatusBox extends StatefulWidget {
   @override
   final GlobalKey<State<StatusBox>> key = GlobalKey();
-  StatusBoxState get state => key.currentState as StatusBoxState;
+  StatusBoxState? get state => key.currentState as StatusBoxState?;
 
   @override
   State<StatusBox> createState() => StatusBoxState();

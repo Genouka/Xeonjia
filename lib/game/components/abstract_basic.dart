@@ -2,6 +2,7 @@ import 'dart:math';
 import 'dart:ui';
 
 import 'package:flame/components.dart';
+import 'package:flame/flame.dart';
 import 'package:meta/meta.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
@@ -23,12 +24,12 @@ abstract class BasicComponent extends SpriteComponent {
             id: id,
             position: startingPosition,
             size: componentSize,
-            sprite: Sprite(properties['image'],
+            sprite: Sprite(Flame.images.fromCache(properties['image']),
                 srcSize: Vector2.all(16) * (properties['imageY'] ?? 0)),
             properties: properties));
 
   BasicComponent.fromTile(Tile tile)
-      : id = tile.id!,
+      : id = tile.id,
         startingPosition = tile.position!,
         name = tile.properties['name'],
         action = tile.properties['action'] ?? '',
@@ -43,19 +44,19 @@ abstract class BasicComponent extends SpriteComponent {
         _flying = 'true' == (tile.properties['flying'] ?? 'false'),
         _layerPriority = 100 * (tile.layer ?? 0),
         _customPriority = int.parse(tile.properties['priority'] ?? '0'),
-        image = tile.properties['image'],
+        image = tile.properties['image'] ?? '',
         imageY = tile.properties['imageY'] ?? 0,
         super(
           size: Vector2(tile.size!, tile.size!),
           sprite: tile.sprite,
         ) {
-    animate(tile.animationSprites!,
-        stepTime: tile.animationStepTime!, loop: true);
+    animate(tile.animationSprites,
+        stepTime: tile.animationStepTime, loop: true);
     onCreate();
   }
 
   // Component unique ID
-  final int id;
+  final int? id;
 
   // Component starting position
   Point startingPosition;
@@ -143,7 +144,7 @@ abstract class BasicComponent extends SpriteComponent {
   String actionOnEvent = ''; // when the map is loaded or a new event is fired
 
   // Component default name (eg. girl, man, hero, old-man)
-  String name;
+  String? name;
 
   @mustCallSuper
   void onCreate() {
@@ -262,11 +263,10 @@ abstract class BasicComponent extends SpriteComponent {
   }
 
   // Animate this component
-  void animate(List<Sprite> sprites,
-      {double stepTime = 0.15, bool loop = false}) {
+  void animate(List<Sprite> sprites, {double? stepTime, bool loop = false}) {
     if (sprites.isEmpty) return;
-    animation =
-        SpriteAnimation.spriteList(sprites, stepTime: stepTime, loop: loop);
+    animation = SpriteAnimation.spriteList(sprites,
+        stepTime: stepTime ?? 15, loop: loop);
   }
 
   @override
@@ -291,7 +291,7 @@ abstract class BasicComponent extends SpriteComponent {
   }
 
   @override
-  void handleResize(Vector2 size) {
+  void onGameResize(Vector2 size) {
     var ratio = componentSize / width;
     width = componentSize;
     height = componentSize;
@@ -306,7 +306,7 @@ abstract class BasicComponent extends SpriteComponent {
     game!.deletedComponents.add(this);
     removeChildren();
     deleted = true;
-    remove(this);
+    game!.remove(this);
   }
 
   // Delete every son of this component

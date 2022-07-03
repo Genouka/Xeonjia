@@ -19,9 +19,6 @@ MatchConfig _config = MatchConfig(
 );
 
 class ArenaPage extends StatefulWidget {
-  static State<ArenaPage> of(BuildContext context) =>
-      context.findAncestorStateOfType()!;
-
   @override
   State<ArenaPage> createState() => _ArenaPageState();
 }
