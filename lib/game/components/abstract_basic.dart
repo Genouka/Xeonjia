@@ -8,7 +8,6 @@ import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/dynamic/snowball.dart';
 import 'package:xeonjia/game/components/static/static.dart';
-import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
@@ -279,10 +278,6 @@ abstract class BasicComponent extends SpriteComponent {
   @mustCallSuper
   void render(Canvas canvas) {
     if (!_visible) return;
-    if (game?.miniMapEnabled ?? false) {
-      canvas.scale(
-          (componentSize * game!.miniMapZoom).gridAligned / componentSize);
-    }
     if (animation?.done() ?? true) {
       super.render(canvas);
     } else {

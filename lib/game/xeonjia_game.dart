@@ -49,7 +49,7 @@ late double componentSize;
 
 // Vertical offset used to translate characters
 double get characterOffset => -(componentSize *
-        ((game?.miniMapEnabled ?? false) ? game!.miniMapZoom : 1) /
+        ((game?.miniMapEnabled ?? false) ? game!.camera.zoom : 1) /
         8)
     .gridAligned
     .toDouble();
@@ -267,7 +267,7 @@ class XeonjiaGame extends FlameGame
     super.onGameResize(canvasSize);
     componentSize =
         (canvasSize.toSize().longestSide / 16).round16.gridAligned.toDouble();
-    miniMapZoom = 1;
+    camera.zoom = 1;
     updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
   }
 
@@ -380,33 +380,29 @@ class XeonjiaGame extends FlameGame
   }
 
   // Update camera position
-  void updateCamera(double x, double y, [double? customComponentSize]) {
+  void updateCamera(double x, double y) {
     if (map.width == 0) return;
-    customComponentSize ??= componentSize;
     camera.snapTo(Vector2(
-        _moveCamera(customComponentSize, size.x, map.width, x),
-        _moveCamera(customComponentSize, size.y, map.height, y)));
+        _moveCamera(size.x, map.width, x), _moveCamera(size.y, map.height, y)));
   }
 
   // Calculate camera position
-  double _moveCamera(
-      double componentSize, double screenSize, int mapSize, double pos) {
+  double _moveCamera(double screenSize, int mapSize, double pos) {
     var delta = mapSize * componentSize - screenSize;
     return (delta <= 0 ? delta / 2 : max(0, min(pos - screenSize / 2, delta)))
         .gridAligned
         .toDouble();
   }
 
-  // Mini-map (componentSize = componentSize * miniMapZoom)
+  // Mini-map
   bool miniMapEnabled = false;
-  double miniMapZoom = 1;
   bool miniMapActive = false;
 
   // Enable/Disable mini-map view
   void miniMap() {
     miniMapEnabled = !miniMapEnabled;
     if (miniMapEnabled) {
-      zoomMiniMap(toValue: miniMapZoom, enable: true);
+      zoomMiniMap(toValue: camera.zoom, enable: true);
       pause(stopEngine: false, stopMusic: false);
       _statusBox.state?.refresh();
       overlays.remove('mapNameBox');
@@ -430,16 +426,15 @@ class XeonjiaGame extends FlameGame
 
   // Change mini-map zoom
   void zoomMiniMap({double? toValue, bool out = false, bool enable = false}) {
-    var previousValue = enable ? 1.0 : miniMapZoom;
+    var previousValue = enable ? 1 : camera.zoom;
     var delta = 16 / componentSize;
-    miniMapZoom = toValue ??
+    var miniMapZoom = toValue ??
         (out
             ? max(previousValue - delta, delta)
             : min(previousValue + delta, 2));
-    updateCamera(playerOne!.x * miniMapZoom, playerOne!.y * miniMapZoom,
-        (componentSize * miniMapZoom).gridAligned.toDouble());
-    onPanUpdate(DragUpdateInfo.fromDetails(
-        game!, DragUpdateDetails(globalPosition: Offset.zero)));
+    camera.zoom =
+        (playerOne!.size.x * miniMapZoom).gridAligned / (playerOne!.size.x);
+    updateCamera(playerOne!.x, playerOne!.y);
   }
 
   // Open backpack
@@ -495,10 +490,11 @@ class XeonjiaGame extends FlameGame
           : Offset(0, info.raw.delta.dy);
       playerOne?.updateOrientation(GetDirection.fromOffset(_panGestureOffset!));
     } else if (miniMapEnabled) {
-      camera.position.x = _moveCamera(componentSize * miniMapZoom, size.x,
-          map.width, camera.position.x - info.raw.delta.dx + size.x / 2);
-      camera.position.y = _moveCamera(componentSize * miniMapZoom, size.y,
-          map.height, camera.position.y - info.raw.delta.dy + size.y / 2);
+      camera.snapTo(Vector2(
+          _moveCamera(size.x, map.width,
+              camera.position.x - info.raw.delta.dx + size.x / 2),
+          camera.position.y = _moveCamera(size.y, map.height,
+              camera.position.y - info.raw.delta.dy + size.y / 2)));
     }
   }
 
