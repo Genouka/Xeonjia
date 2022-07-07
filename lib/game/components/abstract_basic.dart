@@ -265,7 +265,7 @@ abstract class BasicComponent extends SpriteComponent {
   void animate(List<Sprite> sprites, {double? stepTime, bool loop = false}) {
     if (sprites.isEmpty) return;
     animation = SpriteAnimation.spriteList(sprites,
-        stepTime: stepTime ?? 15, loop: loop);
+        stepTime: stepTime ?? 0.15, loop: loop);
   }
 
   @override
