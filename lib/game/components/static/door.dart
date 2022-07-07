@@ -13,7 +13,6 @@ class DoorComponent extends BasicComponent {
                 int.parse(tile.properties['orientation'] ?? '0'))
             .opposite,
         super.fromTile(tile) {
-    hide();
     x += componentSize * _offset.dx;
     y += componentSize * _offset.dy;
   }

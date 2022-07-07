@@ -51,6 +51,7 @@ abstract class BasicComponent extends SpriteComponent {
         ) {
     animate(tile.animationSprites,
         stepTime: tile.animationStepTime, loop: true);
+    if (tile.hidden) hide();
     onCreate();
   }
 

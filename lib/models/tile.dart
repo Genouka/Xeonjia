@@ -11,14 +11,14 @@ class Tile {
     this.gid,
     this.type,
     Map<String, dynamic>? properties,
-    this.sprite,
+    Sprite? sprite,
     this.size,
     this.animationStepTime,
     this.position,
     this.layer,
   }) {
     this.properties = properties ?? {};
-    sprite ??= Sprite(Flame.images.fromCache('background.png'));
+    this.sprite = sprite;
     size ??= componentSize;
   }
 
@@ -34,7 +34,11 @@ class Tile {
   late Map<String, dynamic> properties;
 
   // Component sprite
-  Sprite? sprite;
+  Sprite? _sprite;
+  Sprite get sprite =>
+      _sprite ?? Sprite(Flame.images.fromCache('background.png'));
+  set sprite(Sprite? sprite) => _sprite = sprite;
+  bool get hidden => _sprite == null;
 
   // Component size
   double? size;
