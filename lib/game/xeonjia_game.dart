@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:collection/collection.dart';
 import 'package:flame/components.dart';
-import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flame/input.dart';
 import 'package:flame_audio/bgm.dart';
@@ -99,6 +98,7 @@ class XeonjiaGame extends FlameGame
         Team(id: 1, name: 'Team B', color: Colors.green),
       ];
     }
+    init();
   }
 
   // Match settings
@@ -210,11 +210,8 @@ class XeonjiaGame extends FlameGame
 
     // Remove previous components
     // They are removed during the next update()
-    for (final component in children) {
-      remove(component);
-    }
-    game!.add(BackgroundComponent(
-        0, 0, Sprite(Flame.images.fromCache('background.png'))));
+    removeAll(children);
+    this.add(BackgroundComponent());
     players.clear();
     deletedComponents.clear();
     modifiersToBeRegenerated.clear();
@@ -251,7 +248,7 @@ class XeonjiaGame extends FlameGame
     });
     _timer?.start();
 
-    update(0);
+    if (isLoaded) update(0);
     resume();
     playBackgroundMusic();
   }
@@ -260,6 +257,12 @@ class XeonjiaGame extends FlameGame
   void update(double dt) {
     _timer?.update(dt);
     super.update(dt);
+  }
+
+  @override
+  Future<void>? onLoad() {
+    update(0);
+    return null;
   }
 
   @override

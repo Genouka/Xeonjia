@@ -8,7 +8,6 @@ import 'package:xeonjia/ui/themes.dart';
 class GamePage extends StatelessWidget {
   GamePage(MatchConfig config) {
     game = XeonjiaGame(config);
-    game!.init();
   }
 
   @override

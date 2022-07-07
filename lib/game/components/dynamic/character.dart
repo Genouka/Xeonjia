@@ -71,7 +71,7 @@ class CharacterComponent extends DynamicComponent
           mainCharacter.poisonQuantity);
       game!.refreshWeaponButtons();
       game!.refreshLifePointsBar();
-      game!.updateCamera(x, y);
+      if (game!.isLoaded) game!.updateCamera(x, y);
       if (game!.config.mode == GameMode.story) {
         _itemList = List.from(mainCharacter.itemList);
       }
