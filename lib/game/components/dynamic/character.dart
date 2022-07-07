@@ -53,10 +53,12 @@ class CharacterComponent extends DynamicComponent
       }
     }
     teamId = team;
-    weaponList = inputWeaponList ??
-        ((team == 0)
-            ? [SnowBallWeapon(level: 5), MineWeapon(level: 1)]
-            : [SnowBallWeapon(level: 9), MineWeapon(level: 5)]);
+    if (weaponList.isEmpty) {
+      weaponList = inputWeaponList ??
+          ((team == 0)
+              ? [SnowBallWeapon(level: 5), MineWeapon(level: 1)]
+              : [SnowBallWeapon(level: 9), MineWeapon(level: 5)]);
+    }
     if (!isPlayerOne) selectedWeaponIndex = newSelectedWeaponIndex;
     game!.players.add(this);
     if (isPlayerOne) {
