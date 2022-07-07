@@ -23,8 +23,12 @@ abstract class BasicComponent extends SpriteComponent {
             id: id,
             position: startingPosition,
             size: componentSize,
-            sprite: Sprite(Flame.images.fromCache(properties['image']),
-                srcSize: Vector2.all(16) * (properties['imageY'] ?? 0)),
+            sprite: Sprite(
+              Flame.images.fromCache(properties['image']),
+              srcPosition:
+                  Vector2(0, 16 * (properties['imageY'] as double? ?? 0)),
+              srcSize: Vector2.all(16),
+            ),
             properties: properties));
 
   BasicComponent.fromTile(Tile tile)
