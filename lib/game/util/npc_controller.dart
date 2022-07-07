@@ -52,7 +52,7 @@ class NpcController {
     if (!npc.quiet && npc.isStationary && !_movementInQueue) {
       _movementInQueue = true;
       game!.add(TimerComponent(
-          period: 500,
+          period: 0.5,
           onTick: () {
             _movementInQueue = false;
             npc.updateDirection(
@@ -68,7 +68,7 @@ class NpcController {
     if (!npc.friendly && !_shotInQueue) {
       _shotInQueue = true;
       game!.add(TimerComponent(
-          period: (_hasShots ? _nextShot.frequency : 0.5) * 1000,
+          period: _hasShots ? _nextShot.frequency : 0.5,
           onTick: () {
             _shotInQueue = false;
             if (_hasShots) npc.updateOrientation(_nextShot.direction);

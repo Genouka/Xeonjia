@@ -18,7 +18,7 @@ class _BlackCurtainState extends State<BlackCurtain> {
   void initState() {
     game!.pause(stopMusic: false, stopEngine: false);
     game!.add(TimerComponent(
-      period: 200,
+      period: 0.2,
       onTick: () => setState(() => visible = true),
     ));
     super.initState();

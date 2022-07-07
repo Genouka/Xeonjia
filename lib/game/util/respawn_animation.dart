@@ -10,7 +10,7 @@ mixin RespawnAnimation on DynamicComponent {
   // Start respawn animation
   void respawnAnimation() {
     isBeingDeleted = true;
-    timer = TimerComponent(period: 1000, onTick: respawn);
+    timer = TimerComponent(period: 1, onTick: respawn);
     game!.add(timer);
   }
 

@@ -309,7 +309,7 @@ class XeonjiaGame extends FlameGame
       delay ??= nextActionDelay;
       nextActionDelay = 0;
       this.add(TimerComponent(
-        period: delay * 1000,
+        period: delay,
         onTick: () => evaluate(null, environment, _actionContinuation!),
       ));
     } else {
