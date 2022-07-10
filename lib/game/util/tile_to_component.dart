@@ -1,6 +1,5 @@
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/dynamic/slither_cpu.dart';
-import 'package:xeonjia/game/components/dynamic/walker_cpu.dart';
 import 'package:xeonjia/game/components/static/direction_changer.dart';
 import 'package:xeonjia/game/components/static/door.dart';
 import 'package:xeonjia/game/components/static/hurdle.dart';
@@ -90,9 +89,6 @@ extension CreateComponent on Tile {
         break;
       case 'DirectionChanger':
         gameRef.add(DirectionChangerComponent(this));
-        break;
-      case 'WalkerCpu':
-        gameRef.add(WalkerCpuComponent(this));
         break;
       case 'SlitherCpu':
         if (!(gameRef.currentEventLog['${gameRef.map.id}-safe'] ?? false)) {
