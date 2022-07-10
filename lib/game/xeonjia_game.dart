@@ -565,8 +565,9 @@ class XeonjiaGame extends FlameGame
   }
 
   @override
-  KeyEventResult onKeyEvent(event, keysPressed) {
-    if (event is! RawKeyUpEvent) return KeyEventResult.handled;
+  KeyEventResult onKeyEvent(
+      RawKeyEvent event, Set<LogicalKeyboardKey> keysPressed) {
+    if (event is! RawKeyDownEvent) return KeyEventResult.ignored;
     if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
       gestureDragInput(Direction.down);
     } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
