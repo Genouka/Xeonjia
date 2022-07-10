@@ -15,26 +15,26 @@ import 'package:xeonjia/util/local_data_controller.dart';
 
 extension CreateComponent on Tile {
   // Create components based on tile property "type"
-  void createComponent() {
+  void createComponent(XeonjiaGame gameRef) {
     switch (type) {
       case 'Solid':
-        StaticComponent(this);
+        gameRef.add(StaticComponent(this));
         break;
       case 'Modifier':
-        properties['itemId'] ??= '${game!.map.id}.$id';
+        properties['itemId'] ??= '${gameRef.map.id}.$id';
         var itemId = properties['itemId'];
 
         // Load item only if it is not an unique item (id == "0")
         // or if it is not already owned by the player
         if (itemId == '0' || !mainCharacter.itemList.contains(itemId)) {
-          ModifierComponent(this);
+          gameRef.add(ModifierComponent(this));
         }
         break;
       case 'Ground':
-        StaticComponent(this, walkable: true);
+        gameRef.add(StaticComponent(this, walkable: true));
         break;
       case 'Door':
-        if (game!.config.mode == GameMode.story) {
+        if (gameRef.config.mode == GameMode.story) {
           var previousRoomId = (mainCharacter.visitedRooms.length <= 1)
               ? '0'
               : mainCharacter
@@ -45,55 +45,58 @@ extension CreateComponent on Tile {
                       : '') ==
               properties['roomId']) {
             properties['image'] = 'character.png';
-            CharacterComponent(
+            properties['isPlayerOne'] = true;
+            gameRef.add(CharacterComponent(
                 Tile()
                   ..id = -1
                   ..position = position
                   ..properties = properties,
-                isPlayerOne: true,
+                gameRef.config,
                 inputWeaponList: mainCharacter.weaponList
                     .map((e) => Weapon.fromJson(e.toJson()))
                     .toList(),
-                newSelectedWeaponIndex: mainCharacter.selectedWeaponIndex);
+                newSelectedWeaponIndex: mainCharacter.selectedWeaponIndex));
           }
-          if (properties['roomId'] != '0') DoorComponent(this);
+          if (properties['roomId'] != '0') gameRef.add(DoorComponent(this));
         } else {
           var teamId = int.parse(properties['team'] ?? '0');
-          if (game!.players.where((p) => p.teamId == teamId).length <
-              game!.config.teamSize) {
-            var playerOne = game!.playerOne == null && teamId == 0;
+          //print(gameRef.players.length);
+          if (gameRef.players.where((p) => p.teamId == teamId).length <
+              gameRef.config.teamSize) {
+            var playerOne = gameRef.playerOne == null && teamId == 0;
             properties['image'] =
                 'character${playerOne ? '' : '_cpu_$teamId'}.png';
             properties['friendly'] = 'false';
             properties['quiet'] = 'false';
             properties['def'] = '4';
-            CharacterComponent(
+            properties['isPlayerOne'] = playerOne;
+            gameRef.add(CharacterComponent(
               this,
-              isPlayerOne: playerOne,
+              gameRef.config,
               team: teamId,
-              level: teamId * game!.config.difficulty,
-            );
+              level: teamId * gameRef.config.difficulty,
+            ));
           }
         }
         break;
       case 'ThinWall':
-        ThinWallComponent(this);
+        gameRef.add(ThinWallComponent(this));
         break;
       case 'NPC':
-        CharacterComponent.npc(this);
+        gameRef.add(CharacterComponent.npc(this, gameRef.config));
         break;
       case 'Hurdle':
-        HurdleComponent(this);
+        gameRef.add(HurdleComponent(this));
         break;
       case 'DirectionChanger':
-        DirectionChangerComponent(this);
+        gameRef.add(DirectionChangerComponent(this));
         break;
       case 'WalkerCpu':
-        WalkerCpuComponent(this);
+        gameRef.add(WalkerCpuComponent(this));
         break;
       case 'SlitherCpu':
-        if (!(game!.currentEventLog['${game!.map.id}-safe'] ?? false)) {
-          SlitherCpuComponent(this);
+        if (!(gameRef.currentEventLog['${gameRef.map.id}-safe'] ?? false)) {
+          gameRef.add(SlitherCpuComponent(this));
         }
         break;
       default:

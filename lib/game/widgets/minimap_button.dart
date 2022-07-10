@@ -4,22 +4,23 @@ import 'package:xeonjia/util/i18n.dart';
 
 // Button used to enable/disable the mini-map view
 class MiniMapButton extends StatelessWidget {
-  MiniMapButton({required this.miniMapIsActive});
+  MiniMapButton(this.gameRef, {required this.miniMapIsActive});
+  final XeonjiaGame gameRef;
   final bool miniMapIsActive;
 
   @override
   Widget build(BuildContext context) {
-    return game!.map.disableMiniMap
+    return gameRef.map.disableMiniMap
         ? Container()
         : Positioned(
             top: 6,
             right: 6,
             child: InkWell(
-              onTap: () => game!.messageManager.active ||
-                      game!.hasAction ||
-                      !game!.playerOne!.isStationary
+              onTap: () => gameRef.messageManager.active ||
+                      gameRef.hasAction ||
+                      !gameRef.playerOne!.isStationary
                   ? null
-                  : game!.miniMap(),
+                  : gameRef.miniMap(),
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                 height: 34,

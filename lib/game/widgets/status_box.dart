@@ -6,6 +6,9 @@ import 'package:xeonjia/models/game_mode.dart';
 
 // Box that shows points and lifepoints
 class StatusBox extends StatefulWidget {
+  StatusBox(this.gameRef);
+  final XeonjiaGame gameRef;
+
   @override
   final GlobalKey<State<StatusBox>> key = GlobalKey();
   StatusBoxState? get state => key.currentState as StatusBoxState?;
@@ -21,10 +24,11 @@ class StatusBoxState extends State<StatusBox> {
 
   @override
   Widget build(BuildContext context) {
-    return game!.playerOne == null || game!.miniMapEnabled
+    return widget.gameRef.playerOne == null || widget.gameRef.miniMapEnabled
         ? Container()
         : InfoBox(
-            radius: game!.config.mode == GameMode.tdm ? 10 : 30,
+            widget.gameRef,
+            radius: widget.gameRef.config.mode == GameMode.tdm ? 10 : 30,
             child: Column(
               children: [
                 Row(
@@ -40,13 +44,15 @@ class StatusBoxState extends State<StatusBox> {
                     Expanded(
                       child: _PercentIndicator(
                         values: [
-                          game!.playerOne!.lifePoints,
-                          game!.playerOne!.maxLifePoints
+                          widget.gameRef.playerOne!.lifePoints,
+                          widget.gameRef.playerOne!.maxLifePoints
                         ],
-                        text: game!.playerOne!.lifePoints.round().toString(),
+                        text: widget.gameRef.playerOne!.lifePoints
+                            .round()
+                            .toString(),
                         colors: [
-                          lifePointsColor(game!.playerOne!.lifePoints /
-                              game!.playerOne!.maxLifePoints),
+                          lifePointsColor(widget.gameRef.playerOne!.lifePoints /
+                              widget.gameRef.playerOne!.maxLifePoints),
                           Colors.grey
                         ],
                       ),
@@ -58,7 +64,7 @@ class StatusBoxState extends State<StatusBox> {
                     ),
                   ],
                 ),
-                if (game!.config.mode == GameMode.tdm) ...[
+                if (widget.gameRef.config.mode == GameMode.tdm) ...[
                   Container(height: 10),
                   Row(
                     children: [
@@ -72,25 +78,25 @@ class StatusBoxState extends State<StatusBox> {
                       ),
                       Expanded(
                         child: _PercentIndicator(
-                          values: game!.teams!.first.points ==
-                                  game!.teams!.last.points
+                          values: widget.gameRef.teams!.first.points ==
+                                  widget.gameRef.teams!.last.points
                               ? [0.5, 1]
                               : [
-                                  game!.teams!.first.points.toDouble(),
-                                  game!.teams!.last.points.toDouble() +
-                                      game!.teams!.first.points,
+                                  widget.gameRef.teams!.first.points.toDouble(),
+                                  widget.gameRef.teams!.last.points.toDouble() +
+                                      widget.gameRef.teams!.first.points,
                                 ],
-                          text: game!.teams!.first.points.toString() +
+                          text: widget.gameRef.teams!.first.points.toString() +
                               ' - ' +
-                              game!.teams!.last.points.toString(),
+                              widget.gameRef.teams!.last.points.toString(),
                           colors: [
-                            game!.teams!.first.color,
-                            game!.teams!.last.color,
+                            widget.gameRef.teams!.first.color,
+                            widget.gameRef.teams!.last.color,
                           ],
                         ),
                       ),
                       Text(
-                        '  ${game!.remainingTime}',
+                        '  ${widget.gameRef.remainingTime}',
                         style: Theme.of(context).textTheme.button,
                       ),
                     ],

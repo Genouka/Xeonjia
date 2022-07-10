@@ -12,9 +12,14 @@ class DoorComponent extends BasicComponent {
         _offset = GetDirection.fromInt(
                 int.parse(tile.properties['orientation'] ?? '0'))
             .opposite,
-        super.fromTile(tile) {
+        super.fromTile(tile);
+
+  @override
+  Future<void>? onLoad() {
+    super.onLoad();
     x += componentSize * _offset.dx;
     y += componentSize * _offset.dy;
+    return null;
   }
 
   // Next Room ID
@@ -26,7 +31,7 @@ class DoorComponent extends BasicComponent {
   @override
   bool isSolid({BasicComponent? otherComponent}) =>
       !otherComponent!.isPlayerOne ||
-      (game!.enemies != 0 &&
+      (gameRef.enemies != 0 &&
           _roomId !=
               mainCharacter
                   .visitedRooms[mainCharacter.visitedRooms.length - 2]);
@@ -34,12 +39,14 @@ class DoorComponent extends BasicComponent {
   @override
   void collidedBy(otherComponent) {
     if (otherComponent.isPlayerOne) {
-      var count = game!.enemies;
-      game!.setMessage(Message(count == 1
-          ? "There is still 1 monster here. I can't escape.".i18n
-          : ("There are still %s monsters here. I can't escape."
-              .i18n
-              .fill([count]))));
+      var count = gameRef.enemies;
+      gameRef.setMessage(Message(
+          gameRef,
+          count == 1
+              ? "There is still 1 monster here. I can't escape.".i18n
+              : ("There are still %s monsters here. I can't escape."
+                  .i18n
+                  .fill([count]))));
       otherComponent.updateOrientation(otherComponent.orientation.opposite);
     }
     super.collidedBy(otherComponent);
@@ -47,6 +54,6 @@ class DoorComponent extends BasicComponent {
 
   @override
   void overlappedBy(BasicComponent componentAbove) {
-    if (componentAbove.isPlayerOne) game!.changeRoom(_roomId);
+    if (componentAbove.isPlayerOne) gameRef.changeRoom(_roomId);
   }
 }

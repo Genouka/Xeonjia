@@ -7,6 +7,9 @@ import 'package:xeonjia/util/i18n.dart';
 
 // Backpack menu
 class BackpackMenu extends StatefulWidget {
+  BackpackMenu(this.gameRef);
+  final XeonjiaGame gameRef;
+
   @override
   State<BackpackMenu> createState() => _BackpackMenuState();
 }
@@ -99,7 +102,8 @@ class _BackpackMenuState extends State<BackpackMenu> {
     );
   }
 
-  Map<Item, int> get items => game!.playerOne!.backpackItems.fold({}, (p, e) {
+  Map<Item, int> get items =>
+      widget.gameRef.playerOne!.backpackItems.fold({}, (p, e) {
         p[e] = p.containsKey(e) ? p[e]! + 1 : 1;
         return p;
       });
@@ -112,8 +116,8 @@ class _BackpackMenuState extends State<BackpackMenu> {
         actionButton(
           'Back'.i18n.toUpperCase(),
           () {
-            game!.overlays.remove('backpackMenu');
-            game!.resume();
+            widget.gameRef.overlays.remove('backpackMenu');
+            widget.gameRef.resume();
           },
         ),
       ];
@@ -125,13 +129,13 @@ class _BackpackMenuState extends State<BackpackMenu> {
             'Use'.i18n.toUpperCase(),
             () {
               setState(() {
-                game!.environment
+                widget.gameRef.environment
                     .defineSymbol(Sym('selected-item-id'), selectedItem!.id!);
-                game!.environment.defineSymbol(
+                widget.gameRef.environment.defineSymbol(
                     Sym('selected-item-name'), selectedItem!.name);
-                game!.overlays.remove('backpackMenu');
-                game!.resume();
-                game!.executeAction(action: selectedItem!.action!);
+                widget.gameRef.overlays.remove('backpackMenu');
+                widget.gameRef.resume();
+                widget.gameRef.executeAction(action: selectedItem!.action!);
               });
             },
           ),

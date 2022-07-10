@@ -4,7 +4,11 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Group of players
 class Team {
-  Team({required this.id, this.name = 'Team', this.color = Colors.blue});
+  Team(this.gameRef,
+      {required this.id, this.name = 'Team', this.color = Colors.blue});
+
+  // Current game
+  final XeonjiaGame gameRef;
 
   // Team id
   final int id;
@@ -17,7 +21,7 @@ class Team {
 
   // Team members
   List<CharacterComponent> get members =>
-      game!.players.where((player) => player.teamId == id).toList();
+      gameRef.players.where((player) => player.teamId == id).toList();
 
   // Team points acquired by friendly fire defeats
   int basisPoints = 0;

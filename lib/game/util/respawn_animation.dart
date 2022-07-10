@@ -11,7 +11,7 @@ mixin RespawnAnimation on DynamicComponent {
   void respawnAnimation() {
     isBeingDeleted = true;
     timer = TimerComponent(period: 1, onTick: respawn);
-    game!.add(timer);
+    gameRef.add(timer);
   }
 
   @override

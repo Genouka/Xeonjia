@@ -16,7 +16,8 @@ import 'package:xeonjia/models/tile.dart';
 
 // Basic game component
 // Every game component extends this one
-abstract class BasicComponent extends SpriteComponent {
+abstract class BasicComponent extends SpriteComponent
+    with HasGameRef<XeonjiaGame> {
   BasicComponent(
       int? id, Point startingPosition, Map<String, dynamic> properties)
       : this.fromTile(Tile(
@@ -56,7 +57,8 @@ abstract class BasicComponent extends SpriteComponent {
     animate(tile.animationSprites,
         stepTime: tile.animationStepTime, loop: true);
     if (tile.hidden) hide();
-    onCreate();
+    x = startingPosition.x * componentSize;
+    y = startingPosition.y * componentSize;
   }
 
   // Component unique ID
@@ -131,7 +133,7 @@ abstract class BasicComponent extends SpriteComponent {
   // It is used to avoid friendly fire among components of the same species
   // It is also used in multiplayer matches to manage team membership
   int teamId = -1;
-  Team get team => game!.teams!.firstWhere((team) => team.id == teamId);
+  Team get team => gameRef.teams!.firstWhere((team) => team.id == teamId);
 
   // Check if this is player one (a player can only be a CharacterComponent)
   bool get isPlayerOne => false;
@@ -150,18 +152,17 @@ abstract class BasicComponent extends SpriteComponent {
   // Component default name (eg. girl, man, hero, old-man)
   String? name;
 
+  @override
   @mustCallSuper
-  void onCreate() {
+  Future<void>? onLoad() {
     _lifePoints = maxLifePoints;
-    x = startingPosition.x * componentSize;
-    y = startingPosition.y * componentSize;
-    game!.add(this);
     if (this is! SnowballComponent) executeAction();
+    return null;
   }
 
   // Execute an action
   void executeAction([String? action, BasicComponent? actor]) {
-    game!.executeAction(
+    gameRef.executeAction(
         action: action ?? actionOnEvent, actor: actor ?? this, self: this);
   }
 
@@ -174,33 +175,34 @@ abstract class BasicComponent extends SpriteComponent {
   void setStatus(double lifePoints, double poison) {
     _lifePoints = lifePoints;
     poisonQuantity = poison;
-    game!.refreshLifePointsBar();
+    gameRef.refreshLifePointsBar();
   }
 
   // Restore LP and poison quantity
   void restoreStatus() {
     _lifePoints = maxLifePoints;
     poisonQuantity = 0;
-    game!.refreshLifePointsBar();
+    gameRef.refreshLifePointsBar();
   }
 
   // Function used to change life points
   void lifePointsDifference(double difference,
       {BasicComponent? cause, double poison = 0}) {
-    if ((game!.config.mode != GameMode.story || game!.config.friendlyFire) ||
+    if ((gameRef.config.mode != GameMode.story ||
+            gameRef.config.friendlyFire) ||
         teamId != (cause?.teamId ?? -99)) {
       _lifePoints += difference < 0 ? min(0, difference + def) : difference;
       poisonQuantity += poison;
       if (_lifePoints < 0) _lifePoints = 0;
       if (_lifePoints > maxLifePoints) _lifePoints = maxLifePoints;
       if (isPlayerOne && difference != 0) {
-        game!.refreshLifePointsBar();
+        gameRef.refreshLifePointsBar();
       }
       if (_lifePoints <= 0) {
         delete();
         if (teamId == (cause?.teamId ?? -99)) {
           // Teammate defeated
-          for (final team in game!.teams!) {
+          for (final team in gameRef.teams!) {
             if (team.id != teamId) team.basisPoints += 10;
           }
         } else if (this is! StaticComponent) {
@@ -263,7 +265,7 @@ abstract class BasicComponent extends SpriteComponent {
   // Reset life points
   void restoreLifePoints() {
     _lifePoints = maxLifePoints;
-    if (isPlayerOne) game!.refreshLifePointsBar();
+    if (isPlayerOne) gameRef.refreshLifePointsBar();
   }
 
   // Animate this component
@@ -303,15 +305,15 @@ abstract class BasicComponent extends SpriteComponent {
   // Delete component
   void delete() {
     ++defeats;
-    game!.deletedComponents.add(this);
+    gameRef.deletedComponents.add(this);
     removeChildren();
     deleted = true;
-    game!.remove(this);
+    gameRef.remove(this);
   }
 
   // Delete every son of this component
   void removeChildren() {
-    for (final c in game!.children) {
+    for (final c in gameRef.children) {
       if (c is BasicComponent && c.father == this) c.delete();
     }
   }
@@ -324,6 +326,6 @@ abstract class BasicComponent extends SpriteComponent {
     restoreLifePoints();
     x = startingPosition.x * componentSize;
     y = startingPosition.y * componentSize;
-    if (!game!.children.contains(this)) game!.add(this);
+    if (!gameRef.children.contains(this)) gameRef.add(this);
   }
 }

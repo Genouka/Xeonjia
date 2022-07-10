@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/util/lifepoints_bar.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 
 // Basic CPU controlled enemy that slides on ice
@@ -31,7 +30,7 @@ class SlitherCpuComponent extends DynamicComponent with LifePointsBar {
 
   @override
   void update(double dt) {
-    if ((_timeToNextMove -= dt) < 0 && game!.isNotPaused) {
+    if ((_timeToNextMove -= dt) < 0 && gameRef.isNotPaused) {
       updateDirection(GetDirection.random);
       _timeToNextMove = _updatePeriod;
     }
@@ -40,6 +39,6 @@ class SlitherCpuComponent extends DynamicComponent with LifePointsBar {
 
   @override
   void render(Canvas canvas) {
-    super.render(canvas..translate(0, characterOffset));
+    super.render(canvas..translate(0, gameRef.characterOffset));
   }
 }

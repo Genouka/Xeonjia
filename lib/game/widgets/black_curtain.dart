@@ -4,7 +4,8 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 // AnimatedOpacity widget shown while executing (delete)
 class BlackCurtain extends StatefulWidget {
-  const BlackCurtain([this.callback]);
+  const BlackCurtain(this.gameRef, [this.callback]);
+  final XeonjiaGame gameRef;
   final VoidCallback? callback;
 
   @override
@@ -16,8 +17,8 @@ class _BlackCurtainState extends State<BlackCurtain> {
 
   @override
   void initState() {
-    game!.pause(stopMusic: false, stopEngine: false);
-    game!.add(TimerComponent(
+    widget.gameRef.pause(stopMusic: false, stopEngine: false);
+    widget.gameRef.add(TimerComponent(
       period: 0.2,
       onTick: () => setState(() => visible = true),
     ));
@@ -36,8 +37,8 @@ class _BlackCurtainState extends State<BlackCurtain> {
             visible = !visible;
           });
         } else {
-          game!.overlays.remove('blackCurtain');
-          game!.continueAction();
+          widget.gameRef.overlays.remove('blackCurtain');
+          widget.gameRef.continueAction();
         }
       },
       child: Container(

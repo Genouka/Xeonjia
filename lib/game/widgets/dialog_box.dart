@@ -8,6 +8,9 @@ import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/util/i18n.dart';
 
 class DialogBox extends StatefulWidget {
+  DialogBox(this.gameRef);
+  final XeonjiaGame gameRef;
+
   @override
   final GlobalKey<State<DialogBox>> key = GlobalKey();
   DialogBoxState? get state => key.currentState as DialogBoxState?;
@@ -21,16 +24,19 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   void next({bool removeAnswers = false}) {
     if (_controller?.isAnimating ?? false) {
       _controller!.fling().whenComplete(() {
-        if (mounted && game!.messageManager.isShowingAQuestion) setState(() {});
+        if (mounted && widget.gameRef.messageManager.isShowingAQuestion) {
+          setState(() {});
+        }
       });
     } else {
-      if (game!.messageManager.hasOtherMessages) {
-        game!.messageManager.nextMessage();
+      if (widget.gameRef.messageManager.hasOtherMessages) {
+        widget.gameRef.messageManager.nextMessage();
         _animateText();
-      } else if (removeAnswers || !game!.messageManager.isShowingAQuestion) {
-        game!.messageManager.clear();
+      } else if (removeAnswers ||
+          !widget.gameRef.messageManager.isShowingAQuestion) {
+        widget.gameRef.messageManager.clear();
       }
-      game!.playSound(Sfx.dialog);
+      widget.gameRef.playSound(Sfx.dialog);
       if (mounted) setState(() {});
     }
   }
@@ -44,20 +50,25 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   AnimationController? _controller;
   Animation<int>? _characterCountAnimation;
   void _animateText() {
-    if (!game!.messageManager.active || (_controller?.isAnimating ?? false)) {
+    if (!widget.gameRef.messageManager.active ||
+        (_controller?.isAnimating ?? false)) {
       return;
     }
     _controller = AnimationController(
       duration: Duration(
-          milliseconds: 35 * game!.messageManager.currentMessage!.text.length),
+          milliseconds:
+              35 * widget.gameRef.messageManager.currentMessage!.text.length),
       vsync: this,
     );
     _characterCountAnimation = StepTween(
-            begin: 0, end: game!.messageManager.currentMessage!.text.length)
+            begin: 0,
+            end: widget.gameRef.messageManager.currentMessage!.text.length)
         .animate(CurvedAnimation(parent: _controller!, curve: Curves.linear));
     _controller!.forward().then((_) {
       _controller!.dispose();
-      if (mounted && game!.messageManager.isShowingAQuestion) setState(() {});
+      if (mounted && widget.gameRef.messageManager.isShowingAQuestion) {
+        setState(() {});
+      }
     });
   }
 
@@ -65,23 +76,26 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     if (_characterCountAnimation == null) _animateText();
     return Visibility(
-      visible: game!.messageManager.active,
+      visible: widget.gameRef.messageManager.active,
       child: InkWell(
         enableFeedback: false,
         onTap: next,
         child: Stack(
           children: [
-            if (game!.messageManager.hideMap) Container(color: Colors.black),
-            if (game!.messageManager.active)
+            if (widget.gameRef.messageManager.hideMap)
+              Container(color: Colors.black),
+            if (widget.gameRef.messageManager.active)
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    if (game!.messageManager.isShowingAQuestion &&
+                    if (widget.gameRef.messageManager.isShowingAQuestion &&
                         _characterCountAnimation!.isCompleted)
-                      _AnswerButtons(game!.messageManager.answers,
+                      _AnswerButtons(
+                          widget.gameRef,
+                          widget.gameRef.messageManager.answers,
                           () => next(removeAnswers: true)),
                     Container(
                       margin: const EdgeInsets.all(20),
@@ -96,10 +110,12 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          if (game!.messageManager.currentMessage!.image !=
+                          if (widget.gameRef.messageManager.currentMessage!
+                                  .image !=
                               null)
                             Image.asset(
-                              game!.messageManager.currentMessage!.image!,
+                              widget.gameRef.messageManager.currentMessage!
+                                  .image!,
                               height: (min(96,
                                       MediaQuery.of(context).size.width / 4))
                                   .gridAligned
@@ -116,11 +132,11 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    if ((game!.messageManager.currentMessage!
-                                            .authorName) !=
+                                    if ((widget.gameRef.messageManager
+                                            .currentMessage!.authorName) !=
                                         '')
                                       Text(
-                                        '${game!.messageManager.currentMessage!.authorName} :'
+                                        '${widget.gameRef.messageManager.currentMessage!.authorName} :'
                                             .toUpperCase(),
                                         style: Theme.of(context)
                                             .textTheme
@@ -131,8 +147,8 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                       builder: (BuildContext context,
                                           Widget? child) {
                                         return Text(
-                                          game!.messageManager.currentMessage!
-                                              .text
+                                          widget.gameRef.messageManager
+                                              .currentMessage!.text
                                               .substring(
                                                   0,
                                                   _characterCountAnimation!
@@ -141,8 +157,11 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                               .textTheme
                                               .bodyText2!
                                               .copyWith(
-                                                fontFamily: game!.messageManager
-                                                    .currentMessage!.font,
+                                                fontFamily: widget
+                                                    .gameRef
+                                                    .messageManager
+                                                    .currentMessage!
+                                                    .font,
                                               ),
                                         );
                                       },
@@ -166,7 +185,8 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
 }
 
 class _AnswerButtons extends StatelessWidget {
-  const _AnswerButtons(this.answers, this.callback);
+  const _AnswerButtons(this.gameRef, this.answers, this.callback);
+  final XeonjiaGame gameRef;
   final List<Answer> answers;
   final VoidCallback callback;
 
@@ -184,8 +204,8 @@ class _AnswerButtons extends StatelessWidget {
           for (var answer in answers)
             TextButton(
               onPressed: () {
-                game!.currentEventLog[answer.questionId] = answer.value;
-                game!.messageManager.clear();
+                gameRef.currentEventLog[answer.questionId] = answer.value;
+                gameRef.messageManager.clear();
                 callback();
               },
               child: Container(

@@ -6,17 +6,16 @@ import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/ui/themes.dart';
 
 class GamePage extends StatelessWidget {
-  GamePage(MatchConfig config) {
-    game = XeonjiaGame(config);
-  }
+  GamePage(MatchConfig config) : _game = XeonjiaGame(config);
+  final XeonjiaGame _game;
 
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () {
-        game!.miniMapEnabled
-            ? game!.miniMap()
-            : game!.pause(mode: PauseMode.exit);
+        _game.miniMapEnabled
+            ? _game.miniMap()
+            : _game.pause(mode: PauseMode.exit);
         return Future.value(false);
       },
       child: Focus(
@@ -24,7 +23,7 @@ class GamePage extends StatelessWidget {
         child: Theme(
           data: gameTheme,
           child: Scaffold(
-            body: GameWidget(game: game!, overlayBuilderMap: game!.overlayMap),
+            body: GameWidget(game: _game, overlayBuilderMap: _game.overlayMap),
           ),
         ),
       ),

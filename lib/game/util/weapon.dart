@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/dynamic/snowball.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/resources/weapon_details.dart';
@@ -48,7 +47,7 @@ abstract class Weapon {
   // Function used when a shoot input happens
   @mustCallSuper
   void shoot({required CharacterComponent shooter}) {
-    if (shooter.isPlayerOne) game!.refreshWeaponButtons();
+    if (shooter.isPlayerOne) shooter.gameRef.refreshWeaponButtons();
   }
 
   // Export / Import weapon details
@@ -83,7 +82,7 @@ class PunchWeapon extends Weapon {
     }
     componentInFront?.lifePointsDifference(-atk, cause: shooter);
     shooter.animate([shooter.punchSprites[shooter.orientation]!]);
-    if (shooter.isPlayerOne) game!.playSound(Sfx.punch);
+    if (shooter.isPlayerOne) shooter.gameRef.playSound(Sfx.punch);
     super.shoot(shooter: shooter);
   }
 }
@@ -105,7 +104,8 @@ class SnowBallWeapon extends Weapon {
           Point(shooter.x, shooter.y), shooter, shooter.orientation, atk);
       --powerPoints;
       super.shoot(shooter: shooter);
-      if (shooter == game!.playerOne || game!.config.mode != GameMode.story) {
+      if (shooter == shooter.gameRef.playerOne ||
+          shooter.gameRef.config.mode != GameMode.story) {
         shooter.animate([shooter.punchSprites[shooter.orientation]!]);
       }
     }

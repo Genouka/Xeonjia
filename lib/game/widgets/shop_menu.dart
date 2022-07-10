@@ -6,7 +6,8 @@ import 'package:xeonjia/util/i18n.dart';
 
 // Menu used to buy items in stores
 class ShopMenu extends StatefulWidget {
-  const ShopMenu(this._items);
+  const ShopMenu(this.gameRef, this._items);
+  final XeonjiaGame gameRef;
   final List<ShopItem> _items;
 
   @override
@@ -60,18 +61,21 @@ class _ShopMenuState extends State<ShopMenu> {
                               .textTheme
                               .bodyText2!
                               .copyWith(
-                                  color: game!.playerOne!.money >= item.price
+                                  color: widget.gameRef.playerOne!.money >=
+                                          item.price
                                       ? Colors.white
                                       : Colors.red),
                         ),
-                        onTap: game!.playerOne!.money >= item.price
+                        onTap: widget.gameRef.playerOne!.money >= item.price
                             ? () {
                                 setState(() {
-                                  game!.playerOne!.moneyDifference(-item.price,
+                                  widget.gameRef.playerOne!.moneyDifference(
+                                      -item.price,
                                       popup: false);
-                                  game!.executeAction(action: item.action);
+                                  widget.gameRef
+                                      .executeAction(action: item.action);
                                 });
-                                game!.refreshLifePointsBar();
+                                widget.gameRef.refreshLifePointsBar();
                                 closeMenu();
                               }
                             : null,
@@ -85,7 +89,7 @@ class _ShopMenuState extends State<ShopMenu> {
           Container(
             margin: const EdgeInsets.only(top: 5),
             child: Text(
-                '${game!.playerOne!.lifePoints.round()} LP  -  ${game!.playerOne!.money} ¤',
+                '${widget.gameRef.playerOne!.lifePoints.round()} LP  -  ${widget.gameRef.playerOne!.money} ¤',
                 style: Theme.of(context).textTheme.subtitle2),
           ),
           Expanded(
@@ -104,8 +108,9 @@ class _ShopMenuState extends State<ShopMenu> {
   }
 
   void closeMenu() {
-    game!.overlays.remove('shop');
-    game!.setMessage(Message('Let me know if you need anything else.'.i18n,
+    widget.gameRef.overlays.remove('shop');
+    widget.gameRef.setMessage(Message(
+        widget.gameRef, 'Let me know if you need anything else.'.i18n,
         translate: false, author: 'pharmacist/elderly'));
   }
 

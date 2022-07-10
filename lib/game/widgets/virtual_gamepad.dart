@@ -9,6 +9,9 @@ import 'package:xeonjia/util/local_data_controller.dart';
 
 // Virtual Gamepad (D-pad + buttons)
 class VirtualGamePad extends StatelessWidget {
+  VirtualGamePad(this.gameRef);
+  final XeonjiaGame gameRef;
+
   final GlobalKey<_ButtonsState> _buttonsKey = GlobalKey();
   final GlobalKey<_DPadState> _dPadKey = GlobalKey();
   static double _size = 0;
@@ -18,8 +21,8 @@ class VirtualGamePad extends StatelessWidget {
     var screenSize = MediaQuery.of(context).size;
     _size = min(screenSize.width, screenSize.height) / 12;
     return Stack(children: [
-      if (settings.showDPad) _DPad(_dPadKey),
-      _Buttons(_buttonsKey),
+      if (settings.showDPad) _DPad(gameRef, _dPadKey),
+      _Buttons(gameRef, _buttonsKey),
     ]);
   }
 
@@ -31,7 +34,8 @@ class VirtualGamePad extends StatelessWidget {
 
 // Virtual D-pad (on the left)
 class _DPad extends StatefulWidget {
-  const _DPad(Key key) : super(key: key);
+  const _DPad(this.gameRef, Key key) : super(key: key);
+  final XeonjiaGame gameRef;
   static const Color arrowColor = Colors.white;
 
   @override
@@ -53,7 +57,7 @@ class _DPadState extends State<_DPad> {
 
   @override
   Widget build(BuildContext context) {
-    if (game!.miniMapEnabled) return Container();
+    if (widget.gameRef.miniMapEnabled) return Container();
     return Positioned(
       left: 20,
       bottom: 20,
@@ -100,12 +104,12 @@ class _DPadState extends State<_DPad> {
   Widget arrowButton(Direction? direction) {
     return GestureDetector(
       onTap: () {
-        game!.playerOne!.isStationary
-            ? game!.gestureDragInput(direction!)
-            : game!.playerOne!.updateOrientation(direction);
+        widget.gameRef.playerOne!.isStationary
+            ? widget.gameRef.gestureDragInput(direction!)
+            : widget.gameRef.playerOne!.updateOrientation(direction);
       },
       onLongPress: () {
-        game!.playerOne!.updateOrientation(direction);
+        widget.gameRef.playerOne!.updateOrientation(direction);
       },
       child: direction != null
           ? Container(
@@ -131,7 +135,8 @@ class _DPadState extends State<_DPad> {
 
 // Buttons (on the right)
 class _Buttons extends StatefulWidget {
-  const _Buttons(Key key) : super(key: key);
+  const _Buttons(this.gameRef, Key key) : super(key: key);
+  final XeonjiaGame gameRef;
 
   @override
   _ButtonsState createState() => _ButtonsState();
@@ -140,16 +145,16 @@ class _Buttons extends StatefulWidget {
 class _ButtonsState extends State<_Buttons> {
   @override
   Widget build(BuildContext context) {
-    return game!.playerOne == null
+    return widget.gameRef.playerOne == null
         ? Container()
         : Positioned(
             bottom: 20,
             right: 20,
             child: GestureDetector(
-              onPanUpdate: (upd) =>
-                  game!.onPanUpdate(DragUpdateInfo.fromDetails(game!, upd)),
-              onPanEnd: (end) =>
-                  game!.onPanEnd(DragEndInfo.fromDetails(game!, end)),
+              onPanUpdate: (upd) => widget.gameRef
+                  .onPanUpdate(DragUpdateInfo.fromDetails(widget.gameRef, upd)),
+              onPanEnd: (end) => widget.gameRef
+                  .onPanEnd(DragEndInfo.fromDetails(widget.gameRef, end)),
               child: Container(
                 width: VirtualGamePad._size * 4,
                 height: VirtualGamePad._size * 4,
@@ -157,60 +162,70 @@ class _ButtonsState extends State<_Buttons> {
                 child: Column(
                   children: [
                     Row(
-                      children: game!.miniMapEnabled
+                      children: widget.gameRef.miniMapEnabled
                           ? [
                               const Spacer(),
                               button(
                                 '+',
-                                () => game!.zoomMiniMap(),
+                                () => widget.gameRef.zoomMiniMap(),
                                 percentage: 0,
                                 highlight: false,
                                 color: Colors.grey.shade800.withOpacity(0.7),
                               ),
                             ]
                           : [
-                              button('P', () => game!.playerOne!.shootById(0),
+                              button('P',
+                                  () => widget.gameRef.playerOne!.shootById(0),
                                   percentage: 1,
-                                  highlight:
-                                      game!.playerOne!.selectedWeapon.id == 0),
-                              if (game!.playerOne!.hasWeaponId(2))
-                                button('M', () => game!.playerOne!.shootById(2),
-                                    percentage: game!.playerOne!
+                                  highlight: widget.gameRef.playerOne!
+                                          .selectedWeapon.id ==
+                                      0),
+                              if (widget.gameRef.playerOne!.hasWeaponId(2))
+                                button(
+                                    'M',
+                                    () =>
+                                        widget.gameRef.playerOne!.shootById(2),
+                                    percentage: widget.gameRef.playerOne!
                                         .getWeaponById(2)
                                         .ppPercentage,
-                                    highlight:
-                                        game!.playerOne!.selectedWeapon.id == 2)
+                                    highlight: widget.gameRef.playerOne!
+                                            .selectedWeapon.id ==
+                                        2)
                               else
                                 const Spacer(),
                             ],
                     ),
                     const Spacer(),
                     Row(
-                      children: game!.miniMapEnabled
+                      children: widget.gameRef.miniMapEnabled
                           ? [
                               const Spacer(),
                               button(
                                 '-',
-                                () => game!.zoomMiniMap(out: true),
+                                () => widget.gameRef.zoomMiniMap(out: true),
                                 percentage: 0,
                                 highlight: false,
                                 color: Colors.grey.shade800.withOpacity(0.7),
                               ),
                             ]
                           : [
-                              if (game!.playerOne!.hasWeaponId(1))
-                                button('S', () => game!.playerOne!.shootById(1),
-                                    percentage: game!.playerOne!
+                              if (widget.gameRef.playerOne!.hasWeaponId(1))
+                                button(
+                                    'S',
+                                    () =>
+                                        widget.gameRef.playerOne!.shootById(1),
+                                    percentage: widget.gameRef.playerOne!
                                         .getWeaponById(1)
                                         .ppPercentage,
-                                    highlight:
-                                        game!.playerOne!.selectedWeapon.id == 1)
+                                    highlight: widget.gameRef.playerOne!
+                                            .selectedWeapon.id ==
+                                        1)
                               else
                                 const Spacer(),
-                              if (game!.config.mode == GameMode.story)
+                              if (widget.gameRef.config.mode == GameMode.story)
                                 button(
                                   'A',
-                                  game!.playerOne!.inspect,
+                                  widget.gameRef.playerOne!.inspect,
                                   percentage: 0,
                                   color: Colors.blueGrey[400],
                                 ),

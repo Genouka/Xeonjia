@@ -12,12 +12,12 @@ import 'package:xeonjia/models/tile.dart';
 import 'package:xml/xml.dart';
 
 // Import map from a TMX file
-Future<void> importMap(String fileName) async {
+Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
   var mapXml =
       XmlDocument.parse(await rootBundle.loadString(fileName)).rootElement;
 
   // Get map information
-  game!.map
+  gameRef.map
     ..width = int.parse(mapXml.getAttribute('width')!)
     ..height = int.parse(mapXml.getAttribute('height')!);
 
@@ -28,17 +28,17 @@ Future<void> importMap(String fileName) async {
       if (property.attributes.isEmpty) continue;
       switch (property.getAttributeNode('name')!.value) {
         case 'action':
-          game!.map.action =
+          gameRef.map.action =
               property.getAttributeNode('value')?.value ?? property.text;
           break;
         case 'music':
-          game!.map.music = property.getAttributeNode('value')!.value;
+          gameRef.map.music = property.getAttributeNode('value')!.value;
           break;
         case 'map-name':
-          game!.map.name = property.getAttributeNode('value')!.value;
+          gameRef.map.name = property.getAttributeNode('value')!.value;
           break;
         case 'disable-minimap':
-          game!.map.disableMiniMap =
+          gameRef.map.disableMiniMap =
               property.getAttributeNode('value')!.value == 'true';
           break;
       }
@@ -137,16 +137,15 @@ Future<void> importMap(String fileName) async {
 
     var lineCount = 0;
     var columnCount = 0;
-    game!.playerOne = null;
     for (final tileId in mapData) {
       var componentTile = tileMap[tileId];
       if (componentTile != null) {
         componentTile.position = Point(columnCount, lineCount);
         componentTile.layer = layerCount;
-        componentTile.createComponent();
+        componentTile.createComponent(gameRef);
       }
       ++columnCount;
-      if (columnCount == game!.map.width) {
+      if (columnCount == gameRef.map.width) {
         columnCount = 0;
         ++lineCount;
       }
@@ -179,7 +178,7 @@ Future<void> importMap(String fileName) async {
       // Add itemId value even if properties['itemId'] == null
       tile.properties['itemId'] = properties['itemId'];
       tile.id = int.parse(object.getAttribute('id')!);
-      tile.createComponent();
+      tile.createComponent(gameRef);
     });
   });
 }

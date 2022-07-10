@@ -249,7 +249,7 @@ typedef Setter = void Function(Object val);
 /// List of frames which map symbols to values
 class Environment {
   /// Construct a new frame on the [next] (= current) environment or null.
-  Environment(Cell? symbols, Cell? data, Environment? next) {
+  Environment(this.gameRef, Cell? symbols, Cell? data, Environment? next) {
     var names = symbols?.map((e) => e as Sym).toList() ?? [];
     var values = data?.toList() ?? [];
     if (names.length != values.length) {
@@ -263,6 +263,7 @@ class Environment {
   late List<Sym> _names;
   late List<Object> _values;
   Environment? _next;
+  XeonjiaGame gameRef;
 
   /// Searches the environment for [symbol] and returns its setter.
   Setter lookForSetter(Sym symbol) {
@@ -490,7 +491,9 @@ Continuation? evaluate(dynamic exp, Environment env,
             exp = kdr.cdr.car;
             k.push(ContOp.SETQ, env.lookForSetter(kdr.car as Sym));
           } else if (identical(kar, waitSym)) {
-            if (kdr?.car != null) game!.nextActionDelay = kdr?.car?.toDouble();
+            if (kdr?.car != null) {
+              env.gameRef.nextActionDelay = kdr?.car?.toDouble();
+            }
             exp = null;
             k.push(ContOp.WAIT, kdr);
           } else {
@@ -510,8 +513,8 @@ Continuation? evaluate(dynamic exp, Environment env,
       for (;;) {
         if (k.isEmpty) {
           // execution finished
-          game!.clearActionContinuation();
-          if (!game!.messageManager.active) game!.resume();
+          env.gameRef.clearActionContinuation();
+          if (!env.gameRef.messageManager.active) env.gameRef.resume();
           return null;
         }
         var step = k.pop();
@@ -520,8 +523,8 @@ Continuation? evaluate(dynamic exp, Environment env,
         switch (op) {
           case ContOp.WAIT:
             // execution paused
-            if (game!.nextActionDelay != 0 && game!.hasAction) {
-              game!.continueAction();
+            if (env.gameRef.nextActionDelay != 0 && env.gameRef.hasAction) {
+              env.gameRef.continueAction();
             }
             return k;
           case ContOp.THEN: // x is (e2 e3) of (if e1 e2 e3).
@@ -633,7 +636,7 @@ REPair applyFunction(Object? fun, Cell? arg, Continuation k, Environment env) {
   } else if (fun is Closure) {
     k.pushRestoreEnv(env);
     k.push(ContOp.BEGIN, fun.body);
-    return REPair(#NONE, Environment(fun.params, arg, fun.env));
+    return REPair(#NONE, Environment(env.gameRef, fun.params, arg, fun.env));
   } else if (fun is Continuation) {
     k.copyFrom(fun);
     return REPair(arg!.car!, env);

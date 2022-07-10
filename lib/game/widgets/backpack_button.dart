@@ -3,17 +3,20 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Button used to open the backpack
 class BackpackButton extends StatelessWidget {
+  BackpackButton(this.gameRef);
+  final XeonjiaGame gameRef;
+
   @override
   Widget build(BuildContext context) {
     return Positioned(
       top: 6,
-      right: game!.map.disableMiniMap ? 6 : 56,
+      right: gameRef.map.disableMiniMap ? 6 : 56,
       child: InkWell(
-        onTap: () => game!.messageManager.active ||
-                game!.hasAction ||
-                !game!.playerOne!.isStationary
+        onTap: () => gameRef.messageManager.active ||
+                gameRef.hasAction ||
+                !gameRef.playerOne!.isStationary
             ? null
-            : game!.backpack(),
+            : gameRef.backpack(),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
           height: 34,

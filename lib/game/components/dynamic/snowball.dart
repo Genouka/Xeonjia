@@ -45,7 +45,7 @@ class SnowballComponent extends DynamicComponent {
     x += direction!.dx * componentSize / 2;
     y += direction!.dy * componentSize / 2;
     stop();
-    game!.playSound(Sfx.snowball);
+    gameRef.playSound(Sfx.snowball);
     isBeingDeleted = true;
     animation = SpriteAnimation.fromFrameData(
         Flame.images.fromCache(image),
@@ -57,7 +57,7 @@ class SnowballComponent extends DynamicComponent {
           loop: false,
         ))
       ..onComplete = delete;
-    if (game!.config.friendlyFire ||
+    if (gameRef.config.friendlyFire ||
         collidedComponent?.teamId != father!.teamId) {
       collidedComponent?.lifePointsDifference(-atk, cause: father);
     }

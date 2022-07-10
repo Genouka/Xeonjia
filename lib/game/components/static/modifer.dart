@@ -65,7 +65,7 @@ class ModifierComponent extends BasicComponent {
   void overlappedBy(BasicComponent componentAbove) {
     if (!isBeingDeleted &&
         componentAbove is CharacterComponent &&
-        (game!.config.friendlyFire ||
+        (gameRef.config.friendlyFire ||
             (father?.teamId ?? -99) != componentAbove.teamId)) {
       componentAbove.lifePointsDifference(_lifePointsDiff,
           cause: father ?? this);
@@ -76,16 +76,16 @@ class ModifierComponent extends BasicComponent {
       for (final weapon in componentAbove.weaponList) {
         weapon.powerPoints += _powerPointsDelta;
       }
-      game!.refreshWeaponButtons();
+      gameRef.refreshWeaponButtons();
       if (_itemId != '0' &&
           componentAbove.isPlayerOne &&
-          game!.config.mode == GameMode.story) {
+          gameRef.config.mode == GameMode.story) {
         componentAbove.addItem(_itemId);
       }
-      if (_regenerable ?? false) game!.modifiersToBeRegenerated.add(this);
+      if (_regenerable ?? false) gameRef.modifiersToBeRegenerated.add(this);
       if (explosionOnDelete) {
         isBeingDeleted = true;
-        game!.playSound(Sfx.explosion);
+        gameRef.playSound(Sfx.explosion);
         animation = SpriteAnimation.fromFrameData(
             Flame.images.fromCache(image),
             SpriteAnimationData.sequenced(

@@ -5,10 +5,10 @@ import 'package:xeonjia/game/util/lifepoints_bar.dart';
 import 'package:xeonjia/game/util/npc_controller.dart';
 import 'package:xeonjia/game/util/respawn_animation.dart';
 import 'package:xeonjia/game/util/weapon.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/item.dart';
+import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/models/tile.dart';
@@ -20,24 +20,25 @@ class CharacterComponent extends DynamicComponent
     with LifePointsBar, RespawnAnimation {
   // Create character from input details
   CharacterComponent(
-    Tile tile, {
-    bool isPlayerOne = false,
+    this.tile,
+    MatchConfig matchConfig, {
     int level = 0,
     double? initialLP,
     List<Weapon>? inputWeaponList,
     int newSelectedWeaponIndex = 0,
     team = 0,
-  })  : maxLifePoints = initialLP ??
-            ((isPlayerOne && game!.config.mode == GameMode.story)
-                ? mainCharacter.maxLifePoints
-                : (100 + 5 * level).toDouble()),
-        super(tile.id, tile.position!, tile.properties) {
+  }) : super(tile.id, tile.position!, tile.properties) {
+    bool isPlayerOne = tile.properties['isPlayerOne'] ?? false;
+    maxLifePoints = initialLP ??
+        ((isPlayerOne && matchConfig.mode == GameMode.story)
+            ? mainCharacter.maxLifePoints
+            : (100 + 5 * level).toDouble());
     orientation =
         GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0'));
     _initialOrientation = orientation;
     friendly = 'true' == (tile.properties['friendly'] ?? 'true');
     quiet = 'true' == (tile.properties['quiet'] ?? 'true');
-    if (isPlayerOne && game!.config.mode == GameMode.story) {
+    if (isPlayerOne && matchConfig.mode == GameMode.story) {
       atk = mainCharacter.atk;
       def = mainCharacter.def;
     } else {
@@ -60,37 +61,13 @@ class CharacterComponent extends DynamicComponent
               : [SnowBallWeapon(level: 9), MineWeapon(level: 5)]);
     }
     if (!isPlayerOne) selectedWeaponIndex = newSelectedWeaponIndex;
-    game!.players.add(this);
-    if (isPlayerOne) {
-      game!.playerOne = this;
-      setStatus(
-          mainCharacter.currentLifePoints <= 0 ||
-                  game!.config.mode != GameMode.story
-              ? maxLifePoints
-              : mainCharacter.currentLifePoints,
-          mainCharacter.poisonQuantity);
-      game!.refreshWeaponButtons();
-      game!.refreshLifePointsBar();
-      if (game!.isLoaded) game!.updateCamera(x, y);
-      if (game!.config.mode == GameMode.story) {
-        _itemList = List.from(mainCharacter.itemList);
-      }
-      game!.executeAction(action: game!.map.action, actor: game!.playerOne!);
-    } else {
-      npcController = NpcController(
-          tile.properties['movementPattern'], tile.properties['shootPattern']);
-    }
-    if (game!.config.mode != GameMode.story) {
-      isPlayerOne
-          ? updateOrientation(_initialOrientation)
-          : updateDirection(_initialOrientation);
-    }
   }
 
   // Non-Player Character (story mode)
-  CharacterComponent.npc(Tile tile)
+  CharacterComponent.npc(Tile tile, MatchConfig matchConfig)
       : this(
           tile,
+          matchConfig,
           initialLP: double.parse(tile.properties['lp'] ?? 'Infinity'),
           team: int.parse(tile.properties['team'] ?? '0'),
           inputWeaponList: [
@@ -102,7 +79,37 @@ class CharacterComponent extends DynamicComponent
         );
 
   @override
-  bool get isPlayerOne => this == game?.playerOne;
+  Future<void>? onLoad() {
+    super.onLoad();
+    if (tile.properties['isPlayerOne'] ?? false) {
+      setStatus(
+          mainCharacter.currentLifePoints <= 0 ||
+                  gameRef.config.mode != GameMode.story
+              ? maxLifePoints
+              : mainCharacter.currentLifePoints,
+          mainCharacter.poisonQuantity);
+      gameRef.refreshWeaponButtons();
+      gameRef.refreshLifePointsBar();
+      if (gameRef.isLoaded) gameRef.updateCamera(x, y);
+      if (gameRef.config.mode == GameMode.story) {
+        _itemList = List.from(mainCharacter.itemList);
+      }
+      gameRef.executeAction(
+          action: gameRef.map.action, actor: gameRef.playerOne!);
+    }
+    if (gameRef.config.mode != GameMode.story) {
+      isPlayerOne
+          ? updateOrientation(_initialOrientation)
+          : updateDirection(_initialOrientation);
+    }
+    return null;
+  }
+
+  // Component's tile
+  late Tile tile;
+
+  @override
+  bool get isPlayerOne => this == gameRef.playerOne;
 
   // List of weapon owned
   List<Weapon> weaponList = [];
@@ -121,7 +128,7 @@ class CharacterComponent extends DynamicComponent
 
   // Total number of minutes played by the character in this game
   double get minutesPlayed =>
-      mainCharacter.minutesPlayed + game!.elapsedSeconds / 60;
+      mainCharacter.minutesPlayed + gameRef.elapsedSeconds / 60;
 
   // List of items owned
   // Add/remove items by using addItem() and removeItem()
@@ -138,10 +145,11 @@ class CharacterComponent extends DynamicComponent
   // NPC features: If friendly it doesn't shoot. If quiet it doesn't move.
   late bool friendly;
   late bool quiet;
-  late NpcController npcController;
+  late NpcController npcController = NpcController(
+      tile.properties['movementPattern'], tile.properties['shootPattern']);
 
   @override
-  double maxLifePoints;
+  late double maxLifePoints;
 
   @override
   bool isSolid({DynamicComponent? otherComponent}) => !isBeingDeleted;
@@ -155,7 +163,7 @@ class CharacterComponent extends DynamicComponent
   // Weapon
   Weapon get selectedWeapon => weaponList[selectedWeaponIndex];
   void shoot() {
-    if (isBeingDeleted || game!.isPaused) return;
+    if (isBeingDeleted || gameRef.isPaused) return;
     selectedWeapon.shoot(shooter: this);
   }
 
@@ -183,7 +191,7 @@ class CharacterComponent extends DynamicComponent
 
   // Inspect what is in front of this
   void inspect() {
-    if (game!.isNotPaused && isStationary && !isBeingDeleted) {
+    if (gameRef.isNotPaused && isStationary && !isBeingDeleted) {
       componentInFront()?.playAction(orientation);
     }
   }
@@ -193,15 +201,19 @@ class CharacterComponent extends DynamicComponent
     _itemList.add(itemId);
     if (isPlayerOne) {
       if (itemData.containsKey(itemId)) {
-        game!.setMessage(Message('* {{hero}} puts %s in the backpack. *'
-            .i18n
-            .fill([itemData[itemId]!.name])));
+        gameRef.setMessage(Message(
+            gameRef,
+            '* {{hero}} puts %s in the backpack. *'
+                .i18n
+                .fill([itemData[itemId]!.name])));
       } else if (itemId.startsWith('gem_')) {
-        game!.setMessage(Message('* {{hero}} puts %s in the backpack. *'
-            .i18n
-            .fill(['the gem'.i18n.toUpperCase()])));
+        gameRef.setMessage(Message(
+            gameRef,
+            '* {{hero}} puts %s in the backpack. *'
+                .i18n
+                .fill(['the gem'.i18n.toUpperCase()])));
       }
-      game!.playSound(Sfx.item);
+      gameRef.playSound(Sfx.item);
     }
   }
 
@@ -209,15 +221,17 @@ class CharacterComponent extends DynamicComponent
   void removeItem(String itemId, {bool used = true}) {
     _itemList.remove(itemId);
     if (isPlayerOne) {
-      game!.setMessage(Message(used
-          ? '* {{hero}} used {{selected-item-name}} *'.i18n
-          : '* {{hero}} gives %s *'.i18n.fill([itemData[itemId]!.name])));
+      gameRef.setMessage(Message(
+          gameRef,
+          used
+              ? '* {{hero}} used {{selected-item-name}} *'.i18n
+              : '* {{hero}} gives %s *'.i18n.fill([itemData[itemId]!.name])));
     }
   }
 
   @override
   void hasMoved() {
-    if (isPlayerOne) game!.updateCamera(x, y);
+    if (isPlayerOne) gameRef.updateCamera(x, y);
   }
 
   @override
@@ -233,19 +247,20 @@ class CharacterComponent extends DynamicComponent
 
   @override
   void delete() {
-    if (game!.config.mode == GameMode.story) {
+    if (gameRef.config.mode == GameMode.story) {
       super.delete();
       if (isPlayerOne) {
-        game!.end();
-      } else if (!game!.hasAction) {
-        game!.executeAction(action: game!.map.action!, actor: game!.playerOne);
+        gameRef.end();
+      } else if (!gameRef.hasAction /*  && gameRef.map.action != null */) {
+        gameRef.executeAction(
+            action: gameRef.map.action!, actor: gameRef.playerOne);
       }
     } else {
       ++defeats;
       stop();
       respawnAnimation();
       removeChildren();
-      game!.checkMatchStatus();
+      gameRef.checkMatchStatus();
     }
   }
 
@@ -259,14 +274,14 @@ class CharacterComponent extends DynamicComponent
     orientation = _initialOrientation;
     direction = null;
     if (isPlayerOne) {
-      game!.refreshWeaponButtons();
-      game!.updateCamera(x, y);
+      gameRef.refreshWeaponButtons();
+      gameRef.updateCamera(x, y);
     }
   }
 
   @override
   void update(double dt) {
-    if (!isPlayerOne && game!.isNotPaused) {
+    if (!isPlayerOne && gameRef.isNotPaused) {
       npcController.shoot(this);
       npcController.move(this);
     }
@@ -275,6 +290,6 @@ class CharacterComponent extends DynamicComponent
 
   @override
   void render(Canvas canvas) {
-    super.render(canvas..translate(0, characterOffset));
+    super.render(canvas..translate(0, gameRef.characterOffset));
   }
 }

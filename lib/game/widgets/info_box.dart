@@ -4,7 +4,9 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Top left container
 class InfoBox extends StatelessWidget {
-  const InfoBox({required this.child, this.radius = 30, this.below = false});
+  const InfoBox(this.gameRef,
+      {required this.child, this.radius = 30, this.below = false});
+  final XeonjiaGame gameRef;
   final Widget child;
   final double radius;
   final bool below;
@@ -15,9 +17,9 @@ class InfoBox extends StatelessWidget {
       top: below ? 46 : 6,
       left: 6,
       child: InkWell(
-        onTap: () => game!.messageManager.active
+        onTap: () => gameRef.messageManager.active
             ? null
-            : game!.pause(mode: PauseMode.pause),
+            : gameRef.pause(mode: PauseMode.pause),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
           width: MediaQuery.of(context).size.width / 2.2,

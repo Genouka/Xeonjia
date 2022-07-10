@@ -37,41 +37,36 @@ import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/models/team.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
-// Main game variable
-XeonjiaGame? game;
-
 // Default component speed (componentSize per second)
 double get defaultSpeed => componentSize * 8;
 
 // Default component dimension
 late double componentSize;
 
-// Vertical offset used to translate characters
-double get characterOffset => -(componentSize *
-        ((game?.miniMapEnabled ?? false) ? game!.camera.zoom : 1) /
-        8)
-    .gridAligned
-    .toDouble();
-
 // Xeonjia game class
 class XeonjiaGame extends FlameGame
     with KeyboardEvents, PanDetector, SingleGameInstance, TapDetector {
   XeonjiaGame(this.config) {
+    environment = setEnvironment(this);
+    messageManager = MessageManager(this);
+    dialogBox = DialogBox(this);
+    _statusBox = StatusBox(this);
+    _virtualGamePad = VirtualGamePad(this);
     overlayMap = {
       'statusBox': (BuildContext context, XeonjiaGame game) {
         return _statusBox;
       },
       'backpackButton': (BuildContext context, XeonjiaGame game) {
-        return BackpackButton();
+        return BackpackButton(game);
       },
       'backpackMenu': (BuildContext context, XeonjiaGame game) {
-        return BackpackMenu();
+        return BackpackMenu(game);
       },
       'noMapsMenu': (BuildContext context, XeonjiaGame game) {
-        return const NoMapsMenu('43');
+        return NoMapsMenu(game, '43');
       },
       'miniMapButton': (BuildContext context, XeonjiaGame game) {
-        return MiniMapButton(miniMapIsActive: game.miniMapActive);
+        return MiniMapButton(game, miniMapIsActive: game.miniMapActive);
       },
       'virtualGamePad': (BuildContext context, XeonjiaGame game) {
         return _virtualGamePad;
@@ -94,12 +89,18 @@ class XeonjiaGame extends FlameGame
       overlays.add('backpackButton');
     } else {
       teams = [
-        Team(id: 0, name: 'Team A', color: Colors.red),
-        Team(id: 1, name: 'Team B', color: Colors.green),
+        Team(this, id: 0, name: 'Team A', color: Colors.red),
+        Team(this, id: 1, name: 'Team B', color: Colors.green),
       ];
     }
     start();
   }
+
+  // Vertical offset used to translate characters
+  double get characterOffset =>
+      -(componentSize * (miniMapEnabled ? camera.zoom : 1) / 8)
+          .gridAligned
+          .toDouble();
 
   // Match settings
   final MatchConfig config;
@@ -114,17 +115,17 @@ class XeonjiaGame extends FlameGame
   }
 
   // Scheme's environment
-  final Environment environment = setEnvironment();
+  late Environment environment;
 
   // Dialog box
-  final DialogBox dialogBox = DialogBox();
-  final MessageManager messageManager = MessageManager();
+  late DialogBox dialogBox;
+  late MessageManager messageManager;
 
   // Box with lifePoints, pause, time and team points
-  final StatusBox _statusBox = StatusBox();
+  late StatusBox _statusBox;
 
   // Virtual Gamepad (D-pad + buttons)
-  final VirtualGamePad _virtualGamePad = VirtualGamePad();
+  late VirtualGamePad _virtualGamePad;
 
   // Timer used in multiplayer mode
   Timer? _timer;
@@ -153,6 +154,17 @@ class XeonjiaGame extends FlameGame
   // List of teams
   List<Team>? teams;
 
+  @override
+  Future<void>? add(Component component) {
+    if (component is CharacterComponent) {
+      players.add(component);
+      if (component.tile.properties['isPlayerOne'] ?? false) {
+        playerOne = component;
+      }
+    }
+    return super.add(component);
+  }
+
   // Get component from ID
   BasicComponent? getComponentFromId(int id) {
     var componentList = List.from(children)..addAll(deletedComponents);
@@ -167,7 +179,7 @@ class XeonjiaGame extends FlameGame
       deletedComponents.firstWhere((c) => c.id == id);
 
   // Count enemies in the room
-  int get enemies => game!.children
+  int get enemies => children
       .where((e) =>
           (e is BasicComponent &&
               [-3, -2, 1].contains(e.teamId) &&
@@ -211,7 +223,7 @@ class XeonjiaGame extends FlameGame
     // Remove previous components
     // They are removed during the next update()
     removeAll(children);
-    this.add(BackgroundComponent());
+    add(BackgroundComponent());
     players.clear();
     deletedComponents.clear();
     modifiersToBeRegenerated.clear();
@@ -228,13 +240,13 @@ class XeonjiaGame extends FlameGame
         overlays.add('noMapsMenu');
         return;
       }
-      await importMap('assets/maps/story/${map.id}.tmx');
+      await importMap(this, 'assets/maps/story/${map.id}.tmx');
       miniMapActive = false;
       overlays.add('miniMapButton');
       overlays.add('backpackButton');
     } else {
       map = MapProperties(fullId: config.mapId.toString());
-      await importMap('assets/maps/arena/${config.mapId}.tmx');
+      await importMap(this, 'assets/maps/arena/${config.mapId}.tmx');
     }
 
     _timer = Timer(1, repeat: true, onTick: () {
@@ -280,7 +292,9 @@ class XeonjiaGame extends FlameGame
     _pause = true;
     if (stopEngine) pauseEngine();
     if (stopMusic) _backgroundMusic?.pause();
-    if (mode != null) addCustomWidgetOverlay('pauseMenu', PauseMenu(mode));
+    if (mode != null) {
+      addCustomWidgetOverlay('pauseMenu', PauseMenu(this, mode));
+    }
   }
 
   // Resume game
@@ -311,7 +325,7 @@ class XeonjiaGame extends FlameGame
     if (hasAction) {
       delay ??= nextActionDelay;
       nextActionDelay = 0;
-      this.add(TimerComponent(
+      add(TimerComponent(
         period: delay,
         onTick: () => evaluate(null, environment, _actionContinuation!),
       ));
@@ -338,7 +352,7 @@ class XeonjiaGame extends FlameGame
     currentBgm = newBgm;
     _backgroundMusic?.stop();
     Future.delayed(const Duration(seconds: 1), () {
-      if (game != null) _backgroundMusic?.play('bgm/' + currentBgm!);
+      _backgroundMusic?.play('bgm/' + currentBgm!);
     });
   }
 
@@ -350,7 +364,7 @@ class XeonjiaGame extends FlameGame
   // Save match data and load the new room
   void changeRoom(String nextRoomId, {bool enterNextRoom = true}) {
     pause(stopMusic: false);
-    if (game!.enemies == 0) {
+    if (enemies == 0) {
       currentEventLog['${map.id}-safe'] = true;
     }
 
@@ -377,7 +391,7 @@ class XeonjiaGame extends FlameGame
   void regenerateModifiers() {
     for (final modifier in modifiersToBeRegenerated) {
       modifier.deleted = false;
-      game!.add(modifier);
+      add(modifier);
     }
     modifiersToBeRegenerated.clear();
   }
@@ -409,7 +423,7 @@ class XeonjiaGame extends FlameGame
       pause(stopEngine: false, stopMusic: false);
       _statusBox.state?.refresh();
       overlays.remove('mapNameBox');
-      addCustomWidgetOverlay('mapNameBox', MapNameBox());
+      addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
       overlays.remove('miniMapButton');
       overlays.remove('backpackButton');
       refreshWeaponButtons();
@@ -479,7 +493,7 @@ class XeonjiaGame extends FlameGame
       saveUserData();
     }
     refreshLifePointsBar();
-    addCustomWidgetOverlay('endMenu', EndMenu(lostMoney ?? 0));
+    addCustomWidgetOverlay('endMenu', EndMenu(this, lostMoney ?? 0));
   }
 
   Offset? _panGestureOffset;
@@ -587,7 +601,7 @@ class XeonjiaGame extends FlameGame
   void dispose() {
     _backgroundMusic?.stop();
     _backgroundMusic?.dispose();
+    _backgroundMusic = null;
     gamepad?.removeListener();
-    game = null;
   }
 }

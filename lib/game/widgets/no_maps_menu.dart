@@ -6,7 +6,8 @@ import 'package:xeonjia/util/local_data_controller.dart';
 
 // Menu displayed if there are no more maps to play
 class NoMapsMenu extends StatelessWidget {
-  const NoMapsMenu(this.previousMapId);
+  const NoMapsMenu(this.gameRef, this.previousMapId);
+  final XeonjiaGame gameRef;
   final String previousMapId;
 
   @override
@@ -76,8 +77,8 @@ class NoMapsMenu extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       mainCharacter.visitedRooms.add(previousMapId);
-                      game!.start();
-                      game!.overlays.remove('noMapsMenu');
+                      gameRef.start();
+                      gameRef.overlays.remove('noMapsMenu');
                     },
                     child: Text(
                       'Go back'.i18n,
@@ -87,7 +88,7 @@ class NoMapsMenu extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       Navigator.pop(context);
-                      game!.dispose();
+                      gameRef.dispose();
                     },
                     child: Text(
                       'Back to menu'.i18n,

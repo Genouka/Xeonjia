@@ -14,8 +14,8 @@ import 'package:xeonjia/models/shop_item.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 // Set scheme's environment
-Environment setEnvironment() {
-  var env = Environment(null, null, null);
+Environment setEnvironment(XeonjiaGame gameRef) {
+  var env = Environment(gameRef, null, null, null);
   void _(String name, int arity, IntrinsicBody fun) {
     env.defineSymbol(Sym(name), Intrinsic(name, arity, fun));
   }
@@ -26,7 +26,7 @@ Environment setEnvironment() {
   // e.g. (move 2) and (move '(0 93))
   List getActorAndValue(Cell? x) => (x!.car is Cell)
       ? [
-          game!.getComponentFromId(((x.car as Cell).cdr as Cell).car as int),
+          gameRef.getComponentFromId(((x.car as Cell).cdr as Cell).car as int),
           (x.car as Cell).car
         ]
       : [env.lookForValue(Sym('actor')), x.car];
@@ -36,43 +36,44 @@ Environment setEnvironment() {
     env.defineSymbol(Sym(x!.car as String), x.cdr.car);
     return #NONE;
   });
-  _('get-life', 0, (Cell? x) => game!.playerOne!.lifePoints);
-  _('get-initial-life', 0, (Cell? x) => game!.playerOne!.maxLifePoints);
+  _('get-life', 0, (Cell? x) => gameRef.playerOne!.lifePoints);
+  _('get-initial-life', 0, (Cell? x) => gameRef.playerOne!.maxLifePoints);
   _('set-life-diff', 1, (Cell? x) {
-    game!.playerOne!.lifePointsDifference((x!.car as int).toDouble());
+    gameRef.playerOne!.lifePointsDifference((x!.car as int).toDouble());
     return #NONE;
   });
   _('set-life-to', 1, (Cell? x) {
-    game!.playerOne!.setStatus((x!.car as int).toDouble(), 0);
+    gameRef.playerOne!.setStatus((x!.car as int).toDouble(), 0);
     return #NONE;
   });
   _('restore-life', 0, (Cell? x) {
-    game!.addCustomWidgetOverlay(
-        'blackCurtain', BlackCurtain(game!.playerOne!.restoreStatus));
+    gameRef.addCustomWidgetOverlay('blackCurtain',
+        BlackCurtain(gameRef, gameRef.playerOne!.restoreStatus));
     return #NONE;
   });
   _('increase-life', 1,
-      (Cell? x) => game!.playerOne!.maxLifePoints += x!.car as num);
-  _('get-atk', 0, (Cell? x) => game!.playerOne!.atk);
-  _('increase-atk', 1, (Cell? x) => game!.playerOne!.atk += x!.car as num);
-  _('get-def', 0, (Cell? x) => game!.playerOne!.def);
-  _('increase-def', 1, (Cell? x) => game!.playerOne!.def += x!.car as num);
+      (Cell? x) => gameRef.playerOne!.maxLifePoints += x!.car as num);
+  _('get-atk', 0, (Cell? x) => gameRef.playerOne!.atk);
+  _('increase-atk', 1, (Cell? x) => gameRef.playerOne!.atk += x!.car as num);
+  _('get-def', 0, (Cell? x) => gameRef.playerOne!.def);
+  _('increase-def', 1, (Cell? x) => gameRef.playerOne!.def += x!.car as num);
   _('set-money-diff', 1, (Cell? x) {
-    game!.playerOne!.moneyDifference(x!.car as int, popup: false);
+    gameRef.playerOne!.moneyDifference(x!.car as int, popup: false);
     return #NONE;
   });
-  _('has-weapon', 1, (Cell? x) => game!.playerOne!.hasWeaponId(x!.car as int));
+  _('has-weapon', 1,
+      (Cell? x) => gameRef.playerOne!.hasWeaponId(x!.car as int));
   _('max-pp-snowballs', 0, (Cell? x) {
-    if (!game!.playerOne!.hasWeaponId(1)) return false;
-    var weapon = game!.playerOne!.getWeaponById(1);
+    if (!gameRef.playerOne!.hasWeaponId(1)) return false;
+    var weapon = gameRef.playerOne!.getWeaponById(1);
     var max = weapon.powerPoints >= weapon.maxPp;
     weapon.restorePp();
-    game!.refreshWeaponButtons();
+    gameRef.refreshWeaponButtons();
     return max;
   });
   _('give-weapon', 1, (Cell? x) {
-    game!.playerOne!.weaponList.add(Weapon.fromId(x!.car as int));
-    game!.refreshWeaponButtons();
+    gameRef.playerOne!.weaponList.add(Weapon.fromId(x!.car as int));
+    gameRef.refreshWeaponButtons();
     return #NONE;
   });
   _('places-visited', 0,
@@ -88,7 +89,7 @@ Environment setEnvironment() {
         1;
   });
   _('set-team', 1, (Cell? x) {
-    game!.playerOne?.maxLifePoints += x!.car as double;
+    gameRef.playerOne?.maxLifePoints += x!.car as double;
     return #NONE;
   });
   _('set-team', 1, (Cell? x) {
@@ -97,12 +98,12 @@ Environment setEnvironment() {
     return #NONE;
   });
   _('place', 3, (Cell? x) {
-    BasicComponent c = game!.getComponentFromId(x!.car as int) ??
+    BasicComponent c = gameRef.getComponentFromId(x!.car as int) ??
         (env.lookForValue(Sym('self')) as Intrinsic).fun!(x) as BasicComponent;
     c.x = x.cdr.car / 16 * componentSize;
     c.y = x.cdr.cdr.car / 16 * componentSize;
     if (c.isPlayerOne) {
-      game!.updateCamera(game!.playerOne!.x, game!.playerOne!.y);
+      gameRef.updateCamera(gameRef.playerOne!.x, gameRef.playerOne!.y);
     }
     return #NONE;
   });
@@ -113,7 +114,7 @@ Environment setEnvironment() {
     actor.updateDirection(GetDirection.fromInt(direction), animated: false);
     return #NONE;
   });
-  _('orientation', 0, (Cell? x) => game!.playerOne!.orientation.index);
+  _('orientation', 0, (Cell? x) => gameRef.playerOne!.orientation.index);
   _('set-orientation', 1, (Cell? x) {
     var actorAndValue = getActorAndValue(x);
     DynamicComponent actor = actorAndValue[0];
@@ -121,10 +122,13 @@ Environment setEnvironment() {
     actor.orientation = GetDirection.fromInt(direction);
     return #NONE;
   });
-  _('is-visible', 1,
-      (Cell? x) => game!.getComponentFromId(x!.car as int)?.isVisible ?? false);
+  _(
+      'is-visible',
+      1,
+      (Cell? x) =>
+          gameRef.getComponentFromId(x!.car as int)?.isVisible ?? false);
   _('show', 1, (Cell? x) {
-    game!.getComponentFromId(x!.car as int)?.show();
+    gameRef.getComponentFromId(x!.car as int)?.show();
     return #NONE;
   });
   _('show-me', 0, (Cell? x) {
@@ -133,11 +137,11 @@ Environment setEnvironment() {
     return #NONE;
   });
   _('hide', 1, (Cell? x) {
-    game!.getComponentFromId(x!.car as int)?.hide();
+    gameRef.getComponentFromId(x!.car as int)?.hide();
     return #NONE;
   });
   _('invert-visibility', 1, (Cell? x) {
-    game!.getComponentFromId(x!.car as int)!.invertVisibility();
+    gameRef.getComponentFromId(x!.car as int)!.invertVisibility();
     return #NONE;
   });
   _('delete-me', 0, (Cell? x) {
@@ -147,26 +151,29 @@ Environment setEnvironment() {
     return #NONE;
   });
   _('delete', 1, (Cell? x) {
-    game!.getComponentFromId(x!.car as int)?.delete();
+    gameRef.getComponentFromId(x!.car as int)?.delete();
     return #NONE;
   });
   _('respawn', 1, (Cell? x) {
-    game!.getDeletedComponentFromId(x!.car as int).respawn();
+    gameRef.getDeletedComponentFromId(x!.car as int).respawn();
     return #NONE;
   });
   _('leave', 0, (Cell? x) {
     BasicComponent self =
         (env.lookForValue(Sym('self')) as Intrinsic).fun!(x) as BasicComponent;
-    game!.addCustomWidgetOverlay('blackCurtain', BlackCurtain(self.delete));
+    gameRef.addCustomWidgetOverlay(
+        'blackCurtain', BlackCurtain(gameRef, self.delete));
     return #NONE;
   });
   _('leave-npc', 1, (Cell? x) {
-    game!.addCustomWidgetOverlay('blackCurtain',
-        BlackCurtain(game!.getComponentFromId(x!.car as int)?.delete));
+    gameRef.addCustomWidgetOverlay(
+        'blackCurtain',
+        BlackCurtain(
+            gameRef, gameRef.getComponentFromId(x!.car as int)?.delete));
     return #NONE;
   });
   _('is-friendly', 1, (Cell? x) {
-    return (game!.getComponentFromId(x!.car as int) as CharacterComponent)
+    return (gameRef.getComponentFromId(x!.car as int) as CharacterComponent)
         .friendly;
   });
   _('friendly', 1, (Cell? x) {
@@ -183,49 +190,50 @@ Environment setEnvironment() {
     actor.quiet = quiet;
     return #NONE;
   });
-  _('enemies-count', 0, (Cell? x) => game!.enemies);
+  _('enemies-count', 0, (Cell? x) => gameRef.enemies);
   _('fire-event', 1, (Cell? x) {
     (x!.car as BasicComponent).executeAction();
     return #NONE;
   });
   _('fire-global-event', 0, (Cell? x) {
-    for (final c in game!.children) {
+    for (final c in gameRef.children) {
       if (c is BasicComponent) c.executeAction();
     }
     return #NONE;
   });
-  _('gem-count', 0, (Cell? x) => game!.playerOne!.gemCount);
+  _('gem-count', 0, (Cell? x) => gameRef.playerOne!.gemCount);
   _('has-item', 1, (Cell? x) {
-    return (game!.playerOne?.itemList ?? mainCharacter.itemList)
+    return (gameRef.playerOne?.itemList ?? mainCharacter.itemList)
         .contains(x!.car);
   });
   _('give-item', 1, (Cell? x) {
-    game!.playerOne!.addItem(x!.car as String);
+    gameRef.playerOne!.addItem(x!.car as String);
     return #NONE;
   });
   _('find-item', 1, (Cell? x) {
-    game!.playerOne!.addItem(x!.car as String);
+    gameRef.playerOne!.addItem(x!.car as String);
     return #NONE;
   });
   _('take-item', 1, (Cell? x) {
-    game!.playerOne!.removeItem(x!.car as String, used: false);
+    gameRef.playerOne!.removeItem(x!.car as String, used: false);
     return #NONE;
   });
   _('use-item', 1, (Cell? x) {
-    game!.playerOne!.removeItem(x!.car as String);
+    gameRef.playerOne!.removeItem(x!.car as String);
     return #NONE;
   });
   _('story-dialog', 1, (Cell? x) {
-    game!.setMessage(Message(stringify(x!.car, false)), hideMap: true);
+    gameRef.setMessage(Message(gameRef, stringify(x!.car, false)),
+        hideMap: true);
     return #NONE;
   });
   _('dialog', 1, (Cell? x) {
     var it = (x!.car as Cell).iterator;
     while (it.moveNext()) {
-      game!.setMessage((it.current as Cell).length == 1
-          ? Message((it.current as Cell).car as String,
+      gameRef.setMessage((it.current as Cell).length == 1
+          ? Message(gameRef, (it.current as Cell).car as String,
               component: env.lookForValue(Sym('actor')) as BasicComponent)
-          : Message((it.current as Cell).cdr.car,
+          : Message(gameRef, (it.current as Cell).cdr.car,
               component: env.lookForValue(Sym('actor')) as BasicComponent,
               author: (it.current as Cell).car as String));
     }
@@ -234,11 +242,12 @@ Environment setEnvironment() {
   _('dialog-kobi', 1, (Cell? x) {
     var it = (x!.car as Cell).iterator;
     while (it.moveNext()) {
-      game!.setMessage((it.current as Cell).length == 1
-          ? Message((it.current as Cell).car as String,
+      gameRef.setMessage((it.current as Cell).length == 1
+          ? Message(gameRef, (it.current as Cell).car as String,
               component: env.lookForValue(Sym('actor')) as BasicComponent,
               font: 'kobi')
           : Message(
+              gameRef,
               (it.current as Cell).cdr.car,
               component: env.lookForValue(Sym('actor')) as BasicComponent,
               author: (it.current as Cell).car as String,
@@ -250,7 +259,7 @@ Environment setEnvironment() {
   _('answer', 2, (Cell? x) {
     var it = (x!.cdr.car as Cell).iterator;
     while (it.moveNext()) {
-      game!.messageManager.answers.add(Answer(x.car.toString(),
+      gameRef.messageManager.answers.add(Answer(x.car.toString(),
           (it.current as Cell).car.toString(), (it.current as Cell).cdr));
     }
     return #NONE;
@@ -265,43 +274,44 @@ Environment setEnvironment() {
         action: (it.current as Cell).cdr.cdr.car,
       ));
     }
-    game!.addCustomWidgetOverlay('shop', ShopMenu(itemList));
+    gameRef.addCustomWidgetOverlay('shop', ShopMenu(gameRef, itemList));
     return #NONE;
   });
   _('black-curtain', 0, (Cell? x) {
-    game!.addCustomWidgetOverlay('blackCurtain', const BlackCurtain());
+    gameRef.addCustomWidgetOverlay('blackCurtain', BlackCurtain(gameRef));
     return #NONE;
   });
   _('teleport', 2, (Cell? x) {
-    game!.changeRoom(x!.car as String, enterNextRoom: x.cdr.car);
+    gameRef.changeRoom(x!.car as String, enterNextRoom: x.cdr.car);
     return #NONE;
   });
   _(
     'get',
     1,
-    (Cell? x) => (game!.currentEventLog.containsKey(x!.car.toString()))
-        ? game!.currentEventLog[x.car.toString()]
+    (Cell? x) => (gameRef.currentEventLog.containsKey(x!.car.toString()))
+        ? gameRef.currentEventLog[x.car.toString()]
         : false,
   );
   _(
     '!get', // only for boolean
     1,
-    (Cell? x) => (game!.currentEventLog.containsKey(x!.car.toString()))
-        ? !game!.currentEventLog[x.car.toString()]
+    (Cell? x) => (gameRef.currentEventLog.containsKey(x!.car.toString()))
+        ? !gameRef.currentEventLog[x.car.toString()]
         : true,
   );
   _('set', 2, (Cell? x) {
-    game!.currentEventLog[x!.car.toString()] = x.cdr.car;
+    gameRef.currentEventLog[x!.car.toString()] = x.cdr.car;
     return #NONE;
   });
   _('map-name', 1, (Cell? x) {
-    game!.map.name = stringify(x!.car, false);
-    game!.addCustomWidgetOverlay('mapNameBox', MapNameBox(below: true));
-    game!.add(TimerComponent(
+    gameRef.map.name = stringify(x!.car, false);
+    gameRef.addCustomWidgetOverlay(
+        'mapNameBox', MapNameBox(gameRef, below: true));
+    gameRef.add(TimerComponent(
       period: 3,
       removeOnFinish: true,
       onTick: () {
-        if (!game!.miniMapEnabled) game!.overlays.remove('mapNameBox');
+        if (!gameRef.miniMapEnabled) gameRef.overlays.remove('mapNameBox');
       },
     ));
     return #NONE;
@@ -338,7 +348,7 @@ Environment setEnvironment() {
   _('error', 2, (Cell? x) => throw ErrorException(x!.car!, x.cdr.car));
   _('globals', 0, (Cell? x) {
     late Cell j;
-    for (final symbol in game!.environment.names) {
+    for (final symbol in gameRef.environment.names) {
       j = Cell(symbol, j);
     }
     return j;

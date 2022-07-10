@@ -5,7 +5,8 @@ import 'package:xeonjia/util/i18n.dart';
 
 // Map name shown on the top left of the screen
 class MapNameBox extends StatelessWidget {
-  MapNameBox({this.below = false}) : text = game!.map.name;
+  MapNameBox(this.gameRef, {this.below = false}) : text = gameRef.map.name;
+  final XeonjiaGame gameRef;
   final String? text;
   final bool below;
 
@@ -13,6 +14,7 @@ class MapNameBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return text != null
         ? InfoBox(
+            gameRef,
             below: below,
             child: Marquee(
               child: Text(

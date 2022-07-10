@@ -6,7 +6,7 @@ import 'package:xeonjia/util/local_data_controller.dart';
 
 // Message shown in dialog box
 class Message {
-  Message(this.text,
+  Message(this.gameRef, this.text,
       {this.author = '', this.component, bool translate = true, this.font}) {
     var m = RegExp(r'([^\/]*)\/?([^_]*)_?(.*)').firstMatch(author)!;
     var name = m.group(2) != '' ? m.group(2)! : component?.name ?? '';
@@ -25,7 +25,7 @@ class Message {
           .i18n
           .replaceAll('\n', r'\n')
           .replaceAllMapped(RegExp('{{(.*?)}}'),
-              (m) => game!.environment.lookForValue(Sym(m[1]!)).toString());
+              (m) => gameRef.environment.lookForValue(Sym(m[1]!)).toString());
       if (font == 'kobi') {
         const diacritics =
             'ÀÁÂÃÄÅàáâãäåắạÒÓÔÕÕÖØòóôõöøốọồớÈÉÊËèéêëềẽðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüựứừưÑñŠšŸÿýŽžđ';
@@ -38,6 +38,9 @@ class Message {
       }
     }
   }
+
+  // Current game
+  final XeonjiaGame gameRef;
 
   // Text of the message
   String text;

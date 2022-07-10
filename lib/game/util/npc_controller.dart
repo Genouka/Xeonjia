@@ -1,6 +1,5 @@
 import 'package:flame/components.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 
 // Manage movements and shots (NPC)
@@ -51,7 +50,7 @@ class NpcController {
   void move(CharacterComponent npc) {
     if (!npc.quiet && npc.isStationary && !_movementInQueue) {
       _movementInQueue = true;
-      game!.add(TimerComponent(
+      npc.gameRef.add(TimerComponent(
           period: 0.5,
           onTick: () {
             _movementInQueue = false;
@@ -67,17 +66,18 @@ class NpcController {
   void shoot(CharacterComponent npc) {
     if (!npc.friendly && !_shotInQueue) {
       _shotInQueue = true;
-      game!.add(TimerComponent(
+      npc.gameRef.add(TimerComponent(
           period: _hasShots ? _nextShot.frequency : 0.5,
           onTick: () {
             _shotInQueue = false;
             if (_hasShots) npc.updateOrientation(_nextShot.direction);
-            if (npc.teamId != game!.playerOne!.teamId) {
-              if (game!.playerOne!.x == npc.x) {
-                npc.updateOrientation(
-                    game!.playerOne!.y > npc.y ? Direction.down : Direction.up);
-              } else if (game!.playerOne!.y == npc.y) {
-                npc.updateOrientation(game!.playerOne!.x > npc.x
+            if (npc.teamId != npc.gameRef.playerOne!.teamId) {
+              if (npc.gameRef.playerOne!.x == npc.x) {
+                npc.updateOrientation(npc.gameRef.playerOne!.y > npc.y
+                    ? Direction.down
+                    : Direction.up);
+              } else if (npc.gameRef.playerOne!.y == npc.y) {
+                npc.updateOrientation(npc.gameRef.playerOne!.x > npc.x
                     ? Direction.right
                     : Direction.left);
               }

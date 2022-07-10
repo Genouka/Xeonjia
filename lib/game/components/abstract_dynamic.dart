@@ -44,7 +44,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   final punchSprites = <Direction, Sprite>{};
 
   @override
-  void onCreate() {
+  Future<void>? onLoad() {
     const size = 16.0;
     for (final d in Direction.values) {
       _sprites[d] = Sprite(Flame.images.fromCache(image),
@@ -57,7 +57,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
           srcPosition: Vector2(d.index * size, size * 2),
           srcSize: Vector2.all(size));
     }
-    super.onCreate();
+    return super.onLoad();
   }
 
   // If this component was previously still update its direction and orientation
@@ -109,7 +109,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
         candidatePositionTemp.height);
 
     // Check if this is going to collide or overlap another component
-    for (final component in game!.children) {
+    for (final component in gameRef.children) {
       if (component is BasicComponent &&
           component != this &&
           component != father &&
@@ -164,7 +164,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
           cause: this, poison: poisonAtk);
     } else if (settings.soundEffects &&
         (collidedComponent is! StaticComponent || !collidedComponent.isFloor)) {
-      game!.playSound(Sfx.collision);
+      gameRef.playSound(Sfx.collision);
     }
     if (_wallInFront() == null) {
       collidedComponent.collidedBy(this);
@@ -176,7 +176,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
 
   // Get components under this one
   List<BasicComponent> componentsUnder() {
-    return game!.children
+    return gameRef.children
         .where((component) =>
             (component is StaticComponent || component is ThinWallComponent) &&
             (component as BasicComponent)
@@ -210,7 +210,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
         offset = Offset(x - componentSize / 2, y + componentSize / 2);
         break;
     }
-    return game!.children
+    return gameRef.children
         .where((component) =>
             component is BasicComponent &&
             component.toRect().contains(offset) &&

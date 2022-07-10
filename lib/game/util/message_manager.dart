@@ -4,6 +4,9 @@ import 'package:xeonjia/models/sfx.dart';
 
 // Manage game messages (used in dialog box)
 class MessageManager {
+  MessageManager(this.gameRef);
+  final XeonjiaGame gameRef;
+
   // Messages to show
   List<Message> _messages = [];
 
@@ -14,7 +17,7 @@ class MessageManager {
 
   // Increase currentIndex and check if there are other messages
   bool get hasOtherMessages =>
-      _currentIndex + 1 < (game!.messageManager._messages.length);
+      _currentIndex + 1 < (gameRef.messageManager._messages.length);
 
   // Answers shown at the end of the dialog
   List<Answer> answers = [];
@@ -24,10 +27,10 @@ class MessageManager {
   void clear() {
     _messages = [];
     answers = [];
-    game!.continueAction(delay: 0);
+    gameRef.continueAction(delay: 0);
     if (hideMap) {
       hideMap = false;
-      game!.playBackgroundMusic();
+      gameRef.playBackgroundMusic();
     }
   }
 
@@ -47,9 +50,9 @@ class MessageManager {
       return previousValue;
     }));
     _currentIndex = 0;
-    game!.dialogBox.state?.refresh();
-    game!.pause(stopMusic: false);
-    game!.playSound(Sfx.dialog);
+    gameRef.dialogBox.state?.refresh();
+    gameRef.pause(stopMusic: false);
+    gameRef.playSound(Sfx.dialog);
   }
 
   // Split message in sentences and group them
@@ -68,6 +71,7 @@ class MessageManager {
     });
     return strings.fold([], (previousValue, element) {
       previousValue.add(Message(
+        gameRef,
         element,
         author: message.author,
         component: message.component,
