@@ -49,7 +49,7 @@ class EndMenu extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {
-                  game!.init();
+                  game!.start();
                   game!.overlays.remove('endMenu');
                 },
                 child: Text(

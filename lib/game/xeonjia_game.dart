@@ -98,7 +98,7 @@ class XeonjiaGame extends FlameGame
         Team(id: 1, name: 'Team B', color: Colors.green),
       ];
     }
-    init();
+    start();
   }
 
   // Match settings
@@ -196,7 +196,7 @@ class XeonjiaGame extends FlameGame
   Color backgroundColor() => const Color(0xFF5D6872);
 
   // Reset variables and import map data
-  void init() async {
+  void start() async {
     pause(stopMusic: false);
     overlays.remove('mapNameBox');
     overlays.remove('miniMapButton');
@@ -370,7 +370,7 @@ class XeonjiaGame extends FlameGame
     saveUserData();
 
     // Load the next room
-    if (enterNextRoom) init();
+    if (enterNextRoom) start();
   }
 
   // Regenerate regenerable modifiers

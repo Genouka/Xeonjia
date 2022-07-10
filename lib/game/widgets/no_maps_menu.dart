@@ -76,7 +76,7 @@ class NoMapsMenu extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       mainCharacter.visitedRooms.add(previousMapId);
-                      game!.init();
+                      game!.start();
                       game!.overlays.remove('noMapsMenu');
                     },
                     child: Text(

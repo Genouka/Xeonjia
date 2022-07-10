@@ -91,7 +91,7 @@ class _PauseMenuState extends State<PauseMenu> {
         () {
           if (pauseMode == PauseMode.restart) {
             game!.overlays.remove('pauseMenu');
-            game!.init();
+            game!.start();
           } else {
             Navigator.pop(context);
             game!.dispose();
