@@ -8,6 +8,7 @@ import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/components/dynamic/snowball.dart';
 import 'package:xeonjia/game/components/static/static.dart';
+import 'package:xeonjia/game/util/fire_atlas.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
@@ -18,18 +19,20 @@ import 'package:xeonjia/models/tile.dart';
 // Every game component extends this one
 abstract class BasicComponent extends SpriteComponent
     with HasGameRef<XeonjiaGame> {
-  BasicComponent(
-      int? id, Point startingPosition, Map<String, dynamic> properties)
+  BasicComponent(int? id, Point startingPosition,
+      [Map<String, dynamic>? properties])
       : this.fromTile(Tile(
             id: id,
             position: startingPosition,
             size: componentSize,
-            sprite: Sprite(
-              Flame.images.fromCache(properties['image']),
-              srcPosition:
-                  Vector2(0, 16 * (properties['imageY'] as double? ?? 0)),
-              srcSize: Vector2.all(16),
-            ),
+            sprite: (properties?.containsKey('image') ?? false)
+                ? Sprite(
+                    Flame.images.fromCache(properties!['image']),
+                    srcPosition:
+                        Vector2(0, 16 * (properties['imageY'] as double? ?? 0)),
+                    srcSize: Vector2.all(16),
+                  )
+                : null,
             properties: properties));
 
   BasicComponent.fromTile(Tile tile)
@@ -157,8 +160,19 @@ abstract class BasicComponent extends SpriteComponent
   Future<void>? onLoad() {
     _lifePoints = maxLifePoints;
     if (this is! SnowballComponent) executeAction();
+    if (atlasAsset != null) {
+      gameRef.loadCustomAtlas('images/metadata/$atlasAsset').then((value) {
+        atlas = value;
+        sprite = atlas.getSprite(name!);
+        show();
+      });
+    }
     return null;
   }
+
+  // Atlas file used for sprites and animations
+  String? atlasAsset;
+  late FireAtlas atlas;
 
   // Execute an action
   void executeAction([String? action, BasicComponent? actor]) {
