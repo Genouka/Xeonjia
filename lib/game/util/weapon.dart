@@ -100,8 +100,8 @@ class SnowBallWeapon extends Weapon {
   @override
   void shoot({required CharacterComponent shooter}) {
     if (powerPoints > 0) {
-      SnowballComponent(
-          Point(shooter.x, shooter.y), shooter, shooter.orientation, atk);
+      shooter.gameRef.add(SnowballComponent(
+          Point(shooter.x, shooter.y), shooter, shooter.orientation, atk));
       --powerPoints;
       super.shoot(shooter: shooter);
       if (shooter == shooter.gameRef.playerOne ||
@@ -125,7 +125,8 @@ class MineWeapon extends Weapon {
   @override
   void shoot({required CharacterComponent shooter}) {
     if (powerPoints > 0) {
-      ModifierComponent.mine(Point(shooter.x, shooter.y), shooter, atk);
+      shooter.gameRef.add(
+          ModifierComponent.mine(Point(shooter.x, shooter.y), shooter, atk));
       --powerPoints;
       super.shoot(shooter: shooter);
     }
