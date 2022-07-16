@@ -1,7 +1,5 @@
 import 'dart:math';
 
-import 'package:flame/components.dart';
-import 'package:flame/flame.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -26,13 +24,19 @@ class ModifierComponent extends BasicComponent {
 
   // Constructor used for mine weapon shots
   ModifierComponent.mine(Point position, this.father, double atk)
-      : super(
-            null,
-            Point(position.x / componentSize, position.y / componentSize),
-            {'image': 'mine.png', 'imageY': father!.teamId.toDouble()}) {
+      : atlasAsset = 'mine.json',
+        name = 'mine-${father!.teamId}',
+        super(null,
+            Point(position.x / componentSize, position.y / componentSize)) {
     _lifePointsDiff = -atk;
     explosionOnDelete = true;
   }
+
+  @override
+  String? atlasAsset;
+
+  @override
+  String? name;
 
   // Stats difference caused by this component
   int _moneyDelta = 0;
@@ -86,16 +90,7 @@ class ModifierComponent extends BasicComponent {
       if (explosionOnDelete) {
         isBeingDeleted = true;
         gameRef.playSound(Sfx.explosion);
-        animation = SpriteAnimation.fromFrameData(
-            Flame.images.fromCache(image),
-            SpriteAnimationData.sequenced(
-              amount: 4,
-              texturePosition: Vector2(16, 16.0 * father!.teamId),
-              textureSize: Vector2.all(16),
-              stepTime: 0.05,
-              loop: false,
-            ))
-          ..onComplete = delete;
+        animation = atlas.getAnimation('$name-explosion')..onComplete = delete;
       } else {
         delete();
       }
