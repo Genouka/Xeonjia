@@ -28,6 +28,7 @@
 
 import 'dart:convert';
 
+import 'package:archive/archive.dart';
 import 'package:flame/cache.dart';
 import 'package:flame/extensions.dart';
 import 'package:flame/flame.dart';
@@ -306,11 +307,22 @@ class FireAtlas {
   }
 
   /// Serializes this instances into a byte array.
-  List<int> serialize() => utf8.encode(jsonEncode(toJson()));
+  List<int> serialize() {
+    final raw = jsonEncode(toJson());
+
+    final stringBytes = utf8.encode(raw);
+    final gzipBytes = GZipEncoder().encode(stringBytes);
+
+    if (gzipBytes == null) {
+      throw 'Generated an empty file';
+    }
+    return gzipBytes;
+  }
 
   /// Reads a [FireAtlas] instance from a byte array.
   factory FireAtlas.deserialize(List<int> bytes) {
-    final unzippedString = utf8.decode(bytes);
+    final unzippedBytes = GZipDecoder().decodeBytes(bytes);
+    final unzippedString = utf8.decode(unzippedBytes);
     return FireAtlas._fromJson(
       jsonDecode(unzippedString) as Map<String, dynamic>,
     );
