@@ -30,7 +30,7 @@
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <tileset firstgid="229" source="../tilesets/crypt-1.tsx"/>
- <tileset firstgid="285" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="285" source="../tilesets/monsters.tsx"/>
  <tileset firstgid="293" source="../tilesets/npc_main.tsx"/>
  <layer id="1" name="Tile Layer 1" width="19" height="19">
   <data encoding="base64" compression="gzip">

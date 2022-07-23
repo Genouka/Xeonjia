@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flame/components.dart';
-import 'package:flame/flame.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -16,10 +15,19 @@ class SnowballComponent extends DynamicComponent {
             null,
             Point(startingPosition.x / componentSize,
                 startingPosition.y / componentSize),
-            {'image': 'snowball.png'});
+            {});
 
   @override
   BasicComponent? father;
+
+  @override
+  String? atlasAsset = 'weapons.xfa';
+
+  @override
+  String? name = 'snowball';
+
+  @override
+  Sprite getSpriteFromAtlas() => atlas.getSprite(name!);
 
   @override
   Direction? direction;
@@ -47,16 +55,7 @@ class SnowballComponent extends DynamicComponent {
     stop();
     gameRef.playSound(Sfx.snowball);
     isBeingDeleted = true;
-    animation = SpriteAnimation.fromFrameData(
-        Flame.images.fromCache(image),
-        SpriteAnimationData.sequenced(
-          amount: 4,
-          texturePosition: Vector2(16, 16.0 * father!.teamId),
-          textureSize: Vector2.all(16),
-          stepTime: 0.02,
-          loop: false,
-        ))
-      ..onComplete = delete;
+    animation = atlas.getAnimation('${name}_explosion')..onComplete = delete;
     if (gameRef.config.friendlyFire ||
         collidedComponent?.teamId != father!.teamId) {
       collidedComponent?.lifePointsDifference(-atk, cause: father);

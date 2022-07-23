@@ -6,7 +6,7 @@
   <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
- <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
  <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="189" source="../tilesets/capital-1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="34">

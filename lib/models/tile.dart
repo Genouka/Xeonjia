@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
@@ -11,14 +10,13 @@ class Tile {
     this.gid,
     this.type,
     Map<String, dynamic>? properties,
-    Sprite? sprite,
+    this.sprite,
     this.size,
     this.animationStepTime,
     this.position,
     this.layer,
   }) {
     this.properties = properties ?? {};
-    this.sprite = sprite;
     size ??= componentSize;
   }
 
@@ -34,11 +32,8 @@ class Tile {
   late Map<String, dynamic> properties;
 
   // Component sprite
-  Sprite? _sprite;
-  Sprite get sprite =>
-      _sprite ?? Sprite(Flame.images.fromCache('background.png'));
-  set sprite(Sprite? sprite) => _sprite = sprite;
-  bool get hidden => _sprite == null;
+  Sprite? sprite;
+  bool get hidden => sprite == null;
 
   // Component size
   double? size;

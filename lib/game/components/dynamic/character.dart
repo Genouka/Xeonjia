@@ -33,8 +33,8 @@ class CharacterComponent extends DynamicComponent
         ((isPlayerOne && matchConfig.mode == GameMode.story)
             ? mainCharacter.maxLifePoints
             : (100 + 5 * level).toDouble());
-    orientation =
-        GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0'));
+    updateOrientation(
+        GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0')));
     _initialOrientation = orientation;
     friendly = 'true' == (tile.properties['friendly'] ?? 'true');
     quiet = 'true' == (tile.properties['quiet'] ?? 'true');
@@ -54,6 +54,10 @@ class CharacterComponent extends DynamicComponent
       }
     }
     teamId = team;
+    if (image == '') {
+      atlasAsset ??= isPlayerOne ? 'hero.xfa' : 'character_cpu.xfa';
+    }
+    name ??= isPlayerOne ? 'hero' : 'character_cpu-$teamId';
     if (weaponList.isEmpty) {
       weaponList = inputWeaponList ??
           ((team == 0)
@@ -96,11 +100,6 @@ class CharacterComponent extends DynamicComponent
       }
       gameRef.executeAction(
           action: gameRef.map.action, actor: gameRef.playerOne!);
-    }
-    if (gameRef.config.mode != GameMode.story) {
-      isPlayerOne
-          ? updateOrientation(_initialOrientation)
-          : updateDirection(_initialOrientation);
     }
     return null;
   }
@@ -156,7 +155,7 @@ class CharacterComponent extends DynamicComponent
 
   @override
   void playAction(Direction orientation) {
-    this.orientation = orientation.opposite;
+    updateOrientation(orientation.opposite);
     super.playAction(orientation);
   }
 

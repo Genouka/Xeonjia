@@ -4,7 +4,7 @@
   <property name="map-name" value="Route 5"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
- <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
  <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="189" source="../tilesets/outdoor-2.tsx"/>
  <tileset firstgid="349" source="../tilesets/basic.tsx"/>

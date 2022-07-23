@@ -39,6 +39,7 @@ abstract class BasicComponent extends SpriteComponent
       : id = tile.id,
         startingPosition = tile.position!,
         name = tile.properties['name'],
+        atlasAsset = tile.properties['atlasAsset'],
         action = tile.properties['action'] ?? '',
         actionOnCollision = tile.properties['actionOnCollision'] ?? '',
         actionOnEvent = tile.properties['actionOnEvent'] ?? '',
@@ -57,8 +58,10 @@ abstract class BasicComponent extends SpriteComponent
           size: Vector2(tile.size!, tile.size!),
           sprite: tile.sprite,
         ) {
-    animate(tile.animationSprites,
-        stepTime: tile.animationStepTime, loop: true);
+    if (tile.animationSprites.isNotEmpty) {
+      animation = SpriteAnimation.spriteList(tile.animationSprites,
+          stepTime: tile.animationStepTime ?? 0.15, loop: true);
+    }
     if (tile.hidden) hide();
     x = startingPosition.x * componentSize;
     y = startingPosition.y * componentSize;
@@ -157,22 +160,21 @@ abstract class BasicComponent extends SpriteComponent
 
   @override
   @mustCallSuper
-  Future<void>? onLoad() {
+  Future<void>? onLoad() async {
     _lifePoints = maxLifePoints;
     if (this is! SnowballComponent) executeAction();
-    if (atlasAsset != null) {
-      gameRef.loadCustomAtlas('images/metadata/$atlasAsset').then((value) {
-        atlas = value;
-        sprite = atlas.getSprite(name!);
-        show();
-      });
+    if (atlasAsset != null && name != null) {
+      atlas = await gameRef.loadCustomAtlas('images/metadata/$atlasAsset');
+      sprite = getSpriteFromAtlas();
+      show();
     }
-    return null;
+    sprite ??= Sprite(Flame.images.fromCache('basic.png')); // placeholder
   }
 
   // Atlas file used for sprites and animations
   String? atlasAsset;
   late FireAtlas atlas;
+  Sprite getSpriteFromAtlas() => atlas.getSprite(name!);
 
   // Execute an action
   void executeAction([String? action, BasicComponent? actor]) {
@@ -280,13 +282,6 @@ abstract class BasicComponent extends SpriteComponent
   void restoreLifePoints() {
     _lifePoints = maxLifePoints;
     if (isPlayerOne) gameRef.refreshLifePointsBar();
-  }
-
-  // Animate this component
-  void animate(List<Sprite> sprites, {double? stepTime, bool loop = false}) {
-    if (sprites.isEmpty) return;
-    animation = SpriteAnimation.spriteList(sprites,
-        stepTime: stepTime ?? 0.15, loop: loop);
   }
 
   @override

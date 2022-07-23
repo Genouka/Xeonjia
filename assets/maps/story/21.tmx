@@ -6,7 +6,7 @@
   <property name="map-name" value="Route 2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
- <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
  <tileset firstgid="137" source="../tilesets/basic.tsx"/>
  <layer id="12" name="Tile Layer 1" width="28" height="18">
   <data encoding="base64" compression="gzip">

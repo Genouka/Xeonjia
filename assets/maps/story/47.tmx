@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="25" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="54">
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
- <tileset firstgid="129" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
  <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="189" source="../tilesets/outdoor-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="18">

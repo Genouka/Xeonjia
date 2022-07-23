@@ -37,7 +37,6 @@ flutter:
     - assets/graphics/
     - assets/images/
     - assets/images/metadata/
-    - assets/images/heads/
     - assets/maps/
     - assets/maps/arena/
     - assets/maps/story/

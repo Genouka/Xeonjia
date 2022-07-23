@@ -1,8 +1,9 @@
 import 'dart:math';
 
 import 'package:collection/collection.dart';
-import 'package:flame/components.dart';
+import 'package:flame/extensions.dart';
 import 'package:flame/flame.dart';
+import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/static/static.dart';
@@ -23,6 +24,9 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   // Constructor used when component is imported from a tmx file
   DynamicComponent.fromTile(tile) : super.fromTile(tile);
 
+  @override
+  Sprite getSpriteFromAtlas() => atlas.getSprite('$name-${orientation.index}');
+
   // Component orientation
   Direction orientation = Direction.down;
 
@@ -40,22 +44,17 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
 
   // Map orientation : sprite
   final _sprites = <Direction, Sprite>{};
-  final _walkingSprites = <Direction, Sprite>{};
-  final punchSprites = <Direction, Sprite>{};
 
   @override
   Future<void>? onLoad() {
-    const size = 16.0;
-    for (final d in Direction.values) {
-      _sprites[d] = Sprite(Flame.images.fromCache(image),
-          srcPosition: Vector2(d.index * size, imageY),
-          srcSize: Vector2.all(size));
-      _walkingSprites[d] = Sprite(Flame.images.fromCache(image),
-          srcPosition: Vector2(d.index * size, size),
-          srcSize: Vector2.all(size));
-      punchSprites[d] = Sprite(Flame.images.fromCache(image),
-          srcPosition: Vector2(d.index * size, size * 2),
-          srcSize: Vector2.all(size));
+    if (atlasAsset == null) {
+      const size = 16.0;
+      for (final d in Direction.values) {
+        _sprites[d] = Sprite(Flame.images.fromCache(image),
+            srcPosition: Vector2(d.index * size, imageY),
+            srcSize: Vector2.all(size));
+      }
+      updateOrientation();
     }
     return super.onLoad();
   }
@@ -67,7 +66,9 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
       wasStationary = true;
       direction = newDirection;
       updateOrientation();
-      if (animated) animate([_walkingSprites[orientation]!]);
+      if (animated) {
+        animation = atlas.getAnimation('$name-${direction!.index}-walking');
+      }
       ++movesCounter;
 
       // Decrease life points cause poison
@@ -78,12 +79,9 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
   // Update component orientation
   void updateOrientation([Direction? newDirection]) {
     orientation = newDirection ?? direction ?? orientation;
-  }
-
-  @override
-  void render(Canvas canvas) {
-    sprite = _sprites[orientation];
-    super.render(canvas);
+    sprite = atlasAsset == null
+        ? _sprites[orientation]
+        : atlas.getSprite('${name!}-${orientation.index}');
   }
 
   @override

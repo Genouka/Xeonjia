@@ -1,4 +1,6 @@
+import 'package:flame/sprite.dart';
 import 'package:xeonjia/game/components/abstract_basic.dart';
+import 'package:xeonjia/game/util/fire_atlas.dart';
 import 'package:xeonjia/game/util/little_scheme.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/util/i18n.dart';
@@ -12,8 +14,12 @@ class Message {
     var name = m.group(2) != '' ? m.group(2)! : component?.name ?? '';
     authorName = m.group(1) != '' ? m.group(1)! : (author == '' ? '' : name);
     var mood = m.group(3);
-    var fileName = name + (mood != '' ? '_$mood' : '');
-    image = authorName != '' ? 'assets/images/heads/$fileName.png' : null;
+    var headName = name + (mood != '' ? '_$mood' : '');
+    if (authorName != '') {
+      gameRef.loadCustomAtlas('images/metadata/heads.xfa').then((value) {
+        sprite = value.getSprite(headName);
+      });
+    }
     if (authorName != '') {
       authorName = (authorName == 'hero')
           ? mainCharacter.name
@@ -55,7 +61,7 @@ class Message {
   String author;
 
   // Author image
-  String? image;
+  Sprite? sprite;
 
   // Author name (name displayed)
   late String authorName;

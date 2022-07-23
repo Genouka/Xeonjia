@@ -81,7 +81,8 @@ class PunchWeapon extends Weapon {
       return;
     }
     componentInFront?.lifePointsDifference(-atk, cause: shooter);
-    shooter.animate([shooter.punchSprites[shooter.orientation]!]);
+    shooter.animation = shooter.atlas
+        .getAnimation('${shooter.name}-${shooter.orientation.index}-punching');
     if (shooter.isPlayerOne) shooter.gameRef.playSound(Sfx.punch);
     super.shoot(shooter: shooter);
   }
@@ -106,7 +107,8 @@ class SnowBallWeapon extends Weapon {
       super.shoot(shooter: shooter);
       if (shooter == shooter.gameRef.playerOne ||
           shooter.gameRef.config.mode != GameMode.story) {
-        shooter.animate([shooter.punchSprites[shooter.orientation]!]);
+        shooter.animation = shooter.atlas.getAnimation(
+            '${shooter.name}-${shooter.orientation.index}-punching');
       }
     }
   }

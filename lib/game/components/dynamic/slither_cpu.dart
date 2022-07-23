@@ -16,6 +16,12 @@ class SlitherCpuComponent extends DynamicComponent with LifePointsBar {
   @override
   int teamId = -2;
 
+  @override
+  String? atlasAsset = 'monsters.xfa';
+
+  @override
+  String? name = 'green';
+
   // Frequency of movements (CPU only)
   final double _updatePeriod;
   late double _timeToNextMove;

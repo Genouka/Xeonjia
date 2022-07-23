@@ -24,7 +24,7 @@ class ModifierComponent extends BasicComponent {
 
   // Constructor used for mine weapon shots
   ModifierComponent.mine(Point position, this.father, double atk)
-      : atlasAsset = 'mine.json',
+      : atlasAsset = 'weapons.xfa',
         name = 'mine-${father!.teamId}',
         super(null,
             Point(position.x / componentSize, position.y / componentSize)) {
@@ -90,7 +90,8 @@ class ModifierComponent extends BasicComponent {
       if (explosionOnDelete) {
         isBeingDeleted = true;
         gameRef.playSound(Sfx.explosion);
-        animation = atlas.getAnimation('$name-explosion')..onComplete = delete;
+        animation = atlas.getAnimation('${name}_explosion')
+          ..onComplete = delete;
       } else {
         delete();
       }

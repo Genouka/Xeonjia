@@ -43,7 +43,6 @@ extension CreateComponent on Tile {
                       ? '/' + mainCharacter.visitedRooms.last.split('/').last
                       : '') ==
               properties['roomId']) {
-            properties['image'] = 'character.png';
             properties['isPlayerOne'] = true;
             gameRef.add(CharacterComponent(
                 Tile()
@@ -63,8 +62,6 @@ extension CreateComponent on Tile {
           if (gameRef.players.where((p) => p.teamId == teamId).length <
               gameRef.config.teamSize) {
             var playerOne = gameRef.playerOne == null && teamId == 0;
-            properties['image'] =
-                'character${playerOne ? '' : '_cpu_$teamId'}.png';
             properties['friendly'] = 'false';
             properties['quiet'] = 'false';
             properties['def'] = '4';

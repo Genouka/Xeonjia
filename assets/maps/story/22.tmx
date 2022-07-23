@@ -8,7 +8,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="161" source="../tilesets/monster-1.tsx"/>
+ <tileset firstgid="161" source="../tilesets/monsters.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgQABWIGbDg9kZcANeIObDoQ8kzk9AL0w/CCsjsflJ1IuMidELUicGxQJIbGLcjM1OZLtxAVEke9DtBWFxPHrpCSRwiAsDsTQQi+CRV6DATgMy9Sow4HYzMfbCsAISG+QWOyBmgdISaHIwtQBct+yYSAMAAA==
