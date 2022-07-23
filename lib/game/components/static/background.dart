@@ -1,12 +1,19 @@
+import 'dart:ui';
+
 import 'package:flame/components.dart';
-import 'package:flame/flame.dart';
+import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
-class BackgroundComponent extends SpriteComponent with HasGameRef<XeonjiaGame> {
-  BackgroundComponent()
-      : super(sprite: Sprite(Flame.images.fromCache('background.png'))) {
-    priority = -999;
-  }
+class BackgroundComponent extends PositionComponent
+    with HasGameRef<XeonjiaGame> {
+  @override
+  final int priority = -999;
+
+  final Paint paint = Paint()..color = const Color(0xFFE1F5FE);
+
+  @override
+  void render(Canvas canvas) =>
+      canvas.drawRect(Rect.fromLTWH(0, 0, width, height), paint);
 
   @override
   void onGameResize(Vector2 size) {
