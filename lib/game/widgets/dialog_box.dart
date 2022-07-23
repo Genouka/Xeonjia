@@ -1,7 +1,5 @@
-import 'dart:math';
-
+import 'package:flame/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/util/extensions.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/message.dart';
 import 'package:xeonjia/models/sfx.dart';
@@ -111,17 +109,18 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           if (widget.gameRef.messageManager.currentMessage!
-                                  .image !=
+                                  .sprite !=
                               null)
-                            Image.asset(
-                              widget.gameRef.messageManager.currentMessage!
-                                  .image!,
-                              height: (min(96,
-                                      MediaQuery.of(context).size.width / 4))
-                                  .gridAligned
-                                  .toDouble(),
-                              fit: BoxFit.fitHeight,
-                              filterQuality: FilterQuality.none,
+                            SizedBox(
+                              width: 96,
+                              child: Transform.scale(
+                                scale: 3,
+                                alignment: Alignment.bottomLeft,
+                                child: SpriteWidget(
+                                  sprite: widget.gameRef.messageManager
+                                      .currentMessage!.sprite!,
+                                ),
+                              ),
                             ),
                           Flexible(
                             child: Padding(
