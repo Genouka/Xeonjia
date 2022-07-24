@@ -5,7 +5,7 @@
     (if (== (last-place) &quot;4&quot;)
         (map-name &quot;Mitsu Forest&quot;))
     (if  (first-time?)
-        (dialog '((&quot;Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here.&quot;)))))</property>
+        (dialog '((&quot;Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of this region lived here.&quot;)))))</property>
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
  </properties>
