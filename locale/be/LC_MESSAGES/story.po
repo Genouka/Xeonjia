@@ -1,14 +1,13 @@
 # Translation for Xeonjia
 # Copyright (C) 2020, 2021 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# Muha Aliss <muhaaliss@gmail.com>, 2022.
-# Alparslan Şakçi <sakci@protonmail.com>, 2022.
+# Mark Badrus <mark.badrus@tuta.io>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-07-14 10:56+0000\nLast-Translator: Alparslan Şakçi <sakci@protonmail.com>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-07-22 19:56+0000\nLast-Translator: Mark Badrus <mark.badrus@tuta.io>\nLanguage-Team: Belarusian <https://translate.deepdaikon.xyz/projects/xeonjia/story/be/>\nLanguage: be\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
-msgstr "Belediye Binası"
+msgstr "Мэрыя"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "…"
@@ -16,207 +15,207 @@ msgstr "…"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "H-Hello."
-msgstr "M-Merhaba."
+msgstr "Д-добры д-дзень."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
-msgstr "Merhaba, sen {{hero}} olmalısın! Tanıştığıma memnun oldum. Bu taraflara gideceğini duydum.\nBenim adım III Xe ve ben bu bölgenin kralıyım."
+msgstr "Вітаю, ты павінна быць {{hero}}! Прыемна пазнаёміцца. Я чуў, ты накіроўваўся ў гэтыя мясціны.\nМяне завуць Ксі III, я Кароль гэтага рэгіёна."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "king"
-msgstr "kral"
+msgstr "кароль"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Do not confuse me with the King of Evil, I am good haha."
-msgstr "Beni Kötülüğün Kralı ile karıştırmayın, ben iyiyim haha."
+msgstr "Не варта блытаць мяне з Каралём Зла, я добры хаха."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "So… tell me, how are you? Is everything okay? How is the journey going?"
-msgstr "Peki… söyle bana, nasılsın? Her şey yolunda mı? Yolculuk nasıl gidiyor?"
+msgstr "Дык вось... расказвай, як ты? Усё нармальна? Як рухаецца тваё падарожжа?"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Everything good, I just defeated the Hoarfrost Team and I got the first signet!"
-msgstr "Her şey yolunda, Kırağı Takımını yendim ve ilk mührü aldım!"
+msgstr "Усё выдатна. Я адолеў атрад Інэя і атрымаў першую пячатку!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Oh really?! This is great news!"
-msgstr "Gerçekten mi?! Bu harika bir haber!"
+msgstr "Праўда?! Гэта выдатныя навіны!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "It has been difficult?"
-msgstr "Zordu sanırım?"
+msgstr "Гэта было цяжка?"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Well, but if you did it, it means that you are strong!"
-msgstr "Ama başardıysan güçlüsün demektir!"
+msgstr "Ну, калі ты гэта пракруціў, значыць ты моцны!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Well, congratulations! This means that you are strong!"
-msgstr "Tebrikler! Bu, güçlü olduğun anlamına gelir!"
+msgstr "Што ж, пахвальна! Значыць ты моцны!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "I trust that you will be able to take the other two signets as well."
-msgstr "Diğer iki mührü de alabileceğine inanıyorum."
+msgstr "Спадзяюся, ты зможаш дастаць і дзве іншыя пячаткі."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Since you're heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here."
-msgstr "Doğuya gittiğine göre bana bir iyilik yapar mısın? Bu paketi Su Bölgesi Kralı'na teslim edebilir misin? Buranın birkaç kilometre doğusunda."
+msgstr "Калі ты трымаеш шлях на ўсход, то можаш аказаць мне ласку? Не мог бы ты даставіць гэты скрутак Каралю Воднага рэгіёна? Гэта за некалькі кіламетраў на ўсход адсюль."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes of course, I'll give it to him."
-msgstr "Evet tabiki ona veririm."
+msgstr "Так, вядома, я перадам яму гэта."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Thank you very much. Here's to you."
-msgstr "Çok teşekkürler. İşte senin için."
+msgstr "Дзякуй вялікі. Трымай."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Be careful not to drop it, it is fragile."
-msgstr "Düşürmemeye dikkat et, kırılgandır."
+msgstr "Будзь асцярожны. Не выпусці яго. Ён далікатны."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Sure, I'll be careful."
-msgstr "Tabii, dikkatli olacağım."
+msgstr "Канечне, я буду асцярожны."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Thank you again.\nI wish you a good journey, come back anytime."
-msgstr "Tekrar teşekkürler.\nİyi yolculuklar dilerim, istediğin zaman geri gelebilirsin."
+msgstr "Яшчэ раз дзякуй.\nЖадаю шчаслівага шляху, табе заўсёды тут будуць рады."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Good journey {{hero}}, I have faith in you."
-msgstr "İyi yolculuklar {{hero}}, sana güveniyorum."
+msgstr "Шчаслівага шляху, {{hero}}. Я ў цябе веру."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes, quite a lot"
-msgstr "Evet, oldukça fazla"
+msgstr "Так, зусім няпроста"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Just a little"
-msgstr "Sadece biraz"
+msgstr "Самую драбніцу"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! {{life-diff}} LPs have been recovered *"
-msgstr "* {{hero}} birkaç böğürtlen buldu! {{life-diff}} puan can elde ettin *"
+msgstr "* {{hero}} знайшоў некалькі ягад! Здароўе было адноўлена на {{life-diff}} *"
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant… nothing else."
-msgstr "Sadece küçük bir bitki."
+msgstr "Маленькая расліна… нічога больш."
 
 #: assets/maps/story/15.tmx:
 msgid "\" Exit ↑ \""
-msgstr "\"Çıkış ↑\""
+msgstr "\"Выхад ↑ \""
 
 #: assets/maps/story/33.tmx:
 msgid "In the distance can be seen the other part of the region."
-msgstr ""
+msgstr "Удалечыні відаць іншая частка рэгіёну."
 
 #: assets/maps/story/33.tmx:
 msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
-msgstr ""
+msgstr "Жыхары гэтага рэгіёну пакідаюць у гэтых вазах сувеніры падарожнікам і маракам, якія высаджваюцца тут.\nГэта старажытная традыцыя.\nСмела забірай падарункі."
 
 #: assets/maps/story/33.tmx:
 msgid "Hey, there are items in here!"
-msgstr ""
+msgstr "Гэй, тут ёсць рэчы!"
 
 #: assets/maps/story/33.tmx:
 msgid "There are still items in here but I've already taken one."
-msgstr ""
+msgstr "Тут ёсць яшчэ прадметы, але я ўжо ўзяў адзін."
 
 #: assets/maps/story/33.tmx:
 msgid "I can see a city in the distance."
-msgstr ""
+msgstr "Я бачу горад удалечыні."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB – 1F"
-msgstr ""
+msgstr "IOTCO LAB - 1 паверх"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Sorry about the mess. Thieves have entered and turned everything upside down."
-msgstr ""
+msgstr "Прабач за беспарадак. Рабаўнікі праніклі і перавярнулі ўсё з ног на галаву."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "scientist"
-msgstr ""
+msgstr "вучоны"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A life's work has been destroyed…"
-msgstr ""
+msgstr "Працы ўсяго майго жыцця знішчаны…"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Someone used this plant to do some experiments."
-msgstr ""
+msgstr "Хтосьці выкарыстаў гэтую расліну для эксперыментаў."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A broken monitor."
-msgstr ""
+msgstr "Зламаны манітор."
 
 #: assets/maps/story/8.tmx:
 msgid "\" → \""
-msgstr ""
+msgstr "\" → \""
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
-msgstr "Natawn"
+msgstr "Натаўн"
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nMany before you have failed, but I am sure you will handle it right."
-msgstr "Kendine dikkat et, {{hero}}.\nSenden önceki pek çok kahraman başarısız oldu ama senin başarılı olacağına eminim."
+msgstr "Удачы, {{hero}}.\nМногія да цябе спрабавалі, і не змаглі, але я ўпэўнены, што ты справішся."
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
-msgstr "babam"
+msgstr "тата"
 
 #: assets/maps/story/1.tmx:
 msgid "I'll do my best."
-msgstr "Elimden geleni yapacağım."
+msgstr "Я пастараюся."
 
 #: assets/maps/story/1.tmx:
 msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
-msgstr ""
+msgstr "Вежа, у якой жыве \"Кароль Зла\", павінна размяшчацца недалёка ад сталіцы рэгіёна."
 
 #: assets/maps/story/1.tmx:
 msgid "\" NATAWN – Hometown of the 62nd hero \""
-msgstr "\" NATAWN – 62. kahramanın memleketi \""
+msgstr "\"НАТАЎН - Родны горад 62-га героя\""
 
 #: assets/maps/story/1.tmx:
 msgid "I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude."
-msgstr ""
+msgstr "Перад маім сыходам я павінен развітацца са сваімі бацькамі, націснуўшы кнопку 'A'. Інакш гэта будзе выглядаць няветліва."
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks."
-msgstr "Annemin dediği gibi komşudan dizliklerimi alsam iyi olur. Dizliklerim olmadan kayalara çarparsam kötü bir şekilde yaralanabilirim."
+msgstr "Як сказала мая мама, будзе лепш, калі я зайду да суседа па накаленнікі. Інакш я рызыкую моцна параніцца камянямі."
 
 #: assets/maps/story/34.tmx:
 msgid "Route 4"
-msgstr ""
+msgstr "Дарога 4"
 
 #: assets/maps/story/34.tmx:
 msgid "This vase is empty."
-msgstr ""
+msgstr "Гэтая ваза пустая."
 
 #: assets/maps/story/34.tmx:
 msgid "* {{hero}} found {{money-diff}} ¤ *"
-msgstr ""
+msgstr "* {{hero}} знайшоў {{money-diff}} ¤ *"
 
 #: assets/maps/story/34.tmx:
 msgid "A rock."
-msgstr "Bir kaya."
+msgstr "Камень."
 
 #: assets/maps/story/34.tmx:
 msgid "\" Hexa Cave \""
-msgstr ""
+msgstr "Пячора шасцікутнікаў"
 
 #: assets/maps/story/38.tmx:
 msgid "Zamelis Village"
-msgstr ""
+msgstr "Вёска Замеліс"
 
 #: assets/maps/story/38.tmx:
 msgid "I want to reach the capital quickly but the only way is traveling by land."
-msgstr ""
+msgstr "Я хачу дабрацца да сталіцы хутчэй, але адзіны спосаб - па сушы."
 
 #: assets/maps/story/38.tmx:
 msgid "I really needed a pomegranate juice."
-msgstr ""
+msgstr "Мне вельмі патрэбен быў гранатавы сок."
 
 #: assets/maps/story/17.tmx:
 msgid "I still haven't figured out if these monsters are malicious or just stupid."
@@ -228,15 +227,15 @@ msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Hi, you look a little tired. Rest here for a moment."
-msgstr "Biraz yorgun görünüyorsun. Neden biraz dinlenmiyorsun?"
+msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
 msgid "* {{hero}} rested and is now in perfect health *"
-msgstr "* {{hero}} dinlenip enerji topladı *"
+msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Come back anytime."
-msgstr "İstediğin zaman uğra."
+msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Be careful not to get hurt."
@@ -324,43 +323,43 @@ msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays."
-msgstr "Ah... pardon. Farkında olmadan yolunu kapatmışım.\nTurist misin? Buralara artık çok az turist geliyor."
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "???"
-msgstr "???"
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "N-no, I'm {{hero}}, this year's chosen hero. I just left home to try to defeat the King of Evil."
-msgstr "Y-yok yok, ben {{hero}}, bu yılın seçilmiş kahramanıyım. Kötülüklerin Efendisi'ni yenmek için memleketimden yeni ayrıldım."
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "What?! So is it you?!"
-msgstr "Ne?! Bu yılki kahraman sen misin?!"
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Nice to meet you, I've never met a hero before."
-msgstr "Tanıştığıma memnun oldum. Daha önce bir kahramanla hiç karşılaşmamıştım."
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "My name is Milla, I was born and raised in this area. I too am setting out on a journey."
-msgstr "Benim adım Milla, bu civarlarda doğup büyüdüm. Ben de senin gibi bir yolculuğa çıkıyorum."
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Oh cool! Where are you going?"
-msgstr "Ah harika! Nereye gidiyorsun?"
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "I have absolutely no idea."
-msgstr "Dürüst olmak gerekirse hiçbir fikrim yok."
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "I just want to explore the world, know new places and learn new things."
-msgstr "Dünyayı keşfetmek, yeni yerler görmek ve yeni şeyler öğrenmek istediğim için yolculuğa çıkmaya karar verdim."
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Wow, sounds like a great idea!"
-msgstr "Vay canına, kulağa harika bir fikir gibi geliyor!"
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Yep, it won't be easy but I want to visit at least the whole Kingdom."
@@ -368,31 +367,31 @@ msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Are there places outside the Kingdom?!"
-msgstr "Krallığın dışında yerler de mi var?!"
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Dunno, that's what I want to find out!"
-msgstr "Bilmiyorum, ben de bunu öğrenmek istiyorum!"
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Anyway, I don't want to waste any more of your time."
-msgstr "Neyse, daha fazla vaktini almak istemiyorum."
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "After all, you have to save the world. Not an easy task."
-msgstr "Ne de olsa dünyayı kurtarman gerekiyor. Kolay iş değil."
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "I'm sure we'll meet again soon, hero."
-msgstr "Eminim ileride yollarımız tekrar kesişecek, sayın kahraman."
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "See ya!"
-msgstr "Görüşürüz!"
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Bye!"
-msgstr "Görüşürüz!"
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area – Do not leave rubbish, thanks \""
@@ -588,11 +587,11 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes"
-msgstr "Evet"
+msgstr "Так"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "No"
-msgstr "Hayır"
+msgstr "Не"
 
 #: assets/maps/story/t1_04.tmx:
 msgid "Mossy Crypt -4F"
@@ -608,7 +607,7 @@ msgstr ""
 
 #: assets/maps/story/t1_04.tmx:
 msgid "A snowdrift."
-msgstr "Bir kar yığını."
+msgstr ""
 
 #: assets/maps/story/t1_02.tmx:
 msgid "Mossy Crypt -2F"
@@ -624,35 +623,35 @@ msgstr ""
 
 #: assets/maps/story/t1_02.tmx:
 msgid "A rock covered by moss."
-msgstr "Yosunlarla kaplı bir kaya."
+msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to."
-msgstr "B-bugün... hayatım boyunca beklediğim gün. Xeonjia kulesine olan yolculuğuma başlayacağım gün.\nBu yıl Krallığı donduran canavarı yenmek için seçilmiş \"kahraman\" benim...\nYıllardır kahraman olmak için çalıştım. Umarım bunu başarabilrim."
+msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'd like to go back to bed but I can't."
-msgstr "Yatağımda uzanmak istiyorum ama yapmam gereken şeyler var."
+msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'll miss you, TV."
-msgstr "En çok da seni özleyeceğim, canım televizyonum."
+msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I hope my parents will water it when I'm away."
-msgstr "Umarım bizimkiler ben yokken bitkileri ihmal etmez."
+msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
-msgstr "Bir gün hepsini okuyacağım."
+msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "My chair."
-msgstr "Sandalyem."
+msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "From here I can see the garden."
-msgstr "Buradan bahçenin tamamını görebiliyorum."
+msgstr ""
 
 #: assets/maps/story/24.tmx:
 msgid "Melhopolis"
@@ -776,15 +775,15 @@ msgstr ""
 
 #: assets/maps/story/9.tmx:
 msgid "This is not a place for kids, go home."
-msgstr "Burası çocuklara göre bir yer değil, hadi evine."
+msgstr ""
 
 #: assets/maps/story/9.tmx:
 msgid "Weird things happen in this area…"
-msgstr "Bu bölgede tuhaf şeyler yaşanıyor…"
+msgstr ""
 
 #: assets/maps/story/9.tmx:
 msgid "\" If you get lost, follow the road signs \""
-msgstr "\" Kaybolmamak için lütfen yoldaki tabelaları takip edin \""
+msgstr ""
 
 #: assets/maps/story/19.tmx:
 msgid "\" Xeonjia Tower ↑ \""
@@ -864,11 +863,11 @@ msgstr ""
 
 #: assets/maps/story/2_house.tmx:
 msgid "You are the chosen one for this year, right? My son was too many years ago."
-msgstr "Bu yıl seçilen kişi sensin, değil mi? Benim oğlum da yıllar önce seçilmişti."
+msgstr ""
 
 #: assets/maps/story/2_house.tmx:
 msgid "Unfortunately he failed to defeat the King of Evil…"
-msgstr "Maalesef Kötülüklerin Efendisi'ni yenmeyi başarmadı…"
+msgstr ""
 
 #: assets/maps/story/32.tmx:
 msgid "\" Relax and enjoy the sea \""
@@ -920,7 +919,7 @@ msgstr ""
 
 #: assets/maps/story/35.tmx:
 msgid "A heavy rock."
-msgstr "Büyük bir kaya."
+msgstr ""
 
 #: assets/maps/story/35.tmx:
 msgid "\" ↑ Hexa Cave \"\n\" Zamelis Village → \""
@@ -1044,39 +1043,39 @@ msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "Good morning mom!"
-msgstr "Günaydın anne!"
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "Hi {{hero}}! Did you sleep well?"
-msgstr "Günaydın {{hero}}! Uykunu aldın mı?"
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "mom"
-msgstr "annem"
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "Actually not very well… I'm still a little sleepy."
-msgstr "Pek sayılmaz... Hâlâ biraz uykum var."
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "You always are.\nAnyway, now it is time to leave, be very careful and remember to check your health in the top left bar."
-msgstr "Her zaman biraz uykun var senin.\nNeyse, gitme zamanın gelmiş. Kendine dikkat et ve sol üstteki çubuktan sağlığını kontrol etmeyi unutma."
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "Yea mom. Don't worry, I'll be careful."
-msgstr "Tamam anne. Merak etme, kendime dikkat ederim."
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "When you hit the rocks you could hurt yourself, so stop by our neighbor who have prepared a brand new pair of shin guards for you."
-msgstr "Kayalara çarpıp yaralanmanı istemem, bu yüzden komşudan sana bir çift dizlik hazırlamasını istedim. Gitmeden önce dizliklerini almayı sakın unutma."
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "Sure, I will."
-msgstr "Tamamdır, alırım."
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "Go get the shin guards from the neighbor, you will need them."
-msgstr "Hadi git komşudan dizliklerini al."
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "The new shin guards are beautiful, they match the suit."
@@ -1084,23 +1083,23 @@ msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "This plant hasn't been watered for long."
-msgstr "Henüz sulanmamış."
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "Unfortunately, this is not the time to lie down on the sofa."
-msgstr "Maalesef kanepede uzanacak vaktim yok."
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "This plant seems to have been recently watered."
-msgstr "Bugün sulanmış gibi."
+msgstr ""
 
 #: assets/maps/story/4_house.tmx:
 msgid "The last time I went through the forest I was attacked.\nI'm not going back there anymore."
-msgstr "En son ormana gittiğimde saldırıya uğradım.\nO yüzden artık oraya gitmiyorum."
+msgstr ""
 
 #: assets/maps/story/4_house.tmx:
 msgid "If you want to enter the forest you have to be careful, my grandson risked getting hurt there."
-msgstr "Ormana mı girmek istiyorsun? Sakın dikkati elden bırakma. Torunum ormandayken neredeyse ağır yaralanıyordu."
+msgstr ""
 
 #: assets/maps/story/26_house.tmx:
 msgid "Do you think piglets will one day be a common pet?"
@@ -1172,7 +1171,7 @@ msgstr ""
 
 #: assets/maps/story/39.tmx:
 msgid "Yes! Thank you so much!"
-msgstr "Evet! Çok teşekkürler!"
+msgstr ""
 
 #: assets/maps/story/39.tmx:
 msgid "As a reward I give you this gem that I found while I was looking for the glasses."
@@ -1180,7 +1179,7 @@ msgstr ""
 
 #: assets/maps/story/39.tmx:
 msgid "Oh, thank you so much!"
-msgstr "Ah, çok teşekkürler!"
+msgstr ""
 
 #: assets/maps/story/39.tmx:
 msgid "I missed being able to see the sea."
@@ -1212,7 +1211,7 @@ msgstr ""
 
 #: assets/maps/story/3_house1.tmx:
 msgid "A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."
-msgstr "Buradan birkaç metre ötede Mitsu Ormanı var. Bir zamanlar kutsal bir yer olduğu için birçok turistin uğrak yeriydi. Ancak orman artık canavarlarla dolu."
+msgstr ""
 
 #: assets/maps/story/28_house.tmx:
 msgid "Hoarfrost Team members came to our house because they wanted a gem that I found on the ground.\nWe managed to keep it hidden from them but we don't want to have problems anymore.\nWe don't even need it after all, can we give it to you?"
@@ -1224,7 +1223,7 @@ msgstr ""
 
 #: assets/maps/story/28_house.tmx:
 msgid "Thank you!"
-msgstr "Teşekkürler!"
+msgstr ""
 
 #: assets/maps/story/28_house.tmx:
 msgid "Oh, ok. Then I'll have to think about what to do with this gem."
@@ -1244,7 +1243,7 @@ msgstr ""
 
 #: assets/maps/story/28_house.tmx:
 msgid "This plant is very fragrant."
-msgstr "Bu bitki çok güzel kokuyor."
+msgstr ""
 
 #: assets/maps/story/28_house.tmx:
 msgid "This vase is very heavy, I can't move it."
@@ -1264,7 +1263,7 @@ msgstr ""
 
 #: assets/maps/story/1_house.tmx:
 msgid "Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones.\nI made them by hand. Here's to you!"
-msgstr "Merhaba {{hero}}, nasılsın? Dizliklerin hazır. Bunları taktıktan sonra kayalara çarpsan bile canın çok yanmaz.\nHepsini kendi ellerimle yaptım. Al bakalım!"
+msgstr ""
 
 #: assets/maps/story/1_house.tmx:
 msgid "neighbor"
@@ -1272,19 +1271,19 @@ msgstr ""
 
 #: assets/maps/story/1_house.tmx:
 msgid "* {{hero}} got and put on the shin guards *"
-msgstr "* {{hero}} dizlikleri alıp taktı *"
+msgstr ""
 
 #: assets/maps/story/1_house.tmx:
 msgid "This way you will hurt yourself less, but be careful that they do not fully protect you from damage."
-msgstr "Bunlar sayesinde ağır yaralanmalara karşı korunabilirsin ancak yine de dikkatli ol, dizlikler seni yaralanmalara karşı tamamen korumaz."
+msgstr ""
 
 #: assets/maps/story/1_house.tmx:
 msgid "Thank you very much!"
-msgstr "Çok teşekkürler!"
+msgstr ""
 
 #: assets/maps/story/1_house.tmx:
 msgid "Since the shin guards I gave you do not fully protect you, try to think diligently about the moves you make."
-msgstr "Verdiğim dizlikler seni yaralanmalara karşı tamamen korumayacağı için hareket ederken dikkatli ol."
+msgstr ""
 
 #: assets/maps/story/30.tmx:
 msgid "I'm sorry but this road is closed.\nWork is underway to restore the railway system."
@@ -1428,7 +1427,7 @@ msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
 msgid "A rocky wall covered by moss."
-msgstr "Yosunlarla kaplı kayadan bir duvar."
+msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
 msgid "iosa"
@@ -1480,7 +1479,7 @@ msgstr ""
 
 #: assets/maps/story/3.tmx:
 msgid "Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck."
-msgstr "Bazen bitkilerin dalları arasında meyve bulabilirsin.\nDalların arasına sıkışmış çeşitli nesnelere de denk gelebilirsin."
+msgstr ""
 
 #: assets/maps/story/3.tmx:
 msgid "Oh, I was about to take those berries."
@@ -1496,7 +1495,7 @@ msgstr ""
 
 #: assets/maps/story/3.tmx:
 msgid "On the ground it's easy to find XEON (¤) stones that you can use to buy items in shops."
-msgstr "Yerde XEON (¤) taşlarına denk gelebilirsin. Bu taşlarla dükkânlardan çeşitli eşyalar alabilirsin."
+msgstr ""
 
 #: assets/maps/story/3.tmx:
 msgid "It seems that once there was a path here."
@@ -1544,7 +1543,7 @@ msgstr ""
 
 #: assets/maps/story/2.tmx:
 msgid "The ice is so slippery, have you noticed?\nI feel more comfortable on the snow."
-msgstr "Buz aşırı kaygan, değil mi?\nKarda yürümek daha rahat."
+msgstr ""
 
 #: assets/maps/story/2.tmx:
 msgid "There seems to be something in the branches of this plant…\nIt's a stone!"
@@ -1584,15 +1583,15 @@ msgstr ""
 
 #: assets/maps/story/5.tmx:
 msgid "174805…\nI don't know what these figures are but a little while ago I heard someone say them out loud…\nDunno why."
-msgstr "174805...\nBu rakamların ne anlama geldiğini bilmiyorum ama kısa bir süre önce birinin bu sayıyı söylerken duydum."
+msgstr ""
 
 #: assets/maps/story/5.tmx:
 msgid "The trees of this region are admired and studied throughout the Kingdom. These blues are my favorites."
-msgstr "Bu hayranlık uyandıran ağaçlar Krallığın dört bir yanından ilgi görüyor. Benim favorim mavi olanlar."
+msgstr ""
 
 #: assets/maps/story/5.tmx:
 msgid "\" Mitsu Forest – Welcome, respect nature and remember to take a look at the souvenir shop on the right \""
-msgstr "\" Mitsu Ormanı - Hoş geldiniz. Doğaya gereken saygıyı göstermeyi ve sağda bulunan hediyelik eşya dükkânına göz atmayı unutmayın \""
+msgstr ""
 
 #: assets/maps/story/5.tmx:
 msgid "Once this was a very touristy place, the Kingdom tried to make money from it."
@@ -1608,7 +1607,7 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A rocky wall."
-msgstr "Kayadan bir duvar."
+msgstr ""
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A wall."
@@ -1660,23 +1659,23 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A little plant."
-msgstr "Küçük bir bitki."
+msgstr ""
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A little plant without leaves."
-msgstr "Küçük bir bitki. Yaprakları dökülmüş."
+msgstr ""
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "I like the color of this tree."
-msgstr "Bu ağacın rengi çok güzel."
+msgstr ""
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "This type of tree is strange."
-msgstr "Garip görünümlü bir ağaç."
+msgstr ""
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "This type of plant is strange."
-msgstr "Garip bir bitki."
+msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "man"
@@ -1684,11 +1683,11 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "lumberjack"
-msgstr "oduncu"
+msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "young-girl"
-msgstr "genç kız"
+msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "youngster"
@@ -1696,15 +1695,15 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "elderly"
-msgstr "yaşlı kadın"
+msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "guy"
-msgstr "adam"
+msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "old-man"
-msgstr "yaşlı adam"
+msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "adventurer"
@@ -1712,7 +1711,7 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "dude"
-msgstr "adam"
+msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "girl"
@@ -1720,7 +1719,7 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "oldster"
-msgstr "yaşlı adam"
+msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "henchman"
@@ -1744,7 +1743,7 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "milla"
-msgstr "milla"
+msgstr ""
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "shen"
@@ -1756,15 +1755,15 @@ msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "The weather is good today."
-msgstr "Bugün hava güzel."
+msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A painting that depicts this area long ago."
-msgstr "Bölgenin geçmişteki hâlini resmeden bir tablo."
+msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "It's full of books here."
-msgstr "Burada da baya kitap var."
+msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A closed door."
@@ -1772,7 +1771,7 @@ msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "There is some food between the mattresses of this sofa."
-msgstr "Rahat bir koltuk."
+msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "This is a wall."

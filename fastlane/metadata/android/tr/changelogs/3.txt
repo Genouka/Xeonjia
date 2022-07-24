@@ -1,3 +1,3 @@
 * Çok oyunculu mod eklendi
-* Oyun kumandası geliştirildi
+* Yön düğmeleri geliştirildi
 * Hata düzeltmeleri yapıldı

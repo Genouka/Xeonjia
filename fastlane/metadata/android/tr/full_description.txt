@@ -1,17 +1,17 @@
-İki mod var:
+Oyunda iki farklı mod mevcut:
 
-1) Hikaye modu: Amaç kulenin son katına ulaşmak ve "Kötülük Kralı"nı yenmektir.
+1) Hikâye modu: Kulenin son katına ulaş ve "Kötülüklerin Efendisi"ni alt et!
 
-2) Çok oyunculu mod: Bu modun amacı puan toplamak ve takımınızın kazanmasını sağlamaktır.
+2) Çok oyunculu mod: Bu modda amaç puan toplayıp takımının kazanmasını sağlamaktır.
 
-Basitçe karakterini dünya içerisinde hareket ettirmek için parmağını kaydırman gerekecek.
+Karakterini oyun içerisinde hareket ettirmek için parmağınla kaydırman yeterli.
 
-Duvara, kayaya veya başka bir engele ulaşana kadar karakterini durduramayacağını unutma.
+Bir duvara, kayaya veya başka bir engele ulaşana kadar karakterini durduramayacağını sakın unutma.
 
-Zamanla, seviyeni yükseltmeni sağlayacak deneyim puanları kazanacak, bir şeyler satın almak ve kendini geliştirmek için kullanabileceğin para ve gizli hazineler bulacaksın.
+Zamanla deneyim puanları kazanarak üst seviyelere yükselebilecek ve bulduğun para ve gizli hazinelerle de bir şeyler satın alıp karakterini geliştirebileceksin.
 
-Dikkatli ol, dünya sana saldırmaya hazır tehlikeli düşmanlarla dolu!
+Ancak dikkatli ol, etrafın sana saldırmayı bekleyen tehlikeli düşmanlarla dolu!
 
-En iyi yolu bulmak için aklını kullan!
+En ideal yolu bulmak için aklını kullan!
 
-<b>Not</b>: Bu oyun şu anda erken beta aşamasındadır.
+<b>Dipnot</b>: Bu oyun hâlâ beta aşamasındadır.
