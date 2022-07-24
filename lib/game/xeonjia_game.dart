@@ -564,6 +564,12 @@ class XeonjiaGame extends FlameGame
     playerOne!.shoot();
   }
 
+  // Handle back button
+  Future<bool> onWillPop() {
+    miniMapEnabled ? miniMap() : pause(mode: PauseMode.exit);
+    return Future.value(false);
+  }
+
   @override
   KeyEventResult onKeyEvent(
       RawKeyEvent event, Set<LogicalKeyboardKey> keysPressed) {

@@ -11,11 +11,10 @@ class HurdleComponent extends BasicComponent {
             int.parse(tile.properties['allowedDirection'] ?? '0')),
         super.fromTile(tile);
 
-  // Other components direction that permits to jump over this component
   final Direction _allowedDirection;
 
   @override
-  Rect? collisionRect(DynamicComponent otherComponent) {
+  Rect? collisionRect(Walker otherComponent) {
     return (otherComponent.direction == _allowedDirection ||
             otherComponent.direction!.dx * (otherComponent.x - x) > 0 ||
             otherComponent.direction!.dy * (otherComponent.y - y) > 0)

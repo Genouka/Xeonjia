@@ -18,7 +18,7 @@ class StaticComponent extends BasicComponent {
   bool get isFloor => _walkable;
 
   @override
-  Rect? collisionRect(DynamicComponent otherComponent) {
+  Rect? collisionRect(Walker otherComponent) {
     if (_slippery) return null;
     if (!_walkable) return super.collisionRect(otherComponent);
     if (otherComponent.isFlying() != isFlying() ||

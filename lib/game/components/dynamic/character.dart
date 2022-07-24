@@ -1,9 +1,11 @@
 import 'dart:ui';
 
+import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/util/lifepoints_bar.dart';
 import 'package:xeonjia/game/util/npc_controller.dart';
 import 'package:xeonjia/game/util/respawn_animation.dart';
+import 'package:xeonjia/game/util/text_animation.dart';
 import 'package:xeonjia/game/util/weapon.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/game_mode.dart';
@@ -16,9 +18,8 @@ import 'package:xeonjia/util/i18n.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 // Dynamic component used for human-like players
-class CharacterComponent extends DynamicComponent
-    with LifePointsBar, RespawnAnimation {
-  // Create character from input details
+class CharacterComponent extends BasicComponent
+    with Walker, LifePointsBar, RespawnAnimation, TextAnimation {
   CharacterComponent(
     this.tile,
     MatchConfig matchConfig, {
@@ -144,14 +145,11 @@ class CharacterComponent extends DynamicComponent
   // NPC features: If friendly it doesn't shoot. If quiet it doesn't move.
   late bool friendly;
   late bool quiet;
-  late NpcController npcController = NpcController(
+  late NpcController npcController = NpcController(this,
       tile.properties['movementPattern'], tile.properties['shootPattern']);
 
   @override
   late double maxLifePoints;
-
-  @override
-  bool isSolid({DynamicComponent? otherComponent}) => !isBeingDeleted;
 
   @override
   void playAction(Direction orientation) {
@@ -240,7 +238,7 @@ class CharacterComponent extends DynamicComponent
   }
 
   @override
-  void collidedBy(DynamicComponent otherComponent) {
+  void collidedBy(Walker otherComponent) {
     if (!isPlayerOne) super.collidedBy(otherComponent);
   }
 
@@ -281,8 +279,8 @@ class CharacterComponent extends DynamicComponent
   @override
   void update(double dt) {
     if (!isPlayerOne && gameRef.isNotPaused) {
-      npcController.shoot(this);
-      npcController.move(this);
+      npcController.shoot();
+      npcController.move();
     }
     super.update(dt);
   }

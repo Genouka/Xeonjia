@@ -9,21 +9,13 @@ import 'package:xeonjia/game/components/abstract_basic.dart';
 import 'package:xeonjia/game/components/static/static.dart';
 import 'package:xeonjia/game/components/static/thin_wall.dart';
 import 'package:xeonjia/game/util/extensions.dart';
-import 'package:xeonjia/game/util/text_animation.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/sfx.dart';
 import 'package:xeonjia/util/local_data_controller.dart';
 
 // Component able to move on the game field
-abstract class DynamicComponent extends BasicComponent with TextAnimation {
-  DynamicComponent(
-      int? id, Point startingPosition, Map<String, dynamic> properties)
-      : super(id, startingPosition, properties);
-
-  // Constructor used when component is imported from a tmx file
-  DynamicComponent.fromTile(tile) : super.fromTile(tile);
-
+mixin Walker on BasicComponent {
   @override
   Sprite getSpriteFromAtlas() => atlas.getSprite('$name-${orientation.index}');
 
@@ -184,7 +176,7 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
         .cast<BasicComponent>();
   }
 
-  // Workaround waiting for the priority/layers + collision fix
+  // Workaround (waiting for the priority/layers + collision fix)
   ThinWallComponent? _wallInFront() => componentsUnder().firstWhereOrNull(
           (c) => c is ThinWallComponent && c.isBlocking(orientation))
       as ThinWallComponent?;
@@ -220,8 +212,4 @@ abstract class DynamicComponent extends BasicComponent with TextAnimation {
 
   @override
   int get priority => 125;
-
-  // Generate random number between -0.5 and +0.5
-  // It is used to generate random direction for CPU-moved characters
-  double randomDouble() => Random().nextDouble() - 0.5;
 }

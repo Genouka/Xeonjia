@@ -109,7 +109,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   });
   _('move', 1, (Cell? x) {
     var actorAndValue = getActorAndValue(x);
-    DynamicComponent actor = actorAndValue[0];
+    Walker actor = actorAndValue[0];
     int direction = actorAndValue[1];
     actor.updateDirection(GetDirection.fromInt(direction), animated: false);
     return #NONE;
@@ -117,7 +117,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   _('orientation', 0, (Cell? x) => gameRef.playerOne!.orientation.index);
   _('set-orientation', 1, (Cell? x) {
     var actorAndValue = getActorAndValue(x);
-    DynamicComponent actor = actorAndValue[0];
+    Walker actor = actorAndValue[0];
     int direction = actorAndValue[1];
     actor.orientation = GetDirection.fromInt(direction);
     return #NONE;

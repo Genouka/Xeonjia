@@ -14,15 +14,14 @@ class DirectionChangerComponent extends BasicComponent {
   final Direction _forcedDirection;
 
   @override
-  void collidedBy(DynamicComponent otherComponent) {
+  void collidedBy(Walker otherComponent) {
     otherComponent.updateDirection(_forcedDirection, forced: true);
   }
 
   @override
-  Rect? collisionRect(DynamicComponent otherComponent) =>
-      otherComponent.isFlying() ||
-              otherComponent.wasStationary ||
-              otherComponent.direction == _forcedDirection
-          ? null
-          : oppositeBorderRect(otherComponent);
+  Rect? collisionRect(Walker otherComponent) => otherComponent.isFlying() ||
+          otherComponent.wasStationary ||
+          otherComponent.direction == _forcedDirection
+      ? null
+      : oppositeBorderRect(otherComponent);
 }

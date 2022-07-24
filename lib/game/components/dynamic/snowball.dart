@@ -8,7 +8,7 @@ import 'package:xeonjia/models/direction.dart';
 import 'package:xeonjia/models/sfx.dart';
 
 // Shot created by SnowBallWeapon
-class SnowballComponent extends DynamicComponent {
+class SnowballComponent extends BasicComponent with Walker {
   SnowballComponent(
       Point startingPosition, this.father, this.direction, this.atk)
       : super(
@@ -39,7 +39,7 @@ class SnowballComponent extends DynamicComponent {
   double get speed => defaultSpeed * 2;
 
   @override
-  bool isSolid({DynamicComponent? otherComponent}) => false;
+  bool isSolid({Walker? otherComponent}) => false;
 
   @override
   bool isFlying() => true;

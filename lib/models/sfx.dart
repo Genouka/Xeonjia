@@ -1,4 +1,4 @@
-// Sound effects (file name is equal to the enum name)
+// Sound effects
 enum Sfx { collision, item, punch, snowball, explosion, dialog }
 
 extension SfxFileName on Sfx {

@@ -17,7 +17,7 @@ class ThinWallComponent extends BasicComponent {
       (_solidSide.dy != 0 && _solidSide.dy.sign == direction.dy.sign);
 
   @override
-  Rect? collisionRect(DynamicComponent otherComponent) {
+  Rect? collisionRect(Walker otherComponent) {
     switch (_solidSide) {
       case Direction.down:
         return otherComponent.direction!.dy != 0

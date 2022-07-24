@@ -4,7 +4,7 @@ import 'package:xeonjia/game/components/abstract_dynamic.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Show an animation during respawn
-mixin RespawnAnimation on DynamicComponent {
+mixin RespawnAnimation on Walker {
   late TimerComponent timer;
 
   // Start respawn animation

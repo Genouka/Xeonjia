@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/ui/basic.dart';
 
 class PageButton extends StatelessWidget {
   const PageButton({required this.title, required this.onPressed});
@@ -18,7 +17,7 @@ class PageButton extends StatelessWidget {
         decoration: BoxDecoration(
             color: Colors.white,
             border: Border.all(color: Colors.black45),
-            borderRadius: circularRadius),
+            borderRadius: const BorderRadius.all(Radius.circular(30))),
         child: Center(
           child: Text(
             title,

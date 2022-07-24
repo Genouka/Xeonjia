@@ -2,15 +2,20 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-enum Direction { down, up, right, left }
+enum Direction {
+  down(0, 1),
+  up(0, -1),
+  right(1, 0),
+  left(-1, 0);
+
+  const Direction(this.dx, this.dy);
+  final int dx;
+  final int dy;
+}
 
 extension GetDirection on Direction {
-  double get dx =>
-      this == Direction.right ? 1 : (this == Direction.left ? -1 : 0);
-  double get dy => this == Direction.down ? 1 : (this == Direction.up ? -1 : 0);
-
   // Get opposite direction
-  Direction get opposite => fromXY(-dx, -dy);
+  Direction get opposite => fromXY(-dx.toDouble(), -dy.toDouble());
 
   // Get a random direction
   static Direction get random => Direction.values[Random().nextInt(4)];

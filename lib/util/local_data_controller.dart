@@ -7,9 +7,8 @@ import 'package:xeonjia/models/character_info.dart';
 import 'package:xeonjia/models/item.dart';
 import 'package:xeonjia/models/settings.dart';
 
+// Game settings and preferences
 late SharedPreferences _prefs;
-
-// Stored app settings
 late Settings settings;
 
 // Main character data
@@ -25,9 +24,18 @@ late Offset gamepadOffset;
 // Import all data from shared preferences
 Future<void> loadStoredData() async {
   _prefs = await SharedPreferences.getInstance();
-  _loadUserData();
-  _loadSettings();
-  _loadItems();
+
+  // Load user data from shared preferences
+  mainCharacter =
+      CharacterInfo(jsonDecode(_prefs.getString('userData_V2') ?? '{}'));
+
+  // Restore app settings
+  settings = Settings(jsonDecode(_prefs.getString('settings_V2') ?? '{}'));
+
+  // Load items from assets
+  var data = json.decode(
+      await rootBundle.loadString('assets/maps/utils/items-and-events.json'));
+  data['items'].forEach((key, value) => itemData[key] = Item(value));
 }
 
 // Save user data in shared preferences
@@ -35,27 +43,7 @@ void saveUserData() {
   _prefs.setString('userData_V2', jsonEncode(mainCharacter.toJson()));
 }
 
-// Load user data from shared preferences
-void _loadUserData() {
-  mainCharacter =
-      CharacterInfo(jsonDecode(_prefs.getString('userData_V2') ?? '{}'));
-}
-
 // Save app settings in shared preferences
 void saveSettings() {
   _prefs.setString('settings_V2', jsonEncode(settings.toJson()));
-}
-
-// Restore app settings
-void _loadSettings() {
-  settings = Settings(jsonDecode(_prefs.getString('settings_V2') ?? '{}'));
-}
-
-// Load items from assets
-void _loadItems() async {
-  var data = json.decode(
-      await rootBundle.loadString('assets/maps/utils/items-and-events.json'));
-  data['items'].forEach((key, value) {
-    itemData[key] = Item(value);
-  });
 }

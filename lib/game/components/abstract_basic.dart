@@ -183,9 +183,7 @@ abstract class BasicComponent extends SpriteComponent
   }
 
   @mustCallSuper
-  void playAction(Direction orientation) {
-    executeAction(action);
-  }
+  void playAction(Direction orientation) => executeAction(action);
 
   // Update LP and poison quantity
   void setStatus(double lifePoints, double poison) {
@@ -238,11 +236,11 @@ abstract class BasicComponent extends SpriteComponent
       : (_layerPriority + (_flying ? 50 : 0));
 
   // Collision area
-  Rect? collisionRect(DynamicComponent otherComponent) => toRect();
+  Rect? collisionRect(Walker otherComponent) => toRect();
 
   // Collision border based on otherComponent direction
   // It is used if otherComponent should stop on this
-  Rect? oppositeBorderRect(DynamicComponent otherComponent) {
+  Rect? oppositeBorderRect(Walker otherComponent) {
     // If the other component is going left or right
     if (otherComponent.direction?.dx != 0) {
       // If otherComponent.center > this.center -> do nothing
@@ -262,16 +260,16 @@ abstract class BasicComponent extends SpriteComponent
     }
   }
 
-  // True if this component could be collided
+  // True if this component could be collided (otherwise it is overlapped)
   // It depends on component that would collide this one
-  bool isSolid({required DynamicComponent otherComponent}) => true;
+  bool isSolid({required Walker otherComponent}) => !isBeingDeleted;
 
   // Define what happens if this component has been overlapped by another one
   // Used if isSolid() returned false
-  void overlappedBy(DynamicComponent componentAbove) {}
+  void overlappedBy(Walker componentAbove) {}
 
   // Define what happens if this component has been collided by another one
-  void collidedBy(DynamicComponent otherComponent) {
+  void collidedBy(Walker otherComponent) {
     otherComponent.lifePointsDifference(-atk, cause: this, poison: poisonAtk);
     if (otherComponent.isPlayerOne) {
       executeAction(actionOnCollision, otherComponent);
@@ -294,11 +292,9 @@ abstract class BasicComponent extends SpriteComponent
   @mustCallSuper
   void render(Canvas canvas) {
     if (!_visible) return;
-    if (animation?.done() ?? true) {
-      super.render(canvas);
-    } else {
-      animation!.getSprite().render(canvas, size: Vector2(width, height));
-    }
+    animation?.done() ?? true
+        ? super.render(canvas)
+        : animation!.getSprite().render(canvas, size: Vector2(width, height));
   }
 
   @override

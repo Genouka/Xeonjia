@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/ui/themes.dart';
 
-// Circular radius
-const circularRadius = BorderRadius.all(Radius.circular(30));
-
 // Page route
 class FadeRoute extends PageRouteBuilder {
   FadeRoute(this.page)
@@ -37,19 +34,17 @@ class NoGlow extends ScrollBehavior {
 }
 
 // Button in pauseMenu and backpackMenu
-Widget actionButton(String text, VoidCallback onPressed) {
-  return InkWell(
-    onTap: onPressed,
-    child: Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: Text(
-        text,
-        textAlign: TextAlign.center,
-        style: gameTheme.textTheme.bodyText2,
+Widget actionButton(String text, VoidCallback onPressed) => InkWell(
+      onTap: onPressed,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: Text(
+          text,
+          textAlign: TextAlign.center,
+          style: gameTheme.textTheme.bodyText2,
+        ),
       ),
-    ),
-  );
-}
+    );
 
 // White line that divides children of Columns in pauseMenu and backpackMenu
 Widget divider(BuildContext context) => Container(

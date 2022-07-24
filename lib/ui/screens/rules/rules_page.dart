@@ -24,9 +24,7 @@ class _RulesPageState extends State<RulesPage>
   @override
   void initState() {
     _controller = TabController(vsync: this, length: rules().length + 1);
-    _controller.addListener(() {
-      setState(() {});
-    });
+    _controller.addListener(() => setState(() {}));
     super.initState();
   }
 
@@ -49,12 +47,10 @@ class _RulesPageState extends State<RulesPage>
                         size: 32),
                     tooltip: 'Close'.i18n,
                     onPressed: () {
-                      if (widget.homePage == null) {
-                        Navigator.pop(context);
-                      } else {
-                        Navigator.pushReplacement(
-                            context, FadeRoute(widget.homePage!));
-                      }
+                      widget.homePage == null
+                          ? Navigator.pop(context)
+                          : Navigator.pushReplacement(
+                              context, FadeRoute(widget.homePage!));
                     },
                   ),
       ),
@@ -77,9 +73,7 @@ class _RulesPageState extends State<RulesPage>
                       : Colors.black,
                 ),
                 onPressed: (_controller.index > 0)
-                    ? () {
-                        _controller.index -= (_controller.index > 0) ? 1 : 0;
-                      }
+                    ? () => _controller.index -= (_controller.index > 0) ? 1 : 0
                     : null,
                 child: Row(
                   children: <Widget>[
@@ -114,9 +108,7 @@ class _RulesPageState extends State<RulesPage>
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50)),
                   ),
-                  onPressed: () {
-                    saveName(_textFieldController.text);
-                  },
+                  onPressed: () => saveName(_textFieldController.text),
                   child: Text(
                     'OK'.i18n,
                     style: const TextStyle(color: Colors.white),
@@ -137,7 +129,7 @@ class _RulesPageState extends State<RulesPage>
                   child: Row(
                     children: <Widget>[
                       Text('Next'.i18n),
-                      const Icon(Icons.navigate_next)
+                      const Icon(Icons.navigate_next),
                     ],
                   ),
                 ),

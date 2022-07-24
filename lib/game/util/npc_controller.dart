@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flame/components.dart';
 import 'package:xeonjia/game/components/dynamic/character.dart';
 import 'package:xeonjia/models/direction.dart';
@@ -7,7 +9,8 @@ class NpcController {
   // Read and import patterns
   // movementPatternString: is a list of: direction
   // shotPatternString:     is a list of: direction | frequency
-  NpcController(String? movementPatternString, String? shotPatternString) {
+  NpcController(
+      this.npc, String? movementPatternString, String? shotPatternString) {
     if (movementPatternString != null) {
       movementPatternString.split(',').forEach((m) {
         _movementPattern.add(GetDirection.fromInt(int.parse(m)));
@@ -21,6 +24,9 @@ class NpcController {
       });
     }
   }
+
+  final CharacterComponent npc;
+
   // Pattern defined in tile.properties['movementPattern']
   final List<Direction> _movementPattern = [];
   int _movementPatternIndex = 0;
@@ -47,7 +53,7 @@ class NpcController {
 
   // Move
   bool _movementInQueue = false;
-  void move(CharacterComponent npc) {
+  void move() {
     if (!npc.quiet && npc.isStationary && !_movementInQueue) {
       _movementInQueue = true;
       npc.gameRef.add(TimerComponent(
@@ -63,7 +69,7 @@ class NpcController {
 
   // Shoot
   bool _shotInQueue = false;
-  void shoot(CharacterComponent npc) {
+  void shoot() {
     if (!npc.friendly && !_shotInQueue) {
       _shotInQueue = true;
       npc.gameRef.add(TimerComponent(
@@ -82,8 +88,8 @@ class NpcController {
                     : Direction.left);
               }
             }
-            if (npc.randomDouble() > 0.1) npc.nextWeapon();
-            if (npc.randomDouble() > 0.3) npc.shoot();
+            if (Random().nextDouble() > 0.6) npc.nextWeapon();
+            if (Random().nextDouble() > 0.8) npc.shoot();
           }));
     }
   }

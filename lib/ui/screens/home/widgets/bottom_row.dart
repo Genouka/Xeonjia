@@ -30,9 +30,7 @@ class BottomRow extends StatelessWidget {
     return IconButton(
       icon: Icon(icon, color: Colors.white.withOpacity(0.7), size: 28),
       tooltip: tooltip,
-      onPressed: () {
-        Navigator.push(context, FadeRoute(page()));
-      },
+      onPressed: () => Navigator.push(context, FadeRoute(page())),
     );
   }
 }

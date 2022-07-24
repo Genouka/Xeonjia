@@ -9,15 +9,15 @@ class Tile {
     this.id,
     this.gid,
     this.type,
-    Map<String, dynamic>? properties,
     this.sprite,
     this.size,
     this.animationStepTime,
     this.position,
     this.layer,
+    Map<String, dynamic>? properties,
   }) {
-    this.properties = properties ?? {};
     size ??= componentSize;
+    this.properties = properties ?? {};
   }
 
   // Tile id and gid defined in the TMX file

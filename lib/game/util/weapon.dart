@@ -6,7 +6,6 @@ import 'package:xeonjia/game/components/dynamic/snowball.dart';
 import 'package:xeonjia/game/components/static/modifer.dart';
 import 'package:xeonjia/models/game_mode.dart';
 import 'package:xeonjia/models/sfx.dart';
-import 'package:xeonjia/resources/weapon_details.dart';
 
 // Abstract class used to manage weapons inside game
 // It defines what happens if someone use a weapon
@@ -34,10 +33,6 @@ abstract class Weapon {
     _powerPoints = powerPoints ?? double.infinity;
     if (_powerPoints > maxPp) restorePp();
   }
-
-  // Weapon details
-  String get name => weaponDetails()[id]['name'];
-  String get description => weaponDetails()[id]['description'];
 
   // Restore PP
   void restorePp() {

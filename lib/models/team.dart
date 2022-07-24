@@ -27,11 +27,5 @@ class Team {
   int basisPoints = 0;
 
   // Team points (basePoints + players points)
-  int get points {
-    var points = 0;
-    for (final member in members) {
-      points += member.points;
-    }
-    return points + basisPoints;
-  }
+  int get points => basisPoints + members.fold(0, (p, m) => p + m.points);
 }

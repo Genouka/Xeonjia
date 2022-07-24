@@ -40,9 +40,8 @@ class SettingsPageState extends State<SettingsPage> {
                   .i18n),
           actions: <Widget>[
             TextButton(
-              style: TextButton.styleFrom(
-                primary: Theme.of(context).primaryColor,
-              ),
+              style:
+                  TextButton.styleFrom(primary: Theme.of(context).primaryColor),
               onPressed: () {
                 SystemChrome.restoreSystemUIOverlays();
                 settings = Settings({'firstRun': false});
@@ -54,9 +53,8 @@ class SettingsPageState extends State<SettingsPage> {
               child: Text('Restore'.i18n),
             ),
             TextButton(
-              style: TextButton.styleFrom(
-                primary: Theme.of(context).primaryColor,
-              ),
+              style:
+                  TextButton.styleFrom(primary: Theme.of(context).primaryColor),
               onPressed: Navigator.of(context).pop,
               child: Text('Cancel'.i18n),
             ),
@@ -64,7 +62,5 @@ class SettingsPageState extends State<SettingsPage> {
         ),
       );
 
-  void refresh() {
-    setState(() {});
-  }
+  void refresh() => setState(() {});
 }

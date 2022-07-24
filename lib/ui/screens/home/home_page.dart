@@ -57,9 +57,8 @@ class HomePage extends StatelessWidget {
                 for (var page in pageList())
                   PageButton(
                     title: page['title'],
-                    onPressed: () {
-                      Navigator.push(context, FadeRoute(page['goto']()));
-                    },
+                    onPressed: () =>
+                        Navigator.push(context, FadeRoute(page['goto']())),
                   ),
               ],
             ),

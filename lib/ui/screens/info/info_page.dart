@@ -35,17 +35,10 @@ class _InfoPageState extends State<InfoPage> {
       'icon': const Icon(Icons.translate_rounded),
     },
     {
-      'title': 'Updates'.i18n,
-      'subtitle': 'Search for updates'.i18n,
-      'url':
-          'https://play.google.com/store/apps/details?id=xyz.deepdaikon.xeonjia',
-      'icon': const Icon(Icons.system_update),
-    },
-    {
-      'title': 'View source code'.i18n,
-      'subtitle': 'Look at the source code'.i18n,
-      'url': 'https://gitlab.com/DeepDaikon/Xeonjia',
-      'icon': const Icon(Icons.developer_mode),
+      'title': 'Send email'.i18n,
+      'subtitle': 'Ask for something or request a new feature'.i18n,
+      'url': 'mailto:deepdaikon' '@' 'tuta.io?subject=Xeonjia Game',
+      'icon': const Icon(Icons.email),
     },
     {
       'title': 'Report bugs'.i18n,
@@ -54,10 +47,10 @@ class _InfoPageState extends State<InfoPage> {
       'icon': const Icon(Icons.bug_report),
     },
     {
-      'title': 'Send email'.i18n,
-      'subtitle': 'Ask for something or request a new feature'.i18n,
-      'url': 'mailto:deepdaikon' '@' 'tuta.io?subject=Xeonjia Game',
-      'icon': const Icon(Icons.email),
+      'title': 'View source code'.i18n,
+      'subtitle': 'Look at the source code'.i18n,
+      'url': 'https://gitlab.com/DeepDaikon/Xeonjia',
+      'icon': const Icon(Icons.developer_mode),
     },
     {
       'title': 'View License (GPLv3)'.i18n,

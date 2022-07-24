@@ -13,14 +13,14 @@ class PlayButton extends StatelessWidget {
       width: 150,
       height: 50,
       decoration: BoxDecoration(
-          color: Theme.of(context).primaryColor, borderRadius: circularRadius),
+          color: Theme.of(context).primaryColor,
+          borderRadius: const BorderRadius.all(Radius.circular(30))),
       child: TextButton(
         style: TextButton.styleFrom(
-          shape: const RoundedRectangleBorder(borderRadius: circularRadius),
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(30))),
         ),
-        onPressed: () {
-          Navigator.push(context, FadeRoute(page()));
-        },
+        onPressed: () => Navigator.push(context, FadeRoute(page())),
         child: FittedBox(
           fit: BoxFit.fitWidth,
           child: Text(

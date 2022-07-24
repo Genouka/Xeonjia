@@ -16,14 +16,12 @@ class Message {
     var mood = m.group(3);
     var headName = name + (mood != '' ? '_$mood' : '');
     if (authorName != '') {
-      gameRef.loadCustomAtlas('images/metadata/heads.xfa').then((value) {
-        sprite = value.getSprite(headName);
-      });
-    }
-    if (authorName != '') {
       authorName = (authorName == 'hero')
           ? mainCharacter.name
           : authorName.i18n.replaceAll('-', ' ');
+      gameRef.loadCustomAtlas('images/metadata/heads.xfa').then((value) {
+        sprite = value.getSprite(headName);
+      });
     }
     if (translate) {
       text = text
@@ -57,16 +55,16 @@ class Message {
   // If mood is omitted: no mood
   // Examples: mom, mom/_happy, bob/man, ali/girl_happy, /_sad, /hero, /hero_sad
   // Default name and default avatar: /
-  // Author null or '' is used for thoughts and narrator voice
+  // Author empty (author == '') is used for thoughts and narrator voice
   String author;
 
-  // Author image
+  // Author's sprite
   Sprite? sprite;
 
-  // Author name (name displayed)
+  // Author name (displayed name)
   late String authorName;
 
-  // Character speaking
+  // Speaking component
   BasicComponent? component;
 
   // Font family used (null if default)
@@ -80,7 +78,7 @@ class Answer {
   // Unique ID saved in the event log
   String questionId;
 
-  // Text displayed
+  // Displayed text
   String text;
 
   // Answer value
