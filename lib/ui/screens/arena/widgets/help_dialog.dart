@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/util/i18n.dart';
+import 'package:xeonjia/utils/i18n.dart';
 
 Widget helpDialog(BuildContext context) {
   return AlertDialog(

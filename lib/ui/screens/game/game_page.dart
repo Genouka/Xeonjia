@@ -1,8 +1,8 @@
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/models/match_config.dart';
 import 'package:xeonjia/ui/themes.dart';
+import 'package:xeonjia/utils/game_properties.dart';
 
 class GamePage extends StatelessWidget {
   GamePage(MatchConfig config) : _game = XeonjiaGame(config);

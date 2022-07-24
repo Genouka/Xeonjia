@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:xeonjia/ui/screens/info/resources/third_party_licenses.dart';
-import 'package:xeonjia/util/i18n.dart';
+import 'package:xeonjia/utils/i18n.dart';
 
 class InfoPage extends StatefulWidget {
   @override

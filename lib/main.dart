@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flame/flame.dart';
 import 'package:flutter/material.dart';
@@ -8,8 +9,8 @@ import 'package:i18n_extension/i18n_widget.dart';
 import 'package:xeonjia/ui/screens/home/home_page.dart';
 import 'package:xeonjia/ui/screens/rules/rules_page.dart';
 import 'package:xeonjia/ui/themes.dart';
-import 'package:xeonjia/util/i18n.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
+import 'package:xeonjia/utils/i18n.dart';
+import 'package:xeonjia/utils/local_data_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

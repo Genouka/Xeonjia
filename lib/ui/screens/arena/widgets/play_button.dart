@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/ui/basic.dart';
-import 'package:xeonjia/util/i18n.dart';
+import 'package:xeonjia/utils/i18n.dart';
 
 // Floating "PLAY" button
 class PlayButton extends StatelessWidget {

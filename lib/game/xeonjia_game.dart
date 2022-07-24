@@ -8,16 +8,21 @@ import 'package:flame_audio/bgm.dart';
 import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:xeonjia/game/components/abstract_basic.dart';
-import 'package:xeonjia/game/components/dynamic/character.dart';
-import 'package:xeonjia/game/components/static/background.dart';
-import 'package:xeonjia/game/components/static/modifer.dart';
-import 'package:xeonjia/game/util/event_manager.dart';
-import 'package:xeonjia/game/util/extensions.dart';
-import 'package:xeonjia/game/util/little_scheme.dart';
-import 'package:xeonjia/game/util/map_importer.dart';
-import 'package:xeonjia/game/util/message_manager.dart';
-import 'package:xeonjia/game/util/wireless_gamepad.dart';
+import 'package:xeonjia/game/components/background.dart';
+import 'package:xeonjia/game/components/character.dart';
+import 'package:xeonjia/game/components/common/basic.dart';
+import 'package:xeonjia/game/components/modifer.dart';
+import 'package:xeonjia/game/models/game_map.dart';
+import 'package:xeonjia/game/models/team.dart';
+import 'package:xeonjia/game/utils/direction.dart';
+import 'package:xeonjia/game/utils/event_manager.dart';
+import 'package:xeonjia/game/utils/extensions.dart';
+import 'package:xeonjia/game/utils/little_scheme.dart';
+import 'package:xeonjia/game/utils/map_importer.dart';
+import 'package:xeonjia/game/utils/message.dart';
+import 'package:xeonjia/game/utils/message_manager.dart';
+import 'package:xeonjia/game/utils/sfx.dart';
+import 'package:xeonjia/game/utils/wireless_gamepad.dart';
 import 'package:xeonjia/game/widgets/backpack_button.dart';
 import 'package:xeonjia/game/widgets/backpack_menu.dart';
 import 'package:xeonjia/game/widgets/dialog_box.dart';
@@ -28,14 +33,8 @@ import 'package:xeonjia/game/widgets/no_maps_menu.dart';
 import 'package:xeonjia/game/widgets/pause_menu.dart';
 import 'package:xeonjia/game/widgets/status_box.dart';
 import 'package:xeonjia/game/widgets/virtual_gamepad.dart';
-import 'package:xeonjia/models/direction.dart';
-import 'package:xeonjia/models/game_mode.dart';
-import 'package:xeonjia/models/map_properties.dart';
-import 'package:xeonjia/models/match_config.dart';
-import 'package:xeonjia/models/message.dart';
-import 'package:xeonjia/models/sfx.dart';
-import 'package:xeonjia/models/team.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
+import 'package:xeonjia/utils/game_properties.dart';
+import 'package:xeonjia/utils/local_data_controller.dart';
 
 // Default component speed (componentSize per second)
 double get defaultSpeed => componentSize * 8;
@@ -138,7 +137,7 @@ class XeonjiaGame extends FlameGame
   bool get isNotPaused => !_pause;
 
   // Map properties
-  late MapProperties map;
+  late GameMap map;
 
   // Current event log
   // It is synced with mainCharacter.eventLog while changing room
@@ -233,7 +232,7 @@ class XeonjiaGame extends FlameGame
 
     // Import map and components
     if (config.mode == GameMode.story) {
-      map = MapProperties(fullId: mainCharacter.visitedRooms.last);
+      map = GameMap(fullId: mainCharacter.visitedRooms.last);
       if (map.id == '44') {
         overlays.remove('loading');
         _backgroundMusic?.dispose();
@@ -245,7 +244,7 @@ class XeonjiaGame extends FlameGame
       overlays.add('miniMapButton');
       overlays.add('backpackButton');
     } else {
-      map = MapProperties(fullId: config.mapId.toString());
+      map = GameMap(fullId: config.mapId.toString());
       await importMap(this, 'assets/maps/arena/${config.mapId}.tmx');
     }
 

@@ -39,9 +39,9 @@ flutter:
     - assets/images/metadata/
     - assets/maps/
     - assets/maps/arena/
+    - assets/maps/data/
     - assets/maps/story/
     - assets/maps/tilesets/
-    - assets/maps/utils/
     - locale/de/LC_MESSAGES/
     - locale/es/LC_MESSAGES/
     - locale/fr/LC_MESSAGES/

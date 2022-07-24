@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:xeonjia/ui/themes.dart';
+import 'package:xeonjia/utils/i18n.dart';
 
 // Page route
 class FadeRoute extends PageRouteBuilder {
@@ -55,3 +57,32 @@ Widget divider(BuildContext context) => Container(
         borderRadius: BorderRadius.all(Radius.circular(30)),
       ),
     );
+
+// Form used to insert player name
+Widget insertNameForm(GlobalKey<FormState> key,
+    TextEditingController textFieldController, Function onSubmitted) {
+  return Form(
+    key: key,
+    child: TextFormField(
+        textAlign: TextAlign.center,
+        controller: textFieldController,
+        keyboardType: TextInputType.text,
+        textCapitalization: TextCapitalization.characters,
+        onFieldSubmitted: (String text) {
+          onSubmitted(text.trim());
+          SystemChrome.restoreSystemUIOverlays();
+        },
+        onChanged: (String input) {
+          if (input.isEmpty) key.currentState?.validate();
+        },
+        validator: (value) {
+          if (value == '') return "What's your name?".i18n + ' [A-Z]';
+          return value!.trim().length < 2 ? 'Too short.'.i18n : null;
+        },
+        inputFormatters: [
+          LengthLimitingTextInputFormatter(10),
+          FilteringTextInputFormatter.allow(RegExp('[a-zA-Z ]')),
+        ],
+        decoration: InputDecoration(hintText: 'Insert your name here'.i18n)),
+  );
+}

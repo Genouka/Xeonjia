@@ -1,10 +1,10 @@
 // ignore_for_file: avoid_print
 import 'dart:io';
 
-import 'util/dart2po.dart';
-import 'util/get_i18n_files.dart';
-import 'util/tmx2po.dart';
-import 'util/translation.dart';
+import 'utils/dart2po.dart';
+import 'utils/get_i18n_files.dart';
+import 'utils/tmx2po.dart';
+import 'utils/translation.dart';
 
 List<String> languageList = [];
 const String appName = 'Xeonjia';
@@ -14,7 +14,7 @@ const year = '2020, 2021, 2022';
 var metadata = <String, String>{};
 
 // Read each .dart, .tmx, .tsx file and re-generate .po files inside locale
-// Use this command to run the script: flutter pub run bin/update_po_files
+// Use this command to run the script: flutter pub run update_po_files.dart
 void main() {
   // filename : [...msgids]
   var dirStringsMap = <String, List<Translation>>{};

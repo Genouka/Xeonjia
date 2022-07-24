@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/ui/screens/rules/util/rule.dart';
+import 'package:xeonjia/ui/screens/rules/utils/rule.dart';
 
 class RulePage extends StatelessWidget {
   RulePage(this.rule) : assert(rule.image != null || rule.icon != null);

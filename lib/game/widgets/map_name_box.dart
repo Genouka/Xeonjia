@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/widgets/info_box.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/util/i18n.dart';
+import 'package:xeonjia/utils/i18n.dart';
 
 // Map name shown on the top left of the screen
 class MapNameBox extends StatelessWidget {

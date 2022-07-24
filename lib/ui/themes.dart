@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
+import 'package:xeonjia/utils/local_data_controller.dart';
 
 final appTheme = ThemeData(
   primarySwatch: Colors.blueGrey,

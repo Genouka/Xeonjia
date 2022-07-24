@@ -2,4 +2,4 @@ The files in this directory (assets/images/metadata/raw/) are NOT bundled and de
 
 These files are created using the Fire Atlas Editor.
 
-Command `flutter pub run bin/remove_img_from_fa.dart` is used to remove the 'imageData' property and create .xfa files in assets/images/metadata.
+Command `flutter pub run update_xfa_files.dart` is used to remove the 'imageData' property and create .xfa files in assets/images/metadata.

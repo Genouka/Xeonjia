@@ -4,8 +4,8 @@ import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/rules/resources/rules.dart';
 import 'package:xeonjia/ui/screens/rules/widgets/last_page.dart';
 import 'package:xeonjia/ui/screens/rules/widgets/rule_page.dart';
-import 'package:xeonjia/util/i18n.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
+import 'package:xeonjia/utils/i18n.dart';
+import 'package:xeonjia/utils/local_data_controller.dart';
 
 class RulesPage extends StatefulWidget {
   const RulesPage([this.homePage]);

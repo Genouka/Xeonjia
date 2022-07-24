@@ -2,10 +2,10 @@ import 'dart:math';
 
 import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
+import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/models/direction.dart';
-import 'package:xeonjia/models/game_mode.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
+import 'package:xeonjia/utils/game_properties.dart';
+import 'package:xeonjia/utils/local_data_controller.dart';
 
 // Virtual Gamepad (D-pad + buttons)
 class VirtualGamePad extends StatelessWidget {

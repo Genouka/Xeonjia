@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/util/extensions.dart';
-import 'package:xeonjia/models/game_mode.dart';
-import 'package:xeonjia/models/match_config.dart';
+import 'package:xeonjia/game/utils/extensions.dart';
 import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/arena/arena_page.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
 import 'package:xeonjia/ui/screens/home/widgets/bottom_row.dart';
 import 'package:xeonjia/ui/screens/home/widgets/page_button.dart';
 import 'package:xeonjia/ui/screens/rules/rules_page.dart';
-import 'package:xeonjia/util/i18n.dart';
+import 'package:xeonjia/utils/game_properties.dart';
+import 'package:xeonjia/utils/i18n.dart';
 
 class HomePage extends StatelessWidget {
   List<Map<String, dynamic>> pageList() {

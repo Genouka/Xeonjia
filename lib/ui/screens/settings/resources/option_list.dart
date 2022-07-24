@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:i18n_extension/i18n_widget.dart';
+import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/settings/settings_page.dart';
 import 'package:xeonjia/ui/themes.dart';
-import 'package:xeonjia/util/i18n.dart';
-import 'package:xeonjia/util/insert_name_form.dart';
-import 'package:xeonjia/util/local_data_controller.dart';
+import 'package:xeonjia/utils/i18n.dart';
+import 'package:xeonjia/utils/local_data_controller.dart';
 
 // List of available options displayed in settings page
 class OptionList extends StatelessWidget {

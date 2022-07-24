@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/util/i18n.dart';
-import 'package:xeonjia/util/insert_name_form.dart';
+import 'package:xeonjia/ui/basic.dart';
+import 'package:xeonjia/utils/i18n.dart';
 
 class LastPage extends StatelessWidget {
   const LastPage(this._textFieldController, this._formKey, this.saveName);
