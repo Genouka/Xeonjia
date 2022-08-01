@@ -248,6 +248,12 @@ class XeonjiaGame extends FlameGame
       await importMap(this, 'assets/maps/arena/${config.mapId}.tmx');
     }
 
+    // Workaround to wait for loading to end
+    while (lifecycle.hasPendingEvents) {
+      await Future.delayed(const Duration(milliseconds: 50));
+      update(0);
+    }
+
     _timer = Timer(1, repeat: true, onTick: () {
       if (isPaused) return;
       elapsedSeconds++;
@@ -259,7 +265,6 @@ class XeonjiaGame extends FlameGame
     });
     _timer?.start();
 
-    if (isLoaded) update(0);
     resume();
     playBackgroundMusic();
   }
@@ -268,12 +273,6 @@ class XeonjiaGame extends FlameGame
   void update(double dt) {
     _timer?.update(dt);
     super.update(dt);
-  }
-
-  @override
-  Future<void>? onLoad() {
-    update(0);
-    return null;
   }
 
   @override
