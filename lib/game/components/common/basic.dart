@@ -45,6 +45,7 @@ abstract class BasicComponent extends SpriteComponent
         actionOnEvent = tile.properties['actionOnEvent'] ?? '',
         maxLifePoints =
             double.parse(tile.properties['lifePoints'] ?? 'Infinity'),
+        level = int.parse(tile.properties['level'] ?? '0'),
         atk = double.parse(tile.properties['atk'] ?? '0'),
         def = double.parse(tile.properties['def'] ?? '0'),
         poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
@@ -76,6 +77,9 @@ abstract class BasicComponent extends SpriteComponent
   // Component image file
   String image;
   double imageY;
+
+  // Component's level
+  late int level;
 
   // Initial life points
   double maxLifePoints = double.infinity;
