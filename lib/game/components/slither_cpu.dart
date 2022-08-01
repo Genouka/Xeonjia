@@ -38,8 +38,40 @@ class SlitherCpuComponent extends BasicComponent with Walker, LifePointsBar {
 
   @override
   void update(double dt) {
-    if ((_timeToNextMove -= dt) < 0 && gameRef.isNotPaused) {
-      updateDirection(GetDirection.random);
+    if (gameRef.isNotPaused && isMyTurn && (_timeToNextMove -= dt) < 0) {
+      bool near = false;
+      Direction newOrientation = orientation;
+      if (gameRef.playerOne!.x == x) {
+        newOrientation =
+            gameRef.playerOne!.y > y ? Direction.down : Direction.up;
+        near = true;
+      } else if (gameRef.playerOne!.y == y) {
+        newOrientation =
+            gameRef.playerOne!.x > x ? Direction.right : Direction.left;
+        near = true;
+      }
+      if (componentInFront(newOrientation) == gameRef.playerOne) {
+        updateOrientation(newOrientation);
+        shoot();
+      } else {
+        if (!near) newOrientation = GetDirection.random;
+        if (componentInFront(newOrientation)?.isSolid(otherComponent: this) ??
+            false) {
+          newOrientation = orientation.opposite;
+          if (componentInFront(newOrientation)?.isSolid(otherComponent: this) ??
+              false) {
+            newOrientation = GetDirection.random;
+            if (componentInFront(newOrientation)
+                    ?.isSolid(otherComponent: this) ??
+                false) {
+              gameRef.useMove();
+            }
+          }
+          updateDirection(newOrientation);
+        } else {
+          updateDirection(newOrientation);
+        }
+      }
       _timeToNextMove = _updatePeriod;
     }
     super.update(dt);
