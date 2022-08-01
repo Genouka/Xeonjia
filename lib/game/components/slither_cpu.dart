@@ -4,11 +4,12 @@ import 'package:xeonjia/game/components/common/basic.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/components/utils/lifepoints_bar.dart';
 import 'package:xeonjia/game/utils/direction.dart';
+import 'package:xeonjia/game/utils/weapons.dart';
 
 // Basic CPU controlled enemy that slides on ice
 class SlitherCpuComponent extends BasicComponent with Walker, LifePointsBar {
   SlitherCpuComponent(tile)
-      : _updatePeriod = double.parse(tile.properties['updatePeriod'] ?? '0.8'),
+      : _updatePeriod = double.parse(tile.properties['updatePeriod'] ?? '0.5'),
         super.fromTile(tile) {
     _timeToNextMove = _updatePeriod;
     weaponList = [PunchWeapon(level: level)];

@@ -57,7 +57,10 @@ class _DPadState extends State<_DPad> {
 
   @override
   Widget build(BuildContext context) {
-    if (widget.gameRef.miniMapEnabled) return Container();
+    if (widget.gameRef.miniMapEnabled ||
+        (widget.gameRef.enemies > 0 && !widget.gameRef.playerOne!.isMyTurn)) {
+      return Container();
+    }
     return Positioned(
       left: 20,
       bottom: 20,
@@ -145,7 +148,8 @@ class _Buttons extends StatefulWidget {
 class _ButtonsState extends State<_Buttons> {
   @override
   Widget build(BuildContext context) {
-    return widget.gameRef.playerOne == null
+    return widget.gameRef.playerOne == null ||
+            (widget.gameRef.enemies > 0 && !widget.gameRef.playerOne!.isMyTurn)
         ? Container()
         : Positioned(
             bottom: 20,

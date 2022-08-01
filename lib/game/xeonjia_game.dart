@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 import 'package:xeonjia/game/components/background.dart';
 import 'package:xeonjia/game/components/character.dart';
 import 'package:xeonjia/game/components/common/basic.dart';
+import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/components/modifer.dart';
 import 'package:xeonjia/game/models/game_map.dart';
 import 'package:xeonjia/game/models/team.dart';
@@ -31,9 +32,11 @@ import 'package:xeonjia/game/widgets/map_name_box.dart';
 import 'package:xeonjia/game/widgets/minimap_button.dart';
 import 'package:xeonjia/game/widgets/no_maps_menu.dart';
 import 'package:xeonjia/game/widgets/pause_menu.dart';
+import 'package:xeonjia/game/widgets/remaining_moves_box.dart';
 import 'package:xeonjia/game/widgets/status_box.dart';
 import 'package:xeonjia/game/widgets/virtual_gamepad.dart';
 import 'package:xeonjia/utils/game_properties.dart';
+import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
 // Default component speed (componentSize per second)
@@ -153,12 +156,48 @@ class XeonjiaGame extends FlameGame
   // List of teams
   List<Team>? teams;
 
+  // Battle variables
+  Walker? get activePlayer => changingTurn ? null : players[_activePlayerIndex];
+  bool changingTurn = false;
+  late int _activePlayerIndex;
+  late int remainingMoves;
+
+  // Increase the move counter during a battle
+  void useMove() {
+    if (--remainingMoves <= 0) {
+      remainingMoves = 3;
+      _virtualGamePad.refresh();
+      if (++_activePlayerIndex >= players.length) _activePlayerIndex = 0;
+      for (int i = _activePlayerIndex; i < players.length; i++) {
+        if (!players[i].deleted) {
+          changingTurn = true;
+          add(TimerComponent(
+              period: 0.7,
+              onTick: () {
+                _activePlayerIndex = i;
+                changingTurn = false;
+                updateCamera(
+                    activePlayer!.position.x, activePlayer!.position.y);
+                _virtualGamePad.refresh();
+              }));
+          break;
+        }
+      }
+    }
+  }
+
   @override
   Future<void>? add(Component component) {
-    if (component is CharacterComponent) {
+    if (component is Walker &&
+        (([-3, -2, 1].contains(component.teamId)) ||
+            (component is CharacterComponent &&
+                (component.friendly == false ||
+                    (component.tile.properties['isPlayerOne'] ?? false))))) {
       players.add(component);
-      if (component.tile.properties['isPlayerOne'] ?? false) {
+      if (component is CharacterComponent &&
+          (component.tile.properties['isPlayerOne'] ?? false)) {
         playerOne = component;
+        _activePlayerIndex = players.length - 1;
       }
     }
     return super.add(component);
@@ -218,6 +257,7 @@ class XeonjiaGame extends FlameGame
 
     // Reset variables
     elapsedSeconds = 0;
+    remainingMoves = 3;
 
     // Remove previous components
     // They are removed during the next update()

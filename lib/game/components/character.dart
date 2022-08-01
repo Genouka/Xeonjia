@@ -1,5 +1,5 @@
-import 'dart:ui';
-
+import 'package:flame/extensions.dart';
+import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/common/basic.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/components/utils/lifepoints_bar.dart';
@@ -165,8 +165,10 @@ class CharacterComponent extends BasicComponent
 
   // Inspect what is in front of this
   void inspect() {
-    if (gameRef.isNotPaused && isStationary && !isBeingDeleted) {
-      componentInFront()?.playAction(orientation);
+    if (gameRef.isNotPaused && isStationary && !isBeingDeleted && isMyTurn) {
+      BasicComponent? component = componentInFront();
+      component?.playAction(orientation);
+      if (component?.action != null) gameRef.useMove();
     }
   }
 
@@ -195,6 +197,7 @@ class CharacterComponent extends BasicComponent
   void removeItem(String itemId, {bool used = true}) {
     _itemList.remove(itemId);
     if (isPlayerOne) {
+      if (used) gameRef.useMove();
       gameRef.setMessage(Message(
           gameRef,
           used
@@ -250,7 +253,7 @@ class CharacterComponent extends BasicComponent
 
   @override
   void update(double dt) {
-    if (!isPlayerOne && gameRef.isNotPaused) {
+    if (!isPlayerOne && gameRef.isNotPaused && isMyTurn) {
       npcController.shoot();
       npcController.move();
     }

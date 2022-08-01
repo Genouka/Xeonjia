@@ -11,6 +11,7 @@ import 'package:xeonjia/game/components/thin_wall.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/extensions.dart';
 import 'package:xeonjia/game/utils/sfx.dart';
+import 'package:xeonjia/game/utils/weapons.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
@@ -131,6 +132,7 @@ mixin Walker on BasicComponent {
       for (final e in collidedComponents) {
         onCollision(e, wasStationary);
       }
+      if (!wasStationary) gameRef.useMove();
     } else {
       // This component did not collide with another one
       x = candidatePosition.left;
