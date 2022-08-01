@@ -246,4 +246,18 @@ mixin Walker on BasicComponent {
 
   @override
   int get priority => 125;
+
+  final Paint _paint = Paint()
+    ..color = const Color(0xFFB63C3F)
+    ..style = PaintingStyle.stroke
+    ..strokeWidth = 3;
+
+  @override
+  void render(Canvas canvas) {
+    if (isMyTurn && gameRef.enemies > 0) {
+      canvas.drawOval(
+          Rect.fromLTWH(0, size.y / 1.5, size.x, size.y / 2), _paint);
+    }
+    super.render(canvas);
+  }
 }
