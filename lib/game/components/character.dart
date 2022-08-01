@@ -204,11 +204,6 @@ class CharacterComponent extends BasicComponent
   }
 
   @override
-  void hasMoved() {
-    if (isPlayerOne) gameRef.updateCamera(x, y);
-  }
-
-  @override
   void stop() {
     super.stop();
     if (!isPlayerOne) npcController.updateMovement();

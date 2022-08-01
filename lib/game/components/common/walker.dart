@@ -144,7 +144,9 @@ mixin Walker on BasicComponent {
   }
 
   // Function called if the component moved
-  void hasMoved() {}
+  void hasMoved() {
+    if (isMyTurn) gameRef.updateCamera(x, y);
+  }
 
   // Function called when this component collide another component
   // ignore_for_file: avoid_positional_boolean_parameters
