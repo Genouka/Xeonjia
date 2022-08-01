@@ -517,7 +517,7 @@ class XeonjiaGame extends FlameGame
   // ignore: avoid_renaming_method_parameters
   void onPanEnd(DragEndInfo _) {
     if (_panGestureOffset != null) {
-      gestureDragInput(GetDirection.fromOffset(_panGestureOffset!));
+      movePlayer(GetDirection.fromOffset(_panGestureOffset!));
     }
   }
 
@@ -528,9 +528,9 @@ class XeonjiaGame extends FlameGame
         : gestureTapInput(info.raw.globalPosition);
   }
 
-  // Manage drag gestures
-  void gestureDragInput(Direction direction) {
-    if (!_pause && !messageManager.active) {
+  // Move playerOne
+  void movePlayer(Direction direction) {
+    if (!_pause && !messageManager.active && playerOne!.isMyTurn) {
       playerOne?.updateDirection(direction);
     }
   }
@@ -573,13 +573,13 @@ class XeonjiaGame extends FlameGame
       RawKeyEvent event, Set<LogicalKeyboardKey> keysPressed) {
     if (event is! RawKeyDownEvent) return KeyEventResult.ignored;
     if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
-      gestureDragInput(Direction.down);
+      movePlayer(Direction.down);
     } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
-      gestureDragInput(Direction.up);
+      movePlayer(Direction.up);
     } else if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
-      gestureDragInput(Direction.right);
+      movePlayer(Direction.right);
     } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
-      gestureDragInput(Direction.left);
+      movePlayer(Direction.left);
     } else if (event.logicalKey == LogicalKeyboardKey.space) {
       playerOne!.shoot();
     } else if (event.logicalKey == LogicalKeyboardKey.keyA) {

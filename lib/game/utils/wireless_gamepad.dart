@@ -9,16 +9,16 @@ extension WirelessGamepad on XeonjiaGame {
       ..setListener((evtType, key) {
         switch (key) {
           case GAMEPAD_DPAD_UP:
-            gestureDragInput(Direction.up);
+            movePlayer(Direction.up);
             break;
           case GAMEPAD_DPAD_DOWN:
-            gestureDragInput(Direction.down);
+            movePlayer(Direction.down);
             break;
           case GAMEPAD_DPAD_RIGHT:
-            gestureDragInput(Direction.right);
+            movePlayer(Direction.right);
             break;
           case GAMEPAD_DPAD_LEFT:
-            gestureDragInput(Direction.left);
+            movePlayer(Direction.left);
             break;
           case GAMEPAD_BUTTON_A:
             playerOne!.inspect();
