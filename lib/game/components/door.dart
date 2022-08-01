@@ -37,7 +37,7 @@ class DoorComponent extends BasicComponent {
                   .visitedRooms[mainCharacter.visitedRooms.length - 2]);
 
   @override
-  void collidedBy(otherComponent) {
+  void collidedBy(otherComponent, [bool wasStationary = false]) {
     if (otherComponent.isPlayerOne) {
       var count = gameRef.enemies;
       gameRef.setMessage(Message(

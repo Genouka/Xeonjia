@@ -14,7 +14,7 @@ class DirectionChangerComponent extends BasicComponent {
   final Direction _forcedDirection;
 
   @override
-  void collidedBy(Walker otherComponent) {
+  void collidedBy(Walker otherComponent, [bool wasStationary = false]) {
     otherComponent.updateDirection(_forcedDirection, forced: true);
   }
 

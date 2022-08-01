@@ -129,7 +129,7 @@ mixin Walker on BasicComponent {
         y = collidedRect.top - height;
       }
       for (final e in collidedComponents) {
-        onCollision(e);
+        onCollision(e, wasStationary);
       }
     } else {
       // This component did not collide with another one
@@ -147,7 +147,9 @@ mixin Walker on BasicComponent {
   void hasMoved() {}
 
   // Function called when this component collide another component
-  void onCollision(BasicComponent collidedComponent) {
+  // ignore_for_file: avoid_positional_boolean_parameters
+  void onCollision(BasicComponent collidedComponent,
+      [bool wasStationary = false]) {
     stop();
     if (!isPlayerOne) {
       collidedComponent.lifePointsDifference(-atk,
@@ -157,7 +159,7 @@ mixin Walker on BasicComponent {
       gameRef.playSound(Sfx.collision);
     }
     if (_wallInFront() == null) {
-      collidedComponent.collidedBy(this);
+      collidedComponent.collidedBy(this, wasStationary);
     }
   }
 

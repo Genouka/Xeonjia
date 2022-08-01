@@ -237,7 +237,7 @@ class CharacterComponent extends BasicComponent
   }
 
   @override
-  void collidedBy(Walker otherComponent) {
+  void collidedBy(Walker otherComponent, [bool wasStationary = false]) {
     if (!isPlayerOne) super.collidedBy(otherComponent);
   }
 

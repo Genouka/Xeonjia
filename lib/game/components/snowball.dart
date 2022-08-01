@@ -48,7 +48,8 @@ class SnowballComponent extends BasicComponent with Walker {
   int get priority => 125;
 
   @override
-  void onCollision(BasicComponent? collidedComponent) {
+  void onCollision(BasicComponent? collidedComponent,
+      [bool wasStationary = false]) {
     if (isBeingDeleted) return;
     x += direction!.dx * componentSize / 2;
     y += direction!.dy * componentSize / 2;

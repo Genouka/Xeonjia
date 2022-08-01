@@ -273,8 +273,11 @@ abstract class BasicComponent extends SpriteComponent
   void overlappedBy(Walker componentAbove) {}
 
   // Define what happens if this component has been collided by another one
-  void collidedBy(Walker otherComponent) {
-    otherComponent.lifePointsDifference(-atk, cause: this, poison: poisonAtk);
+  // ignore: avoid_positional_boolean_parameters
+  void collidedBy(Walker otherComponent, [bool wasStationary = false]) {
+    if (!wasStationary) {
+      otherComponent.lifePointsDifference(-atk, cause: this, poison: poisonAtk);
+    }
     if (otherComponent.isPlayerOne) {
       executeAction(actionOnCollision, otherComponent);
     }
