@@ -186,11 +186,11 @@ mixin Walker on BasicComponent {
       as ThinWallComponent?;
 
   // Get component in front of this
-  BasicComponent? componentInFront() {
+  BasicComponent? componentInFront([Direction? orientation]) {
     var wall = _wallInFront();
     if (wall != null) return wall;
     Offset offset;
-    switch (orientation) {
+    switch (orientation ?? this.orientation) {
       case Direction.down:
         offset = Offset(x + componentSize / 2, y + componentSize * 3 / 2);
         break;
