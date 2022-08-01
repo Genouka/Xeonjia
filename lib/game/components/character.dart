@@ -110,12 +110,6 @@ class CharacterComponent extends BasicComponent
   @override
   bool get isPlayerOne => this == gameRef.playerOne;
 
-  // List of weapon owned
-  List<Weapon> weaponList = [];
-
-  // Index of the weapon selected from weaponList
-  int selectedWeaponIndex = 0;
-
   // Money earned by the player
   int _money = mainCharacter.money;
   int get money => _money;
@@ -154,22 +148,6 @@ class CharacterComponent extends BasicComponent
   void playAction(Direction orientation) {
     updateOrientation(orientation.opposite);
     super.playAction(orientation);
-  }
-
-  // Weapon
-  Weapon get selectedWeapon => weaponList[selectedWeaponIndex];
-  void shoot() {
-    if (isBeingDeleted || gameRef.isPaused) return;
-    selectedWeapon.shoot(shooter: this);
-  }
-
-  // Shoot with the weapon that has weapon.id == id
-  void shootById(int id) {
-    var newWeaponIndex = weaponList.indexWhere((weapon) => weapon.id == id);
-    if (weaponList[newWeaponIndex].powerPoints > 0) {
-      selectedWeaponIndex = newWeaponIndex;
-      shoot();
-    }
   }
 
   // True if this has the weapon

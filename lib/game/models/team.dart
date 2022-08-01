@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/components/character.dart';
+import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
 // Group of players
@@ -20,7 +20,7 @@ class Team {
   final Color color;
 
   // Team members
-  List<CharacterComponent> get members =>
+  List<Walker> get members =>
       gameRef.players.where((player) => player.teamId == id).toList();
 
   // Team points acquired by friendly fire defeats

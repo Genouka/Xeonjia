@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/character.dart';
+import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/components/modifer.dart';
 import 'package:xeonjia/game/components/snowball.dart';
 import 'package:xeonjia/game/utils/sfx.dart';
@@ -41,7 +42,7 @@ abstract class Weapon {
 
   // Function used when a shoot input happens
   @mustCallSuper
-  void shoot({required CharacterComponent shooter}) {
+  void shoot({required Walker shooter}) {
     if (shooter.isPlayerOne) shooter.gameRef.refreshWeaponButtons();
   }
 
@@ -70,9 +71,11 @@ class PunchWeapon extends Weapon {
   final int level;
 
   @override
-  void shoot({required CharacterComponent shooter}) {
+  void shoot({required Walker shooter}) {
     var componentInFront = shooter.componentInFront();
-    if (componentInFront is CharacterComponent && componentInFront.friendly) {
+    if (componentInFront is CharacterComponent &&
+        componentInFront.friendly &&
+        !componentInFront.isPlayerOne) {
       return;
     }
     componentInFront?.lifePointsDifference(-atk, cause: shooter);
@@ -94,7 +97,7 @@ class SnowBallWeapon extends Weapon {
   final int level;
 
   @override
-  void shoot({required CharacterComponent shooter}) {
+  void shoot({required Walker shooter}) {
     if (powerPoints > 0) {
       shooter.gameRef.add(SnowballComponent(
           Point(shooter.x, shooter.y), shooter, shooter.orientation, atk));
@@ -120,7 +123,7 @@ class MineWeapon extends Weapon {
   final int level;
 
   @override
-  void shoot({required CharacterComponent shooter}) {
+  void shoot({required Walker shooter}) {
     if (powerPoints > 0) {
       shooter.gameRef.add(
           ModifierComponent.mine(Point(shooter.x, shooter.y), shooter, atk));

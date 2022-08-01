@@ -105,7 +105,7 @@ class _DPadState extends State<_DPad> {
     return GestureDetector(
       onTap: () {
         widget.gameRef.playerOne!.isStationary
-            ? widget.gameRef.gestureDragInput(direction!)
+            ? widget.gameRef.movePlayer(direction!)
             : widget.gameRef.playerOne!.updateOrientation(direction);
       },
       onLongPress: () {

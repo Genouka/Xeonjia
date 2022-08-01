@@ -212,6 +212,34 @@ mixin Walker on BasicComponent {
         .lastOrNull as BasicComponent?;
   }
 
+  // List of weapon owned
+  List<Weapon> weaponList = [];
+
+  // Index of the weapon selected from weaponList
+  int selectedWeaponIndex = 0;
+
+  // Weapon
+  Weapon get selectedWeapon => weaponList[selectedWeaponIndex];
+  void shoot() {
+    if (isBeingDeleted || gameRef.isPaused || !isMyTurn) return;
+    selectedWeapon.shoot(shooter: this);
+    gameRef.useMove();
+  }
+
+  // Shoot with the weapon that has weapon.id == id
+  void shootById(int id) {
+    var newWeaponIndex = weaponList.indexWhere((weapon) => weapon.id == id);
+    if (weaponList[newWeaponIndex].powerPoints > 0) {
+      selectedWeaponIndex = newWeaponIndex;
+      shoot();
+    }
+  }
+
+  // Check if it is this component's turn during a battle
+  bool get isMyTurn => gameRef.enemies > 0
+      ? (gameRef.players.isNotEmpty ? this == gameRef.activePlayer : false)
+      : true;
+
   @override
   int get priority => 125;
 }

@@ -143,8 +143,8 @@ class XeonjiaGame extends FlameGame
   // It is synced with mainCharacter.eventLog while changing room
   late Map<String, dynamic> currentEventLog;
 
-  // List of CharacterComponent in game
-  List<CharacterComponent> players = [];
+  // List of non-friendly Walker components in game + playerOne
+  List<Walker> players = [];
   List<BasicComponent> deletedComponents = [];
 
   // Main character

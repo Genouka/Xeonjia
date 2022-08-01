@@ -11,6 +11,7 @@ class SlitherCpuComponent extends BasicComponent with Walker, LifePointsBar {
       : _updatePeriod = double.parse(tile.properties['updatePeriod'] ?? '0.8'),
         super.fromTile(tile) {
     _timeToNextMove = _updatePeriod;
+    weaponList = [PunchWeapon(level: level)];
   }
 
   @override
