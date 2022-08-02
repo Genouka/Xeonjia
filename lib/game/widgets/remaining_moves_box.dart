@@ -21,13 +21,10 @@ class RemainingMovesBox extends TextBoxComponent with HasGameRef<XeonjiaGame> {
               color: BasicPalette.white.color,
             ),
           ),
-        );
-
-  @override
-  PositionType positionType = PositionType.viewport;
-
-  @override
-  int priority = 1000;
+        ) {
+    positionType = PositionType.viewport;
+    priority = 1000;
+  }
 
   // To avoid calling .i18n every update()
   final Map<int, String> texts = {
