@@ -26,6 +26,7 @@ import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/game/utils/wireless_gamepad.dart';
 import 'package:xeonjia/game/widgets/backpack_button.dart';
 import 'package:xeonjia/game/widgets/backpack_menu.dart';
+import 'package:xeonjia/game/widgets/battle_text_box.dart';
 import 'package:xeonjia/game/widgets/dialog_box.dart';
 import 'package:xeonjia/game/widgets/end_menu.dart';
 import 'package:xeonjia/game/widgets/map_name_box.dart';
@@ -203,6 +204,17 @@ class XeonjiaGame extends FlameGame
     return super.add(component);
   }
 
+  @override
+  void remove(Component component) {
+    if (((component is BasicComponent &&
+                [-3, -2, 1].contains(component.teamId)) ||
+            (component is CharacterComponent && component.friendly == false)) &&
+        enemies == 0) {
+      add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
+    }
+    super.remove(component);
+  }
+
   // Get component from ID
   BasicComponent? getComponentFromId(int id) {
     var componentList = List.from(children)..addAll(deletedComponents);
@@ -293,6 +305,15 @@ class XeonjiaGame extends FlameGame
     while (lifecycle.hasPendingEvents) {
       await Future.delayed(const Duration(milliseconds: 50));
       update(0);
+    }
+
+    if (enemies > 0) {
+      add(BattleTextBox(size, 'Battle!'.i18n.toUpperCase()));
+      setMessage(Message(
+          this,
+          "There are %s enemies here! It' time to fight!"
+              .i18n
+              .fill([enemies])));
     }
 
     _timer = Timer(1, repeat: true, onTick: () {
