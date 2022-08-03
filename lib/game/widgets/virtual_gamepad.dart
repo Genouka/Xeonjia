@@ -178,17 +178,15 @@ class _ButtonsState extends State<_Buttons> {
                               ),
                             ]
                           : [
-                              button('P',
-                                  () => widget.gameRef.playerOne!.shootById(0),
+                              button(
+                                  'P', () => widget.gameRef.playerOne!.shoot(0),
                                   percentage: 1,
                                   highlight: widget.gameRef.playerOne!
                                           .selectedWeapon.id ==
                                       0),
                               if (widget.gameRef.playerOne!.hasWeaponId(2))
-                                button(
-                                    'M',
-                                    () =>
-                                        widget.gameRef.playerOne!.shootById(2),
+                                button('M',
+                                    () => widget.gameRef.playerOne!.shoot(2),
                                     percentage: widget.gameRef.playerOne!
                                         .getWeaponById(2)
                                         .ppPercentage,
@@ -214,10 +212,8 @@ class _ButtonsState extends State<_Buttons> {
                             ]
                           : [
                               if (widget.gameRef.playerOne!.hasWeaponId(1))
-                                button(
-                                    'S',
-                                    () =>
-                                        widget.gameRef.playerOne!.shootById(1),
+                                button('S',
+                                    () => widget.gameRef.playerOne!.shoot(1),
                                     percentage: widget.gameRef.playerOne!
                                         .getWeaponById(1)
                                         .ppPercentage,
