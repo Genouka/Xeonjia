@@ -132,7 +132,9 @@ mixin Walker on BasicComponent {
       for (final e in collidedComponents) {
         onCollision(e, wasStationary);
       }
-      if (!wasStationary) gameRef.useMove();
+      if (!wasStationary && (gameRef.isEnemy(this) || isPlayerOne)) {
+        gameRef.useMove();
+      }
     } else {
       // This component did not collide with another one
       x = candidatePosition.left;
