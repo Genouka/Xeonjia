@@ -1,6 +1,7 @@
 import 'package:xeonjia/game/components/common/basic.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/components/utils/lifepoints_bar.dart';
+import 'package:xeonjia/game/components/utils/npc_controller.dart';
 import 'package:xeonjia/game/components/utils/render_offset.dart';
 import 'package:xeonjia/game/components/utils/respawn_animation.dart';
 import 'package:xeonjia/game/components/utils/text_animation.dart';
@@ -8,7 +9,6 @@ import 'package:xeonjia/game/models/item.dart';
 import 'package:xeonjia/game/models/tile.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/message.dart';
-import 'package:xeonjia/game/utils/npc_controller.dart';
 import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/game/utils/weapons.dart';
 import 'package:xeonjia/utils/game_properties.dart';
