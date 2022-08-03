@@ -3,7 +3,7 @@
 # This file is distributed under the same license as Xeonjia.
 # hamaryns <hendrik@hendrikmaryns.name>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-07-21 17:26+0000\nLast-Translator: hamaryns <hendrik@hendrikmaryns.name>\nLanguage-Team: Dutch <https://translate.deepdaikon.xyz/projects/xeonjia/story/nl/>\nLanguage: nl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-08-03 20:33+0000\nLast-Translator: hamaryns <hendrik@hendrikmaryns.name>\nLanguage-Team: Dutch <https://translate.deepdaikon.xyz/projects/xeonjia/story/nl/>\nLanguage: nl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -32,7 +32,7 @@ msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "So… tell me, how are you? Is everything okay? How is the journey going?"
-msgstr ""
+msgstr "Dus… vertel me, hoe gaat het?  Alles goed?  Hoe gaat de reis?"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Everything good, I just defeated the Hoarfrost Team and I got the first signet!"
