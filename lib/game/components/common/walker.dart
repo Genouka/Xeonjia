@@ -246,7 +246,9 @@ mixin Walker on BasicComponent {
 
   // Shoot with the weapon that has weapon.id == id or with the current weapon
   void shoot([int? id]) {
-    if (isBeingDeleted || gameRef.isPaused || !isMyTurn) return;
+    if (isBeingDeleted || gameRef.isPaused || !isMyTurn || !isStationary) {
+      return;
+    }
     if (id != null) {
       var newWeaponIndex = weaponList.indexWhere((weapon) => weapon.id == id);
       if (weaponList[newWeaponIndex].powerPoints > 0) {
