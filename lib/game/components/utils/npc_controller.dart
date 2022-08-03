@@ -65,7 +65,7 @@ class NpcController extends Component {
           npc.gameRef.playerOne!.x > npc.x ? Direction.right : Direction.left;
       near = true;
     }
-    if (npc.hasPpForWeapon(Weapons.snowball.id) ||
+    if ((npc.hasPpForWeapon(Weapons.snowball.id) && near) ||
         npc.componentInFront(newOrientation) == npc.gameRef.playerOne) {
       npc.updateOrientation(newOrientation);
       npc.shoot(npc.hasPpForWeapon(Weapons.snowball.id)
