@@ -153,7 +153,7 @@ class XeonjiaGame extends FlameGame
 
   // Battle variables
   Walker? get activePlayer => changingTurn ? null : players[_activePlayerIndex];
-  bool changingTurn = false;
+  late bool changingTurn;
   late int _activePlayerIndex;
   late int remainingMoves;
 
@@ -262,6 +262,7 @@ class XeonjiaGame extends FlameGame
     // Reset variables
     elapsedSeconds = 0;
     remainingMoves = 3;
+    changingTurn = false;
 
     // Remove previous components
     // They are removed during the next update()
