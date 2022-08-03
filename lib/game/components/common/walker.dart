@@ -147,7 +147,9 @@ mixin Walker on BasicComponent {
 
   // Function called if the component moved
   void hasMoved() {
-    if (isMyTurn) gameRef.updateCamera(x, y);
+    if ((isMyTurn && gameRef.enemies > 0) || this == gameRef.playerOne) {
+      gameRef.updateCamera(x, y);
+    }
   }
 
   // Function called when this component collide another component
