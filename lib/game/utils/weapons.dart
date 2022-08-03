@@ -8,6 +8,15 @@ import 'package:xeonjia/game/components/snowball.dart';
 import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/utils/game_properties.dart';
 
+enum Weapons {
+  punch(0),
+  snowball(1),
+  mine(2);
+
+  const Weapons(this.id);
+  final int id;
+}
+
 // Abstract class used to manage weapons inside game
 // It defines what happens if someone use a weapon
 abstract class Weapon {
@@ -63,7 +72,8 @@ abstract class Weapon {
 
 // Punch
 class PunchWeapon extends Weapon {
-  PunchWeapon({required this.level}) : super(0, double.infinity) {
+  PunchWeapon({required this.level})
+      : super(Weapons.punch.id, double.infinity) {
     atk = level + 1.0;
   }
 
@@ -89,7 +99,7 @@ class PunchWeapon extends Weapon {
 // Snowball
 class SnowBallWeapon extends Weapon {
   SnowBallWeapon({required this.level, double? powerPoints})
-      : super(1, powerPoints) {
+      : super(Weapons.snowball.id, powerPoints) {
     atk = 10 + level * 2.0;
   }
 
@@ -115,7 +125,7 @@ class SnowBallWeapon extends Weapon {
 // Mine
 class MineWeapon extends Weapon {
   MineWeapon({required this.level, double? powerPoints})
-      : super(2, powerPoints) {
+      : super(Weapons.mine.id, powerPoints) {
     atk = 10 + level * 2.0;
   }
 
