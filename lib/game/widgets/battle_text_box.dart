@@ -25,7 +25,7 @@ class BattleTextBox extends TextComponent with HasGameRef<XeonjiaGame> {
   }
 
   // Seconds to open and close the box
-  double animationDuration = 0.5;
+  double animationDuration = 0.3;
 
   // Seconds the box stays open
   double stayOpenFor = 1.5;
