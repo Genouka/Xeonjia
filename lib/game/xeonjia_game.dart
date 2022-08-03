@@ -308,12 +308,14 @@ class XeonjiaGame extends FlameGame
     }
 
     if (enemies > 0) {
-      add(BattleTextBox(size, 'Battle!'.i18n.toUpperCase()));
-      setMessage(Message(
-          this,
-          "There are %s enemies here! It' time to fight!"
-              .i18n
-              .fill([enemies])));
+      setMessage(
+          Message(
+              this,
+              "There are %s enemies here! It' time to fight!"
+                  .i18n
+                  .fill([enemies])),
+          callback: () =>
+              add(BattleTextBox(size, 'Battle!'.i18n.toUpperCase())));
     }
 
     _timer = Timer(1, repeat: true, onTick: () {
