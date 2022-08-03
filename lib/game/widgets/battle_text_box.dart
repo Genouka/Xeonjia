@@ -43,8 +43,8 @@ class BattleTextBox extends TextComponent with HasGameRef<XeonjiaGame> {
   @override
   void render(Canvas canvas) {
     double currentWidth = elapsed < animationDuration
-        ? width * elapsed * 4
-        : width * (1 - elapsed) * 4;
+        ? width * elapsed * 2 / animationDuration
+        : width * (2 * animationDuration - elapsed) * 2 / animationDuration;
     final rect =
         Rect.fromLTWH(width / 2 - currentWidth, -10, 2 * currentWidth, 84);
     canvas.drawRect(
