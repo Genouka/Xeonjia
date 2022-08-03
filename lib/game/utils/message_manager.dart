@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -6,6 +8,7 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 class MessageManager {
   MessageManager(this.gameRef);
   final XeonjiaGame gameRef;
+  VoidCallback? callback;
 
   // Messages to show
   List<Message> _messages = [];
@@ -28,6 +31,7 @@ class MessageManager {
     _messages = [];
     answers = [];
     gameRef.continueAction(delay: 0);
+    callback?.call();
     if (hideMap) {
       hideMap = false;
       gameRef.playBackgroundMusic();
@@ -42,9 +46,11 @@ class MessageManager {
   bool hideMap = false;
 
   // Show one or more messages
-  void setMessages(List<Message>? newMessages, {bool? hideMap}) {
+  void setMessages(List<Message>? newMessages,
+      {bool? hideMap, VoidCallback? callback}) {
     if (newMessages == null) return;
     this.hideMap = hideMap ?? false;
+    this.callback = callback;
     _messages.addAll(newMessages.fold([], (previousValue, element) {
       (previousValue as List<Message>).addAll(_splitMessage(element));
       return previousValue;

@@ -395,13 +395,16 @@ class XeonjiaGame extends FlameGame
   }
 
   // Show a message in messageBox
-  void setMessage(Message? message, {bool? hideMap}) {
-    if (message != null) setMessages([message], hideMap: hideMap ?? false);
+  void setMessage(Message? message, {bool? hideMap, VoidCallback? callback}) {
+    if (message != null) {
+      setMessages([message], hideMap: hideMap ?? false, callback: callback);
+    }
   }
 
   // Show a list of messages in messageBox
-  void setMessages(List<Message> messages, {bool hideMap = false}) {
-    messageManager.setMessages(messages, hideMap: hideMap);
+  void setMessages(List<Message> messages,
+      {bool hideMap = false, VoidCallback? callback}) {
+    messageManager.setMessages(messages, hideMap: hideMap, callback: callback);
   }
 
   // Start the background music
