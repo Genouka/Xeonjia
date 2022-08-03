@@ -79,7 +79,7 @@ mixin Walker on BasicComponent {
 
   @override
   void update(double dt) {
-    if (direction != null) _move(dt);
+    if (!isStationary) _move(dt);
     super.update(dt);
   }
 
