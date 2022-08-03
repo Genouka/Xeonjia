@@ -1,13 +1,13 @@
-import 'dart:ui';
-
 import 'package:xeonjia/game/components/common/basic.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/components/utils/lifepoints_bar.dart';
+import 'package:xeonjia/game/components/utils/render_offset.dart';
 import 'package:xeonjia/game/utils/npc_controller.dart';
 import 'package:xeonjia/game/utils/weapons.dart';
 
 // Basic CPU controlled enemy that slides on ice
-class SlitherCpuComponent extends BasicComponent with Walker, LifePointsBar {
+class SlitherCpuComponent extends BasicComponent
+    with Walker, RenderOffset, LifePointsBar {
   SlitherCpuComponent(tile) : super.fromTile(tile) {
     weaponList = [PunchWeapon(level: level)];
     add(NpcController());
@@ -28,10 +28,5 @@ class SlitherCpuComponent extends BasicComponent with Walker, LifePointsBar {
     if (cause?.isPlayerOne ?? false) {
       super.lifePointsDifference(difference, cause: cause!, poison: poison);
     }
-  }
-
-  @override
-  void render(Canvas canvas) {
-    super.render(canvas..translate(0, gameRef.characterOffset));
   }
 }

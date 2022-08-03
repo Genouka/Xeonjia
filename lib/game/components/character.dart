@@ -1,8 +1,7 @@
-import 'package:flame/extensions.dart';
-import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/common/basic.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/components/utils/lifepoints_bar.dart';
+import 'package:xeonjia/game/components/utils/render_offset.dart';
 import 'package:xeonjia/game/components/utils/respawn_animation.dart';
 import 'package:xeonjia/game/components/utils/text_animation.dart';
 import 'package:xeonjia/game/models/item.dart';
@@ -18,7 +17,7 @@ import 'package:xeonjia/utils/local_data_controller.dart';
 
 // Dynamic component used for human-like players
 class CharacterComponent extends BasicComponent
-    with Walker, LifePointsBar, RespawnAnimation, TextAnimation {
+    with Walker, RenderOffset, LifePointsBar, RespawnAnimation, TextAnimation {
   CharacterComponent(
     this.tile,
     MatchConfig matchConfig, {
@@ -231,10 +230,5 @@ class CharacterComponent extends BasicComponent
       gameRef.refreshWeaponButtons();
       gameRef.updateCamera(x, y);
     }
-  }
-
-  @override
-  void render(Canvas canvas) {
-    super.render(canvas..translate(0, gameRef.characterOffset));
   }
 }

@@ -99,12 +99,6 @@ class XeonjiaGame extends FlameGame
     start();
   }
 
-  // Vertical offset used to translate characters
-  double get characterOffset =>
-      -(componentSize * (miniMapEnabled ? camera.zoom : 1) / 8)
-          .gridAligned
-          .toDouble();
-
   // Match settings
   final MatchConfig config;
 
