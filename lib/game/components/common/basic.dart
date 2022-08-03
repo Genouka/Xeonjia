@@ -35,7 +35,7 @@ abstract class BasicComponent extends SpriteComponent
                 : null,
             properties: properties));
 
-  BasicComponent.fromTile(Tile tile)
+  BasicComponent.fromTile(this.tile)
       : id = tile.id,
         startingPosition = tile.position!,
         name = tile.properties['name'],
@@ -70,6 +70,9 @@ abstract class BasicComponent extends SpriteComponent
 
   // Component unique ID
   final int? id;
+
+  // Component's tile
+  Tile tile;
 
   // Component starting position
   Point startingPosition;

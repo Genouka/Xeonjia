@@ -224,19 +224,37 @@ mixin Walker on BasicComponent {
 
   // Weapon
   Weapon get selectedWeapon => weaponList[selectedWeaponIndex];
-  void shoot() {
-    if (isBeingDeleted || gameRef.isPaused || !isMyTurn) return;
-    selectedWeapon.shoot(shooter: this);
-    gameRef.useMove();
+
+  // True if this has the weapon
+  bool hasWeaponId(int id) =>
+      weaponList.where((weapon) => weapon.id == id).isNotEmpty;
+
+  // True if this has the weapon and the weapon has at least one PP
+  bool hasPpForWeapon(int id) =>
+      (weaponList.firstWhereOrNull((w) => w.id == id)?.powerPoints ?? -1) > 0;
+
+  // Return the weapon object by passing the id
+  Weapon getWeaponById(int id) =>
+      weaponList.firstWhere((weapon) => weapon.id == id);
+
+  // Select next weapon in weapon list
+  void nextWeapon() {
+    if (++selectedWeaponIndex >= weaponList.length) selectedWeaponIndex = 0;
   }
 
-  // Shoot with the weapon that has weapon.id == id
-  void shootById(int id) {
-    var newWeaponIndex = weaponList.indexWhere((weapon) => weapon.id == id);
-    if (weaponList[newWeaponIndex].powerPoints > 0) {
-      selectedWeaponIndex = newWeaponIndex;
-      shoot();
+  // Shoot with the weapon that has weapon.id == id or with the current weapon
+  void shoot([int? id]) {
+    if (isBeingDeleted || gameRef.isPaused || !isMyTurn) return;
+    if (id != null) {
+      var newWeaponIndex = weaponList.indexWhere((weapon) => weapon.id == id);
+      if (weaponList[newWeaponIndex].powerPoints > 0) {
+        selectedWeaponIndex = newWeaponIndex;
+        selectedWeapon.shoot(shooter: this);
+      }
+    } else {
+      selectedWeapon.shoot(shooter: this);
     }
+    gameRef.useMove();
   }
 
   // Check if it is this component's turn during a battle

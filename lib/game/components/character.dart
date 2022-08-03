@@ -105,7 +105,8 @@ class CharacterComponent extends BasicComponent
   }
 
   // Component's tile
-  late Tile tile;
+  @override
+  Tile tile;
 
   @override
   bool get isPlayerOne => this == gameRef.playerOne;
@@ -148,19 +149,6 @@ class CharacterComponent extends BasicComponent
   void playAction(Direction orientation) {
     updateOrientation(orientation.opposite);
     super.playAction(orientation);
-  }
-
-  // True if this has the weapon
-  bool hasWeaponId(int id) =>
-      weaponList.where((weapon) => weapon.id == id).isNotEmpty;
-
-  // Return the weapon object by passing the id
-  Weapon getWeaponById(int id) =>
-      weaponList.firstWhere((weapon) => weapon.id == id);
-
-  // Select next weapon in weapon list
-  void nextWeapon() {
-    if (++selectedWeaponIndex >= weaponList.length) selectedWeaponIndex = 0;
   }
 
   // Inspect what is in front of this
