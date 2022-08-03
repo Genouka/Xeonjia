@@ -100,6 +100,8 @@ class CharacterComponent extends BasicComponent
       }
       gameRef.executeAction(
           action: gameRef.map.action, actor: gameRef.playerOne!);
+    } else {
+      add(NpcController());
     }
     return null;
   }
@@ -139,8 +141,6 @@ class CharacterComponent extends BasicComponent
   // NPC features: If friendly it doesn't shoot. If quiet it doesn't move.
   late bool friendly;
   late bool quiet;
-  late NpcController npcController = NpcController(this,
-      tile.properties['movementPattern'], tile.properties['shootPattern']);
 
   @override
   late double maxLifePoints;
@@ -195,12 +195,6 @@ class CharacterComponent extends BasicComponent
   }
 
   @override
-  void stop() {
-    super.stop();
-    if (!isPlayerOne) npcController.updateMovement();
-  }
-
-  @override
   void collidedBy(Walker otherComponent, [bool wasStationary = false]) {
     if (!isPlayerOne) super.collidedBy(otherComponent);
   }
@@ -237,15 +231,6 @@ class CharacterComponent extends BasicComponent
       gameRef.refreshWeaponButtons();
       gameRef.updateCamera(x, y);
     }
-  }
-
-  @override
-  void update(double dt) {
-    if (!isPlayerOne && gameRef.isNotPaused && isMyTurn) {
-      npcController.shoot();
-      npcController.move();
-    }
-    super.update(dt);
   }
 
   @override
