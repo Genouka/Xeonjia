@@ -424,9 +424,7 @@ class XeonjiaGame extends FlameGame
   // Save match data and load the new room
   void changeRoom(String nextRoomId, {bool enterNextRoom = true}) {
     pause(stopMusic: false);
-    if (enemies == 0) {
-      currentEventLog['${map.id}-safe'] = true;
-    }
+    if (enemies == 0) currentEventLog['${map.id}-safe'] = true;
 
     // Save new player data into mainCharacter
     mainCharacter.def = playerOne!.def;
