@@ -200,10 +200,7 @@ class XeonjiaGame extends FlameGame
 
   @override
   void remove(Component component) {
-    if (((component is BasicComponent &&
-                [-3, -2, 1].contains(component.teamId)) ||
-            (component is CharacterComponent && component.friendly == false)) &&
-        enemies == 0) {
+    if (isEnemy(component) && enemies == 0) {
       add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
     }
     super.remove(component);
@@ -222,14 +219,15 @@ class XeonjiaGame extends FlameGame
   BasicComponent getDeletedComponentFromId(int id) =>
       deletedComponents.firstWhere((c) => c.id == id);
 
-  // Count enemies in the room
-  int get enemies => children
-      .where((e) =>
-          (e is BasicComponent &&
-              [-3, -2, 1].contains(e.teamId) &&
-              !e.deleted) ||
-          (e is CharacterComponent && e.friendly == false && !e.deleted))
-      .length;
+  // Count enemies (alive) in the room
+  int get enemies => children.where((e) => isEnemy(e, onlyAlive: true)).length;
+  bool isEnemy(Component c, {bool onlyAlive = false}) =>
+      (c is BasicComponent &&
+          [-3, -2, 1].contains(c.teamId) &&
+          (!c.deleted || !onlyAlive)) ||
+      (c is CharacterComponent &&
+          c.friendly == false &&
+          (!c.deleted || !onlyAlive));
 
   // List of teams sorted by points
   List<Team> get ranking {
