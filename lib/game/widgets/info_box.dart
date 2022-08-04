@@ -23,6 +23,7 @@ class InfoBox extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
           width: MediaQuery.of(context).size.width / 2.2,
+          height: 36,
           constraints: const BoxConstraints(maxWidth: 320),
           decoration: BoxDecoration(
               color: Colors.grey.shade800.withOpacity(0.7),

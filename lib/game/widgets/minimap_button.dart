@@ -23,7 +23,7 @@ class MiniMapButton extends StatelessWidget {
                   : gameRef.miniMap(),
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-                height: 34,
+                height: 36,
                 width: miniMapIsActive
                     ? MediaQuery.of(context).size.width / 2.2
                     : null,
