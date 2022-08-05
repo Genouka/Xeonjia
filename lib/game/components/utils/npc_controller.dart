@@ -98,6 +98,7 @@ class NpcController extends Component {
 
   @override
   void update(double dt) {
+    if (npc.gameRef.isPaused) return;
     if (_hasMovements) {
       _patternMove();
     } else if (npc.gameRef.isNotPaused &&
