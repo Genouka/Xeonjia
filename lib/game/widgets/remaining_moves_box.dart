@@ -25,6 +25,7 @@ class RemainingMovesBox extends TextBoxComponent with HasGameRef<XeonjiaGame> {
 
   // To avoid calling .i18n every update()
   final Map<int, String> texts = {
+    0: 'Wait'.i18n.toUpperCase(),
     1: '1 move'.i18n.toUpperCase(),
     2: '2 moves'.i18n.toUpperCase(),
     3: '3 moves'.i18n.toUpperCase(),
@@ -39,8 +40,9 @@ class RemainingMovesBox extends TextBoxComponent with HasGameRef<XeonjiaGame> {
 
   @override
   void update(double dt) {
-    text =
-        gameRef.playerOne!.isMyTurn ? texts[gameRef.remainingMoves]! : 'wait';
+    text = gameRef.playerOne!.isMyTurn
+        ? texts[gameRef.remainingMoves]!
+        : texts[0]!;
     super.update(dt);
   }
 
