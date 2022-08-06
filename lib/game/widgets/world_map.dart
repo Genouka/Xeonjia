@@ -23,9 +23,17 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
 }
 
 // A single map
-class _RectangleMap extends PositionComponent with Tappable {
+class _RectangleMap extends PositionComponent
+    with HasGameRef<XeonjiaGame>, Tappable {
   _RectangleMap(this.map);
   final MapData map;
+  bool isTheCurrentMap = false;
+
+  @override
+  Future<void>? onLoad() {
+    isTheCurrentMap = map.fileName.split('.').first == gameRef.map.id;
+    return super.onLoad();
+  }
 
   @override
   bool onTapUp(TapUpInfo info) {
@@ -40,13 +48,20 @@ class _RectangleMap extends PositionComponent with Tappable {
     this.size = Vector2(map.width, map.height) * MapData.scale;
   }
 
-  final Paint paint = Paint()
+  final Paint mapPaint = Paint()
     ..color = const Color(0xFF0909FF)
+    ..style = PaintingStyle.stroke
+    ..strokeWidth = 1;
+  final Paint currentMapPaint = Paint()
+    ..color = const Color(0xFFFF0909)
     ..style = PaintingStyle.stroke
     ..strokeWidth = 1;
 
   @override
   void render(Canvas canvas) {
-    canvas.drawRect(Rect.fromLTWH(0, 0, width, height), paint);
+    isTheCurrentMap
+        ? canvas.drawRect(
+            Rect.fromLTWH(2, 2, width - 4, height - 4), currentMapPaint)
+        : canvas.drawRect(Rect.fromLTWH(0, 0, width, height), mapPaint);
   }
 }
