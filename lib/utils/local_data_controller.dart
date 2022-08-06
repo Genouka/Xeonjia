@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:xeonjia/game/models/character_info.dart';
 import 'package:xeonjia/game/models/item.dart';
+import 'package:xeonjia/game/models/map_data.dart';
 import 'package:xeonjia/utils/settings.dart';
 
 // Game settings and preferences
@@ -17,6 +18,9 @@ late CharacterInfo mainCharacter;
 // List of all items
 // itemId : Item info
 Map<String, Item> itemData = {};
+
+// List of maps (taken from kingdom.world and maps-data.json)
+List<MapData> worldData = [];
 
 // Gamepad position
 late Offset gamepadOffset;
@@ -36,6 +40,17 @@ Future<void> loadStoredData() async {
   var data = json.decode(
       await rootBundle.loadString('assets/maps/data/items-and-events.json'));
   data['items'].forEach((key, value) => itemData[key] = Item(value));
+
+  // Load maps data from kingdom.world and maps-data.json
+  final List<dynamic> kingdomWorld = json.decode(
+      await rootBundle.loadString('assets/maps/story/kingdom.world'))['maps'];
+  final Map<String, dynamic> mapsData = json
+      .decode(await rootBundle.loadString('assets/maps/data/maps-data.json'));
+  for (final map in kingdomWorld) {
+    worldData.add(MapData({}
+      ..addAll(map)
+      ..addAll(mapsData.containsKey(map) ? mapsData[map] : {})));
+  }
 }
 
 // Save user data in shared preferences

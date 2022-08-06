@@ -36,6 +36,8 @@ import 'package:xeonjia/game/widgets/pause_menu.dart';
 import 'package:xeonjia/game/widgets/remaining_moves_box.dart';
 import 'package:xeonjia/game/widgets/status_box.dart';
 import 'package:xeonjia/game/widgets/virtual_gamepad.dart';
+import 'package:xeonjia/game/widgets/world_map.dart';
+import 'package:xeonjia/game/widgets/world_map_button.dart';
 import 'package:xeonjia/utils/game_properties.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
@@ -48,7 +50,7 @@ late double componentSize;
 
 // Xeonjia game class
 class XeonjiaGame extends FlameGame
-    with KeyboardEvents, PanDetector, SingleGameInstance, TapDetector {
+    with KeyboardEvents, PanDetector, SingleGameInstance, HasTappables {
   XeonjiaGame(this.config) {
     environment = setEnvironment(this);
     messageManager = MessageManager(this);
@@ -268,6 +270,7 @@ class XeonjiaGame extends FlameGame
     // They are removed during the next update()
     removeAll(children);
     add(BackgroundComponent());
+    add(WorldMapButton());
     players.clear();
     deletedComponents.clear();
     modifiersToBeRegenerated.clear();
@@ -338,7 +341,7 @@ class XeonjiaGame extends FlameGame
     componentSize =
         (canvasSize.toSize().longestSide / 16).round16.gridAligned.toDouble();
     camera.zoom = 1;
-    updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
+    if (!worldMapEnabled) updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
   }
 
   // Pause game
@@ -460,7 +463,7 @@ class XeonjiaGame extends FlameGame
   }
 
   // Calculate camera position
-  double _moveCamera(double screenSize, int mapSize, double pos) {
+  double _moveCamera(double screenSize, num mapSize, double pos) {
     var delta = mapSize * componentSize - screenSize;
     return (delta <= 0 ? delta / 2 : max(0, min(pos - screenSize / 2, delta)))
         .gridAligned
@@ -471,7 +474,10 @@ class XeonjiaGame extends FlameGame
   bool miniMapEnabled = false;
   bool miniMapActive = false;
 
-  // Enable/Disable mini-map view
+  // World map
+  bool worldMapEnabled = false;
+
+  // Open/Close mini-map
   void miniMap() {
     miniMapEnabled = !miniMapEnabled;
     if (miniMapEnabled) {
@@ -479,7 +485,7 @@ class XeonjiaGame extends FlameGame
       pause(stopEngine: false, stopMusic: false);
       _statusBox.state?.refresh();
       overlays.remove('mapNameBox');
-      addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
+      if (enemies == 0) addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
       overlays.remove('miniMapButton');
       overlays.remove('backpackButton');
       refreshWeaponButtons();
@@ -497,6 +503,20 @@ class XeonjiaGame extends FlameGame
     overlays.add('miniMapButton');
   }
 
+  // Open/Close world-map
+  void worldMap() {
+    worldMapEnabled = !worldMapEnabled;
+    if (worldMapEnabled) {
+      updateCamera(0, 0);
+      add(WorldMap());
+      overlays.remove('mapNameBox');
+    } else {
+      updateCamera(playerOne!.x, playerOne!.y);
+      children.whereType<WorldMap>().first.removeFromParent();
+      addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
+    }
+  }
+
   // Change mini-map zoom
   void zoomMiniMap({double? toValue, bool out = false, bool enable = false}) {
     var previousValue = enable ? 1 : camera.zoom;
@@ -507,7 +527,7 @@ class XeonjiaGame extends FlameGame
             : min(previousValue + delta, 2));
     camera.zoom =
         (playerOne!.size.x * miniMapZoom).gridAligned / (playerOne!.size.x);
-    updateCamera(playerOne!.x, playerOne!.y);
+    if (!worldMapEnabled) updateCamera(playerOne!.x, playerOne!.y);
   }
 
   // Open backpack
@@ -566,7 +586,9 @@ class XeonjiaGame extends FlameGame
       camera.snapTo(Vector2(
           _moveCamera(size.x, map.width,
               camera.position.x - info.raw.delta.dx + size.x / 2),
-          camera.position.y = _moveCamera(size.y, map.height,
+          camera.position.y = _moveCamera(
+              size.y,
+              worldMapEnabled ? map.width * 0.7 : map.height,
               camera.position.y - info.raw.delta.dy + size.y / 2)));
     }
   }
@@ -580,10 +602,11 @@ class XeonjiaGame extends FlameGame
   }
 
   @override
-  void onTapDown(TapDownInfo info) {
+  void onTapDown(int pointerId, TapDownInfo info) {
     messageManager.active
         ? dialogBox.state!.next()
         : gestureTapInput(info.raw.globalPosition);
+    super.onTapDown(pointerId, info);
   }
 
   // Move playerOne

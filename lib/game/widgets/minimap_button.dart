@@ -20,7 +20,9 @@ class MiniMapButton extends StatelessWidget {
                       gameRef.hasAction ||
                       !gameRef.playerOne!.isStationary
                   ? null
-                  : gameRef.miniMap(),
+                  : gameRef.worldMapEnabled
+                      ? gameRef.worldMap()
+                      : gameRef.miniMap(),
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                 height: 36,
