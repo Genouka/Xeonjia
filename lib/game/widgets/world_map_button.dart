@@ -11,9 +11,15 @@ class WorldMapButton extends TextBoxComponent
     with HasGameRef<XeonjiaGame>, Tappable {
   WorldMapButton() : super(size: Vector2.all(1), align: Anchor.center) {
     positionType = PositionType.viewport;
-    priority = 1000;
-    text = 'World map'.i18n.toUpperCase();
+    priority = 10000;
   }
+
+  List<String> texts = [
+    'Open local map'.i18n.toUpperCase(),
+    'Open world map'.i18n.toUpperCase(),
+  ];
+
+  bool get disabled => !gameRef.miniMapEnabled || gameRef.enemies > 0;
 
   @override
   Future<void> onLoad() {
@@ -25,17 +31,20 @@ class WorldMapButton extends TextBoxComponent
   @override
   void onGameResize(Vector2 size) {
     super.onGameResize(size);
-    this.size = Vector2(min(320, gameRef.canvasSize.x / 2.2), 36);
-    position = Vector2(gameRef.canvasSize.x - this.size.x - 6, 46);
+    this.size = Vector2(min(320, gameRef.canvasSize.x / 1.8), 36);
+    position = Vector2(6, gameRef.canvasSize.y - this.size.y - 6);
   }
-
-  bool get disabled =>
-      !gameRef.miniMapEnabled || gameRef.worldMapEnabled || gameRef.enemies > 0;
 
   @override
   bool onTapUp(TapUpInfo info) {
     if (!disabled) gameRef.worldMap();
     return true;
+  }
+
+  @override
+  void update(double dt) {
+    text = gameRef.worldMapEnabled ? texts.first : texts.last;
+    super.update(dt);
   }
 
   @override

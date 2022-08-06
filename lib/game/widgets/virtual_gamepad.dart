@@ -152,8 +152,8 @@ class _ButtonsState extends State<_Buttons> {
             (widget.gameRef.enemies > 0 && !widget.gameRef.playerOne!.isMyTurn)
         ? Container()
         : Positioned(
-            bottom: 20,
-            right: 20,
+            bottom: widget.gameRef.miniMapEnabled ? 0 : 20,
+            right: widget.gameRef.miniMapEnabled ? 0 : 20,
             child: GestureDetector(
               onPanUpdate: (upd) => widget.gameRef
                   .onPanUpdate(DragUpdateInfo.fromDetails(widget.gameRef, upd)),
