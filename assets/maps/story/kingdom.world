@@ -37,15 +37,15 @@
         },
         {
             "fileName": "7.tmx",
-            "height": 224,
-            "width": 272,
+            "height": 320,
+            "width": 320,
             "x": 864,
             "y": 720
         },
         {
             "fileName": "8.tmx",
             "height": 224,
-            "width": 256,
+            "width": 272,
             "x": 592,
             "y": 1168
         },
@@ -59,14 +59,14 @@
         {
             "fileName": "10.tmx",
             "height": 224,
-            "width": 270,
+            "width": 272,
             "x": 592,
             "y": 944
         },
         {
             "fileName": "11.tmx",
             "height": 224,
-            "width": 269,
+            "width": 272,
             "x": 864,
             "y": 1040
         },
@@ -79,7 +79,7 @@
         },
         {
             "fileName": "13.tmx",
-            "height": 240,
+            "height": 224,
             "width": 272,
             "x": 864,
             "y": 1264
@@ -93,7 +93,7 @@
         },
         {
             "fileName": "15.tmx",
-            "height": 320,
+            "height": 288,
             "width": 240,
             "x": 1136,
             "y": 1040
@@ -115,21 +115,21 @@
         {
             "fileName": "18.tmx",
             "height": 160,
-            "width": 320,
+            "width": 304,
             "x": 1376,
             "y": 720
         },
         {
             "fileName": "19.tmx",
             "height": 288,
-            "width": 496,
+            "width": 416,
             "x": 1264,
             "y": 432
         },
         {
             "fileName": "20.tmx",
             "height": 288,
-            "width": 236,
+            "width": 240,
             "x": 1024,
             "y": 432
         },
@@ -143,42 +143,42 @@
         {
             "fileName": "24.tmx",
             "height": 448,
-            "width": 240,
+            "width": 336,
             "x": 2128,
             "y": 432
         },
         {
             "fileName": "23.tmx",
-            "height": 288,
-            "width": 224,
+            "height": 160,
+            "width": 448,
             "x": 1680,
             "y": 720
         },
         {
             "fileName": "22.tmx",
             "height": 224,
-            "width": 256,
+            "width": 240,
             "x": 1648,
             "y": 880
         },
         {
             "fileName": "21.tmx",
             "height": 288,
-            "width": 224,
+            "width": 448,
             "x": 1680,
             "y": 432
         },
         {
             "fileName": "25.tmx",
             "height": 368,
-            "width": 320,
+            "width": 288,
             "x": 2176,
             "y": 880
         },
         {
             "fileName": "26.tmx",
-            "height": 272,
-            "width": 384,
+            "height": 304,
+            "width": 288,
             "x": 2176,
             "y": 1248
         },
@@ -198,22 +198,22 @@
         },
         {
             "fileName": "29.tmx",
-            "height": 448,
+            "height": 336,
             "width": 224,
             "x": 1472,
             "y": 1328
         },
         {
             "fileName": "30.tmx",
-            "height": 464,
-            "width": 240,
+            "height": 544,
+            "width": 400,
             "x": 1888,
             "y": 1552
         },
         {
             "fileName": "31.tmx",
             "height": 336,
-            "width": 272,
+            "width": 288,
             "x": 1888,
             "y": 880
         },
@@ -240,7 +240,7 @@
         },
         {
             "fileName": "35.tmx",
-            "height": 240,
+            "height": 192,
             "width": 400,
             "x": 2688,
             "y": 2208
@@ -255,14 +255,14 @@
         {
             "fileName": "37.tmx",
             "height": 320,
-            "width": 256,
+            "width": 240,
             "x": 3088,
             "y": 2080
         },
         {
             "fileName": "38.tmx",
             "height": 352,
-            "width": 288,
+            "width": 240,
             "x": 3088,
             "y": 1728
         },
@@ -282,7 +282,7 @@
         },
         {
             "fileName": "41.tmx",
-            "height": 240,
+            "height": 192,
             "width": 400,
             "x": 3328,
             "y": 2208
@@ -290,7 +290,7 @@
         {
             "fileName": "42.tmx",
             "height": 240,
-            "width": 240,
+            "width": 176,
             "x": 3728,
             "y": 2096
         },
