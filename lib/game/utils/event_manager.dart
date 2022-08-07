@@ -8,8 +8,8 @@ import 'package:xeonjia/game/utils/little_scheme.dart';
 import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/utils/weapons.dart';
 import 'package:xeonjia/game/widgets/black_curtain.dart';
-import 'package:xeonjia/game/widgets/map_name_box.dart';
-import 'package:xeonjia/game/widgets/shop_menu.dart';
+import 'package:xeonjia/game/widgets/boxes/map_name_box.dart';
+import 'package:xeonjia/game/widgets/menus/shop_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
