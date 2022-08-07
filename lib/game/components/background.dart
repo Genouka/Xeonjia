@@ -12,8 +12,9 @@ class BackgroundComponent extends PositionComponent
   final Paint paint = Paint()..color = const Color(0xFFE1F5FE);
 
   @override
-  void render(Canvas canvas) =>
-      canvas.drawRect(Rect.fromLTWH(0, 0, width, height), paint);
+  void render(Canvas canvas) => gameRef.worldMapEnabled
+      ? null
+      : canvas.drawRect(Rect.fromLTWH(0, 0, width, height), paint);
 
   @override
   void onGameResize(Vector2 size) {

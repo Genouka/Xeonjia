@@ -301,7 +301,7 @@ abstract class BasicComponent extends SpriteComponent
   @override
   @mustCallSuper
   void render(Canvas canvas) {
-    if (!_visible) return;
+    if (!_visible || gameRef.worldMapEnabled) return;
     animation?.done() ?? true
         ? super.render(canvas)
         : animation!.getSprite().render(canvas, size: Vector2(width, height));

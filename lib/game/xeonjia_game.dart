@@ -508,11 +508,13 @@ class XeonjiaGame extends FlameGame
   void worldMap({bool? enable}) {
     worldMapEnabled = enable ?? !worldMapEnabled;
     if (worldMapEnabled) {
-      updateCamera(0, 0);
+      updateCamera(playerOne!.x, playerOne!.y);
+      zoomMiniMap(toValue: 1);
       add(WorldMap());
       overlays.remove('mapNameBox');
     } else {
-      updateCamera(playerOne!.x, playerOne!.y);
+      updateCamera(
+          map.width * componentSize / 2, map.width * componentSize * 0.7 / 2);
       children.whereType<WorldMap>().first.removeFromParent();
       addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
     }
@@ -528,7 +530,12 @@ class XeonjiaGame extends FlameGame
             : min(previousValue + delta, 2));
     camera.zoom =
         (playerOne!.size.x * miniMapZoom).gridAligned / (playerOne!.size.x);
-    if (!worldMapEnabled) updateCamera(playerOne!.x, playerOne!.y);
+    worldMapEnabled
+        ? camera.snapTo(Vector2(
+            _moveCamera(size.x, map.width, camera.position.x + size.x / 2),
+            _moveCamera(
+                size.y, map.width * 0.7, camera.position.y + size.y / 2)))
+        : updateCamera(playerOne!.x, playerOne!.y);
   }
 
   // Open backpack
@@ -587,9 +594,7 @@ class XeonjiaGame extends FlameGame
       camera.snapTo(Vector2(
           _moveCamera(size.x, map.width,
               camera.position.x - info.raw.delta.dx + size.x / 2),
-          camera.position.y = _moveCamera(
-              size.y,
-              worldMapEnabled ? map.width * 0.7 : map.height,
+          _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
               camera.position.y - info.raw.delta.dy + size.y / 2)));
     }
   }

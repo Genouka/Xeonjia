@@ -15,12 +15,17 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
   Future<void>? onLoad() {
     priority = 9999;
     sprite = Sprite(Flame.images.fromCache('map.png'));
-    size = Vector2(gameRef.map.width * componentSize,
-        gameRef.map.width * componentSize * 0.7);
     addAll(worldData
         .where((m) => !m.hidden && mainCharacter.visitedRooms.contains(m.id))
         .map(_RectangleMap.new));
     return super.onLoad();
+  }
+
+  @override
+  void onGameResize(Vector2 size) {
+    super.onGameResize(size);
+    this.size = Vector2(gameRef.map.width * componentSize,
+        gameRef.map.width * componentSize * 0.7);
   }
 
   MapData? selectedMap;
