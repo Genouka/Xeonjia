@@ -514,7 +514,8 @@ Continuation? evaluate(dynamic exp, Environment env,
         if (k.isEmpty) {
           // execution finished
           env.gameRef.clearActionContinuation();
-          if (!env.gameRef.messageManager.active) env.gameRef.resume();
+          if (!env.gameRef.messageManager.active &&
+              !env.gameRef.worldMapEnabled) env.gameRef.resume();
           return null;
         }
         var step = k.pop();

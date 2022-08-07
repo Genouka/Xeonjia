@@ -283,6 +283,8 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   });
   _('teleport', 2, (Cell? x) {
     gameRef.changeRoom(x!.car as String, enterNextRoom: x.cdr.car);
+    gameRef.worldMap(enable: false);
+    gameRef.miniMap(enable: false);
     return #NONE;
   });
   _(

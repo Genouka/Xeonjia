@@ -34,16 +34,7 @@ extension CreateComponent on Tile {
         break;
       case 'Door':
         if (gameRef.config.mode == GameMode.story) {
-          var previousRoomId = (mainCharacter.visitedRooms.length <= 1)
-              ? '0'
-              : mainCharacter
-                  .visitedRooms[mainCharacter.visitedRooms.length - 2];
-          if (previousRoomId.split('/').first +
-                  (mainCharacter.visitedRooms.last.contains('/')
-                      ? '/' + mainCharacter.visitedRooms.last.split('/').last
-                      : '') ==
-              properties['roomId']) {
-            properties['isPlayerOne'] = true;
+          if (properties['isPlayerOne'] == true) {
             gameRef.add(CharacterComponent(
                 Tile()
                   ..id = -1

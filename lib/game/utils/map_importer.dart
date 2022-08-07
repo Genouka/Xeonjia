@@ -9,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:xeonjia/game/models/tile.dart';
 import 'package:xeonjia/game/utils/tile_to_component.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/utils/local_data_controller.dart';
 import 'package:xml/xml.dart';
 
 // Import map from a TMX file
@@ -154,6 +155,8 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
   });
 
   // Read objectgroups
+  Tile? mainDoor;
+  bool playerOneCreated = false;
   mapXml.findElements('objectgroup').forEach((objectgroup) {
     objectgroup.findElements('object').forEach((object) {
       var isTileObject = object.getAttribute('gid') != null;
@@ -172,13 +175,33 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
         properties[property.getAttributeNode('name')!.value] =
             property.getAttributeNode('value')?.value ?? property.text;
       });
-      tile!.type ??= object.getAttribute('type')!;
+      tile!.type ??=
+          object.getAttribute('type') ?? object.getAttribute('class');
       tile.position = Point(x, y);
       tile.properties.addAll(properties);
       // Add itemId value even if properties['itemId'] == null
       tile.properties['itemId'] = properties['itemId'];
       tile.id = int.parse(object.getAttribute('id')!);
+      if (tile.type == 'Door') {
+        var previousRoomId = (mainCharacter.visitedRooms.length <= 1)
+            ? '0'
+            : mainCharacter.visitedRooms[mainCharacter.visitedRooms.length - 2];
+        if (previousRoomId.split('/').first +
+                (mainCharacter.visitedRooms.last.contains('/')
+                    ? '/' + mainCharacter.visitedRooms.last.split('/').last
+                    : '') ==
+            tile.properties['roomId']) {
+          tile.properties['isPlayerOne'] = true;
+          playerOneCreated = true;
+        }
+        if (tile.properties['mainDoor'] == 'true') mainDoor = tile;
+      }
       tile.createComponent(gameRef);
     });
   });
+  if (!playerOneCreated) {
+    mainDoor
+      ?..properties['isPlayerOne'] = true
+      ..createComponent(gameRef);
+  }
 }

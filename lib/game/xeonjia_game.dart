@@ -385,9 +385,9 @@ class XeonjiaGame extends FlameGame
       nextActionDelay = 0;
       add(TimerComponent(
         period: delay,
-        onTick: () => evaluate(null, environment, _actionContinuation!),
+        onTick: () => evaluate(null, environment, _actionContinuation),
       ));
-    } else {
+    } else if (!worldMapEnabled) {
       resume();
     }
   }
@@ -478,8 +478,8 @@ class XeonjiaGame extends FlameGame
   bool worldMapEnabled = false;
 
   // Open/Close mini-map
-  void miniMap() {
-    miniMapEnabled = !miniMapEnabled;
+  void miniMap({bool? enable}) {
+    miniMapEnabled = enable ?? !miniMapEnabled;
     if (miniMapEnabled) {
       zoomMiniMap(toValue: camera.zoom, enable: true);
       pause(stopEngine: false, stopMusic: false);
@@ -505,8 +505,8 @@ class XeonjiaGame extends FlameGame
   }
 
   // Open/Close world-map
-  void worldMap() {
-    worldMapEnabled = !worldMapEnabled;
+  void worldMap({bool? enable}) {
+    worldMapEnabled = enable ?? !worldMapEnabled;
     if (worldMapEnabled) {
       updateCamera(0, 0);
       add(WorldMap());
