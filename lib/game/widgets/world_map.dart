@@ -63,7 +63,7 @@ class _RectangleMap extends PositionComponent
     (wait)
     (if (get id)
         (begin
-            (dialog '(("* After a long journey, {{hero}} has arrived here *")))
+            (dialog '(("* After a long journey, {{hero}} arrived here *")))
             (teleport "${map.id}" #t))))''');
     return true;
   }
