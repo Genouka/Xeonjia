@@ -77,7 +77,7 @@ Map<String, List<Translation>> tmx2po() {
       });
     }
   });
-  var dataJsonFileName = 'assets/maps/utils/items-and-events.json';
+  var dataJsonFileName = 'assets/maps/data/items-and-events.json';
   var data = json.decode(File(dataJsonFileName).readAsStringSync());
   data['items'].forEach((_, value) {
     dirStringsMap['story']!
@@ -105,6 +105,16 @@ Map<String, List<Translation>> tmx2po() {
           }
         });
       });
+    }
+  });
+  var mapsDataJsonFileName = 'assets/maps/data/maps-data.json';
+  var mapsData = json.decode(File(mapsDataJsonFileName).readAsStringSync());
+  mapsData.forEach((_, value) {
+    dirStringsMap['story']!
+        .add(Translation(dataJsonFileName, value['name'], null));
+    if (value['text'] != null) {
+      dirStringsMap['story']!.add(Translation(
+          dataJsonFileName, value['text'].replaceAll('\n', r'\n'), null));
     }
   });
   return dirStringsMap;
