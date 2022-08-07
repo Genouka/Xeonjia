@@ -49,7 +49,9 @@ Future<void> loadStoredData() async {
   for (final map in kingdomWorld) {
     worldData.add(MapData({}
       ..addAll(map)
-      ..addAll(mapsData.containsKey(map) ? mapsData[map] : {})));
+      ..addAll(mapsData.containsKey(map['fileName'])
+          ? mapsData[map['fileName']]
+          : {})));
   }
 }
 
