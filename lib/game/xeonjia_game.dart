@@ -608,11 +608,11 @@ class XeonjiaGame extends FlameGame
   }
 
   @override
-  void onTapDown(int pointerId, TapDownInfo info) {
+  void onTapUp(int pointerId, TapUpInfo info) {
     messageManager.active
         ? dialogBox.state!.next()
         : gestureTapInput(info.raw.globalPosition);
-    super.onTapDown(pointerId, info);
+    super.onTapUp(pointerId, info);
   }
 
   // Move playerOne
