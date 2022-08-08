@@ -7,7 +7,8 @@ class Item {
         _description = json['description'],
         action = json['action'],
         keyItem = json['keyItem'] ?? false,
-        location = json['location'];
+        location = json['location'],
+        id = json['id'];
 
   // Item name
   final String _name;

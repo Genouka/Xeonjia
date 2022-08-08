@@ -281,6 +281,10 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     gameRef.addCustomWidgetOverlay('blackCurtain', BlackCurtain(gameRef));
     return #NONE;
   });
+  _('remove-overlay', 1, (Cell? x) {
+    gameRef.overlays.remove(x!.car as String);
+    return #NONE;
+  });
   _('teleport', 2, (Cell? x) {
     gameRef.changeRoom(x!.car as String, enterNextRoom: x.cdr.car);
     gameRef.worldMap(enable: false);

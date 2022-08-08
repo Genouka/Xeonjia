@@ -515,7 +515,10 @@ Continuation? evaluate(dynamic exp, Environment env,
           // execution finished
           env.gameRef.clearActionContinuation();
           if (!env.gameRef.messageManager.active &&
-              !env.gameRef.worldMapEnabled) env.gameRef.resume();
+              !env.gameRef.worldMapEnabled &&
+              !env.gameRef.overlays.isActive('backpackMenu')) {
+            env.gameRef.resume();
+          }
           return null;
         }
         var step = k.pop();

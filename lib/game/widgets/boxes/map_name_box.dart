@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/widgets/boxes/info_box.dart';
+import 'package:xeonjia/game/widgets/menus/pause_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
@@ -14,7 +15,9 @@ class MapNameBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return text != null
         ? InfoBox(
-            gameRef,
+            onTap: () => gameRef.messageManager.active
+                ? null
+                : gameRef.pause(mode: PauseMode.pause),
             below: below,
             child: Marquee(
               child: Text(

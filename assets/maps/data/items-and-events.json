@@ -51,6 +51,9 @@
     "berries-shop": {
       "name": "Berries"
     },
+    "lp-up-shop": {
+      "name": "LP UP +5"
+    },
     "fresh-water": {
       "name": "Fresh Water",
       "description": "A bottle of water.\nIt restores 20 LPs.",

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/utils/extensions.dart';
 import 'package:xeonjia/game/widgets/boxes/info_box.dart';
+import 'package:xeonjia/game/widgets/menus/pause_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/game_properties.dart';
 
@@ -27,7 +28,9 @@ class StatusBoxState extends State<StatusBox> {
     return widget.gameRef.playerOne == null || widget.gameRef.miniMapEnabled
         ? Container()
         : InfoBox(
-            widget.gameRef,
+            onTap: () => widget.gameRef.messageManager.active
+                ? null
+                : widget.gameRef.pause(mode: PauseMode.pause),
             radius: widget.gameRef.config.mode == GameMode.tdm ? 10 : 30,
             child: Column(
               children: [

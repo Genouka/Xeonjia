@@ -70,6 +70,9 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
     });
   }
 
+  double get opacity =>
+      widget.gameRef.overlays.isActive('backpackMenu') ? 1 : 0.8;
+
   @override
   Widget build(BuildContext context) {
     if (_characterCountAnimation == null) _animateText();
@@ -100,7 +103,7 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                       padding: const EdgeInsets.all(20),
                       constraints: const BoxConstraints(maxWidth: 500),
                       decoration: BoxDecoration(
-                        color: Colors.grey.shade800.withOpacity(0.8),
+                        color: Colors.grey.shade800.withOpacity(opacity),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(30)),
                         border: Border.all(color: Colors.blue, width: 3),

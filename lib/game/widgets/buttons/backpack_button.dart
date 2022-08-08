@@ -14,7 +14,8 @@ class BackpackButton extends StatelessWidget {
       child: InkWell(
         onTap: () => gameRef.messageManager.active ||
                 gameRef.hasAction ||
-                !gameRef.playerOne!.isStationary
+                !gameRef.playerOne!.isStationary ||
+                !gameRef.playerOne!.isMyTurn
             ? null
             : gameRef.backpack(),
         child: Container(

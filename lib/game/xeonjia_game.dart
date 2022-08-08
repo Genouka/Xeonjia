@@ -176,6 +176,9 @@ class XeonjiaGame extends FlameGame
                 updateCamera(
                     activePlayer!.position.x, activePlayer!.position.y);
                 _virtualGamePad.refresh();
+                playerOne!.isMyTurn
+                    ? overlays.add('backpackButton')
+                    : overlays.remove('backpackButton');
               }));
           break;
         }
@@ -387,7 +390,8 @@ class XeonjiaGame extends FlameGame
         period: delay,
         onTick: () => evaluate(null, environment, _actionContinuation),
       ));
-    } else if (!worldMapEnabled) {
+      if (overlays.isActive('backpackMenu')) update(0);
+    } else if (!worldMapEnabled && !overlays.isActive('backpackMenu')) {
       resume();
     }
   }
@@ -541,7 +545,9 @@ class XeonjiaGame extends FlameGame
   // Open backpack
   void backpack() {
     pause(stopMusic: false);
+    overlays.remove('dialogBox');
     overlays.add('backpackMenu');
+    overlays.add('dialogBox');
   }
 
   // Reload weapon buttons
@@ -624,7 +630,7 @@ class XeonjiaGame extends FlameGame
 
   // Manage tap gesture
   void gestureTapInput(Offset position) {
-    if (_pause) return;
+    if (_pause || !(playerOne?.isMyTurn ?? false)) return;
 
     // Update orientation
     var relativeTapX =
