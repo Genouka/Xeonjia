@@ -37,16 +37,16 @@ Future<void> loadStoredData() async {
   settings = Settings(jsonDecode(_prefs.getString('settings_V2') ?? '{}'));
 
   // Load items from assets
-  var data = json.decode(
-      await rootBundle.loadString('assets/maps/data/items-and-events.json'));
+  var data = json
+      .decode(await rootBundle.loadString('assets/data/items-and-events.json'));
   data['items'].forEach((key, value) => itemData[key] =
       Item((value as Map<String, dynamic>)..putIfAbsent('id', () => key)));
 
   // Load maps data from kingdom.world and maps-data.json
   final List<dynamic> kingdomWorld = json.decode(
       await rootBundle.loadString('assets/maps/story/kingdom.world'))['maps'];
-  final Map<String, dynamic> mapsData = json
-      .decode(await rootBundle.loadString('assets/maps/data/maps-data.json'));
+  final Map<String, dynamic> mapsData =
+      json.decode(await rootBundle.loadString('assets/data/maps-data.json'));
   for (final map in kingdomWorld) {
     worldData.add(MapData({}
       ..addAll(map)

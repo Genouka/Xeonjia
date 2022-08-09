@@ -34,12 +34,12 @@ flutter:
   assets:
     - assets/audio/bgm/
     - assets/audio/sfx/
+    - assets/data/
     - assets/graphics/
     - assets/images/
     - assets/images/metadata/
     - assets/maps/
     - assets/maps/arena/
-    - assets/maps/data/
     - assets/maps/story/
     - assets/maps/tilesets/
     - locale/de/LC_MESSAGES/
