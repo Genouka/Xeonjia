@@ -8,19 +8,26 @@ import 'package:xeonjia/utils/local_data_controller.dart';
 
 // Message shown in dialog box
 class Message {
-  Message(this.gameRef, this.text,
-      {this.author = '', this.component, bool translate = true, this.font}) {
+  Message(
+    this.gameRef,
+    this.text, {
+    this.author = '',
+    this.component,
+    bool translate = true,
+    this.font,
+    this.xfaFile = 'heads',
+  }) {
     var m = RegExp(r'([^\/]*)\/?([^_]*)_?(.*)').firstMatch(author)!;
     var name = m.group(2) != '' ? m.group(2)! : component?.name ?? '';
     authorName = m.group(1) != '' ? m.group(1)! : (author == '' ? '' : name);
     var mood = m.group(3);
-    var headName = name + (mood != '' ? '_$mood' : '');
+    var spriteName = name + (mood != '' ? '_$mood' : '');
     if (authorName != '') {
       authorName = (authorName == 'hero')
           ? mainCharacter.name
           : authorName.i18n.replaceAll('-', ' ');
-      gameRef.loadCustomAtlas('images/metadata/heads.xfa').then((value) {
-        sprite = value.getSprite(headName);
+      gameRef.loadCustomAtlas('images/metadata/$xfaFile.xfa').then((value) {
+        sprite = value.getSprite(spriteName);
       });
     }
     if (translate) {
@@ -63,6 +70,9 @@ class Message {
 
   // Author name (displayed name)
   late String authorName;
+
+  // .xfa file used for the sprite
+  String xfaFile;
 
   // Speaking component
   BasicComponent? component;

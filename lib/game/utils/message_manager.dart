@@ -83,6 +83,7 @@ class MessageManager {
         component: message.component,
         translate: false,
         font: message.font,
+        xfaFile: message.xfaFile,
       ));
       return previousValue;
     });

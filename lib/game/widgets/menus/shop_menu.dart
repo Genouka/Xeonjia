@@ -29,7 +29,7 @@ class ShopMenu extends ItemsMenu {
             } else {
               gameRef.setMessage(Message(
                   gameRef, "I don't have enough money for this item.".i18n,
-                  translate: false));
+                  author: '/hero_sad', translate: false));
             }
           },
           onClose: () {

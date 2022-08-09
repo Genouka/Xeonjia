@@ -54,9 +54,14 @@ class _ItemsMenuState extends State<ItemsMenu> {
                       setState(() {
                         selectedItem = i;
                         widget.gameRef.setMessage(Message(
-                            widget.gameRef, selectedItem!.description!));
+                          widget.gameRef,
+                          selectedItem!.description!,
+                          author:
+                              '${selectedItem!.rawName}/${selectedItem!.id}',
+                          xfaFile: 'items',
+                        ));
                         widget.gameRef.environment.defineSymbol(
-                            Sym('selected-item-id'), selectedItem!.id!);
+                            Sym('selected-item-id'), selectedItem!.id);
                         widget.gameRef.environment.defineSymbol(
                             Sym('selected-item-name'), selectedItem!.name);
                         widget.onSelection(selectedItem);

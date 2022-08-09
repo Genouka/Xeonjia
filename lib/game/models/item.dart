@@ -18,7 +18,7 @@ class Item {
   String get rawName => _name;
 
   // Item ID
-  String? id;
+  String id;
 
   // Item description
   final String? _description;
