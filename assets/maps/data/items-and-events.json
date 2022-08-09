@@ -49,19 +49,22 @@
       "location": "t1_06"
     },
     "berries-shop": {
-      "name": "Berries"
+      "name": "Berries",
+      "description": "Five little berries. They restore 5 LPs.",
+      "action": "(if (< (get-life) (get-initial-life)) (begin (set-life-diff 5) (use-item selected-item-id)) (dialog '((\"I'm already healthy, I don't need {{selected-item-name}} right now.\"))))"
     },
-    "lp-up-shop": {
-      "name": "LP UP +5"
+    "lp-up-5-shop": {
+      "name": "LP UP +5",
+      "description": "Increases the max LP by 5 points."
     },
     "fresh-water": {
       "name": "Fresh Water",
-      "description": "A bottle of water.\nIt restores 20 LPs.",
+      "description": "A bottle of water. It restores 20 LPs.",
       "action": "(if (< (get-life) (get-initial-life)) (begin (set-life-diff 20) (use-item selected-item-id)) (dialog '((\"I'm already healthy, I don't need {{selected-item-name}} right now.\"))))"
     },
     "pomegranate-juice": {
       "name": "Pomegranate juice",
-      "description": "A bottle of pomegranate juice.\nIt restores 50 LPs.",
+      "description": "A bottle of pomegranate juice. It restores 50 LPs.",
       "action": "(if (< (get-life) (get-initial-life)) (begin (set-life-diff 50) (use-item selected-item-id)) (dialog '((\"I'm already healthy, I don't need {{selected-item-name}} right now.\"))))"
     }
   },

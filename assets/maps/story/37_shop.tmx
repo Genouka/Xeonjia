@@ -38,12 +38,12 @@
    <properties>
     <property name="action">(if (= (get-initial-life) 100)
     (shop
-        '((&quot;LP UP +5&quot; 110 &quot;(begin (increase-life 5) (set-life-diff 105))&quot;)
-        (&quot;Fresh Water&quot; 15 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
-        (&quot;Pomegranate juice&quot; 50 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)))
+        '((&quot;lp-up-5-shop&quot; 110 &quot;(begin (increase-life 5) (set-life-diff 105))&quot;)
+        (&quot;fresh-water&quot; 15 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
+        (&quot;pomegranate-juice&quot; 50 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)))
     (shop
-        '((&quot;Fresh Water&quot; 15 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
-        (&quot;Pomegranate juice&quot; 50 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;))))</property>
+        '((&quot;fresh-water&quot; 15 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
+        (&quot;pomegranate-juice&quot; 50 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
