@@ -390,8 +390,8 @@ class XeonjiaGame extends FlameGame
         period: delay,
         onTick: () => evaluate(null, environment, _actionContinuation),
       ));
-      if (overlays.isActive('backpackMenu')) update(0);
-    } else if (!worldMapEnabled && !overlays.isActive('backpackMenu')) {
+      if (isItemsMenuActive) update(0);
+    } else if (!worldMapEnabled && !isItemsMenuActive) {
       resume();
     }
   }
@@ -549,6 +549,10 @@ class XeonjiaGame extends FlameGame
     overlays.add('backpackMenu');
     overlays.add('dialogBox');
   }
+
+  // True if BackpackMenu or ShopMenu are open
+  bool get isItemsMenuActive =>
+      overlays.isActive('backpackMenu') || overlays.isActive('shop');
 
   // Reload weapon buttons
   void refreshWeaponButtons() {

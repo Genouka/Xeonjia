@@ -70,8 +70,7 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
     });
   }
 
-  double get opacity =>
-      widget.gameRef.overlays.isActive('backpackMenu') ? 1 : 0.8;
+  double get opacity => widget.gameRef.isItemsMenuActive ? 1 : 0.8;
 
   @override
   Widget build(BuildContext context) {

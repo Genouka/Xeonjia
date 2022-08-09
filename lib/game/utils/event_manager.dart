@@ -2,7 +2,7 @@ import 'package:flame/components.dart';
 import 'package:xeonjia/game/components/character.dart';
 import 'package:xeonjia/game/components/common/basic.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
-import 'package:xeonjia/game/models/shop_item.dart';
+import 'package:xeonjia/game/models/item.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/little_scheme.dart';
 import 'package:xeonjia/game/utils/message.dart';
@@ -265,16 +265,22 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     return #NONE;
   });
   _('shop', 1, (Cell? x) {
-    var itemList = <ShopItem>[];
+    var items = <Item>[];
     var it = (x!.car as Cell).iterator;
     while (it.moveNext()) {
-      itemList.add(ShopItem(
-        (it.current as Cell).car as String,
-        price: (it.current as Cell).cdr.car as int,
-        action: (it.current as Cell).cdr.cdr.car,
-      ));
+      items.add(Item({
+        'id': (it.current as Cell).car as String,
+        'name': itemData[(it.current as Cell).car as String]!.rawName,
+        'description':
+            itemData[(it.current as Cell).car as String]!.description,
+        'price': (it.current as Cell).cdr.car as int,
+        'action': (it.current as Cell).cdr.cdr.car,
+      }));
     }
-    gameRef.addCustomWidgetOverlay('shop', ShopMenu(gameRef, itemList));
+    gameRef.pause(stopMusic: false);
+    gameRef.overlays.remove('dialogBox');
+    gameRef.addCustomWidgetOverlay('shop', ShopMenu(gameRef, items));
+    gameRef.overlays.add('dialogBox');
     return #NONE;
   });
   _('black-curtain', 0, (Cell? x) {

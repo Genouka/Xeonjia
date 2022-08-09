@@ -8,18 +8,23 @@ class InfoBox extends StatelessWidget {
     this.radius = 30,
     this.opacity = 0.7,
     this.below = false,
+    this.bottom = false,
+    this.center = false,
   });
   final VoidCallback? onTap;
   final Widget child;
   final double radius;
   final double opacity;
   final bool below;
+  final bool bottom;
+  final bool center;
 
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: below ? 46 : 6,
-      left: 6,
+      top: bottom ? null : (below ? 46 : 6),
+      left: center ? MediaQuery.of(context).size.width * 0.272727 : 6,
+      bottom: bottom ? (below ? 46 : 6) : null,
       child: InkWell(
         onTap: onTap,
         child: Container(

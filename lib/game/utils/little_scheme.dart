@@ -516,7 +516,7 @@ Continuation? evaluate(dynamic exp, Environment env,
           env.gameRef.clearActionContinuation();
           if (!env.gameRef.messageManager.active &&
               !env.gameRef.worldMapEnabled &&
-              !env.gameRef.overlays.isActive('backpackMenu')) {
+              !env.gameRef.isItemsMenuActive) {
             env.gameRef.resume();
           }
           return null;
