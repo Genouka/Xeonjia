@@ -9,18 +9,24 @@ class BackpackMenu extends ItemsMenu {
       : super(
           gameRef,
           text: 'Backpack'.i18n,
-          items: gameRef.playerOne!.backpackItems.fold([], (l, e) {
-            l.contains(e)
-                ? l[l.indexOf(e)].quantity = l[l.indexOf(e)].quantity! + 1
-                : l.add(Item(e.toMap())..quantity = 1);
-            return l;
-          })
-            ..add(Item({
-              'id': 'gems_*',
-              'name': 'Gems'.i18n,
-              'description': 'Mysterious gems scattered around the world.'.i18n,
-              'quantity': gameRef.playerOne!.gemCount,
-            })),
+          items: () {
+            List<Item> list = gameRef.playerOne!.backpackItems.fold([], (l, e) {
+              l.contains(e)
+                  ? l[l.indexOf(e)].quantity = l[l.indexOf(e)].quantity! + 1
+                  : l.add(Item(e.toMap())..quantity = 1);
+              return l;
+            });
+            if (gameRef.playerOne!.gemCount > 0) {
+              list.add(Item({
+                'id': 'gems_*',
+                'name': 'Gems'.i18n,
+                'description':
+                    'Mysterious gems scattered around the world.'.i18n,
+                'quantity': gameRef.playerOne!.gemCount,
+              }));
+            }
+            return list;
+          }(),
           onSelection: (Item item) {
             if (item.action != null) {
               // i18n: "Do you want to use {{selected-item-name}}?".i18n

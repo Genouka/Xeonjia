@@ -15,7 +15,7 @@ import 'package:xeonjia/utils/local_data_controller.dart';
 extension CreateComponent on Tile {
   // Create components based on tile property "type"
   void createComponent(XeonjiaGame gameRef) {
-    switch (type) {
+    switch (tiledClass) {
       case 'Solid':
         gameRef.add(StaticComponent(this));
         break;

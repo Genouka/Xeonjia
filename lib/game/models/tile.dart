@@ -8,7 +8,7 @@ class Tile {
   Tile({
     this.id,
     this.gid,
-    this.type,
+    this.tiledClass,
     this.sprite,
     this.size,
     this.animationStepTime,
@@ -24,8 +24,8 @@ class Tile {
   int? id;
   int? gid;
 
-  // Component type
-  String? type;
+  // Component class
+  String? tiledClass;
 
   // List of tile properties
   // Properties define component features and stats (eg: atk, def, lifePoints)

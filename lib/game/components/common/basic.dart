@@ -216,9 +216,7 @@ abstract class BasicComponent extends SpriteComponent
       poisonQuantity += poison;
       if (_lifePoints < 0) _lifePoints = 0;
       if (_lifePoints > maxLifePoints) _lifePoints = maxLifePoints;
-      if (isPlayerOne && difference != 0) {
-        gameRef.refreshLifePointsBar();
-      }
+      if (isPlayerOne && difference != 0) gameRef.refreshLifePointsBar();
       if (_lifePoints <= 0) {
         delete();
         if (teamId == (cause?.teamId ?? -99)) {

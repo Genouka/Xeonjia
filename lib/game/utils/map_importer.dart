@@ -89,7 +89,7 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
       tileset.findElements('tile').forEach((tile) {
         var newTile = Tile(
           gid: int.parse(tile.getAttribute('id')!) + firstGid,
-          type: tile.getAttribute('type'),
+          tiledClass: tile.getAttribute('class'),
         );
         newTile.properties['imageY'] =
             ((newTile.gid! - firstGid) / columns).floor() * tileHeight;
@@ -175,14 +175,13 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
         properties[property.getAttributeNode('name')!.value] =
             property.getAttributeNode('value')?.value ?? property.text;
       });
-      tile!.type ??=
-          object.getAttribute('type') ?? object.getAttribute('class');
+      tile!.tiledClass ??= object.getAttribute('class');
       tile.position = Point(x, y);
       tile.properties.addAll(properties);
       // Add itemId value even if properties['itemId'] == null
       tile.properties['itemId'] = properties['itemId'];
       tile.id = int.parse(object.getAttribute('id')!);
-      if (tile.type == 'Door') {
+      if (tile.tiledClass == 'Door') {
         var previousRoomId = (mainCharacter.visitedRooms.length <= 1)
             ? '0'
             : mainCharacter.visitedRooms[mainCharacter.visitedRooms.length - 2];

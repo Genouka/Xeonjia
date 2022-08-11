@@ -280,7 +280,6 @@ class XeonjiaGame extends FlameGame
     for (final t in teams ?? []) {
       t.basisPoints = 0;
     }
-    add(RemainingMovesBox());
 
     // Import map and components
     if (config.mode == GameMode.story) {
@@ -306,6 +305,7 @@ class XeonjiaGame extends FlameGame
       update(0);
     }
 
+    add(RemainingMovesBox());
     if (enemies > 0) {
       setMessage(
           Message(

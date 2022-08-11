@@ -42,65 +42,72 @@ class _ItemsMenuState extends State<ItemsMenu> {
             right: MediaQuery.of(context).size.width / 7,
             top: 60,
           ),
-          child: ScrollConfiguration(
-            behavior: _NoGlow(),
-            child: ListView(
-              shrinkWrap: true,
-              primary: true,
-              children: [
-                for (var i in widget.items)
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        selectedItem = i;
-                        widget.gameRef.setMessage(Message(
-                          widget.gameRef,
-                          selectedItem!.description!,
-                          author:
-                              '${selectedItem!.rawName}/${selectedItem!.id}',
-                          xfaFile: 'items',
-                        ));
-                        widget.gameRef.environment.defineSymbol(
-                            Sym('selected-item-id'), selectedItem!.id);
-                        widget.gameRef.environment.defineSymbol(
-                            Sym('selected-item-name'), selectedItem!.name);
-                        widget.onSelection(selectedItem);
-                        setState(() {});
-                      });
-                    },
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(selectedItem?.id == i.id ? '>' : ' '),
-                            Expanded(
-                                child:
-                                    Text(i.name, textAlign: TextAlign.center)),
-                            Text(
-                              widget.showPrices
-                                  ? '${i.price} ¤'
-                                  : (i.keyItem ? '   ' : ' x ${i.quantity}'),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyText2!
-                                  .copyWith(
-                                      color: widget.gameRef.playerOne!.money >=
-                                              (i.price ?? -1)
-                                          ? Colors.white
-                                          : Colors.red),
-                            ),
-                          ],
+          child: widget.items.isEmpty
+              ? Container(
+                  padding: const EdgeInsets.only(bottom: 60),
+                  child: Center(child: Text('No items here'.i18n)))
+              : ScrollConfiguration(
+                  behavior: _NoGlow(),
+                  child: ListView(
+                    shrinkWrap: true,
+                    primary: true,
+                    children: [
+                      for (var i in widget.items)
+                        InkWell(
+                          onTap: () {
+                            setState(() {
+                              selectedItem = i;
+                              widget.gameRef.setMessage(Message(
+                                widget.gameRef,
+                                selectedItem!.description!,
+                                author:
+                                    '${selectedItem!.rawName}/${selectedItem!.id}',
+                                xfaFile: 'items',
+                              ));
+                              widget.gameRef.environment.defineSymbol(
+                                  Sym('selected-item-id'), selectedItem!.id);
+                              widget.gameRef.environment.defineSymbol(
+                                  Sym('selected-item-name'),
+                                  selectedItem!.name);
+                              widget.onSelection(selectedItem);
+                              setState(() {});
+                            });
+                          },
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(selectedItem?.id == i.id ? '>' : ' '),
+                                  Expanded(
+                                      child: Text(i.name,
+                                          textAlign: TextAlign.center)),
+                                  Text(
+                                    widget.showPrices
+                                        ? '${i.price} ¤'
+                                        : (i.keyItem
+                                            ? '   '
+                                            : ' x ${i.quantity}'),
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(
+                                            color: widget.gameRef.playerOne!
+                                                        .money >=
+                                                    (i.price ?? -1)
+                                                ? Colors.white
+                                                : Colors.red),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 20),
+                            ],
+                          ),
                         ),
-                        const SizedBox(height: 20),
-                      ],
-                    ),
+                    ],
                   ),
-                if (widget.items.isEmpty)
-                  Center(child: Text('No items here'.i18n))
-              ],
-            ),
-          ),
+                ),
         ),
         _CloseButton(widget.gameRef, widget.onClose),
         InfoBox(
