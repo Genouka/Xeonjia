@@ -281,7 +281,7 @@ mixin Walker on BasicComponent {
   void render(Canvas canvas) {
     if (isMyTurn && gameRef.enemies > 0) {
       canvas.drawOval(
-          Rect.fromLTWH(0, size.y / 1.5, size.x, size.y / 2), _paint);
+          Rect.fromLTWH(0, size.y / 1.5, size.x, size.y / 2.35), _paint);
     }
     super.render(canvas);
   }
