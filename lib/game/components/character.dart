@@ -204,7 +204,7 @@ class CharacterComponent extends BasicComponent
       super.delete();
       if (isPlayerOne) {
         gameRef.end();
-      } else if (!gameRef.hasAction /*  && gameRef.map.action != null */) {
+      } else if (!gameRef.hasAction && gameRef.map.action != null) {
         gameRef.executeAction(
             action: gameRef.map.action!, actor: gameRef.playerOne);
       }
