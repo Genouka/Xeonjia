@@ -78,6 +78,8 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   });
   _('places-visited', 0,
       (Cell? x) => mainCharacter.visitedRooms.toSet().length);
+  _('has-been-here', 1,
+      (Cell? x) => mainCharacter.visitedRooms.contains(x!.car as String));
   _('last-place', 0, (Cell? x) {
     return mainCharacter.visitedRooms[mainCharacter.visitedRooms.length - 2];
   });
