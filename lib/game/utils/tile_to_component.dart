@@ -46,7 +46,10 @@ extension CreateComponent on Tile {
                     .toList(),
                 newSelectedWeaponIndex: mainCharacter.selectedWeaponIndex));
           }
-          if (properties['roomId'] != '0') gameRef.add(DoorComponent(this));
+          if (properties['roomId'] != '0' &&
+              properties['createDoor'] != false) {
+            gameRef.add(DoorComponent(this));
+          }
         } else {
           var teamId = int.parse(properties['team'] ?? '0');
           //print(gameRef.players.length);

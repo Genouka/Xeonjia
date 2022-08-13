@@ -198,9 +198,10 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
       tile.createComponent(gameRef);
     });
   });
-  if (!playerOneCreated) {
-    mainDoor
-      ?..properties['isPlayerOne'] = true
+  if (!playerOneCreated && mainDoor != null) {
+    mainDoor!
+      ..properties['createDoor'] = false
+      ..properties['isPlayerOne'] = true
       ..createComponent(gameRef);
   }
 }
