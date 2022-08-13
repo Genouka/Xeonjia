@@ -508,7 +508,7 @@ class XeonjiaGame extends FlameGame
       overlays.remove('mapNameBox');
       overlays.remove('miniMapButton');
       overlays.add('backpackButton');
-      overlays.add('rulesButton');
+      if (enemies > 0) overlays.add('rulesButton');
       refreshWeaponButtons();
       _statusBox.state?.refresh();
       resume();
