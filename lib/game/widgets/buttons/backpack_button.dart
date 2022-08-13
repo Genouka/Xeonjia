@@ -24,7 +24,7 @@ class BackpackButton extends StatelessWidget {
           decoration: BoxDecoration(
               color: Colors.grey.shade800.withOpacity(0.7),
               borderRadius: const BorderRadius.all(Radius.circular(30))),
-          child: const Icon(Icons.backpack_rounded, color: Colors.white),
+          child: const Icon(Icons.backpack, color: Colors.white),
         ),
       ),
     );
