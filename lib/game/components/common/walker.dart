@@ -21,7 +21,8 @@ mixin Walker on BasicComponent {
   Sprite getSpriteFromAtlas() => atlas.getSprite('$name-${orientation.index}');
 
   // Component orientation
-  Direction orientation = Direction.down;
+  Direction _orientation = Direction.down;
+  Direction get orientation => _orientation;
 
   // Component speed (componentSize per second)
   double get speed => defaultSpeed;
@@ -71,7 +72,7 @@ mixin Walker on BasicComponent {
 
   // Update component orientation
   void updateOrientation([Direction? newDirection]) {
-    orientation = newDirection ?? direction ?? orientation;
+    _orientation = newDirection ?? direction ?? orientation;
     sprite = atlasAsset == null
         ? _sprites[orientation]
         : atlas.getSprite('${name!}-${orientation.index}');

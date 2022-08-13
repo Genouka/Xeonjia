@@ -224,7 +224,7 @@ class CharacterComponent extends BasicComponent
       weapon.restorePp();
     }
     movesCounter = 0;
-    orientation = _initialOrientation;
+    updateOrientation(_initialOrientation);
     direction = null;
     if (isPlayerOne) {
       gameRef.refreshWeaponButtons();

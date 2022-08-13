@@ -119,7 +119,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     var actorAndValue = getActorAndValue(x);
     Walker actor = actorAndValue[0];
     int direction = actorAndValue[1];
-    actor.orientation = GetDirection.fromInt(direction);
+    actor.updateOrientation(GetDirection.fromInt(direction));
     return #NONE;
   });
   _(
