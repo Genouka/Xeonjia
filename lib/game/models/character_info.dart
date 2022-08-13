@@ -9,7 +9,7 @@ class CharacterInfo {
       : name = json['name'] ?? '',
         eventLog = jsonDecode(json['eventLog'] ?? '{}'),
         atk = json['atk'] ?? 1,
-        def = json['def'] ?? 0,
+        def = 0, // forced to zero (note that old players had json['def'] = 3)
         maxLifePoints = json['maxLifePoints'] ?? 100,
         currentLifePoints = json['currentLifePoints'] ?? 0,
         poisonQuantity = json['poisonQuantity'] ?? 0,
