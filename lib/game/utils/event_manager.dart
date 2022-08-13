@@ -297,6 +297,10 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     gameRef.miniMap(enable: false);
     return #NONE;
   });
+  _('battle-rules', 0, (Cell? x) {
+    gameRef.battleRules();
+    return #NONE;
+  });
   _(
     'get',
     1,

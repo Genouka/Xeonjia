@@ -23,6 +23,7 @@ import 'package:xeonjia/game/utils/map_importer.dart';
 import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/utils/message_manager.dart';
 import 'package:xeonjia/game/utils/sfx.dart';
+import 'package:xeonjia/game/utils/weapons.dart';
 import 'package:xeonjia/game/utils/wireless_gamepad.dart';
 import 'package:xeonjia/game/widgets/boxes/battle_text_box.dart';
 import 'package:xeonjia/game/widgets/boxes/dialog_box.dart';
@@ -31,6 +32,7 @@ import 'package:xeonjia/game/widgets/boxes/remaining_moves_box.dart';
 import 'package:xeonjia/game/widgets/boxes/status_box.dart';
 import 'package:xeonjia/game/widgets/buttons/backpack_button.dart';
 import 'package:xeonjia/game/widgets/buttons/minimap_button.dart';
+import 'package:xeonjia/game/widgets/buttons/rules_button.dart';
 import 'package:xeonjia/game/widgets/buttons/world_map_button.dart';
 import 'package:xeonjia/game/widgets/menus/backpack_menu.dart';
 import 'package:xeonjia/game/widgets/menus/end_menu.dart';
@@ -63,6 +65,9 @@ class XeonjiaGame extends FlameGame
       },
       'backpackButton': (BuildContext context, XeonjiaGame game) {
         return BackpackButton(game);
+      },
+      'rulesButton': (BuildContext context, XeonjiaGame game) {
+        return RulesButton(game);
       },
       'backpackMenu': (BuildContext context, XeonjiaGame game) {
         return BackpackMenu(game);
@@ -206,6 +211,7 @@ class XeonjiaGame extends FlameGame
   @override
   void remove(Component component) {
     if (isEnemy(component) && enemies == 0) {
+      overlays.remove('rulesButton');
       add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
     }
     super.remove(component);
@@ -305,8 +311,9 @@ class XeonjiaGame extends FlameGame
       update(0);
     }
 
-    add(RemainingMovesBox());
     if (enemies > 0) {
+      add(RemainingMovesBox());
+      overlays.add('rulesButton');
       setMessage(
           Message(
               this,
@@ -560,8 +567,37 @@ class XeonjiaGame extends FlameGame
   }
 
   // Reload LP bar
-  void refreshLifePointsBar() {
-    _statusBox.state?.refresh();
+  void refreshLifePointsBar() => _statusBox.state?.refresh();
+
+  // Explain battles
+  void battleRules() {
+    // i18n: '* {{hero}} consults "The Manual of the Perfect Hero" *'.i18n
+    setMessage(Message(
+        this, '* {{hero}} consults the "Manual of the Perfect Hero" *'));
+    final List<String> texts = [
+      'Chapter 4: Battles'.i18n,
+      'In battle each player has 3 moves per turn.'.i18n,
+      "After these 3 moves, it is the opponent's turn.".i18n,
+      'A move can be used to walk, use items, attack or examine what is in front of you.'
+          .i18n,
+      'You should already know the "A" button, it examines objects, plants and people.'
+          .i18n,
+      'To attack use the "P" button. In this way you punch the enemy in front of you.'
+          .i18n,
+      if (playerOne!.hasWeaponId(Weapons.snowball.id))
+        '"Otherwise, throw snowballs with the "S" button in the direction you are looking at.'
+            .i18n,
+      'Remember, enemies also have LPs. Hit them multiple times to knock them out!'
+          .i18n,
+      'And if you have few LPs take advantage of a move you have available to eat or drink something you have in your backpack!'
+          .i18n,
+      'Good luck!'.i18n,
+    ];
+    setMessages([
+      for (final string in texts)
+        Message(this, string,
+            author: 'manual/book', xfaFile: 'items', translate: false)
+    ]);
   }
 
   // Check if someone won
