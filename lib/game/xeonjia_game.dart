@@ -499,6 +499,7 @@ class XeonjiaGame extends FlameGame
       if (enemies == 0) addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
       overlays.remove('miniMapButton');
       overlays.remove('backpackButton');
+      overlays.remove('rulesButton');
       refreshWeaponButtons();
       miniMapActive = true;
     } else {
@@ -507,6 +508,7 @@ class XeonjiaGame extends FlameGame
       overlays.remove('mapNameBox');
       overlays.remove('miniMapButton');
       overlays.add('backpackButton');
+      overlays.add('rulesButton');
       refreshWeaponButtons();
       _statusBox.state?.refresh();
       resume();
