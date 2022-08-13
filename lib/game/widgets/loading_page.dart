@@ -6,7 +6,7 @@ class LoadingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black87,
+      color: Colors.black,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -16,7 +16,6 @@ class LoadingPage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           Container(height: 25),
-          const CircularProgressIndicator(backgroundColor: Colors.white),
         ],
       ),
     );

@@ -25,7 +25,8 @@ class StatusBoxState extends State<StatusBox> {
 
   @override
   Widget build(BuildContext context) {
-    return widget.gameRef.playerOne == null || widget.gameRef.miniMapEnabled
+    return widget.gameRef.playerOne?.isLoaded != true ||
+            widget.gameRef.miniMapEnabled
         ? Container()
         : InfoBox(
             onTap: () => widget.gameRef.messageManager.active

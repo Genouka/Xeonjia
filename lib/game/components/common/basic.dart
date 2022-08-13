@@ -170,12 +170,12 @@ abstract class BasicComponent extends SpriteComponent
   Future<void>? onLoad() async {
     _lifePoints = maxLifePoints;
     if (this is! SnowballComponent) executeAction();
+    sprite ??= Sprite(Flame.images.fromCache('basic.png')); // placeholder
     if (atlasAsset != null && name != null) {
       atlas = await gameRef.loadCustomAtlas('images/metadata/$atlasAsset');
       sprite = getSpriteFromAtlas();
       show();
     }
-    sprite ??= Sprite(Flame.images.fromCache('basic.png')); // placeholder
   }
 
   // Atlas file used for sprites and animations

@@ -97,8 +97,7 @@ class CharacterComponent extends BasicComponent
       if (gameRef.config.mode == GameMode.story) {
         _itemList = List.from(mainCharacter.itemList);
       }
-      gameRef.executeAction(
-          action: gameRef.map.action, actor: gameRef.playerOne!);
+      gameRef.playerOneReady();
     } else {
       add(NpcController());
     }

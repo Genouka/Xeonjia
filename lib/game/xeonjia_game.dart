@@ -34,6 +34,7 @@ import 'package:xeonjia/game/widgets/buttons/backpack_button.dart';
 import 'package:xeonjia/game/widgets/buttons/minimap_button.dart';
 import 'package:xeonjia/game/widgets/buttons/rules_button.dart';
 import 'package:xeonjia/game/widgets/buttons/world_map_button.dart';
+import 'package:xeonjia/game/widgets/loading_page.dart';
 import 'package:xeonjia/game/widgets/menus/backpack_menu.dart';
 import 'package:xeonjia/game/widgets/menus/end_menu.dart';
 import 'package:xeonjia/game/widgets/menus/no_maps_menu.dart';
@@ -52,7 +53,7 @@ late double componentSize;
 
 // Xeonjia game class
 class XeonjiaGame extends FlameGame
-    with KeyboardEvents, PanDetector, SingleGameInstance, HasTappables {
+    with KeyboardEvents, PanDetector, HasTappables {
   XeonjiaGame(this.config) {
     environment = setEnvironment(this);
     messageManager = MessageManager(this);
@@ -83,6 +84,9 @@ class XeonjiaGame extends FlameGame
       },
       'dialogBox': (BuildContext context, XeonjiaGame game) {
         return game.dialogBox;
+      },
+      'loading': (BuildContext context, XeonjiaGame game) {
+        return LoadingPage();
       },
     };
     overlays.add('statusBox');
@@ -266,6 +270,7 @@ class XeonjiaGame extends FlameGame
     overlays.remove('mapNameBox');
     overlays.remove('miniMapButton');
     overlays.remove('backpackButton');
+    overlays.add('loading');
 
     // Import mainCharacter.eventLog
     currentEventLog = Map.from(mainCharacter.eventLog);
@@ -298,22 +303,13 @@ class XeonjiaGame extends FlameGame
       }
       await importMap(this, 'assets/maps/story/${map.id}.tmx');
       miniMapActive = false;
-      overlays.add('miniMapButton');
-      overlays.add('backpackButton');
     } else {
       map = GameMap(fullId: config.mapId.toString());
       await importMap(this, 'assets/maps/arena/${config.mapId}.tmx');
     }
 
-    // Workaround to wait for loading to end
-    while (lifecycle.hasPendingEvents) {
-      await Future.delayed(const Duration(milliseconds: 50));
-      update(0);
-    }
-
     if (enemies > 0) {
       add(RemainingMovesBox());
-      overlays.add('rulesButton');
       setMessage(
           Message(
               this,
@@ -334,7 +330,6 @@ class XeonjiaGame extends FlameGame
       }
     });
     _timer?.start();
-
     resume();
     playBackgroundMusic();
   }
@@ -352,6 +347,17 @@ class XeonjiaGame extends FlameGame
         (canvasSize.toSize().longestSide / 16).round16.gridAligned.toDouble();
     camera.zoom = 1;
     if (!worldMapEnabled) updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
+  }
+
+  // Function called when playerOne is loaded
+  void playerOneReady() {
+    executeAction(action: map.action, actor: playerOne!);
+    overlays.remove('loading');
+    if (config.mode == GameMode.story) {
+      overlays.add('miniMapButton');
+      overlays.add('backpackButton');
+    }
+    if (enemies > 0) overlays.add('rulesButton');
   }
 
   // Pause game
