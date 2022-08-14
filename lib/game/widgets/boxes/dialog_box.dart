@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flame/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/utils/message.dart';
@@ -74,6 +76,8 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    double imageScale =
+        min(3, (MediaQuery.of(context).size.width ~/ 100).roundToDouble());
     if (_characterCountAnimation == null) _animateText();
     return Visibility(
       visible: widget.gameRef.messageManager.active,
@@ -114,9 +118,9 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                   .sprite !=
                               null)
                             SizedBox(
-                              width: 96,
+                              width: 32 * imageScale,
                               child: Transform.scale(
-                                scale: 3,
+                                scale: imageScale,
                                 alignment: Alignment.bottomLeft,
                                 child: SpriteWidget(
                                   sprite: widget.gameRef.messageManager
@@ -125,20 +129,25 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                               ),
                             ),
                           Flexible(
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 20),
+                            child: Container(
+                              padding: const EdgeInsets.only(left: 20),
+                              constraints: widget.gameRef.messageManager
+                                          .currentMessage!.sprite !=
+                                      null
+                                  ? BoxConstraints(minHeight: 32 * imageScale)
+                                  : null,
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    if ((widget.gameRef.messageManager
-                                            .currentMessage!.authorName) !=
+                                    if (widget.gameRef.messageManager
+                                            .currentMessage!.authorName !=
                                         '')
                                       Text(
                                         '${widget.gameRef.messageManager.currentMessage!.authorName} :'
                                             .toUpperCase(),
+                                        maxLines: 1,
                                         style: Theme.of(context)
                                             .textTheme
                                             .bodyText1,
