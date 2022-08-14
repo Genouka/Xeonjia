@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 // Top left container
@@ -21,17 +23,17 @@ class InfoBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = min(MediaQuery.of(context).size.width / 2.2, 320);
     return Positioned(
       top: bottom ? null : (below ? 46 : 6),
-      left: center ? MediaQuery.of(context).size.width * 0.272727 : 6,
+      left: center ? MediaQuery.of(context).size.width / 2 - (width / 2) : 6,
       bottom: bottom ? (below ? 46 : 6) : null,
       child: InkWell(
         onTap: onTap,
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-          width: MediaQuery.of(context).size.width / 2.2,
+          width: width,
           height: 36,
-          constraints: const BoxConstraints(maxWidth: 320),
           decoration: BoxDecoration(
               color: Colors.grey.shade800.withOpacity(opacity),
               borderRadius: BorderRadius.all(Radius.circular(radius))),

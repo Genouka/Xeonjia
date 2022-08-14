@@ -45,9 +45,6 @@ import 'package:xeonjia/utils/game_properties.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
-// Default component speed (componentSize per second)
-double get defaultSpeed => componentSize * 8;
-
 // Default component dimension
 late double componentSize;
 
@@ -342,9 +339,9 @@ class XeonjiaGame extends FlameGame
 
   @override
   void onGameResize(Vector2 canvasSize) {
-    super.onGameResize(canvasSize);
     componentSize =
         (canvasSize.toSize().longestSide / 16).round16.gridAligned.toDouble();
+    super.onGameResize(canvasSize);
     camera.zoom = 1;
     if (!worldMapEnabled) updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
   }
@@ -476,7 +473,9 @@ class XeonjiaGame extends FlameGame
   void updateCamera(double x, double y) {
     if (map.width == 0) return;
     camera.snapTo(Vector2(
-        _moveCamera(size.x, map.width, x), _moveCamera(size.y, map.height, y)));
+        _moveCamera(size.x, map.width, x),
+        _moveCamera(
+            size.y, worldMapEnabled ? map.width * 0.7 : map.height, y)));
   }
 
   // Calculate camera position
@@ -527,9 +526,10 @@ class XeonjiaGame extends FlameGame
   void worldMap({bool? enable}) {
     worldMapEnabled = enable ?? !worldMapEnabled;
     if (worldMapEnabled) {
-      updateCamera(playerOne!.x, playerOne!.y);
       zoomMiniMap(toValue: 1);
-      add(WorldMap());
+      var map = WorldMap();
+      add(map);
+      updateCamera(map.currentMap?.x ?? 0, map.currentMap?.y ?? 0);
       overlays.remove('mapNameBox');
     } else {
       updateCamera(
@@ -550,10 +550,8 @@ class XeonjiaGame extends FlameGame
     camera.zoom =
         (playerOne!.size.x * miniMapZoom).gridAligned / (playerOne!.size.x);
     worldMapEnabled
-        ? camera.snapTo(Vector2(
-            _moveCamera(size.x, map.width, camera.position.x + size.x / 2),
-            _moveCamera(
-                size.y, map.width * 0.7, camera.position.y + size.y / 2)))
+        ? updateCamera(
+            camera.position.x + size.x / 2, camera.position.y + size.y / 2)
         : updateCamera(playerOne!.x, playerOne!.y);
   }
 

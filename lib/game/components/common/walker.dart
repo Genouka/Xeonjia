@@ -24,6 +24,9 @@ mixin Walker on BasicComponent {
   Direction _orientation = Direction.down;
   Direction get orientation => _orientation;
 
+  // Default component speed (componentSize per second)
+  static double get defaultSpeed => componentSize * 8;
+
   // Component speed (componentSize per second)
   double get speed => defaultSpeed;
 

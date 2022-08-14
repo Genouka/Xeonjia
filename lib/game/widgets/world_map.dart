@@ -23,12 +23,13 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
 
   @override
   void onGameResize(Vector2 size) {
-    super.onGameResize(size);
     this.size = Vector2(gameRef.map.width * componentSize,
         gameRef.map.width * componentSize * 0.7);
+    super.onGameResize(size);
   }
 
   MapData? selectedMap;
+  MapData? currentMap;
 }
 
 // A single map
@@ -41,6 +42,7 @@ class _RectangleMap extends PositionComponent
   @override
   Future<void>? onLoad() {
     isTheCurrentMap = map.id == gameRef.map.id;
+    if (isTheCurrentMap) (parent as WorldMap).currentMap = map;
     return super.onLoad();
   }
 

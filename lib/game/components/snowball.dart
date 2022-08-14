@@ -36,7 +36,7 @@ class SnowballComponent extends BasicComponent with Walker {
   final double atk;
 
   @override
-  double get speed => defaultSpeed * 2;
+  double get speed => Walker.defaultSpeed * 2;
 
   @override
   bool isSolid({Walker? otherComponent}) => false;

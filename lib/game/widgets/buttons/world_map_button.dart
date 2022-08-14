@@ -33,6 +33,9 @@ class WorldMapButton extends TextBoxComponent
     super.onGameResize(size);
     this.size = Vector2(min(320, gameRef.canvasSize.x / 1.8), 36);
     position = Vector2(6, gameRef.canvasSize.y - this.size.y - 6);
+    // Workaround to force align = center again
+    text = text + ' ';
+    text = text.trim();
   }
 
   @override
