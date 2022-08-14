@@ -182,9 +182,15 @@ class XeonjiaGame extends FlameGame
                 updateCamera(
                     activePlayer!.position.x, activePlayer!.position.y);
                 _virtualGamePad.refresh();
-                playerOne!.isMyTurn
-                    ? overlays.add('backpackButton')
-                    : overlays.remove('backpackButton');
+                if (playerOne!.isMyTurn) {
+                  overlays.add('backpackButton');
+                  overlays.add('rulesButton');
+                  overlays.add('miniMapButton');
+                } else {
+                  overlays.remove('backpackButton');
+                  overlays.remove('rulesButton');
+                  overlays.remove('miniMapButton');
+                }
               }));
           break;
         }

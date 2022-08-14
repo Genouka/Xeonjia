@@ -36,6 +36,9 @@ class RemainingMovesBox extends TextBoxComponent with HasGameRef<XeonjiaGame> {
     super.onGameResize(size);
     this.size = Vector2(min(320, gameRef.canvasSize.x / 2.2), 36);
     position = Vector2(6, gameRef.miniMapEnabled ? 6 : 46);
+    // Workaround to force align = center again
+    text = text + ' ';
+    text = text.trim();
   }
 
   @override

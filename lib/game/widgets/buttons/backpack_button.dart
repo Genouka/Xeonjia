@@ -10,7 +10,7 @@ class BackpackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       top: 6,
-      right: gameRef.map.disableMiniMap ? 6 : 56,
+      right: gameRef.map.disableMiniMap ? 6 : 50,
       child: InkWell(
         onTap: () => gameRef.messageManager.active ||
                 gameRef.hasAction ||

@@ -10,7 +10,7 @@ class RulesButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       top: 6,
-      right: gameRef.map.disableMiniMap ? 56 : 106,
+      right: gameRef.map.disableMiniMap ? 50 : 94,
       child: InkWell(
         onTap: () => gameRef.messageManager.active ||
                 gameRef.hasAction ||
