@@ -29,6 +29,7 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
     this.size = Vector2(gameRef.map.width * componentSize * gameRef.miniMapZoom,
         gameRef.map.width * componentSize * gameRef.miniMapZoom * 0.7);
     super.onGameResize(size);
+    _updateCamera();
   }
 
   @override
@@ -37,8 +38,15 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
     super.render(canvas);
   }
 
-  MapData? selectedMap;
-  MapData? currentMap;
+  // Update gameRef.camera.position based on currentMap
+  void _updateCamera() {
+    if (_currentMapPosition == null) return;
+    gameRef.updateCamera(_currentMapPosition!.x * gameRef.miniMapZoom,
+        _currentMapPosition!.y * gameRef.miniMapZoom);
+  }
+
+  MapData? _selectedMap;
+  Vector2? _currentMapPosition;
 }
 
 // A single map
@@ -51,13 +59,12 @@ class _RectangleMap extends PositionComponent
   @override
   Future<void>? onLoad() {
     isTheCurrentMap = map.id == gameRef.map.id;
-    if (isTheCurrentMap) (parent as WorldMap).currentMap = map;
     return super.onLoad();
   }
 
   @override
   bool onTapUp(TapUpInfo info) {
-    (parent as WorldMap).selectedMap = map;
+    (parent as WorldMap)._selectedMap = map;
     if (map.id == gameRef.map.id) {
       gameRef.setMessage(Message(gameRef, 'This is where I am right now.'.i18n,
           translate: false));
@@ -80,12 +87,11 @@ class _RectangleMap extends PositionComponent
   }
 
   @override
-  bool containsPoint(Vector2 point) {
-    return (point.x >= x * gameRef.miniMapZoom) &&
-        (point.y >= y * gameRef.miniMapZoom) &&
-        (point.x < x * gameRef.miniMapZoom + size.x * gameRef.miniMapZoom) &&
-        (point.y < y * gameRef.miniMapZoom + size.y * gameRef.miniMapZoom);
-  }
+  bool containsPoint(Vector2 point) =>
+      (point.x >= x * gameRef.miniMapZoom) &&
+      (point.y >= y * gameRef.miniMapZoom) &&
+      (point.x < x * gameRef.miniMapZoom + size.x * gameRef.miniMapZoom) &&
+      (point.y < y * gameRef.miniMapZoom + size.y * gameRef.miniMapZoom);
 
   @override
   void onGameResize(Vector2 size) {
@@ -96,6 +102,11 @@ class _RectangleMap extends PositionComponent
       ..multiply(MapData.offset);
     position = Vector2(map.x * multiplier, map.y * multiplier) + offset;
     this.size = Vector2(map.width * multiplier, map.height * multiplier);
+    if (isTheCurrentMap) {
+      (parent as WorldMap)
+        .._currentMapPosition = position
+        .._updateCamera();
+    }
   }
 
   final Paint mapPaint = Paint()
@@ -113,7 +124,7 @@ class _RectangleMap extends PositionComponent
 
   @override
   void render(Canvas canvas) {
-    if ((parent as WorldMap).selectedMap == map) {
+    if ((parent as WorldMap)._selectedMap == map) {
       canvas.drawRect(
           Rect.fromLTWH(1, 1, width - 2, height - 2), selectedMapPaint);
     } else if (isTheCurrentMap) {

@@ -536,7 +536,6 @@ class XeonjiaGame extends FlameGame
       zoomMiniMap(toValue: 1);
       var map = WorldMap();
       add(map);
-      updateCamera(map.currentMap?.x ?? 0, map.currentMap?.y ?? 0);
       overlays.remove('mapNameBox');
     } else {
       updateCamera(
@@ -550,14 +549,23 @@ class XeonjiaGame extends FlameGame
   void zoomMiniMap({double? toValue, bool out = false, bool enable = false}) {
     var previousValue = enable ? 1 : miniMapZoom;
     var delta = 16 / componentSize;
-    miniMapZoom = toValue ??
-        (out
-            ? max(previousValue - delta, delta)
-            : min(previousValue + delta, 2));
-    worldMapEnabled
-        ? updateCamera(
-            camera.position.x + size.x / 2, camera.position.y + size.y / 2)
-        : updateCamera(playerOne!.x * miniMapZoom, playerOne!.y * miniMapZoom);
+    if (!out ||
+        miniMapZoom * componentSize * map.width > canvasSize.x ||
+        (worldMapEnabled
+            ? miniMapZoom * componentSize * map.width * 0.7 > canvasSize.y
+            : miniMapZoom * componentSize * map.height > canvasSize.y)) {
+      miniMapZoom = toValue ??
+          (out
+              ? max(previousValue - delta, delta / 2)
+              : min(previousValue + delta, 2));
+    }
+    if (previousValue != miniMapZoom) {
+      worldMapEnabled
+          ? updateCamera(
+              camera.position.x + size.x / 2, camera.position.y + size.y / 2)
+          : updateCamera(
+              playerOne!.x * miniMapZoom, playerOne!.y * miniMapZoom);
+    }
   }
 
   // Open backpack
