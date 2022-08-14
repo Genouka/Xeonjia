@@ -7,6 +7,7 @@ class GameMap {
     this.action,
     this.music,
     this.disableMiniMap = false,
+    this.canEscape = false,
   });
 
   // Map id
@@ -28,4 +29,7 @@ class GameMap {
 
   // Disable/Enable mini-map (enabled by default)
   bool disableMiniMap;
+
+  // True if playerOne can escape from this room without defeating every enemy
+  bool canEscape;
 }

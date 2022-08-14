@@ -42,6 +42,10 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
           gameRef.map.disableMiniMap =
               property.getAttributeNode('value')!.value == 'true';
           break;
+        case 'can-escape':
+          gameRef.map.canEscape =
+              property.getAttributeNode('value')!.value == 'true';
+          break;
       }
     }
   }

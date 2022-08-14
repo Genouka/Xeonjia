@@ -3,7 +3,6 @@ import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
-import 'package:xeonjia/utils/local_data_controller.dart';
 
 // Component that permits to change room
 class DoorComponent extends BasicComponent {
@@ -31,10 +30,7 @@ class DoorComponent extends BasicComponent {
   @override
   bool isSolid({BasicComponent? otherComponent}) =>
       !otherComponent!.isPlayerOne ||
-      (gameRef.enemies != 0 &&
-          _roomId !=
-              mainCharacter
-                  .visitedRooms[mainCharacter.visitedRooms.length - 2]);
+      (gameRef.enemies != 0 && !gameRef.map.canEscape);
 
   @override
   void collidedBy(otherComponent, [bool wasStationary = false]) {
@@ -43,8 +39,8 @@ class DoorComponent extends BasicComponent {
       gameRef.setMessage(Message(
           gameRef,
           count == 1
-              ? "There is still 1 monster here. I can't escape.".i18n
-              : ("There are still %s monsters here. I can't escape."
+              ? "There is still 1 enemy here. I can't escape.".i18n
+              : ("There are still %s enemies here. I can't escape."
                   .i18n
                   .fill([count]))));
       otherComponent.updateOrientation(otherComponent.orientation.opposite);
