@@ -297,9 +297,18 @@ abstract class BasicComponent extends SpriteComponent
   }
 
   @override
+  Paint paint = Paint()..isAntiAlias = false;
+
+  @override
   @mustCallSuper
   void render(Canvas canvas) {
     if (!_visible || gameRef.worldMapEnabled) return;
+    if (gameRef.miniMapEnabled) {
+      canvas
+        ..translate(position.x * gameRef.miniMapZoom - position.x,
+            position.y * gameRef.miniMapZoom - position.y)
+        ..scale(gameRef.miniMapZoom);
+    }
     animation?.done() ?? true
         ? super.render(canvas)
         : animation!.getSprite().render(canvas, size: Vector2(width, height));

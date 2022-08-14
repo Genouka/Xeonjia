@@ -14,7 +14,10 @@ class BackgroundComponent extends PositionComponent
   @override
   void render(Canvas canvas) => gameRef.worldMapEnabled
       ? null
-      : canvas.drawRect(Rect.fromLTWH(0, 0, width, height), paint);
+      : canvas.drawRect(
+          Rect.fromLTWH(
+              0, 0, width * gameRef.miniMapZoom, height * gameRef.miniMapZoom),
+          paint);
 
   @override
   void onGameResize(Vector2 size) {

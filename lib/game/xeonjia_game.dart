@@ -348,7 +348,7 @@ class XeonjiaGame extends FlameGame
     componentSize =
         (canvasSize.toSize().longestSide / 16).round16.gridAligned.toDouble();
     super.onGameResize(canvasSize);
-    camera.zoom = 1;
+    miniMapZoom = 1;
     if (!worldMapEnabled) updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
   }
 
@@ -486,7 +486,7 @@ class XeonjiaGame extends FlameGame
 
   // Calculate camera position
   double _moveCamera(double screenSize, num mapSize, double pos) {
-    var delta = mapSize * componentSize - screenSize;
+    var delta = mapSize * componentSize * miniMapZoom - screenSize;
     return (delta <= 0 ? delta / 2 : max(0, min(pos - screenSize / 2, delta)))
         .gridAligned
         .toDouble();
@@ -495,6 +495,7 @@ class XeonjiaGame extends FlameGame
   // Mini-map
   bool miniMapEnabled = false;
   bool miniMapActive = false;
+  double miniMapZoom = 1;
 
   // World map
   bool worldMapEnabled = false;
@@ -503,7 +504,7 @@ class XeonjiaGame extends FlameGame
   void miniMap({bool? enable}) {
     miniMapEnabled = enable ?? !miniMapEnabled;
     if (miniMapEnabled) {
-      zoomMiniMap(toValue: camera.zoom, enable: true);
+      zoomMiniMap(toValue: miniMapZoom, enable: true);
       pause(stopEngine: false, stopMusic: false);
       _statusBox.state?.refresh();
       overlays.remove('mapNameBox');
@@ -547,18 +548,16 @@ class XeonjiaGame extends FlameGame
 
   // Change mini-map zoom
   void zoomMiniMap({double? toValue, bool out = false, bool enable = false}) {
-    var previousValue = enable ? 1 : camera.zoom;
+    var previousValue = enable ? 1 : miniMapZoom;
     var delta = 16 / componentSize;
-    var miniMapZoom = toValue ??
+    miniMapZoom = toValue ??
         (out
             ? max(previousValue - delta, delta)
             : min(previousValue + delta, 2));
-    camera.zoom =
-        (playerOne!.size.x * miniMapZoom).gridAligned / (playerOne!.size.x);
     worldMapEnabled
         ? updateCamera(
             camera.position.x + size.x / 2, camera.position.y + size.y / 2)
-        : updateCamera(playerOne!.x, playerOne!.y);
+        : updateCamera(playerOne!.x * miniMapZoom, playerOne!.y * miniMapZoom);
   }
 
   // Open backpack

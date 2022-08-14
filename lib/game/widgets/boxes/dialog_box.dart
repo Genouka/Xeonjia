@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flame/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:xeonjia/game/utils/extensions.dart';
 import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -118,9 +119,9 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                   .sprite !=
                               null)
                             SizedBox(
-                              width: 32 * imageScale,
+                              width: 32 * imageScale.gridAligned.toDouble(),
                               child: Transform.scale(
-                                scale: imageScale,
+                                scale: imageScale.gridAligned.toDouble(),
                                 alignment: Alignment.bottomLeft,
                                 child: SpriteWidget(
                                   sprite: widget.gameRef.messageManager

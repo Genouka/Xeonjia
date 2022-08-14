@@ -6,7 +6,7 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 // Vertical offset used to translate characters
 mixin RenderOffset on BasicComponent {
   double get _offset =>
-      -(componentSize * (gameRef.miniMapEnabled ? gameRef.camera.zoom : 1) / 8)
+      -(componentSize * (gameRef.miniMapEnabled ? gameRef.miniMapZoom : 1) / 8)
           .gridAligned
           .toDouble();
 

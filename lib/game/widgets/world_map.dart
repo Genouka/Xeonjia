@@ -22,10 +22,19 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
   }
 
   @override
+  Paint paint = Paint()..isAntiAlias = false;
+
+  @override
   void onGameResize(Vector2 size) {
-    this.size = Vector2(gameRef.map.width * componentSize,
-        gameRef.map.width * componentSize * 0.7);
+    this.size = Vector2(gameRef.map.width * componentSize * gameRef.miniMapZoom,
+        gameRef.map.width * componentSize * gameRef.miniMapZoom * 0.7);
     super.onGameResize(size);
+  }
+
+  @override
+  void render(Canvas canvas) {
+    canvas.scale(gameRef.miniMapZoom);
+    super.render(canvas);
   }
 
   MapData? selectedMap;
@@ -68,6 +77,14 @@ class _RectangleMap extends PositionComponent
             (dialog '(("* After a long journey, {{hero}} arrived here *")))
             (teleport "${map.id}" #t))))''');
     return true;
+  }
+
+  @override
+  bool containsPoint(Vector2 point) {
+    return (point.x >= x * gameRef.miniMapZoom) &&
+        (point.y >= y * gameRef.miniMapZoom) &&
+        (point.x < x * gameRef.miniMapZoom + size.x * gameRef.miniMapZoom) &&
+        (point.y < y * gameRef.miniMapZoom + size.y * gameRef.miniMapZoom);
   }
 
   @override
