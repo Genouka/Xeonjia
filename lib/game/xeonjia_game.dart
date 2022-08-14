@@ -184,7 +184,7 @@ class XeonjiaGame extends FlameGame
                 _virtualGamePad.refresh();
                 if (playerOne!.isMyTurn) {
                   overlays.add('backpackButton');
-                  overlays.add('rulesButton');
+                  if (enemies > 0) overlays.add('rulesButton');
                   overlays.add('miniMapButton');
                 } else {
                   overlays.remove('backpackButton');
