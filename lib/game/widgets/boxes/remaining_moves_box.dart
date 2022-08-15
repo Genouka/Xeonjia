@@ -17,10 +17,10 @@ class RemainingMovesBox extends TextBoxComponent with HasGameRef<XeonjiaGame> {
   }
 
   @override
-  Future<void> onLoad() {
+  void onMount() {
     textRenderer =
         TextPaint(style: Theme.of(gameRef.buildContext!).textTheme.button);
-    return super.onLoad();
+    super.onMount();
   }
 
   // To avoid calling .i18n every update()
