@@ -238,7 +238,7 @@ class XeonjiaGame extends FlameGame
       deletedComponents.firstWhere((c) => c.id == id);
 
   // Count enemies (alive) in the room
-  int get enemies => children.where((e) => isEnemy(e, onlyAlive: true)).length;
+  int get enemies => players.where((e) => isEnemy(e, onlyAlive: true)).length;
   bool isEnemy(Component c, {bool onlyAlive = false}) =>
       (c is BasicComponent &&
           [-3, -2, 1].contains(c.teamId) &&
@@ -311,18 +311,6 @@ class XeonjiaGame extends FlameGame
       await importMap(this, 'assets/maps/arena/${config.mapId}.tmx');
     }
 
-    if (enemies > 0) {
-      add(RemainingMovesBox());
-      setMessage(
-          Message(
-              this,
-              "There are %s enemies here! It' time to fight!"
-                  .i18n
-                  .fill([enemies])),
-          callback: () =>
-              add(BattleTextBox(size, 'Battle!'.i18n.toUpperCase())));
-    }
-
     _timer = Timer(1, repeat: true, onTick: () {
       if (isPaused) return;
       elapsedSeconds++;
@@ -360,7 +348,18 @@ class XeonjiaGame extends FlameGame
       overlays.add('miniMapButton');
       overlays.add('backpackButton');
     }
-    if (enemies > 0) overlays.add('rulesButton');
+    if (enemies > 0) {
+      overlays.add('rulesButton');
+      add(RemainingMovesBox());
+      setMessage(
+          Message(
+              this,
+              "There are %s enemies here! It' time to fight!"
+                  .i18n
+                  .fill([enemies])),
+          callback: () =>
+              add(BattleTextBox(size, 'Battle!'.i18n.toUpperCase())));
+    }
   }
 
   // Pause game
