@@ -19,9 +19,8 @@ mixin TextAnimation on BasicComponent {
     if (_show) {
       _remainingSeconds -= dt;
       if (_remainingSeconds <= 0) _text = null;
-    } else {
-      super.update(dt);
     }
+    super.update(dt);
   }
 
   @override
