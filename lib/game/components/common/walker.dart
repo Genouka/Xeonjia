@@ -255,16 +255,20 @@ mixin Walker on BasicComponent {
     if (isBeingDeleted || gameRef.isPaused || !isMyTurn || !isStationary) {
       return;
     }
+    double previousPP = 0;
     if (id != null) {
       var newWeaponIndex = weaponList.indexWhere((weapon) => weapon.id == id);
       if (weaponList[newWeaponIndex].powerPoints > 0) {
         selectedWeaponIndex = newWeaponIndex;
+        previousPP = selectedWeapon.powerPoints;
         selectedWeapon.shoot(shooter: this);
       }
     } else {
+      previousPP = selectedWeapon.powerPoints;
       selectedWeapon.shoot(shooter: this);
     }
-    gameRef.useMove();
+    if (selectedWeapon.maxPp == double.infinity ||
+        selectedWeapon.powerPoints != previousPP) gameRef.useMove();
   }
 
   // Check if it is this component's turn during a battle
