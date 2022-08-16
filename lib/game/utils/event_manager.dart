@@ -68,12 +68,10 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     var weapon = gameRef.playerOne!.getWeaponById(1);
     var max = weapon.powerPoints >= weapon.maxPp;
     weapon.restorePp();
-    gameRef.refreshWeaponButtons();
     return max;
   });
   _('give-weapon', 1, (Cell? x) {
     gameRef.playerOne!.weaponList.add(Weapon.fromId(x!.car as int));
-    gameRef.refreshWeaponButtons();
     return #NONE;
   });
   _('places-visited', 0,

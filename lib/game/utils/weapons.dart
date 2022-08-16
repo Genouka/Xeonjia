@@ -1,7 +1,5 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
-import 'package:xeonjia/game/components/character.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/components/modifer.dart';
 import 'package:xeonjia/game/components/snowball.dart';
@@ -50,10 +48,7 @@ abstract class Weapon {
   }
 
   // Function used when a shoot input happens
-  @mustCallSuper
-  void shoot({required Walker shooter}) {
-    if (shooter.isPlayerOne) shooter.gameRef.refreshWeaponButtons();
-  }
+  void shoot({required Walker shooter});
 
   // Export / Import weapon details
   Map<String, dynamic> toJson() =>
@@ -83,16 +78,10 @@ class PunchWeapon extends Weapon {
   @override
   void shoot({required Walker shooter}) {
     var componentInFront = shooter.componentInFront();
-    if (componentInFront is CharacterComponent &&
-        componentInFront.friendly &&
-        !componentInFront.isPlayerOne) {
-      return;
-    }
     componentInFront?.lifePointsDifference(-atk, cause: shooter);
     shooter.animation = shooter.atlas
         .getAnimation('${shooter.name}-${shooter.orientation.index}-punching');
     if (shooter.isPlayerOne) shooter.gameRef.playSound(Sfx.punch);
-    super.shoot(shooter: shooter);
   }
 }
 
@@ -112,7 +101,6 @@ class SnowBallWeapon extends Weapon {
       shooter.gameRef.add(SnowballComponent(
           Point(shooter.x, shooter.y), shooter, shooter.orientation, atk));
       --powerPoints;
-      super.shoot(shooter: shooter);
       if (shooter == shooter.gameRef.playerOne ||
           shooter.gameRef.config.mode != GameMode.story) {
         shooter.animation = shooter.atlas.getAnimation(
@@ -138,7 +126,6 @@ class MineWeapon extends Weapon {
       shooter.gameRef.add(
           ModifierComponent.mine(Point(shooter.x, shooter.y), shooter, atk));
       --powerPoints;
-      super.shoot(shooter: shooter);
     }
   }
 }

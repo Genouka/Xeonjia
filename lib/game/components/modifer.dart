@@ -80,7 +80,6 @@ class ModifierComponent extends BasicComponent {
       for (final weapon in componentAbove.weaponList) {
         weapon.powerPoints += _powerPointsDelta;
       }
-      gameRef.refreshWeaponButtons();
       if (_itemId != '0' &&
           componentAbove.isPlayerOne &&
           gameRef.config.mode == GameMode.story) {

@@ -91,7 +91,6 @@ class CharacterComponent extends BasicComponent
               ? maxLifePoints
               : mainCharacter.currentLifePoints,
           mainCharacter.poisonQuantity);
-      gameRef.refreshWeaponButtons();
       gameRef.refreshLifePointsBar();
       if (gameRef.isLoaded) gameRef.updateCamera(x, y);
       if (gameRef.config.mode == GameMode.story) {
@@ -225,9 +224,6 @@ class CharacterComponent extends BasicComponent
     movesCounter = 0;
     updateOrientation(_initialOrientation);
     direction = null;
-    if (isPlayerOne) {
-      gameRef.refreshWeaponButtons();
-      gameRef.updateCamera(x, y);
-    }
+    if (isPlayerOne) gameRef.updateCamera(x, y);
   }
 }

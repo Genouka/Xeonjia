@@ -56,7 +56,6 @@ class XeonjiaGame extends FlameGame
     messageManager = MessageManager(this);
     dialogBox = DialogBox(this);
     _statusBox = StatusBox(this);
-    _virtualGamePad = VirtualGamePad(this);
     overlayMap = {
       'statusBox': (BuildContext context, XeonjiaGame game) {
         return _statusBox;
@@ -77,7 +76,7 @@ class XeonjiaGame extends FlameGame
         return MiniMapButton(game, miniMapIsActive: game.miniMapActive);
       },
       'virtualGamePad': (BuildContext context, XeonjiaGame game) {
-        return _virtualGamePad;
+        return VirtualGamePad(this);
       },
       'dialogBox': (BuildContext context, XeonjiaGame game) {
         return game.dialogBox;
@@ -87,7 +86,6 @@ class XeonjiaGame extends FlameGame
       },
     };
     overlays.add('statusBox');
-    overlays.add('virtualGamePad');
     overlays.add('dialogBox');
     initGamepad();
     if (settings.backgroundMusic && config.mode == GameMode.story) {
@@ -129,9 +127,6 @@ class XeonjiaGame extends FlameGame
   // Box with lifePoints, pause, time and team points
   late StatusBox _statusBox;
 
-  // Virtual Gamepad (D-pad + buttons)
-  late VirtualGamePad _virtualGamePad;
-
   // Timer used in multiplayer mode
   Timer? _timer;
   int elapsedSeconds = 0;
@@ -169,7 +164,6 @@ class XeonjiaGame extends FlameGame
   void useMove() {
     if (--remainingMoves <= 0) {
       remainingMoves = 3;
-      _virtualGamePad.refresh();
       if (++_activePlayerIndex >= players.length) _activePlayerIndex = 0;
       for (int i = _activePlayerIndex; i < players.length; i++) {
         if (!players[i].deleted) {
@@ -181,15 +175,16 @@ class XeonjiaGame extends FlameGame
                 changingTurn = false;
                 updateCamera(
                     activePlayer!.position.x, activePlayer!.position.y);
-                _virtualGamePad.refresh();
                 if (playerOne!.isMyTurn) {
                   overlays.add('backpackButton');
                   if (enemies > 0) overlays.add('rulesButton');
                   overlays.add('miniMapButton');
+                  overlays.add('virtualGamePad');
                 } else {
                   overlays.remove('backpackButton');
                   overlays.remove('rulesButton');
                   overlays.remove('miniMapButton');
+                  overlays.remove('virtualGamePad');
                 }
               }));
           break;
@@ -273,6 +268,8 @@ class XeonjiaGame extends FlameGame
     overlays.remove('mapNameBox');
     overlays.remove('miniMapButton');
     overlays.remove('backpackButton');
+    overlays.remove('rulesButton');
+    overlays.remove('virtualGamePad');
     overlays.add('loading');
 
     // Import mainCharacter.eventLog
@@ -344,6 +341,8 @@ class XeonjiaGame extends FlameGame
   void playerOneReady() {
     executeAction(action: map.action, actor: playerOne!);
     overlays.remove('loading');
+    overlays.add('virtualGamePad');
+    add(Button.A(this));
     if (config.mode == GameMode.story) {
       overlays.add('miniMapButton');
       overlays.add('backpackButton');
@@ -351,6 +350,8 @@ class XeonjiaGame extends FlameGame
     if (enemies > 0) {
       overlays.add('rulesButton');
       add(RemainingMovesBox());
+      add(Button.P(this));
+      if (playerOne!.hasWeaponId(1)) add(Button.S(this));
       setMessage(
           Message(
               this,
@@ -499,6 +500,10 @@ class XeonjiaGame extends FlameGame
   // World map
   bool worldMapEnabled = false;
 
+  // Buttons used to zoom in and out
+  late Button zoomInButton = Button.plus(this);
+  late Button zoomOutButton = Button.minus(this);
+
   // Open/Close mini-map
   void miniMap({bool? enable}) {
     miniMapEnabled = enable ?? !miniMapEnabled;
@@ -511,16 +516,18 @@ class XeonjiaGame extends FlameGame
       overlays.remove('miniMapButton');
       overlays.remove('backpackButton');
       overlays.remove('rulesButton');
-      refreshWeaponButtons();
+      overlays.remove('virtualGamePad');
+      addAll([zoomInButton, zoomOutButton]);
       miniMapActive = true;
     } else {
       if (worldMapEnabled) worldMap(); // remove the world map
       updateCamera(playerOne!.x, playerOne!.y);
       overlays.remove('mapNameBox');
       overlays.remove('miniMapButton');
+      removeAll([zoomInButton, zoomOutButton]);
       overlays.add('backpackButton');
+      overlays.add('virtualGamePad');
       if (enemies > 0) overlays.add('rulesButton');
-      refreshWeaponButtons();
       _statusBox.state?.refresh();
       resume();
       miniMapActive = false;
@@ -578,11 +585,6 @@ class XeonjiaGame extends FlameGame
   // True if BackpackMenu or ShopMenu are open
   bool get isItemsMenuActive =>
       overlays.isActive('backpackMenu') || overlays.isActive('shop');
-
-  // Reload weapon buttons
-  void refreshWeaponButtons() {
-    _virtualGamePad.refresh();
-  }
 
   // Reload LP bar
   void refreshLifePointsBar() => _statusBox.state?.refresh();
@@ -696,6 +698,14 @@ class XeonjiaGame extends FlameGame
     var relativeTapY =
         position.dy - (playerOne!.y + componentSize / 2 - camera.position.y);
 
+    var buttonSize =
+        children.whereType<Button>().firstOrNull?.size ?? Vector2.zero();
+    if (position.dx >
+            canvasSize.x - 100 - buttonSize.x * (enemies > 0 ? 2 : 1) &&
+        position.dy >
+            canvasSize.y - 100 - buttonSize.y * (enemies > 0 ? 2 : 1)) {
+      return;
+    }
     if (position.dx < componentSize || position.dx > size.x - componentSize) {
       playerOne!.updateOrientation(
           GetDirection.fromXY(position.dx - componentSize, 0));
@@ -708,9 +718,6 @@ class XeonjiaGame extends FlameGame
           ? playerOne!.updateOrientation(GetDirection.fromXY(relativeTapX, 0))
           : playerOne!.updateOrientation(GetDirection.fromXY(0, relativeTapY));
     }
-
-    // Use weapon selected by player
-    playerOne!.shoot();
   }
 
   // Handle back button
