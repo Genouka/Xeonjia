@@ -23,6 +23,9 @@ class SlitherCpuComponent extends BasicComponent
   String? name = 'green';
 
   @override
+  double get speed => Walker.defaultSpeed * 1.5;
+
+  @override
   void lifePointsDifference(double difference,
       {BasicComponent? cause, double poison = 0}) {
     if (cause?.isPlayerOne ?? false) {
