@@ -57,7 +57,7 @@ abstract class Weapon {
 
   // Export / Import weapon details
   Map<String, dynamic> toJson() =>
-      {'id': id, 'lv': level, 'pp': powerPoints.isFinite ? powerPoints : null};
+      {'id': id, 'lv': level, 'pp': powerPoints.isFinite ? maxPp : null};
   static Weapon fromJson(Map<String, dynamic> json) =>
       (Weapon.fromId(json['id'], json['lv'])
         ..powerPoints = (json['pp'] ?? double.infinity));
