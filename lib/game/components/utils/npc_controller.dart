@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:flame/components.dart';
 import 'package:xeonjia/game/components/character.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
+import 'package:xeonjia/game/components/static.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/weapons.dart';
 
@@ -50,9 +53,13 @@ class NpcController extends Component {
     }
   }
 
-  // Move free without pattern
+  // Move freely without pattern
+  // (the code/logic will be improved sooner or later)
+  Direction? previousMove;
   void _freeMove() {
+    if (npc.gameRef.remainingMoves == 3) previousMove = null;
     bool near = false;
+    bool done = false;
     Direction newOrientation = npc.orientation;
 
     // Check if playerOne has the same x or y
@@ -65,35 +72,74 @@ class NpcController extends Component {
           npc.gameRef.playerOne!.x > npc.x ? Direction.right : Direction.left;
       near = true;
     }
-    if ((npc.hasPpForWeapon(Weapons.snowball.id) && near) ||
-        npc.componentInFront(newOrientation) == npc.gameRef.playerOne) {
+
+    // If npc can hit playerOne: shoot
+    if (npc.componentInFront(newOrientation) == npc.gameRef.playerOne ||
+        (npc.hasPpForWeapon(Weapons.snowball.id) && near)) {
       npc.updateOrientation(newOrientation);
-      npc.shoot(npc.hasPpForWeapon(Weapons.snowball.id)
+      // If npc has remained stationary in this turn move away else shoot
+      var weapon = npc.getWeaponById(npc.hasPpForWeapon(Weapons.snowball.id)
           ? Weapons.snowball.id
           : Weapons.punch.id);
-    } else {
-      if (!near) newOrientation = GetDirection.random;
-      if (npc.componentInFront(newOrientation)?.isSolid(otherComponent: npc) ??
-          false) {
-        newOrientation = npc.orientation.opposite;
-        if (npc
-                .componentInFront(newOrientation)
-                ?.isSolid(otherComponent: npc) ??
-            false) {
-          newOrientation = GetDirection.random;
-          if (npc
-                  .componentInFront(newOrientation)
-                  ?.isSolid(otherComponent: npc) ??
-              false) {
-            npc.gameRef.useMove();
+      if (!(npc.gameRef.remainingMoves == 1 &&
+          previousMove == null &&
+          npc.gameRef.playerOne!.lifePoints - weapon.atk > 0)) {
+        done = true;
+        npc.shoot(weapon.id);
+      }
+    }
+
+    // If npc still have to do its move: try to move
+    if (!done) {
+      var remainingDirections = Direction.values.toSet().difference({
+        if (previousMove != null) previousMove!.opposite,
+      }).toList();
+      if (!near) newOrientation = getCloserToPlayerOne(previousMove);
+      if (!remainingDirections.contains(newOrientation) ||
+          cantMoveInThisDirection(newOrientation)) {
+        remainingDirections.remove(newOrientation);
+        newOrientation = getCloserToPlayerOne(newOrientation);
+        if (!remainingDirections.contains(newOrientation) ||
+            cantMoveInThisDirection(newOrientation)) {
+          remainingDirections.remove(newOrientation);
+          newOrientation =
+              remainingDirections[Random().nextInt(remainingDirections.length)];
+          if (!remainingDirections.contains(newOrientation) ||
+              cantMoveInThisDirection(newOrientation)) {
+            remainingDirections.remove(newOrientation);
+            if (remainingDirections.isEmpty ||
+                cantMoveInThisDirection(remainingDirections.first)) {
+              npc.gameRef.useMove();
+            } else {
+              newOrientation = remainingDirections.first;
+            }
           }
         }
         npc.updateDirection(newOrientation, animated: false);
+        previousMove = newOrientation;
       } else {
         npc.updateDirection(newOrientation, animated: false);
+        previousMove = newOrientation;
       }
     }
     _timeToNextMove = _updatePeriod;
+  }
+
+  bool cantMoveInThisDirection(Direction direction) {
+    var component = npc.componentInFront(direction);
+    return (component?.isSolid(otherComponent: npc) ?? false) &&
+        !(component is StaticComponent && component.isFloor);
+  }
+
+  Direction getCloserToPlayerOne([Direction? directionAvoided]) {
+    if ([Direction.right, Direction.left].contains(directionAvoided) ||
+        Random().nextBool()) {
+      return npc.gameRef.playerOne!.y > npc.y ? Direction.down : Direction.up;
+    } else {
+      return npc.gameRef.playerOne!.x > npc.x
+          ? Direction.right
+          : Direction.left;
+    }
   }
 
   @override
