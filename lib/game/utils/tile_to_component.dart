@@ -3,7 +3,7 @@ import 'package:xeonjia/game/components/direction_changer.dart';
 import 'package:xeonjia/game/components/door.dart';
 import 'package:xeonjia/game/components/hurdle.dart';
 import 'package:xeonjia/game/components/modifer.dart';
-import 'package:xeonjia/game/components/slither_cpu.dart';
+import 'package:xeonjia/game/components/slider_cpu.dart';
 import 'package:xeonjia/game/components/static.dart';
 import 'package:xeonjia/game/components/thin_wall.dart';
 import 'package:xeonjia/game/models/tile.dart';
@@ -81,9 +81,9 @@ extension CreateComponent on Tile {
       case 'DirectionChanger':
         gameRef.add(DirectionChangerComponent(this));
         break;
-      case 'SlitherCpu':
+      case 'SliderCpu':
         if (!(gameRef.currentEventLog['${gameRef.map.id}-safe'] ?? false)) {
-          gameRef.add(SlitherCpuComponent(this));
+          gameRef.add(SliderCpuComponent(this));
         }
         break;
       default:
