@@ -286,7 +286,7 @@ mixin Walker on BasicComponent {
 
   @override
   void render(Canvas canvas) {
-    if (isMyTurn && gameRef.enemies > 0) {
+    if (isMyTurn && gameRef.enemies > 0 && !gameRef.miniMapEnabled) {
       canvas.drawOval(
           Rect.fromLTWH(0, size.y / 1.5, size.x, size.y / 2.35), _paint);
     }
