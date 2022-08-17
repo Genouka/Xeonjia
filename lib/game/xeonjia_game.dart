@@ -31,6 +31,7 @@ import 'package:xeonjia/game/widgets/boxes/map_name_box.dart';
 import 'package:xeonjia/game/widgets/boxes/remaining_moves_box.dart';
 import 'package:xeonjia/game/widgets/boxes/status_box.dart';
 import 'package:xeonjia/game/widgets/buttons/backpack_button.dart';
+import 'package:xeonjia/game/widgets/buttons/hide_hints_button.dart';
 import 'package:xeonjia/game/widgets/buttons/minimap_button.dart';
 import 'package:xeonjia/game/widgets/buttons/rules_button.dart';
 import 'package:xeonjia/game/widgets/buttons/world_map_button.dart';
@@ -143,6 +144,9 @@ class XeonjiaGame extends FlameGame
   // Current event log
   // It is synced with mainCharacter.eventLog while changing room
   late Map<String, dynamic> currentEventLog;
+
+  // If true: hide hints on the maps
+  bool hideHints = true;
 
   // List of non-friendly Walker components in game + playerOne
   List<Walker> players = [];
@@ -307,6 +311,7 @@ class XeonjiaGame extends FlameGame
       map = GameMap(fullId: config.mapId.toString());
       await importMap(this, 'assets/maps/arena/${config.mapId}.tmx');
     }
+    if (map.hasHints) add(HideHintsButton());
 
     _timer = Timer(1, repeat: true, onTick: () {
       if (isPaused) return;
@@ -701,6 +706,7 @@ class XeonjiaGame extends FlameGame
     var relativeTapY =
         position.dy - (playerOne!.y + componentSize / 2 - camera.position.y);
 
+    // Ignore tap near buttons (bottom right)
     var buttonSize =
         children.whereType<Button>().firstOrNull?.size ?? Vector2.zero();
     if (position.dx >
@@ -709,6 +715,14 @@ class XeonjiaGame extends FlameGame
             canvasSize.y - 100 - buttonSize.y * (enemies > 0 ? 2 : 1)) {
       return;
     }
+
+    // Ignore tap near buttons (top left)
+    var topLeftSize = children.whereType<HideHintsButton>().firstOrNull?.size ??
+        Vector2.zero();
+    if (position.dx < topLeftSize.x && position.dy < topLeftSize.y * 2 + 20) {
+      return;
+    }
+
     if (position.dx < componentSize || position.dx > size.x - componentSize) {
       playerOne!.updateOrientation(
           GetDirection.fromXY(position.dx - componentSize, 0));

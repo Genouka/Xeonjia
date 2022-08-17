@@ -8,6 +8,7 @@ class GameMap {
     this.music,
     this.disableMiniMap = false,
     this.canEscape = false,
+    this.hasHints = false,
   });
 
   // Map id
@@ -32,4 +33,7 @@ class GameMap {
 
   // True if playerOne can escape from this room without defeating every enemy
   bool canEscape;
+
+  // True if this map has hints (arrows on the ground)
+  bool hasHints;
 }

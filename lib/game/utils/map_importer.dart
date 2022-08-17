@@ -46,6 +46,10 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
           gameRef.map.canEscape =
               property.getAttributeNode('value')!.value == 'true';
           break;
+        case 'has-hints':
+          gameRef.map.hasHints =
+              property.getAttributeNode('value')!.value == 'true';
+          break;
       }
     }
   }
