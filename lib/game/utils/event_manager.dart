@@ -63,6 +63,12 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   });
   _('has-weapon', 1,
       (Cell? x) => gameRef.playerOne!.hasWeaponId(x!.car as int));
+  _('set-pp-snowballs', 1, (Cell? x) {
+    if (gameRef.playerOne!.hasWeaponId(1)) {
+      gameRef.playerOne!.getWeaponById(1).powerPoints = x!.car as double;
+    }
+    return #NONE;
+  });
   _('max-pp-snowballs', 0, (Cell? x) {
     if (!gameRef.playerOne!.hasWeaponId(1)) return false;
     var weapon = gameRef.playerOne!.getWeaponById(1);
