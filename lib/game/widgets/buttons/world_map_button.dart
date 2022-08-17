@@ -22,10 +22,10 @@ class WorldMapButton extends TextBoxComponent
   bool get disabled => !gameRef.miniMapEnabled || gameRef.enemies > 0;
 
   @override
-  Future<void> onLoad() {
+  void onMount() {
     textRenderer =
         TextPaint(style: Theme.of(gameRef.buildContext!).textTheme.button);
-    return super.onLoad();
+    return super.onMount();
   }
 
   @override
