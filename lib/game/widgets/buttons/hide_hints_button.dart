@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flame/components.dart';
 import 'package:flame/events.dart';
 import 'package:flutter/material.dart';
+import 'package:xeonjia/game/components/static.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
@@ -21,7 +22,8 @@ class HideHintsButton extends TextBoxComponent
 
   bool get disabled =>
       (gameRef.overlays.isActive('mapNameBox') && !gameRef.miniMapEnabled) ||
-      gameRef.worldMapEnabled;
+      gameRef.worldMapEnabled ||
+      gameRef.children.where((c) => c is StaticComponent && c.hideable).isEmpty;
 
   @override
   void onMount() {

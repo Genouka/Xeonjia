@@ -8,7 +8,7 @@ class StaticComponent extends BasicComponent {
   StaticComponent(tile, {bool walkable = false})
       : _slippery = (tile.properties['slippery'] ?? 'false') == 'true',
         _walkable = walkable,
-        _hideable = (tile.properties['hideable'] ?? 'false') == 'true',
+        hideable = (tile.properties['hideable'] ?? 'false') == 'true',
         super.fromTile(tile);
 
   // If true: other components slide on this
@@ -19,7 +19,7 @@ class StaticComponent extends BasicComponent {
   bool get isFloor => _walkable;
 
   // If true: this component can be hidden from UI buttons (used for hints)
-  final bool _hideable;
+  final bool hideable;
 
   @override
   Rect? collisionRect(Walker otherComponent) {
@@ -34,7 +34,7 @@ class StaticComponent extends BasicComponent {
 
   @override
   void render(Canvas canvas) {
-    if (_hideable && gameRef.hideHints) return;
+    if (hideable && gameRef.hideHints) return;
     super.render(canvas);
   }
 }
