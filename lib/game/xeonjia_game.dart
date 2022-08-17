@@ -605,7 +605,10 @@ class XeonjiaGame extends FlameGame
       'To attack use the "P" button. In this way you punch the enemy in front of you.'
           .i18n,
       if (playerOne!.hasWeaponId(Weapons.snowball.id))
-        '"Otherwise, throw snowballs with the "S" button in the direction you are looking at.'
+        'Otherwise, throw snowballs with the "S" button in the direction you are looking at.'
+            .i18n,
+      if (playerOne!.hasWeaponId(Weapons.snowball.id))
+        'If you run out of snowballs, get some snow from the snowdrifts around you.'
             .i18n,
       'Remember, enemies also have LPs. Hit them multiple times to knock them out!'
           .i18n,
