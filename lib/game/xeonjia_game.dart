@@ -216,10 +216,7 @@ class XeonjiaGame extends FlameGame
 
   @override
   void remove(Component component) {
-    if (isEnemy(component) && enemies == 0) {
-      overlays.remove('rulesButton');
-      add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
-    }
+    if (isEnemy(component) && enemies == 0) endBattle();
     super.remove(component);
   }
 
@@ -344,7 +341,6 @@ class XeonjiaGame extends FlameGame
 
   // Function called when playerOne is loaded
   void playerOneReady() {
-    executeAction(action: map.action, actor: playerOne!);
     overlays.remove('loading');
     overlays.add('virtualGamePad');
     add(Button.A(this));
@@ -352,20 +348,34 @@ class XeonjiaGame extends FlameGame
       overlays.add('miniMapButton');
       overlays.add('backpackButton');
     }
-    if (enemies > 0) {
-      overlays.add('rulesButton');
-      add(RemainingMovesBox());
-      add(Button.P(this));
-      if (playerOne!.hasWeaponId(1)) add(Button.S(this));
+    executeAction(action: map.action, actor: playerOne!);
+    if (enemies > 0 && !map.startBattle) {
       setMessage(
           Message(
               this,
               "There are %s enemies here! It' time to fight!"
                   .i18n
                   .fill([enemies])),
-          callback: () =>
-              add(BattleTextBox(size, 'Battle!'.i18n.toUpperCase())));
+          callback: startBattle);
     }
+  }
+
+  // Start battle and add HUDs
+  bool inBattle = false;
+  void startBattle() {
+    inBattle = true;
+    add(BattleTextBox(size, 'Battle!'.i18n.toUpperCase()));
+    add(Button.P(this));
+    if (playerOne!.hasWeaponId(1)) add(Button.S(this));
+    add(RemainingMovesBox());
+    overlays.add('rulesButton');
+  }
+
+  // Battle is over
+  void endBattle() {
+    inBattle = false;
+    overlays.remove('rulesButton');
+    add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
   }
 
   // Pause game

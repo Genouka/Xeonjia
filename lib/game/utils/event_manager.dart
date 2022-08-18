@@ -304,6 +304,11 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     gameRef.miniMap(enable: false);
     return #NONE;
   });
+  _('start-battle', 0, (Cell? x) {
+    // this procedure MUST be used if map.startBattle == true
+    gameRef.startBattle();
+    return #NONE;
+  });
   _('battle-rules', 0, (Cell? x) {
     gameRef.battleRules();
     return #NONE;

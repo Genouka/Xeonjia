@@ -50,6 +50,10 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
           gameRef.map.hasHints =
               property.getAttributeNode('value')!.value == 'true';
           break;
+        case 'start-battle':
+          gameRef.map.startBattle =
+              property.getAttributeNode('value')!.value == 'true';
+          break;
       }
     }
   }

@@ -9,6 +9,7 @@ class GameMap {
     this.disableMiniMap = false,
     this.canEscape = false,
     this.hasHints = false,
+    this.startBattle = false,
   });
 
   // Map id
@@ -36,4 +37,8 @@ class GameMap {
 
   // True if this map has hints (arrows on the ground)
   bool hasHints;
+
+  // True if game.startBattle() is called immediately
+  // If true, (start-battle) procedure must be used
+  bool startBattle;
 }
