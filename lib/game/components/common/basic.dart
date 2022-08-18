@@ -69,6 +69,7 @@ abstract class BasicComponent extends SpriteComponent
   }
 
   // Component unique ID
+  // PlayerOne has ID = -1
   final int? id;
 
   // Component's tile

@@ -24,6 +24,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
 
   // Return [actor, value] for Cells that have a default actor
   // e.g. (move 2) and (move '(0 93))
+  // PlayerOne always has id -1. So if it is not the default actor use: '(0 -1)
   List getActorAndValue(Cell? x) => (x!.car is Cell)
       ? [
           gameRef.getComponentFromId(((x.car as Cell).cdr as Cell).car as int),
