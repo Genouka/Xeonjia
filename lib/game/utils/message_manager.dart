@@ -32,6 +32,7 @@ class MessageManager {
     answers = [];
     gameRef.continueAction(delay: 0);
     callback?.call();
+    callback = null;
     if (hideMap) {
       hideMap = false;
       gameRef.playBackgroundMusic();
