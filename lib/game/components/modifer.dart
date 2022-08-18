@@ -80,6 +80,13 @@ class ModifierComponent extends BasicComponent {
       for (final weapon in componentAbove.weaponList) {
         weapon.powerPoints += _powerPointsDelta;
       }
+      if (componentAbove.isPlayerOne) {
+        if (_lifePointsDiff != 0 && componentAbove.isPlayerOne) {
+          gameRef.playerOne!.showText('+ ${_lifePointsDiff.round()} LPs');
+        } else if (_moneyDelta != 0 && componentAbove.isPlayerOne) {
+          gameRef.playerOne!.showText('+ $_moneyDelta ¤');
+        }
+      }
       if (_itemId != '0' &&
           componentAbove.isPlayerOne &&
           gameRef.config.mode == GameMode.story) {

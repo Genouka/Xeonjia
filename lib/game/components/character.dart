@@ -113,10 +113,8 @@ class CharacterComponent extends BasicComponent
   // Money earned by the player
   int _money = mainCharacter.money;
   int get money => _money;
-  void moneyDifference(int moneyDelta, {bool popup = true}) {
-    if (moneyDelta == 0) return;
-    _money += moneyDelta;
-    if (popup) showText('+ $moneyDelta ¤');
+  void moneyDifference(int moneyDelta) {
+    if (moneyDelta != 0) _money += moneyDelta;
   }
 
   // Total number of minutes played by the character in this game

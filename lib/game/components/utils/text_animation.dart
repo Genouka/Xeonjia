@@ -3,7 +3,7 @@ import 'package:xeonjia/game/components/common/basic.dart';
 
 // Show a text above the component for a few seconds
 mixin TextAnimation on BasicComponent {
-  final _seconds = 0.4;
+  final _seconds = 0.6;
   late double _remainingSeconds;
   bool get _show => _text != null;
   String? _text;
@@ -41,6 +41,6 @@ mixin TextAnimation on BasicComponent {
                 letterSpacing: 1.1,
                 fontWeight: FontWeight.w600)))
       ..layout()
-      ..paint(canvas, Offset(0, -55 * (0.2 + _seconds - _remainingSeconds)));
+      ..paint(canvas, Offset(0, -60 * (0.2 + _seconds - _remainingSeconds)));
   }
 }

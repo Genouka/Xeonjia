@@ -59,7 +59,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   _('get-def', 0, (Cell? x) => gameRef.playerOne!.def);
   _('increase-def', 1, (Cell? x) => gameRef.playerOne!.def += x!.car as num);
   _('set-money-diff', 1, (Cell? x) {
-    gameRef.playerOne!.moneyDifference(x!.car as int, popup: false);
+    gameRef.playerOne!.moneyDifference(x!.car as int);
     return #NONE;
   });
   _('has-weapon', 1,
