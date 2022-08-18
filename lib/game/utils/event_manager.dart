@@ -313,6 +313,15 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     gameRef.battleRules();
     return #NONE;
   });
+  _('animate', 2, (Cell? x) {
+    var actorAndValue = getActorAndValue(x!.cdr as Cell);
+    Walker actor = actorAndValue[0];
+    int direction = actorAndValue[1];
+    String animation = x.car as String;
+    actor.animation =
+        actor.atlas.getAnimation('${actor.name}-$direction-$animation');
+    return #NONE;
+  });
   _(
     'get',
     1,
