@@ -353,9 +353,10 @@ class XeonjiaGame extends FlameGame
       setMessage(
           Message(
               this,
-              "There are %s enemies here! It' time to fight!"
-                  .i18n
-                  .fill([enemies])),
+              (enemies == 1
+                      ? 'There is one enemy here!'.i18n
+                      : 'There are %s enemies here!'.i18n.fill([enemies])) +
+                  "It' time to fight!".i18n),
           callback: startBattle);
     }
   }
@@ -629,7 +630,7 @@ class XeonjiaGame extends FlameGame
           .i18n,
       'And if you have few LPs take advantage of a move you have available to eat or drink something you have in your backpack!'
           .i18n,
-      'Good luck!'.i18n,
+      "That's all. Good luck!".i18n,
     ];
     setMessages([
       for (final string in texts)
