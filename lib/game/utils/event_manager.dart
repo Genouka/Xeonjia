@@ -66,7 +66,8 @@ Environment setEnvironment(XeonjiaGame gameRef) {
       (Cell? x) => gameRef.playerOne!.hasWeaponId(x!.car as int));
   _('set-pp-snowballs', 1, (Cell? x) {
     if (gameRef.playerOne!.hasWeaponId(1)) {
-      gameRef.playerOne!.getWeaponById(1).powerPoints = x!.car as double;
+      gameRef.playerOne!.getWeaponById(1).powerPoints =
+          (x!.car as num).toDouble();
     }
     return #NONE;
   });
@@ -298,10 +299,15 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     gameRef.overlays.remove(x!.car as String);
     return #NONE;
   });
-  _('teleport', 2, (Cell? x) {
-    gameRef.changeRoom(x!.car as String, enterNextRoom: x.cdr.car);
+  _('teleport', 1, (Cell? x) {
+    gameRef.changeRoom(x!.car as String);
     gameRef.worldMap(enable: false);
     gameRef.miniMap(enable: false);
+    return #NONE;
+  });
+  _('add-room', 1, (Cell? x) {
+    // MUST be followed by (teleport "id") where id != x.car
+    mainCharacter.visitedRooms.add(x!.car as String);
     return #NONE;
   });
   _('start-battle', 0, (Cell? x) {
