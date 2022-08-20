@@ -42,6 +42,10 @@ mixin Walker on BasicComponent {
   // Map orientation : sprite
   final _sprites = <Direction, Sprite>{};
 
+  // NPC features: If friendly it doesn't shoot. If quiet it doesn't move.
+  late bool friendly;
+  late bool quiet;
+
   @override
   Future<void>? onLoad() {
     if (atlasAsset == null) {

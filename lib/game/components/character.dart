@@ -11,6 +11,7 @@ import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/game/utils/weapons.dart';
+import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/game_properties.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
@@ -132,10 +133,6 @@ class CharacterComponent extends BasicComponent
 
   // Initial orientation
   late Direction _initialOrientation;
-
-  // NPC features: If friendly it doesn't shoot. If quiet it doesn't move.
-  late bool friendly;
-  late bool quiet;
 
   @override
   late double maxLifePoints;
