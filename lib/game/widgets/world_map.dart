@@ -16,7 +16,9 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
     priority = 9999;
     sprite = Sprite(Flame.images.fromCache('map.png'));
     addAll(worldData
-        .where((m) => !m.hidden && mainCharacter.visitedRooms.contains(m.id))
+        .where((m) =>
+            !m.hidden &&
+            mainCharacter.visitedRooms.any((e) => e.split('/').first == m.id))
         .map(_RectangleMap.new));
     return super.onLoad();
   }
