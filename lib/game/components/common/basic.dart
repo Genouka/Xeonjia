@@ -288,7 +288,7 @@ abstract class BasicComponent extends SpriteComponent
   // Reset life points
   void restoreLifePoints() {
     _lifePoints = maxLifePoints;
-    if (isPlayerOne) gameRef.refreshLifePointsBar();
+    // if (isPlayerOne) gameRef.refreshLifePointsBar();
   }
 
   @override
@@ -343,7 +343,7 @@ abstract class BasicComponent extends SpriteComponent
 
   // Respawn component
   @mustCallSuper
-  void respawn() {
+  void respawn(XeonjiaGame gameRef) {
     deleted = false;
     isBeingDeleted = false;
     restoreLifePoints();

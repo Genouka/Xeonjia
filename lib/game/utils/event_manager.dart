@@ -162,7 +162,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     return #NONE;
   });
   _('respawn', 1, (Cell? x) {
-    gameRef.getDeletedComponentFromId(x!.car as int).respawn();
+    gameRef.getDeletedComponentFromId(x!.car as int).respawn(gameRef);
     return #NONE;
   });
   _('leave', 0, (Cell? x) {

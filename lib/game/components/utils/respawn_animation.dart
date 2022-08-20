@@ -10,7 +10,7 @@ mixin RespawnAnimation on Walker {
   // Start respawn animation
   void respawnAnimation() {
     isBeingDeleted = true;
-    timer = TimerComponent(period: 1, onTick: respawn);
+    timer = TimerComponent(period: 1, onTick: () => respawn(gameRef));
     gameRef.add(timer);
   }
 

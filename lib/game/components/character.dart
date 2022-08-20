@@ -214,8 +214,8 @@ class CharacterComponent extends BasicComponent
   }
 
   @override
-  void respawn() {
-    super.respawn();
+  void respawn(XeonjiaGame gameRef) {
+    super.respawn(gameRef);
     for (final weapon in weaponList) {
       weapon.restorePp();
     }
