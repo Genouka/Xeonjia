@@ -19,7 +19,10 @@ class WorldMapButton extends TextBoxComponent
     'Open world map'.i18n.toUpperCase(),
   ];
 
-  bool get disabled => !gameRef.miniMapEnabled || gameRef.enemies > 0;
+  bool get disabled =>
+      !gameRef.miniMapEnabled ||
+      gameRef.enemies > 0 ||
+      gameRef.map.disableWorldMap;
 
   @override
   void onMount() {

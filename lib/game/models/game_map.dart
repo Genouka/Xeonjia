@@ -7,6 +7,7 @@ class GameMap {
     this.action,
     this.music,
     this.disableMiniMap = false,
+    this.disableWorldMap = false,
     this.canEscape = false,
     this.hasHints = false,
     this.startBattle = true,
@@ -31,6 +32,9 @@ class GameMap {
 
   // Disable/Enable mini-map (enabled by default)
   bool disableMiniMap;
+
+  // Disable/Enable world-map (enabled by default)
+  bool disableWorldMap;
 
   // True if playerOne can escape from this room without defeating every enemy
   bool canEscape;

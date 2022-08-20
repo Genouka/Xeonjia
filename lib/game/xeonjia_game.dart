@@ -408,7 +408,9 @@ class XeonjiaGame extends FlameGame
     pause(stopEngine: false, stopMusic: false);
     environment.defineSymbol(
         Sym('self'), Intrinsic('self', 0, (Cell? x) => self!));
-    environment.defineSymbol(Sym('actor'), actor ?? playerOne!);
+    if (playerOne != null) {
+      environment.defineSymbol(Sym('actor'), actor ?? playerOne!);
+    }
     _actionContinuation =
         evaluate(readFromTokens(splitStringIntoTokens(action!)), environment);
   }
@@ -463,7 +465,7 @@ class XeonjiaGame extends FlameGame
   }
 
   // Save match data and load the new room
-  void changeRoom(String nextRoomId, {bool enterNextRoom = true}) {
+  void changeRoom(String nextRoomId) {
     pause(stopMusic: false);
     if (enemies == 0) currentEventLog['${map.id}-safe'] = true;
 
@@ -483,7 +485,7 @@ class XeonjiaGame extends FlameGame
     saveUserData();
 
     // Load the next room
-    if (enterNextRoom) start();
+    start();
   }
 
   // Regenerate regenerable modifiers
