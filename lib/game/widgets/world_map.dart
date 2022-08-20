@@ -74,7 +74,17 @@ class _RectangleMap extends PositionComponent
     }
     if (map.text != null) gameRef.setMessage(Message(gameRef, map.text!));
     // i18n: "Do you want to come back to this place?".i18n
-    // i18n: "* {{hero}} has arrived here *".i18n
+    // i18n: "* {{hero}} arrived here *".i18n
+    // i18n: "* After a long journey, {{hero}} arrived here *".i18n
+    // i18n: "* After a very long journey, {{hero}} arrived here *".i18n
+    var distance =
+        (parent as WorldMap)._currentMapPosition!.distanceTo(position) /
+            (parent as WorldMap).size.x;
+    var text = distance < 0.2
+        ? '* {{hero}} arrived here *'
+        : (distance < 0.3
+            ? '* After a long journey, {{hero}} arrived here *'
+            : '* After a very long journey, {{hero}} arrived here *');
     gameRef.executeAction(action: '''
 (begin
     (dialog '(("Do you want to come back to this place?")))
@@ -83,7 +93,7 @@ class _RectangleMap extends PositionComponent
     (wait)
     (if (get id)
         (begin
-            (dialog '(("* After a long journey, {{hero}} arrived here *")))
+            (dialog '(("$text")))
             (teleport "${map.id}"))))''');
     return true;
   }
