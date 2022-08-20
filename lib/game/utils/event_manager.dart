@@ -180,6 +180,17 @@ Environment setEnvironment(XeonjiaGame gameRef) {
             gameRef, gameRef.getComponentFromId(x!.car as int)?.delete));
     return #NONE;
   });
+  _('leave-all', 1, (Cell? x) {
+    gameRef.addCustomWidgetOverlay(
+        'blackCurtain',
+        BlackCurtain(gameRef, () {
+          var it = (x!.car as Cell).iterator;
+          while (it.moveNext()) {
+            gameRef.getComponentFromId(it.current as int)?.delete();
+          }
+        }));
+    return #NONE;
+  });
   _('is-friendly', 1, (Cell? x) {
     return (gameRef.getComponentFromId(x!.car as int) as CharacterComponent)
         .friendly;
