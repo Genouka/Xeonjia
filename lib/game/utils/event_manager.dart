@@ -319,7 +319,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     return #NONE;
   });
   _('teleport', 1, (Cell? x) {
-    gameRef.changeRoom(x!.car as String);
+    gameRef.changeRoom((x!.car as String) + '/teleport');
     gameRef.worldMap(enable: false);
     gameRef.miniMap(enable: false);
     return #NONE;
