@@ -167,7 +167,7 @@ class CharacterComponent extends BasicComponent
             gameRef,
             '* {{hero}} puts %s in the backpack. *'
                 .i18n
-                .fill(['the gem'.i18n.toUpperCase()])));
+                .fill(['the gem'.i18n])));
       }
       gameRef.playSound(Sfx.item);
     }

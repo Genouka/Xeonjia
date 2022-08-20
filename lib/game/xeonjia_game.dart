@@ -359,6 +359,7 @@ class XeonjiaGame extends FlameGame
               (enemies == 1
                       ? 'There is one enemy here!'.i18n
                       : 'There are %s enemies here!'.i18n.fill([enemies])) +
+                  ' ' +
                   "It' time to fight!".i18n),
           callback: startBattle);
     }
