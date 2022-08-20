@@ -9,7 +9,7 @@ class GameMap {
     this.disableMiniMap = false,
     this.canEscape = false,
     this.hasHints = false,
-    this.startBattle = false,
+    this.startBattle = true,
   });
 
   // Map id
@@ -39,6 +39,6 @@ class GameMap {
   bool hasHints;
 
   // True if game.startBattle() is called immediately
-  // If true, (start-battle) procedure must be used
+  // If false, (start-battle) procedure must be used
   bool startBattle;
 }

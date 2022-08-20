@@ -352,7 +352,7 @@ class XeonjiaGame extends FlameGame
       overlays.add('backpackButton');
     }
     executeAction(action: map.action, actor: playerOne!);
-    if (enemies > 0 && !map.startBattle) {
+    if (enemies > 0 && map.startBattle) {
       setMessage(
           Message(
               this,
