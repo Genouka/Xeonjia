@@ -408,9 +408,8 @@ class XeonjiaGame extends FlameGame
     pause(stopEngine: false, stopMusic: false);
     environment.defineSymbol(
         Sym('self'), Intrinsic('self', 0, (Cell? x) => self!));
-    if (playerOne != null) {
-      environment.defineSymbol(Sym('actor'), actor ?? playerOne!);
-    }
+    environment.defineSymbol(
+        Sym('actor'), Intrinsic('actor', 0, (Cell? x) => actor ?? playerOne!));
     _actionContinuation =
         evaluate(readFromTokens(splitStringIntoTokens(action!)), environment);
   }

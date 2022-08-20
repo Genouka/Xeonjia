@@ -30,7 +30,11 @@ Environment setEnvironment(XeonjiaGame gameRef) {
           gameRef.getComponentFromId(((x.car as Cell).cdr as Cell).car as int),
           (x.car as Cell).car
         ]
-      : [env.lookForValue(Sym('actor')), x.car];
+      : [
+          (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
+              as BasicComponent,
+          x.car
+        ];
 
   // Game procedures
   _('define-symbol', 2, (Cell? x) {
@@ -95,10 +99,6 @@ Environment setEnvironment(XeonjiaGame gameRef) {
               mainCharacter.visitedRooms.last.split('/').first;
         }).length ==
         1;
-  });
-  _('set-team', 1, (Cell? x) {
-    gameRef.playerOne?.maxLifePoints += x!.car as double;
-    return #NONE;
   });
   _('set-team', 1, (Cell? x) {
     var actorAndValue = getActorAndValue(x);
@@ -251,9 +251,11 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     while (it.moveNext()) {
       gameRef.setMessage((it.current as Cell).length == 1
           ? Message(gameRef, (it.current as Cell).car as String,
-              component: env.lookForValue(Sym('actor')) as BasicComponent)
+              component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
+                  as BasicComponent)
           : Message(gameRef, (it.current as Cell).cdr.car,
-              component: env.lookForValue(Sym('actor')) as BasicComponent,
+              component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
+                  as BasicComponent,
               author: (it.current as Cell).car as String));
     }
     return #NONE;
@@ -263,12 +265,14 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     while (it.moveNext()) {
       gameRef.setMessage((it.current as Cell).length == 1
           ? Message(gameRef, (it.current as Cell).car as String,
-              component: env.lookForValue(Sym('actor')) as BasicComponent,
+              component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
+                  as BasicComponent,
               font: 'kobi')
           : Message(
               gameRef,
               (it.current as Cell).cdr.car,
-              component: env.lookForValue(Sym('actor')) as BasicComponent,
+              component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
+                  as BasicComponent,
               author: (it.current as Cell).car as String,
               font: 'kobi',
             ));
