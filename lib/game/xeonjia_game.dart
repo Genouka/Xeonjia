@@ -165,7 +165,8 @@ class XeonjiaGame extends FlameGame
   late int remainingMoves;
 
   // Increase the move counter during a battle
-  void useMove() {
+  void useMove(Walker component) {
+    if (!(component.isMyTurn && inBattle)) return;
     if (--remainingMoves <= 0) {
       remainingMoves = 3;
       if (++_activePlayerIndex >= players.length) _activePlayerIndex = 0;
@@ -177,6 +178,7 @@ class XeonjiaGame extends FlameGame
               onTick: () {
                 _activePlayerIndex = i;
                 changingTurn = false;
+                if (!inBattle) return;
                 updateCamera(
                     activePlayer!.position.x, activePlayer!.position.y);
                 if (playerOne!.isMyTurn) {
@@ -216,7 +218,7 @@ class XeonjiaGame extends FlameGame
 
   @override
   void remove(Component component) {
-    if (isEnemy(component) && enemies == 0) endBattle();
+    if (isEnemy(component) && enemies == 0 && inBattle) endBattle();
     super.remove(component);
   }
 
@@ -280,6 +282,7 @@ class XeonjiaGame extends FlameGame
     elapsedSeconds = 0;
     remainingMoves = 3;
     changingTurn = false;
+    inBattle = false;
 
     // Remove previous components
     // They are removed during the next update()

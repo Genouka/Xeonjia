@@ -136,9 +136,7 @@ mixin Walker on BasicComponent {
       for (final e in collidedComponents) {
         onCollision(e, wasStationary);
       }
-      if (!wasStationary && (gameRef.isEnemy(this) || isPlayerOne)) {
-        gameRef.useMove();
-      }
+      hasMoved();
     } else {
       // This component did not collide with another one
       x = candidatePosition.left;
@@ -147,14 +145,21 @@ mixin Walker on BasicComponent {
         overlappedComponent.overlappedBy(this);
       }
     }
-    hasMoved();
+    isMoving();
     wasStationary = false;
+  }
+
+  // Function called if the component is moving
+  void isMoving() {
+    if ((isMyTurn && gameRef.inBattle) || this == gameRef.playerOne) {
+      gameRef.updateCamera(x, y);
+    }
   }
 
   // Function called if the component moved
   void hasMoved() {
-    if ((isMyTurn && gameRef.enemies > 0) || this == gameRef.playerOne) {
-      gameRef.updateCamera(x, y);
+    if (!wasStationary && (gameRef.isEnemy(this) || isPlayerOne)) {
+      gameRef.useMove(this);
     }
   }
 
@@ -268,7 +273,7 @@ mixin Walker on BasicComponent {
       selectedWeapon.shoot(shooter: this);
     }
     if (selectedWeapon.maxPp == double.infinity ||
-        selectedWeapon.powerPoints != previousPP) gameRef.useMove();
+        selectedWeapon.powerPoints != previousPP) gameRef.useMove(this);
   }
 
   // Check if it is this component's turn during a battle

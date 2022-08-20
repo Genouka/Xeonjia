@@ -109,7 +109,7 @@ class NpcController extends Component {
             remainingDirections.remove(newOrientation);
             if (remainingDirections.isEmpty ||
                 cantMoveInThisDirection(remainingDirections.first)) {
-              npc.gameRef.useMove();
+              npc.gameRef.useMove(npc);
             } else {
               newOrientation = remainingDirections.first;
             }

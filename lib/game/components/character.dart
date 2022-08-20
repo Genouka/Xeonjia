@@ -151,7 +151,7 @@ class CharacterComponent extends BasicComponent
     if (gameRef.isNotPaused && isStationary && !isBeingDeleted && isMyTurn) {
       BasicComponent? component = componentInFront();
       component?.playAction(orientation);
-      if (component?.action != null) gameRef.useMove();
+      if (component?.action != null) gameRef.useMove(this);
     }
   }
 
@@ -180,7 +180,7 @@ class CharacterComponent extends BasicComponent
   void removeItem(String itemId, {bool used = true}) {
     _itemList.remove(itemId);
     if (isPlayerOne) {
-      if (used) gameRef.useMove();
+      if (used) gameRef.useMove(this);
       gameRef.setMessage(Message(
           gameRef,
           used
