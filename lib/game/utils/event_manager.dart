@@ -105,6 +105,10 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     actorAndValue[0].teamId = actorAndValue[1];
     return #NONE;
   });
+  _('add-to-players', 1, (Cell? x) {
+    gameRef.players.add(gameRef.getComponentFromId(x!.car as int) as Walker);
+    return #NONE;
+  });
   _('place', 3, (Cell? x) {
     BasicComponent c = gameRef.getComponentFromId(x!.car as int) ??
         (env.lookForValue(Sym('self')) as Intrinsic).fun!(x) as BasicComponent;
