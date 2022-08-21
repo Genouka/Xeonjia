@@ -43,8 +43,8 @@ mixin Walker on BasicComponent {
   final _sprites = <Direction, Sprite>{};
 
   // NPC features: If friendly it doesn't shoot. If quiet it doesn't move.
-  late bool friendly;
-  late bool quiet;
+  bool friendly = true;
+  bool quiet = true;
 
   @override
   Future<void>? onLoad() {

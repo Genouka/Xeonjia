@@ -10,6 +10,8 @@ class SliderCpuComponent extends BasicComponent
     with Walker, RenderOffset, LifePointsBar {
   SliderCpuComponent(tile) : super.fromTile(tile) {
     weaponList = [PunchWeapon(level: level)];
+    friendly = false;
+    quiet = false;
     add(NpcController());
   }
 
