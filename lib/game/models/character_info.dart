@@ -26,6 +26,10 @@ class CharacterInfo {
     for (final weapon in jsonWeaponList) {
       weaponList.add(Weapon.fromJson(weapon));
     }
+    // Migrate from app version < 2.2.0
+    if (visitedRooms.contains('2')) eventLog['001-talk-neighbor'] = true;
+    if (visitedRooms.contains('12')) eventLog['013-rules'] = true;
+    if (visitedRooms.contains('26')) eventLog['025-henchmen'] = true;
   }
 
   // Name of the character
