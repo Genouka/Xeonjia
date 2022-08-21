@@ -17,7 +17,7 @@ class RulesButton extends StatelessWidget {
                 !gameRef.playerOne!.isStationary ||
                 !gameRef.playerOne!.isMyTurn
             ? null
-            : gameRef.battleRules(),
+            : gameRef.battleRules(askForConfirmation: true),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
           height: 34,

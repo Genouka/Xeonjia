@@ -611,7 +611,20 @@ class XeonjiaGame extends FlameGame
   void refreshLifePointsBar() => _statusBox.state?.refresh();
 
   // Explain battles
-  void battleRules() {
+  void battleRules({bool askForConfirmation = false}) {
+    if (askForConfirmation) {
+      // i18n: "Do you want to reread the explanation of how to fight?".i18n
+      executeAction(action: '''
+          (begin
+            (dialog '(("Do you want to reread the explanation of how to fight?")))
+            (define id "generic-question")
+            (answer id '(("Yes" . #t) ("No" . #f)))
+            (wait)
+            (if (get id)
+              (battle-rules)))''');
+      return;
+    }
+
     // i18n: '* {{hero}} consults "The Manual of the Perfect Hero" *'.i18n
     setMessage(Message(
         this, '* {{hero}} consults the "Manual of the Perfect Hero" *'));
