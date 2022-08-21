@@ -10,8 +10,8 @@ class CharacterInfo {
         eventLog = jsonDecode(json['eventLog'] ?? '{}'),
         atk = json['atk'] ?? 1,
         def = 0, // forced to zero (note that old players had json['def'] = 3)
-        maxLifePoints = json['maxLifePoints'] ?? 100,
-        currentLifePoints = json['currentLifePoints'] ?? 0,
+        maxHP = json['maxHP'] ?? 100,
+        currentHP = json['currentHP'] ?? 0,
         poisonQuantity = json['poisonQuantity'] ?? 0,
         money = json['money'] ?? 0,
         itemList = (json['itemList'] ?? []).cast<String>(),
@@ -38,10 +38,10 @@ class CharacterInfo {
   // Player stats
   double atk;
   double def;
-  double maxLifePoints;
+  double maxHP;
 
   // Player current status
-  double currentLifePoints;
+  double currentHP;
   double poisonQuantity;
 
   // Store story events (eg. things done, info acquired)
@@ -81,8 +81,8 @@ class CharacterInfo {
       'name': name,
       'atk': atk,
       'def': def,
-      'maxLifePoints': maxLifePoints,
-      'currentLifePoints': currentLifePoints,
+      'maxHP': maxHP,
+      'currentHP': currentHP,
       'poisonQuantity': poisonQuantity,
       'money': money,
       'weaponList': jsonEncode(weaponList.fold(

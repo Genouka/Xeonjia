@@ -1,6 +1,6 @@
 import 'package:xeonjia/game/components/common/basic.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
-import 'package:xeonjia/game/components/utils/lifepoints_bar.dart';
+import 'package:xeonjia/game/components/utils/hp_bar.dart';
 import 'package:xeonjia/game/components/utils/npc_controller.dart';
 import 'package:xeonjia/game/components/utils/render_offset.dart';
 import 'package:xeonjia/game/components/utils/respawn_animation.dart';
@@ -18,20 +18,20 @@ import 'package:xeonjia/utils/local_data_controller.dart';
 
 // Dynamic component used for human-like players
 class CharacterComponent extends BasicComponent
-    with Walker, RenderOffset, LifePointsBar, RespawnAnimation, TextAnimation {
+    with Walker, RenderOffset, HPBar, RespawnAnimation, TextAnimation {
   CharacterComponent(
     this.tile,
     MatchConfig matchConfig, {
     int level = 0,
-    double? initialLP,
+    double? initialHP,
     List<Weapon>? inputWeaponList,
     int newSelectedWeaponIndex = 0,
     team = 0,
   }) : super(tile.id, tile.position!, tile.properties) {
     bool isPlayerOne = tile.properties['isPlayerOne'] ?? false;
-    maxLifePoints = initialLP ??
+    maxHP = initialHP ??
         ((isPlayerOne && matchConfig.mode == GameMode.story)
-            ? mainCharacter.maxLifePoints
+            ? mainCharacter.maxHP
             : (100 + 5 * level).toDouble());
     updateOrientation(
         GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0')));
@@ -72,7 +72,7 @@ class CharacterComponent extends BasicComponent
       : this(
           tile,
           matchConfig,
-          initialLP: double.parse(tile.properties['lp'] ?? 'Infinity'),
+          initialHP: double.parse(tile.properties['hp'] ?? 'Infinity'),
           team: int.parse(tile.properties['team'] ?? '0'),
           inputWeaponList: [
             SnowBallWeapon(
@@ -87,12 +87,11 @@ class CharacterComponent extends BasicComponent
     super.onLoad();
     if (tile.properties['isPlayerOne'] ?? false) {
       setStatus(
-          mainCharacter.currentLifePoints <= 0 ||
-                  gameRef.config.mode != GameMode.story
-              ? maxLifePoints
-              : mainCharacter.currentLifePoints,
+          mainCharacter.currentHP <= 0 || gameRef.config.mode != GameMode.story
+              ? maxHP
+              : mainCharacter.currentHP,
           mainCharacter.poisonQuantity);
-      gameRef.refreshLifePointsBar();
+      gameRef.refreshHPBar();
       if (gameRef.isLoaded) gameRef.updateCamera(x, y);
       if (gameRef.config.mode == GameMode.story) {
         _itemList = List.from(mainCharacter.itemList);
@@ -135,7 +134,7 @@ class CharacterComponent extends BasicComponent
   late Direction _initialOrientation;
 
   @override
-  late double maxLifePoints;
+  late double maxHP;
 
   @override
   void playAction(Direction orientation) {

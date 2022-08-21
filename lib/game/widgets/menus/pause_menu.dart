@@ -109,10 +109,11 @@ class _PauseMenuState extends State<PauseMenu> {
     ];
     switch (pauseMode!) {
       case PauseMode.pause:
-        text = 'lifepoints: %s'.i18n.fill(
-                [widget.gameRef.playerOne!.lifePoints.round().toString()]) +
+        text = 'HP: %s'
+                .i18n
+                .fill([widget.gameRef.playerOne!.hp.round().toString()]) +
             (widget.gameRef.config.mode == GameMode.story
-                ? ('\n' + // 'level: %s'.i18n
+                ? ('\n' +
                     'money: %s ¤'.i18n.fill([widget.gameRef.playerOne!.money]) +
                     '\n' +
                     'gems: %s'.i18n.fill([widget.gameRef.playerOne!.gemCount]) +

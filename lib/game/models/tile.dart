@@ -28,7 +28,7 @@ class Tile {
   String? tiledClass;
 
   // List of tile properties
-  // Properties define component features and stats (eg: atk, def, lifePoints)
+  // Properties define component features and stats (eg: atk, def, hp)
   late Map<String, dynamic> properties;
 
   // Component sprite

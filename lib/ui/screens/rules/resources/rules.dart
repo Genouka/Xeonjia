@@ -26,9 +26,9 @@ List<Rule> rules() => [
         icon: Icons.games,
       ),
       Rule(
-        title: 'Lifepoints'.i18n,
+        title: 'Health Points'.i18n,
         subtitle:
-            'Pay attention to your lifepoints!\nMany enemies, pitfalls and dangers will try to hurt you.'
+            'Pay attention to your HP!\nMany enemies, pitfalls and dangers will try to hurt you.'
                 .i18n,
         icon: Icons.favorite_border,
       ),
@@ -42,7 +42,7 @@ List<Rule> rules() => [
       Rule(
         title: 'Enemies'.i18n,
         subtitle:
-            'Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have life points too.'
+            'Be careful, the world is full of dangerous enemies ready to attack you!\nHit them several times to defeat them; they have health points too.'
                 .i18n,
         icon: Icons.adjust,
       ),

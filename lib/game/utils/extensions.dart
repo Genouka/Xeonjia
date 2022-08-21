@@ -28,9 +28,9 @@ extension Round16 on double {
   double get round16 => this % 16 == 0 ? this : (floor() + 16 & ~15).toDouble();
 }
 
-// Red / Yellow / Green based on life points
+// Red / Yellow / Green based on health points
 extension MyColors on Colors {
-  static Color lifePointsColor(double percentage) {
+  static Color healthPointsColor(double percentage) {
     if (percentage > 2 / 3) return Colors.green;
     return (percentage > 1 / 3) ? Colors.orange : Colors.red;
   }

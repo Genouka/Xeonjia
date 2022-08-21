@@ -83,7 +83,7 @@ class NpcController extends Component {
           : Weapons.punch.id);
       if (!(npc.gameRef.remainingMoves == 1 &&
           previousMove == null &&
-          npc.gameRef.playerOne!.lifePoints - weapon.atk > 0)) {
+          npc.gameRef.playerOne!.hp - weapon.atk > 0)) {
         done = true;
         npc.shoot(weapon.id);
       }

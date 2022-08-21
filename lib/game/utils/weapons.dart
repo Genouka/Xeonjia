@@ -78,7 +78,7 @@ class PunchWeapon extends Weapon {
   @override
   void shoot({required Walker shooter}) {
     var componentInFront = shooter.componentInFront();
-    componentInFront?.lifePointsDifference(-atk, cause: shooter);
+    componentInFront?.hpDifference(-atk, cause: shooter);
     shooter.animation = shooter.atlas
         .getAnimation('${shooter.name}-${shooter.orientation.index}-punching');
     if (shooter.isPlayerOne) shooter.gameRef.playSound(Sfx.punch);

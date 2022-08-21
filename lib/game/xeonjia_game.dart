@@ -125,7 +125,7 @@ class XeonjiaGame extends FlameGame
   late DialogBox dialogBox;
   late MessageManager messageManager;
 
-  // Box with lifePoints, pause, time and team points
+  // Box with HP, pause, time and team points
   late StatusBox _statusBox;
 
   // Timer used in multiplayer mode
@@ -470,8 +470,8 @@ class XeonjiaGame extends FlameGame
 
     // Save new player data into mainCharacter
     mainCharacter.def = playerOne!.def;
-    mainCharacter.maxLifePoints = playerOne!.maxLifePoints;
-    mainCharacter.currentLifePoints = playerOne!.lifePoints;
+    mainCharacter.maxHP = playerOne!.maxHP;
+    mainCharacter.currentHP = playerOne!.hp;
     mainCharacter.money = playerOne!.money;
     mainCharacter.defeatedComponents += playerOne!.defeatedEnemies;
     mainCharacter.minutesPlayed += elapsedSeconds / 60;
@@ -607,8 +607,8 @@ class XeonjiaGame extends FlameGame
   bool get isItemsMenuActive =>
       overlays.isActive('backpackMenu') || overlays.isActive('shop');
 
-  // Reload LP bar
-  void refreshLifePointsBar() => _statusBox.state?.refresh();
+  // Reload HP bar
+  void refreshHPBar() => _statusBox.state?.refresh();
 
   // Explain battles
   void battleRules({bool askForConfirmation = false}) {
@@ -644,9 +644,9 @@ class XeonjiaGame extends FlameGame
       if (playerOne!.hasWeaponId(Weapons.snowball.id))
         'If you run out of snowballs, get some snow from the snowdrifts around you.'
             .i18n,
-      'Remember, enemies also have LPs. Hit them multiple times to knock them out!'
+      'Remember, enemies also have HP. Hit them multiple times to knock them out!'
           .i18n,
-      'And if you have few LPs take advantage of a move you have available to eat or drink something you have in your backpack!'
+      'And if you have few HP take advantage of a move you have available to eat or drink something you have in your backpack!'
           .i18n,
       "That's all. Good luck!".i18n,
     ];
@@ -673,13 +673,13 @@ class XeonjiaGame extends FlameGame
       mainCharacter.minutesPlayed += elapsedSeconds / 60;
       mainCharacter.movesCounter += playerOne!.movesCounter;
       ++mainCharacter.defeatsCounter;
-      mainCharacter.currentLifePoints = playerOne!.maxLifePoints;
+      mainCharacter.currentHP = playerOne!.maxHP;
       lostMoney = mainCharacter.visitedRooms.toSet().length;
       mainCharacter.money -= lostMoney;
       if (mainCharacter.money < 0) mainCharacter.money = 0;
       saveUserData();
     }
-    refreshLifePointsBar();
+    refreshHPBar();
     addCustomWidgetOverlay('endMenu', EndMenu(this, lostMoney ?? 0));
   }
 

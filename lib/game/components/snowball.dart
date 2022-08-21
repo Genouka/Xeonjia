@@ -59,7 +59,7 @@ class SnowballComponent extends BasicComponent with Walker {
     animation = atlas.getAnimation('${name}_explosion')..onComplete = delete;
     if (gameRef.config.friendlyFire ||
         collidedComponent?.teamId != father!.teamId) {
-      collidedComponent?.lifePointsDifference(-atk, cause: father);
+      collidedComponent?.hpDifference(-atk, cause: father);
     }
   }
 }

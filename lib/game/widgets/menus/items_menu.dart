@@ -127,7 +127,7 @@ class _ItemsMenuState extends State<ItemsMenu> {
           below: true,
           center: true,
           child: Text(
-            '%s LP'.i18n.fill([widget.gameRef.playerOne!.lifePoints.round()]) +
+            '%s HP'.i18n.fill([widget.gameRef.playerOne!.hp.round()]) +
                 '  /  ${widget.gameRef.playerOne!.money} ¤',
             style: Theme.of(context).textTheme.button,
             textAlign: TextAlign.center,

@@ -41,23 +41,22 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     env.defineSymbol(Sym(x!.car as String), x.cdr.car);
     return #NONE;
   });
-  _('get-life', 0, (Cell? x) => gameRef.playerOne!.lifePoints);
-  _('get-initial-life', 0, (Cell? x) => gameRef.playerOne!.maxLifePoints);
-  _('set-life-diff', 1, (Cell? x) {
-    gameRef.playerOne!.lifePointsDifference((x!.car as int).toDouble());
+  _('get-HP', 0, (Cell? x) => gameRef.playerOne!.hp);
+  _('get-initial-HP', 0, (Cell? x) => gameRef.playerOne!.maxHP);
+  _('set-HP-diff', 1, (Cell? x) {
+    gameRef.playerOne!.hpDifference((x!.car as int).toDouble());
     return #NONE;
   });
-  _('set-life-to', 1, (Cell? x) {
+  _('set-HP-to', 1, (Cell? x) {
     gameRef.playerOne!.setStatus((x!.car as int).toDouble(), 0);
     return #NONE;
   });
-  _('restore-life', 0, (Cell? x) {
+  _('restore-HP', 0, (Cell? x) {
     gameRef.addCustomWidgetOverlay('blackCurtain',
         BlackCurtain(gameRef, gameRef.playerOne!.restoreStatus));
     return #NONE;
   });
-  _('increase-life', 1,
-      (Cell? x) => gameRef.playerOne!.maxLifePoints += x!.car as num);
+  _('increase-HP', 1, (Cell? x) => gameRef.playerOne!.maxHP += x!.car as num);
   _('get-atk', 0, (Cell? x) => gameRef.playerOne!.atk);
   _('increase-atk', 1, (Cell? x) => gameRef.playerOne!.atk += x!.car as num);
   _('get-def', 0, (Cell? x) => gameRef.playerOne!.def);

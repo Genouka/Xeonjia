@@ -13,8 +13,7 @@ class ModifierComponent extends BasicComponent {
       : _moneyDelta = int.parse(tile.properties['moneyDelta'] ?? '0'),
         _atkDelta = int.parse(tile.properties['atkDelta'] ?? '0'),
         _defDelta = int.parse(tile.properties['defDelta'] ?? '0'),
-        _lifePointsDiff =
-            double.parse(tile.properties['lifePointsDelta'] ?? '0'),
+        _hpDelta = double.parse(tile.properties['healthPointsDelta'] ?? '0'),
         _powerPointsDelta =
             int.parse(tile.properties['powerPointsDelta'] ?? '0'),
         _poisonDelta = double.parse(tile.properties['poisonDelta'] ?? '0'),
@@ -28,7 +27,7 @@ class ModifierComponent extends BasicComponent {
         name = 'mine-${father!.teamId}',
         super(null,
             Point(position.x / componentSize, position.y / componentSize)) {
-    _lifePointsDiff = -atk;
+    _hpDelta = -atk;
     explosionOnDelete = true;
   }
 
@@ -42,7 +41,7 @@ class ModifierComponent extends BasicComponent {
   int _moneyDelta = 0;
   int _atkDelta = 0;
   int _defDelta = 0;
-  double _lifePointsDiff = 0;
+  double _hpDelta = 0;
   int _powerPointsDelta = 0;
   double _poisonDelta = 0;
 
@@ -71,8 +70,7 @@ class ModifierComponent extends BasicComponent {
         componentAbove is CharacterComponent &&
         (gameRef.config.friendlyFire ||
             (father?.teamId ?? -99) != componentAbove.teamId)) {
-      componentAbove.lifePointsDifference(_lifePointsDiff,
-          cause: father ?? this);
+      componentAbove.hpDifference(_hpDelta, cause: father ?? this);
       componentAbove.atk += _atkDelta;
       componentAbove.def += _defDelta;
       componentAbove.poisonQuantity += _poisonDelta;
@@ -81,8 +79,8 @@ class ModifierComponent extends BasicComponent {
         weapon.powerPoints += _powerPointsDelta;
       }
       if (componentAbove.isPlayerOne) {
-        if (_lifePointsDiff != 0 && componentAbove.isPlayerOne) {
-          gameRef.playerOne!.showText('+ ${_lifePointsDiff.round()} LPs');
+        if (_hpDelta != 0 && componentAbove.isPlayerOne) {
+          gameRef.playerOne!.showText('+ ${_hpDelta.round()} HP');
         } else if (_moneyDelta != 0 && componentAbove.isPlayerOne) {
           gameRef.playerOne!.showText('+ $_moneyDelta ¤');
         }

@@ -72,8 +72,8 @@ mixin Walker on BasicComponent {
       }
       ++movesCounter;
 
-      // Decrease life points cause poison
-      if (poisonQuantity > 0) lifePointsDifference(-poisonQuantity);
+      // Decrease health points cause poison
+      if (poisonQuantity > 0) hpDifference(-poisonQuantity);
     }
   }
 
@@ -173,8 +173,7 @@ mixin Walker on BasicComponent {
       [bool wasStationary = false]) {
     stop();
     if (!isPlayerOne) {
-      collidedComponent.lifePointsDifference(-atk,
-          cause: this, poison: poisonAtk);
+      collidedComponent.hpDifference(-atk, cause: this, poison: poisonAtk);
     } else if (settings.soundEffects &&
         (collidedComponent is! StaticComponent || !collidedComponent.isFloor)) {
       gameRef.playSound(Sfx.collision);

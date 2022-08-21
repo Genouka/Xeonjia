@@ -5,7 +5,7 @@ import 'package:xeonjia/game/widgets/menus/pause_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/game_properties.dart';
 
-// Box that shows points and lifepoints
+// Box that shows points and HP
 class StatusBox extends StatefulWidget {
   StatusBox(this.gameRef);
   final XeonjiaGame gameRef;
@@ -48,16 +48,14 @@ class StatusBoxState extends State<StatusBox> {
                     Expanded(
                       child: _PercentIndicator(
                         values: [
-                          widget.gameRef.playerOne!.lifePoints,
-                          widget.gameRef.playerOne!.maxLifePoints
+                          widget.gameRef.playerOne!.hp,
+                          widget.gameRef.playerOne!.maxHP,
                         ],
-                        text: widget.gameRef.playerOne!.lifePoints
-                            .round()
-                            .toString(),
+                        text: widget.gameRef.playerOne!.hp.round().toString(),
                         colors: [
-                          MyColors.lifePointsColor(
-                              widget.gameRef.playerOne!.lifePoints /
-                                  widget.gameRef.playerOne!.maxLifePoints),
+                          MyColors.healthPointsColor(
+                              widget.gameRef.playerOne!.hp /
+                                  widget.gameRef.playerOne!.maxHP),
                           Colors.grey
                         ],
                       ),

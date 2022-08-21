@@ -43,8 +43,7 @@ abstract class BasicComponent extends SpriteComponent
         action = tile.properties['action'] ?? '',
         actionOnCollision = tile.properties['actionOnCollision'] ?? '',
         actionOnEvent = tile.properties['actionOnEvent'] ?? '',
-        maxLifePoints =
-            double.parse(tile.properties['lifePoints'] ?? 'Infinity'),
+        maxHP = double.parse(tile.properties['hp'] ?? 'Infinity'),
         level = int.parse(tile.properties['level'] ?? '0'),
         atk = double.parse(tile.properties['atk'] ?? '0'),
         def = double.parse(tile.properties['def'] ?? '0'),
@@ -85,19 +84,19 @@ abstract class BasicComponent extends SpriteComponent
   // Component's level
   late int level;
 
-  // Initial life points
-  double maxLifePoints = double.infinity;
+  // Initial health points
+  double maxHP = double.infinity;
 
-  // Current life points
-  // Value edited by using lifePointsDifference() method
-  late double _lifePoints;
-  double get lifePoints => _lifePoints;
+  // Current health points
+  // Value edited by using healthPointsDifference() method
+  late double _hp;
+  double get hp => _hp;
 
   // Poison released to enemies during collision
   double poisonAtk = 0;
 
   // Poison in this component
-  // It reduce life points when move
+  // It reduce health points when move
   double poisonQuantity = 0;
 
   // Enemies defeated by this component
@@ -169,7 +168,7 @@ abstract class BasicComponent extends SpriteComponent
   @override
   @mustCallSuper
   Future<void>? onLoad() async {
-    _lifePoints = maxLifePoints;
+    _hp = maxHP;
     if (this is! SnowballComponent) executeAction();
     sprite ??= Sprite(Flame.images.fromCache('basic.png')); // placeholder
     if (atlasAsset != null && name != null) {
@@ -193,32 +192,32 @@ abstract class BasicComponent extends SpriteComponent
   @mustCallSuper
   void playAction(Direction orientation) => executeAction(action);
 
-  // Update LP and poison quantity
-  void setStatus(double lifePoints, double poison) {
-    _lifePoints = lifePoints;
+  // Update HP and poison quantity
+  void setStatus(double hp, double poison) {
+    _hp = hp;
     poisonQuantity = poison;
-    gameRef.refreshLifePointsBar();
+    gameRef.refreshHPBar();
   }
 
-  // Restore LP and poison quantity
+  // Restore HP and poison quantity
   void restoreStatus() {
-    _lifePoints = maxLifePoints;
+    _hp = maxHP;
     poisonQuantity = 0;
-    gameRef.refreshLifePointsBar();
+    gameRef.refreshHPBar();
   }
 
-  // Function used to change life points
-  void lifePointsDifference(double difference,
+  // Function used to change health points
+  void hpDifference(double difference,
       {BasicComponent? cause, double poison = 0}) {
     if ((gameRef.config.mode != GameMode.story ||
             gameRef.config.friendlyFire) ||
         teamId != (cause?.teamId ?? -99)) {
-      _lifePoints += difference < 0 ? min(0, difference + def) : difference;
+      _hp += difference < 0 ? min(0, difference + def) : difference;
       poisonQuantity += poison;
-      if (_lifePoints < 0) _lifePoints = 0;
-      if (_lifePoints > maxLifePoints) _lifePoints = maxLifePoints;
-      if (isPlayerOne && difference != 0) gameRef.refreshLifePointsBar();
-      if (_lifePoints <= 0) {
+      if (_hp < 0) _hp = 0;
+      if (_hp > maxHP) _hp = maxHP;
+      if (isPlayerOne && difference != 0) gameRef.refreshHPBar();
+      if (_hp <= 0) {
         delete();
         if (teamId == (cause?.teamId ?? -99)) {
           // Teammate defeated
@@ -278,18 +277,15 @@ abstract class BasicComponent extends SpriteComponent
   // ignore: avoid_positional_boolean_parameters
   void collidedBy(Walker otherComponent, [bool wasStationary = false]) {
     if (!wasStationary) {
-      otherComponent.lifePointsDifference(-atk, cause: this, poison: poisonAtk);
+      otherComponent.hpDifference(-atk, cause: this, poison: poisonAtk);
     }
     if (otherComponent.isPlayerOne) {
       executeAction(actionOnCollision, otherComponent);
     }
   }
 
-  // Reset life points
-  void restoreLifePoints() {
-    _lifePoints = maxLifePoints;
-    // if (isPlayerOne) gameRef.refreshLifePointsBar();
-  }
+  // Reset health points
+  void restoreHP() => _hp = maxHP;
 
   @override
   void update(double dt) {
@@ -346,7 +342,7 @@ abstract class BasicComponent extends SpriteComponent
   void respawn(XeonjiaGame gameRef) {
     deleted = false;
     isBeingDeleted = false;
-    restoreLifePoints();
+    restoreHP();
     x = startingPosition.x * componentSize;
     y = startingPosition.y * componentSize;
     if (!gameRef.children.contains(this)) gameRef.add(this);
