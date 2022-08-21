@@ -74,6 +74,7 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   }
 
   double get opacity => widget.gameRef.isItemsMenuActive ? 1 : 0.8;
+  String get author => widget.gameRef.messageManager.currentMessage!.authorName;
 
   @override
   Widget build(BuildContext context) {
@@ -142,12 +143,9 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    if (widget.gameRef.messageManager
-                                            .currentMessage!.authorName !=
-                                        '')
+                                    if (author != '' && author != ' ')
                                       Text(
-                                        '${widget.gameRef.messageManager.currentMessage!.authorName} :'
-                                            .toUpperCase(),
+                                        '$author :'.toUpperCase(),
                                         maxLines: 1,
                                         style: Theme.of(context)
                                             .textTheme

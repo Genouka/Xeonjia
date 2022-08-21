@@ -652,8 +652,7 @@ class XeonjiaGame extends FlameGame
     ];
     setMessages([
       for (final string in texts)
-        Message(this, string,
-            author: 'manual/book', xfaFile: 'items', translate: false)
+        Message(this, string, author: '/manual', translate: false)
     ]);
   }
 

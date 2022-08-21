@@ -157,16 +157,22 @@ class CharacterComponent extends BasicComponent
     if (isPlayerOne) {
       if (itemData.containsKey(itemId)) {
         gameRef.setMessage(Message(
-            gameRef,
-            '* {{hero}} puts %s in the backpack. *'
-                .i18n
-                .fill([itemData[itemId]!.name])));
+          gameRef,
+          '* {{hero}} puts %s in the backpack. *'
+              .i18n
+              .fill([itemData[itemId]!.name]),
+          author: '-/$itemId',
+          xfaFile: 'items',
+          translate: false,
+        ));
       } else if (itemId.startsWith('gem_')) {
         gameRef.setMessage(Message(
-            gameRef,
-            '* {{hero}} puts %s in the backpack. *'
-                .i18n
-                .fill(['the gem'.i18n])));
+          gameRef,
+          '* {{hero}} puts %s in the backpack. *'.i18n.fill(['the gem'.i18n]),
+          author: '-/gem_*',
+          xfaFile: 'items',
+          translate: false,
+        ));
       }
       gameRef.playSound(Sfx.item);
     }
