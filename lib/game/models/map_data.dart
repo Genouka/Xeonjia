@@ -8,8 +8,7 @@ class MapData {
         height = json['height'] / 16,
         width = json['width'] / 16,
         x = json['x'] / 16,
-        y = json['y'] / 16 + 1, // +1 because 1.tmx is at: "y": -16
-        name = json['name'] ?? 'this place.',
+        y = json['y'] / 16,
         text = json['text'],
         hidden = json['hidden'] ?? false;
 
@@ -19,7 +18,6 @@ class MapData {
   final double width;
   final double x;
   final double y;
-  final String name;
   final String? text;
   final bool hidden;
 

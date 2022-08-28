@@ -110,8 +110,6 @@ Map<String, List<Translation>> tmx2po() {
   var mapsDataJsonFileName = 'assets/data/maps-data.json';
   var mapsData = json.decode(File(mapsDataJsonFileName).readAsStringSync());
   mapsData.forEach((_, value) {
-    dirStringsMap['story']!
-        .add(Translation(dataJsonFileName, value['name'], null));
     if (value['text'] != null) {
       dirStringsMap['story']!.add(Translation(
           dataJsonFileName, value['text'].replaceAll('\n', r'\n'), null));
