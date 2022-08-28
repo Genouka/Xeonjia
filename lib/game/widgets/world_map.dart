@@ -121,15 +121,11 @@ class _RectangleMap extends PositionComponent
     }
   }
 
-  final Paint mapPaint = Paint()
-    ..color = const Color(0xFF0909FF)
-    ..style = PaintingStyle.stroke
-    ..strokeWidth = 1;
-  final Paint currentMapPaint = Paint()
+  final Paint _currentMapPaint = Paint()
     ..color = const Color(0xFFFF0909)
     ..style = PaintingStyle.stroke
     ..strokeWidth = 2;
-  final Paint selectedMapPaint = Paint()
+  final Paint _selectedMapPaint = Paint()
     ..color = const Color(0xFFD47612)
     ..style = PaintingStyle.stroke
     ..strokeWidth = 2;
@@ -138,12 +134,10 @@ class _RectangleMap extends PositionComponent
   void render(Canvas canvas) {
     if ((parent as WorldMap)._selectedMap == map) {
       canvas.drawRect(
-          Rect.fromLTWH(1, 1, width - 2, height - 2), selectedMapPaint);
+          Rect.fromLTWH(1, 1, width - 2, height - 2), _selectedMapPaint);
     } else if (isTheCurrentMap) {
       canvas.drawRect(
-          Rect.fromLTWH(1, 1, width - 2, height - 2), currentMapPaint);
-    } else {
-      canvas.drawRect(Rect.fromLTWH(0, 0, width, height), mapPaint);
+          Rect.fromLTWH(1, 1, width - 2, height - 2), _currentMapPaint);
     }
   }
 }
