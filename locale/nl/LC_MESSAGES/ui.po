@@ -4,7 +4,7 @@
 # deepdaikon <deepdaikon@tuta.io>, 2022.
 # hamaryns <hendrik@hendrikmaryns.name>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-08-03 20:33+0000\nLast-Translator: hamaryns <hendrik@hendrikmaryns.name>\nLanguage-Team: Dutch <https://translate.deepdaikon.xyz/projects/xeonjia/ui/nl/>\nLanguage: nl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-08-05 11:34+0000\nLast-Translator: hamaryns <hendrik@hendrikmaryns.name>\nLanguage-Team: Dutch <https://translate.deepdaikon.xyz/projects/xeonjia/ui/nl/>\nLanguage: nl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -36,7 +36,7 @@ msgstr "Voordat we van start gaan, vertel me je naam; die zal in het spel gebrui
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Solve ice puzzles and defeat enemies in an RPG world.\n\nSwipe right to learn the basic concepts."
-msgstr ""
+msgstr "Ijspuzzels oplossen en vijanden verslaan in een rollenspelwereld.\n\nVeeg naar rechts om de basisprincipes te leren."
 
 #: lib/ui/screens/rules/resources/rules.dart:
 msgid "Modes"

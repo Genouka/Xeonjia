@@ -1,0 +1,3 @@
+* Aanpassingen aan moeilijkheidsgraad
+* Franse, Spaanse en Italiaanse vertalingen toegevoegd
+* Bugs opgelost

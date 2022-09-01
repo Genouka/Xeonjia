@@ -3,14 +3,13 @@
 # This file is distributed under the same license as Xeonjia.
 # hamaryns <hendrik@hendrikmaryns.name>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-08-03 20:33+0000\nLast-Translator: hamaryns <hendrik@hendrikmaryns.name>\nLanguage-Team: Dutch <https://translate.deepdaikon.xyz/projects/xeonjia/story/nl/>\nLanguage: nl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-09-01 07:34+0000\nLast-Translator: hamaryns <hendrik@hendrikmaryns.name>\nLanguage-Team: Dutch <https://translate.deepdaikon.xyz/projects/xeonjia/story/nl/>\nLanguage: nl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
 msgstr "Stadhuis"
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "…"
 msgstr "…"
 
@@ -28,7 +27,7 @@ msgstr "koning"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Do not confuse me with the King of Evil, I am good haha."
-msgstr ""
+msgstr "Verwar me niet met de Koning van het Kwaad, ik ben goed, haha."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "So… tell me, how are you? Is everything okay? How is the journey going?"
@@ -36,31 +35,31 @@ msgstr "Dus… vertel me, hoe gaat het?  Alles goed?  Hoe gaat de reis?"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Everything good, I just defeated the Hoarfrost Team and I got the first signet!"
-msgstr ""
+msgstr "Dat gaat goed, ik heb net het Ijzelteam verslagen en het eerste zegel gekregen!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Oh really?! This is great news!"
-msgstr ""
+msgstr "O, echt?!  Dat is goed nieuws!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "It has been difficult?"
-msgstr ""
+msgstr "Was het moeilijk?"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Well, but if you did it, it means that you are strong!"
-msgstr ""
+msgstr "Maar als je het gedaan hebt, betekent dat dat je sterk bent!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Well, congratulations! This means that you are strong!"
-msgstr ""
+msgstr "Wel gefeliciteerd!  Dat betekent dat je sterk bent!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "I trust that you will be able to take the other two signets as well."
-msgstr ""
+msgstr "Ik vertrouw erop dat je ertoe in staat zal zijn de andere twee emblemen ook te veroveren."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Since you're heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here."
-msgstr ""
+msgstr "Gezien je naar het oosten gaat, kan je me een plezier doen?  Kan je dit pakket meenemen voor de Koning van de Waterstreek?  Het is een paar kilometer ten oosten van hier."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes of course, I'll give it to him."

@@ -4,7 +4,7 @@
 # Muha Aliss <muhaaliss@gmail.com>, 2022.
 # Alparslan Şakçi <sakci@protonmail.com>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-07-14 10:56+0000\nLast-Translator: Alparslan Şakçi <sakci@protonmail.com>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-08-26 16:34+0000\nLast-Translator: Alparslan Şakçi <sakci@protonmail.com>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -148,11 +148,11 @@ msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A broken monitor."
-msgstr ""
+msgstr "Kırık bir monitör."
 
 #: assets/maps/story/8.tmx:
 msgid "\" → \""
-msgstr ""
+msgstr "\" → \""
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
@@ -204,11 +204,11 @@ msgstr "Bir kaya."
 
 #: assets/maps/story/34.tmx:
 msgid "\" Hexa Cave \""
-msgstr ""
+msgstr "\" Hexa Mağarası \""
 
 #: assets/maps/story/38.tmx:
 msgid "Zamelis Village"
-msgstr ""
+msgstr "Zamelis Köyü"
 
 #: assets/maps/story/38.tmx:
 msgid "I want to reach the capital quickly but the only way is traveling by land."
@@ -284,7 +284,7 @@ msgstr ""
 
 #: assets/maps/story/37.tmx:
 msgid "\" Zamelis Village \""
-msgstr ""
+msgstr "\" Zamelis Köyü \""
 
 #: assets/maps/story/37.tmx:
 msgid "{{hero}}, there you are. Finally! I heard a rumor that you were coming here."
@@ -320,7 +320,7 @@ msgstr ""
 
 #: assets/maps/story/14.tmx:
 msgid "\" ← Pharmacy \""
-msgstr ""
+msgstr "\" ← Eczane \""
 
 #: assets/maps/story/7.tmx:
 msgid "Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays."
@@ -396,7 +396,7 @@ msgstr "Görüşürüz!"
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area – Do not leave rubbish, thanks \""
-msgstr ""
+msgstr "\" Piknik alanı – Lütfen çöplerinizi yere atmayın \""
 
 #: assets/maps/story/7.tmx:
 msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
@@ -404,7 +404,7 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hexa Cave"
-msgstr ""
+msgstr "Hexa Mağarası"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
@@ -1812,7 +1812,7 @@ msgstr ""
 
 #: assets/maps/utils/items-and-events.json:
 msgid "A pair of glasses"
-msgstr ""
+msgstr "Bir gözlük"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Eyeglasses given to me by a girl."
@@ -1856,7 +1856,7 @@ msgstr ""
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Fresh Water"
-msgstr ""
+msgstr "Taze su"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "A bottle of water.\nIt restores 20 LPs."
@@ -1868,7 +1868,7 @@ msgstr ""
 
 #: assets/maps/utils/items-and-events.json:
 msgid "Pomegranate juice"
-msgstr ""
+msgstr "Nar suyu"
 
 #: assets/maps/utils/items-and-events.json:
 msgid "A bottle of pomegranate juice.\nIt restores 50 LPs."

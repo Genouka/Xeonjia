@@ -1,0 +1,4 @@
+* Nieuw onderdeel van het verhaal toegevoegd
+* Verscheidene verbeteringen en nieuwe mogelijkheden toegevoegd
+* Vertalingen bijgewerkt en nieuwe talen toegevoegd (bèta)
+* Bugs opgelost
