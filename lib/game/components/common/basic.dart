@@ -215,7 +215,7 @@ abstract class BasicComponent extends SpriteComponent
         teamId != (cause?.teamId ?? -99)) {
       double actual = difference < 0 ? min(0, difference + def) : difference;
       _hp += actual;
-      if (actual != 0) showText(actual.round().toString());
+      if (actual != 0 && maxHP.isFinite) showText(actual.round().toString());
       poisonQuantity += poison;
       if (_hp < 0) _hp = 0;
       if (_hp > maxHP) _hp = maxHP;
