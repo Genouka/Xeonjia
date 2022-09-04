@@ -34,4 +34,14 @@ class SliderCpuComponent extends BasicComponent
       super.hpDifference(difference, cause: cause!, poison: poison);
     }
   }
+
+  @override
+  void delete({bool silently = false}) {
+    isBeingDeleted = true;
+    animation = atlas.getAnimation('$name-deletion')
+      ..onComplete = () {
+        hide();
+        super.delete();
+      };
+  }
 }

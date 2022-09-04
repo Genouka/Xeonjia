@@ -8,7 +8,8 @@ mixin HPBar on BasicComponent {
   final _padding = 5.0;
   final _seconds = 2.0;
   double _remainingSeconds = -1;
-  bool get _show => !isPlayerOne && hp != maxHP && _remainingSeconds >= 0;
+  bool get _show =>
+      !isPlayerOne && hp != maxHP && hp != 0 && _remainingSeconds >= 0;
 
   @override
   void render(Canvas canvas) {
