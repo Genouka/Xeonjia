@@ -322,7 +322,7 @@ abstract class BasicComponent extends SpriteComponent
   }
 
   // Delete component
-  void delete() {
+  void delete({bool silently = false}) {
     ++defeats;
     gameRef.deletedComponents.add(this);
     removeChildren();

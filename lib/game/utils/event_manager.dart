@@ -164,6 +164,12 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     self.delete();
     return #NONE;
   });
+  _('delete-me-silently', 0, (Cell? x) {
+    BasicComponent self =
+        (env.lookForValue(Sym('self')) as Intrinsic).fun!(x) as BasicComponent;
+    self.delete(silently: true);
+    return #NONE;
+  });
   _('delete', 1, (Cell? x) {
     gameRef.getComponentFromId(x!.car as int)?.delete();
     return #NONE;

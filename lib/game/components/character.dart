@@ -197,12 +197,14 @@ class CharacterComponent extends BasicComponent
   }
 
   @override
-  void delete() {
+  void delete({bool silently = false}) {
     if (gameRef.config.mode == GameMode.story) {
       super.delete();
       if (isPlayerOne) {
         gameRef.end();
-      } else if (!gameRef.hasAction && gameRef.map.action != null) {
+      } else if (!silently &&
+          !gameRef.hasAction &&
+          gameRef.map.action != null) {
         gameRef.executeAction(
             action: gameRef.map.action!, actor: gameRef.playerOne);
       }
