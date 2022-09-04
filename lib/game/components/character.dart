@@ -1,9 +1,9 @@
 import 'package:xeonjia/game/components/common/basic.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
+import 'package:xeonjia/game/components/utils/deletion_animation.dart';
 import 'package:xeonjia/game/components/utils/hp_bar.dart';
 import 'package:xeonjia/game/components/utils/npc_controller.dart';
 import 'package:xeonjia/game/components/utils/render_offset.dart';
-import 'package:xeonjia/game/components/utils/respawn_animation.dart';
 import 'package:xeonjia/game/models/item.dart';
 import 'package:xeonjia/game/models/tile.dart';
 import 'package:xeonjia/game/utils/direction.dart';
@@ -17,7 +17,7 @@ import 'package:xeonjia/utils/local_data_controller.dart';
 
 // Dynamic component used for human-like players
 class CharacterComponent extends BasicComponent
-    with Walker, RenderOffset, HPBar, RespawnAnimation {
+    with Walker, RenderOffset, HPBar, DeletionAnimation {
   CharacterComponent(
     this.tile,
     MatchConfig matchConfig, {
@@ -197,20 +197,26 @@ class CharacterComponent extends BasicComponent
 
   @override
   void delete({bool silently = false}) {
+    stop();
     if (gameRef.config.mode == GameMode.story) {
-      super.delete();
-      if (isPlayerOne) {
-        gameRef.end();
-      } else if (!silently &&
-          !gameRef.hasAction &&
-          gameRef.map.action != null) {
-        gameRef.executeAction(
-            action: gameRef.map.action!, actor: gameRef.playerOne);
-      }
+      isBeingDeleted = true;
+      gameRef.changingTurn = true;
+      deletionAnimation(
+          period: 1.5,
+          callback: () {
+            super.delete();
+            if (isPlayerOne) {
+              gameRef.end();
+            } else if (!silently &&
+                !gameRef.hasAction &&
+                gameRef.map.action != null) {
+              gameRef.executeAction(
+                  action: gameRef.map.action!, actor: gameRef.playerOne);
+            }
+          });
     } else {
       ++defeats;
-      stop();
-      respawnAnimation();
+      deletionAnimation(callback: () => respawn(gameRef));
       removeChildren();
       gameRef.checkMatchStatus();
     }
