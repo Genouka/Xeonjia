@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flame/components.dart';
-import 'package:xeonjia/game/components/character.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/components/static.dart';
 import 'package:xeonjia/game/utils/direction.dart';
@@ -144,13 +143,11 @@ class NpcController extends Component {
 
   @override
   void update(double dt) {
-    if (npc.gameRef.isPaused || npc.friendly || npc.quiet) return;
+    if (npc.gameRef.isPaused || npc.quiet) return;
     if (_hasMovements) {
       _patternMove();
     } else if (npc.gameRef.isNotPaused &&
         npc.isMyTurn &&
-        (parent is! CharacterComponent ||
-            !(parent as CharacterComponent).quiet) &&
         (_timeToNextMove -= dt) < 0) {
       _freeMove();
     }
