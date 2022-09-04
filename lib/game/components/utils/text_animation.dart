@@ -1,8 +1,8 @@
+import 'package:flame/components.dart';
 import 'package:flutter/painting.dart';
-import 'package:xeonjia/game/components/common/basic.dart';
 
 // Show a text above the component for a few seconds
-mixin TextAnimation on BasicComponent {
+mixin TextAnimation on SpriteComponent {
   final _seconds = 0.6;
   late double _remainingSeconds;
   bool get _show => _text != null;

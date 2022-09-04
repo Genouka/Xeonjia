@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/components/common/basic.dart';
+import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/utils/extensions.dart';
 
 // Draw a health points bar near the component
 // It is shown only for 2 seconds after healthPointsDifference
-mixin HPBar on BasicComponent {
+mixin HPBar on Walker {
   final _padding = 5.0;
   final _seconds = 2.0;
   double _remainingSeconds = -1;

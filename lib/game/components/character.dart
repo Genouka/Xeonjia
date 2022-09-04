@@ -4,7 +4,6 @@ import 'package:xeonjia/game/components/utils/hp_bar.dart';
 import 'package:xeonjia/game/components/utils/npc_controller.dart';
 import 'package:xeonjia/game/components/utils/render_offset.dart';
 import 'package:xeonjia/game/components/utils/respawn_animation.dart';
-import 'package:xeonjia/game/components/utils/text_animation.dart';
 import 'package:xeonjia/game/models/item.dart';
 import 'package:xeonjia/game/models/tile.dart';
 import 'package:xeonjia/game/utils/direction.dart';
@@ -18,7 +17,7 @@ import 'package:xeonjia/utils/local_data_controller.dart';
 
 // Dynamic component used for human-like players
 class CharacterComponent extends BasicComponent
-    with Walker, RenderOffset, HPBar, RespawnAnimation, TextAnimation {
+    with Walker, RenderOffset, HPBar, RespawnAnimation {
   CharacterComponent(
     this.tile,
     MatchConfig matchConfig, {

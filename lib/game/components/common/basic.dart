@@ -8,6 +8,7 @@ import 'package:xeonjia/game/components/character.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/components/snowball.dart';
 import 'package:xeonjia/game/components/static.dart';
+import 'package:xeonjia/game/components/utils/text_animation.dart';
 import 'package:xeonjia/game/models/team.dart';
 import 'package:xeonjia/game/models/tile.dart';
 import 'package:xeonjia/game/utils/direction.dart';
@@ -18,7 +19,7 @@ import 'package:xeonjia/utils/game_properties.dart';
 // Basic game component
 // Every game component extends this one
 abstract class BasicComponent extends SpriteComponent
-    with HasGameRef<XeonjiaGame> {
+    with HasGameRef<XeonjiaGame>, TextAnimation {
   BasicComponent(int? id, Point startingPosition,
       [Map<String, dynamic>? properties])
       : this.fromTile(Tile(
@@ -212,7 +213,9 @@ abstract class BasicComponent extends SpriteComponent
     if ((gameRef.config.mode != GameMode.story ||
             gameRef.config.friendlyFire) ||
         teamId != (cause?.teamId ?? -99)) {
-      _hp += difference < 0 ? min(0, difference + def) : difference;
+      double actual = difference < 0 ? min(0, difference + def) : difference;
+      _hp += actual;
+      if (actual != 0) showText(actual.round().toString());
       poisonQuantity += poison;
       if (_hp < 0) _hp = 0;
       if (_hp > maxHP) _hp = maxHP;
