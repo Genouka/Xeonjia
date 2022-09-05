@@ -47,7 +47,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Last-Translator: Automatically generated\\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\\n"
-"Language: $language\\n"'''}${(() => strings.fold('', (prev, string) => (prev as String) + '''
+"Language: $language\\n"'''}${(() => strings.fold('', (prev, string) => prev + '''
 \n\n#: ${string.path}:
 ${_getTranslation(currentTranslations, string, language).comments ?? ''}msgid "${string.msgid}"
 msgstr "${_getTranslation(currentTranslations, string, language).msgstr!.replaceAll('"', r'\"')}"'''))()}

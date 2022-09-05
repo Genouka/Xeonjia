@@ -68,9 +68,10 @@ class _RulesPageState extends State<RulesPage>
             children: <Widget>[
               TextButton(
                 style: TextButton.styleFrom(
-                  primary: Theme.of(context).brightness == Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
+                  foregroundColor:
+                      Theme.of(context).brightness == Brightness.dark
+                          ? Colors.white
+                          : Colors.black,
                 ),
                 onPressed: (_controller.index > 0)
                     ? () => _controller.index -= (_controller.index > 0) ? 1 : 0
@@ -117,9 +118,10 @@ class _RulesPageState extends State<RulesPage>
               else
                 TextButton(
                   style: TextButton.styleFrom(
-                    primary: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.white
-                        : Colors.black,
+                    foregroundColor:
+                        Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.black,
                   ),
                   onPressed: () {
                     if (_controller.index < _controller.length - 1) {

@@ -12,7 +12,8 @@ Widget helpDialog(BuildContext context) {
     actions: <Widget>[
       TextButton(
         onPressed: Navigator.of(context).pop,
-        style: TextButton.styleFrom(primary: Theme.of(context).primaryColor),
+        style: TextButton.styleFrom(
+            foregroundColor: Theme.of(context).primaryColor),
         child: Text('Okay, got it!'.i18n),
       ),
     ],

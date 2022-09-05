@@ -69,7 +69,7 @@ class OptionList extends StatelessWidget {
                         Navigator.of(context).pop();
                       },
                       style: TextButton.styleFrom(
-                        primary: Theme.of(context).primaryColor,
+                        foregroundColor: Theme.of(context).primaryColor,
                       ),
                       child: Text('Discard'.i18n),
                     ),
@@ -78,7 +78,7 @@ class OptionList extends StatelessWidget {
                         saveName(context, _textFieldController.text);
                       },
                       style: TextButton.styleFrom(
-                        primary: Theme.of(context).primaryColor,
+                        foregroundColor: Theme.of(context).primaryColor,
                       ),
                       child: Text('Save'.i18n),
                     ),
