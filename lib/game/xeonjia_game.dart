@@ -47,7 +47,7 @@ import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
 // Default component dimension
-late double componentSize;
+double componentSize = 16;
 
 // Xeonjia game class
 class XeonjiaGame extends FlameGame
