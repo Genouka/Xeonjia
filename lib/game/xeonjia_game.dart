@@ -70,9 +70,6 @@ class XeonjiaGame extends FlameGame
       'backpackMenu': (BuildContext context, XeonjiaGame game) {
         return BackpackMenu(game);
       },
-      'noMapsMenu': (BuildContext context, XeonjiaGame game) {
-        return NoMapsMenu(game, '43');
-      },
       'miniMapButton': (BuildContext context, XeonjiaGame game) {
         return MiniMapButton(game, miniMapIsActive: game.miniMapActive);
       },
@@ -86,18 +83,12 @@ class XeonjiaGame extends FlameGame
         return LoadingPage();
       },
     };
-    overlays.add('statusBox');
-    overlays.add('dialogBox');
     initGamepad();
     if (settings.backgroundMusic && config.mode == GameMode.story) {
       _backgroundMusic = Bgm();
       _backgroundMusic!.initialize();
     }
-    if (config.mode == GameMode.story) {
-      miniMapActive = false;
-      overlays.add('miniMapButton');
-      overlays.add('backpackButton');
-    } else {
+    if (config.mode != GameMode.story) {
       teams = [
         Team(this, id: 0, name: 'Team A', color: Colors.red),
         Team(this, id: 1, name: 'Team B', color: Colors.green),
@@ -106,15 +97,26 @@ class XeonjiaGame extends FlameGame
     start();
   }
 
+  @override
+  void onMount() {
+    overlays.add('statusBox');
+    if (!overlays.isActive('noMapsMenu')) {
+      overlays.add('dialogBox');
+      overlays.add('miniMapButton');
+      overlays.add('backpackButton');
+      overlays.add('loading');
+    }
+    super.onMount();
+  }
+
   // Match settings
   final MatchConfig config;
 
   // Map with widgets overlay
   Map<String, Widget Function(BuildContext, XeonjiaGame)>? overlayMap;
   void addCustomWidgetOverlay(String overlayName, Widget widget) {
-    overlayMap![overlayName] = (BuildContext context, XeonjiaGame game) {
-      return widget;
-    };
+    overlays.addEntry(
+        overlayName, (BuildContext context, Game gameRef) => widget);
     overlays.add(overlayName);
   }
 
@@ -273,7 +275,6 @@ class XeonjiaGame extends FlameGame
     overlays.remove('backpackButton');
     overlays.remove('rulesButton');
     overlays.remove('virtualGamePad');
-    overlays.add('loading');
 
     // Import mainCharacter.eventLog
     currentEventLog = Map.from(mainCharacter.eventLog);
@@ -300,9 +301,8 @@ class XeonjiaGame extends FlameGame
     if (config.mode == GameMode.story) {
       map = GameMap(fullId: mainCharacter.visitedRooms.last);
       if (map.id == '44') {
-        overlays.remove('loading');
         _backgroundMusic?.dispose();
-        overlays.add('noMapsMenu');
+        addCustomWidgetOverlay('noMapsMenu', NoMapsMenu(this, '43'));
         return;
       }
       await importMap(this, 'assets/maps/story/${map.id}.tmx');
