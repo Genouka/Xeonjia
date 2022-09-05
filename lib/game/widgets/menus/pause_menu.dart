@@ -95,7 +95,6 @@ class _PauseMenuState extends State<PauseMenu> {
             widget.gameRef.start();
           } else {
             Navigator.pop(context);
-            widget.gameRef.dispose();
           }
         },
       ),

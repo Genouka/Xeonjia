@@ -86,10 +86,7 @@ class NoMapsMenu extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                      gameRef.dispose();
-                    },
+                    onPressed: () => Navigator.pop(context),
                     child: Text(
                       'Back to menu'.i18n,
                       style: Theme.of(context).textTheme.bodyText2,

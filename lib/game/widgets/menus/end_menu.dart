@@ -62,10 +62,7 @@ class EndMenu extends StatelessWidget {
               ),
               if (gameRef.config.mode != GameMode.story)
                 TextButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                    gameRef.dispose();
-                  },
+                  onPressed: () => Navigator.pop(context),
                   child: Text(
                     'No'.i18n,
                     style: Theme.of(context).textTheme.bodyText2,

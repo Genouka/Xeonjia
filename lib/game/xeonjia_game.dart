@@ -806,10 +806,12 @@ class XeonjiaGame extends FlameGame
     return KeyEventResult.handled;
   }
 
-  void dispose() {
+  @override
+  void onRemove() {
     _backgroundMusic?.stop();
     _backgroundMusic?.dispose();
     _backgroundMusic = null;
     gamepad?.removeListener();
+    super.onRemove();
   }
 }
