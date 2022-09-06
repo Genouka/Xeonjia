@@ -12,13 +12,10 @@ class GamePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: _game.onWillPop,
-      child: Focus(
-        onKey: (data, event) => KeyEventResult.handled,
-        child: Theme(
-          data: gameTheme,
-          child: Scaffold(
-            body: GameWidget(game: _game, overlayBuilderMap: _game.overlayMap),
-          ),
+      child: Theme(
+        data: gameTheme,
+        child: Scaffold(
+          body: GameWidget(game: _game, overlayBuilderMap: _game.overlayMap),
         ),
       ),
     );
