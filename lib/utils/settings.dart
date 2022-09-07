@@ -3,9 +3,9 @@ import 'dart:ui';
 
 import 'package:xeonjia/utils/i18n.dart';
 
-// Class used to store settings data
+/// This contains the configurations of the app
 class Settings {
-  // Import settings from a Json
+  /// Import settings from a Json
   Settings(Map<String, dynamic> json)
       : showDPad = json['showDPad'] ?? false,
         firstRun = json['firstRun'] ?? true,
@@ -13,18 +13,18 @@ class Settings {
         soundEffects = json['soundEffects'] ?? true,
         _languageCode = json['languageCode'];
 
-  // True if D-pad is enabled
+  /// True if D-pad is enabled
   bool showDPad;
 
-  // True if rules have been read
+  /// True if rules have been read
   bool firstRun;
 
-  // True if music and sounds should be played
+  /// True if music and sounds should be played
   bool backgroundMusic;
   bool soundEffects;
   bool audioSupported = true;
 
-  // App language
+  /// App language
   String? _languageCode;
   bool get useSystemLanguage => _languageCode == null;
   String get _currentLanguageCode =>
@@ -36,10 +36,11 @@ class Settings {
       : const Locale('en');
   set locale(Locale? locale) => _languageCode = locale?.toString();
 
+  /// True if the system font should be used instead of dd5x7.ttf
   bool get useSystemFont =>
       ['ru', 'uk', 'vi', 'zh'].contains(locale.languageCode);
 
-  // Export settings as a Json
+  /// Export settings as a Json
   Map<String, dynamic> toJson() => {
         'showDPad': showDPad,
         'firstRun': firstRun,

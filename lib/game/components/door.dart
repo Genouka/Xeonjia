@@ -4,7 +4,7 @@ import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
-// Component that permits to change room
+/// Component that permits to change room
 class DoorComponent extends BasicComponent {
   DoorComponent(tile)
       : _roomId = tile.properties['roomId'] ?? '0',
@@ -21,10 +21,10 @@ class DoorComponent extends BasicComponent {
     return null;
   }
 
-  // Next Room ID
+  /// Next Room ID
   final String _roomId;
 
-  // Door offset
+  /// Door offset
   final Direction _offset;
 
   @override

@@ -1,4 +1,4 @@
-// Sound effects
+/// Sound effects
 enum Sfx { collision, item, punch, snowball, explosion, dialog }
 
 extension SfxFileName on Sfx {

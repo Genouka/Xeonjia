@@ -21,7 +21,7 @@ class DialogBox extends StatefulWidget {
 }
 
 class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
-  // Show the next message or hide dialog box if there are no message to show
+  /// Show the next [Message] or hide [DialogBox] if there are no more messages
   void next({bool removeAnswers = false}) {
     if (_controller?.isAnimating ?? false) {
       _controller!.fling().whenComplete(() {
@@ -47,7 +47,7 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
     _animateText();
   }
 
-  // Typing text animation
+  /// Typing text animation
   AnimationController? _controller;
   Animation<int>? _characterCountAnimation;
   void _animateText() {

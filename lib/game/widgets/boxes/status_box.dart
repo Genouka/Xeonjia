@@ -5,7 +5,7 @@ import 'package:xeonjia/game/widgets/menus/pause_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/game_properties.dart';
 
-// Box that shows points and HP
+/// Box that shows points and HP
 class StatusBox extends StatefulWidget {
   StatusBox(this.gameRef);
   final XeonjiaGame gameRef;

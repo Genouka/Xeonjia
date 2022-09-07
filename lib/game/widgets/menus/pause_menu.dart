@@ -7,7 +7,7 @@ import 'package:xeonjia/utils/i18n.dart';
 // i18n: 'pause'.i18n, 'restart'.i18n, 'exit'.i18n
 enum PauseMode { pause, restart, exit }
 
-// In-game pause menu
+/// In-game pause menu
 class PauseMenu extends StatefulWidget {
   const PauseMenu(this.gameRef, this.mode);
   final XeonjiaGame gameRef;
@@ -18,14 +18,14 @@ class PauseMenu extends StatefulWidget {
 }
 
 class _PauseMenuState extends State<PauseMenu> {
-  // Pause mode. It is also the title of this menu
+  /// Pause mode. It is also the title of this menu
   PauseMode? pauseMode;
 
-  // Text inside the central box
+  /// Text inside the central box
   late String text;
 
-  // Buttons
-  late List<Widget> actions;
+  /// Buttons
+  late List<Widget> buttons;
 
   @override
   void initState() {
@@ -75,7 +75,7 @@ class _PauseMenuState extends State<PauseMenu> {
           Expanded(
             child: Container(
               margin: const EdgeInsets.only(top: 5),
-              child: Wrap(alignment: WrapAlignment.center, children: actions),
+              child: Wrap(alignment: WrapAlignment.center, children: buttons),
             ),
           ),
         ],
@@ -83,10 +83,10 @@ class _PauseMenuState extends State<PauseMenu> {
     );
   }
 
-  // Reload texts and buttons
+  /// Reload [text] and [buttons]
   void reloadInfo() {
     pauseMode ??= widget.mode;
-    actions = [
+    buttons = [
       actionButton(
         pauseMode!.name.i18n.toUpperCase(),
         () {
@@ -131,7 +131,7 @@ class _PauseMenuState extends State<PauseMenu> {
                     'your points: %s'
                         .i18n
                         .fill([widget.gameRef.playerOne!.points.toString()])));
-        actions = [
+        buttons = [
           actionButton(
             'exit'.i18n.toUpperCase(),
             () {

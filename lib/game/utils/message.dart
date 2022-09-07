@@ -6,7 +6,7 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
-// Message shown in dialog box
+/// Message shown in dialog box
 class Message {
   Message(
     this.gameRef,
@@ -50,47 +50,47 @@ class Message {
     }
   }
 
-  // Current game
+  /// Current game
   final XeonjiaGame gameRef;
 
-  // Text of the message
+  /// Text of the message
   String text;
 
-  // Author (name/avatar_mood)
-  // If name is omitted: avatar name is used
-  // If avatar is omitted: component.name is used
-  // If mood is omitted: no mood
-  // Examples: mom, mom/_happy, bob/man, ali/girl_happy, /_sad, /hero, /hero_sad
-  // Default name and default avatar: /
-  // Author empty (author == '') is used for thoughts and narrator voice
+  /// Author (name/avatar_mood)
+  /// If name is omitted: avatar name is used
+  /// If avatar is omitted: component.name is used
+  /// If mood is omitted: no mood
+  /// Examples: mom, mom/_happy, bob/man, ali/girl_happy, /_sad, /hero, /hero_sad
+  /// Default name and default avatar: /
+  /// Author empty (author == '') is used for thoughts and narrator voice
   String author;
 
-  // Author's sprite
+  /// Author's sprite
   Sprite? sprite;
 
-  // Author name (displayed name)
+  /// Author name (displayed name)
   late String authorName;
 
-  // .xfa file used for the sprite
+  /// .xfa file used for the sprite
   String xfaFile;
 
-  // Speaking component
+  /// Speaking component
   BasicComponent? component;
 
-  // Font family used (null if default)
+  /// Font family used (null if default)
   String? font;
 }
 
-// Answer shown in dialogs
+/// Answer shown in dialogs
 class Answer {
   Answer(this.questionId, this.text, this.value);
 
-  // Unique ID saved in the event log
+  /// Unique ID saved in the event log
   String questionId;
 
-  // Displayed text
+  /// Displayed text
   String text;
 
-  // Answer value
+  /// Answer value
   dynamic value;
 }

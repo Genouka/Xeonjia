@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
-// Button used to open the backpack
+/// Button used to open the backpack
 class BackpackButton extends StatelessWidget {
   BackpackButton(this.gameRef);
   final XeonjiaGame gameRef;

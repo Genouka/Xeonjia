@@ -7,7 +7,7 @@ import 'package:xeonjia/game/components/static.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
-// Hide / Show hints
+/// Hide / Show hints
 class HideHintsButton extends TextBoxComponent
     with HasGameRef<XeonjiaGame>, Tappable {
   HideHintsButton() : super(size: Vector2.all(1), align: Anchor.center) {

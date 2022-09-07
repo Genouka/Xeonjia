@@ -5,7 +5,7 @@ import 'package:xeonjia/ui/screens/game/game_page.dart';
 import 'package:xeonjia/utils/game_properties.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
-// Match settings
+/// Match settings
 MatchConfig _config = MatchConfig(
   GameMode.tdm,
   teamSize: 5,
@@ -16,14 +16,14 @@ MatchConfig _config = MatchConfig(
   friendlyFire: true,
 );
 
-// Map names
+/// Map names
 Map<int, String> mapNames = {
   0: 'Kontrast',
   1: 'Stopovers',
   2: 'Flussi',
 };
 
-// Difficulty
+/// Difficulty
 // i18n: 'Easy'.i18n, 'Medium'.i18n, 'Hard'.i18n
 Map<int, String> difficultyNames = {
   3: 'Easy',

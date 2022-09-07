@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
-// TextBox shown at the beginning and end of a battle
+/// TextBox shown at the beginning and end of a battle
 class BattleTextBox extends TextComponent with HasGameRef<XeonjiaGame> {
   BattleTextBox(Vector2 size, String text)
       : super(
@@ -24,13 +24,13 @@ class BattleTextBox extends TextComponent with HasGameRef<XeonjiaGame> {
     priority = 1000;
   }
 
-  // Seconds to open and close the box
+  /// Seconds to open and close the box
   double animationDuration = 0.3;
 
-  // Seconds the box stays open
+  /// Seconds the box stays open
   double stayOpenFor = 1.5;
 
-  // Seconds elapsed since the start
+  /// Seconds elapsed since the start
   double elapsed = 0;
 
   @override

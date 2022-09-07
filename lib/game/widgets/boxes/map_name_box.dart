@@ -4,7 +4,7 @@ import 'package:xeonjia/game/widgets/menus/pause_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
-// Map name shown on the top left of the screen
+/// Map name shown on the top left of the screen
 class MapNameBox extends StatelessWidget {
   MapNameBox(this.gameRef, {this.below = false}) : text = gameRef.map.name;
   final XeonjiaGame gameRef;

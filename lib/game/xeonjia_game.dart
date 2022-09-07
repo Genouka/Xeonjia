@@ -46,10 +46,10 @@ import 'package:xeonjia/utils/game_properties.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
-// Default component dimension
+/// Default component dimension
 double componentSize = 16;
 
-// Xeonjia game class
+/// This contains the game logics
 class XeonjiaGame extends FlameGame
     with KeyboardEvents, PanDetector, HasTappables {
   XeonjiaGame(this.config) {
@@ -109,7 +109,7 @@ class XeonjiaGame extends FlameGame
     super.onMount();
   }
 
-  // Match settings
+  /// Match settings
   final MatchConfig config;
 
   // Map with widgets overlay
@@ -120,53 +120,53 @@ class XeonjiaGame extends FlameGame
     overlays.add(overlayName);
   }
 
-  // Scheme's environment
+  /// Scheme's environment
   late Environment environment;
 
-  // Dialog box
+  /// Dialog box
   late DialogBox dialogBox;
   late MessageManager messageManager;
 
-  // Box with HP, pause, time and team points
+  /// Box with HP, pause, time and team points
   late StatusBox _statusBox;
 
-  // Timer used in multiplayer mode
+  /// Timer used in multiplayer mode
   Timer? _timer;
   int elapsedSeconds = 0;
   int get remainingTime => config.maxTime - elapsedSeconds;
 
-  // If true the game is paused
+  /// If true the game is paused
   bool _pause = false;
   bool get isPaused => _pause;
   bool get isNotPaused => !_pause;
 
-  // Map properties
+  /// Map properties
   late GameMap map;
 
-  // Current event log
-  // It is synced with mainCharacter.eventLog while changing room
+  /// Current event log
+  /// It is synced with [mainCharacter.eventLog] while changing room
   late Map<String, dynamic> currentEventLog;
 
-  // If true: hide hints on the maps
+  /// If true: hide hints on the maps
   bool hideHints = true;
 
-  // List of non-friendly Walker components in game + playerOne
+  /// List of non-friendly [Walker] components in game + [playerOne]
   List<Walker> players = [];
   List<BasicComponent> deletedComponents = [];
 
-  // Main character
+  /// Main character
   CharacterComponent? playerOne;
 
-  // List of teams
+  /// List of teams
   List<Team>? teams;
 
-  // Battle variables
+  /// Battle variables
   Walker? get activePlayer => changingTurn ? null : players[_activePlayerIndex];
   late bool changingTurn;
   late int _activePlayerIndex;
   late int remainingMoves;
 
-  // Increase the move counter during a battle
+  /// Increase the move counter during a battle
   void useMove(Walker component) {
     if (!(component.isMyTurn && inBattle)) return;
     if (--remainingMoves <= 0) {
@@ -224,7 +224,7 @@ class XeonjiaGame extends FlameGame
     super.remove(component);
   }
 
-  // Get component from ID
+  /// Get [BasicComponent] from ID
   BasicComponent? getComponentFromId(int id) {
     var componentList = List.from(children)..addAll(deletedComponents);
     return componentList
@@ -237,7 +237,7 @@ class XeonjiaGame extends FlameGame
   BasicComponent getDeletedComponentFromId(int id) =>
       deletedComponents.firstWhere((c) => c.id == id);
 
-  // Count enemies (alive) in the room
+  /// Count enemies (alive) in the room
   int get enemies => players.where((e) => isEnemy(e, onlyAlive: true)).length;
   bool isEnemy(Component c, {bool onlyAlive = false}) =>
       (c is BasicComponent &&
@@ -247,27 +247,27 @@ class XeonjiaGame extends FlameGame
           c.friendly == false &&
           (!c.deleted || !onlyAlive));
 
-  // List of teams sorted by points
+  /// List of [teams] sorted by points
   List<Team> get ranking {
     var list = List.from(teams!).cast<Team>();
     list.sort((a, b) => b.points.compareTo(a.points));
     return list;
   }
 
-  // List of modifier to be regenerate during the next regenerateModifiers()
+  /// List of modifier to be regenerate during the next [regenerateModifiers]
   List<ModifierComponent> modifiersToBeRegenerated = [];
 
-  // Wireless gamepad
+  /// Wireless gamepad
   FlameGamepad? gamepad;
 
-  // Background music
+  /// Background music
   Bgm? _backgroundMusic;
   String? currentBgm;
 
   @override
   Color backgroundColor() => const Color(0xFF5D6872);
 
-  // Reset variables and import map data
+  /// Reset variables and import [map] data
   void start() async {
     pause(stopMusic: false);
     overlays.remove('mapNameBox');
@@ -342,7 +342,7 @@ class XeonjiaGame extends FlameGame
     if (!worldMapEnabled) updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
   }
 
-  // Function called when playerOne is loaded
+  /// Function called when [playerOne] is loaded
   void playerOneReady() {
     overlays.remove('loading');
     overlays.add('virtualGamePad');
@@ -365,7 +365,7 @@ class XeonjiaGame extends FlameGame
     }
   }
 
-  // Start battle and add HUDs
+  /// Start battle and adds HUDs
   bool inBattle = false;
   void startBattle() {
     inBattle = true;
@@ -376,14 +376,14 @@ class XeonjiaGame extends FlameGame
     overlays.add('rulesButton');
   }
 
-  // Battle is over
+  /// Battle is over
   void endBattle() {
     inBattle = false;
     overlays.remove('rulesButton');
     add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
   }
 
-  // Pause game
+  /// Pause game
   void pause({PauseMode? mode, bool stopMusic = true, bool stopEngine = true}) {
     if (_pause) return;
     _pause = true;
@@ -394,14 +394,14 @@ class XeonjiaGame extends FlameGame
     }
   }
 
-  // Resume game
+  /// Resume game
   void resume() {
     _pause = false;
     resumeEngine();
     _backgroundMusic?.resume();
   }
 
-  // Execute an action
+  /// Execute an action
   void executeAction(
       {required String? action, BasicComponent? actor, BasicComponent? self}) {
     if (action?.isEmpty ?? true) return;
@@ -414,7 +414,7 @@ class XeonjiaGame extends FlameGame
         evaluate(readFromTokens(splitStringIntoTokens(action!)), environment);
   }
 
-  // Continue action execution after (wait)
+  /// Continue action execution after (wait)
   Continuation? _actionContinuation;
   bool get hasAction => _actionContinuation != null;
   void clearActionContinuation() => _actionContinuation = null;
@@ -433,20 +433,20 @@ class XeonjiaGame extends FlameGame
     }
   }
 
-  // Show a message in messageBox
+  /// Show a message in the [dialogBox]
   void setMessage(Message? message, {bool? hideMap, VoidCallback? callback}) {
     if (message != null) {
       setMessages([message], hideMap: hideMap ?? false, callback: callback);
     }
   }
 
-  // Show a list of messages in messageBox
+  /// Show a list of messages in the [dialogBox]
   void setMessages(List<Message> messages,
       {bool hideMap = false, VoidCallback? callback}) {
     messageManager.setMessages(messages, hideMap: hideMap, callback: callback);
   }
 
-  // Start the background music
+  /// Start the background music
   void playBackgroundMusic() {
     if (!settings.backgroundMusic || messageManager.hideMap) return;
     var newBgm = (map.music ?? 'road') + '.oga';
@@ -458,12 +458,12 @@ class XeonjiaGame extends FlameGame
     });
   }
 
-  // Play sound effect
+  /// Play sound effect
   void playSound(Sfx sfx) {
     if (settings.soundEffects) FlameAudio.play(sfx.fileName, volume: 0.3);
   }
 
-  // Save match data and load the new room
+  /// Save match data and load the new room
   void changeRoom(String nextRoomId) {
     pause(stopMusic: false);
     if (enemies == 0) currentEventLog['${map.id}-safe'] = true;
@@ -487,7 +487,7 @@ class XeonjiaGame extends FlameGame
     start();
   }
 
-  // Regenerate regenerable modifiers
+  /// Regenerate regenerable modifiers
   void regenerateModifiers() {
     for (final modifier in modifiersToBeRegenerated) {
       modifier.deleted = false;
@@ -496,7 +496,7 @@ class XeonjiaGame extends FlameGame
     modifiersToBeRegenerated.clear();
   }
 
-  // Update camera position
+  /// Update [camera] position
   void updateCamera(double x, double y) {
     if (map.width == 0) return;
     camera.snapTo(Vector2(
@@ -505,7 +505,7 @@ class XeonjiaGame extends FlameGame
             size.y, worldMapEnabled ? map.width * 0.7 : map.height, y)));
   }
 
-  // Calculate camera position
+  /// Calculate [camera] position
   double _moveCamera(double screenSize, num mapSize, double pos) {
     var delta = mapSize * componentSize * miniMapZoom - screenSize;
     return (delta <= 0 ? delta / 2 : max(0, min(pos - screenSize / 2, delta)))
@@ -513,19 +513,19 @@ class XeonjiaGame extends FlameGame
         .toDouble();
   }
 
-  // Mini-map
+  /// Mini-map
   bool miniMapEnabled = false;
   bool miniMapActive = false;
   double miniMapZoom = 1;
 
-  // World map
+  /// World map
   bool worldMapEnabled = false;
 
-  // Buttons used to zoom in and out
+  /// Buttons used to zoom in and out
   late Button zoomInButton = Button.plus(this);
   late Button zoomOutButton = Button.minus(this);
 
-  // Open/Close mini-map
+  /// Open/Close mini-map
   void miniMap({bool? enable}) {
     miniMapEnabled = enable ?? !miniMapEnabled;
     if (miniMapEnabled) {
@@ -556,7 +556,7 @@ class XeonjiaGame extends FlameGame
     overlays.add('miniMapButton');
   }
 
-  // Open/Close world-map
+  /// Open/Close world-map
   void worldMap({bool? enable}) {
     worldMapEnabled = enable ?? !worldMapEnabled;
     if (worldMapEnabled) {
@@ -572,7 +572,7 @@ class XeonjiaGame extends FlameGame
     }
   }
 
-  // Change mini-map zoom
+  /// Change mini-map zoom
   void zoomMiniMap({double? toValue, bool out = false, bool enable = false}) {
     var previousValue = enable ? 1 : miniMapZoom;
     var delta = 16 / componentSize;
@@ -595,7 +595,7 @@ class XeonjiaGame extends FlameGame
     }
   }
 
-  // Open backpack
+  /// Open backpack
   void backpack() {
     pause(stopMusic: false);
     overlays.remove('dialogBox');
@@ -603,14 +603,14 @@ class XeonjiaGame extends FlameGame
     overlays.add('dialogBox');
   }
 
-  // True if BackpackMenu or ShopMenu are open
+  /// True if [BackpackMenu] or [ShopMenu] are open
   bool get isItemsMenuActive =>
       overlays.isActive('backpackMenu') || overlays.isActive('shop');
 
-  // Reload HP bar
+  /// Reload HP bar
   void refreshHPBar() => _statusBox.state?.refresh();
 
-  // Explain battles
+  /// Explain battles
   void battleRules({bool askForConfirmation = false}) {
     if (askForConfirmation) {
       // i18n: "Do you want to reread the explanation of how to fight?".i18n
@@ -656,7 +656,7 @@ class XeonjiaGame extends FlameGame
     ]);
   }
 
-  // Check if someone won
+  /// Check if someone won
   void checkMatchStatus() {
     if (teams!.first.points >= config.maxPoints ||
         teams!.last.points >= config.maxPoints) {
@@ -664,7 +664,7 @@ class XeonjiaGame extends FlameGame
     }
   }
 
-  // End of the game (defeat in single player or end match in multiplayer)
+  /// End of the game (defeat in single player or end match in multiplayer)
   void end({bool timeOut = false}) {
     pause();
     int? lostMoney;
@@ -717,14 +717,14 @@ class XeonjiaGame extends FlameGame
     super.onTapUp(pointerId, info);
   }
 
-  // Move playerOne
+  /// Move [playerOne]
   void movePlayer(Direction direction) {
     if (!_pause && !messageManager.active && playerOne!.isMyTurn) {
       playerOne?.updateDirection(direction);
     }
   }
 
-  // Manage tap gesture
+  /// Manage tap gesture
   void gestureTapInput(Offset position) {
     if (_pause || !(playerOne?.isMyTurn ?? false)) return;
 
@@ -765,7 +765,7 @@ class XeonjiaGame extends FlameGame
     }
   }
 
-  // Handle back button
+  /// Handle back button
   Future<bool> onWillPop() {
     miniMapEnabled ? miniMap() : pause(mode: PauseMode.exit);
     return Future.value(false);

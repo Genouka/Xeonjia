@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
-// Button used to explain battles
+/// Button used to explain battles
 class RulesButton extends StatelessWidget {
   RulesButton(this.gameRef);
   final XeonjiaGame gameRef;

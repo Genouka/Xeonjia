@@ -7,24 +7,24 @@ import 'package:xeonjia/game/models/item.dart';
 import 'package:xeonjia/game/models/map_data.dart';
 import 'package:xeonjia/utils/settings.dart';
 
-// Game settings and preferences
+/// Game settings and preferences
 late SharedPreferences _prefs;
 late Settings settings;
 
-// Main character data
+/// Main character data
 late CharacterInfo mainCharacter;
 
-// List of all items
-// itemId : Item info
+/// List of all items
+/// itemId : Item info
 Map<String, Item> itemData = {};
 
-// List of maps (taken from kingdom.world and maps-data.json)
+/// List of maps (taken from kingdom.world and maps-data.json)
 List<MapData> worldData = [];
 
-// Gamepad position
+/// Gamepad position
 late Offset gamepadOffset;
 
-// Import all data from shared preferences
+/// Import all data from shared preferences
 Future<void> loadStoredData() async {
   _prefs = await SharedPreferences.getInstance();
 
@@ -55,12 +55,12 @@ Future<void> loadStoredData() async {
   }
 }
 
-// Save user data in shared preferences
+/// Save user data in shared preferences
 void saveUserData() {
   _prefs.setString('userData_V2', jsonEncode(mainCharacter.toJson()));
 }
 
-// Save app settings in shared preferences
+/// Save app settings in shared preferences
 void saveSettings() {
   _prefs.setString('settings_V2', jsonEncode(settings.toJson()));
 }

@@ -3,7 +3,7 @@ import 'package:xeonjia/game/widgets/menus/items_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
-// Backpack menu
+/// Backpack menu
 class BackpackMenu extends ItemsMenu {
   BackpackMenu(XeonjiaGame gameRef)
       : super(

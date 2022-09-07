@@ -96,7 +96,7 @@ class _InfoPageState extends State<InfoPage> {
     );
   }
 
-  // Display third party licenses in an alert dialog
+  /// Display third party licenses in an alert dialog
   void _licenseDialog() {
     showDialog(
       context: context,

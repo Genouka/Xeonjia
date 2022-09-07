@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/ui/screens/rules/utils/rule.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
-// Global rules
+/// Global rules
 List<Rule> rules() => [
       Rule(
         title: 'X E O N J i A',

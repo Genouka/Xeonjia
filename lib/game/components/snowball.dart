@@ -7,7 +7,7 @@ import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
-// Shot created by SnowBallWeapon
+/// Shot created by [SnowBallWeapon]
 class SnowballComponent extends BasicComponent with Walker {
   SnowballComponent(
       Point startingPosition, this.father, this.direction, this.atk)

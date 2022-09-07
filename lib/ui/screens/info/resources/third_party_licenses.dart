@@ -1,4 +1,4 @@
-// List of third party licences used in this app
+/// List of third party licences used in this app
 const List<Map<String, String>> licenses = [
   {
     'lib': 'archive',

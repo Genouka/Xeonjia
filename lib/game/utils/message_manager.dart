@@ -4,29 +4,29 @@ import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
-// Manage game messages (used in dialog box)
+/// Manage game [Message]s (used in [DialogBox])
 class MessageManager {
   MessageManager(this.gameRef);
   final XeonjiaGame gameRef;
   VoidCallback? callback;
 
-  // Messages to show
+  /// [Message]s to show
   List<Message> _messages = [];
 
-  // Message currently displayed
+  /// [Message] currently displayed
   late int _currentIndex;
   Message? get currentMessage => active ? _messages[_currentIndex] : null;
   void nextMessage() => _currentIndex++;
 
-  // Increase currentIndex and check if there are other messages
+  /// Increase [_currentIndex] and check if there are other messages
   bool get hasOtherMessages =>
       _currentIndex + 1 < (gameRef.messageManager._messages.length);
 
-  // Answers shown at the end of the dialog
+  /// Answers shown at the end of the dialog
   List<Answer> answers = [];
   bool get isShowingAQuestion => !hasOtherMessages && answers.isNotEmpty;
 
-  // Remove every message
+  /// Remove every message
   void clear() {
     _messages = [];
     answers = [];
@@ -39,14 +39,14 @@ class MessageManager {
     }
   }
 
-  // True if the dialog box is visible
+  /// True if the dialog box is visible
   bool get active => _messages.isNotEmpty;
 
-  // If true, hide the map with a black container
-  // eg. it will be used for chapter change
+  /// If true, hide the map with a black container
+  /// eg. it will be used for chapter change
   bool hideMap = false;
 
-  // Show one or more messages
+  /// Show one or more messages
   void setMessages(List<Message>? newMessages,
       {bool? hideMap, VoidCallback? callback}) {
     if (newMessages == null) return;
@@ -62,7 +62,7 @@ class MessageManager {
     gameRef.playSound(Sfx.dialog);
   }
 
-  // Split message in sentences and group them
+  /// Split message in sentences and group them
   List<Message> _splitMessage(Message message) {
     var strings = <String>[];
     RegExp(r'([^.,?!"»…。！？“”]*[.,?!"»…。？！“”]*)\s*')

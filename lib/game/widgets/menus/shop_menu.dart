@@ -4,7 +4,7 @@ import 'package:xeonjia/game/widgets/menus/items_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
-// Menu used to buy items in stores
+/// Menu used to buy [Item]s in stores
 class ShopMenu extends ItemsMenu {
   ShopMenu(XeonjiaGame gameRef, List<Item> items)
       : super(

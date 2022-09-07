@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-// Top left container
+/// Top left container
 class InfoBox extends StatelessWidget {
   const InfoBox({
     required this.child,

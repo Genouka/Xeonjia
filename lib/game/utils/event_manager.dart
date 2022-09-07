@@ -13,7 +13,7 @@ import 'package:xeonjia/game/widgets/menus/shop_menu.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
-// Set scheme's environment
+/// Set scheme's environment
 Environment setEnvironment(XeonjiaGame gameRef) {
   var env = Environment(gameRef, null, null, null);
   void _(String name, int arity, IntrinsicBody fun) {

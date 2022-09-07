@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
-// Manage a wireless gamepad
+/// Manage a wireless gamepad
 extension WirelessGamepad on XeonjiaGame {
   void initGamepad() async {
     gamepad ??= (FlameGamepad()

@@ -4,7 +4,7 @@ import 'package:xeonjia/game/components/common/basic.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 
-// Component that can be bypassed only if coming from the allowed direction
+/// Component that can be bypassed only if coming from the allowed direction
 class HurdleComponent extends BasicComponent {
   HurdleComponent(tile)
       : _allowedDirection = GetDirection.fromInt(

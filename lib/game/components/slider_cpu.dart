@@ -5,7 +5,7 @@ import 'package:xeonjia/game/components/utils/npc_controller.dart';
 import 'package:xeonjia/game/components/utils/render_offset.dart';
 import 'package:xeonjia/game/utils/weapons.dart';
 
-// Basic CPU controlled enemy that slides on ice
+/// Basic CPU controlled enemy that slides on ice
 class SliderCpuComponent extends BasicComponent
     with Walker, RenderOffset, HPBar {
   SliderCpuComponent(tile) : super.fromTile(tile) {

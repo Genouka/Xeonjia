@@ -15,24 +15,24 @@ enum Weapons {
   final int id;
 }
 
-// Abstract class used to manage weapons inside game
-// It defines what happens if someone use a weapon
+/// Abstract class used to manage weapons inside game
+/// It defines what happens if someone use a weapon
 abstract class Weapon {
   Weapon(this.id, double? maxPp) {
     this.maxPp = maxPp ?? 10 + level * 5.0;
     _powerPoints = this.maxPp;
   }
 
-  // Weapon id
+  /// Weapon id
   final int id;
 
-  // Weapon level
+  /// Weapon level
   late int level;
 
-  // Weapon attack value
+  /// Weapon attack value
   late double atk;
 
-  // Number of times a weapon can be used
+  /// Number of times a weapon can be used
   double _powerPoints = 0;
   late double maxPp;
   double get ppPercentage => _powerPoints / maxPp;
@@ -42,22 +42,22 @@ abstract class Weapon {
     if (_powerPoints > maxPp) restorePp();
   }
 
-  // Restore PP
+  /// Restore PP
   void restorePp() {
     powerPoints = maxPp;
   }
 
-  // Function used when a shoot input happens
+  /// Function used when a shoot input happens
   void shoot({required Walker shooter});
 
-  // Export / Import weapon details
+  /// Export / Import weapon details
   Map<String, dynamic> toJson() =>
       {'id': id, 'lv': level, 'pp': powerPoints.isFinite ? maxPp : null};
   static Weapon fromJson(Map<String, dynamic> json) =>
       (Weapon.fromId(json['id'], json['lv'])
         ..powerPoints = (json['pp'] ?? double.infinity));
 
-  // Return a new weapon
+  /// Return a new weapon
   static Weapon fromId(int id, [int level = 0]) {
     if (id == 1) return SnowBallWeapon(level: level);
     if (id == 2) return MineWeapon(level: level);
@@ -65,7 +65,7 @@ abstract class Weapon {
   }
 }
 
-// Punch
+/// Punch
 class PunchWeapon extends Weapon {
   PunchWeapon({required this.level})
       : super(Weapons.punch.id, double.infinity) {
@@ -85,7 +85,7 @@ class PunchWeapon extends Weapon {
   }
 }
 
-// Snowball
+/// Snowball
 class SnowBallWeapon extends Weapon {
   SnowBallWeapon({required this.level, double? powerPoints})
       : super(Weapons.snowball.id, powerPoints) {
@@ -110,7 +110,7 @@ class SnowBallWeapon extends Weapon {
   }
 }
 
-// Mine
+/// Mine
 class MineWeapon extends Weapon {
   MineWeapon({required this.level, double? powerPoints})
       : super(Weapons.mine.id, powerPoints) {

@@ -1,4 +1,4 @@
-// Game modes
+/// Game modes
 enum GameMode {
   story('Story mode'),
   tdm('Team Deathmatch'),
@@ -8,7 +8,7 @@ enum GameMode {
   final String name;
 }
 
-// Match parameters
+/// Match parameters
 class MatchConfig {
   MatchConfig(
     this.mode, {

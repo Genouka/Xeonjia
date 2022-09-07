@@ -14,13 +14,13 @@ enum Direction {
 }
 
 extension GetDirection on Direction {
-  // Get opposite direction
+  /// Get opposite direction
   Direction get opposite => fromXY(-dx.toDouble(), -dy.toDouble());
 
-  // Get a random direction
+  /// Get a random direction
   static Direction get random => Direction.values[Random().nextInt(4)];
 
-  // Get direction from different sources
+  /// Get direction from different sources
   static Direction fromInt(int value) => Direction.values[value];
   static Direction fromXY(double x, double y) => fromOffset(Offset(x, y));
   static Direction fromOffset(Offset offset) =>

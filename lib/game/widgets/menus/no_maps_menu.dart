@@ -4,7 +4,7 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
-// Menu displayed if there are no more maps to play
+/// Menu displayed if there are no more maps to play
 class NoMapsMenu extends StatelessWidget {
   const NoMapsMenu(this.gameRef, this.previousMapId);
   final XeonjiaGame gameRef;

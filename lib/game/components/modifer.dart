@@ -6,8 +6,8 @@ import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/game_properties.dart';
 
-// Stats modifier component
-// It increases/decreases character stats
+/// Stats modifier component
+/// It increases/decreases character stats
 class ModifierComponent extends BasicComponent {
   ModifierComponent(tile, {this.father})
       : _moneyDelta = int.parse(tile.properties['moneyDelta'] ?? '0'),
@@ -21,7 +21,7 @@ class ModifierComponent extends BasicComponent {
         _regenerable = (tile.properties['regenerable'] ?? 'false') == 'true',
         super.fromTile(tile);
 
-  // Constructor used for mine weapon shots
+  /// Constructor used for mine weapon shots
   ModifierComponent.mine(Point position, this.father, double atk)
       : atlasAsset = 'weapons.xfa',
         name = 'mine-${father!.teamId}',
@@ -37,7 +37,7 @@ class ModifierComponent extends BasicComponent {
   @override
   String? name;
 
-  // Stats difference caused by this component
+  /// Stats difference caused by this component
   int _moneyDelta = 0;
   int _atkDelta = 0;
   int _defDelta = 0;
@@ -45,17 +45,17 @@ class ModifierComponent extends BasicComponent {
   int _powerPointsDelta = 0;
   double _poisonDelta = 0;
 
-  // Item unique ID
-  // It is "0" if this is not an unique item (this can be taken multiple times)
+  /// Item unique ID
+  /// It is "0" if this is not an unique item (this can be taken multiple times)
   String _itemId = '0';
 
   @override
   BasicComponent? father;
 
-  // True if this is capable of being regenerated
+  /// True if this is capable of being regenerated
   bool? _regenerable;
 
-  // True if this should show an explosion animation on destruction
+  /// True if this should show an explosion animation on destruction
   bool explosionOnDelete = false;
 
   @override

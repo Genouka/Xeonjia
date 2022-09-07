@@ -6,7 +6,7 @@ import 'package:xeonjia/game/widgets/boxes/info_box.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
-// Menu that shows a list of items. Used for ShopMenu and BackpackMenu
+/// Menu that shows a list of [Item]s. Used for [ShopMenu] and [BackpackMenu]
 abstract class ItemsMenu extends StatefulWidget {
   ItemsMenu(
     this.gameRef, {

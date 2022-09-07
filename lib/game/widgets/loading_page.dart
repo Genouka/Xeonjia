@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
-// Page shown while the map is loading
+/// Page shown while the map is loading
 class LoadingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

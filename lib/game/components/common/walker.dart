@@ -15,34 +15,34 @@ import 'package:xeonjia/game/utils/weapons.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
-// Component able to move on the game field
+/// Component able to move on the game field
 mixin Walker on BasicComponent {
   @override
   Sprite getSpriteFromAtlas() => atlas.getSprite('$name-${orientation.index}');
 
-  // Component orientation
+  /// Component orientation
   Direction _orientation = Direction.down;
   Direction get orientation => _orientation;
 
-  // Default component speed (componentSize per second)
+  /// Default component speed ([componentSize] per second)
   static double get defaultSpeed => componentSize * 8;
 
-  // Component speed (componentSize per second)
+  /// Component speed ([componentSize] per second)
   double get speed => defaultSpeed;
 
-  // Number of moves done
+  /// Number of moves done
   int movesCounter = 0;
 
-  // If this is not moving, isStationary returns true
+  /// If this is not moving, isStationary returns true
   bool get isStationary => direction == null;
 
-  // True if this just moved (it's stationary but it's calculating the movement)
+  /// True if this just moved: it's stationary but it's calculating the movement
   bool wasStationary = true;
 
-  // Map orientation : sprite
+  /// Map orientation : sprite
   final _sprites = <Direction, Sprite>{};
 
-  // NPC features: If friendly it doesn't shoot. If quiet it doesn't move.
+  /// NPC features: If friendly it doesn't shoot. If quiet it doesn't move.
   bool friendly = true;
   bool quiet = true;
 
@@ -60,7 +60,8 @@ mixin Walker on BasicComponent {
     return super.onLoad();
   }
 
-  // If this component was previously still update its direction and orientation
+  /// If this component was previously still update its
+  /// [direction] and [_orientation]
   void updateDirection(Direction newDirection,
       {bool forced = false, bool animated = true}) {
     if (!isBeingDeleted && (isStationary || forced)) {
@@ -77,7 +78,7 @@ mixin Walker on BasicComponent {
     }
   }
 
-  // Update component orientation
+  /// Update component [_orientation]
   void updateOrientation([Direction? newDirection]) {
     _orientation = newDirection ?? direction ?? orientation;
     sprite = atlasAsset == null
@@ -91,7 +92,7 @@ mixin Walker on BasicComponent {
     super.update(dt);
   }
 
-  // Recalculate component position
+  /// Recalculate component position
   void _move(double dt) {
     Rect? collidedRect;
     List<BasicComponent> collidedComponents = [];
@@ -153,21 +154,21 @@ mixin Walker on BasicComponent {
     wasStationary = false;
   }
 
-  // Function called if the component is moving
+  /// Function called if the component is moving
   void isMoving() {
     if ((isMyTurn && gameRef.inBattle) || this == gameRef.playerOne) {
       gameRef.updateCamera(x, y);
     }
   }
 
-  // Function called if the component moved
+  /// Function called if the component moved
   void hasMoved() {
     if (!wasStationary && (gameRef.isEnemy(this) || isPlayerOne)) {
       gameRef.useMove(this);
     }
   }
 
-  // Function called when this component collide another component
+  /// Function called when this component collide another component
   // ignore_for_file: avoid_positional_boolean_parameters
   void onCollision(BasicComponent collidedComponent,
       [bool wasStationary = false]) {
@@ -186,7 +187,7 @@ mixin Walker on BasicComponent {
   @mustCallSuper
   void stop() => direction = null;
 
-  // Get components under this one
+  /// Get components under this one
   List<BasicComponent> componentsUnder() {
     return gameRef.children
         .where((component) =>
@@ -198,12 +199,12 @@ mixin Walker on BasicComponent {
         .cast<BasicComponent>();
   }
 
-  // Workaround (waiting for the priority/layers + collision fix)
+  /// Workaround (waiting for the priority/layers + collision fix)
   ThinWallComponent? _wallInFront() => componentsUnder().firstWhereOrNull(
           (c) => c is ThinWallComponent && c.isBlocking(orientation))
       as ThinWallComponent?;
 
-  // Get component in front of this
+  /// Get component in front of this
   BasicComponent? componentInFront([Direction? orientation]) {
     var wall = _wallInFront();
     if (wall != null) return wall;
@@ -232,33 +233,33 @@ mixin Walker on BasicComponent {
         .lastOrNull as BasicComponent?;
   }
 
-  // List of weapon owned
+  /// List of weapon owned
   List<Weapon> weaponList = [];
 
-  // Index of the weapon selected from weaponList
+  /// Index of the weapon selected from weaponList
   int selectedWeaponIndex = 0;
 
-  // Weapon
+  /// Weapon
   Weapon get selectedWeapon => weaponList[selectedWeaponIndex];
 
-  // True if this has the weapon
+  /// True if this has the weapon
   bool hasWeaponId(int id) =>
       weaponList.where((weapon) => weapon.id == id).isNotEmpty;
 
-  // True if this has the weapon and the weapon has at least one PP
+  /// True if this has the weapon and the weapon has at least one PP
   bool hasPpForWeapon(int id) =>
       (weaponList.firstWhereOrNull((w) => w.id == id)?.powerPoints ?? -1) > 0;
 
-  // Return the weapon object by passing the id
+  /// Return the weapon object by passing the id
   Weapon getWeaponById(int id) =>
       weaponList.firstWhere((weapon) => weapon.id == id);
 
-  // Select next weapon in weapon list
+  /// Select next weapon in weapon list
   void nextWeapon() {
     if (++selectedWeaponIndex >= weaponList.length) selectedWeaponIndex = 0;
   }
 
-  // Shoot with the weapon that has weapon.id == id or with the current weapon
+  /// Shoot with the weapon that has weapon.id == id or with the current weapon
   void shoot([int? id]) {
     if (isBeingDeleted || gameRef.isPaused || !isMyTurn || !isStationary) {
       return;
@@ -279,7 +280,7 @@ mixin Walker on BasicComponent {
         selectedWeapon.powerPoints != previousPP) gameRef.useMove(this);
   }
 
-  // Check if it is this component's turn during a battle
+  /// Check if it is this component's turn during a battle
   bool get isMyTurn => gameRef.enemies > 0
       ? (gameRef.players.isNotEmpty ? this == gameRef.activePlayer : false)
       : true;

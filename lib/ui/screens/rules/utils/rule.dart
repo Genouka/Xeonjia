@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// Game rule
+/// Game rule
 class Rule {
   Rule({
     required this.title,

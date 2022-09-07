@@ -15,7 +15,7 @@ import 'package:xeonjia/utils/game_properties.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
-// Dynamic component used for human-like players
+/// Dynamic component used for human-like players
 class CharacterComponent extends BasicComponent
     with Walker, RenderOffset, HPBar, DeletionAnimation {
   CharacterComponent(
@@ -66,7 +66,7 @@ class CharacterComponent extends BasicComponent
     if (!isPlayerOne) selectedWeaponIndex = newSelectedWeaponIndex;
   }
 
-  // Non-Player Character (story mode)
+  /// Non-Player Character (story mode)
   CharacterComponent.npc(Tile tile, MatchConfig matchConfig)
       : this(
           tile,
@@ -102,26 +102,26 @@ class CharacterComponent extends BasicComponent
     return null;
   }
 
-  // Component's tile
+  /// Component's tile
   @override
   Tile tile;
 
   @override
   bool get isPlayerOne => this == gameRef.playerOne;
 
-  // Money earned by the player
+  /// Money earned by the player
   int _money = mainCharacter.money;
   int get money => _money;
   void moneyDifference(int moneyDelta) {
     if (moneyDelta != 0) _money += moneyDelta;
   }
 
-  // Total number of minutes played by the character in this game
+  /// Total number of minutes played by the character in this game
   double get minutesPlayed =>
       mainCharacter.minutesPlayed + gameRef.elapsedSeconds / 60;
 
-  // List of items owned
-  // Add/remove items by using addItem() and removeItem()
+  /// List of [Item]s owned
+  /// Add/remove [Item]s by using [addItem] and [removeItem]
   List<String> _itemList = [];
   List<String> get itemList => _itemList;
   List<Item> get backpackItems => _itemList.fold([],
@@ -129,7 +129,7 @@ class CharacterComponent extends BasicComponent
     ..sort((a, b) => a.name.compareTo(b.name));
   int get gemCount => _itemList.where((e) => e.startsWith('gem_')).length;
 
-  // Initial orientation
+  /// Initial orientation
   late Direction _initialOrientation;
 
   @override
@@ -150,7 +150,7 @@ class CharacterComponent extends BasicComponent
     }
   }
 
-  // Add item to _itemList
+  /// Add item to _itemList
   void addItem(String itemId) {
     _itemList.add(itemId);
     if (isPlayerOne) {
@@ -175,7 +175,7 @@ class CharacterComponent extends BasicComponent
     }
   }
 
-  // Remove item from _itemList
+  /// Remove item from _itemList
   void removeItem(String itemId, {bool used = true}) {
     _itemList.remove(itemId);
     if (isPlayerOne) {

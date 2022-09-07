@@ -9,7 +9,7 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
-// World map
+/// World map
 class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
   @override
   Future<void>? onLoad() {
@@ -40,7 +40,7 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
     super.render(canvas);
   }
 
-  // Update gameRef.camera.position based on currentMap
+  /// Update [gameRef.camera.position] based on currentMap
   void _updateCamera() {
     if (_currentMapPosition == null) return;
     gameRef.updateCamera(_currentMapPosition!.x * gameRef.miniMapZoom,
@@ -51,7 +51,7 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
   Vector2? _currentMapPosition;
 }
 
-// A single map
+/// A single map
 class _RectangleMap extends PositionComponent
     with HasGameRef<XeonjiaGame>, Tappable {
   _RectangleMap(this.map);

@@ -13,7 +13,7 @@ import 'package:xeonjia/utils/game_properties.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
 extension CreateComponent on Tile {
-  // Create components based on tile property "type"
+  /// Create components based on tile property "type"
   void createComponent(XeonjiaGame gameRef) {
     switch (tiledClass) {
       case 'Solid':
@@ -52,7 +52,6 @@ extension CreateComponent on Tile {
           }
         } else {
           var teamId = int.parse(properties['team'] ?? '0');
-          //print(gameRef.players.length);
           if (gameRef.players.where((p) => p.teamId == teamId).length <
               gameRef.config.teamSize) {
             var playerOne = gameRef.playerOne == null && teamId == 0;

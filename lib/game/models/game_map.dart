@@ -1,4 +1,4 @@
-// Map properties read from the tmx file
+/// Map properties read from the tmx file
 class GameMap {
   GameMap({
     required this.fullId,
@@ -13,36 +13,36 @@ class GameMap {
     this.startBattle = true,
   });
 
-  // Map id
+  /// Map id
   final String fullId;
   String get id => fullId.split('/').first;
 
-  // Map name (read from map action)
+  /// Map name (read from map action)
   String? name;
 
-  // Map size
+  /// Map size
   int height;
   int width;
 
-  // Map action (eg. show map-name)
+  /// Map action (eg. show map-name)
   String? action;
 
-  // Background music
+  /// Background music
   String? music;
 
-  // Disable/Enable mini-map (enabled by default)
+  /// Disable/Enable mini-map (enabled by default)
   bool disableMiniMap;
 
-  // Disable/Enable world-map (enabled by default)
+  /// Disable/Enable world-map (enabled by default)
   bool disableWorldMap;
 
-  // True if playerOne can escape from this room without defeating every enemy
+  /// True if [playerOne] can escape from this room without defeating every enemy
   bool canEscape;
 
-  // True if this map has hints (arrows on the ground)
+  /// True if this map has hints (arrows on the ground)
   bool hasHints;
 
-  // True if game.startBattle() is called immediately
-  // If false, (start-battle) procedure must be used
+  /// True if game.startBattle() is called immediately
+  /// If false, (start-battle) procedure must be used
   bool startBattle;
 }

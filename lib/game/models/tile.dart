@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flame/sprite.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
-// Class used to manage a single tile
+/// Class used to manage a single tile
 class Tile {
   Tile({
     this.id,
@@ -20,31 +20,31 @@ class Tile {
     this.properties = properties ?? {};
   }
 
-  // Tile id and gid defined in the TMX file
+  /// Tile id and gid defined in the TMX file
   int? id;
   int? gid;
 
-  // Component class
+  /// Component class
   String? tiledClass;
 
-  // List of tile properties
-  // Properties define component features and stats (eg: atk, def, hp)
+  /// List of tile properties
+  /// Properties define component features and stats (eg: atk, def, hp)
   late Map<String, dynamic> properties;
 
-  // Component sprite
+  /// Component sprite
   Sprite? sprite;
   bool get hidden => sprite == null;
 
-  // Component size
+  /// Component size
   double? size;
 
-  // Component animation
+  /// Component animation
   List<Sprite> animationSprites = [];
   double? animationStepTime;
 
-  // Tile position
+  /// Tile position
   Point? position;
 
-  // Map layer
+  /// Map layer
   int? layer;
 }

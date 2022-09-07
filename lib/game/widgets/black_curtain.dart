@@ -2,7 +2,7 @@ import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
-// AnimatedOpacity widget shown while executing (delete)
+/// [AnimatedOpacity] widget shown while executing `(delete)`
 class BlackCurtain extends StatefulWidget {
   const BlackCurtain(this.gameRef, [this.callback]);
   final XeonjiaGame gameRef;

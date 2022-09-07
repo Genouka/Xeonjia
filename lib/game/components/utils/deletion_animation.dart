@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
-// Show an animation during respawn
+/// Show an animation during respawn
 mixin DeletionAnimation on Walker {
   late TimerComponent timer;
 
-  // Start respawn animation
+  /// Start respawn animation
   void deletionAnimation({required VoidCallback callback, double period = 1}) {
     isBeingDeleted = true;
     timer = TimerComponent(period: period, onTick: callback);

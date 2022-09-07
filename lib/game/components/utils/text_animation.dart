@@ -1,14 +1,14 @@
 import 'package:flame/components.dart';
 import 'package:flutter/painting.dart';
 
-// Show a text above the component for a few seconds
+/// Show a text above the component for a few seconds
 mixin TextAnimation on SpriteComponent {
   final _seconds = 0.6;
   late double _remainingSeconds;
   bool get _show => _text != null;
   String? _text;
 
-  // Show text for _seconds
+  /// Show text for [_seconds]
   void showText(String text) {
     _text = text;
     _remainingSeconds = _seconds;

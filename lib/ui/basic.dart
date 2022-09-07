@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:xeonjia/ui/themes.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
-// Page route
+/// Page route
 class FadeRoute extends PageRouteBuilder {
   FadeRoute(this.page)
       : super(
@@ -26,7 +26,7 @@ class FadeRoute extends PageRouteBuilder {
   final Widget page;
 }
 
-// Remove scroll glow
+/// This removes scroll glow
 class NoGlow extends ScrollBehavior {
   @override
   Widget buildViewportChrome(
@@ -35,7 +35,7 @@ class NoGlow extends ScrollBehavior {
   }
 }
 
-// Button in pauseMenu and backpackMenu
+/// Button used in pauseMenu and backpackMenu
 Widget actionButton(String text, VoidCallback onPressed) => InkWell(
       onTap: onPressed,
       child: Container(
@@ -48,7 +48,7 @@ Widget actionButton(String text, VoidCallback onPressed) => InkWell(
       ),
     );
 
-// White line that divides children of Columns in pauseMenu and backpackMenu
+/// White line that divides children of Columns in pauseMenu and backpackMenu
 Widget divider(BuildContext context) => Container(
       height: 3,
       width: MediaQuery.of(context).size.width / 1.5,
@@ -58,7 +58,7 @@ Widget divider(BuildContext context) => Container(
       ),
     );
 
-// Form used to insert player name
+/// Form used to insert player name
 Widget insertNameForm(GlobalKey<FormState> key,
     TextEditingController textFieldController, Function onSubmitted) {
   return Form(

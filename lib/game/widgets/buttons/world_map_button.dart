@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
-// It opens the world map
+/// Button that opens the world map
 class WorldMapButton extends TextBoxComponent
     with HasGameRef<XeonjiaGame>, Tappable {
   WorldMapButton() : super(size: Vector2.all(1), align: Anchor.center) {

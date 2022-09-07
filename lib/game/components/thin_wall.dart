@@ -4,7 +4,7 @@ import 'package:xeonjia/game/components/common/basic.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 
-// Thin wall with one solid side
+/// Thin wall with one solid side
 class ThinWallComponent extends BasicComponent {
   ThinWallComponent(tile)
       : _solidSide = GetDirection.fromInt(

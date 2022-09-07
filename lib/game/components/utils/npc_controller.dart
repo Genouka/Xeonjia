@@ -6,8 +6,8 @@ import 'package:xeonjia/game/components/static.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/weapons.dart';
 
-// Manage movements and shots (NPC)
-// Add this as a child of a Walker
+/// Manage movements and shots (NPC)
+/// Add this as a child of a [Walker]
 class NpcController extends Component {
   @override
   void onMount() {
@@ -23,17 +23,17 @@ class NpcController extends Component {
 
   late Walker npc;
 
-  // Frequency of movements
+  /// Frequency of movements
   final double _updatePeriod = 0.5;
   late double _timeToNextMove;
 
-  // Pattern defined in tile.properties['movementPattern'] (optional)
+  /// Pattern defined in tile.properties['movementPattern'] (optional)
   final List<Direction> _movementPattern = [];
   int _movementPatternIndex = 0;
   Direction get _nextDirection => _movementPattern[_movementPatternIndex];
   bool get _hasMovements => _movementPattern.isNotEmpty;
 
-  // Follow the pattern
+  /// Follow the pattern
   bool _movementInQueue = false;
   void _patternMove() {
     if (npc.isStationary && !_movementInQueue) {
@@ -52,7 +52,7 @@ class NpcController extends Component {
     }
   }
 
-  // Move freely without pattern
+  /// Move freely without pattern
   // (the code/logic will be improved sooner or later)
   Direction? previousMove;
   void _freeMove() {

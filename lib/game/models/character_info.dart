@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:xeonjia/game/utils/weapons.dart';
 
-// Class used to manage player data
+/// Class used to manage player data
 class CharacterInfo {
-  // Import character data from a Json
+  /// Import character data from a Json
   CharacterInfo(Map<String, dynamic> json)
       : name = json['name'] ?? '',
         eventLog = jsonDecode(json['eventLog'] ?? '{}'),
@@ -32,49 +32,49 @@ class CharacterInfo {
     if (visitedRooms.contains('26')) eventLog['025-henchmen'] = true;
   }
 
-  // Name of the character
+  /// Name of the character
   String name;
 
-  // Player stats
+  /// Player stats
   double atk;
   double def;
   double maxHP;
 
-  // Player current status
+  /// Player current status
   double currentHP;
   double poisonQuantity;
 
-  // Store story events (eg. things done, info acquired)
-  // event name : value (bool or int)
+  /// Store story events (eg. things done, info acquired)
+  /// event name : value (bool or int)
   Map<String, dynamic> eventLog;
 
-  // Available money
+  /// Money available
   int money;
 
-  // Total number of minutes played by the character in this game
+  /// Total number of minutes played by the character in this game
   double minutesPlayed;
 
-  // Total number of enemies defeated by the character
+  /// Total number of enemies defeated by the character
   int defeatedComponents;
 
-  // Number of moves done by the character
+  /// Number of moves done by the character
   int movesCounter;
 
-  // Number of defeats of the character
+  /// Number of defeats of the character
   int defeatsCounter;
 
-  // List of rooms visited by the character ordered by view time
-  // A room could be stored more than once in this list
+  /// List of rooms visited by the character ordered by view time
+  /// A room could be stored more than once in this list
   List<String> visitedRooms;
 
-  // List of items owned by the character
+  /// List of items owned by the character
   List<String> itemList;
 
-  // Weapons owned by the character
+  /// Weapons owned by the character
   List<Weapon> weaponList = [];
   int selectedWeaponIndex;
 
-  // Export character data as a Json
+  /// Export character data as a Json
   Map<String, dynamic> toJson() {
     return {
       'eventLog': jsonEncode(eventLog),

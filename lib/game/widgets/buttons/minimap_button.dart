@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
-// Button used to enable/disable the mini-map view
+/// Button used to enable/disable the mini-map view
 class MiniMapButton extends StatelessWidget {
   MiniMapButton(this.gameRef, {required this.miniMapIsActive});
   final XeonjiaGame gameRef;
