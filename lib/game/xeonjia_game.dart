@@ -289,7 +289,6 @@ class XeonjiaGame extends FlameGame
     // They are removed during the next update()
     removeAll(children);
     add(BackgroundComponent());
-    add(WorldMapButton());
     players.clear();
     deletedComponents.clear();
     modifiersToBeRegenerated.clear();
@@ -348,6 +347,7 @@ class XeonjiaGame extends FlameGame
     overlays.add('virtualGamePad');
     add(Button.A(this));
     if (config.mode == GameMode.story) {
+      add(WorldMapButton());
       overlays.add('miniMapButton');
       overlays.add('backpackButton');
     }
