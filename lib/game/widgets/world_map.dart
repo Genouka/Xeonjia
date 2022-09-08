@@ -2,6 +2,7 @@ import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/image_composition.dart';
 import 'package:flame/input.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:xeonjia/game/models/map_data.dart';
 import 'package:xeonjia/game/utils/message.dart';
@@ -28,9 +29,9 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
 
   @override
   void onGameResize(Vector2 size) {
+    super.onGameResize(size);
     this.size = Vector2(gameRef.map.width * componentSize * gameRef.miniMapZoom,
         gameRef.map.width * componentSize * gameRef.miniMapZoom * 0.7);
-    super.onGameResize(size);
     _updateCamera();
   }
 
@@ -43,8 +44,8 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
   /// Update [gameRef.camera.position] based on currentMap
   void _updateCamera() {
     if (_currentMapPosition == null) return;
-    gameRef.updateCamera(_currentMapPosition!.x * gameRef.miniMapZoom,
-        _currentMapPosition!.y * gameRef.miniMapZoom);
+    gameRef.onPanUpdate(DragUpdateInfo.fromDetails(
+        gameRef, DragUpdateDetails(globalPosition: Offset.zero)));
   }
 
   MapData? _selectedMap;

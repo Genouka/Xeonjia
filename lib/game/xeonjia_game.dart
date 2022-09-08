@@ -360,8 +360,8 @@ class XeonjiaGame extends FlameGame
   void onGameResize(Vector2 canvasSize) {
     componentSize =
         (canvasSize.toSize().longestSide / 16).round16.gridAligned.toDouble();
-    super.onGameResize(canvasSize);
     miniMapZoom = 1;
+    super.onGameResize(canvasSize);
     if (!worldMapEnabled) updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
   }
 
