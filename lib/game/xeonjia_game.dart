@@ -109,6 +109,89 @@ class XeonjiaGame extends FlameGame
     super.onMount();
   }
 
+  /// Function called when [playerOne] is loaded
+  void playerOneReady() {
+    overlays.remove('loading');
+    overlays.add('virtualGamePad');
+    add(Button.A(this));
+    if (config.mode == GameMode.story) {
+      add(WorldMapButton());
+      overlays.add('miniMapButton');
+      overlays.add('backpackButton');
+    }
+    executeAction(action: map.action, actor: playerOne!);
+    if (enemies > 0 && map.startBattle) {
+      setMessage(
+          Message(
+              this,
+              (enemies == 1
+                      ? 'There is one enemy here!'.i18n
+                      : 'There are %s enemies here!'.i18n.fill([enemies])) +
+                  ' ' +
+                  "It' time to fight!".i18n),
+          callback: startBattle);
+    }
+  }
+
+  /// Reset variables and import [map] data
+  void start() async {
+    pause(stopMusic: false);
+    overlays.remove('mapNameBox');
+    overlays.remove('miniMapButton');
+    overlays.remove('backpackButton');
+    overlays.remove('rulesButton');
+    overlays.remove('virtualGamePad');
+
+    // Import mainCharacter.eventLog
+    currentEventLog = Map.from(mainCharacter.eventLog);
+
+    // Reset variables
+    elapsedSeconds = 0;
+    remainingMoves = 3;
+    changingTurn = false;
+    inBattle = false;
+
+    // Remove previous components
+    // They are removed during the next update()
+    removeAll(children);
+    add(BackgroundComponent());
+    players.clear();
+    deletedComponents.clear();
+    modifiersToBeRegenerated.clear();
+    for (final t in teams ?? []) {
+      t.basisPoints = 0;
+    }
+
+    // Import map and components
+    if (config.mode == GameMode.story) {
+      map = GameMap(fullId: mainCharacter.visitedRooms.last);
+      if (map.id == '44') {
+        _backgroundMusic?.dispose();
+        addCustomWidgetOverlay('noMapsMenu', NoMapsMenu(this, '43'));
+        return;
+      }
+      await importMap(this, 'assets/maps/story/${map.id}.tmx');
+      miniMapActive = false;
+    } else {
+      map = GameMap(fullId: config.mapId.toString());
+      await importMap(this, 'assets/maps/arena/${config.mapId}.tmx');
+    }
+    if (map.hasHints) add(HideHintsButton());
+
+    _timer = Timer(1, repeat: true, onTick: () {
+      if (isPaused) return;
+      elapsedSeconds++;
+      if (config.mode != GameMode.story) {
+        if (elapsedSeconds == config.maxTime) end(timeOut: true);
+        if (elapsedSeconds % 10 == 0) regenerateModifiers();
+        _statusBox.state?.refresh();
+      }
+    });
+    _timer?.start();
+    resume();
+    playBackgroundMusic();
+  }
+
   /// Match settings
   final MatchConfig config;
 
@@ -267,65 +350,6 @@ class XeonjiaGame extends FlameGame
   @override
   Color backgroundColor() => const Color(0xFF5D6872);
 
-  /// Reset variables and import [map] data
-  void start() async {
-    pause(stopMusic: false);
-    overlays.remove('mapNameBox');
-    overlays.remove('miniMapButton');
-    overlays.remove('backpackButton');
-    overlays.remove('rulesButton');
-    overlays.remove('virtualGamePad');
-
-    // Import mainCharacter.eventLog
-    currentEventLog = Map.from(mainCharacter.eventLog);
-
-    // Reset variables
-    elapsedSeconds = 0;
-    remainingMoves = 3;
-    changingTurn = false;
-    inBattle = false;
-
-    // Remove previous components
-    // They are removed during the next update()
-    removeAll(children);
-    add(BackgroundComponent());
-    players.clear();
-    deletedComponents.clear();
-    modifiersToBeRegenerated.clear();
-    for (final t in teams ?? []) {
-      t.basisPoints = 0;
-    }
-
-    // Import map and components
-    if (config.mode == GameMode.story) {
-      map = GameMap(fullId: mainCharacter.visitedRooms.last);
-      if (map.id == '44') {
-        _backgroundMusic?.dispose();
-        addCustomWidgetOverlay('noMapsMenu', NoMapsMenu(this, '43'));
-        return;
-      }
-      await importMap(this, 'assets/maps/story/${map.id}.tmx');
-      miniMapActive = false;
-    } else {
-      map = GameMap(fullId: config.mapId.toString());
-      await importMap(this, 'assets/maps/arena/${config.mapId}.tmx');
-    }
-    if (map.hasHints) add(HideHintsButton());
-
-    _timer = Timer(1, repeat: true, onTick: () {
-      if (isPaused) return;
-      elapsedSeconds++;
-      if (config.mode != GameMode.story) {
-        if (elapsedSeconds == config.maxTime) end(timeOut: true);
-        if (elapsedSeconds % 10 == 0) regenerateModifiers();
-        _statusBox.state?.refresh();
-      }
-    });
-    _timer?.start();
-    resume();
-    playBackgroundMusic();
-  }
-
   @override
   void update(double dt) {
     _timer?.update(dt);
@@ -339,30 +363,6 @@ class XeonjiaGame extends FlameGame
     super.onGameResize(canvasSize);
     miniMapZoom = 1;
     if (!worldMapEnabled) updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
-  }
-
-  /// Function called when [playerOne] is loaded
-  void playerOneReady() {
-    overlays.remove('loading');
-    overlays.add('virtualGamePad');
-    add(Button.A(this));
-    if (config.mode == GameMode.story) {
-      add(WorldMapButton());
-      overlays.add('miniMapButton');
-      overlays.add('backpackButton');
-    }
-    executeAction(action: map.action, actor: playerOne!);
-    if (enemies > 0 && map.startBattle) {
-      setMessage(
-          Message(
-              this,
-              (enemies == 1
-                      ? 'There is one enemy here!'.i18n
-                      : 'There are %s enemies here!'.i18n.fill([enemies])) +
-                  ' ' +
-                  "It' time to fight!".i18n),
-          callback: startBattle);
-    }
   }
 
   /// Start battle and adds HUDs
