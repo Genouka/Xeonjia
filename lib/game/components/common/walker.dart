@@ -261,7 +261,11 @@ mixin Walker on BasicComponent {
 
   /// Shoot with the weapon that has weapon.id == id or with the current weapon
   void shoot([int? id]) {
-    if (isBeingDeleted || gameRef.isPaused || !isMyTurn || !isStationary) {
+    if (!gameRef.inBattle ||
+        isBeingDeleted ||
+        gameRef.isPaused ||
+        !isMyTurn ||
+        !isStationary) {
       return;
     }
     double previousPP = 0;
