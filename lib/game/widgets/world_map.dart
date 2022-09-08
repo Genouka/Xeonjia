@@ -3,7 +3,6 @@ import 'package:flame/flame.dart';
 import 'package:flame/image_composition.dart';
 import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:xeonjia/game/models/map_data.dart';
 import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -109,10 +108,11 @@ class _RectangleMap extends PositionComponent
   @override
   void onGameResize(Vector2 size) {
     super.onGameResize(size);
-    final double multiplier =
-        (parent as WorldMap).size.x * MapData.offset.x * MapData.scale;
-    final Vector2 offset = Vector2.copy((parent as WorldMap).size)
-      ..multiply(MapData.offset);
+    var parentSize = Vector2(
+        gameRef.map.width * componentSize * gameRef.miniMapZoom,
+        gameRef.map.width * componentSize * gameRef.miniMapZoom * 0.7);
+    final double multiplier = parentSize.x * MapData.offset.x * MapData.scale;
+    final Vector2 offset = Vector2.copy(parentSize)..multiply(MapData.offset);
     position = Vector2(map.x * multiplier, map.y * multiplier) + offset;
     this.size = Vector2(map.width * multiplier, map.height * multiplier);
     if (isTheCurrentMap) {
