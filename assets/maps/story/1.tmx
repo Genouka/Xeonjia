@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="20" height="22" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="75">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="18" height="19" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="130">
  <properties>
   <property name="action" value="(map-name &quot;Natawn&quot;)"/>
+  <property name="has-hints" type="bool" value="true"/>
   <property name="music" value="town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
- <layer id="1" name="Tile Layer 1" width="20" height="22">
+ <tileset firstgid="181" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="18" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7WUyw7CIBBF57N8ROM7UbuosRv37Nio/QLtj3tJmHRKpgoEJzkpuWGGAW4hyosFWGbmarEHB0WfgtlIjtPnieuswcYjg7UtMIXr5fanwfXawvVi4whOATsxPv/Id/d8BTdQee0ZzFkBm9ATe+edkBMTFfU9/rNeuP/YsDQ8p9fIvFivlN5vR/l708L1xv9mSl323IWGb4w7u1zPaO+VofJ+Kenplr73l9p7R7q3pDah+Lti/zUeKzTurQZ38BC6W8/4b+M1zv0AWT+X5uAGAAA=
+   H4sIAAAAAAAAA52UQU8CMRCF52chBrMokIh7IezFhGNvXER/gWwgelCBxIMmgh4A+Ze+SWbSobTK+pIvLbPta7d9C1E1NcBZxTkxtUFH+nemfgLqiTlcPzW/b8AoMbYJzgUrrV0AZ+oTMDU8VvCxegLPYCbtPOITQ330LD7AEqzAAnxV9FGtwRZswDvYSf0SdANapn8V+NxKy/fWB9cgD56pMjCktKwXZ2BsnuWHw3+VXTv/x/yYUj6F6fP7cWYeAjQ3zoxT3SfWewUvwkzat2A/LjIvlGZG+SSfG1ZJx50PZ4bzorn5Jp8b3Y/eWXj3MWlmeuS/eRZnvYjO8OvEvDpBraT9/xDrr6rR33sdSMt74vMempoqEx89S0f+PQry9/0DMeFmGFgFAAA=
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="48" type="NPC" gid="1" x="48" y="96" width="16" height="16">
+  <object id="48" class="NPC" gid="1" x="48" y="96" width="16" height="16">
    <properties>
-    <property name="action">(if (!get &quot;001-talk-dad&quot;)
+    <property name="action">(if (not (has-been-here &quot;999&quot;))
+  (if (!get &quot;001-talk-dad&quot;)
     (begin
-        (dialog
-            '((&quot;dad&quot; &quot;Safe travels, {{hero}}.\nMany before you have failed, but I am sure you will handle it right.&quot;)
-            (&quot;/hero&quot; &quot;I'll do my best.&quot;)))
-        (set &quot;001-talk-dad&quot; #t))
-    (dialog '((&quot;dad&quot; &quot;The tower in which the \&quot;King of Evil\&quot; resides should be located near the capital of the region.&quot;))))</property>
+      (dialog
+        '((&quot;dad&quot; &quot;Safe travels, {{hero}}.\nIf you lose your way or get stuck take a look at the map.\nYou can open it by tapping on its icon in the upper right corner.&quot;)))
+      (set &quot;001-talk-dad&quot; #t))
+      (dialog '((&quot;dad&quot; &quot;The tower in which the \&quot;King of Evil\&quot; resides should be located near the capital of the region.&quot;))))
+  (dialog '((&quot;dad&quot; &quot;Stay focused on your goals and don't wander around aimlessly.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
- <layer id="6" name="Tile Layer 2" width="20" height="22">
+ <layer id="6" name="Tile Layer 2" width="18" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA82U2Q6CMBBF5wP9EIUXlyd5d8EtRmNcIrjvfqS3aRsHQysoRG9y0pBhLp1ygeipBmgCX10XQYk+k/CagCGYK88yqCT0fq33QQd0QU95cmlvky9/tgu2YKcYg71hH7pPn43GZ/c44AqW4AYW4A4KlvnE2UxJns9MzeOoWtXQU7P4BSAEKzACG+Zj6nMtfgdwAkeS81xYzYntSC+PvstYnPh7zktZzV+31HTeWmxtUzR3aSTyNiCZObHy3HElnY3nLVSsSeYuTu98dd40IndniuZOyEu4v1/p3/dnEv8Os8h3mn99nnoAKeJo/uAGAAA=
+   H4sIAAAAAAAAA2NgQIBWIG4D4k4oPwOIMxlIAyAzpgLxBCCeCTWrAIgLkdRgMxddrBeIu4C4G4h7oGbhUw8DyHZlA/EiIF4MxZOBeAke9bhAFhCvAuI5QLwaiGcB8Rog9iGgD1k/CBThkC8m0hyYflzqs/HYjQ3gkyNGfRUDeWkEm1nExMNAgcqBdgAVQRWUJjXu6Q2Q0xUlbkVOV/T0MwA7xpVuWAUAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="47" type="Door" x="128" y="336" width="16" height="16">
+  <object id="47" class="Door" x="128" y="288" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="2"/>
    </properties>
   </object>
-  <object id="67" type="Door" x="80" y="80" width="16" height="16">
+  <object id="67" class="Door" x="80" y="80" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="1_home"/>
    </properties>
   </object>
-  <object id="68" type="Door" x="272" y="112" width="16" height="16">
+  <object id="68" class="Door" x="240" y="112" width="16" height="16">
    <properties>
     <property name="roomId" value="1_house"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="66" gid="123" x="112" y="352" width="16" height="16">
+  <object id="66" gid="123" x="112" y="304" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;\&quot; NATAWN – Hometown of the 62nd hero \&quot;&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/_1&quot; &quot;NATAWN – Hometown of the 62nd hero&quot;)))"/>
    </properties>
   </object>
-  <object id="70" type="Solid" x="80" y="128" width="16" height="16">
+  <object id="70" class="Solid" x="80" y="128" width="16" height="16">
    <properties>
     <property name="actionOnCollision">(if  (or (!get &quot;001-talk-dad&quot;) (!get &quot;001-talk-mom&quot;))
     (begin 
-        (dialog '((&quot;I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude.&quot;)))
+        (dialog '((&quot;I've to say goodbye to my parents with the \&quot;A\&quot; button before I leave. Otherwise it would be rude.&quot;)))
         (wait)
         (set-orientation 1))
     (fire-event (self)))</property>
@@ -65,16 +69,289 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="73" type="Solid" x="128" y="336" width="16" height="16">
+  <object id="73" class="Solid" x="128" y="288" width="16" height="16">
    <properties>
-    <property name="actionOnCollision">(if  (= (get-def) 0)
+    <property name="actionOnCollision">(if (!get &quot;001-talk-neighbor&quot;)
     (begin 
-        (dialog '((&quot;Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks.&quot;)))
+        (dialog '((&quot;Like my mother said, I have to go to my neighbor first.&quot;)))
         (wait)
         (set-orientation 1))
     (fire-event (self)))</property>
-    <property name="actionOnEvent">(if  (&gt; (get-def) 0)
+    <property name="actionOnEvent">(if (get &quot;001-talk-neighbor&quot;)
     (delete-me))</property>
+   </properties>
+  </object>
+  <object id="77" gid="195" x="96" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="78" gid="195" x="80" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="79" gid="204" x="80" y="160" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="80" gid="195" x="112" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="81" gid="195" x="128" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="82" gid="195" x="240" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="83" gid="195" x="208" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="84" gid="195" x="192" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="85" gid="195" x="176" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="86" gid="195" x="224" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="87" gid="195" x="160" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="88" gid="195" x="144" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="89" gid="203" x="240" y="288" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="90" gid="196" x="256" y="160" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="91" gid="203" x="224" y="288" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="92" gid="203" x="208" y="288" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="93" gid="203" x="192" y="288" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="94" gid="203" x="176" y="288" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="95" gid="196" x="160" y="288" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="96" gid="196" x="256" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (get &quot;001-talk-neighbor&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="97" gid="204" x="240" y="272" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="98" gid="196" x="160" y="256" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="99" gid="203" x="144" y="256" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="100" gid="203" x="128" y="256" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="101" gid="203" x="112" y="256" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="102" gid="203" x="96" y="256" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="103" gid="203" x="80" y="256" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="110" gid="204" x="128" y="224" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="111" gid="195" x="112" y="224" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="112" gid="195" x="96" y="224" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="113" gid="195" x="80" y="224" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="114" gid="195" x="64" y="224" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="115" gid="195" x="48" y="224" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="116" gid="203" x="64" y="256" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="117" gid="196" x="48" y="256" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="118" gid="204" x="128" y="272" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="119" gid="204" x="128" y="240" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="120" gid="204" x="240" y="256" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="121" gid="204" x="240" y="240" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="122" gid="204" x="240" y="224" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="123" gid="204" x="240" y="208" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="124" gid="204" x="240" y="192" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="125" gid="204" x="240" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="126" gid="204" x="240" y="160" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="127" gid="196" x="48" y="240" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="128" gid="196" x="160" y="272" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="129" class="Solid" x="80" y="144" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if (!get &quot;001-first-slide&quot;)
+  (begin
+    (dialog '((&quot;/hero&quot; &quot;From here on is the frozen floor.\nI'll slide until I reach an obstacle.\nSo I have to use my mind to figure out the best path.&quot;)))
+      (set &quot;001-first-slide&quot; #t)
+      (fire-event (self))))</property>
+    <property name="actionOnEvent">(if (get &quot;001-first-slide&quot;)
+  (delete-me))</property>
    </properties>
   </object>
  </objectgroup>

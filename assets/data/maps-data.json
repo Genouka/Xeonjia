@@ -1,6 +1,32 @@
 {
     "1.tmx": {
-        "name": "Natawn",
-        "text": "Here is where I live."
+        "text": "Here is where I lived."
+    },
+    "22.tmx": {
+        "text": "Here is the Mossy Crypt."
+    },
+    "24.tmx": {
+        "text": "Here is the Vantoi Lab."
+    },
+    "30.tmx": {
+        "text": "Here is the City Hall of Melhopolis."
+    },
+    "34.tmx": {
+        "text": "Here is the Hexa Cave."
+    },
+    "37.tmx": {
+        "text": "Here is the Zamelis Village."
+    },
+    "38.tmx": {
+        "text": "Here is the Zamelis Village."
+    },
+    "43.tmx": {
+        "text": "Here is the Observation Tower."
+    },
+    "44.tmx": {
+        "hidden": true
+    },
+    "999.tmx": {
+        "text": "Here is the Xeonjia Tower."
     }
 }

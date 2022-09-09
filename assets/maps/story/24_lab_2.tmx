@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="74">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="74">
  <properties>
   <property name="action" value="(map-name &quot;VANTOI LAB – 2F&quot;)"/>
   <property name="disable-minimap" type="bool" value="true"/>
@@ -8,33 +8,34 @@
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="229" source="../tilesets/lab.tsx"/>
+ <tileset firstgid="237" source="../tilesets/lab.tsx"/>
  <layer id="1" name="Tile Layer 1" width="13" height="10">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA7vAwMBwngR8EYhvAPF1PHgbGn0TqmcPCXhUD0TPAxLU3wXih0B8jQwMAMOQeNAIAgAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="71" type="NPC" gid="7" x="128" y="112" width="16" height="16">
+  <object id="71" class="NPC" gid="7" x="48" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;scientist&quot; &quot;What a mess! I have to tidy up!&quot;)))"/>
-    <property name="orientation" type="int" value="1"/>
+    <property name="friendly" type="bool" value="true"/>
+    <property name="movementPattern" value="2,2,3,3"/>
     <property name="quiet" type="bool" value="false"/>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA88BeJnWGh84DUQf0KiPwLxG6jccyB+CcUv0PT9RON/htJvgfg9lP2OBLe9QqMZoG6Bue0NmtvwgS8kqiEn3L4D8Q8sNDUBAGO4KvAIAgAA
+   H4sIAAAAAAAAA2NgIA+8BeJ3WGh84DMQ/0KifwLxF6jceyD+CMUf0PQxMqLyf0Ppr0D8Hcr+RoLbPqHRDFC3wNz2Bc1t+MAfEtWQE27/QQQjJk1NAADZTNqYCAIAAA==
   </data>
  </layer>
  <layer id="12" name="Tile Layer 3" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGFzgKxB/G2hHjEAAADzd4VIIAgAA
+   H4sIAAAAAAAAA2NgGFzgLxD/G2hHjEAAAFlygXYIAgAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="70" type="Door" x="160" y="128" width="16" height="16">
+  <object id="70" class="Door" x="160" y="128" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="24_lab"/>
@@ -42,7 +43,7 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="73" gid="239" x="160" y="64" width="16" height="16">
+  <object id="73" gid="247" x="160" y="64" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;A broken monitor.&quot;))))</property>

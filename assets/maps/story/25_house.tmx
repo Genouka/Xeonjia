@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="73">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="75">
  <properties>
   <property name="disable-minimap" type="bool" value="true"/>
-  <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6EG+D0sgYJnYTqm4PATwU1D0gQt1DIL6GA19F4wMA6cfviWgBAAA=
+   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6EG+D0sgYJnYTqm4PATwU1D2Ask8C8SkkGlndQyC+hgNfReMDAKFA7kxoAQAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="72" class="NPC" gid="10" x="64" y="96" width="16" height="16">
+  <object id="73" class="NPC" gid="20" x="96" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;Melhopolis is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though.&quot;)))"/>
-    <property name="orientation" type="int" value="1"/>
+    <property name="action">(begin
+  (dialog '((&quot;/&quot; &quot;I'm planning a surprise wedding for my son.\nI hope he doesn't find out.&quot;)))
+  (wait)
+  (set-orientation 3))</property>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA/sBOJdRKg7CMSHiFC3H4gPAPF2AuqOA/EJIsyjBdgNxFuhNKkAAL0Xf0xoAQAA
+   H4sIAAAAAAAAA2NgIB/sBOJdWMR3o/EPAvEhHHLIYDsB+0Dy+4H4ABFuOw7EJ4hQhw9gc+tWPHL4AADaJ6FvaAEAAA==
+  </data>
+ </layer>
+ <layer id="13" name="Tile Layer 3" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGHrg6UA7gAwAAO/YlE5oAQAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="31"/>
+    <property name="roomId" value="25"/>
    </properties>
   </object>
  </objectgroup>

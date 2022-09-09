@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="73">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="74">
  <properties>
   <property name="action" value="(map-name &quot;Pharmacy&quot;)"/>
   <property name="disable-minimap" type="bool" value="true"/>
-  <property name="music" value="town"/>
+  <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
@@ -19,6 +19,11 @@
     <property name="actionOnEvent" value="(dialog '((&quot;pharmacist&quot; &quot;Welcome to my shop!&quot;)))"/>
    </properties>
   </object>
+  <object id="73" class="NPC" gid="46" x="48" y="112" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I wanted to buy some medicines but they don't have the ones I like.&quot;)))"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="10" height="9">
   <data encoding="base64" compression="gzip">
@@ -29,7 +34,7 @@
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="37"/>
+    <property name="roomId" value="28"/>
    </properties>
   </object>
  </objectgroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="98">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="98">
  <properties>
   <property name="action" value="(map-name &quot;Mossy Crypt -3F&quot;)"/>
   <property name="map-name" value="Mossy Crypt -3F"/>
@@ -10,46 +10,46 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <tileset firstgid="229" source="../tilesets/crypt-1.tsx"/>
  <tileset firstgid="285" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="293" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="305" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="22" height="15">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA62TzQqDMBCEE1BaBRsr2Lz/64n2UGgPxUM3oDBdN2b9WfguSWZ2M7CVNeZ2Mo6oiJy4n8QFfAOhBuILPM32coLvm+iAj6C70tuCKO3/+bjiq6l6+m8T0az59uztaPS1d16pVwZ6yTeWXZbom/JNZaeZ/WgOsdrjG3J6AKVdnnvBF3OSMnWwqznkVU97xvdYOy/6zpqXcDf7tux/MTxoucYzX63nFkKPH28jIsIoBQAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="84" type="SlitherCpu" gid="285" x="128" y="144" width="16" height="16">
+  <object id="84" class="SliderCpu" gid="285" x="128" y="144" width="16" height="16">
    <properties>
     <property name="atk" type="float" value="10"/>
-    <property name="lifePoints" type="float" value="30"/>
+    <property name="hp" type="float" value="30"/>
    </properties>
   </object>
-  <object id="85" type="SlitherCpu" gid="285" x="192" y="112" width="16" height="16">
+  <object id="85" class="SliderCpu" gid="285" x="192" y="112" width="16" height="16">
    <properties>
     <property name="atk" type="float" value="10"/>
-    <property name="lifePoints" type="float" value="30"/>
+    <property name="hp" type="float" value="30"/>
    </properties>
   </object>
-  <object id="86" type="SlitherCpu" gid="285" x="64" y="160" width="16" height="16">
+  <object id="86" class="SliderCpu" gid="285" x="64" y="160" width="16" height="16">
    <properties>
     <property name="atk" type="float" value="10"/>
-    <property name="lifePoints" type="float" value="30"/>
+    <property name="hp" type="float" value="30"/>
    </properties>
   </object>
-  <object id="87" gid="48" x="304" y="176" width="16" height="16">
+  <object id="87" class="NPC" gid="48" x="304" y="176" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
     (delete-me))</property>
    </properties>
   </object>
-  <object id="88" gid="45" x="208" y="16" width="16" height="16">
+  <object id="88" class="NPC" gid="45" x="208" y="16" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
     (delete-me))</property>
    </properties>
   </object>
-  <object id="89" gid="45" x="80" y="64" width="16" height="16">
+  <object id="89" class="NPC" gid="45" x="80" y="64" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;My work is so boring…&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
@@ -63,12 +63,12 @@
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="80" type="Door" x="64" y="48" width="16" height="16">
+  <object id="80" class="Door" x="64" y="48" width="16" height="16">
    <properties>
     <property name="roomId" value="t1_02"/>
    </properties>
   </object>
-  <object id="83" type="Door" x="96" y="48" width="16" height="16">
+  <object id="83" class="Door" x="96" y="48" width="16" height="16">
    <properties>
     <property name="roomId" value="t1_04"/>
    </properties>
@@ -93,19 +93,19 @@
     (dialog '((&quot;A snowdrift.&quot;))))</property>
    </properties>
   </object>
-  <object id="93" gid="304" x="64" y="208" width="16" height="16">
+  <object id="93" gid="316" x="64" y="208" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="94" gid="304" x="304" y="64" width="16" height="16">
+  <object id="94" gid="316" x="304" y="64" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="95" gid="304" x="256" y="208" width="16" height="16">
+  <object id="95" gid="316" x="256" y="208" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
   <object id="97" gid="276" x="48" y="48" width="16" height="16">

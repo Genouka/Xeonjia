@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="15" height="27" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="63">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="27" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="64">
  <properties>
   <property name="map-name" value="Route 4"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="189" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="349" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="361" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="27">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WUMQ7CMAxFzcwFehJYKCws6b2RWNgyMHRkBQYW2LCFLVkGx0n40lOiJL/fSdoCAMzMwFA/M2c1Nxs2yAi+js545nYw4wmZCs/T3ijb80pGq5+868L8rjB3ge+9tki8pfOx+ZlzZbxUu+hh/L01U+4K+u6IvFvui/+K3ALu7Omp+Ym8Or1Ss91rzXmTlotP25NNuTlc5Xsl0553pAPU78/qxK1kt9T/z3f0645avKSa/5PnJbXelfbWZo/4PiVG5J2ZXktMyJ5JAXqt5Q105+dfVAYAAA==
+   H4sIAAAAAAAAA6WUuw7CMAxFHQm+gX4JLDzmMrGU/67Uhc0DQ0dWYIBYtSXLkPeVrhIlOb1x0hYAYGZ3bOoj+67mZmXS3vsAYU2BceS2M+O99znyPM2mskOsZJTyxO4i86fI3AN+ay2RsLHzsfloxmN7F30MX7tnqncLdXdE7JH7wj+9Xwm/manZ88oBrF1bvbbWnPMmbdzS1mRTLlZwwkqmPe+URsivz+rGrWRjAdvyHf27oxKWlPN/CrEkbGBzs3v/Pg1sUejM9Fry1fvCHhLWa62/9HBNoVQGAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="15" height="27">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzNhYGAwZaAecARiJyLVmpBpN8wOcvXTE3wA4o9IfFLC5wcQ/6S6i0gDlIYxveIIPZzJAUMhPeECZlB6KPuBGECp/0jJf9QGA2k3PQEAQ9rP61QGAAA=
+   H4sIAAAAAAAAAzNhYGAwZaAecARiJyLVmpBpN8wOcvXTE/wB4r9IfFLCh4WRgYGVkfpuIgVQGsb0iiP0cCYHDIX0hAuYQemh7AdiAKX+IyX/URsMpN30BAC0ikvvVAYAAA==
   </data>
  </layer>
  <objectgroup id="10" name="spawn points">
-  <object id="51" type="Door" x="128" y="0" width="16" height="16">
+  <object id="51" class="Door" x="128" y="0" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="32"/>
    </properties>
   </object>
-  <object id="54" type="Door" x="224" y="272" width="16" height="16">
+  <object id="54" class="Door" x="224" y="272" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="35/1"/>
    </properties>
   </object>
-  <object id="55" type="Door" x="224" y="288" width="16" height="16">
+  <object id="55" class="Door" x="224" y="288" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="35/2"/>
@@ -39,7 +40,7 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="56" gid="243" x="16" y="192" width="16" height="16">
+  <object id="56" gid="255" x="16" y="192" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define event-id &quot;36.vase1&quot;)
@@ -52,7 +53,7 @@
         (dialog '((&quot;This vase is empty.&quot;)))))</property>
    </properties>
   </object>
-  <object id="57" gid="243" x="112" y="160" width="16" height="16">
+  <object id="57" gid="255" x="112" y="160" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;36.vase2&quot;)
@@ -65,24 +66,24 @@
         (dialog '((&quot;This vase is empty.&quot;)))))</property>
    </properties>
   </object>
-  <object id="58" type="Modifier" gid="367" x="64" y="80" width="16" height="16">
+  <object id="58" class="Modifier" gid="379" x="64" y="80" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
    </properties>
   </object>
-  <object id="59" type="Modifier" gid="367" x="192" y="64" width="16" height="16">
+  <object id="59" class="Modifier" gid="379" x="192" y="64" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="25"/>
    </properties>
   </object>
-  <object id="60" gid="361" x="48" y="304" width="16" height="16">
+  <object id="60" gid="373" x="48" y="304" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="60"/>
+    <property name="healthPointsDelta" type="int" value="60"/>
    </properties>
   </object>
-  <object id="61" gid="360" x="32" y="32" width="16" height="16">
+  <object id="61" gid="372" x="32" y="32" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="25"/>
+    <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
   </object>
  </objectgroup>

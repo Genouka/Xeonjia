@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="14" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="46">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="14" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="46">
  <properties>
   <property name="action" value="(map-name &quot;Mitsu Forest&quot;)"/>
   <property name="map-name" value="Mitsu Forest"/>
@@ -7,39 +7,40 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="137" source="../tilesets/capital-1.tsx"/>
- <tileset firstgid="201" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="253" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="149" source="../tilesets/capital-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="233" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="14" height="21">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA51TQQ6EQAjjD3sx8cLRIw9Q77v7tt03yySSIIFKbNLMpFKK40jUx6Tkc+1gVW6nZ0CCbqvhrfwkfcwfc6t6023WKcmK+Lp9pz6bT5IZfU/0LOZltVFj0BNBXF7HbzVM9bdAPvTud35JtCpnIN65iJ/yD/KezlnlIbDL20FNppnuz2dp5GX97oDOper3Us50vWd+z45C13918ABFqm/TmAQAAA==
+   H4sIAAAAAAAAA5VSOw6DMAz1HVgidfHYMRsLRVn7uWA5La6K1VfLdsKTrIDzPjGEKMZs1hEsUjfQvRIOcpVfpO5SD0dXzHvE8/o2y+Jpcnp8BB9rdc6IntmezfO4ttcSzwwV8kb0ymH6zXpGl83e09fAM+rpXBx4vqW2YK8F/j2UQ3sWDHlrwvF62sfvcx3I8/x6yP5f5DdJXej/nuGznqXRdwaGnE/t/yxXN5gEAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="44" gid="230" x="96" y="240" width="16" height="16">
+  <object id="44" class="NPC" gid="210" x="96" y="240" width="16" height="16">
    <properties>
     <property name="action">(begin
-    (dialog '((&quot;/&quot; &quot;Nobody knows what the writing on this stone means, it is not even known who wrote it.&quot;)))
-    (define id &quot;029-tree-story&quot;)
-    (if (get id)
-        (dialog '((&quot;/&quot; &quot;Do you want to hear the legend of this tree again?&quot;)))
-        (dialog '((&quot;/&quot; &quot;Are you interested to learn about the legend of this tree?&quot;))))
-    (answer id '((&quot;Yes please&quot; . #t) (&quot;No thanks&quot; . #f)))
-    (wait)
-    (if (get id)
-        (dialog '((&quot;/&quot; &quot;There was once a devastating war in this area and everything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all the souls who left us.\nIt has the particularity of withering in spring and blooming in the other seasons.\nEvery spring the souls leave this tree to make other plants bloom and then, at the end of spring, the souls return to flourish again this tree.\nThat's all I know about this tree.\nI hope to have time to see the end of this winter season which has persisted for more than 60 years now.&quot;)))
-        (dialog '((&quot;/&quot; &quot;Ok, it was a long and boring story after all.&quot;)))))</property>
+  (dialog '((&quot;/&quot; &quot;Nobody knows what the writing on this rock means, it is not even known who wrote it.&quot;)))
+  (define id &quot;029-tree-story&quot;)
+  (if (get id)
+    (dialog '((&quot;/&quot; &quot;Do you want to hear the legend of this tree again?&quot;)))
+    (dialog '((&quot;/&quot; &quot;Are you interested to learn about the legend of this tree?&quot;))))
+  (answer id '((&quot;Yes please&quot; . #t) (&quot;No thanks&quot; . #f)))
+  (wait)
+  (if (get id)
+    (dialog '((&quot;/&quot; &quot;A looong time ago, way before the arrival of the King of Evil, there was a devastating war in this area.\nEverything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all the souls who left us.\nIt has the peculiarity of losing its leaves in spring and blooming in the other seasons.\nEvery spring the souls leave this tree to make other plants bloom and then, at the end of spring, the souls return to flourish again this tree.\nThat's all I know about this tree.\nI hope to live long enough to see the end of this winter season which has persisted for more than 60 years now.&quot;)))
+    (dialog '((&quot;/&quot; &quot;Ok, it was a long and boring story after all.&quot;)))))</property>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="14" height="21">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIAxMgNgUjzi6vCMQOxFhLiH12MRxuQUGnElUT20wGOzrBOIuIO4G4h4SzJoIxJOAeDIQTyFB30wgngXEs4F4Dgn68AF6hyO1gNlAO4BGADk+6BE3AN+YQNqYBAAA
+   H4sIAAAAAAAAA2NgwA5MgNgUie+CRw26WhhwBGInHOYTow6bOC67YMCZRPXUBoPBvqlAPA2IpwPxDBLMmgvE84B4PhAvIEHfUiBeBsTLgXgFCfrwAXqHI7WA2UA7gEYAOT7oETcA2p1uo5gEAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="36" type="Door" x="208" y="304" width="16" height="16">
+  <object id="36" class="Door" x="208" y="304" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="27"/>
    </properties>

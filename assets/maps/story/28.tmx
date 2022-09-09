@@ -1,80 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="51">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="18" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="57">
  <properties>
   <property name="map-name" value="Melhopolis"/>
   <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="137" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="149" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="173" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="21">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62UPQ7CMAyFfQAWYOmAUMaO2boAmeEG/AkhBGICJuD4vIhYRMa0acqTPiVNnRentloQUQFMGG00d2H0jEScnHtS1Kt558+bg0Wi1y+1ySfWEqzBCmzANsPH32EPDhFHxadS9howAdPwfAFXsAvjLcSkimPv4AFO4Aye9K5zjvpgDAaU/52l/uHDfePE+izDa5iRj1XObrpXaq+XwkfrnRRVDfloMsqao++7pu6N1bXu7M//qa6K8zE1cZrimrS5V11/eg+uvaVP/Xi9FDGME8+eF5eWboToBQAA
+   H4sIAAAAAAAAA5WUu27CQBBFp6BMA2koULSlS3duEuw2/AGPJIoCCJAgAYnH53NXzCiTyT7MlY5mLXvv7Kxnl4ioDxzHUo1rjp6B+a5RY1Ixp4fEO5/vFYxaesUka75XYzAFEzADb2CYyBGSr+ETfCkW7D1nxNvKgWfwws878A0+OP6w91yxSNTjOJ7AGSzBClzAGmyYd7BN+Gh1wRPo0W0P9uDAeP9jYE4n4+l99D7HekR6UFNxlL6pzRz7//oJf9Ej5fvHvi8DueWcxNS21wuTr2qxHquafvcqJevtIl62VivdxzG1OadyD4Xk1HrurUvm2VyN8Q6tJ+efq0v/h9j9onPJvSzzPIX6rqC/Z6Km/+fkCo4l6/roBQAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="39" type="SlitherCpu" gid="129" x="192" y="256" width="16" height="16">
+  <object id="39" class="SliderCpu" gid="129" x="192" y="256" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="6"/>
-    <property name="lifePoints" type="float" value="6"/>
+    <property name="level" type="float" value="6"/>
+    <property name="hp" type="float" value="3"/>
    </properties>
   </object>
-  <object id="46" type="Modifier" gid="155" x="80" y="272" width="16" height="16">
+  <object id="46" class="Modifier" gid="167" x="80" y="272" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
    </properties>
   </object>
-  <object id="47" type="Modifier" gid="155" x="80" y="48" width="16" height="16">
+  <object id="47" class="Modifier" gid="167" x="80" y="48" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="51" class="SliderCpu" gid="129" x="192" y="176" width="16" height="16">
+   <properties>
+    <property name="level" type="float" value="12"/>
+    <property name="hp" type="float" value="3"/>
+   </properties>
+  </object>
+  <object id="52" class="SliderCpu" gid="129" x="256" y="256" width="16" height="16">
+   <properties>
+    <property name="level" type="float" value="12"/>
+    <property name="hp" type="float" value="3"/>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="18" height="21">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoA5wBGInKplFKggE4iAkHDoAbjABYtMBsHeoA1zpxozeDiEBDGRaHwWDAwzm9IkNAACrMs2Y6AUAAA==
+   H4sIAAAAAAAAA2NgoA5wBGInKplFKggE4iAkHArEZlQ2OxiIQ6BmYwMmQGxKJTuHEgCFcw0Q15KpH1e6oVb80QIMZFqnNRip6ZhUMJjTJzYAAK7uOV3oBQAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="36" type="Door" x="160" y="0" width="16" height="16">
+  <object id="36" class="Door" x="160" y="0" width="16" height="16">
    <properties>
     <property name="roomId" value="31"/>
    </properties>
   </object>
-  <object id="44" type="Door" x="272" y="160" width="16" height="16">
+  <object id="44" class="Door" x="272" y="160" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="26"/>
    </properties>
   </object>
-  <object id="45" type="Door" x="240" y="112" width="16" height="16">
+  <object id="45" class="Door" x="240" y="112" width="16" height="16">
    <properties>
     <property name="roomId" value="28_house"/>
    </properties>
   </object>
+  <object id="54" class="Door" x="48" y="144" width="16" height="16">
+   <properties>
+    <property name="roomId" value="28_lp_shop"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="48" type="Solid" gid="55" x="128" y="160" width="16" height="16">
+  <object id="48" class="Solid" gid="55" x="128" y="160" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;28.berries&quot;)
-    (define life-diff 40)
+    (define HP-diff 40)
     (if (! (has-item item-id))
         (begin
-            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (dialog '((&quot;* {{hero}} found some berries! {{HP-diff}} HP have been recovered *&quot;)))
             (give-item item-id)
-            (set-life-diff life-diff))
+            (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
-  <object id="49" gid="148" x="224" y="240" width="16" height="16">
+  <object id="49" gid="160" x="224" y="240" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="25"/>
+    <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
   </object>
-  <object id="50" gid="148" x="160" y="32" width="16" height="16">
+  <object id="50" gid="160" x="160" y="32" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="50"/>
+    <property name="healthPointsDelta" type="int" value="50"/>
+   </properties>
+  </object>
+  <object id="53" class="Solid" x="144" y="144" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if  (&gt; (enemies-count) 0)
+    (begin
+        (dialog '((&quot;There are still enemies here. I can't escape.&quot;)))
+        (wait)
+        (set-orientation 0))
+    (fire-event (self)))</property>
+    <property name="actionOnEvent">(if (= (enemies-count) 0)
+    (delete-me))</property>
    </properties>
   </object>
  </objectgroup>

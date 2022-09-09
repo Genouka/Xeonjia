@@ -1,59 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="43">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="17" height="8" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
  <properties>
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="enemies"/>
+  <property name="start-battle" type="bool" value="false"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="181" source="../tilesets/monsters.tsx"/>
- <layer id="1" name="Tile Layer 1" width="17" height="14">
+ <layer id="1" name="Tile Layer 1" width="17" height="8">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WTvQ7CMAyEs8KABCyewAuCCbplgXbm//3fhot0kYwVEqqe9Ml27DqOkmoIQUAHlETji/FtzdvlpkhI0svlbO9no8fUOdKZ0tln4AjmoK/UDy5WY/dgAXYjZziDC/c/uR45J6ZeQ1lrsATbP+a4glthPfWO7LMBq8aeJQ0j60tK30uriIouzvdX6lF7T1Z32o7U9Ou9PGjtPxNZ3zM+0M/3bNc0fJ/lA0joukK4AwAA
+   H4sIAAAAAAAAA2NgYGCQAGIDIFaAYnMkWgJJHFmNP1SOAcqmBCCb5Ycmp4DE9sVjBsydpAJkPSB3mKPJ2+FRb49Djhx3wIANENsCsTQSFkGTQ3YTuvtgQBiLGCiMkP0HM88TiL2g8jAxWHgCADkxyW4gAgAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="37" type="NPC" gid="136" x="32" y="112" width="16" height="16">
+  <object id="37" class="NPC" gid="135" x="48" y="112" width="16" height="16">
    <properties>
-    <property name="action">(if  (!get &quot;013-h-safe&quot;)
-    (if  (&gt; (enemies-count) 0)
-        (dialog '((&quot;/&quot; &quot;Help me please!\nPunch him by pressing the 'P' button.&quot;)))
-        (begin
-            (set &quot;013-h-safe&quot; #t)
-            (dialog
-                '((&quot;/hero&quot; &quot;Everything good?&quot;)
-                (&quot;/&quot; &quot;Yes, thank you so much for saving my life!\nI have to admit, I was scared.\nAs a token of gratitude I give you this gem that I found a little while ago.&quot;)
-                (&quot;/hero_happy&quot; &quot;Thanks, it seems very precious.&quot;)))
-            (wait)
-            (give-item &quot;gem_1&quot;)))
-    (dialog '((&quot;/&quot; &quot;Thanks for saving me, I think it's better if I go home now.&quot;))))</property>
-    <property name="actionOnEvent">(if (!get &quot;013-h-safe&quot;)
-    (dialog '((&quot;/&quot; &quot;Please help me! Save me from this monster!&quot;))))</property>
+    <property name="action">(if (!get &quot;013-h-safe&quot;)
+  (if  (&gt; (enemies-count) 0)
+    (dialog '((&quot;/&quot; &quot;Help me please!&quot;)))
+    (begin
+      (set &quot;013-h-safe&quot; #t)
+      (dialog
+        '((&quot;/hero&quot; &quot;Are you okay?&quot;)
+        (&quot;/&quot; &quot;Yes, thank you so much for saving my life!\nI have to admit, I was so scared!&quot;)
+        (&quot;/hero&quot; &quot;Me too!&quot;)
+        (&quot;/&quot; &quot;Luckily it went all right!\nI don't know how to thank you, I can give you this gem that I found a little while ago.&quot;)
+        (&quot;/hero_happy&quot; &quot;Thank you, it seems very precious!&quot;)))
+      (wait)
+      (give-item &quot;gem_1&quot;)
+      (dialog
+        '((&quot;/&quot; &quot;Now I think it's better for me if I go to my safe home.\nBye!&quot;)))))
+  (dialog '((&quot;/&quot; &quot;I'll go home as soon as my legs stop shaking in fear.&quot;))))</property>
+    <property name="actionOnEvent">(if (get &quot;013-h-safe&quot;)
+  (set-orientation 0))</property>
    </properties>
   </object>
-  <object id="39" type="SlitherCpu" gid="181" x="48" y="112" width="16" height="16">
+  <object id="39" class="SliderCpu" gid="181" x="64" y="112" width="16" height="16">
    <properties>
     <property name="actionOnEvent">(if  (get &quot;013-safe&quot;)
     (delete-me))</property>
-    <property name="atk" type="float" value="5"/>
-    <property name="lifePoints" type="float" value="13"/>
-    <property name="updatePeriod" type="float" value="0.6"/>
+    <property name="level" type="float" value="5"/>
+    <property name="hp" type="float" value="6"/>
    </properties>
   </object>
  </objectgroup>
- <layer id="6" name="Tile Layer 2" width="17" height="14">
+ <layer id="6" name="Tile Layer 2" width="17" height="8">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoB5wwyPnSkV7iAVmdLbPBIhNyZCjBDgCsRMOOXMa2EdPgC/+iE1PzlSwzwWPejM0Pno8m6HR1AIAsXqrwrgDAAA=
+   H4sIAAAAAAAAA2NgoB5wwyPnSkV7iAVmdLbPBIhNCcghu4kS98HMcwRiJxz2mwOxBBDbQ9nkAABxolHiIAIAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="35" type="Door" x="0" y="96" width="16" height="16">
+  <object id="35" class="Door" x="0" y="96" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="8"/>
    </properties>
   </object>
-  <object id="36" type="Door" x="256" y="96" width="16" height="16">
+  <object id="36" class="Door" x="256" y="96" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="12"/>
@@ -61,7 +66,7 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="40" type="Solid" x="272" y="96" width="16" height="16">
+  <object id="40" class="Solid" x="272" y="96" width="16" height="16">
    <properties>
     <property name="actionOnCollision">(if  (!get &quot;013-h-safe&quot;)
     (begin
@@ -74,7 +79,7 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="41" type="Solid" x="-16" y="96" width="16" height="16">
+  <object id="41" class="Solid" x="-16" y="96" width="16" height="16">
    <properties>
     <property name="actionOnCollision">(if  (!get &quot;013-h-safe&quot;)
     (begin
@@ -87,17 +92,59 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="42" type="Solid" gid="55" x="240" y="224" width="16" height="16">
+  <object id="42" class="Solid" gid="55" x="64" y="32" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;13.berries&quot;)
-    (define life-diff 10)
+    (define HP-diff 10)
     (if (! (has-item item-id))
         (begin
-            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (dialog '((&quot;* {{hero}} found some berries! {{HP-diff}} HP have been recovered *&quot;)))
             (give-item item-id)
-            (set-life-diff life-diff))
+            (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="43" class="Solid" x="16" y="96" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if (!get &quot;013-h-safe&quot;)
+  (begin
+    (dialog
+      '((&quot;/hero_exclamation&quot; &quot;! ! !&quot;)
+      (&quot;monster/green&quot; &quot;Gyaaa!&quot;)))
+    (wait)
+    (set-orientation '(3 37))
+    (wait 0.7)
+    (dialog
+      '((&quot;/lumberjack&quot; &quot;Please help me! Save me from this monster!&quot;)
+      (&quot;monster/green&quot; &quot;Gyaaa!&quot;)
+      (&quot;/hero&quot; &quot;Don't worry! I'll help you now!&quot;)))
+    (wait)
+    (wait 1)
+    (dialog
+      '((&quot;/hero&quot; &quot;. . . . .&quot;)
+      (&quot;/lumberjack&quot; &quot;. . . . .&quot;)
+      (&quot;. . . . . . . . . .&quot;)
+      (&quot;/lumberjack&quot; &quot;What are you waiting for??!&quot;)
+      (&quot;/hero_mouthless&quot; &quot;I… I… I don't know how to fight!&quot;)
+      (&quot;/lumberjack&quot; &quot;What??\nAren't you this year's \&quot;choosen hero\&quot;?&quot;)
+      (&quot;/hero&quot; &quot;Yes, I am…&quot;)
+      (&quot;/hero_mouthless&quot; &quot;But this is my first battle…&quot;)
+      (&quot;monster/green&quot; &quot;Gyaaa!&quot;)
+      (&quot;/lumberjack&quot; &quot;If you don't do anything this will be our LAST battle!&quot;)
+      (&quot;monster/green&quot; &quot;Gyaaa!&quot;)
+      (&quot;/lumberjack&quot; &quot;We have no time left, make up something!&quot;)
+      (&quot;/hero&quot; &quot;Hmm…\nAh, right! My mom gave me this book…&quot;)))
+    (battle-rules)
+    (dialog
+      '((&quot;/hero&quot; &quot;Ok, now I know what to do!\nLet's fight!&quot;)
+      (&quot;monster/green&quot; &quot;Gyaaa!&quot;)))
+    (wait)
+    (start-battle)
+    (set &quot;013-rules&quot; #t)
+    (fire-event (self))))</property>
+    <property name="actionOnEvent">(if (get &quot;013-rules&quot;)
+  (delete-me))</property>
    </properties>
   </object>
  </objectgroup>

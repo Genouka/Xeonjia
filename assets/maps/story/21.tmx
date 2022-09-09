@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="28" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="50">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="28" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="51">
  <properties>
   <property name="action">(if (! (== (last-place) &quot;23&quot;))
     (map-name &quot;Route 2&quot;))</property>
@@ -7,31 +7,32 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="137" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="149" source="../tilesets/basic.tsx"/>
  <layer id="12" name="Tile Layer 1" width="28" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7VVsQ4DIQhl6NjtFocOjI63ubS9D2iu//85lURyxOAVTn3JC4ooiiIIAPdMzAyC1I+lvWYmZZxtUHCtdEGRs4BVPyq6mX5JpobN17nmx+jXE8+3cw8StB+K59axxhl2RYfFZy+ssd/g/L1oe7yCICSx5148aOXDqJysz7HAmPuzAmHu/6L5Q9EmWPJ2hD8PrrwvmkOxfGa+lPFWnFu5ZrkXBP/5ev6jf/mu4aborPGVdZF8c20Nos02qcgHHHVV1lCeH6txJs//AZNItXjgBwAA
+   H4sIAAAAAAAAA7WVMQ/CIBCFb3B0UZcOxtzY0a2LWnaju0YHY4xO6mDUn+8RIb2cRwO2fcmXo8A9aPEEAaBPIJEx7HPu2lOiUMYthrXRzc3ZmJ9rI7DYhVA850pfFzJs/SIwZ53ouYyYY9dL+Z6LxD1w+f2UDTzqtFL6EL5n2FSx376E+t+Ltsd/JGuhybmkKFQPpiV/+R6jFr1jhPBbDxtiR2xd3Ef4aDkhHxTxQBwZp4j1tJyQD4rcK3Ejzi7eFX95LlpOyGdGzFnuk3gRD+JCvIW3VmtaTshHvp/VgJgQQ2Us9H+k5fA+n6etV6ee0hdbv77+0K3v79aMtQ1U94iNY6juVT+Wog/ZynLK4AcAAA==
   </data>
  </layer>
  <objectgroup id="13" name="npc"/>
  <layer id="11" name="Tile Layer 2" width="28" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGJnAjUT1zjRwgxkFemnhHmTgSkOzSQ17XACbG6lhNinx4kcF+2gFKElfwwXQOp+QA8iJF5geEyA2JUEftfLaUAKj6R4BAAD6UiPgBwAA
+   H4sIAAAAAAAAA2NgGJnAjUT1zjRwgxkFemnhHmTgSkOzSQ17XACbG6lhNinx4kcF+2gFKElftAKBQBwExMFAHALEoWTqIcecwQIoiRcTIDYlQT218tpQAoMx3Q8UAADFjYZg4AcAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="36" type="Door" x="16" y="0" width="16" height="16">
+  <object id="36" class="Door" x="16" y="0" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="999"/>
    </properties>
   </object>
-  <object id="38" type="Door" x="192" y="272" width="16" height="16">
+  <object id="38" class="Door" x="192" y="272" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="23"/>
    </properties>
   </object>
-  <object id="44" type="Door" x="432" y="144" width="16" height="16">
+  <object id="44" class="Door" x="432" y="144" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="24"/>
@@ -39,38 +40,43 @@
   </object>
  </objectgroup>
  <objectgroup id="10" name="items">
-  <object id="45" type="Modifier" gid="155" x="272" y="192" width="16" height="16">
+  <object id="45" class="Modifier" gid="167" x="288" y="144" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
    </properties>
   </object>
-  <object id="46" type="Modifier" gid="155" x="416" y="32" width="16" height="16">
+  <object id="46" class="Modifier" gid="167" x="416" y="32" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
   <object id="47" gid="71" x="160" y="176" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;\&quot; Melhopolis → \&quot;&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/_1&quot; &quot;Melhopolis →&quot;)))"/>
    </properties>
   </object>
-  <object id="48" gid="148" x="32" y="192" width="16" height="16">
+  <object id="48" gid="160" x="160" y="80" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="25"/>
+    <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
   </object>
-  <object id="49" type="Solid" gid="55" x="384" y="176" width="16" height="16">
+  <object id="49" class="Solid" gid="55" x="384" y="176" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;21.berries&quot;)
-    (define life-diff 20)
+    (define HP-diff 20)
     (if (! (has-item item-id))
         (begin
-            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (dialog '((&quot;* {{hero}} found some berries! {{HP-diff}} HP have been recovered *&quot;)))
             (give-item item-id)
-            (set-life-diff life-diff))
+            (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))
 </property>
+   </properties>
+  </object>
+  <object id="50" class="Modifier" gid="167" x="16" y="160" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="15"/>
    </properties>
   </object>
  </objectgroup>

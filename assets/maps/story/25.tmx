@@ -1,63 +1,236 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="23" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="50">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="18" height="23" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="63">
  <properties>
   <property name="map-name" value="Melhopolis"/>
   <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="137" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="149" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="173" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52VuQ7CMBBEXVDSQEWBkEvKfABHzdGE+ywQouAquP6fWclWFmttHI/0FMXKjDaZOMmVUhMwBTMwBw1D0xz7bI3IBc8a7MDGHPeqUFXJIs+WQZ4DODJOHi8XeRZgCVbGcwYXcANXcDfXDsDQkyN5HuAJ3uAFPhHzSB56bjXQAvWA152Pe+zzt+pFzCKJMnSil4sybIdS7z5JntTeXY+v95B8vVN31CF1Gdu76wn1HuqPezL123uqdGIO39t2n3ZAt2SO1FfKPFJfKTm+fco1jsxy92lWchbtWft3X6OIbPe7YVX2+2Fz2kr+L1Scc62Kd5dDvi9kQ6iteAYAAA==
+   H4sIAAAAAAAAA7WUvWsCQRDFt7AxiKCVRbATrSTdNcZcq7GJn0n8ABED8aMw6v+fN9wsDuPe7qbIgx8ns+/mdvcxGnOvFLTAI6hx7Q0MwQiMwUS98wEW4JOfS7FW4mfCvrlA+khrsBFsHfuzvimYgXeH7xvswAHswZHrRdAGDwGf1Qn8gAs4gyvXm6AMGgFfV/SqgDqomuwudI3UA32uV9X7Wr61/5L+ps3TlXvIZ89K+kvuPp/Nc2XceWqfK3c6I+VJOX6ZLNerbsCyvkuOj+ZHZyy/Y5Xk+Drg2dzm0KckbInqQ5Lz7JpTu6+QQnmlkfsJzWnsuVxzKs+i+ww8vWReei5i70fqxbPWyqm/Bnp0HWsx/xu+vUjRfaUm218BPPHvmvFn8gswWZEgeAYAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="39" type="SlitherCpu" gid="129" x="192" y="256" width="16" height="16">
+  <object id="56" class="NPC" gid="217" x="112" y="64" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="12"/>
-    <property name="lifePoints" type="float" value="3"/>
+    <property name="action" value="(dialog '((&quot;…&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
+  (delete-me))</property>
    </properties>
   </object>
-  <object id="46" type="SlitherCpu" gid="129" x="112" y="224" width="16" height="16">
+  <object id="58" class="NPC" gid="220" x="128" y="80" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="12"/>
-    <property name="lifePoints" type="float" value="3"/>
+    <property name="action" value="(dialog '((&quot;…&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="59" class="NPC" gid="219" x="96" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;…&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="60" class="NPC" gid="217" x="144" y="16" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;…&quot;)))"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="62" class="NPC" gid="218" x="112" y="96" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;…&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
+  (delete-me))</property>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="18" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA8EAnEQEIeSqR8GIoE4BohjCahzBGInCu2iJSDFfWa0dAiRABZ/wUAcwkBcPJKjZziCwRB/xABs8WUCxKYD6Sg6AZeBdgAB4EyB3qGS/vABAG2R53V4BgAA
+   H4sIAAAAAAAAAwtkYGAIQsKhDLhBIBFqiAGRQBwDxLEUmkNLYEaiekcgdiJSP6lmUwOg2wmLy2AgDmHAHafY1KH7dbAAeoUrMfaYALEprR2CBRCK14FyFy0APr+4EGkGelzSK3ycCchjS2MDUW7QCgAAkC9jxXgGAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="44" type="Door" x="112" y="0" width="16" height="16">
+  <object id="44" class="Door" x="112" y="0" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="24"/>
    </properties>
   </object>
-  <object id="45" type="Door" x="112" y="352" width="16" height="16">
+  <object id="45" class="Door" x="112" y="352" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="26"/>
    </properties>
   </object>
+  <object id="51" class="Door" x="32" y="192" width="16" height="16">
+   <properties>
+    <property name="roomId" value="25_house"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="47" gid="148" x="16" y="352" width="16" height="16">
+  <object id="47" gid="160" x="112" y="288" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="25"/>
+    <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
   </object>
-  <object id="48" gid="148" x="224" y="208" width="16" height="16">
+  <object id="48" gid="160" x="128" y="240" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="25"/>
+    <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
   </object>
-  <object id="49" gid="148" x="32" y="112" width="16" height="16">
+  <object id="61" class="Solid" x="112" y="32" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="25"/>
+    <property name="actionOnCollision">(if (!get &quot;025-henchmen&quot;)
+  (begin
+    (delete-me)
+    (set &quot;025-henchmen&quot; #t)
+    (dialog '((&quot;/hero_exclamation&quot; &quot;!&quot;)))
+    (wait)
+    (set-orientation '(1 56))
+    (wait 0.4)
+    (set-orientation '(1 58))
+    (set-orientation '(1 59))
+    (wait 0.6)
+    (move '(1 56))
+    (move '(1 58))
+    (move '(1 59))
+    (move '(1 62))
+    (wait 0.4)
+    (move '(1 56))
+    (move '(1 58))
+    (move '(1 59))
+    (move '(1 62))
+    (wait 0.4)
+    (move '(2 62))
+    (wait 0.4)
+    (move '(3 62))
+    (wait 0.4)
+    (move '(3 62))
+    (wait 0.4)
+    (move '(2 62))
+    (set-orientation '(0 56))
+    (set-orientation '(0 58))
+    (set-orientation '(0 59))
+    (wait 0.4)
+    (move '(2 62))
+    (set-orientation '(2 56))
+    (set-orientation '(2 58))
+    (set-orientation '(2 59))
+    (wait 0.4)
+    (move '(2 62))
+    (wait 0.4)
+    (move '(3 62))
+    (wait 0.4)
+    (move '(3 62))
+    (set-orientation '(0 56))
+    (set-orientation '(0 58))
+    (set-orientation '(0 59))
+    (wait 0.4)
+    (move '(3 62))
+    (wait 0.4)
+    (move '(3 62))
+    (set-orientation '(3 56))
+    (set-orientation '(3 58))
+    (set-orientation '(3 59))
+    (wait 0.4)
+    (move '(1 62))
+    (wait 0.4)
+    (set-orientation '(1 56))
+    (set-orientation '(3 58))
+    (set-orientation '(2 59))
+    (set-orientation '(2 62))
+    (wait 0.4)
+    (dialog
+      '((&quot;/henchman&quot; &quot;Look who's here… This year's \&quot;hero\&quot;.\nWe took out the heroes of past years, we will take you out too.&quot;)
+      (&quot;/hero&quot; &quot;W-who are you?! What do you want?!&quot;)
+      (&quot;/henchman&quot; &quot;You don't seem particularly informed, kid.\nAt least those before you had the basics.\nThey should choose \&quot;heroes\&quot; more carefully.\nWe are the Hoarfrost Team!\nWe are the professionals of crime.\nThe King of Evil's right-hand men.\nThanks to us, the King of Evil will be able to complete his work.&quot;)
+      (&quot;/hero&quot; &quot;His work?! What are you talking about?&quot;)
+      (&quot;/henchman&quot; &quot;Hehe, we don't reveal our plans to you, kid.\nWe're not stupid.\nAnd anyway, even if we told you everything, it wouldn't do you any good, since we're going to take you out now.&quot;)
+      (&quot;/hero&quot; &quot;You won't catch me!&quot;)))
+    (wait)
+    (set-orientation '(1 -1))
+    (wait 0.8)
+    (move '(1 -1))
+    (wait 0.6)
+    (move '(0 -1))
+    (set-orientation '(1 -1))
+    (wait 0.6)
+    (place 60 112 0)
+    (show 60)
+    (wait 0.6)
+    (dialog
+      '((&quot;/henchman&quot; &quot;You can't run away from here.\nDid you think you could get away with it that easily?\nThe fact that you tried to escape and not to fight make it clear how little value you are.\nI hope next year's \&quot;hero\&quot; is a little braver than you, at least it would be a bit more fun for us.&quot;)))
+    (wait)
+    (wait 0.6)
+    (dialog '((&quot;/phone_off&quot; &quot;Bzzt… Bzzt… Bzzt…&quot;)))
+    (wait)
+    (set-orientation '(0 -1))
+    (wait 0.6)
+    (dialog
+      '((&quot;/phone_on&quot; &quot;What's happening?&quot;)
+      (&quot;/henchman&quot; &quot;This year's \&quot;hero\&quot;.\nWe just caught him.&quot;)
+      (&quot;/phone_on&quot; &quot;Very well.&quot;)
+      (&quot;/henchman&quot; &quot;Do we get rid of him?&quot;)
+      (&quot;/phone_on&quot; &quot;Does he look smart?&quot;)
+      (&quot;/henchman&quot; &quot;No.&quot;)
+      (&quot;/phone_on&quot; &quot;Then let him go.&quot;)
+      (&quot;/henchman&quot; &quot;WHAT?!\nAre you sure? Why have him around again?&quot;)
+      (&quot;/phone_on&quot; &quot;He has to go through me anyway if he wants to continue his journey.\nI'll get rid of him.&quot;)
+      (&quot;/henchman&quot; &quot;But what if he makes trouble and…&quot;)
+      (&quot;/phone_on&quot; &quot;Do not insist. It's my final decision.&quot;)
+      (&quot;/henchman&quot; &quot;But boss, we can't risk that he will…&quot;)
+      (&quot;/phone_on&quot; &quot;You will still get your reward, don't worry.&quot;)
+      (&quot;/henchman&quot; &quot;Ah okay, perfect. We leave it free.\nSee you later boss.&quot;)
+      (&quot;/phone_off&quot; &quot;Beep… Beep… Beep…&quot;)))
+    (wait)
+    (wait 0.6)
+    (set-orientation '(1 56))
+    (set-orientation '(3 58))
+    (set-orientation '(2 59))
+    (wait 0.6)
+    (dialog
+      '((&quot;/henchman&quot; &quot;You got lucky this time.\nBut soon you will be dealing with our boss.&quot;)
+      (&quot;/hero&quot; &quot;The King of Evil?&quot;)
+      (&quot;/henchman&quot; &quot;No, kid. We were in communication with the leader of Hoarfrost Team.\nHe will take care of you.\nIn any case, we keep an eye on you.\nWe wish you the worst.&quot;)))
+    (wait)
+    (move '(2 56))
+    (wait 0.6)
+    (move '(0 -1))
+    (set-orientation '(1 -1))
+    (set-orientation '(0 56))
+    (wait 0.3)
+    (move '(0 60))
+    (set-orientation '(0 58))
+    (set-orientation '(0 59))
+    (set-orientation '(0 62))
+    (wait 0.4)
+    (move '(0 56))
+    (move '(0 62))
+    (wait 0.4)
+    (move '(3 59))
+    (move '(0 58))
+    (wait 0.4)
+    (move '(3 60))
+    (move '(0 59))
+    (move '(2 58))
+    (move '(3 56))
+    (wait 0.4)
+    (move '(0 60))
+    (move '(0 59))
+    (move '(0 58))
+    (move '(0 56))
+    (set-orientation '(0 -1))
+    (wait 0.5)
+    (black-curtain)
+    (leave-all '(56 58 59 60 62))))</property>
+    <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
+  (delete-me))</property>
    </properties>
   </object>
  </objectgroup>

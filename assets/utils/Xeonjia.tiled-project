@@ -6,5 +6,354 @@
     "folders": [
         "../"
     ],
-    "objectTypesFile": "objecttypes.xml"
+    "propertyTypes": [
+        {
+            "color": "#ffa0a0a4",
+            "id": 1,
+            "members": [
+                {
+                    "name": "forcedDirection",
+                    "type": "int",
+                    "value": 0
+                }
+            ],
+            "name": "DirectionChanger",
+            "type": "class",
+            "useAs": [
+                "object",
+                "tile"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "id": 2,
+            "members": [
+                {
+                    "name": "orientation",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "roomId",
+                    "type": "string",
+                    "value": "0"
+                },
+                {
+                    "name": "team",
+                    "type": "int",
+                    "value": 0
+                }
+            ],
+            "name": "Door",
+            "type": "class",
+            "useAs": [
+                "object",
+                "tile"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "id": 3,
+            "members": [
+                {
+                    "name": "action",
+                    "type": "string",
+                    "value": "(dialog '((\"text\")))"
+                },
+                {
+                    "name": "actionOnEvent",
+                    "type": "string",
+                    "value": "(dialog '((\"text\")))"
+                },
+                {
+                    "name": "flying",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "hideable",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "priority",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "slippery",
+                    "type": "bool",
+                    "value": false
+                }
+            ],
+            "name": "Ground",
+            "type": "class",
+            "useAs": [
+                "object",
+                "tile"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "id": 4,
+            "members": [
+                {
+                    "name": "action",
+                    "type": "string",
+                    "value": "(dialog '((\"text\")))"
+                },
+                {
+                    "name": "allowedDirection",
+                    "type": "int",
+                    "value": 0
+                }
+            ],
+            "name": "Hurdle",
+            "type": "class",
+            "useAs": [
+                "object",
+                "tile"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "id": 5,
+            "members": [
+                {
+                    "name": "atkDelta",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "defDelta",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "healthPointsDelta",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "itemId",
+                    "type": "string",
+                    "value": "0"
+                },
+                {
+                    "name": "moneyDelta",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "poisonDelta",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "powerPointsDelta",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "regenerable",
+                    "type": "bool",
+                    "value": false
+                }
+            ],
+            "name": "Modifier",
+            "type": "class",
+            "useAs": [
+                "object",
+                "tile"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "id": 6,
+            "members": [
+                {
+                    "name": "action",
+                    "type": "string",
+                    "value": "(dialog '((\"/\" \"…\")))"
+                },
+                {
+                    "name": "actionOnEvent",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "friendly",
+                    "type": "bool",
+                    "value": true
+                },
+                {
+                    "name": "hp",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "level",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "movementPattern",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "orientation",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "priority",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "quiet",
+                    "type": "bool",
+                    "value": true
+                },
+                {
+                    "name": "shootPattern",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "team",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "visible",
+                    "type": "bool",
+                    "value": true
+                },
+                {
+                    "name": "weaponLevel",
+                    "type": "int",
+                    "value": 0
+                }
+            ],
+            "name": "NPC",
+            "type": "class",
+            "useAs": [
+                "object",
+                "tile"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "id": 7,
+            "members": [
+                {
+                    "name": "action",
+                    "type": "string",
+                    "value": "(dialog '((\"text\")))"
+                },
+                {
+                    "name": "actionOnEvent",
+                    "type": "string",
+                    "value": "(dialog '((\"text\")))"
+                },
+                {
+                    "name": "hp",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "level",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "priority",
+                    "type": "int",
+                    "value": 0
+                }
+            ],
+            "name": "SliderCpu",
+            "type": "class",
+            "useAs": [
+                "object",
+                "tile"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "id": 8,
+            "members": [
+                {
+                    "name": "action",
+                    "type": "string",
+                    "value": "(dialog '((\"text\")))"
+                },
+                {
+                    "name": "actionOnCollision",
+                    "type": "string",
+                    "value": "(dialog '((\"text\")))"
+                },
+                {
+                    "name": "actionOnEvent",
+                    "type": "string",
+                    "value": "(dialog '((\"text\")))"
+                },
+                {
+                    "name": "atk",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "priority",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "visible",
+                    "type": "bool",
+                    "value": true
+                }
+            ],
+            "name": "Solid",
+            "type": "class",
+            "useAs": [
+                "object",
+                "tile"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "id": 9,
+            "members": [
+                {
+                    "name": "action",
+                    "type": "string",
+                    "value": "(dialog '((\"text\")))"
+                },
+                {
+                    "name": "solidSide",
+                    "type": "int",
+                    "value": 0
+                }
+            ],
+            "name": "ThinWall",
+            "type": "class",
+            "useAs": [
+                "object",
+                "tile"
+            ]
+        }
+    ]
 }

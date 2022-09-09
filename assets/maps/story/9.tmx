@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="27" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="46">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="27" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="49">
  <properties>
+  <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
  </properties>
@@ -9,43 +10,58 @@
  <tileset firstgid="181" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="27" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WUuw7CMAxFPfQPYIgEAxNztiyQzqBAVSRmNkbEhPh8HBFLrtU8mlzpqHHs2G6adASAG3JHDDImbBUwbNzPzA+IFj7PC3kgb/grZ7fogzyRb6FdowNyRCybsyLG2y7iWyrFatLe78Ucj2nREHKVqKUenRkT8cse+so6PJ9i45h64deVtUr7Ld1rkhO2379cj76GFXBdMmv5eK5fmW+FbALrTG+puifkHOmD15bvFTtTMclvnurJs1uQuxP9UI4uPB1M7668U4bF0n3RMP2/0pptsK8s9gckYgu96AUAAA==
+   H4sIAAAAAAAAA6WTsQ7CMAxEPXRkgwEJBibmbl0g7QioUBWJmY0RMSE+n4uIhbEwCc1JT7ETJ3bdpCeiIzjRS/0PfwoaUAXbUwub5ztQqjWvKziDW6Kfozu4gEeiP0QrsAYOjMKcC6P02+A7ytNU5OTeL9WcjMlRR+//FlNOPr4zlbHeKL8emIfFd5htS7VaLwfmSq03tdesVvm+f7EafQ6nkNpH9kr7W736vDGYBSaR2iw1YAt2Rh0yt/4u605Z0v/cEscs/ji7UPVwD4swtvT5dvWbqkQsv5dS+HLvHGzAQcQ+AZ2LRjroBQAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="36" type="NPC" gid="173" x="64" y="64" width="16" height="16">
+  <object id="36" class="NPC" gid="173" x="64" y="64" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;This is not a place for kids, go home.&quot;)))"/>
+    <property name="action">(begin
+  (dialog '((&quot;/&quot; &quot;This is not a place for kids, go home.&quot;)))
+  (wait)
+  (move '(0 -1))
+  (set-orientation '(1 -1))
+  (wait 0.1)
+  (move 0)
+  (wait 1)
+  (move 1)
+  (set-orientation 0)
+  (wait 0.5)
+  (set-HP-diff -2)
+  (if (!get &quot;009-talk-henchman&quot;)
+    (begin
+      (set &quot;009-talk-henchman&quot; #t)
+      (dialog '((&quot;/hero_angry&quot; &quot;How rude!\nHe pushed me away viciously!&quot;))))))</property>
    </properties>
   </object>
-  <object id="37" type="NPC" gid="176" x="176" y="32" width="16" height="16">
+  <object id="37" class="NPC" gid="176" x="176" y="32" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;Weird things happen in this area…&quot;)))"/>
    </properties>
   </object>
-  <object id="42" type="Solid" gid="55" x="272" y="80" width="16" height="16">
+  <object id="42" class="Solid" gid="55" x="272" y="80" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;9.berries&quot;)
-    (define life-diff 5)
+    (define HP-diff 5)
     (if (! (has-item item-id))
         (begin
-            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (dialog '((&quot;* {{hero}} found some berries! {{HP-diff}} HP have been recovered *&quot;)))
             (give-item item-id)
-            (set-life-diff life-diff))
+            (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
-  <object id="45" type="Solid" gid="55" x="416" y="32" width="16" height="16">
+  <object id="45" class="Solid" gid="55" x="416" y="32" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;9.berries2&quot;)
-    (define life-diff 25)
+    (define HP-diff 25)
     (if (! (has-item item-id))
         (begin
-            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (dialog '((&quot;* {{hero}} found some berries! {{HP-diff}} HP have been recovered *&quot;)))
             (give-item item-id)
-            (set-life-diff life-diff))
+            (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
@@ -53,32 +69,42 @@
  <objectgroup id="8" name="items">
   <object id="38" gid="193" x="96" y="176" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="40"/>
+    <property name="healthPointsDelta" type="int" value="40"/>
    </properties>
   </object>
-  <object id="39" type="Modifier" gid="199" x="256" y="48" width="16" height="16">
+  <object id="39" class="Modifier" gid="199" x="256" y="48" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="40" type="Modifier" gid="199" x="384" y="160" width="16" height="16">
+  <object id="40" class="Modifier" gid="199" x="384" y="160" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="41" type="Modifier" gid="199" x="144" y="144" width="16" height="16">
+  <object id="41" class="Modifier" gid="199" x="144" y="144" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="20"/>
    </properties>
   </object>
   <object id="43" gid="71" x="384" y="112" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;\&quot; If you get lost, follow the road signs \&quot;&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/_1&quot; &quot;If you get lost, follow the road signs.&quot;)))"/>
    </properties>
   </object>
   <object id="44" gid="192" x="336" y="144" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="10"/>
+    <property name="healthPointsDelta" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="47" gid="204" x="352" y="208" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;7&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="48" gid="195" x="192" y="208" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;7&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>
@@ -88,19 +114,20 @@
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="25" type="Door" x="192" y="208" width="16" height="16">
+  <object id="25" class="Door" x="192" y="208" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="5/1"/>
    </properties>
   </object>
-  <object id="27" type="Door" x="352" y="208" width="16" height="16">
+  <object id="27" class="Door" x="352" y="208" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="7"/>
    </properties>
   </object>
-  <object id="35" type="Door" x="16" y="208" width="16" height="16">
+  <object id="35" class="Door" x="16" y="208" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="5/2"/>

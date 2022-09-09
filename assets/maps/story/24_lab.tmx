@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="77">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="78">
  <properties>
   <property name="action" value="(map-name &quot;VANTOI LAB – 1F&quot;)"/>
   <property name="disable-minimap" type="bool" value="true"/>
@@ -8,21 +8,21 @@
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="229" source="../tilesets/lab.tsx"/>
+ <tileset firstgid="237" source="../tilesets/lab.tsx"/>
  <layer id="1" name="Tile Layer 1" width="13" height="10">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA7vAwMBwngR8EYhvAPF1IvE2IL4J1bOHBDyqB6LnAYl6HgLxNRz4Kh45AIINUtIIAgAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="71" type="NPC" gid="18" x="128" y="64" width="16" height="16">
+  <object id="71" class="NPC" gid="18" x="128" y="64" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;scientist&quot; &quot;Sorry about the mess. Thieves have entered and turned everything upside down.&quot;)))"/>
     <property name="orientation" type="int" value="1"/>
     <property name="quiet" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="73" gid="22" x="32" y="112" width="16" height="16">
+  <object id="73" class="NPC" gid="22" x="32" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;scientist/_sad&quot; &quot;A life's work has been destroyed…&quot;)))"/>
    </properties>
@@ -30,22 +30,22 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA88BeJnRNDI4CMQvwHi10D8Ccr/hMR/DZVHB1+A+DMet/xE4z8H4pdQ/AKIX2HR8xwqBwNvgfg9Hjtgat4h8bGZiw5eoanDFz64wHcg/oFEg8BWLOrOEmkeNgAAbghl2wgCAAA=
+   H4sIAAAAAAAAA2NgIA+8BeJ3RNDI4CcQfwHiz0D8C8r/hcT/DJVHB3+A+DcetzAyovLfA/FHKP4AxJ+w6HkPlYOBr0D8HY8dMDXfkPjYzEUHn4hURyrYikXsLAXmAQC9apIfCAIAAA==
   </data>
  </layer>
  <layer id="12" name="Tile Layer 3" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGH7gKxB/Q6JHAWEAAJR2rGAIAgAA
+   H4sIAAAAAAAAA2NgGH7gLxD/Q6IHE3gLxO+QaGLAfxDBiKBpAQA8LrBnCAIAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="70" type="Door" x="96" y="128" width="16" height="16">
+  <object id="70" class="Door" x="96" y="128" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="24"/>
    </properties>
   </object>
-  <object id="72" type="Door" x="160" y="128" width="16" height="16">
+  <object id="72" class="Door" x="160" y="128" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="24_lab_2"/>
@@ -58,13 +58,13 @@
     <property name="action" value="(dialog '((&quot;Someone used this plant to do some experiments.&quot;)))"/>
    </properties>
   </object>
-  <object id="75" gid="239" x="48" y="96" width="16" height="16">
+  <object id="75" gid="247" x="48" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;A broken monitor.&quot;))))</property>
    </properties>
   </object>
-  <object id="76" gid="238" x="64" y="96" width="16" height="16">
+  <object id="76" gid="246" x="64" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
     (dialog '((&quot;A broken monitor.&quot;))))</property>

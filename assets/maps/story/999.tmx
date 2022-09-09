@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="31" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="66">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="31" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="67">
  <properties>
   <property name="action" value="(map-name &quot;Xeonjia Tower&quot;)"/>
   <property name="map-name" value="Xeonjia Tower"/>
@@ -7,60 +7,74 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="157" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="161" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="213" source="../tilesets/tower.tsx"/>
  <layer id="1" name="Tile Layer 1" width="31" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA8WUwQqDMAyGc9hVh+5SD9N6q7dO3//dljCDUevaiMUPfpSm7UcCCvCfAlMq8ozcRxiMS9iXw81+wt7gdhFvTrdJcOfCwDL3GBWmg3Cvb0yt8DZK95Ff6yV6zAvWM7fBncf+M15igF/PXuGV/vakl9HO/ErudKd83znd3PcHM2ImUfe7E9fB/xae/UO8c02uuUD8vM9uzllRl+t8Dz2/2XOI0MgGAAA=
+   H4sIAAAAAAAAA2NgwA94gZiPBMxPwDxSwHCz234A7QYBByLUiAKxGBYsgENcnEp2I8sLArE8A3a/ygKxEJFmwoA5ie7CZj+yvcSYCwPCaHwFPPZisx+bvTDggEbjkke2lxgAsl8Oj7247LFHE7MBYlsS7IUBOzL0YHMPpeZQYvdAAEJ2G1DJHmzx6oDGZoHSyBhdzByLGhhWQGLbM6CmJ3QzQAAABSWHD8gGAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="37" type="NPC" gid="143" x="240" y="96" width="16" height="16">
+  <object id="37" class="NPC" gid="143" x="240" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;999-talk-milla&quot;)
-    (begin
-        (set &quot;999-talk-milla&quot; #t)
-        (dialog
-            '((&quot;/hero&quot; &quot;Hi Milla, are you ok? Did you get here without any problems?&quot;)
-            (&quot;/_happy&quot; &quot;Hii {{hero}}!&quot;)
-            (&quot;/&quot; &quot;Yes, I cleverly managed to avoid the monsters that were along the way!&quot;)
-            (&quot;/_happy&quot; &quot;I love those cute little green worms!&quot;)
-            (&quot;/hero_mouthless&quot; &quot;…S-such weird tastes here.&quot;)
-            (&quot;/_sad&quot; &quot;Unkind!&quot;)
-            (&quot;/&quot; &quot;Aaanyway, look here! This is the tower where the King of Evil resides!&quot;)
-            (&quot;/hero&quot; &quot;Oh really? Are we there yet?&quot;)
-            (&quot;/&quot; &quot;It seems so… but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets.&quot;)
-            (&quot;/hero&quot; &quot;Signets?&quot;)
-            (&quot;/&quot; &quot;I did not understand exactly what they are, but if I have not misunderstood they are kept in crypts present in each region of the Kingdom.&quot;)
-            (&quot;/hero&quot; &quot;Mm… Then I really think that I have to set out in search of these crypts…&quot;)
-            (&quot;/&quot; &quot;I guess you have no other choice.&quot;)
-            (&quot;/_happy&quot; &quot;Good luck!&quot;)))
-        (fire-global-event))
-    (dialog '((&quot;/&quot; &quot;Do your best!&quot;))))</property>
+  (begin
+    (set &quot;999-talk-milla&quot; #t)
+    (dialog
+      '((&quot;/hero_happy&quot; &quot;Hi Milla!&quot;)
+      (&quot;/_happy&quot; &quot;Hii {{hero}}!&quot;)
+      (&quot;/hero&quot; &quot;Are you ok? Did you get here without any problems?&quot;)
+      (&quot;/&quot; &quot;Yes! No problem at all!&quot;)
+      (&quot;/_happy&quot; &quot;Have you seen those little green worms?\nThey are so cute!&quot;)
+      (&quot;/hero_mouthless&quot; &quot;…C-cute?? You have strange tastes.&quot;)
+      (&quot;/hero&quot; &quot;Anyway…\n…I had to defeat them all.&quot;)
+      (&quot;/_sad&quot; &quot;Nooooo!&quot;)
+      (&quot;/_sad&quot; &quot;I hope they are okay…&quot;)
+      (&quot;/hero&quot; &quot;Y-yes… Sure…\n…\nBy the way, where are we?&quot;)
+      (&quot;/_happy&quot; &quot;This is the tower where the King of Evil resides!&quot;)
+      (&quot;/hero&quot; &quot;Oh really? Are we there yet?&quot;)
+      (&quot;/&quot; &quot;It seems so… but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets.&quot;)
+      (&quot;/hero&quot; &quot;Signets?&quot;)
+      (&quot;/&quot; &quot;I did not understand exactly what they are, but they should be items that are placed in crypts in each region of the Kingdom.\n3 crypts with one signet each.&quot;)
+      (&quot;/hero&quot; &quot;Okay, it doesn't sound complicated.\nIn this region for now I have not yet found the crypt.\nIt might be in the southeast.\nWhere are you headed now?&quot;)
+      (&quot;/&quot; &quot;I think I will stay here and rest for a while, near the Mitsu Forest.\nI will resume my journey in a few days.&quot;)
+      (&quot;/hero&quot; &quot;I can't rest so much unfortunately.\nI'll continue my journey right away.\nHave a good rest!&quot;)
+      (&quot;/&quot; &quot;Thanks!\nWe will meet again.&quot;)
+      (&quot;/_happy&quot; &quot;Good luck {{hero}}!&quot;)
+      (&quot;/hero_happy&quot; &quot;Bye!&quot;)))
+    (fire-global-event))
+  (dialog '((&quot;/&quot; &quot;Do your best!&quot;))))</property>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
     (delete-me))</property>
    </properties>
   </object>
-  <object id="45" type="NPC" gid="201" x="256" y="96" width="16" height="16">
+  <object id="45" class="NPC" gid="205" x="256" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (!(has-item &quot;signet-1&quot;))
-    (dialog '((&quot;/&quot; &quot;I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent.&quot;)))
+    (dialog '((&quot;/&quot; &quot;I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted.\nHow impertinent.&quot;)))
     (dialog '((&quot;/&quot; &quot;One signet is not enough.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="31" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzNhYGAwZUAAEzQ+CIgCsRgRWBzNDHSz0Pk2QGyLJI7OJ8dumBm4zEYH+NSRaje6P3HZScgN5ABS7cTlBnIAJXpHwSgYBaOAUgAARkmFS8gGAAA=
+   H4sIAAAAAAAAAzNhYGAwZUAAEzT+VSC+BsTXicA3gPgmkhnoZqHzbYDYFkkcnQ8C94D4PhH4AZqZuMxGB/jUPQPi52j4FRaxF2hmErKTkBvIAaTaicsN5ABK9I4C2gJy05QZleynljmjABVQUlYMRXsJAQAFWL4PyAYAAA==
+  </data>
+ </layer>
+ <layer id="11" name="Tile Layer 3" width="31" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGAX4gBkUkypHDWAHxaTKjYJRMApGwUgCANHE9aHIBgAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="36" type="Door" x="48" y="208" width="16" height="16">
+  <object id="36" class="Door" x="48" y="208" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="19"/>
    </properties>
   </object>
-  <object id="43" type="Door" x="128" y="208" width="16" height="16">
+  <object id="43" class="Door" x="128" y="208" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="21"/>
@@ -70,84 +84,25 @@
  <objectgroup id="8" name="items">
   <object id="41" gid="71" x="288" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;\&quot; Xeonjia Tower – Dwelling of the King of Evil. Stay away \&quot;&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/_1&quot; &quot;Xeonjia Tower – Dwelling of the King of Evil. Stay away.&quot;)))"/>
    </properties>
   </object>
-  <object id="50" gid="44" x="224" y="80" width="16" height="16">
+  <object id="50" gid="234" x="224" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (! (get &quot;999-talk-milla&quot;))
     (dialog '((&quot;This door is closed.&quot;)))
     (dialog '((&quot;This door is closed, I need the 3 signets to open it.&quot;))))</property>
    </properties>
   </object>
-  <object id="51" type="Solid" x="128" y="224" width="16" height="16">
+  <object id="66" class="Solid" x="128" y="224" width="16" height="16">
    <properties>
     <property name="actionOnCollision">(if (!get &quot;999-talk-milla&quot;)
-    (begin
-        (set-orientation 1)
-        (dialog '((&quot;I should go to the tower.&quot;)))))</property>
+  (begin
+    (dialog '((&quot;I should go to the tower.&quot;)))
+    (wait)
+    (set-orientation 1)))</property>
     <property name="actionOnEvent">(if (get &quot;999-talk-milla&quot;)
     (delete-me))</property>
-   </properties>
-  </object>
-  <object id="52" gid="21" x="128" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="53" gid="23" x="320" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="54" gid="22" x="176" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="55" gid="22" x="144" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="56" gid="22" x="160" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="57" gid="22" x="208" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="58" gid="22" x="192" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="59" gid="22" x="240" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="60" gid="22" x="272" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="61" gid="22" x="256" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="62" gid="22" x="288" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="63" gid="22" x="304" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;The tower is so ugly.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

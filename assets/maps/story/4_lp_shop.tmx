@@ -3,7 +3,7 @@
  <properties>
   <property name="action" value="(map-name &quot;Pharmacy&quot;)"/>
   <property name="disable-minimap" type="bool" value="true"/>
-  <property name="music" value="town"/>
+  <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
@@ -29,7 +29,7 @@
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="37"/>
+    <property name="roomId" value="4"/>
    </properties>
   </object>
  </objectgroup>
@@ -40,7 +40,7 @@
   (shop
     '((&quot;berries-shop&quot; 5 &quot;(give-item \&quot;berries-shop\&quot;)&quot;)
     (&quot;fresh-water&quot; 20 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
-    (&quot;pomegranate-juice&quot; 55 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)))
+    (&quot;pomegranate-juice&quot; 50 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)))
   (if (not (has-been-here &quot;48&quot;))
     (if (= (get-initial-HP) 100)
       (shop

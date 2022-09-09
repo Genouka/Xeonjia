@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="19" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="43">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="19" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
  <properties>
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
@@ -9,42 +9,49 @@
  <tileset firstgid="153" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="19" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAwtkYGAIAuJgIA4B4lAgloBiBSiGsXmA2BxJTAOIDaA0SCwRiJOhOAaIUxmwAz8c4uZQGmR2HhDnA3E8lC4goAfZbHskcZC7yoC4HIjToHQFkhwyIMQHmesDZathcYsNENtC9Zmj8e2xmI1uPi5ggEXMF80sDSLNwgdg7kW3DxZfdgyY4Y2uBhko4FFPKoClO1haQw5bkJgvAyJMQWpZGFDTKXJ6BqkFAGrsTeX4AgAA
+   H4sIAAAAAAAAAwtkYGAIAuJgIA4B4lAgloBiBSiGsXmA2BxJTIMBAhygdCIQJ0NxDBCnMmAHfjjEzaE0yOw8IM4H4ngoXUBAD7LZ9kjiILeWAXE5EKdB6QokOWRAiA8y1wfKVsPiFhsgtoXqM0fj22MxG918XACbXb5oZmlgUUMqgLnXAE0cFl92DJjhja4GGSjgUU8qgKU7ByiNHLYgv/syIMIUpJaFAZFOHRhQ0zNILQABooI7+AIAAA==
   </data>
  </layer>
- <objectgroup id="9" name="npc"/>
+ <objectgroup id="9" name="npc">
+  <object id="44" class="NPC" gid="186" x="160" y="96" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I have to stay here because if I move you can't get out anymore.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="6" name="Tile Layer 2" width="19" height="10">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgIA64EamOHEBLs0HABY+cCRCb4uFTE7jSwExc7oWFqRkevbQOd3SA7lZSwoPaYQcAaXBbSvgCAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="34" type="Door" x="176" y="0" width="16" height="16">
+  <object id="34" class="Door" x="176" y="0" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="19"/>
    </properties>
   </object>
-  <object id="37" type="Door" x="176" y="144" width="16" height="16">
+  <object id="37" class="Door" x="176" y="144" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="16"/>
    </properties>
   </object>
-  <object id="38" type="Door" x="32" y="64" width="16" height="16">
+  <object id="38" class="Door" x="32" y="64" width="16" height="16">
    <properties>
     <property name="roomId" value="18_house"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="40" type="Modifier" gid="147" x="272" y="32" width="16" height="16">
+  <object id="40" class="Modifier" gid="147" x="272" y="32" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
   <object id="42" gid="140" x="240" y="32" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="15"/>
+    <property name="healthPointsDelta" type="int" value="15"/>
    </properties>
   </object>
  </objectgroup>

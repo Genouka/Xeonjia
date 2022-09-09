@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="12" height="35" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="53">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="12" height="35" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="54">
  <properties>
   <property name="action">(if (! (== (last-place) &quot;22&quot;))
     (map-name &quot;Route 3&quot;))</property>
@@ -7,35 +7,36 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="137" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="185" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="237" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="154" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="210" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="262" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="35">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA51VwQkDMQzLAP21j0D78Ag3wF3+7f4D1X0YhLAduwLB5VBkOThkjjEm8KU86B8TcRsxPH0G1EtRX4F5eXneys8mz6m8inmyTEJrT88arL3zP5p5GP/os/OL/KWh556yvZXzRPy8F6xXJASvSesMnAf13kyxfwTba/e0CgnqZvrMH73sWxp5uvcd+630weefzeoa/rx1/A3S0N+VT+Uj0HNmz9sys/dunrP77tWxrFFe3o9vhvXBbwm/NV/J/jEtkAYAAA==
+   H4sIAAAAAAAAA5VUQQ7DIAzjAbttB6TtwBN666VDXNf/P2igNpJlJSFYigTCcRxIm9KFfMenx3avW9Kxw/pBZ0ePL+yzoaFp7cAvwZwIUIv9/HqcTo3B554sNEXf8iHabcLB2vJGFraAvoc20WcMrnV/szpRfe7Jy9Xupzj8oV1hXy0iaKG+50XOkYNetJlifQuSK99pFMWo6/E9fdSSdVnwg+8VycN+I33wPHizWpM+byv6grbAf/Z493gZfPZcFJ54Zu3ZPHv/E62OeLX8cu0MIX1kCp7hP8oZ8WiQBgAA
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="12" height="35">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGFzAjET1dmh8RyB2IqDHBIhNSbSHWmAg7SYGEBN+IEBpPNEKmOFg0xpQEq8DpRefWfRKp7A4ItY+5HSEL63SM+5JAcTmLxggNT3TK5+R6g9iAQATiNAkkAYAAA==
+   H4sIAAAAAAAAA2NgwA9MgNiUgBpqAjMS1duh8R2B2ImAHnr7abDYTQwgJvxAgNJ4ohUww8GmNaAkXgdKLz6z6JVOYXFErH3I6QhfWqVn3JMCiM1fMEBqeqZVPkO3m1R/EAsAI1ump5AGAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="36" type="Door" x="176" y="512" width="16" height="16">
+  <object id="36" class="Door" x="176" y="512" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="30"/>
    </properties>
   </object>
-  <object id="38" type="Door" x="0" y="528" width="16" height="16">
+  <object id="38" class="Door" x="0" y="528" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="29"/>
    </properties>
   </object>
-  <object id="44" type="Door" x="64" y="0" width="16" height="16">
+  <object id="44" class="Door" x="64" y="0" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="22"/>
    </properties>
   </object>
@@ -43,25 +44,25 @@
  <objectgroup id="8" name="items">
   <object id="45" gid="71" x="80" y="544" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;\&quot; ← Sacred Tree \&quot;\n\&quot; Melhopolis City Center → \&quot;&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/_1&quot; &quot;← Sacred Tree\nMelhopolis City Center →&quot;)))"/>
    </properties>
   </object>
-  <object id="49" gid="250" x="64" y="32" width="16" height="16">
+  <object id="49" gid="275" x="64" y="32" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="100"/>
+    <property name="healthPointsDelta" type="int" value="100"/>
    </properties>
   </object>
-  <object id="50" type="Modifier" gid="255" x="16" y="368" width="16" height="16">
+  <object id="50" class="Modifier" gid="280" x="16" y="368" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
-  <object id="51" type="Modifier" gid="255" x="128" y="208" width="16" height="16">
+  <object id="51" class="Modifier" gid="280" x="128" y="208" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
    </properties>
   </object>
-  <object id="52" type="Modifier" gid="255" x="160" y="448" width="16" height="16">
+  <object id="52" class="Modifier" gid="280" x="160" y="448" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>

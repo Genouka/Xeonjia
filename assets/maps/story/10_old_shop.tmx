@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="77">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="78">
  <properties>
   <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="forest"/>
@@ -9,11 +9,11 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6EG+D0sgYJnYTqu4cEO/Bg2Hq8KkZaHUPiFD3EIiv4cBX0fgADLU+pGgBAAA=
+   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6EG+D0siYAUrfhKo7B8R78GCYOnxqBlrdAyLUPQTiazjwVTQ+AFTAkDZoAQAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="71" type="NPC" gid="27" x="48" y="80" width="16" height="16">
+  <object id="71" class="NPC" gid="27" x="48" y="80" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;shopkeeper&quot; &quot;Hi, I'm sorry but we're closed. Once this was a busy shop, but now it doesn't even make sense to stay open.&quot;)))"/>
    </properties>
@@ -25,7 +25,7 @@
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="70" type="Door" x="96" y="112" width="16" height="16">
+  <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="10"/>
@@ -58,6 +58,11 @@
   <object id="76" gid="187" x="32" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;I think this vase was placed here on purpose to block the passage.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="77" gid="182" x="112" y="32" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;From this window I can only see a tree.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

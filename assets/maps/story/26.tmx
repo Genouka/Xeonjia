@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="18" height="19" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="50">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="18" height="19" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="53">
  <properties>
   <property name="map-name" value="Melhopolis"/>
   <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52UuQ7CMBBE9wNoQBRUyCVlKmg4PgAouAouIYS475vPZ1bxSsY4xGGkp7VzjLPJOC0iaoMO6IIeyGlSxpgpWXOTPhiCARiBMYUq6qooXuwzBTODuT5XdVxfBhXHmH0O4Agmup5i1lZWZdXAAzzBAqzAy6MPZc3lHaVBHmQ8PEQNh4+tekKvUoL1XVK6BiDreU9UPljcU8HTJyof4uN6Py5JPpb0mQ/Jke/zSD5u9J0P2RfcL/fN/Y9tA0N2PiTzv/aF77cXnzXYgC3YgX2C+1mKwvycwRVcKOz9ntBHnufffeHy+UdNh0+Nvv9vfCzQmOftf2Kg6xu3iaEpWAUAAA==
+   H4sIAAAAAAAAA52UO2/CQBCE9wekIUlBhVxSUkED2GWkQBEeRQALRRGQN0l4hJ+fGWVXmMvh10if1j7b41t77u5EZACGYATGoKpcJI5JS2vkjFP3YAomYAZiHW9qvQLXki56PYDHBAu91vXc3wYdzzF9PsAazLV+Zrw7cCoVgj34AUvwBA4ZPlTknNt3qoAauMzhYep5fFzdFvRqFXi/T4HWhmT/U9O5fFDsqZ7T51w+zMf3fXyyfKzkNB+Wo7zzsXxs5X8+OBf2zX7ZN/uPXYOE3HxY5tPWRd5/bz7P4AW8gjfwXuB5KtD6BTbgW/563xX0oSIpvy6Ssj2pjPqODwnldH+zsYYSynHutidSNwrPfwHTL8riWAUAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="49" type="Solid" gid="55" x="112" y="128" width="16" height="16">
+  <object id="49" class="Solid" gid="55" x="112" y="128" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;26.berries&quot;)
-    (define life-diff 20)
+    (define HP-diff 20)
     (if (! (has-item item-id))
         (begin
-            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (dialog '((&quot;* {{hero}} found some berries! {{HP-diff}} HP have been recovered *&quot;)))
             (give-item item-id)
-            (set-life-diff life-diff))
+            (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="50" class="NPC" gid="161" x="256" y="288" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (get &quot;026-snowglobe&quot;))
+  (begin
+    (dialog '((&quot;/&quot; &quot;Did you come here just to talk to me?\nI don't have much to say, but I can give you this little snow globe.&quot;)))
+    (set &quot;026-snowglobe&quot; #t)
+    (wait)
+    (give-item &quot;26.snow-globe&quot;))
+  (dialog '((&quot;/&quot; &quot;The weather is good today.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="51" class="NPC" gid="193" x="128" y="32" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;We keep an eye on you.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
@@ -33,18 +49,19 @@
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="36" type="Door" x="112" y="0" width="16" height="16">
+  <object id="36" class="Door" x="112" y="0" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="25"/>
    </properties>
   </object>
-  <object id="44" type="Door" x="0" y="128" width="16" height="16">
+  <object id="44" class="Door" x="0" y="128" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="28"/>
    </properties>
   </object>
-  <object id="45" type="Door" x="32" y="80" width="16" height="16">
+  <object id="45" class="Door" x="32" y="80" width="16" height="16">
    <properties>
     <property name="roomId" value="26_house"/>
    </properties>

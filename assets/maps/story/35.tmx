@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="25" height="12" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="64">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="12" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="64">
  <properties>
   <property name="action">(if (== (last-place) &quot;37&quot;)
-    (map-name &quot;Route 4&quot;))</property>
+  (map-name &quot;Route 4&quot;))</property>
   <property name="map-name" value="Route 4"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="189" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="349" source="../tilesets/crypt-2.tsx"/>
- <tileset firstgid="405" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="361" source="../tilesets/crypt-2.tsx"/>
+ <tileset firstgid="417" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="12">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA3vCwMDwBIrfILFB+AYaH5sadL45IwODBRK2ZISI4wIngJidEY8CLMAUqF4GCZsB8TES9F8h045zROh/Q4K4KtBMNSBWB2ININYkEFbEAmT36QLN1ANifSA2AGJDLHa8weNuYuxBjz9YuqAl+M1Aflh9AuI/RKg7T4Edv6B2ELIH5A9PRtpjl2GCAcdiMfCwBAAA
+   H4sIAAAAAAAAA2NgYGD4AMU/kNgg/ASJ7YCmBp0vzgihnYG0CxJ2hYrjAleAWJgRjwIswBGoXgMJOwHxJRL0PyDTjltE6P9Bgrgh0EwjIDYGYhMgNiUQVsSCB0hsS6CZVkBsDcQ2QGyLxY4feNxNjD3o8QdLF7QE7IyQNEcO+AfEHETovc0ASefkADZGiB2E7AH5I5QOOGCYYADMgI8MsAQAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="59" gid="185" x="368" y="112" width="16" height="16">
+  <object id="59" class="NPC" gid="197" x="368" y="112" width="16" height="16">
    <properties>
     <property name="action">(begin
     (dialog '((&quot;/&quot; &quot;This boulder is very heavy.&quot;)))
@@ -27,7 +27,7 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="60" gid="187" x="352" y="128" width="16" height="16">
+  <object id="60" class="NPC" gid="199" x="352" y="128" width="16" height="16">
    <properties>
     <property name="action">(begin
     (dialog '((&quot;/&quot; &quot;We are trying to move this boulder.\nI'm sorry but it's going to take a while.&quot;)))
@@ -37,7 +37,7 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="61" gid="24" x="368" y="128" width="16" height="16">
+  <object id="61" class="Solid" gid="24" x="368" y="128" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;A heavy rock.&quot;)))"/>
     <property name="actionOnEvent">(if  (get &quot;34-cave-spirit&quot;)
@@ -47,28 +47,29 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="25" height="12">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgwA/+E5AfBYMbjMbfKBhOAADXf6jWsAQAAA==
+   H4sIAAAAAAAAA2NgwA+4GQkoGAWDGozG3ygYTgAABQKrdrAEAAA=
   </data>
  </layer>
  <objectgroup id="10" name="spawn points">
-  <object id="51" type="Door" x="112" y="0" width="16" height="16">
+  <object id="51" class="Door" x="112" y="0" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="34"/>
    </properties>
   </object>
-  <object id="52" type="Door" x="384" y="112" width="16" height="16">
+  <object id="52" class="Door" x="384" y="112" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="37"/>
    </properties>
   </object>
-  <object id="54" type="Door" x="0" y="32" width="16" height="16">
+  <object id="54" class="Door" x="0" y="32" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="36/1"/>
    </properties>
   </object>
-  <object id="55" type="Door" x="0" y="48" width="16" height="16">
+  <object id="55" class="Door" x="0" y="48" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="36/2"/>
@@ -76,14 +77,14 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="62" type="Modifier" gid="423" x="208" y="48" width="16" height="16">
+  <object id="62" class="Modifier" gid="435" x="208" y="48" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
    </properties>
   </object>
-  <object id="63" gid="259" x="112" y="96" width="16" height="16">
+  <object id="63" gid="271" x="112" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;\&quot; ↑ Hexa Cave \&quot;\n\&quot; Zamelis Village → \&quot;&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/_2&quot; &quot;↑ Hexa Cave\nZamelis Village →&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

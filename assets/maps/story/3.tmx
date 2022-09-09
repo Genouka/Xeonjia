@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="19" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="43">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="19" height="13" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="87">
  <properties>
+  <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Route 1"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/basic.tsx"/>
  <tileset firstgid="25" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="77" source="../tilesets/outdoor-1.tsx"/>
- <layer id="1" name="Tile Layer 1" width="19" height="20">
+ <layer id="1" name="Tile Layer 1" width="19" height="13">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA61Uuw6AIAzsJzoZJycGY5wcDZsjX2D8WWnsJZWIgHDJhWePPkgXIlo8jdCqOe9PMjKdjKfaC/mFIXEOsM7m2Wfef0OntGbPsUJrkhF5AVLxvgE5QM5bIPQrRImfO911LrWLvdsqRvy7GnvAUH1sWhdaawOt4+OsBPsPm9i73BNc6mImOPc1ddRI/a+S+HP6VwzwwTbQgj3ghJaefdioNc+7YI26GXr28wsAQbdF8AUAAA==
+   H4sIAAAAAAAAA61TMQqAMAzME53EyclBxBeIWxe1/YD4WRPMYQY1RT04Uky8tNeGiKhnNsqRGXQt31tm0nXUuGm0DBqfUDl5QHQGZplZf4XCaHXM+oNWqxGeAMsLLXggOutNDXqETE3P+9x9TsyZjnv+A81POgLvbXl564HUppf7wJlGo+X1fgI8F0QlZhAzh3eH2sL0RU7+SXTOsWAHwXbll9wDAAA=
   </data>
  </layer>
  <objectgroup id="8" name="npcs">
-  <object id="35" type="NPC" gid="52" x="16" y="48" width="16" height="16">
+  <object id="35" class="NPC" gid="52" x="16" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (! (has-item &quot;3.berries&quot;))
     (dialog '((&quot;/&quot; &quot;Sometimes among the branches of the plants you can find some berries.\nI also happened to find objects that have remained stuck.&quot;)))
@@ -27,35 +28,36 @@
 </property>
    </properties>
   </object>
-  <object id="41" type="NPC" gid="29" x="256" y="64" width="16" height="16">
+  <object id="43" class="NPC" gid="30" x="256" y="48" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;On the ground it's easy to find XEON (¤) stones that you can use to buy items in shops.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;The ice is so slippery, have you noticed?\nI feel more comfortable on the snow.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
- <layer id="6" name="Tile Layer 2" width="19" height="20">
+ <layer id="6" name="Tile Layer 2" width="19" height="13">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3SywpAUBSF4fPM3sQDECNFcgnlWuTB/MWZmqxTIqu+6d8ebGP+2QUIESEWWzkKlKjEVosOKXqxNWNBjVVs2XmOOm+d//QBN3P908lF/ekBIzJMYmtDY86f3sWW3Vd/+gBP+lYC8AUAAA==
+   H4sIAAAAAAAAA2NgGFmgCY/cXCCeB8QLgHghDjUTibRnLRCvB+INQLyRWMchAWR3bgXibUC8Coh3oqlrAOJGKJsY9+8F4n1AvAmID+KxH+T+5VBMyP1FBOR3AfFuIF4NxHsIqEUG2OLqEBBvYYC4/wgJZuEDhNyPDhoYEGFOTbXUBgCBlT2r3AMAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="25" type="Door" x="0" y="48" width="16" height="16">
+  <object id="25" class="Door" x="0" y="48" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="2"/>
    </properties>
   </object>
-  <object id="24" type="Door" x="48" y="272" width="16" height="16">
+  <object id="24" class="Door" x="48" y="160" width="16" height="16">
    <properties>
     <property name="roomId" value="3_house1"/>
    </properties>
   </object>
-  <object id="32" type="Door" x="192" y="112" width="16" height="16">
+  <object id="32" class="Door" x="192" y="112" width="16" height="16">
    <properties>
     <property name="roomId" value="3_house2"/>
    </properties>
   </object>
-  <object id="33" type="Door" x="144" y="304" width="16" height="16">
+  <object id="33" class="Door" x="144" y="192" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" type="int" value="4"/>
@@ -63,37 +65,147 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="36" type="Solid" gid="131" x="0" y="48" width="16" height="16">
+  <object id="36" class="Solid" gid="131" x="0" y="48" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;3.berries&quot;)
-    (define life-diff 20)
+    (define HP-diff 20)
     (if (! (has-item item-id))
         (begin
-            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (dialog '((&quot;* {{hero}} found some berries! {{HP-diff}} HP have been recovered *&quot;)))
             (give-item item-id)
-            (set-life-diff life-diff))
+            (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
-   </properties>
-  </object>
-  <object id="38" type="Modifier" gid="19" x="272" y="32" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="5"/>
-   </properties>
-  </object>
-  <object id="39" type="Modifier" gid="19" x="240" y="240" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="5"/>
-   </properties>
-  </object>
-  <object id="40" type="Modifier" gid="19" x="144" y="48" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
   <object id="42" gid="139" x="128" y="16" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;It seems that once there was a path here.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="45" gid="24" x="144" y="160" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="47" gid="24" x="144" y="128" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="48" gid="24" x="144" y="192" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="49" gid="24" x="144" y="96" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="50" gid="24" x="144" y="80" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="51" gid="15" x="128" y="80" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="52" gid="24" x="128" y="64" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="53" gid="24" x="144" y="112" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="59" gid="24" x="128" y="48" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="66" gid="23" x="144" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="68" gid="23" x="176" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="69" gid="23" x="224" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="71" gid="23" x="192" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="72" gid="23" x="272" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="73" gid="23" x="256" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="74" gid="23" x="240" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="75" gid="16" x="272" y="48" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="76" gid="16" x="272" y="64" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="77" gid="15" x="32" y="64" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="79" gid="15" x="64" y="64" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="80" gid="15" x="112" y="64" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="81" gid="15" x="96" y="64" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="83" gid="15" x="224" y="64" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="84" gid="15" x="144" y="64" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="86" gid="15" x="240" y="64" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;4&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

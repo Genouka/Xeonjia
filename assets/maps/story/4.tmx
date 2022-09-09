@@ -1,77 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="39">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="19" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="58">
  <properties>
   <property name="action">(if (== (last-place) &quot;5&quot;)
     (map-name &quot;Route 1&quot;))</property>
+  <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Route 1"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/basic.tsx"/>
- <layer id="1" name="Tile Layer 1" width="16" height="24">
+ <tileset firstgid="153" source="../tilesets/npc_common.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="19" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA61Uuw7DIAz0B3Rpu2SoKk+d2bK04gtS/v9vaiSQLpbNI+lJJ8zFhw0JYSJi4VJY4wfEXBjLmEDLtHBxdMRd+B3I87Cc8FY/rsGD9Rjmsz2wilt+rx+GMZY4HOhhNep7Nb110kS+5Z+ppxHA/2rkvYUfQ8/73xpra+ga9W6MwMrLWjT0Hup+sj8pbQa975cH/L2cf/uvwqfwRsfP70x9xGr4e+8Bn3vnP9oTAwPEkfZ3K9L+/x5g/gO/AfjhAAYAAA==
+   H4sIAAAAAAAAA2NgwAQSQCwDxA5QtjkQK0CxBJS2h9L+SHKRQJwCxTFAHAs1jweLHfiAMBAnIpkFwqk41NoAsS0es0DuzQTiLCiOA+JcEt0DAxpAXAjERVCcBsSlROqVgNLI7rVDkscWRvj8poDGlsCuDEMtITUg2h7KNiBCHyGA7i5i3IIL+FOgFx04UKBXEIjlgFiIAZE3QEANShNKk8jyyGxQWPmS6SY1ND7MTQ4MkHgE8UHpF5ZvFaDi9lBxBaj9MAyTh8UfAJPWNEUoBAAA
   </data>
  </layer>
  <objectgroup id="8" name="npcs">
-  <object id="35" type="Modifier" gid="147" x="32" y="192" width="16" height="16">
+  <object id="39" class="NPC" gid="181" x="80" y="32" width="16" height="16">
    <properties>
-    <property name="moneyDelta" type="int" value="5"/>
-   </properties>
-  </object>
-  <object id="36" type="Modifier" gid="147" x="224" y="352" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="5"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;On the ground it's easy to find XEON (¤) stones that you can use to buy items in shops.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
- <layer id="6" name="Tile Layer 2" width="16" height="24">
+ <layer id="6" name="Tile Layer 2" width="19" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoAy4UaifUmA/wPaPAtoDEyA2xSHnSk+HUAlg8w8+P4JAIBAHQXEIEIeSaGciEEcBcQwQpwBxKon6M4E4G4izgDgOiHNJ1F8IxMVAXATEaUBcSqJ+egFC8UBIfqgBAN0hwM8ABgAA
+   H4sIAAAAAAAAAwtkYGAIAuJgIA4B4lAG2gMTIDalgz3UAsjuNQPiGiCuJULtYAeBDJC4B2FK4z4RiKOAOAaIU4A4lQKzMoE4G4izgDgOiHMpMKsQiIuBuAiI04C4FIc6QvGGLI+u1pUC9w0VAAAOCQZXKAQAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="25" type="Door" x="96" y="0" width="16" height="16">
+  <object id="25" class="Door" x="96" y="0" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="3"/>
    </properties>
   </object>
-  <object id="24" type="Door" x="208" y="288" width="16" height="16">
+  <object id="24" class="Door" x="48" y="80" width="16" height="16">
    <properties>
-    <property name="roomId" value="4_house"/>
+    <property name="roomId" value="4_lp_shop"/>
    </properties>
   </object>
-  <object id="32" type="Door" x="240" y="16" width="16" height="16">
+  <object id="32" class="Door" x="288" y="16" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="5"/>
    </properties>
   </object>
+  <object id="43" class="Door" x="256" y="160" width="16" height="16">
+   <properties>
+    <property name="roomId" value="4_house"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="37" type="Solid" gid="55" x="128" y="384" width="16" height="16">
+  <object id="37" class="Solid" gid="55" x="96" y="64" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;4.berries&quot;)
-    (define life-diff 20)
+    (define HP-diff 20)
     (if (! (has-item item-id))
         (begin
-            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (dialog '((&quot;* {{hero}} found some berries! {{HP-diff}} HP have been recovered *&quot;)))
             (give-item item-id)
-            (set-life-diff life-diff))
+            (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
-  <object id="38" type="Solid" gid="55" x="208" y="32" width="16" height="16">
+  <object id="38" class="Solid" gid="55" x="224" y="176" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;4.berries2&quot;)
-    (define life-diff 15)
+    (define HP-diff 15)
     (if (! (has-item item-id))
         (begin
-            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (dialog '((&quot;* {{hero}} found some berries! {{HP-diff}} HP have been recovered *&quot;)))
             (give-item item-id)
-            (set-life-diff life-diff))
+            (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="40" class="Modifier" gid="147" x="128" y="112" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="42" class="Modifier" gid="147" x="80" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="44" gid="143" x="112" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;5&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="53" gid="143" x="272" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;5&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="36" class="Modifier" gid="147" x="16" y="208" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="55" gid="143" x="208" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;5&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="56" gid="143" x="240" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;5&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="57" gid="143" x="144" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;5&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

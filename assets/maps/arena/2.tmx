@@ -28,37 +28,37 @@
   </object>
   <object id="32" gid="140" x="144" y="32" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="healthPointsDelta" type="int" value="20"/>
     <property name="regenerable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="33" gid="140" x="160" y="128" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="healthPointsDelta" type="int" value="20"/>
     <property name="regenerable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="34" gid="140" x="352" y="320" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="healthPointsDelta" type="int" value="20"/>
     <property name="regenerable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="36" gid="140" x="48" y="320" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="healthPointsDelta" type="int" value="20"/>
     <property name="regenerable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="37" gid="140" x="240" y="192" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="healthPointsDelta" type="int" value="20"/>
     <property name="regenerable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="38" gid="140" x="272" y="352" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="20"/>
+    <property name="healthPointsDelta" type="int" value="20"/>
     <property name="regenerable" type="bool" value="true"/>
    </properties>
   </object>

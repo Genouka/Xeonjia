@@ -6,6 +6,12 @@
       "keyItem": true,
       "location": "002"
     },
+    "26.snow-globe": {
+      "name": "Snow globe",
+      "description": "A little snow globe with a miniaturized Mitsu Forest inside.",
+      "keyItem": true,
+      "location": "026"
+    },
     "30.package-of-the-king": {
       "name": "Package of the King",
       "description": "Package given to me by the King.",
@@ -44,28 +50,38 @@
     },
     "signet-1": {
       "name": "First Signet",
-      "description": "First out of 3 signets required to enter the Xeonjia tower.",
+      "description": "First out of 3 signets required to enter the Xeonjia Tower.",
       "keyItem": true,
       "location": "t1_06"
     },
     "berries-shop": {
       "name": "Berries",
-      "description": "Five little berries. They restore 5 LPs.",
-      "action": "(if (< (get-life) (get-initial-life)) (begin (set-life-diff 5) (use-item selected-item-id)) (dialog '((\"I'm already healthy, I don't need {{selected-item-name}} right now.\"))))"
+      "description": "Five little berries. They restore 5 HP.",
+      "action": "(if (< (get-HP) (get-initial-HP)) (begin (set-HP-diff 5) (use-item selected-item-id)) (dialog '((\"I'm already healthy, I don't need {{selected-item-name}} right now.\"))))"
     },
-    "lp-up-5-shop": {
-      "name": "LP UP +5",
-      "description": "Increases the max LP by 5 points."
+    "hp-up-5-shop": {
+      "name": "HP UP +5",
+      "description": "Increases the max HP by 5 points."
     },
     "fresh-water": {
       "name": "Fresh Water",
-      "description": "A bottle of water. It restores 20 LPs.",
-      "action": "(if (< (get-life) (get-initial-life)) (begin (set-life-diff 20) (use-item selected-item-id)) (dialog '((\"I'm already healthy, I don't need {{selected-item-name}} right now.\"))))"
+      "description": "A bottle of water. It restores 20 HP.",
+      "action": "(if (< (get-HP) (get-initial-HP)) (begin (set-HP-diff 20) (use-item selected-item-id)) (dialog '((\"I'm already healthy, I don't need {{selected-item-name}} right now.\"))))"
     },
     "pomegranate-juice": {
       "name": "Pomegranate juice",
-      "description": "A bottle of pomegranate juice. It restores 50 LPs.",
-      "action": "(if (< (get-life) (get-initial-life)) (begin (set-life-diff 50) (use-item selected-item-id)) (dialog '((\"I'm already healthy, I don't need {{selected-item-name}} right now.\"))))"
+      "description": "A bottle of pomegranate juice. It restores 50 HP.",
+      "action": "(if (< (get-HP) (get-initial-HP)) (begin (set-HP-diff 50) (use-item selected-item-id)) (dialog '((\"I'm already healthy, I don't need {{selected-item-name}} right now.\"))))"
+    },
+    "healer": {
+      "name": "Healer",
+      "description": "A medicine that restores 80 HP.",
+      "action": "(if (< (get-HP) (get-initial-HP)) (begin (set-HP-diff 80) (use-item selected-item-id)) (dialog '((\"I'm already healthy, I don't need {{selected-item-name}} right now.\"))))"
+    },
+    "food-box": {
+      "name": "Food Box",
+      "description": "A small box full of rice, vegetables and beans. It restores 100 HP.",
+      "action": "(if (< (get-HP) (get-initial-HP)) (begin (set-HP-diff 100) (use-item selected-item-id)) (dialog '((\"I'm already healthy, I don't need {{selected-item-name}} right now.\"))))"
     }
   },
   "global-events": {

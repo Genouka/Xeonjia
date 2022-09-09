@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="47">
  <properties>
+  <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
  </properties>
@@ -8,58 +9,64 @@
  <tileset firstgid="129" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WTMQ6AIAxFewA3F0aO4MaiMKsQ738b21hCoyIgP3mxSfHnU0ABgEYMopAJcVwTh+gRA3+N6NP/PRrZq0eeM/Uo7vuvLFyzyHnU5jMNa3PeCp7nYkUdKjyjhy2sy2lFNsjP42vWsucYqV3UNfni3ZaeJd1932bakoEU73pgL8JDel8zsnA+DSm3nCVxArepSLe4AwAA
+   H4sIAAAAAAAAA6WSSwqAMAxEcwB3blz2CO7caOvWT/H+tzGBCQaxtdqBR0IbxmmwIyLHDEzH9ExAPzOHuRMaVD07MFejFl412pGpRvruv/KoKY/SfMOH2ZS3ZHC3M2/6WOCp7/DZqbQWZqX0PnK7tncBWG2mL8mn/7b1fNPd92mnuQxPZy1qhJew0/XekZmQT78lue0uhRP1y9DouAMAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGHjgMtAOAAKzgXYAAYDsPlcy9ZECHIHYiUy9hIAzEptW4U6KuaS6ATn8kdOuCRCbYlFPi7AEADvHqxW4AwAA
+   H4sIAAAAAAAAA2NgGHjgMtAOAAKzgXYAAYDsPlcy9ZECHIHYiUy9hIAzEptW4U6KudjU4tOPHP7IadcEiE2xqKdFWAIA4cft27gDAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="34" type="Door" x="192" y="0" width="16" height="16">
+  <object id="34" class="Door" x="192" y="0" width="16" height="16">
    <properties>
     <property name="roomId" value="10"/>
    </properties>
   </object>
-  <object id="35" type="Door" x="256" y="192" width="16" height="16">
+  <object id="35" class="Door" x="256" y="192" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="13"/>
    </properties>
   </object>
-  <object id="36" type="Door" x="256" y="16" width="16" height="16">
+  <object id="36" class="Door" x="256" y="16" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="11"/>
    </properties>
   </object>
   <object id="37" gid="141" x="240" y="208" width="16" height="16">
    <properties>
-    <property name="lifePointsDelta" type="int" value="50"/>
+    <property name="healthPointsDelta" type="int" value="50"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="38" type="Modifier" gid="147" x="16" y="176" width="16" height="16">
+  <object id="38" class="Modifier" gid="147" x="16" y="176" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="39" type="Modifier" gid="147" x="16" y="64" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="5"/>
-   </properties>
-  </object>
-  <object id="40" type="Modifier" gid="147" x="112" y="144" width="16" height="16">
+  <object id="39" class="Modifier" gid="147" x="16" y="64" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
   <object id="44" gid="71" x="128" y="160" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;\&quot; → \&quot;&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/_1&quot; &quot;Go this way →&quot;)))"/>
+   </properties>
+  </object>
+  <object id="45" gid="152" x="192" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;13&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="46" gid="143" x="192" y="96" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;13&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

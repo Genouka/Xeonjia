@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2020.08.05" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="47">
  <properties>
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
@@ -9,16 +9,11 @@
  <tileset firstgid="153" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5NgYGCQAGJ7KG0OpRWQsAQU8yCxYeoMoGqIAfY4xGF2EAt8sIiB9ItA2XYE1OICuNxHCoCFCyE1+AAsjJGBGonuUCDCHfiAHdQMGyC2pcAcXPFCqhmU+AUE/Bgoj19C7iAmrSHnNVDeAaUFBTRz7RgQeRCW1wyQ+CD9AHy8Wyq4AwAA
+   H4sIAAAAAAAAA5NgYGCQAGJ7KG0OpRWQsAQU8yCxYeoMoGqIAfY4xEH6bYDYlkhzfLCIgdwiAmXbEVCLC8DCgBJgTgU1sDDGBtSIdIcCHjOIAbAwJCVesAFc8UKqGZTGix8D7vRHLXcQk9Zgec2BAZJ3QGlBAc1cOwZEHoTlNQM0dQAXmCgvuAMAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="40" type="Modifier" gid="147" x="176" y="144" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="10"/>
-   </properties>
-  </object>
-  <object id="44" gid="201" x="64" y="112" width="16" height="16">
+  <object id="46" class="NPC" gid="201" x="96" y="112" width="16" height="16">
    <properties>
     <property name="action">(if (first-time?)
     (dialog '((&quot;/&quot; &quot;Hi, I'm an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I'll help you.&quot;)))
@@ -28,27 +23,34 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoC9wISBvRoJadOAIxE4k6kEHnkDsRaEZAw1gYWgCxKZUNnMggBsd7CA1raEDWFhTEk42QGxLpFoA57jq+rgDAAA=
+   H4sIAAAAAAAAA2NgoByYALEpkWpdCMibkaCWFsARiJ0oNMMTiL2o4BZyASwMSYkXYs0cCOBGBzsoTWuwsKYknGyA2JZItQB+GNkzuAMAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="34" type="Door" x="176" y="0" width="16" height="16">
+  <object id="34" class="Door" x="176" y="0" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="7"/>
    </properties>
   </object>
-  <object id="35" type="Door" x="0" y="48" width="16" height="16">
+  <object id="35" class="Door" x="0" y="48" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="10"/>
    </properties>
   </object>
-  <object id="36" type="Door" x="0" y="144" width="16" height="16">
+  <object id="36" class="Door" x="0" y="144" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="8"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="8" name="items"/>
+ <objectgroup id="8" name="items">
+  <object id="40" class="Modifier" gid="147" x="32" y="80" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="10"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

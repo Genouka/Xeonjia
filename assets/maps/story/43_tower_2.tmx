@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="5" height="5" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="56">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="5" height="5" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="56">
  <properties>
   <property name="disable-minimap" type="bool" value="true"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="189" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="349" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="361" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="5" height="5">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6tgZGCoQsKVQNwAxClQ3ArEjWhiKVCxDjSxTiCuw4IBBqB1X2QAAAA=
+   H4sIAAAAAAAAA2thZGBoQ8KtQNwDxAVQPBGIe9HECqBiU9DEpgJxFxYMAJedvq1kAAAA
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="5" height="5">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoA4oZcQtBwDS4fmwZAAAAA==
+   H4sIAAAAAAAAA2NgoA5oZMQtBwAWrk8sZAAAAA==
   </data>
  </layer>
  <objectgroup id="10" name="spawn points">
-  <object id="51" type="Door" x="32" y="16" width="16" height="16">
+  <object id="51" class="Door" x="32" y="16" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="43_tower_1"/>
    </properties>
   </object>
-  <object id="55" type="Door" x="32" y="48" width="16" height="16">
+  <object id="55" class="Door" x="32" y="48" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="43_tower_3"/>

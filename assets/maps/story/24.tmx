@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="78">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="81">
  <properties>
   <property name="action">(if (! (== (last-place) &quot;25&quot;))
     (map-name &quot;Melhopolis&quot;))</property>
@@ -8,62 +8,57 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="137" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="189" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="237" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="201" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="249" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="21" height="28">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA61Wu07EMBB0wQ+AKCIhnVKhK+nS8KiBnvdDp9PBAeIpHlcBn84s2hF7Kzuxw400spWxN97Ys3EVQqgMG9MfarvhxnjKnNo9K8F2hl4as+td0m6CW04fgSfgqbZn4LnRj8ED8FB5ZPRU7iMzR8aPwYnRP8Evx2/V+G09bsBb8A680P690R/AR+Wltk9mncNIzGdtX8Ar7b8Z/d30RZ+CMxOzbY+WwQG40qJR5x6V7nmdoclZXgNXI2P6vq/PmSd4BiXWLri3gJgp0Msl6PKmxNzpt5xfL4m/rM/4PXLX6dcnXhsbis8as9Y27Cee00vXYd5HjCl5pOpFCuKlD/A1/PmIuVeJPHIQ8xn3iHn4etAHPJ/Mg/VilpzRjUZp60GqZuQiVev+A/4XS9HmJTnvsZrksV7wPv6bc9HldcYsyT2nNvDOsUjE7jOpe8xSmPeevfvUbuwPtVIu7jAJAAA=
+   H4sIAAAAAAAAA62WOU8DMRCFXfAHQBSRkKKtECVdGo5tgZ77UBQIlzjFkQr46bxBM8rLaO21lzzpk62Md9Ze+03cCyH0iAH117Rdd2M88kyl/UBtrrYy4qU5294l7QbYdPEhOAYn2p6CM4ofgX1woBxS3L6Hl+S8JEbgiuJf4NvxozH7tl634A7cg3PtP1D8ETwpF9o+0zzrhpwv2r6CsfbfKf5BfYnfgAnlTO3RIuiDpUTM4rZHpXteZcTkLK+A5YYxXd9Xd3jWZGdQcu2AXZrLvM68ybxcojZvSs7tbtP585L4i31m3yN3nn5+4rURwT4btOTai/xuXroOsz4yyTpi9SIm8dIneAtTH3E9Sq0jJe8zPkO2Dl8Pusjy2jqsXkyah2dJ9kf2k+tBrGbkKlbr/iP7XyxVykty3ptqktdqwfvsvzlXbV4X1aFs7Tm1we4c85Tl4/sM32Nq6i+Eqff47iNjqjBbi38BfuuowzAJAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="67" gid="185" x="144" y="384" width="16" height="16">
+  <object id="67" class="NPC" gid="197" x="144" y="384" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;The city center is a few kilometers to the south.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="77" type="NPC" gid="154" x="304" y="288" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;I'm planning a surprise wedding for my son, I hope he doesn't find out.&quot;)))"/>
-    <property name="orientation" type="int" value="1"/>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="21" height="28">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA2YUSiPDwQCcRAQhwBxKJJZINoEiE1xqAfhYCR9yPKRQBwFxDFAHIsmT8gdxKgd6YCS+B5qADkNOgKx0wC6BRugZVzA8gRyPsOWJ/EBarrPmUx92PxBDiDV78MV1ABx7UA7ggZgsJdrg919tAQDmfcA00gkzjAJAAA=
+   H4sIAAAAAAAAA2NgIA2YUSiPDwQCcRAQhwBxKJJZINoEiE1xqAfhYCR9yPKRQBwFxDFAHIsmPwooB5TE91ADyGnQEYidBtAt2AAt4wKW15DzGbY8iQ9Q033OZOrD5g9yAKl+H44AFJ81QFw70A6hARjs5dpgdx8twUDmPQCZMM3jMAkAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
-  <object id="38" type="Door" x="0" y="368" width="16" height="16">
+  <object id="38" class="Door" x="0" y="368" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="23"/>
    </properties>
   </object>
-  <object id="44" type="Door" x="0" y="144" width="16" height="16">
+  <object id="44" class="Door" x="0" y="144" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="21"/>
    </properties>
   </object>
-  <object id="45" type="Door" x="160" y="432" width="16" height="16">
+  <object id="45" class="Door" x="160" y="432" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="25"/>
    </properties>
   </object>
-  <object id="46" type="Door" x="48" y="320" width="16" height="16">
+  <object id="46" class="Door" x="48" y="320" width="16" height="16">
    <properties>
     <property name="roomId" value="24_lp_shop"/>
    </properties>
   </object>
-  <object id="47" type="Door" x="128" y="112" width="16" height="16">
+  <object id="47" class="Door" x="128" y="112" width="16" height="16">
    <properties>
     <property name="roomId" value="24_house1"/>
    </properties>
   </object>
-  <object id="48" type="Door" x="256" y="112" width="16" height="16">
+  <object id="48" class="Door" x="256" y="112" width="16" height="16">
    <properties>
     <property name="roomId" value="24_lab"/>
    </properties>
@@ -72,7 +67,7 @@
  <objectgroup id="8" name="items">
   <object id="51" gid="71" x="272" y="128" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;\&quot; VANTOI LAB \&quot;&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/_1&quot; &quot;VANTOI LAB&quot;)))"/>
    </properties>
   </object>
   <object id="59" gid="104" x="240" y="112" width="16" height="16">
@@ -92,7 +87,7 @@
   </object>
   <object id="62" gid="71" x="0" y="144" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;\&quot; Melhopolis – Regional capital \&quot;&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/_1&quot; &quot;Melhopolis – Regional capital&quot;)))"/>
    </properties>
   </object>
   <object id="63" gid="115" x="144" y="112" width="16" height="16">
@@ -105,58 +100,58 @@
     <property name="action" value="(dialog '((&quot;I can see the inside of the house.&quot;)))"/>
    </properties>
   </object>
-  <object id="69" type="Modifier" gid="255" x="304" y="96" width="16" height="16">
+  <object id="69" class="Modifier" gid="267" x="304" y="96" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="70" type="Modifier" gid="255" x="304" y="176" width="16" height="16">
+  <object id="70" class="Modifier" gid="267" x="304" y="176" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="71" type="Modifier" gid="255" x="208" y="208" width="16" height="16">
+  <object id="71" class="Modifier" gid="267" x="208" y="208" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="72" type="Solid" gid="55" x="64" y="80" width="16" height="16">
+  <object id="72" class="Solid" gid="55" x="64" y="80" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;24.berries&quot;)
-    (define life-diff 30)
+    (define HP-diff 30)
     (if (! (has-item item-id))
         (begin
-            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (dialog '((&quot;* {{hero}} found some berries! {{HP-diff}} HP have been recovered *&quot;)))
             (give-item item-id)
-            (set-life-diff life-diff))
+            (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
-  <object id="73" type="Solid" gid="55" x="208" y="192" width="16" height="16">
+  <object id="73" class="Solid" gid="55" x="208" y="192" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;24.berries2&quot;)
-    (define life-diff 20)
+    (define HP-diff 20)
     (if (! (has-item item-id))
         (begin
-            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (dialog '((&quot;* {{hero}} found some berries! {{HP-diff}} HP have been recovered *&quot;)))
             (give-item item-id)
-            (set-life-diff life-diff))
+            (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))
 </property>
    </properties>
   </object>
-  <object id="74" type="Solid" gid="55" x="160" y="352" width="16" height="16">
+  <object id="74" class="Solid" gid="55" x="160" y="352" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;24.berries3&quot;)
-    (define life-diff 20)
+    (define HP-diff 20)
     (if (! (has-item item-id))
         (begin
-            (dialog '((&quot;* {{hero}} found some berries! {{life-diff}} LPs have been recovered *&quot;)))
+            (dialog '((&quot;* {{hero}} found some berries! {{HP-diff}} HP have been recovered *&quot;)))
             (give-item item-id)
-            (set-life-diff life-diff))
+            (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
