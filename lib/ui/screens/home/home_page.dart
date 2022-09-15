@@ -1,68 +1,113 @@
+import 'dart:math';
+
+import 'package:animated_background/animated_background.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/utils/extensions.dart';
 import 'package:xeonjia/ui/basic.dart';
-import 'package:xeonjia/ui/screens/arena/arena_page.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
 import 'package:xeonjia/ui/screens/home/widgets/bottom_row.dart';
-import 'package:xeonjia/ui/screens/home/widgets/page_button.dart';
-import 'package:xeonjia/ui/screens/rules/rules_page.dart';
+import 'package:xeonjia/ui/screens/home/widgets/rain_particle_behaviour.dart';
 import 'package:xeonjia/utils/game_properties.dart';
 import 'package:xeonjia/utils/i18n.dart';
+import 'package:xeonjia/utils/local_data_controller.dart';
 
-class HomePage extends StatelessWidget {
-  List<Map<String, dynamic>> pageList() {
-    return [
-      {
-        'title': 'Story mode'.i18n,
-        'goto': () => GamePage(MatchConfig(GameMode.story)),
-      },
-      {'title': 'Multiplayer'.i18n, 'goto': ArenaPage.new},
-      {'title': 'How to play'.i18n, 'goto': RulesPage.new},
-    ];
-  }
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
 
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     devicePixelRatio = MediaQuery.of(context).devicePixelRatio;
     return Scaffold(
-      body: DecoratedBox(
-        decoration: const BoxDecoration(
-          color: Color(0xFF7BA1C1),
-          image: DecorationImage(
-            image: AssetImage('assets/graphics/home_background.png'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            const Expanded(
-              child: Center(
-                child: Text(
-                  'XEONJiA',
-                  maxLines: 1,
-                  style: TextStyle(
-                    letterSpacing: 14,
-                    color: Colors.white,
-                    fontSize: 80,
-                    fontFamily: 'dd5x7',
-                  ),
-                ),
+      body: InkWell(
+        onTap: () => Navigator.push(
+            context, FadeRoute(GamePage(MatchConfig(GameMode.story)))),
+        child: DecoratedBox(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xFF438EBA), Color(0xFFA6B5C1)],
+          )),
+          child: AnimatedBackground(
+            behaviour: RainParticleBehaviour(
+              ParticleOptions(
+                image: Image(
+                    image: Image.asset('assets/graphics/icon_white.png').image),
+                baseColor: Colors.white,
+                spawnMinSpeed: 60,
+                spawnMaxSpeed: 80,
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                for (var page in pageList())
-                  PageButton(
-                    title: page['title'],
-                    onPressed: () =>
-                        Navigator.push(context, FadeRoute(page['goto']())),
+            vsync: this,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Stack(
+                        children: <Widget>[
+                          Text(
+                            'XEONJiA',
+                            maxLines: 1,
+                            style: TextStyle(
+                              letterSpacing: min(
+                                  24,
+                                  (MediaQuery.of(context).size.width - 20) /
+                                      24),
+                              fontSize: min(160,
+                                  (MediaQuery.of(context).size.width - 20) / 4),
+                              fontFamily: 'dd5x7',
+                              foreground: Paint()
+                                ..style = PaintingStyle.stroke
+                                ..strokeWidth = 6
+                                ..color = Colors.black38,
+                            ),
+                          ),
+                          Text(
+                            'XEONJiA',
+                            maxLines: 1,
+                            style: TextStyle(
+                              letterSpacing: min(
+                                  24,
+                                  (MediaQuery.of(context).size.width - 20) /
+                                      24),
+                              color: Colors.white,
+                              fontSize: min(160,
+                                  (MediaQuery.of(context).size.width - 20) / 4),
+                              fontFamily: 'dd5x7',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(top: 60),
+                        child: Text(
+                          '> ' + 'Tap to play'.i18n.toUpperCase() + ' <',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: min(
+                                    48,
+                                    (MediaQuery.of(context).size.width - 20) /
+                                        8) /
+                                (settings.useSystemFont ? 1.5 : 1),
+                            fontFamily: settings.useSystemFont ? null : 'dd5x7',
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
+                ),
+                BottomRow(),
               ],
             ),
-            BottomRow(),
-          ],
+          ),
         ),
       ),
     );
