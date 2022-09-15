@@ -23,9 +23,10 @@ class Message {
     var mood = m.group(3);
     var spriteName = name + (mood != '' ? '_$mood' : '');
     if (authorName != '') {
-      authorName = (authorName == 'hero')
-          ? mainCharacter.name
-          : authorName.i18n.replaceAll('-', ' ');
+      authorName = ((authorName == 'hero')
+              ? mainCharacter.name
+              : authorName.i18n.replaceAll('-', ' '))
+          .toUpperCase();
       gameRef.loadCustomAtlas('images/metadata/$xfaFile.xfa').then((value) {
         sprite = value.getSprite(spriteName);
       });
