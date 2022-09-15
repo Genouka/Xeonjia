@@ -36,7 +36,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ParticleOptions(
                 image: Image(
                     image: Image.asset('assets/graphics/icon_white.png').image),
-                baseColor: Colors.white,
+                particleCount:
+                    (MediaQuery.of(context).size.longestSide / 6).round(),
                 spawnMinSpeed: 60,
                 spawnMaxSpeed: 80,
               ),
