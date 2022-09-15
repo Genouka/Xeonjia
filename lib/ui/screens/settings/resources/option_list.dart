@@ -53,8 +53,7 @@ class OptionList extends StatelessWidget {
               }),
         ListTile(
           title: Text('Your name'.i18n, style: const TextStyle(fontSize: 20)),
-          subtitle:
-              Text('Click here to change the name used in story mode'.i18n),
+          subtitle: Text('Click here to change your name'.i18n),
           onTap: () => showDialog(
               context: context,
               builder: (BuildContext context) {

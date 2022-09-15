@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:i18n_extension/i18n_widget.dart';
 import 'package:xeonjia/ui/screens/home/home_page.dart';
-import 'package:xeonjia/ui/screens/rules/rules_page.dart';
+import 'package:xeonjia/ui/screens/welcome/welcome_page.dart';
 import 'package:xeonjia/ui/themes.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
@@ -41,7 +41,7 @@ class Xeonjia extends StatelessWidget {
       child: MaterialApp(
         title: 'Xeonjia',
         theme: appTheme,
-        home: settings.firstRun ? RulesPage(HomePage()) : HomePage(),
+        home: settings.firstRun ? WelcomePage(HomePage()) : HomePage(),
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,

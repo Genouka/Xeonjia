@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xeonjia/ui/themes.dart';
 import 'package:xeonjia/utils/i18n.dart';
+import 'package:xeonjia/utils/latinise.dart';
 
 /// Page route
 class FadeRoute extends PageRouteBuilder {
@@ -60,29 +61,51 @@ Widget divider(BuildContext context) => Container(
 
 /// Form used to insert player name
 Widget insertNameForm(GlobalKey<FormState> key,
-    TextEditingController textFieldController, Function onSubmitted) {
+    TextEditingController textFieldController, Function onSubmitted,
+    {double? fontSize}) {
   return Form(
     key: key,
     child: TextFormField(
-        textAlign: TextAlign.center,
-        controller: textFieldController,
-        keyboardType: TextInputType.text,
-        textCapitalization: TextCapitalization.characters,
-        onFieldSubmitted: (String text) {
-          onSubmitted(text.trim());
-          SystemChrome.restoreSystemUIOverlays();
-        },
-        onChanged: (String input) {
-          if (input.isEmpty) key.currentState?.validate();
-        },
-        validator: (value) {
-          if (value == '') return "What's your name?".i18n + ' [A-Z]';
-          return value!.trim().length < 2 ? 'Too short.'.i18n : null;
-        },
-        inputFormatters: [
-          LengthLimitingTextInputFormatter(10),
-          FilteringTextInputFormatter.allow(RegExp('[a-zA-Z ]')),
-        ],
-        decoration: InputDecoration(hintText: 'Insert your name here'.i18n)),
+      textAlign: TextAlign.center,
+      controller: textFieldController,
+      keyboardType: TextInputType.text,
+      textCapitalization: TextCapitalization.characters,
+      style: TextStyle(fontSize: fontSize),
+      onFieldSubmitted: (String text) {
+        onSubmitted(text.trim());
+        SystemChrome.restoreSystemUIOverlays();
+      },
+      onChanged: (String input) {
+        if (input.isEmpty) key.currentState?.validate();
+      },
+      validator: (value) {
+        if (value == '') return "What's your name?".i18n + ' [A-Z]';
+        return value!.trim().length < 2 ? 'Too short.'.i18n : null;
+      },
+      inputFormatters: [
+        LengthLimitingTextInputFormatter(10),
+        LatiniseAndUpperCaseTextFormatter(),
+        FilteringTextInputFormatter.allow(RegExp('[a-zA-Z ]')),
+      ],
+      decoration: InputDecoration(
+        hintText: 'Insert your name here'.i18n,
+        hintStyle: const TextStyle(fontSize: 18),
+      ),
+    ),
   );
+}
+
+/// Replace special characters and uppercase the input
+class LatiniseAndUpperCaseTextFormatter extends TextInputFormatter {
+  @override
+  TextEditingValue formatEditUpdate(
+      TextEditingValue oldValue, TextEditingValue newValue) {
+    var text = newValue.text.latinise();
+    return TextEditingValue(
+      text: text.toUpperCase(),
+      selection: text.length != newValue.text.length
+          ? TextSelection.collapsed(offset: text.length)
+          : newValue.selection,
+    );
+  }
 }
