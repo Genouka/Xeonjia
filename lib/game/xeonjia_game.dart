@@ -56,6 +56,7 @@ class XeonjiaGame extends FlameGame
     environment = setEnvironment(this);
     messageManager = MessageManager(this);
     dialogBox = DialogBox(this);
+    preLoadDialogAtlases();
     _statusBox = StatusBox(this);
     overlayMap = {
       'statusBox': (BuildContext context, XeonjiaGame game) {
@@ -444,6 +445,16 @@ class XeonjiaGame extends FlameGame
   void setMessages(List<Message> messages,
       {bool hideMap = false, VoidCallback? callback}) {
     messageManager.setMessages(messages, hideMap: hideMap, callback: callback);
+  }
+
+  /// Map xfaFileName -> FireAtlas. Used for dialogs.
+  final Map<String, FireAtlas> dialogAtlases = {};
+  void preLoadDialogAtlases() {
+    for (final xfaFile in ['heads', 'items']) {
+      loadCustomAtlas('images/metadata/$xfaFile.xfa').then((value) {
+        dialogAtlases[xfaFile] = value;
+      });
+    }
   }
 
   /// Start the background music

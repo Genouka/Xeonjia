@@ -1,6 +1,5 @@
 import 'package:flame/sprite.dart';
 import 'package:xeonjia/game/components/common/basic.dart';
-import 'package:xeonjia/game/utils/fire_atlas.dart';
 import 'package:xeonjia/game/utils/little_scheme.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/i18n.dart';
@@ -27,9 +26,7 @@ class Message {
               ? mainCharacter.name
               : authorName.i18n.replaceAll('-', ' '))
           .toUpperCase();
-      gameRef.loadCustomAtlas('images/metadata/$xfaFile.xfa').then((value) {
-        sprite = value.getSprite(spriteName);
-      });
+      sprite = gameRef.dialogAtlases[xfaFile]?.getSprite(spriteName);
     }
     if (translate) {
       text = text
