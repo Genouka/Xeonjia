@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:animated_background/animated_background.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/utils/extensions.dart';
+import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/game/game_page.dart';
 import 'package:xeonjia/ui/screens/home/widgets/bottom_row.dart';
@@ -20,6 +21,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     devicePixelRatio = MediaQuery.of(context).devicePixelRatio;
+    setComponentSize(MediaQuery.of(context).size);
     return Scaffold(
       body: InkWell(
         onTap: () => Navigator.push(

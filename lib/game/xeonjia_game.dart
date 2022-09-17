@@ -18,6 +18,7 @@ import 'package:xeonjia/game/models/team.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/event_manager.dart';
 import 'package:xeonjia/game/utils/extensions.dart';
+import 'package:xeonjia/game/utils/fire_atlas.dart';
 import 'package:xeonjia/game/utils/little_scheme.dart';
 import 'package:xeonjia/game/utils/map_importer.dart';
 import 'package:xeonjia/game/utils/message.dart';
@@ -47,7 +48,9 @@ import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
 /// Default component dimension
-double componentSize = 16;
+late double componentSize;
+void setComponentSize(Size screenSize) => componentSize =
+    (screenSize.longestSide / 16).round16.gridAligned.toDouble();
 
 /// This contains the game logics
 class XeonjiaGame extends FlameGame
@@ -359,8 +362,7 @@ class XeonjiaGame extends FlameGame
 
   @override
   void onGameResize(Vector2 canvasSize) {
-    componentSize =
-        (canvasSize.toSize().longestSide / 16).round16.gridAligned.toDouble();
+    setComponentSize(canvasSize.toSize());
     miniMapZoom = 1;
     super.onGameResize(canvasSize);
     if (!worldMapEnabled) updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
