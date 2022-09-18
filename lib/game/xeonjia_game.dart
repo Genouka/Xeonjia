@@ -736,7 +736,10 @@ class XeonjiaGame extends FlameGame
 
   /// Move [playerOne]
   void movePlayer(Direction direction) {
-    if (!_pause && !messageManager.active && playerOne!.isMyTurn) {
+    if (!_pause &&
+        !messageManager.active &&
+        playerOne!.isMyTurn &&
+        elapsed > 0.5) {
       playerOne?.updateDirection(direction);
     }
   }
