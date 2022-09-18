@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="85">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="87">
  <properties>
   <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="enemies"/>
@@ -47,10 +47,26 @@
     <property name="actionOnEvent" value="(if (has-item &quot;signet-1&quot;) (delete-me))"/>
    </properties>
   </object>
+  <object id="85" gid="193" x="96" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 1)
+  (dialog
+    '((&quot;/book&quot; &quot;After 10 minutes add to the pot half a daikon, chopped into small pieces…&quot;)
+    (&quot;I'm getting hungry.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="86" gid="194" x="112" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 1)
+  (dialog
+    '((&quot;/book&quot; &quot;After 10 minutes add to the pot half a daikon, chopped into small pieces…&quot;)
+    (&quot;I'm getting hungry.&quot;))))</property>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoAzsBOJdRKg7CMSH0MS2A/F+ID5AQC9I3XEgPkGq46gMtlKgFwDfn20haAEAAA==
+   H4sIAAAAAAAAA2NgoAzsBOJdZOrdDsT7gfgAEeqOA/EJMu2hFthKgV4AZY9temgBAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

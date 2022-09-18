@@ -40,13 +40,13 @@
  <tile id="12" class="Solid">
   <properties>
    <property name="action">(if (= (orientation) 1)
-    (dialog '((&quot;It's full of books here.&quot;))))</property>
+  (dialog '((&quot;It's full of books here.&quot;))))</property>
   </properties>
  </tile>
  <tile id="13" class="Solid">
   <properties>
    <property name="action">(if (= (orientation) 1)
-    (dialog '((&quot;It's full of books here.&quot;))))</property>
+  (dialog '((&quot;It's full of books here.&quot;))))</property>
   </properties>
  </tile>
  <tile id="14" class="Ground">

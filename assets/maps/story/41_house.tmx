@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="87">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="90">
  <properties>
   <property name="disable-minimap" type="bool" value="true"/>
  </properties>
@@ -8,7 +8,7 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gHgHEF8H4m1Y6HtAfBOqbg8BTAt1DFQ27wER6h4C8TUc+CoaHwBUut+saAEAAA==
+   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6FG/DQt8D4ptQdXsIYFqoY6CyeQ+IUPcQiK/hwFfR+ADxPR0aaAEAAA==
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -33,7 +33,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoC+4j8bfDsT7gfgAlI0LgOSOA/EJAupoDbaSqQ8ALy9+BmgBAAA=
+   H4sIAAAAAAAAA2NgIB7sBOJdJKjHBu5jEdsOxPuB+ACUjQuA5I4D8QkC6mgJtpKpDwCL3o1taAEAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points"/>
@@ -42,6 +42,18 @@
    <properties>
     <property name="flying" type="bool" value="true"/>
     <property name="slippery" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="87" gid="193" x="16" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 1)
+  (dialog '((&quot;These books are in a language I don't understand.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="88" gid="194" x="32" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 1)
+  (dialog '((&quot;These books are in a language I don't understand.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

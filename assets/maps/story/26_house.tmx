@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="75">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="77">
  <properties>
   <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="city"/>
@@ -9,7 +9,7 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6AXwTqm4PATwU1D0gQt1DIL6GA19F4wMAElYrs2gBAAA=
+   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6FrwNiX0Tqm4PATwU1D0gQt1DIL6GA19F4wMAZcLvFWgBAAA=
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -31,7 +31,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIB7sBOJdeGgYOAjEh/DQ2MB+ID4AxNsJuOE4EJ+Asu+Q4HZqgN1AvBVKkwoAbdHMaGgBAAA=
+   H4sIAAAAAAAAA2NgIB7sBOJdJKgnBewH4gNAvJ2AuuNAfALKvkMjt+ACu4F4K5QmFQAA65RjfGgBAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -42,5 +42,22 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="9" name="items"/>
+ <objectgroup id="9" name="items">
+  <object id="75" gid="193" x="16" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 1)
+  (dialog
+    '((&quot;/book&quot; &quot;Remove the casing and loosen the screws until panel B2 reaches…&quot;)
+    (&quot;This is the manual for assembling a library.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="76" gid="194" x="32" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 1)
+  (dialog
+    '((&quot;/book&quot; &quot;Remove the casing and loosen the screws until panel B2 reaches…&quot;)
+    (&quot;This is the manual for assembling a library.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

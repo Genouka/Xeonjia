@@ -11,7 +11,7 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7vAwMBwnkh8EYhvAPF1LHgbGvseEN+Eqt9DJKanehigtvkPSFD/EIiv4cBXcYgDADuA6IWwAQAA
+   H4sIAAAAAAAAA7vAwMBwnkh8EYhvAPF1JLwNB/seEN+Eqt9DJKanehigtvkPSFD/EIiv4cBXcYgDAPn6TPqwAQAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
