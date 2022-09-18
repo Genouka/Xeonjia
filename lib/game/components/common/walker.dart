@@ -66,11 +66,12 @@ mixin Walker on BasicComponent {
       {bool forced = false, bool animated = true}) {
     if (!isBeingDeleted && (isStationary || forced)) {
       wasStationary = true;
+      if (animated &&
+          ((animation?.done() ?? true) || orientation != newDirection)) {
+        animation = atlas.getAnimation('$name-${newDirection.index}-walking');
+      }
       direction = newDirection;
       updateOrientation();
-      if (animated) {
-        animation = atlas.getAnimation('$name-${direction!.index}-walking');
-      }
       ++movesCounter;
 
       // Decrease health points cause poison
