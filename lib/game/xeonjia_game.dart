@@ -708,7 +708,6 @@ class XeonjiaGame extends FlameGame
       _panGestureOffset = info.raw.delta.dx.abs() > info.raw.delta.dy.abs()
           ? Offset(info.raw.delta.dx, 0)
           : Offset(0, info.raw.delta.dy);
-      playerOne?.updateOrientation(GetDirection.fromOffset(_panGestureOffset!));
     } else if (miniMapEnabled) {
       camera.snapTo(Vector2(
           _moveCamera(size.x, map.width,
