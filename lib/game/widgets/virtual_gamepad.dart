@@ -194,7 +194,7 @@ class VirtualGamePad extends StatelessWidget {
                 while (longPressingDirection != null &&
                     gameRef.map.id == currentMapId &&
                     gameRef.isNotPaused) {
-                  gameRef.movePlayer(longPressingDirection!);
+                  gameRef.movePlayer(longPressingDirection!, slow: true);
                   await Future.delayed(const Duration(milliseconds: 50));
                 }
               },
