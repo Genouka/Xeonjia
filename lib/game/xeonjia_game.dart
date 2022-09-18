@@ -116,7 +116,9 @@ class XeonjiaGame extends FlameGame
   /// Function called when [playerOne] is loaded
   void playerOneReady() {
     overlays.remove('loading');
+    overlays.remove('dialogBox');
     overlays.add('virtualGamePad');
+    overlays.add('dialogBox');
     add(Button.A(this));
     if (config.mode == GameMode.story) {
       add(WorldMapButton());
@@ -277,7 +279,9 @@ class XeonjiaGame extends FlameGame
                   overlays.add('backpackButton');
                   if (enemies > 0) overlays.add('rulesButton');
                   overlays.add('miniMapButton');
+                  overlays.remove('dialogBox');
                   overlays.add('virtualGamePad');
+                  overlays.add('dialogBox');
                 } else {
                   overlays.remove('backpackButton');
                   overlays.remove('rulesButton');
@@ -564,7 +568,9 @@ class XeonjiaGame extends FlameGame
       overlays.remove('miniMapButton');
       removeAll([zoomInButton, zoomOutButton]);
       overlays.add('backpackButton');
+      overlays.remove('dialogBox');
       overlays.add('virtualGamePad');
+      overlays.add('dialogBox');
       if (enemies > 0) overlays.add('rulesButton');
       _statusBox.state?.refresh();
       resume();
