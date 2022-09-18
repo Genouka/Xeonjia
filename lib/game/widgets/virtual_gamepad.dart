@@ -146,15 +146,15 @@ class Button extends HudButtonComponent {
 }
 
 /// Virtual D-pad
-class VirtualGamePad extends StatefulWidget {
-  VirtualGamePad(this.gameRef);
+class VirtualDPad extends StatefulWidget {
+  VirtualDPad(this.gameRef);
   final XeonjiaGame gameRef;
 
   @override
-  State<VirtualGamePad> createState() => _VirtualGamePadState();
+  State<VirtualDPad> createState() => _VirtualDPadState();
 }
 
-class _VirtualGamePadState extends State<VirtualGamePad> {
+class _VirtualDPadState extends State<VirtualDPad> {
   final Color arrowColor = Colors.white.withOpacity(0.7);
   final Color buttonColor = Colors.grey.withOpacity(0.3);
   Direction? longPressingDirection;

@@ -77,8 +77,8 @@ class XeonjiaGame extends FlameGame
       'miniMapButton': (BuildContext context, XeonjiaGame game) {
         return MiniMapButton(game, miniMapIsActive: game.miniMapActive);
       },
-      'virtualGamePad': (BuildContext context, XeonjiaGame game) {
-        return VirtualGamePad(this);
+      'virtualDPad': (BuildContext context, XeonjiaGame game) {
+        return VirtualDPad(this);
       },
       'dialogBox': (BuildContext context, XeonjiaGame game) {
         return game.dialogBox;
@@ -117,7 +117,7 @@ class XeonjiaGame extends FlameGame
   void playerOneReady() {
     overlays.remove('loading');
     overlays.remove('dialogBox');
-    overlays.add('virtualGamePad');
+    overlays.add('virtualDPad');
     overlays.add('dialogBox');
     add(Button.A(this));
     if (config.mode == GameMode.story) {
@@ -146,7 +146,7 @@ class XeonjiaGame extends FlameGame
     overlays.remove('miniMapButton');
     overlays.remove('backpackButton');
     overlays.remove('rulesButton');
-    overlays.remove('virtualGamePad');
+    overlays.remove('virtualDPad');
 
     // Import mainCharacter.eventLog
     currentEventLog = Map.from(mainCharacter.eventLog);
@@ -280,13 +280,13 @@ class XeonjiaGame extends FlameGame
                   if (enemies > 0) overlays.add('rulesButton');
                   overlays.add('miniMapButton');
                   overlays.remove('dialogBox');
-                  overlays.add('virtualGamePad');
+                  overlays.add('virtualDPad');
                   overlays.add('dialogBox');
                 } else {
                   overlays.remove('backpackButton');
                   overlays.remove('rulesButton');
                   overlays.remove('miniMapButton');
-                  overlays.remove('virtualGamePad');
+                  overlays.remove('virtualDPad');
                 }
               }));
           break;
@@ -558,7 +558,7 @@ class XeonjiaGame extends FlameGame
       overlays.remove('miniMapButton');
       overlays.remove('backpackButton');
       overlays.remove('rulesButton');
-      overlays.remove('virtualGamePad');
+      overlays.remove('virtualDPad');
       addAll([zoomInButton, zoomOutButton]);
       miniMapActive = true;
     } else {
@@ -569,7 +569,7 @@ class XeonjiaGame extends FlameGame
       removeAll([zoomInButton, zoomOutButton]);
       overlays.add('backpackButton');
       overlays.remove('dialogBox');
-      overlays.add('virtualGamePad');
+      overlays.add('virtualDPad');
       overlays.add('dialogBox');
       if (enemies > 0) overlays.add('rulesButton');
       _statusBox.state?.refresh();
