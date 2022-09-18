@@ -118,7 +118,7 @@ class CharacterComponent extends BasicComponent
 
   /// Total number of minutes played by the character in this game
   double get minutesPlayed =>
-      mainCharacter.minutesPlayed + gameRef.elapsedSeconds / 60;
+      mainCharacter.minutesPlayed + gameRef.elapsed / 60;
 
   /// List of [Item]s owned
   /// Add/remove [Item]s by using [addItem] and [removeItem]

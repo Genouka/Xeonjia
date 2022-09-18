@@ -150,7 +150,8 @@ class XeonjiaGame extends FlameGame
     currentEventLog = Map.from(mainCharacter.eventLog);
 
     // Reset variables
-    elapsedSeconds = 0;
+    elapsed = 0;
+    _elapsedSecondsMultiplayer = 0;
     remainingMoves = 3;
     changingTurn = false;
     inBattle = false;
@@ -179,18 +180,17 @@ class XeonjiaGame extends FlameGame
     } else {
       map = GameMap(fullId: config.mapId.toString());
       await importMap(this, 'assets/maps/arena/${config.mapId}.tmx');
+      _timer = Timer(1, repeat: true, onTick: () {
+        if (isPaused) return;
+        _elapsedSecondsMultiplayer++;
+        if (config.mode != GameMode.story) {
+          if (_elapsedSecondsMultiplayer == config.maxTime) end(timeOut: true);
+          if (_elapsedSecondsMultiplayer % 10 == 0) regenerateModifiers();
+          _statusBox.state?.refresh();
+        }
+      });
     }
     if (map.hasHints) add(HideHintsButton());
-
-    _timer = Timer(1, repeat: true, onTick: () {
-      if (isPaused) return;
-      elapsedSeconds++;
-      if (config.mode != GameMode.story) {
-        if (elapsedSeconds == config.maxTime) end(timeOut: true);
-        if (elapsedSeconds % 10 == 0) regenerateModifiers();
-        _statusBox.state?.refresh();
-      }
-    });
     _timer?.start();
     resume();
     playBackgroundMusic();
@@ -217,10 +217,13 @@ class XeonjiaGame extends FlameGame
   /// Box with HP, pause, time and team points
   late StatusBox _statusBox;
 
+  /// Elapsed time since room change (in seconds with microseconds precision)
+  double elapsed = 0;
+
   /// Timer used in multiplayer mode
   Timer? _timer;
-  int elapsedSeconds = 0;
-  int get remainingTime => config.maxTime - elapsedSeconds;
+  int _elapsedSecondsMultiplayer = 0;
+  int get remainingTime => config.maxTime - _elapsedSecondsMultiplayer;
 
   /// If true the game is paused
   bool _pause = false;
@@ -357,6 +360,7 @@ class XeonjiaGame extends FlameGame
   @override
   void update(double dt) {
     _timer?.update(dt);
+    elapsed += dt;
     super.update(dt);
   }
 
@@ -487,7 +491,7 @@ class XeonjiaGame extends FlameGame
     mainCharacter.currentHP = playerOne!.hp;
     mainCharacter.money = playerOne!.money;
     mainCharacter.defeatedComponents += playerOne!.defeatedEnemies;
-    mainCharacter.minutesPlayed += elapsedSeconds / 60;
+    mainCharacter.minutesPlayed += elapsed / 60;
     mainCharacter.movesCounter += playerOne!.movesCounter;
     mainCharacter.visitedRooms.add(nextRoomId);
     mainCharacter.eventLog = Map.from(currentEventLog);
@@ -682,7 +686,7 @@ class XeonjiaGame extends FlameGame
     pause();
     int? lostMoney;
     if (config.mode == GameMode.story) {
-      mainCharacter.minutesPlayed += elapsedSeconds / 60;
+      mainCharacter.minutesPlayed += elapsed / 60;
       mainCharacter.movesCounter += playerOne!.movesCounter;
       ++mainCharacter.defeatsCounter;
       mainCharacter.currentHP = playerOne!.maxHP;
