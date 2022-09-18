@@ -709,7 +709,7 @@ class XeonjiaGame extends FlameGame
 
   @override
   void onPanUpdate(DragUpdateInfo info) {
-    if (settings.showDPad) return;
+    if (settings.showDPad && !miniMapEnabled) return;
     if (!_pause &&
         (info.raw.delta.dx.abs() > 5 || info.raw.delta.dy.abs() > 5)) {
       _panGestureOffset = info.raw.delta.dx.abs() > info.raw.delta.dy.abs()
