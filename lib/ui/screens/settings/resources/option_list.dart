@@ -12,19 +12,50 @@ class OptionList extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   final _textFieldController = TextEditingController(text: mainCharacter.name);
 
+  final Map<double, String> dPadSizes = {
+    0.8: 'Smallest'.i18n,
+    0.9: 'Small'.i18n,
+    1: 'Default'.i18n,
+    1.1: 'Large'.i18n,
+    1.2: 'Largest'.i18n,
+  };
+
   @override
   Widget build(BuildContext context) => ListView(children: <Widget>[
         CheckboxListTile(
             title:
-                Text('Show D-Pad'.i18n, style: const TextStyle(fontSize: 20)),
+                Text('Show D-pad'.i18n, style: const TextStyle(fontSize: 20)),
             activeColor: Colors.blueGrey,
-            subtitle: Text('Enable directional pad'.i18n),
+            subtitle: Text(
+                'Enable the directional pad.\nTo change its position, long-press the D-pad in the center.'
+                    .i18n),
             value: settings.showDPad,
             onChanged: (newValue) {
               settings.showDPad = newValue!;
               (SettingsPage.of(context) as SettingsPageState).refresh();
               saveSettings();
             }),
+        ListTile(
+          title: Text('D-pad size'.i18n, style: const TextStyle(fontSize: 20)),
+          subtitle: Text('Virtual D-pad dimension'.i18n),
+          trailing: DropdownButton<double>(
+            value: settings.dPadSize,
+            onChanged: (double? newValue) {
+              settings.dPadSize = newValue!;
+              saveSettings();
+              (SettingsPage.of(context) as SettingsPageState).refresh();
+            },
+            items: dPadSizes.keys
+                .toList()
+                .map<DropdownMenuItem<double>>(
+                  (double value) => DropdownMenuItem<double>(
+                    value: value,
+                    child: Text(dPadSizes[value]!),
+                  ),
+                )
+                .toList(),
+          ),
+        ),
         if (settings.audioSupported)
           CheckboxListTile(
               title: Text(

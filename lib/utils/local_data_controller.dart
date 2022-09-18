@@ -21,9 +21,6 @@ Map<String, Item> itemData = {};
 /// List of maps (taken from kingdom.world and maps-data.json)
 List<MapData> worldData = [];
 
-/// Gamepad position
-late Offset gamepadOffset;
-
 /// Import all data from shared preferences
 Future<void> loadStoredData() async {
   _prefs = await SharedPreferences.getInstance();

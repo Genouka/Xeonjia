@@ -145,13 +145,21 @@ class Button extends HudButtonComponent {
   }
 }
 
-/// Virtual Gamepad
-class VirtualGamePad extends StatelessWidget {
+/// Virtual D-pad
+class VirtualGamePad extends StatefulWidget {
   VirtualGamePad(this.gameRef);
   final XeonjiaGame gameRef;
+
+  @override
+  State<VirtualGamePad> createState() => _VirtualGamePadState();
+}
+
+class _VirtualGamePadState extends State<VirtualGamePad> {
   final Color arrowColor = Colors.white.withOpacity(0.7);
   final Color buttonColor = Colors.grey.withOpacity(0.3);
-  static double _size = 0;
+  Direction? longPressingDirection;
+  double size = 0;
+  bool moving = false;
 
   Icon arrowIcon(Direction direction) {
     IconData icon;
@@ -169,41 +177,64 @@ class VirtualGamePad extends StatelessWidget {
         icon = Icons.keyboard_arrow_left_rounded;
         break;
     }
-    return Icon(icon, color: arrowColor, size: _size);
+    return Icon(icon, color: arrowColor, size: size);
   }
 
   @override
   Widget build(BuildContext context) {
-    _size = MediaQuery.of(context).size.shortestSide / 10;
-    String currentMapId = gameRef.map.id;
+    size = MediaQuery.of(context).size.shortestSide / 10 * settings.dPadSize;
+    settings.dPadOffset = Offset(
+        max(
+            0,
+            min(MediaQuery.of(context).size.width - size * 3,
+                settings.dPadOffset.dx)),
+        max(
+            0,
+            min(MediaQuery.of(context).size.height - size * 3,
+                settings.dPadOffset.dy)));
+    String currentMapId = widget.gameRef.map.id;
     return settings.showDPad
         ? Positioned(
-            left: 30,
-            bottom: 30,
+            left: settings.dPadOffset.dx,
+            bottom: settings.dPadOffset.dy,
             child: GestureDetector(
               onTapDown: (TapDownDetails details) {
                 Direction? direction = getDirection(details.localPosition);
-                if (direction != null && gameRef.playerOne != null) {
-                  gameRef.playerOne!.isStationary
-                      ? gameRef.movePlayer(direction)
-                      : gameRef.playerOne!.updateOrientation(direction);
+                if (direction != null && widget.gameRef.playerOne != null) {
+                  widget.gameRef.playerOne!.isStationary
+                      ? widget.gameRef.movePlayer(direction)
+                      : widget.gameRef.playerOne!.updateOrientation(direction);
                 }
               },
               onLongPressStart: (LongPressStartDetails details) async {
                 longPressingDirection = getDirection(details.localPosition);
-                while (longPressingDirection != null &&
-                    gameRef.map.id == currentMapId &&
-                    gameRef.isNotPaused) {
-                  gameRef.movePlayer(longPressingDirection!, slow: true);
-                  await Future.delayed(const Duration(milliseconds: 50));
+                if (longPressingDirection == null) {
+                  moving = true;
+                } else {
+                  while (longPressingDirection != null &&
+                      widget.gameRef.map.id == currentMapId &&
+                      widget.gameRef.isNotPaused &&
+                      !moving) {
+                    widget.gameRef
+                        .movePlayer(longPressingDirection!, slow: true);
+                    await Future.delayed(const Duration(milliseconds: 50));
+                  }
                 }
               },
               onLongPressMoveUpdate: (LongPressMoveUpdateDetails details) {
-                longPressingDirection = getDirection(details.localPosition) ??
-                    longPressingDirection;
+                if (moving) {
+                  setState(() => settings.dPadOffset = Offset(
+                      details.globalPosition.dx - size * 1.5,
+                      MediaQuery.of(context).size.height -
+                          details.globalPosition.dy -
+                          size * 1.5));
+                } else {
+                  longPressingDirection = getDirection(details.localPosition) ??
+                      longPressingDirection;
+                }
               },
-              onLongPressEnd: (_) => longPressingDirection = null,
-              onLongPressCancel: () => longPressingDirection = null,
+              onLongPressEnd: (_) => onLongPressEnd(),
+              onLongPressCancel: onLongPressEnd,
               child: Column(
                 children: [
                   Row(
@@ -237,11 +268,17 @@ class VirtualGamePad extends StatelessWidget {
         : Container();
   }
 
+  void onLongPressEnd() {
+    longPressingDirection = null;
+    if (moving) saveSettings();
+    moving = false;
+  }
+
   Widget arrowButton(Direction? direction) {
     return direction != null
         ? Container(
-            width: VirtualGamePad._size,
-            height: VirtualGamePad._size,
+            width: size,
+            height: size,
             decoration: BoxDecoration(
               color: buttonColor,
               borderRadius: BorderRadius.only(
@@ -265,28 +302,21 @@ class VirtualGamePad extends StatelessWidget {
             ),
             child: arrowIcon(direction),
           )
-        : Container(
-            width: VirtualGamePad._size,
-            height: VirtualGamePad._size,
-            color: buttonColor,
-          );
+        : Container(width: size, height: size, color: buttonColor);
   }
 
   Direction? getDirection(Offset position) {
-    if (position.dx < _size) {
+    if (position.dx < size) {
       return Direction.left;
-    } else if (position.dx > 2 * _size) {
+    } else if (position.dx > 2 * size) {
       return Direction.right;
-    } else if (position.dy < _size) {
+    } else if (position.dy < size) {
       return Direction.up;
-    } else if (position.dy > 2 * _size) {
+    } else if (position.dy > 2 * size) {
       return Direction.down;
     }
     return null;
   }
 
-  Widget separator() =>
-      SizedBox(width: VirtualGamePad._size, height: VirtualGamePad._size);
+  Widget separator() => SizedBox(width: size, height: size);
 }
-
-Direction? longPressingDirection;

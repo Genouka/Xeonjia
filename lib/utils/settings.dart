@@ -8,10 +8,25 @@ class Settings {
   /// Import settings from a Json
   Settings(Map<String, dynamic> json)
       : showDPad = json['showDPad'] ?? false,
+        dPadSize = json['dPadSize'] ?? 1,
+        dPadOffset =
+            Offset(json['dPadOffsetX'] ?? 30, json['dPadOffsetY'] ?? 30),
         firstRun = json['firstRun'] ?? true,
         backgroundMusic = json['backgroundMusic'] ?? true,
         soundEffects = json['soundEffects'] ?? true,
         _languageCode = json['languageCode'];
+
+  /// Export settings as a Json
+  Map<String, dynamic> toJson() => {
+        'showDPad': showDPad,
+        'dPadSize': dPadSize,
+        'dPadOffsetX': dPadOffset.dx,
+        'dPadOffsetY': dPadOffset.dy,
+        'firstRun': firstRun,
+        'backgroundMusic': backgroundMusic,
+        'soundEffects': soundEffects,
+        'languageCode': _languageCode,
+      };
 
   /// True if D-pad is enabled
   bool showDPad;
@@ -23,6 +38,10 @@ class Settings {
   bool backgroundMusic;
   bool soundEffects;
   bool audioSupported = true;
+
+  /// D-pad dimension and position
+  double dPadSize;
+  Offset dPadOffset;
 
   /// App language
   String? _languageCode;
@@ -39,13 +58,4 @@ class Settings {
   /// True if the system font should be used instead of dd5x7.ttf
   bool get useSystemFont =>
       ['ru', 'uk', 'vi', 'zh'].contains(locale.languageCode);
-
-  /// Export settings as a Json
-  Map<String, dynamic> toJson() => {
-        'showDPad': showDPad,
-        'firstRun': firstRun,
-        'backgroundMusic': backgroundMusic,
-        'soundEffects': soundEffects,
-        'languageCode': _languageCode,
-      };
 }
