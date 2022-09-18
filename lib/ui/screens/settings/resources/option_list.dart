@@ -22,66 +22,6 @@ class OptionList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ListView(children: <Widget>[
-        CheckboxListTile(
-            title:
-                Text('Show D-pad'.i18n, style: const TextStyle(fontSize: 20)),
-            activeColor: Colors.blueGrey,
-            subtitle: Text(
-                'Enable the directional pad.\nTo change its position, long-press the D-pad in the center.'
-                    .i18n),
-            value: settings.showDPad,
-            onChanged: (newValue) {
-              settings.showDPad = newValue!;
-              (SettingsPage.of(context) as SettingsPageState).refresh();
-              saveSettings();
-            }),
-        ListTile(
-          title: Text('D-pad size'.i18n, style: const TextStyle(fontSize: 20)),
-          subtitle: Text('Virtual D-pad dimension'.i18n),
-          trailing: DropdownButton<double>(
-            value: settings.dPadSize,
-            onChanged: (double? newValue) {
-              settings.dPadSize = newValue!;
-              saveSettings();
-              (SettingsPage.of(context) as SettingsPageState).refresh();
-            },
-            items: dPadSizes.keys
-                .toList()
-                .map<DropdownMenuItem<double>>(
-                  (double value) => DropdownMenuItem<double>(
-                    value: value,
-                    child: Text(dPadSizes[value]!),
-                  ),
-                )
-                .toList(),
-          ),
-        ),
-        if (settings.audioSupported)
-          CheckboxListTile(
-              title: Text(
-                'Background music'.i18n,
-                style: const TextStyle(fontSize: 20),
-              ),
-              activeColor: Colors.blueGrey,
-              subtitle: Text('Enable background music'.i18n),
-              value: settings.backgroundMusic,
-              onChanged: (newValue) {
-                settings.backgroundMusic = newValue!;
-                (SettingsPage.of(context) as SettingsPageState).refresh();
-                saveSettings();
-              }),
-        if (settings.audioSupported)
-          CheckboxListTile(
-              title: Text('Sound effects'.i18n,
-                  style: const TextStyle(fontSize: 20)),
-              activeColor: Colors.blueGrey,
-              subtitle: Text('Enable sound effects'.i18n),
-              value: settings.soundEffects,
-              onChanged: (newValue) {
-                settings.soundEffects = newValue!;
-                (SettingsPage.of(context) as SettingsPageState).refresh();
-                saveSettings();
-              }),
         ListTile(
           title: Text('Your name'.i18n, style: const TextStyle(fontSize: 20)),
           subtitle: Text('Click here to change your name'.i18n),
@@ -115,6 +55,66 @@ class OptionList extends StatelessWidget {
                   ],
                 );
               }).then((_) => SystemChrome.restoreSystemUIOverlays()),
+        ),
+        if (settings.audioSupported)
+          CheckboxListTile(
+              title: Text(
+                'Background music'.i18n,
+                style: const TextStyle(fontSize: 20),
+              ),
+              activeColor: Colors.blueGrey,
+              subtitle: Text('Enable background music'.i18n),
+              value: settings.backgroundMusic,
+              onChanged: (newValue) {
+                settings.backgroundMusic = newValue!;
+                (SettingsPage.of(context) as SettingsPageState).refresh();
+                saveSettings();
+              }),
+        if (settings.audioSupported)
+          CheckboxListTile(
+              title: Text('Sound effects'.i18n,
+                  style: const TextStyle(fontSize: 20)),
+              activeColor: Colors.blueGrey,
+              subtitle: Text('Enable sound effects'.i18n),
+              value: settings.soundEffects,
+              onChanged: (newValue) {
+                settings.soundEffects = newValue!;
+                (SettingsPage.of(context) as SettingsPageState).refresh();
+                saveSettings();
+              }),
+        CheckboxListTile(
+            title:
+                Text('Show D-pad'.i18n, style: const TextStyle(fontSize: 20)),
+            activeColor: Colors.blueGrey,
+            subtitle: Text(
+                'Enable the directional pad.\nTo change its position, long-press the D-pad in the center.'
+                    .i18n),
+            value: settings.showDPad,
+            onChanged: (newValue) {
+              settings.showDPad = newValue!;
+              (SettingsPage.of(context) as SettingsPageState).refresh();
+              saveSettings();
+            }),
+        ListTile(
+          title: Text('D-pad size'.i18n, style: const TextStyle(fontSize: 20)),
+          subtitle: Text('Virtual D-pad dimension'.i18n),
+          trailing: DropdownButton<double>(
+            value: settings.dPadSize,
+            onChanged: (double? newValue) {
+              settings.dPadSize = newValue!;
+              saveSettings();
+              (SettingsPage.of(context) as SettingsPageState).refresh();
+            },
+            items: dPadSizes.keys
+                .toList()
+                .map<DropdownMenuItem<double>>(
+                  (double value) => DropdownMenuItem<double>(
+                    value: value,
+                    child: Text(dPadSizes[value]!),
+                  ),
+                )
+                .toList(),
+          ),
         ),
         ListTile(
           title: Text('Language'.i18n, style: const TextStyle(fontSize: 20)),
