@@ -514,7 +514,7 @@ Continuation? evaluate(dynamic exp, Environment env,
         if (k.isEmpty) {
           // execution finished
           env.gameRef.clearActionContinuation();
-          if (!env.gameRef.messageManager.active &&
+          if (!env.gameRef.messageManager.isActive &&
               !env.gameRef.worldMapEnabled &&
               !env.gameRef.isItemsMenuActive) {
             env.gameRef.resume();

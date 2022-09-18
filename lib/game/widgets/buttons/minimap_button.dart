@@ -16,7 +16,7 @@ class MiniMapButton extends StatelessWidget {
             top: 6,
             right: 6,
             child: InkWell(
-              onTap: () => gameRef.messageManager.active ||
+              onTap: () => gameRef.messageManager.isActive ||
                       gameRef.hasAction ||
                       !gameRef.playerOne!.isStationary
                   ? null

@@ -15,7 +15,7 @@ class MessageManager {
 
   /// [Message] currently displayed
   late int _currentIndex;
-  Message? get currentMessage => active ? _messages[_currentIndex] : null;
+  Message? get currentMessage => isActive ? _messages[_currentIndex] : null;
   void nextMessage() => _currentIndex++;
 
   /// Increase [_currentIndex] and check if there are other messages
@@ -40,7 +40,7 @@ class MessageManager {
   }
 
   /// True if the dialog box is visible
-  bool get active => _messages.isNotEmpty;
+  bool get isActive => _messages.isNotEmpty;
 
   /// If true, hide the map with a black container
   /// eg. it will be used for chapter change

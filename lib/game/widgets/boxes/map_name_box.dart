@@ -15,7 +15,7 @@ class MapNameBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return text != null
         ? InfoBox(
-            onTap: () => gameRef.messageManager.active
+            onTap: () => gameRef.messageManager.isActive
                 ? null
                 : gameRef.pause(mode: PauseMode.pause),
             below: below,

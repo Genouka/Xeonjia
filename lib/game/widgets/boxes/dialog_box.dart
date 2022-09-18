@@ -51,7 +51,7 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   AnimationController? _controller;
   Animation<int>? _characterCountAnimation;
   void _animateText() {
-    if (!widget.gameRef.messageManager.active ||
+    if (!widget.gameRef.messageManager.isActive ||
         (_controller?.isAnimating ?? false)) {
       return;
     }
@@ -82,7 +82,7 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
         min(3, (MediaQuery.of(context).size.width ~/ 100).roundToDouble());
     if (_characterCountAnimation == null) _animateText();
     return Visibility(
-      visible: widget.gameRef.messageManager.active,
+      visible: widget.gameRef.messageManager.isActive,
       child: InkWell(
         enableFeedback: false,
         onTap: next,
@@ -90,7 +90,7 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
           children: [
             if (widget.gameRef.messageManager.hideMap)
               Container(color: Colors.black),
-            if (widget.gameRef.messageManager.active)
+            if (widget.gameRef.messageManager.isActive)
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 child: Column(
