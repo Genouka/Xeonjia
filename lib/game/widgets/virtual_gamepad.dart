@@ -175,7 +175,6 @@ class VirtualGamePad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _size = MediaQuery.of(context).size.shortestSide / 10;
-    Direction? longPressingDirection;
     String currentMapId = gameRef.map.id;
     return settings.showDPad
         ? Positioned(
@@ -289,3 +288,5 @@ class VirtualGamePad extends StatelessWidget {
   Widget separator() =>
       SizedBox(width: VirtualGamePad._size, height: VirtualGamePad._size);
 }
+
+Direction? longPressingDirection;
