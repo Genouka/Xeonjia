@@ -816,13 +816,13 @@ class XeonjiaGame extends FlameGame
     } else if (event.logicalKey == LogicalKeyboardKey.space) {
       playerOne!.shoot();
     } else if (event.logicalKey == LogicalKeyboardKey.keyA) {
-      playerOne!.updateOrientation(Direction.left);
+      if (!paused) playerOne!.updateOrientation(Direction.left);
     } else if (event.logicalKey == LogicalKeyboardKey.keyW) {
-      playerOne!.updateOrientation(Direction.up);
+      if (!paused) playerOne!.updateOrientation(Direction.up);
     } else if (event.logicalKey == LogicalKeyboardKey.keyD) {
-      playerOne!.updateOrientation(Direction.right);
+      if (!paused) playerOne!.updateOrientation(Direction.right);
     } else if (event.logicalKey == LogicalKeyboardKey.keyS) {
-      playerOne!.updateOrientation(Direction.down);
+      if (!paused) playerOne!.updateOrientation(Direction.down);
     } else if (event.logicalKey == LogicalKeyboardKey.escape) {
       if (isPaused) {
         overlays.remove('pauseMenu');
