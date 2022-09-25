@@ -10,16 +10,10 @@
  <tileset firstgid="178" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="26" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoBwoALE9lIaxZaBsByR15lSwCwbUoDQPmjvoAehljwOUtgFiWxraYwDEGlC2HZlm+BChRoKBNmGHbrcCjeyBAVgYgfxDy7iB2QOKGxECaqgBFIDYE4i90MQd8OjxINMeBSib3DKBmPRmAMW0AApIbFA6cMCj1ptE83ABDahdpOjBBhwI2G1AptmwvICeJnGlUQcccixk2I1PDyzMFKAY5k5YHQWSN0ByD0xMA4kPCxMZJP3o5oEAAP1MSatQBwAA
+   H4sIAAAAAAAAA71Vuw7DMAj00LFjhw4ZGD1669IHY5r2/7+nIIGErNhJaMhJJ2MbOAeTJKX/AcSXjEnsQeZo/G47aFlNxnlmLRpH6aCMd+IjUKcQs9hPZ47vCp9riqldrQ1BOgqtET9P5N2oDt/NZcFnDwDxTZyqdezEjE4dENv7TVjTb0UYATA29wF2fD8b87WQRWtLzBxwQbs4c+u7UPdkq0exsXdyaPditGYg1HPqP4r3izmPrmUz15oMJr7Ox/gBiGvBvVAHAAA=
   </data>
  </layer>
- <objectgroup id="9" name="npc">
-  <object id="56" class="NPC" gid="210" x="320" y="32" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;I still don't understand why I lose money when I run out of HP.&quot;)))"/>
-   </properties>
-  </object>
- </objectgroup>
+ <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="26" height="18">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgQIBAIA4C4hAgDkXiB+MQh/FJBYlAHAPEKUCcCuVHQ8WS0cSR1ZEKMoE4C4hzgDgXiZ+FQxzGJxaYALEpEBcCcREQlwBxKZRfDMXo4sh8UoAZElsNhxp0cRDfhUR7qAmoZTex6Q05jGBxQwogNr2Z4ZEjRg056c0RiJ2IVAsDlKQ3csBApzdSgfNAO4BOAJYX0NMkvjRKTBqnNsCXZ4lxO7p+csoASgEAq+vnclAHAAA=
@@ -79,7 +73,7 @@
   </object>
   <object id="53" gid="71" x="192" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/_1&quot; &quot;Tourist Information and Reception Office\nClosed until further notice.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/_1&quot; &quot;Tourist Information and Reception Office.\nClosed until further notice.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

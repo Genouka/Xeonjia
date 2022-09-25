@@ -8,10 +8,10 @@
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="229" source="../tilesets/crypt-1.tsx"/>
+ <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="22" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62U3QrCMAxGu4tVsdippRP0+dSn1wfwRlNIWIhJnXaBQ7utnH70Z7FzLgJbbJdgYP3i7YE94llfon07YbsCgvAWWmvAvD3OX9xpIW8Q6yrzruF5rLBRclBe8pbch+5zTDScWg7Nq40JYm851n6QN82YW/OmhrzkpLP0clO/ZR2srDyztXY17w7enVlWzzJ7ZZ/n5v2npDcb55HqAlyBW8VZzvsRvblyL3jdgSfwMHwjOvl/J3+5V79S/G9IvPiZKAUAAA==
+   H4sIAAAAAAAAA62U3QrCMAxGN2+8WhWLnVo6QZ9Nff8LvTaBBEJM6rQLHNpt5fSjP0t91yVgT+0SjKKP3gE4EkH0Nda3C7UbICov0loj5R1ofnTnhbxRravOu4XnqcLOyMF52Yu5T/3nmOQ4rRyW1xoT1d5KvP1gb54xt+XNDXnZyWdpLfot6+BllZm9tat5D/DuKrIGkTkY+zw37z+lvcU5j1w34A48Kk4872fylsq9kPUEVvD95fgmcsr/Tvlyr34F/W+nEyNWKAUAAA==
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -31,7 +31,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="22" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA68wSL2h0T1QwEIMQ60C6gDOJD8gRxPXFTyH8hMRkb8aYAcM/HxyQECOPw7XOKZHoCFRmFFdFocBHEFABV1vo8oBQAA
+   H4sIAAAAAAAAA2NgIA58wSLGwkia+qEApPD4aSgBASR/IMeTEJX8BzKTkxF/GiDHTHx8coAEDjOGSzzTA/DQKKyITYscgyCuAJqDoLooBQAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

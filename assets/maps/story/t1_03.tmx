@@ -8,31 +8,31 @@
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="229" source="../tilesets/crypt-1.tsx"/>
- <tileset firstgid="285" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="305" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
+ <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="318" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="22" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62TzQqDMBCEE1BaBRsr2Lz/64n2UGgPxUM3oDBdN2b9WfguSWZ2M7CVNeZ2Mo6oiJy4n8QFfAOhBuILPM32coLvm+iAj6C70tuCKO3/+bjiq6l6+m8T0az59uztaPS1d16pVwZ6yTeWXZbom/JNZaeZ/WgOsdrjG3J6AKVdnnvBF3OSMnWwqznkVU97xvdYOy/6zpqXcDf7tux/MTxoucYzX63nFkKPH28jIsIoBQAA
+   H4sIAAAAAAAAA62T0QrCMAxFG9njhnMwOwXt//+eqA+CYgobXrPEtnOBA6NrTtoL7cm5/cp4pmca5rASW/BGYt2YDX24u/LyivfJXICX0tfy3h3T0fd6RbY3p4bxvkej55f3KvZWBXOXnlebVcO35rWyqxNzU95Udjln/zcHq5Z4Y05noKP5elC8mJOWqYe32kBew/jO5DvOPS96p56H8m/ynsT9LAL0yp4gvLnOEuKMN6KCC4goBQAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="84" class="SliderCpu" gid="285" x="128" y="144" width="16" height="16">
+  <object id="84" class="SliderCpu" gid="293" x="128" y="144" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="10"/>
     <property name="hp" type="float" value="30"/>
+    <property name="level" type="float" value="9"/>
    </properties>
   </object>
-  <object id="85" class="SliderCpu" gid="285" x="192" y="112" width="16" height="16">
+  <object id="85" class="SliderCpu" gid="293" x="192" y="112" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="10"/>
     <property name="hp" type="float" value="30"/>
+    <property name="level" type="float" value="9"/>
    </properties>
   </object>
-  <object id="86" class="SliderCpu" gid="285" x="64" y="160" width="16" height="16">
+  <object id="86" class="SliderCpu" gid="293" x="64" y="160" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="10"/>
     <property name="hp" type="float" value="30"/>
+    <property name="level" type="float" value="9"/>
    </properties>
   </object>
   <object id="87" class="NPC" gid="48" x="304" y="176" width="16" height="16">
@@ -59,7 +59,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="22" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIAx4GAmreUOEObQAjEC3/QEzoPQoGAU0BixE5IehAAYqz1Ib0MMfAAgtefYoBQAA
+   H4sIAAAAAAAAA2NgIAxEGAmr+UKEObQAnEC3sQAxB5QeBaOA1oBnmKSzgcqz1Ab08AcA/k6yqigFAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -75,7 +75,7 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="91" gid="276" x="160" y="176" width="16" height="16">
+  <object id="91" gid="284" x="160" y="176" width="16" height="16">
    <properties>
     <property name="action">(if (has-weapon 1)
     (if (max-pp-snowballs)
@@ -84,7 +84,7 @@
     (dialog '((&quot;A snowdrift.&quot;))))</property>
    </properties>
   </object>
-  <object id="92" gid="276" x="144" y="64" width="16" height="16">
+  <object id="92" gid="284" x="144" y="64" width="16" height="16">
    <properties>
     <property name="action">(if (has-weapon 1)
     (if (max-pp-snowballs)
@@ -93,22 +93,22 @@
     (dialog '((&quot;A snowdrift.&quot;))))</property>
    </properties>
   </object>
-  <object id="93" gid="316" x="64" y="208" width="16" height="16">
+  <object id="93" gid="329" x="64" y="208" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="94" gid="316" x="304" y="64" width="16" height="16">
+  <object id="94" gid="329" x="304" y="64" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="95" gid="316" x="256" y="208" width="16" height="16">
+  <object id="95" gid="329" x="256" y="208" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="97" gid="276" x="48" y="48" width="16" height="16">
+  <object id="97" gid="284" x="48" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (has-weapon 1)
     (if (max-pp-snowballs)

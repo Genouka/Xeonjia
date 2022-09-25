@@ -10,31 +10,31 @@
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="229" source="../tilesets/crypt-1.tsx"/>
- <tileset firstgid="285" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="305" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
+ <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="318" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="22" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA72T3QqEIBCFFart336ooHfqEXr/+673Yg1GOgxaulEDBwdGPo/jWEsh6ocVa7WkBHIuW22m9WPhVlpi141QwMto7bU2qpcOfnRxLnJb9HsReF6q85F85fLgInvvbRfYA8V7aOH6eOXRwLt1jFt5cL+Bd/DlhsRdrusOxct+z3ppZrc82cu5A8ygiynlwVocexT49J21DfKV8cwfmSzcgWr/yPAy0g8OTFxVKAUAAA==
+   H4sIAAAAAAAAAxNjZGAQozHmBWJJKOZDYqNjbHJKUJofi7miQMwBxJQAcSTzBKG0NBD/gsqL4DCfh4C9yOZKIrmXEEC2TwDIloO6S4gRYS6y2aCwlSIxDMTRwhCbucS4FR1IIMWbFJq5okSYy0KCnaSYSwqg1FxcfhCms3vxhSUs7YrgUYturixSGsRlJicjwixfHGrEkdxJbFr7hcSORTMPlkfksZgrC5UjB8PME4RiAGrbBuAoBQAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="84" class="SliderCpu" gid="285" x="80" y="144" width="16" height="16">
+  <object id="84" class="SliderCpu" gid="293" x="80" y="144" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="10"/>
     <property name="hp" type="float" value="20"/>
+    <property name="level" type="float" value="8"/>
    </properties>
   </object>
-  <object id="85" class="SliderCpu" gid="285" x="144" y="96" width="16" height="16">
+  <object id="85" class="SliderCpu" gid="293" x="144" y="96" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="10"/>
     <property name="hp" type="float" value="20"/>
+    <property name="level" type="float" value="8"/>
    </properties>
   </object>
-  <object id="86" class="SliderCpu" gid="285" x="176" y="160" width="16" height="16">
+  <object id="86" class="SliderCpu" gid="293" x="176" y="160" width="16" height="16">
    <properties>
-    <property name="atk" type="float" value="10"/>
     <property name="hp" type="float" value="20"/>
+    <property name="level" type="float" value="8"/>
    </properties>
   </object>
   <object id="87" gid="45" x="256" y="80" width="16" height="16">
@@ -55,13 +55,13 @@
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;We're watching you.&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
-    (delete-me-silently))</property>
+    (delete-me))</property>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="22" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA68wSL2h0T1gxlwMEJoLkbqmikANU+IiubSElDT/6NgeAAWKqcJgSGSxmBlAogGAJ8mf24oBQAA
+   H4sIAAAAAAAAA2NgIA58wSLGwkia+sEMBKB+EcLjJ3LMlICaJ0VFc2kJqOn/UTA8AA+V04TEEEljsDIBRAMAG+GyRSgFAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -77,12 +77,12 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="90" gid="316" x="48" y="192" width="16" height="16">
+  <object id="90" gid="329" x="48" y="192" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="95" gid="276" x="128" y="224" width="16" height="16">
+  <object id="95" gid="284" x="128" y="224" width="16" height="16">
    <properties>
     <property name="action">(if (has-weapon 1)
   (if (max-pp-snowballs)
@@ -97,7 +97,7 @@
       (set event-id #t))))</property>
    </properties>
   </object>
-  <object id="97" gid="268" x="80" y="48" width="16" height="16">
+  <object id="97" gid="276" x="80" y="48" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;t1_02.money&quot;)
@@ -109,10 +109,10 @@
             (set-money-diff money-diff))
         (dialog '((&quot;A rock covered by moss.&quot;)))))</property>
     <property name="actionOnEvent">(if (! (has-item &quot;signet-1&quot;))
-    (delete-me-silently))</property>
+    (delete-me))</property>
    </properties>
   </object>
-  <object id="98" gid="316" x="208" y="224" width="16" height="16">
+  <object id="98" gid="329" x="208" y="224" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="50"/>
    </properties>

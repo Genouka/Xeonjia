@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="17" height="8" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="45">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="17" height="8" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="47">
  <properties>
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="enemies"/>
@@ -10,7 +10,7 @@
  <tileset firstgid="181" source="../tilesets/monsters.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="8">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgYGCQAGIDIFaAYnMkWgJJHFmNP1SOAcqmBCCb5Ycmp4DE9sVjBsydpAJkPSB3mKPJ2+FRb49Djhx3wIANENsCsTQSFkGTQ3YTuvtgQBiLGCiMkP0HM88TiL2g8jAxWHgCADkxyW4gAgAA
+   H4sIAAAAAAAAA2NgYGCQAGIDIFaAYnMkWgJJHFmNP1SOAcqmBCCbhQ4UkNi+eMyAuVMYiEVIsBvZfJA7zNHk7fCot8chp8CAG+DyJwzYALEtEEsjYRE0OWQ3obsPBoRx2I3sP5h5nkDsBZWHicHCEwDUAI8fIAIAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -36,18 +36,26 @@
   (set-orientation 0))</property>
    </properties>
   </object>
-  <object id="39" class="SliderCpu" gid="181" x="64" y="112" width="16" height="16">
+  <object id="39" class="SliderCpu" gid="196" x="64" y="112" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if  (get &quot;013-safe&quot;)
+  (delete-me))</property>
+    <property name="hp" type="float" value="6"/>
+    <property name="level" type="float" value="5"/>
+   </properties>
+  </object>
+  <object id="46" class="SliderCpu" gid="181" x="48" y="96" width="16" height="16">
    <properties>
     <property name="actionOnEvent">(if  (get &quot;013-safe&quot;)
     (delete-me))</property>
-    <property name="level" type="float" value="5"/>
     <property name="hp" type="float" value="6"/>
+    <property name="level" type="float" value="5"/>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="17" height="8">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoB5wwyPnSkV7iAVmdLbPBIhNCcghu4kS98HMcwRiJxz2mwOxBBDbQ9nkAABxolHiIAIAAA==
+   H4sIAAAAAAAAA2NgoB5wwyPnSqQZvtRwCBSYUdEsYoAJEJsSkEN2EyXug5nnCMROOOw3B2IJILaHsskBALs4REwgAgAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -92,7 +100,7 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="42" class="Solid" gid="55" x="64" y="32" width="16" height="16">
+  <object id="42" class="Solid" gid="55" x="128" y="32" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;13.berries&quot;)
@@ -116,7 +124,7 @@
     (set-orientation '(3 37))
     (wait 0.7)
     (dialog
-      '((&quot;/lumberjack&quot; &quot;Please help me! Save me from this monster!&quot;)
+      '((&quot;/lumberjack&quot; &quot;Please help me! Save me from these monsters!&quot;)
       (&quot;monster/green&quot; &quot;Gyaaa!&quot;)
       (&quot;/hero&quot; &quot;Don't worry! I'll help you now!&quot;)))
     (wait)

@@ -32,12 +32,12 @@
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="229" source="../tilesets/crypt-1.tsx"/>
- <tileset firstgid="285" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="305" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
+ <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="318" source="../tilesets/npc_main.tsx"/>
  <layer id="1" name="Tile Layer 1" width="19" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52U6wrCMAxGO3AowjYV1Bfcw4vokIEXZDJTaOCzS7LWwPmRXs6+0rKycG5L1IEy9IiveGwJe7ivYKwWeo1G6Ksoi5RtdHIm7NklZcO6/bZiJnRhll3kimsjZEIXZhlg35V4E52T55sZF9adOBMPJWOqa1HYfW4uX70+leQa5K2T8ZxcT+JDvP7IdTHOg8XrUnPxe2C66RLT1cI6fg8Mvos2wZVbOS5/b73T71Vy7YmDwDp8Y6XMHyOX5sF/Bv8bLN+cx3OCs1i+L9zwsjKkBQAA
+   H4sIAAAAAAAAA5WU4QrCMAyEO5n4xzERtqngfDnfHxEVGahLoIUzJFkbONgl3ceVljZVCEdSH9VEj+KSvRb+Sb6DXq94S4PiO5FFy7YxMqFPLC0b1vvfqpmQhVlOgiXroGRCFmap4ftJWpF/BX0+LLCwPqQ76WtkzGVtK9+X5uKa7FEWqzbYsl+S60da88yYe6yHsx+stK4kl3YncnNdxVrrTqR1pefoVQmLz20K9rlqrDNpVLSPjJ0xvwiWxcE3I70NHm+Jw7rBXjzeDOq/CpSkBQAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -46,8 +46,8 @@
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I will defeat you.&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
   (delete-me))</property>
+    <property name="hp" type="float" value="40"/>
     <property name="level" type="int" value="9"/>
-    <property name="hp" type="float" value="5"/>
     <property name="name" value="iosa"/>
     <property name="team" type="int" value="1"/>
    </properties>
@@ -57,24 +57,23 @@
     <property name="action" value="(dialog '((&quot;/&quot; &quot;You will not escape me.&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
   (delete-me))</property>
+    <property name="hp" type="float" value="40"/>
     <property name="level" type="int" value="9"/>
-    <property name="hp" type="float" value="5"/>
     <property name="name" value="joza"/>
     <property name="team" type="int" value="1"/>
    </properties>
   </object>
-  <object id="93" class="NPC" gid="310" x="144" y="176" width="16" height="16">
+  <object id="93" class="NPC" gid="323" x="144" y="176" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
   (delete-me))</property>
-    <property name="team" type="int" value="1"/>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="19" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NggAAhRgaygACZ+kgFxLqPXu4ZBaNgFIwcwIVWrnCQWc6gm0OMeQAMiXPvpAUAAA==
+   H4sIAAAAAAAAA2NggAApRgaygASZ+kgFxLqPXu4ZBaNgFIwcIIRWrgiQWc6gm0OMeQC/G2rSpAUAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -98,7 +97,7 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="98" gid="280" x="144" y="32" width="16" height="16">
+  <object id="98" gid="288" x="144" y="32" width="16" height="16">
    <properties>
     <property name="action">(if (eq? (enemies-count) 0)
  (begin 
@@ -176,10 +175,6 @@
   (move '(3 90))
   (move '(2 91))
   (wait 1)
-  (move '(3 90))
-  (move '(2 91))
-  (wait 1)
-  (move '(3 90))
   (set-orientation '(2 90))
   (set-orientation '(3 91))
   (friendly '(#f 90))
@@ -192,7 +187,7 @@
   (delete-me))</property>
    </properties>
   </object>
-  <object id="107" gid="262" x="144" y="16" width="16" height="16">
+  <object id="107" gid="270" x="144" y="16" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;t1_06.money&quot;)

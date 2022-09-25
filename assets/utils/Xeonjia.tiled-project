@@ -274,6 +274,11 @@
                     "value": 0
                 },
                 {
+                    "name": "orientation",
+                    "type": "int",
+                    "value": 0
+                },
+                {
                     "name": "priority",
                     "type": "int",
                     "value": 0

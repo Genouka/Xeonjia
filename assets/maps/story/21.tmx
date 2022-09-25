@@ -7,10 +7,10 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="154" source="../tilesets/basic.tsx"/>
  <layer id="12" name="Tile Layer 1" width="28" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7WVMQ/CIBCFb3B0UZcOxtzY0a2LWnaju0YHY4xO6mDUn+8RIb2cRwO2fcmXo8A9aPEEAaBPIJEx7HPu2lOiUMYthrXRzc3ZmJ9rI7DYhVA850pfFzJs/SIwZ53ouYyYY9dL+Z6LxD1w+f2UDTzqtFL6EL5n2FSx376E+t+Ltsd/JGuhybmkKFQPpiV/+R6jFr1jhPBbDxtiR2xd3Ef4aDkhHxTxQBwZp4j1tJyQD4rcK3Ejzi7eFX95LlpOyGdGzFnuk3gRD+JCvIW3VmtaTshHvp/VgJgQQ2Us9H+k5fA+n6etV6ee0hdbv77+0K3v79aMtQ1U94iNY6juVT+Wog/ZynLK4AcAAA==
+   H4sIAAAAAAAAA7VVuw7CMAz0wMgCLB0Q8tiRrQvQ7Ah2EAwIIZiAAQGfjyMS1TJOldD2pJPzusurbhAA+kQkZoy2nrvylFgo/ZaGlZGN9X0Z0wKLXQBFPVfauoDfk52rCIxZJ3ouI8YgpJ3nInENHH49ZQOPOqyUNoTvHTZF7NmXUP+9aGv8BzIXmtxLCkL5YFryl/sYtegdA4TffNgQd8Sti/sIH00T8kERD8Qj4yliPk0T8kGhvRJvxLOLd8Vf3oumCfnMiHOmfRJfxAfxQnwLby3XNE3IR+7PYkCcEIdKX+h/pGl4m9dp89Whp7TF5q/PP3Tz+7c1Y2UD1Tti4xiqd9X3peADjIQAyuAHAAA=
   </data>
  </layer>
  <objectgroup id="13" name="npc"/>
@@ -40,12 +40,12 @@
   </object>
  </objectgroup>
  <objectgroup id="10" name="items">
-  <object id="45" class="Modifier" gid="167" x="288" y="144" width="16" height="16">
+  <object id="45" class="Modifier" gid="172" x="288" y="144" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
    </properties>
   </object>
-  <object id="46" class="Modifier" gid="167" x="416" y="32" width="16" height="16">
+  <object id="46" class="Modifier" gid="172" x="416" y="32" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
@@ -55,7 +55,7 @@
     <property name="action" value="(dialog '((&quot;/_1&quot; &quot;Melhopolis →&quot;)))"/>
    </properties>
   </object>
-  <object id="48" gid="160" x="160" y="80" width="16" height="16">
+  <object id="48" gid="165" x="160" y="80" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
@@ -74,7 +74,7 @@
 </property>
    </properties>
   </object>
-  <object id="50" class="Modifier" gid="167" x="16" y="160" width="16" height="16">
+  <object id="50" class="Modifier" gid="172" x="16" y="160" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
    </properties>

@@ -6,10 +6,10 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52UO2/CQBCE9wekIUlBhVxSUkED2GWkQBEeRQALRRGQN0l4hJ+fGWVXmMvh10if1j7b41t77u5EZACGYATGoKpcJI5JS2vkjFP3YAomYAZiHW9qvQLXki56PYDHBAu91vXc3wYdzzF9PsAazLV+Zrw7cCoVgj34AUvwBA4ZPlTknNt3qoAauMzhYep5fFzdFvRqFXi/T4HWhmT/U9O5fFDsqZ7T51w+zMf3fXyyfKzkNB+Wo7zzsXxs5X8+OBf2zX7ZN/uPXYOE3HxY5tPWRd5/bz7P4AW8gjfwXuB5KtD6BTbgW/563xX0oSIpvy6Ssj2pjPqODwnldH+zsYYSynHutidSNwrPfwHTL8riWAUAAA==
+   H4sIAAAAAAAAA52UOW/CQBCF5wfQBFKkQi5TunOTxC6RgAICBQkRihA3hCNcP583yoxYLxvby5M+zfp63rHfbouI2uAddEAXPAklY8xEUhPrPKsHPsEH6IMvSqsCHilb7PUNhgYjufbmuP8FvDrG7PMD1mAgdZPz7sCqrBgcwQmMwRScc3xYiXWs3+kBVEG5gIeq4fCxVff0ijze71IgNaT8f6rKygf39FzQ5798qI/r+7ik+ZhQOh+ao6Lz0Xzs6TYfPBfum/vlvrl/e12YsvOhmc9aF0X/vfrMwBwswBKsPJ5nBVK34Bfs6K/3g6cPK6H714Up3ZPuUdPyYWJK7296LhRius5d90SScU2OL/Xbx25YBQAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -26,7 +26,7 @@
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
-  <object id="50" class="NPC" gid="161" x="256" y="288" width="16" height="16">
+  <object id="50" class="NPC" gid="166" x="256" y="288" width="16" height="16">
    <properties>
     <property name="action">(if (! (get &quot;026-snowglobe&quot;))
   (begin
@@ -37,7 +37,7 @@
   (dialog '((&quot;/&quot; &quot;The weather is good today.&quot;))))</property>
    </properties>
   </object>
-  <object id="51" class="NPC" gid="193" x="128" y="32" width="16" height="16">
+  <object id="51" class="NPC" gid="198" x="128" y="32" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;We keep an eye on you.&quot;)))"/>
    </properties>
@@ -45,7 +45,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="18" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoD8wAWJTLOzhBFyIUONMhlnEmEsM8CFSXSAQhyDhUCrZT21A7XQE8ncwEibF32ZEqCE27kcBduA60A4gAACiSavgWAUAAA==
+   H4sIAAAAAAAAA2NgoC0wwyJmAsSmWNjDCbgQocaZDLOIMZcY4EOkukAgDkHCoVSyn9qA2ukI5O9gJEyKv7GleXRAbNyPAuzAdaAdQAAAAAGjeDpYBQAA
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

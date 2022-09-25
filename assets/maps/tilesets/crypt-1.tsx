@@ -11,6 +11,7 @@
  <tile id="7" class="Solid">
   <properties>
    <property name="action" value="(dialog '((&quot;A sharp and pointed rock covered by moss. It hurts.&quot;)))"/>
+   <property name="atk" type="int" value="15"/>
   </properties>
  </tile>
  <tile id="8" class="Ground"/>

@@ -8,26 +8,26 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="361" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="366" source="../tilesets/npc_main.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAxNnZGD4wcDA8AKIrwDxAyg7ECgeAMTBQIwLvMAhjqzXGYhdkLArI/F6HYFYAwk74XELNfWaAbE5EKtDaQsS9NoBsT0Q6wGxARA7QPWyM0LCFxkIM6LqFYaqfYKm7gEa/zYQ3wHiSKD6KCCOBuJ3UDl0O7CFM8geT6i93kj2otspjsPfhNLGDyxuJlbvfwr0gvQRk66wAQ5G8u0F6WUnI6xA+kD4MQMkPkm1FwTYsdiNK12hg1BG7DgMqjcEh3woVH4gMABD+2EFsAQAAA==
+   H4sIAAAAAAAAA5NhZGD4y8DA8BaIbwLxUyg7DCgeCsQRQIwLvMUhjqzXA4g9kbAXI/F63YBYFwm743ELNfVaA7ENEOtAaVsS9DoDsQsQGwOxKRC7QvXyMELCFxlIMKLqlYCqfYmm7ika/wEQPwTiOKD6eCBOAOLPUDl0O7CFM8geP6i9AUj2otspg8PfhNLGXyxuJlYvCyP5emFplxy9vBTYC9LLQ0ZYgfSB8AsGSHySai8I8GCxG1e6QgdRjNhxNFRvJA75KKj8QGAA/DCpLrAEAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="63" class="NPC" gid="169" x="192" y="112" width="16" height="16">
+  <object id="63" class="NPC" gid="174" x="192" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;The prices for an HP UP are too high for me.&quot;)))"/>
    </properties>
   </object>
-  <object id="64" class="NPC" gid="165" x="160" y="272" width="16" height="16">
+  <object id="64" class="NPC" gid="170" x="160" y="272" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I would love to leave for a long journey but I don't have the strength anymore.&quot;)))"/>
    </properties>
   </object>
-  <object id="70" class="NPC" gid="391" x="80" y="176" width="16" height="16">
+  <object id="70" class="NPC" gid="396" x="80" y="176" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="actionOnEvent">(if  (get &quot;037-talk&quot;)
@@ -37,12 +37,12 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="15" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGBjgzMjA4ALErozEqVdBUucIZGsAsRORepGBGVCPOhBbkKHXDqhHD4gdkPRyo5mTBOQnI4n9AeK/pFsFBixAc1hxuBPdXnQ+CIgT8GMMGWEwCugD8MUvD5DNC8R8ZMSfCFCPKBCLDdG4BwDvQpWJsAQAAA==
+   H4sIAAAAAAAAA2NgGBjgwcjA4AnEXozEqddEUucGZOsCsTuRepGBNVCPDhDbkqHXGajHGIhd8ehNB8plIMkzAtlMZNgFApxAfVxk6gUBGQJ6EykwexQMHBAExpsQEAuTEX+SQD1SQCw9ROMeAHbF58qwBAAA
   </data>
  </layer>
  <layer id="11" name="Tile Layer 3" width="15" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAXUBNyMA+2CUTAKhi8AAJCPT1ewBAAA
+   H4sIAAAAAAAAA2NgGAWUAAFG/PzhZu8ooA8YjV/sAADteRb3sAQAAA==
   </data>
  </layer>
  <objectgroup id="10" name="spawn points">
@@ -70,7 +70,7 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="56" gid="271" x="16" y="240" width="16" height="16">
+  <object id="56" gid="276" x="16" y="240" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Zamelis Village&quot;)))"/>
    </properties>

@@ -34,27 +34,27 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="361" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="393" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="366" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="398" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAwtgZGAIGCQ4AoiV0HAEkXqjsOArDJhi4UhmKyOx/Yiw4wcDcSADqFYbC46EugGfXSA73hEwHyRvCFRrBMXGQKwGxKaMCDX47MLmD2x2WgLVWgGxNRTrAbEtI6Y6bHY9AIr/BOJfOPBvHH67gkVMAoddd3CYAQNqDMTHGTYQCfWHJJZ0KYslHMgBD6A0rnQpgU8zkQAWBrjSJTIg174HUJpQuiQGGOAQvw2lcaXLBzj0EQtA4QQzgwVoHiuSu58gqUOXIxbAwtYBzYwHULtBdrxgQPWHODS/OkDFH0DZMLeKMyLEYfpgNABQX+2A3AUAAA==
+   H4sIAAAAAAAAAwtlZGAIHSQ4FojV0XAskXrjseCbDJhiMUhmayCxg4mw4y8DcSAXqNYAC46DugGfXSA7PhMwHyRvBlRrDsUWQKwNxFaMCDX47MLmD2x22gHV2gOxAxQbA7ETI6Y6bHY9BYr/A+L/ODADFnNA4CYWMQkcdj3EbgQcqDEQH2fYQBzUH3JY0qUSDveTCp5CaVzpUgKvbuIALAxwpUtkQK59MH8QSpfEAAMc4g+gNK50+RSHPmIBKJxgZnACzeNCcvdLJHXocsQCWNg6oJnxFGo3yI63DKj+kIHmVweo+FMoG+ZWGUaEOEwfjAYAkVpMxNwFAAA=
   </data>
  </layer>
  <layer id="6" name="Tile Layer 2" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGDxAkpGBQQqKpYFYBohlGYnT+wOLWBQWvYpYxFSJtINYoAk0TwsN61LZjlFAewBLU/5Y0qUOleNzNF0SD/4A8V8y5Khh/lACANy+u8XcBQAA
+   H4sIAAAAAAAAA2NgGDxAjpGBQR6KFYBYEYiVGInT+xeLWDwWvWpYxLSItINYoAc0Tx8NG1HZjlFAewBLUyFY0qUhleNzNF0SDxiBbmbC4W58ctQwfygBAPryEF/cBQAA
   </data>
  </layer>
  <layer id="11" name="Tile Layer 3" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGDzAnxFTTAeL2CgYBaNgFIwC/AAAdytShdwFAAA=
+   H4sIAAAAAAAAA2NgGDwghBFTzBCL2CgYBaNgFIwC/AAA2r8ST9wFAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="61" class="NPC" gid="170" x="224" y="32" width="16" height="16">
+  <object id="61" class="NPC" gid="175" x="224" y="32" width="16" height="16">
    <properties>
     <property name="action">(if (! (has-item &quot;gem_4&quot;))
     (if (! (has-item &quot;40.eyeglasses&quot;))
@@ -74,7 +74,7 @@
     (dialog '((&quot;/&quot; &quot;I missed being able to see the sea.&quot;))))</property>
    </properties>
   </object>
-  <object id="64" class="NPC" gid="391" x="16" y="128" width="16" height="16">
+  <object id="64" class="NPC" gid="396" x="16" y="128" width="16" height="16">
    <properties>
     <property name="action">(if (and (is-friendly 64) (!get &quot;039-september-ok&quot;))
   (begin
@@ -105,12 +105,12 @@
     (dialog '((&quot;/&quot; &quot;I have to train harder.&quot;)))))</property>
     <property name="actionOnEvent">(if  (get &quot;039-september-ok&quot;)
     (delete-me))</property>
+    <property name="hp" type="float" value="60"/>
     <property name="level" type="int" value="12"/>
-    <property name="hp" type="float" value="10"/>
     <property name="weaponLevel" type="int" value="5"/>
    </properties>
   </object>
-  <object id="75" class="NPC" gid="173" x="32" y="160" width="16" height="16">
+  <object id="75" class="NPC" gid="178" x="32" y="160" width="16" height="16">
    <properties>
     <property name="action">(begin
     (dialog '((&quot;/&quot; &quot;I have heard that in each region there is a strange polyhedric stone.&quot;)))
@@ -163,7 +163,7 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="68" gid="255" x="80" y="160" width="16" height="16">
+  <object id="68" gid="260" x="80" y="160" width="16" height="16">
    <properties>
     <property name="action">(if (! (has-item &quot;39.stone2&quot;))
     (begin
@@ -179,12 +179,12 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="73" class="Modifier" gid="411" x="272" y="64" width="16" height="16">
+  <object id="73" class="Modifier" gid="416" x="272" y="64" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="30"/>
    </properties>
   </object>
-  <object id="74" gid="406" x="160" y="112" width="16" height="16">
+  <object id="74" gid="411" x="160" y="112" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="100"/>
    </properties>
