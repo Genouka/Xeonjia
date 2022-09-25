@@ -41,7 +41,6 @@ class CharacterComponent extends BasicComponent
       atk = mainCharacter.atk;
       def = mainCharacter.def;
     } else {
-      atk = (level + 1).toDouble();
       def = def != 0 ? def : (level ~/ 5).toDouble();
       if (isPlayerOne) {
         weaponList = [
