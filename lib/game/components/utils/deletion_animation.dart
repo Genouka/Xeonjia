@@ -5,21 +5,21 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 /// Show an animation during respawn
 mixin DeletionAnimation on Walker {
-  late TimerComponent timer;
+  TimerComponent? timer;
 
   /// Start respawn animation
   void deletionAnimation({required VoidCallback callback, double period = 1}) {
     isBeingDeleted = true;
     timer = TimerComponent(period: period, onTick: callback);
-    gameRef.add(timer);
+    gameRef.add(timer!);
   }
 
   @override
   void render(Canvas canvas) {
-    if (isBeingDeleted) {
+    if (isBeingDeleted && timer != null) {
       canvas.drawCircle(
           Offset(componentSize / 2, componentSize / 2),
-          (1 - timer.timer.progress) * 10,
+          (1 - timer!.timer.progress) * 10,
           Paint()
             ..color = Colors.black
             ..strokeWidth = 2
