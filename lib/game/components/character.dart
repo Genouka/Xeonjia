@@ -198,20 +198,22 @@ class CharacterComponent extends BasicComponent
     stop();
     if (gameRef.config.mode == GameMode.story) {
       isBeingDeleted = true;
-      gameRef.changingTurn = true;
-      deletionAnimation(
-          period: 1.5,
-          callback: () {
-            super.delete();
-            if (isPlayerOne) {
-              gameRef.end();
-            } else if (!silently &&
-                !gameRef.hasAction &&
-                gameRef.map.action != null) {
-              gameRef.executeAction(
-                  action: gameRef.map.action!, actor: gameRef.playerOne);
-            }
-          });
+      if (silently) {
+        super.delete();
+        if (isPlayerOne) gameRef.end();
+      } else {
+        deletionAnimation(
+            period: 1.5,
+            callback: () {
+              super.delete();
+              if (isPlayerOne) {
+                gameRef.end();
+              } else if (!gameRef.hasAction && gameRef.map.action != null) {
+                gameRef.executeAction(
+                    action: gameRef.map.action!, actor: gameRef.playerOne);
+              }
+            });
+      }
     } else {
       ++defeats;
       deletionAnimation(callback: () => respawn(gameRef));

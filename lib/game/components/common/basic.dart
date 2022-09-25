@@ -325,6 +325,7 @@ abstract class BasicComponent extends SpriteComponent
   }
 
   /// Delete component
+  /// Silently: don't execute [XeonjiaGame.map.action] and [deletionAnimation]
   void delete({bool silently = false}) {
     ++defeats;
     gameRef.deletedComponents.add(this);

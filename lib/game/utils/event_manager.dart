@@ -158,20 +158,24 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     gameRef.getComponentFromId(x!.car as int)!.invertVisibility();
     return #NONE;
   });
-  _('delete-me', 0, (Cell? x) {
+  _('delete-me-animated', 0, (Cell? x) {
     BasicComponent self =
         (env.lookForValue(Sym('self')) as Intrinsic).fun!(x) as BasicComponent;
     self.delete();
     return #NONE;
   });
-  _('delete-me-silently', 0, (Cell? x) {
+  _('delete-me', 0, (Cell? x) {
     BasicComponent self =
         (env.lookForValue(Sym('self')) as Intrinsic).fun!(x) as BasicComponent;
     self.delete(silently: true);
     return #NONE;
   });
-  _('delete', 1, (Cell? x) {
+  _('delete-animated', 1, (Cell? x) {
     gameRef.getComponentFromId(x!.car as int)?.delete();
+    return #NONE;
+  });
+  _('delete', 1, (Cell? x) {
+    gameRef.getComponentFromId(x!.car as int)?.delete(silently: true);
     return #NONE;
   });
   _('respawn', 1, (Cell? x) {
@@ -181,15 +185,18 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   _('leave', 0, (Cell? x) {
     BasicComponent self =
         (env.lookForValue(Sym('self')) as Intrinsic).fun!(x) as BasicComponent;
-    gameRef.addCustomWidgetOverlay(
-        'blackCurtain', BlackCurtain(gameRef, self.delete));
+    gameRef.addCustomWidgetOverlay('blackCurtain',
+        BlackCurtain(gameRef, () => self.delete(silently: true)));
     return #NONE;
   });
   _('leave-npc', 1, (Cell? x) {
     gameRef.addCustomWidgetOverlay(
         'blackCurtain',
         BlackCurtain(
-            gameRef, gameRef.getComponentFromId(x!.car as int)?.delete));
+            gameRef,
+            () => gameRef
+                .getComponentFromId(x!.car as int)
+                ?.delete(silently: true)));
     return #NONE;
   });
   _('leave-all', 1, (Cell? x) {
@@ -198,7 +205,9 @@ Environment setEnvironment(XeonjiaGame gameRef) {
         BlackCurtain(gameRef, () {
           var it = (x!.car as Cell).iterator;
           while (it.moveNext()) {
-            gameRef.getComponentFromId(it.current as int)?.delete();
+            gameRef
+                .getComponentFromId(it.current as int)
+                ?.delete(silently: true);
           }
         }));
     return #NONE;
