@@ -70,6 +70,7 @@ class ChooseName extends StatelessWidget {
                         var names = [
                           'Aenor',
                           'Aldo',
+                          'Anna',
                           'Aoi',
                           'Ave',
                           'Chi',
@@ -85,7 +86,8 @@ class ChooseName extends StatelessWidget {
                           'Koko',
                           'Kyo',
                           'Makana',
-                          'Mage',
+                          'Magen',
+                          'Marko',
                           'Mila',
                         ];
                         _textFieldController.text =
