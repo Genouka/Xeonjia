@@ -259,34 +259,38 @@ class XeonjiaGame extends FlameGame
   late int remainingMoves;
 
   /// Increase the move counter during a battle
-  void useMove(Walker component) {
-    if (!(component.isMyTurn && inBattle)) return;
-    if (--remainingMoves <= 0) {
+  void useMove(Walker component, {bool skipTurn = false}) {
+    if (!skipTurn && !(component.isMyTurn && inBattle)) return;
+    if (skipTurn || --remainingMoves <= 0) {
       remainingMoves = 3;
       if (++_activePlayerIndex >= players.length) _activePlayerIndex = 0;
       for (int i = _activePlayerIndex; i < players.length; i++) {
-        if (!players[i].deleted) {
+        if (!(players[i].deleted || players[i].isBeingDeleted)) {
           changingTurn = true;
           add(TimerComponent(
               period: 0.7,
               onTick: () {
-                _activePlayerIndex = i;
-                changingTurn = false;
                 if (!inBattle) return;
-                updateCamera(
-                    activePlayer!.position.x, activePlayer!.position.y);
-                if (playerOne!.isMyTurn) {
-                  overlays.add('backpackButton');
-                  if (enemies > 0) overlays.add('rulesButton');
-                  overlays.add('miniMapButton');
-                  overlays.remove('dialogBox');
-                  overlays.add('virtualDPad');
-                  overlays.add('dialogBox');
+                if (players[i].deleted || players[i].isBeingDeleted) {
+                  useMove(players[i], skipTurn: true);
                 } else {
-                  overlays.remove('backpackButton');
-                  overlays.remove('rulesButton');
-                  overlays.remove('miniMapButton');
-                  overlays.remove('virtualDPad');
+                  _activePlayerIndex = i;
+                  changingTurn = false;
+                  updateCamera(
+                      activePlayer!.position.x, activePlayer!.position.y);
+                  if (playerOne!.isMyTurn) {
+                    overlays.add('backpackButton');
+                    if (enemies > 0) overlays.add('rulesButton');
+                    overlays.add('miniMapButton');
+                    overlays.remove('dialogBox');
+                    overlays.add('virtualDPad');
+                    overlays.add('dialogBox');
+                  } else {
+                    overlays.remove('backpackButton');
+                    overlays.remove('rulesButton');
+                    overlays.remove('miniMapButton');
+                    overlays.remove('virtualDPad');
+                  }
                 }
               }));
           break;
