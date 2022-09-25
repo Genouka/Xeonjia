@@ -3,12 +3,16 @@ import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/components/utils/hp_bar.dart';
 import 'package:xeonjia/game/components/utils/npc_controller.dart';
 import 'package:xeonjia/game/components/utils/render_offset.dart';
+import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/weapons.dart';
 
 /// Basic CPU controlled enemy that slides on ice
 class SliderCpuComponent extends BasicComponent
     with Walker, RenderOffset, HPBar {
   SliderCpuComponent(tile) : super.fromTile(tile) {
+    updateOrientation(
+        GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0')));
+    atlasAsset = 'monsters.xfa';
     weaponList = [PunchWeapon(level: level)];
     friendly = false;
     quiet = false;
@@ -17,9 +21,6 @@ class SliderCpuComponent extends BasicComponent
 
   @override
   int teamId = -2;
-
-  @override
-  String? atlasAsset = 'monsters.xfa';
 
   @override
   String? name = 'green';
