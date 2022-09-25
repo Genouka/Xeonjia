@@ -6,21 +6,12 @@ import 'package:xeonjia/game/utils/extensions.dart';
 /// It is shown only for 2 seconds after healthPointsDifference
 mixin HPBar on Walker {
   final _padding = 5.0;
-  final _seconds = 2.0;
-  double _remainingSeconds = -1;
-  bool get _show =>
-      !isPlayerOne && hp != maxHP && hp != 0 && _remainingSeconds >= 0;
+  bool get _show => !isPlayerOne && hp != maxHP && hp != 0;
 
   @override
   void render(Canvas canvas) {
     super.render(canvas);
     if (_show) _healthPointsBar(canvas);
-  }
-
-  @override
-  void update(double dt) {
-    if (_show) _remainingSeconds -= dt;
-    super.update(dt);
   }
 
   void _healthPointsBar(Canvas canvas) {
@@ -40,13 +31,5 @@ mixin HPBar on Walker {
           ..color = MyColors.healthPointsColor(currentHP / width)
           ..strokeWidth = 2
           ..style = PaintingStyle.fill);
-  }
-
-  void _showBar() => _remainingSeconds = _seconds;
-
-  @override
-  void hpDifference(double difference, {cause, poison = 0.0}) {
-    if (difference != 0) _showBar();
-    super.hpDifference(difference, cause: cause, poison: poison);
   }
 }
