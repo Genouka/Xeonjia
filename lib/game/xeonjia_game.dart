@@ -594,7 +594,7 @@ class XeonjiaGame extends FlameGame
     } else {
       updateCamera(
           map.width * componentSize / 2, map.width * componentSize * 0.7 / 2);
-      children.whereType<WorldMap>().first.removeFromParent();
+      children.whereType<WorldMap>().firstOrNull?.removeFromParent();
       addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
     }
   }
