@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flame/components.dart';
-import 'package:flame/game.dart';
 import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/utils/direction.dart';
@@ -18,7 +17,7 @@ class Button extends HudButtonComponent {
     this.color = Colors.blueGrey,
     this.visibility,
   })  : paint = Paint()
-          ..strokeWidth = 10
+          ..strokeWidth = 6
           ..color = color.withOpacity(0.7)
           ..style = PaintingStyle.stroke,
         super(
@@ -107,7 +106,7 @@ class Button extends HudButtonComponent {
   @override
   void onGameResize(Vector2 gameSize) {
     super.onGameResize(gameSize);
-    size = NotifyingVector2.all(max(40, gameSize.toSize().shortestSide / 14));
+    size = Vector2.all(max(40, gameSize.toSize().shortestSide / 14));
     (button as CircleComponent).radius = size.x / 2;
     (buttonDown as CircleComponent).radius = size.x / 2;
     textBox.size = size;
@@ -129,7 +128,7 @@ class Button extends HudButtonComponent {
     if (percent != null) {
       canvas.drawArc(
         Rect.fromCircle(
-            radius: size.x / 2, center: Offset(size.x / 2, size.y / 2)),
+            radius: size.x / 2 + 3, center: Offset(size.x / 2, size.y / 2)),
         -pi / 2,
         2 * pi * percent!(),
         false,
