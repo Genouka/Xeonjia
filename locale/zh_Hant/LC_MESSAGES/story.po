@@ -2368,10 +2368,6 @@ msgid "Here is the Zamelis Village."
 msgstr ""
 
 #: assets/data/items-and-events.json:
-msgid "Here is the Zamelis Village."
-msgstr ""
-
-#: assets/data/items-and-events.json:
 msgid "Here is the Observation Tower."
 msgstr ""
 

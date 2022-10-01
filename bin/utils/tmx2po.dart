@@ -109,8 +109,10 @@ Map<String, List<Translation>> tmx2po() {
   });
   var mapsDataJsonFileName = 'assets/data/maps-data.json';
   var mapsData = json.decode(File(mapsDataJsonFileName).readAsStringSync());
+  var added = [];
   mapsData.forEach((_, value) {
-    if (value['text'] != null) {
+    if (value['text'] != null && !added.contains(value['text'])) {
+      added.add(value['text']);
       dirStringsMap['story']!.add(Translation(
           dataJsonFileName, value['text'].replaceAll('\n', r'\n'), null));
     }
