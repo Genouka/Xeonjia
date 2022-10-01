@@ -1039,7 +1039,7 @@ msgstr "海はとても穏やかでリラックスできる。"
 
 #: assets/maps/story/32.tmx:
 msgid "Welcome to the Water Region! Enjoy your stay."
-msgstr 水の地方へようこそ！　ごゆっくりどうぞ。""
+msgstr "水の地方へようこそ！　ごゆっくりどうぞ。"
 
 #: assets/maps/story/25.tmx:
 msgid "!"
