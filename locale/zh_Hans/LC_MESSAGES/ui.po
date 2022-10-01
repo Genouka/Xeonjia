@@ -4,8 +4,9 @@
 # Liu Tao <lyuutau@outlook.com>, 2021.
 # KMX <kumax2048@protonmail.ch>, 2021.
 # DeepDaikon <deepdaikon@tuta.io>, 2021.
+# 苏汀 <753594451@qq.com>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-08-24 18:56+0000\nLast-Translator: KMX <kumax2048@protonmail.ch>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-09-12 22:35+0000\nLast-Translator: 苏汀 <753594451@qq.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -56,13 +57,14 @@ msgid "Multiplayer Mode"
 msgstr "多人模式"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
+#, fuzzy
 msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press \"Play\"."
-msgstr ""
+msgstr "该模式的目的是打败敌人、得分并使你的队获胜。\n\n规则很简单：\n- 玩家分成两队。\n- 当一名玩家击败一名对手时，他的队获得100分。\n- 达到规定分数的队获胜。\n\n你的队是红队。\n\n\n目前只能与电脑对战。\n\n选择游戏地点和游戏配置。\n当你准备就绪，请按下\"开始游戏\""
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 #, fuzzy
 msgid "Okay, got it!"
-msgstr "好，明白了！"
+msgstr "明白了！"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Easy"
@@ -113,8 +115,9 @@ msgid "Time available"
 msgstr "可用时间"
 
 #: lib/ui/screens/arena/arena_page.dart:
+#, fuzzy
 msgid "Maximum time for a match (minutes)"
-msgstr ""
+msgstr "一场比赛的最长时间（分钟）"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Players"
@@ -131,15 +134,15 @@ msgstr "友军开火"
 #: lib/ui/screens/arena/arena_page.dart:
 #, fuzzy
 msgid "If enabled, players can hit their teammates"
-msgstr "如果启用，玩家可以击中队友"
+msgstr "如果启用，玩家可以伤害队友"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore"
-msgstr ""
+msgstr "恢复"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore default settings?"
-msgstr ""
+msgstr "恢复默认设置？"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Are you sure you want to delete your settings and restore default ones?"
@@ -232,11 +235,11 @@ msgstr "系统默认"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "By %s"
-msgstr ""
+msgstr "%s 创作"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App developed by %s"
-msgstr ""
+msgstr "应用由 ％s 开发"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version: %s"
@@ -301,11 +304,11 @@ msgstr "第三方许可证"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read third party notices"
-msgstr ""
+msgstr "查看第三方许可证"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ok"
-msgstr ""
+msgstr "确定"
 
 #: lib/game/widgets/world_map.dart:
 msgid "This is where I am right now."
@@ -328,28 +331,31 @@ msgid "* After a very long journey, {{hero}} arrived here *"
 msgstr ""
 
 #: lib/game/widgets/menus/no_maps_menu.dart:
+#, fuzzy
 msgid "You went too far!"
-msgstr ""
+msgstr "你走得太远了!"
 
 #: lib/game/widgets/menus/no_maps_menu.dart:
+#, fuzzy
 msgid "Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback."
-msgstr ""
+msgstr "不幸的是，下一章的内容尚未完成 :(\n希望它很快会完成。\n\n同时你可以捐赠或发送反馈来支持开发。"
 
 #: lib/game/widgets/menus/no_maps_menu.dart:
 msgid "Report a bug or ask something"
-msgstr ""
+msgstr "报告错误或提问"
 
 #: lib/game/widgets/menus/no_maps_menu.dart:
 msgid "Go back"
 msgstr ""
 
 #: lib/game/widgets/menus/no_maps_menu.dart:
+#, fuzzy
 msgid "Back to menu"
-msgstr ""
+msgstr "返回主菜单"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "No items here"
-msgstr ""
+msgstr "无物品"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "%s HP"
@@ -361,7 +367,7 @@ msgstr "关闭"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Backpack"
-msgstr ""
+msgstr "背包"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Gems"
@@ -401,7 +407,7 @@ msgstr "已经达到 %s 分。"
 
 #: lib/game/widgets/menus/end_menu.dart:
 msgid "Do you want to restart this game?"
-msgstr "你想要重新开始这次游戏吗？"
+msgstr "你想重新开始游戏吗？"
 
 #: lib/game/widgets/menus/end_menu.dart:
 msgid "Continue"
@@ -413,7 +419,7 @@ msgstr "是"
 
 #: lib/game/widgets/menus/end_menu.dart:
 msgid "No"
-msgstr ""
+msgstr "否"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "pause"
@@ -476,8 +482,9 @@ msgid "Are you sure you want to quit this game?"
 msgstr "你确定要退出游戏吗？"
 
 #: lib/game/widgets/menus/pause_menu.dart:
+#, fuzzy
 msgid "\n\nGame data since the last time you changed your location will be lost."
-msgstr ""
+msgstr "\n\n自您最后一次保存后的记录将会丢失。"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Shop"
