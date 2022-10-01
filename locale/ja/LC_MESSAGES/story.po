@@ -1,5 +1,5 @@
 # Translation for Xeonjia
-# Copyright (C) 2020, 2021 DeepDaikon
+# Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Satou <sanna+dee@dismail.de>, 2022.
 msgid ""
@@ -94,16 +94,16 @@ msgid "Just a little"
 msgstr "ちょっとだけ"
 
 #: assets/maps/story/15.tmx:
-msgid "* {{hero}} found some berries! {{life-diff}} LPs have been recovered *"
-msgstr "*{{hero}}はベリーを発見した！　LPが{{life-diff}}回復した*"
+msgid "* {{hero}} found some berries! {{HP-diff}} HP have been recovered *"
+msgstr "*{{hero}}はベリーを発見した！　HPが{{HP-diff}}回復した*"
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant… nothing else."
 msgstr "小さな植物…もう何もない。"
 
 #: assets/maps/story/15.tmx:
-msgid "\" Exit ↑ \""
-msgstr "\"出口 ↑\""
+msgid "Exit ↑"
+msgstr "出口 ↑"
 
 #: assets/maps/story/33.tmx:
 msgid "In the distance can be seen the other part of the region."
@@ -150,40 +150,44 @@ msgid "A broken monitor."
 msgstr "壊れたモニター。"
 
 #: assets/maps/story/8.tmx:
-msgid "\" → \""
-msgstr "\"→\""
+msgid "Go this way →"
+msgstr ""
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
 msgstr "ナタウン"
 
 #: assets/maps/story/1.tmx:
-msgid "Safe travels, {{hero}}.\nMany before you have failed, but I am sure you will handle it right."
-msgstr "無事に旅するんだぞ、{{hero}}。\n過去にはたくさんの失敗を積み重ねてきたが、お前ならきっとうまくやれる。"
+msgid "Safe travels, {{hero}}.\nIf you lose your way or get stuck take a look at the map.\nYou can open it by tapping on its icon in the upper right corner."
+msgstr ""
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
 msgstr "パパ"
 
 #: assets/maps/story/1.tmx:
-msgid "I'll do my best."
-msgstr "頑張るよ。"
-
-#: assets/maps/story/1.tmx:
 msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
 msgstr "邪悪の王がいる塔は、この地方の首都近くにあるはずだ。"
 
 #: assets/maps/story/1.tmx:
-msgid "\" NATAWN – Hometown of the 62nd hero \""
-msgstr "\"ナタウン、62番目のヒーローの故郷\""
+msgid "Stay focused on your goals and don't wander around aimlessly."
+msgstr ""
 
 #: assets/maps/story/1.tmx:
-msgid "I've to say goodbye to my parents with the 'A' button before I leave. Otherwise it would be rude."
+msgid "NATAWN – Hometown of the 62nd hero"
+msgstr "ナタウン、62番目のヒーローの故郷"
+
+#: assets/maps/story/1.tmx:
+msgid "I've to say goodbye to my parents with the \"A\" button before I leave. Otherwise it would be rude."
 msgstr "出発する前にAボタンで両親に別れを告げなくてはいけない。そうしないと失礼だ。"
 
 #: assets/maps/story/1.tmx:
-msgid "Like my mother said, it's better if I go to get the shin guards from my neighbor, otherwise I risk hurting myself too much with the rocks."
-msgstr "お母さんが言っていたように、おとなりさんからすね当てをもらいに行ったほうがいい。そうしないと岩でケガをしてしまう。"
+msgid "Like my mother said, I have to go to my neighbor first."
+msgstr ""
+
+#: assets/maps/story/1.tmx:
+msgid "From here on is the frozen floor.\nI'll slide until I reach an obstacle.\nSo I have to use my mind to figure out the best path."
+msgstr ""
 
 #: assets/maps/story/34.tmx:
 msgid "Route 4"
@@ -202,8 +206,8 @@ msgid "A rock."
 msgstr "岩。"
 
 #: assets/maps/story/34.tmx:
-msgid "\" Hexa Cave \""
-msgstr "\"ヘキサ洞窟\""
+msgid "Hexa Cave"
+msgstr "ヘキサ洞窟"
 
 #: assets/maps/story/38.tmx:
 msgid "Zamelis Village"
@@ -218,52 +222,64 @@ msgid "I really needed a pomegranate juice."
 msgstr "ザクロジュースがどうしても必要だったんじゃ。"
 
 #: assets/maps/story/17.tmx:
-msgid "I still haven't figured out if these monsters are malicious or just stupid."
-msgstr "このモンスターが悪意あるものなのか、それともただのバカなのか、よくわかってないんだ。"
+msgid "These monsters don't seem very smart to me."
+msgstr ""
+
+#: assets/maps/story/17.tmx:
+msgid "There are still enemies here. I can't escape."
+msgstr ""
 
 #: assets/maps/story/31_house1.tmx:
 msgid "I hate people who always say the same things."
 msgstr "私はいつも同じことを言う人が嫌いです。"
 
 #: assets/maps/story/3_house2.tmx:
-msgid "Hi, you look a little tired. Rest here for a moment."
-msgstr "こんにちは、少しお疲れのようですね。ここで少し休んでください。"
+msgid "Hi, you look a little tired.\nHere's a bottle of water."
+msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
-msgid "* {{hero}} rested and is now in perfect health *"
-msgstr "*{{hero}}は休んだ、今はすっかり元気になった*"
+msgid "Thank you!"
+msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
-msgid "Come back anytime."
-msgstr "いつでも戻ってきてください。"
+msgid "I wish you the best."
+msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
-msgid "Be careful not to get hurt."
-msgstr "ケガしないように気をつけてください。"
+msgid "This sofa looks very comfortable."
+msgstr ""
 
 #: assets/maps/story/13.tmx:
-msgid "Help me please!\nPunch him by pressing the 'P' button."
-msgstr "助けてくれ！\nPボタンを押して相手を殴るんだ。"
+msgid "Help me please!"
+msgstr ""
 
 #: assets/maps/story/13.tmx:
-msgid "Everything good?"
-msgstr "調子はどう？"
+msgid "Are you okay?"
+msgstr ""
 
 #: assets/maps/story/13.tmx:
-msgid "Yes, thank you so much for saving my life!\nI have to admit, I was scared.\nAs a token of gratitude I give you this gem that I found a little while ago."
-msgstr "ああ、助けてくれて本当にありがとう！\n正直言って怖かったよ。\nお礼にさっき拾ったこの宝石をあげるよ。"
+msgid "Yes, thank you so much for saving my life!\nI have to admit, I was so scared!"
+msgstr ""
 
 #: assets/maps/story/13.tmx:
-msgid "Thanks, it seems very precious."
-msgstr "ありがとう、とても貴重そうだね。"
+msgid "Me too!"
+msgstr ""
 
 #: assets/maps/story/13.tmx:
-msgid "Thanks for saving me, I think it's better if I go home now."
-msgstr "助けてくれてありがとう、もう帰ろうかな。"
+msgid "Luckily it went all right!\nI don't know how to thank you, I can give you this gem that I found a little while ago."
+msgstr ""
 
 #: assets/maps/story/13.tmx:
-msgid "Please help me! Save me from this monster!"
-msgstr "助けてくれ！　あのモンスターから助けてくれ！"
+msgid "Thank you, it seems very precious!"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Now I think it's better for me if I go to my safe home.\nBye!"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "I'll go home as soon as my legs stop shaking in fear."
+msgstr ""
 
 #: assets/maps/story/13.tmx:
 msgid "I can't escape, I have to defeat the monster to save that man."
@@ -273,25 +289,85 @@ msgstr "逃げられない、男性を救うためにモンスターを倒す必
 msgid "Better if I check that the guy is okay."
 msgstr "男性が無事か確認したほうがいい。"
 
+#: assets/maps/story/13.tmx:
+msgid "! ! !"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Gyaaa!"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "monster"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Please help me! Save me from these monsters!"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Don't worry! I'll help you now!"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid ". . . . ."
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid ". . . . . . . . . ."
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "What are you waiting for??!"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "I… I… I don't know how to fight!"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "What??\nAren't you this year's \"choosen hero\"?"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Yes, I am…"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "But this is my first battle…"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "If you don't do anything this will be our LAST battle!"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "We have no time left, make up something!"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Hmm…\nAh, right! My mom gave me this book…"
+msgstr ""
+
+#: assets/maps/story/13.tmx:
+msgid "Ok, now I know what to do!\nLet's fight!"
+msgstr ""
+
 #: assets/maps/story/37.tmx:
-msgid "The prices for an LP UP are too high for me."
-msgstr "LP UPの値段はちょっとボクには高すぎるよ。"
+msgid "The prices for an HP UP are too high for me."
+msgstr "HP UPの値段はちょっとボクには高すぎるよ。"
 
 #: assets/maps/story/37.tmx:
 msgid "I would love to leave for a long journey but I don't have the strength anymore."
 msgstr "遠くへ旅に出たいのだけど、もうそんな体力がなくなってしまったのよ。"
 
 #: assets/maps/story/37.tmx:
-msgid "\" Zamelis Village \""
-msgstr "\"ザメリス村\""
-
-#: assets/maps/story/37.tmx:
 msgid "{{hero}}, there you are. Finally! I heard a rumor that you were coming here."
 msgstr "{{hero}}、ここにいたんだ。やっとだよ！　ここに来るってウワサは聞いてたんだけどね。"
 
 #: assets/maps/story/37.tmx:
-msgid "September! Long time no see! Last time was when we battled each other to be proclaimed HERO, we were 5 years old."
-msgstr "セプテンバーだ！　久しぶり！　前回は5歳のころ、ヒーローの座をかけて戦ったね。"
+msgid "September! Long time no see! Last time was when we battled each other to be proclaimed HERO.\nWe were 5 years old."
+msgstr ""
 
 #: assets/maps/story/37.tmx:
 msgid "I remember well, you got lucky that time.\nBut now it would go differently.\nI challenge you now. Show me that you are better than me.\nSee you on the north-east side of the village. I will wait for you there."
@@ -318,8 +394,24 @@ msgid "I remembered her less surly."
 msgstr "あんなにぶっきらぼうじゃなかったんだけどな。"
 
 #: assets/maps/story/14.tmx:
-msgid "\" ← Pharmacy \""
-msgstr "\"← 薬局\""
+msgid "Hello, I'm a workers of the Kingdom.\nI'm smoothing this rock so it doesn't hurt anymore.\nA lot of people complain about these rocks, I'm sorry."
+msgstr ""
+
+#: assets/maps/story/14.tmx:
+msgid "Maybe one day these rocks will all be nice and smooth, but today is not that day."
+msgstr ""
+
+#: assets/maps/story/14.tmx:
+msgid "← Pharmacy"
+msgstr "← 薬局"
+
+#: assets/maps/story/14.tmx:
+msgid "I guess this rock has just been smoothed out."
+msgstr ""
+
+#: assets/maps/story/18.tmx:
+msgid "I have to stay here because if I move you can't get out anymore."
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays."
@@ -358,12 +450,12 @@ msgid "I just want to explore the world, know new places and learn new things."
 msgstr "私は世界を探検して、新しい場所を知って、新しいことを学びたいだけなの。"
 
 #: assets/maps/story/7.tmx:
-msgid "Wow, sounds like a great idea!"
-msgstr "わあ、いい考えだね！"
+msgid "Wow, cool!"
+msgstr ""
 
 #: assets/maps/story/7.tmx:
-msgid "Yep, it won't be easy but I want to visit at least the whole Kingdom."
-msgstr "うん、簡単にはいかないでしょうけど、でも少なくとも王国中を回りたいわね。"
+msgid "Yep, it won't be easy but I want to visit the whole Kingdom!\nAnd maybe even visit places outside the Kingdom!"
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Are there places outside the Kingdom?!"
@@ -378,8 +470,8 @@ msgid "Anyway, I don't want to waste any more of your time."
 msgstr "とにかく、これ以上あなたの時間をムダにさせたくないわ。"
 
 #: assets/maps/story/7.tmx:
-msgid "After all, you have to save the world. Not an easy task."
-msgstr "だって、あなたは世界を救わなくちゃならないのだものね。一筋縄ではいかないでしょう。"
+msgid "After all, you have to save the world. Not an easy task!"
+msgstr "だって、あなたは世界を救わなくちゃならないのだものね。一筋縄ではいかないでしょう！"
 
 #: assets/maps/story/7.tmx:
 msgid "I'm sure we'll meet again soon, hero."
@@ -390,20 +482,36 @@ msgid "See ya!"
 msgstr "またね！"
 
 #: assets/maps/story/7.tmx:
-msgid "Bye!"
-msgstr "じゃあね！"
+msgid "Bye Milla!"
+msgstr ""
 
 #: assets/maps/story/7.tmx:
-msgid "\" Picnic area – Do not leave rubbish, thanks \""
-msgstr "\"ピクニックエリア。ゴミは捨てないでください\""
+msgid "Picnic area – Do not leave rubbish, thanks."
+msgstr "ピクニックエリア。ゴミは捨てないでください"
 
 #: assets/maps/story/7.tmx:
-msgid "\" Picnic area ↑ \"\n\" Forest Center ↓ \""
-msgstr "\"ピクニックエリア ↑\"\n\"森の中心部 ↓\""
+msgid "Picnic area ↑"
+msgstr "ピクニックエリア ↑"
 
-#: assets/maps/story/34_cave.tmx:
-msgid "Hexa Cave"
-msgstr "ヘキサ洞窟"
+#: assets/maps/story/7.tmx:
+msgid "Forest Center ↓"
+msgstr "森の中心部 ↓"
+
+#: assets/maps/story/28_lp_shop.tmx:
+msgid "Pharmacy"
+msgstr "薬局"
+
+#: assets/maps/story/28_lp_shop.tmx:
+msgid "Welcome to my shop!"
+msgstr "いらっしゃいませ！"
+
+#: assets/maps/story/28_lp_shop.tmx:
+msgid "pharmacist"
+msgstr "薬剤師"
+
+#: assets/maps/story/28_lp_shop.tmx:
+msgid "I wanted to buy some medicines but they don't have the ones I like."
+msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
@@ -514,7 +622,7 @@ msgid "Slooosh!"
 msgstr "バシャーッ！"
 
 #: assets/maps/story/34_cave.tmx:
-msgid "Hi, I'm the spirit of water.\nIs there anything you need?\nI don't have much time, with this cold I quickly become ice. And I'd say there's enough ice here."
+msgid "Hi, I'm the Spirit of Water.\nIs there anything you need?\nI don't have much time, with this cold I quickly become ice. And I'd say there's enough ice here."
 msgstr "こんにちは、ボクは水の精霊。\n何か用かい？\nあまり時間がないんだ、この寒さだとすぐに凍っちゃうよ。ここは氷でいっぱいだね。"
 
 #: assets/maps/story/34_cave.tmx:
@@ -530,8 +638,8 @@ msgid "I agree! I have to defeat him but I don't even know why he's here or what
 msgstr "賛成！　倒さなくちゃいけない相手だけど、なんでここにいるのかも、目的が何なのかさえもわからないんだ。"
 
 #: assets/maps/story/34_cave.tmx:
-msgid "The King of Evil, as you know, came to us 64 years ago freezing the Kingdom and instilling fear.\nI don't know exactly where he comes from, but what I do know is that his goal is to collect gems that are scattered around the world to get energy to completely freeze our world."
-msgstr "知っての通り、邪悪の王は64年前にやって来て、王国を氷に閉ざして恐怖を植えつけたんだ。\nどこからやって来たかはよく分からないけど、目的は世界中に散らばる宝石を集めてエネルギーを手に入れて、世界を完全に凍らせることみたいだ。"
+msgid "The King of Evil, as you know, came to us 64 years ago freezing the Kingdom and instilling fear.\nI don't know exactly where he comes from, but what I do know is that his goal is to collect gems that are scattered around the world.\nHe needs them to get energy to completely freeze our world."
+msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Completely?!"
@@ -546,8 +654,8 @@ msgid "And why would he want that??"
 msgstr "どうしてそんなことを？？"
 
 #: assets/maps/story/34_cave.tmx:
-msgid "Because he and his fellows need very low temperatures to live, temperatures so low that right now there are only in the Xeonjia tower."
-msgstr "彼やその仲間が生きていくにはすごく低い気温が必要なんだ、今のところゼオンジアタワーにしかないほど低い気温がね。"
+msgid "Because he and his fellows need very low temperatures to live, temperatures so low that right now there are only in the Xeonjia Tower."
+msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "So he's making our Kingdom unlivable for us to make it livable for him?!"
@@ -594,7 +702,7 @@ msgid "No"
 msgstr "いいえ"
 
 #: assets/maps/story/t1_04.tmx:
-msgid "Mossy Crypt -4F"
+msgid "MOSSY CRYPT – B4F"
 msgstr "コケの地下室4F"
 
 #: assets/maps/story/t1_04.tmx:
@@ -610,7 +718,7 @@ msgid "A snowdrift."
 msgstr "雪の吹きだまり。"
 
 #: assets/maps/story/t1_02.tmx:
-msgid "Mossy Crypt -2F"
+msgid "MOSSY CRYPT – B2F"
 msgstr "コケの地下室2F"
 
 #: assets/maps/story/t1_02.tmx:
@@ -618,15 +726,15 @@ msgid "We're watching you."
 msgstr "我々はお前のことを見ているぞ。"
 
 #: assets/maps/story/t1_02.tmx:
-msgid "Hmm, I think that from this snowdrift I can obtain material to make new snowballs by pressing the 'A' key."
-msgstr "うーん、Aボタンを押してこの雪の吹きだまりから新しい雪玉の材料が手に入りそうだ。"
+msgid "Hmm, I think if I run out of snowballs I can make new ones from snowdrifts like this one.\nI just have to press the \"A\" key."
+msgstr ""
 
 #: assets/maps/story/t1_02.tmx:
 msgid "A rock covered by moss."
 msgstr "コケでおおわれた岩。"
 
 #: assets/maps/story/1_home_2.tmx:
-msgid "T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to."
+msgid "T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia Tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to."
 msgstr "今日は…ボクがずっと待ち望んでいた日だ。ゼオンジアタワーへの旅が始まろうとしている。\n今年はボクが王国を凍らせたモンスターを倒すのに選ばれたヒーローだ…\n長年訓練を積んできたんだ、できるといいな。"
 
 #: assets/maps/story/1_home_2.tmx:
@@ -634,8 +742,20 @@ msgid "I'd like to go back to bed but I can't."
 msgstr "ベッドに戻りたいけど、それはできない。"
 
 #: assets/maps/story/1_home_2.tmx:
+msgid "It has been quite a while since the last time I slept here."
+msgstr ""
+
+#: assets/maps/story/1_home_2.tmx:
 msgid "I'll miss you, TV."
 msgstr "さびしくなるね、テレビ。"
+
+#: assets/maps/story/1_home_2.tmx:
+msgid "I don't want to watch television now."
+msgstr ""
+
+#: assets/maps/story/1_home_2.tmx:
+msgid "There's a bit of dust back here."
+msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I hope my parents will water it when I'm away."
@@ -662,12 +782,8 @@ msgid "The city center is a few kilometers to the south."
 msgstr "街の中心部はもう少し南に行ったところだ。"
 
 #: assets/maps/story/24.tmx:
-msgid "I'm planning a surprise wedding for my son, I hope he doesn't find out."
-msgstr "息子のために結婚式のサプライズを計画しているの、気づかれないといいんだけど。"
-
-#: assets/maps/story/24.tmx:
-msgid "\" VANTOI LAB \""
-msgstr "\"バントワ研究所\""
+msgid "VANTOI LAB"
+msgstr "バントワ研究所"
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Laboratory."
@@ -678,12 +794,28 @@ msgid "I can see the inside of the Pharmacy."
 msgstr "薬局の中が見える。"
 
 #: assets/maps/story/24.tmx:
-msgid "\" Melhopolis – Regional capital \""
-msgstr "\"メロポリス。地方首都\""
+msgid "Melhopolis – Regional capital"
+msgstr "メロポリス。地方首都"
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the house."
 msgstr "家の中が見える。"
+
+#: assets/maps/story/26.tmx:
+msgid "Did you come here just to talk to me?\nI don't have much to say, but I can give you this little snow globe."
+msgstr ""
+
+#: assets/maps/story/26.tmx:
+msgid "The weather is good today."
+msgstr "今日はいい天気だ。"
+
+#: assets/maps/story/26.tmx:
+msgid "We keep an eye on you."
+msgstr ""
+
+#: assets/maps/story/41_house.tmx:
+msgid "These books are in a language I don't understand."
+msgstr ""
 
 #: assets/maps/story/22.tmx:
 msgid "Route 3"
@@ -702,7 +834,7 @@ msgid "Well, you are the hero of this year, you are quite famous. Are you here t
 msgstr "ええ、今年のヒーローでしょう、かなり有名よ。地下室に用？"
 
 #: assets/maps/story/22.tmx:
-msgid "Yes. If I have not misunderstood, here's one of the 3 signets I need to access the Xeonjia tower."
+msgid "Yes. If I have not misunderstood, here's one of the 3 signets I need to access the Xeonjia Tower."
 msgstr "うん。勘違いじゃないなら、ゼオンジアタワーに入るための3つの印のうちのひとつがここにあるんだ。"
 
 #: assets/maps/story/22.tmx:
@@ -734,8 +866,8 @@ msgid "* {{hero}} got a SNOWBALLS CONTAINER *"
 msgstr "*{{hero}}は雪玉コンテナを手に入れた*"
 
 #: assets/maps/story/22.tmx:
-msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the 'S' button.\nIt can contain up to 10 snowballs."
-msgstr "それは私の発明品。Sボタンを押して投げられる雪玉を持ち歩けるの。\n最大で10個まで雪玉を入れておけるわね。"
+msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \"S\" button.\nIt can contain up to 10 snowballs."
+msgstr ""
 
 #: assets/maps/story/22.tmx:
 msgid "Wow! I'm sure it'll come in handy. Thank you."
@@ -754,7 +886,7 @@ msgid "Well, at least it will be an equal fight."
 msgstr "まあ、少なくとも対等な戦いにはなるよね。"
 
 #: assets/maps/story/22.tmx:
-msgid "Ha ha, well, you're right."
+msgid "Haha, well, you're right."
 msgstr "フフ、ええ、そうね。"
 
 #: assets/maps/story/22.tmx:
@@ -778,23 +910,31 @@ msgid "This is not a place for kids, go home."
 msgstr "ここは子供の来るところじゃない、家に帰りな。"
 
 #: assets/maps/story/9.tmx:
+msgid "How rude!\nHe pushed me away viciously!"
+msgstr ""
+
+#: assets/maps/story/9.tmx:
 msgid "Weird things happen in this area…"
 msgstr "この地域ではおかしなことが起こる…"
 
 #: assets/maps/story/9.tmx:
-msgid "\" If you get lost, follow the road signs \""
-msgstr "\"道に迷ったら、道路標識に従おう\""
+msgid "If you get lost, follow the road signs."
+msgstr "道に迷ったら、道路標識に従おう"
 
 #: assets/maps/story/19.tmx:
-msgid "\" Xeonjia Tower ↑ \""
-msgstr "\"ゼオンジアタワー ↑\""
+msgid "Xeonjia Tower ↑"
+msgstr "ゼオンジアタワー ↑"
+
+#: assets/maps/story/19.tmx:
+msgid "Tourist Information and Reception Office.\nClosed until further notice."
+msgstr ""
 
 #: assets/maps/story/29.tmx:
 msgid "Mitsu Forest"
 msgstr "ミツの森"
 
 #: assets/maps/story/29.tmx:
-msgid "Nobody knows what the writing on this stone means, it is not even known who wrote it."
+msgid "Nobody knows what the writing on this rock means, it is not even known who wrote it."
 msgstr "この石に書かれた文字が何を意味するのか誰にも分からない、誰が書いたのかさえ分からない。"
 
 #: assets/maps/story/29.tmx:
@@ -806,8 +946,8 @@ msgid "Are you interested to learn about the legend of this tree?"
 msgstr "この木の伝説を知りたいか？"
 
 #: assets/maps/story/29.tmx:
-msgid "There was once a devastating war in this area and everything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all the souls who left us.\nIt has the particularity of withering in spring and blooming in the other seasons.\nEvery spring the souls leave this tree to make other plants bloom and then, at the end of spring, the souls return to flourish again this tree.\nThat's all I know about this tree.\nI hope to have time to see the end of this winter season which has persisted for more than 60 years now."
-msgstr "かつてこの地は戦火に見舞われた、あらゆるものが破壊された。\nこの木以外には何も残らなかったんだ。\nこの木には、オレたちを残していったすべての魂が宿っていると言われている。\n春には枯れ、それ以外の季節には花を咲かせる特徴がある。\n春になると魂はこの木から離れて他の植物を咲かせ、春の終わりには戻ってきて再びこの木を咲かせる。\nこの木について知っているのはそれだけだ。\n60年以上も続いているこの冬の終わりを見られる日が来ますように。"
+msgid "A looong time ago, way before the arrival of the King of Evil, there was a devastating war in this area.\nEverything was razed to the ground.\nNothing and no one remained, except this tree.\nIt is said that this tree encloses all the souls who left us.\nIt has the peculiarity of losing its leaves in spring and blooming in the other seasons.\nEvery spring the souls leave this tree to make other plants bloom and then, at the end of spring, the souls return to flourish again this tree.\nThat's all I know about this tree.\nI hope to live long enough to see the end of this winter season which has persisted for more than 60 years now."
+msgstr ""
 
 #: assets/maps/story/29.tmx:
 msgid "Ok, it was a long and boring story after all."
@@ -825,13 +965,17 @@ msgstr "結構です"
 msgid "A computer turned off. Looks like a key is needed to turn it on."
 msgstr "電源が切れたパソコン。起動にはキーが必要みたいだ。"
 
+#: assets/maps/story/24_house1.tmx:
+msgid "There's nothing back here."
+msgstr ""
+
 #: assets/maps/story/21.tmx:
 msgid "Route 2"
 msgstr "ルート2"
 
 #: assets/maps/story/21.tmx:
-msgid "\" Melhopolis → \""
-msgstr "\"メロポリス →\""
+msgid "Melhopolis →"
+msgstr "メロポリス →"
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "Hi, I'm sorry but we're closed. Once this was a busy shop, but now it doesn't even make sense to stay open."
@@ -861,20 +1005,28 @@ msgstr "ここにはとても高価なガラクタがある。"
 msgid "I think this vase was placed here on purpose to block the passage."
 msgstr "この花瓶は通路をふさぐためにわざと置いてあるのだと思う。"
 
+#: assets/maps/story/10_old_shop.tmx:
+msgid "From this window I can only see a tree."
+msgstr ""
+
 #: assets/maps/story/2_house.tmx:
-msgid "You are the chosen one for this year, right? My son was too many years ago."
-msgstr "今年はお前さんが選ばれたんじゃな。ずいぶん前にワシの息子もそうだったんじゃ。"
+msgid "You are the chosen one for this year, right?\nMy son was too, many years ago."
+msgstr "今年はお前さんが選ばれたんじゃな。\nずいぶん前にワシの息子もそうだったんじゃ。"
 
 #: assets/maps/story/2_house.tmx:
 msgid "Unfortunately he failed to defeat the King of Evil…"
 msgstr "残念ながら邪悪の王を倒すことはできなかったよ…"
 
-#: assets/maps/story/32.tmx:
-msgid "\" Relax and enjoy the sea \""
-msgstr "\"海をゆっくり楽しんでください\""
+#: assets/maps/story/2_house.tmx:
+msgid "Many before you have failed, but I am sure you will handle it right."
+msgstr ""
 
 #: assets/maps/story/32.tmx:
-msgid "Wow! I've never seen the sea!"
+msgid "Relax and enjoy the sea."
+msgstr "海をゆっくり楽しんでください"
+
+#: assets/maps/story/32.tmx:
+msgid "Wow! I had never seen the sea before!"
 msgstr "すごいや！　海なんて初めて見たよ！"
 
 #: assets/maps/story/32.tmx:
@@ -886,28 +1038,116 @@ msgid "The sea is very calm and relaxing."
 msgstr "海はとても穏やかでリラックスできる。"
 
 #: assets/maps/story/32.tmx:
-msgid "\" Welcome to the Water Region! Enjoy your stay. \""
-msgstr "\"水の地方へようこそ！　ごゆっくりどうぞ。\""
+msgid "Welcome to the Water Region! Enjoy your stay."
+msgstr 水の地方へようこそ！　ごゆっくりどうぞ。""
 
-#: assets/maps/story/15_lp_shop.tmx:
-msgid "Pharmacy"
-msgstr "薬局"
+#: assets/maps/story/25.tmx:
+msgid "!"
+msgstr "！"
 
-#: assets/maps/story/15_lp_shop.tmx:
-msgid "Welcome to my shop!"
-msgstr "いらっしゃいませ！"
+#: assets/maps/story/25.tmx:
+msgid "Look who's here… This year's \"hero\".\nWe took out the heroes of past years, we will take you out too."
+msgstr ""
 
-#: assets/maps/story/15_lp_shop.tmx:
-msgid "pharmacist"
-msgstr "薬剤師"
+#: assets/maps/story/25.tmx:
+msgid "W-who are you?! What do you want?!"
+msgstr ""
 
-#: assets/maps/story/15_lp_shop.tmx:
-msgid "* {{hero}} ate some berries *"
-msgstr "*{{hero}}はベリーを食べた*"
+#: assets/maps/story/25.tmx:
+msgid "You don't seem particularly informed, kid.\nAt least those before you had the basics.\nThey should choose \"heroes\" more carefully.\nWe are the Hoarfrost Team!\nWe are the professionals of crime.\nThe King of Evil's right-hand men.\nThanks to us, the King of Evil will be able to complete his work."
+msgstr ""
 
-#: assets/maps/story/15_lp_shop.tmx:
-msgid "* {{life-diff}} LPs have been recovered *"
-msgstr "*LPが{{life-diff}}回復した*"
+#: assets/maps/story/25.tmx:
+msgid "His work?! What are you talking about?"
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "Hehe, we don't reveal our plans to you, kid.\nWe're not stupid.\nAnd anyway, even if we told you everything, it wouldn't do you any good, since we're going to take you out now."
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "You won't catch me!"
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "You can't run away from here.\nDid you think you could get away with it that easily?\nThe fact that you tried to escape and not to fight make it clear how little value you are.\nI hope next year's \"hero\" is a little braver than you, at least it would be a bit more fun for us."
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "Bzzt… Bzzt… Bzzt…"
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "What's happening?"
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "This year's \"hero\".\nWe just caught him."
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "Very well."
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "Do we get rid of him?"
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "Does he look smart?"
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "No."
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "Then let him go."
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "WHAT?!\nAre you sure? Why have him around again?"
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "He has to go through me anyway if he wants to continue his journey.\nI'll get rid of him."
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "But what if he makes trouble and…"
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "Do not insist. It's my final decision."
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "But boss, we can't risk that he will…"
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "You will still get your reward, don't worry."
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "Ah okay, perfect. We leave it free.\nSee you later boss."
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "Beep… Beep… Beep…"
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "You got lucky this time.\nBut soon you will be dealing with our boss."
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "The King of Evil?"
+msgstr ""
+
+#: assets/maps/story/25.tmx:
+msgid "No, kid. We were in communication with the leader of Hoarfrost Team.\nHe will take care of you.\nIn any case, we keep an eye on you.\nWe wish you the worst."
+msgstr ""
 
 #: assets/maps/story/35.tmx:
 msgid "This boulder is very heavy."
@@ -922,48 +1162,68 @@ msgid "A heavy rock."
 msgstr "重い岩。"
 
 #: assets/maps/story/35.tmx:
-msgid "\" ↑ Hexa Cave \"\n\" Zamelis Village → \""
-msgstr "\"↑ ヘキサ洞窟\"\n\"ザメリス村 →\""
+msgid "↑ Hexa Cave\nZamelis Village →"
+msgstr "↑ ヘキサ洞窟\nザメリス村 →"
 
 #: assets/maps/story/27.tmx:
-msgid "\" ← Sacred Tree \"\n\" Melhopolis City Center → \""
-msgstr "\"← 聖なる木\"\n\"メロポリス中心部 →\""
+msgid "I still don't understand why I lose money when I run out of HP."
+msgstr ""
+
+#: assets/maps/story/27.tmx:
+msgid "← Sacred Tree\nMelhopolis City Center →"
+msgstr "← 聖なる木\nメロポリス中心部 →"
 
 #: assets/maps/story/20.tmx:
-msgid "I advise you to take another path.\nThese monsters are too strong."
-msgstr "他の道を進んだほうがいいですよ。\nここのモンスターは強すぎます。"
+msgid "I advise you to go away.\nThese monsters are too strong."
+msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Xeonjia Tower"
 msgstr "ゼオンジアタワー"
 
 #: assets/maps/story/999.tmx:
-msgid "Hi Milla, are you ok? Did you get here without any problems?"
-msgstr "こんにちはミラ、大丈夫？　ここに来るまで平気だった？"
+msgid "Hi Milla!"
+msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Hii {{hero}}!"
 msgstr "こんにちは{{hero}}！"
 
 #: assets/maps/story/999.tmx:
-msgid "Yes, I cleverly managed to avoid the monsters that were along the way!"
-msgstr "ええ、途中にいたモンスターはうまく避けてきたの！"
+msgid "Are you ok? Did you get here without any problems?"
+msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "I love those cute little green worms!"
-msgstr "かわいらしいあの緑のイモムシは大好きよ！"
+msgid "Yes! No problem at all!"
+msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "…S-such weird tastes here."
-msgstr "…か、変わった趣味だね。"
+msgid "Have you seen those little green worms?\nThey are so cute!"
+msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "Unkind!"
-msgstr "ひどい！"
+msgid "…C-cute?? You have strange tastes."
+msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "Aaanyway, look here! This is the tower where the King of Evil resides!"
-msgstr "とにかく、ここを見て！　この塔に邪悪の王が住んでいるの！"
+msgid "Anyway…\n…I had to defeat them all."
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Nooooo!"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "I hope they are okay…"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Y-yes… Sure…\n…\nBy the way, where are we?"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "This is the tower where the King of Evil resides!"
+msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Oh really? Are we there yet?"
@@ -978,36 +1238,48 @@ msgid "Signets?"
 msgstr "印？"
 
 #: assets/maps/story/999.tmx:
-msgid "I did not understand exactly what they are, but if I have not misunderstood they are kept in crypts present in each region of the Kingdom."
-msgstr "それが何なのかはよくわからなかった。でも私の理解が間違っていないなら、それは王国のそれぞれの地方にある地下室に保存されているの。"
+msgid "I did not understand exactly what they are, but they should be items that are placed in crypts in each region of the Kingdom.\n3 crypts with one signet each."
+msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "Mm… Then I really think that I have to set out in search of these crypts…"
-msgstr "うーん…じゃあ、その地下室を探しに行かないといけないんだね…"
+msgid "Okay, it doesn't sound complicated.\nIn this region for now I have not yet found the crypt.\nIt might be in the southeast.\nWhere are you headed now?"
+msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "I guess you have no other choice."
-msgstr "他に選択肢はないでしょうね。"
+msgid "I think I will stay here and rest for a while, near the Mitsu Forest.\nI will resume my journey in a few days."
+msgstr ""
 
 #: assets/maps/story/999.tmx:
-msgid "Good luck!"
-msgstr "頑張ってね！"
+msgid "I can't rest so much unfortunately.\nI'll continue my journey right away.\nHave a good rest!"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Thanks!\nWe will meet again."
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Good luck {{hero}}!"
+msgstr ""
+
+#: assets/maps/story/999.tmx:
+msgid "Bye!"
+msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Do your best!"
 msgstr "頑張って！"
 
 #: assets/maps/story/999.tmx:
-msgid "I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted. How impertinent."
-msgstr "このガキは嫌いだ…オレに山ほど質問を浴びせてきて、ちゃんと話すまでずっと騒ぎ続けていやがったんだ。なんて生意気な。"
+msgid "I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted.\nHow impertinent."
+msgstr "このガキは嫌いだ…オレに山ほど質問を浴びせてきて、ちゃんと話すまでずっと騒ぎ続けていやがったんだ。\nなんて生意気な。"
 
 #: assets/maps/story/999.tmx:
 msgid "One signet is not enough."
 msgstr "印が1つでは足りない。"
 
 #: assets/maps/story/999.tmx:
-msgid "\" Xeonjia Tower – Dwelling of the King of Evil. Stay away \""
-msgstr "\"ゼオンジアタワー。邪悪の王の住まい。近寄るな\""
+msgid "Xeonjia Tower – Dwelling of the King of Evil. Stay away."
+msgstr "ゼオンジアタワー。邪悪の王の住まい。近寄るな"
 
 #: assets/maps/story/999.tmx:
 msgid "This door is closed."
@@ -1021,21 +1293,29 @@ msgstr "このドアは閉まっている、開くには3つの印が必要だ�
 msgid "I should go to the tower."
 msgstr "塔に行ったほうがいい。"
 
-#: assets/maps/story/999.tmx:
-msgid "The tower is so ugly."
-msgstr "塔は見るに耐えない。"
-
 #: assets/maps/story/16.tmx:
-msgid "Why am I here? What am I supposed to do?"
-msgstr "なぜワシはこんなところにおるのじゃろう。どうしたらええんじゃ？"
+msgid "Exit ←"
+msgstr ""
 
 #: assets/maps/story/37_house.tmx:
 msgid "I love studying history and literature."
 msgstr "歴史や文学を勉強するのが好きなんだ。"
 
 #: assets/maps/story/37_house.tmx:
-msgid "\"[…] but half of the army defected, made a deal with the King of Evil and founded the Hoarfrost Team. That moment decreed our defeat.\"\nThis book tells what happened 64 years ago."
-msgstr "\"…しかし軍の半分は離反して邪悪の王と協定を結び、ホアフロストチームを創設した。その瞬間、我々の敗北は決定的となった。\"\nこの本は64年前に起こったことを伝えている。"
+msgid "[…] but half of the army defected, made a deal with the King of Evil and founded the Hoarfrost Team. That moment decreed our defeat."
+msgstr ""
+
+#: assets/maps/story/37_house.tmx:
+msgid "This book tells what happened 64 years ago."
+msgstr ""
+
+#: assets/maps/story/37_house.tmx:
+msgid "There are math notes here."
+msgstr ""
+
+#: assets/maps/story/25_house.tmx:
+msgid "I'm planning a surprise wedding for my son.\nI hope he doesn't find out."
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "Home"
@@ -1062,24 +1342,28 @@ msgid "You always are.\nAnyway, now it is time to leave, be very careful and rem
 msgstr "あなたはいつもそうね。\nとにかく、そろそろ出発の時間だから、しっかり気をつけて左上のバーで体力をチェックしておくのよ。"
 
 #: assets/maps/story/1_home.tmx:
-msgid "Yea mom. Don't worry, I'll be careful."
-msgstr "うん、ママ。大丈夫だよ、気をつけるから。"
+msgid "Yea mom, I know. I am no longer a child."
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
-msgid "When you hit the rocks you could hurt yourself, so stop by our neighbor who have prepared a brand new pair of shin guards for you."
-msgstr "岩にぶつかるとケガするから、新品のすね当てを用意してくれたおとなりさんのところに寄っていってね。"
+msgid "Ah, and don't forget that the neighbor wanted to give you a little gift before you leave."
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
-msgid "Sure, I will."
-msgstr "うん、そうする。"
+msgid "Sure mom, I will stop by our neighbor."
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
-msgid "Go get the shin guards from the neighbor, you will need them."
-msgstr "必要なものだから、おとなりさんからすね当てをもらってきてね。"
+msgid "Go get the gift from the neighbor."
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
-msgid "The new shin guards are beautiful, they match the suit."
-msgstr "新しいすね当てはスーツに合っていてきれいね。"
+msgid "The food the neighbor gave you looks tasty!"
+msgstr ""
+
+#: assets/maps/story/1_home.tmx:
+msgid "Hi {{hero}}, everything okay?\nYou missed your mom, right?"
+msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "This plant hasn't been watered for long."
@@ -1117,8 +1401,16 @@ msgstr "おや、そうはならんといいが。"
 msgid "I like piglets."
 msgstr "子ブタが好きなんじゃよ。"
 
+#: assets/maps/story/26_house.tmx:
+msgid "Remove the casing and loosen the screws until panel B2 reaches…"
+msgstr ""
+
+#: assets/maps/story/26_house.tmx:
+msgid "This is the manual for assembling a library."
+msgstr ""
+
 #: assets/maps/story/t1_03.tmx:
-msgid "Mossy Crypt -3F"
+msgid "MOSSY CRYPT – B3F"
 msgstr "コケの地下室3F"
 
 #: assets/maps/story/t1_03.tmx:
@@ -1134,16 +1426,20 @@ msgid "Ok, you were better than me.\nI still have room for improvement, I will c
 msgstr "よくわかった、あなたのほうが上みたい。\nまだまだ改善の余地があるから、これからもトレーニングは続けていかないとね。"
 
 #: assets/maps/story/39.tmx:
-msgid "Anyway, it was great seeing you."
-msgstr "とにかく、あなたに会えてよかった。"
+msgid "Anyway, it is good to see you again."
+msgstr ""
 
 #: assets/maps/story/39.tmx:
-msgid "It was good to see you too, I felt like I was going back to when we were kids."
-msgstr "ボクも会えてよかったよ。子供の頃に戻ったみたいだった。"
+msgid "It is good to see you too. I felt like I was going back to when we were kids."
+msgstr ""
 
 #: assets/maps/story/39.tmx:
-msgid "Hehe, you are right… we spent a lot of hours playing and training as kids.\nI'll leave you now, see you in the Xeonjia Tower."
-msgstr "フフ、確かにね…子供のころはたくさんの時間を遊びながらトレーニングしてたんだっけ。\nじゃあもう行くね、ゼオンジアタワーで会おう。"
+msgid "Hehe, you are right… we spent a lot of hours playing and training as kids.\nThat was the happiest time in my life…\nThis is too much nostalgia for me. I can't handle it."
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "I don't have time for these emotions, I have to go back to training now.\nSee you in the Xeonjia Tower."
+msgstr ""
 
 #: assets/maps/story/39.tmx:
 msgid "Are you going to the tower too?"
@@ -1198,6 +1494,14 @@ msgid "I have to train harder."
 msgstr "もっとトレーニングしないと。"
 
 #: assets/maps/story/39.tmx:
+msgid "I have heard that in each region there is a strange polyhedric stone."
+msgstr ""
+
+#: assets/maps/story/39.tmx:
+msgid "This one seems to be useless."
+msgstr ""
+
+#: assets/maps/story/39.tmx:
 msgid "This is a very strange stone… Never seen anything like this before."
 msgstr "これはとても不思議な石だ…こんなの見たことない。"
 
@@ -1210,8 +1514,8 @@ msgid "Are you stuck?\nTake the path behind the blue tree."
 msgstr "道に迷いましたか？\n青い木の後ろの道を進んでください。"
 
 #: assets/maps/story/3_house1.tmx:
-msgid "A few meters from here is the Mitsu Forest. Once it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."
-msgstr "ここから少し向こうに行ったところにミツの森があるの。昔は神聖な場所として観光客がたくさんやって来てたんだけど、今となってはモンスターがはびこっていて危険なのよね。"
+msgid "A few meters from here is the Mitsu Forest.\nOnce it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."
+msgstr "ここから少し向こうに行ったところにミツの森があるの。\n昔は神聖な場所として観光客がたくさんやって来てたんだけど、今となってはモンスターがはびこっていて危険なのよね。"
 
 #: assets/maps/story/28_house.tmx:
 msgid "Hoarfrost Team members came to our house because they wanted a gem that I found on the ground.\nWe managed to keep it hidden from them but we don't want to have problems anymore.\nWe don't even need it after all, can we give it to you?"
@@ -1220,10 +1524,6 @@ msgstr "ホアフロストチームがうちに来たのは私の拾った宝石
 #: assets/maps/story/28_house.tmx:
 msgid "Here's to you!"
 msgstr "はいどうぞ！"
-
-#: assets/maps/story/28_house.tmx:
-msgid "Thank you!"
-msgstr "ありがとう！"
 
 #: assets/maps/story/28_house.tmx:
 msgid "Oh, ok. Then I'll have to think about what to do with this gem."
@@ -1242,6 +1542,14 @@ msgid "Mind your own business."
 msgstr "お前には関係ない。"
 
 #: assets/maps/story/28_house.tmx:
+msgid "After 10 minutes add to the pot half a daikon, chopped into small pieces…"
+msgstr ""
+
+#: assets/maps/story/28_house.tmx:
+msgid "I'm getting hungry."
+msgstr ""
+
+#: assets/maps/story/28_house.tmx:
 msgid "This plant is very fragrant."
 msgstr "この植物はとてもいい香りがする。"
 
@@ -1253,6 +1561,10 @@ msgstr "この花瓶はすごく重い、動かない。"
 msgid "Yes thanks"
 msgstr "うん、ありがとう"
 
+#: assets/maps/story/46.tmx:
+msgid "Why am I here? What am I supposed to do?"
+msgstr ""
+
 #: assets/maps/story/43_tower_1.tmx:
 msgid "Observation Tower"
 msgstr "展望台"
@@ -1262,28 +1574,24 @@ msgid "NEIGHBOR'S HOUSE"
 msgstr "おとなりさんの家"
 
 #: assets/maps/story/1_house.tmx:
-msgid "Hello lad, are you all right? I made you the shin guards, you will need them to cushion the blows with the stones.\nI made them by hand. Here's to you!"
-msgstr "こんにちは、元気にしてたかしら？　すね当てを作っておいたのよ、岩に当たったときに衝撃を和らげてくれるわ。\nわたしの手作りなの。はいどうぞ！"
+msgid "Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nYou simply have to open your backpack and eat the food!\nHere's to you!"
+msgstr ""
 
 #: assets/maps/story/1_house.tmx:
 msgid "neighbor"
 msgstr "おとなりさん"
 
 #: assets/maps/story/1_house.tmx:
-msgid "* {{hero}} got and put on the shin guards *"
-msgstr "*{{hero}}はすね当てを手に入れて、それを身に着けた*"
+msgid "Thank you very much!\nIt looks delicious!"
+msgstr ""
 
 #: assets/maps/story/1_house.tmx:
-msgid "This way you will hurt yourself less, but be careful that they do not fully protect you from damage."
-msgstr "こうすればケガしにくくなるけど、完全に防いでくれるわけじゃないから気をつけてね。"
+msgid "Good luck."
+msgstr ""
 
 #: assets/maps/story/1_house.tmx:
-msgid "Thank you very much!"
-msgstr "ありがとう！"
-
-#: assets/maps/story/1_house.tmx:
-msgid "Since the shin guards I gave you do not fully protect you, try to think diligently about the moves you make."
-msgstr "わたしのすね当ては完全に守ってくれるわけではないから、自分の動きをよく考えてみてね。"
+msgid "It's the first time an inhabitant of this village has been chosen as a \"hero\".\nI'm so happy."
+msgstr ""
 
 #: assets/maps/story/30.tmx:
 msgid "I'm sorry but this road is closed.\nWork is underway to restore the railway system."
@@ -1294,20 +1602,20 @@ msgid "Welcome to the City Hall."
 msgstr "シティホールへようこそ。"
 
 #: assets/maps/story/30.tmx:
-msgid "I can't wait till they finish to restore the railway system, it no longer work since the ice arrival."
-msgstr "鉄道の復旧が待ち遠しいのう、氷が張ってから動かなくなってしまったんじゃ。"
+msgid "I can't wait till they finish to restore the railway system, it hasn't worked since the arrival of ice."
+msgstr ""
 
 #: assets/maps/story/30.tmx:
-msgid "My wife remained blocked on the other side of the kingdom, I wonder if I will ever see her again."
+msgid "My wife got stuck on the other side of the kingdom, I wonder if I will ever see her again."
 msgstr "妻が王国の反対側で足止めされたままでな、もう会えないんじゃろうか。"
 
 #: assets/maps/story/30.tmx:
-msgid "\" City Hall ↑ \""
-msgstr "\"シティホール ↑\""
+msgid "City Hall ↑"
+msgstr "シティホール ↑"
 
 #: assets/maps/story/30.tmx:
-msgid "\" Route 4 → \""
-msgstr "\"ルート4 →\""
+msgid "Route 4 →"
+msgstr "ルート4 →"
 
 #: assets/maps/story/30.tmx:
 msgid "Before continuing I'd like to visit the City Hall."
@@ -1316,6 +1624,22 @@ msgstr "先にシティホールに行っておきたい。"
 #: assets/maps/story/30.tmx:
 msgid "The City Hall seems spacious."
 msgstr "シティホールは広々としている。"
+
+#: assets/maps/story/14_house.tmx:
+msgid "Hi, you look a little tired. Rest here for a moment."
+msgstr "こんにちは、少しお疲れのようですね。ここで少し休んでください。"
+
+#: assets/maps/story/14_house.tmx:
+msgid "* {{hero}} rested and is now in perfect health *"
+msgstr "*{{hero}}は休んだ、今はすっかり元気になった*"
+
+#: assets/maps/story/14_house.tmx:
+msgid "Come back anytime."
+msgstr "いつでも戻ってきてください。"
+
+#: assets/maps/story/14_house.tmx:
+msgid "Be careful not to get hurt."
+msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
 msgid "You're lucky, but it doesn't end here, guaranteed."
@@ -1346,8 +1670,8 @@ msgid "I didn't think you would get this far, kid."
 msgstr "まさかこんなところまでやって来るとは思ってもみなかった。"
 
 #: assets/maps/story/t1_06.tmx:
-msgid "W-Who are you? Who are you guys?"
-msgstr "あ、あなたは？　あなたたちは一体？"
+msgid "W-Who are you?"
+msgstr ""
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm surprised that my name is not known among the woods of your village."
@@ -1494,8 +1818,8 @@ msgid "I hope those berries were good."
 msgstr "あのベリーがおいしかったらいいんじゃが。"
 
 #: assets/maps/story/3.tmx:
-msgid "On the ground it's easy to find XEON (¤) stones that you can use to buy items in shops."
-msgstr "地上ではお店でアイテムを買うのに使えるゼオン(¤)ストーンが簡単に見つかるんだ。"
+msgid "The ice is so slippery, have you noticed?\nI feel more comfortable on the snow."
+msgstr "氷はとてもすべりやすいんだ、気づいていたかな？\n雪のほうが気持ちいいね。"
 
 #: assets/maps/story/3.tmx:
 msgid "It seems that once there was a path here."
@@ -1506,27 +1830,23 @@ msgid "To reach the other shore you have to go through the submarine tunnel but 
 msgstr "対岸に行くには海底トンネルを通らねばならんが、今はホアフロストチームが警備しておるんじゃ。\nあやつらが出ていってくれんなら、ワシはボートで海を渡ってみることにしようかの。"
 
 #: assets/maps/story/43.tmx:
-msgid "Once I happened to see a strange hole in the middle of the sea."
-msgstr "たまたま海の真ん中に不思議な穴が開いているのを見たことがあるのよ。"
+msgid "I think I will spend the rest of my life here."
+msgstr ""
 
 #: assets/maps/story/43.tmx:
-msgid "\" Hana's Tunnel \""
-msgstr "\"ハナのトンネル\""
+msgid "Hana's Tunnel"
+msgstr "ハナのトンネル"
 
 #: assets/maps/story/43.tmx:
-msgid "\" Observation Tower \""
-msgstr "\"展望台\""
-
-#: assets/maps/story/43.tmx:
-msgid "The sea is calm today."
-msgstr "今日は海が穏やかだ。"
+msgid "Wow! The view here is spectacular!"
+msgstr ""
 
 #: assets/maps/story/42.tmx:
 msgid "Nope, there's only trash here."
 msgstr "いや、ここにはゴミしかない。"
 
 #: assets/maps/story/t1_01.tmx:
-msgid "Mossy Crypt -1F"
+msgid "MOSSY CRYPT – B1F"
 msgstr "コケの地下室1F"
 
 #: assets/maps/story/t1_01.tmx:
@@ -1542,12 +1862,36 @@ msgid "Route 1"
 msgstr "ルート1"
 
 #: assets/maps/story/2.tmx:
-msgid "The ice is so slippery, have you noticed?\nI feel more comfortable on the snow."
-msgstr "氷はとてもすべりやすいんだ、気づいていたかな？\n雪のほうが気持ちいいね。"
+msgid "I also often get hurt with rocks.\nIt's annoying but you'll get used to it."
+msgstr ""
 
 #: assets/maps/story/2.tmx:
 msgid "There seems to be something in the branches of this plant…\nIt's a stone!"
 msgstr "この植物の枝に何かある…\n石だ！"
+
+#: assets/maps/story/2.tmx:
+msgid "Ouch! I hurt myself by bumping into this rock."
+msgstr ""
+
+#: assets/maps/story/2.tmx:
+msgid "Are you okay?\nI heard you screaming."
+msgstr ""
+
+#: assets/maps/story/2.tmx:
+msgid "Y-yes, I just lost 15 health points (HP)."
+msgstr ""
+
+#: assets/maps/story/2.tmx:
+msgid "I know, it happens often.\nSome rocks are very sharp and pointy.\nWhen you bump into them you get hurt."
+msgstr ""
+
+#: assets/maps/story/2.tmx:
+msgid "Now I know!"
+msgstr ""
+
+#: assets/maps/story/2.tmx:
+msgid "During your journey you will run into them many times, it's not a problem, just be careful not to run out of HP."
+msgstr ""
 
 #: assets/maps/story/41.tmx:
 msgid "As long as the tunnel is blocked we must organize differently to get goods and people from one side to another."
@@ -1566,19 +1910,23 @@ msgid "Some boulders are placed by us, the workers of the Kingdom.\nIn this way 
 msgstr "丸石は、ボクたち王国の労働者が設置しているよ。\nこうして色んなところへ簡単に行けるようになってるんだ。"
 
 #: assets/maps/story/10.tmx:
-msgid "\" Souvenir shop \""
-msgstr "\"おみやげ屋\""
+msgid "Souvenir shop"
+msgstr "おみやげ屋"
 
 #: assets/maps/story/10.tmx:
 msgid "I can see the inside of the shop."
 msgstr "お店の中が見える。"
+
+#: assets/maps/story/4.tmx:
+msgid "On the ground it's easy to find XEON (¤) stones that you can use to buy items in shops."
+msgstr "地上ではお店でアイテムを買うのに使えるゼオン(¤)ストーンが簡単に見つかるんだ。"
 
 #: assets/maps/story/31_house2.tmx:
 msgid "Melhopolis is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though."
 msgstr "メロポリスはこの地方の行政の中心地なの。\nでもこの頃は汚職に貧困、犯罪が横行しているのよ。"
 
 #: assets/maps/story/5.tmx:
-msgid "Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of the continent lived here."
+msgid "Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of this region lived here."
 msgstr "ここはミツの森だね。ここがどんなにキレイで豊かなところだったかって昔のお話を、両親がたくさんしてくれたんだ。おとぎ話の生き物が昔ここに住んでいたと言われているよ。"
 
 #: assets/maps/story/5.tmx:
@@ -1586,24 +1934,64 @@ msgid "174805…\nI don't know what these figures are but a little while ago I h
 msgstr "174805…\nこの数字が何なのかはわからないけど、少し前に誰かがそう声に出していたんだ…\nなんでだろう。"
 
 #: assets/maps/story/5.tmx:
-msgid "The trees of this region are admired and studied throughout the Kingdom. These blues are my favorites."
+msgid "The trees of this region are admired and studied throughout the Kingdom. These blue ones are my favorite."
 msgstr "この地方の木は王国中で賞賛されてて研究されているんだ。この青いのはボクのお気に入りなんだよね。"
 
 #: assets/maps/story/5.tmx:
-msgid "\" Mitsu Forest – Welcome, respect nature and remember to take a look at the souvenir shop on the right \""
-msgstr "\"ミツの森へようこそ。自然を大切にしよう、右手にあるおみやげ屋さんも見ていってね。\""
+msgid "Mitsu Forest – Welcome, respect nature and remember to take a look at the souvenir shop on the right."
+msgstr "ミツの森へようこそ。自然を大切にしよう、右手にあるおみやげ屋さんも見ていってね。"
 
 #: assets/maps/story/5.tmx:
 msgid "Once this was a very touristy place, the Kingdom tried to make money from it."
 msgstr "かつてここは有力な観光地になっていて、王国はそこでお金を稼ぐつもりだったんだ。"
+
+#: assets/maps/tilesets/tower.tsx:
+msgid "The tower is so ugly."
+msgstr "塔は見るに耐えない。"
+
+#: assets/maps/tilesets/lab.tsx:
+msgid "A table."
+msgstr ""
+
+#: assets/maps/tilesets/lab.tsx:
+msgid "A stool."
+msgstr ""
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Test tubes and other scientific stuff."
 msgstr "試験管などの科学的なもの。"
 
 #: assets/maps/tilesets/lab.tsx:
+msgid "Hey, there's a fruit juice here!\n* {{hero}} puts FRUIT JUICE in the backpack. *"
+msgstr ""
+
+#: assets/maps/tilesets/lab.tsx:
+msgid "…\nNo… I think I'm stealing it.\n* {{hero}} puts FRUIT JUICE back on the shelf. *"
+msgstr ""
+
+#: assets/maps/tilesets/lab.tsx:
+msgid "I'm not even sure it's a fruit juice."
+msgstr ""
+
+#: assets/maps/tilesets/lab.tsx:
+msgid "Better not to touch anything."
+msgstr ""
+
+#: assets/maps/tilesets/lab.tsx:
 msgid "Someone has turned everything upside down."
 msgstr "誰かが何もかもをひっくり返してしまった。"
+
+#: assets/maps/tilesets/lab.tsx:
+msgid "Someone spilled a green liquid here."
+msgstr ""
+
+#: assets/maps/tilesets/lab.tsx:
+msgid "There are pieces of glass here."
+msgstr ""
+
+#: assets/maps/tilesets/lab.tsx:
+msgid "Maybe I'd better watch my step."
+msgstr ""
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A rocky wall."
@@ -1612,6 +2000,10 @@ msgstr "岩壁。"
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A wall."
 msgstr "壁。"
+
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "There is a small difference in height here… I can't climb over it on this side."
+msgstr ""
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "An empty vase."
@@ -1638,6 +2030,14 @@ msgid "A little boat."
 msgstr "小さなボート。"
 
 #: assets/maps/tilesets/outdoor-2.tsx:
+msgid "text"
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "A sharp and pointed rock."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-2.tsx:
 msgid "This is a common tree in this area."
 msgstr "この地域ではよく見かける木だ。"
 
@@ -1654,28 +2054,40 @@ msgid "It's not a good thing to look into other people's homes."
 msgstr "他人の家を調べるのはよくないことだ。"
 
 #: assets/maps/tilesets/outdoor-2.tsx:
+msgid "The sea is calm today."
+msgstr "今日は海が穏やかだ。"
+
+#: assets/maps/tilesets/outdoor-2.tsx:
 msgid "This is a pharmacy."
 msgstr "ここは薬局だ。"
+
+#: assets/maps/tilesets/outdoor-2.tsx:
+msgid "signpost"
+msgstr ""
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A little plant."
 msgstr "小さな植物。"
 
 #: assets/maps/tilesets/outdoor-1.tsx:
+msgid "A tree."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A little plant without leaves."
 msgstr "葉のない小さな植物。"
 
 #: assets/maps/tilesets/outdoor-1.tsx:
+msgid "A sharp and pointed rock. It hurts."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-1.tsx:
+msgid "A trash can."
+msgstr ""
+
+#: assets/maps/tilesets/outdoor-1.tsx:
 msgid "I like the color of this tree."
 msgstr "この木の色が好きだ。"
-
-#: assets/maps/tilesets/outdoor-1.tsx:
-msgid "This type of tree is strange."
-msgstr "この種の木は変だ。"
-
-#: assets/maps/tilesets/outdoor-1.tsx:
-msgid "This type of plant is strange."
-msgstr "この種の植物は変だ。"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "man"
@@ -1753,9 +2165,13 @@ msgstr "シェン"
 msgid "september"
 msgstr "セプテンバー"
 
+#: assets/maps/tilesets/crypt-1.tsx:
+msgid "A sharp and pointed rock covered by moss. It hurts."
+msgstr ""
+
 #: assets/maps/tilesets/indoor.tsx:
-msgid "The weather is good today."
-msgstr "今日はいい天気だ。"
+msgid "A chair."
+msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A painting that depicts this area long ago."
@@ -1774,6 +2190,10 @@ msgid "There is some food between the mattresses of this sofa."
 msgstr "ソファーのマットレスの間に食べ物がある。"
 
 #: assets/maps/tilesets/indoor.tsx:
+msgid "A television."
+msgstr ""
+
+#: assets/maps/tilesets/indoor.tsx:
 msgid "This is a wall."
 msgstr "これは壁だ。"
 
@@ -1785,90 +2205,166 @@ msgstr "ブーブー！"
 msgid "This pig looks very happy."
 msgstr "このブタはとても幸せそうだ。"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/maps/tilesets/indoor.tsx:
+msgid "There are a few sheets of paper here."
+msgstr ""
+
+#: assets/data/items-and-events.json:
 msgid "Icosahedron"
 msgstr "二十面体"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "A strange blue icosahedral stone."
 msgstr "不思議な青い二十面体の石。"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
+msgid "Snow globe"
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "A little snow globe with a miniaturized Mitsu Forest inside."
+msgstr ""
+
+#: assets/data/items-and-events.json:
 msgid "Package of the King"
 msgstr "王様の小包"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "Package given to me by the King."
 msgstr "王様から預かった小包。"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "Tetrahedron"
 msgstr "四面体"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "A strange red tetrahedral stone."
 msgstr "不思議な赤い四面体の石。"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "A pair of glasses"
 msgstr "メガネ"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "Eyeglasses given to me by a girl."
 msgstr "女の人からもらったメガネ。"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "Cube"
 msgstr "六面体"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "A strange green cubic stone."
 msgstr "不思議な緑の六面体の石。"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "Octahedron"
 msgstr "八面体"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "A strange white octahedral stone."
 msgstr "不思議な白い八面体の石。"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "Dodecahedron"
 msgstr "十二面体"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "A strange multicolored dodecahedral stone."
 msgstr "不思議な色とりどりの正十二面体の石。"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "First Signet"
 msgstr "1つ目の印"
 
-#: assets/maps/utils/items-and-events.json:
-msgid "First out of 3 signets required to enter the Xeonjia tower."
+#: assets/data/items-and-events.json:
+msgid "First out of 3 signets required to enter the Xeonjia Tower."
 msgstr "ゼオンジアタワーに入るために必要な3つの印のうちのひとつ目。"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "Berries"
 msgstr "ベリー"
 
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
+msgid "Five little berries. They restore 5 HP."
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "I'm already healthy, I don't need {{selected-item-name}} right now."
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "HP UP +5"
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "Increases the max HP by 5 points."
+msgstr ""
+
+#: assets/data/items-and-events.json:
 msgid "Fresh Water"
 msgstr "フレッシュウォーター"
 
-#: assets/maps/utils/items-and-events.json:
-msgid "A bottle of water.\nIt restores 20 LPs."
-msgstr "水。\n20LP回復する。"
+#: assets/data/items-and-events.json:
+msgid "A bottle of water. It restores 20 HP."
+msgstr "水。20HP回復する。"
 
-#: assets/maps/utils/items-and-events.json:
-msgid "I'm already healthy, I don't need {{selected-item-name}} right now."
-msgstr "もう元気だから、{{selected-item-name}}は今のところ必要ない。"
-
-#: assets/maps/utils/items-and-events.json:
+#: assets/data/items-and-events.json:
 msgid "Pomegranate juice"
 msgstr "ザクロジュース"
 
-#: assets/maps/utils/items-and-events.json:
-msgid "A bottle of pomegranate juice.\nIt restores 50 LPs."
-msgstr "ザクロジュース。\n50LP回復する。"
+#: assets/data/items-and-events.json:
+msgid "A bottle of pomegranate juice. It restores 50 HP."
+msgstr " ザクロジュース。50HP回復する。"
+
+#: assets/data/items-and-events.json:
+msgid "Healer"
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "A medicine that restores 80 HP."
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "Food Box"
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "A small box full of rice, vegetables and beans. It restores 100 HP."
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "Here is where I lived."
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "Here is the Mossy Crypt."
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "Here is the Vantoi Lab."
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "Here is the City Hall of Melhopolis."
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "Here is the Hexa Cave."
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "Here is the Zamelis Village."
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "Here is the Zamelis Village."
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "Here is the Observation Tower."
+msgstr ""
+
+#: assets/data/items-and-events.json:
+msgid "Here is the Xeonjia Tower."
+msgstr ""
