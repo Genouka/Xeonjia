@@ -2,10 +2,10 @@
 # Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Viktória Nagy <tindykmp@protonmail.ch>, 2021, 2022.
-# DeepDaikon <deepdaikon@tuta.io>, 2021.
+# DeepDaikon <deepdaikon@tuta.io>, 2021, 2022.
 # Kempelen <lion@cmsbazar.hu>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-05-21 14:11+0000\nLast-Translator: Viktória Nagy <tindykmp@protonmail.ch>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -241,7 +241,7 @@ msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "Köszönöm!"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "I wish you the best."
@@ -809,7 +809,7 @@ msgstr ""
 
 #: assets/maps/story/26.tmx:
 msgid "The weather is good today."
-msgstr ""
+msgstr "Ma jó idő van."
 
 #: assets/maps/story/26.tmx:
 msgid "We keep an eye on you."
@@ -1265,7 +1265,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "Szia!"
 
 #: assets/maps/story/999.tmx:
 msgid "Do your best!"
@@ -1565,7 +1565,7 @@ msgstr "Igen, köszönöm"
 
 #: assets/maps/story/46.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "Miért vagyok itt? Mit kellene tennem?"
 
 #: assets/maps/story/43_tower_1.tmx:
 msgid "Observation Tower"
@@ -1641,7 +1641,7 @@ msgstr "Gyere vissza bármikor."
 
 #: assets/maps/story/14_house.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "Vigyázz, nehogy megsérülj."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "You're lucky, but it doesn't end here, guaranteed."

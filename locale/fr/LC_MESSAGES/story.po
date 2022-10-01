@@ -1,11 +1,11 @@
 # Translation for Xeonjia
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# DeepDaikon <deepdaikon@tuta.io>, 2020, 2021.
+# DeepDaikon <deepdaikon@tuta.io>, 2020, 2021, 2022.
 # Swann Fournial <s.fournial@protonmail.com>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-01-07 16:03+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -241,7 +241,7 @@ msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "Merci !"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "I wish you the best."
@@ -273,7 +273,7 @@ msgstr ""
 
 #: assets/maps/story/13.tmx:
 msgid "Thank you, it seems very precious!"
-msgstr "Merci, elle semble très précieuse."
+msgstr "Merci, elle semble très précieuse !"
 
 #: assets/maps/story/13.tmx:
 msgid "Now I think it's better for me if I go to my safe home.\nBye!"
@@ -473,7 +473,7 @@ msgstr "Passons, je veux pas te faire perdre ton temps."
 
 #: assets/maps/story/7.tmx:
 msgid "After all, you have to save the world. Not an easy task!"
-msgstr "Après tout, tu dois sauver le monde. C'est pas une tâche facile!"
+msgstr "Après tout, tu dois sauver le monde. C'est pas une tâche facile !"
 
 #: assets/maps/story/7.tmx:
 msgid "I'm sure we'll meet again soon, hero."
@@ -921,7 +921,7 @@ msgstr "Des choses étranges se produisent dans cette zone…"
 
 #: assets/maps/story/9.tmx:
 msgid "If you get lost, follow the road signs."
-msgstr "Si vous vous perdez, suivez les panneaux de signalisation"
+msgstr "Si vous vous perdez, suivez les panneaux de signalisation."
 
 #: assets/maps/story/19.tmx:
 msgid "Xeonjia Tower ↑"
@@ -1265,7 +1265,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "Salut !"
 
 #: assets/maps/story/999.tmx:
 msgid "Do your best!"
@@ -1317,7 +1317,7 @@ msgstr ""
 
 #: assets/maps/story/25_house.tmx:
 msgid "I'm planning a surprise wedding for my son.\nI hope he doesn't find out."
-msgstr " Je prépare un mariage surprise pour mon fils.\nJ'espère qu'il ne le découvrira pas."
+msgstr "Je prépare un mariage surprise pour mon fils.\nJ'espère qu'il ne le découvrira pas."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Home"
@@ -1565,7 +1565,7 @@ msgstr "Oui, merci"
 
 #: assets/maps/story/46.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "Pourquoi suis-je ici ? Que suis-je censé faire ?"
 
 #: assets/maps/story/43_tower_1.tmx:
 msgid "Observation Tower"
@@ -1641,7 +1641,7 @@ msgstr "Reviens quand tu veux."
 
 #: assets/maps/story/14_house.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "Fais attention à ne pas te blesser."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "You're lucky, but it doesn't end here, guaranteed."

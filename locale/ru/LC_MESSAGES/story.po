@@ -5,7 +5,7 @@
 # Tri-fan <ausa1156red@gmail.com>, 2021.
 # Denis Proleev <denproleev@gmail.com>, 2021, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-06-15 20:50+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -241,7 +241,7 @@ msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "Спасибо!"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "I wish you the best."
@@ -1265,7 +1265,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "Пока!"
 
 #: assets/maps/story/999.tmx:
 msgid "Do your best!"
@@ -1317,7 +1317,7 @@ msgstr ""
 
 #: assets/maps/story/25_house.tmx:
 msgid "I'm planning a surprise wedding for my son.\nI hope he doesn't find out."
-msgstr "Я запланировал неожиданную свадьбу своему сыну. Надеюсь, он не узнает."
+msgstr "Я запланировал неожиданную свадьбу своему сыну.\nНадеюсь, он не узнает."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Home"
@@ -1641,7 +1641,7 @@ msgstr "Приходи, когда захочешь."
 
 #: assets/maps/story/14_house.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "Будь осторожен, не поранься."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "You're lucky, but it doesn't end here, guaranteed."
@@ -1821,7 +1821,7 @@ msgstr "Надеюсь, эти ягоды были вкусными."
 
 #: assets/maps/story/3.tmx:
 msgid "The ice is so slippery, have you noticed?\nI feel more comfortable on the snow."
-msgstr ""
+msgstr "Лёд такой скользкий, ты заметил?\nМне комфортнее на снегу."
 
 #: assets/maps/story/3.tmx:
 msgid "It seems that once there was a path here."
@@ -1921,7 +1921,7 @@ msgstr "Я могу разглядеть врутреннюю часть маг�
 
 #: assets/maps/story/4.tmx:
 msgid "On the ground it's easy to find XEON (¤) stones that you can use to buy items in shops."
-msgstr " На земле часто попадаются камни КСЕОН (¤), на которые ты можешь купить вещи в магазинах."
+msgstr "На земле часто попадаются камни КСЕОН (¤), на которые ты можешь купить вещи в магазинах."
 
 #: assets/maps/story/31_house2.tmx:
 msgid "Melhopolis is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though."
@@ -2229,7 +2229,7 @@ msgstr ""
 
 #: assets/data/items-and-events.json:
 msgid "Package of the King"
-msgstr ""
+msgstr "Свёрток Короля"
 
 #: assets/data/items-and-events.json:
 msgid "Package given to me by the King."

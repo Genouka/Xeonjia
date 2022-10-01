@@ -4,7 +4,7 @@
 # Patryk <kikson91@yandex.com>, 2021.
 # DeepDaikon <deepdaikon@tuta.io>, 2021, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-02-06 08:29+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Polish <https://translate.deepdaikon.xyz/projects/xeonjia/story/pl/>\nLanguage: pl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Polish <https://translate.deepdaikon.xyz/projects/xeonjia/story/pl/>\nLanguage: pl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -16,15 +16,15 @@ msgstr "…"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "H-Hello."
-msgstr "Dź-Dzień dobry"
+msgstr "Dź-Dzień dobry."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
-msgstr "Witaj, zapewne jesteś {{hero}}! Miło mi ciebie poznać. Słyszałem, że wybierasz się w te strony. Na imię mi Xe III, jestem królem tego regionu."
+msgstr "Witaj, zapewne jesteś {{hero}}! Miło mi ciebie poznać. Słyszałem, że wybierasz się w te strony.\nNa imię mi Xe III, jestem królem tej krainy."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "king"
-msgstr ""
+msgstr "król"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Do not confuse me with the King of Evil, I am good haha."

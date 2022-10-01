@@ -2,8 +2,9 @@
 # Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Mark Badrus <mark.badrus@tuta.io>, 2022.
+# deepdaikon <deepdaikon@tuta.io>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-07-22 19:56+0000\nLast-Translator: Mark Badrus <mark.badrus@tuta.io>\nLanguage-Team: Belarusian <https://translate.deepdaikon.xyz/projects/xeonjia/story/be/>\nLanguage: be\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Belarusian <https://translate.deepdaikon.xyz/projects/xeonjia/story/be/>\nLanguage: be\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -919,7 +920,7 @@ msgstr ""
 
 #: assets/maps/story/9.tmx:
 msgid "If you get lost, follow the road signs."
-msgstr "If you get lost, follow the road signs"
+msgstr ""
 
 #: assets/maps/story/19.tmx:
 msgid "Xeonjia Tower ↑"

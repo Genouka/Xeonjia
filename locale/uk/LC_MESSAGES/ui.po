@@ -3,8 +3,9 @@
 # This file is distributed under the same license as Xeonjia.
 # Sergiy Borodych <sergiy.borodych@gmail.com>, 2021.
 # Sean R. <seanrmsk@protonmail.com>, 2021.
+# deepdaikon <deepdaikon@tuta.io>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2021-12-28 09:31+0000\nLast-Translator: Sean R. <seanrmsk@protonmail.com>\nLanguage-Team: Ukrainian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/uk/>\nLanguage: uk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Ukrainian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/uk/>\nLanguage: uk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -484,7 +485,7 @@ msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Let me know if you need anything else."
-msgstr ""
+msgstr "Дайте мені знати, якщо вам ще щось потрібно."
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "Wait"

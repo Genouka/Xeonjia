@@ -2,8 +2,9 @@
 # Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Mark Badrus <mark.badrus@tuta.io>, 2022.
+# deepdaikon <deepdaikon@tuta.io>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-07-22 19:56+0000\nLast-Translator: Mark Badrus <mark.badrus@tuta.io>\nLanguage-Team: Belarusian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/be/>\nLanguage: be\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Belarusian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/be/>\nLanguage: be\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -31,7 +32,7 @@ msgstr ""
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Welcome!"
-msgstr ""
+msgstr "Сардэчна запрашаем!"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Before starting tell me what you want to call your character."
@@ -143,23 +144,23 @@ msgstr "Адмена"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Smallest"
-msgstr ""
+msgstr "Мінімальны"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Small"
-msgstr ""
+msgstr "Маленькі"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Default"
-msgstr ""
+msgstr "Па змаўчанні"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Large"
-msgstr ""
+msgstr "Вялікі"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Largest"
-msgstr ""
+msgstr "Максімальны"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Your name"
@@ -567,7 +568,7 @@ msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "You won!"
-msgstr ""
+msgstr "Ты перамог!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"

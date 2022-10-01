@@ -3,18 +3,7 @@
 # This file is distributed under the same license as Xeonjia.
 # deepdaikon <deepdaikon@tuta.io>, 2022.
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: he\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
-"n % 10 == 0) ? 2 : 3));\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Hebrew <https://translate.deepdaikon.xyz/projects/xeonjia/ui/he/>\nLanguage: he\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && n % 10 == 0) ? 2 : 3));\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -30,11 +19,11 @@ msgstr ""
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
-msgstr ""
+msgstr "מידע"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Settings"
-msgstr ""
+msgstr "הגדרות"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
@@ -54,11 +43,11 @@ msgstr ""
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "OK"
-msgstr ""
+msgstr "אוקיי"
 
 #: lib/ui/screens/arena/widgets/play_button.dart:
 msgid "Play"
-msgstr ""
+msgstr "התחל"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Multiplayer Mode"
@@ -74,19 +63,19 @@ msgstr ""
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Easy"
-msgstr ""
+msgstr "קל"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Medium"
-msgstr ""
+msgstr "בינוני"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Hard"
-msgstr ""
+msgstr "קשה"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Multiplayer"
-msgstr ""
+msgstr "ריבוי שחקנים"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Map"
@@ -98,7 +87,7 @@ msgstr ""
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Difficulty"
-msgstr ""
+msgstr "רמת קושי"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Match difficulty"
@@ -106,7 +95,7 @@ msgstr ""
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points required"
-msgstr ""
+msgstr "נקודות נצרכות"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points needed to win"
@@ -138,19 +127,19 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore"
-msgstr ""
+msgstr "שחזור"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore default settings?"
-msgstr ""
+msgstr "לשחזר את ההגדרות המקוריות?"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Are you sure you want to delete your settings and restore default ones?"
-msgstr ""
+msgstr "אתה בטוח שאתה רוצה למחוק את ההגדרות ששינית ולשחזר את ההגדרות המקוריות?"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Cancel"
-msgstr ""
+msgstr "ביטול"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Smallest"
@@ -222,23 +211,23 @@ msgstr ""
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Language"
-msgstr ""
+msgstr "שפה"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "App language"
-msgstr ""
+msgstr "שפת האפליקציה"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "System default"
-msgstr ""
+msgstr "ברירת מחדל (לפי שפת המערכת)"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "By %s"
-msgstr ""
+msgstr "מ%s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App developed by %s"
-msgstr ""
+msgstr "האפליקציה פותחה עי %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version: %s"
@@ -246,23 +235,23 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
-msgstr ""
+msgstr "גרסת אפליקציה"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Donate"
-msgstr ""
+msgstr "תרומה"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Support the development"
-msgstr ""
+msgstr "תמוך בפיתוח"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate"
-msgstr ""
+msgstr "תרגם"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate in your language"
-msgstr ""
+msgstr "תרגם לשפתך"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
@@ -274,19 +263,19 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
-msgstr ""
+msgstr "דווח על באגים"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs or request new feature"
-msgstr ""
+msgstr "דווח על באגים או בקש פונקציה חדשה"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View source code"
-msgstr ""
+msgstr "הצג קוד מקור"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Look at the source code"
-msgstr ""
+msgstr "ראה את קוד המקור"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View License (GPLv3)"
@@ -294,15 +283,15 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
-msgstr ""
+msgstr "קרא רשיון תוכנה"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Third Party Licenses"
-msgstr ""
+msgstr "רשיונות צד שלישי"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read third party notices"
-msgstr ""
+msgstr "קרא התראות צד שלישי"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ok"
@@ -358,7 +347,7 @@ msgstr ""
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "Close"
-msgstr ""
+msgstr "סגור"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Backpack"
@@ -578,7 +567,7 @@ msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "You won!"
-msgstr ""
+msgstr "ניצחת!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"

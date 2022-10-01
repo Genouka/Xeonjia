@@ -3,17 +3,7 @@
 # This file is distributed under the same license as Xeonjia.
 # deepdaikon <deepdaikon@tuta.io>, 2022.
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: el\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Greek <https://translate.deepdaikon.xyz/projects/xeonjia/ui/el/>\nLanguage: el\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -29,11 +19,11 @@ msgstr ""
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
-msgstr ""
+msgstr "Πληροφορίες"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Settings"
-msgstr ""
+msgstr "Ρυθμίσεις"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
@@ -53,11 +43,11 @@ msgstr ""
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "OK"
-msgstr ""
+msgstr "ΟΚ"
 
 #: lib/ui/screens/arena/widgets/play_button.dart:
 msgid "Play"
-msgstr ""
+msgstr "Παίξε"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Multiplayer Mode"
@@ -73,19 +63,19 @@ msgstr ""
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Easy"
-msgstr ""
+msgstr "Εύκολο"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Medium"
-msgstr ""
+msgstr "Μέτριο"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Hard"
-msgstr ""
+msgstr "Δύσκολο"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Multiplayer"
-msgstr ""
+msgstr "Πολλοί παίκτες"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Map"
@@ -97,7 +87,7 @@ msgstr ""
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Difficulty"
-msgstr ""
+msgstr "Δυσκολία"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Match difficulty"
@@ -105,7 +95,7 @@ msgstr ""
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points required"
-msgstr ""
+msgstr "Πόντοι που απαιτούνται"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points needed to win"
@@ -137,19 +127,19 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore"
-msgstr ""
+msgstr "Επαναφορά"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore default settings?"
-msgstr ""
+msgstr "Επαναφορά αρχικών ρυθμίσεων;"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Are you sure you want to delete your settings and restore default ones?"
-msgstr ""
+msgstr "Σίγουρα θέλεις να διαγράψεις τις ρυθμίσεις σου και να επαναφέρεις τις αρχικές;"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Cancel"
-msgstr ""
+msgstr "Ακύρωση"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Smallest"
@@ -221,23 +211,23 @@ msgstr ""
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Language"
-msgstr ""
+msgstr "Γλώσσα"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "App language"
-msgstr ""
+msgstr "Γλώσσα της εφαρμογής"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "System default"
-msgstr ""
+msgstr "Προεπιλογή συστήματος"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "By %s"
-msgstr ""
+msgstr "Από %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App developed by %s"
-msgstr ""
+msgstr "Η ανάπτυξη της εφαρμογής έγινε από τον %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version: %s"
@@ -245,23 +235,23 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
-msgstr ""
+msgstr "Έκδοση της εφαρμογής"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Donate"
-msgstr ""
+msgstr "Δωρεά"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Support the development"
-msgstr ""
+msgstr "Υποστήριξε την ανάπτυξη της εφαρμογής"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate"
-msgstr ""
+msgstr "Μετάφραση"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate in your language"
-msgstr ""
+msgstr "Μετάφρασε την εφαρμογή στη γλώσσα σου"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
@@ -273,19 +263,19 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
-msgstr ""
+msgstr "Αναφορά σφάλματος"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs or request new feature"
-msgstr ""
+msgstr "Ενημέρωσέ μας για ένα σφάλμα ή ζήτησε νέες λειτουργίες"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View source code"
-msgstr ""
+msgstr "Προβολή πηγαίου κώδικα"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Look at the source code"
-msgstr ""
+msgstr "Δες τον πηγαίο κώδικα"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View License (GPLv3)"
@@ -293,15 +283,15 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
-msgstr ""
+msgstr "Διάβασε την άδεια χρήσης αυτού του λογισμικού"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Third Party Licenses"
-msgstr ""
+msgstr "Άδειες τρίτων μερών"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read third party notices"
-msgstr ""
+msgstr "Διάβασε τις άδειες των τρίτων μερών"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ok"
@@ -357,7 +347,7 @@ msgstr ""
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "Close"
-msgstr ""
+msgstr "Κλείσιμο"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Backpack"
@@ -577,7 +567,7 @@ msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "You won!"
-msgstr ""
+msgstr "Κέρδισες!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"

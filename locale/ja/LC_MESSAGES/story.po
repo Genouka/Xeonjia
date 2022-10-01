@@ -2,8 +2,9 @@
 # Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Satou <sanna+dee@dismail.de>, 2022.
+# deepdaikon <deepdaikon@tuta.io>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-02-13 20:52+0000\nLast-Translator: Satou <sanna+dee@dismail.de>\nLanguage-Team: Japanese <https://translate.deepdaikon.xyz/projects/xeonjia/story/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Japanese <https://translate.deepdaikon.xyz/projects/xeonjia/story/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -239,7 +240,7 @@ msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "ありがとう！"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "I wish you the best."
@@ -487,7 +488,7 @@ msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Picnic area – Do not leave rubbish, thanks."
-msgstr "ピクニックエリア。ゴミは捨てないでください"
+msgstr "ピクニックエリア。ゴミは捨てないでください。"
 
 #: assets/maps/story/7.tmx:
 msgid "Picnic area ↑"
@@ -919,7 +920,7 @@ msgstr "この地域ではおかしなことが起こる…"
 
 #: assets/maps/story/9.tmx:
 msgid "If you get lost, follow the road signs."
-msgstr "道に迷ったら、道路標識に従おう"
+msgstr "道に迷ったら、道路標識に従おう。"
 
 #: assets/maps/story/19.tmx:
 msgid "Xeonjia Tower ↑"
@@ -1023,7 +1024,7 @@ msgstr ""
 
 #: assets/maps/story/32.tmx:
 msgid "Relax and enjoy the sea."
-msgstr "海をゆっくり楽しんでください"
+msgstr "海をゆっくり楽しんでください。"
 
 #: assets/maps/story/32.tmx:
 msgid "Wow! I had never seen the sea before!"
@@ -1263,7 +1264,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "じゃあね！"
 
 #: assets/maps/story/999.tmx:
 msgid "Do your best!"
@@ -1279,7 +1280,7 @@ msgstr "印が1つでは足りない。"
 
 #: assets/maps/story/999.tmx:
 msgid "Xeonjia Tower – Dwelling of the King of Evil. Stay away."
-msgstr "ゼオンジアタワー。邪悪の王の住まい。近寄るな"
+msgstr "ゼオンジアタワー。邪悪の王の住まい。近寄るな。"
 
 #: assets/maps/story/999.tmx:
 msgid "This door is closed."
@@ -1563,7 +1564,7 @@ msgstr "うん、ありがとう"
 
 #: assets/maps/story/46.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "なぜワシはこんなところにおるのじゃろう。どうしたらええんじゃ？"
 
 #: assets/maps/story/43_tower_1.tmx:
 msgid "Observation Tower"
@@ -1639,7 +1640,7 @@ msgstr "いつでも戻ってきてください。"
 
 #: assets/maps/story/14_house.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "ケガしないように気をつけてください。"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "You're lucky, but it doesn't end here, guaranteed."
@@ -2291,7 +2292,7 @@ msgstr ""
 
 #: assets/data/items-and-events.json:
 msgid "I'm already healthy, I don't need {{selected-item-name}} right now."
-msgstr ""
+msgstr "もう元気だから、{{selected-item-name}}は今のところ必要ない。"
 
 #: assets/data/items-and-events.json:
 msgid "HP UP +5"
@@ -2315,7 +2316,7 @@ msgstr "ザクロジュース"
 
 #: assets/data/items-and-events.json:
 msgid "A bottle of pomegranate juice. It restores 50 HP."
-msgstr " ザクロジュース。50HP回復する。"
+msgstr "ザクロジュース。50HP回復する。"
 
 #: assets/data/items-and-events.json:
 msgid "Healer"

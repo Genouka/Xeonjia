@@ -3,8 +3,9 @@
 # This file is distributed under the same license as Xeonjia.
 # Muha Aliss <muhaaliss@gmail.com>, 2022.
 # Alparslan Şakçi <sakci@protonmail.com>, 2022.
+# deepdaikon <deepdaikon@tuta.io>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-09-20 17:36+0000\nLast-Translator: Alparslan Şakçi <sakci@protonmail.com>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 #, fuzzy
@@ -259,7 +260,7 @@ msgstr ""
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "Teşekkürler!"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "I wish you the best."
@@ -511,15 +512,15 @@ msgstr "Piknik alanı – Lütfen çöplerinizi yere atmayın."
 
 #: assets/maps/story/7.tmx:
 msgid "Picnic area ↑"
-msgstr "Picnic area ↑"
+msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Forest Center ↓"
-msgstr "Forest Center ↓"
+msgstr ""
 
 #: assets/maps/story/28_lp_shop.tmx:
 msgid "Pharmacy"
-msgstr ""
+msgstr "Eczane"
 
 #: assets/maps/story/28_lp_shop.tmx:
 msgid "Welcome to my shop!"
@@ -827,7 +828,7 @@ msgstr ""
 
 #: assets/maps/story/26.tmx:
 msgid "The weather is good today."
-msgstr ""
+msgstr "Bugün hava güzel."
 
 #: assets/maps/story/26.tmx:
 msgid "We keep an eye on you."
@@ -1283,7 +1284,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "Görüşürüz!"
 
 #: assets/maps/story/999.tmx:
 msgid "Do your best!"
@@ -1299,7 +1300,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Xeonjia Tower – Dwelling of the King of Evil. Stay away."
-msgstr "Xeonjia Kulesi – Kötülüklerin Efendisi'nin evi. Uzak durun,"
+msgstr "Xeonjia Kulesi – Kötülüklerin Efendisi'nin evi. Uzak durun."
 
 #: assets/maps/story/999.tmx:
 msgid "This door is closed."
@@ -1335,7 +1336,7 @@ msgstr ""
 
 #: assets/maps/story/25_house.tmx:
 msgid "I'm planning a surprise wedding for my son.\nI hope he doesn't find out."
-msgstr "Oğlum için sürpriz bir düğün yapmayı planlıyorum. Umarım haberi olmaz."
+msgstr "Oğlum için sürpriz bir düğün yapmayı planlıyorum.\nUmarım haberi olmaz."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Home"
@@ -1583,7 +1584,7 @@ msgstr ""
 
 #: assets/maps/story/46.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "Neden buradayım? Ne yapmam gerekiyor?"
 
 #: assets/maps/story/43_tower_1.tmx:
 msgid "Observation Tower"

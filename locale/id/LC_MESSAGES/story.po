@@ -4,7 +4,7 @@
 # Hunter <dualhan@yahoo.com>, 2021.
 # deepdaikon <deepdaikon@tuta.io>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-02-17 04:14+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Indonesian <https://translate.deepdaikon.xyz/projects/xeonjia/story/id/>\nLanguage: id\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Indonesian <https://translate.deepdaikon.xyz/projects/xeonjia/story/id/>\nLanguage: id\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -36,8 +36,9 @@ msgid "So… tell me, how are you? Is everything okay? How is the journey going?
 msgstr "Jadi... ceritakanlah, bagaimana keadaanmu? Apakah semuanya baik-baik saja? Bagaimana perjalananmu kemari?"
 
 #: assets/maps/story/30_cityhall.tmx:
+#, fuzzy
 msgid "Everything good, I just defeated the Hoarfrost Team and I got the first signet!"
-msgstr ""
+msgstr "Semuanya bagus, aku baru saja mengalah tim Hoarfrost!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Oh really?! This is great news!"
@@ -1642,7 +1643,7 @@ msgstr "Kembalilah suatu saat nanti."
 
 #: assets/maps/story/14_house.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "Berhati-hatilah, jangan sampai terluka."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "You're lucky, but it doesn't end here, guaranteed."

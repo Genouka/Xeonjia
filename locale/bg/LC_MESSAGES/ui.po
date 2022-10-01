@@ -3,17 +3,7 @@
 # This file is distributed under the same license as Xeonjia.
 # deepdaikon <deepdaikon@tuta.io>, 2022.
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: bg\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Bulgarian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/bg/>\nLanguage: bg\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -29,11 +19,11 @@ msgstr ""
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
-msgstr ""
+msgstr "Информация"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
@@ -53,11 +43,11 @@ msgstr ""
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "OK"
-msgstr ""
+msgstr "ОК"
 
 #: lib/ui/screens/arena/widgets/play_button.dart:
 msgid "Play"
-msgstr ""
+msgstr "Играй"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Multiplayer Mode"
@@ -73,19 +63,19 @@ msgstr ""
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Easy"
-msgstr ""
+msgstr "Лесно"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Medium"
-msgstr ""
+msgstr "Средно"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Hard"
-msgstr ""
+msgstr "Трудно"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Multiplayer"
-msgstr ""
+msgstr "Мултиплейър"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Map"
@@ -97,7 +87,7 @@ msgstr ""
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Difficulty"
-msgstr ""
+msgstr "Трудност"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Match difficulty"
@@ -105,7 +95,7 @@ msgstr ""
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points required"
-msgstr ""
+msgstr "Необходими точки"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points needed to win"
@@ -137,19 +127,19 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore"
-msgstr ""
+msgstr "Възстанови"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore default settings?"
-msgstr ""
+msgstr "Възстанови настройките по подразбиране?"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Are you sure you want to delete your settings and restore default ones?"
-msgstr ""
+msgstr "Сигурен ли си, че искаш да изтриеш настройките си и да възстановиш тези по подразбиране?"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Cancel"
-msgstr ""
+msgstr "Отказ"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Smallest"
@@ -221,23 +211,23 @@ msgstr ""
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Language"
-msgstr ""
+msgstr "Език"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "App language"
-msgstr ""
+msgstr "Език на приложението"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "System default"
-msgstr ""
+msgstr "Систмно подразбиране"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "By %s"
-msgstr ""
+msgstr "От %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App developed by %s"
-msgstr ""
+msgstr "Приложение, разработено от %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version: %s"
@@ -245,23 +235,23 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
-msgstr ""
+msgstr "Версия на приложението"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Donate"
-msgstr ""
+msgstr "Дари"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Support the development"
-msgstr ""
+msgstr "Подкрепи развитието"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate"
-msgstr ""
+msgstr "Превод"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate in your language"
-msgstr ""
+msgstr "Преведи на твоя език"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
@@ -273,19 +263,19 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
-msgstr ""
+msgstr "Докладвай за грешки"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs or request new feature"
-msgstr ""
+msgstr "Докладвай за грешки или заяви нова функция"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View source code"
-msgstr ""
+msgstr "Преглед на изходния код"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Look at the source code"
-msgstr ""
+msgstr "Погледни изходния код"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View License (GPLv3)"
@@ -293,15 +283,15 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
-msgstr ""
+msgstr "Прочети софтуерен лиценз"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Third Party Licenses"
-msgstr ""
+msgstr "Лицензи на Трети Страни"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read third party notices"
-msgstr ""
+msgstr "Прочети известията на трети страни"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ok"
@@ -357,7 +347,7 @@ msgstr ""
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "Close"
-msgstr ""
+msgstr "Затвори"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Backpack"
@@ -577,7 +567,7 @@ msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "You won!"
-msgstr ""
+msgstr "Спечели!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"

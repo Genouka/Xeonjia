@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # araccaine <arac.caine@posteo.de>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-01-09 17:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -1267,7 +1267,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "Tschüss!"
 
 #: assets/maps/story/999.tmx:
 msgid "Do your best!"
@@ -1283,7 +1283,7 @@ msgstr "Ein Siegel reicht nicht aus."
 
 #: assets/maps/story/999.tmx:
 msgid "Xeonjia Tower – Dwelling of the King of Evil. Stay away."
-msgstr "Xeonjia Turm – Wohnsitz des König des Bösen. Halte dich fern"
+msgstr "Xeonjia Turm – Wohnsitz des König des Bösen. Halte dich fern."
 
 #: assets/maps/story/999.tmx:
 msgid "This door is closed."
@@ -1319,7 +1319,7 @@ msgstr ""
 
 #: assets/maps/story/25_house.tmx:
 msgid "I'm planning a surprise wedding for my son.\nI hope he doesn't find out."
-msgstr "Ich plane eine Überraschungshochzeit für meinen Sohn. Ich hoffe, er findet es nicht heraus."
+msgstr "Ich plane eine Überraschungshochzeit für meinen Sohn.\nIch hoffe, er findet es nicht heraus."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Home"
@@ -1567,7 +1567,7 @@ msgstr "Ja danke"
 
 #: assets/maps/story/46.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "Warum hast du mich hierher bestellt? Was soll ich tun?"
 
 #: assets/maps/story/43_tower_1.tmx:
 msgid "Observation Tower"
@@ -1643,7 +1643,7 @@ msgstr "Komm jederzeit wieder."
 
 #: assets/maps/story/14_house.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "Pass gut auf, dass du dir nicht wehtust."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "You're lucky, but it doesn't end here, guaranteed."
@@ -2307,11 +2307,11 @@ msgstr ""
 
 #: assets/data/items-and-events.json:
 msgid "Fresh Water"
-msgstr " Frisches Wasser"
+msgstr "Frisches Wasser"
 
 #: assets/data/items-and-events.json:
 msgid "A bottle of water. It restores 20 HP."
-msgstr "Eine Flasche Wasser.\nStellt 20 HP wieder her."
+msgstr "Eine Flasche Wasser. Stellt 20 HP wieder her."
 
 #: assets/data/items-and-events.json:
 msgid "Pomegranate juice"
@@ -2319,7 +2319,7 @@ msgstr "Granatapfelsaft"
 
 #: assets/data/items-and-events.json:
 msgid "A bottle of pomegranate juice. It restores 50 HP."
-msgstr "Eine Flasche Granatapfelsaft.\nStellt 50 HP wieder her."
+msgstr "Eine Flasche Granatapfelsaft. Stellt 50 HP wieder her."
 
 #: assets/data/items-and-events.json:
 msgid "Healer"

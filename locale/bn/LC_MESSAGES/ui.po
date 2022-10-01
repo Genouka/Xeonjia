@@ -2,8 +2,9 @@
 # Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Xika Ka <xikaka8452@serosin.com>, 2022.
+# deepdaikon <deepdaikon@tuta.io>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-06-15 20:50+0000\nLast-Translator: Xika Ka <xikaka8452@serosin.com>\nLanguage-Team: Bengali <https://translate.deepdaikon.xyz/projects/xeonjia/ui/bn/>\nLanguage: bn\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Bengali <https://translate.deepdaikon.xyz/projects/xeonjia/ui/bn/>\nLanguage: bn\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -43,7 +44,7 @@ msgstr ""
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "OK"
-msgstr ""
+msgstr "আচ্ছা"
 
 #: lib/ui/screens/arena/widgets/play_button.dart:
 msgid "Play"

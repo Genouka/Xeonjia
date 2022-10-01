@@ -4,8 +4,9 @@
 # Liu Tao <lyuutau@outlook.com>, 2021.
 # KMX <kumax2048@protonmail.ch>, 2021.
 # 苏汀 <753594451@qq.com>, 2022.
+# deepdaikon <deepdaikon@tuta.io>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-09-12 22:35+0000\nLast-Translator: 苏汀 <753594451@qq.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -147,9 +148,8 @@ msgid "A life's work has been destroyed…"
 msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
-#, fuzzy
 msgid "Someone used this plant to do some experiments."
-msgstr "某人用这株植物做实验"
+msgstr "某人用这株植物做实验。"
 
 #: assets/maps/story/24_lab.tmx:
 #, fuzzy
@@ -502,7 +502,7 @@ msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Picnic area – Do not leave rubbish, thanks."
-msgstr "野餐区 – 请不要留下垃圾，谢谢"
+msgstr "野餐区 – 请不要留下垃圾，谢谢。"
 
 #: assets/maps/story/7.tmx:
 msgid "Picnic area ↑"
@@ -710,7 +710,7 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "No"
@@ -1289,7 +1289,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "拜拜！"
 
 #: assets/maps/story/999.tmx:
 msgid "Do your best!"
@@ -1668,7 +1668,7 @@ msgstr "随时都可以回来。"
 
 #: assets/maps/story/14_house.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "小心点，别受伤了。"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "You're lucky, but it doesn't end here, guaranteed."
@@ -1976,7 +1976,7 @@ msgstr ""
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "The tower is so ugly."
-msgstr ""
+msgstr "这座塔长得也太难看了。"
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "A table."
