@@ -10,20 +10,36 @@ const List<Locale> enabledLocales = [
   Locale('fr'),
   Locale('hu'),
   Locale('it'),
+  Locale('ja'),
   Locale('ru'),
+  Locale('tr'),
   Locale('vi'),
 ];
 final List<Locale> supportedLocales = [
   ...enabledLocales,
+  const Locale('be'),
+  const Locale('bn'),
   const Locale('id'),
   const Locale('uk'),
   const Locale('zh'),
+];
+const languagesWithSpecialCharacters = [
+  'be',
+  'bn',
+  'ja',
+  'ru',
+  'uk',
+  'vi',
+  'zh',
 ];
 
 const Map<String, List<String>> languageNames = {
   'zh': ['Chinese', '汉语'],
   'es': ['Spanish', 'Español'],
   'en': ['English', 'English'],
+  'be': ['Belarusian', 'беларуская мова'],
+  'bn': ['Bengali', 'বাংলা'],
+  'id': ['Indonesian', 'Bahasa Indonesia'],
   'ar': ['Arabic', 'العربية'],
   'he': ['Hebrew', 'עברית'],
   'hu': ['Hungarian', 'Magyar'],

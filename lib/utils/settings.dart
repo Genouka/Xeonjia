@@ -57,5 +57,5 @@ class Settings {
 
   /// True if the system font should be used instead of dd5x7.ttf
   bool get useSystemFont =>
-      ['ru', 'uk', 'vi', 'zh'].contains(locale.languageCode);
+      languagesWithSpecialCharacters.contains(locale.languageCode);
 }
