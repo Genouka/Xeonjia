@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="98">
  <properties>
-  <property name="action" value="(map-name &quot;Mossy Crypt -3F&quot;)"/>
-  <property name="map-name" value="Mossy Crypt -3F"/>
+  <property name="action" value="(map-name &quot;MOSSY CRYPT – B3F&quot;)"/>
+  <property name="map-name" value="MOSSY CRYPT – B3F"/>
   <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
@@ -35,7 +35,7 @@
     <property name="level" type="float" value="9"/>
    </properties>
   </object>
-  <object id="87" class="NPC" gid="48" x="304" y="176" width="16" height="16">
+  <object id="87" class="NPC" gid="48" x="304" y="192" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
