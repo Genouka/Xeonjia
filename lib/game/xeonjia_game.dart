@@ -479,7 +479,7 @@ class XeonjiaGame extends FlameGame
     currentBgm = newBgm;
     _backgroundMusic?.stop();
     Future.delayed(const Duration(seconds: 1), () {
-      _backgroundMusic?.play('bgm/' + currentBgm!);
+      _backgroundMusic?.play('audio/bgm/' + currentBgm!);
     });
   }
 
