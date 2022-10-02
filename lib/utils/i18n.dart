@@ -40,6 +40,7 @@ const Map<String, List<String>> languageNames = {
   'be': ['Belarusian', 'беларуская мова'],
   'bn': ['Bengali', 'বাংলা'],
   'id': ['Indonesian', 'Bahasa Indonesia'],
+  'uk': ['Ukrainian', 'украї́нська мо́ва'],
   'ar': ['Arabic', 'العربية'],
   'he': ['Hebrew', 'עברית'],
   'hu': ['Hungarian', 'Magyar'],

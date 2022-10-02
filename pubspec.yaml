@@ -43,6 +43,8 @@ flutter:
     - assets/maps/arena/
     - assets/maps/story/
     - assets/maps/tilesets/
+    - locale/be/LC_MESSAGES/
+    - locale/bn/LC_MESSAGES/
     - locale/de/LC_MESSAGES/
     - locale/es/LC_MESSAGES/
     - locale/fr/LC_MESSAGES/
