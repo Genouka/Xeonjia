@@ -369,6 +369,7 @@ class XeonjiaGame extends FlameGame
   void update(double dt) {
     _timer?.update(dt);
     elapsed += dt;
+    if (_gesturesDirection != null) _gesturesElapsed -= dt;
     super.update(dt);
   }
 
@@ -709,16 +710,33 @@ class XeonjiaGame extends FlameGame
     addCustomWidgetOverlay('endMenu', EndMenu(this, lostMoney ?? 0));
   }
 
-  Offset? _panGestureOffset;
+  Direction? _gesturesDirection;
+  double _gesturesElapsed = 0;
+  bool _gesturesPlayerMoved = false;
 
   @override
-  void onPanUpdate(DragUpdateInfo info) {
+  void onPanStart(DragStartInfo info) => _gesturesElapsed = 1;
+
+  @override
+  void onPanUpdate(DragUpdateInfo info) async {
     if (settings.showDPad && !miniMapEnabled) return;
     if (!_pause &&
         (info.raw.delta.dx.abs() > 5 || info.raw.delta.dy.abs() > 5)) {
-      _panGestureOffset = info.raw.delta.dx.abs() > info.raw.delta.dy.abs()
-          ? Offset(info.raw.delta.dx, 0)
-          : Offset(0, info.raw.delta.dy);
+      _gesturesDirection = GetDirection.fromOffset(
+          info.raw.delta.dx.abs() > info.raw.delta.dy.abs()
+              ? Offset(info.raw.delta.dx, 0)
+              : Offset(0, info.raw.delta.dy));
+      if (_gesturesElapsed > 0) {
+        if (!_gesturesPlayerMoved) {
+          _gesturesPlayerMoved = true;
+          movePlayer(_gesturesDirection!);
+        }
+        return;
+      }
+      while (_gesturesDirection != null && isNotPaused) {
+        movePlayer(_gesturesDirection!, slow: true);
+        await Future.delayed(const Duration(milliseconds: 50));
+      }
     } else if (miniMapEnabled) {
       camera.snapTo(Vector2(
           _moveCamera(size.x, map.width,
@@ -729,11 +747,12 @@ class XeonjiaGame extends FlameGame
   }
 
   @override
-  // ignore: avoid_renaming_method_parameters
-  void onPanEnd(DragEndInfo _) {
-    if (_panGestureOffset != null) {
-      movePlayer(GetDirection.fromOffset(_panGestureOffset!));
-    }
+  void onPanEnd(DragEndInfo info) => onPanCancel();
+
+  @override
+  void onPanCancel() {
+    _gesturesDirection = null;
+    _gesturesPlayerMoved = false;
   }
 
   @override

@@ -29,7 +29,7 @@ mixin Walker on BasicComponent {
 
   /// Component speed ([componentSize] per second)
   double get speed => defaultSpeed;
-  bool _slowedMove = false;
+  double _slowedMove = 0;
 
   /// Number of moves done
   int movesCounter = 0;
@@ -67,7 +67,7 @@ mixin Walker on BasicComponent {
       {bool forced = false, bool animated = true, bool slow = false}) {
     if (!isBeingDeleted && (isStationary || forced)) {
       wasStationary = true;
-      _slowedMove = slow;
+      _slowedMove = slow ? 0.2 : 0;
       if (animated &&
           ((animation?.done() ?? true) || orientation != newDirection)) {
         animation = atlas.getAnimation('$name-${newDirection.index}-walking');
@@ -97,13 +97,14 @@ mixin Walker on BasicComponent {
 
   /// Recalculate component position
   void _move(double dt) {
+    _slowedMove -= dt;
     Rect? collidedRect;
     List<BasicComponent> collidedComponents = [];
     final overlappedComponents = <BasicComponent>[];
 
     // Distance traveled
     final delta =
-        min((_slowedMove ? speed * 0.8 : speed) * dt, componentSize - 1);
+        min((_slowedMove > 0 ? speed * 0.6 : speed) * dt, componentSize - 1);
     final candidatePositionTemp =
         toRect().translate(direction!.dx * delta, direction!.dy * delta);
     final candidatePosition = Rect.fromLTWH(
@@ -191,7 +192,7 @@ mixin Walker on BasicComponent {
   @mustCallSuper
   void stop() {
     direction = null;
-    _slowedMove = false;
+    _slowedMove = 0;
   }
 
   /// Get components under this one
