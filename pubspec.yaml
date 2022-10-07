@@ -62,6 +62,9 @@ flutter:
     - family: dd5x7
       fonts:
         - asset: assets/fonts/dd5x7.ttf
+    - family: LanaPixel
+      fonts:
+        - asset: assets/fonts/LanaPixel.ttf
     - family: kobi
       fonts:
         - asset: assets/fonts/kobi-linear.ttf

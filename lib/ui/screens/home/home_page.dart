@@ -99,8 +99,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                     48,
                                     (MediaQuery.of(context).size.width - 20) /
                                         8) /
-                                (settings.useSystemFont ? 1.5 : 1),
-                            fontFamily: settings.useSystemFont ? null : 'dd5x7',
+                                (settings.smallerFont ? 1.5 : 1),
+                            fontFamily: settings.font,
                           ),
                         ),
                       ),

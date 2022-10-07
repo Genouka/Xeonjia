@@ -15,7 +15,7 @@ class BattleTextBox extends TextComponent with HasGameRef<XeonjiaGame> {
           textRenderer: TextPaint(
             style: TextStyle(
               fontSize: 64,
-              fontFamily: settings.useSystemFont ? null : 'dd5x7',
+              fontFamily: settings.font,
               color: BasicPalette.white.color,
             ),
           ),

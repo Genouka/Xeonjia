@@ -55,7 +55,12 @@ class Settings {
       : const Locale('en');
   set locale(Locale? locale) => _languageCode = locale?.toString();
 
-  /// True if the system font should be used instead of dd5x7.ttf
-  bool get useSystemFont =>
+  /// Font used
+  String get font =>
+      _useExtendedFont ? 'LanaPixel' : (_useSystemFont ? '' : 'dd5x7');
+  bool get smallerFont => font != 'dd5x7';
+  bool get _useExtendedFont =>
       languagesWithSpecialCharacters.contains(locale.languageCode);
+  bool get _useSystemFont =>
+      languagesWithNonSupportedCharacters.contains(locale.languageCode);
 }

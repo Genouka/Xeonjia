@@ -24,13 +24,15 @@ final List<Locale> supportedLocales = [
   const Locale('zh'),
 ];
 const languagesWithSpecialCharacters = [
-  'be',
-  'bn',
   'ja',
   'ru',
   'uk',
-  'vi',
   'zh',
+];
+const languagesWithNonSupportedCharacters = [
+  'be',
+  'bn',
+  'vi',
 ];
 
 const Map<String, List<String>> languageNames = {
