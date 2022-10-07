@@ -713,15 +713,18 @@ class XeonjiaGame extends FlameGame
   Direction? _gesturesDirection;
   double _gesturesElapsed = 0;
   bool _gesturesPlayerMoved = false;
+  String _gesturesMapId = '';
 
   @override
-  void onPanStart(DragStartInfo info) => _gesturesElapsed = 1;
+  void onPanStart(DragStartInfo info) {
+    _gesturesElapsed = 1;
+    _gesturesMapId = map.id;
+  }
 
   @override
   void onPanUpdate(DragUpdateInfo info) async {
     if (settings.showDPad && !miniMapEnabled) return;
-    if (!_pause &&
-        (info.raw.delta.dx.abs() > 5 || info.raw.delta.dy.abs() > 5)) {
+    if (!_pause) {
       _gesturesDirection = GetDirection.fromOffset(
           info.raw.delta.dx.abs() > info.raw.delta.dy.abs()
               ? Offset(info.raw.delta.dx, 0)
@@ -733,7 +736,9 @@ class XeonjiaGame extends FlameGame
         }
         return;
       }
-      while (_gesturesDirection != null && isNotPaused) {
+      while (_gesturesDirection != null &&
+          isNotPaused &&
+          _gesturesMapId == map.id) {
         movePlayer(_gesturesDirection!, slow: true);
         await Future.delayed(const Duration(milliseconds: 50));
       }
