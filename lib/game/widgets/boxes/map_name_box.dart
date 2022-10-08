@@ -23,7 +23,6 @@ class MapNameBox extends StatelessWidget {
               child: Text(
                 text!.i18n.toUpperCase() + ' ',
                 style: Theme.of(context).textTheme.button,
-                textAlign: TextAlign.center,
                 maxLines: 1,
               ),
             ),

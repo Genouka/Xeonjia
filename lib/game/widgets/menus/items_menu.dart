@@ -116,7 +116,6 @@ class _ItemsMenuState extends State<ItemsMenu> {
           child: Text(
             widget.text.toUpperCase(),
             style: Theme.of(context).textTheme.button,
-            textAlign: TextAlign.center,
             maxLines: 1,
           ),
         ),
@@ -130,7 +129,6 @@ class _ItemsMenuState extends State<ItemsMenu> {
             '%s HP'.i18n.fill([widget.gameRef.playerOne!.hp.round()]) +
                 '  /  ${widget.gameRef.playerOne!.money} ¤',
             style: Theme.of(context).textTheme.button,
-            textAlign: TextAlign.center,
             maxLines: 1,
           ),
         ),
