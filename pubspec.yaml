@@ -56,7 +56,7 @@ flutter:
     - locale/tr/LC_MESSAGES/
     - locale/uk/LC_MESSAGES/
     - locale/vi/LC_MESSAGES/
-    - locale/zh_Hans/LC_MESSAGES/
+    - locale/zh-Hans/LC_MESSAGES/
 
   fonts:
     - family: dd5x7
