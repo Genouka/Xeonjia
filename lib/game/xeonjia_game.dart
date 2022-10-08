@@ -615,11 +615,9 @@ class XeonjiaGame extends FlameGame
               : min(previousValue + delta, 2));
     }
     if (previousValue != miniMapZoom) {
-      worldMapEnabled
-          ? updateCamera(
-              camera.position.x + size.x / 2, camera.position.y + size.y / 2)
-          : updateCamera(
-              playerOne!.x * miniMapZoom, playerOne!.y * miniMapZoom);
+      updateCamera(
+          (camera.position.x + size.x / 2) * miniMapZoom / previousValue,
+          (camera.position.y + size.y / 2) * miniMapZoom / previousValue);
     }
   }
 
