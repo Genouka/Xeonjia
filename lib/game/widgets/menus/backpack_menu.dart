@@ -18,7 +18,7 @@ class BackpackMenu extends ItemsMenu {
             });
             if (gameRef.playerOne!.gemCount > 0) {
               list.add(Item({
-                'id': 'gems_*',
+                'id': 'gem_*',
                 'name': 'Gems'.i18n,
                 'description':
                     'Mysterious gems scattered around the world.'.i18n,
