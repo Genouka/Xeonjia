@@ -108,8 +108,7 @@
    (wait)
    (dialog '((&quot;/hero&quot; &quot;I can get out of here now.&quot;)))
    (wait)
-   (add-room &quot;t1_01&quot;)
-   (teleport &quot;22&quot;))
+   (teleport-multi &quot;t1_01&quot; &quot;22&quot;))
 (dialog '((&quot;/hero&quot; &quot;The henchmen are after me! I'll get the signet later.&quot;))))</property>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
     (delete-me))</property>
