@@ -181,7 +181,8 @@
   (quiet '(#f 90))
   (quiet '(#f 91))
   (set &quot;t1_06-talk&quot; #t)
-  (start-battle))</property>
+  (start-battle)
+  (music &quot;boss&quot;))</property>
     <property name="actionOnEvent">(if  (get &quot;t1_06-talk&quot;)
   (delete-me))</property>
    </properties>

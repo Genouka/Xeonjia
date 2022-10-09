@@ -4,26 +4,26 @@
   <property name="action">(if (== (last-place) &quot;39&quot;)
     (map-name &quot;Zamelis Village&quot;))</property>
   <property name="map-name" value="Zamelis Village"/>
-  <property name="music" value="town"/>
+  <property name="music" value="village"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="361" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="393" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="366" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="398" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="22">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA8WSPQvCMBCGk8n+A3FwUdCC4OAXfqNuokjFQdTF0R/r2M2lg4OjY7f6hl7oEdIacPCFB3pJHq69JpBCBH/gnMOO9rcFZxJhz57cA/AIHs/RtSUSv7kvVi9xzgcrme/qXiWsx2x9gLoJhgWuzsPoO8e5Nlg4uKpvZNSh4/fGRl8el1m9wd1YV/WJ/v9F2vcjIjT2XGrd15Y1vfOGvXOZPSs3NiUK/94KqDGqdB/NWTUs7pGcOvN1fMssuXsDLYOicPcKOqALeqDP3Ck9JyK7r9wdgTGYyPTsTGbz+tY3L9zld8DF1b7iKdK5x47uB/EqqaMoBQAA
+   H4sIAAAAAAAAA8WTPQvCMBCGG+ho/4E4OKiDBcHBL/xG3USRioOoi6M/1rGbSwcHR8eAb+gFj5jWgIMvPLTX5OHaaxsJz4v+wDGDDa2vc/b4wJYtuTsQEDyBo2tL4v3mPlg9x74QLES2q3sVcJTseg91HfRzXJ2b0XeKfU0wc3BV38SoY8fnlUZfHpdZPcHVuK7qA73/k7CvJ0RsrLnUuq8tS7rnFbvnIjtXrvyw0vDnLYEqo0zfozmrisXdk1Njvk5omSV3L6BhkBfunkELtEEHdJk7pnOf/VfcHYAhGIl070S85/Wtb1a4y78BF1f7iruXzl06ui8ZWqsuKAUAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="59" class="NPC" gid="178" x="48" y="48" width="16" height="16">
+  <object id="59" class="NPC" gid="183" x="48" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I want to reach the capital quickly but the only way is traveling by land.&quot;)))"/>
    </properties>
   </object>
-  <object id="60" class="NPC" gid="189" x="192" y="96" width="16" height="16">
+  <object id="60" class="NPC" gid="194" x="192" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I really needed a pomegranate juice.&quot;)))"/>
    </properties>
@@ -31,12 +31,12 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="15" height="22">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIB9wMxIWw6VGGIs4uhiIzwHEPEDMC8R8OPThAyJA9aJALEaiPloDFSzucQSKaQCxExluNQPq0QdiCzL02gH12ACxA43DCFv8DnYAc2MMIyqfHOAP1CsFxNJALAPEOiSYpYimVhXKB6UZFQJpRhMop4WEdaFqyU0zoPxLTJrhBMpxkRnngkB1QoMofQAAiETqqCgFAAA=
+   H4sIAAAAAAAAA2NgIB8IMBIWw6VGAos4uhiIzwvEgkAsBMTCOPThA5JA9VJALE2iPloDTSzucQOK6QKxOxlutQbqMQFiWzL0OgP1OAKxK43DCFv8DnYAc2MiIyqfHBAC1CsPxApArAjEhiSYpYamVgvKB6UZTQJpRg8op4+EjaBqyU0zoPxLTJrhA8rxkxnnYkB14oMofQAA3qTYWCgFAAA=
   </data>
  </layer>
  <layer id="11" name="Tile Layer 3" width="15" height="22">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAXkAGdGBgYXIHZlJE58uABuRvz8wQho5WZOoDlcVDBruKeZ4QAAsVirsigFAAA=
+   H4sIAAAAAAAAA2NgGAXkAA9GBgZPIPZiJE58uAABRvz8wQho5WY+oDn8VDBruKeZ4QAALPxxxCgFAAA=
   </data>
  </layer>
  <objectgroup id="10" name="spawn points">
@@ -60,7 +60,7 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="62" gid="255" x="16" y="64" width="16" height="16">
+  <object id="62" gid="260" x="16" y="64" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define event-id &quot;38.vase1&quot;)
@@ -73,7 +73,7 @@
         (dialog '((&quot;There are still items in here but I've already taken one.&quot;)))))</property>
    </properties>
   </object>
-  <object id="63" gid="255" x="48" y="304" width="16" height="16">
+  <object id="63" gid="260" x="48" y="304" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;38.vase2&quot;)

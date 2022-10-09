@@ -4,7 +4,7 @@
   <property name="action" value="(map-name &quot;Hexa Cave&quot;)"/>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="Hexa Cave"/>
-  <property name="music" value="none"/>
+  <property name="music" value="mystic"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
