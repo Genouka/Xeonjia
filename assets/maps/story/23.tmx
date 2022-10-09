@@ -5,7 +5,6 @@
     (map-name &quot;Route 2&quot;))</property>
   <property name="can-escape" type="bool" value="true"/>
   <property name="map-name" value="Route 2"/>
-  <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>

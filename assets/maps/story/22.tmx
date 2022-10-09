@@ -4,7 +4,6 @@
   <property name="action">(if (! (== (last-place) &quot;27&quot;))
   (map-name &quot;Route 3&quot;))</property>
   <property name="map-name" value="Route 3"/>
-  <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>

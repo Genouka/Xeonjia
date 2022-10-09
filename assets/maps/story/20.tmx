@@ -3,12 +3,12 @@
  <properties>
   <property name="can-escape" type="bool" value="true"/>
   <property name="map-name" value="Mitsu Forest"/>
-  <property name="music" value="enemies"/>
+  <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/basic.tsx"/>
- <tileset firstgid="173" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="154" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="178" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="11">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAAzNgYGCQIAEzINEKDKQBOyR9xOgVBmIRLGLmaGLeWOzABrDZi2wWLr02QGwLxP5YzMOmjhh7vdH46Gb7IOk1wKGHEDDHYi+xQIECvTC/gPTDwgTENoDS5khu84HSLEhqAU5wH0mUAgAA
@@ -17,29 +17,29 @@
  <objectgroup id="9" name="npc">
   <object id="39" class="SliderCpu" gid="129" x="96" y="96" width="16" height="16">
    <properties>
-    <property name="level" type="float" value="15"/>
     <property name="hp" type="float" value="10"/>
+    <property name="level" type="float" value="15"/>
    </properties>
   </object>
   <object id="40" class="SliderCpu" gid="129" x="160" y="80" width="16" height="16">
    <properties>
-    <property name="level" type="float" value="15"/>
     <property name="hp" type="float" value="10"/>
+    <property name="level" type="float" value="15"/>
    </properties>
   </object>
   <object id="42" class="SliderCpu" gid="129" x="160" y="128" width="16" height="16">
    <properties>
-    <property name="level" type="float" value="15"/>
     <property name="hp" type="float" value="10"/>
+    <property name="level" type="float" value="15"/>
    </properties>
   </object>
   <object id="43" class="SliderCpu" gid="129" x="128" y="32" width="16" height="16">
    <properties>
-    <property name="level" type="float" value="15"/>
     <property name="hp" type="float" value="10"/>
+    <property name="level" type="float" value="15"/>
    </properties>
   </object>
-  <object id="47" class="NPC" gid="208" x="160" y="48" width="16" height="16">
+  <object id="47" class="NPC" gid="213" x="160" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I advise you to go away.\nThese monsters are too strong.&quot;)))"/>
    </properties>
@@ -66,7 +66,7 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="46" gid="166" x="64" y="32" width="16" height="16">
+  <object id="46" gid="171" x="64" y="32" width="16" height="16">
    <properties>
     <property name="itemId" value="gem_2"/>
    </properties>

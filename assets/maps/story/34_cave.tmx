@@ -4,26 +4,26 @@
   <property name="action" value="(map-name &quot;Hexa Cave&quot;)"/>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="Hexa Cave"/>
-  <property name="music" value="enemies"/>
+  <property name="music" value="none"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="361" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="393" source="../tilesets/crypt-2.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="366" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="398" source="../tilesets/crypt-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA1vJyMCwFQmvguKtWMSR+auBeCMQTwJiUsBEoPrNUL1TSdQ7HUnvLBL1zkTSSw7YjMe/Z4H4HBCfx6KPkH+vAvE1IL6ORS8h/94F4ntAfB+LXkL+nQ0UXwjEc3DI0yqs8IHBnDZ68MiB9O4E4l1Y8DogXgTEa3DI7wZiAOfP7BmEAwAA
+   H4sIAAAAAAAAA1vHyMCwCwmvh+JdWMSR+RuAeBsQTwdiUsA0oPodUL2zSNQ7B0nvfBL1zkPSSw7Ygce/l4D4MhBfwaKPkH9vAfFtIL6DRS8h/z4C4sdA/ASLXkL+XQAUXwbEC3HI0yqs8IHBnDYm4pED6d0HxPux4M1AvByIN+KQPwDEAJQ8dpaEAwAA
   </data>
  </layer>
  <layer id="6" name="Tile Layer 2" width="15" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAXUAOsZyde7nQK9o2DoAwDJtL/ihAMAAA==
+   H4sIAAAAAAAAA2NgGAXUAFsYyde7hwK9o2DoAwCLJ3eihAMAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="62" class="NPC" gid="386" x="112" y="144" width="16" height="16">
+  <object id="62" class="NPC" gid="391" x="112" y="144" width="16" height="16">
    <properties>
     <property name="action">(if (not (is-visible 64))
   (if (!get &quot;34-cave-talk-shen-1&quot;)
@@ -64,7 +64,7 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="64" gid="416" x="112" y="96" width="16" height="16">
+  <object id="64" gid="421" x="112" y="96" width="16" height="16">
    <properties>
     <property name="actionOnEvent">(if (and (and (!get &quot;34-cave-spirit&quot;) (is-visible 74)) (and (is-visible 77) (and (is-visible 78) (and (is-visible 81) (and (is-visible 83) (is-visible 76))))))
   (show 64)
@@ -74,7 +74,7 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="72" gid="408" x="32" y="112" width="16" height="16">
+  <object id="72" gid="413" x="32" y="112" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
@@ -93,7 +93,7 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="74" gid="408" x="32" y="192" width="16" height="16">
+  <object id="74" gid="413" x="32" y="192" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
@@ -112,7 +112,7 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="75" gid="408" x="192" y="112" width="16" height="16">
+  <object id="75" gid="413" x="192" y="112" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
@@ -131,7 +131,7 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="76" gid="408" x="192" y="48" width="16" height="16">
+  <object id="76" gid="413" x="192" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
@@ -150,7 +150,7 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="77" gid="400" x="32" y="112" width="16" height="16">
+  <object id="77" gid="405" x="32" y="112" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
@@ -168,7 +168,7 @@
     (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
    </properties>
   </object>
-  <object id="78" gid="408" x="32" y="48" width="16" height="16">
+  <object id="78" gid="413" x="32" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
@@ -187,7 +187,7 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="79" gid="400" x="32" y="48" width="16" height="16">
+  <object id="79" gid="405" x="32" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
   (begin
@@ -205,7 +205,7 @@
   (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
    </properties>
   </object>
-  <object id="80" gid="408" x="192" y="192" width="16" height="16">
+  <object id="80" gid="413" x="192" y="192" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
@@ -224,7 +224,7 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="81" gid="400" x="192" y="192" width="16" height="16">
+  <object id="81" gid="405" x="192" y="192" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
@@ -242,7 +242,7 @@
     (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
    </properties>
   </object>
-  <object id="82" gid="400" x="192" y="48" width="16" height="16">
+  <object id="82" gid="405" x="192" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
@@ -260,7 +260,7 @@
     (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
    </properties>
   </object>
-  <object id="83" gid="400" x="192" y="112" width="16" height="16">
+  <object id="83" gid="405" x="192" y="112" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
@@ -278,7 +278,7 @@
     (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
    </properties>
   </object>
-  <object id="84" gid="400" x="32" y="192" width="16" height="16">
+  <object id="84" gid="405" x="32" y="192" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
@@ -340,7 +340,7 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="87" gid="445" x="112" y="128" width="16" height="16">
+  <object id="87" gid="450" x="112" y="128" width="16" height="16">
    <properties>
     <property name="action">(if (not (is-visible 64))
     (dialog-kobi '((&quot;/&quot; &quot;Everything originated from water, everything will return to water.&quot;)))
