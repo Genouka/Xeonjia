@@ -94,6 +94,6 @@ Except where otherwise noted, all the background music of this game are licensed
 Commons Attribution-ShareAlike 4.0 International License
 ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
 
-The following are adapted artwork from Yubatake and are licensed under the Creative Commons
-Attribution 3.0 Unported License ([CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)):
-city.oga, enemies.oga, forest.oga, road.oga, town.oga.
+The following .oga files are adapted artwork from Yubatake and are licensed under the Creative
+Commons Attribution 3.0 Unported License ([CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)):
+boss, city, cityhall, enemies, forest, gameover, item, mystic, road, town, village, win.
