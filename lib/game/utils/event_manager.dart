@@ -285,10 +285,14 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     var it = (x!.car as Cell).iterator;
     while (it.moveNext()) {
       gameRef.setMessage((it.current as Cell).length == 1
-          ? Message(gameRef, (it.current as Cell).car as String,
+          ? Message(
+              gameRef,
+              (it.current as Cell).car as String,
               component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
                   as BasicComponent,
-              font: 'kobi')
+              font: 'kobi',
+              translate: settings.defaultFont, // transliterate?
+            )
           : Message(
               gameRef,
               (it.current as Cell).cdr.car,
@@ -296,6 +300,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
                   as BasicComponent,
               author: (it.current as Cell).car as String,
               font: 'kobi',
+              translate: settings.defaultFont, // transliterate?
             ));
     }
     return #NONE;

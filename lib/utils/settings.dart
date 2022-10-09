@@ -58,7 +58,8 @@ class Settings {
   /// Font used
   String get font =>
       _useExtendedFont ? 'LanaPixel' : (_useSystemFont ? '' : 'dd5x7');
-  bool get smallerFont => font != 'dd5x7';
+  bool get defaultFont => font == 'dd5x7';
+  bool get smallerFont => !defaultFont;
   bool get _useExtendedFont =>
       languagesWithSpecialCharacters.contains(locale.languageCode);
   bool get _useSystemFont =>
