@@ -198,7 +198,7 @@ class XeonjiaGame extends FlameGame
     if (map.hasHints) add(HideHintsButton());
     _timer?.start();
     resume();
-    playBackgroundMusic();
+    if (customBgm == null) playBackgroundMusic();
   }
 
   /// Match settings
@@ -363,6 +363,7 @@ class XeonjiaGame extends FlameGame
 
   /// Background music
   String? currentBgm;
+  String? customBgm;
 
   @override
   Color backgroundColor() => const Color(0xFF5D6872);
@@ -392,6 +393,10 @@ class XeonjiaGame extends FlameGame
     if (playerOne!.hasWeaponId(1)) add(Button.S(this));
     add(RemainingMovesBox());
     overlays.add('rulesButton');
+    if (settings.backgroundMusic) {
+      customBgm = 'enemies.oga';
+      FlameAudio.bgm.play('bgm/' + customBgm!);
+    }
   }
 
   /// Battle is over
@@ -399,6 +404,10 @@ class XeonjiaGame extends FlameGame
     inBattle = false;
     overlays.remove('rulesButton');
     add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
+    if (settings.backgroundMusic) {
+      customBgm = null;
+      playBackgroundMusic();
+    }
   }
 
   /// Pause game
@@ -484,7 +493,7 @@ class XeonjiaGame extends FlameGame
       return;
     }
     var newBgm = (map.music ?? 'road') + '.oga';
-    if (newBgm == currentBgm) return;
+    if (customBgm == null && newBgm == currentBgm) return;
     currentBgm = newBgm;
     FlameAudio.bgm.stop();
     Future.delayed(const Duration(seconds: 1), () {
@@ -500,6 +509,10 @@ class XeonjiaGame extends FlameGame
   /// Save match data and load the new room
   void changeRoom(String nextRoomId) {
     pause(stopMusic: false);
+    if (customBgm != null) {
+      customBgm = null;
+      currentBgm = '';
+    }
     if (enemies == 0) currentEventLog['${map.id}-safe'] = true;
 
     // Save new player data into mainCharacter
