@@ -244,7 +244,9 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   });
   _('gem-count', 0, (Cell? x) => gameRef.playerOne!.gemCount);
   _('has-item', 1, (Cell? x) {
-    return (gameRef.playerOne?.itemList ?? mainCharacter.itemList)
+    return (gameRef.playerOne == null || gameRef.playerOne!.itemList.isEmpty
+            ? mainCharacter.itemList
+            : gameRef.playerOne!.itemList)
         .contains(x!.car);
   });
   _('give-item', 1, (Cell? x) {
