@@ -4,7 +4,6 @@ import 'package:collection/collection.dart';
 import 'package:flame/components.dart';
 import 'package:flame/game.dart';
 import 'package:flame/input.dart';
-import 'package:flame_audio/bgm.dart';
 import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -88,10 +87,6 @@ class XeonjiaGame extends FlameGame
       },
     };
     initGamepad();
-    if (settings.backgroundMusic && config.mode == GameMode.story) {
-      _backgroundMusic = Bgm();
-      _backgroundMusic!.initialize();
-    }
     if (config.mode != GameMode.story) {
       teams = [
         Team(this, id: 0, name: 'Team A', color: Colors.red),
@@ -99,6 +94,14 @@ class XeonjiaGame extends FlameGame
       ];
     }
     start();
+  }
+
+  @override
+  Future<void>? onLoad() {
+    if (settings.backgroundMusic && config.mode == GameMode.story) {
+      FlameAudio.bgm.initialize();
+    }
+    return null;
   }
 
   @override
@@ -173,7 +176,7 @@ class XeonjiaGame extends FlameGame
     if (config.mode == GameMode.story) {
       map = GameMap(fullId: mainCharacter.visitedRooms.last);
       if (map.id == '44') {
-        _backgroundMusic?.dispose();
+        FlameAudio.bgm.dispose();
         addCustomWidgetOverlay('noMapsMenu', NoMapsMenu(this, '43'));
         return;
       }
@@ -359,7 +362,6 @@ class XeonjiaGame extends FlameGame
   FlameGamepad? gamepad;
 
   /// Background music
-  Bgm? _backgroundMusic;
   String? currentBgm;
 
   @override
@@ -404,7 +406,7 @@ class XeonjiaGame extends FlameGame
     if (_pause) return;
     _pause = true;
     if (stopEngine) pauseEngine();
-    if (stopMusic) _backgroundMusic?.pause();
+    if (stopMusic) FlameAudio.bgm.pause();
     if (mode != null) {
       addCustomWidgetOverlay('pauseMenu', PauseMenu(this, mode));
     }
@@ -414,7 +416,9 @@ class XeonjiaGame extends FlameGame
   void resume() {
     _pause = false;
     resumeEngine();
-    _backgroundMusic?.resume();
+    if (settings.backgroundMusic && map.music != 'none') {
+      FlameAudio.bgm.resume();
+    }
   }
 
   /// Execute an action
@@ -475,18 +479,22 @@ class XeonjiaGame extends FlameGame
   /// Start the background music
   void playBackgroundMusic() {
     if (!settings.backgroundMusic || messageManager.hideMap) return;
+    if (map.music == 'none') {
+      FlameAudio.bgm.stop();
+      return;
+    }
     var newBgm = (map.music ?? 'road') + '.oga';
     if (newBgm == currentBgm) return;
     currentBgm = newBgm;
-    _backgroundMusic?.stop();
+    FlameAudio.bgm.stop();
     Future.delayed(const Duration(seconds: 1), () {
-      _backgroundMusic?.play('audio/bgm/' + currentBgm!);
+      if (!paused) FlameAudio.bgm.play('bgm/' + currentBgm!);
     });
   }
 
   /// Play sound effect
-  void playSound(Sfx sfx) {
-    if (settings.soundEffects) FlameAudio.play(sfx.fileName, volume: 0.3);
+  void playSound(Sfx sfx, {double volume = 0.3}) {
+    if (settings.soundEffects) FlameAudio.play(sfx.fileName, volume: volume);
   }
 
   /// Save match data and load the new room
@@ -860,9 +868,8 @@ class XeonjiaGame extends FlameGame
 
   @override
   void onRemove() {
-    _backgroundMusic?.stop();
-    _backgroundMusic?.dispose();
-    _backgroundMusic = null;
+    FlameAudio.bgm.stop();
+    FlameAudio.bgm.dispose();
     gamepad?.removeListener();
     super.onRemove();
   }

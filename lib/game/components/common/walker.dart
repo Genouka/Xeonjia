@@ -92,6 +92,7 @@ mixin Walker on BasicComponent {
   @override
   void update(double dt) {
     if (!isStationary) _move(dt);
+    _previousCollisionSound += dt;
     super.update(dt);
   }
 
@@ -182,12 +183,17 @@ mixin Walker on BasicComponent {
       collidedComponent.hpDifference(-atk, cause: this, poison: poisonAtk);
     } else if (settings.soundEffects &&
         (collidedComponent is! StaticComponent || !collidedComponent.isFloor)) {
-      gameRef.playSound(Sfx.collision);
+      if (_previousCollisionSound > 1) {
+        gameRef.playSound(Sfx.collision);
+        _previousCollisionSound = 0;
+      }
     }
     if (_wallInFront() == null) {
       collidedComponent.collidedBy(this, wasStationary);
     }
   }
+
+  double _previousCollisionSound = 1;
 
   @mustCallSuper
   void stop() {

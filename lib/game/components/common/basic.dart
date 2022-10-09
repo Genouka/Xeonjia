@@ -13,6 +13,7 @@ import 'package:xeonjia/game/models/team.dart';
 import 'package:xeonjia/game/models/tile.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/fire_atlas.dart';
+import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 import 'package:xeonjia/utils/game_properties.dart';
 
@@ -215,7 +216,10 @@ abstract class BasicComponent extends SpriteComponent
         teamId != (cause?.teamId ?? -99)) {
       double actual = difference < 0 ? min(0, difference + def) : difference;
       _hp += actual;
-      if (actual != 0 && maxHP.isFinite) showText(actual.round().toString());
+      if (actual != 0 && maxHP.isFinite) {
+        showText(actual.round().toString());
+        if (isPlayerOne && actual < 0) gameRef.playSound(Sfx.damage, volume: 1);
+      }
       poisonQuantity += poison;
       if (_hp < 0) _hp = 0;
       if (_hp > maxHP) _hp = maxHP;
