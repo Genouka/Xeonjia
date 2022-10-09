@@ -404,6 +404,7 @@ class XeonjiaGame extends FlameGame
     inBattle = false;
     overlays.remove('rulesButton');
     add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
+    playSound(Sfx.win);
     if (settings.backgroundMusic) {
       customBgm = null;
       playBackgroundMusic();
@@ -492,7 +493,7 @@ class XeonjiaGame extends FlameGame
       FlameAudio.bgm.stop();
       return;
     }
-    var newBgm = (map.music ?? 'road') + '.oga';
+    var newBgm = (map.music ?? 'route') + '.oga';
     if (customBgm == null && newBgm == currentBgm) return;
     currentBgm = newBgm;
     FlameAudio.bgm.stop();

@@ -83,6 +83,7 @@ class ModifierComponent extends BasicComponent {
           gameRef.playerOne!.showText('+ ${_hpDelta.round()} HP');
         } else if (_moneyDelta != 0 && componentAbove.isPlayerOne) {
           gameRef.playerOne!.showText('+ $_moneyDelta ¤');
+          gameRef.playSound(Sfx.money);
         }
       }
       if (_itemId != '0' &&
