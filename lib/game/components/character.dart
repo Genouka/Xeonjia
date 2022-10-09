@@ -150,7 +150,7 @@ class CharacterComponent extends BasicComponent
   }
 
   /// Add item to _itemList
-  void addItem(String itemId) {
+  void addItem(String itemId, {bool sfx = true}) {
     _itemList.add(itemId);
     if (isPlayerOne) {
       if (itemData.containsKey(itemId)) {
@@ -170,7 +170,7 @@ class CharacterComponent extends BasicComponent
           xfaFile: 'items',
         ));
       }
-      gameRef.playSound(Sfx.item);
+      if (sfx) gameRef.playSound(Sfx.item);
     }
   }
 

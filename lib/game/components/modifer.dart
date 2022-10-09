@@ -89,7 +89,7 @@ class ModifierComponent extends BasicComponent {
       if (_itemId != '0' &&
           componentAbove.isPlayerOne &&
           gameRef.config.mode == GameMode.story) {
-        componentAbove.addItem(_itemId);
+        componentAbove.addItem(_itemId, sfx: _moneyDelta == 0);
       }
       if (_regenerable ?? false) gameRef.modifiersToBeRegenerated.add(this);
       if (explosionOnDelete) {
