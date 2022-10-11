@@ -5,7 +5,7 @@
 # Alparslan Şakçi <sakci@protonmail.com>, 2022.
 # deepdaikon <deepdaikon@tuta.io>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-11 17:36+0000\nLast-Translator: Alparslan Şakçi <sakci@protonmail.com>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 #, fuzzy
@@ -1692,7 +1692,7 @@ msgstr "Buraya kadar gelebileceğini düşünmemiştim evlat."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "W-Who are you?"
-msgstr ""
+msgstr "S-sen de kimsin?"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm surprised that my name is not known among the woods of your village."
@@ -1700,47 +1700,47 @@ msgstr "Adımın köyüne kadar ulaşmaması beni şaşırttı doğrusu."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Anyway, I'm Dr. Lache and I'm the leader of the Hoarfrost Team."
-msgstr ""
+msgstr "Neyse. Benim adım Dr. Lache. Kırağı Takımı'nın lideriyim."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "dr. lache"
-msgstr ""
+msgstr "dr. lache"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "S-So you're the one who spread terror and violence through the henchmen as ordered by the King of Evil?"
-msgstr ""
+msgstr "Kötülüklerin Efendisi'nin emriyle Krallığa terör ve şiddet yayan grup siz misiniz yani?"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "As ordered by the King of Evil? HAHAHA"
-msgstr ""
+msgstr "Kötülüklerin Efendisi'nin emriyle mi? HAHAHA"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I don't take orders from anyone. Between me and the King of Evil there is a peer collaboration."
-msgstr ""
+msgstr "Ben kimseden emir almam. Ben ve Kötülüğün Kralı ortak sayılırız."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Be that as it may, I won't let you continue your plans."
-msgstr ""
+msgstr "Nasıl bir ilişkiniz var fark etmez. Planlarınızı gerçekleştirmenize izin vermeyeceğim."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm {{hero}}, I'm the chos-"
-msgstr ""
+msgstr "Benim adım {{hero}} ve ben bu yılın seçil-"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I know very well who you are, you're the chosen hero and blah, blah, blah.\nI don't have time for this."
-msgstr ""
+msgstr "Evet evet, biliyorum. Seçilmiş kahramansın falan filan.\nİki saat anlatmana gerek yok."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I know you're interested in the signet, defeat my henchmen and it's yours.\nNow get out of my way."
-msgstr ""
+msgstr "Sadede gelelim. Mührü istiyorsun değil mi? Adamlarımı yenersen mühür senindir.\nŞimdi yolumdan çekil."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I won't let you go so eas-"
-msgstr ""
+msgstr "Gitmene izin vermeyece-"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Well, well, well… you'll have to deal with us now."
-msgstr ""
+msgstr "İşe bak hele… Seçilmiş kahramanın icabına biz bakacağız demek."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm Iosa."
@@ -1752,19 +1752,19 @@ msgstr "Benim adım da Joza."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "We are the Iosa&Joza brothers and we will be your worst nightmare."
-msgstr ""
+msgstr "Biz, Iosa ve Joza kardeşler, senin en büyük kâbusun olacağız."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm not scared of you, let's see what you are capable of!"
-msgstr ""
+msgstr "İkinizden de korkmuyorum. Neler yapabiliyorsunuz görelim bakalım!"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Now you will see."
-msgstr ""
+msgstr "Demek öyle. O zaman savaşımız..."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Let's fight!"
-msgstr ""
+msgstr "...başlasın!"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "iosa&joza"
