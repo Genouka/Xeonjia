@@ -63,7 +63,7 @@ class MessageManager {
   /// Split message in sentences and group them
   List<Message> _splitMessage(Message message) {
     var strings = <String>[];
-    RegExp(r'([^.,?!"»…。！？“”]*[.,?!"»…。？！“”]*)\s*')
+    RegExp(r'([^.,?!…。！？]*[.,?!»…。？！]*)\s*')
         .allMatches(message.text)
         .forEach((m) {
       var match = m.group(0);
