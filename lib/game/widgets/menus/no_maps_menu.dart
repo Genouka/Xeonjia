@@ -26,7 +26,7 @@ class NoMapsMenu extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               Text(
-                'Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback.'
+                'The next part of the story is not yet available.\nIt will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback.'
                     .i18n,
                 style: Theme.of(context).textTheme.bodyText2,
                 textAlign: TextAlign.center,
