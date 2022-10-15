@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:xeonjia/game/utils/message.dart';
-import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
 /// Manage game [Message]s (used in [DialogBox])
@@ -59,7 +58,6 @@ class MessageManager {
     _currentIndex = 0;
     gameRef.dialogBox.state?.refresh();
     gameRef.pause(stopMusic: false);
-    gameRef.playSound(Sfx.dialog);
   }
 
   /// Split message in sentences and group them

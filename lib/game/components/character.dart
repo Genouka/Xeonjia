@@ -145,7 +145,10 @@ class CharacterComponent extends BasicComponent
     if (gameRef.isNotPaused && isStationary && !isBeingDeleted && isMyTurn) {
       BasicComponent? component = componentInFront();
       component?.playAction(orientation);
-      if (component?.action != null) gameRef.useMove(this);
+      if ((component?.action ?? '') != '') {
+        gameRef.playSound(Sfx.dialog);
+        gameRef.useMove(this);
+      }
     }
   }
 
