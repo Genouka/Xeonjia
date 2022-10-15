@@ -503,7 +503,7 @@ class XeonjiaGame extends FlameGame
   }
 
   /// Play sound effect
-  void playSound(Sfx sfx, {double volume = 0.3}) {
+  void playSound(Sfx sfx, {double volume = 0.5}) {
     if (settings.soundEffects) FlameAudio.play(sfx.fileName, volume: volume);
   }
 
