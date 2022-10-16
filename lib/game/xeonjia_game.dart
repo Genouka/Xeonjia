@@ -805,19 +805,11 @@ class XeonjiaGame extends FlameGame
   void gestureTapInput(Offset position) {
     if (_pause || !(playerOne?.isMyTurn ?? false)) return;
 
-    // Update orientation
-    var relativeTapX =
-        position.dx - (playerOne!.x + componentSize / 2 - camera.position.x);
-    var relativeTapY =
-        position.dy - (playerOne!.y + componentSize / 2 - camera.position.y);
-
     // Ignore tap near buttons (bottom right)
     var buttonSize =
         children.whereType<Button>().firstOrNull?.size ?? Vector2.zero();
-    if (position.dx >
-            canvasSize.x - 100 - buttonSize.x * (enemies > 0 ? 2 : 1) &&
-        position.dy >
-            canvasSize.y - 100 - buttonSize.y * (enemies > 0 ? 2 : 1)) {
+    if (position.dx > canvasSize.x - buttonSize.x * (enemies > 0 ? 4 : 2) &&
+        position.dy > canvasSize.y - buttonSize.y * (enemies > 0 ? 4 : 2)) {
       return;
     }
 
@@ -827,6 +819,12 @@ class XeonjiaGame extends FlameGame
     if (position.dx < topLeftSize.x && position.dy < topLeftSize.y * 2 + 20) {
       return;
     }
+
+    // Update orientation
+    var relativeTapX =
+        position.dx - (playerOne!.x + componentSize / 2 - camera.position.x);
+    var relativeTapY =
+        position.dy - (playerOne!.y + componentSize / 2 - camera.position.y);
 
     if (position.dx < componentSize || position.dx > size.x - componentSize) {
       playerOne!.updateOrientation(
