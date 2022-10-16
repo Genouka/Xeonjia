@@ -700,7 +700,7 @@ class XeonjiaGame extends FlameGame
           .i18n,
       "That's all. Good luck!".i18n,
     ];
-    // i18n: 'manual'.i18n
+    // i18n: 'manual'.i18n, 'book'.i18n
     setMessages([
       for (final string in texts)
         Message(this, string, author: '/manual', translate: false)
