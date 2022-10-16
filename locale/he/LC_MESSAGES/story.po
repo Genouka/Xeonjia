@@ -774,6 +774,10 @@ msgid "I hope my parents will water it when I'm away."
 msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
+msgid "This plant hasn't been watered for long."
+msgstr ""
+
+#: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
 msgstr ""
 
@@ -1174,7 +1178,11 @@ msgid "A heavy rock."
 msgstr ""
 
 #: assets/maps/story/35.tmx:
-msgid "↑ Hexa Cave\nZamelis Village →"
+msgid "↑ Hexa Cave"
+msgstr ""
+
+#: assets/maps/story/35.tmx:
+msgid "Zamelis Village →"
 msgstr ""
 
 #: assets/maps/story/27.tmx:
@@ -1182,11 +1190,19 @@ msgid "I still don't understand why I lose money when I run out of HP."
 msgstr ""
 
 #: assets/maps/story/27.tmx:
-msgid "← Sacred Tree\nMelhopolis City Center →"
+msgid "← Sacred Tree"
+msgstr ""
+
+#: assets/maps/story/27.tmx:
+msgid "Melhopolis City Center →"
 msgstr ""
 
 #: assets/maps/story/20.tmx:
 msgid "I advise you to go away.\nThese monsters are too strong."
+msgstr ""
+
+#: assets/maps/story/20.tmx:
+msgid "I didn't think you were that strong."
 msgstr ""
 
 #: assets/maps/story/999.tmx:
@@ -1375,10 +1391,6 @@ msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "Hi {{hero}}, everything okay?\nYou missed your mom, right?"
-msgstr ""
-
-#: assets/maps/story/1_home.tmx:
-msgid "This plant hasn't been watered for long."
 msgstr ""
 
 #: assets/maps/story/1_home.tmx:

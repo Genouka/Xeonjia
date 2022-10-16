@@ -332,7 +332,7 @@ msgid "You went too far!"
 msgstr ""
 
 #: lib/game/widgets/menus/no_maps_menu.dart:
-msgid "Unfortunately, the next part of the story is not yet available :(\nHopefully it will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback."
+msgid "The next part of the story is not yet available.\nIt will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback."
 msgstr ""
 
 #: lib/game/widgets/menus/no_maps_menu.dart:
@@ -629,4 +629,12 @@ msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "That's all. Good luck!"
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "manual"
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "book"
 msgstr ""

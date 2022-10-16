@@ -763,6 +763,10 @@ msgid "I hope my parents will water it when I'm away."
 msgstr "Tôi hy vọng bố mẹ tôi sẽ tưới nước cho nó khi tôi đi vắng."
 
 #: assets/maps/story/1_home_2.tmx:
+msgid "This plant hasn't been watered for long."
+msgstr "Cây con này chưa được tưới nước đã lâu rồi."
+
+#: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
 msgstr "Tất cả quyển sách của tôi đều ở đây."
 
@@ -1163,19 +1167,31 @@ msgid "A heavy rock."
 msgstr "Một hòn đá nặng."
 
 #: assets/maps/story/35.tmx:
-msgid "↑ Hexa Cave\nZamelis Village →"
-msgstr "↑ Hang Hexa\nLàng Zamelis →"
+msgid "↑ Hexa Cave"
+msgstr "↑ Hang Hexa"
+
+#: assets/maps/story/35.tmx:
+msgid "Zamelis Village →"
+msgstr "Làng Zamelis →"
 
 #: assets/maps/story/27.tmx:
 msgid "I still don't understand why I lose money when I run out of HP."
 msgstr ""
 
 #: assets/maps/story/27.tmx:
-msgid "← Sacred Tree\nMelhopolis City Center →"
-msgstr "← Cây thiêng liêng\nTrung tâm thành phố Melhopolis →"
+msgid "← Sacred Tree"
+msgstr "← Cây thiêng liêng"
+
+#: assets/maps/story/27.tmx:
+msgid "Melhopolis City Center →"
+msgstr "Trung tâm thành phố Melhopolis →"
 
 #: assets/maps/story/20.tmx:
 msgid "I advise you to go away.\nThese monsters are too strong."
+msgstr ""
+
+#: assets/maps/story/20.tmx:
+msgid "I didn't think you were that strong."
 msgstr ""
 
 #: assets/maps/story/999.tmx:
@@ -1365,10 +1381,6 @@ msgstr ""
 #: assets/maps/story/1_home.tmx:
 msgid "Hi {{hero}}, everything okay?\nYou missed your mom, right?"
 msgstr ""
-
-#: assets/maps/story/1_home.tmx:
-msgid "This plant hasn't been watered for long."
-msgstr "Cây con này chưa được tưới nước đã lâu rồi."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Unfortunately, this is not the time to lie down on the sofa."

@@ -763,6 +763,10 @@ msgid "I hope my parents will water it when I'm away."
 msgstr "留守の間、ちゃんと両親が水をやってくれるといいんだけど。"
 
 #: assets/maps/story/1_home_2.tmx:
+msgid "This plant hasn't been watered for long."
+msgstr "この植物は長い間水をやっていないみたいだ。"
+
+#: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
 msgstr "ボクの本はすべてここにある。"
 
@@ -1163,19 +1167,31 @@ msgid "A heavy rock."
 msgstr "重い岩。"
 
 #: assets/maps/story/35.tmx:
-msgid "↑ Hexa Cave\nZamelis Village →"
-msgstr "↑ ヘキサ洞窟\nザメリス村 →"
+msgid "↑ Hexa Cave"
+msgstr "↑ ヘキサ洞窟"
+
+#: assets/maps/story/35.tmx:
+msgid "Zamelis Village →"
+msgstr "ザメリス村 →"
 
 #: assets/maps/story/27.tmx:
 msgid "I still don't understand why I lose money when I run out of HP."
 msgstr ""
 
 #: assets/maps/story/27.tmx:
-msgid "← Sacred Tree\nMelhopolis City Center →"
-msgstr "← 聖なる木\nメロポリス中心部 →"
+msgid "← Sacred Tree"
+msgstr ""← 聖なる木"
+
+#: assets/maps/story/27.tmx:
+msgid "Melhopolis City Center →"
+msgstr "メロポリス中心部 →"
 
 #: assets/maps/story/20.tmx:
 msgid "I advise you to go away.\nThese monsters are too strong."
+msgstr ""
+
+#: assets/maps/story/20.tmx:
+msgid "I didn't think you were that strong."
 msgstr ""
 
 #: assets/maps/story/999.tmx:
@@ -1365,10 +1381,6 @@ msgstr ""
 #: assets/maps/story/1_home.tmx:
 msgid "Hi {{hero}}, everything okay?\nYou missed your mom, right?"
 msgstr ""
-
-#: assets/maps/story/1_home.tmx:
-msgid "This plant hasn't been watered for long."
-msgstr "この植物は長い間水をやっていないみたいだ。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Unfortunately, this is not the time to lie down on the sofa."

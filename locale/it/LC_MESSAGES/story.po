@@ -765,6 +765,10 @@ msgid "I hope my parents will water it when I'm away."
 msgstr "Spero che i miei genitori la innaffieranno quando sono via."
 
 #: assets/maps/story/1_home_2.tmx:
+msgid "This plant hasn't been watered for long."
+msgstr "Questa pianta non viene innaffiata da molto."
+
+#: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
 msgstr "Tutti i miei libri sono qui."
 
@@ -1165,20 +1169,32 @@ msgid "A heavy rock."
 msgstr "Una roccia pesante."
 
 #: assets/maps/story/35.tmx:
-msgid "↑ Hexa Cave\nZamelis Village →"
-msgstr "↑ Grotta Hexa\nVillaggio Zamelis →"
+msgid "↑ Hexa Cave"
+msgstr "↑ Grotta Hex"
+
+#: assets/maps/story/35.tmx:
+msgid "Zamelis Village →"
+msgstr "Villaggio Zamelis →"
 
 #: assets/maps/story/27.tmx:
 msgid "I still don't understand why I lose money when I run out of HP."
 msgstr "Ancora non capisco perché perdo soldi quando finisco i PV."
 
 #: assets/maps/story/27.tmx:
-msgid "← Sacred Tree\nMelhopolis City Center →"
-msgstr "← Albero Sacro\nCentro di Melhopolis →"
+msgid "← Sacred Tree"
+msgstr "← Albero Sacro"
+
+#: assets/maps/story/27.tmx:
+msgid "Melhopolis City Center →"
+msgstr "Centro di Melhopolis →"
 
 #: assets/maps/story/20.tmx:
 msgid "I advise you to go away.\nThese monsters are too strong."
 msgstr "Ti consiglio di andartene.\nQuesti mostri sono troppo forti."
+
+#: assets/maps/story/20.tmx:
+msgid "I didn't think you were that strong."
+msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Xeonjia Tower"
@@ -1367,10 +1383,6 @@ msgstr "Il cibo che ti ha dato la vicina sembra gustoso!"
 #: assets/maps/story/1_home.tmx:
 msgid "Hi {{hero}}, everything okay?\nYou missed your mom, right?"
 msgstr "Ciao {{hero}}, tutto bene?\nTi mancava la mammina, eh?"
-
-#: assets/maps/story/1_home.tmx:
-msgid "This plant hasn't been watered for long."
-msgstr "Questa pianta non viene innaffiata da molto."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Unfortunately, this is not the time to lie down on the sofa."
