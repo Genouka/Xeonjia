@@ -41,7 +41,7 @@ class CharacterComponent extends BasicComponent
       atk = mainCharacter.atk;
       def = mainCharacter.def;
     } else {
-      def = def != 0 ? def : (level ~/ 5).toDouble();
+      def = def != 0 ? def : 0;
       if (isPlayerOne) {
         weaponList = [
           PunchWeapon(level: 10),
