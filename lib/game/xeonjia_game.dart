@@ -132,12 +132,14 @@ class XeonjiaGame extends FlameGame
     if (enemies > 0 && map.startBattle) {
       setMessage(
           Message(
-              this,
-              (enemies == 1
-                      ? 'There is one enemy here!'.i18n
-                      : 'There are %s enemies here!'.i18n.fill([enemies])) +
-                  ' ' +
-                  "It' time to fight!".i18n),
+            this,
+            (enemies == 1
+                    ? 'There is one enemy here!'.i18n
+                    : 'There are %s enemies here!'.i18n.fill([enemies])) +
+                ' ' +
+                "It' time to fight!".i18n,
+            translate: false,
+          ),
           callback: startBattle);
     }
   }
