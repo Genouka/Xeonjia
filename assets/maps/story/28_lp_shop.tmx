@@ -46,21 +46,21 @@
     '((&quot;berries-shop&quot; 5 &quot;(give-item \&quot;berries-shop\&quot;)&quot;)
     (&quot;fresh-water&quot; 20 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
     (&quot;pomegranate-juice&quot; 55 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)))
-  (if (not (has-been-here &quot;48&quot;))
+  (if (not (has-been-here &quot;37&quot;))
+    (shop
+      '((&quot;fresh-water&quot; 22 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
+      (&quot;pomegranate-juice&quot; 60 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
+      (&quot;healer&quot; 85 &quot;(give-item \&quot;healer\&quot;)&quot;)))
     (if (= (get-initial-HP) 100)
       (shop
         '((&quot;fresh-water&quot; 24 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
         (&quot;pomegranate-juice&quot; 65 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
-        (&quot;healer&quot; 90 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
+        (&quot;healer&quot; 90 &quot;(give-item \&quot;healer\&quot;)&quot;)
         (&quot;hp-up-5-shop&quot; 150 &quot;(begin (increase-HP 5) (set-HP-diff 105))&quot;)))
       (shop
         '((&quot;fresh-water&quot; 24 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
         (&quot;pomegranate-juice&quot; 65 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
-        (&quot;healer&quot; 90 &quot;(give-item \&quot;healer\&quot;)&quot;))))
-    (shop
-      '((&quot;fresh-water&quot; 26 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
-      (&quot;pomegranate-juice&quot; 70 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
-      (&quot;healer&quot; 100 &quot;(give-item \&quot;healer\&quot;)&quot;)))))</property>
+        (&quot;healer&quot; 90 &quot;(give-item \&quot;healer\&quot;)&quot;))))))</property>
    </properties>
   </object>
  </objectgroup>

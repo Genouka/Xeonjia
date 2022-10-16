@@ -147,6 +147,7 @@
         (&quot;king/king-1&quot; &quot;Since you're heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here.&quot;)
         (&quot;/hero&quot; &quot;Yes of course, I'll give it to him.&quot;)
         (&quot;king/king-1&quot; &quot;Thank you very much. Here's to you.&quot;)))
+      (wait)
       (give-item &quot;30.package-of-the-king&quot;)
       (dialog
         '((&quot;king/king-1&quot; &quot;Be careful not to drop it, it is fragile.&quot;)
@@ -181,6 +182,7 @@
         (&quot;king/king-1&quot; &quot;Since you're heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here.&quot;)
         (&quot;/hero&quot; &quot;Yes of course, I'll give it to him.&quot;)
         (&quot;king/king-1&quot; &quot;Thank you very much. Here's to you.&quot;)))
+      (wait)
       (give-item &quot;30.package-of-the-king&quot;)
       (dialog
         '((&quot;king/king-1&quot; &quot;Be careful not to drop it, it is fragile.&quot;)

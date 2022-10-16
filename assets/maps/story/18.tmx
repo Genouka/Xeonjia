@@ -13,7 +13,7 @@
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="44" class="NPC" gid="186" x="160" y="96" width="16" height="16">
+  <object id="44" class="NPC" gid="202" x="160" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I have to stay here because if I move you can't get out anymore.&quot;)))"/>
    </properties>
@@ -27,12 +27,12 @@
  <objectgroup id="2" name="spawn points">
   <object id="34" class="Door" x="176" y="0" width="16" height="16">
    <properties>
-    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="19"/>
    </properties>
   </object>
   <object id="37" class="Door" x="176" y="144" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="16"/>
    </properties>

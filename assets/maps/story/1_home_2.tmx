@@ -60,7 +60,9 @@
   </object>
   <object id="90" gid="187" x="48" y="112" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;I hope my parents will water it when I'm away.&quot;)))"/>
+    <property name="action">(if (not (has-been-here &quot;999&quot;))
+  (dialog '((&quot;I hope my parents will water it when I'm away.&quot;)))
+  (dialog '((&quot;This plant hasn't been watered for long.&quot;))))</property>
    </properties>
   </object>
   <object id="98" gid="193" x="16" y="48" width="16" height="16">

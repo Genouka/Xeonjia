@@ -39,7 +39,7 @@
   </object>
   <object id="51" class="NPC" gid="198" x="128" y="32" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;We keep an eye on you.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;We keep an eye on you.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

@@ -18,19 +18,19 @@
  <objectgroup id="9" name="npc">
   <object id="45" class="SliderCpu" gid="129" x="144" y="48" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="4"/>
+    <property name="hp" type="float" value="3"/>
     <property name="level" type="float" value="6"/>
    </properties>
   </object>
   <object id="47" class="SliderCpu" gid="129" x="176" y="80" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="4"/>
+    <property name="hp" type="float" value="3"/>
     <property name="level" type="float" value="6"/>
    </properties>
   </object>
   <object id="48" class="SliderCpu" gid="129" x="240" y="64" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="4"/>
+    <property name="hp" type="float" value="3"/>
     <property name="level" type="float" value="6"/>
    </properties>
   </object>

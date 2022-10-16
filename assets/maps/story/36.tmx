@@ -5,20 +5,68 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="361" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="366" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="27">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WUuw7CMAxFHQm+gX4JLDzmMrGU/67Uhc0DQ0dWYIBYtSXLkPeVrhIlOb1x0hYAYGZ3bOoj+67mZmXS3vsAYU2BceS2M+O99znyPM2mskOsZJTyxO4i86fI3AN+ay2RsLHzsfloxmN7F30MX7tnqncLdXdE7JH7wj+9Xwm/manZ88oBrF1bvbbWnPMmbdzS1mRTLlZwwkqmPe+URsivz+rGrWRjAdvyHf27oxKWlPN/CrEkbGBzs3v/Pg1sUejM9Fry1fvCHhLWa62/9HBNoVQGAAA=
+   H4sIAAAAAAAAA6WUuw7CMAxFXYkFvqAD3wELjxkGNpb2v5FY2DIwdGQFbMmWjIvzvNJRoiS3fqQtAMDE9AzNA/NUe5OCtEP24OvurAcee7N+Qs6R52lvKrbnlRilfvJuI/vHyN4L5rWWSLyx/tj4wazHchctul9/bc5U7wbq7oi8B56L/418EgDnXpPzEr2rrq1eW2tOv0nrhrwpbkie8r0S0/Y7pRvk12f14FFil+Tf8h39u6MSLynn/+R5SaV3pb25sS/4Pg2MyOuZPkuMyJUZEuizli9V//9VVAYAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="15" height="27">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzNhYGAwZaAecARiJyLVmpBpN8wOcvXTE/wB4r9IfFLCh4WRgYGVkfpuIgVQGsb0iiP0cCYHDIX0hAuYQemh7AdiAKX+IyX/URsMpN30BAC0ikvvVAYAAA==
+   H4sIAAAAAAAAAzNhYGAwZaAecARiJyLVmpBpN8wOcvXTEzAyMjAwMSL4pIQPJ1AfFyNhdbQElIYxveIIPZzJAUMhPeECZlB6KPuBGECp/0jJf9QGA2k3PQEAVYuLgFQGAAA=
   </data>
  </layer>
+ <objectgroup id="8" name="items">
+  <object id="56" gid="260" x="16" y="192" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (define event-id &quot;36.vase1&quot;)
+    (define item-id &quot;pomegranate-juice&quot;)
+    (if (!get event-id)
+        (begin
+            (dialog '((&quot;Hey, there are items in here!&quot;)))
+            (give-item item-id)
+            (set event-id #t))
+        (dialog '((&quot;This vase is empty.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="57" gid="260" x="112" y="160" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (define item-id &quot;36.vase2&quot;)
+    (define money-diff 190)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found {{money-diff}} ¤ *&quot;)))
+            (give-item item-id)
+            (set-money-diff money-diff))
+        (dialog '((&quot;This vase is empty.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="58" class="Modifier" gid="384" x="64" y="80" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="59" class="Modifier" gid="384" x="192" y="64" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="25"/>
+   </properties>
+  </object>
+  <object id="60" gid="378" x="48" y="304" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="60"/>
+   </properties>
+  </object>
+  <object id="61" gid="377" x="32" y="32" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="25"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="10" name="spawn points">
   <object id="51" class="Door" x="128" y="0" width="16" height="16">
    <properties>
@@ -36,54 +84,6 @@
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="35/2"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="8" name="items">
-  <object id="56" gid="255" x="16" y="192" width="16" height="16">
-   <properties>
-    <property name="action">(begin
-    (define event-id &quot;36.vase1&quot;)
-    (define item-id &quot;pomegranate-juice&quot;)
-    (if (!get event-id)
-        (begin
-            (dialog '((&quot;Hey, there are items in here!&quot;)))
-            (give-item item-id)
-            (set event-id #t))
-        (dialog '((&quot;This vase is empty.&quot;)))))</property>
-   </properties>
-  </object>
-  <object id="57" gid="255" x="112" y="160" width="16" height="16">
-   <properties>
-    <property name="action">(begin
-    (define item-id &quot;36.vase2&quot;)
-    (define money-diff 190)
-    (if (! (has-item item-id))
-        (begin
-            (dialog '((&quot;* {{hero}} found {{money-diff}} ¤ *&quot;)))
-            (give-item item-id)
-            (set-money-diff money-diff))
-        (dialog '((&quot;This vase is empty.&quot;)))))</property>
-   </properties>
-  </object>
-  <object id="58" class="Modifier" gid="379" x="64" y="80" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="15"/>
-   </properties>
-  </object>
-  <object id="59" class="Modifier" gid="379" x="192" y="64" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="25"/>
-   </properties>
-  </object>
-  <object id="60" gid="373" x="48" y="304" width="16" height="16">
-   <properties>
-    <property name="healthPointsDelta" type="int" value="60"/>
-   </properties>
-  </object>
-  <object id="61" gid="372" x="32" y="32" width="16" height="16">
-   <properties>
-    <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
   </object>
  </objectgroup>

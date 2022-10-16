@@ -50,7 +50,9 @@
  <objectgroup id="8" name="items">
   <object id="45" gid="71" x="80" y="544" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/_1&quot; &quot;← Sacred Tree\nMelhopolis City Center →&quot;)))"/>
+    <property name="action">(dialog
+  '((&quot;/_1&quot; &quot;← Sacred Tree&quot;)
+  (&quot;/_1&quot; &quot;Melhopolis City Center →&quot;)))</property>
    </properties>
   </object>
   <object id="49" gid="275" x="64" y="32" width="16" height="16">

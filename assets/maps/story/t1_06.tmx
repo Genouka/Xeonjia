@@ -23,7 +23,8 @@
     (dialog '((&quot;/iosa&quot; &quot;You're lucky, but it doesn't end here, guaranteed.&quot;)))
     (wait)
     (wait)
-    (leave-all '(90 91))))</property>
+    (leave-all '(90 91))
+    (music &quot;enemies&quot;)))</property>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="MOSSY CRYPT – B4F"/>
   <property name="music" value="enemies"/>
@@ -111,7 +112,7 @@
    (teleport-multi &quot;t1_01&quot; &quot;22&quot;))
 (dialog '((&quot;/hero&quot; &quot;The henchmen are after me! I'll get the signet later.&quot;))))</property>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
-    (delete-me))</property>
+  (delete-me))</property>
    </properties>
   </object>
   <object id="100" class="Ground" x="144" y="208" width="16" height="16">

@@ -90,14 +90,13 @@
   <object id="41" class="Solid" x="-16" y="96" width="16" height="16">
    <properties>
     <property name="actionOnCollision">(if  (!get &quot;013-h-safe&quot;)
-    (begin
-        (if  (&gt; (enemies-count) 0)
-            (dialog '((&quot;I can't escape, I have to defeat the monster to save that man.&quot;)))
-            (dialog '((&quot;Better if I check that the guy is okay.&quot;))))
-        (set-orientation 2))
-    (fire-event (self)))</property>
-    <property name="actionOnEvent">(if  (get &quot;013-h-safe&quot;)
-    (delete-me))</property>
+  (begin
+    (if  (= (enemies-count) 0)
+      (dialog '((&quot;Better if I check that the guy is okay.&quot;))))
+    (set-orientation 2))
+  (fire-event (self)))</property>
+    <property name="actionOnEvent">(if (get &quot;013-h-safe&quot;)
+  (delete-me))</property>
    </properties>
   </object>
   <object id="42" class="Solid" gid="55" x="128" y="32" width="16" height="16">

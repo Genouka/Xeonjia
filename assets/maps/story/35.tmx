@@ -7,17 +7,17 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="361" source="../tilesets/crypt-2.tsx"/>
- <tileset firstgid="417" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="366" source="../tilesets/crypt-2.tsx"/>
+ <tileset firstgid="422" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="12">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgYGD4AMU/kNgg/ASJ7YCmBp0vzgihnYG0CxJ2hYrjAleAWJgRjwIswBGoXgMJOwHxJRL0PyDTjltE6P9Bgrgh0EwjIDYGYhMgNiUQVsSCB0hsS6CZVkBsDcQ2QGyLxY4feNxNjD3o8QdLF7QE7IyQNEcO+AfEHETovc0ASefkADZGiB2E7AH5I5QOOGCYYADMgI8MsAQAAA==
+   H4sIAAAAAAAAA2NgYGD4CsV/kdgg/BKJ7YCmBp0vwwihPYC0JxL2gorjAjeBWIIRjwIswA2oXhcJuwPxdRL0PyXTjvtE6P9LgrgZ0ExzILYAYksgtiIQVsQCZPfZAc20B2IHIHYEYicsdvzF425i7EGPP1i6oCXgYYSkOXIAM1AfLxF6HzBA0jk5gBtqByF7QP6IogMOHSYYAG2AA56wBAAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="59" class="NPC" gid="197" x="368" y="112" width="16" height="16">
+  <object id="59" class="NPC" gid="202" x="368" y="112" width="16" height="16">
    <properties>
     <property name="action">(begin
     (dialog '((&quot;/&quot; &quot;This boulder is very heavy.&quot;)))
@@ -27,7 +27,7 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="60" class="NPC" gid="199" x="352" y="128" width="16" height="16">
+  <object id="60" class="NPC" gid="204" x="352" y="128" width="16" height="16">
    <properties>
     <property name="action">(begin
     (dialog '((&quot;/&quot; &quot;We are trying to move this boulder.\nI'm sorry but it's going to take a while.&quot;)))
@@ -47,7 +47,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="25" height="12">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgwA+4GQkoGAWDGozG3ygYTgAABQKrdrAEAAA=
+   H4sIAAAAAAAAA2NgwA8EGAkoGAWDGozG3ygYTgAAIr7/dLAEAAA=
   </data>
  </layer>
  <objectgroup id="10" name="spawn points">
@@ -77,14 +77,16 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="62" class="Modifier" gid="435" x="208" y="48" width="16" height="16">
+  <object id="62" class="Modifier" gid="440" x="208" y="48" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
    </properties>
   </object>
-  <object id="63" gid="271" x="112" y="96" width="16" height="16">
+  <object id="63" gid="276" x="112" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/_2&quot; &quot;↑ Hexa Cave\nZamelis Village →&quot;)))"/>
+    <property name="action">(dialog
+  '((&quot;/_2&quot; &quot;↑ Hexa Cave&quot;)
+  (&quot;/_2&quot; &quot;Zamelis Village →&quot;)))</property>
    </properties>
   </object>
  </objectgroup>

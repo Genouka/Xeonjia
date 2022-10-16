@@ -15,13 +15,13 @@
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="39" class="SliderCpu" gid="129" x="96" y="96" width="16" height="16">
+  <object id="39" class="SliderCpu" gid="139" x="96" y="96" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="10"/>
     <property name="level" type="float" value="15"/>
    </properties>
   </object>
-  <object id="40" class="SliderCpu" gid="129" x="160" y="80" width="16" height="16">
+  <object id="40" class="SliderCpu" gid="134" x="160" y="80" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="10"/>
     <property name="level" type="float" value="15"/>
@@ -41,7 +41,9 @@
   </object>
   <object id="47" class="NPC" gid="213" x="160" y="48" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;I advise you to go away.\nThese monsters are too strong.&quot;)))"/>
+    <property name="action">(if (&gt; (enemies-count) 0)
+  (dialog '((&quot;/&quot; &quot;I advise you to go away.\nThese monsters are too strong.&quot;)))
+  (dialog '((&quot;/&quot; &quot;I didn't think you were that strong.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

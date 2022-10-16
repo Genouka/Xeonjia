@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="9" height="30" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="94">
  <properties>
+  <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="MOSSY CRYPT – B4F"/>
   <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="229" source="../tilesets/crypt-1.tsx"/>
- <tileset firstgid="285" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="305" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
+ <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="318" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="9" height="30">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAxNkZGDgA2JeKP7AwMDAzwjBIHFBJAxTx8CAKc+HhNHVwDArknohqBoBJDF2qF4WqBwIfEIwweL8SObjAgOlhgVNLQsjphpq2IVuD7J92MxBV0+r8GHBEg4DHYaU+D0XyM5Hk4OJ0TKcP2FRIwrEYlDMBVXPgSQmTmQeJEfNCyxqAJhiTNc4BAAA
+   H4sIAAAAAAAAA5NkZGAQA2JRKP7BwMAgzgjBIHFJJAxTx8CAKS+GhNHVwDAvknopqBoJJDF+qF4eqBwI/EIwweLiSObjAgOlhgdNLQ8jphpq2IVuD7J92MxBV0+r8OHBEg4DHYaU+D0XyM5Hk4OJ0TKcf2FRIwvEclAsBFUvgCQmT2QeJEfNByxqAEsiWiE4BAAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs"/>
  <layer id="6" name="Tile Layer 2" width="9" height="30">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgYGAQYmTACgTQxNHVocuPglEwCkYGAAC1hN4GOAQAAA==
+   H4sIAAAAAAAAA2NgYGCQYmTACiTQxNHVocuPglEwCkYGAABxNkS0OAQAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">
@@ -35,12 +36,12 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="89" gid="316" x="64" y="16" width="16" height="16">
+  <object id="89" gid="329" x="64" y="16" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="200"/>
    </properties>
   </object>
-  <object id="93" gid="276" x="64" y="96" width="16" height="16">
+  <object id="93" gid="284" x="64" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (has-weapon 1)
     (if (max-pp-snowballs)

@@ -7,11 +7,11 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/basic.tsx"/>
- <tileset firstgid="173" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="154" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="178" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5VTMQ6AIAy8wdHRwbEjP2Aj7Cb+/zlKhFiacuIlDXIc7RVQAOx3SB1bBDzQ3FpHqD1QnIc84JP6LvujWT9ITq+m9sOQyFrxEBye9Wfzhgm97c3qpWryRN0R4oQP5qFxoubs7Fhe70xZXQuZ1H35+AOv1+JjG+gzyXUaH0HFgf7NRLx3V2JB/3+2t3MBnGSdoLgDAAA=
+   H4sIAAAAAAAAA5VTMQ6AIAy8wdHRgbEjP2Aj7ib+/zlKhFiattZLGvQ42ytUApDuoL6OyHjAubWvYN+AcRqKwVf2nBTd4eTUanI/Hqqz1zxkhff6k3lzQC97k3rqmj1Q10IJ+PA8DI7Yu3d2Xl7tTL26EhTUffn4A63X5mMz9NacN5zCR2ZxYJ6ZgvfuWiyY/88xOxcYeoEwuAMAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
@@ -41,12 +41,12 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="41" gid="160" x="160" y="48" width="16" height="16">
+  <object id="41" gid="165" x="160" y="48" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="43" gid="160" x="192" y="128" width="16" height="16">
+  <object id="43" gid="165" x="192" y="128" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
@@ -56,7 +56,7 @@
     <property name="action" value="(dialog '((&quot;/_1&quot; &quot;Exit ←&quot;)))"/>
    </properties>
   </object>
-  <object id="46" gid="171" x="16" y="208" width="16" height="16">
+  <object id="46" gid="176" x="16" y="208" width="16" height="16">
    <properties>
     <property name="actionOnEvent" value="(if (has-been-here &quot;14&quot;) (delete-me))"/>
    </properties>
