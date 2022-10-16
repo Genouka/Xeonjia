@@ -41,6 +41,7 @@ class _ItemsMenuState extends State<ItemsMenu> {
             left: MediaQuery.of(context).size.width / 7,
             right: MediaQuery.of(context).size.width / 7,
             top: 60,
+            bottom: 82,
           ),
           child: widget.items.isEmpty
               ? Container(
