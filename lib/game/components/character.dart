@@ -204,7 +204,7 @@ class CharacterComponent extends BasicComponent
         super.delete();
         if (isPlayerOne) gameRef.end();
       } else {
-        gameRef.playSound(Sfx.gameover);
+        if (isPlayerOne) gameRef.playSound(Sfx.gameover);
         deletionAnimation(
             period: 1.5,
             callback: () {
