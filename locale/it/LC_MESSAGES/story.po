@@ -6,7 +6,7 @@
 # no no <skariko@pm.me>, 2020.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-17 14:37+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -1194,7 +1194,7 @@ msgstr "Ti consiglio di andartene.\nQuesti mostri sono troppo forti."
 
 #: assets/maps/story/20.tmx:
 msgid "I didn't think you were that strong."
-msgstr ""
+msgstr "Non pensavo che tu fossi così forte."
 
 #: assets/maps/story/999.tmx:
 msgid "Xeonjia Tower"
