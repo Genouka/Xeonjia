@@ -273,12 +273,8 @@ class XeonjiaGame extends FlameGame
       for (int i = _activePlayerIndex; i < players.length; i++) {
         if (!(players[i].deleted || players[i].isBeingDeleted)) {
           changingTurn = true;
-          camera.moveTo(Vector2(
-              _moveCamera(size.x, map.width, players[i].x),
-              _moveCamera(
-                  size.y,
-                  worldMapEnabled ? map.width * 0.7 : map.height,
-                  players[i].y)));
+          camera.moveTo(Vector2(_moveCamera(size.x, map.width, players[i].x),
+              _moveCamera(size.y, map.height, players[i].y)));
           add(TimerComponent(
               period: 0.7,
               onTick: () {
@@ -415,6 +411,8 @@ class XeonjiaGame extends FlameGame
   void endBattle() {
     inBattle = false;
     overlays.remove('rulesButton');
+    camera.moveTo(Vector2(_moveCamera(size.x, map.width, playerOne!.x),
+        _moveCamera(size.y, map.height, playerOne!.y)));
     add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
     playSound(Sfx.win);
     if (settings.backgroundMusic) {
