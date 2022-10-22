@@ -91,6 +91,8 @@ class SnowBallWeapon extends Weapon {
       : super(Weapons.snowball.id, powerPoints) {
     atk = 10 + level * 2.0;
   }
+  SnowBallWeapon.fromAtk({required int atk, double? powerPoints})
+      : this(level: (atk - 10) ~/ 2, powerPoints: powerPoints);
 
   @override
   final int level;

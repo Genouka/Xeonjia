@@ -73,8 +73,8 @@ class CharacterComponent extends BasicComponent
           initialHP: double.parse(tile.properties['hp'] ?? 'Infinity'),
           team: int.parse(tile.properties['team'] ?? '0'),
           inputWeaponList: [
-            SnowBallWeapon(
-                level: int.parse(tile.properties['weaponLevel'] ?? '0'),
+            SnowBallWeapon.fromAtk(
+                atk: int.parse(tile.properties['weaponAtk'] ?? '0'),
                 powerPoints: double.infinity)
           ],
           level: int.parse(tile.properties['level'] ?? '0'),
