@@ -55,6 +55,7 @@ void setComponentSize(Size screenSize) => componentSize =
 class XeonjiaGame extends FlameGame
     with KeyboardEvents, PanDetector, HasTappables {
   XeonjiaGame(this.config) {
+    camera.speed = 300;
     environment = setEnvironment(this);
     messageManager = MessageManager(this);
     dialogBox = DialogBox(this);
@@ -272,6 +273,12 @@ class XeonjiaGame extends FlameGame
       for (int i = _activePlayerIndex; i < players.length; i++) {
         if (!(players[i].deleted || players[i].isBeingDeleted)) {
           changingTurn = true;
+          camera.moveTo(Vector2(
+              _moveCamera(size.x, map.width, players[i].x),
+              _moveCamera(
+                  size.y,
+                  worldMapEnabled ? map.width * 0.7 : map.height,
+                  players[i].y)));
           add(TimerComponent(
               period: 0.7,
               onTick: () {
@@ -281,8 +288,6 @@ class XeonjiaGame extends FlameGame
                 } else {
                   _activePlayerIndex = i;
                   changingTurn = false;
-                  updateCamera(
-                      activePlayer!.position.x, activePlayer!.position.y);
                   if (playerOne!.isMyTurn) {
                     overlays.add('backpackButton');
                     if (enemies > 0) overlays.add('rulesButton');
@@ -382,8 +387,13 @@ class XeonjiaGame extends FlameGame
   void onGameResize(Vector2 canvasSize) {
     setComponentSize(canvasSize.toSize());
     miniMapZoom = 1;
+    bool changed = !(hasLayout && this.canvasSize == canvasSize);
     super.onGameResize(canvasSize);
-    if (!worldMapEnabled) updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
+    if (!worldMapEnabled && changed) {
+      inBattle
+          ? updateCamera(activePlayer?.x ?? 0, activePlayer?.y ?? 0)
+          : updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
+    }
   }
 
   /// Start battle and adds HUDs
