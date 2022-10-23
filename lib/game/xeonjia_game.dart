@@ -853,7 +853,12 @@ class XeonjiaGame extends FlameGame
   @override
   KeyEventResult onKeyEvent(
       RawKeyEvent event, Set<LogicalKeyboardKey> keysPressed) {
-    if (event is! RawKeyDownEvent) return KeyEventResult.ignored;
+    if (event.logicalKey.keyLabel.contains('Audio Volume')) {
+      return KeyEventResult.skipRemainingHandlers;
+    }
+    if (event is! RawKeyDownEvent || overlays.isActive('loading')) {
+      return KeyEventResult.ignored;
+    }
     if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
       movePlayer(Direction.down);
     } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
@@ -863,7 +868,11 @@ class XeonjiaGame extends FlameGame
     } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
       movePlayer(Direction.left);
     } else if (event.logicalKey == LogicalKeyboardKey.space) {
-      playerOne!.shoot();
+      if (!paused) {
+        messageManager.isActive
+            ? dialogBox.state?.next()
+            : playerOne?.inspect();
+      }
     } else if (event.logicalKey == LogicalKeyboardKey.keyA) {
       if (!paused) playerOne!.updateOrientation(Direction.left);
     } else if (event.logicalKey == LogicalKeyboardKey.keyW) {
@@ -872,6 +881,8 @@ class XeonjiaGame extends FlameGame
       if (!paused) playerOne!.updateOrientation(Direction.right);
     } else if (event.logicalKey == LogicalKeyboardKey.keyS) {
       if (!paused) playerOne!.updateOrientation(Direction.down);
+    } else if (event.logicalKey == LogicalKeyboardKey.keyQ) {
+      if (!paused && inBattle) playerOne!.shoot();
     } else if (event.logicalKey == LogicalKeyboardKey.escape) {
       if (isPaused) {
         overlays.remove('pauseMenu');
