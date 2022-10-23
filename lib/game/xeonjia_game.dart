@@ -594,6 +594,7 @@ class XeonjiaGame extends FlameGame
       addAll([zoomInButton, zoomOutButton]);
       miniMapActive = true;
     } else {
+      zoomMiniMap(toValue: 1);
       if (worldMapEnabled) worldMap(); // remove the world map
       updateCamera(playerOne!.x, playerOne!.y);
       overlays.remove('mapNameBox');
