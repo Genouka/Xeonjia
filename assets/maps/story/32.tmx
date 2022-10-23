@@ -7,19 +7,19 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62UOwvCMBSFb0FwVgQdRJzE0c1FwVUHcW19gEh94hNf/9XFn+DYTU/oDaTRljb2wEfT3JucpMktUXLZFpGj0AeDCGyMGQIHuGAKRkqfaI+BBzqaV9EKevb5XfcQc84Y6THTcA33J9khtgcLcAArsGYmYAO28T/jl0rgCm7gDO7gCE7MnPMuf3g02ScHKiCvxPS+hqGHZ7w6X/LMo/QEhYh4zcBX36/wKBnMk1RqfchaSFMP+q6HuLUQVy8K1od4HlL2EOej1seS/BpJU3UKrw91HUJd0IuYKxPSXwUt0GYvgfz3ibv/6849OafKOS8eVya/3eGcLGJvHvMBwkOA3twFAAA=
+   H4sIAAAAAAAAA62UOwvCMBSFr9DRRXFwEHESRzcXha66FgffiPjGJ75+rkt/QseCJ/QG0tSWGnvgo2leJ2lySvS7pjmimYID+gkMMGYEhmAJ5mCs1InyBPjA1rwqubCnw++6h5hzwUiPhcbScH+SI9pOYA3OYAt2zBTswSH9Z4yoDB7gCW7gBS7gyqy43/0Pjxb7FEAVFJU2va5p6OEbry6QPPMkuaCU0F438NX3KzzKBvP8KjUfMgtZ6k3RPKTNQlp5FM6HeJ4z9hDno+ZjQ0FGslSD4vOhrkOoC3oJc1kx9TXQBh32Esh/n7j73+6cy31q3MfjcRUKyjb3yaPN4vx8APoFyevcBQAA
+  </data>
+ </layer>
+ <layer id="6" name="Tile Layer 2" width="25" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAwtkYGAIgeJQIA4E4mAkMZg4DJgAsSkQf4Xyn0JpZkYGqgEbILbFIs6NZocAkM8IxExUtBsdSADN5gRiLgrt4APq5yfDDJAfa4B0LZoYNiAGFBfHYwcufRJYxLGJEQPI1UcrAEuv5ABQeIHyA668AAO40isxgNzwosRfxAJK/IUNkOJmcvM1zM2OQOxEQC2ufE2PsKUHAADAbTni3AUAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
- <layer id="6" name="Tile Layer 2" width="25" height="15">
-  <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAwtkYGAIgeJQIA4E4mAkMZg4DJgAsSkQf4DyH0DpfwzUAzZAbItFnI0Rlc8N5P8B0n+paDc6EAbawQLErIyE1eIDnED9XGSYAfJjDZCuRRPDBgSB4kJ47MClTxiLODYxYgC5+mgFYOmVHAAKL1B+wJUXYABXeiUGkBtelPiLWECJv7ABUtxMbr6GudkRiJ0IqMWVr+kRtvQAAPIVyiLcBQAA
-  </data>
- </layer>
  <objectgroup id="10" name="spawn points">
   <object id="51" class="Door" x="384" y="144" width="16" height="16">
    <properties>
@@ -47,7 +47,7 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="57" gid="271" x="336" y="48" width="16" height="16">
+  <object id="57" gid="276" x="336" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Relax and enjoy the sea.&quot;)))"/>
    </properties>
@@ -57,7 +57,7 @@
     <property name="action" value="(dialog '((&quot;I can see the inside of the Pharmacy.&quot;)))"/>
    </properties>
   </object>
-  <object id="59" gid="336" x="320" y="32" width="16" height="16">
+  <object id="59" gid="341" x="320" y="32" width="16" height="16">
    <properties>
     <property name="action">(begin
   (define event-id &quot;032-sea&quot;)
@@ -70,7 +70,7 @@
     (dialog '((&quot;The sea is very calm and relaxing.&quot;)))))</property>
    </properties>
   </object>
-  <object id="63" gid="271" x="0" y="112" width="16" height="16">
+  <object id="63" gid="276" x="0" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Welcome to the Water Region! Enjoy your stay.&quot;)))"/>
    </properties>

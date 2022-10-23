@@ -106,8 +106,7 @@
     <property name="actionOnEvent">(if  (get &quot;039-september-ok&quot;)
     (delete-me))</property>
     <property name="hp" type="float" value="60"/>
-    <property name="level" type="int" value="12"/>
-    <property name="weaponLevel" type="int" value="5"/>
+    <property name="weaponAtk" type="int" value="26"/>
    </properties>
   </object>
   <object id="75" class="NPC" gid="178" x="32" y="160" width="16" height="16">

@@ -16,7 +16,12 @@
  <tileset firstgid="318" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="22" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAxNjZGAQozHmBWJJKOZDYqNjbHJKUJofi7miQMwBxJQAcSTzBKG0NBD/gsqL4DCfh4C9yOZKIrmXEEC2TwDIloO6S4gRYS6y2aCwlSIxDMTRwhCbucS4FR1IIMWbFJq5okSYy0KCnaSYSwqg1FxcfhCms3vxhSUs7YrgUYturixSGsRlJicjwixfHGrEkdxJbFr7hcSORTMPlkfksZgrC5UjB8PME4RiAGrbBuAoBQAA
+   H4sIAAAAAAAAA62TwQrCMAyGW9hhgnZM1tUqzifyEXz/qwdPnkyxhRiStGMGPrZD++Vfl87WmHkDB8ABERiUNTHj0DvFIYcHXuZbQfCmNb01TRXQnlRPxjvm5wV4V3x7++u9AkvmRryR9NZqIt4F5Srg3Olsz0CX93WVHoHs94K3JSv1lm+NTF7f4OWyS/9+jVfL+2/vSZjnrV4tP+fV5qDM7sSslbxpvo8V5w7N4V3JS+eudhb4Lj5IT82L7+Rayh0eMx/km95MKAUAAA==
+  </data>
+ </layer>
+ <layer id="6" name="Tile Layer 2" width="22" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIA58wSLGwkia+sEMBKB+EcLjJ3LMlICaJ0WGuQJIeqjpLnyAEnskkPSS499RMDgBD5XjUmKIpA1Y/gPRAOmrYBUoBQAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -26,19 +31,19 @@
     <property name="level" type="float" value="8"/>
    </properties>
   </object>
-  <object id="85" class="SliderCpu" gid="293" x="144" y="96" width="16" height="16">
+  <object id="85" class="SliderCpu" gid="293" x="112" y="176" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="20"/>
     <property name="level" type="float" value="8"/>
    </properties>
   </object>
-  <object id="86" class="SliderCpu" gid="293" x="176" y="160" width="16" height="16">
+  <object id="86" class="SliderCpu" gid="293" x="144" y="144" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="20"/>
     <property name="level" type="float" value="8"/>
    </properties>
   </object>
-  <object id="87" gid="45" x="256" y="80" width="16" height="16">
+  <object id="87" gid="45" x="256" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
@@ -60,11 +65,6 @@
    </properties>
   </object>
  </objectgroup>
- <layer id="6" name="Tile Layer 2" width="22" height="15">
-  <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA58wSLGwkia+sEMBKB+EcLjJ3LMlICaJ0VFc2kJqOn/UTA8AA+V04TEEEljsDIBRAMAG+GyRSgFAAA=
-  </data>
- </layer>
  <objectgroup id="2" name="spawn points">
   <object id="80" class="Door" x="176" y="208" width="16" height="16">
    <properties>
@@ -113,7 +113,7 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="98" gid="329" x="208" y="224" width="16" height="16">
+  <object id="98" gid="329" x="160" y="224" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="50"/>
    </properties>

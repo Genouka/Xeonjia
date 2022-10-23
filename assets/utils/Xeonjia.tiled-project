@@ -192,11 +192,6 @@
                     "value": 0
                 },
                 {
-                    "name": "level",
-                    "type": "int",
-                    "value": 0
-                },
-                {
                     "name": "movementPattern",
                     "type": "string",
                     "value": ""
@@ -237,7 +232,7 @@
                     "value": true
                 },
                 {
-                    "name": "weaponLevel",
+                    "name": "weaponAtk",
                     "type": "int",
                     "value": 0
                 }

@@ -47,10 +47,10 @@
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I will defeat you.&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
   (delete-me))</property>
-    <property name="hp" type="float" value="40"/>
-    <property name="level" type="int" value="9"/>
+    <property name="hp" type="float" value="50"/>
     <property name="name" value="iosa"/>
     <property name="team" type="int" value="1"/>
+    <property name="weaponAtk" type="int" value="10"/>
    </properties>
   </object>
   <object id="91" class="NPC" gid="46" x="160" y="176" width="16" height="16">
@@ -59,9 +59,9 @@
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
   (delete-me))</property>
     <property name="hp" type="float" value="40"/>
-    <property name="level" type="int" value="9"/>
     <property name="name" value="joza"/>
     <property name="team" type="int" value="1"/>
+    <property name="weaponAtk" type="int" value="12"/>
    </properties>
   </object>
   <object id="93" class="NPC" gid="323" x="144" y="176" width="16" height="16">
@@ -88,14 +88,15 @@
  <objectgroup id="9" name="items">
   <object id="96" class="Solid" x="144" y="304" width="16" height="16">
    <properties>
-    <property name="actionOnCollision">(if  (!(has-item &quot;signet-1&quot;))
+    <property name="actionOnCollision">(if (!(has-item &quot;signet-1&quot;))
+  (if  (= (enemies-count) 0)
     (begin 
-        (dialog '((&quot;I can't escape. I have to take the first signet.&quot;)))
+      (dialog '((&quot;I can't escape. I have to take the first signet.&quot;)))
         (wait)
-        (set-orientation 1))
+        (set-orientation 1)))
     (fire-event (self)))</property>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
-    (delete-me))</property>
+  (delete-me))</property>
    </properties>
   </object>
   <object id="98" gid="288" x="144" y="32" width="16" height="16">

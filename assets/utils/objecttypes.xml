@@ -39,7 +39,7 @@
   <property name="quiet" type="bool" default="true"/>
   <property name="shootPattern" type="string"/>
   <property name="team" type="int" default="0"/>
-  <property name="weaponLevel" type="int" default="0"/>
+  <property name="weaponAtk" type="int" default="0"/>
  </objecttype>
  <objecttype name="SliderCpu" color="#a0a0a4">
   <property name="action" type="string" default="(dialog '((&quot;text&quot;)))"/>
