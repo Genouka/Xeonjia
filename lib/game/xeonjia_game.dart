@@ -163,6 +163,7 @@ class XeonjiaGame extends FlameGame
     remainingMoves = 3;
     changingTurn = false;
     inBattle = false;
+    customBgm = null;
 
     // Remove previous components
     // They are removed during the next update()
@@ -201,7 +202,7 @@ class XeonjiaGame extends FlameGame
     if (map.hasHints) add(HideHintsButton());
     _timer?.start();
     resume();
-    if (customBgm == null) playBackgroundMusic();
+    playBackgroundMusic();
   }
 
   /// Match settings
@@ -401,10 +402,7 @@ class XeonjiaGame extends FlameGame
     if (playerOne!.hasWeaponId(1)) add(Button.S(this));
     add(RemainingMovesBox());
     overlays.add('rulesButton');
-    if (settings.backgroundMusic) {
-      customBgm = 'enemies.oga';
-      FlameAudio.bgm.play('bgm/' + customBgm!);
-    }
+    playBackgroundMusic(custom: 'enemies');
   }
 
   /// Battle is over
@@ -415,10 +413,7 @@ class XeonjiaGame extends FlameGame
         _moveCamera(size.y, map.height, playerOne!.y)));
     add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
     playSound(Sfx.win);
-    if (settings.backgroundMusic) {
-      customBgm = null;
-      playBackgroundMusic();
-    }
+    playBackgroundMusic(custom: null);
   }
 
   /// Pause game
@@ -497,18 +492,22 @@ class XeonjiaGame extends FlameGame
   }
 
   /// Start the background music
-  void playBackgroundMusic() {
+  void playBackgroundMusic({String? custom}) {
     if (!settings.backgroundMusic || messageManager.hideMap) return;
-    if (map.music == 'none') {
+    customBgm = custom;
+    String newBgm = custom ?? map.music ?? 'route';
+    if (newBgm == 'none') {
       FlameAudio.bgm.stop();
       return;
     }
-    var newBgm = (map.music ?? 'route') + '.oga';
-    if (customBgm == null && newBgm == currentBgm) return;
+    if (newBgm == currentBgm) return;
     currentBgm = newBgm;
     FlameAudio.bgm.stop();
+    var currentMap = map.id;
     Future.delayed(const Duration(seconds: 1), () {
-      if (!paused) FlameAudio.bgm.play('bgm/' + currentBgm!);
+      if (!paused && currentMap == map.id) {
+        FlameAudio.bgm.play('bgm/' + currentBgm! + '.oga');
+      }
     });
   }
 
@@ -520,10 +519,6 @@ class XeonjiaGame extends FlameGame
   /// Save match data and load the new room
   void changeRoom(String nextRoomId) {
     pause(stopMusic: false);
-    if (customBgm != null) {
-      customBgm = null;
-      currentBgm = '';
-    }
     if (enemies == 0) currentEventLog['${map.id}-safe'] = true;
 
     // Save new player data into mainCharacter

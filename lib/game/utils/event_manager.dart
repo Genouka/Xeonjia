@@ -1,5 +1,4 @@
 import 'package:flame/components.dart';
-import 'package:flame_audio/flame_audio.dart';
 import 'package:xeonjia/game/components/character.dart';
 import 'package:xeonjia/game/components/common/basic.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
@@ -405,8 +404,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   });
   _('music', 1, (Cell? x) {
     if (settings.backgroundMusic) {
-      gameRef.customBgm = '${x!.car}.oga';
-      FlameAudio.bgm.play('bgm/' + gameRef.customBgm!);
+      gameRef.playBackgroundMusic(custom: x!.car as String);
     }
     return #NONE;
   });
