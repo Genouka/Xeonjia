@@ -42,7 +42,7 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
 
   /// Update [gameRef.camera.position] based on currentMap
   void _updateCamera() {
-    if (_currentMapPosition != null) {
+    if (_currentMapPosition != null && gameRef.elapsed != 0) {
       gameRef.updateCamera(_currentMapPosition!.x, _currentMapPosition!.y);
     }
   }

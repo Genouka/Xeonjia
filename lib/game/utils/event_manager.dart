@@ -343,9 +343,9 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     return #NONE;
   });
   _('teleport', 1, (Cell? x) {
-    gameRef.changeRoom((x!.car as String) + '/teleport');
     gameRef.worldMap(enable: false);
     gameRef.miniMap(enable: false);
+    gameRef.changeRoom((x!.car as String) + '/teleport');
     return #NONE;
   });
   _('teleport-multi', 2, (Cell? x) {
