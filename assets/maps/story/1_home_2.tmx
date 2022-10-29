@@ -14,12 +14,12 @@
    H4sIAAAAAAAAA7vAwMBwHg++CMQ3gPg6GmZAYt+EqtmDA98lQs0eKqt5QEDNQyC+RgQGADSf+cggAQAA
   </data>
  </layer>
- <objectgroup id="10" name="npcs"/>
  <layer id="6" name="Tile Layer 2" width="9" height="8">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgIA7sBOJdSDQ1wWEgPkKEujMkmvsIiB+T7hwUAAAB91WzIAEAAA==
   </data>
  </layer>
+ <objectgroup id="10" name="npcs"/>
  <objectgroup id="2" name="spawn points">
   <object id="78" class="Door" x="96" y="32" width="16" height="16">
    <properties>

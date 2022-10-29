@@ -82,7 +82,7 @@
 </property>
    </properties>
   </object>
-  <object id="46" gid="217" x="160" y="176" width="16" height="16">
+  <object id="46" gid="217" x="160" y="32" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="35"/>
    </properties>
