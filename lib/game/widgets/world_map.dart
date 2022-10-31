@@ -66,6 +66,7 @@ class _RectangleMap extends PositionComponent
 
   @override
   bool onTapUp(TapUpInfo info) {
+    if (gameRef.messageManager.isActive) return true;
     (parent as WorldMap)._selectedMap = map;
     if (map.id == gameRef.map.id) {
       gameRef.setMessage(Message(gameRef, 'This is where I am right now.'.i18n,
