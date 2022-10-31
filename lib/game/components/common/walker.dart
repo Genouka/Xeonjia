@@ -184,7 +184,7 @@ mixin Walker on BasicComponent {
     } else if (settings.soundEffects &&
         (collidedComponent is! StaticComponent || !collidedComponent.isFloor)) {
       if (_previousCollisionSound > 1) {
-        gameRef.playSound(Sfx.collision);
+        gameRef.playSound(Sfx.collision, volume: 0.4);
         _previousCollisionSound = 0;
       }
     }

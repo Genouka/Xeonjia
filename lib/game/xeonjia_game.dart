@@ -412,8 +412,8 @@ class XeonjiaGame extends FlameGame
     camera.moveTo(Vector2(_moveCamera(size.x, map.width, playerOne!.x),
         _moveCamera(size.y, map.height, playerOne!.y)));
     add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
-    playSound(Sfx.win);
     playBackgroundMusic(custom: null);
+    playSound(Sfx.win, volume: 1);
   }
 
   /// Pause game
