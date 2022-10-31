@@ -115,6 +115,7 @@
    <properties>
     <property name="actionOnCollision">(if (!get &quot;013-h-safe&quot;)
   (begin
+    (music &quot;enemies&quot;)
     (dialog
       '((&quot;/hero_exclamation&quot; &quot;! ! !&quot;)
       (&quot;monster/green&quot; &quot;Gyaaa!&quot;)))

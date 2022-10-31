@@ -14,6 +14,11 @@
    H4sIAAAAAAAAA2NgwA94gZiPBMxPwDxSwHCz234A7QYBByLUiAKxGBYsgENcnEp2I8sLArE8A3a/ygKxEJFmwoA5ie7CZj+yvcSYCwPCaHwFPPZisx+bvTDggEbjkke2lxgAsl8Oj7247LFHE7MBYlsS7IUBOzL0YHMPpeZQYvdAAEJ2G1DJHmzx6oDGZoHSyBhdzByLGhhWQGLbM6CmJ3QzQAAABSWHD8gGAAA=
   </data>
  </layer>
+ <layer id="6" name="Tile Layer 2" width="31" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAzNhYGAwZUAAEzT+VSC+BsTXicA3gPgmkhnoZqHzbYDYFkkcnQ8C94D4PhH4AZqZuMxGB/jUPQPi52j4FRaxF2hmErKTkBvIAaTaicsN5ABK9I4C2gJy05QZleynljmjABVQUlYMRXsJAQAFWL4PyAYAAA==
+  </data>
+ </layer>
  <objectgroup id="9" name="npc">
   <object id="37" class="NPC" gid="143" x="240" y="96" width="16" height="16">
    <properties>
@@ -56,11 +61,6 @@
    </properties>
   </object>
  </objectgroup>
- <layer id="6" name="Tile Layer 2" width="31" height="14">
-  <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzNhYGAwZUAAEzT+VSC+BsTXicA3gPgmkhnoZqHzbYDYFkkcnQ8C94D4PhH4AZqZuMxGB/jUPQPi52j4FRaxF2hmErKTkBvIAaTaicsN5ABK9I4C2gJy05QZleynljmjABVQUlYMRXsJAQAFWL4PyAYAAA==
-  </data>
- </layer>
  <layer id="11" name="Tile Layer 3" width="31" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgGAX4gBkUkypHDWAHxaTKjYJRMApGwUgCANHE9aHIBgAA

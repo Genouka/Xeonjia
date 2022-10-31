@@ -7,19 +7,75 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="361" source="../tilesets/crypt-2.tsx"/>
- <tileset firstgid="417" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="366" source="../tilesets/crypt-2.tsx"/>
+ <tileset firstgid="422" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7WUywoCMQxFW1B0qy7c+inz//hA8YGCmoWL2fsBNcGGxkw7Y7Vz4DIhbW8gZGLMG4hI5p2IH6jax5XI1yKe208PYoVaC21Mmn3LmYbrEgfUUeiU4cPMbDNH/q5gjRgj0bMr6oZ6+u/9D98taudj8nfqPKfXKc6oi4+rAn5dgAm96gue+T6h/2TRcj6OzGIugJqgz1R5kXcJf64BCe9fasiZTdXoQs+5Rs7st2+WmfdjgAm7k3eX3q9gmnuY7w6wn0MbPGhv8O6Qb17Mg3KK3AUAAA==
+   H4sIAAAAAAAAA7WUuw7CMAxFY6kLqKzAwMCn5P83HgLxEEg8BobujNgiVi5p0hJoj3RVK3GuFcuNMW/uEeF6QT5+sCoXW8ipIJ7Rp4ewZK1Aa5Nm17AXonWFPesAOmb4KFOqr2kPuqoRo4SeXVhX1tN9b3/4blhbF+M9lJxepzixzi62Hfi1gTPaFwX1X0P+k3nD/igyi7nIHcbsMwm8xLsLf62BvULvX2rgzKZqtBHOeQjO7LdnFpn5MfQe1vi3K3xfY++w5g44d0jeQ96NkupnXvAAzhvcBQAA
   </data>
  </layer>
+ <objectgroup id="8" name="items">
+  <object id="56" gid="260" x="112" y="16" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (define event-id &quot;34.vase1&quot;)
+    (define item-id &quot;fresh-water&quot;)
+    (if (!get event-id)
+        (begin
+            (dialog '((&quot;Hey, there are items in here!&quot;)))
+            (give-item item-id)
+            (set event-id #t))
+        (dialog '((&quot;This vase is empty.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="57" gid="260" x="0" y="224" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (define event-id &quot;34.vase2&quot;)
+    (define item-id &quot;fresh-water&quot;)
+    (if (!get event-id)
+        (begin
+            (dialog '((&quot;Hey, there are items in here!&quot;)))
+            (give-item item-id)
+            (set event-id #t))
+        (dialog '((&quot;This vase is empty.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="58" gid="237" x="16" y="16" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (define item-id &quot;34.money&quot;)
+    (define money-diff 150)
+    (if (! (has-item item-id))
+        (begin
+            (dialog '((&quot;* {{hero}} found {{money-diff}} ¤ *&quot;)))
+            (give-item item-id)
+            (set-money-diff money-diff))
+        (dialog '((&quot;A rock.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="59" gid="276" x="32" y="96" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Hexa Cave&quot;)))"/>
+   </properties>
+  </object>
+  <object id="65" class="Modifier" gid="440" x="352" y="80" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="45"/>
+   </properties>
+  </object>
+  <object id="66" gid="433" x="272" y="224" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="25"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NggIA/QPwXC5uagIWRgYGVEZNNCuAmoAfmdnHGgfMHJ5DPRYbfSAGCQPOFaGwHJeDHQDtgkAF8aZFa6YXcPDUKqAdoVeaQAwBDRgHE3AUAAA==
+   H4sIAAAAAAAAA2NggABGRgYGJkZMNjUBJ9BMLkZMNilAgIAemNtlGAfOH3xAPj8N7EUGYkDzxWlsByXg70A7YJABfGmRWumF3Dw1CqgHaFXmkAMAyN1JZ9wFAAA=
   </data>
  </layer>
  <objectgroup id="10" name="spawn points">
@@ -38,62 +94,6 @@
   <object id="61" class="Door" x="64" y="80" width="16" height="16">
    <properties>
     <property name="roomId" value="34_cave"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="8" name="items">
-  <object id="56" gid="255" x="112" y="16" width="16" height="16">
-   <properties>
-    <property name="action">(begin
-    (define event-id &quot;34.vase1&quot;)
-    (define item-id &quot;fresh-water&quot;)
-    (if (!get event-id)
-        (begin
-            (dialog '((&quot;Hey, there are items in here!&quot;)))
-            (give-item item-id)
-            (set event-id #t))
-        (dialog '((&quot;This vase is empty.&quot;)))))</property>
-   </properties>
-  </object>
-  <object id="57" gid="255" x="0" y="224" width="16" height="16">
-   <properties>
-    <property name="action">(begin
-    (define event-id &quot;34.vase2&quot;)
-    (define item-id &quot;fresh-water&quot;)
-    (if (!get event-id)
-        (begin
-            (dialog '((&quot;Hey, there are items in here!&quot;)))
-            (give-item item-id)
-            (set event-id #t))
-        (dialog '((&quot;This vase is empty.&quot;)))))</property>
-   </properties>
-  </object>
-  <object id="58" gid="232" x="16" y="16" width="16" height="16">
-   <properties>
-    <property name="action">(begin
-    (define item-id &quot;34.money&quot;)
-    (define money-diff 150)
-    (if (! (has-item item-id))
-        (begin
-            (dialog '((&quot;* {{hero}} found {{money-diff}} ¤ *&quot;)))
-            (give-item item-id)
-            (set-money-diff money-diff))
-        (dialog '((&quot;A rock.&quot;)))))</property>
-   </properties>
-  </object>
-  <object id="59" gid="271" x="32" y="96" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Hexa Cave&quot;)))"/>
-   </properties>
-  </object>
-  <object id="65" class="Modifier" gid="435" x="352" y="80" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="45"/>
-   </properties>
-  </object>
-  <object id="66" gid="428" x="272" y="224" width="16" height="16">
-   <properties>
-    <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
   </object>
  </objectgroup>

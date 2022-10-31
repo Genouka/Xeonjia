@@ -39,8 +39,7 @@
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;Mind your own business.&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
-  (delete-me)
-  (music &quot;enemies&quot;))</property>
+  (delete-me))</property>
    </properties>
   </object>
   <object id="82" class="NPC" gid="45" x="48" y="48" width="16" height="16">
