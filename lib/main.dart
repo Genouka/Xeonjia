@@ -17,11 +17,11 @@ void main() async {
   var androidInfo =
       Platform.isAndroid ? await DeviceInfoPlugin().androidInfo : null;
   await loadStoredData();
-  Platform.isAndroid && androidInfo!.version.sdkInt! < 19
+  Platform.isAndroid && androidInfo!.version.sdkInt < 19
       ? SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
           overlays: [SystemUiOverlay.bottom])
       : SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
-  if (Platform.isAndroid && androidInfo!.version.sdkInt! < 23) {
+  if (Platform.isAndroid && androidInfo!.version.sdkInt < 23) {
     settings.soundEffects = false;
     settings.backgroundMusic = false;
     settings.audioSupported = false;
