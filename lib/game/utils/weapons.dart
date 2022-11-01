@@ -19,7 +19,7 @@ enum Weapons {
 /// It defines what happens if someone use a weapon
 abstract class Weapon {
   Weapon(this.id, double? maxPp) {
-    this.maxPp = maxPp ?? 10 + level * 5.0;
+    this.maxPp = maxPp ?? 5 + level * 2;
     _powerPoints = this.maxPp;
   }
 
@@ -43,19 +43,15 @@ abstract class Weapon {
   }
 
   /// Restore PP
-  void restorePp() {
-    powerPoints = maxPp;
-  }
+  void restorePp() => powerPoints = maxPp;
 
   /// Function used when a shoot input happens
   void shoot({required Walker shooter});
 
   /// Export / Import weapon details
-  Map<String, dynamic> toJson() =>
-      {'id': id, 'lv': level, 'pp': powerPoints.isFinite ? maxPp : null};
+  Map<String, dynamic> toJson() => {'id': id, 'lv': level};
   static Weapon fromJson(Map<String, dynamic> json) =>
-      (Weapon.fromId(json['id'], json['lv'])
-        ..powerPoints = (json['pp'] ?? double.infinity));
+      Weapon.fromId(json['id'], json['lv']);
 
   /// Return a new weapon
   static Weapon fromId(int id, [int level = 0]) {
@@ -69,7 +65,7 @@ abstract class Weapon {
 class PunchWeapon extends Weapon {
   PunchWeapon({required this.level})
       : super(Weapons.punch.id, double.infinity) {
-    atk = level + 1.0;
+    atk = 10 + level * 2.0;
   }
 
   @override
