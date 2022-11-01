@@ -17,26 +17,26 @@
  <objectgroup id="9" name="npc">
   <object id="39" class="SliderCpu" gid="139" x="96" y="96" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="10"/>
-    <property name="level" type="float" value="15"/>
+    <property name="hp" type="float" value="100"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="40" class="SliderCpu" gid="134" x="160" y="80" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="10"/>
-    <property name="level" type="float" value="15"/>
+    <property name="hp" type="float" value="100"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="42" class="SliderCpu" gid="129" x="160" y="128" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="10"/>
-    <property name="level" type="float" value="15"/>
+    <property name="hp" type="float" value="100"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="43" class="SliderCpu" gid="129" x="128" y="32" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="10"/>
-    <property name="level" type="float" value="15"/>
+    <property name="hp" type="float" value="100"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="47" class="NPC" gid="213" x="160" y="48" width="16" height="16">

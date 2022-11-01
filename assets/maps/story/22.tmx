@@ -33,7 +33,7 @@
   (give-weapon 1)
   (dialog
     '((&quot;* {{hero}} got a SNOWBALLS CONTAINER *&quot;)
-    (&quot;/&quot; &quot;It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \&quot;S\&quot; button.\nIt can contain up to 10 snowballs.&quot;)
+    (&quot;/&quot; &quot;It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \&quot;S\&quot; button.\nIt can contain up to 5 snowballs.&quot;)
     (&quot;/hero_happy&quot; &quot;Wow! I'm sure it'll come in handy. Thank you.&quot;)
     (&quot;/_happy&quot; &quot;You're welcome.&quot;)
     (&quot;/&quot; &quot;Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too.&quot;)

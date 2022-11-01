@@ -22,19 +22,19 @@
   <object id="84" class="SliderCpu" gid="293" x="128" y="144" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="30"/>
-    <property name="level" type="float" value="8"/>
+    <property name="level" type="float" value="1"/>
    </properties>
   </object>
   <object id="85" class="SliderCpu" gid="293" x="192" y="112" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="30"/>
-    <property name="level" type="float" value="8"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="86" class="SliderCpu" gid="293" x="64" y="160" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="30"/>
-    <property name="level" type="float" value="8"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
  </objectgroup>

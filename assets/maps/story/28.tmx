@@ -16,8 +16,8 @@
  <objectgroup id="9" name="npc">
   <object id="39" class="SliderCpu" gid="129" x="192" y="256" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="3"/>
-    <property name="level" type="float" value="6"/>
+    <property name="hp" type="float" value="30"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="46" class="Modifier" gid="172" x="80" y="272" width="16" height="16">
@@ -32,14 +32,14 @@
   </object>
   <object id="51" class="SliderCpu" gid="129" x="192" y="176" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="3"/>
-    <property name="level" type="float" value="12"/>
+    <property name="hp" type="float" value="30"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="52" class="SliderCpu" gid="129" x="256" y="256" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="3"/>
-    <property name="level" type="float" value="12"/>
+    <property name="hp" type="float" value="30"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
  </objectgroup>

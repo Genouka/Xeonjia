@@ -40,16 +40,16 @@
    <properties>
     <property name="actionOnEvent">(if  (get &quot;013-safe&quot;)
   (delete-me))</property>
-    <property name="hp" type="float" value="6"/>
-    <property name="level" type="float" value="5"/>
+    <property name="hp" type="float" value="40"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="46" class="SliderCpu" gid="181" x="48" y="96" width="16" height="16">
    <properties>
     <property name="actionOnEvent">(if  (get &quot;013-safe&quot;)
     (delete-me))</property>
-    <property name="hp" type="float" value="6"/>
-    <property name="level" type="float" value="5"/>
+    <property name="hp" type="float" value="30"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
  </objectgroup>

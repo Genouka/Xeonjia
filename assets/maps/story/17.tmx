@@ -16,20 +16,20 @@
  <objectgroup id="9" name="npc">
   <object id="38" class="SliderCpu" gid="129" x="112" y="256" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="4"/>
-    <property name="level" type="float" value="6"/>
+    <property name="hp" type="float" value="30"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="39" class="SliderCpu" gid="129" x="32" y="256" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="4"/>
-    <property name="level" type="float" value="5"/>
+    <property name="hp" type="float" value="30"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="41" class="SliderCpu" gid="129" x="64" y="256" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="4"/>
-    <property name="level" type="float" value="5"/>
+    <property name="hp" type="float" value="40"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="43" class="NPC" gid="182" x="128" y="80" width="16" height="16">

@@ -3,7 +3,7 @@
  <properties>
   <property name="action">(begin
   (map-name &quot;MOSSY CRYPT – B2F&quot;)
-  (set-pp-snowballs 8))</property>
+  (set-pp-snowballs 3))</property>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="MOSSY CRYPT – B2F"/>
   <property name="music" value="enemies"/>
@@ -28,19 +28,19 @@
   <object id="84" class="SliderCpu" gid="293" x="80" y="144" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="20"/>
-    <property name="level" type="float" value="8"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="85" class="SliderCpu" gid="293" x="112" y="176" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="20"/>
-    <property name="level" type="float" value="8"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="86" class="SliderCpu" gid="293" x="144" y="144" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="20"/>
-    <property name="level" type="float" value="8"/>
+    <property name="level" type="float" value="0"/>
    </properties>
   </object>
   <object id="87" gid="45" x="256" y="96" width="16" height="16">

@@ -13,7 +13,7 @@
  <tileset firstgid="318" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="9" height="30">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5NkZGAQA2JRKP7BwMAgzgjBIHFJJAxTx8CAKS+GhNHVwDAvknopqBoJJDF+qF4eqBwI/EIwweLiSObjAgOlhgdNLQ8jphpq2IVuD7J92MxBV0+r8OHBEg4DHYaU+D0XyM5Hk4OJ0TKcf2FRIwvEclAsBFUvgCQmT2QeJEfNByxqAEsiWiE4BAAA
+   H4sIAAAAAAAAA8WTwQqAIAyG590ogrKC6uW6Rq/eMTxlNWnNHaKSBj/Mf58bDqwVQOlUoBYAMOrQ5tdEngMI6yURZ7wSwjfIVMRL8a7G2hb2THffkP4+hutRZHjEYDRjtQqZL2bxOXSe1IfzsfajhT38vcM3bx9dPrGa92Lu2QpM69ShcuQz4vU3/+ATZhaYFRoGyKo4BAAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs"/>
@@ -39,15 +39,6 @@
   <object id="89" gid="329" x="64" y="16" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="200"/>
-   </properties>
-  </object>
-  <object id="93" gid="284" x="64" y="96" width="16" height="16">
-   <properties>
-    <property name="action">(if (has-weapon 1)
-    (if (max-pp-snowballs)
-        (dialog '((&quot;The snowballs container is full.&quot;)))
-        (dialog '((&quot;* {{hero}} filled his snowballs container *&quot;))))
-    (dialog '((&quot;A snowdrift.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
