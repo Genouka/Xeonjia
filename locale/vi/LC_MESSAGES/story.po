@@ -283,10 +283,6 @@ msgid "I'll go home as soon as my legs stop shaking in fear."
 msgstr ""
 
 #: assets/maps/story/13.tmx:
-msgid "I can't escape, I have to defeat the monster to save that man."
-msgstr "Tôi không thể chạy trốn, tôi phải đánh bại con quái vật để cứu người đàn ông kia."
-
-#: assets/maps/story/13.tmx:
 msgid "Better if I check that the guy is okay."
 msgstr "Tốt hơn là tôi kiểm tra xem anh chàng đó đã ổn."
 
@@ -515,34 +511,6 @@ msgid "I wanted to buy some medicines but they don't have the ones I like."
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
-msgstr "Tôi nghĩ là chúng ta có thể gọi linh hồn bảo vệ của vùng này bằng cách nào đó. Chúng ta chỉ cần phải tìm ra cách đó."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "Let me know if you need help."
-msgstr "Hãy cho tôi biết nếu bạn cần trợ giúp."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I think that all the writings on the six stones must be true to invoke the spirit."
-msgstr "Tôi nghĩ là tất cả chữ viết trên sáu hòn đá phải là đúng để gọi linh hồn đó."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I think that #1 should be green."
-msgstr "Tôi nghĩ là #1 nên là xanh lá."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "Do you need help?"
-msgstr "Bạn có cần giúp không?"
-
-#: assets/maps/story/34_cave.tmx:
-msgid "It doesn't seem difficult to solve."
-msgstr "Việc này có vẻ không khó giải."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I don't know what you did but it seems to have worked."
-msgstr "Tôi không biết bạn đã làm gì nhưng việc đó có vẻ đã thành công."
-
-#: assets/maps/story/34_cave.tmx:
 msgid "\" #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \""
 msgstr "\" #3: Tôi là xanh lá nếu #5 và #6 cùng màu. Nếu không thì tôi là đỏ. \""
 
@@ -619,6 +587,10 @@ msgid "It is the ancient writing used in these areas long ago.\nHere it says:"
 msgstr "Nó là chữ viết cổ xưa được sử dụng trong những vùng này lâu rồi.\nỞ đây viết là:"
 
 #: assets/maps/story/34_cave.tmx:
+msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
+msgstr "Tôi nghĩ là chúng ta có thể gọi linh hồn bảo vệ của vùng này bằng cách nào đó. Chúng ta chỉ cần phải tìm ra cách đó."
+
+#: assets/maps/story/34_cave.tmx:
 msgid "Slooosh!"
 msgstr ""
 
@@ -693,6 +665,30 @@ msgstr "Chúng ta cần phải cẩn thận hơn và tìm chúng tốt hơn.\nB�
 #: assets/maps/story/34_cave.tmx:
 msgid "Bye Shen, be careful!"
 msgstr "Tạm biệt Shen, hãy cẩn thận!"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Let me know if you need help."
+msgstr "Hãy cho tôi biết nếu bạn cần trợ giúp."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think that all the writings on the six stones must be true to invoke the spirit."
+msgstr "Tôi nghĩ là tất cả chữ viết trên sáu hòn đá phải là đúng để gọi linh hồn đó."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think that #1 should be green."
+msgstr "Tôi nghĩ là #1 nên là xanh lá."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Do you need help?"
+msgstr "Bạn có cần giúp không?"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "It doesn't seem difficult to solve."
+msgstr "Việc này có vẻ không khó giải."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I don't know what you did but it seems to have worked."
+msgstr "Tôi không biết bạn đã làm gì nhưng việc đó có vẻ đã thành công."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes"
@@ -871,7 +867,7 @@ msgid "* {{hero}} got a SNOWBALLS CONTAINER *"
 msgstr "* {{hero}} đã nhận THÙNG CHỨA BÓNG TUYẾT *"
 
 #: assets/maps/story/22.tmx:
-msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \"S\" button.\nIt can contain up to 10 snowballs."
+msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \"S\" button.\nIt can contain up to 5 snowballs."
 msgstr ""
 
 #: assets/maps/story/22.tmx:

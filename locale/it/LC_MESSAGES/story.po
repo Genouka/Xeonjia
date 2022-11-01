@@ -285,10 +285,6 @@ msgid "I'll go home as soon as my legs stop shaking in fear."
 msgstr "Andrò a casa non appena le mie gambe smetteranno di tremare per la paura."
 
 #: assets/maps/story/13.tmx:
-msgid "I can't escape, I have to defeat the monster to save that man."
-msgstr "Non posso scappare, devo sconfiggere il mostro per salvare quell'uomo."
-
-#: assets/maps/story/13.tmx:
 msgid "Better if I check that the guy is okay."
 msgstr "Meglio controllare che il ragazzo stia bene."
 
@@ -517,34 +513,6 @@ msgid "I wanted to buy some medicines but they don't have the ones I like."
 msgstr "Volevo comprare delle medicine ma non hanno quelle che piacciono a me."
 
 #: assets/maps/story/34_cave.tmx:
-msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
-msgstr "Penso che in qualche modo sia possibile invocare lo spirito protettivo di questa regione. Dobbiamo solo capire come."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "Let me know if you need help."
-msgstr "Fammi sapere se hai bisogno di aiuto."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I think that all the writings on the six stones must be true to invoke the spirit."
-msgstr "Penso che tutte le scritte presenti sulle sei pietre debbano essere vere per invocare lo spirito."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I think that #1 should be green."
-msgstr "Penso che #1 debba essere verde."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "Do you need help?"
-msgstr "Hai bisogno di aiuto?"
-
-#: assets/maps/story/34_cave.tmx:
-msgid "It doesn't seem difficult to solve."
-msgstr "Non sembra difficile da risolvere."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I don't know what you did but it seems to have worked."
-msgstr "Non so cosa hai fatto ma sembra che abbia funzionato."
-
-#: assets/maps/story/34_cave.tmx:
 msgid "\" #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \""
 msgstr "\" #3: Sono verde se #5 e #6 sono tra di loro dello stesso colore. Altrimenti sono rosso. \""
 
@@ -621,6 +589,10 @@ msgid "It is the ancient writing used in these areas long ago.\nHere it says:"
 msgstr "È l'antica scrittura usata da queste parti molto tempo fa.\nQui c'è scritto:"
 
 #: assets/maps/story/34_cave.tmx:
+msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
+msgstr "Penso che in qualche modo sia possibile invocare lo spirito protettivo di questa regione. Dobbiamo solo capire come."
+
+#: assets/maps/story/34_cave.tmx:
 msgid "Slooosh!"
 msgstr "Slooosh!"
 
@@ -695,6 +667,30 @@ msgstr "Dobbiamo stare più attenti e cercarle meglio.\nOra ti lascio e continuo
 #: assets/maps/story/34_cave.tmx:
 msgid "Bye Shen, be careful!"
 msgstr "A presto Shen, stai attenta!"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Let me know if you need help."
+msgstr "Fammi sapere se hai bisogno di aiuto."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think that all the writings on the six stones must be true to invoke the spirit."
+msgstr "Penso che tutte le scritte presenti sulle sei pietre debbano essere vere per invocare lo spirito."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think that #1 should be green."
+msgstr "Penso che #1 debba essere verde."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Do you need help?"
+msgstr "Hai bisogno di aiuto?"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "It doesn't seem difficult to solve."
+msgstr "Non sembra difficile da risolvere."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I don't know what you did but it seems to have worked."
+msgstr "Non so cosa hai fatto ma sembra che abbia funzionato."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes"
@@ -873,8 +869,8 @@ msgid "* {{hero}} got a SNOWBALLS CONTAINER *"
 msgstr "* {{hero}} ha ricevuto un CONTENITORE DI PALLE DI NEVE *"
 
 #: assets/maps/story/22.tmx:
-msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \"S\" button.\nIt can contain up to 10 snowballs."
-msgstr "È una mia invenzione. Ti permette di trasportare palle di neve che puoi lanciare contro i tuoi nemici premendo il tasto S.\nPuò contenere fino a 10 palle di neve."
+msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \"S\" button.\nIt can contain up to 5 snowballs."
+msgstr "È una mia invenzione. Ti permette di trasportare palle di neve che puoi lanciare contro i tuoi nemici premendo il tasto S.\nPuò contenere fino a 5 palle di neve."
 
 #: assets/maps/story/22.tmx:
 msgid "Wow! I'm sure it'll come in handy. Thank you."

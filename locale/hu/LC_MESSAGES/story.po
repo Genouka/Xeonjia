@@ -284,10 +284,6 @@ msgid "I'll go home as soon as my legs stop shaking in fear."
 msgstr ""
 
 #: assets/maps/story/13.tmx:
-msgid "I can't escape, I have to defeat the monster to save that man."
-msgstr "Nem menekülhetek, le kell győznöm a szörnyet, hogy megmentsem azt az embert."
-
-#: assets/maps/story/13.tmx:
 msgid "Better if I check that the guy is okay."
 msgstr "Jobb, ha ellenőrzöm, hogy a fickó jól van-e."
 
@@ -516,34 +512,6 @@ msgid "I wanted to buy some medicines but they don't have the ones I like."
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
-msgstr "Azt hiszem, valahogyan meg lehet idézni ennek a vidéknek a védőszellemét. Csak ki kell találnunk, hogyan."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "Let me know if you need help."
-msgstr "Szólj, ha segítségre van szükséged."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I think that all the writings on the six stones must be true to invoke the spirit."
-msgstr "Úgy gondolom, hogy a hat kövön lévő összes írásnak igaznak kell lennie ahhoz, hogy megidézzük a szellemet."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I think that #1 should be green."
-msgstr "Szerintem az 1-esnek zöldnek kellene lennie."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "Do you need help?"
-msgstr "Segítségre van szükséged?"
-
-#: assets/maps/story/34_cave.tmx:
-msgid "It doesn't seem difficult to solve."
-msgstr "Nem tűnik nehéznek a megoldás."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I don't know what you did but it seems to have worked."
-msgstr "Nem tudom, mit csináltál, de úgy tűnik, működött."
-
-#: assets/maps/story/34_cave.tmx:
 msgid "\" #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \""
 msgstr "\" #3: Zöld vagyok, ha az #5 és #6 egyforma színű. Egyébként piros vagyok. \""
 
@@ -620,6 +588,10 @@ msgid "It is the ancient writing used in these areas long ago.\nHere it says:"
 msgstr "Ez az ősi írás, amelyet ezeken a területeken régen használtak.\nItt ez áll:"
 
 #: assets/maps/story/34_cave.tmx:
+msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
+msgstr "Azt hiszem, valahogyan meg lehet idézni ennek a vidéknek a védőszellemét. Csak ki kell találnunk, hogyan."
+
+#: assets/maps/story/34_cave.tmx:
 msgid "Slooosh!"
 msgstr "Slooosh!"
 
@@ -694,6 +666,30 @@ msgstr "Óvatosabbnak kell lennünk, és jobban kell keresnünk őket.\nMost itt
 #: assets/maps/story/34_cave.tmx:
 msgid "Bye Shen, be careful!"
 msgstr "Viszlát Shen, légy óvatos!"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Let me know if you need help."
+msgstr "Szólj, ha segítségre van szükséged."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think that all the writings on the six stones must be true to invoke the spirit."
+msgstr "Úgy gondolom, hogy a hat kövön lévő összes írásnak igaznak kell lennie ahhoz, hogy megidézzük a szellemet."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think that #1 should be green."
+msgstr "Szerintem az 1-esnek zöldnek kellene lennie."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Do you need help?"
+msgstr "Segítségre van szükséged?"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "It doesn't seem difficult to solve."
+msgstr "Nem tűnik nehéznek a megoldás."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I don't know what you did but it seems to have worked."
+msgstr "Nem tudom, mit csináltál, de úgy tűnik, működött."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes"
@@ -872,8 +868,8 @@ msgid "* {{hero}} got a SNOWBALLS CONTAINER *"
 msgstr "* {{hero}} kapott egy HÓGOLYÓ TARTÁLYT *"
 
 #: assets/maps/story/22.tmx:
-msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \"S\" button.\nIt can contain up to 10 snowballs."
-msgstr "Ez az én találmányom. Lehetővé teszi, hogy hógolyókat hordj magadnál, amelyeket az 'S' gomb megnyomásával dobhatsz az ellenfeleidre.\nAkár 10 hógolyót is tarthatsz benne."
+msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \"S\" button.\nIt can contain up to 5 snowballs."
+msgstr "Ez az én találmányom. Lehetővé teszi, hogy hógolyókat hordj magadnál, amelyeket az 'S' gomb megnyomásával dobhatsz az ellenfeleidre.\nAkár 5 hógolyót is tarthatsz benne."
 
 #: assets/maps/story/22.tmx:
 msgid "Wow! I'm sure it'll come in handy. Thank you."

@@ -283,10 +283,6 @@ msgid "I'll go home as soon as my legs stop shaking in fear."
 msgstr ""
 
 #: assets/maps/story/13.tmx:
-msgid "I can't escape, I have to defeat the monster to save that man."
-msgstr "逃げられない、男性を救うためにモンスターを倒す必要があります。"
-
-#: assets/maps/story/13.tmx:
 msgid "Better if I check that the guy is okay."
 msgstr "男性が無事か確認したほうがいい。"
 
@@ -515,34 +511,6 @@ msgid "I wanted to buy some medicines but they don't have the ones I like."
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
-msgstr "どうにかして、この地方の守護精霊を呼び出せるんじゃないかって思うの。ただその方法を見つけ出さないと。"
-
-#: assets/maps/story/34_cave.tmx:
-msgid "Let me know if you need help."
-msgstr "助けが必要なら言ってね。"
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I think that all the writings on the six stones must be true to invoke the spirit."
-msgstr "書かれている6つの石がすべて正しい位置にあれば、精霊を呼び出せるんだと思うわ。"
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I think that #1 should be green."
-msgstr "1番は緑色だと思う。"
-
-#: assets/maps/story/34_cave.tmx:
-msgid "Do you need help?"
-msgstr "助けがいる？"
-
-#: assets/maps/story/34_cave.tmx:
-msgid "It doesn't seem difficult to solve."
-msgstr "解くのは難しくなさそうね。"
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I don't know what you did but it seems to have worked."
-msgstr "あなたが何をしたのかは分からないけど、うまくいったみたい。"
-
-#: assets/maps/story/34_cave.tmx:
 msgid "\" #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \""
 msgstr "\"3番: 5番と6番が同じ色なら緑色。そうでないなら赤色。\""
 
@@ -619,6 +587,10 @@ msgid "It is the ancient writing used in these areas long ago.\nHere it says:"
 msgstr "昔、この辺りで使われていた古代文字ね。\nこう書いてあるの。"
 
 #: assets/maps/story/34_cave.tmx:
+msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
+msgstr "どうにかして、この地方の守護精霊を呼び出せるんじゃないかって思うの。ただその方法を見つけ出さないと。"
+
+#: assets/maps/story/34_cave.tmx:
 msgid "Slooosh!"
 msgstr "バシャーッ！"
 
@@ -693,6 +665,30 @@ msgstr "もっと注意して探さないとね。\nじゃあ私はそろそろ�
 #: assets/maps/story/34_cave.tmx:
 msgid "Bye Shen, be careful!"
 msgstr "じゃあねシェン、気をつけてね！"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Let me know if you need help."
+msgstr "助けが必要なら言ってね。"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think that all the writings on the six stones must be true to invoke the spirit."
+msgstr "書かれている6つの石がすべて正しい位置にあれば、精霊を呼び出せるんだと思うわ。"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think that #1 should be green."
+msgstr "1番は緑色だと思う。"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Do you need help?"
+msgstr "助けがいる？"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "It doesn't seem difficult to solve."
+msgstr "解くのは難しくなさそうね。"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I don't know what you did but it seems to have worked."
+msgstr "あなたが何をしたのかは分からないけど、うまくいったみたい。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes"
@@ -871,7 +867,7 @@ msgid "* {{hero}} got a SNOWBALLS CONTAINER *"
 msgstr "*{{hero}}は雪玉コンテナを手に入れた*"
 
 #: assets/maps/story/22.tmx:
-msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \"S\" button.\nIt can contain up to 10 snowballs."
+msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \"S\" button.\nIt can contain up to 5 snowballs."
 msgstr ""
 
 #: assets/maps/story/22.tmx:
@@ -1180,7 +1176,7 @@ msgstr ""
 
 #: assets/maps/story/27.tmx:
 msgid "← Sacred Tree"
-msgstr ""← 聖なる木"
+msgstr "← 聖なる木"
 
 #: assets/maps/story/27.tmx:
 msgid "Melhopolis City Center →"

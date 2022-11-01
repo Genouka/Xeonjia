@@ -284,10 +284,6 @@ msgid "I'll go home as soon as my legs stop shaking in fear."
 msgstr ""
 
 #: assets/maps/story/13.tmx:
-msgid "I can't escape, I have to defeat the monster to save that man."
-msgstr "No puedo escapar, tengo que derrotar al monstruo para salvar a ese hombre."
-
-#: assets/maps/story/13.tmx:
 msgid "Better if I check that the guy is okay."
 msgstr "Es mejor ver si este tipo está bien."
 
@@ -516,34 +512,6 @@ msgid "I wanted to buy some medicines but they don't have the ones I like."
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
-msgstr "Creo que de alguna manera es posible invocar al espíritu protector de esta región. Solo tenemos que averiguar cómo."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "Let me know if you need help."
-msgstr "Hazme saber si necesitas ayuda."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I think that all the writings on the six stones must be true to invoke the spirit."
-msgstr "Creo que todas las escrituras de las seis piedras deben de ser verdad para invocar al espíritu."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I think that #1 should be green."
-msgstr "Creo que #1 debería de ser verde."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "Do you need help?"
-msgstr "¿Necesitas ayuda?"
-
-#: assets/maps/story/34_cave.tmx:
-msgid "It doesn't seem difficult to solve."
-msgstr "No parece difícil de resolver."
-
-#: assets/maps/story/34_cave.tmx:
-msgid "I don't know what you did but it seems to have worked."
-msgstr "No se que has hecho pero parece que funcionó."
-
-#: assets/maps/story/34_cave.tmx:
 msgid "\" #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \""
 msgstr "\" #3: Soy verde si #5 y #6 son las dos del mismo color. Sino soy roja. \""
 
@@ -620,6 +588,10 @@ msgid "It is the ancient writing used in these areas long ago.\nHere it says:"
 msgstr "Es la escritura antigua utilizada en estas regiones hace mucho tiempo.\nAquí dice:"
 
 #: assets/maps/story/34_cave.tmx:
+msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
+msgstr "Creo que de alguna manera es posible invocar al espíritu protector de esta región. Solo tenemos que averiguar cómo."
+
+#: assets/maps/story/34_cave.tmx:
 msgid "Slooosh!"
 msgstr "¡Ploc!"
 
@@ -694,6 +666,30 @@ msgstr "Necesitaremos ser más cuidadosos y buscarlas mejor.\nAhora te dejaré p
 #: assets/maps/story/34_cave.tmx:
 msgid "Bye Shen, be careful!"
 msgstr "Chao Shen, ¡Ten cuidado!"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Let me know if you need help."
+msgstr "Hazme saber si necesitas ayuda."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think that all the writings on the six stones must be true to invoke the spirit."
+msgstr "Creo que todas las escrituras de las seis piedras deben de ser verdad para invocar al espíritu."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I think that #1 should be green."
+msgstr "Creo que #1 debería de ser verde."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "Do you need help?"
+msgstr "¿Necesitas ayuda?"
+
+#: assets/maps/story/34_cave.tmx:
+msgid "It doesn't seem difficult to solve."
+msgstr "No parece difícil de resolver."
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I don't know what you did but it seems to have worked."
+msgstr "No se que has hecho pero parece que funcionó."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes"
@@ -872,8 +868,8 @@ msgid "* {{hero}} got a SNOWBALLS CONTAINER *"
 msgstr "* {{hero}} obtuvo un CONTENEDOR DE BOLAS DE NIEVE *"
 
 #: assets/maps/story/22.tmx:
-msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \"S\" button.\nIt can contain up to 10 snowballs."
-msgstr "Es una invención mía. Te permite transportar bolas de nieve que puedes arrojar a tus oponentes al presionar el botón «S».\nPuede contener hasta 10 bolas de nieve."
+msgid "It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \"S\" button.\nIt can contain up to 5 snowballs."
+msgstr "Es una invención mía. Te permite transportar bolas de nieve que puedes arrojar a tus oponentes al presionar el botón «S».\nPuede contener hasta 5 bolas de nieve."
 
 #: assets/maps/story/22.tmx:
 msgid "Wow! I'm sure it'll come in handy. Thank you."
