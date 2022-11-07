@@ -42,20 +42,6 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="2" name="spawn points">
-  <object id="72" class="Door" x="96" y="112" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="1"/>
-   </properties>
-  </object>
-  <object id="79" class="Door" x="144" y="32" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="3"/>
-    <property name="roomId" value="1_home_2"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="9" name="items">
   <object id="73" gid="187" x="16" y="48" width="16" height="16">
    <properties>
@@ -77,6 +63,20 @@
   <object id="78" gid="187" x="64" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;This plant seems to have been recently watered.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="72" class="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="1"/>
+   </properties>
+  </object>
+  <object id="79" class="Door" x="144" y="32" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="1_home_2"/>
    </properties>
   </object>
  </objectgroup>
