@@ -1,17 +1,24 @@
-There are two modes:
+<b>Xeonjia</b> is an <b>adventure game</b> set in a <b>frozen world</b>.
 
-1) Story mode: the aim is to reach the last floor of the tower and defeat the "King of Evil".
+The floor is frozen! Think carefully about your moves because you can't change direction until you meet an obstacle.
+Use you mind to solve the ice slide puzzles!
 
-2) Multiplayer mode: the aim of this mode is to score points and make your team win.
+The world has been frozen by the <b>“King of Evil”</b> and it’s no longer a safe place.
 
-Basically you will have to swipe your finger to move your character across the world.
+Legend has it that a brave hero will defeat the King of Evil and save the kingdom… For this reason every year a person is appointed as “hero” and sent on a journey to try to save it.
 
-Keep in mind that you can't stop yourself until you reach a wall, a boulder, or any other type of obstacle.
+Now is your time, <b>you have been chosen as this year’s hero!</b> Will you be able to defeat the King of Evil?
+
+You will have to travel the world, explore cities, dungeons and mystical caves.
+
+<b>Are you ready to solve quests and puzzles in this frozen RPG world?</b>
 
 Over time, you will gain experience points that will allow you to increase your level and you will find money and hidden treasures that you can use to buy stuff and improve yourself.
 
-Be careful, the world is full of dangerous enemies ready to attack you!
+Be careful, the world is full of <b>dangerous enemies</b> ready to attack you!
 
-Use your mind to figure out the best path!
+Keep in mind that most of <b>the floor is frozen</b>, so you can’t stop yourself until you reach a wall, a boulder, or any other type of obstacle.
+
+<b>Use your mind to figure out the best path!</b>
 
 <b>Note</b>: this game is currently in early beta stage.
