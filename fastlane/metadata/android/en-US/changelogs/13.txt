@@ -1,0 +1,10 @@
+* New turn-based combat
+* New world map
+* Improve graphics
+* Improve UI/UX
+* Improve story mode
+* Improve animations, background music and sfx
+* Improve gamepad
+* Game difficulty adjustments
+* Update translations
+* Bug fixes
