@@ -1,17 +1,24 @@
-Il gioco ha due modalità:
+<b>Xeonjia</b> è un <b>gioco d'avventura</b> ambientato in un <b>mondo ghiacciato</b>.
 
-1) Modalità storia: sconfiggi il "Re del Male" completando tutti i livelli.
+Il pavimento è ghiaccio! Pensa bene alle tue mosse perché non puoi cambiare direzione finché non incontri un ostacolo.
+Usa la tua mente per risolvere i puzzle scivolando sul ghiaccio!
 
-2) Modalità multiplayer: lo scopo è quello di fare il maggior numero di punti e portare alla vittoria la propria squadra.
+Il mondo è stato ghiacciato dal <b>“Re del Male”</b> e non è più un posto sicuro.
 
-Per giocare non devi fare altro che "swipare" il protagonista per poterlo muovere.
+Leggenda narra che un coraggioso eroe sconfiggerà il Re del Male e salverà il regno... Per questo ogni anno una persona viene nominata “eroe” e inviata in viaggio per cercare di salvarlo.
 
-Tieni a mente che sul ghiaccio scivolerai senza poterti fermare se non andando addosso ad un muro, ad una roccia o ad un qualunque altro ostacolo.
+Ora è il tuo momento, <b>sei stato scelto come eroe di quest'anno!</b> Riuscirai a sconfiggere il Re del Male?
 
-Guadagna punti esperienza che ti permetteranno di incrementare il tuo livello! Vai alla ricerca di monete e di tesori nascosti per acquistare oggetti utili per la tua avventura.
+Dovrai viaggiare per il mondo, esplorare città, dungeon e grotte mistiche.
 
-Fai attenzione perché il mondo è pieno di creature misteriose pronte ad attaccarti!
+<b>Sei pronto a risolvere missioni ed enigmi in questo mondo RPG ghiacciato?</b>
 
-Ragiona e pensa bene ogni movimento: cerca di trovare il percorso meno pericoloso!
+Con il tempo, guadagnerai punti esperienza che ti permetteranno di incrementare il tuo livello e troverai monete e tesori nascosti che potrai usare per acquistare oggetti utili per la tua avventura.
+
+Fai attenzione perché il mondo è pieno di <b>creature pericolose</b> pronte ad attaccarti!
+
+Tieni a mente che gran parte del <b>pavimento è ghiacciato</b>, scivolerai senza poterti fermare se non andando addosso ad un muro, ad una roccia o ad un qualunque altro ostacolo.
+
+<b>Ragiona e pensa bene ogni movimento: cerca di trovare il percorso migliore!</b>
 
 <b>Nota</b>: questo gioco è attualmente in versione beta.
