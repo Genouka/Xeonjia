@@ -19,15 +19,12 @@ Save the world by solving ice puzzles and defeating enemies.
 
 The floor is frozen! Think carefully about your moves because you can't change direction until you
 meet an obstacle.
-
 Use you mind to solve the ice slide puzzles!
 
 The world has been frozen by the **"King of Evil"** and it's no longer a safe place.
 
-Legend has it that a brave hero will defeat the King of Evil and save the kingdom.
-
-For this reason every year a person is appointed as "hero" and sent on a journey to try to save the
-kingdom.
+Legend has it that a brave hero will defeat the King of Evil and save the kingdom… For this reason every year a person is appointed as "hero" and sent on a journey to try to save the
+it.
 
 Now is your time, **you have been chosen as this year's hero!** Will you be able to defeat the King
 of Evil?
