@@ -107,14 +107,6 @@ msgid "Exit ↑"
 msgstr ""
 
 #: assets/maps/story/33.tmx:
-msgid "In the distance can be seen the other part of the region."
-msgstr ""
-
-#: assets/maps/story/33.tmx:
-msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
-msgstr ""
-
-#: assets/maps/story/33.tmx:
 msgid "Hey, there are items in here!"
 msgstr ""
 
@@ -124,6 +116,14 @@ msgstr ""
 
 #: assets/maps/story/33.tmx:
 msgid "I can see a city in the distance."
+msgstr ""
+
+#: assets/maps/story/33.tmx:
+msgid "In the distance can be seen the other part of the region."
+msgstr ""
+
+#: assets/maps/story/33.tmx:
+msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
 msgstr ""
 
 #: assets/maps/story/24_lab.tmx:

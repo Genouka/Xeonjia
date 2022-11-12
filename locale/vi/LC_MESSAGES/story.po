@@ -107,14 +107,6 @@ msgid "Exit ↑"
 msgstr "Lối ra ↑"
 
 #: assets/maps/story/33.tmx:
-msgid "In the distance can be seen the other part of the region."
-msgstr "Từ xa có thể trông thấy phần còn lại của vùng này."
-
-#: assets/maps/story/33.tmx:
-msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
-msgstr "Những người sống ở vùng này để lại quà trong những chiếc bình này cho những người du lịch và những thuỷ thủ đi đến đây.\nĐây là tập quán cổ xưa.\nHãy cứ tự nhiên lấy quà đi."
-
-#: assets/maps/story/33.tmx:
 msgid "Hey, there are items in here!"
 msgstr "Này, có vật phẩm trong này!"
 
@@ -125,6 +117,14 @@ msgstr "Ở đây vẫn còn vật phẩm nhưng tôi đã lấy một cái rồ
 #: assets/maps/story/33.tmx:
 msgid "I can see a city in the distance."
 msgstr "Tôi có thể thấy một thành phố ở xa."
+
+#: assets/maps/story/33.tmx:
+msgid "In the distance can be seen the other part of the region."
+msgstr "Từ xa có thể trông thấy phần còn lại của vùng này."
+
+#: assets/maps/story/33.tmx:
+msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
+msgstr "Những người sống ở vùng này để lại quà trong những chiếc bình này cho những người du lịch và những thuỷ thủ đi đến đây.\nĐây là tập quán cổ xưa.\nHãy cứ tự nhiên lấy quà đi."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB – 1F"

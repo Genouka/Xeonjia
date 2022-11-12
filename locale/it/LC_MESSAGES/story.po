@@ -109,14 +109,6 @@ msgid "Exit ↑"
 msgstr "Uscita ↑"
 
 #: assets/maps/story/33.tmx:
-msgid "In the distance can be seen the other part of the region."
-msgstr "In lontananza si riesce a vedere l'altra parte della regione."
-
-#: assets/maps/story/33.tmx:
-msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
-msgstr "Gli abitanti di questa regione lasciano doni in questi vasi per i viaggiatori e i marinai che sbarcano qui.\nÈ una tradizione antica.\nSentiti libero di prendere i doni anche tu."
-
-#: assets/maps/story/33.tmx:
 msgid "Hey, there are items in here!"
 msgstr "Ehi, ci sono oggetti qui!"
 
@@ -127,6 +119,14 @@ msgstr "Ci sono ancora oggetti qui dentro, ma ne ho già preso uno."
 #: assets/maps/story/33.tmx:
 msgid "I can see a city in the distance."
 msgstr "Riesco a vedere una città in lontananza."
+
+#: assets/maps/story/33.tmx:
+msgid "In the distance can be seen the other part of the region."
+msgstr "In lontananza si riesce a vedere l'altra parte della regione."
+
+#: assets/maps/story/33.tmx:
+msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
+msgstr "Gli abitanti di questa regione lasciano doni in questi vasi per i viaggiatori e i marinai che sbarcano qui.\nÈ una tradizione antica.\nSentiti libero di prendere i doni anche tu."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB – 1F"
