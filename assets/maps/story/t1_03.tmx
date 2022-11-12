@@ -63,18 +63,6 @@
    H4sIAAAAAAAAA2NgIAxEGAmr+UKEObQAnEC3sQAxB5QeBaOA1oBnmKSzgcqz1Ab08AcA/k6yqigFAAA=
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="80" class="Door" x="64" y="48" width="16" height="16">
-   <properties>
-    <property name="roomId" value="t1_02"/>
-   </properties>
-  </object>
-  <object id="83" class="Door" x="96" y="48" width="16" height="16">
-   <properties>
-    <property name="roomId" value="t1_04"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="9" name="items">
   <object id="91" gid="284" x="160" y="176" width="16" height="16">
    <properties>
@@ -116,6 +104,18 @@
         (dialog '((&quot;The snowballs container is full.&quot;)))
         (dialog '((&quot;* {{hero}} filled his snowballs container *&quot;))))
     (dialog '((&quot;A snowdrift.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="80" class="Door" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="roomId" value="t1_02"/>
+   </properties>
+  </object>
+  <object id="83" class="Door" x="96" y="48" width="16" height="16">
+   <properties>
+    <property name="roomId" value="t1_04"/>
    </properties>
   </object>
  </objectgroup>

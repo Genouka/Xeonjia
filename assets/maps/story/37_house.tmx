@@ -31,7 +31,6 @@
    H4sIAAAAAAAAA2NgoBzsBOJdRKg7iEVsOxDvB+IDUDYuAJI7DsQnCKijNdhKpj4AytFXWWgBAAA=
   </data>
  </layer>
- <objectgroup id="2" name="spawn points"/>
  <objectgroup id="9" name="items">
   <object id="84" gid="194" x="128" y="48" width="16" height="16">
    <properties>
@@ -47,4 +46,5 @@
    </properties>
   </object>
  </objectgroup>
+ <objectgroup id="2" name="spawn points"/>
 </map>

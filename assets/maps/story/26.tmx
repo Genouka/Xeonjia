@@ -48,6 +48,7 @@
    H4sIAAAAAAAAA2NgoC0wwyJmAsSmWNjDCbgQocaZDLOIMZcY4EOkukAgDkHCoVSyn9qA2ukI5O9gJEyKv7GleXRAbNyPAuzAdaAdQAAAAAGjeDpYBQAA
   </data>
  </layer>
+ <objectgroup id="8" name="items"/>
  <objectgroup id="2" name="spawn points">
   <object id="36" class="Door" x="112" y="0" width="16" height="16">
    <properties>
@@ -67,5 +68,4 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="8" name="items"/>
 </map>

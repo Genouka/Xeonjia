@@ -43,18 +43,6 @@
    H4sIAAAAAAAAA2NgGNlAgJE+9ghR0R56uXkoAanRMBmyAFt6pmZ+oQYAAHZzI6UoBQAA
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="80" class="Door" x="96" y="48" width="16" height="16">
-   <properties>
-    <property name="roomId" value="t1_03"/>
-   </properties>
-  </object>
-  <object id="83" class="Door" x="176" y="0" width="16" height="16">
-   <properties>
-    <property name="roomId" value="t1_05"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="9" name="items">
   <object id="87" gid="329" x="112" y="192" width="16" height="16">
    <properties>
@@ -83,6 +71,18 @@
   <object id="91" gid="329" x="64" y="48" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="80" class="Door" x="96" y="48" width="16" height="16">
+   <properties>
+    <property name="roomId" value="t1_03"/>
+   </properties>
+  </object>
+  <object id="83" class="Door" x="176" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="t1_05"/>
    </properties>
   </object>
  </objectgroup>

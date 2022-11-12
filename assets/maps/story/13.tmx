@@ -58,21 +58,6 @@
    H4sIAAAAAAAAA2NgoB5wwyPnSqQZvtRwCBSYUdEsYoAJEJsSkEN2EyXug5nnCMROOOw3B2IJILaHsskBALs4REwgAgAA
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="35" class="Door" x="0" y="96" width="16" height="16">
-   <properties>
-    <property name="mainDoor" type="bool" value="true"/>
-    <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="8"/>
-   </properties>
-  </object>
-  <object id="36" class="Door" x="256" y="96" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="3"/>
-    <property name="roomId" value="12"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="8" name="items">
   <object id="40" class="Solid" x="272" y="96" width="16" height="16">
    <properties>
@@ -152,6 +137,21 @@
     (fire-event (self))))</property>
     <property name="actionOnEvent">(if (get &quot;013-rules&quot;)
   (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="35" class="Door" x="0" y="96" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="8"/>
+   </properties>
+  </object>
+  <object id="36" class="Door" x="256" y="96" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="12"/>
    </properties>
   </object>
  </objectgroup>

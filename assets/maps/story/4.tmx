@@ -26,30 +26,6 @@
    H4sIAAAAAAAAAwtkYGAIAuJgIA4B4lAG2gMTIDalgz3UAsjuNQPiGiCuJULtYAeBDJC4B2FK4z4RiKOAOAaIU4A4lQKzMoE4G4izgDgOiHMpMKsQiIuBuAiI04C4FIc6QvGGLI+u1pUC9w0VAAAOCQZXKAQAAA==
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="25" class="Door" x="96" y="0" width="16" height="16">
-   <properties>
-    <property name="mainDoor" type="bool" value="true"/>
-    <property name="roomId" value="3"/>
-   </properties>
-  </object>
-  <object id="24" class="Door" x="48" y="80" width="16" height="16">
-   <properties>
-    <property name="roomId" value="4_lp_shop"/>
-   </properties>
-  </object>
-  <object id="32" class="Door" x="288" y="16" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="3"/>
-    <property name="roomId" value="5"/>
-   </properties>
-  </object>
-  <object id="43" class="Door" x="256" y="160" width="16" height="16">
-   <properties>
-    <property name="roomId" value="4_house"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="9" name="items">
   <object id="37" class="Solid" gid="55" x="96" y="64" width="16" height="16">
    <properties>
@@ -115,6 +91,30 @@
   <object id="57" gid="143" x="144" y="32" width="16" height="16">
    <properties>
     <property name="actionOnEvent" value="(if (has-been-here &quot;5&quot;) (delete-me))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="25" class="Door" x="96" y="0" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="roomId" value="3"/>
+   </properties>
+  </object>
+  <object id="24" class="Door" x="48" y="80" width="16" height="16">
+   <properties>
+    <property name="roomId" value="4_lp_shop"/>
+   </properties>
+  </object>
+  <object id="32" class="Door" x="288" y="16" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="5"/>
+   </properties>
+  </object>
+  <object id="43" class="Door" x="256" y="160" width="16" height="16">
+   <properties>
+    <property name="roomId" value="4_house"/>
    </properties>
   </object>
  </objectgroup>

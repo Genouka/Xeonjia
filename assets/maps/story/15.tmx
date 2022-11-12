@@ -6,7 +6,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="154" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="18">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA6WTsQoCMQyGMzje5uLYR+h2i14dVbhzFlQQVFBwUPD9/QMJtkfrRf3ho71c0oS0ISIKwIMJqIGTPa+VrEGYy7f69VVnbDmfJmNvDbHjQqxF4Y9YBzbgKGzBLjr3kzjnIYplTgN1qvgeLuAq7MHNWDP36g4ewhk8wRTMxCe+L7UvwYrSXlXGnFrz4gv/WPrGfpGj4bsoqTHErgt27nP/3VvesuZ1Br8uY/OZvFY5es+5p3Tmg5wbKJ11/j+S/Qs4byQHOAQAAA==
@@ -18,50 +18,13 @@
    H4sIAAAAAAAAA2NgIB+YYRFzpUAvJfYSCwKBOAiIg4E4BIhD6WAnLYAJEJviEXcEYicGiLtrgLiWfk4bMEDtOKJ2WnYj1yGDEAAAouqTWjgEAAA=
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="34" class="Door" x="128" y="0" width="16" height="16">
-   <properties>
-    <property name="roomId" value="17"/>
-   </properties>
-  </object>
-  <object id="35" class="Door" x="224" y="112" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="3"/>
-    <property name="roomId" value="14/2"/>
-   </properties>
-  </object>
-  <object id="36" class="Door" x="224" y="208" width="16" height="16">
-   <properties>
-    <property name="mainDoor" type="bool" value="true"/>
-    <property name="orientation" type="int" value="3"/>
-    <property name="roomId" value="14/1"/>
-   </properties>
-  </object>
-  <object id="37" class="Door" x="224" y="32" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="3"/>
-    <property name="roomId" value="16"/>
-   </properties>
-  </object>
-  <object id="38" class="Door" x="208" y="272" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="12"/>
-   </properties>
-  </object>
-  <object id="47" class="Door" x="48" y="144" width="16" height="16">
-   <properties>
-    <property name="roomId" value="15_lp_shop"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="48" class="Modifier" gid="167" x="96" y="208" width="16" height="16">
+  <object id="48" class="Modifier" gid="172" x="96" y="208" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
-  <object id="49" class="Modifier" gid="167" x="64" y="32" width="16" height="16">
+  <object id="49" class="Modifier" gid="172" x="64" y="32" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
@@ -97,6 +60,43 @@
             (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))
 </property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="34" class="Door" x="128" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="17"/>
+   </properties>
+  </object>
+  <object id="35" class="Door" x="224" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="14/2"/>
+   </properties>
+  </object>
+  <object id="36" class="Door" x="224" y="208" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="14/1"/>
+   </properties>
+  </object>
+  <object id="37" class="Door" x="224" y="32" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="16"/>
+   </properties>
+  </object>
+  <object id="38" class="Door" x="208" y="272" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="12"/>
+   </properties>
+  </object>
+  <object id="47" class="Door" x="48" y="144" width="16" height="16">
+   <properties>
+    <property name="roomId" value="15_lp_shop"/>
    </properties>
   </object>
  </objectgroup>

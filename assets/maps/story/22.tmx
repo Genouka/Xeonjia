@@ -54,6 +54,20 @@
    H4sIAAAAAAAAA2NgwA3M8MhhA6xI+uyQ9LMTqR+mjwFNPzHAjgAfFxDFYg+IL04je4n1E7I6EyA2JcJsZDfA9NgAsS2R+mCAHD2DHZih0dQGAKLwInBIAwAA
   </data>
  </layer>
+ <objectgroup id="8" name="items">
+  <object id="47" class="Solid" x="112" y="224" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if  (!(has-item &quot;signet-1&quot;))
+    (begin 
+        (dialog '((&quot;I have to go through the crypt to get the first signet.&quot;)))
+        (wait)
+        (set-orientation 1))
+    (fire-event (self)))</property>
+    <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="2" name="spawn points">
   <object id="44" class="Door" x="112" y="208" width="16" height="16">
    <properties>
@@ -71,20 +85,6 @@
     <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="31"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="8" name="items">
-  <object id="47" class="Solid" x="112" y="224" width="16" height="16">
-   <properties>
-    <property name="actionOnCollision">(if  (!(has-item &quot;signet-1&quot;))
-    (begin 
-        (dialog '((&quot;I have to go through the crypt to get the first signet.&quot;)))
-        (wait)
-        (set-orientation 1))
-    (fire-event (self)))</property>
-    <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
-    (delete-me))</property>
    </properties>
   </object>
  </objectgroup>

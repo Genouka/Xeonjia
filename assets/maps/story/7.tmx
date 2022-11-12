@@ -58,26 +58,6 @@
    H4sIAAAAAAAAA7WTSw6AIAxEeyh0r6Ir738eNWJSJzBQPi8hEdrpL9WJyCQvs/xxymahVLdV6nWd3hADfT3xLQVnlsJDfrwjrCYW5/le7rMa4mr9GU7MliKWL6bTb1hHql/9jn32AmOx+X07qzXMn9Gydy2xd6LL7XOu15E91cJ6svy/o7Hk0HM+wFbaUw8uPpuaW0AGAAA=
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="35" class="Door" x="80" y="0" width="16" height="16">
-   <properties>
-    <property name="mainDoor" type="bool" value="true"/>
-    <property name="roomId" value="9"/>
-   </properties>
-  </object>
-  <object id="40" class="Door" x="0" y="256" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="10"/>
-   </properties>
-  </object>
-  <object id="41" class="Door" x="176" y="304" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="11"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="8" name="items">
   <object id="49" gid="71" x="208" y="128" width="16" height="16">
    <properties>
@@ -99,6 +79,26 @@
   <object id="45" gid="173" x="192" y="128" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="50"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="35" class="Door" x="80" y="0" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="roomId" value="9"/>
+   </properties>
+  </object>
+  <object id="40" class="Door" x="0" y="256" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="10"/>
+   </properties>
+  </object>
+  <object id="41" class="Door" x="176" y="304" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="11"/>
    </properties>
   </object>
  </objectgroup>

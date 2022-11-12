@@ -32,25 +32,6 @@
    H4sIAAAAAAAAA2NgQIBWIG4D4k4oPwOIMxlIAyAzpgLxBCCeCTWrAIgLkdRgMxddrBeIu4C4G4h7oGbhUw8DyHZlA/EiIF4MxZOBeAke9bhAFhCvAuI5QLwaiGcB8Rog9iGgD1k/CBThkC8m0hyYflzqs/HYjQ3gkyNGfRUDeWkEm1nExMNAgcqBdgAVQRWUJjXu6Q2Q0xUlbkVOV/T0MwA7xpVuWAUAAA==
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="47" class="Door" x="128" y="288" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="2"/>
-   </properties>
-  </object>
-  <object id="67" class="Door" x="80" y="80" width="16" height="16">
-   <properties>
-    <property name="mainDoor" type="bool" value="true"/>
-    <property name="roomId" value="1_home"/>
-   </properties>
-  </object>
-  <object id="68" class="Door" x="240" y="112" width="16" height="16">
-   <properties>
-    <property name="roomId" value="1_house"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="9" name="items">
   <object id="66" gid="123" x="112" y="304" width="16" height="16">
    <properties>
@@ -352,6 +333,25 @@
       (fire-event (self))))</property>
     <property name="actionOnEvent">(if (get &quot;001-first-slide&quot;)
   (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="47" class="Door" x="128" y="288" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="2"/>
+   </properties>
+  </object>
+  <object id="67" class="Door" x="80" y="80" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="roomId" value="1_home"/>
+   </properties>
+  </object>
+  <object id="68" class="Door" x="240" y="112" width="16" height="16">
+   <properties>
+    <property name="roomId" value="1_house"/>
    </properties>
   </object>
  </objectgroup>

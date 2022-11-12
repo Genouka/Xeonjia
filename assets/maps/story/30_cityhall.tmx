@@ -107,20 +107,6 @@
    H4sIAAAAAAAAA2NgoA34TqL6H3jkRBgZGEQZccurMKJiQuLogJcRgokFPIwQPKp+VD0hAABUhet2YAMAAA==
   </data>
  </layer>
- <objectgroup id="10" name="spawn points">
-  <object id="97" class="Door" x="96" y="256" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="30/2"/>
-   </properties>
-  </object>
-  <object id="114" class="Door" x="80" y="256" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="30/1"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="8" name="items">
   <object id="82" class="Solid" gid="285" x="96" y="80" width="16" height="16">
    <properties>
@@ -190,6 +176,20 @@
         (&quot;king/king-1&quot; &quot;Thank you again.\nI wish you a good journey, come back anytime.&quot;)))
       (set talk-id #t))
     (dialog '((&quot;king/king-1&quot; &quot;Good journey {{hero}}, I have faith in you.&quot;)))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="97" class="Door" x="96" y="256" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="30/2"/>
+   </properties>
+  </object>
+  <object id="114" class="Door" x="80" y="256" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="30/1"/>
    </properties>
   </object>
  </objectgroup>

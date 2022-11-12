@@ -5,30 +5,31 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="12">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NggIAXQHwFiCUZGRiUkLAsI0TOAYjFgewHUHXsUDYI/4BiDkYGnIAFKMcKlQ+Hmq2MZA+xAGQHDxDzAjEfmr4XSOwMoJw2GiYFiADViwKxGJI+ZD+cAeIEINsIiI2BWA2ITUm0Axl4AvWGMqLaAwpnSyBtBcTWQKwHxLZE2gEKJxiGmR0GxAFI+sWh7AdI+q7gMO8dHjcjmx2AZgfMLaQAfOYiY1zpgBiz8ZmLjNHTAT6/kGo2DIeSgEk1e7hhAE893g+wBAAA
+   H4sIAAAAAAAAA2NggIC3QHwTiOUYGRjUkbASI0TOAYhlgOynUHU8UDYI/4ViXkYGnIATKMcFlY+Bmq2BZA+xAGSHIBALAbEwmr63SOxcoJwBGiYFSALVSwGxNJI+ZD9cBOJUINsciC2AWBuIrUi0Axn4AfVGMaLaAwpnOyBtD8QOQGwMxE5E2gEKJxiGmR0NxKFI+mWg7KdI+m7iMO8zHjcjmx2KZgfMLaQAfOYiY1zpgBiz8ZmLjNHTAT6/kGo2DEeRgEk1e7hhACfoVsawBAAA
   </data>
  </layer>
  <layer id="6" name="Tile Layer 2" width="25" height="12">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgYGD4A8R/GSDAn5GBQQqIpYFYBoh1GBmoDhTRzFSlgh3IfgABTaCZWkhYl0r+QLdnFAxdEAtME3FAHE+DNA4DqUCz04A4nYZ2jCQAAPLW3kqwBAAA
+   H4sIAAAAAAAAA2NgYGBgZGRgYAJiEAgB0vJArADEikBsCBWnJlBDM1OLCnYg+wEE9IBsfSRsRCV/oNszCoYuSALGYzIQp9AwPrOAZmcDcc5omqEKAAAN1kmKsAQAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="58" class="NPC" gid="191" x="272" y="128" width="16" height="16">
+  <object id="58" class="NPC" gid="196" x="272" y="128" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
    </properties>
   </object>
-  <object id="59" class="NPC" gid="181" x="272" y="96" width="16" height="16">
+  <object id="59" class="NPC" gid="186" x="272" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;As long as the tunnel is blocked we must organize differently to get goods and people from one side to another.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
+ <objectgroup id="8" name="items"/>
  <objectgroup id="10" name="spawn points">
   <object id="51" class="Door" x="208" y="0" width="16" height="16">
    <properties>
@@ -59,5 +60,4 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="8" name="items"/>
 </map>

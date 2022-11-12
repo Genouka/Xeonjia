@@ -26,6 +26,13 @@
    H4sIAAAAAAAAA2NgoByYALEpkWpdCMibkaCWFsARiJ0oNMMTiL2o4BZyASwMSYkXYs0cCOBGBzsoTWuwsKYknGyA2JZItQB+GNkzuAMAAA==
   </data>
  </layer>
+ <objectgroup id="8" name="items">
+  <object id="40" class="Modifier" gid="147" x="32" y="80" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="10"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="2" name="spawn points">
   <object id="34" class="Door" x="176" y="0" width="16" height="16">
    <properties>
@@ -43,13 +50,6 @@
    <properties>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="8"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="8" name="items">
-  <object id="40" class="Modifier" gid="147" x="32" y="80" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
  </objectgroup>

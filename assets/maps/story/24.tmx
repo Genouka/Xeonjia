@@ -8,16 +8,16 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="201" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="249" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="206" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="262" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="21" height="28">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA62WOU8DMRCFXfAHQBSRkKKtECVdGo5tgZ77UBQIlzjFkQr46bxBM8rLaO21lzzpk62Md9Ze+03cCyH0iAH117Rdd2M88kyl/UBtrrYy4qU5294l7QbYdPEhOAYn2p6CM4ofgX1woBxS3L6Hl+S8JEbgiuJf4NvxozH7tl634A7cg3PtP1D8ETwpF9o+0zzrhpwv2r6CsfbfKf5BfYnfgAnlTO3RIuiDpUTM4rZHpXteZcTkLK+A5YYxXd9Xd3jWZGdQcu2AXZrLvM68ybxcojZvSs7tbtP585L4i31m3yN3nn5+4rURwT4btOTai/xuXroOsz4yyTpi9SIm8dIneAtTH3E9Sq0jJe8zPkO2Dl8Pusjy2jqsXkyah2dJ9kf2k+tBrGbkKlbr/iP7XyxVykty3ptqktdqwfvsvzlXbV4X1aFs7Tm1we4c85Tl4/sM32Nq6i+Eqff47iNjqjBbi38BfuuowzAJAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="67" class="NPC" gid="197" x="144" y="384" width="16" height="16">
+  <object id="67" class="NPC" gid="202" x="144" y="384" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;The city center is a few kilometers to the south.&quot;)))"/>
    </properties>
@@ -28,42 +28,6 @@
    H4sIAAAAAAAAA2NgIA2YUSiPDwQCcRAQhwBxKJJZINoEiE1xqAfhYCR9yPKRQBwFxDFAHIsmPwooB5TE91ADyGnQEYidBtAt2AAt4wKW15DzGbY8iQ9Q033OZOrD5g9yAKl+H44AFJ81QFw70A6hARjs5dpgdx8twUDmPQCZMM3jMAkAAA==
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="38" class="Door" x="0" y="368" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="23"/>
-   </properties>
-  </object>
-  <object id="44" class="Door" x="0" y="144" width="16" height="16">
-   <properties>
-    <property name="mainDoor" type="bool" value="true"/>
-    <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="21"/>
-   </properties>
-  </object>
-  <object id="45" class="Door" x="160" y="432" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="25"/>
-   </properties>
-  </object>
-  <object id="46" class="Door" x="48" y="320" width="16" height="16">
-   <properties>
-    <property name="roomId" value="24_lp_shop"/>
-   </properties>
-  </object>
-  <object id="47" class="Door" x="128" y="112" width="16" height="16">
-   <properties>
-    <property name="roomId" value="24_house1"/>
-   </properties>
-  </object>
-  <object id="48" class="Door" x="256" y="112" width="16" height="16">
-   <properties>
-    <property name="roomId" value="24_lab"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="8" name="items">
   <object id="51" gid="71" x="272" y="128" width="16" height="16">
    <properties>
@@ -100,17 +64,17 @@
     <property name="action" value="(dialog '((&quot;I can see the inside of the house.&quot;)))"/>
    </properties>
   </object>
-  <object id="69" class="Modifier" gid="267" x="304" y="96" width="16" height="16">
+  <object id="69" class="Modifier" gid="280" x="304" y="96" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="70" class="Modifier" gid="267" x="304" y="176" width="16" height="16">
+  <object id="70" class="Modifier" gid="280" x="304" y="176" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="71" class="Modifier" gid="267" x="208" y="208" width="16" height="16">
+  <object id="71" class="Modifier" gid="280" x="208" y="208" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
@@ -153,6 +117,42 @@
             (give-item item-id)
             (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="38" class="Door" x="0" y="368" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="23"/>
+   </properties>
+  </object>
+  <object id="44" class="Door" x="0" y="144" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="21"/>
+   </properties>
+  </object>
+  <object id="45" class="Door" x="160" y="432" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="25"/>
+   </properties>
+  </object>
+  <object id="46" class="Door" x="48" y="320" width="16" height="16">
+   <properties>
+    <property name="roomId" value="24_lp_shop"/>
+   </properties>
+  </object>
+  <object id="47" class="Door" x="128" y="112" width="16" height="16">
+   <properties>
+    <property name="roomId" value="24_house1"/>
+   </properties>
+  </object>
+  <object id="48" class="Door" x="256" y="112" width="16" height="16">
+   <properties>
+    <property name="roomId" value="24_lab"/>
    </properties>
   </object>
  </objectgroup>

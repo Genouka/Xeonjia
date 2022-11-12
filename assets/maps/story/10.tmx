@@ -19,37 +19,6 @@
    H4sIAAAAAAAAA2NgoD9wBGInEvWYEeC7EmmOCRCbItHEqicVwPyI7k5qAHxmuiCxcYWJGxF2kOvv4QBI8Tux6Y7aAADaW+p2uAMAAA==
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="34" class="Door" x="144" y="0" width="16" height="16">
-   <properties>
-    <property name="mainDoor" type="bool" value="true"/>
-    <property name="roomId" value="5"/>
-   </properties>
-  </object>
-  <object id="35" class="Door" x="256" y="32" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="3"/>
-    <property name="roomId" value="7"/>
-   </properties>
-  </object>
-  <object id="36" class="Door" x="192" y="208" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="8"/>
-   </properties>
-  </object>
-  <object id="37" class="Door" x="256" y="144" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="3"/>
-    <property name="roomId" value="11"/>
-   </properties>
-  </object>
-  <object id="40" class="Door" x="32" y="64" width="16" height="16">
-   <properties>
-    <property name="roomId" value="10_old_shop"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="8" name="items">
   <object id="39" gid="71" x="0" y="80" width="16" height="16">
    <properties>
@@ -92,6 +61,37 @@
   <object id="48" gid="151" x="224" y="160" width="16" height="16">
    <properties>
     <property name="actionOnEvent" value="(if (has-been-here &quot;13&quot;) (delete-me))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="34" class="Door" x="144" y="0" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="roomId" value="5"/>
+   </properties>
+  </object>
+  <object id="35" class="Door" x="256" y="32" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="7"/>
+   </properties>
+  </object>
+  <object id="36" class="Door" x="192" y="208" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="8"/>
+   </properties>
+  </object>
+  <object id="37" class="Door" x="256" y="144" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="11"/>
+   </properties>
+  </object>
+  <object id="40" class="Door" x="32" y="64" width="16" height="16">
+   <properties>
+    <property name="roomId" value="10_old_shop"/>
    </properties>
   </object>
  </objectgroup>

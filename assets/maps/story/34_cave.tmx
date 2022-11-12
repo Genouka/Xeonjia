@@ -349,14 +349,6 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="10" name="spawn points">
-  <object id="61" class="Door" x="112" y="224" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="34"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="9" name="npc">
   <object id="62" class="NPC" gid="391" x="112" y="144" width="16" height="16">
    <properties>
@@ -387,6 +379,14 @@
     (delete-me)
     (if  (get &quot;34-cave-talk&quot;)
         (place 62 96 128)))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="61" class="Door" x="112" y="224" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="34"/>
    </properties>
   </object>
  </objectgroup>

@@ -66,21 +66,6 @@
    H4sIAAAAAAAAA2NgGAX4gBkUkypHDWAHxaTKjYJRMApGwUgCANHE9aHIBgAA
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="36" class="Door" x="48" y="208" width="16" height="16">
-   <properties>
-    <property name="mainDoor" type="bool" value="true"/>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="19"/>
-   </properties>
-  </object>
-  <object id="43" class="Door" x="128" y="208" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="21"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="8" name="items">
   <object id="41" gid="71" x="288" y="96" width="16" height="16">
    <properties>
@@ -103,6 +88,21 @@
     (set-orientation 1)))</property>
     <property name="actionOnEvent">(if (get &quot;999-talk-milla&quot;)
     (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="36" class="Door" x="48" y="208" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="19"/>
+   </properties>
+  </object>
+  <object id="43" class="Door" x="128" y="208" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="21"/>
    </properties>
   </object>
  </objectgroup>

@@ -20,26 +20,6 @@
    H4sIAAAAAAAAA2NgIB2YEZB3JsNMathLD3OJ8Rut/E8JoFXYDUZATb+64ZEjNZ6pmS4AgMl5ILgDAAA=
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="34" class="Door" x="176" y="0" width="16" height="16">
-   <properties>
-    <property name="roomId" value="18"/>
-   </properties>
-  </object>
-  <object id="35" class="Door" x="176" y="208" width="16" height="16">
-   <properties>
-    <property name="mainDoor" type="bool" value="true"/>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="14"/>
-   </properties>
-  </object>
-  <object id="36" class="Door" x="0" y="192" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="15"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="8" name="items">
   <object id="41" gid="165" x="160" y="48" width="16" height="16">
    <properties>
@@ -59,6 +39,26 @@
   <object id="46" gid="176" x="16" y="208" width="16" height="16">
    <properties>
     <property name="actionOnEvent" value="(if (has-been-here &quot;14&quot;) (delete-me))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="34" class="Door" x="176" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="18"/>
+   </properties>
+  </object>
+  <object id="35" class="Door" x="176" y="208" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="14"/>
+   </properties>
+  </object>
+  <object id="36" class="Door" x="0" y="192" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="15"/>
    </properties>
   </object>
  </objectgroup>

@@ -77,14 +77,6 @@
    H4sIAAAAAAAAA2NggAApRgaygASZ+kgFxLqPXu4ZBaNgFIwcIIRWrgiQWc6gm0OMeQC/G2rSpAUAAA==
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="88" class="Door" x="144" y="288" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="t1_05"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="9" name="items">
   <object id="96" class="Solid" x="144" y="304" width="16" height="16">
    <properties>
@@ -200,6 +192,14 @@
             (give-item item-id)
             (set-money-diff money-diff))
         (dialog '((&quot;A rocky wall covered by moss.&quot;)))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="88" class="Door" x="144" y="288" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="t1_05"/>
    </properties>
   </object>
  </objectgroup>

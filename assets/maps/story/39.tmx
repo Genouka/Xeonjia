@@ -118,6 +118,34 @@
    </properties>
   </object>
  </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="68" gid="260" x="80" y="160" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;39.stone2&quot;))
+    (begin
+        (dialog '((&quot;Hey, there are items in here!&quot;)))
+        (give-item &quot;39.stone2&quot;)
+        (dialog '((&quot;This is a very strange stone… Never seen anything like this before.&quot;))))
+    (dialog '((&quot;This vase is empty.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="72" gid="48" x="144" y="112" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (get &quot;039-september-ok&quot;)
+    (delete-me))</property>
+   </properties>
+  </object>
+  <object id="73" class="Modifier" gid="416" x="272" y="64" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="30"/>
+   </properties>
+  </object>
+  <object id="74" gid="411" x="160" y="112" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="100"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="10" name="spawn points">
   <object id="51" class="Door" x="0" y="112" width="16" height="16">
    <properties>
@@ -158,34 +186,6 @@
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="39_house2/up"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="8" name="items">
-  <object id="68" gid="260" x="80" y="160" width="16" height="16">
-   <properties>
-    <property name="action">(if (! (has-item &quot;39.stone2&quot;))
-    (begin
-        (dialog '((&quot;Hey, there are items in here!&quot;)))
-        (give-item &quot;39.stone2&quot;)
-        (dialog '((&quot;This is a very strange stone… Never seen anything like this before.&quot;))))
-    (dialog '((&quot;This vase is empty.&quot;))))</property>
-   </properties>
-  </object>
-  <object id="72" gid="48" x="144" y="112" width="16" height="16">
-   <properties>
-    <property name="actionOnEvent">(if (get &quot;039-september-ok&quot;)
-    (delete-me))</property>
-   </properties>
-  </object>
-  <object id="73" class="Modifier" gid="416" x="272" y="64" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="30"/>
-   </properties>
-  </object>
-  <object id="74" gid="411" x="160" y="112" width="16" height="16">
-   <properties>
-    <property name="healthPointsDelta" type="int" value="100"/>
    </properties>
   </object>
  </objectgroup>

@@ -45,30 +45,6 @@
    H4sIAAAAAAAAA2NgGAWUAAFG/PzhZu8ooA8YjV/sAADteRb3sAQAAA==
   </data>
  </layer>
- <objectgroup id="10" name="spawn points">
-  <object id="51" class="Door" x="48" y="0" width="16" height="16">
-   <properties>
-    <property name="roomId" value="38"/>
-   </properties>
-  </object>
-  <object id="55" class="Door" x="0" y="240" width="16" height="16">
-   <properties>
-    <property name="mainDoor" type="bool" value="true"/>
-    <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="35"/>
-   </properties>
-  </object>
-  <object id="57" class="Door" x="16" y="96" width="16" height="16">
-   <properties>
-    <property name="roomId" value="37_house"/>
-   </properties>
-  </object>
-  <object id="58" class="Door" x="176" y="96" width="16" height="16">
-   <properties>
-    <property name="roomId" value="37_shop"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="8" name="items">
   <object id="56" gid="276" x="16" y="240" width="16" height="16">
    <properties>
@@ -110,6 +86,30 @@
   (set &quot;037-talk&quot; #t))</property>
     <property name="actionOnEvent">(if  (get &quot;037-talk&quot;)
     (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="51" class="Door" x="48" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="38"/>
+   </properties>
+  </object>
+  <object id="55" class="Door" x="0" y="240" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="35"/>
+   </properties>
+  </object>
+  <object id="57" class="Door" x="16" y="96" width="16" height="16">
+   <properties>
+    <property name="roomId" value="37_house"/>
+   </properties>
+  </object>
+  <object id="58" class="Door" x="176" y="96" width="16" height="16">
+   <properties>
+    <property name="roomId" value="37_shop"/>
    </properties>
   </object>
  </objectgroup>

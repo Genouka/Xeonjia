@@ -18,31 +18,6 @@
    H4sIAAAAAAAAA2NgGHjgMtAOAAKzgXYAAYDsPlcy9ZECHIHYiUy9hIAzEptW4U6KudjU4tOPHP7IadcEiE2xqKdFWAIA4cft27gDAAA=
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="34" class="Door" x="192" y="0" width="16" height="16">
-   <properties>
-    <property name="roomId" value="10"/>
-   </properties>
-  </object>
-  <object id="35" class="Door" x="256" y="192" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="3"/>
-    <property name="roomId" value="13"/>
-   </properties>
-  </object>
-  <object id="36" class="Door" x="256" y="16" width="16" height="16">
-   <properties>
-    <property name="mainDoor" type="bool" value="true"/>
-    <property name="orientation" type="int" value="3"/>
-    <property name="roomId" value="11"/>
-   </properties>
-  </object>
-  <object id="37" gid="141" x="240" y="208" width="16" height="16">
-   <properties>
-    <property name="healthPointsDelta" type="int" value="50"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="8" name="items">
   <object id="38" class="Modifier" gid="147" x="16" y="176" width="16" height="16">
    <properties>
@@ -67,6 +42,31 @@
   <object id="46" gid="143" x="192" y="96" width="16" height="16">
    <properties>
     <property name="actionOnEvent" value="(if (has-been-here &quot;13&quot;) (delete-me))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="34" class="Door" x="192" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="10"/>
+   </properties>
+  </object>
+  <object id="35" class="Door" x="256" y="192" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="13"/>
+   </properties>
+  </object>
+  <object id="36" class="Door" x="256" y="16" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="11"/>
+   </properties>
+  </object>
+  <object id="37" gid="141" x="240" y="208" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="50"/>
    </properties>
   </object>
  </objectgroup>

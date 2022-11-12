@@ -54,25 +54,6 @@
    H4sIAAAAAAAAAwtkYGAIQsKhDLhBIBFqiAGRQBwDxLEUmkNLYEaiekcgdiJSP6lmUwOg2wmLy2AgDmHAHafY1KH7dbAAeoUrMfaYALEprR2CBRCK14FyFy0APr+4EGkGelzSK3ycCchjS2MDUW7QCgAAkC9jxXgGAAA=
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="44" class="Door" x="112" y="0" width="16" height="16">
-   <properties>
-    <property name="mainDoor" type="bool" value="true"/>
-    <property name="roomId" value="24"/>
-   </properties>
-  </object>
-  <object id="45" class="Door" x="112" y="352" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="26"/>
-   </properties>
-  </object>
-  <object id="51" class="Door" x="32" y="192" width="16" height="16">
-   <properties>
-    <property name="roomId" value="25_house"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="8" name="items">
   <object id="47" gid="165" x="112" y="288" width="16" height="16">
    <properties>
@@ -233,6 +214,25 @@
     (leave-all '(56 58 59 60 62))))</property>
     <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
   (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="44" class="Door" x="112" y="0" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="roomId" value="24"/>
+   </properties>
+  </object>
+  <object id="45" class="Door" x="112" y="352" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="26"/>
+   </properties>
+  </object>
+  <object id="51" class="Door" x="32" y="192" width="16" height="16">
+   <properties>
+    <property name="roomId" value="25_house"/>
    </properties>
   </object>
  </objectgroup>

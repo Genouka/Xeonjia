@@ -7,30 +7,30 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="11" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAwtgZGAIGMI4AoiVoDQhteFArAxVT0gtMkCXiwJiPyLVgkAkkh5CamEAXQ8+tch6/LD45Q525QyBWNQ+wKEWm9n/cajFZjYpan+QoBaXe7GpdaDQDVeo4AZS/IbNvWdwqAUBQSAtBMScQLYeEL9mgMQ9uloAyUeQC/QDAAA=
+   H4sIAAAAAAAAAwtlZGAIHcI4FojVoTQhtTFArAFVT0gtMkCXiwfiYCLVgkAckh5CamEAXQ8+tch6grH45SF25QxhWNQ+xaEWm9ksONyBzWxS1P7FrRRDLS73YlPrQIJabG64SQU3kOI3bO69iEMtCIgBaXEg5gSy9YD4AwMk7tHVAgBgWPBM9AMAAA==
   </data>
  </layer>
  <layer id="6" name="Tile Layer 2" width="11" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGPpAmpH6ZmYAzdSGYkLADajGHYg9KFTLDRTjAWJeIOZjxK9WGCgmAsSiQCxGQC2t3EtrtdyMxKsVhsqZAWl1ILYgwg12QDV6QOxAg/RDLcAJdBsXGe57AKX1sMgBABY3vj30AwAA
+   H4sIAAAAAAAAA2NgGPpAgZH6ZuYCzTSAYkLAG6jGB4h9KVQrABQTBGIhIBZmxK9WAigmCcRSQCxNQC2t3EtrtQKMxKuVgMpZA2kdILYlwg3OQDXGQOxKg/RDLcAHdBs/Ge57CqX1sMgBAOsB2Fv0AwAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="62" class="NPC" gid="195" x="96" y="368" width="16" height="16">
+  <object id="62" class="NPC" gid="200" x="96" y="368" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
    </properties>
   </object>
-  <object id="66" class="NPC" gid="150" x="48" y="192" width="16" height="16">
+  <object id="66" class="NPC" gid="155" x="48" y="192" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;To reach the other shore you have to go through the submarine tunnel but is currently guarded by the Hoarfrost Team.\nIf they don't leave, I'll try to cross the sea with the boat.&quot;)))"/>
    </properties>
   </object>
-  <object id="67" class="NPC" gid="166" x="80" y="80" width="16" height="16">
+  <object id="67" class="NPC" gid="171" x="80" y="80" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I think I will spend the rest of my life here.&quot;)))"/>
    </properties>
@@ -38,9 +38,31 @@
  </objectgroup>
  <layer id="12" name="Tile Layer 3" width="11" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGNrAnxFC6zASVqsIVaNKhFpNoBotINYlQu0oGAVDCQAA2FvgF/QDAAA=
+   H4sIAAAAAAAAA2NgGNoghBFCGzISVqsGVaNFhFo9oBp9IDYiQu0oGAVDCQAA0BPGL/QDAAA=
   </data>
  </layer>
+ <objectgroup id="8" name="items">
+  <object id="59" gid="276" x="96" y="352" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Hana's Tunnel&quot;)))"/>
+   </properties>
+  </object>
+  <object id="60" gid="276" x="96" y="304" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Observation Tower&quot;)))"/>
+   </properties>
+  </object>
+  <object id="68" gid="286" x="64" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;Wow! The view here is spectacular!&quot;)))"/>
+   </properties>
+  </object>
+  <object id="70" gid="290" x="96" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;Wow! The view here is spectacular!&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="10" name="spawn points">
   <object id="51" class="Door" x="0" y="176" width="16" height="16">
    <properties>
@@ -70,28 +92,6 @@
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="44"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="8" name="items">
-  <object id="59" gid="271" x="96" y="352" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Hana's Tunnel&quot;)))"/>
-   </properties>
-  </object>
-  <object id="60" gid="271" x="96" y="304" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Observation Tower&quot;)))"/>
-   </properties>
-  </object>
-  <object id="68" gid="281" x="64" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;Wow! The view here is spectacular!&quot;)))"/>
-   </properties>
-  </object>
-  <object id="70" gid="285" x="96" y="80" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;Wow! The view here is spectacular!&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

@@ -30,6 +30,6 @@
    H4sIAAAAAAAAA2NgoC+4j8bfDsT7gfgAlI0LgOSOA/EJAupoDbaSqQ8ALy9+BmgBAAA=
   </data>
  </layer>
- <objectgroup id="2" name="spawn points"/>
  <objectgroup id="9" name="items"/>
+ <objectgroup id="2" name="spawn points"/>
 </map>

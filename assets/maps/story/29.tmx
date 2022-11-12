@@ -7,16 +7,16 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/capital-1.tsx"/>
- <tileset firstgid="181" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="233" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="154" source="../tilesets/capital-1.tsx"/>
+ <tileset firstgid="186" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="238" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="14" height="21">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5VSOw6DMAz1HVgidfHYMRsLRVn7uWA5La6K1VfLdsKTrIDzPjGEKMZs1hEsUjfQvRIOcpVfpO5SD0dXzHvE8/o2y+Jpcnp8BB9rdc6IntmezfO4ttcSzwwV8kb0ymH6zXpGl83e09fAM+rpXBx4vqW2YK8F/j2UQ3sWDHlrwvF62sfvcx3I8/x6yP5f5DdJXej/nuGznqXRdwaGnE/t/yxXN5gEAAA=
+   H4sIAAAAAAAAA5VSOw6DMAz1HVgidfHYMRsLRVn7OWO5Kq6K1VfLdsKTrIDzPjGEKMZs1hEsUjfQvRIOcpVfpO5SD0dXzHvE8/o2y+Jpcnp8BB9rdc6IntmezfO4ttcSzwwV8kb0ymH6zXpGl83e09fAM+rpXBx4vqW2YK8F/j2UQ3sWDHlrwvF62sfvcx3I8/x6yP5f5DdJXej/nuGznqXRdwaGnE/tbXUkCpgEAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="44" class="NPC" gid="210" x="96" y="240" width="16" height="16">
+  <object id="44" class="NPC" gid="215" x="96" y="240" width="16" height="16">
    <properties>
     <property name="action">(begin
   (dialog '((&quot;/&quot; &quot;Nobody knows what the writing on this rock means, it is not even known who wrote it.&quot;)))
@@ -34,9 +34,15 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="14" height="21">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgwA5MgNgUie+CRw26WhhwBGInHOYTow6bOC67YMCZRPXUBoPBvqlAPA2IpwPxDBLMmgvE84B4PhAvIEHfUiBeBsTLgXgFCfrwAXqHI7WA2UA7gEYAOT7oETcA2p1uo5gEAAA=
+   H4sIAAAAAAAAA2NgwA5MgNgUie+CRw26WhhwBGInHOYTow6bOC67YMCZRPXUBoPBvllAPBuI5wDxXBLMWgTEi4F4CRAvJUHfKiBeDcRrgHgtCfrwAXqHI7WA2UA7gEYAOT7oETcARTv7HpgEAAA=
   </data>
  </layer>
+ <objectgroup id="8" name="items">
+  <properties>
+   <property name="action" value="(map-name &quot;Mitsu Forest&quot;)"/>
+   <property name="map-name" value="Mitsu Forest"/>
+  </properties>
+ </objectgroup>
  <objectgroup id="2" name="spawn points">
   <object id="36" class="Door" x="208" y="304" width="16" height="16">
    <properties>
@@ -45,11 +51,5 @@
     <property name="roomId" value="27"/>
    </properties>
   </object>
- </objectgroup>
- <objectgroup id="8" name="items">
-  <properties>
-   <property name="action" value="(map-name &quot;Mitsu Forest&quot;)"/>
-   <property name="map-name" value="Mitsu Forest"/>
-  </properties>
  </objectgroup>
 </map>

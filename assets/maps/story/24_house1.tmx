@@ -17,14 +17,6 @@
    H4sIAAAAAAAAA2NgGBygH4gnDLQjCIBGCvQCAEpusxZoAQAA
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="70" class="Door" x="80" y="112" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="24"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="9" name="items">
   <object id="74" gid="151" x="64" y="80" width="16" height="16">
    <properties>
@@ -38,6 +30,14 @@
     <property name="action">(if (not (= (orientation) 0))
   (dialog '((&quot;A computer turned off. Looks like a key is needed to turn it on.&quot;)))
   (dialog '((&quot;There's nothing back here.&quot;)))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" class="Door" x="80" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="24"/>
    </properties>
   </object>
  </objectgroup>

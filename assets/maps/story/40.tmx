@@ -5,16 +5,16 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="149" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="201" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="361" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="366" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA51UMQ7CMAx0JHgALP1OVtQFhBgoX+7IxpKBoU/oiC1i4bpO3HCS1SRO7uzYKcASCe2ZvzWkbLMYR2NN8+wCwD6s+TqxNlX2lWJpxWSsdUrvgPNj8DX0OUJL/IzYsNfS3ILk+OleZN4WPL+n4Z0/oe8mrA/rfGsa1H9WfSUuyHdW1gsNL0br/vUZS+Nq5CF7Rb8DT1trDGgPQyMVuLb06T3zMrfOnTlKGpzHvz3LeMG3thperVqQYJnHKMZeT7VqkNGdvMWcc6FxzH72jco/w++fK2vA8X8A/8HYztwFAAA=
+   H4sIAAAAAAAAA51UOw7CMAx1RjgALDlMT1B1ASEG4Modu7F0YOgRKpGIWHVfnbjhSVaTOPbzryFaYwwypG8JY5JZrBvlDP0cHNHRbf15cTYV7uViqcWknHngO4X92dkcaBdREz+jqbirce6BVatYF5m3BktvcVj2bdDdhXRum2+JI86f1l+Ja/B3AekEhxWjVn+00ThuSh5yVvA/sLiR4xnkpXDk6rVnTh/JL/vG3NlHjoPz+HdmGW/69RZh9aoGWKterK2ZquWIEmvyEXvOhd9T7xZdD/qZljdX9oDj/wKph3V93AUAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="58" class="NPC" gid="163" x="224" y="128" width="16" height="16">
+  <object id="58" class="NPC" gid="168" x="224" y="128" width="16" height="16">
    <properties>
     <property name="action">(if (and (! (has-item &quot;40.eyeglasses&quot;)) (! (has-item &quot;gem_4&quot;)))
     (begin
@@ -34,7 +34,7 @@
     (dialog '((&quot;/&quot; &quot;Fishing is relaxing.&quot;))))</property>
    </properties>
   </object>
-  <object id="60" class="Modifier" gid="379" x="80" y="192" width="16" height="16">
+  <object id="60" class="Modifier" gid="384" x="80" y="192" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="75"/>
    </properties>
@@ -42,9 +42,26 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgQIA/QPyXgTAgVh0tAScjAwMXI3l6KXE/JfYSCwSB5gvhsIOQ/ZS6jx7+oxSQ40ZCekJwyA1kWidkN7q8DxY/UOp+FqCZrMM8PRELyM17A5WGANmTk0PcBQAA
+   H4sIAAAAAAAAA2NgQABGRgYGJkYGgoBYdbQEfED7+cl0AyXup8ReYoEY0HxxHHYQsp9S99HDf5QCctxISE8kDrmBTOuE7EaXD8SillL3cwL1cg3z9EQsIDfvDVQaAgABwUfb3AUAAA==
   </data>
  </layer>
+ <objectgroup id="8" name="items">
+  <object id="61" class="Modifier" gid="384" x="272" y="64" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="62" class="Modifier" gid="384" x="368" y="224" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="63" gid="377" x="112" y="192" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="50"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="10" name="spawn points">
   <object id="51" class="Door" x="80" y="0" width="16" height="16">
    <properties>
@@ -68,23 +85,6 @@
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="41/2"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="8" name="items">
-  <object id="61" class="Modifier" gid="379" x="272" y="64" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="15"/>
-   </properties>
-  </object>
-  <object id="62" class="Modifier" gid="379" x="368" y="224" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="15"/>
-   </properties>
-  </object>
-  <object id="63" gid="372" x="112" y="192" width="16" height="16">
-   <properties>
-    <property name="healthPointsDelta" type="int" value="50"/>
    </properties>
   </object>
  </objectgroup>

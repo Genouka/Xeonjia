@@ -50,6 +50,20 @@
    H4sIAAAAAAAAA2NgwA8EGAkoGAWDGozG3ygYTgAAIr7/dLAEAAA=
   </data>
  </layer>
+ <objectgroup id="8" name="items">
+  <object id="62" class="Modifier" gid="440" x="208" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="63" gid="276" x="112" y="96" width="16" height="16">
+   <properties>
+    <property name="action">(dialog
+  '((&quot;/_2&quot; &quot;↑ Hexa Cave&quot;)
+  (&quot;/_2&quot; &quot;Zamelis Village →&quot;)))</property>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="10" name="spawn points">
   <object id="51" class="Door" x="112" y="0" width="16" height="16">
    <properties>
@@ -73,20 +87,6 @@
    <properties>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="36/2"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="8" name="items">
-  <object id="62" class="Modifier" gid="440" x="208" y="48" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="15"/>
-   </properties>
-  </object>
-  <object id="63" gid="276" x="112" y="96" width="16" height="16">
-   <properties>
-    <property name="action">(dialog
-  '((&quot;/_2&quot; &quot;↑ Hexa Cave&quot;)
-  (&quot;/_2&quot; &quot;Zamelis Village →&quot;)))</property>
    </properties>
   </object>
  </objectgroup>

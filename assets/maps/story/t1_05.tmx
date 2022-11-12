@@ -22,6 +22,13 @@
    H4sIAAAAAAAAA2NgYGCQYmTACiTQxNHVocuPglEwCkYGAABxNkS0OAQAAA==
   </data>
  </layer>
+ <objectgroup id="9" name="items">
+  <object id="89" gid="329" x="64" y="16" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="200"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="2" name="spawn points">
   <object id="87" class="Door" x="64" y="464" width="16" height="16">
    <properties>
@@ -32,13 +39,6 @@
   <object id="88" class="Door" x="64" y="0" width="16" height="16">
    <properties>
     <property name="roomId" value="t1_06"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="9" name="items">
-  <object id="89" gid="329" x="64" y="16" width="16" height="16">
-   <properties>
-    <property name="healthPointsDelta" type="int" value="200"/>
    </properties>
   </object>
  </objectgroup>

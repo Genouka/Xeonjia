@@ -24,14 +24,6 @@
    H4sIAAAAAAAAA2NgIB7sBOJdeGgYOAjEh/DQyGA7DruQxfcD8QE8NAwcB+ITSDQDFj4pYDcWvBWJTQoAADF61/RoAQAA
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="70" class="Door" x="96" y="112" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="4"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="9" name="items">
   <object id="72" gid="199" x="80" y="96" width="16" height="16">
    <properties>
@@ -55,6 +47,14 @@
         '((&quot;fresh-water&quot; 24 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
         (&quot;pomegranate-juice&quot; 65 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
         (&quot;healer&quot; 90 &quot;(give-item \&quot;healer\&quot;)&quot;))))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" class="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="4"/>
    </properties>
   </object>
  </objectgroup>

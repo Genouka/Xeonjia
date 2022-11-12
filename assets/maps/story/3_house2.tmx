@@ -32,14 +32,6 @@
    H4sIAAAAAAAAA2NgIB7sBOJdSDQucBCIDyHRyGA3CfbRCuwH4gNAvJ2AuuNAfAJJHcjtWxnI8wMAo6VFM2gBAAA=
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="70" class="Door" x="96" y="112" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="3"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="9" name="items">
   <object id="72" gid="201" x="16" y="80" width="16" height="16">
    <properties>
@@ -63,6 +55,14 @@
    <properties>
     <property name="action">(if (= (orientation) 0)
     (dialog '((&quot;This sofa looks very comfortable.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" class="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="3"/>
    </properties>
   </object>
  </objectgroup>

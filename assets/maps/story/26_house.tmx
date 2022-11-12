@@ -34,14 +34,6 @@
    H4sIAAAAAAAAA2NgIB7sBOJdJKgnBewH4gNAvJ2AuuNAfALKvkMjt+ACu4F4K5QmFQAA65RjfGgBAAA=
   </data>
  </layer>
- <objectgroup id="2" name="spawn points">
-  <object id="70" class="Door" x="96" y="112" width="16" height="16">
-   <properties>
-    <property name="orientation" type="int" value="1"/>
-    <property name="roomId" value="26"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="9" name="items">
   <object id="75" gid="193" x="16" y="48" width="16" height="16">
    <properties>
@@ -57,6 +49,14 @@
   (dialog
     '((&quot;/book&quot; &quot;Remove the casing and loosen the screws until panel B2 reaches…&quot;)
     (&quot;This is the manual for assembling a library.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" class="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="26"/>
    </properties>
   </object>
  </objectgroup>
