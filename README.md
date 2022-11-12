@@ -96,11 +96,11 @@ will." - [M.T.](https://play.google.com/store/apps/details?id=xyz.deepdaikon.xeo
 
 - "I found it a really interesting and clever idea." - R.V.
 
-- Thanks for developing this game! I enjoy ice puzzles in games, so this is a real treat to play. -
+- "Thanks for developing this game! I enjoy ice puzzles in games, so this is a real treat to play." -
 [K.](https://gitlab.com/deepdaikon/Xeonjia/-/issues/13)
 
-- Nice game, cool mechanic. I like the puzzle aspect of the navigation. It can be tedious, but it's
-part of the fun. - [G.L.](https://gitlab.com/deepdaikon/Xeonjia/-/issues/16)
+- "Nice game, cool mechanic. I like the puzzle aspect of the navigation. It can be tedious, but it's
+part of the fun." - [G.L.](https://gitlab.com/deepdaikon/Xeonjia/-/issues/16)
 
 - "Me encantó." - [J.O.](https://play.google.com/store/apps/details?id=xyz.deepdaikon.xeonjia&reviewId=b6903d23-f484-4ef3-8a39-7932394ec32b)
 
