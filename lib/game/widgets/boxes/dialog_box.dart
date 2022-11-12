@@ -160,8 +160,15 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                               .currentMessage!.text
                                               .substring(
                                                   0,
-                                                  _characterCountAnimation!
-                                                      .value),
+                                                  min(
+                                                      widget
+                                                          .gameRef
+                                                          .messageManager
+                                                          .currentMessage!
+                                                          .text
+                                                          .length,
+                                                      _characterCountAnimation!
+                                                          .value)),
                                           style: Theme.of(context)
                                               .textTheme
                                               .bodyText2!
