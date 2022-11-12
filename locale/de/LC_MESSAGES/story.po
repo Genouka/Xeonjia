@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # araccaine <arac.caine@posteo.de>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-11-12 14:37+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -155,7 +155,7 @@ msgstr "Ein kaputter Bildschirm."
 
 #: assets/maps/story/8.tmx:
 msgid "Go this way →"
-msgstr ""
+msgstr "Gehe hier lang →"
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
@@ -163,7 +163,7 @@ msgstr "Natawn"
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nIf you lose your way or get stuck take a look at the map.\nYou can open it by tapping on its icon in the upper right corner."
-msgstr ""
+msgstr "Reise wohl, {{hero}}.\nSolltest du dich verirren oder feststecken, wirf einen Blick auf die Karte. \nDu kannst sie öffnen, indem du rechts oben in der Ecke auf das Kartensymbol klickst."
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
@@ -187,11 +187,11 @@ msgstr "Ich muss meinen Eltern noch mit der A-Taste auf Wiedersehen sagen, das w
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, I have to go to my neighbor first."
-msgstr ""
+msgstr "Wie meine Mutter schon sagte, muss ich zuerst zu meinem Nachbarn gehen."
 
 #: assets/maps/story/1.tmx:
 msgid "From here on is the frozen floor.\nI'll slide until I reach an obstacle.\nSo I have to use my mind to figure out the best path."
-msgstr ""
+msgstr "Ab hier ist der Boden gefroren.\nIch glitsche, bis ich an ein Hindernis stoße. \nAlso muss ich mir Gedanken machen, um den besten Pfad herauszufinden."
 
 #: assets/maps/story/34.tmx:
 msgid "Route 4"
@@ -227,7 +227,7 @@ msgstr "Den Granatapfelsaft hatte ich echt nötig."
 
 #: assets/maps/story/17.tmx:
 msgid "These monsters don't seem very smart to me."
-msgstr ""
+msgstr "Diese Monster scheinen mir nicht sehr schlau zu sein."
 
 #: assets/maps/story/17.tmx:
 msgid "There are still enemies here. I can't escape."
@@ -239,7 +239,7 @@ msgstr "Ich hasse es, wenn Leute immer dasselbe sagen."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Hi, you look a little tired.\nHere's a bottle of water."
-msgstr ""
+msgstr "Hi, Du siehst müde aus.\nHier hast Du eine Flasche mit Wasser."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Thank you!"
@@ -247,11 +247,11 @@ msgstr "Danke!"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "I wish you the best."
-msgstr ""
+msgstr "Ich wünsch Dir das Beste!"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "This sofa looks very comfortable."
-msgstr ""
+msgstr "Dieses Sofa sieht sehr bequem aus."
 
 #: assets/maps/story/13.tmx:
 msgid "Help me please!"
@@ -259,11 +259,11 @@ msgstr "Bitte helft mir!"
 
 #: assets/maps/story/13.tmx:
 msgid "Are you okay?"
-msgstr ""
+msgstr "Alles in Ordnung mit Dir?"
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, thank you so much for saving my life!\nI have to admit, I was so scared!"
-msgstr ""
+msgstr "Ja, vielen Dank, dass Du mein Leben gerettet hast!\nIch muss zugeben, ich hatte solche Angst!"
 
 #: assets/maps/story/13.tmx:
 msgid "Me too!"

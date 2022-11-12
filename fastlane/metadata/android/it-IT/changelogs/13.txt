@@ -1,0 +1,10 @@
+* Nuovo combattimento a turni
+* Nuova mappa del mondo
+* Miglioramenti alla grafica
+* Miglioramenti UI/UX
+* Miglioramenti alla modalità storia
+* Miglioramenti alle animazioni, musica di sottofondo ed effetti sonori
+* Miglioramenti al gamepad
+* Aggiustamenti della difficoltà di gioco
+* Aggiornate traduzioni
+* Risolti bug
