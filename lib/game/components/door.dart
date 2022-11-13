@@ -21,6 +21,9 @@ class DoorComponent extends BasicComponent {
     return null;
   }
 
+  @override
+  int get priority => 500;
+
   /// Next Room ID
   final String _roomId;
 
