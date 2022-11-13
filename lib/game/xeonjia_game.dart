@@ -681,7 +681,7 @@ class XeonjiaGame extends FlameGame
 
     // i18n: '* {{hero}} consults "The Manual of the Perfect Hero" *'.i18n
     setMessage(Message(
-        this, '* {{hero}} consults the "Manual of the Perfect Hero" *'));
+        this, '* {{hero}} consults "The Manual of the Perfect Hero" *'));
     final List<String> texts = [
       'Chapter 4: Battles'.i18n,
       'In battle each player has 3 moves per turn.'.i18n,
