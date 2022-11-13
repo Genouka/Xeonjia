@@ -45,7 +45,7 @@ class Settings {
 
   /// App language
   String? _languageCode;
-  bool get useSystemLanguage => _languageCode == null;
+  bool get useSystemLanguage => _languageCode == null || _languageCode == 'und';
   String get _currentLanguageCode =>
       useSystemLanguage ? Platform.localeName : _languageCode!;
   Locale get locale => supportedLocales
