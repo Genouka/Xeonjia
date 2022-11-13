@@ -70,10 +70,10 @@
     <property name="actionOnCollision">(if (!get &quot;025-henchmen&quot;)
   (begin
     (delete-me)
-    (music &quot;enemies&quot;)
     (set &quot;025-henchmen&quot; #t)
     (dialog '((&quot;/hero_exclamation&quot; &quot;!&quot;)))
     (wait)
+    (music &quot;enemies&quot;)
     (set-orientation '(1 56))
     (wait 0.6)
     (set-orientation '(1 58))
