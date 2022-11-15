@@ -43,19 +43,19 @@ class _InfoPageState extends State<InfoPage> {
     {
       'title': 'Report bugs'.i18n,
       'subtitle': 'Report bugs or request new feature'.i18n,
-      'url': 'https://gitlab.com/DeepDaikon/Xeonjia/issues',
+      'url': 'https://gitlab.com/deepdaikon/Xeonjia/issues',
       'icon': const Icon(Icons.bug_report),
     },
     {
       'title': 'View source code'.i18n,
       'subtitle': 'Look at the source code'.i18n,
-      'url': 'https://gitlab.com/DeepDaikon/Xeonjia',
+      'url': 'https://gitlab.com/deepdaikon/Xeonjia',
       'icon': const Icon(Icons.developer_mode),
     },
     {
       'title': 'View License (GPLv3)'.i18n,
       'subtitle': 'Read software license'.i18n,
-      'url': 'https://gitlab.com/DeepDaikon/Xeonjia/blob/master/LICENSE',
+      'url': 'https://gitlab.com/deepdaikon/Xeonjia/blob/master/LICENSE',
       'icon': const Icon(Icons.chrome_reader_mode),
     },
     {

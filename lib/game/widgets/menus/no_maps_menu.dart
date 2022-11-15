@@ -50,7 +50,7 @@ class NoMapsMenu extends StatelessWidget {
                     onPressed: () {
                       launchUrl(
                           Uri.parse(
-                              'https://gitlab.com/DeepDaikon/Xeonjia/issues'),
+                              'https://gitlab.com/deepdaikon/Xeonjia/issues'),
                           mode: LaunchMode.externalApplication);
                     },
                     child: Text(
