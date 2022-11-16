@@ -16,7 +16,7 @@
  </layer>
  <layer id="6" name="Tile Layer 2" width="11" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGPpAgZH6ZuYCzTSAYkLAG6jGB4h9KVQrABQTBGIhIBZmxK9WAigmCcRSQCxNQC2t3EtrtQKMxKuVgMpZA2kdILYlwg3OQDXGQOxKg/RDLcAHdBs/Ge57CqX1sMgBAOsB2Fv0AwAA
+   H4sIAAAAAAAAA2NgGPpAgZH6ZuYCzTSAYkLAG6jGB4h9KVQrABQTBGIhIBZmxK9WAigmCcRSQCxNQC2t3DuY1EpA5ayBtA4Q2xJhrjNQjTEQu9Ig/Qw0eAql9bDIAQD3foJW9AMAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -38,7 +38,7 @@
  </objectgroup>
  <layer id="12" name="Tile Layer 3" width="11" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGNoghBFCGzISVqsGVaNFhFo9oBp9IDYiQu0oGAVDCQAA0BPGL/QDAAA=
+   H4sIAAAAAAAAA2NgGNoghBFCGzISVqsGVaNFhFo9oBp9IDYiQu0ooA0QGA17Bj5gGPBTORwAzGycIvQDAAA=
   </data>
  </layer>
  <objectgroup id="8" name="items">

@@ -37,12 +37,12 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="15" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGBjgwcjA4AnEXozEqddEUucGZOsCsTuRepGBNVCPDhDbkqHXGajHGIhd8ehNB8plIMkzAtlMZNgFApxAfVxk6gUBGQJ6EykwexQMHBAExpsQEAuTEX+SQD1SQCw9ROMeAHbF58qwBAAA
+   H4sIAAAAAAAAA2NgGBpAkxHBdgOydYHYnRG3elzAGqhHB4htydDrDNRjDMSuePSmA+UykOQZgWwmMuwCAU6gPi4y9YKADAG9iRSYPQoGDggC400IiIXJiD9JoB4pIJYeonEPAN9avqWwBAAA
   </data>
  </layer>
  <layer id="11" name="Tile Layer 3" width="15" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWUAAFG/PzhZu8ooA8YjV/sAADteRb3sAQAAA==
+   H4sIAAAAAAAAA2NgGBjgwcjA4AnEXowD5AAqAQFG/PzhZu8ooA8YjV/sAABE5k+YsAQAAA==
   </data>
  </layer>
  <objectgroup id="8" name="items">

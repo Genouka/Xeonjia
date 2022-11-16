@@ -45,12 +45,12 @@
  </layer>
  <layer id="6" name="Tile Layer 2" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGDxAjpGBQR6KFYBYEYiVGInT+xeLWDwWvWpYxLSItINYoAc0Tx8NG1HZjlFAewBLUyFY0qUhleNzNF0SDxiBbmbC4W58ctQwfygBAPryEF/cBQAA
+   H4sIAAAAAAAAA2NgGDxAjpGBQR6KFYBYEYiVGInT+xeLWDwWvWpYxLSItINYoAc0Tx8NG1HZjlFAewBLUyFY0qUhleNzNF0SDxiBbmaiobtpbT69AAAPAO+G3AUAAA==
   </data>
  </layer>
  <layer id="11" name="Tile Layer 3" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGDwghBFTzBCL2CgYBaNgFIwC/AAA2r8ST9wFAAA=
+   H4sIAAAAAAAAA2NgGDwghBFTzBCL2CgYBaNgFGADjMDygmm0zAADAC9N7ZbcBQAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">

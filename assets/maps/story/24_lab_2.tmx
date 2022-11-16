@@ -26,12 +26,12 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA+8BeJ3WGh84DMQ/0KifwLxF6jceyD+CMUf0PQxMqLyf0Ppr0D8Hcr+RoLbPqHRDFC3wNz2Bc1t+MAfEtWQE27/QQQjJk1NAADZTNqYCAIAAA==
+   H4sIAAAAAAAAA2NgoB/4DMS/kOifQPwFKvceiD9C8Qc0fYyMqPzfUPorEH+Hsr+R4I5PaDQD1C0wt31Bcxs+8IdKavCB/yCCEZOmJgAAE+JLeAgCAAA=
   </data>
  </layer>
  <layer id="12" name="Tile Layer 3" width="13" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGFzgLxD/G2hHjEAAAFlygXYIAgAA
+   H4sIAAAAAAAAA2NgIA+8BeJ3WGhKwV8g/kehGbRyGzXAYHUbAJPcEJYIAgAA
   </data>
  </layer>
  <objectgroup id="9" name="items">
