@@ -44,7 +44,16 @@ class SettingsPageState extends State<SettingsPage> {
                   foregroundColor: Theme.of(context).primaryColor),
               onPressed: () {
                 SystemChrome.restoreSystemUIOverlays();
-                settings = Settings({'firstRun': false});
+                if (settings.audioSupported) {
+                  Settings({'firstRun': false});
+                } else {
+                  Settings({
+                    'firstRun': false,
+                    'soundEffects': false,
+                    'backgroundMusic': false,
+                  });
+                  settings.audioSupported = false;
+                }
                 I18n.of(context).locale = settings.locale;
                 saveSettings();
                 setState(() {});
