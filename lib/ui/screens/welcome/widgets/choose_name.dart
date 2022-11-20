@@ -85,7 +85,6 @@ class ChooseName extends StatelessWidget {
                           'Kyo',
                           'Makana',
                           'Marko',
-                          'Mila',
                         ];
                         _textFieldController.text =
                             names[Random().nextInt(names.length)].toUpperCase();
