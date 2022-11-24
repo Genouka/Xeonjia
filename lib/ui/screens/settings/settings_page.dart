@@ -45,9 +45,9 @@ class SettingsPageState extends State<SettingsPage> {
               onPressed: () {
                 SystemChrome.restoreSystemUIOverlays();
                 if (settings.audioSupported) {
-                  Settings({'firstRun': false});
+                  settings = Settings({'firstRun': false});
                 } else {
-                  Settings({
+                  settings = Settings({
                     'firstRun': false,
                     'soundEffects': false,
                     'backgroundMusic': false,
