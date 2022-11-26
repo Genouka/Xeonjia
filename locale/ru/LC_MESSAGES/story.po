@@ -5,7 +5,7 @@
 # Tri-fan <ausa1156red@gmail.com>, 2021.
 # Denis Proleev <denproleev@gmail.com>, 2021, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-11-20 22:15+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -361,7 +361,7 @@ msgstr "Я бы с удовольствием уехал в дальний пу�
 
 #: assets/maps/story/37.tmx:
 msgid "{{hero}}, there you are. Finally! I heard a rumor that you were coming here."
-msgstr "{{heto}}, вот ты где. Наконец-то! До меня дошли слухи, что ты собираешься сюда."
+msgstr "{{hero}}, вот ты где. Наконец-то! До меня дошли слухи, что ты собираешься сюда."
 
 #: assets/maps/story/37.tmx:
 msgid "September! Long time no see! Last time was when we battled each other to be proclaimed HERO.\nWe were 5 years old."

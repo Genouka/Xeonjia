@@ -6,7 +6,7 @@
 # no no <skariko@pm.me>, 2020.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-17 14:37+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-11-13 15:18+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -326,7 +326,7 @@ msgstr "Io… Io… Io non so come combattere!"
 
 #: assets/maps/story/13.tmx:
 msgid "What??\nAren't you this year's \"choosen hero\"?"
-msgstr "Cosa??\nNon sei l' \"eroe prescelto\" di quest'anno?"
+msgstr "Cosa??\nNon sei mica l' \"eroe prescelto\" di quest'anno?"
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, I am…"

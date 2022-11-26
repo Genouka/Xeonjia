@@ -5,7 +5,7 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2020, 2021, 2022.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-11-20 22:15+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -361,7 +361,7 @@ msgstr "Me encantaría irme en una larga aventura, pero ya no tengo la fuerza."
 
 #: assets/maps/story/37.tmx:
 msgid "{{hero}}, there you are. Finally! I heard a rumor that you were coming here."
-msgstr "{{ hero }}, aquí estás. ¡Por fin! He escuchado un rumor de que estabas de camino."
+msgstr "{{hero}}, aquí estás. ¡Por fin! He escuchado un rumor de que estabas de camino."
 
 #: assets/maps/story/37.tmx:
 msgid "September! Long time no see! Last time was when we battled each other to be proclaimed HERO.\nWe were 5 years old."
@@ -549,7 +549,7 @@ msgstr "!!!"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hi {{hero}}! How are you doing? Were you able to get the first signet?"
-msgstr "¡Hola {{ hero }}!¿Cómo te va?¿Has conseguido el primer sello?"
+msgstr "¡Hola {{hero}}!¿Cómo te va?¿Has conseguido el primer sello?"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hi Shen! Yes I did it!"

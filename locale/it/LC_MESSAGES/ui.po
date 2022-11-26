@@ -5,7 +5,7 @@
 # no no <skariko@pm.me>, 2020.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-17 14:37+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-11-16 22:25+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -201,7 +201,7 @@ msgstr "Mostra D-Pad"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable the directional pad.\nTo change its position, long-press the D-pad in the center."
-msgstr "Attiva il pad direzionale.\nPer modificarne la posizione, premere a lungo il D-pad al centro."
+msgstr "Attiva il pad direzionale.\nPer modificarne la posizione, premi a lungo il D-pad al centro."
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "D-pad size"
@@ -601,7 +601,7 @@ msgstr "Dovresti già conoscere il pulsante \"A\"; esamina oggetti, piante e per
 
 #: lib/game/xeonjia_game.dart:
 msgid "To attack use the \"P\" button. In this way you punch the enemy in front of you."
-msgstr "Per attaccare usate il pulsante \"P\". In questo modo colpisci il nemico di fronte a te."
+msgstr "Per attaccare usa il pulsante \"P\". In questo modo colpisci il nemico di fronte a te."
 
 #: lib/game/xeonjia_game.dart:
 msgid "Otherwise, throw snowballs with the \"S\" button in the direction you are looking at."
