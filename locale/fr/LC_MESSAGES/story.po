@@ -4,8 +4,9 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2020, 2021, 2022.
 # Swann Fournial <s.fournial@protonmail.com>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021, 2022.
+# PulsarTech <crewtech2@gmail.com>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-11-21 22:40+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-12-07 13:35+0000\nLast-Translator: PulsarTech <crewtech2@gmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -1057,7 +1058,7 @@ msgstr "Q-qui êtes-vous ?! Que voulez-vous ?!"
 
 #: assets/maps/story/25.tmx:
 msgid "You don't seem particularly informed, kid.\nAt least those before you had the basics.\nThey should choose \"heroes\" more carefully.\nWe are the Hoarfrost Team!\nWe are the professionals of crime.\nThe King of Evil's right-hand men.\nThanks to us, the King of Evil will be able to complete his work."
-msgstr ""
+msgstr "Tu n'as pas l'air particulièrement informé, gamin.\nAu moins ceux avant toi avaient les bases.\nIls devraient choisir des \"héros\" plus soigneusement.\nNous sommes l'Équipe givrée !\nNous sommes des professionnels du crime.\nLes bras droits du Roi du Mal.\nGrâce à nous, le Roi du Mal sera capable d'accomplir ses ambitions."
 
 #: assets/maps/story/25.tmx:
 msgid "His work?! What are you talking about?"
@@ -1073,7 +1074,7 @@ msgstr ""
 
 #: assets/maps/story/25.tmx:
 msgid "You can't run away from here.\nDid you think you could get away with it that easily?\nThe fact that you tried to escape and not to fight make it clear how little value you are.\nI hope next year's \"hero\" is a little braver than you, at least it would be a bit more fun for us."
-msgstr ""
+msgstr "Tu ne peux pas fuir d'ici.\nTu pensais t'en sortir aussi facilement ?\nLe fait que tu as essayé de t'échapper et non de te battre montre clairement ta faible valeur.\nJ'espère que le \"héros\" de l'année prochaine sera plus courageux que toi, au moins ce serait un peu plus amusant pour nous."
 
 #: assets/maps/story/25.tmx:
 msgid "Bzzt… Bzzt… Bzzt…"
@@ -1253,19 +1254,19 @@ msgstr "Des sceaux ?"
 
 #: assets/maps/story/999.tmx:
 msgid "I did not understand exactly what they are, but they should be items that are placed in crypts in each region of the Kingdom.\n3 crypts with one signet each."
-msgstr ""
+msgstr "Je n'ai pas exactement compris ce qu'ils sont, mais ils devraient être des objets qui sont placés dans des cryptes dans chaque région du Royaume.\n3 cryptes avec un sceau chacune."
 
 #: assets/maps/story/999.tmx:
 msgid "Okay, it doesn't sound complicated.\nIn this region for now I have not yet found the crypt.\nIt might be in the southeast.\nWhere are you headed now?"
-msgstr ""
+msgstr "Bon, ça n'a pas l'air compliqué.\nPour l'instant, dans cette région, je n'ai pas encore trouvé la crypte.\nÇa peut être dans le sud-est.\nOù vas-tu maintenant ?"
 
 #: assets/maps/story/999.tmx:
 msgid "I think I will stay here and rest for a while, near the Mitsu Forest.\nI will resume my journey in a few days."
-msgstr ""
+msgstr "Je pense que je vais rester ici et me reposer un moment, près de la Forêt Mitsu.\nJe reprendrai mon voyage dans quelques jours."
 
 #: assets/maps/story/999.tmx:
 msgid "I can't rest so much unfortunately.\nI'll continue my journey right away.\nHave a good rest!"
-msgstr ""
+msgstr "Je ne peux pas autant me reposer malheureusement.\nJe vais continuer mon voyage tout de suite.\nReposez-vous bien !"
 
 #: assets/maps/story/999.tmx:
 msgid "Thanks!\nWe will meet again."
@@ -1413,7 +1414,7 @@ msgstr "J'aime les porcelets."
 
 #: assets/maps/story/26_house.tmx:
 msgid "Remove the casing and loosen the screws until panel B2 reaches…"
-msgstr ""
+msgstr "Retire le boîtier et desserre les vis jusqu'à que le panneau B2 atteigne…"
 
 #: assets/maps/story/26_house.tmx:
 msgid "This is the manual for assembling a library."
@@ -1445,11 +1446,11 @@ msgstr "Ça m'a fait plaisir de te revoir aussi. J'avais l'impression de retourn
 
 #: assets/maps/story/39.tmx:
 msgid "Hehe, you are right… we spent a lot of hours playing and training as kids.\nThat was the happiest time in my life…\nThis is too much nostalgia for me. I can't handle it."
-msgstr ""
+msgstr "Hé hé, tu as raison... Nous avons passé beaucoup d'heures à jouer et à nous entraîner lorsque nous étions des enfants.\nC'était la partie la plus heureuse de ma vie...\nC'est trop de nostalgie pour moi. Je n'arrive pas à la supporter."
 
 #: assets/maps/story/39.tmx:
 msgid "I don't have time for these emotions, I have to go back to training now.\nSee you in the Xeonjia Tower."
-msgstr ""
+msgstr "Je n'ai pas le temps pour ces émotions, je dois retourner m'entraîner maintenant.\nRendez-vous dans la tour Xeonjia."
 
 #: assets/maps/story/39.tmx:
 msgid "Are you going to the tower too?"
@@ -1509,7 +1510,7 @@ msgstr "J'ai entendu dire que dans chaque région il y a une étrange pierre pol
 
 #: assets/maps/story/39.tmx:
 msgid "This one seems to be useless."
-msgstr ""
+msgstr "Celle-ci semble être inutile."
 
 #: assets/maps/story/39.tmx:
 msgid "This is a very strange stone… Never seen anything like this before."
@@ -1553,7 +1554,7 @@ msgstr "Occupe-toi de tes affaires."
 
 #: assets/maps/story/28_house.tmx:
 msgid "After 10 minutes add to the pot half a daikon, chopped into small pieces…"
-msgstr ""
+msgstr "Au bout de 10 minutes, ajouter à la marmite un demi-daïkon coupé en petits morceaux…"
 
 #: assets/maps/story/28_house.tmx:
 msgid "I'm getting hungry."
@@ -1585,7 +1586,7 @@ msgstr "MAISON DE LA VOISINE"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nYou simply have to open your backpack and eat the food!\nHere's to you!"
-msgstr ""
+msgstr "Bonjour mon garçon, tu vas bien ?\nAujourd'hui c'est le grand jour hein ?\nFais attention, le monde est un endroit dangereux.\nJe t'ai fait cette boite pleine de nourriture, tu en auras besoin quand tu auras peu de PV.\nTu n'as qu'à ouvrir ton sac à dos et manger la nourriture !\nVoilà pour toi !"
 
 #: assets/maps/story/1_house.tmx:
 msgid "neighbor"
@@ -1873,7 +1874,7 @@ msgstr "Route 1"
 
 #: assets/maps/story/2.tmx:
 msgid "I also often get hurt with rocks.\nIt's annoying but you'll get used to it."
-msgstr ""
+msgstr "Je suis aussi souvent blessé par des rochers.\nC'est énervant mais tu t'y habitueras."
 
 #: assets/maps/story/2.tmx:
 msgid "There seems to be something in the branches of this plant…\nIt's a stone!"
@@ -1893,7 +1894,7 @@ msgstr "O-oui, je viens de perdre 15 points de vie (PV)."
 
 #: assets/maps/story/2.tmx:
 msgid "I know, it happens often.\nSome rocks are very sharp and pointy.\nWhen you bump into them you get hurt."
-msgstr ""
+msgstr "Je sais, ça arrive souvent.\nCertains rochers sont très coupants et pointus.\nQuand tu les heurtes, tu te blesses."
 
 #: assets/maps/story/2.tmx:
 msgid "Now I know!"
@@ -1901,7 +1902,7 @@ msgstr "Maintenant je sais !"
 
 #: assets/maps/story/2.tmx:
 msgid "During your journey you will run into them many times, it's not a problem, just be careful not to run out of HP."
-msgstr ""
+msgstr "Au cours de ton voyage, tu les rencontreras régulièrement, ce n'est pas un problème, fais juste attention à ne pas manquer de PV."
 
 #: assets/maps/story/41.tmx:
 msgid "As long as the tunnel is blocked we must organize differently to get goods and people from one side to another."
@@ -1937,7 +1938,7 @@ msgstr "Melhopolis est le centre administratif de la région.\nDe nos jours, la 
 
 #: assets/maps/story/5.tmx:
 msgid "Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of this region lived here."
-msgstr ""
+msgstr "Salut, ça c'est la Forêt Mitsu. Mes parents m'ont raconté de nombreuses histoires sur la beauté et la prospérité qu'elle était autrefois. On raconte qu'il était une fois la créature protectrice mystique de cette région qui vivait ici."
 
 #: assets/maps/story/5.tmx:
 msgid "174805…\nI don't know what these figures are but a little while ago I heard someone say them out loud…\nDunno why."
@@ -2013,7 +2014,7 @@ msgstr "Un mur."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "There is a small difference in height here… I can't climb over it on this side."
-msgstr ""
+msgstr "Il y a une petite différence de hauteur ici... Je ne peux pas escalader de ce côté."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "An empty vase."

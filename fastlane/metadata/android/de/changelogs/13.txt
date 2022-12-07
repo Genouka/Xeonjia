@@ -1,0 +1,10 @@
+* Neuer Zug-basierter Kampf
+* Neue Weltkarte
+* Verbesserte Grafik
+* Verbesserte UI/UX
+* Verbesserter Erzählmodus
+* Verbesserte Animationen, Hintergrundmusik und Toneffekte
+* Verbessertes Gamepad
+* Anpassungen am Schwierigkeitsgrad
+* Aktualisierte Übersetzungen
+* Fehlerbehebungen

@@ -1,17 +1,24 @@
-Il y a deux modes :
+<b>Xeonjia</b> est un <b>jeu d'aventure</b> se déroulant dans un <b>monde gelé</b>.
 
-1) Mode histoire : le but est d'atteindre le dernier étage de la tour et de vaincre le Roi du mal.
+Le sol est gelé ! Réfléchissez bien à vos mouvements car vous ne pouvez pas changer de direction tant que vous ne rencontrez pas un obstacle.
+Utilisez votre esprit pour résoudre les énigmes des glissades de glace !
 
-2) Mode multijoueur : le but de ce mode est de marquer des points et de faire gagner votre équipe.
+Le monde a été gelé par le <b>"Roi du Mal"</b> et ce n'est plus un endroit sûr.
 
-En gros, vous devrez faire glisser votre doigt pour déplacer votre personnage à travers le monde.
+La légende raconte qu'un héros courageux vaincra le Roi du Mal et sauvera le royaume… C'est pourquoi chaque année une personne est nommée « héros » et envoyée en voyage pour tenter de le sauver.
 
-Gardez à l'esprit que vous ne pouvez pas vous arrêter jusqu'à ce que vous atteigniez un mur, un rocher ou tout autre type d'obstacle.
+C'est maintenant votre tour, <b>vous avez été choisi comme héros de cette année !</b> Serez-vous capable de vaincre le Roi du Mal ?
+
+Vous devrez parcourir le monde, explorer des villes, des donjons et des grottes mystiques.
+
+<b>Êtes-vous prêt à résoudre des quêtes et des énigmes dans ce monde de RPG gelé ?</b>
 
 Au fil du temps, vous gagnerez des points d'expérience qui vous permettront d'augmenter votre niveau et vous trouverez de l'argent et des trésors cachés que vous pourrez utiliser pour acheter des choses et vous améliorer.
 
-Attention, le monde regorge d'ennemis dangereux prêts à vous attaquer !
+Attention, le monde regorge <b>d'ennemis dangereux</b> prêts à vous attaquer !
 
-Utilisez votre tête pour trouver le meilleur chemin !
+Gardez à l'esprit que la majeure partie du <b>sol est gelé</b>, vous ne pouvez donc pas vous arrêter tant que vous n'avez pas atteint un mur, un rocher ou tout autre type d'obstacle.
+
+<b>Utilisez votre tête pour trouver le meilleur chemin !</b>
 
 <b>Note</b> : ce jeu est actuellement en bêta.

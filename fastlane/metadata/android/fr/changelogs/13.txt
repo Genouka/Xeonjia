@@ -1,0 +1,10 @@
+* Nouveau combat au tour par tour
+* Nouvelle carte du monde
+* Amélioration des graphismes
+* Amélioration de l'interface utilisateur/UI
+* Amélioration du mode histoire
+* Amélioration des animations, de la musique de fond et des effets spéciaux
+* Amélioration du gamepad
+* Ajustements de la difficulté du jeu
+* Mise à jour des traductions
+* Corrections de bogues

@@ -4,7 +4,7 @@
 # deepdaikon <deepdaikon@tuta.io>, 2022.
 # Satou <sanna+dee@dismail.de>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Japanese <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-12-07 13:35+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Japanese <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -28,7 +28,7 @@ msgstr "設定"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
-msgstr ""
+msgstr "タップしてはじめる"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Welcome!"
@@ -36,7 +36,7 @@ msgstr "ようこそ!"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Before starting tell me what you want to call your character."
-msgstr ""
+msgstr "はじめる前に、あなたのキャラクターの名前を教えてください。"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Random name"
@@ -168,7 +168,7 @@ msgstr "名前"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Click here to change your name"
-msgstr ""
+msgstr "ここをクリックして名前を変更する"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Discard"
@@ -200,15 +200,15 @@ msgstr "方向パッドを表示"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable the directional pad.\nTo change its position, long-press the D-pad in the center."
-msgstr ""
+msgstr "方向パッドを有効にします。\n位置を変更するには、方向パッドの中央を長押しします。"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "D-pad size"
-msgstr ""
+msgstr "方向パッドの大きさ"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Virtual D-pad dimension"
-msgstr ""
+msgstr "バーチャル十字パッドの表示サイズ"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Language"
@@ -344,7 +344,7 @@ msgstr "アイテムはありません"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "%s HP"
-msgstr ""
+msgstr "%s HP"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "Close"
@@ -424,7 +424,7 @@ msgstr "キャンセル"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "HP: %s"
-msgstr ""
+msgstr "HP: %s"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "money: %s ¤"
@@ -512,19 +512,19 @@ msgstr "マップを閉じる"
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open local map"
-msgstr ""
+msgstr "ローカルマップを開く"
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open world map"
-msgstr ""
+msgstr "ワールドマップを開く"
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Show hints"
-msgstr ""
+msgstr "ヒントを表示"
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Hide hints"
-msgstr ""
+msgstr "ヒントを隠す"
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"

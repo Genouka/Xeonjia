@@ -6,8 +6,9 @@
 # Swann Fournial <s.fournial@protonmail.com>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # araccaine <arac.caine@posteo.de>, 2021.
+# Vri <vrifox@vrifox.cc>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-11-12 14:37+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-12-07 13:35+0000\nLast-Translator: Vri <vrifox@vrifox.cc>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -175,7 +176,7 @@ msgstr "Der Turm, in dem der König des Bösen residiert, befindet sich wohl nah
 
 #: assets/maps/story/1.tmx:
 msgid "Stay focused on your goals and don't wander around aimlessly."
-msgstr ""
+msgstr "Bleibe fokussiert und irre nicht ziellos durch die Gegend."
 
 #: assets/maps/story/1.tmx:
 msgid "NATAWN – Hometown of the 62nd hero"
@@ -231,7 +232,7 @@ msgstr "Diese Monster scheinen mir nicht sehr schlau zu sein."
 
 #: assets/maps/story/17.tmx:
 msgid "There are still enemies here. I can't escape."
-msgstr ""
+msgstr "Hier sind noch immer Gegner. Ich kann nicht entkommen."
 
 #: assets/maps/story/31_house1.tmx:
 msgid "I hate people who always say the same things."
@@ -267,23 +268,23 @@ msgstr "Ja, vielen Dank, dass Du mein Leben gerettet hast!\nIch muss zugeben, ic
 
 #: assets/maps/story/13.tmx:
 msgid "Me too!"
-msgstr ""
+msgstr "Ich auch!"
 
 #: assets/maps/story/13.tmx:
 msgid "Luckily it went all right!\nI don't know how to thank you, I can give you this gem that I found a little while ago."
-msgstr ""
+msgstr "Zum Glück ist alles gut verlaufen!\nIch weiß nicht ob es genug ist, aber ich kann dir diesen Edelstein, den ich vor einer Weile gefunden habe als Dank geben."
 
 #: assets/maps/story/13.tmx:
 msgid "Thank you, it seems very precious!"
-msgstr ""
+msgstr "Danke, er scheint sehr kostbar zu sein!"
 
 #: assets/maps/story/13.tmx:
 msgid "Now I think it's better for me if I go to my safe home.\nBye!"
-msgstr ""
+msgstr "Ich denke es ist nun an der Zeit, mich in mein sicheres Heim zu begeben.\nAuf Wiedersehen!"
 
 #: assets/maps/story/13.tmx:
 msgid "I'll go home as soon as my legs stop shaking in fear."
-msgstr ""
+msgstr "Ich werde nach Hause gehen, sobald meine Beine aufhören vor lauter Angst zu zittern."
 
 #: assets/maps/story/13.tmx:
 msgid "Better if I check that the guy is okay."
@@ -291,67 +292,68 @@ msgstr "Ich schaue besser nach, ob es dem Typen gut geht."
 
 #: assets/maps/story/13.tmx:
 msgid "! ! !"
-msgstr ""
+msgstr "! ! !"
 
 #: assets/maps/story/13.tmx:
 msgid "Gyaaa!"
-msgstr ""
+msgstr "Ghaaa!"
 
 #: assets/maps/story/13.tmx:
 msgid "monster"
-msgstr ""
+msgstr "Monster"
 
 #: assets/maps/story/13.tmx:
 msgid "Please help me! Save me from these monsters!"
-msgstr ""
+msgstr "Bitte hilf mir! Rette mich vor diesen Monstern!"
 
 #: assets/maps/story/13.tmx:
 msgid "Don't worry! I'll help you now!"
-msgstr ""
+msgstr "Keine Sorge! Ich werde dir helfen!"
 
 #: assets/maps/story/13.tmx:
 msgid ". . . . ."
-msgstr ""
+msgstr ". . . . ."
 
 #: assets/maps/story/13.tmx:
 msgid ". . . . . . . . . ."
-msgstr ""
+msgstr ". . . . . . . . . ."
 
 #: assets/maps/story/13.tmx:
 msgid "What are you waiting for??!"
-msgstr ""
+msgstr "Worauf wartest du??!"
 
 #: assets/maps/story/13.tmx:
 msgid "I… I… I don't know how to fight!"
-msgstr ""
+msgstr "I… Ich … Ich weiß nicht wie man kämpft!"
 
 #: assets/maps/story/13.tmx:
 msgid "What??\nAren't you this year's \"choosen hero\"?"
-msgstr ""
+msgstr "Was??\nBist du nicht der diesjährige »auserkorene Held«?"
 
 #: assets/maps/story/13.tmx:
+#, fuzzy
 msgid "Yes, I am…"
-msgstr ""
+msgstr "Ja, das bin ich …"
 
 #: assets/maps/story/13.tmx:
 msgid "But this is my first battle…"
-msgstr ""
+msgstr "Aber das ist mein erster Kampf …"
 
 #: assets/maps/story/13.tmx:
 msgid "If you don't do anything this will be our LAST battle!"
-msgstr ""
+msgstr "Wenn du nichts unternimmst, wird es auch unser LETZTER Kampf sein!"
 
 #: assets/maps/story/13.tmx:
 msgid "We have no time left, make up something!"
-msgstr ""
+msgstr "Wir haben keine Zeit mehr, überleg dir was!"
 
 #: assets/maps/story/13.tmx:
 msgid "Hmm…\nAh, right! My mom gave me this book…"
-msgstr ""
+msgstr "Mhm …\nAch ja! Meine Mama gab mir dieses Buch …"
 
 #: assets/maps/story/13.tmx:
 msgid "Ok, now I know what to do!\nLet's fight!"
-msgstr ""
+msgstr "Okay, jetzt weiß ich was zu tun ist!\nAuf in den Kampf!"
 
 #: assets/maps/story/37.tmx:
 msgid "The prices for an HP UP are too high for me."
@@ -451,7 +453,7 @@ msgstr "Ich möchte einfach die Welt erkunden, neue Orte kennenlernen und neue D
 
 #: assets/maps/story/7.tmx:
 msgid "Wow, cool!"
-msgstr ""
+msgstr "Wow, cool!"
 
 #: assets/maps/story/7.tmx:
 msgid "Yep, it won't be easy but I want to visit the whole Kingdom!\nAnd maybe even visit places outside the Kingdom!"
@@ -483,7 +485,7 @@ msgstr "Bis dann!"
 
 #: assets/maps/story/7.tmx:
 msgid "Bye Milla!"
-msgstr ""
+msgstr "Auf Wiedersehen Milla!"
 
 #: assets/maps/story/7.tmx:
 msgid "Picnic area – Do not leave rubbish, thanks."
@@ -747,19 +749,19 @@ msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'll miss you, TV."
-msgstr "I werde dich vermissten, Fernseher."
+msgstr "I werde dich vermissen, Fernseher."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I don't want to watch television now."
-msgstr ""
+msgstr "Ich möchte gerade nicht fernsehen."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "There's a bit of dust back here."
-msgstr ""
+msgstr "Hier hinten ist es ein wenig staubig."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I hope my parents will water it when I'm away."
-msgstr "Ich hoffe meine Eltern werden sie gießen, wenn ich weg bin."
+msgstr "Ich hoffe meine Eltern werden sie gießen, während ich fort bin."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "This plant hasn't been watered for long."
@@ -767,7 +769,7 @@ msgstr "Diese Pflanze wurde ewig nicht mehr gegossen."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
-msgstr "Alle meine Bücher sind hier."
+msgstr "Hier sind all’ meine Bücher verstaut."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "My chair."
@@ -815,7 +817,7 @@ msgstr "Heute ist gutes Wetter."
 
 #: assets/maps/story/26.tmx:
 msgid "We keep an eye on you."
-msgstr ""
+msgstr "Wir werden dich beobachten."
 
 #: assets/maps/story/41_house.tmx:
 msgid "These books are in a language I don't understand."
@@ -971,7 +973,7 @@ msgstr "Ein ausgeschalteter Computer. Es scheint, als wäre ein Schlüssel erfor
 
 #: assets/maps/story/24_house1.tmx:
 msgid "There's nothing back here."
-msgstr ""
+msgstr "Hier hinten befindet sich absolut nichts."
 
 #: assets/maps/story/21.tmx:
 msgid "Route 2"
@@ -1055,7 +1057,7 @@ msgstr ""
 
 #: assets/maps/story/25.tmx:
 msgid "W-who are you?! What do you want?!"
-msgstr ""
+msgstr "W-Wer bist du?! Was willst du?!"
 
 #: assets/maps/story/25.tmx:
 msgid "You don't seem particularly informed, kid.\nAt least those before you had the basics.\nThey should choose \"heroes\" more carefully.\nWe are the Hoarfrost Team!\nWe are the professionals of crime.\nThe King of Evil's right-hand men.\nThanks to us, the King of Evil will be able to complete his work."
@@ -1063,7 +1065,7 @@ msgstr ""
 
 #: assets/maps/story/25.tmx:
 msgid "His work?! What are you talking about?"
-msgstr ""
+msgstr "Sein Werk?! Wovon redest du?"
 
 #: assets/maps/story/25.tmx:
 msgid "Hehe, we don't reveal our plans to you, kid.\nWe're not stupid.\nAnd anyway, even if we told you everything, it wouldn't do you any good, since we're going to take you out now."
@@ -1083,15 +1085,15 @@ msgstr ""
 
 #: assets/maps/story/25.tmx:
 msgid "What's happening?"
-msgstr ""
+msgstr "Was passiert hier?"
 
 #: assets/maps/story/25.tmx:
 msgid "This year's \"hero\".\nWe just caught him."
-msgstr ""
+msgstr "Der diesjährige »Held«.\nWir haben ihn gerade gefangen."
 
 #: assets/maps/story/25.tmx:
 msgid "Very well."
-msgstr ""
+msgstr "Nagut."
 
 #: assets/maps/story/25.tmx:
 msgid "Do we get rid of him?"
@@ -1099,15 +1101,15 @@ msgstr ""
 
 #: assets/maps/story/25.tmx:
 msgid "Does he look smart?"
-msgstr ""
+msgstr "Sieht er intelligent aus?"
 
 #: assets/maps/story/25.tmx:
 msgid "No."
-msgstr ""
+msgstr "Nein."
 
 #: assets/maps/story/25.tmx:
 msgid "Then let him go."
-msgstr ""
+msgstr "Dann lass ihn gehen."
 
 #: assets/maps/story/25.tmx:
 msgid "WHAT?!\nAre you sure? Why have him around again?"
@@ -1119,7 +1121,7 @@ msgstr ""
 
 #: assets/maps/story/25.tmx:
 msgid "But what if he makes trouble and…"
-msgstr ""
+msgstr "Aber was, wenn er Probleme bereitet und …"
 
 #: assets/maps/story/25.tmx:
 msgid "Do not insist. It's my final decision."
@@ -1139,7 +1141,7 @@ msgstr ""
 
 #: assets/maps/story/25.tmx:
 msgid "Beep… Beep… Beep…"
-msgstr ""
+msgstr "Biep … Biep … Biep …"
 
 #: assets/maps/story/25.tmx:
 msgid "You got lucky this time.\nBut soon you will be dealing with our boss."
@@ -1147,7 +1149,7 @@ msgstr ""
 
 #: assets/maps/story/25.tmx:
 msgid "The King of Evil?"
-msgstr ""
+msgstr "Der König des Bösen?"
 
 #: assets/maps/story/25.tmx:
 msgid "No, kid. We were in communication with the leader of Hoarfrost Team.\nHe will take care of you.\nIn any case, we keep an eye on you.\nWe wish you the worst."
@@ -1199,7 +1201,7 @@ msgstr "Xeonjia Turm"
 
 #: assets/maps/story/999.tmx:
 msgid "Hi Milla!"
-msgstr ""
+msgstr "Hallo Milla!"
 
 #: assets/maps/story/999.tmx:
 msgid "Hii {{hero}}!"
@@ -1211,27 +1213,29 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Yes! No problem at all!"
-msgstr ""
+msgstr "Ja! Überhaupt gar kein Problem!"
 
 #: assets/maps/story/999.tmx:
 msgid "Have you seen those little green worms?\nThey are so cute!"
 msgstr ""
 
 #: assets/maps/story/999.tmx:
+#, fuzzy
 msgid "…C-cute?? You have strange tastes."
-msgstr ""
+msgstr "… S-Süß?? Du hast einen seltsamen Geschmack."
 
 #: assets/maps/story/999.tmx:
 msgid "Anyway…\n…I had to defeat them all."
-msgstr ""
+msgstr "Wie dem auch sei …\n… ich musste sie alle besiegen."
 
 #: assets/maps/story/999.tmx:
 msgid "Nooooo!"
-msgstr ""
+msgstr "Neeeeein!"
 
 #: assets/maps/story/999.tmx:
+#, fuzzy
 msgid "I hope they are okay…"
-msgstr ""
+msgstr "Ich hoffe es geht ihnen gut …"
 
 #: assets/maps/story/999.tmx:
 msgid "Y-yes… Sure…\n…\nBy the way, where are we?"
@@ -1270,12 +1274,13 @@ msgid "I can't rest so much unfortunately.\nI'll continue my journey right away.
 msgstr ""
 
 #: assets/maps/story/999.tmx:
+#, fuzzy
 msgid "Thanks!\nWe will meet again."
-msgstr ""
+msgstr "Danke!\nWir werden uns erneut treffen."
 
 #: assets/maps/story/999.tmx:
 msgid "Good luck {{hero}}!"
-msgstr ""
+msgstr "Viel Glück {{hero}}!"
 
 #: assets/maps/story/999.tmx:
 msgid "Bye!"
@@ -1371,11 +1376,11 @@ msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "Go get the gift from the neighbor."
-msgstr ""
+msgstr "Los, hol das Geschenk vom Nachbarn."
 
 #: assets/maps/story/1_home.tmx:
 msgid "The food the neighbor gave you looks tasty!"
-msgstr ""
+msgstr "Das Essen, dass dir die Nachbarn gegeben haben sieht sehr lecker aus!"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Hi {{hero}}, everything okay?\nYou missed your mom, right?"
@@ -1519,7 +1524,7 @@ msgstr "Das ist ein sehr eigenartiger Stein...So etwas habe ich noch nie zuvor g
 
 #: assets/maps/story/11.tmx:
 msgid "Hi, I'm an employee of the Kingdom.\nIf you get lost or have problems finding the way, come back to me and I'll help you."
-msgstr "Hallo, ich bin ein Beamter des Königreichs.\nWenn du dich verirrst oder Probleme hast, den Weg zu finden, komm zu mir und ich werde dir helfen."
+msgstr "Hallo, ich bin ein Beamter des Königreichs.\nWenn du dich verirrst oder Probleme hast den Weg zu finden, komm zu mir und ich werde dir helfen."
 
 #: assets/maps/story/11.tmx:
 msgid "Are you stuck?\nTake the path behind the blue tree."
@@ -1559,7 +1564,7 @@ msgstr ""
 
 #: assets/maps/story/28_house.tmx:
 msgid "I'm getting hungry."
-msgstr ""
+msgstr "Ich werde langsam hungrig."
 
 #: assets/maps/story/28_house.tmx:
 msgid "This plant is very fragrant."
@@ -1595,11 +1600,11 @@ msgstr "Nachbar"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Thank you very much!\nIt looks delicious!"
-msgstr ""
+msgstr "Vielen, vielen Dank!\nEs sieht lecker aus!"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Good luck."
-msgstr ""
+msgstr "Viel Glück."
 
 #: assets/maps/story/1_house.tmx:
 msgid "It's the first time an inhabitant of this village has been chosen as a \"hero\".\nI'm so happy."
@@ -1683,7 +1688,7 @@ msgstr "Ich hätte nicht gedacht, dass du so weit kommst, Kindchen."
 
 #: assets/maps/story/t1_06.tmx:
 msgid "W-Who are you?"
-msgstr ""
+msgstr "W-Wer bist du?"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I'm surprised that my name is not known among the woods of your village."
@@ -1851,7 +1856,7 @@ msgstr "Hanas Tunnel"
 
 #: assets/maps/story/43.tmx:
 msgid "Wow! The view here is spectacular!"
-msgstr ""
+msgstr "Wow! Die Aussicht hier ist atemberaubend!"
 
 #: assets/maps/story/42.tmx:
 msgid "Nope, there's only trash here."
@@ -1887,7 +1892,7 @@ msgstr ""
 
 #: assets/maps/story/2.tmx:
 msgid "Are you okay?\nI heard you screaming."
-msgstr ""
+msgstr "Geht es dir gut?\nIch habe dich schreien gehört."
 
 #: assets/maps/story/2.tmx:
 msgid "Y-yes, I just lost 15 health points (HP)."
@@ -1899,7 +1904,7 @@ msgstr ""
 
 #: assets/maps/story/2.tmx:
 msgid "Now I know!"
-msgstr ""
+msgstr "Jetzt weiß ich es!"
 
 #: assets/maps/story/2.tmx:
 msgid "During your journey you will run into them many times, it's not a problem, just be careful not to run out of HP."
@@ -1963,11 +1968,11 @@ msgstr "Dieser Turm ist so hässlich."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "A table."
-msgstr ""
+msgstr "Ein Tisch."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "A stool."
-msgstr ""
+msgstr "Ein Hocker."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Test tubes and other scientific stuff."
@@ -1986,8 +1991,9 @@ msgid "I'm not even sure it's a fruit juice."
 msgstr ""
 
 #: assets/maps/tilesets/lab.tsx:
+#, fuzzy
 msgid "Better not to touch anything."
-msgstr ""
+msgstr "Ich fasse besser nichts an."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Someone has turned everything upside down."
@@ -1995,15 +2001,15 @@ msgstr "Jemand hat alles auf den Kopf gestellt."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Someone spilled a green liquid here."
-msgstr ""
+msgstr "Hier hat jemand eine grüne Flüssigkeit verschüttet."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "There are pieces of glass here."
-msgstr ""
+msgstr "Hier liegen Glasscherben."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Maybe I'd better watch my step."
-msgstr ""
+msgstr "Ich sollte wohl besser aufpassen, wo ich hintrete."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A rocky wall."
@@ -2043,7 +2049,7 @@ msgstr "Ein kleines Boot."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "text"
-msgstr ""
+msgstr "Text"
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A sharp and pointed rock."
@@ -2075,7 +2081,7 @@ msgstr "Dies ist eine Apotheke."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "signpost"
-msgstr ""
+msgstr "Wegweiser"
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A little plant."
@@ -2083,7 +2089,7 @@ msgstr "Eine kleine Pflanze."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A tree."
-msgstr ""
+msgstr "Ein Baum."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A little plant without leaves."
@@ -2095,7 +2101,7 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A trash can."
-msgstr ""
+msgstr "Ein Mülleimer."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "I like the color of this tree."
@@ -2183,7 +2189,7 @@ msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A chair."
-msgstr ""
+msgstr "Ein Stuhl."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A painting that depicts this area long ago."
@@ -2191,7 +2197,7 @@ msgstr "Ein Gemälde, das die Gegend vor langer Zeit darstellt."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "It's full of books here."
-msgstr "Hier ist es voller Bücher."
+msgstr "Es quillt über vor lauter Büchern."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A closed door."
@@ -2203,7 +2209,7 @@ msgstr "Zwischen den Sofakissen befindet sich irgendwelches Essen."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A television."
-msgstr ""
+msgstr "Ein Fernseher."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "This is a wall."
@@ -2231,7 +2237,7 @@ msgstr "Ein seltsamer, blauer ikosaeder Stein."
 
 #: assets/data/items-and-events.json:
 msgid "Snow globe"
-msgstr ""
+msgstr "Schneekugel"
 
 #: assets/data/items-and-events.json:
 msgid "A little snow globe with a miniaturized Mitsu Forest inside."
@@ -2331,27 +2337,29 @@ msgstr "Eine Flasche Granatapfelsaft. Stellt 50 HP wieder her."
 
 #: assets/data/items-and-events.json:
 msgid "Healer"
-msgstr ""
+msgstr "Heiler"
 
 #: assets/data/items-and-events.json:
 msgid "A medicine that restores 80 HP."
-msgstr ""
+msgstr "Medizin, die 80 LP wiederherstellt."
 
 #: assets/data/items-and-events.json:
 msgid "Food Box"
-msgstr ""
+msgstr "Brotdose"
 
 #: assets/data/items-and-events.json:
 msgid "A small box full of rice, vegetables and beans. It restores 100 HP."
-msgstr ""
+msgstr "Eine kleine Schachtel, gefüllt mit Reis, Gemüse und Bohnen. Sie regeneriert 100 LP."
 
 #: assets/data/items-and-events.json:
+#, fuzzy
 msgid "Here is where I lived."
-msgstr ""
+msgstr "Hier habe ich gelebt."
 
 #: assets/data/items-and-events.json:
+#, fuzzy
 msgid "Here is the Mossy Crypt."
-msgstr ""
+msgstr "Das ist meine bemooste Gruft."
 
 #: assets/data/items-and-events.json:
 msgid "Here is the Vantoi Lab."
