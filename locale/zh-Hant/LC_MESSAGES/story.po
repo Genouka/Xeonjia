@@ -4,7 +4,7 @@
 # crlambda <lm3c@protonmail.ch>, 2021.
 # Lin.KH <dennyxbox890@gmail.com>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-12-15 22:43+0000\nLast-Translator: Lin.KH <dennyxbox890@gmail.com>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-12-26 21:11+0000\nLast-Translator: Lin.KH <dennyxbox890@gmail.com>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -16,7 +16,7 @@ msgstr "…"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "H-Hello."
-msgstr "陛、陛下。"
+msgstr "您、您好。"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
@@ -36,7 +36,7 @@ msgstr "所以…請告訴我，你還好嗎？一切都好嗎？你的旅程進
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Everything good, I just defeated the Hoarfrost Team and I got the first signet!"
-msgstr "一切都好，我剛擊敗了\"凍之狂魔旅團\"並且得到了第一個徽章！"
+msgstr "一切都好，我剛擊敗了\"寒冰旅團\"並且得到了第一個徽章！"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Oh really?! This is great news!"
@@ -48,7 +48,7 @@ msgstr "過程不簡單吧？"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Well, but if you did it, it means that you are strong!"
-msgstr "嗯，既然你都做到了，表示你一定很厲害吧！"
+msgstr "嗯，既然你都做到了，表示你一定很厲害！"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Well, congratulations! This means that you are strong!"
@@ -60,7 +60,7 @@ msgstr "我相信你也能拿到另外兩個徽章。"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Since you're heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here."
-msgstr "既然你要往東走，你能幫我一個忙嗎？你能把這個包裹送到水王領嗎？它位於這裡以東幾公里處。"
+msgstr "既然你要往東走，你能幫我一個忙嗎？你能把這個包裹送到水之王領嗎？它位於這裡以東幾公里處。"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes of course, I'll give it to him."
@@ -92,11 +92,11 @@ msgstr "是的，有很多"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Just a little"
-msgstr "只有一點"
+msgstr "只有一點點"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! {{HP-diff}} HP have been recovered *"
-msgstr "* {{hero}}發現了一些野果！已恢復 {{HP-diff}} 點HP *"
+msgstr "* {{hero}} 發現了一些野果！已恢復 {{HP-diff}} 點HP *"
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant… nothing else."
@@ -108,11 +108,11 @@ msgstr "出口↑"
 
 #: assets/maps/story/33.tmx:
 msgid "Hey, there are items in here!"
-msgstr "咦，這裡面有些東西！"
+msgstr "咦，我發現了一些東西！"
 
 #: assets/maps/story/33.tmx:
 msgid "There are still items in here but I've already taken one."
-msgstr "這裡還有一些東西，但我已經拿走了一些。"
+msgstr "這裡還有一些東西，但我已經有這些物品了。"
 
 #: assets/maps/story/33.tmx:
 msgid "I can see a city in the distance."
@@ -120,7 +120,7 @@ msgstr "我能看到遠處的市鎮。"
 
 #: assets/maps/story/33.tmx:
 msgid "In the distance can be seen the other part of the region."
-msgstr "在遠處可以看到該地的其他部分。"
+msgstr "眺望遠方，可以看到該領地的其他部分。"
 
 #: assets/maps/story/33.tmx:
 msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
@@ -132,7 +132,7 @@ msgstr "VANTOI 實驗室 – 1F"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Sorry about the mess. Thieves have entered and turned everything upside down."
-msgstr "抱歉，這裡看起來亂七八糟，有盜賊進來過，把東西搞得到處都是。"
+msgstr "抱歉，這裡看起來亂糟糟的，有盜賊進來過，把東西搞得到處都是。"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "scientist"
@@ -152,7 +152,7 @@ msgstr "一個損壞的螢幕。"
 
 #: assets/maps/story/8.tmx:
 msgid "Go this way →"
-msgstr "由此路 →"
+msgstr "往這裡走 →"
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
@@ -160,7 +160,7 @@ msgstr "曙光鎮"
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nIf you lose your way or get stuck take a look at the map.\nYou can open it by tapping on its icon in the upper right corner."
-msgstr "一路順風，{{hero}}。\n如果您迷路了，請查看地圖。\n您可以通過點擊右上角的圖示來打開它。"
+msgstr "一路順風，{{hero}}。\n如果您迷路了，請查看地圖。\n您可以點擊右上角的圖示來打開它。"
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
@@ -188,11 +188,11 @@ msgstr "母親大人說，我得先去找鄰居。"
 
 #: assets/maps/story/1.tmx:
 msgid "From here on is the frozen floor.\nI'll slide until I reach an obstacle.\nSo I have to use my mind to figure out the best path."
-msgstr "從這裡開始是結冰的地面。\n我會一直滑到障礙物為止。\n所以我必須用我的智慧找出最佳路徑。"
+msgstr "從這裡開始的地面都是結凍的。\n我會一直滑到障礙物為止。\n我必須用我的智慧找出最佳路徑。"
 
 #: assets/maps/story/34.tmx:
 msgid "Route 4"
-msgstr "路線4"
+msgstr "4 號小徑"
 
 #: assets/maps/story/34.tmx:
 msgid "This vase is empty."
@@ -220,11 +220,11 @@ msgstr "我想要盡快到達王都，但唯一的辦法就是走陸路。"
 
 #: assets/maps/story/38.tmx:
 msgid "I really needed a pomegranate juice."
-msgstr "我真的需要點石榴汁。"
+msgstr "我真的需要喝點石榴汁。"
 
 #: assets/maps/story/17.tmx:
 msgid "These monsters don't seem very smart to me."
-msgstr "這些怪物在我看來不是很聰明。"
+msgstr "這些魔物在我看來不是很聰明。"
 
 #: assets/maps/story/17.tmx:
 msgid "There are still enemies here. I can't escape."
@@ -252,7 +252,7 @@ msgstr "這張沙發看起來很舒服。"
 
 #: assets/maps/story/13.tmx:
 msgid "Help me please!"
-msgstr "請幫幫我！"
+msgstr "請救救我！"
 
 #: assets/maps/story/13.tmx:
 msgid "Are you okay?"
@@ -260,7 +260,7 @@ msgstr "你還好嗎？"
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, thank you so much for saving my life!\nI have to admit, I was so scared!"
-msgstr "是的，非常感謝你救了我的命！\n我承認，我真的非常害怕！"
+msgstr "是的，非常感謝你救了我的命！\n老實說，我剛才真的很害怕！"
 
 #: assets/maps/story/13.tmx:
 msgid "Me too!"
@@ -268,11 +268,11 @@ msgstr "我也是！"
 
 #: assets/maps/story/13.tmx:
 msgid "Luckily it went all right!\nI don't know how to thank you, I can give you this gem that I found a little while ago."
-msgstr "幸好一切順利！\n我不知道如何感謝你，但我可以把我剛才找到的這顆寶石送給你。"
+msgstr "幸好一切平安！\n我不知道如何感謝你，但我可以把剛才找到的這顆寶石送給你。"
 
 #: assets/maps/story/13.tmx:
 msgid "Thank you, it seems very precious!"
-msgstr "謝謝，這看起來很珍貴！"
+msgstr "謝謝，這禮物真的太貴重了！"
 
 #: assets/maps/story/13.tmx:
 msgid "Now I think it's better for me if I go to my safe home.\nBye!"
@@ -280,11 +280,11 @@ msgstr "現在我覺得回到我安全的家對我會更好。\n再見！"
 
 #: assets/maps/story/13.tmx:
 msgid "I'll go home as soon as my legs stop shaking in fear."
-msgstr "一旦我的腿不再顫抖，我就會回家。"
+msgstr "等到我的腿停止顫抖，我就會馬上回家。"
 
 #: assets/maps/story/13.tmx:
 msgid "Better if I check that the guy is okay."
-msgstr "我檢查一下那個人是不是沒事。"
+msgstr "我去檢查一下那個人的情況。"
 
 #: assets/maps/story/13.tmx:
 msgid "! ! !"
@@ -300,7 +300,7 @@ msgstr "魔物"
 
 #: assets/maps/story/13.tmx:
 msgid "Please help me! Save me from these monsters!"
-msgstr "請救救我！幫我擊退這些魔物！"
+msgstr "請救救我！快幫我擊退這些魔物！"
 
 #: assets/maps/story/13.tmx:
 msgid "Don't worry! I'll help you now!"
@@ -324,11 +324,11 @@ msgstr "我……我……我不知道如何戰鬥！"
 
 #: assets/maps/story/13.tmx:
 msgid "What??\nAren't you this year's \"choosen hero\"?"
-msgstr "什麼？？\n你不是今年選定的“勇者”嗎？"
+msgstr "什麼？？\n你不是今年被選定的“勇者”嗎？"
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, I am…"
-msgstr "對，我就是…"
+msgstr "沒錯，我就是…"
 
 #: assets/maps/story/13.tmx:
 msgid "But this is my first battle…"
@@ -340,7 +340,7 @@ msgstr "如果你什麼都不做，這將是我們\"最後一次\"戰鬥！"
 
 #: assets/maps/story/13.tmx:
 msgid "We have no time left, make up something!"
-msgstr "我們沒時間了，快做點什麼啊！"
+msgstr "沒時間了，快做點什麼啊！"
 
 #: assets/maps/story/13.tmx:
 msgid "Hmm…\nAh, right! My mom gave me this book…"
@@ -348,7 +348,7 @@ msgstr "唔…\n啊，對了！母親大人給了我這本書……"
 
 #: assets/maps/story/13.tmx:
 msgid "Ok, now I know what to do!\nLet's fight!"
-msgstr "好，現在我知道要做什麼了！\n開始戰鬥吧！"
+msgstr "好，現在我知道要怎麼做！\n開始戰鬥吧！"
 
 #: assets/maps/story/37.tmx:
 msgid "The prices for an HP UP are too high for me."
@@ -356,7 +356,7 @@ msgstr "HP 提升 的價格對我來說太高了。"
 
 #: assets/maps/story/37.tmx:
 msgid "I would love to leave for a long journey but I don't have the strength anymore."
-msgstr "我很想離開這裡去旅行，但我沒有任何力氣了。"
+msgstr "我很想離開這裡去旅行，但我老了，沒有任何力氣了。"
 
 #: assets/maps/story/37.tmx:
 msgid "{{hero}}, there you are. Finally! I heard a rumor that you were coming here."
@@ -364,7 +364,7 @@ msgstr "{{hero}}，你來了。終於啊！我有聽過你要來這裡的傳聞�
 
 #: assets/maps/story/37.tmx:
 msgid "September! Long time no see! Last time was when we battled each other to be proclaimed HERO.\nWe were 5 years old."
-msgstr "九月！好久不見了！記得上次見面是我們為了成為勇者而互相爭鬥的時候。\n那時我們才五歲。"
+msgstr "九月！好久不見了！記得上次見面是我們為了成為勇者而互相切磋的時候。\n那時我們才五歲。"
 
 #: assets/maps/story/37.tmx:
 msgid "I remember well, you got lucky that time.\nBut now it would go differently.\nI challenge you now. Show me that you are better than me.\nSee you on the north-east side of the village. I will wait for you there."
@@ -376,7 +376,7 @@ msgstr "等、等等我，九月醬！"
 
 #: assets/maps/story/37.tmx:
 msgid "How are you? Everything good? I haven't seen you for 16 years… We have so much to talk about."
-msgstr "你好嗎？一切是否安好？我已經 16 年沒見到你了……我有很多話要說。"
+msgstr "你過的好嗎？一切是否安好？我已經 16 年沒見到你了……我有很多話要說。"
 
 #: assets/maps/story/37.tmx:
 msgid "I don't have time to mess around.\nSee you where I told you."
@@ -392,7 +392,7 @@ msgstr "我記得她以前沒這麼傲。"
 
 #: assets/maps/story/14.tmx:
 msgid "Hello, I'm a workers of the Kingdom.\nI'm smoothing this rock so it doesn't hurt anymore.\nA lot of people complain about these rocks, I'm sorry."
-msgstr "你好，我是王國的工人。\n我正在打磨這塊石頭，這樣它就不會再割到行人了。\n有很多人來跟我抱怨這塊石頭，我真的很抱歉。"
+msgstr "你好，我是王國的工人。\n我正在打磨這塊石頭，這樣它就不會再割到行人了。\n有很多人來跟我抱怨這種石頭，我真的很抱歉。"
 
 #: assets/maps/story/14.tmx:
 msgid "Maybe one day these rocks will all be nice and smooth, but today is not that day."
@@ -440,7 +440,7 @@ msgstr "真不錯！那麼你準備要去哪裡？"
 
 #: assets/maps/story/7.tmx:
 msgid "I have absolutely no idea."
-msgstr "我完全沒有想法。"
+msgstr "我完全不知道。"
 
 #: assets/maps/story/7.tmx:
 msgid "I just want to explore the world, know new places and learn new things."
@@ -568,7 +568,7 @@ msgstr "太好了！我就知道你會成功。\n你覺得使用雪球還算有�
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes, I couldn't do it without them, thank you!\nWhat is this place?"
-msgstr "是的，沒有這些東西我做不到，謝謝關心！\n話說，這是什麼地方？"
+msgstr "當然，沒有這些東西我就要不行了，謝謝關心！\n話說，這是什麼地方？"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I think it is an ancient cave.\nLook at this inscription."
@@ -596,7 +596,7 @@ msgstr "唰！"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hi, I'm the Spirit of Water.\nIs there anything you need?\nI don't have much time, with this cold I quickly become ice. And I'd say there's enough ice here."
-msgstr "您好，我是水之精靈。\n你有什麼需要嗎？\n我的時間不多了，在寒冷的環境下我很快就要變成冰棒了。然後這個地方已經有很多冰塊了。"
+msgstr "您好，我是水之精靈。\n你有什麼需要嗎？\n我的時間不多了，在寒冷的環境下我很快就要變成冰塊了。然後這個地方已經有很多冰塊了。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "water spirit"
@@ -604,7 +604,7 @@ msgstr "水之精靈"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "{{hero}} what could we ask him? I have plenty of questions, but if you agree I would ask him if he knows anything about the King of Evil."
-msgstr "{{hero}} 我們可以問祂什麼？我是有很多問題要問，但如果你想要的話，我會先問祂是否知道關於邪惡帝王的任何事情。"
+msgstr "{{hero}} 我們可以問他什麼？我是有很多問題要問，但如果你想要的話，我會先問他是否知道關於邪惡帝王的任何事情。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I agree! I have to defeat him but I don't even know why he's here or what his purpose is."
@@ -620,15 +620,15 @@ msgstr "完全凍結？！"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes, we are lucky we still have seas and a bearable temperature, but if he succeeds in his plan the Kingdom will no longer be livable for us."
-msgstr "是的，我們很幸運，我們還有海洋和可以忍受的溫度，但如果他的計劃成功，這個王國將不再適合我們居住。"
+msgstr "是的，我們很幸運，這世界上還有未凍結的海洋和可以忍受的溫度，但如果他的計劃成功，這個王國將不再適合我們居住。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "And why would he want that??"
-msgstr "那麼他為什麼要這樣做？？"
+msgstr "他為什麼要這樣做？？"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Because he and his fellows need very low temperatures to live, temperatures so low that right now there are only in the Xeonjia Tower."
-msgstr "因為他和他的僕從們需要極低的溫度才能生存，溫度非常低，到現在只有Xeonjia塔才到達該溫度。"
+msgstr "因為他和他的僕從們需要極低的溫度才能生存。溫度非常低，到現在只有Xeonjia塔到達該溫度。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "So he's making our Kingdom unlivable for us to make it livable for him?!"
@@ -720,7 +720,7 @@ msgstr "苔蘚地下城 – B2F"
 
 #: assets/maps/story/t1_02.tmx:
 msgid "We're watching you."
-msgstr "我們正看著你。"
+msgstr "我們盯上你了。"
 
 #: assets/maps/story/t1_02.tmx:
 msgid "Hmm, I think if I run out of snowballs I can make new ones from snowdrifts like this one.\nI just have to press the \"A\" key."
@@ -736,7 +736,7 @@ msgstr "今天、……今天是我一生都在等待的日子。我前往Xeonji
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'd like to go back to bed but I can't."
-msgstr "我想回去睡覺，但我不能。"
+msgstr "我想回去睡覺，但我現在不行。"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "It has been quite a while since the last time I slept here."
@@ -764,7 +764,7 @@ msgstr "這株植物已經很久沒有澆過水了。"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
-msgstr "我的書本全都在這裡。"
+msgstr "我的藏書都在這裡。"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "My chair."
@@ -772,7 +772,7 @@ msgstr "我的椅子。"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "From here I can see the garden."
-msgstr "在這裡能看到庭院。"
+msgstr "從這裡能看到庭院。"
 
 #: assets/maps/story/24.tmx:
 msgid "Melhopolis"
@@ -784,7 +784,7 @@ msgstr "城鎮中心在往南幾公里處。"
 
 #: assets/maps/story/24.tmx:
 msgid "VANTOI LAB"
-msgstr "萬圖實驗室"
+msgstr "VANTOI 實驗室"
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Laboratory."
@@ -796,7 +796,7 @@ msgstr "能看到藥店的內部。"
 
 #: assets/maps/story/24.tmx:
 msgid "Melhopolis – Regional capital"
-msgstr "梅洛波利斯 – 領地首都"
+msgstr "梅洛波利斯 – 王都"
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the house."
@@ -804,7 +804,7 @@ msgstr "能看到房子的內側。"
 
 #: assets/maps/story/26.tmx:
 msgid "Did you come here just to talk to me?\nI don't have much to say, but I can give you this little snow globe."
-msgstr "你來這裡只是為了和我說話嗎？\n我沒什麼好說的，但我可以給你這個小雪球。"
+msgstr "你來這裡只是為了和我聊天嗎？\n我和你沒什麼好說的，但我可以給你這個小雪球。"
 
 #: assets/maps/story/26.tmx:
 msgid "The weather is good today."
@@ -820,7 +820,7 @@ msgstr "這些書是用我看不懂的語言寫的。"
 
 #: assets/maps/story/22.tmx:
 msgid "Route 3"
-msgstr "路線3"
+msgstr "3 號小徑"
 
 #: assets/maps/story/22.tmx:
 msgid "Hey! Hi {{hero}}!"
@@ -900,7 +900,7 @@ msgstr "我們會再見面的，祝你好運！"
 
 #: assets/maps/story/22.tmx:
 msgid "Bye Shen, thanks again!"
-msgstr "再見了沈小姐，我再次感谢妳的幫助！"
+msgstr "再見了沈小姐，我再次感謝妳的幫助！"
 
 #: assets/maps/story/22.tmx:
 msgid "I have to go through the crypt to get the first signet."
@@ -912,7 +912,7 @@ msgstr "這裡不是小孩子該來的地方，快回家吧。"
 
 #: assets/maps/story/9.tmx:
 msgid "How rude!\nHe pushed me away viciously!"
-msgstr "真沒禮貌！\n他居然惡狠狠地把我給推開！"
+msgstr "真沒禮貌！\n他居然惡狠狠地把我推開了！"
 
 #: assets/maps/story/9.tmx:
 msgid "Weird things happen in this area…"
@@ -972,7 +972,7 @@ msgstr "這裡什麼都沒有。"
 
 #: assets/maps/story/21.tmx:
 msgid "Route 2"
-msgstr "路線2"
+msgstr "2 號小徑"
 
 #: assets/maps/story/21.tmx:
 msgid "Melhopolis →"
@@ -996,7 +996,7 @@ msgstr "我從未見過如此多的灰塵。"
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "Here it's full of snow globes with a miniaturized Mitsu Forest inside. When they were built snow was a very rare phenomenon here and it was much more appreciated."
-msgstr "這裡有個很大的雪球，裡面放著縮小版的彌津森林。當它們被製作完畢時，雪在這裡是一種非常罕見的現象，因此受到了很多讚賞。"
+msgstr "這裡有個很大的雪球，裡面放著縮小版的彌津森林。當它們被製作完畢時，下雪是一種非常罕見的現象，因此受到了很多關注。"
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "There are very expensive junk here."
@@ -1056,7 +1056,7 @@ msgstr "你、你是誰？！你想幹嘛？！"
 
 #: assets/maps/story/25.tmx:
 msgid "You don't seem particularly informed, kid.\nAt least those before you had the basics.\nThey should choose \"heroes\" more carefully.\nWe are the Hoarfrost Team!\nWe are the professionals of crime.\nThe King of Evil's right-hand men.\nThanks to us, the King of Evil will be able to complete his work."
-msgstr "看來你似乎不是特別了解情況啊，孩子。\n至少在您擁有些常識之前。\n他們應該更謹慎地選擇“勇者”。\n我們是寒冰旅團！\n我們是犯罪的專家。\n邪惡帝王的得力助手。\n多虧了我們，邪惡之王才的以完成他的事業。"
+msgstr "看來你似乎不是特別了解情況啊，孩子。\n至少在您擁有些常識之前。\n他們應該更謹慎地選擇“勇者”。\n我們是寒冰旅團！\n我們是犯罪的專家。\n邪惡帝王的得力助手。\n多虧了我們，邪惡帝王才得以完成他的事業。"
 
 #: assets/maps/story/25.tmx:
 msgid "His work?! What are you talking about?"
@@ -1064,7 +1064,7 @@ msgstr "他的事業？！你到底在說什麼？"
 
 #: assets/maps/story/25.tmx:
 msgid "Hehe, we don't reveal our plans to you, kid.\nWe're not stupid.\nAnd anyway, even if we told you everything, it wouldn't do you any good, since we're going to take you out now."
-msgstr "嘿嘿，我們才不會向你透露我們的計劃，小屁孩。\n我們才不是白癡。\n不管怎樣，即使我們把一切都告訴了你，對你也沒有任何好處，因為我們現在要把你幹掉。"
+msgstr "嘿嘿，我們才不會向你透露我們的計劃，小屁孩。\n我們才不是白癡。\n不管怎樣，即使我們把一切都告訴了你，對你也沒有任何好處，因為我們現在要把你做掉。"
 
 #: assets/maps/story/25.tmx:
 msgid "You won't catch me!"
@@ -1072,7 +1072,7 @@ msgstr "你抓不到我的！"
 
 #: assets/maps/story/25.tmx:
 msgid "You can't run away from here.\nDid you think you could get away with it that easily?\nThe fact that you tried to escape and not to fight make it clear how little value you are.\nI hope next year's \"hero\" is a little braver than you, at least it would be a bit more fun for us."
-msgstr "你跑不掉的。\n你以為你可以那麼輕易地擺脫它嗎？\n你試圖逃跑而不是戰鬥的事實清楚地表明了你是多麼沒用。\n我希望明年的“勇者”比你勇敢一點，至少對我們來說會更有趣。"
+msgstr "你跑不掉的。\n你以為你可以那麼輕易地擺脫我們嗎？\n你試圖逃跑而不是戰鬥的事實清楚地表明了你是多麼沒用。\n我希望明年的“勇者”比你勇敢一點，至少對我們來說會更有趣。"
 
 #: assets/maps/story/25.tmx:
 msgid "Bzzt… Bzzt… Bzzt…"
@@ -1148,7 +1148,7 @@ msgstr "邪惡帝王？"
 
 #: assets/maps/story/25.tmx:
 msgid "No, kid. We were in communication with the leader of Hoarfrost Team.\nHe will take care of you.\nIn any case, we keep an eye on you.\nWe wish you the worst."
-msgstr "不，孩子。我們正在與寒冰旅團的領導人進行溝通。\n他將來一定會料理你的。\n無論如何，我們都會盯著你。\n希望你將來噩運連連。"
+msgstr "不是，小屁孩。我們剛才是與寒冰旅團的領導人進行溝通。\n他將來一定會好好的料理你的。\n無論如何，我們已經盯上你了。\n願你將來噩運連連。"
 
 #: assets/maps/story/35.tmx:
 msgid "This boulder is very heavy."
@@ -1424,11 +1424,11 @@ msgstr "苔蘚地下城 – B3F"
 
 #: assets/maps/story/t1_03.tmx:
 msgid "My work is so boring…"
-msgstr "我的工作好無聊……"
+msgstr "工作好無聊……"
 
 #: assets/maps/story/39.tmx:
 msgid "Route 5"
-msgstr "通道 5"
+msgstr "5 號小徑"
 
 #: assets/maps/story/39.tmx:
 msgid "Ok, you were better than me.\nI still have room for improvement, I will continue to train."
@@ -1444,7 +1444,7 @@ msgstr "很高興見到你。我覺得我像回到了我們小時候。"
 
 #: assets/maps/story/39.tmx:
 msgid "Hehe, you are right… we spent a lot of hours playing and training as kids.\nThat was the happiest time in my life…\nThis is too much nostalgia for me. I can't handle it."
-msgstr "呵呵，沒錯……我們小時候花了很多時間玩耍和訓練。\n那是我一生中最快樂的時光……\n這對我來說太懷舊了。我無法釋然。"
+msgstr "呵呵，沒錯……我們小時候花了很多時間玩耍和訓練。\n那是我一生中最快樂的時光……\n這一件事勾起我的回憶了。老實說我無法釋然。"
 
 #: assets/maps/story/39.tmx:
 msgid "I don't have time for these emotions, I have to go back to training now.\nSee you in the Xeonjia Tower."
@@ -1456,7 +1456,7 @@ msgstr "你也要去那座塔嗎？"
 
 #: assets/maps/story/39.tmx:
 msgid "Yes, of course!\nI will go there and I will defeat the King of Evil!\nEven though you are the protagonist and the so-called \"Hero\" it will be me who will defeat the King of Evil and be remembered as the savior of the world hehe."
-msgstr "當然！\n我會去那裡，我會打敗邪惡之王！\n雖然你是主角，是所謂的“勇者”，但打倒邪惡帝王，被世人銘記的會是我，嘿嘿。"
+msgstr "當然了！\n我也會去那裡，我會親自打敗邪惡帝王！\n雖然你是主角，是所謂的“勇者”，但打倒邪惡帝王，被世人銘記的會是我，嘿嘿。"
 
 #: assets/maps/story/39.tmx:
 msgid "Wait, wait, wait, don't steal my job! Haha"
@@ -1476,7 +1476,7 @@ msgstr "這是你的眼鏡嗎？"
 
 #: assets/maps/story/39.tmx:
 msgid "Yes! Thank you so much!"
-msgstr "是的！太感謝了！"
+msgstr "是的！真是太感謝了！"
 
 #: assets/maps/story/39.tmx:
 msgid "As a reward I give you this gem that I found while I was looking for the glasses."
@@ -1496,7 +1496,7 @@ msgstr "我不敢相信你到這裡花了這麼長的時間！\n開始戰鬥吧�
 
 #: assets/maps/story/39.tmx:
 msgid "I will defeat you."
-msgstr "我會打敗你。"
+msgstr "我一定會打敗你。"
 
 #: assets/maps/story/39.tmx:
 msgid "I have to train harder."
@@ -1528,7 +1528,7 @@ msgstr "離這裡幾米就是彌津森林。\n它曾經被認為是個神聖的�
 
 #: assets/maps/story/28_house.tmx:
 msgid "Hoarfrost Team members came to our house because they wanted a gem that I found on the ground.\nWe managed to keep it hidden from them but we don't want to have problems anymore.\nWe don't even need it after all, can we give it to you?"
-msgstr "寒冰旅團的成員曾來到了我們家，因為他們想要我在地上撿到的寶石。\n我們設法對他們隱瞞了它，但我們不想再有任何麻煩了。\n畢竟我們都不需要，能給你嗎？"
+msgstr "寒冰旅團的成員曾來到了我們家，因為他們想要我在地上撿到的寶石。\n我們設法對他們隱瞞這件事，但我們不想再有任何麻煩了。\n畢竟我們用不到這顆寶石，能給你嗎？"
 
 #: assets/maps/story/28_house.tmx:
 msgid "Here's to you!"
@@ -1548,7 +1548,7 @@ msgstr "與寒冰旅團對峙時要小心。"
 
 #: assets/maps/story/28_house.tmx:
 msgid "Mind your own business."
-msgstr "請管好自己。"
+msgstr "請管好你自己。"
 
 #: assets/maps/story/28_house.tmx:
 msgid "After 10 minutes add to the pot half a daikon, chopped into small pieces…"
@@ -1584,7 +1584,7 @@ msgstr "鄰居家"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nYou simply have to open your backpack and eat the food!\nHere's to you!"
-msgstr "你好小伙子，你還好嗎？\n今天是個大日子，對吧？\n小心，這個世界危機四伏。\n我給你做了這個裝滿食物的便當盒，當你HP不足的時候，你會需要它。\n你只需要打開你的背包把食物吃掉！\n給你！"
+msgstr "小伙子，你還好嗎？\n今天是個大日子，對吧？\n小心點，這個世界危機四伏。\n我給你做了這個裝滿食物的便當盒，當你HP不足的時候，你會需要它。\n你只需要打開你的背包把食物吃掉！\n給你！"
 
 #: assets/maps/story/1_house.tmx:
 msgid "neighbor"
@@ -1608,7 +1608,7 @@ msgstr "對不起，這條路已經關閉了。\n恢復鐵路系統的工作正�
 
 #: assets/maps/story/30.tmx:
 msgid "Welcome to the City Hall."
-msgstr "歡迎來到市政大廳。"
+msgstr "歡迎來到市政廳。"
 
 #: assets/maps/story/30.tmx:
 msgid "I can't wait till they finish to restore the railway system, it hasn't worked since the arrival of ice."
@@ -1624,7 +1624,7 @@ msgstr "市政廳 ↑"
 
 #: assets/maps/story/30.tmx:
 msgid "Route 4 →"
-msgstr "道路 4 →"
+msgstr "4 號小徑 →"
 
 #: assets/maps/story/30.tmx:
 msgid "Before continuing I'd like to visit the City Hall."
@@ -1632,7 +1632,7 @@ msgstr "在繼續旅行之前，我想參觀一下市政廳。"
 
 #: assets/maps/story/30.tmx:
 msgid "The City Hall seems spacious."
-msgstr "市政廳看起來寬敞。"
+msgstr "市政廳看起來很寬敞。"
 
 #: assets/maps/story/14_house.tmx:
 msgid "Hi, you look a little tired. Rest here for a moment."
@@ -1724,7 +1724,7 @@ msgstr "我知道你對那些徽章很有興趣。把我的下屬幹掉，然後
 
 #: assets/maps/story/t1_06.tmx:
 msgid "I won't let you go so eas-"
-msgstr "我怎麼會輕易放過你-"
+msgstr "我怎麼可能會輕易放過你-"
 
 #: assets/maps/story/t1_06.tmx:
 msgid "Well, well, well… you'll have to deal with us now."
@@ -1836,7 +1836,7 @@ msgstr "似乎這裡曾經有過一條小路。"
 
 #: assets/maps/story/43.tmx:
 msgid "To reach the other shore you have to go through the submarine tunnel but is currently guarded by the Hoarfrost Team.\nIf they don't leave, I'll try to cross the sea with the boat."
-msgstr "要到達彼岸，您必須穿過海底隧道，但目前由寒冰旅團守衛。\n如果他們不離開，我就想辦法乘船渡海。"
+msgstr "要到達彼岸，您必須穿過海底隧道，但目前由寒冰旅團守衛。\n如果他們不離開，我就會想辦法乘船渡海。"
 
 #: assets/maps/story/43.tmx:
 msgid "I think I will spend the rest of my life here."
@@ -1868,7 +1868,7 @@ msgstr "如果你決定繼續，你會後悔的。"
 
 #: assets/maps/story/2.tmx:
 msgid "Route 1"
-msgstr "路線1"
+msgstr "1 號小徑"
 
 #: assets/maps/story/2.tmx:
 msgid "I also often get hurt with rocks.\nIt's annoying but you'll get used to it."
@@ -1936,7 +1936,7 @@ msgstr "梅洛波利斯是該地區的行政中心。\n然而，如今腐敗、�
 
 #: assets/maps/story/5.tmx:
 msgid "Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of this region lived here."
-msgstr "咦，這裡是彌津之森。我的父母給我講了很多關於很久以前它是多麼美麗和繁榮的故事。據說曾幾何時，這個地區的神秘保育類生物就住在這裡。"
+msgstr "看哪，這裡就是彌津之森。我的父母給我講了很多關於很久以前它是多麼美麗和繁榮的故事。據說曾幾何時，這個地區的神秘保育類生物就住在這裡。"
 
 #: assets/maps/story/5.tmx:
 msgid "174805…\nI don't know what these figures are but a little while ago I heard someone say them out loud…\nDunno why."
@@ -1992,7 +1992,7 @@ msgstr "有人把一切都翻倒了。"
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Someone spilled a green liquid here."
-msgstr "有人在這裡灑了綠色液體。"
+msgstr "有人在這裡灑了不明綠色液體。"
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "There are pieces of glass here."
@@ -2108,7 +2108,7 @@ msgstr "伐木工"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "young-girl"
-msgstr "蘿莉"
+msgstr "小蘿莉"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "youngster"
@@ -2156,7 +2156,7 @@ msgstr "生命總能找到出路。"
 
 #: assets/maps/tilesets/capital-1.tsx:
 msgid "I don't know what this means."
-msgstr "我他媽根本不知道這是三小意思。"
+msgstr "我根本不知道這是什麼意思。"
 
 #: assets/maps/tilesets/capital-1.tsx:
 msgid "I can't go beyond this."
@@ -2232,7 +2232,7 @@ msgstr "雪球"
 
 #: assets/data/items-and-events.json:
 msgid "A little snow globe with a miniaturized Mitsu Forest inside."
-msgstr "一個小雪球，裡面有一個微型化的彌津森林。"
+msgstr "一個小雪球，裡面有一個縮小版的彌津森林。"
 
 #: assets/data/items-and-events.json:
 msgid "Package of the King"

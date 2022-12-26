@@ -4,8 +4,9 @@
 # deepdaikon <deepdaikon@tuta.io>, 2022.
 # Muha Aliss <muhaaliss@gmail.com>, 2022.
 # Alparslan Şakçi <sakci@protonmail.com>, 2022.
+# Sir Crownguard <trilug_inhofe@simplelogin.com>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-12-26 21:11+0000\nLast-Translator: Sir Crownguard <trilug_inhofe@simplelogin.com>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -29,7 +30,7 @@ msgstr "Ayarlar"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
-msgstr ""
+msgstr "Oynamak için tıkla"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Welcome!"
@@ -37,11 +38,11 @@ msgstr "Merhaba!"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Before starting tell me what you want to call your character."
-msgstr ""
+msgstr "Başlamadan önce bana karakterine ne isim vermek istediğinizi söyle."
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Random name"
-msgstr ""
+msgstr "Rastgele isim"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "OK"
@@ -169,7 +170,7 @@ msgstr "Adın"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Click here to change your name"
-msgstr ""
+msgstr "İsmini değiştirmek için tıkla"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Discard"
@@ -201,15 +202,15 @@ msgstr "Yön düğmelerini göster"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable the directional pad.\nTo change its position, long-press the D-pad in the center."
-msgstr ""
+msgstr "Yön tuşlarını etkinleştir.\nKonumunu değiştirmek için D-pad'e basılı tutun."
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "D-pad size"
-msgstr ""
+msgstr "D-pad büyüklüğü"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Virtual D-pad dimension"
-msgstr ""
+msgstr "Sanal D-pad boyutu"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Language"
@@ -301,23 +302,23 @@ msgstr "Tamam"
 
 #: lib/game/widgets/world_map.dart:
 msgid "This is where I am right now."
-msgstr ""
+msgstr "Burası şu an bulunduğum yer."
 
 #: lib/game/widgets/world_map.dart:
 msgid "Do you want to come back to this place?"
-msgstr ""
+msgstr "Buraya geri dönmek istiyor musun?"
 
 #: lib/game/widgets/world_map.dart:
 msgid "* {{hero}} arrived here *"
-msgstr ""
+msgstr "* {{hero}} buraya geldi *"
 
 #: lib/game/widgets/world_map.dart:
 msgid "* After a long journey, {{hero}} arrived here *"
-msgstr ""
+msgstr "* Uzun bir yolculuktan sonra {{hero}} buraya geldi *"
 
 #: lib/game/widgets/world_map.dart:
 msgid "* After a very long journey, {{hero}} arrived here *"
-msgstr ""
+msgstr "* {{hero}} çok uzun bir yolculuktan sonra buraya geldi *"
 
 #: lib/game/widgets/menus/no_maps_menu.dart:
 msgid "You went too far!"
@@ -325,7 +326,7 @@ msgstr "Çok ileri gittin!"
 
 #: lib/game/widgets/menus/no_maps_menu.dart:
 msgid "The next part of the story is not yet available.\nIt will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback."
-msgstr ""
+msgstr "Hikayenin sonraki bölümü mevcut değil.\nYakında mevcut olacak.\n\nBu arada bağışta veya geri bildirimde bulunarak Xeonjia'nın gelişimine destek olabilirsiniz."
 
 #: lib/game/widgets/menus/no_maps_menu.dart:
 msgid "Report a bug or ask something"
@@ -345,7 +346,7 @@ msgstr "Eşya yok"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "%s HP"
-msgstr ""
+msgstr "%s HP"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "Close"
@@ -357,15 +358,15 @@ msgstr "Çanta"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Gems"
-msgstr ""
+msgstr "Taşlar"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Mysterious gems scattered around the world."
-msgstr ""
+msgstr "Dünyanın dört bir yanına dağılmış gizemli taşlar."
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Do you want to use {{selected-item-name}}?"
-msgstr ""
+msgstr "{{selected-item-name}} eşyasını kullanmak istiyor musun?"
 
 #: lib/game/widgets/menus/end_menu.dart:
 msgid "You run out of energy !"
@@ -425,7 +426,7 @@ msgstr "iptal"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "HP: %s"
-msgstr ""
+msgstr "HP: %s"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "money: %s ¤"
@@ -477,11 +478,11 @@ msgstr "Alışveriş"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Do you want to buy {{selected-item-name}}?"
-msgstr ""
+msgstr "{{selected-item-name}} eşyasını satın almak istiyor musun?"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "I don't have enough money for this item."
-msgstr ""
+msgstr "Bu eşyayı almak için yeterli param yok."
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Let me know if you need anything else."
@@ -489,19 +490,19 @@ msgstr "Başka bir şeye ihtiyacın olursa bana haber ver."
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "Wait"
-msgstr ""
+msgstr "Bekle"
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "1 move"
-msgstr ""
+msgstr "1 hareket"
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "2 moves"
-msgstr ""
+msgstr "2 hareket"
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "3 moves"
-msgstr ""
+msgstr "3 hareket"
 
 #: lib/game/widgets/loading_page.dart:
 msgid "Loading…\nPlease wait"
@@ -513,19 +514,19 @@ msgstr "Haritayı kapat"
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open local map"
-msgstr ""
+msgstr "Yerel haritayı aç"
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open world map"
-msgstr ""
+msgstr "Dünya haritasını aç"
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Show hints"
-msgstr ""
+msgstr "İpucu göster"
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Hide hints"
-msgstr ""
+msgstr "İpucunu gizle"
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
@@ -545,27 +546,27 @@ msgstr "* {{hero}}, %s eşyasını verdi *"
 
 #: lib/game/components/door.dart:
 msgid "There is still 1 enemy here. I can't escape."
-msgstr ""
+msgstr "Hâlâ 1 düşman bulunuyor. Kaçamam."
 
 #: lib/game/components/door.dart:
 msgid "There are still %s enemies here. I can't escape."
-msgstr ""
+msgstr "Hâlâ %s düşman bulunuyor. Kaçamam."
 
 #: lib/game/xeonjia_game.dart:
 msgid "There is one enemy here!"
-msgstr ""
+msgstr "Burada bir düşman var!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "There are %s enemies here!"
-msgstr ""
+msgstr "Burada %s düşman var!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "It' time to fight!"
-msgstr ""
+msgstr "Dövüşme zamanı!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Battle!"
-msgstr ""
+msgstr "Savaş!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "You won!"
@@ -573,60 +574,60 @@ msgstr "Kazandın!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"
-msgstr ""
+msgstr "Nasıl dövüşüleceğine dair açıklamayı tekrar okumak ister misin?"
 
 #: lib/game/xeonjia_game.dart:
 msgid "* {{hero}} consults \"The Manual of the Perfect Hero\" *"
-msgstr ""
+msgstr "* {{hero}} \"Muhteşem Kahramanın El Kitabı\"na danışıyor. *"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Chapter 4: Battles"
-msgstr ""
+msgstr "Bölüm 4: Muharebeler"
 
 #: lib/game/xeonjia_game.dart:
 msgid "In battle each player has 3 moves per turn."
-msgstr ""
+msgstr "Savaşta her oyuncunun tur başına 3 hamle hakkı vardır."
 
 #: lib/game/xeonjia_game.dart:
 msgid "After these 3 moves, it is the opponent's turn."
-msgstr ""
+msgstr "3 hamleden sonra sıra rakibe geçer."
 
 #: lib/game/xeonjia_game.dart:
 msgid "A move can be used to walk, use items, attack or examine what is in front of you."
-msgstr ""
+msgstr "Bir hamleyi yürümek, eşyaları kullanmak, saldırmak veya önünüzdekini incelemek için kullanabilirsiniz."
 
 #: lib/game/xeonjia_game.dart:
 msgid "You should already know the \"A\" button, it examines objects, plants and people."
-msgstr ""
+msgstr "\"A\" düğmesini zaten biliyor olmalısınız, nesneleri, bitkileri ve insanları inceler."
 
 #: lib/game/xeonjia_game.dart:
 msgid "To attack use the \"P\" button. In this way you punch the enemy in front of you."
-msgstr ""
+msgstr "Saldırmak için \"P\" tuşunu kullanın. Bu şekilde önünüzdeki düşmana yumruk atarsınız."
 
 #: lib/game/xeonjia_game.dart:
 msgid "Otherwise, throw snowballs with the \"S\" button in the direction you are looking at."
-msgstr ""
+msgstr "Aksi takdirde, \"S\" düğmesi ile baktığınız yöne kartopu atın."
 
 #: lib/game/xeonjia_game.dart:
 msgid "If you run out of snowballs, get some snow from the snowdrifts around you."
-msgstr ""
+msgstr "Kartopunuz biterse, etrafınızdaki kar yığınlarından biraz kar alabilirsiniz."
 
 #: lib/game/xeonjia_game.dart:
 msgid "Remember, enemies also have HP. Hit them multiple times to knock them out!"
-msgstr ""
+msgstr "Düşmanların da HP'si olduğunu unutmayın. Onları bayıltmak için birden fazla kez vurun!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "And if you have few HP take advantage of a move you have available to eat or drink something you have in your backpack!"
-msgstr ""
+msgstr "Ve eğer HP'niz az ise, sırt çantanızda bulunan bir yiyecek veya içeceği müsait bir anda tüketin!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "That's all. Good luck!"
-msgstr ""
+msgstr "Her şey tamam. İyi şanslar!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "manual"
-msgstr ""
+msgstr "manuel"
 
 #: lib/game/xeonjia_game.dart:
 msgid "book"
-msgstr ""
+msgstr "kitap"

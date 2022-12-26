@@ -4,7 +4,7 @@
 # deepdaikon <deepdaikon@tuta.io>, 2022.
 # Lin.KH <dennyxbox890@gmail.com>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-12-15 16:30+0000\nLast-Translator: Lin.KH <dennyxbox890@gmail.com>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-12-26 21:11+0000\nLast-Translator: Lin.KH <dennyxbox890@gmail.com>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -16,7 +16,7 @@ msgstr "太短了。"
 
 #: lib/ui/basic.dart:
 msgid "Insert your name here"
-msgstr "請在下方寫下遊戲名稱"
+msgstr "請在這裡寫下你的名稱"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -36,7 +36,7 @@ msgstr "歡迎！"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Before starting tell me what you want to call your character."
-msgstr "在開始遊戲之前請取角色名稱。"
+msgstr "在開始遊戲之前請取個角色名稱。"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Random name"
@@ -56,7 +56,7 @@ msgstr "多人模式"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press \"Play\"."
-msgstr "擊敗敵人、獲取分數使您的隊伍獲勝是此遊戲模式的目標。\n\n規則很簡單:\n-玩家將被分成兩組。\n-當玩家擊殺敵人，該玩家所在隊伍將獲得100點。\n-達到目標分數的團隊獲勝。\n\n您的隊友標記為紅色。\n\n你現在只能跟電腦玩家對打。\n\n選擇開始的地方並配置。\n準備好後按“開始”。"
+msgstr "擊敗敵人、獲取分數使您的隊伍獲勝是此遊戲模式的目標。\n\n規則很簡單:\n-玩家將被分成兩組。\n-當玩家擊殺敵人，該玩家所在隊伍將獲得100點。\n-達到目標分數的團隊獲勝。\n\n您的隊友標記為紅色。\n\n目前只能跟電腦玩家對打。\n\n選擇開始的地方並配置。\n準備好後按“開始”。"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Okay, got it!"
@@ -68,7 +68,7 @@ msgstr "簡單"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Medium"
-msgstr "中等"
+msgstr "普通"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Hard"
@@ -92,7 +92,7 @@ msgstr "難度"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Match difficulty"
-msgstr "比賽難度"
+msgstr "遊戲難度"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points required"
@@ -200,7 +200,7 @@ msgstr "顯示十字方向鍵"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable the directional pad.\nTo change its position, long-press the D-pad in the center."
-msgstr "啟用十字方向鍵。\n如要更改其位置，請長按方向鍵。"
+msgstr "啟用十字方向鍵。\n如要更改其位置，請長按十字方向鍵。"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "D-pad size"
@@ -216,7 +216,7 @@ msgstr "語言"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "App language"
-msgstr "應用程式語言"
+msgstr "介面語言"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "System default"
@@ -228,7 +228,7 @@ msgstr "由 %s 製作"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App developed by %s"
-msgstr "此程式由 %s 開發"
+msgstr "此遊戲由 %s 開發"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version: %s"
@@ -360,7 +360,7 @@ msgstr "寶石"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Mysterious gems scattered around the world."
-msgstr "神秘的寶石散落世界各處。"
+msgstr "神秘的寶石散落於世界各處。"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Do you want to use {{selected-item-name}}?"
@@ -368,7 +368,7 @@ msgstr "您想要使用 {{selected-item-name}} 嗎?"
 
 #: lib/game/widgets/menus/end_menu.dart:
 msgid "You run out of energy !"
-msgstr "你要沒體力了！"
+msgstr "你快用光體力了！"
 
 #: lib/game/widgets/menus/end_menu.dart:
 msgid "You lost %s ¤ and woke up after a short nap"
@@ -572,11 +572,11 @@ msgstr "你贏了！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"
-msgstr "你想重讀如何戰鬥的方法嗎？"
+msgstr "你想重新閱讀如何戰鬥的方法嗎？"
 
 #: lib/game/xeonjia_game.dart:
 msgid "* {{hero}} consults \"The Manual of the Perfect Hero\" *"
-msgstr "* {{hero}} 查閱了《成為完美的英雄之書》 *"
+msgstr "* {{hero}} 查閱了《成為完美的勇者之書》 *"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Chapter 4: Battles"
@@ -588,7 +588,7 @@ msgstr "在戰鬥中，玩家每回合有 3 次移動的機會。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "After these 3 moves, it is the opponent's turn."
-msgstr "三步之後，就輪到對手了。"
+msgstr "走了三步之後，就輪到對手了。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "A move can be used to walk, use items, attack or examine what is in front of you."
@@ -620,11 +620,11 @@ msgstr "如果您的 HP 很少，請使用您背包裡的回復道具！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "That's all. Good luck!"
-msgstr "就這樣。祝你豁出去，錢進來，發大財！"
+msgstr "就這樣。祝你好運！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "manual"
-msgstr "手動"
+msgstr "手冊"
 
 #: lib/game/xeonjia_game.dart:
 msgid "book"

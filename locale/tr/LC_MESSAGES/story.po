@@ -4,11 +4,11 @@
 # Muha Aliss <muhaaliss@gmail.com>, 2022.
 # Alparslan Şakçi <sakci@protonmail.com>, 2022.
 # deepdaikon <deepdaikon@tuta.io>, 2022.
+# Sir Crownguard <trilug_inhofe@simplelogin.com>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-11 17:36+0000\nLast-Translator: Alparslan Şakçi <sakci@protonmail.com>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-12-26 21:11+0000\nLast-Translator: Sir Crownguard <trilug_inhofe@simplelogin.com>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "City Hall"
 msgstr "Belediye Binası"
 
@@ -17,7 +17,6 @@ msgid "…"
 msgstr "…"
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "H-Hello."
 msgstr "M-Merhaba."
 
@@ -30,87 +29,70 @@ msgid "king"
 msgstr "kral"
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Do not confuse me with the King of Evil, I am good haha."
 msgstr "Beni Kötülüğün Kralı ile karıştırmayın, ben iyiyim haha."
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "So… tell me, how are you? Is everything okay? How is the journey going?"
 msgstr "Peki… söyle bana, nasılsın? Her şey yolunda mı? Yolculuk nasıl gidiyor?"
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Everything good, I just defeated the Hoarfrost Team and I got the first signet!"
 msgstr "Her şey yolunda, Kırağı Takımını yendim ve ilk mührü aldım!"
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Oh really?! This is great news!"
 msgstr "Gerçekten mi?! Bu harika bir haber!"
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "It has been difficult?"
-msgstr "Zordu sanırım?"
+msgstr "Zor mu oldu?"
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Well, but if you did it, it means that you are strong!"
 msgstr "Ama başardıysan güçlüsün demektir!"
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Well, congratulations! This means that you are strong!"
 msgstr "Tebrikler! Bu, güçlü olduğun anlamına gelir!"
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "I trust that you will be able to take the other two signets as well."
 msgstr "Diğer iki mührü de alabileceğine inanıyorum."
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Since you're heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here."
 msgstr "Doğuya gittiğine göre bana bir iyilik yapar mısın? Bu paketi Su Bölgesi Kralı'na teslim edebilir misin? Buranın birkaç kilometre doğusunda."
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Yes of course, I'll give it to him."
-msgstr "Evet tabiki ona veririm."
+msgstr "Evet, tabiki ona veririm."
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Thank you very much. Here's to you."
-msgstr "Çok teşekkürler. İşte senin için."
+msgstr "Çok teşekkürler. İşte alabilirsin."
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Be careful not to drop it, it is fragile."
 msgstr "Düşürmemeye dikkat et, kırılgandır."
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Sure, I'll be careful."
 msgstr "Tabii, dikkatli olacağım."
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Thank you again.\nI wish you a good journey, come back anytime."
-msgstr "Tekrar teşekkürler.\nİyi yolculuklar dilerim, istediğin zaman geri gelebilirsin."
+msgstr "Tekrar teşekkürler.\nİyi yolculuklar dilerim, istediğin zaman gelebilirsin."
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Good journey {{hero}}, I have faith in you."
 msgstr "İyi yolculuklar {{hero}}, sana güveniyorum."
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Yes, quite a lot"
 msgstr "Evet, oldukça fazla"
 
 #: assets/maps/story/30_cityhall.tmx:
-#, fuzzy
 msgid "Just a little"
 msgstr "Sadece biraz"
 
@@ -128,23 +110,23 @@ msgstr "Çıkış ↑"
 
 #: assets/maps/story/33.tmx:
 msgid "Hey, there are items in here!"
-msgstr ""
+msgstr "Hey, burada eşyalar var!"
 
 #: assets/maps/story/33.tmx:
 msgid "There are still items in here but I've already taken one."
-msgstr ""
+msgstr "Burada hala eşyalar var ama zaten birini aldım."
 
 #: assets/maps/story/33.tmx:
 msgid "I can see a city in the distance."
-msgstr ""
+msgstr "Uzakta bir şehir görüyorum."
 
 #: assets/maps/story/33.tmx:
 msgid "In the distance can be seen the other part of the region."
-msgstr ""
+msgstr "Uzakta bölgenin diğer kısmı görülebilir."
 
 #: assets/maps/story/33.tmx:
 msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
-msgstr ""
+msgstr "Bu bölgenin sakinleri, buraya gelen gezginler ve denizciler için bu vazoların içine hediyeler bırakır.\nBu eski bir gelenektir.\nHediyeleri almaktan çekinmeyin."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB – 1F"
@@ -172,7 +154,7 @@ msgstr "Kırık bir monitör."
 
 #: assets/maps/story/8.tmx:
 msgid "Go this way →"
-msgstr ""
+msgstr "Bu taraftan →"
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
@@ -180,7 +162,7 @@ msgstr "Natawn"
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nIf you lose your way or get stuck take a look at the map.\nYou can open it by tapping on its icon in the upper right corner."
-msgstr ""
+msgstr "İyi yolculuklar, {{hero}}.\nYolunu kaybedersen veya takılırsan haritaya bir göz at.\nSağ üst köşedeki simgeye dokunarak açabilirsiniz."
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
@@ -188,11 +170,11 @@ msgstr "babam"
 
 #: assets/maps/story/1.tmx:
 msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
-msgstr ""
+msgstr "\"Şeytan Kral\"ın bulunduğu kule, bölgenin başkentine yakın bir yerde bulunuyor."
 
 #: assets/maps/story/1.tmx:
 msgid "Stay focused on your goals and don't wander around aimlessly."
-msgstr ""
+msgstr "Hedeflerine odaklan ve amaçsızca dolaşma."
 
 #: assets/maps/story/1.tmx:
 msgid "NATAWN – Hometown of the 62nd hero"
@@ -200,15 +182,15 @@ msgstr "NATAWN – 62. kahramanın memleketi"
 
 #: assets/maps/story/1.tmx:
 msgid "I've to say goodbye to my parents with the \"A\" button before I leave. Otherwise it would be rude."
-msgstr ""
+msgstr "Ayrılmadan önce aileme \"A\" tuşuyla veda etmek zorundayım. Aksi takdirde kabalık olur."
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, I have to go to my neighbor first."
-msgstr ""
+msgstr "Annemin dediği gibi, önce komşuma gitmeliyim."
 
 #: assets/maps/story/1.tmx:
 msgid "From here on is the frozen floor.\nI'll slide until I reach an obstacle.\nSo I have to use my mind to figure out the best path."
-msgstr ""
+msgstr "Buradan sonrası donmuş zemin.\nBir engele ulaşana kadar kayacağım.\nBu yüzden en iyi yolu bulmak için aklımı kullanmalıyım."
 
 #: assets/maps/story/34.tmx:
 msgid "Route 4"
@@ -216,7 +198,7 @@ msgstr "4. Yol"
 
 #: assets/maps/story/34.tmx:
 msgid "This vase is empty."
-msgstr ""
+msgstr "Bu vazo boş."
 
 #: assets/maps/story/34.tmx:
 msgid "* {{hero}} found {{money-diff}} ¤ *"
@@ -236,19 +218,19 @@ msgstr "Zamelis Köyü"
 
 #: assets/maps/story/38.tmx:
 msgid "I want to reach the capital quickly but the only way is traveling by land."
-msgstr ""
+msgstr "Başkente hızlı bir şekilde ulaşmak istiyorum ama tek yol karadan seyahat etmek."
 
 #: assets/maps/story/38.tmx:
 msgid "I really needed a pomegranate juice."
-msgstr ""
+msgstr "Nar suyuna gerçekten ihtiyacım vardı."
 
 #: assets/maps/story/17.tmx:
 msgid "These monsters don't seem very smart to me."
-msgstr ""
+msgstr "Bu canavarlar bana pek akıllı görünmüyor."
 
 #: assets/maps/story/17.tmx:
 msgid "There are still enemies here. I can't escape."
-msgstr ""
+msgstr "Burada hâlâ düşmanlar var. Kaçamam."
 
 #: assets/maps/story/31_house1.tmx:
 msgid "I hate people who always say the same things."
@@ -256,7 +238,7 @@ msgstr "Hep aynı şeyleri söyleyen insanlardan nefret ediyorum."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Hi, you look a little tired.\nHere's a bottle of water."
-msgstr ""
+msgstr "Selam, biraz yorgun görünüyorsun.\nİşte bir şişe su."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Thank you!"
@@ -264,31 +246,31 @@ msgstr "Teşekkürler!"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "I wish you the best."
-msgstr ""
+msgstr "Umarım senin için en iyisi olur."
 
 #: assets/maps/story/3_house2.tmx:
 msgid "This sofa looks very comfortable."
-msgstr ""
+msgstr "Bu kanepe çok rahat görünüyor."
 
 #: assets/maps/story/13.tmx:
 msgid "Help me please!"
-msgstr ""
+msgstr "Lütfen yardım edin!"
 
 #: assets/maps/story/13.tmx:
 msgid "Are you okay?"
-msgstr ""
+msgstr "İyi misin?"
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, thank you so much for saving my life!\nI have to admit, I was so scared!"
-msgstr ""
+msgstr "Evet, hayatımı kurtardığın için çok teşekkür ederim!\nİtiraf etmeliyim, çok korkmuştum!"
 
 #: assets/maps/story/13.tmx:
 msgid "Me too!"
-msgstr ""
+msgstr "Ben de!"
 
 #: assets/maps/story/13.tmx:
 msgid "Luckily it went all right!\nI don't know how to thank you, I can give you this gem that I found a little while ago."
-msgstr ""
+msgstr "Neyse ki her şey yolunda gitti!\nSize nasıl teşekkür edeceğimi bilemiyorum, ama az önce bulduğum bu mücevheri verebilirim."
 
 #: assets/maps/story/13.tmx:
 msgid "Thank you, it seems very precious!"
