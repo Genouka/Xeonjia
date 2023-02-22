@@ -100,7 +100,7 @@ class StatusBoxState extends State<StatusBox> {
                       ),
                       Text(
                         '  ${widget.gameRef.remainingTime}',
-                        style: Theme.of(context).textTheme.button,
+                        style: Theme.of(context).textTheme.labelLarge,
                       ),
                     ],
                   ),
@@ -155,7 +155,7 @@ class _PercentIndicator extends StatelessWidget {
           fit: BoxFit.contain,
           child: Text(
             text,
-            style: Theme.of(context).textTheme.button,
+            style: Theme.of(context).textTheme.labelLarge,
             textAlign: TextAlign.center,
             maxLines: 1,
           ),

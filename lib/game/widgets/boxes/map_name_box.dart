@@ -22,7 +22,7 @@ class MapNameBox extends StatelessWidget {
             child: Marquee(
               child: Text(
                 text!.i18n.toUpperCase() + ' ',
-                style: Theme.of(context).textTheme.button,
+                style: Theme.of(context).textTheme.labelLarge,
                 maxLines: 1,
               ),
             ),

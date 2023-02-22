@@ -48,7 +48,7 @@ class _PauseMenuState extends State<PauseMenu> {
                 fit: BoxFit.fitWidth,
                 child: Text(
                   pauseMode!.name.i18n.toUpperCase(),
-                  style: Theme.of(context).textTheme.headline3,
+                  style: Theme.of(context).textTheme.displaySmall,
                 ),
               ),
             ),
@@ -63,7 +63,7 @@ class _PauseMenuState extends State<PauseMenu> {
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Text(
                       text,
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: Theme.of(context).textTheme.bodyMedium,
                       textAlign: TextAlign.center,
                     ),
                   ),

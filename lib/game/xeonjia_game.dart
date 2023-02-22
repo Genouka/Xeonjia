@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:collection/collection.dart';
@@ -307,7 +308,7 @@ class XeonjiaGame extends FlameGame
   }
 
   @override
-  Future<void>? add(Component component) {
+  FutureOr<void> add(Component component) {
     if (component is Walker &&
         (([-3, -2, 1].contains(component.teamId)) ||
             (component is CharacterComponent &&

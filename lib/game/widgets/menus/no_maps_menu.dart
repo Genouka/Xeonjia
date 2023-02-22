@@ -22,13 +22,13 @@ class NoMapsMenu extends StatelessWidget {
             children: [
               Text(
                 'You went too far!'.i18n,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
                 textAlign: TextAlign.center,
               ),
               Text(
                 'The next part of the story is not yet available.\nIt will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback.'
                     .i18n,
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context).textTheme.bodyMedium,
                 textAlign: TextAlign.center,
               ),
               Container(height: 35),
@@ -42,7 +42,7 @@ class NoMapsMenu extends StatelessWidget {
                     },
                     child: Text(
                       'Donate'.i18n,
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: Theme.of(context).textTheme.bodyMedium,
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -55,7 +55,7 @@ class NoMapsMenu extends StatelessWidget {
                     },
                     child: Text(
                       'Report a bug or ask something'.i18n,
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: Theme.of(context).textTheme.bodyMedium,
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -71,7 +71,7 @@ class NoMapsMenu extends StatelessWidget {
                     },
                     child: Text(
                       'Send email'.i18n,
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                   ),
                   TextButton(
@@ -84,14 +84,14 @@ class NoMapsMenu extends StatelessWidget {
                     },
                     child: Text(
                       'Go back'.i18n,
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                   ),
                   TextButton(
                     onPressed: () => Navigator.pop(context),
                     child: Text(
                       'Back to menu'.i18n,
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                   ),
                 ],

@@ -12,7 +12,7 @@ class LoadingPage extends StatelessWidget {
         children: [
           Text(
             'Loading…\nPlease wait'.i18n,
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
             textAlign: TextAlign.center,
           ),
           Container(height: 25),

@@ -114,7 +114,7 @@ class Button extends HudButtonComponent {
       textBox.textRenderer = TextPaint(
           style: Theme.of(gameRef.buildContext!)
               .textTheme
-              .button!
+              .labelLarge!
               .copyWith(fontSize: size.x / 1.5));
     }
     textBox.text = text + ' ';

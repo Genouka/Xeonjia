@@ -19,7 +19,7 @@ class RemainingMovesBox extends TextBoxComponent with HasGameRef<XeonjiaGame> {
   @override
   void onMount() {
     textRenderer =
-        TextPaint(style: Theme.of(gameRef.buildContext!).textTheme.button);
+        TextPaint(style: Theme.of(gameRef.buildContext!).textTheme.labelLarge);
     super.onMount();
   }
 

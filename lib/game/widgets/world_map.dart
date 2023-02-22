@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/image_composition.dart';
@@ -12,7 +14,7 @@ import 'package:xeonjia/utils/local_data_controller.dart';
 /// World map
 class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
   @override
-  Future<void>? onLoad() {
+  FutureOr<void> onLoad() {
     priority = 9999;
     sprite = Sprite(Flame.images.fromCache('map.png'));
     addAll(worldData
@@ -59,7 +61,7 @@ class _RectangleMap extends PositionComponent
   bool isTheCurrentMap = false;
 
   @override
-  Future<void>? onLoad() {
+  FutureOr<void> onLoad() {
     isTheCurrentMap = map.id == gameRef.map.id;
     return super.onLoad();
   }

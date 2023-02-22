@@ -28,7 +28,7 @@ class HideHintsButton extends TextBoxComponent
   @override
   void onMount() {
     textRenderer =
-        TextPaint(style: Theme.of(gameRef.buildContext!).textTheme.button);
+        TextPaint(style: Theme.of(gameRef.buildContext!).textTheme.labelLarge);
     return super.onMount();
   }
 

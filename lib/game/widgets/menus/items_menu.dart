@@ -4,6 +4,7 @@ import 'package:xeonjia/game/utils/little_scheme.dart';
 import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/widgets/boxes/info_box.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/utils/i18n.dart';
 
 /// Menu that shows a list of [Item]s. Used for [ShopMenu] and [BackpackMenu]
@@ -48,7 +49,7 @@ class _ItemsMenuState extends State<ItemsMenu> {
                   padding: const EdgeInsets.only(bottom: 60),
                   child: Center(child: Text('No items here'.i18n)))
               : ScrollConfiguration(
-                  behavior: _NoGlow(),
+                  behavior: NoGlow(),
                   child: ListView(
                     shrinkWrap: true,
                     primary: true,
@@ -92,7 +93,7 @@ class _ItemsMenuState extends State<ItemsMenu> {
                                             : ' x ${i.quantity}'),
                                     style: Theme.of(context)
                                         .textTheme
-                                        .bodyText2!
+                                        .bodyMedium!
                                         .copyWith(
                                             color: widget.gameRef.playerOne!
                                                         .money >=
@@ -116,7 +117,7 @@ class _ItemsMenuState extends State<ItemsMenu> {
           opacity: 1,
           child: Text(
             widget.text.toUpperCase(),
-            style: Theme.of(context).textTheme.button,
+            style: Theme.of(context).textTheme.labelLarge,
             maxLines: 1,
           ),
         ),
@@ -129,7 +130,7 @@ class _ItemsMenuState extends State<ItemsMenu> {
           child: Text(
             '%s HP'.i18n.fill([widget.gameRef.playerOne!.hp.round()]) +
                 '  /  ${widget.gameRef.playerOne!.money} ¤',
-            style: Theme.of(context).textTheme.button,
+            style: Theme.of(context).textTheme.labelLarge,
             maxLines: 1,
           ),
         ),
@@ -163,7 +164,7 @@ class _CloseButton extends StatelessWidget {
               Expanded(
                 child: Text(
                   'Close'.i18n.toUpperCase(),
-                  style: Theme.of(context).textTheme.button,
+                  style: Theme.of(context).textTheme.labelLarge,
                   textAlign: TextAlign.center,
                   maxLines: 1,
                 ),
@@ -174,14 +175,5 @@ class _CloseButton extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-// Remove scroll glow
-class _NoGlow extends ScrollBehavior {
-  @override
-  Widget buildViewportChrome(
-      BuildContext context, Widget child, AxisDirection axisDirection) {
-    return child;
   }
 }

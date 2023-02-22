@@ -61,8 +61,7 @@ class ChooseName extends StatelessWidget {
                     padding: const EdgeInsets.all(24),
                     child: TextButton(
                       style: TextButton.styleFrom(
-                        backgroundColor:
-                            Theme.of(context).toggleableActiveColor,
+                        backgroundColor: Theme.of(context).primaryColor,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50)),
                       ),

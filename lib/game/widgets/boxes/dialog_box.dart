@@ -149,7 +149,7 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                         maxLines: 1,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .bodyText1,
+                                            .bodyLarge,
                                       ),
                                     AnimatedBuilder(
                                       animation: _characterCountAnimation!,
@@ -171,7 +171,7 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                                           .value)),
                                           style: Theme.of(context)
                                               .textTheme
-                                              .bodyText2!
+                                              .bodyMedium!
                                               .copyWith(
                                                 fontFamily: widget
                                                     .gameRef
@@ -229,7 +229,7 @@ class _AnswerButtons extends StatelessWidget {
                 child: Text(
                   answer.text.i18n,
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.button,
+                  style: Theme.of(context).textTheme.labelLarge,
                 ),
               ),
             ),

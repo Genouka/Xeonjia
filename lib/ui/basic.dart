@@ -30,8 +30,8 @@ class FadeRoute extends PageRouteBuilder {
 /// This removes scroll glow
 class NoGlow extends ScrollBehavior {
   @override
-  Widget buildViewportChrome(
-      BuildContext context, Widget child, AxisDirection axisDirection) {
+  Widget buildOverscrollIndicator(
+      BuildContext context, Widget child, ScrollableDetails details) {
     return child;
   }
 }
@@ -44,7 +44,7 @@ Widget actionButton(String text, VoidCallback onPressed) => InkWell(
         child: Text(
           text,
           textAlign: TextAlign.center,
-          style: gameTheme.textTheme.bodyText2,
+          style: gameTheme.textTheme.bodyMedium,
         ),
       ),
     );
