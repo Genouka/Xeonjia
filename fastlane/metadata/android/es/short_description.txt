@@ -1,1 +1,1 @@
-Resuelve rompecabezas gélidos y derrota enemigos en un mundo RPG.
+Salva al mundo resolviendo rompecabezas gélidos y derrotando enemigos.
