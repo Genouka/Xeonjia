@@ -872,41 +872,127 @@ class XeonjiaGame extends FlameGame
       return KeyEventResult.ignored;
     }
     if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
-      movePlayer(Direction.down);
+      if (miniMapEnabled) {
+        camera.snapTo(Vector2(
+            _moveCamera(size.x, map.width, camera.position.x + size.x / 2),
+            _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
+                camera.position.y + 50 + size.y / 2)));
+      } else {
+        movePlayer(Direction.down);
+      }
     } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
-      movePlayer(Direction.up);
+      if (miniMapEnabled) {
+        camera.snapTo(Vector2(
+            _moveCamera(size.x, map.width, camera.position.x + size.x / 2),
+            _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
+                camera.position.y - 50 + size.y / 2)));
+      } else {
+        movePlayer(Direction.up);
+      }
     } else if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
-      movePlayer(Direction.right);
+      if (miniMapEnabled) {
+        camera.snapTo(Vector2(
+            _moveCamera(size.x, map.width, camera.position.x + 50 + size.x / 2),
+            _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
+                camera.position.y + size.y / 2)));
+      } else {
+        movePlayer(Direction.right);
+      }
     } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
-      movePlayer(Direction.left);
+      if (miniMapEnabled) {
+        camera.snapTo(Vector2(
+            _moveCamera(size.x, map.width, camera.position.x - 50 + size.x / 2),
+            _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
+                camera.position.y + size.y / 2)));
+      } else {
+        movePlayer(Direction.left);
+      }
     } else if (event.logicalKey == LogicalKeyboardKey.space) {
       if (!paused) {
         messageManager.isActive
             ? dialogBox.state?.next()
             : playerOne?.inspect();
       }
-    } else if (event.logicalKey == LogicalKeyboardKey.keyA) {
-      if (!paused) playerOne!.updateOrientation(Direction.left);
-    } else if (event.logicalKey == LogicalKeyboardKey.keyW) {
-      if (!paused) playerOne!.updateOrientation(Direction.up);
-    } else if (event.logicalKey == LogicalKeyboardKey.keyD) {
-      if (!paused) playerOne!.updateOrientation(Direction.right);
-    } else if (event.logicalKey == LogicalKeyboardKey.keyS) {
-      if (!paused) playerOne!.updateOrientation(Direction.down);
-    } else if (event.logicalKey == LogicalKeyboardKey.keyQ) {
-      if (!paused && inBattle) playerOne!.shoot();
-    } else if (event.logicalKey == LogicalKeyboardKey.escape) {
-      if (isPaused) {
-        overlays.remove('pauseMenu');
-        resume();
-      } else {
-        pause(mode: PauseMode.pause);
+    } else if (!paused && !messageManager.isActive) {
+      if (event.logicalKey == LogicalKeyboardKey.keyA) {
+        playerOne!.updateOrientation(Direction.left);
+      } else if (event.logicalKey == LogicalKeyboardKey.keyW) {
+        playerOne!.updateOrientation(Direction.up);
+      } else if (event.logicalKey == LogicalKeyboardKey.keyD) {
+        playerOne!.updateOrientation(Direction.right);
+      } else if (event.logicalKey == LogicalKeyboardKey.keyS) {
+        playerOne!.updateOrientation(Direction.down);
+      } else if (event.logicalKey == LogicalKeyboardKey.keyQ) {
+        if (inBattle) playerOne!.shoot();
+      }
+    }
+    if (event.logicalKey == LogicalKeyboardKey.space) {
+      overlays.isActive('dialogBox')
+          ? dialogBox.state!.next()
+          : playerOne!.inspect();
+    }
+    if (event.logicalKey == LogicalKeyboardKey.keyM) {
+      if (miniMapEnabled && !worldMapDisabled) {
+        worldMap();
+      } else if (worldMapEnabled ||
+          (!isPaused && !map.disableMiniMap && isMiniMapButtonActive)) {
+        miniMap();
+      }
+    }
+    if (event.logicalKey == LogicalKeyboardKey.keyB) {
+      if (overlays.isActive('backpackButton') && isBackpackButtonActive) {
+        backpack();
+      }
+    }
+    if (event.logicalKey == LogicalKeyboardKey.add) {
+      if (miniMapEnabled) {
+        zoomMiniMap();
+      }
+    }
+    if (event.logicalKey == LogicalKeyboardKey.minus) {
+      if (miniMapEnabled) {
+        zoomMiniMap(out: true);
+      }
+    }
+    if (event.logicalKey == LogicalKeyboardKey.keyH) hideHints = !hideHints;
+    if (event.logicalKey == LogicalKeyboardKey.escape) {
+      if (!messageManager.isActive) {
+        if (miniMapEnabled) {
+          miniMap();
+        } else {
+          if (overlays.isActive('pauseMenu')) {
+            overlays.remove('pauseMenu');
+            resume();
+          } else if (overlays.isActive('backpackMenu')) {
+            overlays.remove('backpackMenu');
+            resume();
+          } else if (overlays.isActive('shopMenu')) {
+            overlays.remove('shopMenu');
+            resume();
+          } else {
+            pause(mode: PauseMode.pause);
+          }
+        }
       }
     } else if (event.logicalKey == LogicalKeyboardKey.keyL) {
       miniMap();
     }
     return KeyEventResult.handled;
   }
+
+  /// True if it's possible to open the backpack
+  bool get isBackpackButtonActive => !(messageManager.isActive ||
+      hasAction ||
+      !playerOne!.isStationary ||
+      !playerOne!.isMyTurn);
+
+  /// True if it's possible to open the mini-map
+  bool get isMiniMapButtonActive =>
+      !(messageManager.isActive || hasAction || !playerOne!.isStationary);
+
+  /// True if the world map is disabled
+  bool get worldMapDisabled =>
+      !miniMapEnabled || enemies > 0 || map.disableWorldMap;
 
   @override
   void onRemove() {

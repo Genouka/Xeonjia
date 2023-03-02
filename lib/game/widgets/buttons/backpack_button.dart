@@ -12,12 +12,7 @@ class BackpackButton extends StatelessWidget {
       top: 6,
       right: gameRef.map.disableMiniMap ? 6 : 50,
       child: InkWell(
-        onTap: () => gameRef.messageManager.isActive ||
-                gameRef.hasAction ||
-                !gameRef.playerOne!.isStationary ||
-                !gameRef.playerOne!.isMyTurn
-            ? null
-            : gameRef.backpack(),
+        onTap: () => gameRef.isBackpackButtonActive ? gameRef.backpack() : null,
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
           height: 34,

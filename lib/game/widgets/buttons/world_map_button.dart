@@ -19,11 +19,6 @@ class WorldMapButton extends TextBoxComponent
     'Open world map'.i18n.toUpperCase(),
   ];
 
-  bool get disabled =>
-      !gameRef.miniMapEnabled ||
-      gameRef.enemies > 0 ||
-      gameRef.map.disableWorldMap;
-
   @override
   void onMount() {
     textRenderer =
@@ -43,7 +38,7 @@ class WorldMapButton extends TextBoxComponent
 
   @override
   bool onTapUp(TapUpInfo info) {
-    if (!disabled) gameRef.worldMap();
+    if (!gameRef.worldMapDisabled) gameRef.worldMap();
     return true;
   }
 
@@ -55,7 +50,7 @@ class WorldMapButton extends TextBoxComponent
 
   @override
   void render(Canvas c) {
-    if (disabled) return;
+    if (gameRef.worldMapDisabled) return;
     final rect = RRect.fromRectAndRadius(
         Rect.fromLTWH(0, 0, size.x, size.y), const Radius.circular(30));
     c.drawRRect(rect, Paint()..color = Colors.grey.shade800.withOpacity(0.7));

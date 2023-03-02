@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:math';
 
 import 'package:animated_background/animated_background.dart';
@@ -91,7 +92,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       Container(
                         margin: const EdgeInsets.only(top: 60),
                         child: Text(
-                          '> ' + 'Tap to play'.i18n.toUpperCase() + ' <',
+                          '> ' +
+                              (Platform.isAndroid
+                                      ? 'Tap to play'.i18n
+                                      : 'Press enter'.i18n)
+                                  .toUpperCase() +
+                              ' <',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white,
