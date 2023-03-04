@@ -20,9 +20,13 @@ class DialogBox extends StatefulWidget {
   State<DialogBox> createState() => DialogBoxState();
 }
 
+/// Currently selected answer (for keyboard input)
+int selectedAnswerIndex = 0;
+
 class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   /// Show the next [Message] or hide [DialogBox] if there are no more messages
   void next({bool removeAnswers = false}) {
+    selectedAnswerIndex = 0;
     if (_controller?.isAnimating ?? false) {
       _controller!.fling().whenComplete(() {
         if (mounted && widget.gameRef.messageManager.isShowingAQuestion) {
@@ -45,6 +49,36 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   void refresh() {
     if (mounted) setState(() {});
     _animateText();
+  }
+
+  /// True if answers are shown
+  bool get isShowingAnswers =>
+      widget.gameRef.messageManager.isShowingAQuestion &&
+      _characterCountAnimation!.isCompleted;
+
+  /// Select the next answer
+  void selectNextAnswer() {
+    setState(() {
+      if (++selectedAnswerIndex >=
+          widget.gameRef.messageManager.answers.length) {
+        selectedAnswerIndex = 0;
+      }
+    });
+  }
+
+  /// Select the previous answer
+  void selectPreviousAnswer() {
+    setState(() {
+      if (--selectedAnswerIndex < 0) {
+        selectedAnswerIndex = widget.gameRef.messageManager.answers.length - 1;
+      }
+    });
+  }
+
+  /// Choose the currently selected answer
+  void chooseAnswer() {
+    widget.gameRef.messageManager.chooseAnswer(
+        widget.gameRef.messageManager.answers[selectedAnswerIndex]);
   }
 
   /// Typing text animation
@@ -97,12 +131,9 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    if (widget.gameRef.messageManager.isShowingAQuestion &&
-                        _characterCountAnimation!.isCompleted)
-                      _AnswerButtons(
-                          widget.gameRef,
-                          widget.gameRef.messageManager.answers,
-                          () => next(removeAnswers: true)),
+                    if (isShowingAnswers)
+                      _AnswerButtons(widget.gameRef,
+                          widget.gameRef.messageManager.answers),
                     Container(
                       margin: const EdgeInsets.all(20),
                       padding: const EdgeInsets.all(20),
@@ -201,10 +232,9 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
 }
 
 class _AnswerButtons extends StatelessWidget {
-  const _AnswerButtons(this.gameRef, this.answers, this.callback);
+  const _AnswerButtons(this.gameRef, this.answers);
   final XeonjiaGame gameRef;
   final List<Answer> answers;
-  final VoidCallback callback;
 
   @override
   Widget build(BuildContext context) {
@@ -219,15 +249,12 @@ class _AnswerButtons extends StatelessWidget {
         children: [
           for (var answer in answers)
             TextButton(
-              onPressed: () {
-                gameRef.currentEventLog[answer.questionId] = answer.value;
-                gameRef.messageManager.clear();
-                callback();
-              },
+              onPressed: () => gameRef.messageManager.chooseAnswer(answer),
               child: Container(
                 constraints: const BoxConstraints(minWidth: 120),
                 child: Text(
-                  answer.text.i18n,
+                  (answers.indexOf(answer) == selectedAnswerIndex ? '> ' : '') +
+                      answer.text.i18n,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.labelLarge,
                 ),

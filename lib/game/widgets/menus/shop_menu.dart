@@ -33,7 +33,7 @@ class ShopMenu extends ItemsMenu {
             }
           },
           onClose: () {
-            gameRef.overlays.remove('shop');
+            gameRef.overlays.remove('shopMenu');
             gameRef.setMessage(Message(
                 gameRef, 'Let me know if you need anything else.'.i18n,
                 translate: false, author: 'pharmacist/elderly'));

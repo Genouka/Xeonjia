@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/models/item.dart';
 import 'package:xeonjia/game/utils/little_scheme.dart';
@@ -25,11 +26,61 @@ abstract class ItemsMenu extends StatefulWidget {
   final VoidCallback onClose;
 
   @override
-  State<ItemsMenu> createState() => _ItemsMenuState();
+  final GlobalKey<State<ItemsMenu>> key = GlobalKey();
+  ItemsMenuState? get state => key.currentState as ItemsMenuState?;
+
+  @override
+  State<ItemsMenu> createState() => ItemsMenuState();
 }
 
-class _ItemsMenuState extends State<ItemsMenu> {
+class ItemsMenuState extends State<ItemsMenu> {
   Item? selectedItem;
+  int selectedItemIndex = 0;
+
+  @override
+  void initState() {
+    selectedItem = widget.items.firstOrNull;
+    super.initState();
+  }
+
+  /// Select the next item
+  void nextItem() {
+    setState(() {
+      if (++selectedItemIndex < widget.items.length) {
+        selectedItem = widget.items[selectedItemIndex];
+      } else {
+        selectedItemIndex = 0;
+        selectedItem = widget.items.firstOrNull;
+      }
+    });
+  }
+
+  /// Select the previous item
+  void previousItem() {
+    setState(() {
+      if (--selectedItemIndex < 0) selectedItemIndex = widget.items.length - 1;
+      selectedItem = widget.items[selectedItemIndex];
+    });
+  }
+
+  /// Choose the currently selected item
+  void chooseItem([Item? i]) {
+    setState(() {
+      selectedItem = i ?? selectedItem;
+      widget.gameRef.setMessage(Message(
+        widget.gameRef,
+        selectedItem!.description!,
+        author: '${selectedItem!.rawName}/${selectedItem!.id}',
+        xfaFile: 'items',
+      ));
+      widget.gameRef.environment
+          .defineSymbol(Sym('selected-item-id'), selectedItem!.id);
+      widget.gameRef.environment
+          .defineSymbol(Sym('selected-item-name'), selectedItem!.name);
+      widget.onSelection(selectedItem);
+      setState(() {});
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,25 +107,7 @@ class _ItemsMenuState extends State<ItemsMenu> {
                     children: [
                       for (var i in widget.items)
                         InkWell(
-                          onTap: () {
-                            setState(() {
-                              selectedItem = i;
-                              widget.gameRef.setMessage(Message(
-                                widget.gameRef,
-                                selectedItem!.description!,
-                                author:
-                                    '${selectedItem!.rawName}/${selectedItem!.id}',
-                                xfaFile: 'items',
-                              ));
-                              widget.gameRef.environment.defineSymbol(
-                                  Sym('selected-item-id'), selectedItem!.id);
-                              widget.gameRef.environment.defineSymbol(
-                                  Sym('selected-item-name'),
-                                  selectedItem!.name);
-                              widget.onSelection(selectedItem);
-                              setState(() {});
-                            });
-                          },
+                          onTap: () => chooseItem(i),
                           child: Column(
                             children: [
                               Row(

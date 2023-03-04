@@ -37,7 +37,7 @@ class NoGlow extends ScrollBehavior {
 }
 
 /// Button used in pauseMenu and backpackMenu
-Widget actionButton(String text, VoidCallback onPressed) => InkWell(
+InkWell actionButton(String text, VoidCallback onPressed) => InkWell(
       onTap: onPressed,
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10),

@@ -41,6 +41,7 @@ import 'package:xeonjia/game/widgets/menus/backpack_menu.dart';
 import 'package:xeonjia/game/widgets/menus/end_menu.dart';
 import 'package:xeonjia/game/widgets/menus/no_maps_menu.dart';
 import 'package:xeonjia/game/widgets/menus/pause_menu.dart';
+import 'package:xeonjia/game/widgets/menus/shop_menu.dart';
 import 'package:xeonjia/game/widgets/virtual_gamepad.dart';
 import 'package:xeonjia/game/widgets/world_map.dart';
 import 'package:xeonjia/utils/game_properties.dart';
@@ -73,7 +74,8 @@ class XeonjiaGame extends FlameGame
         return RulesButton(game);
       },
       'backpackMenu': (BuildContext context, XeonjiaGame game) {
-        return BackpackMenu(game);
+        _backpackMenu = BackpackMenu(this);
+        return _backpackMenu!;
       },
       'miniMapButton': (BuildContext context, XeonjiaGame game) {
         return MiniMapButton(game, miniMapIsActive: game.miniMapActive);
@@ -226,6 +228,15 @@ class XeonjiaGame extends FlameGame
 
   /// Box with HP, pause, time and team points
   late StatusBox _statusBox;
+
+  /// Pause menu
+  PauseMenu? _pauseMenu;
+
+  /// Backpack menu
+  BackpackMenu? _backpackMenu;
+
+  /// Shop menu
+  ShopMenu? shopMenu;
 
   /// Elapsed time since room change (in seconds with microseconds precision)
   double elapsed = 0;
@@ -424,7 +435,8 @@ class XeonjiaGame extends FlameGame
     if (stopEngine) pauseEngine();
     if (stopMusic) FlameAudio.bgm.pause();
     if (mode != null) {
-      addCustomWidgetOverlay('pauseMenu', PauseMenu(this, mode));
+      _pauseMenu = PauseMenu(this, mode);
+      addCustomWidgetOverlay('pauseMenu', _pauseMenu!);
     }
   }
 
@@ -671,7 +683,7 @@ class XeonjiaGame extends FlameGame
 
   /// True if [BackpackMenu] or [ShopMenu] are open
   bool get isItemsMenuActive =>
-      overlays.isActive('backpackMenu') || overlays.isActive('shop');
+      overlays.isActive('backpackMenu') || overlays.isActive('shopMenu');
 
   /// Reload HP bar
   void refreshHPBar() => _statusBox.state?.refresh();
@@ -877,6 +889,13 @@ class XeonjiaGame extends FlameGame
             _moveCamera(size.x, map.width, camera.position.x + size.x / 2),
             _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
                 camera.position.y + 50 + size.y / 2)));
+      } else if (overlays.isActive('backpackMenu') &&
+          !messageManager.isActive) {
+        _backpackMenu?.state?.nextItem();
+      } else if (overlays.isActive('shopMenu') && !messageManager.isActive) {
+        shopMenu?.state?.nextItem();
+      } else if (messageManager.isActive && messageManager.isShowingAQuestion) {
+        dialogBox.state?.selectNextAnswer();
       } else {
         movePlayer(Direction.down);
       }
@@ -886,6 +905,13 @@ class XeonjiaGame extends FlameGame
             _moveCamera(size.x, map.width, camera.position.x + size.x / 2),
             _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
                 camera.position.y - 50 + size.y / 2)));
+      } else if (overlays.isActive('backpackMenu') &&
+          !messageManager.isActive) {
+        _backpackMenu?.state?.nextItem();
+      } else if (overlays.isActive('shopMenu') && !messageManager.isActive) {
+        shopMenu?.state?.previousItem();
+      } else if (messageManager.isActive && messageManager.isShowingAQuestion) {
+        dialogBox.state?.selectPreviousAnswer();
       } else {
         movePlayer(Direction.up);
       }
@@ -895,6 +921,8 @@ class XeonjiaGame extends FlameGame
             _moveCamera(size.x, map.width, camera.position.x + 50 + size.x / 2),
             _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
                 camera.position.y + size.y / 2)));
+      } else if (overlays.isActive('pauseMenu')) {
+        _pauseMenu?.state?.selectNextOption();
       } else {
         movePlayer(Direction.right);
       }
@@ -904,11 +932,25 @@ class XeonjiaGame extends FlameGame
             _moveCamera(size.x, map.width, camera.position.x - 50 + size.x / 2),
             _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
                 camera.position.y + size.y / 2)));
+      } else if (overlays.isActive('pauseMenu')) {
+        _pauseMenu?.state?.selectPreviousOption();
       } else {
         movePlayer(Direction.left);
       }
     } else if (event.logicalKey == LogicalKeyboardKey.space) {
-      if (!paused) {
+      if (dialogBox.state?.isShowingAnswers ?? false) {
+        dialogBox.state?.chooseAnswer();
+      } else if (overlays.isActive('backpackMenu')) {
+        messageManager.isActive
+            ? dialogBox.state?.next()
+            : _backpackMenu?.state?.chooseItem();
+      } else if (overlays.isActive('shopMenu')) {
+        messageManager.isActive
+            ? dialogBox.state?.next()
+            : shopMenu?.state?.chooseItem();
+      } else if (overlays.isActive('pauseMenu')) {
+        _pauseMenu?.state?.chooseOption();
+      } else if (!paused) {
         messageManager.isActive
             ? dialogBox.state?.next()
             : playerOne?.inspect();
@@ -925,11 +967,6 @@ class XeonjiaGame extends FlameGame
       } else if (event.logicalKey == LogicalKeyboardKey.keyQ) {
         if (inBattle) playerOne!.shoot();
       }
-    }
-    if (event.logicalKey == LogicalKeyboardKey.space) {
-      overlays.isActive('dialogBox')
-          ? dialogBox.state!.next()
-          : playerOne!.inspect();
     }
     if (event.logicalKey == LogicalKeyboardKey.keyM) {
       if (miniMapEnabled && !worldMapDisabled) {

@@ -330,7 +330,8 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     }
     gameRef.pause(stopMusic: false);
     gameRef.overlays.remove('dialogBox');
-    gameRef.addCustomWidgetOverlay('shop', ShopMenu(gameRef, items));
+    gameRef.shopMenu = ShopMenu(gameRef, items);
+    gameRef.addCustomWidgetOverlay('shopMenu', gameRef.shopMenu!);
     gameRef.overlays.add('dialogBox');
     return #NONE;
   });

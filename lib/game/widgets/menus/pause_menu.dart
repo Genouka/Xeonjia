@@ -9,15 +9,19 @@ enum PauseMode { pause, restart, exit }
 
 /// In-game pause menu
 class PauseMenu extends StatefulWidget {
-  const PauseMenu(this.gameRef, this.mode);
+  PauseMenu(this.gameRef, this.mode);
   final XeonjiaGame gameRef;
   final PauseMode mode;
 
   @override
-  State<PauseMenu> createState() => _PauseMenuState();
+  final GlobalKey<State<PauseMenu>> key = GlobalKey();
+  PauseMenuState? get state => key.currentState as PauseMenuState?;
+
+  @override
+  State<PauseMenu> createState() => PauseMenuState();
 }
 
-class _PauseMenuState extends State<PauseMenu> {
+class PauseMenuState extends State<PauseMenu> {
   /// Pause mode. It is also the title of this menu
   PauseMode? pauseMode;
 
@@ -27,10 +31,38 @@ class _PauseMenuState extends State<PauseMenu> {
   /// Buttons
   late List<Widget> buttons;
 
+  /// Currently selected option (for keyboard input)
+  int selectedOptionIndex = 0;
+
   @override
   void initState() {
     reloadInfo();
     super.initState();
+  }
+
+  /// Select the next option
+  void selectNextOption() {
+    setState(() {
+      if (++selectedOptionIndex >= buttons.length) selectedOptionIndex = 0;
+      reloadInfo();
+    });
+  }
+
+  /// Select the previous option
+  void selectPreviousOption() {
+    setState(() {
+      if (--selectedOptionIndex < 0) selectedOptionIndex = buttons.length - 1;
+      reloadInfo();
+    });
+  }
+
+  /// Choose the currently selected option
+  void chooseOption() {
+    setState(() {
+      (buttons[selectedOptionIndex] as InkWell).onTap!();
+      selectedOptionIndex = 0;
+      reloadInfo();
+    });
   }
 
   @override
@@ -88,7 +120,8 @@ class _PauseMenuState extends State<PauseMenu> {
     pauseMode ??= widget.mode;
     buttons = [
       actionButton(
-        pauseMode!.name.i18n.toUpperCase(),
+        (selectedOptionIndex == 0 ? '> ' : '') +
+            pauseMode!.name.i18n.toUpperCase(),
         () {
           if (pauseMode == PauseMode.restart) {
             widget.gameRef.overlays.remove('pauseMenu');
@@ -99,7 +132,7 @@ class _PauseMenuState extends State<PauseMenu> {
         },
       ),
       actionButton(
-        'cancel'.i18n.toUpperCase(),
+        (selectedOptionIndex == 1 ? '> ' : '') + 'cancel'.i18n.toUpperCase(),
         () {
           widget.gameRef.overlays.remove('pauseMenu');
           widget.gameRef.resume();
@@ -133,7 +166,7 @@ class _PauseMenuState extends State<PauseMenu> {
                         .fill([widget.gameRef.playerOne!.points.toString()])));
         buttons = [
           actionButton(
-            'exit'.i18n.toUpperCase(),
+            (selectedOptionIndex == 0 ? '> ' : '') + 'exit'.i18n.toUpperCase(),
             () {
               setState(() {
                 pauseMode = PauseMode.exit;
@@ -142,7 +175,8 @@ class _PauseMenuState extends State<PauseMenu> {
             },
           ),
           actionButton(
-            'restart'.i18n.toUpperCase(),
+            (selectedOptionIndex == 1 ? '> ' : '') +
+                'restart'.i18n.toUpperCase(),
             () {
               setState(() {
                 pauseMode = PauseMode.restart;
@@ -150,7 +184,9 @@ class _PauseMenuState extends State<PauseMenu> {
               });
             },
           ),
-          actionButton('resume'.i18n.toUpperCase(), () {
+          actionButton(
+              (selectedOptionIndex == 2 ? '> ' : '') +
+                  'resume'.i18n.toUpperCase(), () {
             widget.gameRef.overlays.remove('pauseMenu');
             widget.gameRef.resume();
           }),

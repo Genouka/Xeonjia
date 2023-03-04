@@ -13,7 +13,7 @@ class MessageManager {
   List<Message> _messages = [];
 
   /// [Message] currently displayed
-  late int _currentIndex;
+  int _currentIndex = 0;
   Message? get currentMessage => isActive ? _messages[_currentIndex] : null;
   void nextMessage() => _currentIndex++;
 
@@ -44,6 +44,13 @@ class MessageManager {
   /// If true, hide the map with a black container
   /// eg. it will be used for chapter change
   bool hideMap = false;
+
+  /// Choose an answer
+  void chooseAnswer(Answer answer) {
+    gameRef.currentEventLog[answer.questionId] = answer.value;
+    gameRef.messageManager.clear();
+    gameRef.dialogBox.state!.next(removeAnswers: true);
+  }
 
   /// Show one or more messages
   void setMessages(List<Message>? newMessages,
