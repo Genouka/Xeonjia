@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:i18n_extension/i18n_widget.dart';
+import 'package:window_manager/window_manager.dart';
 import 'package:xeonjia/ui/screens/home/home_page.dart';
 import 'package:xeonjia/ui/screens/welcome/welcome_page.dart';
 import 'package:xeonjia/ui/themes.dart';
@@ -26,6 +27,10 @@ void main() async {
     settings.backgroundMusic = false;
     settings.audioSupported = false;
     saveSettings();
+  } else if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
+    await windowManager.ensureInitialized();
+    windowManager.setMinimumSize(const Size(400, 500));
+    windowManager.setMaximumSize(Size.infinite);
   }
   updateGameTheme();
   await Localization.loadTranslations();
