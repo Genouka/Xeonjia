@@ -874,84 +874,114 @@ class XeonjiaGame extends FlameGame
       RawKeyEvent event, Set<LogicalKeyboardKey> keysPressed) {
     if (event.logicalKey.keyLabel.contains('Audio Volume')) {
       return KeyEventResult.skipRemainingHandlers;
-    }
-    if (event is! RawKeyDownEvent || overlays.isActive('loading')) {
+    } else if (event is! RawKeyDownEvent || overlays.isActive('loading')) {
       return KeyEventResult.ignored;
     }
-    if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
-      if (miniMapEnabled) {
+
+    /// Manage input based on game state
+    if (messageManager.isActive && messageManager.isShowingAQuestion) {
+      /// Dialog menu (with question)
+      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
+        dialogBox.state?.selectNextAnswer();
+      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
+        dialogBox.state?.selectPreviousAnswer();
+      } else if (event.logicalKey == LogicalKeyboardKey.space &&
+          (dialogBox.state?.isShowingAnswers ?? false)) {
+        dialogBox.state?.chooseAnswer();
+      }
+    } else if (miniMapEnabled) {
+      /// Mini-map
+      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
         camera.snapTo(Vector2(
             _moveCamera(size.x, map.width, camera.position.x + size.x / 2),
             _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
                 camera.position.y + 50 + size.y / 2)));
-      } else if (overlays.isActive('backpackMenu') &&
-          !messageManager.isActive) {
-        _backpackMenu?.state?.nextItem();
-      } else if (overlays.isActive('shopMenu') && !messageManager.isActive) {
-        shopMenu?.state?.nextItem();
-      } else if (messageManager.isActive && messageManager.isShowingAQuestion) {
-        dialogBox.state?.selectNextAnswer();
-      } else {
-        movePlayer(Direction.down);
-      }
-    } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
-      if (miniMapEnabled) {
+      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
         camera.snapTo(Vector2(
             _moveCamera(size.x, map.width, camera.position.x + size.x / 2),
             _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
                 camera.position.y - 50 + size.y / 2)));
-      } else if (overlays.isActive('backpackMenu') &&
-          !messageManager.isActive) {
-        _backpackMenu?.state?.nextItem();
-      } else if (overlays.isActive('shopMenu') && !messageManager.isActive) {
-        shopMenu?.state?.previousItem();
-      } else if (messageManager.isActive && messageManager.isShowingAQuestion) {
-        dialogBox.state?.selectPreviousAnswer();
-      } else {
-        movePlayer(Direction.up);
-      }
-    } else if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
-      if (miniMapEnabled) {
+      } else if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
         camera.snapTo(Vector2(
             _moveCamera(size.x, map.width, camera.position.x + 50 + size.x / 2),
             _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
                 camera.position.y + size.y / 2)));
-      } else if (overlays.isActive('pauseMenu')) {
-        _pauseMenu?.state?.selectNextOption();
-      } else {
-        movePlayer(Direction.right);
-      }
-    } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
-      if (miniMapEnabled) {
+      } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
         camera.snapTo(Vector2(
             _moveCamera(size.x, map.width, camera.position.x - 50 + size.x / 2),
             _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
                 camera.position.y + size.y / 2)));
-      } else if (overlays.isActive('pauseMenu')) {
-        _pauseMenu?.state?.selectPreviousOption();
-      } else {
-        movePlayer(Direction.left);
+      } else if (event.logicalKey == LogicalKeyboardKey.add) {
+        zoomMiniMap();
+      } else if (event.logicalKey == LogicalKeyboardKey.minus) {
+        zoomMiniMap(out: true);
+      } else if (event.logicalKey == LogicalKeyboardKey.keyM &&
+          !worldMapDisabled) {
+        worldMap();
+      } else if (event.logicalKey == LogicalKeyboardKey.keyH) {
+        hideHints = !hideHints;
+      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
+        miniMap();
       }
-    } else if (event.logicalKey == LogicalKeyboardKey.space) {
-      if (dialogBox.state?.isShowingAnswers ?? false) {
-        dialogBox.state?.chooseAnswer();
-      } else if (overlays.isActive('backpackMenu')) {
-        messageManager.isActive
-            ? dialogBox.state?.next()
-            : _backpackMenu?.state?.chooseItem();
-      } else if (overlays.isActive('shopMenu')) {
-        messageManager.isActive
-            ? dialogBox.state?.next()
-            : shopMenu?.state?.chooseItem();
-      } else if (overlays.isActive('pauseMenu')) {
+    } else if (overlays.isActive('backpackMenu') && !messageManager.isActive) {
+      /// Backpack menu (without dialog)
+      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
+        _backpackMenu?.state?.nextItem();
+      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
+        _backpackMenu?.state?.nextItem();
+      } else if (event.logicalKey == LogicalKeyboardKey.space) {
+        _backpackMenu?.state?.chooseItem();
+      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
+        overlays.remove('backpackMenu');
+        resume();
+      }
+    } else if (overlays.isActive('backpackMenu') && messageManager.isActive) {
+      /// Backpack menu (with dialog)
+      if (event.logicalKey == LogicalKeyboardKey.space) {
+        dialogBox.state?.next();
+      }
+    } else if (overlays.isActive('shopMenu') && !messageManager.isActive) {
+      /// Shop menu (without dialog)
+      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
+        shopMenu?.state?.nextItem();
+      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
+        shopMenu?.state?.previousItem();
+      } else if (event.logicalKey == LogicalKeyboardKey.space) {
+        shopMenu?.state?.chooseItem();
+      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
+        overlays.remove('shopMenu');
+        resume();
+      }
+    } else if (overlays.isActive('shopMenu') && messageManager.isActive) {
+      /// Shop menu (with dialog)
+      if (event.logicalKey == LogicalKeyboardKey.space) {
+        dialogBox.state?.next();
+      }
+    } else if (overlays.isActive('pauseMenu')) {
+      /// Pause menu
+      if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
+        _pauseMenu?.state?.selectNextOption();
+      } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
+        _pauseMenu?.state?.selectPreviousOption();
+      } else if (event.logicalKey == LogicalKeyboardKey.space) {
         _pauseMenu?.state?.chooseOption();
-      } else if (!paused) {
-        messageManager.isActive
-            ? dialogBox.state?.next()
-            : playerOne?.inspect();
+      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
+        overlays.remove('pauseMenu');
+        resume();
       }
     } else if (!paused && !messageManager.isActive) {
-      if (event.logicalKey == LogicalKeyboardKey.keyA) {
+      /// In-game
+      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
+        movePlayer(Direction.down);
+      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
+        movePlayer(Direction.up);
+      } else if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
+        movePlayer(Direction.right);
+      } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
+        movePlayer(Direction.left);
+      } else if (event.logicalKey == LogicalKeyboardKey.space) {
+        playerOne?.inspect();
+      } else if (event.logicalKey == LogicalKeyboardKey.keyA) {
         playerOne!.updateOrientation(Direction.left);
       } else if (event.logicalKey == LogicalKeyboardKey.keyW) {
         playerOne!.updateOrientation(Direction.up);
@@ -961,53 +991,23 @@ class XeonjiaGame extends FlameGame
         playerOne!.updateOrientation(Direction.down);
       } else if (event.logicalKey == LogicalKeyboardKey.keyQ) {
         if (inBattle) playerOne!.shoot();
-      }
-    }
-    if (event.logicalKey == LogicalKeyboardKey.keyM) {
-      if (miniMapEnabled && !worldMapDisabled) {
-        worldMap();
-      } else if (worldMapEnabled ||
-          (!isPaused && !map.disableMiniMap && isMiniMapButtonActive)) {
-        miniMap();
-      }
-    }
-    if (event.logicalKey == LogicalKeyboardKey.keyB) {
-      if (overlays.isActive('backpackButton') && isBackpackButtonActive) {
-        backpack();
-      }
-    }
-    if (event.logicalKey == LogicalKeyboardKey.add) {
-      if (miniMapEnabled) {
-        zoomMiniMap();
-      }
-    }
-    if (event.logicalKey == LogicalKeyboardKey.minus) {
-      if (miniMapEnabled) {
-        zoomMiniMap(out: true);
-      }
-    }
-    if (event.logicalKey == LogicalKeyboardKey.keyH) hideHints = !hideHints;
-    if (event.logicalKey == LogicalKeyboardKey.escape) {
-      if (!messageManager.isActive) {
-        if (miniMapEnabled) {
-          miniMap();
-        } else {
-          if (overlays.isActive('pauseMenu')) {
-            overlays.remove('pauseMenu');
-            resume();
-          } else if (overlays.isActive('backpackMenu')) {
-            overlays.remove('backpackMenu');
-            resume();
-          } else if (overlays.isActive('shopMenu')) {
-            overlays.remove('shopMenu');
-            resume();
-          } else {
-            pause(mode: PauseMode.pause);
-          }
+      } else if (event.logicalKey == LogicalKeyboardKey.keyB) {
+        if (overlays.isActive('backpackButton') && isBackpackButtonActive) {
+          backpack();
         }
+      } else if (event.logicalKey == LogicalKeyboardKey.keyH) {
+        hideHints = !hideHints;
+      } else if (event.logicalKey == LogicalKeyboardKey.keyM) {
+        if (worldMapEnabled || (!map.disableMiniMap && isMiniMapButtonActive)) {
+          miniMap();
+        }
+      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
+        pause(mode: PauseMode.pause);
       }
-    } else if (event.logicalKey == LogicalKeyboardKey.keyL) {
-      miniMap();
+    } else if (messageManager.isActive) {
+      if (event.logicalKey == LogicalKeyboardKey.space) {
+        dialogBox.state?.next();
+      }
     }
     return KeyEventResult.handled;
   }
