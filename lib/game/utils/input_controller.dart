@@ -4,6 +4,7 @@ import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xeonjia/game/utils/direction.dart';
+import 'package:xeonjia/game/utils/map_controller.dart';
 import 'package:xeonjia/game/widgets/buttons/hide_hints_button.dart';
 import 'package:xeonjia/game/widgets/menus/pause_menu.dart';
 import 'package:xeonjia/game/widgets/virtual_gamepad.dart';

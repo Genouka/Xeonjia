@@ -20,6 +20,7 @@ import 'package:xeonjia/game/utils/extensions.dart';
 import 'package:xeonjia/game/utils/fire_atlas.dart';
 import 'package:xeonjia/game/utils/input_controller.dart';
 import 'package:xeonjia/game/utils/little_scheme.dart';
+import 'package:xeonjia/game/utils/map_controller.dart';
 import 'package:xeonjia/game/utils/map_importer.dart';
 import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/utils/message_manager.dart';
@@ -27,7 +28,6 @@ import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/game/utils/weapons.dart';
 import 'package:xeonjia/game/widgets/boxes/battle_text_box.dart';
 import 'package:xeonjia/game/widgets/boxes/dialog_box.dart';
-import 'package:xeonjia/game/widgets/boxes/map_name_box.dart';
 import 'package:xeonjia/game/widgets/boxes/remaining_moves_box.dart';
 import 'package:xeonjia/game/widgets/boxes/status_box.dart';
 import 'package:xeonjia/game/widgets/buttons/backpack_button.dart';
@@ -42,7 +42,6 @@ import 'package:xeonjia/game/widgets/menus/no_maps_menu.dart';
 import 'package:xeonjia/game/widgets/menus/pause_menu.dart';
 import 'package:xeonjia/game/widgets/menus/shop_menu.dart';
 import 'package:xeonjia/game/widgets/virtual_gamepad.dart';
-import 'package:xeonjia/game/widgets/world_map.dart';
 import 'package:xeonjia/utils/game_properties.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
@@ -61,9 +60,9 @@ class XeonjiaGame extends FlameGame
     messageManager = MessageManager(this);
     dialogBox = DialogBox(this);
     preLoadDialogAtlases();
-    _statusBox = StatusBox(this);
+    statusBox = StatusBox(this);
     overlayMap = {
-      'statusBox': (BuildContext context, XeonjiaGame game) => _statusBox,
+      'statusBox': (BuildContext context, XeonjiaGame game) => statusBox,
       'backpackButton': (BuildContext context, XeonjiaGame game) =>
           BackpackButton(game),
       'rulesButton': (BuildContext context, XeonjiaGame game) =>
@@ -186,7 +185,7 @@ class XeonjiaGame extends FlameGame
         if (config.mode != GameMode.story) {
           if (_elapsedSecondsMultiplayer == config.maxTime) end(timeOut: true);
           if (_elapsedSecondsMultiplayer % 10 == 0) regenerateModifiers();
-          _statusBox.state?.refresh();
+          statusBox.state?.refresh();
         }
       });
     }
@@ -215,7 +214,7 @@ class XeonjiaGame extends FlameGame
   late MessageManager messageManager;
 
   /// Box with HP, pause, time and team points
-  late StatusBox _statusBox;
+  late StatusBox statusBox;
 
   /// Pause menu
   PauseMenu? pauseMenu;
@@ -585,77 +584,6 @@ class XeonjiaGame extends FlameGame
   late Button zoomInButton = Button.plus(this);
   late Button zoomOutButton = Button.minus(this);
 
-  /// Open/Close mini-map
-  void miniMap({bool? enable}) {
-    miniMapEnabled = enable ?? !miniMapEnabled;
-    if (miniMapEnabled) {
-      zoomMiniMap(toValue: miniMapZoom, enable: true);
-      pause(stopEngine: false, stopMusic: false);
-      _statusBox.state?.refresh();
-      overlays.remove('mapNameBox');
-      if (enemies == 0) addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
-      overlays.remove('miniMapButton');
-      overlays.remove('backpackButton');
-      overlays.remove('rulesButton');
-      overlays.remove('virtualDPad');
-      addAll([zoomInButton, zoomOutButton]);
-      miniMapActive = true;
-    } else {
-      zoomMiniMap(toValue: 1);
-      if (worldMapEnabled) worldMap(); // remove the world map
-      updateCamera(playerOne!.x, playerOne!.y);
-      overlays.remove('mapNameBox');
-      overlays.remove('miniMapButton');
-      removeAll([zoomInButton, zoomOutButton]);
-      overlays.add('backpackButton');
-      overlays.remove('dialogBox');
-      overlays.add('virtualDPad');
-      overlays.add('dialogBox');
-      if (enemies > 0) overlays.add('rulesButton');
-      _statusBox.state?.refresh();
-      resume();
-      miniMapActive = false;
-    }
-    overlays.add('miniMapButton');
-  }
-
-  /// Open/Close world-map
-  void worldMap({bool? enable}) {
-    worldMapEnabled = enable ?? !worldMapEnabled;
-    if (worldMapEnabled) {
-      zoomMiniMap(toValue: 1);
-      var map = WorldMap();
-      add(map);
-      overlays.remove('mapNameBox');
-    } else {
-      zoomMiniMap(toValue: 1);
-      updateCamera(playerOne!.x, playerOne!.y);
-      children.whereType<WorldMap>().firstOrNull?.removeFromParent();
-      addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
-    }
-  }
-
-  /// Change mini-map zoom
-  void zoomMiniMap({double? toValue, bool out = false, bool enable = false}) {
-    var previousValue = enable ? 1 : miniMapZoom;
-    var delta = 16 / componentSize;
-    if (!out ||
-        miniMapZoom * componentSize * map.width > canvasSize.x ||
-        (worldMapEnabled
-            ? miniMapZoom * componentSize * map.width * 0.7 > canvasSize.y
-            : miniMapZoom * componentSize * map.height > canvasSize.y)) {
-      miniMapZoom = toValue ??
-          (out
-              ? max(previousValue - delta, delta / 2)
-              : min(previousValue + delta, 2));
-    }
-    if (previousValue != miniMapZoom) {
-      updateCamera(
-          (camera.position.x + size.x / 2) * miniMapZoom / previousValue,
-          (camera.position.y + size.y / 2) * miniMapZoom / previousValue);
-    }
-  }
-
   /// Open backpack
   void backpack() {
     pause(stopMusic: false);
@@ -669,7 +597,7 @@ class XeonjiaGame extends FlameGame
       overlays.isActive('backpackMenu') || overlays.isActive('shopMenu');
 
   /// Reload HP bar
-  void refreshHPBar() => _statusBox.state?.refresh();
+  void refreshHPBar() => statusBox.state?.refresh();
 
   /// Explain battles
   void battleRules({bool askForConfirmation = false}) {

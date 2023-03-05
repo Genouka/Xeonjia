@@ -5,6 +5,7 @@ import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/models/item.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/little_scheme.dart';
+import 'package:xeonjia/game/utils/map_controller.dart';
 import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/utils/weapons.dart';
 import 'package:xeonjia/game/widgets/black_curtain.dart';
