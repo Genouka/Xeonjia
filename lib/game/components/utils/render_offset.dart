@@ -1,7 +1,5 @@
 import 'package:flame/image_composition.dart';
-import 'package:xeonjia/game/components/common/basic.dart';
-import 'package:xeonjia/game/utils/extensions.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Vertical offset used to translate characters
 mixin RenderOffset on BasicComponent {

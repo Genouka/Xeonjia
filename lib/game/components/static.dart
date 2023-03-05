@@ -1,7 +1,6 @@
 import 'dart:ui';
 
-import 'package:xeonjia/game/components/common/basic.dart';
-import 'package:xeonjia/game/components/common/walker.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Static component
 class StaticComponent extends BasicComponent {

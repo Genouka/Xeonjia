@@ -2,8 +2,7 @@ import 'dart:math';
 
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/i18n.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Box with the number of remaining moves
 class RemainingMovesBox extends TextBoxComponent with HasGameRef<XeonjiaGame> {

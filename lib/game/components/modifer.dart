@@ -1,11 +1,6 @@
 import 'dart:math';
 
-import 'package:xeonjia/game/components/character.dart';
-import 'package:xeonjia/game/components/common/basic.dart';
-import 'package:xeonjia/game/utils/audio_controller.dart';
-import 'package:xeonjia/game/utils/sfx.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/game_properties.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Stats modifier component
 /// It increases/decreases character stats

@@ -2,12 +2,7 @@ import 'dart:math';
 
 import 'package:flame/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/utils/audio_controller.dart';
-import 'package:xeonjia/game/utils/extensions.dart';
-import 'package:xeonjia/game/utils/message.dart';
-import 'package:xeonjia/game/utils/sfx.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/i18n.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 class DialogBox extends StatefulWidget {
   DialogBox(this.gameRef);

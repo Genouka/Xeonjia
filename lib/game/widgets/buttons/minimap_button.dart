@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/utils/map_controller.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/i18n.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Button used to enable/disable the mini-map view
 class MiniMapButton extends StatelessWidget {

@@ -4,19 +4,8 @@ import 'dart:ui';
 import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:meta/meta.dart';
-import 'package:xeonjia/game/components/character.dart';
-import 'package:xeonjia/game/components/common/walker.dart';
-import 'package:xeonjia/game/components/snowball.dart';
-import 'package:xeonjia/game/components/static.dart';
-import 'package:xeonjia/game/components/utils/text_animation.dart';
-import 'package:xeonjia/game/models/team.dart';
-import 'package:xeonjia/game/models/tile.dart';
-import 'package:xeonjia/game/utils/audio_controller.dart';
-import 'package:xeonjia/game/utils/direction.dart';
-import 'package:xeonjia/game/utils/fire_atlas.dart';
-import 'package:xeonjia/game/utils/sfx.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/game_properties.dart';
+
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Basic game component
 /// Every game component extends this one

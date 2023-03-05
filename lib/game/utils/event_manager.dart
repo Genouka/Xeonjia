@@ -1,19 +1,5 @@
 import 'package:flame/components.dart';
-import 'package:xeonjia/game/components/character.dart';
-import 'package:xeonjia/game/components/common/basic.dart';
-import 'package:xeonjia/game/components/common/walker.dart';
-import 'package:xeonjia/game/models/item.dart';
-import 'package:xeonjia/game/utils/audio_controller.dart';
-import 'package:xeonjia/game/utils/direction.dart';
-import 'package:xeonjia/game/utils/little_scheme.dart';
-import 'package:xeonjia/game/utils/map_controller.dart';
-import 'package:xeonjia/game/utils/message.dart';
-import 'package:xeonjia/game/utils/weapons.dart';
-import 'package:xeonjia/game/widgets/black_curtain.dart';
-import 'package:xeonjia/game/widgets/boxes/map_name_box.dart';
-import 'package:xeonjia/game/widgets/menus/shop_menu.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/local_data_controller.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Set scheme's environment
 Environment setEnvironment(XeonjiaGame gameRef) {

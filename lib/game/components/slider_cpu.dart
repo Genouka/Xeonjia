@@ -1,10 +1,4 @@
-import 'package:xeonjia/game/components/common/basic.dart';
-import 'package:xeonjia/game/components/common/walker.dart';
-import 'package:xeonjia/game/components/utils/hp_bar.dart';
-import 'package:xeonjia/game/components/utils/npc_controller.dart';
-import 'package:xeonjia/game/components/utils/render_offset.dart';
-import 'package:xeonjia/game/utils/direction.dart';
-import 'package:xeonjia/game/utils/weapons.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Basic CPU controlled enemy that slides on ice
 class SliderCpuComponent extends BasicComponent
@@ -16,7 +10,7 @@ class SliderCpuComponent extends BasicComponent
     weaponList = [PunchWeapon(level: level)];
     friendly = false;
     quiet = false;
-    add(NpcController());
+    this.add(NpcController());
   }
 
   @override

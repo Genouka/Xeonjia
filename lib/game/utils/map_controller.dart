@@ -1,9 +1,7 @@
 import 'dart:math';
 
 import 'package:collection/collection.dart';
-import 'package:xeonjia/game/widgets/boxes/map_name_box.dart';
-import 'package:xeonjia/game/widgets/world_map.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Manage mini-map and world-map
 extension MapController on XeonjiaGame {
@@ -47,7 +45,7 @@ extension MapController on XeonjiaGame {
     if (worldMapEnabled) {
       zoomMiniMap(toValue: 1);
       var map = WorldMap();
-      add(map);
+      this.add(map);
       overlays.remove('mapNameBox');
     } else {
       zoomMiniMap(toValue: 1);

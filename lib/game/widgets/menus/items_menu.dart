@@ -1,12 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/models/item.dart';
-import 'package:xeonjia/game/utils/little_scheme.dart';
-import 'package:xeonjia/game/utils/message.dart';
-import 'package:xeonjia/game/widgets/boxes/info_box.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/ui/basic.dart';
-import 'package:xeonjia/utils/i18n.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Menu that shows a list of [Item]s. Used for [ShopMenu] and [BackpackMenu]
 abstract class ItemsMenu extends StatefulWidget {

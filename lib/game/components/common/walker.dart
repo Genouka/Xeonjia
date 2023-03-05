@@ -5,16 +5,7 @@ import 'package:flame/extensions.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/components/common/basic.dart';
-import 'package:xeonjia/game/components/static.dart';
-import 'package:xeonjia/game/components/thin_wall.dart';
-import 'package:xeonjia/game/utils/audio_controller.dart';
-import 'package:xeonjia/game/utils/direction.dart';
-import 'package:xeonjia/game/utils/extensions.dart';
-import 'package:xeonjia/game/utils/sfx.dart';
-import 'package:xeonjia/game/utils/weapons.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/local_data_controller.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Component able to move on the game field
 mixin Walker on BasicComponent {

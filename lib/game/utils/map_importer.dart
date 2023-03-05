@@ -6,10 +6,7 @@ import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/services.dart';
-import 'package:xeonjia/game/models/tile.dart';
-import 'package:xeonjia/game/utils/tile_to_component.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/local_data_controller.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 import 'package:xml/xml.dart';
 
 /// Import map from a TMX file

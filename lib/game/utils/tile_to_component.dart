@@ -1,16 +1,4 @@
-import 'package:xeonjia/game/components/character.dart';
-import 'package:xeonjia/game/components/direction_changer.dart';
-import 'package:xeonjia/game/components/door.dart';
-import 'package:xeonjia/game/components/hurdle.dart';
-import 'package:xeonjia/game/components/modifer.dart';
-import 'package:xeonjia/game/components/slider_cpu.dart';
-import 'package:xeonjia/game/components/static.dart';
-import 'package:xeonjia/game/components/thin_wall.dart';
-import 'package:xeonjia/game/models/tile.dart';
-import 'package:xeonjia/game/utils/weapons.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/game_properties.dart';
-import 'package:xeonjia/utils/local_data_controller.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 extension CreateComponent on Tile {
   /// Create components based on tile property "type"

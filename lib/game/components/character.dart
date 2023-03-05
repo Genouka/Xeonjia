@@ -1,20 +1,4 @@
-import 'package:xeonjia/game/components/common/basic.dart';
-import 'package:xeonjia/game/components/common/walker.dart';
-import 'package:xeonjia/game/components/utils/deletion_animation.dart';
-import 'package:xeonjia/game/components/utils/hp_bar.dart';
-import 'package:xeonjia/game/components/utils/npc_controller.dart';
-import 'package:xeonjia/game/components/utils/render_offset.dart';
-import 'package:xeonjia/game/models/item.dart';
-import 'package:xeonjia/game/models/tile.dart';
-import 'package:xeonjia/game/utils/audio_controller.dart';
-import 'package:xeonjia/game/utils/direction.dart';
-import 'package:xeonjia/game/utils/message.dart';
-import 'package:xeonjia/game/utils/sfx.dart';
-import 'package:xeonjia/game/utils/weapons.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/game_properties.dart';
-import 'package:xeonjia/utils/i18n.dart';
-import 'package:xeonjia/utils/local_data_controller.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Dynamic component used for human-like players
 class CharacterComponent extends BasicComponent
@@ -97,7 +81,7 @@ class CharacterComponent extends BasicComponent
       }
       gameRef.playerOneReady();
     } else {
-      add(NpcController());
+      this.add(NpcController());
     }
     return null;
   }

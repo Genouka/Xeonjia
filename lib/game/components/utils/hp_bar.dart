@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/components/common/walker.dart';
-import 'package:xeonjia/game/utils/extensions.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Draw a health points bar near the component
 /// It is shown only for 2 seconds after healthPointsDifference

@@ -1,9 +1,5 @@
 import 'package:flame/sprite.dart';
-import 'package:xeonjia/game/components/common/basic.dart';
-import 'package:xeonjia/game/utils/little_scheme.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/i18n.dart';
-import 'package:xeonjia/utils/local_data_controller.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Message shown in dialog box
 class Message {

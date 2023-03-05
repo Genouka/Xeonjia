@@ -1,8 +1,6 @@
 import 'dart:ui';
 
-import 'package:xeonjia/game/utils/audio_controller.dart';
-import 'package:xeonjia/game/utils/message.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Manage game [Message]s (used in [DialogBox])
 class MessageManager {

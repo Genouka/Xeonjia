@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/utils/extensions.dart';
-import 'package:xeonjia/game/widgets/boxes/info_box.dart';
-import 'package:xeonjia/game/widgets/menus/pause_menu.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/game_properties.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Box that shows points and HP
 class StatusBox extends StatefulWidget {

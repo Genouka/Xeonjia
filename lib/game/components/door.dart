@@ -1,8 +1,4 @@
-import 'package:xeonjia/game/components/common/basic.dart';
-import 'package:xeonjia/game/utils/direction.dart';
-import 'package:xeonjia/game/utils/message.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/i18n.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Component that permits to change room
 class DoorComponent extends BasicComponent {

@@ -5,11 +5,7 @@ import 'package:flame/flame.dart';
 import 'package:flame/image_composition.dart';
 import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/models/map_data.dart';
-import 'package:xeonjia/game/utils/message.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/i18n.dart';
-import 'package:xeonjia/utils/local_data_controller.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// World map
 class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {

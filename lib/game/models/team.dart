@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/components/common/walker.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Group of players
 class Team {

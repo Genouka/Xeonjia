@@ -3,13 +3,7 @@ import 'package:flame/extensions.dart';
 import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:xeonjia/game/utils/direction.dart';
-import 'package:xeonjia/game/utils/map_controller.dart';
-import 'package:xeonjia/game/widgets/buttons/hide_hints_button.dart';
-import 'package:xeonjia/game/widgets/menus/pause_menu.dart';
-import 'package:xeonjia/game/widgets/virtual_gamepad.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/local_data_controller.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Handle user input
 extension InputController on XeonjiaGame {

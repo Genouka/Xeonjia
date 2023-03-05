@@ -1,7 +1,5 @@
 import 'package:flame_audio/flame_audio.dart';
-import 'package:xeonjia/game/utils/sfx.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/local_data_controller.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 extension AudioController on XeonjiaGame {
   /// Start the background music

@@ -1,7 +1,6 @@
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/components/common/walker.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Show an animation during respawn
 mixin DeletionAnimation on Walker {

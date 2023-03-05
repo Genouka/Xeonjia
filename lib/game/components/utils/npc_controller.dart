@@ -1,10 +1,7 @@
 import 'dart:math';
 
 import 'package:flame/components.dart';
-import 'package:xeonjia/game/components/common/walker.dart';
-import 'package:xeonjia/game/components/static.dart';
-import 'package:xeonjia/game/utils/direction.dart';
-import 'package:xeonjia/game/utils/weapons.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// Manage movements and shots (NPC)
 /// Add this as a child of a [Walker]

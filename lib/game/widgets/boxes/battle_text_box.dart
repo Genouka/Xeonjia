@@ -1,8 +1,7 @@
 import 'package:flame/components.dart';
 import 'package:flame/palette.dart';
 import 'package:flutter/material.dart';
-import 'package:xeonjia/game/xeonjia_game.dart';
-import 'package:xeonjia/utils/local_data_controller.dart';
+import 'package:xeonjia/game/xeonjia.dart';
 
 /// TextBox shown at the beginning and end of a battle
 class BattleTextBox extends TextComponent with HasGameRef<XeonjiaGame> {
