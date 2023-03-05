@@ -22,6 +22,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+  FocusNode focusNode = FocusNode();
   void startGame() =>
       Navigator.push(context, FadeRoute(GamePage(MatchConfig(GameMode.story))));
 
@@ -31,7 +32,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     setComponentSize(MediaQuery.of(context).size);
     return Scaffold(
       body: Focus(
-        focusNode: FocusNode(),
+        focusNode: focusNode,
         autofocus: true,
         onKey: (node, event) {
           if (event is RawKeyDownEvent) {
