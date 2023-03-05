@@ -30,6 +30,10 @@ msgstr "設定"
 msgid "Tap to play"
 msgstr "タップしてはじめる"
 
+#: lib/ui/screens/home/home_page.dart:
+msgid "Press enter"
+msgstr ""
+
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Welcome!"
 msgstr "ようこそ!"

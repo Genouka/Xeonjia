@@ -29,6 +29,10 @@ msgstr "Configurações"
 msgid "Tap to play"
 msgstr ""
 
+#: lib/ui/screens/home/home_page.dart:
+msgid "Press enter"
+msgstr ""
+
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Welcome!"
 msgstr "Bem vindo!"
