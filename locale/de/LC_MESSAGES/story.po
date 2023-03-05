@@ -2,13 +2,13 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # anselm-helbig <gh@mnemonikk.org>, 2020.
-# DeepDaikon <deepdaikon@tuta.io>, 2020, 2021, 2022.
+# DeepDaikon <deepdaikon@tuta.io>, 2020, 2021, 2022, 2023.
 # Swann Fournial <s.fournial@protonmail.com>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # araccaine <arac.caine@posteo.de>, 2021.
 # Vri <vrifox@vrifox.cc>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-12-07 13:35+0000\nLast-Translator: Vri <vrifox@vrifox.cc>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-03-05 18:54+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -369,7 +369,7 @@ msgstr "{{hero}}, endlich bist du hier. Wir hatten Gerüchte darüber gehört, d
 
 #: assets/maps/story/37.tmx:
 msgid "September! Long time no see! Last time was when we battled each other to be proclaimed HERO.\nWe were 5 years old."
-msgstr ""
+msgstr "September! Wir haben uns ja ewig nicht gesehen! Das letzte Mal haben wir uns gerauft, wer als HELD auserkoren werden soll.\nDa waren wir 5 Jahre alt."
 
 #: assets/maps/story/37.tmx:
 msgid "I remember well, you got lucky that time.\nBut now it would go differently.\nI challenge you now. Show me that you are better than me.\nSee you on the north-east side of the village. I will wait for you there."
@@ -397,11 +397,11 @@ msgstr "Ich hatte sie weniger bedrohlich in Erinnerung."
 
 #: assets/maps/story/14.tmx:
 msgid "Hello, I'm a workers of the Kingdom.\nI'm smoothing this rock so it doesn't hurt anymore.\nA lot of people complain about these rocks, I'm sorry."
-msgstr ""
+msgstr "Hallo ich bin ein Arbeiter des Königreichs.\nIch glätte diesen Stein, damit sich niemand mehr daran verletzt.\nViele Leute haben sich schon über diese Steine beschwert. Tut mir leid."
 
 #: assets/maps/story/14.tmx:
 msgid "Maybe one day these rocks will all be nice and smooth, but today is not that day."
-msgstr ""
+msgstr "Vielleicht werden eines Tages alle diese Steine schön glatt sein. Aber dieser Tag ist noch fern."
 
 #: assets/maps/story/14.tmx:
 msgid "← Pharmacy"
@@ -409,11 +409,11 @@ msgstr "← Apotheke"
 
 #: assets/maps/story/14.tmx:
 msgid "I guess this rock has just been smoothed out."
-msgstr ""
+msgstr "Dieser Stein wurde vermutlich erst kürzlich geglättet."
 
 #: assets/maps/story/18.tmx:
 msgid "I have to stay here because if I move you can't get out anymore."
-msgstr ""
+msgstr "Ich muss hierbleiben, denn wenn ich mich auch nur ein kleines Stück bewege, komme ich hier nie mehr raus."
 
 #: assets/maps/story/7.tmx:
 msgid "Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays."
