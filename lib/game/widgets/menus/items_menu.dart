@@ -78,7 +78,6 @@ class ItemsMenuState extends State<ItemsMenu> {
       widget.gameRef.environment
           .defineSymbol(Sym('selected-item-name'), selectedItem!.name);
       widget.onSelection(selectedItem);
-      setState(() {});
     });
   }
 
