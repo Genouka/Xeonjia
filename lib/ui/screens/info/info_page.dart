@@ -82,10 +82,8 @@ class _InfoPageState extends State<InfoPage> {
           subtitle: Text(infoMenuList[index]['subtitle']),
           onTap: () async {
             if (infoMenuList[index]['url'].length != 0) {
-              final url = Uri.parse(infoMenuList[index]['url']);
-              if (await canLaunchUrl(url)) {
-                await launchUrl(url, mode: LaunchMode.externalApplication);
-              }
+              launchUrl(Uri.parse(infoMenuList[index]['url']),
+                  mode: LaunchMode.externalApplication);
             } else if (infoMenuList[index]['title'] ==
                 'Third Party Licenses'.i18n) {
               _licenseDialog();
