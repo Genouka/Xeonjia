@@ -63,31 +63,21 @@ class XeonjiaGame extends FlameGame
     preLoadDialogAtlases();
     _statusBox = StatusBox(this);
     overlayMap = {
-      'statusBox': (BuildContext context, XeonjiaGame game) {
-        return _statusBox;
-      },
-      'backpackButton': (BuildContext context, XeonjiaGame game) {
-        return BackpackButton(game);
-      },
-      'rulesButton': (BuildContext context, XeonjiaGame game) {
-        return RulesButton(game);
-      },
+      'statusBox': (BuildContext context, XeonjiaGame game) => _statusBox,
+      'backpackButton': (BuildContext context, XeonjiaGame game) =>
+          BackpackButton(game),
+      'rulesButton': (BuildContext context, XeonjiaGame game) =>
+          RulesButton(game),
       'backpackMenu': (BuildContext context, XeonjiaGame game) {
         backpackMenu = BackpackMenu(this);
         return backpackMenu!;
       },
-      'miniMapButton': (BuildContext context, XeonjiaGame game) {
-        return MiniMapButton(game, miniMapIsActive: game.miniMapActive);
-      },
-      'virtualDPad': (BuildContext context, XeonjiaGame game) {
-        return VirtualDPad(this);
-      },
-      'dialogBox': (BuildContext context, XeonjiaGame game) {
-        return game.dialogBox;
-      },
-      'loading': (BuildContext context, XeonjiaGame game) {
-        return LoadingPage();
-      },
+      'miniMapButton': (BuildContext context, XeonjiaGame game) =>
+          MiniMapButton(game, miniMapIsActive: game.miniMapActive),
+      'virtualDPad': (BuildContext context, XeonjiaGame game) =>
+          VirtualDPad(this),
+      'dialogBox': (BuildContext context, XeonjiaGame game) => game.dialogBox,
+      'loading': (BuildContext context, XeonjiaGame game) => LoadingPage(),
     };
     if (config.mode != GameMode.story) {
       teams = [
