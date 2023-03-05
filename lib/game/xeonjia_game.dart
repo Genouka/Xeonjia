@@ -7,7 +7,6 @@ import 'package:flame/game.dart';
 import 'package:flame/input.dart';
 import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:xeonjia/game/components/background.dart';
 import 'package:xeonjia/game/components/character.dart';
 import 'package:xeonjia/game/components/common/basic.dart';
@@ -19,6 +18,7 @@ import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/event_manager.dart';
 import 'package:xeonjia/game/utils/extensions.dart';
 import 'package:xeonjia/game/utils/fire_atlas.dart';
+import 'package:xeonjia/game/utils/input_controller.dart';
 import 'package:xeonjia/game/utils/little_scheme.dart';
 import 'package:xeonjia/game/utils/map_importer.dart';
 import 'package:xeonjia/game/utils/message.dart';
@@ -73,8 +73,8 @@ class XeonjiaGame extends FlameGame
         return RulesButton(game);
       },
       'backpackMenu': (BuildContext context, XeonjiaGame game) {
-        _backpackMenu = BackpackMenu(this);
-        return _backpackMenu!;
+        backpackMenu = BackpackMenu(this);
+        return backpackMenu!;
       },
       'miniMapButton': (BuildContext context, XeonjiaGame game) {
         return MiniMapButton(game, miniMapIsActive: game.miniMapActive);
@@ -228,10 +228,10 @@ class XeonjiaGame extends FlameGame
   late StatusBox _statusBox;
 
   /// Pause menu
-  PauseMenu? _pauseMenu;
+  PauseMenu? pauseMenu;
 
   /// Backpack menu
-  BackpackMenu? _backpackMenu;
+  BackpackMenu? backpackMenu;
 
   /// Shop menu
   ShopMenu? shopMenu;
@@ -284,8 +284,8 @@ class XeonjiaGame extends FlameGame
       for (int i = _activePlayerIndex; i < players.length; i++) {
         if (!(players[i].deleted || players[i].isBeingDeleted)) {
           changingTurn = true;
-          camera.moveTo(Vector2(_moveCamera(size.x, map.width, players[i].x),
-              _moveCamera(size.y, map.height, players[i].y)));
+          camera.moveTo(Vector2(moveCamera(size.x, map.width, players[i].x),
+              moveCamera(size.y, map.height, players[i].y)));
           add(TimerComponent(
               period: 0.7,
               onTick: () {
@@ -416,8 +416,8 @@ class XeonjiaGame extends FlameGame
   void endBattle() {
     inBattle = false;
     overlays.remove('rulesButton');
-    camera.moveTo(Vector2(_moveCamera(size.x, map.width, playerOne!.x),
-        _moveCamera(size.y, map.height, playerOne!.y)));
+    camera.moveTo(Vector2(moveCamera(size.x, map.width, playerOne!.x),
+        moveCamera(size.y, map.height, playerOne!.y)));
     add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
     playBackgroundMusic(custom: null);
     playSound(Sfx.win, volume: 1);
@@ -430,8 +430,8 @@ class XeonjiaGame extends FlameGame
     if (stopEngine) pauseEngine();
     if (stopMusic) FlameAudio.bgm.pause();
     if (mode != null) {
-      _pauseMenu = PauseMenu(this, mode);
-      addCustomWidgetOverlay('pauseMenu', _pauseMenu!);
+      pauseMenu = PauseMenu(this, mode);
+      addCustomWidgetOverlay('pauseMenu', pauseMenu!);
     }
   }
 
@@ -571,14 +571,12 @@ class XeonjiaGame extends FlameGame
   /// Update [camera] position
   void updateCamera(double x, double y) {
     if (map.width == 0) return;
-    camera.snapTo(Vector2(
-        _moveCamera(size.x, map.width, x),
-        _moveCamera(
-            size.y, worldMapEnabled ? map.width * 0.7 : map.height, y)));
+    camera.snapTo(Vector2(moveCamera(size.x, map.width, x),
+        moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height, y)));
   }
 
   /// Calculate [camera] position
-  double _moveCamera(double screenSize, num mapSize, double pos) {
+  double moveCamera(double screenSize, num mapSize, double pos) {
     var delta = mapSize * componentSize * miniMapZoom - screenSize;
     return (delta <= 0 ? delta / 2 : max(0, min(pos - screenSize / 2, delta)))
         .gridAligned
@@ -790,9 +788,9 @@ class XeonjiaGame extends FlameGame
       }
     } else if (miniMapEnabled) {
       camera.snapTo(Vector2(
-          _moveCamera(size.x, map.width,
+          moveCamera(size.x, map.width,
               camera.position.x - info.raw.delta.dx + size.x / 2),
-          _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
+          moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
               camera.position.y - info.raw.delta.dy + size.y / 2)));
     }
   }
@@ -824,45 +822,6 @@ class XeonjiaGame extends FlameGame
     }
   }
 
-  /// Manage tap gesture
-  void gestureTapInput(Offset position) {
-    if (_pause || !(playerOne?.isMyTurn ?? false)) return;
-
-    // Ignore tap near buttons (bottom right)
-    var buttonSize =
-        children.whereType<Button>().firstOrNull?.size ?? Vector2.zero();
-    if (position.dx > canvasSize.x - buttonSize.x * (enemies > 0 ? 4 : 2) &&
-        position.dy > canvasSize.y - buttonSize.y * (enemies > 0 ? 4 : 2)) {
-      return;
-    }
-
-    // Ignore tap near buttons (top left)
-    var topLeftSize = children.whereType<HideHintsButton>().firstOrNull?.size ??
-        Vector2.zero();
-    if (position.dx < topLeftSize.x && position.dy < topLeftSize.y * 2 + 20) {
-      return;
-    }
-
-    // Update orientation
-    var relativeTapX =
-        position.dx - (playerOne!.x + componentSize / 2 - camera.position.x);
-    var relativeTapY =
-        position.dy - (playerOne!.y + componentSize / 2 - camera.position.y);
-
-    if (position.dx < componentSize || position.dx > size.x - componentSize) {
-      playerOne!.updateOrientation(
-          GetDirection.fromXY(position.dx - componentSize, 0));
-    } else if (position.dy < componentSize ||
-        position.dy > size.y - componentSize) {
-      playerOne!.updateOrientation(
-          GetDirection.fromXY(0, position.dy - componentSize));
-    } else if (relativeTapX.abs() > 15 || relativeTapY.abs() > 15) {
-      relativeTapX.abs() > relativeTapY.abs()
-          ? playerOne!.updateOrientation(GetDirection.fromXY(relativeTapX, 0))
-          : playerOne!.updateOrientation(GetDirection.fromXY(0, relativeTapY));
-    }
-  }
-
   /// Handle back button
   Future<bool> onWillPop() {
     miniMapEnabled ? miniMap() : pause(mode: PauseMode.exit);
@@ -870,147 +829,8 @@ class XeonjiaGame extends FlameGame
   }
 
   @override
-  KeyEventResult onKeyEvent(
-      RawKeyEvent event, Set<LogicalKeyboardKey> keysPressed) {
-    if (event.logicalKey.keyLabel.contains('Audio Volume')) {
-      return KeyEventResult.skipRemainingHandlers;
-    } else if (event is! RawKeyDownEvent || overlays.isActive('loading')) {
-      return KeyEventResult.ignored;
-    }
-
-    /// Manage input based on game state
-    if (messageManager.isActive && messageManager.isShowingAQuestion) {
-      /// Dialog menu (with question)
-      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
-        dialogBox.state?.selectNextAnswer();
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
-        dialogBox.state?.selectPreviousAnswer();
-      } else if (event.logicalKey == LogicalKeyboardKey.space &&
-          (dialogBox.state?.isShowingAnswers ?? false)) {
-        dialogBox.state?.chooseAnswer();
-      }
-    } else if (miniMapEnabled) {
-      /// Mini-map
-      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
-        camera.snapTo(Vector2(
-            _moveCamera(size.x, map.width, camera.position.x + size.x / 2),
-            _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
-                camera.position.y + 50 + size.y / 2)));
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
-        camera.snapTo(Vector2(
-            _moveCamera(size.x, map.width, camera.position.x + size.x / 2),
-            _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
-                camera.position.y - 50 + size.y / 2)));
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
-        camera.snapTo(Vector2(
-            _moveCamera(size.x, map.width, camera.position.x + 50 + size.x / 2),
-            _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
-                camera.position.y + size.y / 2)));
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
-        camera.snapTo(Vector2(
-            _moveCamera(size.x, map.width, camera.position.x - 50 + size.x / 2),
-            _moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
-                camera.position.y + size.y / 2)));
-      } else if (event.logicalKey == LogicalKeyboardKey.add) {
-        zoomMiniMap();
-      } else if (event.logicalKey == LogicalKeyboardKey.minus) {
-        zoomMiniMap(out: true);
-      } else if (event.logicalKey == LogicalKeyboardKey.keyM &&
-          !worldMapDisabled) {
-        worldMap();
-      } else if (event.logicalKey == LogicalKeyboardKey.keyH) {
-        hideHints = !hideHints;
-      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
-        miniMap();
-      }
-    } else if (overlays.isActive('backpackMenu') && !messageManager.isActive) {
-      /// Backpack menu (without dialog)
-      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
-        _backpackMenu?.state?.nextItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
-        _backpackMenu?.state?.nextItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.space) {
-        _backpackMenu?.state?.chooseItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
-        overlays.remove('backpackMenu');
-        resume();
-      }
-    } else if (overlays.isActive('backpackMenu') && messageManager.isActive) {
-      /// Backpack menu (with dialog)
-      if (event.logicalKey == LogicalKeyboardKey.space) {
-        dialogBox.state?.next();
-      }
-    } else if (overlays.isActive('shopMenu') && !messageManager.isActive) {
-      /// Shop menu (without dialog)
-      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
-        shopMenu?.state?.nextItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
-        shopMenu?.state?.previousItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.space) {
-        shopMenu?.state?.chooseItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
-        overlays.remove('shopMenu');
-        resume();
-      }
-    } else if (overlays.isActive('shopMenu') && messageManager.isActive) {
-      /// Shop menu (with dialog)
-      if (event.logicalKey == LogicalKeyboardKey.space) {
-        dialogBox.state?.next();
-      }
-    } else if (overlays.isActive('pauseMenu')) {
-      /// Pause menu
-      if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
-        _pauseMenu?.state?.selectNextOption();
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
-        _pauseMenu?.state?.selectPreviousOption();
-      } else if (event.logicalKey == LogicalKeyboardKey.space) {
-        _pauseMenu?.state?.chooseOption();
-      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
-        overlays.remove('pauseMenu');
-        resume();
-      }
-    } else if (!paused && !messageManager.isActive) {
-      /// In-game
-      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
-        movePlayer(Direction.down);
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
-        movePlayer(Direction.up);
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
-        movePlayer(Direction.right);
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
-        movePlayer(Direction.left);
-      } else if (event.logicalKey == LogicalKeyboardKey.space) {
-        playerOne?.inspect();
-      } else if (event.logicalKey == LogicalKeyboardKey.keyA) {
-        playerOne!.updateOrientation(Direction.left);
-      } else if (event.logicalKey == LogicalKeyboardKey.keyW) {
-        playerOne!.updateOrientation(Direction.up);
-      } else if (event.logicalKey == LogicalKeyboardKey.keyD) {
-        playerOne!.updateOrientation(Direction.right);
-      } else if (event.logicalKey == LogicalKeyboardKey.keyS) {
-        playerOne!.updateOrientation(Direction.down);
-      } else if (event.logicalKey == LogicalKeyboardKey.keyQ) {
-        if (inBattle) playerOne!.shoot();
-      } else if (event.logicalKey == LogicalKeyboardKey.keyB) {
-        if (overlays.isActive('backpackButton') && isBackpackButtonActive) {
-          backpack();
-        }
-      } else if (event.logicalKey == LogicalKeyboardKey.keyH) {
-        hideHints = !hideHints;
-      } else if (event.logicalKey == LogicalKeyboardKey.keyM) {
-        if (worldMapEnabled || (!map.disableMiniMap && isMiniMapButtonActive)) {
-          miniMap();
-        }
-      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
-        pause(mode: PauseMode.pause);
-      }
-    } else if (messageManager.isActive) {
-      if (event.logicalKey == LogicalKeyboardKey.space) {
-        dialogBox.state?.next();
-      }
-    }
-    return KeyEventResult.handled;
-  }
+  KeyEventResult onKeyEvent(event, keysPressed) =>
+      handleInput(event, keysPressed);
 
   /// True if it's possible to open the backpack
   bool get isBackpackButtonActive => !(messageManager.isActive ||
