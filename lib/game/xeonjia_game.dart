@@ -383,7 +383,7 @@ class XeonjiaGame extends FlameGame
   void update(double dt) {
     _timer?.update(dt);
     elapsed += dt;
-    if (_gesturesDirection != null) _gesturesElapsed -= dt;
+    inputControllerUpdate(dt);
     super.update(dt);
   }
 
@@ -754,64 +754,6 @@ class XeonjiaGame extends FlameGame
     addCustomWidgetOverlay('endMenu', EndMenu(this, lostMoney ?? 0));
   }
 
-  Direction? _gesturesDirection;
-  double _gesturesElapsed = 0;
-  bool _gesturesPlayerMoved = false;
-  String _gesturesMapId = '';
-
-  @override
-  void onPanStart(DragStartInfo info) {
-    _gesturesElapsed = 1;
-    _gesturesMapId = map.id;
-  }
-
-  @override
-  void onPanUpdate(DragUpdateInfo info) async {
-    if (settings.showDPad && !miniMapEnabled) return;
-    if (!_pause) {
-      _gesturesDirection = GetDirection.fromOffset(
-          info.raw.delta.dx.abs() > info.raw.delta.dy.abs()
-              ? Offset(info.raw.delta.dx, 0)
-              : Offset(0, info.raw.delta.dy));
-      if (_gesturesElapsed > 0) {
-        if (!_gesturesPlayerMoved) {
-          _gesturesPlayerMoved = true;
-          movePlayer(_gesturesDirection!);
-        }
-        return;
-      }
-      while (_gesturesDirection != null &&
-          isNotPaused &&
-          _gesturesMapId == map.id) {
-        movePlayer(_gesturesDirection!, slow: true);
-        await Future.delayed(const Duration(milliseconds: 50));
-      }
-    } else if (miniMapEnabled) {
-      camera.snapTo(Vector2(
-          moveCamera(size.x, map.width,
-              camera.position.x - info.raw.delta.dx + size.x / 2),
-          moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
-              camera.position.y - info.raw.delta.dy + size.y / 2)));
-    }
-  }
-
-  @override
-  void onPanEnd(DragEndInfo info) => onPanCancel();
-
-  @override
-  void onPanCancel() {
-    _gesturesDirection = null;
-    _gesturesPlayerMoved = false;
-  }
-
-  @override
-  void onTapUp(int pointerId, TapUpInfo info) {
-    messageManager.isActive
-        ? dialogBox.state!.next()
-        : gestureTapInput(info.raw.globalPosition);
-    super.onTapUp(pointerId, info);
-  }
-
   /// Move [playerOne]
   void movePlayer(Direction direction, {bool slow = false}) {
     if (!_pause &&
@@ -822,15 +764,9 @@ class XeonjiaGame extends FlameGame
     }
   }
 
-  /// Handle back button
-  Future<bool> onWillPop() {
-    miniMapEnabled ? miniMap() : pause(mode: PauseMode.exit);
-    return Future.value(false);
-  }
-
   @override
   KeyEventResult onKeyEvent(event, keysPressed) =>
-      handleInput(event, keysPressed);
+      keyboardHandler(event, keysPressed);
 
   /// True if it's possible to open the backpack
   bool get isBackpackButtonActive => !(messageManager.isActive ||
@@ -845,6 +781,30 @@ class XeonjiaGame extends FlameGame
   /// True if the world map is disabled
   bool get worldMapDisabled =>
       !miniMapEnabled || enemies > 0 || map.disableWorldMap;
+
+  /// Handle back button
+  Future<bool> onWillPop() {
+    miniMapEnabled ? miniMap() : pause(mode: PauseMode.exit);
+    return Future.value(false);
+  }
+
+  @override
+  void onPanStart(DragStartInfo info) => panStartHandler(info);
+
+  @override
+  void onPanUpdate(DragUpdateInfo info) => panUpdateHandler(info);
+
+  @override
+  void onPanEnd(DragEndInfo info) => panEndHandler(info);
+
+  @override
+  void onPanCancel() => panCancelHandler();
+
+  @override
+  void onTapUp(int pointerId, TapUpInfo info) {
+    tapUpHandler(pointerId, info);
+    super.onTapUp(pointerId, info);
+  }
 
   @override
   void onRemove() {

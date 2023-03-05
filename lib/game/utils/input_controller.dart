@@ -1,5 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:flame/extensions.dart';
+import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xeonjia/game/utils/direction.dart';
@@ -7,10 +8,69 @@ import 'package:xeonjia/game/widgets/buttons/hide_hints_button.dart';
 import 'package:xeonjia/game/widgets/menus/pause_menu.dart';
 import 'package:xeonjia/game/widgets/virtual_gamepad.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
+import 'package:xeonjia/utils/local_data_controller.dart';
 
+/// Handle user input
 extension InputController on XeonjiaGame {
-  /// Manage tap gesture
-  void gestureTapInput(Offset position) {
+  static Direction? _gesturesDirection;
+  static double _gesturesElapsed = 0;
+  static bool _gesturesPlayerMoved = false;
+  static String _gesturesMapId = '';
+
+  /// Handle pan start event
+  void panStartHandler(DragStartInfo info) {
+    _gesturesElapsed = 1;
+    _gesturesMapId = map.id;
+  }
+
+  /// Handle pan update event
+  void panUpdateHandler(DragUpdateInfo info) async {
+    if (settings.showDPad && !miniMapEnabled) return;
+    if (isNotPaused) {
+      _gesturesDirection = GetDirection.fromOffset(
+          info.raw.delta.dx.abs() > info.raw.delta.dy.abs()
+              ? Offset(info.raw.delta.dx, 0)
+              : Offset(0, info.raw.delta.dy));
+      if (_gesturesElapsed > 0) {
+        if (!_gesturesPlayerMoved) {
+          _gesturesPlayerMoved = true;
+          movePlayer(_gesturesDirection!);
+        }
+        return;
+      }
+      while (_gesturesDirection != null &&
+          isNotPaused &&
+          _gesturesMapId == map.id) {
+        movePlayer(_gesturesDirection!, slow: true);
+        await Future.delayed(const Duration(milliseconds: 50));
+      }
+    } else if (miniMapEnabled) {
+      camera.snapTo(Vector2(
+          moveCamera(size.x, map.width,
+              camera.position.x - info.raw.delta.dx + size.x / 2),
+          moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
+              camera.position.y - info.raw.delta.dy + size.y / 2)));
+    }
+  }
+
+  /// Handle pan end event
+  void panEndHandler(DragEndInfo info) => panCancelHandler();
+
+  /// Handle pan cancel event
+  void panCancelHandler() {
+    _gesturesDirection = null;
+    _gesturesPlayerMoved = false;
+  }
+
+  /// Handle tap up event
+  void tapUpHandler(int pointerId, TapUpInfo info) {
+    messageManager.isActive
+        ? dialogBox.state!.next()
+        : _tapHandler(info.raw.globalPosition);
+  }
+
+  /// Handle tap gesture
+  void _tapHandler(Offset position) {
     if (isPaused || !(playerOne?.isMyTurn ?? false)) return;
 
     // Ignore tap near buttons (bottom right)
@@ -48,8 +108,13 @@ extension InputController on XeonjiaGame {
     }
   }
 
-  /// Manage keyboard input
-  KeyEventResult handleInput(
+  /// Update [_gesturesElapsed]
+  void inputControllerUpdate(double dt) {
+    if (_gesturesDirection != null) _gesturesElapsed -= dt;
+  }
+
+  /// Handle keyboard input
+  KeyEventResult keyboardHandler(
       RawKeyEvent event, Set<LogicalKeyboardKey> keysPressed) {
     if (event.logicalKey.keyLabel.contains('Audio Volume')) {
       return KeyEventResult.skipRemainingHandlers;
@@ -57,7 +122,7 @@ extension InputController on XeonjiaGame {
       return KeyEventResult.ignored;
     }
 
-    /// Manage input based on game state
+    /// Handle input based on game state
     if (messageManager.isActive && messageManager.isShowingAQuestion) {
       /// Dialog menu (with question)
       if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
