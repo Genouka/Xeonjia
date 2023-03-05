@@ -23,7 +23,7 @@ class ShopMenu extends ItemsMenu {
                     (wait)
                     (if (get id)
                       (begin
-                        (remove-overlay "shop")
+                        (remove-overlay "shopMenu")
                         (set-money-diff ${-item.price!})
                         ${item.action!})))''');
             } else {
