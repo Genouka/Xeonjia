@@ -25,7 +25,6 @@ import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/utils/message_manager.dart';
 import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/game/utils/weapons.dart';
-import 'package:xeonjia/game/utils/wireless_gamepad.dart';
 import 'package:xeonjia/game/widgets/boxes/battle_text_box.dart';
 import 'package:xeonjia/game/widgets/boxes/dialog_box.dart';
 import 'package:xeonjia/game/widgets/boxes/map_name_box.dart';
@@ -90,7 +89,6 @@ class XeonjiaGame extends FlameGame
         return LoadingPage();
       },
     };
-    initGamepad();
     if (config.mode != GameMode.story) {
       teams = [
         Team(this, id: 0, name: 'Team A', color: Colors.red),
@@ -373,9 +371,6 @@ class XeonjiaGame extends FlameGame
 
   /// List of modifier to be regenerate during the next [regenerateModifiers]
   List<ModifierComponent> modifiersToBeRegenerated = [];
-
-  /// Wireless gamepad
-  FlameGamepad? gamepad;
 
   /// Background music
   String? currentBgm;
@@ -1035,7 +1030,6 @@ class XeonjiaGame extends FlameGame
   void onRemove() {
     FlameAudio.bgm.stop();
     FlameAudio.bgm.dispose();
-    gamepad?.removeListener();
     super.onRemove();
   }
 }
