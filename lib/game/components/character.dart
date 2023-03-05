@@ -6,6 +6,7 @@ import 'package:xeonjia/game/components/utils/npc_controller.dart';
 import 'package:xeonjia/game/components/utils/render_offset.dart';
 import 'package:xeonjia/game/models/item.dart';
 import 'package:xeonjia/game/models/tile.dart';
+import 'package:xeonjia/game/utils/audio_controller.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/utils/sfx.dart';

@@ -11,6 +11,7 @@ import 'package:xeonjia/game/components/static.dart';
 import 'package:xeonjia/game/components/utils/text_animation.dart';
 import 'package:xeonjia/game/models/team.dart';
 import 'package:xeonjia/game/models/tile.dart';
+import 'package:xeonjia/game/utils/audio_controller.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/fire_atlas.dart';
 import 'package:xeonjia/game/utils/sfx.dart';

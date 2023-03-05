@@ -3,6 +3,7 @@ import 'package:xeonjia/game/components/character.dart';
 import 'package:xeonjia/game/components/common/basic.dart';
 import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/models/item.dart';
+import 'package:xeonjia/game/utils/audio_controller.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/little_scheme.dart';
 import 'package:xeonjia/game/utils/map_controller.dart';

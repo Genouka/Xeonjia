@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/components/common/basic.dart';
 import 'package:xeonjia/game/components/static.dart';
 import 'package:xeonjia/game/components/thin_wall.dart';
+import 'package:xeonjia/game/utils/audio_controller.dart';
 import 'package:xeonjia/game/utils/direction.dart';
 import 'package:xeonjia/game/utils/extensions.dart';
 import 'package:xeonjia/game/utils/sfx.dart';

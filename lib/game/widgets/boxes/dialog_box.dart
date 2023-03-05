@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flame/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:xeonjia/game/utils/audio_controller.dart';
 import 'package:xeonjia/game/utils/extensions.dart';
 import 'package:xeonjia/game/utils/message.dart';
 import 'package:xeonjia/game/utils/sfx.dart';

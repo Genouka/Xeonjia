@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:xeonjia/game/components/common/walker.dart';
 import 'package:xeonjia/game/components/modifer.dart';
 import 'package:xeonjia/game/components/snowball.dart';
+import 'package:xeonjia/game/utils/audio_controller.dart';
 import 'package:xeonjia/game/utils/sfx.dart';
 import 'package:xeonjia/utils/game_properties.dart';
 
