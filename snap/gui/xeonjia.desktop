@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Xeonjia
+Comment=Save the world by solving ice puzzles and defeating enemies.
+Exec=xeonjia
+Icon=${SNAP}/meta/gui/xeonjia.png
+Terminal=false
+Type=Application
+Categories=Game;
+X-Purism-FormFactor=Workstation;Mobile;
+X-KDE-FormFactors=desktop;tablet;handset;mediacenter;

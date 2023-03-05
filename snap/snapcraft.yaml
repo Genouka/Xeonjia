@@ -1,0 +1,35 @@
+name: xeonjia
+version: 2.3.0
+title: Xeonjia - Ice Adventures
+summary: Save the world by solving ice puzzles and defeating enemies.
+description: The floor is frozen! Think carefully about your moves because you can't change direction until you meet an obstacle. Use you mind to solve the ice slide puzzles!
+icon: snap/gui/xeonjia.png
+license: GPL-3.0-or-later
+source-code: https://gitlab.com/deepdaikon/Xeonjia
+issues: https://gitlab.com/deepdaikon/Xeonjia/-/issues
+donation: https://deepdaikon.xyz/donate
+website: https://deepdaikon.xyz
+
+confinement: strict
+base: core18
+grade: stable
+
+architectures:
+  - build-on: amd64
+    run-on: arm64
+slots:
+  dbus-xeonjia:
+    interface: dbus
+    bus: session
+    name: xyz.deepdaikon.xeonjia
+apps:
+  xeonjia:
+    command: xeonjia
+    extensions: [flutter-master]
+    slots:
+      - dbus-xeonjia
+parts:
+  xeonjia:
+    source: .
+    plugin: flutter
+    flutter-target: lib/main.dart
