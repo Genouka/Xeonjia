@@ -93,9 +93,9 @@ BEGIN
             VALUE "FileDescription", "Solve ice puzzles and defeat enemies in an RPG world." "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "xeonjia" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2021 DeepDaikon. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2019 DeepDaikon. All rights reserved." "\0"
             VALUE "OriginalFilename", "xeonjia.exe" "\0"
-            VALUE "ProductName", "xeonjia" "\0"
+            VALUE "ProductName", "Xeonjia" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
