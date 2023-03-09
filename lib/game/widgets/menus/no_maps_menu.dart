@@ -58,14 +58,12 @@ class NoMapsMenu extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () async {
-                      final url = Uri.parse(Uri.encodeFull('mailto:deepdaikon'
-                          '@'
-                          'tuta.io?subject=Xeonjia Game'));
-                      if (await canLaunchUrl(url)) {
-                        await launchUrl(url,
-                            mode: LaunchMode.externalApplication);
-                      }
+                    onPressed: () {
+                      launchUrl(
+                          Uri.parse(Uri.encodeFull('mailto:deepdaikon'
+                              '@'
+                              'tuta.io?subject=Xeonjia Game')),
+                          mode: LaunchMode.externalApplication);
                     },
                     child: Text(
                       'Send email'.i18n,
