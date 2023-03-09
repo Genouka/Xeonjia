@@ -14,14 +14,15 @@ const List<Locale> enabledLocales = [
   Locale('ru'),
   Locale('tr'),
   Locale('vi'),
+  Locale('zh'),
 ];
 final List<Locale> supportedLocales = [
   ...enabledLocales,
   const Locale('be'),
   const Locale('bn'),
   const Locale('id'),
+  const Locale('nn'),
   const Locale('uk'),
-  const Locale('zh'),
 ];
 const languagesWithSpecialCharacters = [
   'ja',
@@ -50,6 +51,7 @@ const Map<String, List<String>> languageNames = {
   'pt': ['Portuguese', 'Português'],
   'ro': ['Romanian', 'Română'],
   'ru': ['Russian', 'Русский'],
+  'nn': ['Norwegian Nynorsk', 'Nynorsk'],
   'ja': ['Japanese', '日本語'],
   'de': ['German', 'Deutsch'],
   'ko': ['Korean', '한국어'],
@@ -73,7 +75,7 @@ extension Localization on String {
     for (final locale in supportedLocales) {
       var language = locale.languageCode;
       if (language == 'en') continue;
-      if (language == 'zh') language += '-Hans';
+      if (language == 'zh') language += '-Hant';
       if (language == 'pt') language += '-BR';
       for (final fileName in ['story', 'ui']) {
         _translations += await GettextImporter().fromAssetFile(

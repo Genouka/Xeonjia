@@ -53,11 +53,12 @@ flutter:
     - locale/id/LC_MESSAGES/
     - locale/it/LC_MESSAGES/
     - locale/ja/LC_MESSAGES/
+    - locale/nn/LC_MESSAGES/
     - locale/ru/LC_MESSAGES/
     - locale/tr/LC_MESSAGES/
     - locale/uk/LC_MESSAGES/
     - locale/vi/LC_MESSAGES/
-    - locale/zh-Hans/LC_MESSAGES/
+    - locale/zh-Hant/LC_MESSAGES/
 
   fonts:
     - family: dd5x7
