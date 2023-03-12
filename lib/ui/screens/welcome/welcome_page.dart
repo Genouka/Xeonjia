@@ -33,7 +33,7 @@ class WelcomePage extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50)),
                 ),
-                onPressed: () => saveName(_textFieldController.text, context),
+                onPressed: () => saveName(context, _textFieldController.text),
                 child: Text(
                   'OK'.i18n,
                   style: const TextStyle(color: Colors.white),
@@ -46,7 +46,7 @@ class WelcomePage extends StatelessWidget {
     );
   }
 
-  void saveName(String text, BuildContext context) {
+  void saveName(BuildContext context, String text) {
     if (_formKey.currentState?.validate() ?? false) {
       _textFieldController.text = text.trim();
       mainCharacter.name = _textFieldController.text;

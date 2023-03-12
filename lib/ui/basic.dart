@@ -60,8 +60,11 @@ Widget divider(BuildContext context) => Container(
     );
 
 /// Form used to insert player name
-Widget insertNameForm(GlobalKey<FormState> key,
-    TextEditingController textFieldController, Function onSubmitted,
+Widget insertNameForm(
+    GlobalKey<FormState> key,
+    TextEditingController textFieldController,
+    Function onSubmitted,
+    BuildContext context,
     {double? fontSize}) {
   return Form(
     key: key,
@@ -72,7 +75,7 @@ Widget insertNameForm(GlobalKey<FormState> key,
       textCapitalization: TextCapitalization.characters,
       style: TextStyle(fontSize: fontSize),
       onFieldSubmitted: (String text) {
-        onSubmitted(text.trim());
+        onSubmitted(context, text.trim());
         SystemChrome.restoreSystemUIOverlays();
       },
       onChanged: (String input) {

@@ -30,8 +30,8 @@ class OptionList extends StatelessWidget {
               builder: (BuildContext context) {
                 return AlertDialog(
                   title: Text('Your name'.i18n, textAlign: TextAlign.center),
-                  content: insertNameForm(_formKey, _textFieldController,
-                      (String text) => saveName(context, text)),
+                  content: insertNameForm(
+                      _formKey, _textFieldController, saveName, context),
                   actions: <Widget>[
                     TextButton(
                       onPressed: () {

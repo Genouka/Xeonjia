@@ -53,7 +53,7 @@ class ChooseName extends StatelessWidget {
                       margin: EdgeInsets.symmetric(
                           horizontal: MediaQuery.of(context).size.width / 10),
                       child: insertNameForm(
-                          _formKey, _textFieldController, saveName,
+                          _formKey, _textFieldController, saveName, context,
                           fontSize: 24),
                     ),
                   ),
