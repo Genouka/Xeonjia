@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
 class EndMenu extends StatelessWidget {
-  const EndMenu(this.gameRef, [this._lostMoney = 0]);
+  const EndMenu(this.gameRef, this.callback, [this._lostMoney = 0]);
   final XeonjiaGame gameRef;
+  final VoidCallback callback;
   final int _lostMoney;
 
   @override
@@ -47,10 +48,7 @@ class EndMenu extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               TextButton(
-                onPressed: () {
-                  gameRef.start();
-                  gameRef.overlays.remove('endMenu');
-                },
+                onPressed: callback,
                 child: Text(
                   gameRef.config.mode == GameMode.story
                       ? 'Continue'.i18n

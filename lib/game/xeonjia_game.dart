@@ -596,7 +596,14 @@ class XeonjiaGame extends FlameGame
       saveUserData();
     }
     refreshHPBar();
-    addCustomWidgetOverlay('endMenu', EndMenu(this, lostMoney ?? 0));
+    addCustomWidgetOverlay(
+        'endMenu', EndMenu(this, restartAfterEnd, lostMoney ?? 0));
+  }
+
+  /// Close EndMenu and restart the game
+  void restartAfterEnd() {
+    start();
+    overlays.remove('endMenu');
   }
 
   /// Move [playerOne]

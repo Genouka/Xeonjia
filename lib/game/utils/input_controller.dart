@@ -167,7 +167,7 @@ extension InputController on XeonjiaGame {
       if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
         backpackMenu?.state?.nextItem();
       } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
-        backpackMenu?.state?.nextItem();
+        backpackMenu?.state?.previousItem();
       } else if (event.logicalKey == LogicalKeyboardKey.space) {
         backpackMenu?.state?.chooseItem();
       } else if (event.logicalKey == LogicalKeyboardKey.escape) {
@@ -208,6 +208,12 @@ extension InputController on XeonjiaGame {
         overlays.remove('pauseMenu');
         resume();
       }
+    } else if (overlays.isActive('endMenu')) {
+      /// End menu
+      if (event.logicalKey == LogicalKeyboardKey.space ||
+          event.logicalKey == LogicalKeyboardKey.escape) {
+        restartAfterEnd();
+      }
     } else if (!paused && !messageManager.isActive) {
       /// In-game
       if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
@@ -229,7 +235,11 @@ extension InputController on XeonjiaGame {
       } else if (event.logicalKey == LogicalKeyboardKey.keyS) {
         playerOne!.updateOrientation(Direction.down);
       } else if (event.logicalKey == LogicalKeyboardKey.keyQ) {
-        if (inBattle) playerOne!.shoot();
+        if (inBattle) playerOne!.shoot(Weapons.punch.id);
+      } else if (event.logicalKey == LogicalKeyboardKey.keyR) {
+        if (inBattle && playerOne!.hasWeaponId(Weapons.snowball.id)) {
+          playerOne!.shoot(Weapons.snowball.id);
+        }
       } else if (event.logicalKey == LogicalKeyboardKey.keyB) {
         if (overlays.isActive('backpackButton') && isBackpackButtonActive) {
           backpack();
