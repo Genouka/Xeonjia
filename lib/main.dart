@@ -27,10 +27,12 @@ void main() async {
     settings.backgroundMusic = false;
     settings.audioSupported = false;
     saveSettings();
-  } else if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
+  } else if (Platform.isLinux) {
     await windowManager.ensureInitialized();
     windowManager.setMinimumSize(const Size(400, 500));
     windowManager.setMaximumSize(Size.infinite);
+  } else if (Platform.isWindows) {
+    windowManager.setFullScreen(true);
   }
   updateGameTheme();
   await Localization.loadTranslations();
