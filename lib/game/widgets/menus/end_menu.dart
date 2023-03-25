@@ -50,9 +50,10 @@ class EndMenu extends StatelessWidget {
               TextButton(
                 onPressed: callback,
                 child: Text(
-                  gameRef.config.mode == GameMode.story
-                      ? 'Continue'.i18n
-                      : 'Yes'.i18n,
+                  '> ' +
+                      (gameRef.config.mode == GameMode.story
+                          ? 'Continue'.i18n
+                          : 'Yes'.i18n),
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ),
