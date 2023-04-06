@@ -5,6 +5,9 @@ Save the world by solving ice puzzles and defeating enemies.
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
      alt="Get it on Google Play"
      height="70">](https://play.google.com/store/apps/details?id=xyz.deepdaikon.xeonjia)
+[<img src="https://static.itch.io/images/badge.svg"
+     alt="Get it on itch.io"
+     height="45">](https://deepdaikon.itch.io/xeonjia)
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
      alt="Get it on F-Droid"
      height="70">](https://f-droid.org/packages/xyz.deepdaikon.xeonjia/)
