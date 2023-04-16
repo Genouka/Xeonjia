@@ -3,13 +3,13 @@
 # This file is distributed under the same license as Xeonjia.
 # Hrela <6d8fd379d7b549a5+xeonjia-weblate@posteo.net>, 2020.
 # anselm-helbig <gh@mnemonikk.org>, 2020.
-# J. Lavoie <j.lavoie@net-c.ca>, 2021, 2022.
+# J. Lavoie <j.lavoie@net-c.ca>, 2021, 2022, 2023.
 # DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023.
 # zwergwolf <sadness@gmx.de>, 2021.
 # araccaine <arac.caine@posteo.de>, 2021.
 # Vri <vrifox@vrifox.cc>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-03-05 18:54+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-04-16 09:50+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -37,7 +37,7 @@ msgstr "Tippe um zu Spielen"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Press enter"
-msgstr ""
+msgstr "Eingabetaste drücken"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Welcome!"
@@ -49,7 +49,7 @@ msgstr "Bevor es losgeht, sage mir, wie Du Deine Spielfigur nennen möchtest."
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Random name"
-msgstr "Zufälliger Name"
+msgstr "Irgendein Name"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "OK"
@@ -560,7 +560,6 @@ msgid "There are still %s enemies here. I can't escape."
 msgstr "Hier sind noch immer %s Gegner. Ich kann nicht entkommen."
 
 #: lib/game/xeonjia_game.dart:
-#, fuzzy
 msgid "There is one enemy here!"
 msgstr "Hier ist ein Gegner!"
 

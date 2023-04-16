@@ -7,8 +7,9 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # araccaine <arac.caine@posteo.de>, 2021.
 # Vri <vrifox@vrifox.cc>, 2022.
+# Martin <goonini@t-online.de>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-03-05 18:54+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-04-16 09:50+0000\nLast-Translator: Martin <goonini@t-online.de>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -331,9 +332,8 @@ msgid "What??\nAren't you this year's \"choosen hero\"?"
 msgstr "Was??\nBist du nicht der diesjährige »auserkorene Held«?"
 
 #: assets/maps/story/13.tmx:
-#, fuzzy
 msgid "Yes, I am…"
-msgstr "Ja, das bin ich …"
+msgstr "Ja, das bin ich…"
 
 #: assets/maps/story/13.tmx:
 msgid "But this is my first battle…"
@@ -457,7 +457,7 @@ msgstr "Wow, cool!"
 
 #: assets/maps/story/7.tmx:
 msgid "Yep, it won't be easy but I want to visit the whole Kingdom!\nAnd maybe even visit places outside the Kingdom!"
-msgstr ""
+msgstr "Yep, das wird nicht einfach, aber ich habe vor, dass ganze Königreich zu besuchen!\nUnd vielleicht sogar Orte außerhalb des Königreichs!"
 
 #: assets/maps/story/7.tmx:
 msgid "Are there places outside the Kingdom?!"
@@ -513,7 +513,7 @@ msgstr "Apotheker"
 
 #: assets/maps/story/28_lp_shop.tmx:
 msgid "I wanted to buy some medicines but they don't have the ones I like."
-msgstr ""
+msgstr "Ich wollte ein paar Medikamente kaufen, aber sie haben nicht diejenigen, die ich mag."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \""
@@ -617,7 +617,7 @@ msgstr "Du hast Recht! Ich muss ihn erledigen, aber ich weiß nicht einmal, waru
 
 #: assets/maps/story/34_cave.tmx:
 msgid "The King of Evil, as you know, came to us 64 years ago freezing the Kingdom and instilling fear.\nI don't know exactly where he comes from, but what I do know is that his goal is to collect gems that are scattered around the world.\nHe needs them to get energy to completely freeze our world."
-msgstr ""
+msgstr "Wie Du weißt, kam der König des Bösen vor 64 Jahren, fror das Königreich ein und verbreitet seitdem Angst und Schrecken.\nIch weiß nicht genau, wo er herkommt, aber ich weiß, dass sein Ziel ist, Edelsteine einzusammeln die über die überall auf der Welt verteilt sind.\nEr braucht deren Energie, um die ganze Welt einzufrieren."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Completely?!"
@@ -729,7 +729,7 @@ msgstr "Wir beobachten Dich."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "Hmm, I think if I run out of snowballs I can make new ones from snowdrifts like this one.\nI just have to press the \"A\" key."
-msgstr ""
+msgstr "Hmm, ich denke, wenn ich keine Schneebälle mehr habe, kann ich an Schneeverwehungen wie dieser neue machen.\nIch muss nur die \"A\"-Taste drücken."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "A rock covered by moss."
@@ -745,7 +745,7 @@ msgstr "Ich will zurück ins Bett, aber ich kann nicht."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "It has been quite a while since the last time I slept here."
-msgstr ""
+msgstr "Es ist schon eine ganze Weile her, seit ich das letzte Mal hier übernachtet habe."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'll miss you, TV."
@@ -809,7 +809,7 @@ msgstr "Ich kann das Innere des Hauses sehen."
 
 #: assets/maps/story/26.tmx:
 msgid "Did you come here just to talk to me?\nI don't have much to say, but I can give you this little snow globe."
-msgstr ""
+msgstr "Bist du hier hergekommen, nur um mit mir zu reden?\nIch habe nicht viel zu sagen, aber ich kann dir diese kleine Schneekugel geben."
 
 #: assets/maps/story/26.tmx:
 msgid "The weather is good today."
@@ -821,7 +821,7 @@ msgstr "Wir werden dich beobachten."
 
 #: assets/maps/story/41_house.tmx:
 msgid "These books are in a language I don't understand."
-msgstr ""
+msgstr "Diese Bücher sind in einer Sprache geschrieben, die ich nicht verstehe."
 
 #: assets/maps/story/22.tmx:
 msgid "Route 3"
@@ -917,7 +917,7 @@ msgstr "Das ist kein Ort für Kinder, geh nach Hause."
 
 #: assets/maps/story/9.tmx:
 msgid "How rude!\nHe pushed me away viciously!"
-msgstr ""
+msgstr "Wie ungehobelt!\nEr hat mich brutal weggeschubst."
 
 #: assets/maps/story/9.tmx:
 msgid "Weird things happen in this area…"
@@ -933,7 +933,7 @@ msgstr "Xeonjia Turm ↑"
 
 #: assets/maps/story/19.tmx:
 msgid "Tourist Information and Reception Office.\nClosed until further notice."
-msgstr ""
+msgstr "Touristeninformation und Empfangsbüro.\nBis auf weiteres geschlossen."
 
 #: assets/maps/story/29.tmx:
 msgid "Mitsu Forest"
@@ -1013,7 +1013,7 @@ msgstr "Ich glaube, diese Vase wurde absichtlich hier platziert, um den Durchgan
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "From this window I can only see a tree."
-msgstr ""
+msgstr "Durch dieses Fenster kann ich nur einen Baum erkennen."
 
 #: assets/maps/story/2_house.tmx:
 msgid "You are the chosen one for this year, right?\nMy son was too, many years ago."
@@ -1081,7 +1081,7 @@ msgstr ""
 
 #: assets/maps/story/25.tmx:
 msgid "Bzzt… Bzzt… Bzzt…"
-msgstr ""
+msgstr "Bzzt… Bzzt… Bzzt…"
 
 #: assets/maps/story/25.tmx:
 msgid "What's happening?"
@@ -1097,7 +1097,7 @@ msgstr "Nagut."
 
 #: assets/maps/story/25.tmx:
 msgid "Do we get rid of him?"
-msgstr ""
+msgstr "Wie werden wir ihn los?"
 
 #: assets/maps/story/25.tmx:
 msgid "Does he look smart?"
@@ -1113,7 +1113,7 @@ msgstr "Dann lass ihn gehen."
 
 #: assets/maps/story/25.tmx:
 msgid "WHAT?!\nAre you sure? Why have him around again?"
-msgstr ""
+msgstr "WAAAS?\nBist du sicher? Warum ist er wieder da?"
 
 #: assets/maps/story/25.tmx:
 msgid "He has to go through me anyway if he wants to continue his journey.\nI'll get rid of him."
@@ -2383,4 +2383,4 @@ msgstr ""
 
 #: assets/data/items-and-events.json:
 msgid "Here is the Xeonjia Tower."
-msgstr ""
+msgstr "Hier ist der Xeonjia-Turm."

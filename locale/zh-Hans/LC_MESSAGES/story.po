@@ -5,8 +5,9 @@
 # KMX <kumax2048@protonmail.ch>, 2021.
 # 苏汀 <753594451@qq.com>, 2022.
 # deepdaikon <deepdaikon@tuta.io>, 2022.
+# 鸞瑤綾舞 <user3678169@163.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-04-16 09:50+0000\nLast-Translator: 鸞瑤綾舞 <user3678169@163.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -158,16 +159,15 @@ msgstr "一台被砸坏的显示器。"
 
 #: assets/maps/story/8.tmx:
 msgid "Go this way →"
-msgstr ""
+msgstr "往这里走 →"
 
 #: assets/maps/story/1.tmx:
-#, fuzzy
 msgid "Natawn"
-msgstr "Natawn"
+msgstr "曙光镇"
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nIf you lose your way or get stuck take a look at the map.\nYou can open it by tapping on its icon in the upper right corner."
-msgstr ""
+msgstr "祝英雄 {{hero}} 一路顺风！\n如果迷路了，看看小地图或许会有帮助。\nPS : 点击右上角的图标就能激活小地图哦~"
 
 #: assets/maps/story/1.tmx:
 #, fuzzy
@@ -180,7 +180,7 @@ msgstr "“邪王”居住的塔应该位于该地区的首都附近。"
 
 #: assets/maps/story/1.tmx:
 msgid "Stay focused on your goals and don't wander around aimlessly."
-msgstr ""
+msgstr "专注于你的目标，不要漫无目的地四处游荡。"
 
 #: assets/maps/story/1.tmx:
 msgid "NATAWN – Hometown of the 62nd hero"
@@ -188,55 +188,56 @@ msgstr "曙光镇 - 第 62 代英雄的家乡"
 
 #: assets/maps/story/1.tmx:
 msgid "I've to say goodbye to my parents with the \"A\" button before I leave. Otherwise it would be rude."
-msgstr "在离开之前我必须和我的父母告别。不然会显得很没有礼貌的。"
+msgstr "在离开之前我必须和我的父母告别，不然会显得很没有礼貌的。"
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, I have to go to my neighbor first."
-msgstr ""
+msgstr "照母亲大人的说法，我应该先去拜访下领居。"
 
 #: assets/maps/story/1.tmx:
 msgid "From here on is the frozen floor.\nI'll slide until I reach an obstacle.\nSo I have to use my mind to figure out the best path."
-msgstr ""
+msgstr "从这开始，地面都结上了冰。\n如果没碰上障碍物，那么我会一直滑行。\n所以我要用我的智慧找出最佳的路线。"
 
 #: assets/maps/story/34.tmx:
 msgid "Route 4"
-msgstr ""
+msgstr "4 号小径"
 
 #: assets/maps/story/34.tmx:
 msgid "This vase is empty."
-msgstr ""
+msgstr "这个花瓶是空的。"
 
 #: assets/maps/story/34.tmx:
 msgid "* {{hero}} found {{money-diff}} ¤ *"
-msgstr ""
+msgstr "* {{hero}} 找到了 {{money-diff}} ¤ *"
 
 #: assets/maps/story/34.tmx:
 msgid "A rock."
-msgstr ""
+msgstr "一块石头。"
 
 #: assets/maps/story/34.tmx:
+#, fuzzy
 msgid "Hexa Cave"
-msgstr ""
+msgstr "六边形的洞穴"
 
 #: assets/maps/story/38.tmx:
 msgid "Zamelis Village"
-msgstr ""
+msgstr "扎梅利斯村"
 
 #: assets/maps/story/38.tmx:
 msgid "I want to reach the capital quickly but the only way is traveling by land."
-msgstr ""
+msgstr "我想尽快到达王都，但走陆路是唯一的选择。"
 
 #: assets/maps/story/38.tmx:
 msgid "I really needed a pomegranate juice."
-msgstr ""
+msgstr "我是真的需要喝点石榴汁。"
 
 #: assets/maps/story/17.tmx:
 msgid "These monsters don't seem very smart to me."
-msgstr ""
+msgstr "在我看来这些魔物并不是很聪明。"
 
 #: assets/maps/story/17.tmx:
 msgid "There are still enemies here. I can't escape."
-msgstr ""
+msgstr "这里有敌人，我不能就这样离开。"
 
 #: assets/maps/story/31_house1.tmx:
 msgid "I hate people who always say the same things."
@@ -244,39 +245,40 @@ msgstr "我讨厌那些总是说同样的话的人。"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Hi, you look a little tired.\nHere's a bottle of water."
-msgstr ""
+msgstr "你看起来有点疲惫，\n这是给你的一瓶水。"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "谢谢！"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "I wish you the best."
-msgstr ""
+msgstr "我祝你好运。"
 
 #: assets/maps/story/3_house2.tmx:
+#, fuzzy
 msgid "This sofa looks very comfortable."
-msgstr ""
+msgstr "这张沙发看起来很舒服。"
 
 #: assets/maps/story/13.tmx:
 msgid "Help me please!"
-msgstr ""
+msgstr "请帮帮我!"
 
 #: assets/maps/story/13.tmx:
 msgid "Are you okay?"
-msgstr ""
+msgstr "你还好吗?"
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, thank you so much for saving my life!\nI have to admit, I was so scared!"
-msgstr ""
+msgstr "非常感谢你救了我的命！\n实话说，我刚才真的很害怕!"
 
 #: assets/maps/story/13.tmx:
 msgid "Me too!"
-msgstr ""
+msgstr "俺也一样！"
 
 #: assets/maps/story/13.tmx:
 msgid "Luckily it went all right!\nI don't know how to thank you, I can give you this gem that I found a little while ago."
-msgstr ""
+msgstr "所幸一切安好，我不知道该如何感谢你。\n但我可以把最近发现的这颗宝石给你。"
 
 #: assets/maps/story/13.tmx:
 msgid "Thank you, it seems very precious!"
@@ -2320,39 +2322,40 @@ msgstr ""
 
 #: assets/data/items-and-events.json:
 msgid "Berries"
-msgstr ""
+msgstr "浆果"
 
 #: assets/data/items-and-events.json:
 msgid "Five little berries. They restore 5 HP."
-msgstr ""
+msgstr "五个小浆果(恢复 5 HP)."
 
 #: assets/data/items-and-events.json:
 msgid "I'm already healthy, I don't need {{selected-item-name}} right now."
-msgstr ""
+msgstr "我已经很健康了, 暂时不需要 {{selected-item-name}} ."
 
 #: assets/data/items-and-events.json:
 msgid "HP UP +5"
-msgstr ""
+msgstr "生命最大值 +5"
 
 #: assets/data/items-and-events.json:
+#, fuzzy
 msgid "Increases the max HP by 5 points."
-msgstr ""
+msgstr "增加最大 5 点生命值."
 
 #: assets/data/items-and-events.json:
 msgid "Fresh Water"
-msgstr ""
+msgstr "新鲜的水"
 
 #: assets/data/items-and-events.json:
 msgid "A bottle of water. It restores 20 HP."
-msgstr ""
+msgstr "一瓶水(恢复 20 HP)."
 
 #: assets/data/items-and-events.json:
 msgid "Pomegranate juice"
-msgstr ""
+msgstr "石榴汁"
 
 #: assets/data/items-and-events.json:
 msgid "A bottle of pomegranate juice. It restores 50 HP."
-msgstr ""
+msgstr "一瓶石榴汁(恢复 50 HP)."
 
 #: assets/data/items-and-events.json:
 msgid "Healer"

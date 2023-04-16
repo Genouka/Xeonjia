@@ -8,7 +8,7 @@
 # Alex <usr@skrep.eu>, 2023.
 # H6rd <hrdq@proton.me>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-03-05 18:54+0000\nLast-Translator: Andrey <jius55025@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-04-16 09:50+0000\nLast-Translator: Andrey <jius55025@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -1256,7 +1256,7 @@ msgstr "Печатки?"
 
 #: assets/maps/story/999.tmx:
 msgid "I did not understand exactly what they are, but they should be items that are placed in crypts in each region of the Kingdom.\n3 crypts with one signet each."
-msgstr ""
+msgstr "Я не понимал точно, что это такое, но это должны быть предметы, которые размещены в склепах в каждом регионе Королевства.\n3 склепа, в каждой по одной печатке."
 
 #: assets/maps/story/999.tmx:
 msgid "Okay, it doesn't sound complicated.\nIn this region for now I have not yet found the crypt.\nIt might be in the southeast.\nWhere are you headed now?"
@@ -1268,7 +1268,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "I can't rest so much unfortunately.\nI'll continue my journey right away.\nHave a good rest!"
-msgstr ""
+msgstr "К сожалению, я не могу так много отдыхать.\nЯ сразу же продолжу свое путешествие.\nХорошего отдыха!"
 
 #: assets/maps/story/999.tmx:
 msgid "Thanks!\nWe will meet again."

@@ -1,76 +1,65 @@
 # Translation for Xeonjia
 # Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# deepdaikon <deepdaikon@tuta.io>, 2022.
+# deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: ar\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-04-16 09:50+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Arabic <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ar/>\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
-msgstr ""
+msgstr "ما هو اسمك؟"
 
 #: lib/ui/basic.dart:
 msgid "Too short."
-msgstr ""
+msgstr "قصير جدا."
 
 #: lib/ui/basic.dart:
 msgid "Insert your name here"
-msgstr ""
+msgstr "ادخل اسمك هنا"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
-msgstr ""
+msgstr "معلومات"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Settings"
-msgstr ""
+msgstr "اعدادات"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
-msgstr ""
+msgstr "انقر للعب"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Press enter"
-msgstr ""
+msgstr "اضغط enter"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Welcome!"
-msgstr ""
+msgstr "مرحبا!"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Before starting tell me what you want to call your character."
-msgstr ""
+msgstr "قبل البدء اخبرني ماذا تريد ان تسمي شخصيتك."
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Random name"
-msgstr ""
+msgstr "اسم عشوائي"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "OK"
-msgstr ""
+msgstr "حسنا"
 
 #: lib/ui/screens/arena/widgets/play_button.dart:
 msgid "Play"
-msgstr ""
+msgstr "لعب"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Multiplayer Mode"
-msgstr ""
+msgstr "وضع متعدد اللاعبين"
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press \"Play\"."
-msgstr ""
+msgstr "الهدف من هذا الوضع هو هزيمة الأعداء وتسجيل النقا و جعل فريقك يفوز.\n\n القواعد بسيطة:\n - يتم تنظيم اللاعبين في فريقين.\n - عندما يهزم لاعب خصمًا ، يحرز فريقه 100 نقطة.\n - يفوز الفريق الذي يصل إلى النتيجة المطلوبة.\n\n زملاؤك في الفريق هم الحمر.\n\n في الوقت الحالي ، من الممكن فقط اللعب ضد الذكاء الاصطناعي.\n\n اختر مكانا للعب وقم بتهييء اللعبة.\n عندما عندما تكون جاهزا اضغط على \"لعب\"."
 
 #: lib/ui/screens/arena/widgets/help_dialog.dart:
 msgid "Okay, got it!"
