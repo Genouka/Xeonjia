@@ -1,17 +1,24 @@
-Es gibt zwei Modi:
+<b>Xeonjia</b> ist ein <b>Abenteuerspiel</b> in einer <b>eingefrorenen Welt</b>.
 
-1) Story-Modus: Das Ziel ist es, die letzte Etage des Turms zu erreichen und den "König des Bösen" zu besiegen.
+Der Boden ist gefroren! Plane deine Züge sorgsam, denn du kannst deine nicht Richtung ändern, bis du ein Hindernis triffst.
+Nutze deinen Verstand um Eispuzzle zu lösen!
 
-2) Multiplayer-Modus: In diesem Modus geht es darum, Punkte zu sammeln und sein Team zum Sieg zu führen.
+Die Welt wurde vom <b>“König des Bösen”</b> eingefroren und ist kein sicherer Ort mehr.
 
-Du musst nur mit Deinem Finger wischen, um deine Figur durch die Welt zu bewegen.
+Die Legende besagt, dass ein mutiger Held den König des Bösen besiegen und das Königreich retten wird... Aus diesem Grund wird jedes Jahr eine Person zum "Helden" ernannt und auf eine Reise geschickt, es zu retten. 
 
-Denk daran, dass Du Dich nicht selbst bremsen kannst, bis du eine Wand, einen Felsen oder ein anderes Hindernis erreichst.
+Nun ist deine Zeit gekommen, <b>Du wurdest als diesjähriger Held ausgewählt!</b> Wirst du dazu in der Lage sein den König des Bösen zu besiegen?
 
-Mit der Zeit erhältst du Erfahrungspunkte, mit denen Du Deine Stufe erhöhen kannst. Du wirst Geld und versteckte Schätze finden, mit denen du Dinge kaufen und dich verbessern kannst.
+Du wirst die Welt bereisen, Städte, Dungeons und mystische Höhlen erkunden.
 
-Sei vorsichtig, die Welt ist voller gefährlicher Feinde, die bereit sind, dich anzugreifen!
+<b>Bist du bereit Quests und Puzzle in dieser gefrorenen RPG Welt zu lösen?</b>
 
-Benutze deinen Verstand, um den besten Weg zu finden!
+Mit der Zeit wirst du Erfahrungspunkte erhalten, welche es dir ermöglichen werden dein Level zu erhöhen und du wirst Geld und verborgene Schätze finden, die du verwenden kannst um Ausrüstung zu kaufen und dich zu verbessern.
+
+Sei vorsichtig, die Welt ist voller <b>gefährlicher Gegner</b>, bereit dich anzugreifen!
+
+Beachte, dass größtenteils <b>der Boden eingefroren ist</b>, also du nicht anhalten kannst bis du eine Wand, einen Felsbrocken oder ein sonstiges Hindernis erreicht hast.
+
+<b>Nutze deinen Verstand, um den besten Pfad herauszufinden!</b>
 
 <b>Hinweis</b>: Dieses Spiel befindet sich derzeit in einer frühen Betaphase.

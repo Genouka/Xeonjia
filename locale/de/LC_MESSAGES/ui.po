@@ -8,8 +8,9 @@
 # zwergwolf <sadness@gmx.de>, 2021.
 # araccaine <arac.caine@posteo.de>, 2021.
 # Vri <vrifox@vrifox.cc>, 2022.
+# ctntt <pavlov_mainstreamed@slmail.me>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-04-16 09:50+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-04-23 09:45+0000\nLast-Translator: ctntt <pavlov_mainstreamed@slmail.me>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -21,7 +22,7 @@ msgstr "Zu kurz."
 
 #: lib/ui/basic.dart:
 msgid "Insert your name here"
-msgstr "Schreibe deinen Namen hier hinein"
+msgstr "Gebe deinen Namen hier ein"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -45,11 +46,11 @@ msgstr "Willkommen!"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Before starting tell me what you want to call your character."
-msgstr "Bevor es losgeht, sage mir, wie Du Deine Spielfigur nennen möchtest."
+msgstr "Bevor es losgeht, sag mir, wie du deine Spielfigur nennen möchtest."
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Random name"
-msgstr "Irgendein Name"
+msgstr "Zufälliger Name"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "OK"
@@ -105,7 +106,7 @@ msgstr "Schwierigkeitsgrad"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points required"
-msgstr "Punkte benötigt"
+msgstr "Benötigte Punkte"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Points needed to win"
@@ -129,11 +130,11 @@ msgstr "Anzahl der Spieler pro Team"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "Friendly Fire"
-msgstr "Eigener Beschuss"
+msgstr "Friendly Fire"
 
 #: lib/ui/screens/arena/arena_page.dart:
 msgid "If enabled, players can hit their teammates"
-msgstr "Wenn aktiviert können auch Mitspieler des eigenen Teams getroffen werden"
+msgstr "Wenn aktiviert, können auch Mitspieler des eigenen Teams getroffen werden"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Restore"
@@ -269,7 +270,7 @@ msgstr "E-Mail senden"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ask for something or request a new feature"
-msgstr "Fragen Sie nach etwas oder fordern Sie ein neues Verhalten an"
+msgstr "Frage nach etwas oder bitte um ein neues Feature"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
@@ -289,7 +290,7 @@ msgstr "Schau dir den Quellcode an"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View License (GPLv3)"
-msgstr "Lizenzbedingungen (GPLv3)"
+msgstr "Lizenz ansehen (GPLv3)"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
@@ -333,7 +334,7 @@ msgstr "Du bist zu weit gelaufen!"
 
 #: lib/game/widgets/menus/no_maps_menu.dart:
 msgid "The next part of the story is not yet available.\nIt will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback."
-msgstr "Die Fortsetzung der Geschichte ist noch in Arbeit.\nSie wird hoffentlich bald verfügbar sein.\n\nBis dahin kannst du uns bei der Entwicklung von Xeonija durch Spenden oder Rückmeldung unterstützen."
+msgstr "Die Fortsetzung der Geschichte ist noch in Arbeit.\nSie wird bald verfügbar sein.\n\nBis dahin kannst du die Entwicklung von Xeonija durch Spenden oder Feedback unterstützen."
 
 #: lib/game/widgets/menus/no_maps_menu.dart:
 msgid "Report a bug or ask something"
@@ -353,7 +354,7 @@ msgstr "Keine Elemente hier"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "%s HP"
-msgstr "%s LP"
+msgstr "%s HP"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "Close"
@@ -433,7 +434,7 @@ msgstr "abbrechen"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "HP: %s"
-msgstr "LP: %s"
+msgstr "HP: %s"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "money: %s ¤"
@@ -473,7 +474,7 @@ msgstr "Es wird ab der letzten Ortsveränderung neu gestartet."
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Are you sure you want to quit this game?"
-msgstr "Bist du sicher, dass du dieses Spiel verlassen magst?"
+msgstr "Bist du sicher, dass du dieses Spiel beenden möchtest?"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "\n\nGame data since the last time you changed your location will be lost."
@@ -581,7 +582,7 @@ msgstr "Du hast gewonnen!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"
-msgstr "Möchtest du die Anleitung zum Kämpfen erneut lesen?"
+msgstr "Möchtest du die Kampf-Anleitung erneut lesen?"
 
 #: lib/game/xeonjia_game.dart:
 msgid "* {{hero}} consults \"The Manual of the Perfect Hero\" *"
@@ -621,11 +622,11 @@ msgstr "Falls dir keine Schneebälle mehr zur Verfügung stehen, kannst du neue 
 
 #: lib/game/xeonjia_game.dart:
 msgid "Remember, enemies also have HP. Hit them multiple times to knock them out!"
-msgstr "Merke dir, dass Gegner auch LP haben. Treffe sie mehrere Male, um sie lahmzulegen!"
+msgstr "Merke dir, dass Gegner auch HP haben. Treffe sie mehrere Male, um sie lahmzulegen!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "And if you have few HP take advantage of a move you have available to eat or drink something you have in your backpack!"
-msgstr "Und falls du nur wenige LP übrig hast, ziehe es in Erwägung einen Vorteil aus deinem verbleibenden Zug zu ziehen und etwas aus deinem Rucksack zu verzehren!"
+msgstr "Und falls du nur wenige HP übrig hast, ziehe es in Erwägung einen Vorteil aus deinem verbleibenden Zug zu ziehen und etwas aus deinem Rucksack zu verzehren!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "That's all. Good luck!"
