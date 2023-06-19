@@ -2,8 +2,9 @@
 # Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # deepdaikon <deepdaikon@tuta.io>, 2023.
+# 4545duckling <motazahmed54321@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-04-16 09:50+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Arabic <https://translate.deepdaikon.xyz/projects/xeonjia/story/ar/>\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-06-07 13:13+0000\nLast-Translator: 4545duckling <motazahmed54321@gmail.com>\nLanguage-Team: Arabic <https://translate.deepdaikon.xyz/projects/xeonjia/story/ar/>\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -15,11 +16,11 @@ msgstr "…"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "H-Hello."
-msgstr ""
+msgstr "أ-أهلا."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
-msgstr ""
+msgstr "أهلا و سهلا ، يبدو أنك انت {{البطل}}! سمعت انك تنوي الترحال الي تلك المناطق.\nانا زي الثالث حاكم هذا الإقليم."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "king"
