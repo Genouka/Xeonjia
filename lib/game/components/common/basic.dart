@@ -117,6 +117,10 @@ abstract class BasicComponent extends SpriteComponent
   void show() => _visible = true;
   void invertVisibility() => _visible = !_visible;
 
+  /// Render size and translation
+  double renderHeight = 1;
+  double renderTranslateY = 0;
+
   /// True if this is not on the ground floor
   bool _flying = false;
 
@@ -303,9 +307,12 @@ abstract class BasicComponent extends SpriteComponent
             position.y * gameRef.miniMapZoom - position.y)
         ..scale(gameRef.miniMapZoom);
     }
+    canvas.translate(0, -renderTranslateY * height);
     animation?.done() ?? true
-        ? super.render(canvas)
-        : animation!.getSprite().render(canvas, size: Vector2(width, height));
+        ? super.render(canvas..scale(1, renderHeight))
+        : animation!
+            .getSprite()
+            .render(canvas, size: Vector2(width, renderHeight * height));
   }
 
   @override
