@@ -244,6 +244,8 @@ extension InputController on XeonjiaGame {
         if (overlays.isActive('backpackButton') && isBackpackButtonActive) {
           backpack();
         }
+      } else if (event.logicalKey == LogicalKeyboardKey.keyL) {
+        if (overlays.isActive('leafButton')) millaLeaf();
       } else if (event.logicalKey == LogicalKeyboardKey.keyH) {
         hideHints = !hideHints;
       } else if (event.logicalKey == LogicalKeyboardKey.keyM) {
