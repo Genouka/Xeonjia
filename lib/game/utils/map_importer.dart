@@ -191,7 +191,7 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
         properties[property.getAttributeNode('name')!.value] =
             property.getAttributeNode('value')?.value ?? property.text;
       });
-      tile!.tiledClass ??= object.getAttribute('class');
+      tile!.tiledClass = object.getAttribute('class') ?? tile.tiledClass;
       tile.position = Point(x, y);
       tile.properties.addAll(properties);
       // Add itemId value even if properties['itemId'] == null
