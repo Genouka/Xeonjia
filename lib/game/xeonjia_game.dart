@@ -28,6 +28,8 @@ class XeonjiaGame extends FlameGame
       'statusBox': (BuildContext context, XeonjiaGame game) => statusBox,
       'backpackButton': (BuildContext context, XeonjiaGame game) =>
           BackpackButton(game),
+      'leafButton': (BuildContext context, XeonjiaGame game) =>
+          LeafButton(game),
       'rulesButton': (BuildContext context, XeonjiaGame game) =>
           RulesButton(game),
       'backpackMenu': (BuildContext context, XeonjiaGame game) {
@@ -65,6 +67,7 @@ class XeonjiaGame extends FlameGame
       overlays.add('dialogBox');
       overlays.add('miniMapButton');
       overlays.add('backpackButton');
+      overlays.add('leafButton');
       overlays.add('loading');
     }
     super.onMount();
@@ -81,6 +84,7 @@ class XeonjiaGame extends FlameGame
       add(WorldMapButton());
       overlays.add('miniMapButton');
       overlays.add('backpackButton');
+      overlays.add('leafButton');
     }
     executeAction(action: map.action, actor: playerOne!);
     if (enemies > 0 && map.startBattle) {
@@ -104,6 +108,7 @@ class XeonjiaGame extends FlameGame
     overlays.remove('mapNameBox');
     overlays.remove('miniMapButton');
     overlays.remove('backpackButton');
+    overlays.remove('leafButton');
     overlays.remove('rulesButton');
     overlays.remove('virtualDPad');
 
@@ -249,6 +254,7 @@ class XeonjiaGame extends FlameGame
                   changingTurn = false;
                   if (playerOne!.isMyTurn) {
                     overlays.add('backpackButton');
+                    overlays.add('leafButton');
                     if (enemies > 0) overlays.add('rulesButton');
                     overlays.add('miniMapButton');
                     overlays.remove('dialogBox');
@@ -256,6 +262,7 @@ class XeonjiaGame extends FlameGame
                     overlays.add('dialogBox');
                   } else {
                     overlays.remove('backpackButton');
+                    overlays.remove('leafButton');
                     overlays.remove('rulesButton');
                     overlays.remove('miniMapButton');
                     overlays.remove('virtualDPad');
@@ -510,6 +517,20 @@ class XeonjiaGame extends FlameGame
   /// Buttons used to zoom in and out
   late Button zoomInButton = Button.plus(this);
   late Button zoomOutButton = Button.minus(this);
+
+  /// Show Milla
+  void millaLeaf() {
+    if (isBackpackButtonActive) {
+      executeAction(action: '''
+      (begin
+        (milla-in)
+        (random-milla-dialog)
+        (wait)
+        (milla-out)
+        (set-orientation 0)
+        (wait 2))''');
+    }
+  }
 
   /// Open backpack
   void backpack() {
