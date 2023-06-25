@@ -16,6 +16,7 @@ extension MapController on XeonjiaGame {
       if (enemies == 0) addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
       overlays.remove('miniMapButton');
       overlays.remove('backpackButton');
+      overlays.remove('leafButton');
       overlays.remove('rulesButton');
       overlays.remove('virtualDPad');
       addAll([zoomInButton, zoomOutButton]);
@@ -28,6 +29,7 @@ extension MapController on XeonjiaGame {
       overlays.remove('miniMapButton');
       removeAll([zoomInButton, zoomOutButton]);
       overlays.add('backpackButton');
+      overlays.add('leafButton');
       overlays.remove('dialogBox');
       overlays.add('virtualDPad');
       overlays.add('dialogBox');
