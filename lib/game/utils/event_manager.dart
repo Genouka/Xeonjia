@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flame/components.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
@@ -164,6 +166,13 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   });
   _('delete', 1, (Cell? x) {
     gameRef.getComponentFromId(x!.car as int)?.delete(silently: true);
+    return #NONE;
+  });
+  _('delete-all', 1, (Cell? x) {
+    var it = (x!.car as Cell).iterator;
+    while (it.moveNext()) {
+      gameRef.getComponentFromId(it.current as int)?.delete(silently: true);
+    }
     return #NONE;
   });
   _('respawn', 1, (Cell? x) {
@@ -360,6 +369,58 @@ Environment setEnvironment(XeonjiaGame gameRef) {
         actor.atlas.getAnimation('${actor.name}-$direction-$animation');
     return #NONE;
   });
+  _('milla-in-noleaf', 0, (Cell? x) async {
+    var atlas =
+        await gameRef.loadCustomAtlas('images/metadata/hero-and-milla.xfa');
+    gameRef.playerOne!.withMilla = true;
+    gameRef.playerOne!.renderHeight = 2;
+    gameRef.playerOne!.renderTranslateY = 1;
+    gameRef.playerOne!.animation = atlas.getAnimation('milla-in-noleaf');
+    gameRef.playerOne!.sprite = atlas.getSprite('hero-and-milla');
+    return #NONE;
+  });
+  _('milla-in', 0, (Cell? x) async {
+    var atlas =
+        await gameRef.loadCustomAtlas('images/metadata/hero-and-milla.xfa');
+    gameRef.playerOne!.withMilla = true;
+    gameRef.playerOne!.renderHeight = 2;
+    gameRef.playerOne!.renderTranslateY = 1;
+    gameRef.playerOne!.animation = atlas.getAnimation('milla-in');
+    gameRef.playerOne!.sprite = atlas.getSprite('hero-and-milla');
+    return #NONE;
+  });
+  _('milla-out', 0, (Cell? x) async {
+    var atlas =
+        await gameRef.loadCustomAtlas('images/metadata/hero-and-milla.xfa');
+    gameRef.playerOne!.animation = atlas.getAnimation('milla-out');
+    gameRef.playerOne!.animation!.onComplete = () {
+      gameRef.playerOne!.withMilla = false;
+      gameRef.playerOne!.renderHeight = 1;
+      gameRef.playerOne!.renderTranslateY = 0;
+      gameRef.playerOne!.updateOrientation();
+    };
+    return #NONE;
+  });
+  _('random-milla-dialog', 0, (Cell? x) {
+    if (gameRef.map.milla == null) {
+      var dialogs = [
+        'test1',
+        'test2',
+        "If we walk around long enough, we're sure to arrive somewhere!"
+      ];
+      gameRef.setMessage(Message(
+        gameRef,
+        dialogs[Random().nextInt(dialogs.length)],
+        author: '/milla',
+        translate: false,
+      ));
+    } else {
+      gameRef.executeAction(
+          action:
+              gameRef.map.milla![Random().nextInt(gameRef.map.milla!.length)]);
+    }
+    return #NONE;
+  });
   _(
     'get',
     1,
@@ -395,6 +456,11 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     if (settings.backgroundMusic) {
       gameRef.playBackgroundMusic(custom: x!.car as String);
     }
+    return #NONE;
+  });
+  _('give-leaf', 0, (Cell? x) {
+    gameRef.overlays.remove('leafButton');
+    gameRef.overlays.add('leafButton');
     return #NONE;
   });
 
