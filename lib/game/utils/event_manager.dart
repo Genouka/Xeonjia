@@ -372,7 +372,6 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   _('milla-in-noleaf', 0, (Cell? x) async {
     var atlas =
         await gameRef.loadCustomAtlas('images/metadata/hero-and-milla.xfa');
-    gameRef.playerOne!.withMilla = true;
     gameRef.playerOne!.renderHeight = 2;
     gameRef.playerOne!.renderTranslateY = 1;
     gameRef.playerOne!.animation = atlas.getAnimation('milla-in-noleaf');
@@ -382,7 +381,6 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   _('milla-in', 0, (Cell? x) async {
     var atlas =
         await gameRef.loadCustomAtlas('images/metadata/hero-and-milla.xfa');
-    gameRef.playerOne!.withMilla = true;
     gameRef.playerOne!.renderHeight = 2;
     gameRef.playerOne!.renderTranslateY = 1;
     gameRef.playerOne!.animation = atlas.getAnimation('milla-in');
@@ -394,7 +392,6 @@ Environment setEnvironment(XeonjiaGame gameRef) {
         await gameRef.loadCustomAtlas('images/metadata/hero-and-milla.xfa');
     gameRef.playerOne!.animation = atlas.getAnimation('milla-out');
     gameRef.playerOne!.animation!.onComplete = () {
-      gameRef.playerOne!.withMilla = false;
       gameRef.playerOne!.renderHeight = 1;
       gameRef.playerOne!.renderTranslateY = 0;
       gameRef.playerOne!.updateOrientation();
