@@ -6,6 +6,7 @@ class GameMap {
     this.height = 0,
     this.action,
     this.music,
+    this.milla,
     this.disableMiniMap = false,
     this.disableWorldMap = false,
     this.canEscape = false,
@@ -29,6 +30,9 @@ class GameMap {
 
   /// Background music
   String? music;
+
+  /// Milla's dialogs
+  List<String>? milla;
 
   /// Disable/Enable mini-map (enabled by default)
   bool disableMiniMap;
