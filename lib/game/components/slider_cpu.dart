@@ -9,18 +9,22 @@ class SliderCpuComponent extends BasicComponent
     atlasAsset = 'monsters.xfa';
     weaponList = [PunchWeapon(level: level)];
     friendly = false;
-    quiet = false;
+    quiet = tile.properties['quiet'] == 'true';
+    teamId = int.parse(tile.properties['team'] ?? '-2');
     this.add(NpcController());
   }
-
-  @override
-  int teamId = -2;
 
   @override
   String? name = 'green';
 
   @override
   double get speed => Walker.defaultSpeed * 1.5;
+
+  @override
+  Future<void>? onLoad() async {
+    await super.onLoad();
+    if (tile.properties['visible'] == 'false') hide();
+  }
 
   @override
   void hpDifference(double difference,
