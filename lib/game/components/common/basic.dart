@@ -144,8 +144,9 @@ abstract class BasicComponent extends SpriteComponent
   int teamId = -1;
   Team get team => gameRef.teams!.firstWhere((team) => team.id == teamId);
 
-  /// Check if this is player one (a player can only be a CharacterComponent)
-  bool get isPlayerOne => false;
+  /// Check if this is Component controlled by the user
+  bool get isUser => teamId == 0;
+  bool get isPlayerOne => this == gameRef.playerOne;
 
   /// Sprite animation
   SpriteAnimation? animation;
@@ -212,12 +213,12 @@ abstract class BasicComponent extends SpriteComponent
       _hp += actual;
       if (actual != 0 && maxHP.isFinite) {
         showText(actual.round().toString());
-        if (isPlayerOne && actual < 0) gameRef.playSound(Sfx.damage, volume: 1);
+        if (isUser && actual < 0) gameRef.playSound(Sfx.damage, volume: 1);
       }
       poisonQuantity += poison;
       if (_hp < 0) _hp = 0;
       if (_hp > maxHP) _hp = maxHP;
-      if (isPlayerOne && difference != 0) gameRef.refreshHPBar();
+      if (isUser && difference != 0) gameRef.refreshHPBar();
       if (_hp <= 0) {
         delete();
         if (teamId == (cause?.teamId ?? -99)) {
@@ -280,9 +281,7 @@ abstract class BasicComponent extends SpriteComponent
     if (!wasStationary) {
       otherComponent.hpDifference(-atk, cause: this, poison: poisonAtk);
     }
-    if (otherComponent.isPlayerOne) {
-      executeAction(actionOnCollision, otherComponent);
-    }
+    if (otherComponent.isUser) executeAction(actionOnCollision, otherComponent);
   }
 
   /// Reset health points

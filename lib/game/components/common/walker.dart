@@ -161,7 +161,7 @@ mixin Walker on BasicComponent {
 
   /// Function called if the component moved
   void hasMoved() {
-    if (!wasStationary && (gameRef.isEnemy(this) || isPlayerOne)) {
+    if (!wasStationary && (gameRef.isEnemy(this) || isUser)) {
       gameRef.useMove(this);
     }
   }
@@ -171,7 +171,7 @@ mixin Walker on BasicComponent {
   void onCollision(BasicComponent collidedComponent,
       [bool wasStationary = false]) {
     stop();
-    if (!isPlayerOne) {
+    if (!isUser) {
       collidedComponent.hpDifference(-atk, cause: this, poison: poisonAtk);
     } else if (settings.soundEffects &&
         (collidedComponent is! StaticComponent || !collidedComponent.isFloor)) {

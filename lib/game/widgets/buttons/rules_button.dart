@@ -15,7 +15,7 @@ class RulesButton extends StatelessWidget {
         onTap: () => gameRef.messageManager.isActive ||
                 gameRef.hasAction ||
                 !gameRef.playerOne!.isStationary ||
-                !gameRef.playerOne!.isMyTurn
+                !gameRef.user!.isMyTurn
             ? null
             : gameRef.battleRules(askForConfirmation: true),
         child: Container(

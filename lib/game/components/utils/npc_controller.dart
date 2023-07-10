@@ -57,20 +57,22 @@ class NpcController extends Component {
     bool near = false;
     bool done = false;
     Direction newOrientation = npc.orientation;
-
-    // Check if playerOne has the same x or y
-    if (npc.gameRef.playerOne!.x == npc.x) {
-      newOrientation =
-          npc.gameRef.playerOne!.y > npc.y ? Direction.down : Direction.up;
+    CharacterComponent player = npc.gameRef.milla == null ||
+            npc.distance(npc.gameRef.playerOne!) <=
+                npc.distance(npc.gameRef.milla!)
+        ? npc.gameRef.playerOne!
+        : npc.gameRef.milla!;
+    // Check if player has the same x or y
+    if (player.x == npc.x) {
+      newOrientation = player.y > npc.y ? Direction.down : Direction.up;
       near = true;
-    } else if (npc.gameRef.playerOne!.y == npc.y) {
-      newOrientation =
-          npc.gameRef.playerOne!.x > npc.x ? Direction.right : Direction.left;
+    } else if (player.y == npc.y) {
+      newOrientation = player.x > npc.x ? Direction.right : Direction.left;
       near = true;
     }
 
-    // If npc can hit playerOne: shoot
-    if (npc.componentInFront(newOrientation) == npc.gameRef.playerOne ||
+    // If npc can hit player: shoot
+    if (npc.componentInFront(newOrientation) == player ||
         (npc.hasPpForWeapon(Weapons.snowball.id) && near)) {
       npc.updateOrientation(newOrientation);
       // If npc has remained stationary in this turn move away else shoot
@@ -79,7 +81,7 @@ class NpcController extends Component {
           : Weapons.punch.id);
       if (!(npc.gameRef.remainingMoves == 1 &&
           previousMove == null &&
-          npc.gameRef.playerOne!.hp - weapon.atk > 0)) {
+          player.hp - weapon.atk > 0)) {
         done = true;
         npc.shoot(weapon.id);
       }
@@ -90,11 +92,11 @@ class NpcController extends Component {
       var remainingDirections = Direction.values.toSet().difference({
         if (previousMove != null) previousMove!.opposite,
       }).toList();
-      if (!near) newOrientation = getCloserToPlayerOne(previousMove);
+      if (!near) newOrientation = getCloserToPlayer(player, previousMove);
       if (!remainingDirections.contains(newOrientation) ||
           cantMoveInThisDirection(newOrientation)) {
         remainingDirections.remove(newOrientation);
-        newOrientation = getCloserToPlayerOne(newOrientation);
+        newOrientation = getCloserToPlayer(player, newOrientation);
         if (!remainingDirections.contains(newOrientation) ||
             cantMoveInThisDirection(newOrientation)) {
           remainingDirections.remove(newOrientation);
@@ -127,14 +129,13 @@ class NpcController extends Component {
         !(component is StaticComponent && component.isFloor);
   }
 
-  Direction getCloserToPlayerOne([Direction? directionAvoided]) {
+  Direction getCloserToPlayer(CharacterComponent player,
+      [Direction? directionAvoided]) {
     if ([Direction.right, Direction.left].contains(directionAvoided) ||
         Random().nextBool()) {
-      return npc.gameRef.playerOne!.y > npc.y ? Direction.down : Direction.up;
+      return player.y > npc.y ? Direction.down : Direction.up;
     } else {
-      return npc.gameRef.playerOne!.x > npc.x
-          ? Direction.right
-          : Direction.left;
+      return player.x > npc.x ? Direction.right : Direction.left;
     }
   }
 

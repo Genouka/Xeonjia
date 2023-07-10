@@ -118,6 +118,7 @@ class XeonjiaGame extends FlameGame
     // Reset variables
     elapsed = 0;
     _elapsedSecondsMultiplayer = 0;
+    _activePlayerIndex = 0;
     remainingMoves = 3;
     changingTurn = false;
     inBattle = false;
@@ -220,16 +221,20 @@ class XeonjiaGame extends FlameGame
   List<Walker> players = [];
   List<BasicComponent> deletedComponents = [];
 
-  /// Main character
+  /// Main characters
   CharacterComponent? playerOne;
+  CharacterComponent? milla;
 
   /// List of teams
   List<Team>? teams;
 
   /// Battle variables
   Walker? get activePlayer => changingTurn ? null : players[_activePlayerIndex];
+  CharacterComponent? get user => players.isEmpty || activePlayer?.teamId != 0
+      ? playerOne
+      : activePlayer as CharacterComponent;
   late bool changingTurn;
-  late int _activePlayerIndex;
+  int _activePlayerIndex = 0;
   late int remainingMoves;
 
   /// Increase the move counter during a battle
@@ -252,14 +257,18 @@ class XeonjiaGame extends FlameGame
                 } else {
                   _activePlayerIndex = i;
                   changingTurn = false;
-                  if (playerOne!.isMyTurn) {
-                    overlays.add('backpackButton');
-                    overlays.add('leafButton');
-                    if (enemies > 0) overlays.add('rulesButton');
-                    overlays.add('miniMapButton');
-                    overlays.remove('dialogBox');
-                    overlays.add('virtualDPad');
-                    overlays.add('dialogBox');
+                  refreshHPBar();
+                  if (user!.isMyTurn) {
+                    // only if the previous player wasn't user
+                    if (!overlays.isActive('backpackButton')) {
+                      overlays.add('backpackButton');
+                      overlays.add('leafButton');
+                      if (enemies > 0) overlays.add('rulesButton');
+                      overlays.add('miniMapButton');
+                      overlays.remove('dialogBox');
+                      overlays.add('virtualDPad');
+                      overlays.add('dialogBox');
+                    }
                   } else {
                     overlays.remove('backpackButton');
                     overlays.remove('leafButton');
@@ -278,7 +287,7 @@ class XeonjiaGame extends FlameGame
   @override
   FutureOr<void> add(Component component) {
     if (component is Walker &&
-        (([-3, -2, 1].contains(component.teamId)) ||
+        (([-3, -2, 0, 1].contains(component.teamId)) ||
             (component is CharacterComponent &&
                 (component.friendly == false ||
                     (component.tile.properties['isPlayerOne'] ?? false))))) {
@@ -288,6 +297,7 @@ class XeonjiaGame extends FlameGame
         playerOne = component;
         _activePlayerIndex = players.length - 1;
       }
+      if (component.name == 'milla') milla = component as CharacterComponent;
     }
     return super.add(component);
   }
@@ -295,6 +305,12 @@ class XeonjiaGame extends FlameGame
   @override
   void remove(Component component) {
     if (isEnemy(component) && enemies == 0 && inBattle) endBattle();
+    if (component == milla && inBattle) {
+      setMessage(Message(
+          this,
+          'Milla is tired and is back in the leaf, I have to continue the battle.'
+              .i18n));
+    }
     super.remove(component);
   }
 
@@ -377,6 +393,7 @@ class XeonjiaGame extends FlameGame
     overlays.remove('rulesButton');
     camera.moveTo(Vector2(moveCamera(size.x, map.width, playerOne!.x),
         moveCamera(size.y, map.height, playerOne!.y)));
+    _activePlayerIndex = players.indexOf(playerOne!);
     add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
     playBackgroundMusic(custom: null);
     playSound(Sfx.win, volume: 1);
@@ -412,6 +429,8 @@ class XeonjiaGame extends FlameGame
         Sym('self'), Intrinsic('self', 0, (Cell? x) => self!));
     environment.defineSymbol(
         Sym('actor'), Intrinsic('actor', 0, (Cell? x) => actor ?? playerOne!));
+    environment.defineSymbol(
+        Sym('user-name'), (user?.name ?? mainCharacter.name).toUpperCase());
     _actionContinuation =
         evaluate(readFromTokens(splitStringIntoTokens(action!)), environment);
   }
@@ -627,13 +646,13 @@ class XeonjiaGame extends FlameGame
     overlays.remove('endMenu');
   }
 
-  /// Move [playerOne]
+  /// Move [user]
   void movePlayer(Direction direction, {bool slow = false}) {
     if (!_pause &&
         !messageManager.isActive &&
-        playerOne!.isMyTurn &&
+        user!.isMyTurn &&
         elapsed > 0.5) {
-      playerOne?.updateDirection(direction, slow: slow);
+      user?.updateDirection(direction, slow: slow);
     }
   }
 
@@ -644,12 +663,12 @@ class XeonjiaGame extends FlameGame
   /// True if it's possible to open the backpack
   bool get isBackpackButtonActive => !(messageManager.isActive ||
       hasAction ||
-      !playerOne!.isStationary ||
-      !playerOne!.isMyTurn);
+      !user!.isStationary ||
+      !user!.isMyTurn);
 
   /// True if it's possible to open the mini-map
   bool get isMiniMapButtonActive =>
-      !(messageManager.isActive || hasAction || !playerOne!.isStationary);
+      !(messageManager.isActive || hasAction || !user!.isStationary);
 
   /// True if the world map is disabled
   bool get worldMapDisabled =>

@@ -29,7 +29,7 @@ class SliderCpuComponent extends BasicComponent
   @override
   void hpDifference(double difference,
       {BasicComponent? cause, double poison = 0}) {
-    if (cause?.isPlayerOne ?? false) {
+    if (cause?.isUser ?? false) {
       super.hpDifference(difference, cause: cause!, poison: poison);
     }
   }

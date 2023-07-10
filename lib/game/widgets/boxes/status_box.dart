@@ -44,14 +44,13 @@ class StatusBoxState extends State<StatusBox> {
                     Expanded(
                       child: _PercentIndicator(
                         values: [
-                          widget.gameRef.playerOne!.hp,
-                          widget.gameRef.playerOne!.maxHP,
+                          widget.gameRef.user!.hp,
+                          widget.gameRef.user!.maxHP,
                         ],
-                        text: widget.gameRef.playerOne!.hp.round().toString(),
+                        text: widget.gameRef.user!.hp.round().toString(),
                         colors: [
-                          MyColors.healthPointsColor(
-                              widget.gameRef.playerOne!.hp /
-                                  widget.gameRef.playerOne!.maxHP),
+                          MyColors.healthPointsColor(widget.gameRef.user!.hp /
+                              widget.gameRef.user!.maxHP),
                           Colors.grey
                         ],
                       ),

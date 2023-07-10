@@ -66,7 +66,7 @@ extension InputController on XeonjiaGame {
 
   /// Handle tap gesture
   void _tapHandler(Offset position) {
-    if (isPaused || !(playerOne?.isMyTurn ?? false)) return;
+    if (isPaused || !(user?.isMyTurn ?? false)) return;
 
     // Ignore tap near buttons (bottom right)
     var buttonSize =
@@ -85,21 +85,21 @@ extension InputController on XeonjiaGame {
 
     // Update orientation
     var relativeTapX =
-        position.dx - (playerOne!.x + componentSize / 2 - camera.position.x);
+        position.dx - (user!.x + componentSize / 2 - camera.position.x);
     var relativeTapY =
-        position.dy - (playerOne!.y + componentSize / 2 - camera.position.y);
+        position.dy - (user!.y + componentSize / 2 - camera.position.y);
 
     if (position.dx < componentSize || position.dx > size.x - componentSize) {
-      playerOne!.updateOrientation(
+      user!.updateOrientation(
           GetDirection.fromXY(position.dx - componentSize, 0));
     } else if (position.dy < componentSize ||
         position.dy > size.y - componentSize) {
-      playerOne!.updateOrientation(
+      user!.updateOrientation(
           GetDirection.fromXY(0, position.dy - componentSize));
     } else if (relativeTapX.abs() > 15 || relativeTapY.abs() > 15) {
       relativeTapX.abs() > relativeTapY.abs()
-          ? playerOne!.updateOrientation(GetDirection.fromXY(relativeTapX, 0))
-          : playerOne!.updateOrientation(GetDirection.fromXY(0, relativeTapY));
+          ? user!.updateOrientation(GetDirection.fromXY(relativeTapX, 0))
+          : user!.updateOrientation(GetDirection.fromXY(0, relativeTapY));
     }
   }
 
@@ -225,20 +225,20 @@ extension InputController on XeonjiaGame {
       } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
         movePlayer(Direction.left);
       } else if (event.logicalKey == LogicalKeyboardKey.space) {
-        playerOne?.inspect();
+        user?.inspect();
       } else if (event.logicalKey == LogicalKeyboardKey.keyA) {
-        playerOne!.updateOrientation(Direction.left);
+        user!.updateOrientation(Direction.left);
       } else if (event.logicalKey == LogicalKeyboardKey.keyW) {
-        playerOne!.updateOrientation(Direction.up);
+        user!.updateOrientation(Direction.up);
       } else if (event.logicalKey == LogicalKeyboardKey.keyD) {
-        playerOne!.updateOrientation(Direction.right);
+        user!.updateOrientation(Direction.right);
       } else if (event.logicalKey == LogicalKeyboardKey.keyS) {
-        playerOne!.updateOrientation(Direction.down);
+        user!.updateOrientation(Direction.down);
       } else if (event.logicalKey == LogicalKeyboardKey.keyQ) {
-        if (inBattle) playerOne!.shoot(Weapons.punch.id);
+        if (inBattle) user!.shoot(Weapons.punch.id);
       } else if (event.logicalKey == LogicalKeyboardKey.keyR) {
-        if (inBattle && playerOne!.hasWeaponId(Weapons.snowball.id)) {
-          playerOne!.shoot(Weapons.snowball.id);
+        if (inBattle && user!.hasWeaponId(Weapons.snowball.id)) {
+          user!.shoot(Weapons.snowball.id);
         }
       } else if (event.logicalKey == LogicalKeyboardKey.keyB) {
         if (overlays.isActive('backpackButton') && isBackpackButtonActive) {

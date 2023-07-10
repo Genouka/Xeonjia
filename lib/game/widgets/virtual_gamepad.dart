@@ -32,31 +32,31 @@ class Button extends HudButtonComponent {
   }
 
   Button.A(XeonjiaGame gameRef)
-      : this('A', gameRef.playerOne!.inspect,
+      : this('A', () => gameRef.user!.inspect(),
             visibility: () =>
-                !gameRef.miniMapActive && gameRef.playerOne!.isMyTurn);
+                !gameRef.miniMapActive && (gameRef.user?.isMyTurn ?? false));
 
   Button.P(XeonjiaGame gameRef)
       : this(
           'P',
-          () => gameRef.playerOne!.shoot(0),
+          () => gameRef.user!.shoot(0),
           buttonPosition: Anchor.topLeft,
           color: Colors.blue.shade800,
           visibility: () =>
               gameRef.overlays.isActive('rulesButton') &&
-              gameRef.playerOne!.isMyTurn,
+              gameRef.user!.isMyTurn,
         );
 
   Button.S(XeonjiaGame gameRef)
       : this(
           'S',
-          () => gameRef.playerOne!.shoot(1),
+          () => gameRef.user!.shoot(1),
           buttonPosition: Anchor.topRight,
           color: Colors.blueGrey.shade800,
-          percent: () => gameRef.playerOne!.getWeaponById(1).ppPercentage,
+          percent: () => gameRef.user!.getWeaponById(1).ppPercentage,
           visibility: () =>
               gameRef.overlays.isActive('rulesButton') &&
-              gameRef.playerOne!.isMyTurn,
+              gameRef.user!.isMyTurn,
         );
 
   Button.plus(XeonjiaGame gameRef)
@@ -197,10 +197,10 @@ class _VirtualDPadState extends State<VirtualDPad> {
             child: GestureDetector(
               onTapDown: (TapDownDetails details) {
                 Direction? direction = getDirection(details.localPosition);
-                if (direction != null && widget.gameRef.playerOne != null) {
-                  widget.gameRef.playerOne!.isStationary
+                if (direction != null && widget.gameRef.user != null) {
+                  widget.gameRef.user!.isStationary
                       ? widget.gameRef.movePlayer(direction)
-                      : widget.gameRef.playerOne!.updateOrientation(direction);
+                      : widget.gameRef.user!.updateOrientation(direction);
                 }
               },
               onLongPressStart: (LongPressStartDetails details) async {

@@ -31,42 +31,40 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     env.defineSymbol(Sym(x!.car as String), x.cdr.car);
     return #NONE;
   });
-  _('get-HP', 0, (Cell? x) => gameRef.playerOne!.hp);
-  _('get-initial-HP', 0, (Cell? x) => gameRef.playerOne!.maxHP);
+  _('get-HP', 0, (Cell? x) => gameRef.user!.hp);
+  _('get-initial-HP', 0, (Cell? x) => gameRef.user!.maxHP);
   _('set-HP-diff', 1, (Cell? x) {
-    gameRef.playerOne!.hpDifference((x!.car as int).toDouble());
+    gameRef.user!.hpDifference((x!.car as int).toDouble());
     return #NONE;
   });
   _('set-HP-to', 1, (Cell? x) {
-    gameRef.playerOne!.setStatus((x!.car as int).toDouble(), 0);
+    gameRef.user!.setStatus((x!.car as int).toDouble(), 0);
     return #NONE;
   });
   _('restore-HP', 0, (Cell? x) {
-    gameRef.addCustomWidgetOverlay('blackCurtain',
-        BlackCurtain(gameRef, gameRef.playerOne!.restoreStatus));
+    gameRef.addCustomWidgetOverlay(
+        'blackCurtain', BlackCurtain(gameRef, gameRef.user!.restoreStatus));
     return #NONE;
   });
   _('increase-HP', 1, (Cell? x) => gameRef.playerOne!.maxHP += x!.car as num);
-  _('get-atk', 0, (Cell? x) => gameRef.playerOne!.atk);
+  _('get-atk', 0, (Cell? x) => gameRef.user!.atk);
   _('increase-atk', 1, (Cell? x) => gameRef.playerOne!.atk += x!.car as num);
-  _('get-def', 0, (Cell? x) => gameRef.playerOne!.def);
+  _('get-def', 0, (Cell? x) => gameRef.user!.def);
   _('increase-def', 1, (Cell? x) => gameRef.playerOne!.def += x!.car as num);
   _('set-money-diff', 1, (Cell? x) {
     gameRef.playerOne!.moneyDifference(x!.car as int);
     return #NONE;
   });
-  _('has-weapon', 1,
-      (Cell? x) => gameRef.playerOne!.hasWeaponId(x!.car as int));
+  _('has-weapon', 1, (Cell? x) => gameRef.user!.hasWeaponId(x!.car as int));
   _('set-pp-snowballs', 1, (Cell? x) {
-    if (gameRef.playerOne!.hasWeaponId(1)) {
-      gameRef.playerOne!.getWeaponById(1).powerPoints =
-          (x!.car as num).toDouble();
+    if (gameRef.user!.hasWeaponId(1)) {
+      gameRef.user!.getWeaponById(1).powerPoints = (x!.car as num).toDouble();
     }
     return #NONE;
   });
   _('max-pp-snowballs', 0, (Cell? x) {
-    if (!gameRef.playerOne!.hasWeaponId(1)) return false;
-    var weapon = gameRef.playerOne!.getWeaponById(1);
+    if (!gameRef.user!.hasWeaponId(1)) return false;
+    var weapon = gameRef.user!.getWeaponById(1);
     var max = weapon.powerPoints >= weapon.maxPp;
     weapon.restorePp();
     return max;
@@ -106,8 +104,8 @@ Environment setEnvironment(XeonjiaGame gameRef) {
         (env.lookForValue(Sym('self')) as Intrinsic).fun!(x) as BasicComponent;
     c.x = x.cdr.car / 16 * componentSize;
     c.y = x.cdr.cdr.car / 16 * componentSize;
-    if (c.isPlayerOne) {
-      gameRef.updateCamera(gameRef.playerOne!.x, gameRef.playerOne!.y);
+    if (c.isUser) {
+      gameRef.updateCamera(gameRef.user!.x, gameRef.user!.y);
     }
     return #NONE;
   });
@@ -118,7 +116,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     actor.updateDirection(GetDirection.fromInt(direction), animated: false);
     return #NONE;
   });
-  _('orientation', 0, (Cell? x) => gameRef.playerOne!.orientation.index);
+  _('orientation', 0, (Cell? x) => gameRef.user!.orientation.index);
   _('set-orientation', 1, (Cell? x) {
     var actorAndValue = getActorAndValue(x);
     Walker actor = actorAndValue[0];

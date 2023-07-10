@@ -74,18 +74,18 @@ class ModifierComponent extends BasicComponent {
       for (final weapon in componentAbove.weaponList) {
         weapon.powerPoints += _powerPointsDelta;
       }
-      if (componentAbove.isPlayerOne) {
-        if (_hpDelta != 0 && componentAbove.isPlayerOne) {
-          gameRef.playerOne!.showText('+ ${_hpDelta.round()} HP');
-        } else if (_moneyDelta != 0 && componentAbove.isPlayerOne) {
-          gameRef.playerOne!.showText('+ $_moneyDelta ¤');
+      if (componentAbove.isUser) {
+        if (_hpDelta != 0 && componentAbove.isUser) {
+          gameRef.user!.showText('+ ${_hpDelta.round()} HP');
+        } else if (_moneyDelta != 0 && componentAbove.isUser) {
+          gameRef.user!.showText('+ $_moneyDelta ¤');
           gameRef.playSound(Sfx.money);
         }
       }
       if (_itemId != '0' &&
-          componentAbove.isPlayerOne &&
+          componentAbove.isUser &&
           gameRef.config.mode == GameMode.story) {
-        componentAbove.addItem(_itemId, sfx: _moneyDelta == 0);
+        gameRef.playerOne!.addItem(_itemId, sfx: _moneyDelta == 0);
       }
       if (_regenerable ?? false) gameRef.modifiersToBeRegenerated.add(this);
       if (explosionOnDelete) {

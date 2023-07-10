@@ -22,7 +22,7 @@ class CharacterComponent extends BasicComponent
     _initialOrientation = orientation;
     friendly = 'true' == (tile.properties['friendly'] ?? 'true');
     quiet = 'true' == (tile.properties['quiet'] ?? 'true');
-    if (isPlayerOne && matchConfig.mode == GameMode.story) {
+    if (team == 0 && matchConfig.mode == GameMode.story) {
       atk = mainCharacter.atk;
       def = mainCharacter.def;
     } else {
@@ -37,17 +37,27 @@ class CharacterComponent extends BasicComponent
       }
     }
     teamId = team;
-    if (image == '') {
-      atlasAsset ??= isPlayerOne ? 'hero.xfa' : 'character_cpu.xfa';
-    }
     name ??= isPlayerOne ? 'hero' : 'character_cpu-$teamId';
+    if (name == 'hero' || name == 'milla') atlasAsset = '$name.xfa';
     if (weaponList.isEmpty) {
       weaponList = inputWeaponList ??
           ((team == 0)
               ? [SnowBallWeapon(level: 5), MineWeapon(level: 1)]
               : [SnowBallWeapon(level: 9), MineWeapon(level: 5)]);
     }
-    if (!isPlayerOne) selectedWeaponIndex = newSelectedWeaponIndex;
+    if (name == 'milla') {
+      maxHP = mainCharacter.maxHP;
+      weaponList = mainCharacter.weaponList;
+      for (final w in weaponList) {
+        w.restorePp();
+      }
+    }
+    if (isPlayerOne) {
+      // i18n: 'We must fight, not talk!'.i18n
+      action = '''(dialog '(("/" "We must fight, not talk!")))''';
+    } else {
+      selectedWeaponIndex = newSelectedWeaponIndex;
+    }
   }
 
   /// Non-Player Character (story mode)
@@ -89,9 +99,6 @@ class CharacterComponent extends BasicComponent
   /// Component's tile
   @override
   Tile tile;
-
-  @override
-  bool get isPlayerOne => this == gameRef.playerOne;
 
   /// Money earned by the player
   int _money = mainCharacter.money;
@@ -140,7 +147,7 @@ class CharacterComponent extends BasicComponent
   /// Add item to _itemList
   void addItem(String itemId, {bool sfx = true}) {
     _itemList.add(itemId);
-    if (isPlayerOne) {
+    if (isUser) {
       if (itemData.containsKey(itemId)) {
         gameRef.setMessage(Message(
           gameRef,
@@ -165,19 +172,21 @@ class CharacterComponent extends BasicComponent
   /// Remove item from _itemList
   void removeItem(String itemId, {bool used = true}) {
     _itemList.remove(itemId);
-    if (isPlayerOne) {
-      if (used) gameRef.useMove(this);
+    if (isUser) {
+      if (used) gameRef.useMove(gameRef.user ?? this);
       gameRef.setMessage(Message(
           gameRef,
           used
-              ? '* {{hero}} used {{selected-item-name}} *'.i18n
+              ? (gameRef.user?.isPlayerOne ?? true
+                  ? '* {{hero}} used {{selected-item-name}} *'.i18n
+                  : '* {{user-name}} used {{selected-item-name}} *'.i18n)
               : '* {{hero}} gives %s *'.i18n.fill([itemData[itemId]!.name])));
     }
   }
 
   @override
   void collidedBy(Walker otherComponent, [bool wasStationary = false]) {
-    if (!isPlayerOne) super.collidedBy(otherComponent);
+    if (!isUser) super.collidedBy(otherComponent);
   }
 
   @override

@@ -42,7 +42,7 @@ class RemainingMovesBox extends TextBoxComponent with HasGameRef<XeonjiaGame> {
 
   @override
   void update(double dt) {
-    text = (gameRef.playerOne?.isMyTurn ?? false)
+    text = (gameRef.user?.isMyTurn ?? false)
         ? texts[gameRef.remainingMoves]!
         : texts[0]!;
     super.update(dt);

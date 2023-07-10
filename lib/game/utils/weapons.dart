@@ -73,7 +73,7 @@ class PunchWeapon extends Weapon {
     componentInFront?.hpDifference(-atk, cause: shooter);
     shooter.animation = shooter.atlas
         .getAnimation('${shooter.name}-${shooter.orientation.index}-punching');
-    if (shooter.isPlayerOne) shooter.gameRef.playSound(Sfx.punch);
+    if (shooter.isUser) shooter.gameRef.playSound(Sfx.punch);
   }
 }
 

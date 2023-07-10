@@ -5,7 +5,9 @@ import 'package:xeonjia/game/xeonjia.dart';
 /// It is shown only for 2 seconds after healthPointsDifference
 mixin HPBar on Walker {
   final _padding = 5.0;
-  bool get _show => (!isPlayerOne || id != -1) && hp != maxHP && hp != 0;
+  bool get _show =>
+      gameRef.inBattle &&
+      ((teamId != 0 || !isMyTurn) && hp != maxHP && hp != 0);
 
   @override
   void render(Canvas canvas) {
