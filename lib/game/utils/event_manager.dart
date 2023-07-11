@@ -450,6 +450,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     }
     return #NONE;
   });
+  _('minutes-played', 0, (Cell? x) => mainCharacter.minutesPlayed);
   _(
     'get',
     1,
