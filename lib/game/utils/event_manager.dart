@@ -399,14 +399,48 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   _('random-milla-dialog', 0, (Cell? x) {
     if (gameRef.map.milla == null) {
       var dialogs = [
-        'test1',
-        'test2',
-        "If we walk around long enough, we're sure to arrive somewhere!"
+        [
+          'Mitsu Forest used to be bigger, it was deforested to build Melhopolis.'
+              .i18n
+        ],
+        ['The Xeonjia Tower is the tallest building in the Kingdom.'.i18n],
+        ['There are 3 regions in the Kingdom.'.i18n],
+        [
+          'If you click on a point on the world map you can travel to places you have already been.'
+              .i18n
+        ],
+        ['Zzz…', 'sleepy'],
+        ['The world is big.'.i18n],
+        ['What time is it?'.i18n],
+        ["If we walk around long enough, we're sure to arrive somewhere!".i18n],
+        ['How are you?'.i18n],
+        ["It's cold here.".i18n],
+        ['How are you?'.i18n],
+        [
+          "'Green! Green!\nGreen is the answer, but I don't remember the question.'"
+              .i18n
+        ],
+        [
+          "Ours is a strange world, it's cold here but a little warmer there."
+              .i18n
+        ],
+        ['I have to stop eating ice cream before bed.'.i18n],
+        ['I know many languages.'.i18n + ' Lo sai?'],
+        ['I know many languages.'.i18n + ' ¿Lo sabes?'],
+        ['I know many languages.'.i18n + ' Sa tead seda?'],
+        ['Hey!'.i18n],
+        ['Here I am.'.i18n],
+        ['Leave me alone.'.i18n],
+        ['Do you believe in fairies??'.i18n],
+        ['What do piglets dream about?'.i18n],
+        ['I am hungryyy.'.i18n],
       ];
+      var dialog = dialogs[Random().nextInt(dialogs.length)];
+      var mood = dialog.length > 1 ? '_${dialog.last}' : '';
       gameRef.setMessage(Message(
         gameRef,
-        dialogs[Random().nextInt(dialogs.length)],
-        author: '/milla',
+        dialog.first,
+        author: '/milla$mood',
         translate: false,
       ));
     } else {
