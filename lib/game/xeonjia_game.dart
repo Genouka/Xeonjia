@@ -262,8 +262,7 @@ class XeonjiaGame extends FlameGame
                     // only if the previous player wasn't user
                     if (!overlays.isActive('backpackButton')) {
                       overlays.add('backpackButton');
-                      overlays.add('leafButton');
-                      if (inBattle) overlays.add('rulesButton');
+                      overlays.add(inBattle ? 'rulesButton' : 'leafButton');
                       overlays.add('miniMapButton');
                       overlays.remove('dialogBox');
                       overlays.add('virtualDPad');
@@ -384,6 +383,7 @@ class XeonjiaGame extends FlameGame
     if (playerOne!.hasWeaponId(1)) add(Button.S(this));
     add(RemainingMovesBox());
     overlays.add('rulesButton');
+    overlays.remove('leafButton');
     playBackgroundMusic(custom: 'enemies');
   }
 
@@ -391,6 +391,7 @@ class XeonjiaGame extends FlameGame
   void endBattle() {
     inBattle = false;
     overlays.remove('rulesButton');
+    overlays.add('leafButton');
     camera.moveTo(Vector2(moveCamera(size.x, map.width, playerOne!.x),
         moveCamera(size.y, map.height, playerOne!.y)));
     _activePlayerIndex = players.indexOf(playerOne!);

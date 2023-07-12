@@ -29,11 +29,10 @@ extension MapController on XeonjiaGame {
       overlays.remove('miniMapButton');
       removeAll([zoomInButton, zoomOutButton]);
       overlays.add('backpackButton');
-      overlays.add('leafButton');
       overlays.remove('dialogBox');
       overlays.add('virtualDPad');
       overlays.add('dialogBox');
-      if (inBattle) overlays.add('rulesButton');
+      overlays.add(inBattle ? 'rulesButton' : 'leafButton');
       statusBox.state?.refresh();
       resume();
       miniMapActive = false;
