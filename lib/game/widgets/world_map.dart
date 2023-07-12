@@ -54,13 +54,7 @@ class _RectangleMap extends PositionComponent
     with HasGameRef<XeonjiaGame>, Tappable {
   _RectangleMap(this.map);
   final MapData map;
-  bool isTheCurrentMap = false;
-
-  @override
-  FutureOr<void> onLoad() {
-    isTheCurrentMap = map.id == gameRef.map.id;
-    return super.onLoad();
-  }
+  bool get isTheCurrentMap => map.id == gameRef.map.id;
 
   @override
   bool onTapUp(TapUpInfo info) {
