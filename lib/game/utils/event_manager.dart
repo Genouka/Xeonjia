@@ -354,6 +354,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     gameRef.startBattle();
     return #NONE;
   });
+  _('in-battle', 0, (Cell? x) => gameRef.inBattle);
   _('battle-rules', 0, (Cell? x) {
     gameRef.battleRules();
     return #NONE;
