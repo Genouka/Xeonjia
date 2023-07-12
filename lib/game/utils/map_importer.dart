@@ -33,7 +33,10 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
           gameRef.map.music = property.getAttributeNode('value')!.value;
           break;
         case 'milla':
-          gameRef.map.milla = property.text.split(';;;');
+          gameRef.map.milla = (property.text.isNotEmpty
+                  ? property.text
+                  : property.getAttributeNode('value')!.value)
+              .split(';;;');
           break;
         case 'map-name':
           gameRef.map.name = property.getAttributeNode('value')!.value;
