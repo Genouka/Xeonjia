@@ -541,14 +541,18 @@ class XeonjiaGame extends FlameGame
   /// Show Milla
   void millaLeaf() {
     if (isBackpackButtonActive) {
-      executeAction(action: '''
+      // i18n: 'Milla is already here!'.i18n
+      executeAction(
+          action: milla == null
+              ? '''
       (begin
         (milla-in)
         (milla-dialog)
         (wait)
         (milla-out)
         (set-orientation 0)
-        (wait 2))''');
+        (wait 2))'''
+              : '''(dialog '(("Milla is already here!")))''');
     }
   }
 
