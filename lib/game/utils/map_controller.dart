@@ -13,7 +13,7 @@ extension MapController on XeonjiaGame {
       pause(stopEngine: false, stopMusic: false);
       statusBox.state?.refresh();
       overlays.remove('mapNameBox');
-      if (enemies == 0) addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
+      if (!inBattle) addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
       overlays.remove('miniMapButton');
       overlays.remove('backpackButton');
       overlays.remove('leafButton');
@@ -33,7 +33,7 @@ extension MapController on XeonjiaGame {
       overlays.remove('dialogBox');
       overlays.add('virtualDPad');
       overlays.add('dialogBox');
-      if (enemies > 0) overlays.add('rulesButton');
+      if (inBattle) overlays.add('rulesButton');
       statusBox.state?.refresh();
       resume();
       miniMapActive = false;

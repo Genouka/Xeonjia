@@ -71,8 +71,8 @@ extension InputController on XeonjiaGame {
     // Ignore tap near buttons (bottom right)
     var buttonSize =
         children.whereType<Button>().firstOrNull?.size ?? Vector2.zero();
-    if (position.dx > canvasSize.x - buttonSize.x * (enemies > 0 ? 4 : 2) &&
-        position.dy > canvasSize.y - buttonSize.y * (enemies > 0 ? 4 : 2)) {
+    if (position.dx > canvasSize.x - buttonSize.x * (inBattle ? 4 : 2) &&
+        position.dy > canvasSize.y - buttonSize.y * (inBattle ? 4 : 2)) {
       return;
     }
 

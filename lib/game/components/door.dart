@@ -29,7 +29,7 @@ class DoorComponent extends BasicComponent {
   @override
   bool isSolid({BasicComponent? otherComponent}) =>
       !otherComponent!.isPlayerOne ||
-      (gameRef.enemies != 0 && !gameRef.map.canEscape);
+      (gameRef.inBattle && !gameRef.map.canEscape);
 
   @override
   void collidedBy(otherComponent, [bool wasStationary = false]) {

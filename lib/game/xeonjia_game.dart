@@ -263,7 +263,7 @@ class XeonjiaGame extends FlameGame
                     if (!overlays.isActive('backpackButton')) {
                       overlays.add('backpackButton');
                       overlays.add('leafButton');
-                      if (enemies > 0) overlays.add('rulesButton');
+                      if (inBattle) overlays.add('rulesButton');
                       overlays.add('miniMapButton');
                       overlays.remove('dialogBox');
                       overlays.add('virtualDPad');
@@ -672,7 +672,7 @@ class XeonjiaGame extends FlameGame
 
   /// True if the world map is disabled
   bool get worldMapDisabled =>
-      !miniMapEnabled || enemies > 0 || map.disableWorldMap;
+      !miniMapEnabled || inBattle || map.disableWorldMap;
 
   /// Handle back button
   Future<bool> onWillPop() {
