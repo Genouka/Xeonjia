@@ -11,7 +11,7 @@ class LeafButton extends StatelessWidget {
     return (gameRef.currentEventLog['milla-leaf'] ?? false)
         ? Positioned(
             top: 6,
-            right: gameRef.map.disableMiniMap ? 56 : 100,
+            right: gameRef.map.disableMiniMap ? 50 : 94,
             child: InkWell(
               onTap: gameRef.millaLeaf,
               child: Container(
