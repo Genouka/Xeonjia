@@ -171,7 +171,7 @@ abstract class BasicComponent extends SpriteComponent
     if (atlasAsset != null && name != null) {
       atlas = await gameRef.loadCustomAtlas('images/metadata/$atlasAsset');
       sprite = getSpriteFromAtlas();
-      show();
+      if ('true' == (tile.properties['visible'] ?? 'true')) show();
     }
   }
 
