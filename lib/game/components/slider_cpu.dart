@@ -10,12 +10,10 @@ class SliderCpuComponent extends BasicComponent
     weaponList = [PunchWeapon(level: level)];
     friendly = false;
     quiet = tile.properties['quiet'] == 'true';
+    name = tile.properties['name'] ?? 'green';
     teamId = int.parse(tile.properties['team'] ?? '-2');
     this.add(NpcController());
   }
-
-  @override
-  String? name = 'green';
 
   @override
   double get speed => Walker.defaultSpeed * 1.5;
