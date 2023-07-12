@@ -397,7 +397,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     };
     return #NONE;
   });
-  _('random-milla-dialog', 0, (Cell? x) {
+  _('milla-dialog', 0, (Cell? x) {
     if (gameRef.map.milla == null) {
       var dialogs = [
         [

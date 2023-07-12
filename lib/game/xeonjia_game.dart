@@ -543,7 +543,7 @@ class XeonjiaGame extends FlameGame
       executeAction(action: '''
       (begin
         (milla-in)
-        (random-milla-dialog)
+        (milla-dialog)
         (wait)
         (milla-out)
         (set-orientation 0)
