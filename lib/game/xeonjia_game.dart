@@ -242,8 +242,8 @@ class XeonjiaGame extends FlameGame
     if (!skipTurn && !(component.isMyTurn && inBattle)) return;
     if (skipTurn || --remainingMoves <= 0) {
       remainingMoves = 3;
-      if (++_activePlayerIndex >= players.length) _activePlayerIndex = 0;
-      for (int i = _activePlayerIndex; i < players.length; i++) {
+      for (int i = _activePlayerIndex + 1;; i++) {
+        if (i >= players.length) i = 0;
         if (!(players[i].deleted || players[i].isBeingDeleted)) {
           changingTurn = true;
           camera.moveTo(Vector2(moveCamera(size.x, map.width, players[i].x),
@@ -251,7 +251,9 @@ class XeonjiaGame extends FlameGame
           add(TimerComponent(
               period: 0.7,
               onTick: () {
-                if (!inBattle) return;
+                if (!inBattle ||
+                    playerOne!.isBeingDeleted ||
+                    playerOne!.deleted) return;
                 if (players[i].deleted || players[i].isBeingDeleted) {
                   useMove(players[i], skipTurn: true);
                 } else {
