@@ -24,7 +24,7 @@ extension MapController on XeonjiaGame {
     } else {
       zoomMiniMap(toValue: 1);
       if (worldMapEnabled) worldMap(); // remove the world map
-      updateCamera(playerOne!.x, playerOne!.y);
+      updateCamera(user!.x, user!.y);
       overlays.remove('mapNameBox');
       overlays.remove('miniMapButton');
       removeAll([zoomInButton, zoomOutButton]);
@@ -50,7 +50,7 @@ extension MapController on XeonjiaGame {
       overlays.remove('mapNameBox');
     } else {
       zoomMiniMap(toValue: 1);
-      updateCamera(playerOne!.x, playerOne!.y);
+      updateCamera(user!.x, user!.y);
       children.whereType<WorldMap>().firstOrNull?.removeFromParent();
       addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
     }

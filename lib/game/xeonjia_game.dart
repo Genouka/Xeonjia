@@ -372,7 +372,7 @@ class XeonjiaGame extends FlameGame
     if (!worldMapEnabled && changed) {
       inBattle
           ? updateCamera(activePlayer?.x ?? 0, activePlayer?.y ?? 0)
-          : updateCamera(playerOne?.x ?? 0, playerOne?.y ?? 0);
+          : updateCamera(user?.x ?? 0, user?.y ?? 0);
     }
   }
 
