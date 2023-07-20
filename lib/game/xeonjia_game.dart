@@ -123,6 +123,7 @@ class XeonjiaGame extends FlameGame
     changingTurn = false;
     inBattle = false;
     customBgm = null;
+    milla = null;
 
     // Remove previous components
     // They are removed during the next update()
