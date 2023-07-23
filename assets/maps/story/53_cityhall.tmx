@@ -93,7 +93,7 @@
         '((&quot;/hero&quot; &quot;Thank you!\nI will come back sooner or later.&quot;)))
       (wait)
       (set talk-id #t))
-    (dialog '((&quot;king/king-1&quot; &quot;In my Kingdom you are always welcome.&quot;)))))</property>
+    (dialog '((&quot;king/king-1&quot; &quot;In my region you are always welcome.&quot;)))))</property>
    </properties>
   </object>
   <object id="83" class="Solid" gid="309" x="80" y="48" width="16" height="16">
@@ -117,7 +117,7 @@
         '((&quot;/hero&quot; &quot;Thank you!\nI will come back sooner or later.&quot;)))
       (wait)
       (set talk-id #t))
-    (dialog '((&quot;king/king-1&quot; &quot;In my Kingdom you are always welcome.&quot;)))))</property>
+    (dialog '((&quot;king/king-1&quot; &quot;In my region you are always welcome.&quot;)))))</property>
    </properties>
   </object>
  </objectgroup>

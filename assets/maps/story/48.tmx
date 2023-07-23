@@ -6,12 +6,12 @@
   (begin
     (dialog
       '((&quot;/milla_happy&quot; &quot;Here I am!&quot;)
-      (&quot;/hero&quot; &quot;Great, it worked.\nBut… do you have to appear in my head?&quot;)
+      (&quot;/hero&quot; &quot;Great, it worked.\nBut… do you have to appear on my head?&quot;)
       (&quot;/milla&quot; &quot;No, but I like it that way.\nProblems?&quot;)
       (&quot;/hero&quot; &quot;No, but… you weigh…&quot;)
       (&quot;/milla_angry&quot; &quot;What are you insinuating?!&quot;)
       (&quot;/hero&quot; &quot;Nothing…&quot;)
-      (&quot;/milla_happy&quot; &quot;Great, then I'll appear in your head.\nSee ya!&quot;)))
+      (&quot;/milla_happy&quot; &quot;Great, then I'll appear on your head.\nSee ya!&quot;)))
     (set &quot;048-leaf&quot; #t))
   (dialog '((&quot;/milla&quot; &quot;Did you miss me already?\nLet me rest a bit.&quot;))))</property>
   <property name="start-battle" type="bool" value="false"/>
