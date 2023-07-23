@@ -420,7 +420,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
         ["It's cold here.".i18n],
         ['How are you?'.i18n],
         [
-          "'Green! Green!\nGreen is the answer, but I don't remember the question.'"
+          "Green! Green!\nGreen is the answer, but I don't remember the question."
               .i18n
         ],
         [
