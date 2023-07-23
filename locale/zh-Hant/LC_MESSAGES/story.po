@@ -5,7 +5,7 @@
 # Lin.KH <dennyxbox890@gmail.com>, 2022.
 # deepdaikon <deepdaikon@tuta.io>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-03-12 20:59+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-07-23 20:32+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -873,7 +873,7 @@ msgstr ""
 
 #: assets/maps/story/53_house4.tmx:
 msgid "This door is closed."
-msgstr ""
+msgstr "這扇門是關著的。"
 
 #: assets/maps/story/26.tmx:
 msgid "Did you come here just to talk to me?\nI don't have much to say, but I can give you this little snow globe."
@@ -1005,7 +1005,7 @@ msgstr ""
 
 #: assets/maps/story/19.tmx:
 msgid "Good luck."
-msgstr ""
+msgstr "祝你好運。"
 
 #: assets/maps/story/19.tmx:
 msgid "Xeonjia Tower ↑"
@@ -1113,7 +1113,7 @@ msgstr ""
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "guy"
-msgstr ""
+msgstr "一個人"
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "Better to finish in 6 months doing things badly or in 3 years doing things well?"
@@ -1145,7 +1145,7 @@ msgstr ""
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "Welcome to the City Hall."
-msgstr ""
+msgstr "歡迎來到市政廳。"
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "{{hero}}!\nNice to meet you, I am ON VII, the king of the Water Region.\nI was told you freed Hana's Tunnel from the Hoarfrost Team, thanks a lot!\nThe tunnel had been blocked for weeks."
@@ -1445,7 +1445,7 @@ msgstr ""
 
 #: assets/maps/story/53_house3.tmx:
 msgid "Oink !"
-msgstr ""
+msgstr "齁！"
 
 #: assets/maps/story/20.tmx:
 msgid "I advise you to go away.\nThese monsters are too strong."
@@ -1853,7 +1853,7 @@ msgstr ""
 
 #: assets/maps/story/46.tmx:
 msgid "Hana's Tunnel"
-msgstr ""
+msgstr "漢娜的隧道"
 
 #: assets/maps/story/46.tmx:
 msgid "Boats boats! – Custom-made boat store"
@@ -2189,11 +2189,11 @@ msgstr "喬薩"
 
 #: assets/maps/story/55.tmx:
 msgid "This part is under construction."
-msgstr ""
+msgstr "這部分正在施工中。"
 
 #: assets/maps/story/55.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "為什麼我在這裡？我要做什麼？"
 
 #: assets/maps/story/55.tmx:
 msgid "One day you will feel nostalgic about this moment."
@@ -2261,7 +2261,7 @@ msgstr ""
 
 #: assets/maps/story/49.tmx:
 msgid "It's not a good thing to look into other people's homes."
-msgstr ""
+msgstr "偷看別人家可不是什麼光明的事。"
 
 #: assets/maps/story/49.tmx:
 msgid "Bitter winter wind / Ends there / Sound of the sea."
@@ -2269,7 +2269,7 @@ msgstr ""
 
 #: assets/maps/story/49.tmx:
 msgid "This is a common tree in this area."
-msgstr ""
+msgstr "這是該地區常見的樹木。"
 
 #: assets/maps/story/52.tmx:
 msgid "This must be the crypt of this region. Here is the second signet."

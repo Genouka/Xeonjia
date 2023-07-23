@@ -4,10 +4,10 @@
 # Liu Tao <lyuutau@outlook.com>, 2021.
 # KMX <kumax2048@protonmail.ch>, 2021.
 # 苏汀 <753594451@qq.com>, 2022.
-# deepdaikon <deepdaikon@tuta.io>, 2022.
+# deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 # 鸞瑤綾舞 <user3678169@163.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-04-16 09:50+0000\nLast-Translator: 鸞瑤綾舞 <user3678169@163.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-07-23 20:32+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -891,7 +891,7 @@ msgstr ""
 
 #: assets/maps/story/53_house4.tmx:
 msgid "This door is closed."
-msgstr ""
+msgstr "这扇门是关着的。"
 
 #: assets/maps/story/26.tmx:
 msgid "Did you come here just to talk to me?\nI don't have much to say, but I can give you this little snow globe."

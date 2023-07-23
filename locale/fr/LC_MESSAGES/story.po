@@ -1,12 +1,12 @@
 # Translation for Xeonjia
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# DeepDaikon <deepdaikon@tuta.io>, 2020, 2021, 2022.
+# DeepDaikon <deepdaikon@tuta.io>, 2020, 2021, 2022, 2023.
 # Swann Fournial <s.fournial@protonmail.com>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021, 2022.
 # PulsarTech <crewtech2@gmail.com>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-12-07 13:35+0000\nLast-Translator: PulsarTech <crewtech2@gmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-07-23 20:32+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -874,7 +874,7 @@ msgstr ""
 
 #: assets/maps/story/53_house4.tmx:
 msgid "This door is closed."
-msgstr ""
+msgstr "Cette porte est fermée."
 
 #: assets/maps/story/26.tmx:
 msgid "Did you come here just to talk to me?\nI don't have much to say, but I can give you this little snow globe."
@@ -1006,7 +1006,7 @@ msgstr ""
 
 #: assets/maps/story/19.tmx:
 msgid "Good luck."
-msgstr ""
+msgstr "Bon courage."
 
 #: assets/maps/story/19.tmx:
 msgid "Xeonjia Tower ↑"
@@ -1114,7 +1114,7 @@ msgstr ""
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "guy"
-msgstr ""
+msgstr "gars"
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "Better to finish in 6 months doing things badly or in 3 years doing things well?"
@@ -1146,7 +1146,7 @@ msgstr ""
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "Welcome to the City Hall."
-msgstr ""
+msgstr "Bienvenue à l'Hôtel de ville."
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "{{hero}}!\nNice to meet you, I am ON VII, the king of the Water Region.\nI was told you freed Hana's Tunnel from the Hoarfrost Team, thanks a lot!\nThe tunnel had been blocked for weeks."
@@ -1222,7 +1222,7 @@ msgstr "Héhé, on va pas te révéler nos plans, gamin.\nOn est pas stupides.\n
 
 #: assets/maps/story/25.tmx:
 msgid "You won't catch me!"
-msgstr ""
+msgstr "Vous m'attraperez pas !"
 
 #: assets/maps/story/25.tmx:
 msgid "You can't run away from here.\nDid you think you could get away with it that easily?\nThe fact that you tried to escape and not to fight makes it clear how little value you are.\nI hope next year's \"hero\" is a little braver than you, at least it would be a bit more fun for us."
@@ -1446,7 +1446,7 @@ msgstr ""
 
 #: assets/maps/story/53_house3.tmx:
 msgid "Oink !"
-msgstr ""
+msgstr "Grouin !"
 
 #: assets/maps/story/20.tmx:
 msgid "I advise you to go away.\nThese monsters are too strong."
@@ -2190,11 +2190,11 @@ msgstr "joza"
 
 #: assets/maps/story/55.tmx:
 msgid "This part is under construction."
-msgstr ""
+msgstr "Cette partie est en construction."
 
 #: assets/maps/story/55.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "Pourquoi suis-je ici ? Que suis-je censé faire ?"
 
 #: assets/maps/story/55.tmx:
 msgid "One day you will feel nostalgic about this moment."
@@ -2262,7 +2262,7 @@ msgstr ""
 
 #: assets/maps/story/49.tmx:
 msgid "It's not a good thing to look into other people's homes."
-msgstr ""
+msgstr "Ce n'est pas bien de regarder chez les autres."
 
 #: assets/maps/story/49.tmx:
 msgid "Bitter winter wind / Ends there / Sound of the sea."
@@ -2270,7 +2270,7 @@ msgstr ""
 
 #: assets/maps/story/49.tmx:
 msgid "This is a common tree in this area."
-msgstr ""
+msgstr "C'est un arbre répandu dans cette zone."
 
 #: assets/maps/story/52.tmx:
 msgid "This must be the crypt of this region. Here is the second signet."
