@@ -490,9 +490,21 @@
   </properties>
  </tile>
  <tile id="147" class="Solid"/>
- <tile id="148" class="Solid"/>
- <tile id="149" class="Solid"/>
- <tile id="150" class="Solid"/>
+ <tile id="148" class="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;A little boat.&quot;)))"/>
+  </properties>
+ </tile>
+ <tile id="149" class="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;A little boat.&quot;)))"/>
+  </properties>
+ </tile>
+ <tile id="150" class="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;A little boat.&quot;)))"/>
+  </properties>
+ </tile>
  <tile id="151" class="ThinWall">
   <properties>
    <property name="solidSide" type="int" value="1"/>
@@ -514,8 +526,20 @@
   </properties>
  </tile>
  <tile id="155" class="Ground"/>
- <tile id="156" class="Solid"/>
- <tile id="157" class="Solid"/>
- <tile id="158" class="Solid"/>
+ <tile id="156" class="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;A little boat.&quot;)))"/>
+  </properties>
+ </tile>
+ <tile id="157" class="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;A little boat.&quot;)))"/>
+  </properties>
+ </tile>
+ <tile id="158" class="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;A little boat.&quot;)))"/>
+  </properties>
+ </tile>
  <tile id="159" class="Ground"/>
 </tileset>

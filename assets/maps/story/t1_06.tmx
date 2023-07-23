@@ -27,6 +27,7 @@
     (music &quot;enemies&quot;)))</property>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="MOSSY CRYPT – B4F"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;We are underground.&quot;)))"/>
   <property name="music" value="enemies"/>
   <property name="start-battle" type="bool" value="false"/>
  </properties>
@@ -35,7 +36,7 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
  <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="318" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="343" source="../tilesets/npc_main.tsx"/>
  <layer id="1" name="Tile Layer 1" width="19" height="19">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA5WU4QrCMAyEO5n4xzERtqngfDnfHxEVGahLoIUzJFkbONgl3ceVljZVCEdSH9VEj+KSvRb+Sb6DXq94S4PiO5FFy7YxMqFPLC0b1vvfqpmQhVlOgiXroGRCFmap4ftJWpF/BX0+LLCwPqQ76WtkzGVtK9+X5uKa7FEWqzbYsl+S60da88yYe6yHsx+stK4kl3YncnNdxVrrTqR1pefoVQmLz20K9rlqrDNpVLSPjJ0xvwiWxcE3I70NHm+Jw7rBXjzeDOq/CpSkBQAA
@@ -64,7 +65,7 @@
     <property name="weaponAtk" type="int" value="12"/>
    </properties>
   </object>
-  <object id="93" class="NPC" gid="323" x="144" y="176" width="16" height="16">
+  <object id="93" class="NPC" gid="348" x="144" y="176" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
@@ -81,12 +82,10 @@
   <object id="96" class="Solid" x="144" y="304" width="16" height="16">
    <properties>
     <property name="actionOnCollision">(if (!(has-item &quot;signet-1&quot;))
-  (if  (= (enemies-count) 0)
-    (begin 
-      (dialog '((&quot;I can't escape. I have to take the first signet.&quot;)))
-        (wait)
-        (set-orientation 1)))
-    (fire-event (self)))</property>
+  (begin 
+    (dialog '((&quot;I can't escape. I have to take the first signet.&quot;)))
+    (wait)
+    (set-orientation 1))))</property>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
   (delete-me))</property>
    </properties>
@@ -177,7 +176,7 @@
   (set &quot;t1_06-talk&quot; #t)
   (start-battle)
   (music &quot;boss&quot;))</property>
-    <property name="actionOnEvent">(if  (get &quot;t1_06-talk&quot;)
+    <property name="actionOnEvent">(if (get &quot;t1_06-talk&quot;)
   (delete-me))</property>
    </properties>
   </object>

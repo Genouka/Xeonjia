@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="54">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="57">
+ <properties>
+  <property name="map-name" value="Route 6"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
  <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA83SwQ0AIAgDQJ1QfRB9uv8UsgGl1USTfnsBsVqKAemeQQbtXx72ocZ8aKj9kXGjPzKUP/jJ2J72eFe3HOR2VQcxVAc1lBvIGOwsGYN1sgbjHCAWJzXcBQAA
+   H4sIAAAAAAAAAwtlZGAIpREOBOJ4KpvnBsS6QOwONTsBiEGAWnZEALE1EOsAsS3UbBiglh9AbnYGYmMgdgViHiRMjfAGmS8GxOJAfBPVCwwPyPQHstnoANn9lPgjAovZ+AC17YCFGS3toIU/YO5+AGT/BuLrNAormD1fgOz7NLIDBK7hMJ9SO65Bw+c3HvMpteMeEL8mYD41wwoGsKVdAAkGOzzcBQAA
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBSMglEw3AAAv2wkb9wFAAA=
+   H4sIAAAAAAAAA2NgoA3gY2Rg4GekjdmaUHPFgLQ4jeygJaBF2DACzWOicVhwAs3nGqDwpmV6oiWgl7ux2TPc0wSpYKDCY6DSLgCPX7K93AUAAA==
+  </data>
+ </layer>
+ <layer id="11" name="Tile Layer 3" width="25" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoB7wYGRg8ARiL0YqGjoKRsEoGAWjgGQAAKiNYOvcBQAA
   </data>
  </layer>
  <objectgroup id="8" name="items"/>
  <objectgroup id="10" name="spawn points">
-  <object id="51" class="Door" x="208" y="0" width="16" height="16">
+  <object id="52" class="Door" x="384" y="64" width="16" height="16">
    <properties>
-    <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="30"/>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="49"/>
    </properties>
   </object>
-  <object id="52" class="Door" x="384" y="112" width="16" height="16">
+  <object id="54" class="Door" x="320" y="64" width="16" height="16">
    <properties>
-    <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="30"/>
+    <property name="roomId" value="50_house"/>
    </properties>
   </object>
  </objectgroup>

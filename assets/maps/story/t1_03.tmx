@@ -4,6 +4,7 @@
   <property name="action" value="(map-name &quot;MOSSY CRYPT – B3F&quot;)"/>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="MOSSY CRYPT – B3F"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;We are underground.&quot;)))"/>
   <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>

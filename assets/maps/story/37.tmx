@@ -4,6 +4,7 @@
   <property name="action">(if (== (last-place) &quot;35&quot;)
     (map-name &quot;Zamelis Village&quot;))</property>
   <property name="map-name" value="Zamelis Village"/>
+  <property name="milla" value="(dialog '((&quot;/milla_happy&quot; &quot;I love this village!&quot;)))"/>
   <property name="music" value="village"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
@@ -46,7 +47,7 @@
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="56" gid="276" x="16" y="240" width="16" height="16">
+  <object id="56" class="Solid" gid="276" x="16" y="240" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Zamelis Village&quot;)))"/>
    </properties>

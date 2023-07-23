@@ -14,18 +14,21 @@
  </layer>
  <layer id="6" name="Tile Layer 2" width="25" height="12">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgYGBgZGRgYAJiEAgB0vJArADEikBsCBWnJlBDM1OLCnYg+wEE9IBsfSRsRCV/oNszCoYuSALGYzIQp9AwPrOAZmcDcc5omqEKAAAN1kmKsAQAAA==
+   H4sIAAAAAAAAA2NgYGBgZGRgYAJiEAgB0opI2BAqTk2ghmamFhXsQPYDCOgB2fpI2IhK/kC3ZxQMXZAEjMdkIE6hYXxmAc3OBuKc0TRDFQAAEw+t5rAEAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
   <object id="58" class="NPC" gid="196" x="272" y="128" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+    <property name="action">(if (get &quot;44-safe&quot;)
+  (delete-me))</property>
    </properties>
   </object>
   <object id="59" class="NPC" gid="186" x="272" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;As long as the tunnel is blocked we must organize differently to get goods and people from one side to another.&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;44-safe&quot;)
+  (delete-me))</property>
    </properties>
   </object>
  </objectgroup>

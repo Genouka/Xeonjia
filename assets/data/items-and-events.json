@@ -30,6 +30,12 @@
       "keyItem": true,
       "location": "040"
     },
+    "53.travel-pass": {
+      "name": "Travel Pass",
+      "description": "Pass required to reach the Fire Region.",
+      "keyItem": true,
+      "location": "053"
+    },
     "xxx.stone3": {
       "name": "Cube",
       "description": "A strange green cubic stone.",
@@ -49,10 +55,22 @@
       "location": "xxx"
     },
     "signet-1": {
-      "name": "First Signet",
+      "name": "Signet #1",
       "description": "First out of 3 signets required to enter the Xeonjia Tower.",
       "keyItem": true,
       "location": "t1_06"
+    },
+    "signet-2": {
+      "name": "Signet #2",
+      "description": "Second out of 3 signets required to enter the Xeonjia Tower.",
+      "keyItem": true,
+      "location": "t2_04"
+    },
+    "signet-3": {
+      "name": "Signet #3",
+      "description": "Third out of 3 signets required to enter the Xeonjia Tower.",
+      "keyItem": true,
+      "location": "x"
     },
     "berries-shop": {
       "name": "Berries",
@@ -102,6 +120,9 @@
     },
     "030-oldman-missing-her" : {
       "description": "Talked to the old man missing her wife."
+    },
+    "milla-leaf" : {
+      "description": "Milla follows hero."
     }
   }
 }

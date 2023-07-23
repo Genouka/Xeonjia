@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="6" height="8" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="90">
+ <properties>
+  <property name="disable-minimap" type="bool" value="true"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;I feel at home.&quot;)))"/>
+  <property name="music" value="city"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="185" source="../tilesets/npc_common.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="6" height="8">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA5vDwMAwGw3PBeIlQLwYDS+FinegYXzia3CIb8IhvgWIZ6GJrwXiRTgwALdSzDzAAAAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="81" class="NPC" gid="234" x="48" y="96" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;guy/&quot; &quot;Welcome to DeepDaikon studios, we are a bit busy at the moment.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="85" class="NPC" gid="233" x="16" y="64" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;guy/&quot; &quot;I did everything you see.\nI did you too.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="86" class="NPC" gid="235" x="64" y="96" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;guy/&quot; &quot;Bugs? Bugs? There are no bugs here.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="89" class="NPC" gid="236" x="48" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (dialog '((&quot;guy/&quot; &quot;Good that you got here.\nYou donated some money to this project, didn't you?&quot;)))
+  (define id &quot;053-house2-question-donate&quot;)
+  (answer id '((&quot;Yes, I did!&quot; . #t) (&quot;No…&quot; . #f)))
+  (wait)
+  (if (get id)
+    (dialog '((&quot;guy/_happy&quot; &quot;Bravo! I hope you are not lying to me.&quot;)))
+    (dialog '((&quot;guy/_sad&quot; &quot;I thought so. Very few people contributed.&quot;)))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="6" height="8">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIB2045HbCMTdQNyDRW4yEE9B4m8mwq6NBOQBiIF+ocAAAAA=
+  </data>
+ </layer>
+ <layer id="12" name="Tile Layer 3" width="6" height="8">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoD7YSAMzcQEAyx4RwsAAAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="items"/>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" class="Door" x="32" y="96" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="53_house2_2"/>
+   </properties>
+  </object>
+  <object id="84" class="Door" x="16" y="80" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="53"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -4,6 +4,7 @@
   <property name="action">(if (== (last-place) &quot;1&quot;)
     (map-name &quot;Home&quot;))</property>
   <property name="disable-minimap" type="bool" value="true"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;You grew up here, right?&quot;)))"/>
   <property name="music" value="town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>

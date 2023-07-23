@@ -4,6 +4,7 @@
   <property name="action">(if (== (last-place) &quot;39&quot;)
     (map-name &quot;Zamelis Village&quot;))</property>
   <property name="map-name" value="Zamelis Village"/>
+  <property name="milla" value="(dialog '((&quot;/milla_happy&quot; &quot;I love this village!&quot;)))"/>
   <property name="music" value="village"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
@@ -31,7 +32,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="15" height="22">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIB8IMBIWw6VGAos4uhiIzwvEgkAsBMTCOPThA5JA9VJALE2iPloDTSzucQOK6QKxOxlutQbqMQFiWzL0OgP1OAKxK43DCFv8DnYAc2MiIyqfHBAC1CsPxApArAjEhiSYpYamVgvKB6UZTQJpRg8op4+EjaBqyU0zoPxLTJrhA8rxkxnnYkB14oMofQAA3qTYWCgFAAA=
+   H4sIAAAAAAAAA2NgIB8IMBIWw6VGAos4uhiIzwvEgkAsBMTCOPThA5JA9VJALE2iPloDTSzucQOK6QKxOxlutQbqMQFiWzL0OgP1OAKxK43DCFv8DnYAc2MiIyqfHBAC1KuIhA1JMEsNTa0WlA9KM5oE0oweUE4fCRtB1ZKbZkD5l5g0wweU4yczzsWA6sQHUfoAAMKjbVcoBQAA
   </data>
  </layer>
  <layer id="11" name="Tile Layer 3" width="15" height="22">

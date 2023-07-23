@@ -6,6 +6,7 @@
   (set-pp-snowballs 3))</property>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="MOSSY CRYPT – B2F"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;We are underground.&quot;)))"/>
   <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>

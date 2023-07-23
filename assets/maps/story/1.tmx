@@ -3,6 +3,8 @@
  <properties>
   <property name="action" value="(map-name &quot;Natawn&quot;)"/>
   <property name="has-hints" type="bool" value="true"/>
+  <property name="milla">(dialog '((&quot;/milla&quot; &quot;Oh, your hometown.&quot;)));;;
+(dialog '((&quot;/milla&quot; &quot;You grew up here, right?&quot;)))</property>
   <property name="music" value="town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
@@ -124,7 +126,7 @@
   </object>
   <object id="89" gid="203" x="240" y="288" width="16" height="16">
    <properties>
-    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;12&quot;))
   (delete-me))</property>
    </properties>
   </object>
@@ -153,13 +155,13 @@
   </object>
   <object id="94" gid="203" x="176" y="288" width="16" height="16">
    <properties>
-    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;12&quot;))
   (delete-me))</property>
    </properties>
   </object>
   <object id="95" gid="196" x="160" y="288" width="16" height="16">
    <properties>
-    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;12&quot;))
   (delete-me))</property>
    </properties>
   </object>
@@ -170,19 +172,19 @@
   </object>
   <object id="97" gid="204" x="240" y="272" width="16" height="16">
    <properties>
-    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;12&quot;))
   (delete-me))</property>
    </properties>
   </object>
   <object id="98" gid="196" x="160" y="256" width="16" height="16">
    <properties>
-    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;12&quot;))
   (delete-me))</property>
    </properties>
   </object>
   <object id="99" gid="203" x="144" y="256" width="16" height="16">
    <properties>
-    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;12&quot;))
   (delete-me))</property>
    </properties>
   </object>
@@ -212,7 +214,7 @@
   </object>
   <object id="110" gid="204" x="128" y="224" width="16" height="16">
    <properties>
-    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;12&quot;))
   (delete-me))</property>
    </properties>
   </object>
@@ -242,7 +244,7 @@
   </object>
   <object id="115" gid="195" x="48" y="224" width="16" height="16">
    <properties>
-    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;12&quot;))
   (delete-me))</property>
    </properties>
   </object>
@@ -254,13 +256,13 @@
   </object>
   <object id="117" gid="196" x="48" y="256" width="16" height="16">
    <properties>
-    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;12&quot;))
   (delete-me))</property>
    </properties>
   </object>
   <object id="118" gid="204" x="128" y="272" width="16" height="16">
    <properties>
-    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;2&quot;))
+    <property name="actionOnEvent">(if (or (!get &quot;001-talk-neighbor&quot;) (has-been-here &quot;12&quot;))
   (delete-me))</property>
    </properties>
   </object>

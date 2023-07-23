@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="54">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="56">
  <properties>
+  <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="179" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="203" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="18">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA6WTsQoCMQyGMzje5uLYR+h2i14dVbhzFlQQVFBwUPD9/QMJtkfrRf3ho71c0oS0ISIKwIMJqIGTPa+VrEGYy7f69VVnbDmfJmNvDbHjQqxF4Y9YBzbgKGzBLjr3kzjnIYplTgN1qvgeLuAq7MHNWDP36g4ewhk8wRTMxCe+L7UvwYrSXlXGnFrz4gv/WPrGfpGj4bsoqTHErgt27nP/3VvesuZ1Br8uY/OZvFY5es+5p3Tmg5wbKJ11/j+S/Qs4byQHOAQAAA==
@@ -19,12 +21,12 @@
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="48" class="Modifier" gid="172" x="96" y="208" width="16" height="16">
+  <object id="48" class="Modifier" gid="197" x="96" y="208" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
-  <object id="49" class="Modifier" gid="172" x="64" y="32" width="16" height="16">
+  <object id="49" class="Modifier" gid="197" x="64" y="32" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
@@ -97,6 +99,11 @@
   <object id="47" class="Door" x="48" y="144" width="16" height="16">
    <properties>
     <property name="roomId" value="15_lp_shop"/>
+   </properties>
+  </object>
+  <object id="55" gid="194" x="128" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;17&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

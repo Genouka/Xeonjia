@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="54">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="59">
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="15">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgGAWjYBSMglEw3AAAv2wkb9wFAAA=
   </data>
  </layer>
- <objectgroup id="9" name="npc"/>
+ <objectgroup id="9" name="npc">
+  <object id="54" class="NPC" gid="230" x="112" y="128" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;This part is under construction.&quot;)))"/>
+    <property name="orientation" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="55" class="NPC" gid="206" x="176" y="144" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Why am I here? What am I supposed to do?&quot;)))"/>
+   </properties>
+  </object>
+  <object id="58" class="NPC" gid="195" x="128" y="176" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;One day you will feel nostalgic about this moment.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="6" name="Tile Layer 2" width="25" height="15">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgGAWjYBSMglEw3AAAv2wkb9wFAAA=

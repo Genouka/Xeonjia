@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="6" height="8" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="86">
+ <properties>
+  <property name="disable-minimap" type="bool" value="true"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;Cringe.&quot;)))"/>
+  <property name="music" value="none"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="185" source="../tilesets/npc_common.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="6" height="8">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA5vDwMAwGw3PBeIlQLwYDS+FinegYWqKr8EivhaIF+HAABKFzQDAAAAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs"/>
+ <layer id="6" name="Tile Layer 2" width="6" height="8">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgwA/6gXgCATW0BDMJyAMAh8SjvMAAAAA=
+  </data>
+ </layer>
+ <layer id="12" name="Tile Layer 3" width="6" height="8">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgwA/mA/ECAmoGEgAA00bCpMAAAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="items">
+  <object id="74" gid="151" x="32" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 1)
+  (begin
+    (dialog '((&quot;The fun, the frustration, the dedication, the time spent.\nWhat it is and what could have been.\nI'm in it.\nI'm in everything.\nIn every person, in every monster, in every dialog, in every rock.\nI'm it.\nI'm the enigma.\nThe room you couldn't get out, the useless items, the inside jokes you will ever understand.\nI'm.\nI'm all that is not there.\nThe houses with closed doors, the unreachable areas, the untold stories of every secondary character.\nTheir dreams and aspirations.\nI'm the game. The whole and all its parts.\nAnd you played me for {{minutes-played}} minutes.\nAs your journey continues, remember that you are not just playing a game; you are living me.&quot;))))
+  (dialog '((&quot;Computers are not used from this side.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="75" gid="152" x="48" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 1)
+  (begin
+    (dialog '((&quot;The fun, the frustration, the dedication, the time spent.\nWhat it is and what could have been.\nI'm in it.\nI'm in everything.\nIn every person, in every monster, in every dialog, in every rock.\nI'm it.\nI'm the enigma.\nThe room you couldn't get out, the useless items, the inside jokes you will ever understand.\nI'm.\nI'm all that is not there.\nThe houses with closed doors, the unreachable areas, the untold stories of every secondary character.\nTheir dreams and aspirations.\nI'm the game. The whole and all its parts.\nAnd you played me for {{minutes-played}} minutes.\nAs your journey continues, remember that you are not just playing a game; you are living me.&quot;))))
+  (dialog '((&quot;Computers are not used from this side.&quot;)))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" class="Door" x="48" y="96" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="53_house2_2"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

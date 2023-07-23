@@ -269,6 +269,11 @@
                     "value": 0
                 },
                 {
+                    "name": "name",
+                    "type": "string",
+                    "value": ""
+                },
+                {
                     "name": "orientation",
                     "type": "int",
                     "value": 0
@@ -277,6 +282,11 @@
                     "name": "priority",
                     "type": "int",
                     "value": 0
+                },
+                {
+                    "name": "quiet",
+                    "type": "bool",
+                    "value": false
                 }
             ],
             "name": "SliderCpu",

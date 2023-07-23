@@ -1,36 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="26" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="57">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="26" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="63">
  <properties>
+  <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Mitsu Forest"/>
   <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/basic.tsx"/>
- <tileset firstgid="178" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="179" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="203" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="26" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA71Vuw7DMAj00LFjhw4ZGD1669IHY5r2/7+nIIGErNhJaMhJJ2MbOAeTJKX/AcSXjEnsQeZo/G47aFlNxnlmLRpH6aCMd+IjUKcQs9hPZ47vCp9riqldrQ1BOgqtET9P5N2oDt/NZcFnDwDxTZyqdezEjE4dENv7TVjTb0UYATA29wF2fD8b87WQRWtLzBxwQbs4c+u7UPdkq0exsXdyaPditGYg1HPqP4r3izmPrmUz15oMJr7Ox/gBiGvBvVAHAAA=
+   H4sIAAAAAAAAA7VVuw7CMAzMwMjIwNDBY8ZsLDwylsc3MCKBYADB/+NItmSi5lHTnHSKk158aeKmxvwPQO6oNRR31F8K3WoCL+kZMB8YY1yRN+QZ+cjkYt29oEv5PJEv5AX5ycxj3bugY3hq18hNhV4Lh7QUb5U5ThWaUAugzD/GGxr5MHiPwvu0PBv2CWezKGimACD3yEM07jNzeqUPUKy9E2rqzRFbAEQc6sBntMeR+VKw5vc+1cIXvN3AWA34W4hrMlWjPvFspvDOzeE9AyKvU/6jnFgPj1nR5z3pxPw4X8AXduccBlAHAAA=
   </data>
  </layer>
- <objectgroup id="9" name="npc"/>
+ <objectgroup id="9" name="npc">
+  <object id="62" class="NPC" gid="207" x="48" y="240" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;019-fresh-water&quot;)
+  (begin
+    (dialog
+      '((&quot;/&quot; &quot;You must be thirsty, here's this bottle of water for you.&quot;)
+      (&quot;/hero_happy&quot; &quot;Thank you!&quot;)))
+    (wait)
+    (give-item &quot;fresh-water&quot;)
+    (set &quot;019-fresh-water&quot; #t)
+    (wait))
+  (dialog '((&quot;/&quot; &quot;Good luck.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="6" name="Tile Layer 2" width="26" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgQIBAIA4C4hAgDkXiB+MQh/FJBYlAHAPEKUCcCuVHQ8WS0cSR1ZEKMoE4C4hzgDgXiZ+FQxzGJxaYALEpEBcCcREQlwBxKZRfDMXo4sh8UoAZElsNhxp0cRDfhUR7qAmoZTex6Q05jGBxQwogNr2Z4ZEjRg056c0RiJ2IVAsDlKQ3csBApzdSgfNAO4BOAJYX0NMkvjRKTBqnNsCXZ4lxO7p+csoASgEAq+vnclAHAAA=
+   H4sIAAAAAAAAA2NgQIBAIA4C4hAgDkXiB+MQh/FJBYlAHAPEKUCcCuVHQ8WS0cSR1VEKMoE4CwnnAHEuBeaZALEpFvFCIC6G4iIgLgHiUgrsAQEzJLYaDjXo4iC+C4X2UgKoZTex6Q05jHDFDT5AbHozwyNHjBpYOiQl/TkCsRORamEAlA6plf6IAQOd3kgFzgPtADoBWF5AT5P40igxaZzaAF+eJcbt6PrJKQMoBQD0wpjEUAcAAA==
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="47" class="Modifier" gid="172" x="112" y="80" width="16" height="16">
+  <object id="47" class="Modifier" gid="197" x="112" y="80" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="12"/>
    </properties>
   </object>
-  <object id="48" class="Modifier" gid="172" x="352" y="224" width="16" height="16">
+  <object id="48" class="Modifier" gid="197" x="352" y="224" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
-  <object id="49" class="Modifier" gid="172" x="272" y="48" width="16" height="16">
+  <object id="49" class="Modifier" gid="197" x="272" y="48" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
@@ -40,7 +56,7 @@
     <property name="action" value="(dialog '((&quot;/_1&quot; &quot;Xeonjia Tower ↑&quot;)))"/>
    </properties>
   </object>
-  <object id="52" gid="165" x="304" y="144" width="16" height="16">
+  <object id="52" gid="190" x="304" y="144" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
@@ -74,6 +90,32 @@
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="18"/>
+   </properties>
+  </object>
+  <object id="57" class="Door" x="80" y="64" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="roomId" value="19_house"/>
+   </properties>
+  </object>
+  <object id="58" gid="201" x="384" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;999&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="59" gid="194" x="384" y="224" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;999&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="60" gid="194" x="384" y="112" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;999&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="61" gid="193" x="192" y="272" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;999&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

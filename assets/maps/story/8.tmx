@@ -36,12 +36,12 @@
   </object>
   <object id="45" gid="152" x="192" y="32" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;13&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="46" gid="143" x="192" y="96" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;13&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

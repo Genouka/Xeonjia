@@ -4,6 +4,8 @@
   <property name="action">(if (&lt;= (places-visited) 1)
   (story-dialog &quot;T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia Tower is about to begin.\nThis year I'm the chosen \&quot;hero\&quot; in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to.&quot;))</property>
   <property name="disable-minimap" type="bool" value="true"/>
+  <property name="milla">(dialog '((&quot;/milla&quot; &quot;I wish I knew you when you were little.&quot;)));;;
+(dialog '((&quot;/milla&quot; &quot;It all started here.&quot;)))</property>
   <property name="music" value="town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>

@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="31" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="67">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="31" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="68">
  <properties>
   <property name="action" value="(map-name &quot;Xeonjia Tower&quot;)"/>
+  <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Xeonjia Tower"/>
+  <property name="milla" value="(dialog '((&quot;/milla_happy&quot; &quot;The toweeeeer!&quot;)))"/>
   <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
  <tileset firstgid="161" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="213" source="../tilesets/tower.tsx"/>
+ <tileset firstgid="237" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="31" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgwA94gZiPBMxPwDxSwHCz234A7QYBByLUiAKxGBYsgENcnEp2I8sLArE8A3a/ygKxEJFmwoA5ie7CZj+yvcSYCwPCaHwFPPZisx+bvTDggEbjkke2lxgAsl8Oj7247LFHE7MBYlsS7IUBOzL0YHMPpeZQYvdAAEJ2G1DJHmzx6oDGZoHSyBhdzByLGhhWQGLbM6CmJ3QzQAAABSWHD8gGAAA=
@@ -103,6 +106,11 @@
    <properties>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="21"/>
+   </properties>
+  </object>
+  <object id="67" gid="260" x="128" y="208" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;21&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

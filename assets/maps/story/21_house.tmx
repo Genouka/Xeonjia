@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="84">
+ <properties>
+  <property name="disable-minimap" type="bool" value="true"/>
+  <property name="music" value="forest"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6EG+D0tjwTai6PQTwUFD3gAh1D4H4Gg58FY0PAN4xunloAQAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="71" class="NPC" gid="8" x="80" y="80" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (set-orientation 3)
+  (dialog '((&quot;They are playing Quinb! It looks like they are having a lot of fun!&quot;))))</property>
+   </properties>
+  </object>
+  <object id="80" gid="15" x="32" y="80" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (set-orientation 2)
+  (dialog '((&quot;/&quot; &quot;Sorry, I have to stay focused.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="81" gid="19" x="32" y="64" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (set-orientation 2)
+  (dialog '((&quot;/&quot; &quot;I love Quinb!&quot;))))</property>
+   </properties>
+  </object>
+  <object id="82" gid="24" x="80" y="64" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (set-orientation 3)
+  (dialog '((&quot;/&quot; &quot;I always lose, but this time it's going better than usual.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoBzsBOJdWMS3QzEMHATiQ1jUHQbiI0TYcxqIzxChDt1eaoKtZOoDAN4e345oAQAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="items"/>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" class="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="21"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

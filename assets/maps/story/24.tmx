@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="81">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="21" height="28" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="83">
  <properties>
   <property name="action">(if (! (== (last-place) &quot;25&quot;))
     (map-name &quot;Melhopolis&quot;))</property>
+  <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Melhopolis"/>
   <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="262" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="231" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="287" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="21" height="28">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA62WOU8DMRCFXfAHiCgiIUVbIUq6NBC2BXruQ1FCgCBOcaQCfjpv0IzyYq2vJU/6ZCvjnbXXfhN3nXNdok/9TW23vDE+8kylfUdtrgYZ8dKcqXdJuw12vPgQnIIzbc/BBcVPwCE4Uo4pbt/Dl+QcEyNwTfEv8O3xozH7tr7uwBTcg0vtP1D8ETwpV9o+0zzrhpwv2r6CifbfKf5BfYnfghnljO3RKuiBTiRmcduj0j2vMmJyltfBWsOYtu+rWzxrsjMoufbAPs1lWWfeZF4uUcqbknO33XT+vCT+Yp/Z98idpz8/8dqIYJ/1E7kOAr+bl27coo9Mso5QvQhJvPQJ3tzcR1yPYuuIyfcZn6HUOkpkeXkdolnz8CzJ/sh+cj0I1YxchWrdf2T/i6WKeUnOe1NN8rVR8D77b85Vyuui2pWtPac22J1jmbJ8fJ/he0xN/RU39x7ffWRM5RZr8S/tQ6XNMAkAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="67" class="NPC" gid="202" x="144" y="384" width="16" height="16">
+  <object id="67" class="NPC" gid="227" x="144" y="384" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;The city center is a few kilometers to the south.&quot;)))"/>
    </properties>
@@ -64,17 +65,17 @@
     <property name="action" value="(dialog '((&quot;I can see the inside of the house.&quot;)))"/>
    </properties>
   </object>
-  <object id="69" class="Modifier" gid="280" x="304" y="96" width="16" height="16">
+  <object id="69" class="Modifier" gid="305" x="304" y="96" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="70" class="Modifier" gid="280" x="304" y="176" width="16" height="16">
+  <object id="70" class="Modifier" gid="305" x="304" y="176" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="71" class="Modifier" gid="280" x="208" y="208" width="16" height="16">
+  <object id="71" class="Modifier" gid="305" x="208" y="208" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
@@ -148,6 +149,16 @@
   <object id="48" class="Door" x="256" y="112" width="16" height="16">
    <properties>
     <property name="roomId" value="24_lab"/>
+   </properties>
+  </object>
+  <object id="81" gid="309" x="272" y="144" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;25&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="82" gid="310" x="160" y="432" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;25&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

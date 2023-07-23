@@ -147,7 +147,7 @@
     (show 60)
     (wait 0.6)
     (dialog
-      '((&quot;/henchman&quot; &quot;You can't run away from here.\nDid you think you could get away with it that easily?\nThe fact that you tried to escape and not to fight make it clear how little value you are.\nI hope next year's \&quot;hero\&quot; is a little braver than you, at least it would be a bit more fun for us.&quot;)))
+      '((&quot;/henchman&quot; &quot;You can't run away from here.\nDid you think you could get away with it that easily?\nThe fact that you tried to escape and not to fight makes it clear how little value you are.\nI hope next year's \&quot;hero\&quot; is a little braver than you, at least it would be a bit more fun for us.&quot;)))
     (wait)
     (wait 0.6)
     (dialog '((&quot;/phone_off&quot; &quot;Bzzt… Bzzt… Bzzt…&quot;)))

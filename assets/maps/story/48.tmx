@@ -1,32 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="17" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="54">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="17" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="66">
+ <properties>
+  <property name="map-name" value="Route 6"/>
+  <property name="milla">(if (!get &quot;048-leaf&quot;)
+  (begin
+    (dialog
+      '((&quot;/milla_happy&quot; &quot;Here I am!&quot;)
+      (&quot;/hero&quot; &quot;Great, it worked.\nBut… do you have to appear in my head?&quot;)
+      (&quot;/milla&quot; &quot;No, but I like it that way.\nProblems?&quot;)
+      (&quot;/hero&quot; &quot;No, but… you weigh…&quot;)
+      (&quot;/milla_angry&quot; &quot;What are you insinuating?!&quot;)
+      (&quot;/hero&quot; &quot;Nothing…&quot;)
+      (&quot;/milla_happy&quot; &quot;Great, then I'll appear in your head.\nSee ya!&quot;)))
+    (set &quot;048-leaf&quot; #t))
+  (dialog '((&quot;/milla&quot; &quot;Did you miss me already?\nLet me rest a bit.&quot;))))</property>
+  <property name="start-battle" type="bool" value="false"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="391" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="17">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoD6IYmRgCEXCtACjdowsO/zQzKeFHeh+oLYd2PxAbTuw+YGaduDyA7XsAJmfRCM7QGYnEjCfEjvwhQ017CAUNtSwA1f6oZYdpPoBhAHcHz2jpAYAAA==
+   H4sIAAAAAAAAA5WUwQrCMAyGW5FdxJ1kNy8KHlRQ1GfwIXwB8TLRDdRX9qKIoHgQE2lYyZqu/SFE27Vf/rRUqXAlWqkWRKb93+1hPrfCpb4Zn0Gem9+pyQ9Vn0PdIO4NDFpDNY6sOV/dX5NfEG+BkQV4t2vt6ape0gDGhtYenPEJ2/6vLnz/hNwRaiJPnJEEekBhP9q66gmKr9/C/9JxHjheQOwieJK4B2LQ+MFixPjzeeCMo8MPv6OxHjgjd/gJZUkeiHGCfLbiEtGnRKiTM1JdXxMjnwdijCFPIKYB+9ObQXexaNifGAvIS4hVAIPeDF9vXAxU6th/LTCbeiMxJI5LMR44A9+bq6rOfWMy3Vs6gxgPGD+1ytNBpAYAAA==
   </data>
  </layer>
- <objectgroup id="9" name="npc"/>
- <layer id="6" name="Tile Layer 2" width="25" height="17">
-  <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBSMglEwCgYnAADbwUEqpAYAAA==
-  </data>
- </layer>
- <objectgroup id="8" name="items"/>
- <objectgroup id="10" name="spawn points">
-  <object id="51" class="Door" x="0" y="32" width="16" height="16">
+ <objectgroup id="9" name="npc">
+  <object id="56" class="SliderCpu" gid="154" x="256" y="16" width="16" height="16">
    <properties>
-    <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="30"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;048-milla&quot;)
+  (delete-me))</property>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="team" type="int" value="1"/>
+    <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="52" class="Door" x="192" y="0" width="16" height="16">
+  <object id="57" class="SliderCpu" gid="154" x="272" y="16" width="16" height="16">
    <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;048-milla&quot;)
+  (delete-me))</property>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="team" type="int" value="1"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="58" class="SliderCpu" gid="154" x="256" y="32" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;048-milla&quot;)
+  (delete-me))</property>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="team" type="int" value="1"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="59" class="SliderCpu" gid="154" x="272" y="32" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;048-milla&quot;)
+  (delete-me))</property>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="team" type="int" value="1"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="65" class="Modifier" gid="409" x="32" y="192" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="50"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="25" height="17">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgwA3UGRkYNBhJlyPHvMEApIBukx7E7hsFpAF6prfBnrZhgG8IuHEkg3hg/DgBcQIN4ykEaLYvEIcx0i7dxgDNjALiOCqYDQAyoWsFpAYAAA==
+  </data>
+ </layer>
+ <layer id="13" name="Tile Layer 3" width="25" height="17">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGAWjYBSMglFACCQyMjAkAXEy40C7ZGQBAAeKTv2kBgAA
+  </data>
+ </layer>
+ <objectgroup id="8" name="items">
+  <object id="55" class="Hurdle" x="192" y="0" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if (!get &quot;048-milla&quot;)
+  (begin
+    (set-HP-to 100)
+    (set &quot;048-milla&quot; #t)
+    (dialog '((&quot;/hero_exclamation&quot; &quot;!&quot;)))
+    (wait)
+    (music &quot;enemies&quot;)
+    (place 56 192 0)
+    (show 56)
+    (wait 0.6)
+    (move 0)
+    (set-orientation 1)
+    (wait 0.6)
+    (move '(0 56))
+    (wait 0.6)
+    (place 57 192 0)
+    (show 57)
+    (move 0)
+    (set-orientation 1)
+    (move '(0 56))
+    (wait 0.6)
+    (move '(0 57))
+    (wait 0.6)
+    (place 58 192 0)
+    (show 58)
+    (move '(2 56))
+    (move '(0 57))
+    (wait 0.6)
+    (move '(0 56))
+    (move '(3 57))
+    (move '(0 58))
+    (wait 0.6)
+    (place 59 192 0)
+    (show 59)
+    (move '(0 56))
+    (move '(0 57))
+    (move '(0 58))
+    (wait 0.6)
+    (move '(3 56))
+    (set-orientation '(2 57))
+    (move '(2 58))
+    (move '(0 59))
+    (wait 0.6)
+    (set-orientation '(1 56))
+    (move '(0 58))
+    (move '(0 59))
+    (wait 0.6)
+    (set-orientation '(3 58))
+    (wait 0.6)
+    (set-orientation 2)
+    (wait 0.6)
+    (set-orientation 3)
+    (wait 0.6)
+    (set-orientation 0)
+    (wait 0.6)
+    (dialog '((&quot;monster/blue&quot; &quot;Gyaaa!&quot;)))
+    (wait)
+    (animate &quot;punching&quot; '(3 58))
+    (set-HP-diff -20)
+    (wait 1)
+    (animate &quot;punching&quot; '(2 57))
+    (set-HP-diff -20)
+    (wait 1)
+    (animate &quot;punching&quot; '(0 59))
+    (set-HP-diff -20)
+    (wait 1)
+    (animate &quot;punching&quot; '(1 56))
+    (set-HP-diff -20)
+    (wait 1)
+    (animate &quot;punching&quot; '(1 56))
+    (animate &quot;punching&quot; '(2 57))
+    (animate &quot;punching&quot; '(3 58))
+    (animate &quot;punching&quot; '(0 59))
+    (set-HP-to 1)
+(set-orientation '(2 57))
+    (dialog
+      '((&quot;/hero_exclamation&quot; &quot;Arghhhhh.&quot;)
+      (&quot;/hero_surprised&quot; &quot;???&quot;)))
+    (wait)
+    (milla-in-noleaf)
+    (dialog '((&quot;/hero_surprised&quot; &quot;M-Milla???&quot;)))
+    (wait)
+    (delete 58)
+    (wait 0.6)
+    (delete 57)
+    (wait 0.6)
+    (delete 59)
+    (wait 0.6)
+    (delete 56)
+    (music &quot;route&quot;)
+    (dialog
+      '((&quot;/hero_exclamation&quot; &quot;M-Milla??!\nWhat did you do? How??? Where did you appear from?&quot;)
+      (&quot;/milla_happy&quot; &quot;I saw that you were in trouble and helped you.&quot;)
+      (&quot;/hero&quot; &quot;Yes, but… how??\nYou appeared out of nowhere!\nOn my head!&quot;)
+      (&quot;/milla&quot; &quot;Well… maybe I forgot to tell you something the other times we met…\nI am a spirit.&quot;)
+      (&quot;/hero_surprised&quot; &quot;A spirit?!&quot;)
+      (&quot;/milla&quot; &quot;Yes… I am the Spirit of the Forest.&quot;)
+      (&quot;/hero_surprised&quot; &quot;Wait… what!?\nAre you the \&quot;mystical protective creature of the Leaf Region and the Mitsu Forest\&quot;?&quot;)
+      (&quot;/milla&quot; &quot;Yes, that's what they call me… But I prefer \&quot;Milla\&quot;.&quot;)
+      (&quot;/hero&quot; &quot;But why didn't you tell me? That was information you could have told me when we introduced ourselves…&quot;)
+      (&quot;/milla_sweatsmile&quot; &quot;Ah, yes, sometimes I forget some details when I introduce myself.\nI like to sing, I forgot to tell you that as well.&quot;)
+      (&quot;/hero_mouthless&quot; &quot;Oh wait, it makes sense that you didn't give me this other information sooner.&quot;)
+      (&quot;/hero&quot; &quot;Anyway I'm a bit confused… I always imagined the spirit was a little different.\nHow old are you? Do you have superpowers? Where do you come from? How many-&quot;)
+      (&quot;/milla&quot; &quot;Too many! Too many questions hero!\nI'm just a mystical spirit! That's it.\nI will explain everything better to you during the trip!&quot;)
+      (&quot;/hero&quot; &quot;During the trip?&quot;)
+      (&quot;/milla&quot; &quot;Yes, I have decided that from now on I will travel with you, so I can help you out.\nYou need me.&quot;)
+      (&quot;/hero_happy&quot; &quot;O-ok, thanks!\nI was getting a little bored traveling alone all the time.&quot;)
+      (&quot;/milla&quot; &quot;Great!\nSo it's decided! We will travel together!\nHowever, to save energy I will often stay in the spiritual realm. To call me just hold this leaf that I am giving you now and I will appear.\nTo do this, just click on the top right where there is the leaf icon!&quot;)
+      (&quot;/hero&quot; &quot;Ok… ok…\nIt all seems so strange to me but it's okay.&quot;)
+      (&quot;/milla&quot; &quot;Try calling me to see if you understand.\nNow I go to the spirit realm.\nByeeee!&quot;)
+      (&quot;* Milla disappears into the leaf *&quot;)))
+    (wait)
+    (milla-out)
+    (wait 3)
+    (set &quot;milla-leaf&quot; #t)
+    (give-leaf))
+  (if (!get &quot;048-leaf&quot;)
+    (begin
+      (dialog '((&quot;/hero&quot; &quot;I should try calling Milla by clicking on the leaf icon at the top right of the screen.&quot;)))
+      (wait)
+      (move 0))
+    (delete-me)))</property>
+    <property name="actionOnEvent">(if (get &quot;048-leaf&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="64" gid="403" x="192" y="32" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="120"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="51" class="Door" x="0" y="64" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="30"/>
+    <property name="roomId" value="46"/>
+   </properties>
+  </object>
+  <object id="52" class="Door" x="64" y="256" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="47"/>
+   </properties>
+  </object>
+  <object id="54" class="Door" x="192" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="49"/>
    </properties>
   </object>
  </objectgroup>

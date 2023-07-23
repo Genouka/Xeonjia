@@ -3,6 +3,7 @@
  <properties>
   <property name="action" value="(map-name &quot;Mitsu Forest&quot;)"/>
   <property name="map-name" value="Mitsu Forest"/>
+  <property name="milla" value="(dialog '((&quot;/milla_sad&quot; &quot;…&quot;)))"/>
   <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>

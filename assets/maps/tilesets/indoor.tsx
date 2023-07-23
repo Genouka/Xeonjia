@@ -190,4 +190,8 @@
    <property name="action" value="(dialog '((&quot;There are a few sheets of paper here.&quot;)))"/>
   </properties>
  </tile>
+ <tile id="49" class="Ground"/>
+ <tile id="50" class="Ground"/>
+ <tile id="51" class="Solid"/>
+ <tile id="52" class="Solid"/>
 </tileset>

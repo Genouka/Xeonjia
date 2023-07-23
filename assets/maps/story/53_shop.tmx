@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="73">
+ <properties>
+  <property name="action" value="(map-name &quot;Pharmacy&quot;)"/>
+  <property name="disable-minimap" type="bool" value="true"/>
+  <property name="music" value="city"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6AXwTqm4PATwU1D0gQt1DIL6GA19F4wMAElYrs2gBAAA=
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="71" class="NPC" gid="17" x="80" y="64" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(dialog '((&quot;pharmacist&quot; &quot;Welcome to my shop!&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIB7sBOJdeGgYOAjEh/DQyGA7DrvOIrH3A/EBPDQMHAfiE0g0AxY+KWA3FrwViU0KAABeVAZfaAEAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="items">
+  <object id="72" gid="199" x="80" y="96" width="16" height="16">
+   <properties>
+    <property name="action">(if (not (has-been-here &quot;28&quot;))
+  (shop
+    '((&quot;berries-shop&quot; 5 &quot;(give-item \&quot;berries-shop\&quot;)&quot;)
+    (&quot;fresh-water&quot; 20 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
+    (&quot;pomegranate-juice&quot; 55 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)))
+  (if (not (has-been-here &quot;37&quot;))
+    (shop
+      '((&quot;fresh-water&quot; 22 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
+      (&quot;pomegranate-juice&quot; 60 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
+      (&quot;healer&quot; 85 &quot;(give-item \&quot;healer\&quot;)&quot;)))
+    (if (= (get-initial-HP) 100)
+      (shop
+        '((&quot;fresh-water&quot; 24 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
+        (&quot;pomegranate-juice&quot; 65 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
+        (&quot;healer&quot; 90 &quot;(give-item \&quot;healer\&quot;)&quot;)
+        (&quot;hp-up-5-shop&quot; 150 &quot;(begin (increase-HP 5) (set-HP-diff 105))&quot;)))
+      (shop
+        '((&quot;fresh-water&quot; 24 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
+        (&quot;pomegranate-juice&quot; 65 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
+        (&quot;healer&quot; 90 &quot;(give-item \&quot;healer\&quot;)&quot;))))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" class="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="53"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

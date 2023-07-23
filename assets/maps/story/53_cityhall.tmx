@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="12" height="12" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="115">
+ <properties>
+  <property name="action" value="(map-name &quot;City Hall&quot;)"/>
+  <property name="disable-minimap" type="bool" value="true"/>
+  <property name="map-name" value="City Hall"/>
+  <property name="milla" value="(dialog '((&quot;/milla_happy&quot; &quot;This place smells good.&quot;)))"/>
+  <property name="music" value="cityhall"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="231" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="287" source="../tilesets/capital-1.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="12" height="12">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NiZGBgJBIzAzEXEL9gIA5zQ9W/YyAOj6qnvnohEtQLA9Vy4MDsOMQBNPuprUACAAA=
+  </data>
+ </layer>
+ <layer id="6" name="Tile Layer 2" width="12" height="12">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoBzoMjIw6DFSwSAcQI0RgokFqowQPKqeOurxAQBxkaJJQAIAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="100" class="NPC" gid="229" x="64" y="144" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 2)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="101" class="NPC" gid="229" x="64" y="112" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 2)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="102" class="NPC" gid="229" x="64" y="80" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 2)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="104" class="NPC" gid="228" x="80" y="176" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Welcome to the City Hall.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="105" class="NPC" gid="230" x="112" y="144" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 3)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="106" class="NPC" gid="230" x="112" y="112" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 3)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+  <object id="107" class="NPC" gid="230" x="112" y="80" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+    (set-orientation 3)
+    (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="82" class="Solid" gid="310" x="96" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (define talk-id &quot;053-cityhall-king-talk&quot;)
+  (if (!get talk-id)
+    (begin
+      (dialog
+        '((&quot;king/king-1&quot; &quot;{{hero}}!\nNice to meet you, I am ON VII, the king of the Water Region.\nI was told you freed Hana's Tunnel from the Hoarfrost Team, thanks a lot!\nThe tunnel had been blocked for weeks.&quot;)
+        (&quot;/hero&quot; &quot;My duty!\nBy the way, King Xe III gave me this package for you.&quot;)))
+      (wait)
+      (take-item &quot;30.package-of-the-king&quot;)
+      (dialog
+        '((&quot;king/king-1&quot; &quot;Oh thank you, it's medicine for my back pain.\nYou know, sitting all day…\nSome plants in the Mitsu Forest are miraculous to solve these problems.\nWhere are you headed?&quot;)
+        (&quot;/hero&quot; &quot;I have to go to the Fire Region.&quot;)
+        (&quot;king/king-1&quot; &quot;Oh, do you want to leave the region already?\nThis saddens me.\nTo go to the Fire Region you have to take a boat that you find west of here.\nYou need my written permission, here it is.&quot;)))
+      (wait)
+      (give-item &quot;53.travel-pass&quot;)
+      (dialog
+        '((&quot;/hero&quot; &quot;Thank you!\nI will come back sooner or later.&quot;)))
+      (wait)
+      (set talk-id #t))
+    (dialog '((&quot;king/king-1&quot; &quot;In my Kingdom you are always welcome.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="83" class="Solid" gid="309" x="80" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (define talk-id &quot;053-cityhall-king-talk&quot;)
+  (if (!get talk-id)
+    (begin
+      (dialog
+        '((&quot;king/king-1&quot; &quot;{{hero}}!\nNice to meet you, I am ON VII, the king of the Water Region.\nI was told you freed Hana's Tunnel from the Hoarfrost Team, thanks a lot!\nThe tunnel had been blocked for weeks.&quot;)
+        (&quot;/hero&quot; &quot;My duty!\nBy the way, King Xe III gave me this package for you.&quot;)))
+      (wait)
+      (take-item &quot;30.package-of-the-king&quot;)
+      (dialog
+        '((&quot;king/king-1&quot; &quot;Oh thank you, it's medicine for my back pain.\nYou know, sitting all day…\nSome plants in the Mitsu Forest are miraculous to solve these problems.\nWhere are you headed?&quot;)
+        (&quot;/hero&quot; &quot;I have to go to the Fire Region.&quot;)
+        (&quot;king/king-1&quot; &quot;Oh, do you want to leave the region already?\nThis saddens me.\nTo go to the Fire Region you have to take a boat that you find west of here.\nYou need my written permission, here it is.&quot;)))
+      (wait)
+      (give-item &quot;53.travel-pass&quot;)
+      (dialog
+        '((&quot;/hero&quot; &quot;Thank you!\nI will come back sooner or later.&quot;)))
+      (wait)
+      (set talk-id #t))
+    (dialog '((&quot;king/king-1&quot; &quot;In my Kingdom you are always welcome.&quot;)))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="114" class="Door" x="96" y="160" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="53"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

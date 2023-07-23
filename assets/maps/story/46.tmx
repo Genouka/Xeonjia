@@ -1,35 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="18" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="59">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="18" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="68">
+ <properties>
+  <property name="action">(if (! (== (last-place) &quot;48&quot;))
+  (map-name &quot;Route 6&quot;))</property>
+  <property name="map-name" value="Route 6"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="391" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAwtlZGAIxYIDgDgciIkF2MwA4QgSzKCHOaT4CZs5pIYLLnNI9c+oOaPm0MKcBCD2p0J6JtdN2Mwhx01Dpfwh1W8AlZCdVaAFAAA=
+   H4sIAAAAAAAAA5WUPWsCQRCGd8ugtV0aRYso+BHFwiaCBAIJURISo6K2WghGAvoH8ntF0sQi5D3cgWGYWb2BhxuW24d3d29v5Z1bKaxBmtIc5JmBezAXPVUVfc2f97yCJ/Amej6f+phnAkZgKvqWWPO1Mn8JtmAHiuAQ3uW9LM3zg/F9iv39Y/u8DPOJDMudNXrpogxXXvdcUr/B8wk2gcTTxvNO0Im4c8Y5fQlHNzwth3O65xs8KGiVx3jByPMM+oEB6IEX5rlBXwYVNqZ53sEQfAQewZjNaaC/Bc0znrpYg/z+6C7wXNKTnN3C69mTKvkTMpd1t/g73Fli3uS7ORrr4pkov7YfsmL3PVZy3ZaHMsmitciMliftv/Uf9SAL96AFAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="54" gid="198" x="144" y="128" width="16" height="16"/>
-  <object id="55" gid="198" x="192" y="160" width="16" height="16"/>
-  <object id="56" gid="198" x="208" y="96" width="16" height="16"/>
-  <object id="58" class="NPC" gid="181" x="192" y="208" width="16" height="16">
+  <object id="60" class="NPC" gid="227" x="80" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;Why am I here? What am I supposed to do?&quot;)))"/>
+    <property name="action">(if (!get &quot;046-fresh-water&quot;)
+  (begin
+    (dialog
+      '((&quot;/&quot; &quot;Were you able to chase away the Hoarfrost Team?!\nThank you, it had been months since the tunnel was blocked.\nYou must be thirsty, here's this bottle of water for you.&quot;)
+      (&quot;/hero_happy&quot; &quot;Thank you!&quot;)))
+    (wait)
+    (give-item &quot;fresh-water&quot;)
+    (set &quot;046-fresh-water&quot; #t)
+    (wait))
+  (dialog '((&quot;/&quot; &quot;The Hana's Tunnel connects the 2 parts of the region.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="18" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBSMglEwGAEAmhYRqqAFAAA=
+   H4sIAAAAAAAAA2NgIB+oMzIwaDASp9aJEZONrJ8UswYa6APdaUChWwsp1F/BCMGVFJhDqRuwgUygmblAbIWGvciwyx6LHmcc5kgBxaVxyLkDxT3QsPcApjVNAnYPpbyADQx19w8mAABZUDXUoAUAAA==
   </data>
  </layer>
- <objectgroup id="8" name="items"/>
- <objectgroup id="10" name="spawn points">
-  <object id="51" class="Door" x="208" y="0" width="16" height="16">
+ <layer id="12" name="Tile Layer 3" width="18" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgwA0SGRkYkoA4mRGVPVSBOtDtGkPY/bQGsPBBp0kF1UA9NUBcS2FYNwP1twBx6xCPs9HwGAXkAgArxWnIoAUAAA==
+  </data>
+ </layer>
+ <objectgroup id="8" name="items">
+  <object id="59" gid="301" x="48" y="128" width="16" height="16">
    <properties>
-    <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="30"/>
+    <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Hana's Tunnel&quot;)))"/>
+   </properties>
+  </object>
+  <object id="63" gid="301" x="128" y="224" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Boats boats! – Custom-made boat store&quot;)))"/>
+   </properties>
+  </object>
+  <object id="67" class="Modifier" gid="409" x="192" y="224" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="30"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="51" class="Door" x="32" y="96" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="44"/>
+   </properties>
+  </object>
+  <object id="62" class="Door" x="272" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="48"/>
+   </properties>
+  </object>
+  <object id="66" class="Door" x="144" y="208" width="16" height="16">
+   <properties>
+    <property name="roomId" value="46_house"/>
    </properties>
   </object>
  </objectgroup>

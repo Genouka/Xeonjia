@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="6" height="7" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="85">
+ <properties>
+  <property name="disable-minimap" type="bool" value="true"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="237" source="../tilesets/outdoor-2.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="6" height="7">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA7vAwMBwHg1fBOIbQLwNDd+Eiu9Bw+SIP8Ai/hCIryHhq0hsAFHlCueoAAAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="82" class="NPC" gid="38" x="32" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Hello! I am the official florist of the Region!\nThe most beautiful flowers? Zoysii!&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="6" height="7">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIA9oMyIwuhiMTSzYSoQaAAxbzOCoAAAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="items"/>
+ <objectgroup id="2" name="spawn points">
+  <object id="84" class="Door" x="48" y="80" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="50"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

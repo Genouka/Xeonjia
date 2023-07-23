@@ -26,6 +26,12 @@
     "44.tmx": {
         "hidden": true
     },
+    "52.tmx": {
+        "text": "Here is the Watery Crypt."
+    },
+    "53.tmx": {
+        "text": "Here is Neubrij city."
+    },
     "999.tmx": {
         "text": "Here is the Xeonjia Tower."
     }

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="55">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="58">
  <properties>
+  <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Mitsu Forest"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;We stop for a picnic? No?&quot;)))"/>
   <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
@@ -79,6 +81,21 @@
   <object id="45" gid="173" x="192" y="128" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="50"/>
+   </properties>
+  </object>
+  <object id="55" gid="184" x="16" y="96" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="56" gid="184" x="16" y="288" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="57" gid="175" x="160" y="304" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

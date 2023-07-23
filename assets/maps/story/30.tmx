@@ -3,6 +3,7 @@
  <properties>
   <property name="action" value="(map-name &quot;Melhopolis&quot;)"/>
   <property name="map-name" value="Melhopolis"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;This city is boring.&quot;)))"/>
   <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>

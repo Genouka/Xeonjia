@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="92">
+ <properties>
+  <property name="disable-minimap" type="bool" value="true"/>
+  <property name="music" value="city"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6FG/DQt8D4ptQdXsI4KGg7gER6h4C8TUcmAGNDwCdyhp7aAEAAA==
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="79" class="Door" x="112" y="32" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="53/up"/>
+   </properties>
+  </object>
+  <object id="90" class="NPC" gid="5" x="80" y="48" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I too would like to stay there, but nobody ever invites me.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIB7sBOJdRKg7CMSHcMjdJ8E+bGA7EO8H4gNQNj51x4H4BAF1pIKtZOoDACZlYmBoAQAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="items">
+  <object id="91" gid="214" x="96" y="144" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;This door is closed.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points"/>
+</map>

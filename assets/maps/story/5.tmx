@@ -45,12 +45,6 @@
             (set &quot;005-read&quot; #t))))</property>
    </properties>
   </object>
-  <object id="44" class="Modifier" gid="196" x="224" y="192" width="16" height="16">
-   <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
-    <property name="moneyDelta" type="int" value="5"/>
-   </properties>
-  </object>
   <object id="45" class="Modifier" gid="199" x="32" y="64" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
@@ -71,62 +65,62 @@
   </object>
   <object id="54" gid="195" x="64" y="176" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="56" gid="195" x="32" y="176" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="58" gid="196" x="224" y="192" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="59" gid="196" x="224" y="176" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="61" gid="196" x="176" y="160" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="72" gid="195" x="176" y="32" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="73" gid="195" x="96" y="176" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="74" gid="204" x="112" y="176" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="76" gid="204" x="112" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="77" gid="195" x="176" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="79" gid="195" x="144" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="81" gid="195" x="208" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="82" gid="196" x="224" y="208" width="16" height="16">
@@ -136,12 +130,12 @@
   </object>
   <object id="83" gid="203" x="224" y="160" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="84" gid="203" x="192" y="160" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

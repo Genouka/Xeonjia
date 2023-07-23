@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="87">
+ <properties>
+  <property name="action" value="(map-name &quot;WATERY CRYPT – B1F&quot;)"/>
+  <property name="disable-worldmap" type="bool" value="true"/>
+  <property name="map-name" value="WATERY CRYPT – B1F"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;We are underground.&quot;)))"/>
+  <property name="music" value="enemies"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
+ <tileset firstgid="293" source="../tilesets/crypt-2.tsx"/>
+ <tileset firstgid="349" source="../tilesets/outdoor-2.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="22" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA62Uyw3CMAyGmzFgBxiAS07lJTUFpNKpgAkRFxCnwgrYkqMayziUYOlXHra+Oo7T4IoigCoa/6GazZFbgrZC88Ra7i8ULirXauKW9K2QwT0T4+J6biVy5raE9d7QmuJvMF5Bd4WLeY8FN9ZppYjnYXG1GsQY7c75fXQwPkBPg6vVKsXVcpFceSb0jUiezVNn/Ib7SUO4vFYb1/e9p/p4trcbwM01yW1YP2p2AN8RdDJisN9b4jaJekWbgG8Gmiox8f207v2/Y72pX4T8FwtrHH0oBQAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs"/>
+ <layer id="6" name="Tile Layer 2" width="22" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIA7EMBInRozcYAZBQ9Td6MADyR81SGwvKvkPZKYjI6rZ1DATH58cEIDDjOESz/QAPDQKK2LTosMgiCsA/A5QqSgFAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="items"/>
+ <objectgroup id="2" name="spawn points">
+  <object id="80" class="Door" x="176" y="112" width="16" height="16">
+   <properties>
+    <property name="roomId" value="52"/>
+   </properties>
+  </object>
+  <object id="84" class="Door" x="192" y="208" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="t2_02"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

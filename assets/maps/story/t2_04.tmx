@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="19" height="19" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="115">
+ <properties>
+  <property name="disable-worldmap" type="bool" value="true"/>
+  <property name="map-name" value="WATERY CRYPT – B2F"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;We are underground.&quot;)))"/>
+  <property name="music" value="enemies"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
+ <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="343" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="375" source="../tilesets/crypt-2.tsx"/>
+ <tileset firstgid="431" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="591" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="19" height="19">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA52UOwoCQRBEdz2GlxANFEFQryWCIoIGJkZ+EPwF6gk08xMsCGJoJJ7FGtiBsumZUQsKprvZ17XsZxRH0RpepB6ldcgTusbWc+otlNrlpVLPRRYt29CRiWvL0rKxOqLWMjGLs2TFtVIrJROzOEtC5xbOA7hNvTudlwEWq4d+E+7TPJeJojHqfMbPujv22/oBl8AowuUAi3dadUWmyhcsuVOTnRfguocldxqd0b/Cl/iTZecultypqYp+jeYhFt/fHv0nfHA8ZxdL7jQ6on+DT4L1iv2sf/QLy3wD5p1IfrjHDbxVPEsZU8d8J1guDv8z7L/BxwtxjBu028d7AzN+k7CkBQAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="108" class="SliderCpu" gid="318" x="160" y="176" width="16" height="16">
+   <properties>
+    <property name="hp" type="float" value="70"/>
+    <property name="level" type="float" value="4"/>
+   </properties>
+  </object>
+  <object id="109" class="SliderCpu" gid="318" x="128" y="176" width="16" height="16">
+   <properties>
+    <property name="hp" type="float" value="70"/>
+    <property name="level" type="float" value="4"/>
+   </properties>
+  </object>
+  <object id="110" class="SliderCpu" gid="318" x="144" y="176" width="16" height="16">
+   <properties>
+    <property name="hp" type="float" value="70"/>
+    <property name="level" type="float" value="4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="19" height="19">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NggIAljAxkgUVk6iMVEOs+erlnFIyCUTBywBy0cmUWmeUMujnEmAcA+lkDbKQFAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="items">
+  <object id="96" class="Solid" x="144" y="304" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if (!(has-item &quot;signet-2&quot;))
+  (if  (= (enemies-count) 0)
+    (begin 
+      (dialog '((&quot;I can't escape. I have to take the signet.&quot;)))
+        (wait)
+        (set-orientation 1)))
+    (fire-event (self)))</property>
+    <property name="actionOnEvent">(if (has-item &quot;signet-2&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="98" gid="426" x="144" y="32" width="16" height="16">
+   <properties>
+    <property name="action">(if (eq? (enemies-count) 0)
+ (begin 
+   (dialog '((&quot;/hero&quot; &quot;Here it is, this is the second signet!&quot;)))
+   (wait)
+   (give-item &quot;signet-2&quot;)
+   (delete-me)
+   (dialog '((&quot;/hero&quot; &quot;We can get out of here now.&quot;)))
+   (wait)
+   (teleport-multi &quot;t2_01&quot; &quot;52&quot;))
+(dialog '((&quot;/hero&quot; &quot;The monsters are after me! I'll get the signet later.&quot;))))</property>
+    <property name="actionOnEvent">(if (has-item &quot;signet-2&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="112" gid="602" x="48" y="224" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="113" gid="602" x="48" y="112" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="114" gid="602" x="192" y="112" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="88" class="Door" x="144" y="288" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="t2_03"/>
+   </properties>
+  </object>
+  <object id="111" class="NPC" gid="356" x="160" y="240" width="16" height="16">
+   <properties>
+    <property name="action">(if  (= (enemies-count) 0)
+  (dialog '((&quot;/_happy&quot; &quot;Let's get the second signet!&quot;)))
+  (dialog '((&quot;/_happy&quot; &quot;Hi!&quot;))))</property>
+    <property name="actionOnEvent">(if (get &quot;t2_04-safe&quot;)
+  (delete-me))</property>
+    <property name="team" type="int" value="0"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

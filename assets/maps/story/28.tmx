@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="18" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="57">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="18" height="21" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="59">
  <properties>
   <property name="map-name" value="Melhopolis"/>
   <property name="music" value="city"/>
