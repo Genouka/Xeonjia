@@ -11,8 +11,6 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   }
 
   env.defineSymbol(Sym('hero'), mainCharacter.name);
-  env.defineSymbol(Sym('minutes-played'),
-      (mainCharacter.minutesPlayed + gameRef.elapsed / 60).round());
 
   // Return [actor, value] for Cells that have a default actor
   // e.g. (move 2) and (move '(0 93))
