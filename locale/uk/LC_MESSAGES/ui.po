@@ -531,6 +531,86 @@ msgstr ""
 msgid "Hide hints"
 msgstr ""
 
+#: lib/game/utils/event_manager.dart:
+msgid "Mitsu Forest used to be bigger, it was deforested to build Melhopolis."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "The Xeonjia Tower is the tallest building in the Kingdom."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "There are 3 regions in the Kingdom."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "If you click on a point on the world map you can travel to places you have already been."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "The world is big."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "What time is it?"
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "If we walk around long enough, we're sure to arrive somewhere!"
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "How are you?"
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "It's cold here."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "Green! Green!\nGreen is the answer, but I don't remember the question."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "Ours is a strange world, it's cold here but a little warmer there."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "I have to stop eating ice cream before bed."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "I know many languages."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "Hey!"
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "Here I am."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "Leave me alone."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "Do you believe in fairies??"
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "What do piglets dream about?"
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "I am hungryyy."
+msgstr ""
+
+#: lib/game/components/character.dart:
+msgid "We must fight, not talk!"
+msgstr ""
+
 #: lib/game/components/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
 msgstr "* {{hero}} кладе %s у рюкзак. *"
@@ -542,6 +622,10 @@ msgstr "гем"
 #: lib/game/components/character.dart:
 msgid "* {{hero}} used {{selected-item-name}} *"
 msgstr "* {{hero}} використав {{selected-item-name}} *"
+
+#: lib/game/components/character.dart:
+msgid "* {{user-name}} used {{selected-item-name}} *"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} gives %s *"
@@ -568,11 +652,23 @@ msgid "It' time to fight!"
 msgstr ""
 
 #: lib/game/xeonjia_game.dart:
+msgid "Milla is tired and is back in the leaf, I have to continue the battle."
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
 msgid "Battle!"
 msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "You won!"
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "Milla is resting."
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "Milla is already here!"
 msgstr ""
 
 #: lib/game/xeonjia_game.dart:
