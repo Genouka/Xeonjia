@@ -1174,7 +1174,7 @@ msgid "Thank you!\nI will come back sooner or later."
 msgstr "Grazie!\nTornerò qui prima o poi."
 
 #: assets/maps/story/53_cityhall.tmx:
-msgid "In my Kingdom you are always welcome."
+msgid "In my region you are always welcome."
 msgstr "Nella mia regione sei sempre il benvenuto."
 
 #: assets/maps/story/32.tmx:
@@ -1938,7 +1938,7 @@ msgid "Here I am!"
 msgstr "Eccomi qui!"
 
 #: assets/maps/story/48.tmx:
-msgid "Great, it worked.\nBut… do you have to appear in my head?"
+msgid "Great, it worked.\nBut… do you have to appear on my head?"
 msgstr "Ottimo, ha funzionato.\nMa… devi apparire sulla mia testa?"
 
 #: assets/maps/story/48.tmx:
@@ -1958,7 +1958,7 @@ msgid "Nothing…"
 msgstr "Nulla…"
 
 #: assets/maps/story/48.tmx:
-msgid "Great, then I'll appear in your head.\nSee ya!"
+msgid "Great, then I'll appear on your head.\nSee ya!"
 msgstr "Fantastico, allora apparirò sulla tua testa.\nCi vediamo!"
 
 #: assets/maps/story/48.tmx:
@@ -2250,7 +2250,7 @@ msgid "My roof burned.\nYes, okay, it keeps snowing in my house, but it's nice t
 msgstr "Il mio tetto si è bruciato.\nSì, va bene, mi continua a nevicare in casa, ma è bello poter guardare il cielo."
 
 #: assets/maps/story/49.tmx:
-msgid "Well, this is / My final abode / The snow lay 15 meter."
+msgid "Well, this is / My final abode / The snow lay 1 meter."
 msgstr "È questo, allora / La mia ultima dimora / 1 metro di neve."
 
 #: assets/maps/story/49.tmx:

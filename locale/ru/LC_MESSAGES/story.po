@@ -1175,7 +1175,7 @@ msgid "Thank you!\nI will come back sooner or later."
 msgstr ""
 
 #: assets/maps/story/53_cityhall.tmx:
-msgid "In my Kingdom you are always welcome."
+msgid "In my region you are always welcome."
 msgstr ""
 
 #: assets/maps/story/32.tmx:
@@ -1939,7 +1939,7 @@ msgid "Here I am!"
 msgstr ""
 
 #: assets/maps/story/48.tmx:
-msgid "Great, it worked.\nBut… do you have to appear in my head?"
+msgid "Great, it worked.\nBut… do you have to appear on my head?"
 msgstr ""
 
 #: assets/maps/story/48.tmx:
@@ -1959,7 +1959,7 @@ msgid "Nothing…"
 msgstr ""
 
 #: assets/maps/story/48.tmx:
-msgid "Great, then I'll appear in your head.\nSee ya!"
+msgid "Great, then I'll appear on your head.\nSee ya!"
 msgstr ""
 
 #: assets/maps/story/48.tmx:
@@ -2251,7 +2251,7 @@ msgid "My roof burned.\nYes, okay, it keeps snowing in my house, but it's nice t
 msgstr ""
 
 #: assets/maps/story/49.tmx:
-msgid "Well, this is / My final abode / The snow lay 15 meter."
+msgid "Well, this is / My final abode / The snow lay 1 meter."
 msgstr ""
 
 #: assets/maps/story/49.tmx:
