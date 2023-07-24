@@ -167,31 +167,6 @@
         (dialog '((&quot;There are still items in here but I've already taken one.&quot;)))))</property>
    </properties>
   </object>
-  <object id="83" class="Modifier" gid="633" x="384" y="32" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="20"/>
-   </properties>
-  </object>
-  <object id="84" class="Modifier" gid="633" x="400" y="32" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="20"/>
-   </properties>
-  </object>
-  <object id="85" class="Modifier" gid="633" x="432" y="32" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="20"/>
-   </properties>
-  </object>
-  <object id="86" class="Modifier" gid="633" x="352" y="32" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="20"/>
-   </properties>
-  </object>
-  <object id="87" class="Modifier" gid="633" x="576" y="32" width="16" height="16">
-   <properties>
-    <property name="moneyDelta" type="int" value="20"/>
-   </properties>
-  </object>
  </objectgroup>
  <layer id="12" name="Tile Layer 3" width="52" height="15">
   <data encoding="base64" compression="gzip">

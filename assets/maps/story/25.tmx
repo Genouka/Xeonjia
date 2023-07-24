@@ -6,42 +6,42 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/basic.tsx"/>
- <tileset firstgid="178" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="179" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="203" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="23">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA7WUvWsCQRDFt0ijBEErCwlpRCuxu8aordHGbxM/IIiCSSyS6P/vG24Wh8ne7lr44MfJ7Lu53X2MxvxXF9RBBZS5NgQjMAYTMFXvvIEVeOfnWqw98jNh31IgfaQPsBXsHPuzvhmYg4XDdwCf4Bt8gSPXc6AB8gGf1Q/4BSfwB85cr4ECqAZ8bdGrCJ5AyaR3oWukHnjlekm9r+Vbu5f0N22ertxDPntW0i25+3w2z41x56l9rtzpjJQn5bg3aa5n3YBlfacMH82Pzlh+xyrJ8LXAi7nOoU9J2BLVhyTn2TWndl8hhfLqRu4nNKex53LNqTyL7jPw9JJ56bmIvR+pjmetnlHvB3q0HWsx/xu+vUjRfT2bdH8PoMm/y8afyQVOmI/deAYAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="56" class="NPC" gid="222" x="112" y="64" width="16" height="16">
+  <object id="56" class="NPC" gid="247" x="112" y="64" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
   (delete-me))</property>
    </properties>
   </object>
-  <object id="58" class="NPC" gid="225" x="128" y="80" width="16" height="16">
+  <object id="58" class="NPC" gid="250" x="128" y="80" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
   (delete-me))</property>
    </properties>
   </object>
-  <object id="59" class="NPC" gid="224" x="96" y="80" width="16" height="16">
+  <object id="59" class="NPC" gid="249" x="96" y="80" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
   (delete-me))</property>
    </properties>
   </object>
-  <object id="60" class="NPC" gid="222" x="144" y="16" width="16" height="16">
+  <object id="60" class="NPC" gid="247" x="144" y="16" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;…&quot;)))"/>
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="62" class="NPC" gid="223" x="112" y="96" width="16" height="16">
+  <object id="62" class="NPC" gid="248" x="112" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
@@ -55,12 +55,12 @@
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="47" gid="165" x="112" y="288" width="16" height="16">
+  <object id="47" gid="190" x="112" y="288" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
   </object>
-  <object id="48" gid="165" x="128" y="240" width="16" height="16">
+  <object id="48" gid="190" x="128" y="240" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
@@ -150,26 +150,26 @@
       '((&quot;/henchman&quot; &quot;You can't run away from here.\nDid you think you could get away with it that easily?\nThe fact that you tried to escape and not to fight makes it clear how little value you are.\nI hope next year's \&quot;hero\&quot; is a little braver than you, at least it would be a bit more fun for us.&quot;)))
     (wait)
     (wait 0.6)
-    (dialog '((&quot;/phone_off&quot; &quot;Bzzt… Bzzt… Bzzt…&quot;)))
+    (dialog '((&quot;phone/phone_off&quot; &quot;Bzzt… Bzzt… Bzzt…&quot;)))
     (wait)
     (set-orientation '(0 -1))
     (wait 0.6)
     (dialog
-      '((&quot;/phone_on&quot; &quot;What's happening?&quot;)
+      '((&quot;phone/phone_on&quot; &quot;What's happening?&quot;)
       (&quot;/henchman&quot; &quot;This year's \&quot;hero\&quot;.\nWe just caught him.&quot;)
-      (&quot;/phone_on&quot; &quot;Very well.&quot;)
+      (&quot;phone/phone_on&quot; &quot;Very well.&quot;)
       (&quot;/henchman&quot; &quot;Do we get rid of him?&quot;)
-      (&quot;/phone_on&quot; &quot;Does he look smart?&quot;)
+      (&quot;phone/phone_on&quot; &quot;Does he look smart?&quot;)
       (&quot;/henchman&quot; &quot;No.&quot;)
-      (&quot;/phone_on&quot; &quot;Then let him go.&quot;)
+      (&quot;phone/phone_on&quot; &quot;Then let him go.&quot;)
       (&quot;/henchman&quot; &quot;WHAT?!\nAre you sure? Why have him around again?&quot;)
-      (&quot;/phone_on&quot; &quot;He has to go through me anyway if he wants to continue his journey.\nI'll get rid of him.&quot;)
+      (&quot;phone/phone_on&quot; &quot;He has to go through me anyway if he wants to continue his journey.\nI'll get rid of him.&quot;)
       (&quot;/henchman&quot; &quot;But what if he makes trouble and…&quot;)
-      (&quot;/phone_on&quot; &quot;Do not insist. It's my final decision.&quot;)
+      (&quot;phone/phone_on&quot; &quot;Do not insist. It's my final decision.&quot;)
       (&quot;/henchman&quot; &quot;But boss, we can't risk that he will…&quot;)
-      (&quot;/phone_on&quot; &quot;You will still get your reward, don't worry.&quot;)
+      (&quot;phone/phone_on&quot; &quot;You will still get your reward, don't worry.&quot;)
       (&quot;/henchman&quot; &quot;Ah okay, perfect. We leave it free.\nSee you later boss.&quot;)
-      (&quot;/phone_off&quot; &quot;Beep… Beep… Beep…&quot;)))
+      (&quot;phone/phone_off&quot; &quot;Beep… Beep… Beep…&quot;)))
     (wait)
     (wait 0.6)
     (set-orientation '(1 56))
