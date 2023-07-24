@@ -1242,6 +1242,10 @@ msgid "Bzzt… Bzzt… Bzzt…"
 msgstr ""
 
 #: assets/maps/story/25.tmx:
+msgid "phone"
+msgstr ""
+
+#: assets/maps/story/25.tmx:
 msgid "What's happening?"
 msgstr ""
 

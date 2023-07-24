@@ -1232,6 +1232,10 @@ msgid "Bzzt… Bzzt… Bzzt…"
 msgstr "滋… 滋… 滋…"
 
 #: assets/maps/story/25.tmx:
+msgid "phone"
+msgstr ""
+
+#: assets/maps/story/25.tmx:
 msgid "What's happening?"
 msgstr "怎麼了？"
 
