@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # Manuel Tassi <mannivuwiki@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-07-23 13:54+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-07-24 19:35+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -2255,7 +2255,7 @@ msgstr "È questo, allora / La mia ultima dimora / 1 metro di neve."
 
 #: assets/maps/story/49.tmx:
 msgid "sheet-of-paper"
-msgstr "foglio-di-carta"
+msgstr "foglio"
 
 #: assets/maps/story/49.tmx:
 msgid "Just being here / I am here / And the snow falls."
@@ -2267,7 +2267,7 @@ msgstr "Non è una buona cosa guardare nelle case degli altri."
 
 #: assets/maps/story/49.tmx:
 msgid "Bitter winter wind / Ends there / Sound of the sea."
-msgstr "Il vento d’inverno / Avrà una sua fine / Suono del mare."
+msgstr "Il vento d'inverno / Avrà una sua fine / Suono del mare."
 
 #: assets/maps/story/49.tmx:
 msgid "This is a common tree in this area."
@@ -2351,7 +2351,7 @@ msgstr "Uh, brutta storia.\nMa tu sei decisamente più forte di loro, eroe!\nAnd
 
 #: assets/maps/story/52.tmx:
 msgid "I have to go through the crypt to get the second signet."
-msgstr "Devo andare alla cripta per prendere il primo sigillo."
+msgstr "Devo andare alla cripta per prendere il secondo sigillo."
 
 #: assets/maps/story/44.tmx:
 msgid "What do you want?"
