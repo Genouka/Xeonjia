@@ -17,7 +17,7 @@
  <tileset firstgid="447" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA51UsUoDQRC9AU0jpFHs0ijamiZ/YR/BDwgaMRiFGIyNRrDyH1Lm12yUICRYHL7hdnGczOxtfPCY29vce3k7u9unougnOAYZzVBLcAE2wtjDAPPXgRH87QnGbfGOdUuh11K6zYSP9tD/6ZgqptDD/K3ghfq99DgSc3X5PQ3mTcKDwO98addjqLJ4OerQcDSsLLofXu86mT3N8SgdndS+GWHuHrwKOpdin1secQ14784MpjAwMlgeck3m9MvXUBkf4B5V/PyHh1yXN1onYwlu4/kLdcdYkzoP2Q/PQ/rsiiyxL2P6q6M94pnVZ/VJjNsizxaeV4WNA8wd0rqHzNsFz8L7U9TzDc+QlyOOhyIP6y42l6718O6eHDzgmwn4aGgyRsZZyrkf473P9Rl1Cr5Q1d87Y+/K/WFpxF6+43mf/LtBZ2D+AN+VC48IBwAA
+   H4sIAAAAAAAAA51UsUoDQRC9AU0jpDHY2SixNY1/kV7BDxCNGEyEGEwaTSBV/sHSX7NRgqBYHL7hdnGczOxtfPCY3du79252ZrdHRdFLcAwymiGW4ApshLmHPtZvAiP422PMO+IZ65ZCb1/pNhM+2kP/0xFVTOEC60PBS/W+9GiLtbr8PQ3mbcKDwO98addjoHLx8qhDw9GwctH18Gp3klnTHI/S0Un1zQhr9+B10LkSfW55xD3g3n02mELfyMHykHvyQr9chMh4A1tU8f0fHnJflrROxie4jfEH4o6xJ3Uesh6WR1v57IpcYl3G9FdHe8Qzq8/qo5h3hM8Wxl+FjQOsHdK6h8z3FDwLz7uI5xueIS+POB+IfFh3tbl0rYd39+TgAd9MwKmhyRgZZynnfoz3PscnxBk4p6q+d0bvyv6wNGItXzHeI/9u0DkwfwC1BxyeCAcAAA==
   </data>
  </layer>
  <layer id="6" name="Tile Layer 2" width="25" height="18">
