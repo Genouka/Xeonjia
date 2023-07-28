@@ -149,22 +149,10 @@
     (wait 3)
     (dialog '((&quot;/milla&quot; &quot;Ok, that's enough.\nBye.&quot;)))
     (wait)
-    (milla-out))
+    (milla-out)
+    (wait 2))
   (dialog '((&quot;From here I can only see the wall.&quot;))))
 </property>
-   </properties>
-  </object>
-  <object id="82" gid="285" x="224" y="32" width="16" height="16">
-   <properties>
-    <property name="action">(begin
-    (define event-id &quot;53.vase1&quot;)
-    (define item-id &quot;fresh-water&quot;)
-    (if (!get event-id)
-        (begin
-            (dialog '((&quot;Hey, there are items in here!&quot;)))
-            (give-item item-id)
-            (set event-id #t))
-        (dialog '((&quot;There are still items in here but I've already taken one.&quot;)))))</property>
    </properties>
   </object>
  </objectgroup>

@@ -15,30 +15,6 @@
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
- <objectgroup id="2" name="spawn points">
-  <object id="34" class="Door" x="256" y="0" width="16" height="16">
-   <properties>
-    <property name="roomId" value="14"/>
-   </properties>
-  </object>
-  <object id="35" class="Door" x="0" y="32" width="16" height="16">
-   <properties>
-    <property name="mainDoor" type="bool" value="true"/>
-    <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="13"/>
-   </properties>
-  </object>
-  <object id="36" class="Door" x="208" y="0" width="16" height="16">
-   <properties>
-    <property name="roomId" value="15"/>
-   </properties>
-  </object>
-  <object id="49" gid="194" x="64" y="176" width="16" height="16">
-   <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;14&quot;) (delete-me))"/>
-   </properties>
-  </object>
- </objectgroup>
  <layer id="6" name="Tile Layer 2" width="21" height="14">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgGDjgPIB2g4AJEJvikaeG+1ypYAY1wECHNS2AC4XyIDCcwsUMjcYGCKV5csykBQAAQV1wFZgEAAA=
@@ -74,6 +50,30 @@
    </properties>
   </object>
   <object id="47" gid="201" x="240" y="176" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;14&quot;) (delete-me))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="34" class="Door" x="256" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="14"/>
+   </properties>
+  </object>
+  <object id="35" class="Door" x="0" y="32" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="13"/>
+   </properties>
+  </object>
+  <object id="36" class="Door" x="208" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="15"/>
+   </properties>
+  </object>
+  <object id="49" gid="194" x="64" y="176" width="16" height="16">
    <properties>
     <property name="actionOnEvent" value="(if (has-been-here &quot;14&quot;) (delete-me))"/>
    </properties>
