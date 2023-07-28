@@ -1,7 +1,7 @@
 name: xeonjia
 description: Save the world by solving ice puzzles and defeating enemies.
 
-version: 2.3.1+14
+version: 2.4.0+15
 
 environment:
   sdk: ">=2.19.4 <3.0.0"
