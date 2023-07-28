@@ -1,0 +1,3 @@
+* Ajout d'une nouvelle partie à l'histoire
+* Mise à jour des traductions
+* Corrections d'erreurs

@@ -1,0 +1,3 @@
+* Hikâyeye yeni bir bölüm eklendi
+ * Çeviriler güncellendi
+ * Hata düzeltmeleri yapıldı

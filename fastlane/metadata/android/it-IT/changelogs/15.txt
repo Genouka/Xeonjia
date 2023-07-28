@@ -1,0 +1,3 @@
+* Aggiunta una nuova parte della storia
+* Aggiornate traduzioni
+* Risolti bug

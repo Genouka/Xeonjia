@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # Manuel Tassi <mannivuwiki@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-07-24 20:15+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-07-28 18:54+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -2255,7 +2255,7 @@ msgstr "Il mio tetto si è bruciato.\nSì, va bene, mi continua a nevicare in ca
 
 #: assets/maps/story/49.tmx:
 msgid "Well, this is / My final abode / The snow lay 1 meter."
-msgstr "È questo, allora / La mia ultima dimora / 1 metro di neve."
+msgstr "È questa, allora / La mia ultima dimora / 1 metro di neve."
 
 #: assets/maps/story/49.tmx:
 msgid "sheet-of-paper"
