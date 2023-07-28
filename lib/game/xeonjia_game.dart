@@ -680,8 +680,10 @@ class XeonjiaGame extends FlameGame
       !user!.isMyTurn);
 
   /// True if it's possible to open the mini-map
-  bool get isMiniMapButtonActive =>
-      !(messageManager.isActive || hasAction || !user!.isStationary);
+  bool get isMiniMapButtonActive => !(messageManager.isActive ||
+      hasAction ||
+      !user!.isStationary ||
+      changingTurn);
 
   /// True if the world map is disabled
   bool get worldMapDisabled =>
