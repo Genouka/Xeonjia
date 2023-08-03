@@ -2,8 +2,9 @@
 # Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # deepdaikon <deepdaikon@tuta.io>, 2022.
+# J. Lavoie <j.lavoie@net-c.ca>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Greek <https://translate.deepdaikon.xyz/projects/xeonjia/ui/el/>\nLanguage: el\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-01 18:11+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: Greek <https://translate.deepdaikon.xyz/projects/xeonjia/ui/el/>\nLanguage: el\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -259,7 +260,7 @@ msgstr "Μετάφρασε την εφαρμογή στη γλώσσα σου"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
-msgstr ""
+msgstr "Αποστολή ηλεκτρονικό ταχυδρομείο"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ask for something or request a new feature"

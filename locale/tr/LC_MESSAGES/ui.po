@@ -5,8 +5,9 @@
 # Muha Aliss <muhaaliss@gmail.com>, 2022.
 # Alparslan Şakçi <sakci@protonmail.com>, 2022.
 # Sir Crownguard <trilug_inhofe@simplelogin.com>, 2022.
+# cannnAvar <bartucanavar@proton.me>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-12-26 21:11+0000\nLast-Translator: Sir Crownguard <trilug_inhofe@simplelogin.com>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-01 18:11+0000\nLast-Translator: cannnAvar <bartucanavar@proton.me>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -34,7 +35,7 @@ msgstr "Oynamak için tıkla"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Press enter"
-msgstr ""
+msgstr "Entere Bas"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Welcome!"
@@ -537,12 +538,13 @@ msgid "Mitsu Forest used to be bigger, it was deforested to build Melhopolis."
 msgstr ""
 
 #: lib/game/utils/event_manager.dart:
+#, fuzzy
 msgid "The Xeonjia Tower is the tallest building in the Kingdom."
-msgstr ""
+msgstr "Xeonija Kulesi, Kralıktaki en büyük yapı."
 
 #: lib/game/utils/event_manager.dart:
 msgid "There are 3 regions in the Kingdom."
-msgstr ""
+msgstr "Kralıkta 3 bölge vardır."
 
 #: lib/game/utils/event_manager.dart:
 msgid "If you click on a point on the world map you can travel to places you have already been."
@@ -550,27 +552,27 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "The world is big."
-msgstr ""
+msgstr "Dünya büyük."
 
 #: lib/game/utils/event_manager.dart:
 msgid "What time is it?"
-msgstr ""
+msgstr "Saat kaç?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "If we walk around long enough, we're sure to arrive somewhere!"
-msgstr ""
+msgstr "Eğer yeteri kadar yürürsek, eminizki biryere varacağız!"
 
 #: lib/game/utils/event_manager.dart:
 msgid "How are you?"
-msgstr ""
+msgstr "Nasılsın?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "It's cold here."
-msgstr ""
+msgstr "Burası soğuk."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Green! Green!\nGreen is the answer, but I don't remember the question."
-msgstr ""
+msgstr "Yeşil! Yeşil!\nCevap Yeşil, ama soruyu hatırlamıyorum."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Ours is a strange world, it's cold here but a little warmer there."

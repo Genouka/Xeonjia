@@ -5,8 +5,9 @@
 # Alparslan Şakçi <sakci@protonmail.com>, 2022.
 # deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 # Sir Crownguard <trilug_inhofe@simplelogin.com>, 2022.
+# cannnAvar <bartucanavar@proton.me>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-07-23 20:32+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-01 18:11+0000\nLast-Translator: cannnAvar <bartucanavar@proton.me>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -174,11 +175,11 @@ msgstr "Natawn"
 
 #: assets/maps/story/1.tmx:
 msgid "Oh, your hometown."
-msgstr ""
+msgstr "Oh, senin memleketin."
 
 #: assets/maps/story/1.tmx:
 msgid "You grew up here, right?"
-msgstr ""
+msgstr "Burada büyüdün, değilmi?"
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nIf you lose your way or get stuck take a look at the map.\nYou can open it by tapping on its icon in the upper right corner."
@@ -234,11 +235,11 @@ msgstr ""
 
 #: assets/maps/story/t2_04.tmx:
 msgid "Hi!"
-msgstr ""
+msgstr "Selam!"
 
 #: assets/maps/story/54.tmx:
 msgid "Route 7"
-msgstr ""
+msgstr "7. Yol"
 
 #: assets/maps/story/34.tmx:
 msgid "Route 4"
@@ -266,7 +267,7 @@ msgstr "Zamelis Köyü"
 
 #: assets/maps/story/38.tmx:
 msgid "I love this village!"
-msgstr ""
+msgstr "Bu köye bayılıyorm!"
 
 #: assets/maps/story/38.tmx:
 msgid "I want to reach the capital quickly but the only way is traveling by land."

@@ -2,8 +2,9 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # deepdaikon <deepdaikon@tuta.io>, 2022.
+# J. Lavoie <j.lavoie@net-c.ca>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Portuguese (Brazil) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/pt_BR/>\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-01 18:11+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: Portuguese (Brazil) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/pt-BR/>\nLanguage: pt-BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -259,7 +260,7 @@ msgstr "Traduza em seu idioma"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
-msgstr "Envie um email"
+msgstr "Envie um e-mail"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ask for something or request a new feature"
