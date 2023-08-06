@@ -231,9 +231,10 @@ class XeonjiaGame extends FlameGame
 
   /// Battle variables
   Walker? get activePlayer => changingTurn ? null : players[_activePlayerIndex];
-  CharacterComponent? get user => players.isEmpty || activePlayer?.teamId != 0
-      ? playerOne
-      : activePlayer as CharacterComponent;
+  CharacterComponent? get user =>
+      !inBattle || players.isEmpty || activePlayer?.teamId != 0
+          ? playerOne
+          : activePlayer as CharacterComponent;
   late bool changingTurn;
   int _activePlayerIndex = 0;
   late int remainingMoves;
