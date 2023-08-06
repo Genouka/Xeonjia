@@ -630,6 +630,9 @@ class XeonjiaGame extends FlameGame
       if (playerOne!.hasWeaponId(Weapons.snowball.id))
         'If you run out of snowballs, get some snow from the snowdrifts around you.'
             .i18n,
+      if (playerOne!.hasWeaponId(Weapons.mine.id))
+        'Mines you place under you with the "M" button explode as soon as an enemy steps on them.'
+            .i18n,
       'Remember, enemies also have HP. Hit them multiple times to knock them out!'
           .i18n,
       'And if you have few HP take advantage of a move you have available to eat or drink something you have in your backpack!'
