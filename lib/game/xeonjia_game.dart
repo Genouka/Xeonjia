@@ -139,9 +139,9 @@ class XeonjiaGame extends FlameGame
     // Import map and components
     if (config.mode == GameMode.story) {
       map = GameMap(fullId: mainCharacter.visitedRooms.last);
-      if (map.id == '61') {
+      if (map.id == 'x1') {
         FlameAudio.bgm.dispose();
-        addCustomWidgetOverlay('noMapsMenu', NoMapsMenu(this, '60'));
+        addCustomWidgetOverlay('noMapsMenu', NoMapsMenu(this, '999'));
         return;
       }
       await importMap(this, 'assets/maps/story/${map.id}.tmx');
