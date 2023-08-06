@@ -45,6 +45,9 @@ class CharacterComponent extends BasicComponent
               ? [SnowBallWeapon(level: 5), MineWeapon(level: 1)]
               : [SnowBallWeapon(level: 9), MineWeapon(level: 5)]);
     }
+    if (hasWeaponId(Weapons.mine.id)) {
+      getWeaponById(Weapons.mine.id).restorePp();
+    }
     if (name == 'milla') {
       maxHP = mainCharacter.maxHP;
       weaponList = mainCharacter.weaponList;

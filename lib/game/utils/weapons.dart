@@ -106,9 +106,9 @@ class SnowBallWeapon extends Weapon {
 
 /// Mine
 class MineWeapon extends Weapon {
-  MineWeapon({required this.level, double? powerPoints})
+  MineWeapon({required this.level, double? powerPoints = 3})
       : super(Weapons.mine.id, powerPoints) {
-    atk = 10 + level * 2.0;
+    atk = 15 + level * 2.0;
   }
 
   @override

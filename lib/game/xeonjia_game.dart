@@ -387,7 +387,8 @@ class XeonjiaGame extends FlameGame
     inBattle = true;
     add(BattleTextBox(size, 'Battle!'.i18n.toUpperCase()));
     add(Button.P(this));
-    if (playerOne!.hasWeaponId(1)) add(Button.S(this));
+    if (playerOne!.hasWeaponId(Weapons.snowball.id)) add(Button.S(this));
+    if (playerOne!.hasWeaponId(Weapons.mine.id)) add(Button.M(this));
     add(RemainingMovesBox());
     overlays.add('rulesButton');
     overlays.remove('leafButton');
@@ -400,10 +401,21 @@ class XeonjiaGame extends FlameGame
     changingTurn = false;
     overlays.remove('rulesButton');
     overlays.add('leafButton');
+    // only if the previous player wasn't user
+    if (!overlays.isActive('backpackButton')) {
+      overlays.add('backpackButton');
+      overlays.add('miniMapButton');
+      overlays.remove('dialogBox');
+      overlays.add('virtualDPad');
+      overlays.add('dialogBox');
+    }
     camera.moveTo(Vector2(moveCamera(size.x, map.width, playerOne!.x),
         moveCamera(size.y, map.height, playerOne!.y)));
     _activePlayerIndex = players.indexOf(playerOne!);
     add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
+    children
+        .where((c) => c is ModifierComponent && c.explosionOnDelete)
+        .forEach((c) => (c as ModifierComponent).delete());
     playBackgroundMusic(custom: null);
     playSound(Sfx.win, volume: 1);
   }

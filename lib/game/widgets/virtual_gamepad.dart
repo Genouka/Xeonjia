@@ -50,10 +50,24 @@ class Button extends HudButtonComponent {
   Button.S(XeonjiaGame gameRef)
       : this(
           'S',
-          () => gameRef.user!.shoot(1),
+          () => gameRef.user!.shoot(Weapons.snowball.id),
           buttonPosition: Anchor.topRight,
           color: Colors.blueGrey.shade800,
-          percent: () => gameRef.user!.getWeaponById(1).ppPercentage,
+          percent: () =>
+              gameRef.user!.getWeaponById(Weapons.snowball.id).ppPercentage,
+          visibility: () =>
+              gameRef.overlays.isActive('rulesButton') &&
+              gameRef.user!.isMyTurn,
+        );
+
+  Button.M(XeonjiaGame gameRef)
+      : this(
+          'M',
+          () => gameRef.user!.shoot(Weapons.mine.id),
+          buttonPosition: Anchor.bottomLeft,
+          color: Colors.blueGrey.shade800,
+          percent: () =>
+              gameRef.user!.getWeaponById(Weapons.mine.id).ppPercentage,
           visibility: () =>
               gameRef.overlays.isActive('rulesButton') &&
               gameRef.user!.isMyTurn,

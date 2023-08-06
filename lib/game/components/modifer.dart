@@ -63,32 +63,36 @@ class ModifierComponent extends BasicComponent {
   @override
   void overlappedBy(BasicComponent componentAbove) {
     if (!isBeingDeleted &&
-        componentAbove is CharacterComponent &&
+        (componentAbove is CharacterComponent ||
+            (explosionOnDelete && componentAbove is SliderCpuComponent)) &&
         (gameRef.config.friendlyFire ||
             (father?.teamId ?? -99) != componentAbove.teamId)) {
       componentAbove.hpDifference(_hpDelta, cause: father ?? this);
       componentAbove.atk += _atkDelta;
       componentAbove.def += _defDelta;
       componentAbove.poisonQuantity += _poisonDelta;
-      componentAbove.moneyDifference(_moneyDelta);
-      for (final weapon in componentAbove.weaponList) {
-        weapon.powerPoints += _powerPointsDelta;
-      }
-      if (componentAbove.isUser) {
-        if (_hpDelta != 0 && componentAbove.isUser) {
-          gameRef.user!.showText('+ ${_hpDelta.round()} HP');
-        } else if (_moneyDelta != 0 && componentAbove.isUser) {
-          gameRef.user!.showText('+ $_moneyDelta ¤');
-          gameRef.playSound(Sfx.money);
+      if (componentAbove is CharacterComponent) {
+        componentAbove.moneyDifference(_moneyDelta);
+        for (final weapon in componentAbove.weaponList) {
+          weapon.powerPoints += _powerPointsDelta;
         }
-      }
-      if (_itemId != '0' &&
-          componentAbove.isUser &&
-          gameRef.config.mode == GameMode.story) {
-        gameRef.playerOne!.addItem(_itemId, sfx: _moneyDelta == 0);
+        if (componentAbove.isUser) {
+          if (_hpDelta != 0 && componentAbove.isUser) {
+            gameRef.user!.showText('+ ${_hpDelta.round()} HP');
+          } else if (_moneyDelta != 0 && componentAbove.isUser) {
+            gameRef.user!.showText('+ $_moneyDelta ¤');
+            gameRef.playSound(Sfx.money);
+          }
+          if (_itemId != '0' &&
+              componentAbove.isUser &&
+              gameRef.config.mode == GameMode.story) {
+            gameRef.playerOne!.addItem(_itemId, sfx: _moneyDelta == 0);
+          }
+        }
       }
       if (_regenerable ?? false) gameRef.modifiersToBeRegenerated.add(this);
       if (explosionOnDelete) {
+        if (componentAbove.hp <= 0) (componentAbove as Walker).stop();
         isBeingDeleted = true;
         gameRef.playSound(Sfx.explosion);
         animation = atlas.getAnimation('${name}_explosion')
