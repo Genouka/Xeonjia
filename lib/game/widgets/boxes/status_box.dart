@@ -35,8 +35,10 @@ class StatusBoxState extends State<StatusBox> {
                   children: [
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 4),
-                      child: const Icon(
-                        Icons.favorite,
+                      child: Icon(
+                        (widget.gameRef.user?.isPlayerOne ?? true)
+                            ? Icons.favorite
+                            : Icons.energy_savings_leaf,
                         color: Colors.white,
                         size: 15,
                       ),

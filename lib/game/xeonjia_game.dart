@@ -418,6 +418,7 @@ class XeonjiaGame extends FlameGame
         .forEach((c) => (c as ModifierComponent).delete());
     playBackgroundMusic(custom: null);
     playSound(Sfx.win, volume: 1);
+    statusBox.state?.refresh();
   }
 
   /// Pause game
