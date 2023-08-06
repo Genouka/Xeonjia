@@ -35,6 +35,9 @@ class SliderCpuComponent extends BasicComponent
   @override
   void delete({bool silently = false}) {
     isBeingDeleted = true;
+    if (this == gameRef.activePlayer && !gameRef.changingTurn) {
+      gameRef.useMove(this, skipTurn: true);
+    }
     animation = atlas.getAnimation('$name-deletion')
       ..onComplete = () {
         hide();
