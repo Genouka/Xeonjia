@@ -261,6 +261,9 @@ class XeonjiaGame extends FlameGame
                 } else {
                   _activePlayerIndex = i;
                   changingTurn = false;
+                  camera.moveTo(Vector2(
+                      moveCamera(size.x, map.width, players[i].x),
+                      moveCamera(size.y, map.height, players[i].y)));
                   refreshHPBar();
                   if (user!.isMyTurn) {
                     // only if the previous player wasn't user
