@@ -397,6 +397,7 @@ class XeonjiaGame extends FlameGame
   /// Battle is over
   void endBattle() {
     inBattle = false;
+    changingTurn = false;
     overlays.remove('rulesButton');
     overlays.add('leafButton');
     camera.moveTo(Vector2(moveCamera(size.x, map.width, playerOne!.x),
