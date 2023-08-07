@@ -6,28 +6,30 @@
 # 苏汀 <753594451@qq.com>, 2022.
 # deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 # 鸞瑤綾舞 <user3678169@163.com>, 2023.
+# Super12138 <cutewrp@163.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-07-23 20:32+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-07 06:11+0000\nLast-Translator: Super12138 <cutewrp@163.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
-msgstr ""
+msgstr "水下地窖 - B1F"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "We are underground."
-msgstr ""
+msgstr "我们在地下。"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
-msgstr ""
+msgstr "市政府"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "…"
 msgstr "……"
 
 #: assets/maps/story/30_cityhall.tmx:
+#, fuzzy
 msgid "H-Hello."
-msgstr "你、你好。"
+msgstr "你，你好。"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
@@ -120,23 +122,23 @@ msgstr "出口↑"
 
 #: assets/maps/story/33.tmx:
 msgid "Hey, there are items in here!"
-msgstr ""
+msgstr "嘿，这里有物品！"
 
 #: assets/maps/story/33.tmx:
 msgid "There are still items in here but I've already taken one."
-msgstr ""
+msgstr "这里还有别的东西，但我已经拿走一个了。"
 
 #: assets/maps/story/33.tmx:
 msgid "I can see a city in the distance."
-msgstr ""
+msgstr "我可以看到远处的城市。"
 
 #: assets/maps/story/33.tmx:
 msgid "In the distance can be seen the other part of the region."
-msgstr ""
+msgstr "在远处可以看到该地区的另一部分。"
 
 #: assets/maps/story/33.tmx:
 msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
-msgstr ""
+msgstr "这个地区的居民会在这些花瓶里为来这里的旅行者和水手留下礼物。\n这是一个古老的习俗。\n请随意拿走这些礼物。"
 
 #: assets/maps/story/24_lab.tmx:
 #, fuzzy
@@ -220,31 +222,31 @@ msgstr "从这开始，地面都结上了冰。\n如果没碰上障碍物，那�
 
 #: assets/maps/story/t2_04.tmx:
 msgid "I can't escape. I have to take the signet."
-msgstr ""
+msgstr "我逃不掉了。我必须拿到印章。"
 
 #: assets/maps/story/t2_04.tmx:
 msgid "Here it is, this is the second signet!"
-msgstr ""
+msgstr "就在这里，这是第二个印章！"
 
 #: assets/maps/story/t2_04.tmx:
 msgid "We can get out of here now."
-msgstr ""
+msgstr "现在我们可以离开这里了。"
 
 #: assets/maps/story/t2_04.tmx:
 msgid "The monsters are after me! I'll get the signet later."
-msgstr ""
+msgstr "怪物在追我！我得待会儿再去拿印章。"
 
 #: assets/maps/story/t2_04.tmx:
 msgid "Let's get the second signet!"
-msgstr ""
+msgstr "让我们拿到第二个印章吧！"
 
 #: assets/maps/story/t2_04.tmx:
 msgid "Hi!"
-msgstr ""
+msgstr "嗨！"
 
 #: assets/maps/story/54.tmx:
 msgid "Route 7"
-msgstr ""
+msgstr "7 号小径"
 
 #: assets/maps/story/34.tmx:
 msgid "Route 4"
@@ -265,7 +267,7 @@ msgstr "一块石头。"
 #: assets/maps/story/34.tmx:
 #, fuzzy
 msgid "Hexa Cave"
-msgstr "六边形的洞穴"
+msgstr "Hexa 洞穴"
 
 #: assets/maps/story/38.tmx:
 msgid "Zamelis Village"
@@ -273,7 +275,7 @@ msgstr "扎梅利斯村"
 
 #: assets/maps/story/38.tmx:
 msgid "I love this village!"
-msgstr ""
+msgstr "我爱这个村庄！"
 
 #: assets/maps/story/38.tmx:
 msgid "I want to reach the capital quickly but the only way is traveling by land."
@@ -334,15 +336,15 @@ msgstr "所幸一切安好，我不知道该如何感谢你。\n但我可以把�
 
 #: assets/maps/story/13.tmx:
 msgid "Thank you, it seems very precious!"
-msgstr ""
+msgstr "谢谢你，它看起来很珍贵！"
 
 #: assets/maps/story/13.tmx:
 msgid "Now I think it's better for me if I go to my safe home.\nBye!"
-msgstr ""
+msgstr "现在我想我最好还是回我那安全的家。\n再见！"
 
 #: assets/maps/story/13.tmx:
 msgid "I'll go home as soon as my legs stop shaking in fear."
-msgstr ""
+msgstr "只要我的双腿不再战栗，我就会立刻回家。"
 
 #: assets/maps/story/13.tmx:
 #, fuzzy
@@ -351,27 +353,28 @@ msgstr "我最好去确认一下那个人是否没事。"
 
 #: assets/maps/story/13.tmx:
 msgid "! ! !"
-msgstr ""
+msgstr "！！！"
 
 #: assets/maps/story/13.tmx:
+#, fuzzy
 msgid "Gyaaa!"
-msgstr ""
+msgstr "啊啊啊！"
 
 #: assets/maps/story/13.tmx:
 msgid "monster"
-msgstr ""
+msgstr "怪物"
 
 #: assets/maps/story/13.tmx:
 msgid "Please help me! Save me from these monsters!"
-msgstr ""
+msgstr "帮帮我！请把我从这些怪物手中救出来！"
 
 #: assets/maps/story/13.tmx:
 msgid "Don't worry! I'll help you now!"
-msgstr ""
+msgstr "别担心！我现在就来救你！"
 
 #: assets/maps/story/13.tmx:
 msgid ". . . . ."
-msgstr ""
+msgstr "……"
 
 #: assets/maps/story/13.tmx:
 msgid ". . . . . . . . . ."
