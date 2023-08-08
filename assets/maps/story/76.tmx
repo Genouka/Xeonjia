@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="13" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="57">
+ <properties>
+  <property name="map-name" value="Route 8"/>
+  <property name="milla">(dialog '((&quot;/milla&quot; &quot;Oh, the sea! I missed it!&quot;)));;;
+(dialog '((&quot;/milla&quot; &quot;Oh, that tree is like those in the Mitsu Forest! I missed it!&quot;)))</property>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="10" height="13">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2tnZGBoH8S4BQ9uRVL3FIhhwBrItoHytwPpCUhqXyCpg4HzSGIdSOo8gNgTi3pkdc+A+CgONejm2QD5tmjyd4HiEmjq8AGYX2DqrkHp20D6DpRth6SWkHkwAAAQ/42ECAIAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="56" gid="230" x="112" y="96" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;076-healer&quot;)
+  (begin
+    (dialog
+      '((&quot;/&quot; &quot;Volcano, sea, forest.\nThere's a little bit of everything here.&quot;)
+      (&quot;/&quot; &quot;You've traveled a long way to get here, I know that.\nI give you this.&quot;)))
+    (wait)
+    (give-item &quot;healer&quot;)
+    (set &quot;076-healer&quot; #t)
+    (wait))
+  (dialog '((&quot;/&quot; &quot;Volcano, sea, forest.\nThere's a little bit of everything here.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="10" height="13">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGDrAmJGBwYSRcnMcgGY4UsEcGDABYlM0satUMv8y0JwrULPMqGMkVgAAT+bR5wgCAAA=
+  </data>
+ </layer>
+ <objectgroup id="8" name="items"/>
+ <objectgroup id="10" name="spawn points">
+  <object id="54" class="Door" x="16" y="128" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="64"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

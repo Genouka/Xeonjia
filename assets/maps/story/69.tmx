@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="65">
+ <properties>
+  <property name="action">(if (! (== (last-place) &quot;74&quot;))
+  (map-name &quot;Flamecot City&quot;))</property>
+  <property name="map-name" value="Flamecot City"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;This is the third capital of the Kingdom. What is your favorite?&quot;)))"/>
+  <property name="music" value="city"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="15" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA5WSuw7CMAxF48AEDCAxUMTfM3ZgYOgHdGDkA3gIsTAAEjDwEAuOcKll7BAsHdV1nPreNM59xxycy5E11LUC8yuyQ26gbKJYGWspe0MscH0pek74fkYuVd0712J4Rhs5wJsJ1HlFF9d7SJOenL6Paxvg+hDp0DOQEaMfe6v5JdMSfADpbvhas6wX5Dtn58J9cN1WXfrIyAfXLevy7Mo/cumBa4/lBaR5kDGDuDceY+UOrg0/Eu1OBabKP9JmaffbmhXT8blDRkgdWvDvbI3+TcLcvdFzZH3S9x3zB/JM0MnjBeVQNeGwBAAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc"/>
+ <layer id="6" name="Tile Layer 2" width="15" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgwARXGbEIAsELqPgrHPIwcBkofwVNDbreH0D6JxD/QsIw/m8C5g8m8AOHu3GJDyUwHPxAC4AtfQ8kuEfALYTkiQWDwd8ALL6kObAEAAA=
+  </data>
+ </layer>
+ <objectgroup id="8" name="items">
+  <object id="62" gid="471" x="16" y="128" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/_3&quot; &quot;City Hall&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="54" class="Door" x="0" y="224" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="67"/>
+   </properties>
+  </object>
+  <object id="56" class="Door" x="96" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="75"/>
+   </properties>
+  </object>
+  <object id="57" class="Door" x="32" y="208" width="16" height="16">
+   <properties>
+    <property name="roomId" value="69_house1"/>
+   </properties>
+  </object>
+  <object id="58" class="Door" x="112" y="144" width="16" height="16">
+   <properties>
+    <property name="roomId" value="69_house2"/>
+   </properties>
+  </object>
+  <object id="59" class="Door" x="32" y="96" width="16" height="16">
+   <properties>
+    <property name="roomId" value="69_cityhall"/>
+   </properties>
+  </object>
+  <object id="60" class="Door" x="208" y="144" width="16" height="16">
+   <properties>
+    <property name="roomId" value="69_house3"/>
+   </properties>
+  </object>
+  <object id="64" class="Door" x="0" y="128" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="74"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

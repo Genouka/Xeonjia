@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="23" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="60">
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="391" source="../tilesets/outdoor-3.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="23" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGAWjYBQMNgAAXkCd75gDAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="57" class="NPC" gid="230" x="128" y="64" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;This part is under construction.&quot;)))"/>
+    <property name="orientation" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="58" class="NPC" gid="206" x="213.5" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Why am I here? What am I supposed to do?&quot;)))"/>
+   </properties>
+  </object>
+  <object id="59" class="NPC" gid="195" x="165.5" y="112" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;One day you will feel nostalgic about this moment.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="23" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGAWjYBQMNgAAXkCd75gDAAA=
+  </data>
+ </layer>
+ <objectgroup id="8" name="items"/>
+ <objectgroup id="10" name="spawn points"/>
+</map>

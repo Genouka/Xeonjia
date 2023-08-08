@@ -29,6 +29,11 @@
             "id": 2,
             "members": [
                 {
+                    "name": "mainDoor",
+                    "type": "bool",
+                    "value": false
+                },
+                {
                     "name": "orientation",
                     "type": "int",
                     "value": 0

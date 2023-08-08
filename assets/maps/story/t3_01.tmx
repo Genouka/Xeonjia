@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="88">
+ <properties>
+  <property name="action" value="(map-name &quot;FIERY CRYPT – B1F&quot;)"/>
+  <property name="disable-worldmap" type="bool" value="true"/>
+  <property name="map-name" value="FIERY CRYPT – B1F"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;We are underground.&quot;)))"/>
+  <property name="music" value="enemies"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
+ <tileset firstgid="293" source="../tilesets/crypt-2.tsx"/>
+ <tileset firstgid="349" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="509" source="../tilesets/outdoor-3.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="22" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA62UzQrCMAyAu5686UEQfRh3UdRBux/dfP83McGUhRBTZw18pGPlI02zxcq5CATK/6Bla/Segb6Qi+JFSqMlb6oxFng779wA9H72BlEzjys8TwYN7b+D7wQ8FC/WfRDe1KebAq/D8mo9SHu0O+f3EcAX0Wl4tV7lvFot0ivPhO/2RM3WuTN+4/3EEi/vVcfmvRYZGRZ4rVj5/B7pHdk8arEG5w7YGG6c9yd5x0y/UmzBd6zeWfNN5OT/Heub+gX0vwBdmiUzKAUAAA==
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs"/>
+ <layer id="6" name="Tile Layer 2" width="22" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIA7EMBInRozcYAZBFLrbjok67kAGrlAz3Ukw2wPJHzJI+ryQxMkxF9lMR0ZUs0kF6GGFbhY5ZqP7KQBHfJIaz5SE1VAHlMQxPuBFZBw4DIKyBAAWXRJpKAUAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="items"/>
+ <objectgroup id="2" name="spawn points">
+  <object id="80" class="Door" x="176" y="112" width="16" height="16">
+   <properties>
+    <property name="roomId" value="67"/>
+   </properties>
+  </object>
+  <object id="84" class="Door" x="176" y="192" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="t3_02"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

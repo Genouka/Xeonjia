@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="103">
+ <properties>
+  <property name="action" value="(map-name &quot;FIERY CRYPT – B2F&quot;)"/>
+  <property name="disable-worldmap" type="bool" value="true"/>
+  <property name="map-name" value="FIERY CRYPT – B2F"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;We are underground.&quot;)))"/>
+  <property name="music" value="enemies"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
+ <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="368" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="392" source="../tilesets/crypt-2.tsx"/>
+ <tileset firstgid="448" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="608" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="640" source="../tilesets/outdoor-3.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="22" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA6WUsQrCMBCGY5/BwXd2UUTQWYciCmlQUBdHV7VqRkdfwz/QwBHukiv+8BFSji/JcdQOjLGgKRBqVsApamN99NZgL3AAYzDK1GwEb1hDPNY1+HT7mFmyj5ng+5S8ZSt4Q+aCg8sCtcvO64jryHhp6L2HmfNSL+1H39AzHblzzusV57SVMS/wrPTeUr6of8N3BZ7x1oX+5pLzcvNQ6kGcrRt8d/BQekuJs0Xzj/eimLPUG+b4xLBTvkPyNoyzT38kL/evspl3pJyJ9wetl8FgKAUAAA==
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="92" class="NPC" gid="620" x="80" y="64" width="16" height="16">
+   <properties>
+    <property name="action">(if  (= (enemies-count) 0)
+  (dialog '((&quot;/_happy&quot; &quot;We won! We are strong!&quot;)))
+  (dialog '((&quot;/_happy&quot; &quot;Hi!&quot;))))</property>
+    <property name="actionOnEvent">(if (get &quot;t3_02-safe&quot;)
+  (delete-me))</property>
+    <property name="team" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="101" class="SliderCpu" gid="343" x="128" y="144" width="16" height="16">
+   <properties>
+    <property name="hp" type="float" value="70"/>
+    <property name="level" type="float" value="4"/>
+   </properties>
+  </object>
+  <object id="102" class="SliderCpu" gid="343" x="208" y="112" width="16" height="16">
+   <properties>
+    <property name="hp" type="float" value="60"/>
+    <property name="level" type="float" value="4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="22" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGPpgOhOEns9Eut7VjNR1Cy6wFo89yO5eToQfqOFmcsJqOpF6DpJhNj4ACpMTUDNP4TB7K5lhQshcdEBsGIwC4gG29IwvvwwEAADSD78QKAUAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="items">
+  <object id="87" gid="379" x="112" y="192" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="88" gid="379" x="288" y="224" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="89" gid="379" x="288" y="64" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="91" gid="379" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="20"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="spawn points">
+  <object id="83" class="Door" x="176" y="16" width="16" height="16">
+   <properties>
+    <property name="roomId" value="t3_03"/>
+   </properties>
+  </object>
+  <object id="97" class="Door" x="96" y="48" width="16" height="16">
+   <properties>
+    <property name="roomId" value="t3_01"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

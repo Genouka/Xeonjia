@@ -1,20 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="54">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="62">
+ <properties>
+  <property name="map-name" value="Route 8"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
- <layer id="1" name="Tile Layer 1" width="25" height="15">
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <tileset firstgid="544" source="../tilesets/npc_main.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="15" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBSMglEw3AAAv2wkb9wFAAA=
+   H4sIAAAAAAAAA2NgQIBXjKg0KQCk5x4Qvwbih0RgELhLon3HsagjRu9toJo7QHwfqvYxkP4IxJ+Q9K4AslfiMWsTHrduAIptxKEXZvdjqH3Y/IANbEdSB7ITZg66HAg8wBPOyO5FNmMxlH6BJH8Nyj6Px6/7gWK7GSFuAOnFFW4AuEKyvFgCAAA=
   </data>
  </layer>
- <objectgroup id="9" name="npc"/>
- <layer id="6" name="Tile Layer 2" width="25" height="15">
+ <objectgroup id="9" name="npc">
+  <object id="60" class="NPC" gid="557" x="144" y="144" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Time seems to be short. Let's run!&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;58-shen&quot;)
+  (delete-me))</property>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="61" gid="568" x="96" y="80" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (get &quot;58-shen&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="15" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBSMglEw3AAAv2wkb9wFAAA=
+   H4sIAAAAAAAAA2NgoAxcZaTQACLBZaA9V+hkF63spoY5AxkOpAAA4Pnp1VgCAAA=
   </data>
  </layer>
- <objectgroup id="8" name="items"/>
- <objectgroup id="10" name="spawn points"/>
+ <objectgroup id="8" name="items">
+  <object id="59" class="Solid" x="96" y="128" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if (!get &quot;58-shen&quot;)
+  (begin
+    (delete-me)
+    (dialog '((&quot;/hero_exclamation&quot; &quot;Shen!&quot;)))
+    (wait)
+    (move 1)
+    (wait 0.6)
+    (place 60 96 144)
+    (show 60)
+    (move 1)
+    (wait 0.6)
+    (move '(1 60))
+    (wait 0.6)
+    (move '(2 60))
+    (wait 0.6)
+    (move '(1 60))
+    (wait 0.6)
+    (define-symbol &quot;gem_count&quot; (gem-count))
+    (dialog
+      '((&quot;/shen&quot; &quot;Hey {{hero}}!&quot;)
+      (&quot;/milla_happy&quot; &quot;Hi I'm Mil-&quot;)
+      (&quot;/shen&quot; &quot;{{hero}}, long time no see! Are you all right?&quot;)
+      (&quot;/&quot; &quot;Yes, everything is fine. I have ju-&quot;)
+      (&quot;/shen&quot; &quot;I'm sorry, we don't have much time. The King of Evil is about to conclude his plan.&quot;)
+      (&quot;/&quot; &quot;We know!\nWe met the Hoarfr-&quot;)
+      (&quot;/shen&quot; &quot;Tell me next time. Sorry.&quot;)
+      (&quot;/milla_happy&quot; &quot;Hi I'm Mil-&quot;)
+      (&quot;/shen&quot; &quot;How many signets do you have?&quot;)
+      (&quot;/&quot; &quot;I have 2 signets, now I'm about to go get the third one.&quot;)
+      (&quot;/shen&quot; &quot;Great! With the third we can enter the Xeonjia Tower.&quot;)
+      (&quot;/milla_happy&quot; &quot;Hi I'm Mil-&quot;)
+      (&quot;/shen&quot; &quot;We absolutely have to stop the Hoarfrost Team and the King of Evil.&quot;)
+      (&quot;/&quot; &quot;That's right, we will stop them!\nI've def-&quot;)
+      (&quot;/shen&quot; &quot;How many gems did you find?&quot;)
+      (&quot;/&quot; &quot;I have found {{gem_count}} so far.&quot;)
+      (&quot;/shen&quot; &quot;I don't know if they will be enough…&quot;)
+      (&quot;/milla_happy&quot; &quot;By the way, hi, I'm Mil-&quot;)
+      (&quot;/shen&quot; &quot;We'll go to the tower with the ones we found.\nAlways keep your eyes open, the gems are often found in hidden places.&quot;)
+      (&quot;/&quot; &quot;I'll pay attention, but it's not eas-&quot;)
+      (&quot;/shen&quot; &quot;Were the snowballs useful to you? I built this other weapon, here you go.&quot;)
+      (&quot;* Shen gives MINES to {{hero}} *&quot;)
+      (&quot;/shen&quot; &quot;They are Mines, during battles you can place them under you with the \&quot;M\&quot; button.\nWhen an enemy walks over them, they explode and cause damage.&quot;)
+      (&quot;/&quot; &quot;Great thanks! They will sur-&quot;)
+      (&quot;/milla_happy&quot; &quot;THEY WILL SURELY COME IN HANDY!&quot;)
+      (&quot;/shen&quot; &quot;I'm leaving now, see you soon!&quot;)
+      (&quot;/&quot; &quot;Ok, see you Shen.&quot;)
+      (&quot;/milla_happy&quot; &quot;Milla!\nI'm Milla!&quot;)
+      (&quot;/shen&quot; &quot;Hi Milla, sorry, time is running out. We will have time to talk and introduce ourselves after defeating the King of Evil.\nOn our actions depends the future of all citizens of the Kingdom… We cannot fail…&quot;)
+      (&quot;/milla_happy&quot; &quot;Nice to meet you.&quot;)
+      (&quot;/shen&quot; &quot;See you.&quot;)))
+    (wait)
+    (give-weapon 2)
+    (set &quot;58-shen&quot; #t)
+    (move '(2 61))
+    (wait 0.6)
+    (move '(2 61))
+    (wait 0.6)
+    (leave-npc 61)))</property>
+    <property name="actionOnEvent">(if (get &quot;58-shen&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="54" class="Door" x="96" y="144" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="61"/>
+   </properties>
+  </object>
+  <object id="55" class="Door" x="224" y="64" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="57"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

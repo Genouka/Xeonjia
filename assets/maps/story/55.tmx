@@ -1,49 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="59">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="11" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="61">
+ <properties>
+  <property name="map-name" value="Route 10"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
- <layer id="1" name="Tile Layer 1" width="25" height="15">
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="15" height="11">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBSMglEw3AAAv2wkb9wFAAA=
+   H4sIAAAAAAAAA3vFyMDwCoiJAdsZIRgGXsH0MjEwMAIxExBzQTGMzwzE95D03Aay7zAi9AoA5QWxYBYgFmHCdMMmJL0SQHkpNCwJxDxALINF73YkvbjAajQ5mH8fQPW9BuI3aPgwEvsRFrNf4LET2T6Q2evRzH6LxU5sdqCDz0A1X7GoI8asb0Cx50TYQY67iDELAD6KYj+UAgAA
   </data>
  </layer>
- <objectgroup id="9" name="npc">
-  <object id="54" class="NPC" gid="230" x="112" y="128" width="16" height="16">
+ <objectgroup id="9" name="npc"/>
+ <layer id="6" name="Tile Layer 2" width="15" height="11">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NggIAfjAwMP4H4FxKG8X8zMqCAy0D+FTSxUTD4wEMy4+gFBXH7Aaj3I4VpAwAy0evFlAIAAA==
+  </data>
+ </layer>
+ <objectgroup id="8" name="items">
+  <object id="60" gid="471" x="144" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;This part is under construction.&quot;)))"/>
-    <property name="orientation" type="int" value="1"/>
-   </properties>
-  </object>
-  <object id="55" class="NPC" gid="206" x="176" y="144" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;Why am I here? What am I supposed to do?&quot;)))"/>
-   </properties>
-  </object>
-  <object id="58" class="NPC" gid="195" x="128" y="176" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;One day you will feel nostalgic about this moment.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/_3&quot; &quot;Cableway&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
- <layer id="6" name="Tile Layer 2" width="25" height="15">
-  <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBSMglEw3AAAv2wkb9wFAAA=
-  </data>
- </layer>
- <objectgroup id="8" name="items"/>
  <objectgroup id="10" name="spawn points">
-  <object id="51" class="Door" x="208" y="0" width="16" height="16">
+  <object id="52" class="Door" x="224" y="32" width="16" height="16">
    <properties>
-    <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="30"/>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="73"/>
    </properties>
   </object>
-  <object id="52" class="Door" x="384" y="112" width="16" height="16">
+  <object id="59" class="Door" x="128" y="64" width="16" height="16">
    <properties>
-    <property name="orientation" type="int" value="2"/>
-    <property name="roomId" value="30"/>
+    <property name="roomId" value="55_cableway"/>
    </properties>
   </object>
  </objectgroup>

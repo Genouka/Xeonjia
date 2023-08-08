@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="78">
+ <properties>
+  <property name="disable-minimap" type="bool" value="true"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6EG+D0sgYJnYTqm4PATwU1D0gQt1DIL6GA19F4wMA6cfviWgBAAA=
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="74" gid="19" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="action">(if (and (!get &quot;66-rest-2&quot;) (&lt; (get-HP) (get-initial-HP)))
+  (begin
+    (dialog '((&quot;/&quot; &quot;Hi, you look a little tired. Rest here for a moment.&quot;)))
+    (wait)
+    (restore-HP)
+    (wait)
+    (dialog
+      '((&quot;* {{hero}} rested and is now in perfect health *&quot;)
+      (&quot;/&quot; &quot;Come back anytime.&quot;)))
+    (if (get &quot;66-rest-1&quot;)
+      (set &quot;66-rest-2&quot; #t)
+      (set &quot;66-rest-1&quot; #t)))
+  (dialog '((&quot;/&quot; &quot;Be careful not to get hurt.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="76" gid="29" x="32" y="96" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Compared to my previous adventures, this climb will be the most ardent. It's better to be prepared and fully rested.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="10" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoD64BcS3CbBB4BEQPybApgVAdwcucWzu2IpDnBAAALSHcodoAQAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="items"/>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" class="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="66"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="26" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="63">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="26" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="67">
  <properties>
   <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Mitsu Forest"/>
@@ -7,15 +7,15 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/basic.tsx"/>
- <tileset firstgid="203" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="204" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="228" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="26" height="18">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA7VVuw7CMAzMwMjIwNDBY8ZsLDwylsc3MCKBYADB/+NItmSi5lHTnHSKk158aeKmxvwPQO6oNRR31F8K3WoCL+kZMB8YY1yRN+QZ+cjkYt29oEv5PJEv5AX5ycxj3bugY3hq18hNhV4Lh7QUb5U5ThWaUAugzD/GGxr5MHiPwvu0PBv2CWezKGimACD3yEM07jNzeqUPUKy9E2rqzRFbAEQc6sBntMeR+VKw5vc+1cIXvN3AWA34W4hrMlWjPvFspvDOzeE9AyKvU/6jnFgPj1nR5z3pxPw4X8AXduccBlAHAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="62" class="NPC" gid="207" x="48" y="240" width="16" height="16">
+  <object id="62" class="NPC" gid="232" x="48" y="240" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;019-fresh-water&quot;)
   (begin
@@ -36,17 +36,17 @@
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="47" class="Modifier" gid="197" x="112" y="80" width="16" height="16">
+  <object id="47" class="Modifier" gid="222" x="112" y="80" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="12"/>
    </properties>
   </object>
-  <object id="48" class="Modifier" gid="197" x="352" y="224" width="16" height="16">
+  <object id="48" class="Modifier" gid="222" x="352" y="224" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
-  <object id="49" class="Modifier" gid="197" x="272" y="48" width="16" height="16">
+  <object id="49" class="Modifier" gid="222" x="272" y="48" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
@@ -56,7 +56,7 @@
     <property name="action" value="(dialog '((&quot;/_1&quot; &quot;Xeonjia Tower ↑&quot;)))"/>
    </properties>
   </object>
-  <object id="52" gid="190" x="304" y="144" width="16" height="16">
+  <object id="52" gid="215" x="304" y="144" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
@@ -64,6 +64,26 @@
   <object id="53" gid="71" x="192" y="80" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/_1&quot; &quot;Tourist Information and Reception Office.\nClosed until further notice.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="63" gid="226" x="384" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;999&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="64" gid="219" x="384" y="224" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;999&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="65" gid="219" x="384" y="112" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;999&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="66" gid="218" x="192" y="272" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;999&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>
@@ -94,28 +114,7 @@
   </object>
   <object id="57" class="Door" x="80" y="64" width="16" height="16">
    <properties>
-    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="19_house"/>
-   </properties>
-  </object>
-  <object id="58" gid="201" x="384" y="32" width="16" height="16">
-   <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;999&quot;) (delete-me))"/>
-   </properties>
-  </object>
-  <object id="59" gid="194" x="384" y="224" width="16" height="16">
-   <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;999&quot;) (delete-me))"/>
-   </properties>
-  </object>
-  <object id="60" gid="194" x="384" y="112" width="16" height="16">
-   <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;999&quot;) (delete-me))"/>
-   </properties>
-  </object>
-  <object id="61" gid="193" x="192" y="272" width="16" height="16">
-   <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;999&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

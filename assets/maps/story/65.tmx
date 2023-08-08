@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="21" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="60">
+ <properties>
+  <property name="map-name" value="Route 8"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <tileset firstgid="544" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="21" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIA3cY2Rg2M0IodHBC0YIfkMGXo9D/C0NzISZexeLH7CB/VjUncci9gAothmHmdjCCwS24zAH2Z3k+BNd7C2RfsXlJnRwH0nNAyLc+IiAmehmEOPe1wTsxGUGAIpMzf70AgAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc"/>
+ <layer id="6" name="Tile Layer 2" width="21" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgwA6uMeKQGCBwdZC5ZxQMXQAAACHRv/QCAAA=
+  </data>
+ </layer>
+ <objectgroup id="8" name="items"/>
+ <objectgroup id="10" name="spawn points">
+  <object id="54" class="Door" x="0" y="64" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="66"/>
+   </properties>
+  </object>
+  <object id="55" class="Door" x="208" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="64"/>
+   </properties>
+  </object>
+  <object id="58" class="Modifier" gid="562" x="304" y="64" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="15"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

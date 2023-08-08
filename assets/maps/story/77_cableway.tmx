@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="11" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="81">
+ <properties>
+  <property name="disable-minimap" type="bool" value="true"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="11" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA7vAwMBwngh8EYhvAPF1KN6GBYPE7wHxTajaPUTgoaj2ARCfBOJTBNQ+BOJrOPBVLGIAGa05OowBAAA=
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="75" gid="52" x="128" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (dialog '((&quot;/&quot; &quot;Do you want to go back to the volcano?&quot;)))
+  (define id &quot;077-travel&quot;)
+  (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+  (wait)
+  (if (get id)
+    (teleport-multi &quot;77_cableway&quot; &quot;55_cableway&quot;)))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="11" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIA3sBOJdRKo9CMSH8MjfJ9HuwQ62UqgfAF6K0LaMAQAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="items"/>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" class="Door" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="77"/>
+   </properties>
+  </object>
+  <object id="80" class="Door" x="144" y="64" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="55_cableway"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

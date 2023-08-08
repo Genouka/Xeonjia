@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="23" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="62">
+ <properties>
+  <property name="action">(if (! (== (last-place) &quot;71&quot;))
+  (map-name &quot;Route 9&quot;))</property>
+  <property name="map-name" value="Route 8"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;How many meters above sea level are we?&quot;)))"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <tileset firstgid="544" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="23" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA42TPQvCMBCGkw66+v9XP1AQP0Ds5CKik79AwdpFaOug9WP1DebgOC81Bw+59MhzSdPW1phnJA9AkSIv2FyGq73AJZI3OICjd5YYc+GnehHpbCXG3DDelX1qftp3jNfFEPmeMbLN/lLM28mvk2KLZz3QBwOwUVyV6CHnu8D9OPcYrMFEcfMeU9+H9zwH3h25F6CDfNngpkgDd1Mp55shXzHmf9yZr/PvSusTOkvI6dZcG9bU7H/hPWgfXfs998k7XJ4J5wfAuT3FmAMAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc"/>
+ <layer id="6" name="Tile Layer 2" width="23" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgYGB4yEgcBoHLQPoKlI0M7mGRf4FFHS7wigS1IPCWCPWPiTTzGol2g8z9RKIeGHjCiMBPkcwAmfmRAnM3oen7ADWPEjPpCXClq6HqjocUmgEACQ7zoJgDAAA=
+  </data>
+ </layer>
+ <objectgroup id="8" name="items">
+  <object id="57" gid="471" x="336" y="64" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;Flamecot City&quot;)))"/>
+   </properties>
+  </object>
+  <object id="60" gid="556" x="224" y="144" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="70"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="54" class="Door" x="192" y="96" width="16" height="16">
+   <properties>
+    <property name="roomId" value="t3_01"/>
+   </properties>
+  </object>
+  <object id="55" class="Door" x="352" y="64" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="69"/>
+   </properties>
+  </object>
+  <object id="56" class="Door" x="224" y="144" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="71/1"/>
+   </properties>
+  </object>
+  <object id="58" class="Solid" x="336" y="64" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if (!get &quot;t3_04-nosignet&quot;)
+  (dialog '((&quot;/&quot; &quot;I have to take the signet.&quot;))))</property>
+    <property name="actionOnEvent">(if (get &quot;t3_04-nosignet&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="59" class="Door" x="272" y="144" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="71/2"/>
+   </properties>
+  </object>
+  <object id="61" class="Modifier" gid="562" x="80" y="112" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="50"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

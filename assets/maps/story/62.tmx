@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="19" height="8" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="59">
+ <properties>
+  <property name="map-name" value="Route 8"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <tileset firstgid="544" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="19" height="8">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NggIAHjAwMDynEMPACiY0OtuORg4FNWMy6iyS2H4cZ1xhR5W8D6TuMCP+9ZcSuHhc4jqQX2Y/4/IcOzqOpRdaL7CZcfsIFQOGBbBa635ABrjBfjCfOkMPuPFocwMIFZC5M3W5GCP8emrsAO/VFsmACAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc"/>
+ <layer id="6" name="Tile Layer 2" width="19" height="8">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoB24yki6nstAPVfI0DcUADnhQQrAFnbY7KRnGAMA2S/Uh2ACAAA=
+  </data>
+ </layer>
+ <objectgroup id="8" name="items">
+  <object id="56" class="Modifier" gid="562" x="240" y="64" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="50"/>
+   </properties>
+  </object>
+  <object id="58" gid="555" x="80" y="112" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="30"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="54" class="Door" x="208" y="112" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="57"/>
+   </properties>
+  </object>
+  <object id="55" class="Door" x="288" y="16" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="63"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

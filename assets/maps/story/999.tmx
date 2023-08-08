@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="31" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="68">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="31" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="73">
  <properties>
   <property name="action" value="(map-name &quot;Xeonjia Tower&quot;)"/>
   <property name="has-hints" type="bool" value="true"/>
@@ -61,6 +61,47 @@
     <property name="action">(if (!(has-item &quot;signet-1&quot;))
     (dialog '((&quot;/&quot; &quot;I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted.\nHow impertinent.&quot;)))
     (dialog '((&quot;/&quot; &quot;One signet is not enough.&quot;))))</property>
+    <property name="actionOnEvent">(if (get &quot;58-shen&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="69" class="NPC" gid="158" x="224" y="64" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (set-orientation '(0 71))
+  (dialog
+    '((&quot;/hero&quot; &quot;September!&quot;)
+    (&quot;/september&quot; &quot;Here you are finally.&quot;)
+    (&quot;/shen&quot; &quot;She has the third signet.&quot;)
+    (&quot;/september&quot; &quot;Of course I took it, {{hero}} is too slow.&quot;)
+    (&quot;/shen&quot; &quot;The Spirit of Fire is warming up the tower right now.&quot;)
+    (&quot;/hero&quot; &quot;So everything is ready, with the three signets we can enter.&quot;)
+    (&quot;/september&quot; &quot;From now on, maximum concentration, today we save the world.\nHere's the third signet, I give you the honor to open the door.&quot;)
+    (&quot;/hero&quot; &quot;What an unexpected kindness.&quot;)
+    (&quot;/september&quot; &quot;Only because you have 2 signets and I only have 1.\nYou beat me.&quot;)))
+  (wait)
+  (give-item &quot;signet-3&quot;)
+  (wait)
+  (move '(3 69))
+  (set-orientation '(2 69))
+  (set-orientation '(3 71))
+  (wait 0.6)
+  (move '(1 -1))
+  (wait 0.6)
+  (dialog
+    '((&quot;* {{hero}} uses the 3 signets *&quot;)
+    (&quot;/hero&quot; &quot;The door has unlocked, we can enter!&quot;)))
+  (wait)
+  (set &quot;999-september&quot; #t)
+  (teleport-multi &quot;999&quot; &quot;x1&quot;))</property>
+    <property name="actionOnEvent">(if (or (get &quot;999-september&quot;) (!get &quot;75-spirit&quot;))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="71" gid="154" x="240" y="64" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (or (get &quot;999-september&quot;) (!get &quot;75-spirit&quot;))
+  (delete-me))</property>
    </properties>
   </object>
  </objectgroup>
@@ -93,6 +134,11 @@
     (delete-me))</property>
    </properties>
   </object>
+  <object id="72" gid="260" x="128" y="208" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent" value="(if (has-been-here &quot;21&quot;) (delete-me))"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="2" name="spawn points">
   <object id="36" class="Door" x="48" y="208" width="16" height="16">
@@ -108,9 +154,21 @@
     <property name="roomId" value="21"/>
    </properties>
   </object>
-  <object id="67" gid="260" x="128" y="208" width="16" height="16">
+  <object id="68" class="Door" x="480" y="96" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;21&quot;) (delete-me))"/>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="78"/>
+   </properties>
+  </object>
+  <object id="70" class="Door" x="224" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (dialog '((&quot;/&quot; &quot;* {{hero}} uses the 3 signets *&quot;)))
+  (wait)
+  (teleport-multi &quot;999&quot; &quot;x1&quot;))</property>
+    <property name="actionOnEvent">(if (not (has-item &quot;signet-3&quot;))
+  (delete-me))</property>
+    <property name="roomId" value="x1"/>
    </properties>
   </object>
  </objectgroup>

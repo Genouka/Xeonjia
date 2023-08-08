@@ -1,20 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="57">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="68">
+ <properties>
+  <property name="action">(if (! (== (last-place) &quot;58&quot;))
+  (map-name &quot;Route 8&quot;))</property>
+  <property name="map-name" value="Route 8"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBSMglEw3AAAv2wkb9wFAAA=
+   H4sIAAAAAAAAA+thZGDoAeImIMYHXuGQ3w0VfwGkNwDxRizq2hkhuBvNHmcg2wWIXYHYHohfA/EbLPgwlH6LZnYD1O09jAg70O3xBtI+QOxLwH/cWORB5veimY2Mu4BYnoC52IA+I8Lt+MzHFma4gASSm3uINBvdL7ZAzAHEukiYEypObJgQ8gvIXbxYcA8jee7GhbHZQamZA2FHN5r51AgbfHFDK/NHMf0xAJArNpPcBQAA
   </data>
  </layer>
- <objectgroup id="9" name="npc"/>
+ <objectgroup id="9" name="npc">
+  <object id="63" class="NPC" gid="253" x="144" y="160" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (dialog '((&quot;/&quot; &quot;Do you want to go to the Water Region?&quot;)))
+  (define id &quot;061-travel&quot;)
+  (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+  (wait)
+  (if (get id)
+    (teleport-multi &quot;61&quot; &quot;60&quot;)))</property>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="6" name="Tile Layer 2" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBSMglEw3AAAv2wkb9wFAAA=
+   H4sIAAAAAAAAA2NgIB9sZ0SlRwHtgCmOMMYlPphBE5qbG2jghy40MzuGqB0gAAsvWoQTPcEUoPunAvE0GvpjDtDsuUA8b4iHFTUAAPDqCCHcBQAA
   </data>
  </layer>
- <objectgroup id="8" name="items"/>
- <objectgroup id="10" name="spawn points"/>
+ <objectgroup id="8" name="items">
+  <object id="66" gid="471" x="272" y="48" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/_3&quot; &quot;Welcome to the Fire Region!&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="64" class="Door" x="256" y="0" width="16" height="16">
+   <properties>
+    <property name="roomId" value="58"/>
+   </properties>
+  </object>
+  <object id="65" class="Door" x="160" y="128" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="60"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

@@ -77,11 +77,6 @@
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="96" gid="355" x="176" y="-16" width="16" height="16">
-   <properties>
-    <property name="healthPointsDelta" type="int" value="50"/>
-   </properties>
-  </object>
  </objectgroup>
  <objectgroup id="2" name="spawn points">
   <object id="80" class="Door" x="96" y="48" width="16" height="16">

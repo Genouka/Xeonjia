@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="23" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="62">
+ <properties>
+  <property name="action">(if (! (== (last-place) &quot;68&quot;))
+  (map-name &quot;Route 10&quot;))</property>
+  <property name="map-name" value="Route 10"/>
+  <property name="milla">(dialog '((&quot;/milla&quot; &quot;How much lavaaa!&quot;)));;;
+(dialog '((&quot;/milla&quot; &quot;It's hot here.&quot;)));;;
+(dialog '((&quot;/milla&quot; &quot;How is it possible that the floor is frozen here?&quot;)))</property>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <tileset firstgid="544" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="576" source="../tilesets/crypt-2.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="23" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA/vAyAAG7EwMDM8ZKcdsTBDzPgHZH5AwpeaDzAWZCcMgQA3zsZkLA8jmfyTBDpCZHxlxm4tu/kcyMS5zQWA/BWZjM/c+UOw4Hvtg4DNQzVcg/kLAbchgMwFzNzFC1HyDhu93RoQYNrCdEWHHIyLcDLNjFx4zQWAxkhzIjtdA/JBKeD0aHwAmtZnmmAMAAA==
+  </data>
+ </layer>
+ <layer id="6" name="Tile Layer 2" width="23" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA3vKyMDwFIqpAR4zIjAIPKWS+ejmwgCl5uMyF918GJtYM5HNxgcocTetwH4KzX5II7e9gJr7igbmfwCa+RGIP9EwXEkBAKxoinaYAwAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="59" class="NPC" gid="557" x="320" y="144" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Let's go to the tower!&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;75-spirit&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="60" gid="569" x="160" y="144" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (get &quot;75-spirit&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="items">
+  <object id="58" class="Solid" x="304" y="128" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if (!get &quot;75-spirit&quot;)
+  (begin
+    (delete-me)
+    (dialog '((&quot;/hero_exclamation&quot; &quot;!&quot;)))
+    (wait)
+    (move 1)
+    (wait 0.6)
+    (move 3)
+    (wait 1.2)
+    (move 3)
+    (move '(3 59))
+    (wait 0.6)
+    (move '(3 59))
+    (wait 1.2)
+    (set-orientation '(2 60))
+    (dialog
+      '((&quot;/&quot; &quot;Shen!&quot;)
+      (&quot;/shen&quot; &quot;Here you are!&quot;)
+      (&quot;/milla&quot; &quot;Hi Shen!&quot;)
+      (&quot;/shen&quot; &quot;Did you take the third signet?&quot;)
+      (&quot;/&quot; &quot;No, it wasn't in the crypt!\nSomeone must have taken it before us.&quot;)
+      (&quot;/shen&quot; &quot;What?!\nHmm… Very strange… I think I know who did it…\nSeptember.&quot;)
+      (&quot;/&quot; &quot;September!?&quot;)
+      (&quot;/shen&quot; &quot;Well, yes, you know how she is.\nShe must have gone there to get the signet by herself and now she's probablu going to the tower.&quot;)
+      (&quot;/&quot; &quot;At this point let's hope that's how it went.\nAt least with that signet plus my 2 signets we can enter.&quot;)
+      (&quot;/shen&quot; &quot;Before going to the tower we need the help of the Spirit of the Fire.\nThe inside of the Xeonjia Tower is too cold for us, we have to increase its temperature. Otherwise we freeze.&quot;)
+      (&quot;/&quot; &quot;Ah right, the King of Evil needs very low temperatures to live.&quot;)
+      (&quot;/shen&quot; &quot;The problem is that I don't know how to summon the spirit.\nFrom my studies I think we have to do it from here.&quot;)
+      (&quot;/milla&quot; &quot;I can do it!&quot;)))
+    (wait)
+    (set-orientation 2)
+    (wait 0.6)
+    (dialog
+      '((&quot;/shen&quot; &quot;You?&quot;)
+      (&quot;/milla&quot; &quot;Yes!&quot;)))
+    (wait)
+    (set-orientation '(1 59))
+    (wait 1.2)
+    (dialog '((&quot;/milla&quot; &quot;Spirit of Fire! Spirit of Fire! We need you!&quot;)))
+    (wait)
+    (set-orientation 1)
+    (set-orientation '(1 60))
+    (dialog '((&quot;…&quot;)))
+    (wait)
+    (show 61)
+    (wait 3)
+    (dialog
+      '((&quot;/fire-spirit&quot; &quot;Here I am!&quot;)
+      (&quot;/fire-spirit&quot; &quot;Milla! You need me?&quot;)
+      (&quot;/milla&quot; &quot;They. They need you.&quot;)
+      (&quot;/shen&quot; &quot;Do you know each other?&quot;)
+      (&quot;/milla&quot; &quot;Yes, but we don't get along very well.&quot;)
+      (&quot;/fire-spirit&quot; &quot;It's not true, Milla always exaggerates.\nWe are \&quot;best friends for ever\&quot;.&quot;)
+      (&quot;/milla&quot; &quot;You always tease me. You know I hate fire.&quot;)
+      (&quot;/fire-spirit&quot; &quot;Fire is your friend if you are its friend.&quot;)
+      (&quot;/milla&quot; &quot;I prefer the Spirit of Water, at least he makes me feel good.&quot;)
+      (&quot;/fire-spirit&quot; &quot;Don't tell me about the Spirit of Water!\nIt's unbearable!&quot;)))
+    (wait)
+    (set-orientation '(2 60))
+    (wait 0.6)
+    (dialog '((&quot;/shen&quot; &quot;Can anyone tell me what's going on?!&quot;)))
+    (wait)
+    (set-orientation 3)
+    (wait 0.6)
+    (dialog
+      '((&quot;/&quot; &quot;Milla is the Spirit of the Forest.&quot;)
+      (&quot;/shen&quot; &quot;What?!\nAnd why didn't you tell me sooner?!&quot;)))
+    (wait)
+    (set-orientation '(3 59))
+    (dialog
+      '((&quot;/milla&quot; &quot;Last time you were in a hurry, there was no opportunity.&quot;)
+      (&quot;/shen&quot; &quot;There is always an opportunity to say something like this!&quot;)
+      (&quot;/milla_sweatsmile&quot; &quot;I've been hearing that a lot lately.&quot;)
+      (&quot;/&quot; &quot;Don't worry Shen. I, too, recently found it out.&quot;)
+      (&quot;/shen&quot; &quot;We'll talk about it later…&quot;)))
+    (wait)
+    (set-orientation 1)
+    (set-orientation '(1 59))
+    (set-orientation '(1 60))
+    (wait 0.6)
+    (dialog
+      '((&quot;/shen&quot; &quot;Spirit of Fire, can you help us by heating the Xeonjia Tower?\nIt must reach a comfortable temperature for humans.&quot;)
+      (&quot;/fire-spirit&quot; &quot;Of course! I love heating things!&quot;)
+      (&quot;/shen&quot; &quot;Great!\nIt was easy.\nThank you very much!&quot;)
+      (&quot;/&quot; &quot;Thank you!&quot;)
+      (&quot;…&quot;)
+      (&quot;/&quot; &quot;Milla?&quot;)
+      (&quot;/milla_sleepy&quot; &quot;Thank you…&quot;)
+      (&quot;/fire-spirit&quot; &quot;I know you love me Milla.\nAfter you defeat the King of Evil let's go on vacation together.&quot;)
+      (&quot;/milla_sleepy&quot; &quot;We'll see…&quot;)
+      (&quot;/fire-spirit&quot; &quot;I force you.&quot;)
+      (&quot;/milla_exaspeerated&quot; &quot;We'll see…&quot;)
+      (&quot;/fire-spirit&quot; &quot;I'm leaving you now, I'm getting ready to warm up the tower, it will require a lot of energy.\nBye!&quot;)))
+    (wait)
+    (hide 61)
+    (dialog '((&quot;/shen&quot; &quot;Bye!&quot;)))
+    (wait)
+    (set-orientation 3)
+    (set-orientation '(3 59))
+    (set-orientation '(2 60))
+    (wait 0.6)
+    (dialog
+      '((&quot;/shen&quot; &quot;Great.\nNow only the third signet is missing which I hope September has.\nLet's meet at Xeonjia Tower.&quot;)
+      (&quot;/&quot; &quot;Ok see you soon!&quot;)
+      (&quot;/milla&quot; &quot;Bye!&quot;)))
+    (wait)
+    (move '(3 60))
+    (wait 0.6)
+    (leave-npc 60)
+    (set &quot;75-spirit&quot; #t)))</property>
+    <property name="actionOnEvent">(if (get &quot;75-spirit&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="61" gid="517" x="176" y="112" width="16" height="16">
+   <properties>
+    <property name="name" value="fire spirit"/>
+    <property name="priority" type="int" value="999"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="54" class="Door" x="304" y="144" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="69"/>
+   </properties>
+  </object>
+  <object id="57" class="Door" x="0" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="68"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="23" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="67">
+ <properties>
+  <property name="action">(if (! (== (last-place) &quot;79&quot;))
+  (map-name &quot;Fumarole Village&quot;))</property>
+  <property name="map-name" value="Fumarole Village"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;How many meters above sea level are we?&quot;)))"/>
+  <property name="music" value="village"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="23" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgQAJMDAxcQMzNxEB1IAA0kwWIRaBm32ZkYLjDiJDnwGE3TJwJiJmR5JD1SwDFeYBYBk3vXUbsdiO7SRCL3BtGVHyYEVMMhB8xotqN7iZJJDmYW+4xorphNRofBl4TsBub3GYcZiGDxUhqcNmNLrcJyN5OhNn4zMMHkP3wEGoGiF6PFtakAOS4gIU9rnTyGk8Y48PodoHCaRc0Hu5icS96mgcB9PQAAwBXOaC6mAMAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc"/>
+ <objectgroup id="8" name="items">
+  <object id="66" gid="471" x="352" y="112" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;Fumarole Village&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="23" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgwA0uMzIwXGFE8H8A2T+B+DcjqjqYOLocun5s4CoBeWoDfG6iplvkmBgY5JmoZx6pAFdcUQUA/cUFxMwU+g85LmBhLwA0kwWIRagcdtjiHVt8E5Nm6QEAdXquv5gDAAA=
+  </data>
+ </layer>
+ <objectgroup id="10" name="spawn points">
+  <object id="54" class="Door" x="352" y="80" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="64"/>
+   </properties>
+  </object>
+  <object id="55" class="Door" x="0" y="80" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="71"/>
+   </properties>
+  </object>
+  <object id="56" class="Door" x="64" y="144" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="79/1"/>
+   </properties>
+  </object>
+  <object id="57" class="Door" x="80" y="144" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="79/2"/>
+   </properties>
+  </object>
+  <object id="59" class="Door" x="96" y="144" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="79/3"/>
+   </properties>
+  </object>
+  <object id="61" class="Door" x="64" y="144" width="16" height="16">
+   <properties>
+    <property name="roomId" value="70_house4"/>
+   </properties>
+  </object>
+  <object id="62" class="Door" x="304" y="64" width="16" height="16">
+   <properties>
+    <property name="roomId" value="70_shop"/>
+   </properties>
+  </object>
+  <object id="63" class="Door" x="192" y="64" width="16" height="16">
+   <properties>
+    <property name="roomId" value="70_house2"/>
+   </properties>
+  </object>
+  <object id="64" class="Door" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="roomId" value="70_house3"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="17" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="82">
+ <properties>
+  <property name="disable-minimap" type="bool" value="true"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="17" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA7vAwMBwngJ8EYhvAPF1KN5GAobpuQnED4B4DwUYZMYzKpjxkgpm3BgkZoDC9CQQnyJRL0zPQyC+RiK+ikUMAOmcuoxkAgAA
+  </data>
+ </layer>
+ <objectgroup id="10" name="npcs">
+  <object id="75" gid="51" x="16" y="64" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (dialog '((&quot;/&quot; &quot;Do you want to go back down the volcano?&quot;)))
+  (define id &quot;055-travel&quot;)
+  (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+  (wait)
+  (if (get id)
+    (teleport-multi &quot;55_cableway&quot; &quot;77_cableway&quot;)))</property>
+   </properties>
+  </object>
+  <object id="78" gid="35" x="64" y="96" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;055-cableway-fresh-water&quot;)
+  (begin
+    (dialog
+      '((&quot;/&quot; &quot;I'm scared, I'm scared! What if there is a fault?! What if I get stuck?! If I can't get off anymore?! I suffer from claustrophobia.\nDrinking water helps, maybe.\nYou don't seem comfortable either, here's to you.&quot;)))
+    (wait)
+    (give-item &quot;fresh-water&quot;)
+    (set &quot;055-cableway-fresh-water&quot; #t)
+    (wait))
+  (dialog '((&quot;/&quot; &quot;On the next ride I really get on it.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="79" gid="30" x="208" y="48" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;My journey is almost over, I'm a little bit sad for this.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="17" height="9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoA7YCcS7KNRzEIgPkWgGOXpIBduhmBKwH4gPINHkgONAfAKJJgdsR8PIYCuZZhICAK1EI95kAgAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="items"/>
+ <objectgroup id="2" name="spawn points">
+  <object id="70" class="Door" x="192" y="112" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="1"/>
+    <property name="roomId" value="55"/>
+   </properties>
+  </object>
+  <object id="81" class="Door" x="16" y="80" width="16" height="16">
+   <properties>
+    <property name="orientation" type="int" value="2"/>
+    <property name="roomId" value="77_cableway"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

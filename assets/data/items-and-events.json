@@ -36,11 +36,11 @@
       "keyItem": true,
       "location": "053"
     },
-    "xxx.stone3": {
+    "71.stone3": {
       "name": "Cube",
       "description": "A strange green cubic stone.",
       "keyItem": true,
-      "location": "xxx"
+      "location": "071"
     },
     "xxx.stone4": {
       "name": "Octahedron",

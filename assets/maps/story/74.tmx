@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="11" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="62">
+ <properties>
+  <property name="map-name" value="Flamecot City"/>
+  <property name="music" value="city"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <tileset firstgid="544" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="568" source="../tilesets/capital-3.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="11" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA3vIyMDwEA9+BMQwQEjNKyS1uMArLGpx2QdT8xpJHt2s20B8hxHT7ntoZr7G4s7FjAi1uNwHs3s9FjfAzMTl7+1Y3Iuu9igOva+gbn6DBYPsBAAuiHxQuAEAAA==
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="58" gid="232" x="112" y="32" width="16" height="16">
+   <properties>
+    <property name="action">(if (! (has-item &quot;71.stone3&quot;))
+  (begin
+    (dialog '((&quot;/&quot; &quot;Are you interested in this stone? I just found it but I can't take it with me, it weighs too much.&quot;)))
+    (give-item &quot;71.stone3&quot;)
+    (dialog '((&quot;This is a very strange stone…&quot;))))
+  (dialog '((&quot;/&quot; &quot;In my opinion that stone shouldn't have been here.&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="11" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGHzgMiMDwxXGgXbF4AYADQ6uNLgBAAA=
+  </data>
+ </layer>
+ <objectgroup id="8" name="items">
+  <object id="60" gid="571" x="144" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog-kobi '((&quot;In the ardent embrace, life is born again.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="61" gid="570" x="128" y="80" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog-kobi '((&quot;In the ardent embrace, life is born again.&quot;)))"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="54" class="Door" x="160" y="128" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="orientation" type="int" value="3"/>
+    <property name="roomId" value="69"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
