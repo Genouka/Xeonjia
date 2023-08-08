@@ -715,6 +715,10 @@ msgid "If you run out of snowballs, get some snow from the snowdrifts around you
 msgstr "Kartopunuz biterse, etrafınızdaki kar yığınlarından biraz kar alabilirsiniz."
 
 #: lib/game/xeonjia_game.dart:
+msgid "Mines you place under you with the \"M\" button explode as soon as an enemy steps on them."
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
 msgid "Remember, enemies also have HP. Hit them multiple times to knock them out!"
 msgstr "Düşmanların da HP'si olduğunu unutmayın. Onları bayıltmak için birden fazla kez vurun!"
 

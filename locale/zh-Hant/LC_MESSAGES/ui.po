@@ -711,6 +711,10 @@ msgid "If you run out of snowballs, get some snow from the snowdrifts around you
 msgstr "如果你的雪球用完了，就從你周圍的雪堆裡獲取雪球。"
 
 #: lib/game/xeonjia_game.dart:
+msgid "Mines you place under you with the \"M\" button explode as soon as an enemy steps on them."
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
 msgid "Remember, enemies also have HP. Hit them multiple times to knock them out!"
 msgstr "請記住，敵人也有 HP。擊中敵人多次以將他們擊倒！"
 

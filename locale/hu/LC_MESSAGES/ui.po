@@ -722,6 +722,10 @@ msgid "If you run out of snowballs, get some snow from the snowdrifts around you
 msgstr "Ha kifogytál a hógolyókból, szerezz egy kis havat a körülötted lévő hóatorlaszokból."
 
 #: lib/game/xeonjia_game.dart:
+msgid "Mines you place under you with the \"M\" button explode as soon as an enemy steps on them."
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
 #, fuzzy
 msgid "Remember, enemies also have HP. Hit them multiple times to knock them out!"
 msgstr "Ne felejtsd, az ellenségeknek szintén van HP-jük. Többször üsd meg őket a legyőzés érdekében!"
