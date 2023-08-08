@@ -20,7 +20,7 @@ class ModifierComponent extends BasicComponent {
   /// Constructor used for mine weapon shots
   ModifierComponent.mine(Point position, this.father, double atk)
       : atlasAsset = 'weapons.xfa',
-        name = 'mine-${father!.teamId}',
+        name = 'mine-${father!.name}',
         super(null,
             Point(position.x / componentSize, position.y / componentSize)) {
     _hpDelta = -atk;
