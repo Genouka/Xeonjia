@@ -558,7 +558,7 @@ msgid "Yes, but we don't get along very well."
 msgstr ""
 
 #: assets/maps/story/75.tmx:
-msgid "It's not true, Milla always exaggerates.\nWe are \"best friends for ever\"."
+msgid "It's not true, Milla always exaggerates.\nWe are \"best friends forever\"."
 msgstr ""
 
 #: assets/maps/story/75.tmx:
