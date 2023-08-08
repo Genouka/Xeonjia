@@ -303,7 +303,9 @@ class XeonjiaGame extends FlameGame
         playerOne = component;
         _activePlayerIndex = players.length - 1;
       }
-      if (component.name == 'milla') milla = component as CharacterComponent;
+    }
+    if (component is CharacterComponent && component.name == 'milla') {
+      milla = component;
     }
     return super.add(component);
   }
