@@ -4,7 +4,7 @@
 # Quang Trung <quangtrung02hn16@gmail.com>, 2021, 2022.
 # DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-07-23 20:32+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Vietnamese <https://translate.deepdaikon.xyz/projects/xeonjia/story/vi/>\nLanguage: vi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-08 21:28+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Vietnamese <https://translate.deepdaikon.xyz/projects/xeonjia/story/vi/>\nLanguage: vi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -316,7 +316,7 @@ msgstr ""
 
 #: assets/maps/story/79_house.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "Cảm ơn!"
 
 #: assets/maps/story/79_house.tmx:
 msgid "If you defeat the King of Evil it will also be thanks to me."
@@ -640,7 +640,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "Tạm biệt!"
 
 #: assets/maps/story/75.tmx:
 msgid "Great.\nNow only the third signet is missing which I hope September has.\nLet's meet at Xeonjia Tower."
@@ -1268,11 +1268,11 @@ msgstr "Tôi phải đi qua hầm mộ để lấy ấn dấu đầu tiên."
 
 #: assets/maps/story/72.tmx:
 msgid "This part is under construction."
-msgstr ""
+msgstr "Phần này đang được xây dựng."
 
 #: assets/maps/story/72.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "Tại sao tôi lại ở đây? Tôi phải làm gì?"
 
 #: assets/maps/story/72.tmx:
 msgid "One day you will feel nostalgic about this moment."
@@ -2256,19 +2256,19 @@ msgstr "Tháp quan sát"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Hi, you look a little tired. Rest here for a moment."
-msgstr ""
+msgstr "Xin chào, bạn trông hơi mệt một chút. Hãy nghỉ tại đây một lúc."
 
 #: assets/maps/story/66_house.tmx:
 msgid "* {{hero}} rested and is now in perfect health *"
-msgstr ""
+msgstr "* {{hero}} đã nghỉ ngơi và bây giờ đã có sức khoẻ hoàn hảo *"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Come back anytime."
-msgstr ""
+msgstr "Hãy quay lại đây bất cứ lúc nào."
 
 #: assets/maps/story/66_house.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "Hãy cẩn thận đừng để bị thương."
 
 #: assets/maps/story/66_house.tmx:
 msgid "Compared to my previous adventures, this climb will be the most ardent. It's better to be prepared and fully rested."

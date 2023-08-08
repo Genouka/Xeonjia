@@ -5,7 +5,7 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023.
 # Kempelen <lion@cmsbazar.hu>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-07-23 20:32+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-08 21:28+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -317,7 +317,7 @@ msgstr ""
 
 #: assets/maps/story/79_house.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "Köszönöm!"
 
 #: assets/maps/story/79_house.tmx:
 msgid "If you defeat the King of Evil it will also be thanks to me."
@@ -641,7 +641,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "Szia!"
 
 #: assets/maps/story/75.tmx:
 msgid "Great.\nNow only the third signet is missing which I hope September has.\nLet's meet at Xeonjia Tower."
@@ -1269,11 +1269,11 @@ msgstr "Át kell mennem a kriptán, hogy megszerezzem az első jelvényt."
 
 #: assets/maps/story/72.tmx:
 msgid "This part is under construction."
-msgstr ""
+msgstr "Ez a rész építés alatt áll."
 
 #: assets/maps/story/72.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "Miért vagyok itt? Mit kellene tennem?"
 
 #: assets/maps/story/72.tmx:
 msgid "One day you will feel nostalgic about this moment."
@@ -2257,19 +2257,19 @@ msgstr "Megfigyelő torony"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Hi, you look a little tired. Rest here for a moment."
-msgstr ""
+msgstr "Szia, egy kicsit fáradtnak tűnsz. Pihenj itt egy kicsit."
 
 #: assets/maps/story/66_house.tmx:
 msgid "* {{hero}} rested and is now in perfect health *"
-msgstr ""
+msgstr "* {{hero}} kipihente magát és most tökéletes egészségnek örvend *"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Come back anytime."
-msgstr ""
+msgstr "Gyere vissza bármikor."
 
 #: assets/maps/story/66_house.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "Vigyázz, nehogy megsérülj."
 
 #: assets/maps/story/66_house.tmx:
 msgid "Compared to my previous adventures, this climb will be the most ardent. It's better to be prepared and fully rested."

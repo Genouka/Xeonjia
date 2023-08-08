@@ -8,7 +8,7 @@
 # 鸞瑤綾舞 <user3678169@163.com>, 2023.
 # Super12138 <cutewrp@163.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-07 06:11+0000\nLast-Translator: Super12138 <cutewrp@163.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-08 21:28+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -327,7 +327,7 @@ msgstr ""
 
 #: assets/maps/story/79_house.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "谢谢！"
 
 #: assets/maps/story/79_house.tmx:
 msgid "If you defeat the King of Evil it will also be thanks to me."
@@ -654,7 +654,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "拜拜！"
 
 #: assets/maps/story/75.tmx:
 msgid "Great.\nNow only the third signet is missing which I hope September has.\nLet's meet at Xeonjia Tower."
@@ -2289,19 +2289,19 @@ msgstr ""
 
 #: assets/maps/story/66_house.tmx:
 msgid "Hi, you look a little tired. Rest here for a moment."
-msgstr ""
+msgstr "嘿，你看起来有些累了。在这里休息一会吧。"
 
 #: assets/maps/story/66_house.tmx:
 msgid "* {{hero}} rested and is now in perfect health *"
-msgstr ""
+msgstr "* {{hero}} 休息完毕并且充满了活力 *"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Come back anytime."
-msgstr ""
+msgstr "随时都可以回来。"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "小心点，别受伤了。"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Compared to my previous adventures, this climb will be the most ardent. It's better to be prepared and fully rested."

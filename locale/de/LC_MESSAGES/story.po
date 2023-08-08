@@ -11,7 +11,7 @@
 # ctntt <pavlov_mainstreamed@slmail.me>, 2023.
 # Pink Serenity <osiria.pink.serenity@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-07-23 20:32+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-08 21:28+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -323,7 +323,7 @@ msgstr ""
 
 #: assets/maps/story/79_house.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "Danke!"
 
 #: assets/maps/story/79_house.tmx:
 msgid "If you defeat the King of Evil it will also be thanks to me."
@@ -647,7 +647,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "Tschüss!"
 
 #: assets/maps/story/75.tmx:
 msgid "Great.\nNow only the third signet is missing which I hope September has.\nLet's meet at Xeonjia Tower."
@@ -1275,11 +1275,11 @@ msgstr "Ich muss durch die Krypta gehen, um das erste Siegel zu bekommen."
 
 #: assets/maps/story/72.tmx:
 msgid "This part is under construction."
-msgstr ""
+msgstr "Dieser Abschnitt befindet sich noch im Aufbau."
 
 #: assets/maps/story/72.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "Warum bin ich hier? Was soll ich tun?"
 
 #: assets/maps/story/72.tmx:
 msgid "One day you will feel nostalgic about this moment."
@@ -2269,19 +2269,19 @@ msgstr "Wachturm"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Hi, you look a little tired. Rest here for a moment."
-msgstr ""
+msgstr "Hallo, Du siehst etwas müde aus. Ruh Dich doch hier einen Moment aus."
 
 #: assets/maps/story/66_house.tmx:
 msgid "* {{hero}} rested and is now in perfect health *"
-msgstr ""
+msgstr "* {{hero}} hat sich ausgeruht und ist nun top fit *"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Come back anytime."
-msgstr ""
+msgstr "Komm jederzeit wieder."
 
 #: assets/maps/story/66_house.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "Pass gut auf, dass du Dir nicht wehtust."
 
 #: assets/maps/story/66_house.tmx:
 msgid "Compared to my previous adventures, this climb will be the most ardent. It's better to be prepared and fully rested."
@@ -2314,7 +2314,7 @@ msgstr "Vielen, vielen Dank!\nEs sieht lecker aus!"
 #: assets/maps/story/1_house.tmx:
 #, fuzzy
 msgid "It's the first time an inhabitant of this village has been chosen as a \"hero\".\nI'm so happy."
-msgstr "Es ist das erste Mal, dass ein Bewohner dieses Dorfs als \"Held\" ausgewählt wurde.\nIch freu mich so sehr."
+msgstr "Es ist das erste Mal, dass ein Bewohner dieses Dorfs als \"Held\" ausgewählt wurde.\nIch freu mich so sehr.\nIch freu mich so sehr."
 
 #: assets/maps/story/30.tmx:
 msgid "This city is boring."

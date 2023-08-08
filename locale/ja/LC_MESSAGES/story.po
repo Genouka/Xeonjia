@@ -4,7 +4,7 @@
 # Satou <sanna+dee@dismail.de>, 2022.
 # deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-07-23 20:32+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Japanese <https://translate.deepdaikon.xyz/projects/xeonjia/story/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-08 21:28+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Japanese <https://translate.deepdaikon.xyz/projects/xeonjia/story/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -316,7 +316,7 @@ msgstr ""
 
 #: assets/maps/story/79_house.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "ありがとう！"
 
 #: assets/maps/story/79_house.tmx:
 msgid "If you defeat the King of Evil it will also be thanks to me."
@@ -640,7 +640,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "じゃあね！"
 
 #: assets/maps/story/75.tmx:
 msgid "Great.\nNow only the third signet is missing which I hope September has.\nLet's meet at Xeonjia Tower."
@@ -1268,11 +1268,11 @@ msgstr "最初の印を手に入れるために地下室を通らないといけ
 
 #: assets/maps/story/72.tmx:
 msgid "This part is under construction."
-msgstr ""
+msgstr "この部分は建設中です。"
 
 #: assets/maps/story/72.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "なぜワシはこんなところにおるのじゃろう。どうしたらええんじゃ？"
 
 #: assets/maps/story/72.tmx:
 msgid "One day you will feel nostalgic about this moment."
@@ -2256,7 +2256,7 @@ msgstr "展望台"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Hi, you look a little tired. Rest here for a moment."
-msgstr ""
+msgstr "こんにちは、少しお疲れのようですね。ここで少し休んでください。"
 
 #: assets/maps/story/66_house.tmx:
 msgid "* {{hero}} rested and is now in perfect health *"
@@ -2264,11 +2264,11 @@ msgstr ""
 
 #: assets/maps/story/66_house.tmx:
 msgid "Come back anytime."
-msgstr ""
+msgstr "いつでも戻ってきてください。"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "ケガしないように気をつけてください。"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Compared to my previous adventures, this climb will be the most ardent. It's better to be prepared and fully rested."

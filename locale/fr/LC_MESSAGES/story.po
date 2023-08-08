@@ -6,7 +6,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021, 2022, 2023.
 # PulsarTech <crewtech2@gmail.com>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-03 18:11+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-08 21:28+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -22,7 +22,7 @@ msgstr "Hôtel de ville"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "This place smells good."
-msgstr ""
+msgstr "Cet endroit sent bon."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "…"
@@ -318,7 +318,7 @@ msgstr ""
 
 #: assets/maps/story/79_house.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "Merci !"
 
 #: assets/maps/story/79_house.tmx:
 msgid "If you defeat the King of Evil it will also be thanks to me."
@@ -438,7 +438,7 @@ msgstr "D'accord, maintenant je sais quoi faire !\nCombattons !"
 
 #: assets/maps/story/73.tmx:
 msgid "Hey, I found this bottle near here.\nHere's to you."
-msgstr ""
+msgstr "Hé, j'ai trouvé cette bouteille ici.\nTiens."
 
 #: assets/maps/story/73.tmx:
 msgid "If I find something interesting I'll give it to you."
@@ -534,7 +534,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Here I am!"
-msgstr ""
+msgstr "Me voici !"
 
 #: assets/maps/story/75.tmx:
 msgid "Milla! You need me?"
@@ -642,7 +642,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "Salut !"
 
 #: assets/maps/story/75.tmx:
 msgid "Great.\nNow only the third signet is missing which I hope September has.\nLet's meet at Xeonjia Tower."
@@ -1270,11 +1270,11 @@ msgstr "Je dois traverser la crypte pour obtenir le premier sceau."
 
 #: assets/maps/story/72.tmx:
 msgid "This part is under construction."
-msgstr ""
+msgstr "Cette partie est en construction."
 
 #: assets/maps/story/72.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "Pourquoi suis-je ici ? Que suis-je censé faire ?"
 
 #: assets/maps/story/72.tmx:
 msgid "One day you will feel nostalgic about this moment."
@@ -2258,19 +2258,19 @@ msgstr "Tour d'observation"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Hi, you look a little tired. Rest here for a moment."
-msgstr ""
+msgstr "Salut, tu as l'air fatigué. Repose-toi ici un moment."
 
 #: assets/maps/story/66_house.tmx:
 msgid "* {{hero}} rested and is now in perfect health *"
-msgstr ""
+msgstr "* {{hero}} a pris du repos et est maintenant en pleine forme *"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Come back anytime."
-msgstr ""
+msgstr "Reviens quand tu veux."
 
 #: assets/maps/story/66_house.tmx:
 msgid "Be careful not to get hurt."
-msgstr ""
+msgstr "Fais attention à ne pas te blesser."
 
 #: assets/maps/story/66_house.tmx:
 msgid "Compared to my previous adventures, this climb will be the most ardent. It's better to be prepared and fully rested."
