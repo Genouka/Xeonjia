@@ -7,6 +7,7 @@
   <property name="milla">(dialog '((&quot;/milla&quot; &quot;How much lavaaa!&quot;)));;;
 (dialog '((&quot;/milla&quot; &quot;It's hot here.&quot;)));;;
 (dialog '((&quot;/milla&quot; &quot;How is it possible that the floor is frozen here?&quot;)))</property>
+  <property name="music" value="mystic"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
