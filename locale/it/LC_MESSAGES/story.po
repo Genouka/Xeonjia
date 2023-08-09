@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # Manuel Tassi <mannivuwiki@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-08 21:28+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-09 11:23+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -187,7 +187,7 @@ msgstr "Oh, quell'albero è come quelli del Bosco Mitsu! Mi è mancato!"
 
 #: assets/maps/story/76.tmx:
 msgid "Volcano, sea, forest.\nThere's a little bit of everything here."
-msgstr "Vulcano, mare, foresta.\nQui c'è un po' di tutto."
+msgstr "Vulcano, mare, bosco.\nQui c'è un po' di tutto."
 
 #: assets/maps/story/76.tmx:
 msgid "You've traveled a long way to get here, I know that.\nI give you this."
@@ -315,7 +315,7 @@ msgstr "Odio le persone che dicono sempre le stesse cose."
 
 #: assets/maps/story/79_house.tmx:
 msgid "Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere's to you!"
-msgstr "Finalmente un eroe!\nSono anni che aspetto che passi un eroe da queste parti!\nLa mia famiglia conserva questa gemma da decenni nella speranza di regalarlo a un eroe.\nEcco a te!"
+msgstr "Finalmente un eroe!\nSono anni che aspetto che passi un eroe da queste parti!\nLa mia famiglia conserva questa gemma da decenni nella speranza di regalarla a un eroe.\nEcco a te!"
 
 #: assets/maps/story/79_house.tmx:
 msgid "Thank you!"
@@ -983,7 +983,7 @@ msgstr "Non è abbastanza."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I have found {{gem_count}} so far."
-msgstr "Ho trovato {{gem_count}} per adesso."
+msgstr "Ne ho {{gem_count}} per adesso."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Well, it's a start."
@@ -1939,7 +1939,7 @@ msgstr "Che gentilezza inaspettata."
 
 #: assets/maps/story/999.tmx:
 msgid "Only because you have 2 signets and I only have 1.\nYou beat me."
-msgstr "Solo perché tu hai 2 sigilli e io ne ho solo 1.\nMi hai battuto."
+msgstr "Solo perché tu hai 2 sigilli e io ne ho solo 1.\nMi hai battuta."
 
 #: assets/maps/story/999.tmx:
 msgid "* {{hero}} uses the 3 signets *"
@@ -2463,7 +2463,7 @@ msgstr "Non mi piace andare in barca."
 
 #: assets/maps/story/60.tmx:
 msgid "I see you have the travel pass!\nDo you want to go to the Fire Region?"
-msgstr "Vedo che hai il pass di viaggio!\nVuoi andare nella Regione del Fuoco?"
+msgstr "Vedo che hai il pass di viaggio!\nVuoi andare alla Regione del Fuoco?"
 
 #: assets/maps/story/60.tmx:
 msgid "I'm sorry, you need the travel pass to get on this boat."
