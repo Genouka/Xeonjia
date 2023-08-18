@@ -57,11 +57,12 @@ class NpcController extends Component {
     bool near = false;
     bool done = false;
     Direction newOrientation = npc.orientation;
-    CharacterComponent player = npc.gameRef.milla == null ||
-            npc.distance(npc.gameRef.playerOne!) <=
-                npc.distance(npc.gameRef.milla!)
-        ? npc.gameRef.playerOne!
-        : npc.gameRef.milla!;
+    CharacterComponent player = npc.gameRef.children
+        .where((c) => c is CharacterComponent && c.teamId == 0)
+        .reduce((curr, next) => npc.distance(curr as PositionComponent) <
+                npc.distance(next as PositionComponent)
+            ? curr
+            : next) as CharacterComponent;
     // Check if player has the same x or y
     if (player.x == npc.x) {
       newOrientation = player.y > npc.y ? Direction.down : Direction.up;
