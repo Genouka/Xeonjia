@@ -38,7 +38,7 @@ class CharacterComponent extends BasicComponent
     }
     teamId = team;
     name ??= isPlayerOne ? 'hero' : 'character_cpu-$teamId';
-    if (name == 'hero' || name == 'milla') atlasAsset = '$name.xfa';
+    if (['hero', 'milla', 'september'].contains(name)) atlasAsset = '$name.xfa';
     if (weaponList.isEmpty) {
       weaponList = inputWeaponList ??
           ((team == 0)
@@ -48,7 +48,7 @@ class CharacterComponent extends BasicComponent
     if (hasWeaponId(Weapons.mine.id)) {
       getWeaponById(Weapons.mine.id).restorePp();
     }
-    if (name == 'milla') {
+    if (name == 'milla' || name == 'september') {
       maxHP = mainCharacter.maxHP;
       weaponList = mainCharacter.weaponList;
       for (final w in weaponList) {

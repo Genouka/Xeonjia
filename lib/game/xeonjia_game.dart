@@ -308,11 +308,19 @@ class XeonjiaGame extends FlameGame
   @override
   void remove(Component component) {
     if (isEnemy(component) && enemies == 0 && inBattle) endBattle();
-    if (component == milla && inBattle) {
-      setMessage(Message(
-          this,
-          'Milla is tired and is back in the leaf, I have to continue the battle.'
-              .i18n));
+    if (inBattle && component is CharacterComponent) {
+      if (component == milla) {
+        setMessage(Message(
+            this,
+            'Milla is tired and is back in the leaf, I must continue the battle.'
+                .i18n));
+      } else if (component.name == 'september') {
+        setMessage(Message(
+            this,
+            (milla?.deleted ?? true)
+                ? 'September is tired, I must continue the battle alone.'.i18n
+                : 'September is tired, but we must continue the battle.'.i18n));
+      }
     }
     super.remove(component);
   }
