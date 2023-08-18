@@ -42,6 +42,10 @@ class SliderCpuComponent extends BasicComponent
       ..onComplete = () {
         hide();
         super.delete();
+        if (!gameRef.hasAction && gameRef.map.action != null) {
+          gameRef.executeAction(
+              action: gameRef.map.action!, actor: gameRef.playerOne);
+        }
       };
   }
 }
