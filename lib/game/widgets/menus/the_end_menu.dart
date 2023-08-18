@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
-/// Menu displayed if there are no more maps to play
-class NoMapsMenu extends StatelessWidget {
-  const NoMapsMenu(this.gameRef, this.previousMapId);
+/// Menu displayed at the end of the game
+class TheEndMenu extends StatelessWidget {
+  const TheEndMenu(this.gameRef);
   final XeonjiaGame gameRef;
-  final String previousMapId;
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +18,15 @@ class NoMapsMenu extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'You went too far!'.i18n,
-                style: Theme.of(context).textTheme.titleLarge,
+                'The end'.i18n,
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge
+                    ?.copyWith(fontSize: 96),
                 textAlign: TextAlign.center,
               ),
               Text(
-                'The next part of the story is not yet available.\nIt will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback.'
-                    .i18n,
+                'Thank you.'.i18n,
                 style: Theme.of(context).textTheme.bodyMedium,
                 textAlign: TextAlign.center,
               ),
@@ -47,19 +48,6 @@ class NoMapsMenu extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       launchUrl(
-                          Uri.parse(
-                              'https://gitlab.com/deepdaikon/Xeonjia/issues'),
-                          mode: LaunchMode.externalApplication);
-                    },
-                    child: Text(
-                      'Report a bug or ask something'.i18n,
-                      style: Theme.of(context).textTheme.bodyMedium,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      launchUrl(
                           Uri.parse(Uri.encodeFull('mailto:deepdaikon'
                               '@'
                               'tuta.io?subject=Xeonjia Game')),
@@ -67,19 +55,6 @@ class NoMapsMenu extends StatelessWidget {
                     },
                     child: Text(
                       'Send email'.i18n,
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      mainCharacter.visitedRooms.add(previousMapId);
-                      gameRef.overlays.remove('noMapsMenu');
-                      gameRef.overlays.add('dialogBox');
-                      gameRef.overlays.add('loading');
-                      gameRef.start();
-                    },
-                    child: Text(
-                      'Go back'.i18n,
                       style: Theme.of(context).textTheme.bodyMedium,
                     ),
                   ),
