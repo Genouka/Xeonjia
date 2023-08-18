@@ -33,6 +33,9 @@ class CharacterInfo {
     }
     if (visitedRooms.contains('12')) eventLog['013-rules'] = true;
     if (visitedRooms.contains('26')) eventLog['025-henchmen'] = true;
+    // Migrate from app version < 3.0.0
+    if (visitedRooms.contains('30')) eventLog['027-milla'] = true;
+    if (visitedRooms.contains('71')) eventLog['070-lache'] = true;
   }
 
   /// Name of the character
