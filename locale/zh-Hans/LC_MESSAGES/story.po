@@ -7,8 +7,9 @@
 # deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 # 鸞瑤綾舞 <user3678169@163.com>, 2023.
 # Super12138 <cutewrp@163.com>, 2023.
+# hooay233 <hoorayof_hooay@163.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-08 21:28+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-18 12:14+0000\nLast-Translator: hooay233 <hoorayof_hooay@163.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -24,7 +25,7 @@ msgstr "市政府"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "This place smells good."
-msgstr ""
+msgstr "这地方闻起来不错。"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "…"
@@ -159,8 +160,9 @@ msgid "scientist"
 msgstr "科研人员"
 
 #: assets/maps/story/24_lab.tmx:
+#, fuzzy
 msgid "A life's work has been destroyed…"
-msgstr ""
+msgstr "一生的工作白费了……"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Someone used this plant to do some experiments."
@@ -172,32 +174,34 @@ msgid "A broken monitor."
 msgstr "一台被砸坏的显示器。"
 
 #: assets/maps/story/47.tmx:
+#, fuzzy
 msgid "I'm sorry, but you don't have permission to use this vessel.\nIf you want to reach the Fire Region you have to take the boats that leave from the north of this region."
-msgstr ""
+msgstr "对不起，您不能坐这条船。\n如果想去火焰区，你只能坐该地区北部出发的船只。"
 
 #: assets/maps/story/8.tmx:
 msgid "Go this way →"
 msgstr "往这里走 →"
 
 #: assets/maps/story/69_cityhall.tmx:
+#, fuzzy
 msgid "There is no one here."
-msgstr ""
+msgstr "这儿一个人影都没有。"
 
 #: assets/maps/story/76.tmx:
 msgid "Oh, the sea! I missed it!"
-msgstr ""
+msgstr "哦，大海！我深深地对它把念怀！"
 
 #: assets/maps/story/76.tmx:
 msgid "Oh, that tree is like those in the Mitsu Forest! I missed it!"
-msgstr ""
+msgstr "哦，那儿的树如 Mitsu 森林里的一般！我深深地对它把念怀！"
 
 #: assets/maps/story/76.tmx:
 msgid "Volcano, sea, forest.\nThere's a little bit of everything here."
-msgstr ""
+msgstr "火山、森林、大海。\n这儿应有尽有。"
 
 #: assets/maps/story/76.tmx:
 msgid "You've traveled a long way to get here, I know that.\nI give you this."
-msgstr ""
+msgstr "我知道，你走了很久才到这里。\n给你这个东西。"
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
@@ -205,11 +209,11 @@ msgstr "曙光镇"
 
 #: assets/maps/story/1.tmx:
 msgid "Oh, your hometown."
-msgstr ""
+msgstr "哦，你的家乡。"
 
 #: assets/maps/story/1.tmx:
 msgid "You grew up here, right?"
-msgstr ""
+msgstr "你在这儿长大，对吧？"
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nIf you lose your way or get stuck take a look at the map.\nYou can open it by tapping on its icon in the upper right corner."
@@ -218,7 +222,7 @@ msgstr "祝英雄 {{hero}} 一路顺风！\n如果迷路了，看看小地图或
 #: assets/maps/story/1.tmx:
 #, fuzzy
 msgid "dad"
-msgstr "爸"
+msgstr "爸爸"
 
 #: assets/maps/story/1.tmx:
 msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
@@ -322,16 +326,18 @@ msgid "I hate people who always say the same things."
 msgstr "我讨厌那些总是说同样的话的人。"
 
 #: assets/maps/story/79_house.tmx:
+#, fuzzy
 msgid "Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere's to you!"
-msgstr ""
+msgstr "勇者终于来了！\n这几年我都在等着勇者！\n我家里几十年来一直保留着这颗宝石，希望送给勇者。\n交给你了！"
 
 #: assets/maps/story/79_house.tmx:
 msgid "Thank you!"
 msgstr "谢谢！"
 
 #: assets/maps/story/79_house.tmx:
+#, fuzzy
 msgid "If you defeat the King of Evil it will also be thanks to me."
-msgstr ""
+msgstr "你如果打败了魔王也得多亏我。"
 
 #: assets/maps/story/3_house2.tmx:
 msgid "Hi, you look a little tired.\nHere's a bottle of water."
@@ -410,103 +416,111 @@ msgstr "……"
 
 #: assets/maps/story/13.tmx:
 msgid ". . . . . . . . . ."
-msgstr ""
+msgstr "…………"
 
 #: assets/maps/story/13.tmx:
 msgid "What are you waiting for??!"
-msgstr ""
+msgstr "你在这等啥？？！"
 
 #: assets/maps/story/13.tmx:
 msgid "I… I… I don't know how to fight!"
-msgstr ""
+msgstr "我……我……我不知道怎么战斗！"
 
 #: assets/maps/story/13.tmx:
 msgid "What??\nAren't you this year's \"choosen hero\"?"
-msgstr ""
+msgstr "什么？？\n你不是今年“被选中的勇者”吗？"
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, I am…"
-msgstr ""
+msgstr "是，我是……"
 
 #: assets/maps/story/13.tmx:
+#, fuzzy
 msgid "But this is my first battle…"
-msgstr ""
+msgstr "但这是我第一次对战……"
 
 #: assets/maps/story/13.tmx:
 msgid "If you don't do anything this will be our LAST battle!"
-msgstr ""
+msgstr "你什么都不做的话，待会儿就成最后一次对战了！"
 
 #: assets/maps/story/13.tmx:
 msgid "We have no time left, make up something!"
-msgstr ""
+msgstr "我们没时间了，快做些什么啊！"
 
 #: assets/maps/story/13.tmx:
+#, fuzzy
 msgid "Hmm…\nAh, right! My mom gave me this book…"
-msgstr ""
+msgstr "呃……\n啊，对了！我妈给了我这本书……"
 
 #: assets/maps/story/13.tmx:
+#, fuzzy
 msgid "Ok, now I know what to do!\nLet's fight!"
-msgstr ""
+msgstr "好，现在我知道怎么做了！\n我们开打吧！"
 
 #: assets/maps/story/73.tmx:
 msgid "Hey, I found this bottle near here.\nHere's to you."
-msgstr ""
+msgstr "嘿，我在这找到了一个瓶子。\n给你吧。"
 
 #: assets/maps/story/73.tmx:
+#, fuzzy
 msgid "If I find something interesting I'll give it to you."
-msgstr ""
+msgstr "如果我找着了一些有趣的玩意儿，我就会给你。"
 
 #: assets/maps/story/75.tmx:
 msgid "Route 10"
-msgstr ""
+msgstr "10 号小径"
 
 #: assets/maps/story/75.tmx:
+#, fuzzy
 msgid "How much lavaaa!"
-msgstr ""
+msgstr "好多岩浆啊啊啊！"
 
 #: assets/maps/story/75.tmx:
+#, fuzzy
 msgid "It's hot here."
-msgstr ""
+msgstr "这热得很。"
 
 #: assets/maps/story/75.tmx:
+#, fuzzy
 msgid "How is it possible that the floor is frozen here?"
-msgstr ""
+msgstr "地面为什么会结冰啊？"
 
 #: assets/maps/story/75.tmx:
 msgid "Let's go to the tower!"
-msgstr ""
+msgstr "我们去塔那边吧！"
 
 #: assets/maps/story/75.tmx:
 msgid "!"
-msgstr ""
+msgstr "！"
 
 #: assets/maps/story/75.tmx:
 msgid "Shen!"
-msgstr ""
+msgstr "沈！"
 
 #: assets/maps/story/75.tmx:
 msgid "Here you are!"
-msgstr ""
+msgstr "给你！"
 
 #: assets/maps/story/75.tmx:
 msgid "Hi Shen!"
-msgstr ""
+msgstr "嗨！沈！"
 
 #: assets/maps/story/75.tmx:
+#, fuzzy
 msgid "Did you take the third signet?"
-msgstr ""
+msgstr "你有第三块徽章吗？"
 
 #: assets/maps/story/75.tmx:
 msgid "No, it wasn't in the crypt!\nSomeone must have taken it before us."
-msgstr ""
+msgstr "不，它不在地牢里！\n一定有人在我们之前拿走了它。"
 
 #: assets/maps/story/75.tmx:
 msgid "What?!\nHmm… Very strange… I think I know who did it…\nSeptember."
-msgstr ""
+msgstr "什么？！\n呃……真是奇了个怪……我想我知道是谁干的……\n九月。"
 
 #: assets/maps/story/75.tmx:
 msgid "September!?"
-msgstr ""
+msgstr "九月！？"
 
 #: assets/maps/story/75.tmx:
 msgid "Well, yes, you know how she is.\nShe must have gone there to get the signet by herself and now she's probablu going to the tower."

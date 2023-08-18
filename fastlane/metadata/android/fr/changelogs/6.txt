@@ -1,5 +1,5 @@
 * Nouveau mode histoire
 * Graphismes mis à jour
-* IU/expérience utilisateur améliorées
+* IU/expérience utilisateur améliorée
 * Ajout de musique de fond et d'effets sonores
-* Correctifs d'erreur
+* Corrections d'erreurs

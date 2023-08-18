@@ -5,8 +5,9 @@
 # KMX <kumax2048@protonmail.ch>, 2021.
 # DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023.
 # 苏汀 <753594451@qq.com>, 2022.
+# hooay233 <hoorayof_hooay@163.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-03-05 18:54+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-18 12:14+0000\nLast-Translator: hooay233 <hoorayof_hooay@163.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -42,11 +43,12 @@ msgstr "欢迎！"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Before starting tell me what you want to call your character."
-msgstr ""
+msgstr "在开始之前，告诉我你想你的角色叫什么。"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
+#, fuzzy
 msgid "Random name"
-msgstr ""
+msgstr "随机名称"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "OK"

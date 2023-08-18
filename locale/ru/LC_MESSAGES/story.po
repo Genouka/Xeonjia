@@ -8,15 +8,15 @@
 # Alex <usr@skrep.eu>, 2023.
 # H6rd <hrdq@proton.me>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-08 21:28+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-18 12:14+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
-msgstr ""
+msgstr "ВОДЯНАЯ СКИПТА — B1F"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "We are underground."
-msgstr ""
+msgstr "Мы под землёй."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -24,7 +24,7 @@ msgstr "Мэрия"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "This place smells good."
-msgstr ""
+msgstr "Это место хорошо пахнет."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "…"
@@ -176,7 +176,7 @@ msgstr "Идите туда →"
 
 #: assets/maps/story/69_cityhall.tmx:
 msgid "There is no one here."
-msgstr ""
+msgstr "Здесь никого нет."
 
 #: assets/maps/story/76.tmx:
 msgid "Oh, the sea! I missed it!"
@@ -200,11 +200,11 @@ msgstr "Натаун"
 
 #: assets/maps/story/1.tmx:
 msgid "Oh, your hometown."
-msgstr ""
+msgstr "О, твой родной город."
 
 #: assets/maps/story/1.tmx:
 msgid "You grew up here, right?"
-msgstr ""
+msgstr "Ты вырос здесь, верно?"
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nIf you lose your way or get stuck take a look at the map.\nYou can open it by tapping on its icon in the upper right corner."
@@ -256,11 +256,11 @@ msgstr ""
 
 #: assets/maps/story/t2_04.tmx:
 msgid "Let's get the second signet!"
-msgstr ""
+msgstr "Давай возьмём вторую печать."
 
 #: assets/maps/story/t2_04.tmx:
 msgid "Hi!"
-msgstr ""
+msgstr "Привет!"
 
 #: assets/maps/story/54.tmx:
 msgid "Route 7"
@@ -420,7 +420,7 @@ msgstr "Да, это я…"
 
 #: assets/maps/story/13.tmx:
 msgid "But this is my first battle…"
-msgstr "Но это мой первый бой…"
+msgstr "Но это моя первая драка…"
 
 #: assets/maps/story/13.tmx:
 msgid "If you don't do anything this will be our LAST battle!"
@@ -452,11 +452,11 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "How much lavaaa!"
-msgstr ""
+msgstr "Как много лавы!"
 
 #: assets/maps/story/75.tmx:
 msgid "It's hot here."
-msgstr ""
+msgstr "Это не здесь."
 
 #: assets/maps/story/75.tmx:
 msgid "How is it possible that the floor is frozen here?"
@@ -464,7 +464,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Let's go to the tower!"
-msgstr ""
+msgstr "Пошли в башню!"
 
 #: assets/maps/story/75.tmx:
 msgid "!"
@@ -472,7 +472,7 @@ msgstr "!"
 
 #: assets/maps/story/75.tmx:
 msgid "Shen!"
-msgstr ""
+msgstr "Шен!"
 
 #: assets/maps/story/75.tmx:
 msgid "Here you are!"
@@ -480,11 +480,11 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Hi Shen!"
-msgstr ""
+msgstr "Привет Шен!"
 
 #: assets/maps/story/75.tmx:
 msgid "Did you take the third signet?"
-msgstr ""
+msgstr "Ты взял третью печать?"
 
 #: assets/maps/story/75.tmx:
 msgid "No, it wasn't in the crypt!\nSomeone must have taken it before us."
@@ -492,11 +492,11 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "What?!\nHmm… Very strange… I think I know who did it…\nSeptember."
-msgstr ""
+msgstr "Что?\nХмм... Очень странно... Я думаю я знаю кто это сделал...\nСентябрь."
 
 #: assets/maps/story/75.tmx:
 msgid "September!?"
-msgstr ""
+msgstr "Сентябрь?!"
 
 #: assets/maps/story/75.tmx:
 msgid "Well, yes, you know how she is.\nShe must have gone there to get the signet by herself and now she's probablu going to the tower."
@@ -524,19 +524,19 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "You?"
-msgstr ""
+msgstr "Ты?"
 
 #: assets/maps/story/75.tmx:
 msgid "Yes!"
-msgstr ""
+msgstr "Да!"
 
 #: assets/maps/story/75.tmx:
 msgid "Spirit of Fire! Spirit of Fire! We need you!"
-msgstr ""
+msgstr "Дух Огня! Дух Огня! Ты нужен нам!"
 
 #: assets/maps/story/75.tmx:
 msgid "Here I am!"
-msgstr ""
+msgstr "А вот и я!"
 
 #: assets/maps/story/75.tmx:
 msgid "Milla! You need me?"
@@ -560,7 +560,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "You always tease me. You know I hate fire."
-msgstr ""
+msgstr "Ты всегда дразнишь меня. Ты же знаешь, я ненавижу огонь."
 
 #: assets/maps/story/75.tmx:
 msgid "Fire is your friend if you are its friend."
@@ -576,7 +576,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Can anyone tell me what's going on?!"
-msgstr ""
+msgstr "Кто-нибудь может мне сказать что происходит?!"
 
 #: assets/maps/story/75.tmx:
 msgid "Milla is the Spirit of the Forest."
@@ -584,7 +584,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "What?!\nAnd why didn't you tell me sooner?!"
-msgstr ""
+msgstr "Что?!\nИ почему ты не сказал мне раньше?!"
 
 #: assets/maps/story/75.tmx:
 msgid "Last time you were in a hurry, there was no opportunity."
@@ -596,7 +596,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "I've been hearing that a lot lately."
-msgstr ""
+msgstr "Я часто это слышу в последнее время."
 
 #: assets/maps/story/75.tmx:
 msgid "Don't worry Shen. I, too, recently found it out."
@@ -604,7 +604,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "We'll talk about it later…"
-msgstr ""
+msgstr "Мы поговорим об этом позже…"
 
 #: assets/maps/story/75.tmx:
 msgid "Spirit of Fire, can you help us by heating the Xeonjia Tower?\nIt must reach a comfortable temperature for humans."
@@ -616,15 +616,15 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Great!\nIt was easy.\nThank you very much!"
-msgstr ""
+msgstr "Отлично!\nЭто было легко. \nБольшое спасибо!"
 
 #: assets/maps/story/75.tmx:
 msgid "Milla?"
-msgstr ""
+msgstr "Милла?"
 
 #: assets/maps/story/75.tmx:
 msgid "Thank you…"
-msgstr ""
+msgstr "Спасибо…"
 
 #: assets/maps/story/75.tmx:
 msgid "I know you love me Milla.\nAfter you defeat the King of Evil let's go on vacation together."
@@ -844,7 +844,7 @@ msgstr "Я хотел бы купить пару лекарств, но тут �
 
 #: assets/maps/story/34_cave.tmx:
 msgid "\" #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \""
-msgstr "№3: Мой цвет зеленый, есом №5 и №6 будут одинакового цвета. В противном случае, мой цвет красный"
+msgstr "“ №3: Мой цвет зеленый, есом №5 и №6 будут одинакового цвета. В противном случае, мой цвет красный. “"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "There is a button, do I press it?"

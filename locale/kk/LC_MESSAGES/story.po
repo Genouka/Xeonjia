@@ -1,20 +1,9 @@
 # Translation for Xeonjia
 # Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Fontan 030 <pomanfedurin@gmail.com>, 2023.
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: kk\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-18 12:14+0000\nLast-Translator: Fontan 030 <pomanfedurin@gmail.com>\nLanguage-Team: Kazakh <https://translate.deepdaikon.xyz/projects/xeonjia/story/kk/>\nLanguage: kk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -38,7 +27,7 @@ msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "H-Hello."
-msgstr ""
+msgstr "С-сәлеметсіз бе."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
@@ -46,7 +35,7 @@ msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "king"
-msgstr ""
+msgstr "патша"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Do not confuse me with the King of Evil, I am good haha."
@@ -158,7 +147,7 @@ msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "scientist"
-msgstr ""
+msgstr "ғалым"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A life's work has been destroyed…"
@@ -170,7 +159,7 @@ msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A broken monitor."
-msgstr ""
+msgstr "Сынған монитор."
 
 #: assets/maps/story/47.tmx:
 msgid "I'm sorry, but you don't have permission to use this vessel.\nIf you want to reach the Fire Region you have to take the boats that leave from the north of this region."
@@ -218,7 +207,7 @@ msgstr ""
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
-msgstr ""
+msgstr "әкем"
 
 #: assets/maps/story/1.tmx:
 msgid "The tower in which the \"King of Evil\" resides should be located near the capital of the region."
@@ -266,7 +255,7 @@ msgstr ""
 
 #: assets/maps/story/t2_04.tmx:
 msgid "Hi!"
-msgstr ""
+msgstr "Сәлем!"
 
 #: assets/maps/story/54.tmx:
 msgid "Route 7"
@@ -282,11 +271,11 @@ msgstr ""
 
 #: assets/maps/story/34.tmx:
 msgid "* {{hero}} found {{money-diff}} ¤ *"
-msgstr ""
+msgstr "* {{hero}} {{money-diff}} ¤ тауып алды *"
 
 #: assets/maps/story/34.tmx:
 msgid "A rock."
-msgstr ""
+msgstr "Тас."
 
 #: assets/maps/story/34.tmx:
 msgid "Hexa Cave"
@@ -294,7 +283,7 @@ msgstr ""
 
 #: assets/maps/story/38.tmx:
 msgid "Zamelis Village"
-msgstr ""
+msgstr "Замелис ауылы"
 
 #: assets/maps/story/38.tmx:
 msgid "I love this village!"
@@ -326,7 +315,7 @@ msgstr ""
 
 #: assets/maps/story/79_house.tmx:
 msgid "Thank you!"
-msgstr ""
+msgstr "Рақмет!"
 
 #: assets/maps/story/79_house.tmx:
 msgid "If you defeat the King of Evil it will also be thanks to me."
@@ -350,7 +339,7 @@ msgstr ""
 
 #: assets/maps/story/13.tmx:
 msgid "Are you okay?"
-msgstr ""
+msgstr "Жағдайың жақсы ма?"
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, thank you so much for saving my life!\nI have to admit, I was so scared!"
@@ -358,7 +347,7 @@ msgstr ""
 
 #: assets/maps/story/13.tmx:
 msgid "Me too!"
-msgstr ""
+msgstr "Мен де!"
 
 #: assets/maps/story/13.tmx:
 msgid "Luckily it went all right!\nI don't know how to thank you, I can give you this gem that I found a little while ago."
@@ -390,7 +379,7 @@ msgstr ""
 
 #: assets/maps/story/13.tmx:
 msgid "monster"
-msgstr ""
+msgstr "құбыжық"
 
 #: assets/maps/story/13.tmx:
 msgid "Please help me! Save me from these monsters!"
@@ -410,7 +399,7 @@ msgstr ""
 
 #: assets/maps/story/13.tmx:
 msgid "What are you waiting for??!"
-msgstr ""
+msgstr "Не күтіп тұрсың??!"
 
 #: assets/maps/story/13.tmx:
 msgid "I… I… I don't know how to fight!"
@@ -458,7 +447,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "How much lavaaa!"
-msgstr ""
+msgstr "Лава көп-ақ екен!"
 
 #: assets/maps/story/75.tmx:
 msgid "It's hot here."
@@ -1030,11 +1019,11 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Yes"
-msgstr ""
+msgstr "Иә"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "No"
-msgstr ""
+msgstr "Жоқ"
 
 #: assets/maps/story/t1_04.tmx:
 msgid "MOSSY CRYPT – B4F"
@@ -2074,7 +2063,7 @@ msgstr ""
 
 #: assets/maps/story/26_house.tmx:
 msgid "I like piglets."
-msgstr ""
+msgstr "Маған торайлар ұнайды."
 
 #: assets/maps/story/26_house.tmx:
 msgid "Remove the casing and loosen the screws until panel B2 reaches…"
@@ -2330,7 +2319,7 @@ msgstr ""
 
 #: assets/maps/story/30.tmx:
 msgid "City Hall ↑"
-msgstr ""
+msgstr "Әкімдік ↑"
 
 #: assets/maps/story/30.tmx:
 msgid "Route 4 →"
@@ -2990,7 +2979,7 @@ msgstr ""
 
 #: assets/maps/story/53_house2.tmx:
 msgid "No…"
-msgstr ""
+msgstr "Жоқ…"
 
 #: assets/maps/story/43.tmx:
 msgid "To reach the other shore you have to go through the submarine tunnel but is currently guarded by the Hoarfrost Team.\nIf they don't leave, I'll try to cross the sea with the boat."
@@ -3082,7 +3071,7 @@ msgstr ""
 
 #: assets/maps/story/10.tmx:
 msgid "Souvenir shop"
-msgstr ""
+msgstr "Кәдесый дүкені"
 
 #: assets/maps/story/10.tmx:
 msgid "I can see the inside of the shop."
@@ -3134,7 +3123,7 @@ msgstr ""
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "A table."
-msgstr ""
+msgstr "Үстел."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "A stool."
@@ -3182,7 +3171,7 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A wall."
-msgstr ""
+msgstr "Қабырға."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "There is a small difference in height here… I can't climb over it on this side."
@@ -3246,7 +3235,7 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A tree."
-msgstr ""
+msgstr "Ағаш."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A little plant without leaves."
@@ -3354,7 +3343,7 @@ msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A chair."
-msgstr ""
+msgstr "Орындық."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A painting that depicts this area long ago."
@@ -3366,7 +3355,7 @@ msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A closed door."
-msgstr ""
+msgstr "Жабық есік."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "There is some food between the mattresses of this sofa."
@@ -3486,7 +3475,7 @@ msgstr ""
 
 #: assets/data/items-and-events.json:
 msgid "Berries"
-msgstr ""
+msgstr "Жидектер"
 
 #: assets/data/items-and-events.json:
 msgid "Five little berries. They restore 5 HP."

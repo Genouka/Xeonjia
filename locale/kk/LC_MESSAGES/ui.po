@@ -3,23 +3,23 @@
 # This file is distributed under the same license as Xeonjia.
 # Fontan 030 <pomanfedurin@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-09 16:01+0000\nLast-Translator: Fontan 030 <pomanfedurin@gmail.com>\nLanguage-Team: Kazakh <https://translate.deepdaikon.xyz/projects/xeonjia/ui/kk/>\nLanguage: kk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-18 12:14+0000\nLast-Translator: Fontan 030 <pomanfedurin@gmail.com>\nLanguage-Team: Kazakh <https://translate.deepdaikon.xyz/projects/xeonjia/ui/kk/>\nLanguage: kk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
-msgstr ""
+msgstr "Атыңыз кім?"
 
 #: lib/ui/basic.dart:
 msgid "Too short."
-msgstr ""
+msgstr "Тым қысқа."
 
 #: lib/ui/basic.dart:
 msgid "Insert your name here"
-msgstr ""
+msgstr "Атыңызды осында енгізіңіз"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
-msgstr ""
+msgstr "Ақпарат"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Settings"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Press enter"
-msgstr ""
+msgstr "Enter басыңыз"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Welcome!"
@@ -43,11 +43,11 @@ msgstr ""
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Random name"
-msgstr ""
+msgstr "Кездейсоқ есім"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: lib/ui/screens/arena/widgets/play_button.dart:
 msgid "Play"
@@ -171,7 +171,7 @@ msgstr "Атыңыз"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Click here to change your name"
-msgstr ""
+msgstr "Атыңызды өзгерту үшін мұнда басыңыз"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Discard"
@@ -191,11 +191,11 @@ msgstr ""
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Sound effects"
-msgstr ""
+msgstr "Дыбыс эффектілері"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable sound effects"
-msgstr ""
+msgstr "Дыбыс эффектілерін қосу"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Show D-pad"
@@ -207,7 +207,7 @@ msgstr ""
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "D-pad size"
-msgstr ""
+msgstr "Айқыш өлшемі"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Virtual D-pad dimension"
@@ -235,11 +235,11 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version: %s"
-msgstr ""
+msgstr "Нұсқа: %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
-msgstr ""
+msgstr "Қолданба нұсқасы"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Donate"
@@ -251,7 +251,7 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate"
-msgstr ""
+msgstr "Аудару"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate in your language"
@@ -267,7 +267,7 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
-msgstr ""
+msgstr "Қате туралы хабарлау"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs or request new feature"
@@ -275,7 +275,7 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View source code"
-msgstr ""
+msgstr "Бастапқы кодын қарау"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Look at the source code"
@@ -347,11 +347,11 @@ msgstr ""
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "%s HP"
-msgstr ""
+msgstr "%s HP"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "Close"
-msgstr ""
+msgstr "Жабу"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Backpack"
@@ -399,15 +399,15 @@ msgstr ""
 
 #: lib/game/widgets/menus/end_menu.dart:
 msgid "Continue"
-msgstr ""
+msgstr "Жалғастыру"
 
 #: lib/game/widgets/menus/end_menu.dart:
 msgid "Yes"
-msgstr ""
+msgstr "Иә"
 
 #: lib/game/widgets/menus/end_menu.dart:
 msgid "No"
-msgstr ""
+msgstr "Жоқ"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "pause"
@@ -419,7 +419,7 @@ msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "exit"
-msgstr ""
+msgstr "шығу"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "cancel"
@@ -431,7 +431,7 @@ msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "money: %s ¤"
-msgstr ""
+msgstr "ақша: %s ¤"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "gems: %s"
@@ -475,7 +475,7 @@ msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Shop"
-msgstr ""
+msgstr "Дүкен"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Do you want to buy {{selected-item-name}}?"
@@ -495,15 +495,15 @@ msgstr ""
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "1 move"
-msgstr ""
+msgstr "1 әрекет"
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "2 moves"
-msgstr ""
+msgstr "2 әрекет"
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "3 moves"
-msgstr ""
+msgstr "3 әрекет"
 
 #: lib/game/widgets/loading_page.dart:
 msgid "Loading…\nPlease wait"
@@ -551,7 +551,7 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "What time is it?"
-msgstr ""
+msgstr "Сағат неше?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "If we walk around long enough, we're sure to arrive somewhere!"
@@ -579,7 +579,7 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "I know many languages."
-msgstr ""
+msgstr "Көп тіл білемін."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Hey!"
@@ -603,7 +603,7 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "I am hungryyy."
-msgstr ""
+msgstr "Қарным ашып тұр."
 
 #: lib/game/components/character.dart:
 msgid "We must fight, not talk!"
@@ -639,11 +639,11 @@ msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "There is one enemy here!"
-msgstr ""
+msgstr "Мұнда бір жау бар!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "There are %s enemies here!"
-msgstr ""
+msgstr "Мұнда %s жау бар!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "It' time to fight!"
@@ -655,11 +655,11 @@ msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Battle!"
-msgstr ""
+msgstr "Шайқас!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "You won!"
-msgstr ""
+msgstr "Жеңіп шықтыңыз!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is resting."
@@ -727,8 +727,8 @@ msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "manual"
-msgstr ""
+msgstr "нұсқаулық"
 
 #: lib/game/xeonjia_game.dart:
 msgid "book"
-msgstr ""
+msgstr "кітап"
