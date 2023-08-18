@@ -73,10 +73,9 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     gameRef.playerOne!.weaponList.add(Weapon.fromId(x!.car as int));
     return #NONE;
   });
-  _('places-visited', 0,
-      (Cell? x) => mainCharacter.visitedRooms.toSet().length);
+  _('visited-rooms', 0, (Cell? x) => mainCharacter.visitedRooms.toSet().length);
   _(
-      'has-been-here',
+      'visited-room',
       1,
       (Cell? x) =>
           mainCharacter.visitedRooms.any((e) => e.split('/').first == x!.car));
@@ -117,6 +116,8 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     return #NONE;
   });
   _('orientation', 0, (Cell? x) => gameRef.user!.orientation.index);
+  _('opposite-orientation', 0,
+      (Cell? x) => gameRef.user!.orientation.opposite.index);
   _('set-orientation', 1, (Cell? x) {
     var actorAndValue = getActorAndValue(x);
     Walker actor = actorAndValue[0];
@@ -174,7 +175,9 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     return #NONE;
   });
   _('respawn', 1, (Cell? x) {
-    gameRef.getDeletedComponentFromId(x!.car as int).respawn(gameRef);
+    if (gameRef.deletedComponents.any((c) => c.id == x!.car as int)) {
+      gameRef.getDeletedComponentFromId(x!.car as int).respawn(gameRef);
+    }
     return #NONE;
   });
   _('leave', 0, (Cell? x) {
@@ -326,6 +329,30 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     gameRef.pause(stopMusic: false);
     gameRef.overlays.remove('dialogBox');
     gameRef.shopMenu = ShopMenu(gameRef, items);
+    gameRef.addCustomWidgetOverlay('shopMenu', gameRef.shopMenu!);
+    gameRef.overlays.add('dialogBox');
+    return #NONE;
+  });
+  _('hp-machine', 1, (Cell? x) {
+    var items = <Item>[];
+    var it = (x!.car as Cell).iterator;
+    while (it.moveNext()) {
+      items.add(Item({
+        'id': (it.current as Cell).car as String,
+        'name': itemData[(it.current as Cell).car as String]!.rawName,
+        'description':
+            itemData[(it.current as Cell).car as String]!.description,
+        'price': (it.current as Cell).cdr.car as int,
+        'action': (it.current as Cell).cdr.cdr.car,
+      }));
+    }
+    gameRef.pause(stopMusic: false);
+    gameRef.overlays.remove('dialogBox');
+    gameRef.shopMenu = ShopMenu(
+      gameRef,
+      items,
+      machine: true,
+    );
     gameRef.addCustomWidgetOverlay('shopMenu', gameRef.shopMenu!);
     gameRef.overlays.add('dialogBox');
     return #NONE;
@@ -491,6 +518,24 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   _('give-leaf', 0, (Cell? x) {
     gameRef.overlays.remove('leafButton');
     gameRef.overlays.add('leafButton');
+    return #NONE;
+  });
+  _('earthquake', 0, (Cell? x) {
+    gameRef.camera.shake(duration: 4, intensity: 24);
+    return #NONE;
+  });
+  _('king-of-evil-out', 1, (Cell? x) async {
+    var atlas = await gameRef.loadCustomAtlas('images/metadata/tower.xfa');
+    var component = gameRef.getComponentFromId(x!.car as int);
+    component?.animation = atlas.getAnimation('king-of-evil-out');
+    component?.animation!.onComplete = () => component.delete(silently: true);
+    return #NONE;
+  });
+  _('the-end', 0, (Cell? x) {
+    gameRef.currentEventLog['the-end'] = true;
+    gameRef.addCustomWidgetOverlay('endMenu', TheEndMenu(gameRef));
+    mainCharacter.visitedRooms.addAll(['0', '1_home_2']);
+    saveUserData();
     return #NONE;
   });
 
