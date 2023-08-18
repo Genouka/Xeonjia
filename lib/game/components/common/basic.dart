@@ -220,6 +220,17 @@ abstract class BasicComponent extends SpriteComponent
       if (_hp > maxHP) _hp = maxHP;
       if (isUser && difference != 0) gameRef.refreshHPBar();
       if (_hp <= 0) {
+        if (name == 'king-of-evil' && gameRef.enemies > 1) {
+          _hp = 1;
+          gameRef.setMessage(Message(
+            gameRef,
+            "You can't defeat me as long as there are other monsters besides me."
+                .i18n,
+            author: '/king-of-evil',
+            translate: false,
+          ));
+          return;
+        }
         delete();
         if (teamId == (cause?.teamId ?? -99)) {
           // Teammate defeated
