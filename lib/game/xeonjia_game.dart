@@ -12,7 +12,7 @@ import 'package:xeonjia/game/xeonjia.dart';
 /// Default component dimension
 late double componentSize;
 void setComponentSize(Size screenSize) => componentSize =
-    (screenSize.longestSide / 16).round16.gridAligned.toDouble();
+    (screenSize.shortestSide / 10).round16.gridAligned.toDouble();
 
 /// This contains the game logics
 class XeonjiaGame extends FlameGame
