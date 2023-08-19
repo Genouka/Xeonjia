@@ -302,6 +302,7 @@ abstract class BasicComponent extends SpriteComponent
         : animation!
             .getSprite()
             .render(canvas, size: Vector2(width, renderHeight * height));
+    showTextAnimation(canvas);
   }
 
   @override

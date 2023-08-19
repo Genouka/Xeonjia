@@ -23,13 +23,8 @@ mixin TextAnimation on SpriteComponent {
     super.update(dt);
   }
 
-  @override
-  void render(Canvas canvas) {
-    super.render(canvas);
-    if (_show) _showTextAnimation(canvas);
-  }
-
-  void _showTextAnimation(Canvas canvas) {
+  void showTextAnimation(Canvas canvas) {
+    if (!_show) return;
     TextPainter(
         textDirection: TextDirection.ltr,
         text: TextSpan(
