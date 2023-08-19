@@ -9,7 +9,7 @@ class GameMap {
     this.milla,
     this.disableMiniMap = false,
     this.disableWorldMap = false,
-    this.canEscape = false,
+    this.canEscape = true,
     this.hasHints = false,
     this.startBattle = true,
   });
