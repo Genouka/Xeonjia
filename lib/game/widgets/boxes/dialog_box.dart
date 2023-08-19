@@ -178,7 +178,6 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                     if (author != '' && author != ' ')
                                       Text(
                                         '$author :'.toUpperCase(),
-                                        maxLines: 1,
                                         style: Theme.of(context)
                                             .textTheme
                                             .bodyLarge,
