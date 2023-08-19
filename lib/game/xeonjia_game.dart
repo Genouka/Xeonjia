@@ -24,6 +24,7 @@ class XeonjiaGame extends FlameGame
     dialogBox = DialogBox(this);
     preLoadDialogAtlases();
     statusBox = StatusBox(this);
+    add(_curtain);
     overlayMap = {
       'statusBox': (BuildContext context, XeonjiaGame game) => statusBox,
       'backpackButton': (BuildContext context, XeonjiaGame game) =>
@@ -96,6 +97,7 @@ class XeonjiaGame extends FlameGame
 
   /// Reset variables and import [map] data
   void start() async {
+    _curtain.start();
     pause(stopMusic: false);
     overlays.remove('mapNameBox');
     overlays.remove('miniMapButton');
@@ -121,7 +123,7 @@ class XeonjiaGame extends FlameGame
 
     // Remove previous components
     // They are removed during the next update()
-    removeAll(children);
+    removeAll(children.whereNot((c) => c is CurtainComponent));
     add(BackgroundComponent());
     players.clear();
     deletedComponents.clear();
@@ -149,6 +151,9 @@ class XeonjiaGame extends FlameGame
   /// Dialog box
   late DialogBox dialogBox;
   late MessageManager messageManager;
+
+  /// Curtain during [start]
+  final CurtainComponent _curtain = CurtainComponent();
 
   /// Box with HP, pause and time
   late StatusBox statusBox;

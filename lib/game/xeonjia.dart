@@ -2,6 +2,7 @@ export 'package:xeonjia/game/components/background.dart';
 export 'package:xeonjia/game/components/character.dart';
 export 'package:xeonjia/game/components/common/basic.dart';
 export 'package:xeonjia/game/components/common/walker.dart';
+export 'package:xeonjia/game/components/curtain.dart';
 export 'package:xeonjia/game/components/direction_changer.dart';
 export 'package:xeonjia/game/components/door.dart';
 export 'package:xeonjia/game/components/hurdle.dart';
