@@ -1,11 +1,11 @@
 # Translation for Xeonjia
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# DeepDaikon <deepdaikon@tuta.io>, 2021, 2022.
+# DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023.
 # Denis Proleev <denproleev@gmail.com>, 2021.
 # Andrey <jius55025@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-01-04 19:55+0000\nLast-Translator: Andrey <jius55025@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-19 17:33+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -33,7 +33,7 @@ msgstr "Нажмите чтобы начать"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Press enter"
-msgstr ""
+msgstr "Нажмите клавишу ввода"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Welcome!"
@@ -537,23 +537,23 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "The Xeonjia Tower is the tallest building in the Kingdom."
-msgstr ""
+msgstr "Башня Xeonjia - самое высокое здание в Королевстве."
 
 #: lib/game/utils/event_manager.dart:
 msgid "There are 3 regions in the Kingdom."
-msgstr ""
+msgstr "В королевстве есть 3 региона."
 
 #: lib/game/utils/event_manager.dart:
 msgid "If you click on a point on the world map you can travel to places you have already been."
-msgstr ""
+msgstr "Если вы нажмёте на точку на карте мира, вы сможете отправиться в места, где вы уже были."
 
 #: lib/game/utils/event_manager.dart:
 msgid "The world is big."
-msgstr ""
+msgstr "Мир большой."
 
 #: lib/game/utils/event_manager.dart:
 msgid "What time is it?"
-msgstr ""
+msgstr "Который час?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "If we walk around long enough, we're sure to arrive somewhere!"
@@ -561,11 +561,11 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "How are you?"
-msgstr ""
+msgstr "Как ты?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "It's cold here."
-msgstr ""
+msgstr "Здесь холодно."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Green! Green!\nGreen is the answer, but I don't remember the question."
@@ -577,15 +577,15 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "I have to stop eating ice cream before bed."
-msgstr ""
+msgstr "Я должен перестать есть мороженое перед сном."
 
 #: lib/game/utils/event_manager.dart:
 msgid "I know many languages."
-msgstr ""
+msgstr "Я знаю много языков."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Hey!"
-msgstr ""
+msgstr "Эй!"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Here I am."
@@ -597,7 +597,7 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Do you believe in fairies??"
-msgstr ""
+msgstr "Вы верите в фей?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "What do piglets dream about?"
@@ -605,11 +605,11 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "I am hungryyy."
-msgstr ""
+msgstr "Я голодееен."
 
 #: lib/game/components/character.dart:
 msgid "We must fight, not talk!"
-msgstr ""
+msgstr "Мы должны драться, а не болтать!"
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} puts %s in the backpack. *"
@@ -625,7 +625,7 @@ msgstr "* {{hero}} использовал {{selected-item-name}} *"
 
 #: lib/game/components/character.dart:
 msgid "* {{user-name}} used {{selected-item-name}} *"
-msgstr ""
+msgstr "* {{user-name}} использовал {{selected-item-name}} *"
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} gives %s *"
@@ -669,7 +669,7 @@ msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is already here!"
-msgstr ""
+msgstr "Милла уже здесь!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"

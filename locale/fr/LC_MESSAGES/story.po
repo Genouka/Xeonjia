@@ -8,7 +8,7 @@
 # pas calou <bzhkrp@inboxen.org>, 2023.
 # pascalou <bzhkrp@inboxen.org>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-18 12:14+0000\nLast-Translator: pascalou <bzhkrp@inboxen.org>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-19 17:12+0000\nLast-Translator: pascalou <bzhkrp@inboxen.org>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -2818,7 +2818,7 @@ msgstr "Ça doit être la crypte de cette région. Le deuxième sceau s'y trouve
 
 #: assets/maps/story/52.tmx:
 msgid "Yeaaah, let's go get it."
-msgstr ""
+msgstr "Ouais, allons-y."
 
 #: assets/maps/story/52.tmx:
 msgid "In the other crypt there were many monsters. We must be careful."
@@ -2830,11 +2830,11 @@ msgstr "Je vais t'aider."
 
 #: assets/maps/story/52.tmx:
 msgid "To fight? Sure?\nOk thank you."
-msgstr ""
+msgstr "Se battre ? C'est sûr ?\nD'accord, merci."
 
 #: assets/maps/story/52.tmx:
 msgid "Look who's back again.\nThe \"hero\".\nAnd he even made a friend."
-msgstr ""
+msgstr "Regardez qui est de retour.\nLe « héros ».\nEt il s'est même fait un ami."
 
 #: assets/maps/story/52.tmx:
 msgid "Dr. Lache!\nI defeated your henchmen last time, now I will defeat you too."
@@ -2846,27 +2846,27 @@ msgstr "Tu ne nous as pas vaincus."
 
 #: assets/maps/story/52.tmx:
 msgid "We were just trying to figure out what you were capable of."
-msgstr ""
+msgstr "Nous essayions juste de savoir de quoi vous étiez capable."
 
 #: assets/maps/story/52.tmx:
 msgid "Either way, no one is here to fight.\nEverything is now ready for the completion of our work."
-msgstr ""
+msgstr "De toute façon, personne n'est là pour se battre.\nTout est maintenant prêt pour l'achèvement de notre travail."
 
 #: assets/maps/story/52.tmx:
 msgid "What?!\nAre you ready to freeze the whole Kingdom?!"
-msgstr ""
+msgstr "Quoi ?\nÊtes-vous prêts à congeler tout le Royaume ?"
 
 #: assets/maps/story/52.tmx:
 msgid "How do you know our plan???\nWere you the ones who told him?"
-msgstr ""
+msgstr "Comment connaissez-vous notre plan ?\nC'est vous qui lui avez raconté ?"
 
 #: assets/maps/story/52.tmx:
 msgid "No sir!\nWe didn't say anything."
-msgstr ""
+msgstr "Non, monsieur !\nNous n'avons rien dit."
 
 #: assets/maps/story/52.tmx:
 msgid "It matters little.\nSoon this whole lousy kingdom will be frozen and I'll be rich and blissful away from here."
-msgstr ""
+msgstr "Peu importe.\nBientôt, tout ce royaume sera gelé et je serai riche et heureux loin d'ici."
 
 #: assets/maps/story/52.tmx:
 msgid "You can't do this, I'll stop you!"
@@ -2878,7 +2878,7 @@ msgstr "Si tu es aussi doué qu'on le dit, rendez-vous à la Tour Xeonjoa, sinon
 
 #: assets/maps/story/52.tmx:
 msgid "Who were these guys? I do not like them."
-msgstr "Qui c'était ? Je n'aime pas ces mecs."
+msgstr "Qui c'était ? Je n'aime pas ces types."
 
 #: assets/maps/story/52.tmx:
 msgid "The henchmen of the Hoarfrost Team.\nThey want to freeze the whole kingdom so that it will be livable for the King of Evil."
@@ -2886,7 +2886,7 @@ msgstr ""
 
 #: assets/maps/story/52.tmx:
 msgid "Uh, bad story.\nBut you're definitely stronger than them, hero!\nLet's go save the world!"
-msgstr ""
+msgstr "Hum, c'est une mauvaise histoire.\nMais tu es définitivement plus fort qu'eux, héros !\nAllons sauver le monde !"
 
 #: assets/maps/story/52.tmx:
 msgid "I have to go through the crypt to get the second signet."
@@ -2897,8 +2897,9 @@ msgid "What do you want?"
 msgstr "Qu'est-ce que tu veux ?"
 
 #: assets/maps/story/44.tmx:
+#, fuzzy
 msgid "Hey, you! What are you doing here?\nYou are not allowed to stay in this place!\nIf you don't leave immediately, we will have to remove you by force."
-msgstr ""
+msgstr "Hé, toi ! Qu'est-ce que tu fais ici ?\nTu n'as pas le droit de rester ici !\nSi tu ne parts pas immédiatement, nous devrons t'expulser par la force."
 
 #: assets/maps/story/t2_02.tmx:
 msgid "WATERY CRYPT – B2F"
@@ -2910,7 +2911,7 @@ msgstr ""
 
 #: assets/maps/story/53_house2_3.tmx:
 msgid "Cringe."
-msgstr ""
+msgstr "Frisson."
 
 #: assets/maps/story/53_house2_3.tmx:
 msgid "The fun, the frustration, the dedication, the time spent.\nWhat it is and what could have been.\nI'm in it.\nI'm in everything.\nIn every person, in every monster, in every dialog, in every rock.\nI'm it.\nI'm the enigma.\nThe room you couldn't get out, the useless items, the inside jokes you will ever understand.\nI'm.\nI'm all that is not there.\nThe houses with closed doors, the unreachable areas, the untold stories of every secondary character.\nTheir dreams and aspirations.\nI'm the game. The whole and all its parts.\nAnd you played me for {{minutes-played}} minutes.\nAs your journey continues, remember that you are not just playing a game; you are living me."

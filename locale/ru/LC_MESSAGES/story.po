@@ -8,7 +8,7 @@
 # Alex <usr@skrep.eu>, 2023.
 # H6rd <hrdq@proton.me>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-18 12:14+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-19 17:33+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -264,7 +264,7 @@ msgstr "Привет!"
 
 #: assets/maps/story/54.tmx:
 msgid "Route 7"
-msgstr ""
+msgstr "Маршрут 7"
 
 #: assets/maps/story/34.tmx:
 msgid "Route 4"
@@ -292,7 +292,7 @@ msgstr "Деревня Замеллис"
 
 #: assets/maps/story/38.tmx:
 msgid "I love this village!"
-msgstr ""
+msgstr "Я люблю эту деревню!"
 
 #: assets/maps/story/38.tmx:
 msgid "I want to reach the capital quickly but the only way is traveling by land."
@@ -448,7 +448,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Route 10"
-msgstr ""
+msgstr "Маршрут 10"
 
 #: assets/maps/story/75.tmx:
 msgid "How much lavaaa!"
@@ -520,7 +520,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "I can do it!"
-msgstr ""
+msgstr "Я могу сделать это!"
 
 #: assets/maps/story/75.tmx:
 msgid "You?"
