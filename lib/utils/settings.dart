@@ -11,6 +11,7 @@ class Settings {
         dPadSize = json['dPadSize'] ?? 1,
         dPadOffset =
             Offset(json['dPadOffsetX'] ?? 30, json['dPadOffsetY'] ?? 30),
+        zoomIn = json['zoomIn'] ?? 9,
         firstRun = json['firstRun'] ?? true,
         backgroundMusic = json['backgroundMusic'] ?? true,
         soundEffects = json['soundEffects'] ?? true,
@@ -22,6 +23,7 @@ class Settings {
         'dPadSize': dPadSize,
         'dPadOffsetX': dPadOffset.dx,
         'dPadOffsetY': dPadOffset.dy,
+        'zoomIn': zoomIn,
         'firstRun': firstRun,
         'backgroundMusic': backgroundMusic,
         'soundEffects': soundEffects,
@@ -38,6 +40,9 @@ class Settings {
   bool backgroundMusic;
   bool soundEffects;
   bool audioSupported = true;
+
+  /// In-game zoom
+  double zoomIn;
 
   /// D-pad dimension and position
   double dPadSize;

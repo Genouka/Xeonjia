@@ -20,6 +20,12 @@ class OptionList extends StatelessWidget {
     1.2: 'Largest'.i18n,
   };
 
+  final Map<double, String> zoomOptions = {
+    12: 'Zoom out'.i18n,
+    9: 'Default'.i18n,
+    7: 'Zoom in'.i18n,
+  };
+
   @override
   Widget build(BuildContext context) => ListView(children: <Widget>[
         ListTile(
@@ -82,6 +88,27 @@ class OptionList extends StatelessWidget {
                 (SettingsPage.of(context) as SettingsPageState).refresh();
                 saveSettings();
               }),
+        ListTile(
+          title: Text('Game zoom'.i18n, style: const TextStyle(fontSize: 20)),
+          subtitle: Text('Zoom objects in the game for a better view.'.i18n),
+          trailing: DropdownButton<double>(
+            value: settings.zoomIn,
+            onChanged: (double? newValue) {
+              settings.zoomIn = newValue!;
+              saveSettings();
+              (SettingsPage.of(context) as SettingsPageState).refresh();
+            },
+            items: zoomOptions.keys
+                .toList()
+                .map<DropdownMenuItem<double>>(
+                  (double value) => DropdownMenuItem<double>(
+                    value: value,
+                    child: Text(zoomOptions[value]!),
+                  ),
+                )
+                .toList(),
+          ),
+        ),
         CheckboxListTile(
             title:
                 Text('Show D-pad'.i18n, style: const TextStyle(fontSize: 20)),
