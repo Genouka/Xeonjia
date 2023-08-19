@@ -295,9 +295,10 @@ abstract class BasicComponent extends SpriteComponent
             position.y * gameRef.miniMapZoom - position.y)
         ..scale(gameRef.miniMapZoom);
     }
-    canvas.translate(0, -renderTranslateY * height);
+    if (renderTranslateY != 0) canvas.translate(0, -renderTranslateY * height);
     animation?.done() ?? true
-        ? super.render(canvas..scale(1, renderHeight))
+        ? super.render(
+            renderHeight == 1 ? canvas : (canvas..scale(1, renderHeight)))
         : animation!
             .getSprite()
             .render(canvas, size: Vector2(width, renderHeight * height));
