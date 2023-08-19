@@ -32,6 +32,8 @@ extension MapController on XeonjiaGame {
       overlays.remove('dialogBox');
       overlays.add('virtualDPad');
       overlays.add('dialogBox');
+      overlays.remove('statusBox');
+      overlays.add('statusBox');
       overlays.add(inBattle ? 'rulesButton' : 'leafButton');
       statusBox.state?.refresh();
       resume();
