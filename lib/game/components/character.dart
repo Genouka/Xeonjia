@@ -51,7 +51,8 @@ class CharacterComponent extends BasicComponent
     if (name == 'milla' ||
         (name == 'september' && tile.properties['hp'] == null)) {
       maxHP = mainCharacter.maxHP;
-      weaponList = mainCharacter.weaponList;
+      weaponList = List.from(
+          mainCharacter.weaponList.map((e) => Weapon.fromJson(e.toJson())));
       for (final w in weaponList) {
         w.restorePp();
       }
