@@ -48,6 +48,13 @@ extension MapController on XeonjiaGame {
       var map = WorldMap();
       this.add(map);
       overlays.remove('mapNameBox');
+      if (!(currentEventLog['howToWorldMap'] ?? false) && this.map.id != '1') {
+        currentEventLog['howToWorldMap'] = true;
+        setMessage(Message(
+            this,
+            'By clicking on the map I can go back to places I have already been.'
+                .i18n));
+      }
     } else {
       zoomMiniMap(toValue: 1);
       updateCamera(user!.x, user!.y);
