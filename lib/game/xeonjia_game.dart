@@ -64,10 +64,10 @@ class XeonjiaGame extends FlameGame
   void onMount() {
     overlays.add('statusBox');
     if (!overlays.isActive('noMapsMenu')) {
-      overlays.add('dialogBox');
       overlays.add('miniMapButton');
       overlays.add('backpackButton');
       overlays.add('leafButton');
+      overlays.add('dialogBox');
       overlays.add('loading');
     }
     super.onMount();
@@ -78,7 +78,6 @@ class XeonjiaGame extends FlameGame
     overlays.remove('loading');
     overlays.remove('dialogBox');
     overlays.add('virtualDPad');
-    overlays.add('dialogBox');
     add(Button.A(this));
     if (config.mode == GameMode.story) {
       add(WorldMapButton());
@@ -86,6 +85,7 @@ class XeonjiaGame extends FlameGame
       overlays.add('backpackButton');
       overlays.add('leafButton');
     }
+    overlays.add('dialogBox');
     executeAction(action: map.action, actor: playerOne!);
     if (enemies > 0 && map.startBattle) {
       setMessage(
