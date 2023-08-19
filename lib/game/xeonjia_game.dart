@@ -17,7 +17,7 @@ void setComponentSize(Size screenSize) => componentSize =
 /// This contains the game logics
 class XeonjiaGame extends FlameGame
     with KeyboardEvents, PanDetector, HasTappables {
-  XeonjiaGame(this.config) {
+  XeonjiaGame() {
     camera.speed = 300;
     environment = setEnvironment(this);
     messageManager = MessageManager(this);
@@ -43,20 +43,12 @@ class XeonjiaGame extends FlameGame
       'dialogBox': (BuildContext context, XeonjiaGame game) => game.dialogBox,
       'loading': (BuildContext context, XeonjiaGame game) => LoadingPage(),
     };
-    if (config.mode != GameMode.story) {
-      teams = [
-        Team(this, id: 0, name: 'Team A', color: Colors.red),
-        Team(this, id: 1, name: 'Team B', color: Colors.green),
-      ];
-    }
     start();
   }
 
   @override
   Future<void>? onLoad() {
-    if (settings.backgroundMusic && config.mode == GameMode.story) {
-      FlameAudio.bgm.initialize();
-    }
+    if (settings.backgroundMusic) FlameAudio.bgm.initialize();
     return null;
   }
 
@@ -79,12 +71,10 @@ class XeonjiaGame extends FlameGame
     overlays.remove('dialogBox');
     overlays.add('virtualDPad');
     add(Button.A(this));
-    if (config.mode == GameMode.story) {
-      add(WorldMapButton());
-      overlays.add('miniMapButton');
-      overlays.add('backpackButton');
-      overlays.add('leafButton');
-    }
+    add(WorldMapButton());
+    overlays.add('miniMapButton');
+    overlays.add('backpackButton');
+    overlays.add('leafButton');
     overlays.add('dialogBox');
     executeAction(action: map.action, actor: playerOne!);
     if (enemies > 0 && map.startBattle) {
@@ -117,7 +107,6 @@ class XeonjiaGame extends FlameGame
 
     // Reset variables
     elapsed = 0;
-    _elapsedSecondsMultiplayer = 0;
     _activePlayerIndex = 0;
     remainingMoves = 3;
     changingTurn = false;
@@ -131,37 +120,15 @@ class XeonjiaGame extends FlameGame
     add(BackgroundComponent());
     players.clear();
     deletedComponents.clear();
-    modifiersToBeRegenerated.clear();
-    for (final t in teams ?? []) {
-      t.basisPoints = 0;
-    }
 
     // Import map and components
-    if (config.mode == GameMode.story) {
-      map = GameMap(fullId: mainCharacter.visitedRooms.last);
-      await importMap(this, 'assets/maps/story/${map.id}.tmx');
-      miniMapActive = false;
-    } else {
-      map = GameMap(fullId: config.mapId.toString());
-      await importMap(this, 'assets/maps/arena/${config.mapId}.tmx');
-      _timer = Timer(1, repeat: true, onTick: () {
-        if (isPaused) return;
-        _elapsedSecondsMultiplayer++;
-        if (config.mode != GameMode.story) {
-          if (_elapsedSecondsMultiplayer == config.maxTime) end(timeOut: true);
-          if (_elapsedSecondsMultiplayer % 10 == 0) regenerateModifiers();
-          statusBox.state?.refresh();
-        }
-      });
-    }
+    map = GameMap(fullId: mainCharacter.visitedRooms.last);
+    await importMap(this, 'assets/maps/story/${map.id}.tmx');
+    miniMapActive = false;
     if (map.hasHints) add(HideHintsButton());
-    _timer?.start();
     resume();
     playBackgroundMusic();
   }
-
-  /// Match settings
-  final MatchConfig config;
 
   // Map with widgets overlay
   Map<String, Widget Function(BuildContext, XeonjiaGame)>? overlayMap;
@@ -178,7 +145,7 @@ class XeonjiaGame extends FlameGame
   late DialogBox dialogBox;
   late MessageManager messageManager;
 
-  /// Box with HP, pause, time and team points
+  /// Box with HP, pause and time
   late StatusBox statusBox;
 
   /// Pause menu
@@ -192,11 +159,6 @@ class XeonjiaGame extends FlameGame
 
   /// Elapsed time since room change (in seconds with microseconds precision)
   double elapsed = 0;
-
-  /// Timer used in multiplayer mode
-  Timer? _timer;
-  int _elapsedSecondsMultiplayer = 0;
-  int get remainingTime => config.maxTime - _elapsedSecondsMultiplayer;
 
   /// If true the game is paused
   bool _pause = false;
@@ -220,9 +182,6 @@ class XeonjiaGame extends FlameGame
   /// Main characters
   CharacterComponent? playerOne;
   CharacterComponent? milla;
-
-  /// List of teams
-  List<Team>? teams;
 
   /// Battle variables
   Walker? get activePlayer => changingTurn ? null : players[_activePlayerIndex];
@@ -348,16 +307,6 @@ class XeonjiaGame extends FlameGame
           c.friendly == false &&
           (!c.deleted || !onlyAlive));
 
-  /// List of [teams] sorted by points
-  List<Team> get ranking {
-    var list = List.from(teams!).cast<Team>();
-    list.sort((a, b) => b.points.compareTo(a.points));
-    return list;
-  }
-
-  /// List of modifier to be regenerate during the next [regenerateModifiers]
-  List<ModifierComponent> modifiersToBeRegenerated = [];
-
   /// Background music
   String? currentBgm;
   String? customBgm;
@@ -367,7 +316,6 @@ class XeonjiaGame extends FlameGame
 
   @override
   void update(double dt) {
-    _timer?.update(dt);
     elapsed += dt;
     inputControllerUpdate(dt);
     super.update(dt);
@@ -516,7 +464,6 @@ class XeonjiaGame extends FlameGame
     mainCharacter.maxHP = playerOne!.maxHP;
     mainCharacter.currentHP = playerOne!.hp;
     mainCharacter.money = playerOne!.money;
-    mainCharacter.defeatedComponents += playerOne!.defeatedEnemies;
     mainCharacter.minutesPlayed += elapsed / 60;
     mainCharacter.movesCounter += playerOne!.movesCounter;
     mainCharacter.visitedRooms.add(nextRoomId);
@@ -528,15 +475,6 @@ class XeonjiaGame extends FlameGame
 
     // Load the next room
     start();
-  }
-
-  /// Regenerate regenerable modifiers
-  void regenerateModifiers() {
-    for (final modifier in modifiersToBeRegenerated) {
-      modifier.deleted = false;
-      add(modifier);
-    }
-    modifiersToBeRegenerated.clear();
   }
 
   /// Update [camera] position
@@ -652,31 +590,21 @@ class XeonjiaGame extends FlameGame
     ]);
   }
 
-  /// Check if someone won
-  void checkMatchStatus() {
-    if (teams!.first.points >= config.maxPoints ||
-        teams!.last.points >= config.maxPoints) {
-      end();
-    }
-  }
-
-  /// End of the game (defeat in single player or end match in multiplayer)
+  /// End of the game (because HP < 0)
   void end({bool timeOut = false}) {
     pause();
     int? lostMoney;
-    if (config.mode == GameMode.story) {
-      mainCharacter.minutesPlayed += elapsed / 60;
-      mainCharacter.movesCounter += playerOne!.movesCounter;
-      ++mainCharacter.defeatsCounter;
-      mainCharacter.currentHP = playerOne!.maxHP;
-      lostMoney = mainCharacter.visitedRooms.toSet().length;
-      mainCharacter.money -= lostMoney;
-      if (mainCharacter.money < 0) mainCharacter.money = 0;
-      saveUserData();
-    }
+    mainCharacter.minutesPlayed += elapsed / 60;
+    mainCharacter.movesCounter += playerOne!.movesCounter;
+    ++mainCharacter.defeatsCounter;
+    mainCharacter.currentHP = playerOne!.maxHP;
+    lostMoney = mainCharacter.visitedRooms.toSet().length;
+    mainCharacter.money -= lostMoney;
+    if (mainCharacter.money < 0) mainCharacter.money = 0;
+    saveUserData();
     refreshHPBar();
     addCustomWidgetOverlay(
-        'youLostMenu', YouLostMenu(this, restartAfterEnd, lostMoney ?? 0));
+        'youLostMenu', YouLostMenu(this, restartAfterEnd, lostMoney));
   }
 
   /// Close YouLostMenu and restart the game

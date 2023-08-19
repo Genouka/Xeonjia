@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
-/// Box that shows points and HP
+/// Box that shows HP
 class StatusBox extends StatefulWidget {
   StatusBox(this.gameRef);
   final XeonjiaGame gameRef;
@@ -28,7 +28,7 @@ class StatusBoxState extends State<StatusBox> {
             onTap: () => widget.gameRef.messageManager.isActive
                 ? null
                 : widget.gameRef.pause(mode: PauseMode.pause),
-            radius: widget.gameRef.config.mode == GameMode.tdm ? 10 : 30,
+            radius: 30,
             child: Column(
               children: [
                 Row(
@@ -64,44 +64,6 @@ class StatusBoxState extends State<StatusBox> {
                     ),
                   ],
                 ),
-                if (widget.gameRef.config.mode == GameMode.tdm) ...[
-                  Container(height: 10),
-                  Row(
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 4),
-                        child: const Icon(
-                          Icons.whatshot,
-                          color: Colors.white,
-                          size: 15,
-                        ),
-                      ),
-                      Expanded(
-                        child: _PercentIndicator(
-                          values: widget.gameRef.teams!.first.points ==
-                                  widget.gameRef.teams!.last.points
-                              ? [0.5, 1]
-                              : [
-                                  widget.gameRef.teams!.first.points.toDouble(),
-                                  widget.gameRef.teams!.last.points.toDouble() +
-                                      widget.gameRef.teams!.first.points,
-                                ],
-                          text: widget.gameRef.teams!.first.points.toString() +
-                              ' - ' +
-                              widget.gameRef.teams!.last.points.toString(),
-                          colors: [
-                            widget.gameRef.teams!.first.color,
-                            widget.gameRef.teams!.last.color,
-                          ],
-                        ),
-                      ),
-                      Text(
-                        '  ${widget.gameRef.remainingTime}',
-                        style: Theme.of(context).textTheme.labelLarge,
-                      ),
-                    ],
-                  ),
-                ],
               ],
             ),
           );

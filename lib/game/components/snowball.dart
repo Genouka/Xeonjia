@@ -53,8 +53,7 @@ class SnowballComponent extends BasicComponent with Walker {
     gameRef.playSound(Sfx.snowball);
     isBeingDeleted = true;
     animation = atlas.getAnimation('${name}_explosion')..onComplete = delete;
-    if (gameRef.config.friendlyFire ||
-        collidedComponent?.teamId != father!.teamId) {
+    if (collidedComponent?.teamId != father!.teamId) {
       collidedComponent?.hpDifference(-atk, cause: father);
     }
   }

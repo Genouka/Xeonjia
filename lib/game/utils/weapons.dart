@@ -95,8 +95,7 @@ class SnowBallWeapon extends Weapon {
       shooter.gameRef.add(SnowballComponent(
           Point(shooter.x, shooter.y), shooter, shooter.orientation, atk));
       --powerPoints;
-      if (shooter == shooter.gameRef.playerOne ||
-          shooter.gameRef.config.mode != GameMode.story) {
+      if (shooter == shooter.gameRef.playerOne) {
         shooter.animation = shooter.atlas.getAnimation(
             '${shooter.name}-${shooter.orientation.index}-punching');
       }

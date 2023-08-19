@@ -14,7 +14,6 @@ class ModifierComponent extends BasicComponent {
             int.parse(tile.properties['powerPointsDelta'] ?? '0'),
         _poisonDelta = double.parse(tile.properties['poisonDelta'] ?? '0'),
         _itemId = tile.properties['itemId'] ?? '0',
-        _regenerable = (tile.properties['regenerable'] ?? 'false') == 'true',
         super.fromTile(tile);
 
   /// Constructor used for mine weapon shots
@@ -54,9 +53,6 @@ class ModifierComponent extends BasicComponent {
   @override
   BasicComponent? father;
 
-  /// True if this is capable of being regenerated
-  bool? _regenerable;
-
   /// True if this should show an explosion animation on destruction
   bool explosionOnDelete = false;
 
@@ -70,9 +66,8 @@ class ModifierComponent extends BasicComponent {
   void overlappedBy(BasicComponent componentAbove) {
     if (!isBeingDeleted &&
         (componentAbove is CharacterComponent ||
-            (explosionOnDelete && componentAbove is SliderCpuComponent)) &&
-        (gameRef.config.friendlyFire ||
-            (father?.teamId ?? -99) != componentAbove.teamId)) {
+            (explosionOnDelete && componentAbove is MonsterComponent)) &&
+        (father?.teamId ?? -99) != componentAbove.teamId) {
       componentAbove.hpDifference(_hpDelta, cause: father ?? this);
       componentAbove.atk += _atkDelta;
       componentAbove.def += _defDelta;
@@ -89,14 +84,11 @@ class ModifierComponent extends BasicComponent {
             gameRef.user!.showText('+ $_moneyDelta ¤');
             gameRef.playSound(Sfx.money);
           }
-          if (_itemId != '0' &&
-              componentAbove.isUser &&
-              gameRef.config.mode == GameMode.story) {
+          if (_itemId != '0' && componentAbove.isUser) {
             gameRef.playerOne!.addItem(_itemId, sfx: _moneyDelta == 0);
           }
         }
       }
-      if (_regenerable ?? false) gameRef.modifiersToBeRegenerated.add(this);
       if (explosionOnDelete) {
         if (componentAbove.hp <= 0) (componentAbove as Walker).stop();
         isBeingDeleted = true;

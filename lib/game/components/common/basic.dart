@@ -91,15 +91,6 @@ abstract class BasicComponent extends SpriteComponent
   /// It reduce health points when move
   double poisonQuantity = 0;
 
-  /// Enemies defeated by this component
-  int defeatedEnemies = 0;
-
-  /// Number of times this component has been defeated
-  int defeats = 0;
-
-  /// Player points (100 points for each CharacterComponents defeated)
-  int points = 0;
-
   /// Amount of damage done on collision
   double atk = 0;
 
@@ -140,9 +131,7 @@ abstract class BasicComponent extends SpriteComponent
 
   /// This component's team
   /// It is used to avoid friendly fire among components of the same species
-  /// It is also used in multiplayer matches to manage team membership
   int teamId = -1;
-  Team get team => gameRef.teams!.firstWhere((team) => team.id == teamId);
 
   /// Check if this is Component controlled by the user
   bool get isUser => teamId == 0;
@@ -206,9 +195,7 @@ abstract class BasicComponent extends SpriteComponent
   /// Function used to change health points
   void hpDifference(double difference,
       {BasicComponent? cause, double poison = 0}) {
-    if ((gameRef.config.mode != GameMode.story ||
-            gameRef.config.friendlyFire) ||
-        teamId != (cause?.teamId ?? -99)) {
+    if (teamId != (cause?.teamId ?? -99)) {
       double actual = difference < 0 ? min(0, difference + def) : difference;
       _hp += actual;
       if (actual != 0 && maxHP.isFinite) {
@@ -232,15 +219,6 @@ abstract class BasicComponent extends SpriteComponent
           return;
         }
         delete();
-        if (teamId == (cause?.teamId ?? -99)) {
-          // Teammate defeated
-          for (final team in gameRef.teams!) {
-            if (team.id != teamId) team.basisPoints += 10;
-          }
-        } else if (this is! StaticComponent) {
-          cause?.defeatedEnemies++;
-          if (this is CharacterComponent) cause?.points += 100;
-        }
       }
     }
   }
@@ -338,7 +316,6 @@ abstract class BasicComponent extends SpriteComponent
   /// Delete component
   /// Silently: don't execute [XeonjiaGame.map.action] and [deletionAnimation]
   void delete({bool silently = false}) {
-    ++defeats;
     gameRef.deletedComponents.add(this);
     removeChildren();
     deleted = true;

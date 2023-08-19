@@ -4,8 +4,7 @@ import 'package:xeonjia/game/xeonjia.dart';
 class CharacterComponent extends BasicComponent
     with Walker, RenderOffset, HPBar, DeletionAnimation {
   CharacterComponent(
-    this.tile,
-    MatchConfig matchConfig, {
+    this.tile, {
     int level = 0,
     double? initialHP,
     List<Weapon>? inputWeaponList,
@@ -14,15 +13,13 @@ class CharacterComponent extends BasicComponent
   }) : super(tile.id, tile.position!, tile.properties) {
     bool isPlayerOne = tile.properties['isPlayerOne'] ?? false;
     maxHP = initialHP ??
-        ((isPlayerOne && matchConfig.mode == GameMode.story)
-            ? mainCharacter.maxHP
-            : (100 + 5 * level).toDouble());
+        (isPlayerOne ? mainCharacter.maxHP : (100 + 5 * level).toDouble());
     updateOrientation(
         GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0')));
     _initialOrientation = orientation;
     friendly = 'true' == (tile.properties['friendly'] ?? 'true');
     quiet = 'true' == (tile.properties['quiet'] ?? 'true');
-    if (team == 0 && matchConfig.mode == GameMode.story) {
+    if (team == 0) {
       atk = mainCharacter.atk;
       def = mainCharacter.def;
     } else {
@@ -37,7 +34,7 @@ class CharacterComponent extends BasicComponent
       }
     }
     teamId = team;
-    name ??= isPlayerOne ? 'hero' : 'character_cpu-$teamId';
+    name ??= isPlayerOne ? 'hero' : 'unknown';
     if (['hero', 'milla', 'september'].contains(name)) atlasAsset = '$name.xfa';
     if (weaponList.isEmpty) {
       weaponList = inputWeaponList ??
@@ -65,11 +62,10 @@ class CharacterComponent extends BasicComponent
     }
   }
 
-  /// Non-Player Character (story mode)
-  CharacterComponent.npc(Tile tile, MatchConfig matchConfig)
+  /// Non-Player Character
+  CharacterComponent.npc(Tile tile)
       : this(
           tile,
-          matchConfig,
           initialHP: double.parse(tile.properties['hp'] ?? 'Infinity'),
           team: int.parse(tile.properties['team'] ?? '0'),
           inputWeaponList: [
@@ -84,16 +80,11 @@ class CharacterComponent extends BasicComponent
   Future<void>? onLoad() {
     super.onLoad();
     if (tile.properties['isPlayerOne'] ?? false) {
-      setStatus(
-          mainCharacter.currentHP <= 0 || gameRef.config.mode != GameMode.story
-              ? maxHP
-              : mainCharacter.currentHP,
+      setStatus(mainCharacter.currentHP <= 0 ? maxHP : mainCharacter.currentHP,
           mainCharacter.poisonQuantity);
       gameRef.refreshHPBar();
       if (gameRef.isLoaded) gameRef.updateCamera(x, y);
-      if (gameRef.config.mode == GameMode.story) {
-        _itemList = List.from(mainCharacter.itemList);
-      }
+      _itemList = List.from(mainCharacter.itemList);
       gameRef.playerOneReady();
     } else {
       this.add(NpcController());
@@ -197,30 +188,23 @@ class CharacterComponent extends BasicComponent
   @override
   void delete({bool silently = false}) {
     stop();
-    if (gameRef.config.mode == GameMode.story) {
-      isBeingDeleted = true;
-      if (silently) {
-        super.delete();
-        if (isPlayerOne) gameRef.end();
-      } else {
-        if (isPlayerOne) gameRef.playSound(Sfx.gameover);
-        deletionAnimation(
-            period: 1.5,
-            callback: () {
-              super.delete();
-              if (isPlayerOne) {
-                gameRef.end();
-              } else if (!gameRef.hasAction && gameRef.map.action != null) {
-                gameRef.executeAction(
-                    action: gameRef.map.action!, actor: gameRef.playerOne);
-              }
-            });
-      }
+    isBeingDeleted = true;
+    if (silently) {
+      super.delete();
+      if (isPlayerOne) gameRef.end();
     } else {
-      ++defeats;
-      deletionAnimation(callback: () => respawn(gameRef));
-      removeChildren();
-      gameRef.checkMatchStatus();
+      if (isPlayerOne) gameRef.playSound(Sfx.gameover);
+      deletionAnimation(
+          period: 1.5,
+          callback: () {
+            super.delete();
+            if (isPlayerOne) {
+              gameRef.end();
+            } else if (!gameRef.hasAction && gameRef.map.action != null) {
+              gameRef.executeAction(
+                  action: gameRef.map.action!, actor: gameRef.playerOne);
+            }
+          });
     }
   }
 
@@ -230,7 +214,6 @@ class CharacterComponent extends BasicComponent
     for (final weapon in weaponList) {
       weapon.restorePp();
     }
-    movesCounter = 0;
     updateOrientation(_initialOrientation);
     direction = null;
     if (isPlayerOne) gameRef.updateCamera(x, y);

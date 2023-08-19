@@ -41,7 +41,6 @@ flutter:
     - assets/images/
     - assets/images/metadata/
     - assets/maps/
-    - assets/maps/arena/
     - assets/maps/story/
     - assets/maps/tilesets/
     - locale/be/LC_MESSAGES/

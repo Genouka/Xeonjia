@@ -1,9 +1,8 @@
 import 'package:xeonjia/game/xeonjia.dart';
 
-/// Basic CPU controlled enemy that slides on ice
-class SliderCpuComponent extends BasicComponent
-    with Walker, RenderOffset, HPBar {
-  SliderCpuComponent(tile) : super.fromTile(tile) {
+/// CPU controlled enemy that slides on ice (green/blue/red worms)
+class MonsterComponent extends BasicComponent with Walker, RenderOffset, HPBar {
+  MonsterComponent(tile) : super.fromTile(tile) {
     updateOrientation(
         GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0')));
     atlasAsset = 'monsters.xfa';

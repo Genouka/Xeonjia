@@ -12,7 +12,6 @@ import 'package:xeonjia/ui/screens/home/widgets/bottom_row.dart';
 import 'package:xeonjia/ui/screens/home/widgets/rain_particle_behaviour.dart';
 import 'package:xeonjia/ui/screens/info/info_page.dart';
 import 'package:xeonjia/ui/screens/settings/settings_page.dart';
-import 'package:xeonjia/utils/game_properties.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
@@ -23,8 +22,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   FocusNode focusNode = FocusNode();
-  void startGame() =>
-      Navigator.push(context, FadeRoute(GamePage(MatchConfig(GameMode.story))));
+  void startGame() => Navigator.push(context, FadeRoute(GamePage()));
 
   @override
   Widget build(BuildContext context) {

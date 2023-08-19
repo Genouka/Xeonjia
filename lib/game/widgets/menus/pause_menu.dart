@@ -141,26 +141,14 @@ class PauseMenuState extends State<PauseMenu> {
         text = 'HP: %s'
                 .i18n
                 .fill([widget.gameRef.playerOne!.hp.round().toString()]) +
-            (widget.gameRef.config.mode == GameMode.story
-                ? ('\n' +
-                    'money: %s ¤'.i18n.fill([widget.gameRef.playerOne!.money]) +
-                    '\n' +
-                    'gems: %s'.i18n.fill([widget.gameRef.playerOne!.gemCount]) +
-                    '\n' +
-                    'play time: %s min'.i18n.fill(
-                        [widget.gameRef.playerOne!.minutesPlayed.round()]))
-                : ('\n' +
-                    'your defeats: %s'
-                        .i18n
-                        .fill([widget.gameRef.playerOne!.defeats]) +
-                    '\n' +
-                    'enemies defeated: %s'
-                        .i18n
-                        .fill([widget.gameRef.playerOne!.defeatedEnemies]) +
-                    '\n' +
-                    'your points: %s'
-                        .i18n
-                        .fill([widget.gameRef.playerOne!.points.toString()])));
+            '\n' +
+            'money: %s ¤'.i18n.fill([widget.gameRef.playerOne!.money]) +
+            '\n' +
+            'gems: %s'.i18n.fill([widget.gameRef.playerOne!.gemCount]) +
+            '\n' +
+            'play time: %s min'
+                .i18n
+                .fill([widget.gameRef.playerOne!.minutesPlayed.round()]);
         buttons = [
           actionButton(
             (selectedOptionIndex == 0 ? '> ' : '') + 'exit'.i18n.toUpperCase(),
@@ -190,19 +178,15 @@ class PauseMenuState extends State<PauseMenu> {
         ];
         break;
       case PauseMode.restart:
-        text = 'Are you sure you want to restart this game?'.i18n;
-        if (widget.gameRef.config.mode == GameMode.story) {
-          text +=
-              '\n\n' + 'It will restart from the last location change.'.i18n;
-        }
+        text = 'Are you sure you want to restart this game?'.i18n +
+            '\n\n' +
+            'It will restart from the last location change.'.i18n;
         break;
       case PauseMode.exit:
-        text = 'Are you sure you want to quit this game?'.i18n;
-        if (widget.gameRef.config.mode == GameMode.story) {
-          text +=
-              '\n\nGame data since the last time you changed your location will be lost.'
-                  .i18n;
-        }
+        text = 'Are you sure you want to quit this game?'.i18n +
+            '\n\n' +
+            'Game data since the last time you changed your location will be lost.'
+                .i18n;
     }
   }
 }

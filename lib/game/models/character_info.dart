@@ -18,7 +18,6 @@ class CharacterInfo {
         selectedWeaponIndex = json['selectedWeaponIndex'] ?? 0,
         visitedRooms = (json['viewedRooms'] ?? ['1_home_2']).cast<String>(),
         minutesPlayed = json['minutesPlayed'] ?? 0,
-        defeatedComponents = json['defeatedComponents'] ?? 0,
         movesCounter = json['movesCounter'] ?? 0,
         defeatsCounter = json['defeatsCounter'] ?? 0 {
     List<dynamic> jsonWeaponList =
@@ -60,9 +59,6 @@ class CharacterInfo {
   /// Total number of minutes played by the character in this game
   double minutesPlayed;
 
-  /// Total number of enemies defeated by the character
-  int defeatedComponents;
-
   /// Number of moves done by the character
   int movesCounter;
 
@@ -99,7 +95,6 @@ class CharacterInfo {
       'itemList': itemList,
       'viewedRooms': visitedRooms,
       'minutesPlayed': minutesPlayed,
-      'defeatedComponents': defeatedComponents,
       'movesCounter': movesCounter,
       'defeatsCounter': defeatsCounter,
     };
