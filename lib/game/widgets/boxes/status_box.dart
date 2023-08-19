@@ -25,9 +25,7 @@ class StatusBoxState extends State<StatusBox> {
             widget.gameRef.miniMapEnabled
         ? Container()
         : InfoBox(
-            onTap: () => widget.gameRef.messageManager.isActive
-                ? null
-                : widget.gameRef.pause(mode: PauseMode.pause),
+            onTap: () => widget.gameRef.pause(mode: PauseMode.pause),
             radius: 30,
             child: Column(
               children: [

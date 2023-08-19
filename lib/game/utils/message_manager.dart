@@ -25,15 +25,17 @@ class MessageManager {
   bool get isShowingAQuestion => !hasOtherMessages && answers.isNotEmpty;
 
   /// Remove every message
-  void clear() {
+  void clear({bool soft = false}) {
     _messages = [];
     answers = [];
-    gameRef.continueAction(delay: 0);
-    callback?.call();
-    callback = null;
-    if (hideMap) {
-      hideMap = false;
-      gameRef.playBackgroundMusic();
+    if (!soft) {
+      gameRef.continueAction(delay: 0);
+      callback?.call();
+      callback = null;
+      if (hideMap) {
+        hideMap = false;
+        gameRef.playBackgroundMusic();
+      }
     }
   }
 

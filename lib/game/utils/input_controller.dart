@@ -258,6 +258,8 @@ extension InputController on XeonjiaGame {
     } else if (messageManager.isActive) {
       if (event.logicalKey == LogicalKeyboardKey.space) {
         dialogBox.state?.next();
+      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
+        pause(mode: PauseMode.pause);
       }
     }
     return KeyEventResult.handled;

@@ -54,7 +54,6 @@ class XeonjiaGame extends FlameGame
 
   @override
   void onMount() {
-    overlays.add('statusBox');
     if (!overlays.isActive('noMapsMenu')) {
       overlays.add('miniMapButton');
       overlays.add('backpackButton');
@@ -62,6 +61,7 @@ class XeonjiaGame extends FlameGame
       overlays.add('dialogBox');
       overlays.add('loading');
     }
+    overlays.add('statusBox');
     super.onMount();
   }
 
@@ -76,6 +76,8 @@ class XeonjiaGame extends FlameGame
     overlays.add('backpackButton');
     overlays.add('leafButton');
     overlays.add('dialogBox');
+    overlays.remove('statusBox');
+    overlays.add('statusBox');
     executeAction(action: map.action, actor: playerOne!);
     if (enemies > 0 && map.startBattle) {
       setMessage(
@@ -113,6 +115,9 @@ class XeonjiaGame extends FlameGame
     inBattle = false;
     customBgm = null;
     milla = null;
+    clearActionContinuation();
+    messageManager.clear(soft: true);
+    dialogBox.state?.refresh();
 
     // Remove previous components
     // They are removed during the next update()
@@ -228,6 +233,8 @@ class XeonjiaGame extends FlameGame
                       overlays.remove('dialogBox');
                       overlays.add('virtualDPad');
                       overlays.add('dialogBox');
+                      overlays.remove('statusBox');
+                      overlays.add('statusBox');
                     }
                   } else {
                     overlays.remove('backpackButton');
@@ -361,6 +368,8 @@ class XeonjiaGame extends FlameGame
       overlays.remove('dialogBox');
       overlays.add('virtualDPad');
       overlays.add('dialogBox');
+      overlays.remove('statusBox');
+      overlays.add('statusBox');
     }
     camera.moveTo(Vector2(moveCamera(size.x, map.width, playerOne!.x),
         moveCamera(size.y, map.height, playerOne!.y)));
@@ -376,7 +385,13 @@ class XeonjiaGame extends FlameGame
 
   /// Pause game
   void pause({PauseMode? mode, bool stopMusic = true, bool stopEngine = true}) {
-    if (_pause) return;
+    if ((hasAction || messageManager.isActive) && mode != null) {
+      stopEngine = true;
+      stopMusic = true;
+      dialogBox.state?.pauseAnimation();
+    } else if (_pause) {
+      return;
+    }
     _pause = true;
     if (stopEngine) pauseEngine();
     if (stopMusic) FlameAudio.bgm.pause();
@@ -388,7 +403,8 @@ class XeonjiaGame extends FlameGame
 
   /// Resume game
   void resume() {
-    _pause = false;
+    if (!hasAction) _pause = false;
+    dialogBox.state?.resumeAnimation();
     resumeEngine();
     if (settings.backgroundMusic && map.music != 'none') {
       FlameAudio.bgm.resume();

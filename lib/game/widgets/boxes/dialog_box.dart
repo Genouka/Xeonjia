@@ -103,6 +103,11 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
     });
   }
 
+  void pauseAnimation() =>
+      _controller?.isAnimating ?? false ? _controller?.stop() : null;
+  void resumeAnimation() =>
+      _controller?.isCompleted ?? true ? null : _controller?.forward();
+
   double get opacity => widget.gameRef.isItemsMenuActive ? 1 : 0.8;
   String get author => widget.gameRef.messageManager.currentMessage!.authorName;
 

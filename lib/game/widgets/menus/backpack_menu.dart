@@ -41,6 +41,8 @@ class BackpackMenu extends ItemsMenu {
           },
           onClose: () {
             gameRef.overlays.remove('backpackMenu');
+            gameRef.overlays.remove('statusBox');
+            gameRef.overlays.add('statusBox');
             gameRef.resume();
           },
         );
