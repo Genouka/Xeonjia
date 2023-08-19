@@ -208,8 +208,8 @@ extension InputController on XeonjiaGame {
         overlays.remove('pauseMenu');
         resume();
       }
-    } else if (overlays.isActive('endMenu')) {
-      /// End menu
+    } else if (overlays.isActive('youLostMenu')) {
+      /// You lost menu
       if (event.logicalKey == LogicalKeyboardKey.space ||
           event.logicalKey == LogicalKeyboardKey.escape) {
         restartAfterEnd();

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
-class EndMenu extends StatelessWidget {
-  const EndMenu(this.gameRef, this.callback, [this._lostMoney = 0]);
+class YouLostMenu extends StatelessWidget {
+  const YouLostMenu(this.gameRef, this.callback, [this._lostMoney = 0]);
   final XeonjiaGame gameRef;
   final VoidCallback callback;
   final int _lostMoney;

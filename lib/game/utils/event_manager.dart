@@ -533,7 +533,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   });
   _('the-end', 0, (Cell? x) {
     gameRef.currentEventLog['the-end'] = true;
-    gameRef.addCustomWidgetOverlay('endMenu', TheEndMenu(gameRef));
+    gameRef.addCustomWidgetOverlay('theEndMenu', TheEndMenu(gameRef));
     mainCharacter.visitedRooms.addAll(['0', '1_home_2']);
     saveUserData();
     return #NONE;
