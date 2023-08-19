@@ -48,7 +48,8 @@ class CharacterComponent extends BasicComponent
     if (hasWeaponId(Weapons.mine.id)) {
       getWeaponById(Weapons.mine.id).restorePp();
     }
-    if (name == 'milla' || name == 'september') {
+    if (name == 'milla' ||
+        (name == 'september' && tile.properties['hp'] == null)) {
       maxHP = mainCharacter.maxHP;
       weaponList = mainCharacter.weaponList;
       for (final w in weaponList) {
