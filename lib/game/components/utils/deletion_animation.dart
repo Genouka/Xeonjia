@@ -1,27 +1,33 @@
+import 'dart:math';
+
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
-/// Show an animation during respawn
+/// Show an animation during deletion
 mixin DeletionAnimation on Walker {
   TimerComponent? timer;
 
-  /// Start respawn animation
-  void deletionAnimation({required VoidCallback callback, double period = 1}) {
+  /// Start deletion animation
+  void deletionAnimation({required VoidCallback callback}) {
     isBeingDeleted = true;
-    timer = TimerComponent(period: period, onTick: callback);
+    timer = TimerComponent(period: 1.5, onTick: callback);
     gameRef.add(timer!);
   }
 
   @override
   void render(Canvas canvas) {
     if (isBeingDeleted && timer != null) {
+      super.render(canvas
+        ..drawPaint(paint
+          ..color = const Color(0xff000000)
+              .withOpacity(max(0, 1 - timer!.timer.progress - 0.5))));
       canvas.drawCircle(
           Offset(componentSize / 2, componentSize / 2),
-          (1 - timer!.timer.progress) * 10,
+          max(0, 1 - timer!.timer.progress - 0.5) * 45,
           Paint()
             ..color = Colors.black
-            ..strokeWidth = 2
+            ..strokeWidth = 3
             ..style = PaintingStyle.stroke);
     } else {
       super.render(canvas);

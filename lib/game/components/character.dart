@@ -194,17 +194,17 @@ class CharacterComponent extends BasicComponent
       if (isPlayerOne) gameRef.end();
     } else {
       if (isPlayerOne) gameRef.playSound(Sfx.gameover);
-      deletionAnimation(
-          period: 1.5,
-          callback: () {
-            super.delete();
-            if (isPlayerOne) {
-              gameRef.end();
-            } else if (!gameRef.hasAction && gameRef.map.action != null) {
-              gameRef.executeAction(
-                  action: gameRef.map.action!, actor: gameRef.playerOne);
-            }
-          });
+      gameRef.pause(stopMusic: false, stopEngine: false);
+      deletionAnimation(callback: () {
+        gameRef.resume();
+        super.delete();
+        if (isPlayerOne) {
+          gameRef.end();
+        } else if (!gameRef.hasAction && gameRef.map.action != null) {
+          gameRef.executeAction(
+              action: gameRef.map.action!, actor: gameRef.playerOne);
+        }
+      });
     }
   }
 
