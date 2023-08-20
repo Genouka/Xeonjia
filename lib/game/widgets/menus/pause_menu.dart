@@ -142,6 +142,21 @@ class PauseMenuState extends State<PauseMenu> {
                 .i18n
                 .fill([widget.gameRef.playerOne!.hp.round().toString()]) +
             '\n' +
+            (widget.gameRef.inBattle &&
+                    widget.gameRef.milla != null &&
+                    widget.gameRef.milla!.teamId == 0
+                ? "Milla's HP: %s"
+                        .i18n
+                        .fill([widget.gameRef.milla!.hp.round().toString()]) +
+                    '\n'
+                : '') +
+            (widget.gameRef.inBattle &&
+                    widget.gameRef.september != null &&
+                    widget.gameRef.september!.teamId == 0
+                ? "September's HP: %s".i18n.fill(
+                        [widget.gameRef.september!.hp.round().toString()]) +
+                    '\n'
+                : '') +
             'money: %s ¤'.i18n.fill([widget.gameRef.playerOne!.money]) +
             '\n' +
             'gems: %s'.i18n.fill([widget.gameRef.playerOne!.gemCount]) +
