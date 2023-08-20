@@ -92,8 +92,27 @@ class SnowBallWeapon extends Weapon {
   @override
   void shoot({required Walker shooter}) {
     if (powerPoints > 0 && !shooter.gameRef.thereIsASnowball) {
+      late Point startingPosition;
+      switch (shooter.orientation) {
+        case Direction.down:
+          startingPosition =
+              Point(shooter.x, shooter.y + componentSize - componentSize / 3);
+          break;
+        case Direction.up:
+          startingPosition =
+              Point(shooter.x, shooter.y - componentSize + componentSize / 4);
+          break;
+        case Direction.right:
+          startingPosition =
+              Point(shooter.x + componentSize - componentSize / 3, shooter.y);
+          break;
+        case Direction.left:
+          startingPosition =
+              Point(shooter.x - componentSize + componentSize / 3, shooter.y);
+          break;
+      }
       shooter.gameRef.add(SnowballComponent(
-          Point(shooter.x, shooter.y), shooter, shooter.orientation, atk));
+          startingPosition, shooter, shooter.orientation, atk));
       --powerPoints;
       if (shooter == shooter.gameRef.playerOne) {
         shooter.animation = shooter.atlas.getAnimation(
