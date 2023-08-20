@@ -36,7 +36,9 @@ class StatusBoxState extends State<StatusBox> {
                       child: Icon(
                         (widget.gameRef.user?.isPlayerOne ?? true)
                             ? Icons.favorite
-                            : Icons.energy_savings_leaf,
+                            : (widget.gameRef.user?.name == 'milla')
+                                ? Icons.energy_savings_leaf
+                                : Icons.person,
                         color: Colors.white,
                         size: 15,
                       ),
