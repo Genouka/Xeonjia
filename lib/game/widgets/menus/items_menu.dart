@@ -94,46 +94,61 @@ class ItemsMenuState extends State<ItemsMenu> {
                   child: Center(child: Text('No items here'.i18n)))
               : ScrollConfiguration(
                   behavior: NoGlow(),
-                  child: ListView(
-                    shrinkWrap: true,
-                    primary: true,
-                    children: [
-                      for (var i in widget.items)
-                        InkWell(
-                          onTap: () => chooseItem(i),
-                          child: Column(
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                  child: Center(
+                    child: Container(
+                      constraints: const BoxConstraints(maxWidth: 700),
+                      child: ListView(
+                        shrinkWrap: true,
+                        primary: true,
+                        children: [
+                          for (var i in widget.items)
+                            InkWell(
+                              onTap: () => chooseItem(i),
+                              child: Column(
                                 children: [
-                                  Text(selectedItem?.id == i.id ? '>' : ' '),
-                                  Expanded(
-                                      child: Text(i.name,
-                                          textAlign: TextAlign.center)),
-                                  Text(
-                                    widget.showPrices
-                                        ? '${i.price} ¤'
-                                        : (i.keyItem
-                                            ? '   '
-                                            : ' x ${i.quantity}'),
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyMedium!
-                                        .copyWith(
-                                            color: widget.gameRef.playerOne!
-                                                        .money >=
-                                                    (i.price ?? -1)
-                                                ? Colors.white
-                                                : Colors.red),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      SizedBox(
+                                          width: 20,
+                                          child: Text(selectedItem?.id == i.id
+                                              ? '>'
+                                              : '')),
+                                      Expanded(
+                                          child: Text(i.name,
+                                              textAlign: TextAlign.center)),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 10),
+                                        child: Text(
+                                          widget.showPrices
+                                              ? '${i.price} ¤'
+                                              : (i.keyItem
+                                                  ? '  '
+                                                  : 'x ${i.quantity}'),
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyMedium!
+                                              .copyWith(
+                                                  color: widget
+                                                              .gameRef
+                                                              .playerOne!
+                                                              .money >=
+                                                          (i.price ?? -1)
+                                                      ? Colors.white
+                                                      : Colors.red),
+                                        ),
+                                      ),
+                                    ],
                                   ),
+                                  const SizedBox(height: 40),
                                 ],
                               ),
-                              const SizedBox(height: 20),
-                            ],
-                          ),
-                        ),
-                    ],
+                            ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
         ),
@@ -148,14 +163,25 @@ class ItemsMenuState extends State<ItemsMenu> {
           ),
         ),
         InfoBox(
-          onTap: null,
+          onTap: widget.gameRef.userStatusMessage,
           opacity: 1,
           bottom: true,
           below: true,
           center: true,
           child: Text(
-            '%s HP'.i18n.fill([widget.gameRef.playerOne!.hp.round()]) +
-                '  /  ${widget.gameRef.playerOne!.money} ¤',
+            '%s HP'.i18n.fill([widget.gameRef.playerOne!.hp.round()]),
+            style: Theme.of(context).textTheme.labelLarge,
+            maxLines: 1,
+          ),
+        ),
+        InfoBox(
+          onTap: () => widget.gameRef.userStatusMessage(money: true),
+          opacity: 1,
+          bottom: true,
+          below: false,
+          center: true,
+          child: Text(
+            '${widget.gameRef.playerOne!.money} ¤',
             style: Theme.of(context).textTheme.labelLarge,
             maxLines: 1,
           ),

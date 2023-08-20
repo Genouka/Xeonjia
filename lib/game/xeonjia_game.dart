@@ -192,6 +192,9 @@ class XeonjiaGame extends FlameGame
   /// Main characters
   CharacterComponent? playerOne;
   CharacterComponent? milla;
+  CharacterComponent? get september => children.firstWhereOrNull(
+          (c) => c is CharacterComponent && c.name == 'september')
+      as CharacterComponent;
 
   /// Battle variables
   Walker? get activePlayer => changingTurn ? null : players[_activePlayerIndex];
@@ -558,6 +561,33 @@ class XeonjiaGame extends FlameGame
   /// True if [BackpackMenu] or [ShopMenu] are open
   bool get isItemsMenuActive =>
       overlays.isActive('backpackMenu') || overlays.isActive('shopMenu');
+
+  /// Show messages about users' money or HP
+  void userStatusMessage({bool money = false}) {
+    List<List<String>> messages = [
+      [
+        if (money)
+          "I have %s ¤. I'm not very rich.".i18n.fill([playerOne!.money])
+        else
+          'I have %s health points.'.i18n.fill([playerOne!.hp.round()]),
+        '/hero'
+      ],
+      if (!money && inBattle && milla != null && milla!.teamId == 0)
+        [
+          'I have %s health points!'.i18n.fill([milla!.hp.round()]),
+          '/milla_happy'
+        ],
+      if (!money && inBattle && september != null && september!.teamId == 0)
+        [
+          'I? I have %s health points.'.i18n.fill([september!.hp.round()]),
+          '/september'
+        ],
+    ];
+    setMessages([
+      for (final message in messages)
+        Message(this, message.first, author: message.last, translate: false)
+    ]);
+  }
 
   /// Reload HP bar
   void refreshHPBar() => statusBox.state?.refresh();
