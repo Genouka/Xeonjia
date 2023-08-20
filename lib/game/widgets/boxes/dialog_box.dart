@@ -176,11 +176,15 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     if (author != '' && author != ' ')
-                                      Text(
-                                        author.toUpperCase(),
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyLarge,
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(bottom: 4),
+                                        child: Text(
+                                          author.toUpperCase(),
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyLarge,
+                                        ),
                                       ),
                                     AnimatedBuilder(
                                       animation: _characterCountAnimation!,
