@@ -355,6 +355,7 @@ class XeonjiaGame extends FlameGame
     if (playerOne!.hasWeaponId(Weapons.snowball.id)) add(Button.S(this));
     if (playerOne!.hasWeaponId(Weapons.mine.id)) add(Button.M(this));
     add(RemainingMovesBox());
+    overlays.remove('mapNameBox');
     overlays.add('rulesButton');
     overlays.remove('leafButton');
     playBackgroundMusic(custom: 'enemies');

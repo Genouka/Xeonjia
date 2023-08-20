@@ -497,6 +497,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     return #NONE;
   });
   _('map-name', 1, (Cell? x) {
+    if (gameRef.inBattle) return #NONE;
     gameRef.map.name = stringify(x!.car, false);
     gameRef.addCustomWidgetOverlay(
         'mapNameBox', MapNameBox(gameRef, below: true));
