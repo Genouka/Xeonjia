@@ -34,7 +34,7 @@ class MiniMapButton extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Close map'.i18n.toUpperCase(),
+                              'Close'.i18n.toUpperCase(),
                               style: Theme.of(context).textTheme.labelLarge,
                               textAlign: TextAlign.center,
                               maxLines: 1,
