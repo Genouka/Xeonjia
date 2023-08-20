@@ -34,7 +34,7 @@ abstract class Weapon {
   double get ppPercentage => _powerPoints / maxPp;
   double get powerPoints => _powerPoints;
   set powerPoints(double? powerPoints) {
-    _powerPoints = powerPoints ?? double.infinity;
+    _powerPoints = powerPoints ?? 9999;
     if (_powerPoints > maxPp) restorePp();
   }
 
@@ -91,7 +91,7 @@ class SnowBallWeapon extends Weapon {
 
   @override
   void shoot({required Walker shooter}) {
-    if (powerPoints > 0) {
+    if (powerPoints > 0 && !shooter.gameRef.thereIsASnowball) {
       shooter.gameRef.add(SnowballComponent(
           Point(shooter.x, shooter.y), shooter, shooter.orientation, atk));
       --powerPoints;

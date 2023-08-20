@@ -29,8 +29,7 @@ extension CreateComponent on Tile {
                 ..properties = properties,
               inputWeaponList: mainCharacter.weaponList
                   .map((e) => Weapon.fromJson(e.toJson()))
-                  .toList(),
-              newSelectedWeaponIndex: mainCharacter.selectedWeaponIndex));
+                  .toList()));
         }
         if (properties['roomId'] != '0' && properties['createDoor'] != false) {
           gameRef.add(DoorComponent(this));

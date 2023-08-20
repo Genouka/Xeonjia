@@ -21,7 +21,7 @@ class NpcController extends Component {
   late Walker npc;
 
   /// Frequency of movements
-  final double _updatePeriod = 0.5;
+  final double _updatePeriod = 0.75;
   late double _timeToNextMove;
 
   /// Pattern defined in tile.properties['movementPattern'] (optional)

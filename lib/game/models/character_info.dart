@@ -15,7 +15,6 @@ class CharacterInfo {
         poisonQuantity = json['poisonQuantity'] ?? 0,
         money = json['money'] ?? 0,
         itemList = (json['itemList'] ?? []).cast<String>(),
-        selectedWeaponIndex = json['selectedWeaponIndex'] ?? 0,
         visitedRooms = (json['viewedRooms'] ?? ['1_home_2']).cast<String>(),
         minutesPlayed = json['minutesPlayed'] ?? 0,
         movesCounter = json['movesCounter'] ?? 0,
@@ -74,7 +73,6 @@ class CharacterInfo {
 
   /// Weapons owned by the character
   List<Weapon> weaponList = [];
-  int selectedWeaponIndex;
 
   /// Export character data as a Json
   Map<String, dynamic> toJson() {
@@ -91,7 +89,6 @@ class CharacterInfo {
           <Map>[],
           (previousValue, element) =>
               (((previousValue as List?) ?? [])..add(element.toJson())))),
-      'selectedWeaponIndex': selectedWeaponIndex,
       'itemList': itemList,
       'viewedRooms': visitedRooms,
       'minutesPlayed': minutesPlayed,

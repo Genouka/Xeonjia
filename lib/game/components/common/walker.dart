@@ -57,7 +57,9 @@ mixin Walker on BasicComponent {
   /// [direction] and [_orientation]
   void updateDirection(Direction newDirection,
       {bool forced = false, bool animated = true, bool slow = false}) {
-    if (!isBeingDeleted && (isStationary || forced)) {
+    if (!isBeingDeleted &&
+        (isStationary || forced) &&
+        !gameRef.thereIsASnowball) {
       wasStationary = true;
       _slowedMove = slow ? 0.2 : 0;
       if (animated &&
@@ -243,12 +245,6 @@ mixin Walker on BasicComponent {
   /// List of weapon owned
   List<Weapon> weaponList = [];
 
-  /// Index of the weapon selected from weaponList
-  int selectedWeaponIndex = 0;
-
-  /// Weapon
-  Weapon get selectedWeapon => weaponList[selectedWeaponIndex];
-
   /// True if this has the weapon
   bool hasWeaponId(int id) =>
       weaponList.where((weapon) => weapon.id == id).isNotEmpty;
@@ -261,13 +257,8 @@ mixin Walker on BasicComponent {
   Weapon getWeaponById(int id) =>
       weaponList.firstWhere((weapon) => weapon.id == id);
 
-  /// Select next weapon in weapon list
-  void nextWeapon() {
-    if (++selectedWeaponIndex >= weaponList.length) selectedWeaponIndex = 0;
-  }
-
   /// Shoot with the weapon that has weapon.id == id or with the current weapon
-  void shoot([int? id]) {
+  void shoot(int id) {
     if (!gameRef.inBattle ||
         isBeingDeleted ||
         gameRef.isPaused ||
@@ -276,19 +267,15 @@ mixin Walker on BasicComponent {
       return;
     }
     double previousPP = 0;
-    if (id != null) {
-      var newWeaponIndex = weaponList.indexWhere((weapon) => weapon.id == id);
-      if (weaponList[newWeaponIndex].powerPoints > 0) {
-        selectedWeaponIndex = newWeaponIndex;
-        previousPP = selectedWeapon.powerPoints;
-        selectedWeapon.shoot(shooter: this);
-      }
-    } else {
-      previousPP = selectedWeapon.powerPoints;
-      selectedWeapon.shoot(shooter: this);
+    var weapon = weaponList.firstWhere((weapon) => weapon.id == id);
+    if (weapon.powerPoints > 0) {
+      previousPP = weapon.powerPoints;
+      weapon.shoot(shooter: this);
     }
-    if (selectedWeapon.maxPp == double.infinity ||
-        selectedWeapon.powerPoints != previousPP) gameRef.useMove(this);
+    if ((weapon.maxPp == double.infinity || weapon.powerPoints != previousPP) &&
+        weapon.id != Weapons.snowball.id) {
+      gameRef.useMove(this);
+    }
   }
 
   /// Check if it is this component's turn during a battle
@@ -306,7 +293,10 @@ mixin Walker on BasicComponent {
 
   @override
   void render(Canvas canvas) {
-    if (isMyTurn && gameRef.inBattle && !gameRef.miniMapEnabled) {
+    if (isMyTurn &&
+        gameRef.inBattle &&
+        !gameRef.miniMapEnabled &&
+        !isBeingDeleted) {
       canvas.drawOval(
           Rect.fromLTWH(0, size.y / 1.5, size.x, size.y / 2.35), _paint);
     }

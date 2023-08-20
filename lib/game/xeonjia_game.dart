@@ -205,6 +205,7 @@ class XeonjiaGame extends FlameGame
   late bool changingTurn;
   int _activePlayerIndex = 0;
   late int remainingMoves;
+  bool get thereIsASnowball => children.any((c) => c is SnowballComponent);
 
   /// Increase the move counter during a battle
   void useMove(Walker component, {bool skipTurn = false}) {
@@ -495,7 +496,6 @@ class XeonjiaGame extends FlameGame
     mainCharacter.eventLog = Map.from(currentEventLog);
     mainCharacter.itemList = List.from(playerOne!.itemList);
     mainCharacter.weaponList = List.from(playerOne!.weaponList);
-    mainCharacter.selectedWeaponIndex = playerOne!.selectedWeaponIndex;
     saveUserData();
 
     // Load the next room

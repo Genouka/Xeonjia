@@ -8,7 +8,6 @@ class CharacterComponent extends BasicComponent
     int level = 0,
     double? initialHP,
     List<Weapon>? inputWeaponList,
-    int newSelectedWeaponIndex = 0,
     team = 0,
   }) : super(tile.id, tile.position!, tile.properties) {
     bool isPlayerOne = tile.properties['isPlayerOne'] ?? false;
@@ -30,7 +29,6 @@ class CharacterComponent extends BasicComponent
           SnowBallWeapon(level: 5),
           MineWeapon(level: 3),
         ];
-        selectedWeaponIndex = 1;
       }
     }
     teamId = team;
@@ -57,8 +55,6 @@ class CharacterComponent extends BasicComponent
     if (isPlayerOne) {
       // i18n: 'We must fight, not talk!'.i18n
       action = '''(dialog '(("/" "We must fight, not talk!")))''';
-    } else {
-      selectedWeaponIndex = newSelectedWeaponIndex;
     }
   }
 
@@ -71,7 +67,7 @@ class CharacterComponent extends BasicComponent
           inputWeaponList: [
             SnowBallWeapon.fromAtk(
                 atk: int.parse(tile.properties['weaponAtk'] ?? '0'),
-                powerPoints: double.infinity)
+                powerPoints: 9999)
           ],
           level: int.parse(tile.properties['level'] ?? '0'),
         );
