@@ -194,7 +194,7 @@ class XeonjiaGame extends FlameGame
   CharacterComponent? milla;
   CharacterComponent? get september => children.firstWhereOrNull(
           (c) => c is CharacterComponent && c.name == 'september')
-      as CharacterComponent;
+      as CharacterComponent?;
 
   /// Battle variables
   Walker? get activePlayer => changingTurn ? null : players[_activePlayerIndex];
