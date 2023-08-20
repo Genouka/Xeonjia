@@ -34,6 +34,8 @@ class ShopMenu extends ItemsMenu {
           },
           onClose: () {
             gameRef.overlays.remove('shopMenu');
+            gameRef.overlays.remove('statusBox');
+            gameRef.overlays.add('statusBox');
             if (!machine) {
               gameRef.setMessage(Message(
                   gameRef, 'Let me know if you need anything else.'.i18n,
