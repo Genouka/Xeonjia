@@ -1,6 +1,8 @@
+import 'dart:io';
 import 'dart:math';
 
 import 'package:flame/components.dart';
+import 'package:path/path.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
 /// Set scheme's environment
@@ -305,6 +307,30 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     }
     return #NONE;
   });
+  _('dialog-kobi-untranslated', 1, (Cell? x) {
+    var it = (x!.car as Cell).iterator;
+    while (it.moveNext()) {
+      gameRef.setMessage((it.current as Cell).length == 1
+          ? Message(
+              gameRef,
+              (it.current as Cell).car as String,
+              component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
+                  as BasicComponent,
+              font: 'kobi',
+              translate: false,
+            )
+          : Message(
+              gameRef,
+              (it.current as Cell).cdr.car,
+              component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
+                  as BasicComponent,
+              author: (it.current as Cell).car as String,
+              font: 'kobi',
+              translate: false,
+            ));
+    }
+    return #NONE;
+  });
   _('answer', 2, (Cell? x) {
     var it = (x!.cdr.car as Cell).iterator;
     while (it.moveNext()) {
@@ -374,6 +400,22 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   _('teleport-multi', 2, (Cell? x) {
     mainCharacter.visitedRooms.add(x!.car as String);
     gameRef.changeRoom(x.cdr.car as String);
+    return #NONE;
+  });
+  _('teleport-random', 0, (Cell? x) {
+    var maps = Directory('assets/maps/story')
+        .listSync()
+        .where((f) => f is File && extension(f.path) == '.tmx')
+        .toList();
+    gameRef.changeRoom(
+        basenameWithoutExtension(maps[Random().nextInt(maps.length)].path) +
+            '/teleport');
+    gameRef.setMessage(Message(
+      gameRef,
+      'Where am I? How did i end up here?'.i18n,
+      author: '/hero',
+      translate: false,
+    ));
     return #NONE;
   });
   _('start-battle', 0, (Cell? x) {
