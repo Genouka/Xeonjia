@@ -8,7 +8,7 @@
 # Alex <usr@skrep.eu>, 2023.
 # H6rd <hrdq@proton.me>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-19 17:33+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-20 13:25+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -168,7 +168,7 @@ msgstr "Сломанный монитор."
 
 #: assets/maps/story/47.tmx:
 msgid "I'm sorry, but you don't have permission to use this vessel.\nIf you want to reach the Fire Region you have to take the boats that leave from the north of this region."
-msgstr ""
+msgstr "Извини, но у тебя нет разрешения на использование этого судна. \nЕсли ты хочешь добраться до региона Огня, то ты должен сесть на лодку, которая отправляется с севера этого региона."
 
 #: assets/maps/story/8.tmx:
 msgid "Go this way →"
@@ -180,7 +180,7 @@ msgstr "Здесь никого нет."
 
 #: assets/maps/story/76.tmx:
 msgid "Oh, the sea! I missed it!"
-msgstr ""
+msgstr "Ох, море! Я скучал по нему!"
 
 #: assets/maps/story/76.tmx:
 msgid "Oh, that tree is like those in the Mitsu Forest! I missed it!"
@@ -188,11 +188,11 @@ msgstr ""
 
 #: assets/maps/story/76.tmx:
 msgid "Volcano, sea, forest.\nThere's a little bit of everything here."
-msgstr ""
+msgstr "Вулкан, море, лес.\nЗдесь всего понемногу."
 
 #: assets/maps/story/76.tmx:
 msgid "You've traveled a long way to get here, I know that.\nI give you this."
-msgstr ""
+msgstr "Ты проделал долгий путь, чтобы добраться сюда, я знаю это.\nЯ дарю тебе это."
 
 #: assets/maps/story/1.tmx:
 msgid "Natawn"
@@ -240,19 +240,19 @@ msgstr "Здесь довольно скользко. \nЯ буду скольз
 
 #: assets/maps/story/t2_04.tmx:
 msgid "I can't escape. I have to take the signet."
-msgstr ""
+msgstr "Я не могу сбежать. Я должен взять печать."
 
 #: assets/maps/story/t2_04.tmx:
 msgid "Here it is, this is the second signet!"
-msgstr ""
+msgstr "Вот она, это вторая печать!"
 
 #: assets/maps/story/t2_04.tmx:
 msgid "We can get out of here now."
-msgstr ""
+msgstr "Теперь мы можем убираться отсюда."
 
 #: assets/maps/story/t2_04.tmx:
 msgid "The monsters are after me! I'll get the signet later."
-msgstr ""
+msgstr "Монстры охотятся за мной! Я заберу печать позже."
 
 #: assets/maps/story/t2_04.tmx:
 msgid "Let's get the second signet!"
@@ -264,7 +264,7 @@ msgstr "Привет!"
 
 #: assets/maps/story/54.tmx:
 msgid "Route 7"
-msgstr "Маршрут 7"
+msgstr "Дорога 7"
 
 #: assets/maps/story/34.tmx:
 msgid "Route 4"

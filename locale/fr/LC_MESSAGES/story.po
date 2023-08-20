@@ -8,7 +8,7 @@
 # pas calou <bzhkrp@inboxen.org>, 2023.
 # pascalou <bzhkrp@inboxen.org>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-19 17:12+0000\nLast-Translator: pascalou <bzhkrp@inboxen.org>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-20 13:25+0000\nLast-Translator: pascalou <bzhkrp@inboxen.org>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -1458,19 +1458,19 @@ msgstr "Peut-être que si j'avais plus de 2 heures par semaine pour travailler s
 
 #: assets/maps/story/74.tmx:
 msgid "Are you interested in this stone? I just found it but I can't take it with me, it weighs too much."
-msgstr ""
+msgstr "Cette pierre vous intéresse ? Je viens de la trouver mais je ne peux pas l'emporter, elle est trop lourde."
 
 #: assets/maps/story/74.tmx:
 msgid "This is a very strange stone…"
-msgstr ""
+msgstr "C'est une pierre bien étrange…"
 
 #: assets/maps/story/74.tmx:
 msgid "In my opinion that stone shouldn't have been here."
-msgstr ""
+msgstr "À mon avis, cette pierre n'aurait pas dû se trouver ici."
 
 #: assets/maps/story/74.tmx:
 msgid "In the ardent embrace, life is born again."
-msgstr ""
+msgstr "Dans l'étreinte ardente, la vie renaît."
 
 #: assets/maps/story/2_house.tmx:
 msgid "You are the chosen one for this year, right?\nMy son was too, many years ago."
@@ -1546,7 +1546,7 @@ msgstr "Q-qui êtes-vous ?! Que voulez-vous ?!"
 
 #: assets/maps/story/25.tmx:
 msgid "You don't seem particularly informed, kid.\nAt least those before you had the basics.\nThey should choose \"heroes\" more carefully.\nWe are the Hoarfrost Team!\nWe are the professionals of crime.\nThe King of Evil's right-hand men.\nThanks to us, the King of Evil will be able to complete his work."
-msgstr "Tu n'as pas l'air particulièrement informé, gamin.\nAu moins ceux avant toi avaient les bases.\nIls devraient choisir des \"héros\" plus soigneusement.\nNous sommes l'Équipe givrée !\nNous sommes des professionnels du crime.\nLes bras droits du Roi du Mal.\nGrâce à nous, le Roi du Mal sera capable d'accomplir ses ambitions."
+msgstr "Tu n'as pas l'air particulièrement informé, gamin.\nAu moins ceux avant toi avaient les bases.\nIls devraient choisir des « héros » plus soigneusement.\nNous sommes l'Équipe givrée !\nNous sommes des professionnels du crime.\nLes bras droits du Roi du Mal.\nGrâce à nous, le Roi du Mal sera capable d'accomplir ses ambitions."
 
 #: assets/maps/story/25.tmx:
 msgid "His work?! What are you talking about?"
@@ -1646,15 +1646,15 @@ msgstr "Non, gamin. On était en communication avec le chef de l'Équipe givrée
 
 #: assets/maps/story/71.tmx:
 msgid "Route 9"
-msgstr ""
+msgstr "Route 9"
 
 #: assets/maps/story/69_house2.tmx:
 msgid "We pride ourselves on our traditions, such as the fire dance, to honor the power of the volcano and appease its spirits."
-msgstr ""
+msgstr "Nous sommes fiers de nos traditions, comme la danse du feu, qui honore le pouvoir du volcan et apaise ses esprits."
 
 #: assets/maps/story/69_house2.tmx:
 msgid "Legends tell of an ancient guardian who protects the volcano. We see it as a symbol of hope and security."
-msgstr ""
+msgstr "Les légendes parlent d'un ancien gardien qui protège le volcan. Nous le voyons comme un symbole d'espoir et de sécurité."
 
 #: assets/maps/story/53.tmx:
 msgid "Neubrij"
@@ -1910,47 +1910,47 @@ msgstr "Un seul sceau n'est pas suffisant."
 
 #: assets/maps/story/999.tmx:
 msgid "September!"
-msgstr ""
+msgstr "Septembre !"
 
 #: assets/maps/story/999.tmx:
 msgid "Here you are finally."
-msgstr ""
+msgstr "Te voilà finalement."
 
 #: assets/maps/story/999.tmx:
 msgid "She has the third signet."
-msgstr ""
+msgstr "Elle a le troisième sceau."
 
 #: assets/maps/story/999.tmx:
 msgid "Of course I took it, {{hero}} is too slow."
-msgstr ""
+msgstr "Bien-sûr je l'ai pris, {{hero}} est trop lent."
 
 #: assets/maps/story/999.tmx:
 msgid "The Spirit of Fire is warming up the tower right now."
-msgstr ""
+msgstr "L'Esprit du Feu réchauffe la tour en ce moment."
 
 #: assets/maps/story/999.tmx:
 msgid "So everything is ready, with the three signets we can enter."
-msgstr ""
+msgstr "Donc tout est prêt, avec les troisième sceau, on peut rentrer."
 
 #: assets/maps/story/999.tmx:
 msgid "From now on, maximum concentration, today we save the world.\nHere's the third signet, I give you the honor to open the door."
-msgstr ""
+msgstr "A partir de maintenant, concentration maximale, aujourd'hui nous sauvons le monde.\nVoici le troisième sceau, je vous accorde l'honneur d'ouvrir la porte."
 
 #: assets/maps/story/999.tmx:
 msgid "What an unexpected kindness."
-msgstr ""
+msgstr "Quelle gentillesse inattendue."
 
 #: assets/maps/story/999.tmx:
 msgid "Only because you have 2 signets and I only have 1.\nYou beat me."
-msgstr ""
+msgstr "Simplement parce que vous avez deux sceaux et que je n'en ai qu'un.\nVous m'avez battu."
 
 #: assets/maps/story/999.tmx:
 msgid "* {{hero}} uses the 3 signets *"
-msgstr ""
+msgstr "* {{hero}} utilise les 3 sceaux *"
 
 #: assets/maps/story/999.tmx:
 msgid "The door has unlocked, we can enter!"
-msgstr ""
+msgstr "La porte s'est déverrouillée, nous pouvons entrer !"
 
 #: assets/maps/story/999.tmx:
 msgid "Xeonjia Tower – Dwelling of the King of Evil. Stay away."
@@ -1986,7 +1986,7 @@ msgstr "Il y a des notes mathématiques ici."
 
 #: assets/maps/story/70.tmx:
 msgid "Fumarole Village"
-msgstr ""
+msgstr "Village Fumarole"
 
 #: assets/maps/story/25_house.tmx:
 msgid "I'm planning a surprise wedding for my son.\nI hope he doesn't find out."
@@ -2278,15 +2278,15 @@ msgstr "Fais attention à ne pas te blesser."
 
 #: assets/maps/story/66_house.tmx:
 msgid "Compared to my previous adventures, this climb will be the most ardent. It's better to be prepared and fully rested."
-msgstr ""
+msgstr "Par rapport à mes précédentes aventures, cette ascension sera la plus ardue. Il vaut mieux être préparé et bien reposé."
 
 #: assets/maps/story/67.tmx:
 msgid "Flamecot City"
-msgstr ""
+msgstr "Ville de Flamecot"
 
 #: assets/maps/story/67.tmx:
 msgid "I have to take the signet."
-msgstr ""
+msgstr "Je dois prendre le sceau."
 
 #: assets/maps/story/1_house.tmx:
 msgid "NEIGHBOR'S HOUSE"
@@ -2630,7 +2630,7 @@ msgstr "La pêche est une activité relaxante."
 
 #: assets/maps/story/61.tmx:
 msgid "Route 8"
-msgstr ""
+msgstr "Route 8"
 
 #: assets/maps/story/61.tmx:
 msgid "Do you want to go to the Water Region?"
@@ -2654,7 +2654,7 @@ msgstr ""
 
 #: assets/maps/story/58.tmx:
 msgid "Hi I'm Mil-"
-msgstr ""
+msgstr "Salut, je suis Mil-"
 
 #: assets/maps/story/58.tmx:
 msgid "{{hero}}, long time no see! Are you all right?"
@@ -2670,7 +2670,7 @@ msgstr ""
 
 #: assets/maps/story/58.tmx:
 msgid "We know!\nWe met the Hoarfr-"
-msgstr ""
+msgstr "On sait !\nOn a rencontré l'Équipe gri-"
 
 #: assets/maps/story/58.tmx:
 msgid "Tell me next time. Sorry."
@@ -2690,7 +2690,7 @@ msgstr ""
 
 #: assets/maps/story/58.tmx:
 msgid "We absolutely have to stop the Hoarfrost Team and the King of Evil."
-msgstr ""
+msgstr "Nous devons absolument arrêter l'Équipe givrée et le Roi du Mal."
 
 #: assets/maps/story/58.tmx:
 msgid "That's right, we will stop them!\nI've def-"
@@ -2706,7 +2706,7 @@ msgstr ""
 
 #: assets/maps/story/58.tmx:
 msgid "By the way, hi, I'm Mil-"
-msgstr ""
+msgstr "Au passage, salut, je suis Mil-"
 
 #: assets/maps/story/58.tmx:
 msgid "We'll go to the tower with the ones we found.\nAlways keep your eyes open, the gems are often found in hidden places."
@@ -2766,7 +2766,7 @@ msgstr "Mon toit a brulé.\nOui, d'accord, il continue à neiger chez moi, mais 
 
 #: assets/maps/story/49.tmx:
 msgid "Well, this is / My final abode / The snow lay 1 meter."
-msgstr ""
+msgstr "Eh bien, voici / Ma dernière demeure / La neige est tombée sur 1 mètre."
 
 #: assets/maps/story/49.tmx:
 msgid "sheet-of-paper"
@@ -2858,7 +2858,7 @@ msgstr "Quoi ?\nÊtes-vous prêts à congeler tout le Royaume ?"
 
 #: assets/maps/story/52.tmx:
 msgid "How do you know our plan???\nWere you the ones who told him?"
-msgstr "Comment connaissez-vous notre plan ?\nC'est vous qui lui avez raconté ?"
+msgstr "Comment connaissez-vous notre plan ???\nC'est vous qui lui avez raconté ?"
 
 #: assets/maps/story/52.tmx:
 msgid "No sir!\nWe didn't say anything."
@@ -2882,7 +2882,7 @@ msgstr "Qui c'était ? Je n'aime pas ces types."
 
 #: assets/maps/story/52.tmx:
 msgid "The henchmen of the Hoarfrost Team.\nThey want to freeze the whole kingdom so that it will be livable for the King of Evil."
-msgstr ""
+msgstr "Les sbires de l'Équipe givrée.\nIls veulent geler tout le royaume pour le rendre vivable au Roi du Mal."
 
 #: assets/maps/story/52.tmx:
 msgid "Uh, bad story.\nBut you're definitely stronger than them, hero!\nLet's go save the world!"
@@ -2890,7 +2890,7 @@ msgstr "Hum, c'est une mauvaise histoire.\nMais tu es définitivement plus fort 
 
 #: assets/maps/story/52.tmx:
 msgid "I have to go through the crypt to get the second signet."
-msgstr ""
+msgstr "Je dois aller dans la crypte pour récupérer le deuxième sceau."
 
 #: assets/maps/story/44.tmx:
 msgid "What do you want?"
@@ -2915,7 +2915,7 @@ msgstr "Frisson."
 
 #: assets/maps/story/53_house2_3.tmx:
 msgid "The fun, the frustration, the dedication, the time spent.\nWhat it is and what could have been.\nI'm in it.\nI'm in everything.\nIn every person, in every monster, in every dialog, in every rock.\nI'm it.\nI'm the enigma.\nThe room you couldn't get out, the useless items, the inside jokes you will ever understand.\nI'm.\nI'm all that is not there.\nThe houses with closed doors, the unreachable areas, the untold stories of every secondary character.\nTheir dreams and aspirations.\nI'm the game. The whole and all its parts.\nAnd you played me for {{minutes-played}} minutes.\nAs your journey continues, remember that you are not just playing a game; you are living me."
-msgstr ""
+msgstr "Le plaisir, la frustration, le dévouement, le temps passé.\nCe que c'est et ce qui aurait pu être.\nJe suis dedans.\nJe suis dans tout.\nDans chaque personne, dans chaque monstre, dans chaque dialogue, dans chaque pierre.\nC'est moi.\nJe suis l'énigme.\nLa pièce dont vous ne pouvez pas sortir, les objets inutiles, les blagues que vous ne comprendrez jamais.\nJe suis.\nJe suis tout ce qui n'existe pas.\nLes maisons aux portes fermées, les zones inaccessibles, les histoires non racontées de chaque personnage secondaire.\nLeurs rêves et leurs aspirations.\nJe suis le jeu. Le tout et toutes ses parties.\nEt vous m'avez joué pendant {{minutes-played}} minutes.\nAlors que votre voyage se poursuit, rappelez-vous que vous ne jouez pas seulement à un jeu, mais que vous me vivez."
 
 #: assets/maps/story/53_house2_3.tmx:
 msgid "Computers are not used from this side."

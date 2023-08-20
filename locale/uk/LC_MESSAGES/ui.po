@@ -3,9 +3,9 @@
 # This file is distributed under the same license as Xeonjia.
 # Sergiy Borodych <sergiy.borodych@gmail.com>, 2021.
 # Sean R. <seanrmsk@protonmail.com>, 2021.
-# deepdaikon <deepdaikon@tuta.io>, 2022.
+# deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Ukrainian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/uk/>\nLanguage: uk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-20 13:25+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Ukrainian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/uk/>\nLanguage: uk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -33,19 +33,19 @@ msgstr ""
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Press enter"
-msgstr ""
+msgstr "Натисніть enter"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Welcome!"
-msgstr ""
+msgstr "Ласкаво просимо!"
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Before starting tell me what you want to call your character."
-msgstr ""
+msgstr "Перш ніж почати, скажіть мені, як ви хочете назвати свого героя."
 
 #: lib/ui/screens/welcome/widgets/choose_name.dart:
 msgid "Random name"
-msgstr ""
+msgstr "Випадкове ім'я"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "OK"
@@ -149,23 +149,23 @@ msgstr "Відмінити"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Smallest"
-msgstr ""
+msgstr "Найменший"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Small"
-msgstr ""
+msgstr "Маленький"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Default"
-msgstr ""
+msgstr "За замовчуванням"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Large"
-msgstr ""
+msgstr "Великий"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Largest"
-msgstr ""
+msgstr "Найбільший"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Your name"
@@ -173,7 +173,7 @@ msgstr "Ваше ім'я"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Click here to change your name"
-msgstr ""
+msgstr "Натисніть тут, щоб змінити ім'я"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Discard"

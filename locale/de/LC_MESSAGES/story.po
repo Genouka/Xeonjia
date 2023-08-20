@@ -12,7 +12,7 @@
 # Pink Serenity <osiria.pink.serenity@gmail.com>, 2023.
 # Sebastian <abba@use.startmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-19 17:12+0000\nLast-Translator: Sebastian <abba@use.startmail.com>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-20 13:25+0000\nLast-Translator: Sebastian <abba@use.startmail.com>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -1509,7 +1509,7 @@ msgstr "Ich muss zur Feuerregion."
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "Oh, do you want to leave the region already?\nThis saddens me.\nTo go to the Fire Region you have to take a boat that you find west of here.\nYou need my written permission, here it is."
-msgstr ""
+msgstr "Oh, du willst die Gegend schon verlassen? Das macht mich traurig.\nUm zur Feuerregion zu gelangen, musst du ein Boot westlich von hier nehmen. \nDu brauchst meine schriftliche Erlaubnis -\nhier bitte."
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "Thank you!\nI will come back sooner or later."
@@ -1565,7 +1565,7 @@ msgstr "Du wirst mich nicht fangen!"
 
 #: assets/maps/story/25.tmx:
 msgid "You can't run away from here.\nDid you think you could get away with it that easily?\nThe fact that you tried to escape and not to fight makes it clear how little value you are.\nI hope next year's \"hero\" is a little braver than you, at least it would be a bit more fun for us."
-msgstr ""
+msgstr "Du kannst hier nicht entkommen.\nDachtest du, dass du damit so einfach davon kommst?\nDer Umstand, dass du weglaufen und nicht kämpfen wolltest, zeigt wie wertlos du bist.\nIch hoffe der nächstjährige \"Held\" ist mutiger als du, das wäre zumindest unterhaltsamer für uns."
 
 #: assets/maps/story/25.tmx:
 msgid "Bzzt… Bzzt… Bzzt…"
@@ -1653,11 +1653,11 @@ msgstr "Route 9"
 
 #: assets/maps/story/69_house2.tmx:
 msgid "We pride ourselves on our traditions, such as the fire dance, to honor the power of the volcano and appease its spirits."
-msgstr ""
+msgstr "Wir sind stolz auf unsere Traditionen, so wie den Feuertanz, um die Kraft des Vulkans zu ehren und seine Geister zu besänftigen."
 
 #: assets/maps/story/69_house2.tmx:
 msgid "Legends tell of an ancient guardian who protects the volcano. We see it as a symbol of hope and security."
-msgstr ""
+msgstr "Legenden besagen, dass ein antiker Wächter den Vulkan beschützt. Wir sehen das als ein Zeichen der Hoffnung und Sicherheit."
 
 #: assets/maps/story/53.tmx:
 msgid "Neubrij"
@@ -1669,23 +1669,23 @@ msgstr "Mir gefällt diese Stadt!"
 
 #: assets/maps/story/53.tmx:
 msgid "Hey, welcome to Neubrij!\nWe have the best view in the whole Kingdom."
-msgstr ""
+msgstr "Hey, willkommen in Neubrij!\nWir haben den besten Ausblick im ganzen Königreich."
 
 #: assets/maps/story/53.tmx:
 msgid "This city is very expensive."
-msgstr ""
+msgstr "Diese Stadt ist sehr teuer."
 
 #: assets/maps/story/53.tmx:
 msgid "From this side you can see the volcano, beautiful beautiful."
-msgstr ""
+msgstr "Von hier aus kann man den Vulkan sehen, schön schön."
 
 #: assets/maps/story/53.tmx:
 msgid "My boyfriend took me here for a short holiday.\nHow wonderful!"
-msgstr ""
+msgstr "Mein Freund hat mich zu einem Kurzurlaub hierhergebracht.\nWie wundervoll!"
 
 #: assets/maps/story/53.tmx:
 msgid "Today is my day off.\nWorking 40 hours a week is tough."
-msgstr ""
+msgstr "Heute hab ich frei.\n40 Stunden die Woche zu arbeiten ist hart."
 
 #: assets/maps/story/53.tmx:
 msgid "Don't worry, the bridge is very solid.\nIt has already collapsed 2 times but this time it was done a little better.\nI'm sure we've learned from our mistakes by now.\nDon't worry."
@@ -1921,7 +1921,7 @@ msgstr "Da bist du endlich."
 
 #: assets/maps/story/999.tmx:
 msgid "She has the third signet."
-msgstr ""
+msgstr "Sie hat das dritte Siegel."
 
 #: assets/maps/story/999.tmx:
 msgid "Of course I took it, {{hero}} is too slow."
@@ -1941,7 +1941,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "What an unexpected kindness."
-msgstr ""
+msgstr "Welch unerwartete Nettigkeit."
 
 #: assets/maps/story/999.tmx:
 msgid "Only because you have 2 signets and I only have 1.\nYou beat me."
@@ -2313,7 +2313,7 @@ msgstr "Es ist das erste Mal, dass ein Bewohner dieses Dorfs als \"Held\" ausgew
 
 #: assets/maps/story/30.tmx:
 msgid "This city is boring."
-msgstr ""
+msgstr "Diese Stadt ist langweilig."
 
 #: assets/maps/story/30.tmx:
 msgid "I'm sorry but this road is closed.\nWork is underway to restore the railway system."
@@ -2353,11 +2353,11 @@ msgstr ""
 
 #: assets/maps/story/48.tmx:
 msgid "No, but… you weigh…"
-msgstr ""
+msgstr "Nein, aber... du wiegst…"
 
 #: assets/maps/story/48.tmx:
 msgid "What are you insinuating?!"
-msgstr ""
+msgstr "Was deutest du an?!"
 
 #: assets/maps/story/48.tmx:
 msgid "Nothing…"
@@ -2641,7 +2641,7 @@ msgstr ""
 
 #: assets/maps/story/61.tmx:
 msgid "Welcome to the Fire Region!"
-msgstr ""
+msgstr "Willkommen in der Feuerregion!"
 
 #: assets/maps/story/69.tmx:
 msgid "This is the third capital of the Kingdom. What is your favorite?"
@@ -2745,7 +2745,7 @@ msgstr ""
 
 #: assets/maps/story/58.tmx:
 msgid "Ok, see you Shen."
-msgstr ""
+msgstr "Ok, bis dann, Shen."
 
 #: assets/maps/story/58.tmx:
 msgid "Milla!\nI'm Milla!"
@@ -2757,7 +2757,7 @@ msgstr ""
 
 #: assets/maps/story/58.tmx:
 msgid "Nice to meet you."
-msgstr ""
+msgstr "Freut mich dich kennenzulernen."
 
 #: assets/maps/story/58.tmx:
 msgid "See you."
@@ -2821,7 +2821,7 @@ msgstr ""
 
 #: assets/maps/story/52.tmx:
 msgid "Yeaaah, let's go get it."
-msgstr ""
+msgstr "Jaaa, los, holen wir es uns."
 
 #: assets/maps/story/52.tmx:
 msgid "In the other crypt there were many monsters. We must be careful."

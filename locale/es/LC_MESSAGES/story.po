@@ -7,7 +7,7 @@
 # YottaMxt <yottamxt@gmail.com>, 2023.
 # Nicolas <nicolas2013toledo@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-19 17:12+0000\nLast-Translator: Nicolas <nicolas2013toledo@gmail.com>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-20 13:25+0000\nLast-Translator: Nicolas <nicolas2013toledo@gmail.com>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -1884,7 +1884,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "I think I will stay here and rest for a while, near the Mitsu Forest.\nI will resume my journey in a few days."
-msgstr ""
+msgstr "Creo que me quedare aquí y descansare por un rato, cerca del Bosque Mitsu.\nVoy a reanudar mi viaje en unos dias."
 
 #: assets/maps/story/999.tmx:
 msgid "I can't rest so much unfortunately.\nI'll continue my journey right away.\nHave a good rest!"
@@ -1892,11 +1892,11 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Thanks!\nWe will meet again."
-msgstr ""
+msgstr "¡Gracias!\nNos volveremos a ver."
 
 #: assets/maps/story/999.tmx:
 msgid "Good luck {{hero}}!"
-msgstr ""
+msgstr "Buena suerte {{hero}}!"
 
 #: assets/maps/story/999.tmx:
 msgid "Do your best!"
@@ -1912,15 +1912,15 @@ msgstr "Un medallón no es suficiente."
 
 #: assets/maps/story/999.tmx:
 msgid "September!"
-msgstr ""
+msgstr "Septiembre!"
 
 #: assets/maps/story/999.tmx:
 msgid "Here you are finally."
-msgstr ""
+msgstr "Finalmente estas aquí."
 
 #: assets/maps/story/999.tmx:
 msgid "She has the third signet."
-msgstr ""
+msgstr "Ella tiene el tercer sello."
 
 #: assets/maps/story/999.tmx:
 msgid "Of course I took it, {{hero}} is too slow."

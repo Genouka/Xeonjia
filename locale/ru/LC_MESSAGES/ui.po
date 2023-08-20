@@ -5,7 +5,7 @@
 # Denis Proleev <denproleev@gmail.com>, 2021.
 # Andrey <jius55025@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-19 17:33+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-20 13:25+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -205,7 +205,7 @@ msgstr "Показывать D-Pad"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable the directional pad.\nTo change its position, long-press the D-pad in the center."
-msgstr ""
+msgstr "Включить навигационную крестовину (D-pad).\nДля изменения её положения нажмите и удерживайте центр D-pad."
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "D-pad size"
@@ -213,7 +213,7 @@ msgstr "Размер D-Pad"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Virtual D-pad dimension"
-msgstr ""
+msgstr "Виртуальное измерение D-pad"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Language"
@@ -533,7 +533,7 @@ msgstr "Скрыть подсказки"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Mitsu Forest used to be bigger, it was deforested to build Melhopolis."
-msgstr ""
+msgstr "Раньше лес Митцу был больше, но его вырубили чтобы построить Мелхополис."
 
 #: lib/game/utils/event_manager.dart:
 msgid "The Xeonjia Tower is the tallest building in the Kingdom."
@@ -557,7 +557,7 @@ msgstr "Который час?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "If we walk around long enough, we're sure to arrive somewhere!"
-msgstr ""
+msgstr "Если мы будем идти достаточно долго, мы обязательно куда-нибудь придем!"
 
 #: lib/game/utils/event_manager.dart:
 msgid "How are you?"
@@ -569,11 +569,11 @@ msgstr "Здесь холодно."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Green! Green!\nGreen is the answer, but I don't remember the question."
-msgstr ""
+msgstr "Зелёный! Зелёный!\nЗелёный это ответ, но я не помню вопрос."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Ours is a strange world, it's cold here but a little warmer there."
-msgstr ""
+msgstr "Странный у нас мир, здесь холодно, а там чуть теплее."
 
 #: lib/game/utils/event_manager.dart:
 msgid "I have to stop eating ice cream before bed."
@@ -589,11 +589,11 @@ msgstr "Эй!"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Here I am."
-msgstr ""
+msgstr "А вот и я."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Leave me alone."
-msgstr ""
+msgstr "Оставь меня в покое."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Do you believe in fairies??"
@@ -601,7 +601,7 @@ msgstr "Вы верите в фей?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "What do piglets dream about?"
-msgstr ""
+msgstr "О чем мечтают поросята?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "I am hungryyy."
@@ -653,7 +653,7 @@ msgstr "Время сражаться!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is tired and is back in the leaf, I have to continue the battle."
-msgstr ""
+msgstr "Милла устала и вернулась назад в листву, я должен продолжить бой."
 
 #: lib/game/xeonjia_game.dart:
 msgid "Battle!"
@@ -665,7 +665,7 @@ msgstr "Ты победил!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is resting."
-msgstr ""
+msgstr "Милла отдыхает."
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is already here!"
@@ -713,7 +713,7 @@ msgstr "Если у вас кончатся снежки, возьмите их 
 
 #: lib/game/xeonjia_game.dart:
 msgid "Mines you place under you with the \"M\" button explode as soon as an enemy steps on them."
-msgstr ""
+msgstr "Мины, которые вы ставите под себя с помощью кнопки «М», взрываются, как только на них наступает враг."
 
 #: lib/game/xeonjia_game.dart:
 msgid "Remember, enemies also have HP. Hit them multiple times to knock them out!"
