@@ -350,7 +350,7 @@ class XeonjiaGame extends FlameGame
   bool inBattle = false;
   void startBattle() {
     inBattle = true;
-    add(BattleTextBox(size, 'Battle!'.i18n.toUpperCase()));
+    add(BattleTextBox('Battle!'.i18n.toUpperCase()));
     add(Button.P(this));
     if (playerOne!.hasWeaponId(Weapons.snowball.id)) add(Button.S(this));
     if (playerOne!.hasWeaponId(Weapons.mine.id)) add(Button.M(this));
@@ -379,7 +379,7 @@ class XeonjiaGame extends FlameGame
     camera.moveTo(Vector2(moveCamera(size.x, map.width, playerOne!.x),
         moveCamera(size.y, map.height, playerOne!.y)));
     _activePlayerIndex = players.indexOf(playerOne!);
-    add(BattleTextBox(size, 'You won!'.i18n.toUpperCase()));
+    add(BattleTextBox('You won!'.i18n.toUpperCase()));
     children
         .where((c) => c is ModifierComponent && c.explosionOnDelete)
         .forEach((c) => (c as ModifierComponent).delete());
