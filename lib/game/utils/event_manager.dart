@@ -412,7 +412,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
             '/teleport');
     gameRef.setMessage(Message(
       gameRef,
-      'Where am I? How did i end up here?'.i18n,
+      'Where am I? How did I end up here?'.i18n,
       author: '/hero',
       translate: false,
     ));
