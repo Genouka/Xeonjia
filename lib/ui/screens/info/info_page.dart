@@ -93,36 +93,34 @@ class _InfoPageState extends State<InfoPage> {
               shrinkWrap: true,
               padding: const EdgeInsets.all(8),
               itemCount: infoMenuList.length,
-              itemBuilder: (BuildContext context, int index) => InkWell(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4),
-                  child: ListTile(
-                    tileColor: const Color(0xFF0C0C0C),
-                    leading: Icon(
-                      infoMenuList[index]['icon'].icon,
-                      size: 27,
-                      color: Colors.grey,
-                    ),
-                    title: Text(
-                      infoMenuList[index]['title'],
-                      style: TextStyle(fontSize: 32, fontFamily: settings.font),
-                    ),
-                    subtitle: Text(infoMenuList[index]['subtitle'],
-                        style: TextStyle(
-                            fontSize: 24,
-                            color: Colors.grey,
-                            fontFamily: settings.font)),
+              itemBuilder: (BuildContext context, int index) => Padding(
+                padding: const EdgeInsets.symmetric(vertical: 4),
+                child: ListTile(
+                  tileColor: const Color(0xFF0C0C0C),
+                  leading: Icon(
+                    infoMenuList[index]['icon'].icon,
+                    size: 27,
+                    color: Colors.grey,
                   ),
+                  title: Text(
+                    infoMenuList[index]['title'],
+                    style: TextStyle(fontSize: 32, fontFamily: settings.font),
+                  ),
+                  subtitle: Text(infoMenuList[index]['subtitle'],
+                      style: TextStyle(
+                          fontSize: 24,
+                          color: Colors.grey,
+                          fontFamily: settings.font)),
+                  onTap: () async {
+                    if (infoMenuList[index]['url'].length != 0) {
+                      launchUrl(Uri.parse(infoMenuList[index]['url']),
+                          mode: LaunchMode.externalApplication);
+                    } else if (infoMenuList[index]['title'] ==
+                        'Third Party Licenses'.i18n) {
+                      _licenseDialog();
+                    }
+                  },
                 ),
-                onTap: () async {
-                  if (infoMenuList[index]['url'].length != 0) {
-                    launchUrl(Uri.parse(infoMenuList[index]['url']),
-                        mode: LaunchMode.externalApplication);
-                  } else if (infoMenuList[index]['title'] ==
-                      'Third Party Licenses'.i18n) {
-                    _licenseDialog();
-                  }
-                },
               ),
             ),
           ),
