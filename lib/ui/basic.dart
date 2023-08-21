@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:xeonjia/ui/themes.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/latinise.dart';
+import 'package:xeonjia/utils/local_data_controller.dart';
 
 /// Page route
 class FadeRoute extends PageRouteBuilder {
@@ -36,6 +37,20 @@ class NoGlow extends ScrollBehavior {
   }
 }
 
+/// Close button in settings and info pages
+TextButton closeButton(BuildContext context) => TextButton(
+      style: ButtonStyle(
+        overlayColor:
+            MaterialStateColor.resolveWith((states) => const Color(0xFF323232)),
+      ),
+      onPressed: () => Navigator.of(context).pop(),
+      child: const Text(
+        '×',
+        style:
+            TextStyle(color: Colors.white, fontSize: 48, fontFamily: 'dd5x7'),
+      ),
+    );
+
 /// Button used in pauseMenu and backpackMenu
 InkWell actionButton(String text, VoidCallback onPressed) => InkWell(
       onTap: onPressed,
@@ -65,7 +80,7 @@ Widget insertNameForm(
     TextEditingController textFieldController,
     Function onSubmitted,
     BuildContext context,
-    {double? fontSize}) {
+    {double? fontSize = 32}) {
   return Form(
     key: key,
     child: TextFormField(
@@ -73,7 +88,7 @@ Widget insertNameForm(
       controller: textFieldController,
       keyboardType: TextInputType.text,
       textCapitalization: TextCapitalization.characters,
-      style: TextStyle(fontSize: fontSize),
+      style: TextStyle(fontSize: fontSize, fontFamily: settings.font),
       onFieldSubmitted: (String text) {
         onSubmitted(context, text.trim());
         SystemChrome.restoreSystemUIOverlays();
@@ -92,7 +107,11 @@ Widget insertNameForm(
       ],
       decoration: InputDecoration(
         hintText: 'Insert your name here'.i18n,
-        hintStyle: const TextStyle(fontSize: 18),
+        hintStyle: TextStyle(fontSize: 24, fontFamily: settings.font),
+        errorStyle: TextStyle(
+          fontSize: 24,
+          fontFamily: settings.font,
+        ),
       ),
     ),
   );

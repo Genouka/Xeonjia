@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:i18n_extension/i18n_widget.dart';
+import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/settings/resources/option_list.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
-import 'package:xeonjia/utils/settings.dart';
 
 class SettingsPage extends StatefulWidget {
   static State<SettingsPage> of(BuildContext context) =>
@@ -19,57 +17,15 @@ class SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
         title: Text('Settings'.i18n.toUpperCase()),
-        centerTitle: true,
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.settings_backup_restore),
-            tooltip: 'Restore'.i18n,
-            onPressed: _restoreSettingsDialog,
-          ),
-        ],
+        titleTextStyle: TextStyle(
+          color: Colors.white,
+          fontSize: 48,
+          fontWeight: FontWeight.w600,
+          fontFamily: settings.font,
+        ),
+        leading: Container(),
+        actions: [closeButton(context)],
       ),
       body: OptionList());
-
-  /// Dialog used to restore default settings
-  Future _restoreSettingsDialog() => showDialog(
-        context: context,
-        builder: (BuildContext context) => AlertDialog(
-          title: Text('Restore default settings?'.i18n),
-          content: Text(
-              'Are you sure you want to delete your settings and restore default ones?'
-                  .i18n),
-          actions: <Widget>[
-            TextButton(
-              style: TextButton.styleFrom(
-                  foregroundColor: Theme.of(context).primaryColor),
-              onPressed: () {
-                SystemChrome.restoreSystemUIOverlays();
-                if (settings.audioSupported) {
-                  settings = Settings({'firstRun': false});
-                } else {
-                  settings = Settings({
-                    'firstRun': false,
-                    'soundEffects': false,
-                    'backgroundMusic': false,
-                  });
-                  settings.audioSupported = false;
-                }
-                I18n.of(context).locale = settings.locale;
-                saveSettings();
-                setState(() {});
-                Navigator.of(context).pop();
-              },
-              child: Text('Restore'.i18n),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                  foregroundColor: Theme.of(context).primaryColor),
-              onPressed: Navigator.of(context).pop,
-              child: Text('Cancel'.i18n),
-            ),
-          ],
-        ),
-      );
-
   void refresh() => setState(() {});
 }

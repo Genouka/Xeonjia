@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
 final appTheme = ThemeData(
-  primarySwatch: Colors.blueGrey,
-  primaryColor: const Color(0xFF416AA3),
+  primaryColor: Colors.grey,
+  scaffoldBackgroundColor: Colors.black,
+  colorScheme: ColorScheme.fromSwatch()
+      .copyWith(secondary: Colors.grey, brightness: Brightness.dark),
   appBarTheme: const AppBarTheme(
-    color: Color(0xFF416AA3),
-    titleTextStyle:
-        TextStyle(letterSpacing: 6, fontSize: 22, fontWeight: FontWeight.w600),
+    color: Colors.black,
+    elevation: 0,
+    centerTitle: true,
   ),
 );
 
