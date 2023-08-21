@@ -131,8 +131,10 @@ class PauseMenuState extends State<PauseMenu> {
       actionButton(
         (selectedOptionIndex == 1 ? '> ' : '') + 'cancel'.i18n.toUpperCase(),
         () {
-          widget.gameRef.overlays.remove('pauseMenu');
-          widget.gameRef.resume();
+          setState(() {
+            pauseMode = PauseMode.pause;
+            reloadInfo();
+          });
         },
       ),
     ];
