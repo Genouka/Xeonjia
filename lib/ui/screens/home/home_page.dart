@@ -47,13 +47,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         },
         child: InkWell(
           onTap: startGame,
+          overlayColor:
+              MaterialStateColor.resolveWith((states) => Colors.transparent),
           child: DecoratedBox(
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [Color(0xFF438EBA), Color(0xFFA6B5C1)],
-            )),
+            decoration: gradientDecoration(withOpacity: true),
             child: AnimatedBackground(
               behaviour: RainParticleBehaviour(
                 ParticleOptions(
@@ -72,9 +69,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 children: <Widget>[
                   Expanded(
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
+                        const Spacer(),
                         Stack(
                           children: <Widget>[
                             Text(
@@ -86,9 +84,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                     (MediaQuery.of(context).size.width - 20) /
                                         24),
                                 fontSize: min(
-                                    160,
-                                    (MediaQuery.of(context).size.width - 20) /
-                                        4),
+                                  MediaQuery.of(context).size.height / 1.75,
+                                  min(
+                                      160,
+                                      (MediaQuery.of(context).size.width - 20) /
+                                          4),
+                                ),
                                 fontFamily: 'dd5x7',
                                 foreground: Paint()
                                   ..style = PaintingStyle.stroke
@@ -106,33 +107,54 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                         24),
                                 color: Colors.white,
                                 fontSize: min(
-                                    160,
-                                    (MediaQuery.of(context).size.width - 20) /
-                                        4),
+                                    MediaQuery.of(context).size.height / 1.75,
+                                    min(
+                                        160,
+                                        (MediaQuery.of(context).size.width -
+                                                20) /
+                                            4)),
                                 fontFamily: 'dd5x7',
                               ),
                             ),
                           ],
                         ),
-                        Container(
-                          margin: const EdgeInsets.only(top: 60),
-                          child: Text(
-                            '> ' +
-                                (Platform.isAndroid
-                                        ? 'Tap to play'.i18n
-                                        : 'Press enter'.i18n)
-                                    .toUpperCase() +
-                                ' <',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: min(
-                                      48,
-                                      (MediaQuery.of(context).size.width - 20) /
-                                          8) /
-                                  (settings.smallerFont ? 1.5 : 1),
-                              fontFamily: settings.font,
-                            ),
+                        Text(
+                          'Ice Adventures'.i18n,
+                          maxLines: 1,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: min(
+                                    MediaQuery.of(context).size.height / 6,
+                                    min(
+                                        72,
+                                        (MediaQuery.of(context).size.width -
+                                                20) /
+                                            8)) /
+                                (settings.smallerFont ? 1.5 : 1),
+                            fontFamily: settings.font,
+                          ),
+                        ),
+                        const Spacer(),
+                        const Spacer(),
+                        Text(
+                          '> ' +
+                              (Platform.isAndroid
+                                      ? 'Tap to play'.i18n
+                                      : 'Press enter'.i18n)
+                                  .toUpperCase() +
+                              ' <',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: min(
+                                    MediaQuery.of(context).size.height / 8,
+                                    min(
+                                        48,
+                                        (MediaQuery.of(context).size.width -
+                                                20) /
+                                            10)) /
+                                (settings.smallerFont ? 1.5 : 1),
+                            fontFamily: settings.font,
                           ),
                         ),
                       ],

@@ -8,7 +8,7 @@ final appTheme = ThemeData(
       .copyWith(secondary: Colors.grey, brightness: Brightness.dark),
   appBarTheme: const AppBarTheme(
     toolbarHeight: 80,
-    color: Colors.black,
+    color: Colors.transparent,
     elevation: 0,
     centerTitle: true,
   ),

@@ -16,57 +16,66 @@ class WelcomePage extends StatelessWidget {
       extendBodyBehindAppBar: true,
       extendBody: true,
       appBar: null,
-      body: Center(
-        child: ScrollConfiguration(
-          behavior: NoGlow(),
-          child: SingleChildScrollView(
-            child: Container(
-              color: Theme.of(context).primaryColor,
-              margin: const EdgeInsets.symmetric(horizontal: 10),
-              constraints: const BoxConstraints(maxWidth: 600),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
-                    child: Text(
-                      'Welcome'.i18n,
-                      style: TextStyle(fontSize: 48, fontFamily: settings.font),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Text(
-                      "Your journey is about to begin!\nWhat's your name?".i18n,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 32, fontFamily: settings.font),
-                    ),
-                  ),
-                  Center(
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 10),
-                      constraints: const BoxConstraints(maxWidth: 250),
-                      child: insertNameForm(
-                          _formKey, _textFieldController, saveName, context),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () =>
-                            saveName(context, _textFieldController.text),
+      body: DecoratedBox(
+        decoration: gradientDecoration(),
+        child: Container(
+          color: Colors.black45,
+          child: Center(
+            child: ScrollConfiguration(
+              behavior: NoGlow(),
+              child: SingleChildScrollView(
+                child: Container(
+                  color: Colors.white12,
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  constraints: const BoxConstraints(maxWidth: 600),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20),
                         child: Text(
-                          '> ' "Let's start!".i18n,
+                          'Welcome'.i18n,
                           style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 32,
-                              fontFamily: settings.font),
+                              fontSize: 48, fontFamily: settings.font),
                         ),
                       ),
-                    ),
-                  )
-                ],
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10),
+                        child: Text(
+                          "Your journey is about to begin!\nWhat's your name?"
+                              .i18n,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 32, fontFamily: settings.font),
+                        ),
+                      ),
+                      Center(
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          constraints: const BoxConstraints(maxWidth: 250),
+                          child: insertNameForm(_formKey, _textFieldController,
+                              saveName, context),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20),
+                        child: Center(
+                          child: TextButton(
+                            onPressed: () =>
+                                saveName(context, _textFieldController.text),
+                            child: Text(
+                              '> ' "Let's start!".i18n,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 32,
+                                  fontFamily: settings.font),
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ),
             ),
           ),

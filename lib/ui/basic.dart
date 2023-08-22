@@ -36,11 +36,26 @@ class NoGlow extends ScrollBehavior {
   }
 }
 
+/// Gradient decoration used in HomePage, SettingsPage, InfoPage, WelcomePage
+BoxDecoration gradientDecoration({bool withOpacity = false}) => BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          Color(withOpacity ? 0x85306684 : 0xFF306684),
+          const Color(0xFFC1D5DE),
+        ],
+      ),
+    );
+
 /// Close button in settings and info pages
-TextButton closeButton(BuildContext context) => TextButton(
+TextButton closeButton(
+        BuildContext context, ValueChanged<bool>? onFocusChange) =>
+    TextButton(
+      onFocusChange: onFocusChange,
       style: ButtonStyle(
         overlayColor:
-            MaterialStateColor.resolveWith((states) => const Color(0xFF323232)),
+            MaterialStateColor.resolveWith((states) => Colors.white24),
       ),
       onPressed: () => Navigator.of(context).pop(),
       child: const Text(
@@ -81,12 +96,26 @@ Widget insertNameForm(
         LatiniseAndUpperCaseTextFormatter(),
         FilteringTextInputFormatter.allow(RegExp('[a-zA-Z ]')),
       ],
+      cursorColor: Colors.white,
       decoration: InputDecoration(
-        hintText: 'Insert your name here'.i18n,
+        hintText: 'Insert your name'.i18n,
         hintStyle: TextStyle(fontSize: 32, fontFamily: settings.font),
+        enabledBorder: const UnderlineInputBorder(
+          borderSide: BorderSide(color: Colors.white),
+        ),
+        focusedBorder: const UnderlineInputBorder(
+          borderSide: BorderSide(color: Colors.white),
+        ),
         errorStyle: TextStyle(
           fontSize: 24,
+          color: Colors.white,
           fontFamily: settings.font,
+        ),
+        errorBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.white),
+        ),
+        focusedErrorBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.white),
         ),
       ),
     ),
