@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xeonjia/ui/basic.dart';
-import 'package:xeonjia/ui/screens/welcome/widgets/choose_name.dart';
+import 'package:xeonjia/ui/screens/home/home_page.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
 /// Page shown on first startup
 class WelcomePage extends StatelessWidget {
-  WelcomePage([this.homePage]);
-  final Widget? homePage;
   final _textFieldController = TextEditingController(text: mainCharacter.name);
   final _formKey = GlobalKey<FormState>();
 
@@ -17,29 +15,60 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       extendBody: true,
-      appBar: AppBar(elevation: 0, backgroundColor: Colors.transparent),
-      body: ChooseName(_textFieldController, _formKey, saveName),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.transparent,
-        elevation: 0,
-        child: Container(
-          margin: const EdgeInsets.all(15),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Theme.of(context).primaryColor,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50)),
-                ),
-                onPressed: () => saveName(context, _textFieldController.text),
-                child: Text(
-                  'OK'.i18n,
-                  style: const TextStyle(color: Colors.white),
-                ),
-              )
-            ],
+      appBar: null,
+      body: Center(
+        child: ScrollConfiguration(
+          behavior: NoGlow(),
+          child: SingleChildScrollView(
+            child: Container(
+              color: Theme.of(context).primaryColor,
+              margin: const EdgeInsets.symmetric(horizontal: 10),
+              constraints: const BoxConstraints(maxWidth: 600),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    child: Text(
+                      'Welcome'.i18n,
+                      style: TextStyle(fontSize: 48, fontFamily: settings.font),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Text(
+                      "Your journey is about to begin!\nWhat's your name?".i18n,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 32, fontFamily: settings.font),
+                    ),
+                  ),
+                  Center(
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      constraints: const BoxConstraints(maxWidth: 250),
+                      child: insertNameForm(
+                          _formKey, _textFieldController, saveName, context),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    child: Center(
+                      child: TextButton(
+                        onPressed: () =>
+                            saveName(context, _textFieldController.text),
+                        child: Text(
+                          '> ' "Let's start!".i18n,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 32,
+                              fontFamily: settings.font),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
           ),
         ),
       ),
@@ -56,9 +85,7 @@ class WelcomePage extends StatelessWidget {
         saveSettings();
       }
       SystemChrome.restoreSystemUIOverlays();
-      homePage == null
-          ? Navigator.pop(context)
-          : Navigator.pushReplacement(context, FadeRoute(homePage!));
+      Navigator.pushReplacement(context, FadeRoute(HomePage()));
     }
   }
 }

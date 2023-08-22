@@ -83,7 +83,7 @@ Widget insertNameForm(
       ],
       decoration: InputDecoration(
         hintText: 'Insert your name here'.i18n,
-        hintStyle: TextStyle(fontSize: 24, fontFamily: settings.font),
+        hintStyle: TextStyle(fontSize: 32, fontFamily: settings.font),
         errorStyle: TextStyle(
           fontSize: 24,
           fontFamily: settings.font,

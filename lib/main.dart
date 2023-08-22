@@ -52,7 +52,7 @@ class Xeonjia extends StatelessWidget {
       child: MaterialApp(
         title: 'Xeonjia',
         theme: appTheme,
-        home: settings.firstRun ? WelcomePage(HomePage()) : HomePage(),
+        home: settings.firstRun ? WelcomePage() : HomePage(),
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
