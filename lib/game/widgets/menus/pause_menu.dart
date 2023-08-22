@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia.dart';
+import 'package:xeonjia/ui/themes.dart';
 
 // i18n: 'pause'.i18n, 'restart'.i18n, 'exit'.i18n
 enum PauseMode { pause, restart, exit }
@@ -70,9 +71,9 @@ class PauseMenuState extends State<PauseMenu> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
+            flex: 2,
             child: Container(
-              margin: const EdgeInsets.only(bottom: 5),
-              alignment: Alignment.bottomCenter,
+              alignment: Alignment.center,
               child: FittedBox(
                 fit: BoxFit.fitWidth,
                 child: Text(
@@ -84,6 +85,7 @@ class PauseMenuState extends State<PauseMenu> {
           ),
           divider(context),
           Expanded(
+            flex: 3,
             child: Center(
               child: ScrollConfiguration(
                 behavior: NoGlow(),
@@ -101,12 +103,7 @@ class PauseMenuState extends State<PauseMenu> {
             ),
           ),
           divider(context),
-          Expanded(
-            child: Container(
-              margin: const EdgeInsets.only(top: 5),
-              child: Wrap(alignment: WrapAlignment.center, children: buttons),
-            ),
-          ),
+          Expanded(flex: 2, child: Center(child: Wrap(children: buttons))),
         ],
       ),
     );
@@ -140,35 +137,34 @@ class PauseMenuState extends State<PauseMenu> {
     ];
     switch (pauseMode!) {
       case PauseMode.pause:
-        text = 'HP: %s'
-                .i18n
-                .fill([widget.gameRef.playerOne!.hp.round().toString()]) +
-            '\n' +
+        text = 'You have %s HP and %s ¤.'.i18n.fill([
+              widget.gameRef.playerOne!.hp.round().toString(),
+              widget.gameRef.playerOne!.money
+            ]) +
             (widget.gameRef.inBattle &&
                     widget.gameRef.milla != null &&
                     widget.gameRef.milla!.teamId == 0
-                ? "Milla's HP: %s"
-                        .i18n
-                        .fill([widget.gameRef.milla!.hp.round().toString()]) +
-                    '\n'
+                ? '\n' 'Milla has %s HP.'
+                    .i18n
+                    .fill([widget.gameRef.milla!.hp.round().toString()])
                 : '') +
             (widget.gameRef.inBattle &&
                     widget.gameRef.september != null &&
                     widget.gameRef.september!.teamId == 0
-                ? "September's HP: %s".i18n.fill(
-                        [widget.gameRef.september!.hp.round().toString()]) +
-                    '\n'
+                ? ' ' 'September has %s HP.'
+                    .i18n
+                    .fill([widget.gameRef.september!.hp.round().toString()])
                 : '') +
-            'money: %s ¤'.i18n.fill([widget.gameRef.playerOne!.money]) +
-            '\n' +
-            'gems: %s'.i18n.fill([widget.gameRef.playerOne!.gemCount]) +
-            '\n' +
-            'play time: %s min'
-                .i18n
-                .fill([widget.gameRef.playerOne!.minutesPlayed.round()]);
+            '\n\n' 'What do you want to do?'.i18n;
         buttons = [
           actionButton(
-            (selectedOptionIndex == 0 ? '> ' : '') + 'exit'.i18n.toUpperCase(),
+              (selectedOptionIndex == 0 ? '> ' : '') +
+                  'resume'.i18n.toUpperCase(), () {
+            widget.gameRef.overlays.remove('pauseMenu');
+            widget.gameRef.resume();
+          }),
+          actionButton(
+            (selectedOptionIndex == 1 ? '> ' : '') + 'exit'.i18n.toUpperCase(),
             () {
               setState(() {
                 pauseMode = PauseMode.exit;
@@ -177,7 +173,7 @@ class PauseMenuState extends State<PauseMenu> {
             },
           ),
           actionButton(
-            (selectedOptionIndex == 1 ? '> ' : '') +
+            (selectedOptionIndex == 2 ? '> ' : '') +
                 'restart'.i18n.toUpperCase(),
             () {
               setState(() {
@@ -186,12 +182,6 @@ class PauseMenuState extends State<PauseMenu> {
               });
             },
           ),
-          actionButton(
-              (selectedOptionIndex == 2 ? '> ' : '') +
-                  'resume'.i18n.toUpperCase(), () {
-            widget.gameRef.overlays.remove('pauseMenu');
-            widget.gameRef.resume();
-          }),
         ];
         break;
       case PauseMode.restart:
@@ -202,8 +192,29 @@ class PauseMenuState extends State<PauseMenu> {
       case PauseMode.exit:
         text = 'Are you sure you want to quit this game?'.i18n +
             '\n\n' +
-            'Game data since the last time you changed your location will be lost.'
-                .i18n;
+            'Game data since the last location change will be lost.'.i18n;
     }
   }
 }
+
+InkWell actionButton(String text, VoidCallback onPressed) => InkWell(
+      onTap: onPressed,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 14),
+        child: Text(
+          text,
+          textAlign: TextAlign.center,
+          style: gameTheme.textTheme.bodyMedium,
+        ),
+      ),
+    );
+
+Widget divider(BuildContext context) => Container(
+      height: 3,
+      width: MediaQuery.of(context).size.width / 1.5,
+      constraints: const BoxConstraints(maxWidth: 600),
+      decoration: const BoxDecoration(
+        color: Colors.white24,
+        borderRadius: BorderRadius.all(Radius.circular(30)),
+      ),
+    );

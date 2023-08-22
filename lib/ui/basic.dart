@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:xeonjia/ui/themes.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/latinise.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
@@ -48,29 +47,6 @@ TextButton closeButton(BuildContext context) => TextButton(
         '×',
         style:
             TextStyle(color: Colors.white, fontSize: 48, fontFamily: 'dd5x7'),
-      ),
-    );
-
-/// Button used in pauseMenu and backpackMenu
-InkWell actionButton(String text, VoidCallback onPressed) => InkWell(
-      onTap: onPressed,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: Text(
-          text,
-          textAlign: TextAlign.center,
-          style: gameTheme.textTheme.bodyMedium,
-        ),
-      ),
-    );
-
-/// White line that divides children of Columns in pauseMenu and backpackMenu
-Widget divider(BuildContext context) => Container(
-      height: 3,
-      width: MediaQuery.of(context).size.width / 1.5,
-      decoration: const BoxDecoration(
-        color: Colors.white54,
-        borderRadius: BorderRadius.all(Radius.circular(30)),
       ),
     );
 
