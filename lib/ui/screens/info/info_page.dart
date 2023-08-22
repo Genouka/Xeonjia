@@ -81,7 +81,6 @@ class _InfoPageState extends State<InfoPage> {
         ),
         leading: Container(),
         actions: [closeButton(context)],
-        backgroundColor: Colors.black,
       ),
       body: ScrollConfiguration(
         behavior: NoGlow(),
@@ -96,7 +95,7 @@ class _InfoPageState extends State<InfoPage> {
               itemBuilder: (BuildContext context, int index) => Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4),
                 child: ListTile(
-                  tileColor: const Color(0xFF0C0C0C),
+                  tileColor: Theme.of(context).primaryColor,
                   leading: Icon(
                     infoMenuList[index]['icon'].icon,
                     size: 27,

@@ -54,12 +54,12 @@ class _OptionListState extends State<OptionList> {
                               fontSize: 24,
                               fontFamily: settings.font,
                               color: Colors.grey)),
-                      tileColor: const Color(0xFF0C0C0C),
+                      tileColor: Theme.of(context).primaryColor,
                       onTap: () => showDialog(
                           context: context,
                           builder: (BuildContext context) {
                             return AlertDialog(
-                              title: Text('Your name'.i18n,
+                              title: Text("What's your name?".i18n,
                                   style: TextStyle(
                                       fontSize: 32, fontFamily: settings.font),
                                   textAlign: TextAlign.center),
@@ -122,7 +122,7 @@ class _OptionListState extends State<OptionList> {
                                 color: Colors.white),
                           ),
                           activeColor: Colors.blueGrey,
-                          tileColor: const Color(0xFF0C0C0C),
+                          tileColor: Theme.of(context).primaryColor,
                           subtitle: Text('Enable background music'.i18n,
                               style: TextStyle(
                                   fontSize: 24,
@@ -146,7 +146,7 @@ class _OptionListState extends State<OptionList> {
                                   fontFamily: settings.font,
                                   color: Colors.white)),
                           activeColor: Colors.blueGrey,
-                          tileColor: const Color(0xFF0C0C0C),
+                          tileColor: Theme.of(context).primaryColor,
                           subtitle: Text('Enable sound effects'.i18n,
                               style: TextStyle(
                                   fontSize: 24,
@@ -169,7 +169,7 @@ class _OptionListState extends State<OptionList> {
                                 fontFamily: settings.font,
                                 color: Colors.white)),
                         activeColor: Colors.blueGrey,
-                        tileColor: const Color(0xFF0C0C0C),
+                        tileColor: Theme.of(context).primaryColor,
                         subtitle: Text(
                             'Enable the directional pad.\nTo change its position, long-press the D-pad in the center.'
                                 .i18n,
@@ -199,7 +199,7 @@ class _OptionListState extends State<OptionList> {
                                 fontSize: 24,
                                 fontFamily: settings.font,
                                 color: Colors.grey)),
-                        tileColor: const Color(0xFF0C0C0C),
+                        tileColor: Theme.of(context).primaryColor,
                         trailing: DropdownButton<double>(
                           value: settings.dPadSize,
                           onChanged: (double? newValue) {
@@ -240,7 +240,7 @@ class _OptionListState extends State<OptionList> {
                               fontSize: 24,
                               fontFamily: settings.font,
                               color: Colors.grey)),
-                      tileColor: const Color(0xFF0C0C0C),
+                      tileColor: Theme.of(context).primaryColor,
                       trailing: DropdownButton<double>(
                         value: settings.zoomIn,
                         onChanged: (double? newValue) {
@@ -280,7 +280,7 @@ class _OptionListState extends State<OptionList> {
                               fontSize: 24,
                               fontFamily: settings.font,
                               color: Colors.grey)),
-                      tileColor: const Color(0xFF0C0C0C),
+                      tileColor: Theme.of(context).primaryColor,
                       trailing: DropdownButton<Locale>(
                         value: settings.useSystemLanguage
                             ? const Locale.fromSubtags()
