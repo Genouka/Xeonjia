@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:collection/collection.dart';
 import 'package:flame/extensions.dart';
 import 'package:flame/input.dart';
@@ -7,6 +9,15 @@ import 'package:xeonjia/game/xeonjia.dart';
 
 /// Handle user input
 extension InputController on XeonjiaGame {
+  String get inspectButtonKey =>
+      Platform.isLinux || Platform.isWindows ? 'X' : 'A';
+  String get punchButtonKey =>
+      Platform.isLinux || Platform.isWindows ? 'Q' : 'P';
+  String get snowballButtonKey =>
+      Platform.isLinux || Platform.isWindows ? 'E' : 'S';
+  String get mineButtonKey =>
+      Platform.isLinux || Platform.isWindows ? 'R' : 'M';
+
   static Direction? _gesturesDirection;
   static double _gesturesElapsed = 0;
   static bool _gesturesPlayerMoved = false;
@@ -124,7 +135,8 @@ extension InputController on XeonjiaGame {
         dialogBox.state?.selectNextAnswer();
       } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
         dialogBox.state?.selectPreviousAnswer();
-      } else if (event.logicalKey == LogicalKeyboardKey.space &&
+      } else if ((event.logicalKey == LogicalKeyboardKey.space ||
+              event.logicalKey == LogicalKeyboardKey.keyX) &&
           (dialogBox.state?.isShowingAnswers ?? false)) {
         dialogBox.state?.chooseAnswer();
       }
@@ -224,7 +236,8 @@ extension InputController on XeonjiaGame {
         movePlayer(Direction.right);
       } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
         movePlayer(Direction.left);
-      } else if (event.logicalKey == LogicalKeyboardKey.space) {
+      } else if (event.logicalKey == LogicalKeyboardKey.space ||
+          event.logicalKey == LogicalKeyboardKey.keyX) {
         user?.inspect();
       } else if (event.logicalKey == LogicalKeyboardKey.keyA) {
         user!.updateOrientation(Direction.left);
@@ -236,9 +249,13 @@ extension InputController on XeonjiaGame {
         user!.updateOrientation(Direction.down);
       } else if (event.logicalKey == LogicalKeyboardKey.keyQ) {
         if (inBattle) user!.shoot(Weapons.punch.id);
-      } else if (event.logicalKey == LogicalKeyboardKey.keyR) {
+      } else if (event.logicalKey == LogicalKeyboardKey.keyE) {
         if (inBattle && user!.hasWeaponId(Weapons.snowball.id)) {
           user!.shoot(Weapons.snowball.id);
+        }
+      } else if (event.logicalKey == LogicalKeyboardKey.keyR) {
+        if (inBattle && user!.hasWeaponId(Weapons.mine.id)) {
+          user!.shoot(Weapons.mine.id);
         }
       } else if (event.logicalKey == LogicalKeyboardKey.keyB) {
         if (overlays.isActive('backpackButton') && isBackpackButtonActive) {

@@ -5,7 +5,7 @@ import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
-/// A single game button (used for A, P, S, +, -, ...)
+/// A single game button (used for A, P, S, M, +, -, ...)
 class Button extends HudButtonComponent {
   Button(
     this.text,
@@ -32,13 +32,13 @@ class Button extends HudButtonComponent {
   }
 
   Button.A(XeonjiaGame gameRef)
-      : this('A', () => gameRef.user!.inspect(),
+      : this(gameRef.inspectButtonKey, () => gameRef.user!.inspect(),
             visibility: () =>
                 !gameRef.miniMapActive && (gameRef.user?.isMyTurn ?? false));
 
   Button.P(XeonjiaGame gameRef)
       : this(
-          'P',
+          gameRef.punchButtonKey,
           () => gameRef.user!.shoot(0),
           buttonPosition: Anchor.topLeft,
           color: Colors.blue.shade800,
@@ -49,7 +49,7 @@ class Button extends HudButtonComponent {
 
   Button.S(XeonjiaGame gameRef)
       : this(
-          'S',
+          gameRef.snowballButtonKey,
           () => gameRef.user!.shoot(Weapons.snowball.id),
           buttonPosition: Anchor.topRight,
           color: Colors.blueGrey.shade800,
@@ -62,7 +62,7 @@ class Button extends HudButtonComponent {
 
   Button.M(XeonjiaGame gameRef)
       : this(
-          'M',
+          gameRef.mineButtonKey,
           () => gameRef.user!.shoot(Weapons.mine.id),
           buttonPosition: Anchor.bottomLeft,
           color: Colors.blueGrey.shade800,

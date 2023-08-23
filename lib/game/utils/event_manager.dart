@@ -581,6 +581,9 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     saveUserData();
     return #NONE;
   });
+  _('get-inspect-key', 0, (Cell? x) => gameRef.inspectButtonKey);
+  _('get-snowball-key', 0, (Cell? x) => gameRef.snowballButtonKey);
+  _('get-mine-key', 0, (Cell? x) => gameRef.mineButtonKey);
 
   // Built-in procedures
   _('car', 1, (Cell? x) => (x!.car as Cell).car!);

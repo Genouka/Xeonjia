@@ -619,19 +619,23 @@ class XeonjiaGame extends FlameGame
       "After these 3 moves, it is the opponent's turn.".i18n,
       'A move can be used to walk, use items, attack or examine what is in front of you.'
           .i18n,
-      'You should already know the "A" button, it examines objects, plants and people.'
-          .i18n,
-      'To attack use the "P" button. In this way you punch the enemy in front of you.'
-          .i18n,
+      'You should already know the "%s" button, it examines objects, plants and people.'
+          .i18n
+          .fill([inspectButtonKey]),
+      'To attack use the "%s" button. In this way you punch the enemy in front of you.'
+          .i18n
+          .fill([punchButtonKey]),
       if (playerOne!.hasWeaponId(Weapons.snowball.id))
-        'Otherwise, throw snowballs with the "S" button in the direction you are looking at.'
-            .i18n,
+        'Otherwise, throw snowballs with the "%s" button in the direction you are looking at.'
+            .i18n
+            .fill([snowballButtonKey]),
       if (playerOne!.hasWeaponId(Weapons.snowball.id))
         'If you run out of snowballs, get some snow from the snowdrifts around you.'
             .i18n,
       if (playerOne!.hasWeaponId(Weapons.mine.id))
-        'Mines you place under you with the "M" button explode as soon as an enemy steps on them.'
-            .i18n,
+        'Mines you place under you with the "%s" button explode as soon as an enemy steps on them.'
+            .i18n
+            .fill([mineButtonKey]),
       'Remember, enemies also have HP. Hit them multiple times to knock them out!'
           .i18n,
       'And if you have few HP take advantage of a move you have available to eat or drink something you have in your backpack!'
