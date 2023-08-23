@@ -168,7 +168,7 @@ class VirtualDPad extends StatefulWidget {
 class _VirtualDPadState extends State<VirtualDPad> {
   final Color arrowColor = Colors.white.withOpacity(0.7);
   final Color buttonColor = Colors.grey.withOpacity(0.3);
-  Direction? longPressingDirection;
+  Direction? direction;
   double size = 0;
   bool moving = false;
 
@@ -209,30 +209,21 @@ class _VirtualDPadState extends State<VirtualDPad> {
             left: settings.dPadOffset.dx,
             bottom: settings.dPadOffset.dy,
             child: GestureDetector(
-              onTapDown: (TapDownDetails details) {
-                Direction? direction = getDirection(details.localPosition);
-                if (direction != null && widget.gameRef.user != null) {
-                  widget.gameRef.user!.isStationary
-                      ? widget.gameRef.movePlayer(direction)
-                      : widget.gameRef.user!.updateOrientation(direction);
-                }
-              },
-              onLongPressStart: (LongPressStartDetails details) async {
-                longPressingDirection = getDirection(details.localPosition);
-                if (longPressingDirection == null) {
+              onPanStart: (details) async {
+                direction = getDirection(details.localPosition);
+                if (direction == null) {
                   moving = true;
                 } else {
-                  while (longPressingDirection != null &&
+                  while (direction != null &&
                       widget.gameRef.map.id == currentMapId &&
                       widget.gameRef.isNotPaused &&
                       !moving) {
-                    widget.gameRef
-                        .movePlayer(longPressingDirection!, slow: true);
+                    widget.gameRef.movePlayer(direction!, slow: true);
                     await Future.delayed(const Duration(milliseconds: 50));
                   }
                 }
               },
-              onLongPressMoveUpdate: (LongPressMoveUpdateDetails details) {
+              onPanUpdate: (details) {
                 if (moving) {
                   setState(() => settings.dPadOffset = Offset(
                       details.globalPosition.dx - size * 1.5,
@@ -240,12 +231,11 @@ class _VirtualDPadState extends State<VirtualDPad> {
                           details.globalPosition.dy -
                           size * 1.5));
                 } else {
-                  longPressingDirection = getDirection(details.localPosition) ??
-                      longPressingDirection;
+                  direction = getDirection(details.localPosition) ?? direction;
                 }
               },
-              onLongPressEnd: (_) => onLongPressEnd(),
-              onLongPressCancel: onLongPressEnd,
+              onPanCancel: onLongPressEnd,
+              onPanEnd: (_) => onLongPressEnd(),
               child: Column(
                 children: [
                   Row(
@@ -280,7 +270,7 @@ class _VirtualDPadState extends State<VirtualDPad> {
   }
 
   void onLongPressEnd() {
-    longPressingDirection = null;
+    direction = null;
     if (moving) saveSettings();
     moving = false;
   }
