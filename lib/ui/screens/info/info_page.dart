@@ -102,51 +102,48 @@ class _InfoPageState extends State<InfoPage> {
                   child: Container(
                     alignment: Alignment.center,
                     constraints: const BoxConstraints(maxWidth: 500),
-                    child: SingleChildScrollView(
-                      child: ListView.builder(
-                        shrinkWrap: true,
-                        padding: const EdgeInsets.all(8),
-                        itemCount: infoMenuList.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return Container(
-                            margin: const EdgeInsets.symmetric(
-                                vertical: 4, horizontal: 8),
-                            color: focusItem == index
-                                ? Colors.white24
-                                : Colors.white12,
-                            child: ListTile(
-                              onFocusChange: (bool focus) => setState(() {
-                                focus ? focusItem = index : null;
-                              }),
-                              leading: Icon(
-                                infoMenuList[index]['icon'].icon,
-                                size: 27,
-                                color: Colors.white70,
-                              ),
-                              title: Text(
-                                infoMenuList[index]['title'],
-                                style: TextStyle(
-                                    fontSize: 32, fontFamily: settings.font),
-                              ),
-                              subtitle: Text(infoMenuList[index]['subtitle'],
-                                  style: TextStyle(
-                                      fontSize: 24,
-                                      color: Colors.white70,
-                                      fontFamily: settings.font)),
-                              onTap: () async {
-                                if (infoMenuList[index]['url'].length != 0) {
-                                  launchUrl(
-                                      Uri.parse(infoMenuList[index]['url']),
-                                      mode: LaunchMode.externalApplication);
-                                } else if (infoMenuList[index]['title'] ==
-                                    'Third Party Licenses'.i18n) {
-                                  _licenseDialog();
-                                }
-                              },
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      padding: const EdgeInsets.all(8),
+                      itemCount: infoMenuList.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Container(
+                          margin: const EdgeInsets.symmetric(
+                              vertical: 4, horizontal: 8),
+                          color: focusItem == index
+                              ? Colors.white24
+                              : Colors.white12,
+                          child: ListTile(
+                            onFocusChange: (bool focus) => setState(() {
+                              focus ? focusItem = index : null;
+                            }),
+                            leading: Icon(
+                              infoMenuList[index]['icon'].icon,
+                              size: 27,
+                              color: Colors.white70,
                             ),
-                          );
-                        },
-                      ),
+                            title: Text(
+                              infoMenuList[index]['title'],
+                              style: TextStyle(
+                                  fontSize: 32, fontFamily: settings.font),
+                            ),
+                            subtitle: Text(infoMenuList[index]['subtitle'],
+                                style: TextStyle(
+                                    fontSize: 24,
+                                    color: Colors.white70,
+                                    fontFamily: settings.font)),
+                            onTap: () async {
+                              if (infoMenuList[index]['url'].length != 0) {
+                                launchUrl(Uri.parse(infoMenuList[index]['url']),
+                                    mode: LaunchMode.externalApplication);
+                              } else if (infoMenuList[index]['title'] ==
+                                  'Third Party Licenses'.i18n) {
+                                _licenseDialog();
+                              }
+                            },
+                          ),
+                        );
+                      },
                     ),
                   ),
                 ),
