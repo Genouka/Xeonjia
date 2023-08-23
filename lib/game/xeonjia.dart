@@ -52,7 +52,6 @@ export 'package:xeonjia/game/widgets/menus/backpack_menu.dart';
 export 'package:xeonjia/game/widgets/menus/items_menu.dart';
 export 'package:xeonjia/game/widgets/menus/pause_menu.dart';
 export 'package:xeonjia/game/widgets/menus/shop_menu.dart';
-export 'package:xeonjia/game/widgets/menus/the_end_menu.dart';
 export 'package:xeonjia/game/widgets/menus/you_lost_menu.dart';
 export 'package:xeonjia/game/widgets/virtual_gamepad.dart';
 export 'package:xeonjia/game/widgets/world_map.dart';
