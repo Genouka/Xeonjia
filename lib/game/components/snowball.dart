@@ -23,7 +23,8 @@ class SnowballComponent extends BasicComponent with Walker {
   String? name = 'snowball';
 
   @override
-  Sprite getSpriteFromAtlas() => atlas.getSprite(name!);
+  Sprite getSpriteFromAtlas() =>
+      atlas.getSprite('${name!}-${direction!.index}');
 
   @override
   Direction? direction;
