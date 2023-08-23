@@ -60,6 +60,7 @@ class SettingsPageState extends State<SettingsPage> {
                   Container(height: 80),
                   Expanded(
                     child: Container(
+                      padding: const EdgeInsets.all(8),
                       alignment: Alignment.center,
                       constraints: const BoxConstraints(maxWidth: 500),
                       child: SingleChildScrollView(
