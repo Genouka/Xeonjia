@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:collection/collection.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
 /// Manage mini-map and world-map
@@ -47,10 +46,10 @@ extension MapController on XeonjiaGame {
     worldMapEnabled = enable ?? !worldMapEnabled;
     if (worldMapEnabled) {
       zoomMiniMap(toValue: 1);
-      var map = WorldMap();
-      this.add(map);
+      worldMapComponent = WorldMap();
+      this.add(worldMapComponent!);
       overlays.remove('mapNameBox');
-      if (!(currentEventLog['howToWorldMap'] ?? false) && this.map.id != '1') {
+      if (!(currentEventLog['howToWorldMap'] ?? false) && map.id != '1') {
         currentEventLog['howToWorldMap'] = true;
         setMessage(Message(
             this,
@@ -60,7 +59,8 @@ extension MapController on XeonjiaGame {
     } else {
       zoomMiniMap(toValue: 1);
       updateCamera(user!.x, user!.y);
-      children.whereType<WorldMap>().firstOrNull?.removeFromParent();
+      worldMapComponent?.removeFromParent();
+      worldMapComponent = null;
       addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
     }
   }

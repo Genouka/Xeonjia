@@ -141,27 +141,43 @@ extension InputController on XeonjiaGame {
         dialogBox.state?.chooseAnswer();
       }
     } else if (miniMapEnabled) {
-      /// Mini-map
+      /// Mini map and World map
       if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
-        camera.snapTo(Vector2(
-            moveCamera(size.x, map.width, camera.position.x + size.x / 2),
-            moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
-                camera.position.y + 50 + size.y / 2)));
+        if (worldMapEnabled) {
+          worldMapComponent?.movePointer(Direction.down);
+        } else {
+          camera.snapTo(Vector2(
+              moveCamera(size.x, map.width, camera.position.x + size.x / 2),
+              moveCamera(
+                  size.y, map.height, camera.position.y + 50 + size.y / 2)));
+        }
       } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
-        camera.snapTo(Vector2(
-            moveCamera(size.x, map.width, camera.position.x + size.x / 2),
-            moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
-                camera.position.y - 50 + size.y / 2)));
+        if (worldMapEnabled) {
+          worldMapComponent?.movePointer(Direction.up);
+        } else {
+          camera.snapTo(Vector2(
+              moveCamera(size.x, map.width, camera.position.x + size.x / 2),
+              moveCamera(
+                  size.y, map.height, camera.position.y - 50 + size.y / 2)));
+        }
       } else if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
-        camera.snapTo(Vector2(
-            moveCamera(size.x, map.width, camera.position.x + 50 + size.x / 2),
-            moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
-                camera.position.y + size.y / 2)));
+        if (worldMapEnabled) {
+          worldMapComponent?.movePointer(Direction.right);
+        } else {
+          camera.snapTo(Vector2(
+              moveCamera(
+                  size.x, map.width, worldMapComponent!.pointer.x + size.x / 2),
+              moveCamera(size.y, map.height, camera.position.y + size.y / 2)));
+        }
       } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
-        camera.snapTo(Vector2(
-            moveCamera(size.x, map.width, camera.position.x - 50 + size.x / 2),
-            moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
-                camera.position.y + size.y / 2)));
+        if (worldMapEnabled) {
+          worldMapComponent?.movePointer(Direction.left);
+        } else {
+          camera.snapTo(Vector2(
+              moveCamera(
+                  size.x, map.width, camera.position.x - 50 + size.x / 2),
+              moveCamera(size.y, map.height, camera.position.y + size.y / 2)));
+        }
       } else if (event.logicalKey == LogicalKeyboardKey.add) {
         zoomMiniMap();
       } else if (event.logicalKey == LogicalKeyboardKey.minus) {
@@ -171,6 +187,9 @@ extension InputController on XeonjiaGame {
         worldMap();
       } else if (event.logicalKey == LogicalKeyboardKey.keyH) {
         hideHints = !hideHints;
+      } else if (event.logicalKey == LogicalKeyboardKey.space ||
+          event.logicalKey == LogicalKeyboardKey.keyX) {
+        worldMapComponent?.selectPoint();
       } else if (event.logicalKey == LogicalKeyboardKey.escape) {
         miniMap();
       }

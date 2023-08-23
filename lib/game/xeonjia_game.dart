@@ -524,6 +524,7 @@ class XeonjiaGame extends FlameGame
 
   /// World map
   bool worldMapEnabled = false;
+  WorldMap? worldMapComponent;
 
   /// Buttons used to zoom in and out
   late Button zoomInButton = Button.plus(this);

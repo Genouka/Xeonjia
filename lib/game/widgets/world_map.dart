@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'dart:math';
 
+import 'package:collection/collection.dart';
 import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/image_composition.dart';
@@ -18,7 +20,38 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
             !m.hidden &&
             mainCharacter.visitedRooms.any((e) => e.split('/').first == m.id))
         .map(_RectangleMap.new));
+    this.add(pointer);
     return super.onLoad();
+  }
+
+  Pointer pointer = Pointer();
+  void movePointer(Direction direction) {
+    pointer.visible = true;
+    switch (direction) {
+      case Direction.down:
+        pointer.y = min(pointer.y + pointer.delta, position.y + size.y);
+        break;
+      case Direction.up:
+        pointer.y = max(pointer.y - pointer.delta, position.x);
+        break;
+      case Direction.right:
+        pointer.x = min(pointer.x + pointer.delta, position.x + size.x);
+        break;
+      case Direction.left:
+        pointer.x = max(pointer.x - pointer.delta, position.x);
+        break;
+    }
+    gameRef.camera.snapTo(Vector2(
+        gameRef.moveCamera(gameRef.size.x, gameRef.map.width, pointer.x),
+        gameRef.moveCamera(
+            gameRef.size.y, gameRef.map.width * 0.7, pointer.y)));
+  }
+
+  void selectPoint() {
+    (children.firstWhereOrNull(
+                (m) => m is _RectangleMap && m.containsPoint(pointer.position))
+            as _RectangleMap?)
+        ?.selected();
   }
 
   @override
@@ -49,6 +82,25 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
   Vector2? _currentMapPosition;
 }
 
+/// Pointer moved with keyboard
+class Pointer extends PositionComponent with HasGameRef<XeonjiaGame> {
+  @override
+  FutureOr<void> onLoad() {
+    x = gameRef.camera.position.x + gameRef.size.x / 2;
+    y = gameRef.camera.position.y + gameRef.size.y / 2;
+    size = Vector2(1, 1);
+    return super.onLoad();
+  }
+
+  final Paint _paint = Paint()..color = Colors.red;
+  final int delta = 15;
+  bool visible = false;
+
+  @override
+  void render(Canvas canvas) =>
+      visible ? canvas.drawCircle(Offset.zero, 5, _paint) : null;
+}
+
 /// A single map
 class _RectangleMap extends PositionComponent
     with HasGameRef<XeonjiaGame>, Tappable {
@@ -57,7 +109,8 @@ class _RectangleMap extends PositionComponent
   bool get isTheCurrentMap => map.id == gameRef.map.id;
 
   @override
-  bool onTapUp(TapUpInfo info) {
+  bool onTapUp(TapUpInfo info) => selected();
+  bool selected() {
     if (gameRef.messageManager.isActive) return true;
     (parent as WorldMap)._selectedMap = map;
     if (map.id == gameRef.map.id) {
