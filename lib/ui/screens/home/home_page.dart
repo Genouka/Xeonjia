@@ -137,15 +137,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         const Spacer(),
                         const Spacer(),
                         Text(
-                          '> ' +
-                              (Platform.isAndroid
-                                      ? 'Tap to play'.i18n
-                                      : 'Press enter'.i18n)
-                                  .toUpperCase() +
-                              ' <',
+                          (Platform.isAndroid
+                                  ? 'Tap to play'.i18n
+                                  : 'Press enter'.i18n)
+                              .toUpperCase(),
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.white70,
                             fontSize: min(
                                     MediaQuery.of(context).size.height / 8,
                                     min(
