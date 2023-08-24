@@ -143,7 +143,7 @@ class CharacterComponent extends BasicComponent
       if (itemData.containsKey(itemId)) {
         gameRef.setMessage(Message(
           gameRef,
-          '* {{hero}} puts %s in the backpack. *'
+          '* {{hero}} puts %s in the backpack *'
               .i18n
               .fill([itemData[itemId]!.name]),
           author: '-/$itemId',
@@ -152,7 +152,7 @@ class CharacterComponent extends BasicComponent
       } else if (itemId.startsWith('gem_')) {
         gameRef.setMessage(Message(
           gameRef,
-          '* {{hero}} puts %s in the backpack. *'.i18n.fill(['the gem'.i18n]),
+          '* {{hero}} puts %s in the backpack *'.i18n.fill(['the gem'.i18n]),
           author: '-/gem_*',
           xfaFile: 'items',
         ));
