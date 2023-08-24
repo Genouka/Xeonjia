@@ -88,7 +88,7 @@ Widget insertNameForm(
         if (input.isEmpty) key.currentState?.validate();
       },
       validator: (value) {
-        if (value == '') return "What's your name?".i18n + ' [A-Z]';
+        if (value == '') return 'Valid characters: A-Z.'.i18n;
         return value!.trim().length < 2 ? 'Too short.'.i18n : null;
       },
       inputFormatters: [

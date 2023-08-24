@@ -26,7 +26,7 @@ class _InfoPageState extends State<InfoPage> {
     },
     {
       'title': 'Donate'.i18n,
-      'subtitle': 'Support the development'.i18n,
+      'subtitle': 'Contribute to the project'.i18n,
       'url': 'https://deepdaikon.xyz/donate',
       'icon': const Icon(Icons.euro),
     },
@@ -44,7 +44,7 @@ class _InfoPageState extends State<InfoPage> {
     },
     {
       'title': 'Report bugs'.i18n,
-      'subtitle': 'Report bugs'.i18n,
+      'subtitle': 'Report the bugs you found'.i18n,
       'url': 'https://gitlab.com/deepdaikon/Xeonjia/issues',
       'icon': const Icon(Icons.bug_report),
     },

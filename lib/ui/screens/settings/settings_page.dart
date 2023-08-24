@@ -300,7 +300,7 @@ class SettingsPageState extends State<SettingsPage> {
                                         fontFamily: settings.font,
                                         color: Colors.white)),
                                 subtitle: Text(
-                                    'Zoom objects in the game for a better view.'
+                                    'Zoom objects in the game for a better view'
                                         .i18n,
                                     style: TextStyle(
                                         fontSize: 24,
