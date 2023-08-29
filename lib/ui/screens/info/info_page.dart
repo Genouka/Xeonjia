@@ -14,7 +14,7 @@ class _InfoPageState extends State<InfoPage> {
   final List<Map<String, dynamic>> infoMenuList = [
     {
       'title': 'DeepDaikon Project',
-      'subtitle': 'Game developed by %s'.i18n.fill(['DeepDaikon']),
+      'subtitle': 'Game made by %s'.i18n.fill(['DeepDaikon']),
       'url': 'https://deepdaikon.xyz',
       'icon': const Icon(Icons.change_history),
     },

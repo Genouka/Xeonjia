@@ -170,8 +170,8 @@ class CharacterComponent extends BasicComponent
           gameRef,
           used
               ? (gameRef.user?.isPlayerOne ?? true
-                  ? '* {{hero}} used {{selected-item-name}} *'.i18n
-                  : '* {{user-name}} used {{selected-item-name}} *'.i18n)
+                  ? '* {{hero}} uses {{selected-item-name}} *'.i18n
+                  : '* {{user-name}} uses {{selected-item-name}} *'.i18n)
               : '* {{hero}} gives %s *'.i18n.fill([itemData[itemId]!.name])));
     }
   }
