@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:i18n_extension/i18n_widget.dart';
@@ -217,14 +219,47 @@ class SettingsPageState extends State<SettingsPage> {
                                   onFocusChange: (bool focus) => setState(() {
                                         focus ? focusItem = 3 : null;
                                       }),
-                                  title: Text('Show D-pad'.i18n,
+                                  title: Text('Gestures'.i18n,
                                       style: TextStyle(
                                           fontSize: 32,
                                           fontFamily: settings.font,
                                           color: Colors.white)),
                                   activeColor: Colors.transparent,
                                   subtitle: Text(
-                                      'Enable the directional pad.\nTo change its position, long-press the D-pad in the center.'
+                                      'Use gestures to move the character'.i18n,
+                                      style: TextStyle(
+                                          fontSize: 24,
+                                          fontFamily: settings.font,
+                                          color: Colors.white70)),
+                                  value: settings.gestures,
+                                  onChanged: (newValue) {
+                                    if (newValue! ||
+                                        settings.showDPad ||
+                                        !Platform.isAndroid) {
+                                      settings.gestures = newValue;
+                                      setState(() {});
+                                      saveSettings();
+                                    }
+                                  }),
+                            ),
+                            Container(
+                              margin: const EdgeInsets.symmetric(
+                                  vertical: 4, horizontal: 8),
+                              color: focusItem == 3
+                                  ? Colors.white24
+                                  : Colors.white12,
+                              child: CheckboxListTile(
+                                  onFocusChange: (bool focus) => setState(() {
+                                        focus ? focusItem = 3 : null;
+                                      }),
+                                  title: Text('D-pad'.i18n,
+                                      style: TextStyle(
+                                          fontSize: 32,
+                                          fontFamily: settings.font,
+                                          color: Colors.white)),
+                                  activeColor: Colors.transparent,
+                                  subtitle: Text(
+                                      'Use the directional pad to move the character.\nTo change its position, long-press the D-pad in the center.'
                                           .i18n,
                                       style: TextStyle(
                                           fontSize: 24,
@@ -232,9 +267,13 @@ class SettingsPageState extends State<SettingsPage> {
                                           color: Colors.white70)),
                                   value: settings.showDPad,
                                   onChanged: (newValue) {
-                                    settings.showDPad = newValue!;
-                                    setState(() {});
-                                    saveSettings();
+                                    if (newValue! ||
+                                        settings.gestures ||
+                                        !Platform.isAndroid) {
+                                      settings.showDPad = newValue;
+                                      setState(() {});
+                                      saveSettings();
+                                    }
                                   }),
                             ),
                             if (settings.showDPad)
