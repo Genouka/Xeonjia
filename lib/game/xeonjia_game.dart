@@ -301,17 +301,9 @@ class XeonjiaGame extends FlameGame
   }
 
   /// Get [BasicComponent] from ID
-  BasicComponent? getComponentFromId(int id) {
-    var componentList = List.from(children)..addAll(deletedComponents);
-    return componentList
-        .firstWhereOrNull((c) => c is BasicComponent && c.id == id);
-  }
-
-  BasicComponent getActiveComponentFromId(int id) =>
-      children.firstWhere((c) => c is BasicComponent && c.id == id)
-          as BasicComponent;
-  BasicComponent getDeletedComponentFromId(int id) =>
-      deletedComponents.firstWhere((c) => c.id == id);
+  BasicComponent? getComponentFromId(int id) =>
+      (List.from(children)..addAll(deletedComponents))
+          .firstWhereOrNull((c) => c is BasicComponent && c.id == id);
 
   /// Count enemies (alive) in the room
   int get enemies => players.where((e) => isEnemy(e, onlyAlive: true)).length;
@@ -391,6 +383,7 @@ class XeonjiaGame extends FlameGame
     playBackgroundMusic(custom: null);
     playSound(Sfx.win, volume: 1);
     statusBox.state?.refresh();
+    if (map.action != null) executeAction(action: map.action, actor: playerOne);
   }
 
   /// Pause game

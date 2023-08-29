@@ -194,12 +194,7 @@ class CharacterComponent extends BasicComponent
       deletionAnimation(callback: () {
         gameRef.resume();
         super.delete();
-        if (isPlayerOne) {
-          gameRef.end();
-        } else if (!gameRef.hasAction && gameRef.map.action != null) {
-          gameRef.executeAction(
-              action: gameRef.map.action!, actor: gameRef.playerOne);
-        }
+        if (isPlayerOne) gameRef.end();
       });
     }
   }

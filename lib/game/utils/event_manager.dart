@@ -177,9 +177,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     return #NONE;
   });
   _('respawn', 1, (Cell? x) {
-    if (gameRef.deletedComponents.any((c) => c.id == x!.car as int)) {
-      gameRef.getDeletedComponentFromId(x!.car as int).respawn(gameRef);
-    }
+    gameRef.getComponentFromId(x!.car as int)?.respawn(gameRef);
     return #NONE;
   });
   _('leave', 0, (Cell? x) {

@@ -37,14 +37,14 @@ class MonsterComponent extends BasicComponent with Walker, RenderOffset, HPBar {
     if (this == gameRef.activePlayer && !gameRef.changingTurn) {
       gameRef.useMove(this, skipTurn: true);
     }
-    animation = atlas.getAnimation('$name-deletion')
-      ..onComplete = () {
-        hide();
-        super.delete();
-        if (!gameRef.hasAction && gameRef.map.action != null) {
-          gameRef.executeAction(
-              action: gameRef.map.action!, actor: gameRef.playerOne);
-        }
-      };
+    if (silently) {
+      super.delete();
+    } else {
+      animation = atlas.getAnimation('$name-deletion')
+        ..onComplete = () {
+          hide();
+          super.delete();
+        };
+    }
   }
 }
