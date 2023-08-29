@@ -90,8 +90,8 @@ class SnowBallWeapon extends Weapon {
   final int level;
 
   @override
-  void shoot({required Walker shooter}) {
-    if (powerPoints > 0 && !shooter.gameRef.thereIsASnowball) {
+  void shoot({required Walker shooter, bool forced = false}) {
+    if ((powerPoints > 0 && !shooter.gameRef.thereIsASnowball) || forced) {
       late Point startingPosition;
       switch (shooter.orientation) {
         case Direction.down:
