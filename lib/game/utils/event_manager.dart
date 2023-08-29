@@ -579,6 +579,13 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     saveUserData();
     return #NONE;
   });
+  _('shot-snowball', 1, (Cell? x) {
+    SnowBallWeapon(level: -5, powerPoints: 999).shoot(
+        shooter:
+            gameRef.getComponentFromId(x!.car as int) as CharacterComponent,
+        forced: true);
+    return #NONE;
+  });
   _('get-inspect-key', 0, (Cell? x) => gameRef.inspectButtonKey);
   _('get-snowball-key', 0, (Cell? x) => gameRef.snowballButtonKey);
   _('get-mine-key', 0, (Cell? x) => gameRef.mineButtonKey);
