@@ -166,7 +166,7 @@ extension InputController on XeonjiaGame {
         } else {
           camera.snapTo(Vector2(
               moveCamera(
-                  size.x, map.width, worldMapComponent!.pointer.x + size.x / 2),
+                  size.x, map.width, camera.position.x + 50 + size.x / 2),
               moveCamera(size.y, map.height, camera.position.y + size.y / 2)));
         }
       } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
