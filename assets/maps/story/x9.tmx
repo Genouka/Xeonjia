@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="70">
  <properties>
-  <property name="action" value="(map-name &quot;XEONJIA TOWER – 9&quot;)"/>
+  <property name="action" value="(map-name &quot;XEONJIA TOWER – 9F&quot;)"/>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="XEONJIA TOWER – 9F"/>
  </properties>
