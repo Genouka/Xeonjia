@@ -55,5 +55,8 @@
     },
     "999.tmx": {
         "text": "Here is the Xeonjia Tower."
+    },
+    "999_up.tmx": {
+        "text": "Here is the top floor of the Xeonjia Tower."
     }
 }

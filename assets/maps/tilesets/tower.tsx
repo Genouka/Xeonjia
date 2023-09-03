@@ -125,24 +125,24 @@
  <tile id="55" class="Solid"/>
  <tile id="56" class="NPC">
   <properties>
-   <property name="name" value="king-of-evil"/>
+   <property name="name" value="king of evil"/>
   </properties>
  </tile>
  <tile id="57" class="NPC">
   <properties>
-   <property name="name" value="king-of-evil"/>
+   <property name="name" value="king of evil"/>
    <property name="orientation" type="int" value="1"/>
   </properties>
  </tile>
  <tile id="58" class="NPC">
   <properties>
-   <property name="name" value="king-of-evil"/>
+   <property name="name" value="king of evil"/>
    <property name="orientation" type="int" value="2"/>
   </properties>
  </tile>
  <tile id="59" class="NPC">
   <properties>
-   <property name="name" value="king-of-evil"/>
+   <property name="name" value="king of evil"/>
    <property name="orientation" type="int" value="3"/>
   </properties>
  </tile>

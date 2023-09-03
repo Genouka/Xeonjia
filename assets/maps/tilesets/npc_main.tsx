@@ -126,27 +126,27 @@
  </tile>
  <tile id="20" class="NPC">
   <properties>
-   <property name="name" value="65hero"/>
+   <property name="name" value="65th hero"/>
    <property name="team" type="int" value="2"/>
   </properties>
  </tile>
  <tile id="21" class="NPC">
   <properties>
-   <property name="name" value="65hero"/>
+   <property name="name" value="65th hero"/>
    <property name="orientation" type="int" value="1"/>
    <property name="team" type="int" value="2"/>
   </properties>
  </tile>
  <tile id="22" class="NPC">
   <properties>
-   <property name="name" value="65hero"/>
+   <property name="name" value="65th hero"/>
    <property name="orientation" type="int" value="2"/>
    <property name="team" type="int" value="2"/>
   </properties>
  </tile>
  <tile id="23" class="NPC">
   <properties>
-   <property name="name" value="65hero"/>
+   <property name="name" value="65th hero"/>
    <property name="orientation" type="int" value="3"/>
    <property name="team" type="int" value="2"/>
   </properties>

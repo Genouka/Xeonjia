@@ -36,7 +36,7 @@
       (&quot;/king-of-evil&quot; &quot;I just got defeated by 3 kids.&quot;)
       (&quot;/king-of-evil&quot; &quot;I had to leave my world because it was uninhabitable.\nFreezing your world was the only way to save me and my people.\nThere was no possibility of coexistence.&quot;)
       (&quot;/hero&quot; &quot;But in this way, to avoid your own suffering you brought suffering to us.&quot;)
-      (&quot;/king-of-evil&quot; &quot;I have been blind to the pain I have inflicted on this world and those who inhabit it.\nI was ready to freeze everything and wipe out every living thing in this Kingdom.\nThe power wore me down.\nBut I'd do it all over again.\nI hope you will not be faced with similar choices.&quot;)
+      (&quot;/king-of-evil&quot; &quot;I have been blind to the pain I have inflicted on this world and those who inhabit it.\nI was ready to freeze everything and wipe out every living thing in this Kingdom.\nThe power wore me down.\nBut I'd do it all over again the same way.\nI hope you will not be faced with similar choices.&quot;)
       (&quot;/hero&quot; &quot;We would act differently.&quot;)
       (&quot;/king-of-evil&quot; &quot;I know.&quot;)
       (&quot;/king-of-evil&quot; &quot;I am leaving now, and with me the winter that has lasted for 65 years.\nRemember that even if my kingdom falls, evil will never completely disappear.\nIt will be reborn somewhere else, in a different form, waiting for a new opportunity to reclaim power.\nAlways be on your guard, heroes.\nFarewell.&quot;)))
@@ -321,7 +321,7 @@
     '((&quot;/king-of-evil&quot; &quot;The planet I come from is no longer habitable, but this one is almost perfect.\nThe only problem is the temperature which is too high.\nBut now I have enough gems.\nWith the gems found by the Hoarfrost Team, I'm {{required_gems}} gems away, but I know that Shen has 2 and you {{hero}} have {{gem_count}} gems.\nMore than enough for my needs.&quot;)
     (&quot;/shen&quot; &quot;So you used us to collect gems?&quot;)
     (&quot;/king-of-evil&quot; &quot;Exactly.\nWhat were you thinking of doing with them?\nAnd I'll tell you more: the whole signet thing was to  make you go around the Kingdom in order to increase the probability of finding gems.\nOtherwise you would have come straight to the tower without bringing me any.&quot;)
-    (&quot;/hero&quot; &quot;But we needed the signets to enter the tower, we still had to get them.&quot;)
+    (&quot;/hero&quot; &quot;But we needed the signets to enter the tower, we should have taken them anyway.&quot;)
     (&quot;/king-of-evil&quot; &quot;Actually, it was enough to knock on the door of the tower and we would have opened.&quot;)
     (&quot;/hero&quot; &quot;Ah.\nIt matters little. I am this year's chosen hero and together with m–&quot;)
     (&quot;/king-of-evil&quot; &quot;Even the \&quot;hero\&quot; thing is a joke.&quot;)
@@ -390,7 +390,7 @@
   </object>
   <object id="67" gid="632" x="112" y="144" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;The Ice Kingdom will rise today.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/king-of-evil&quot; &quot;The Ice Kingdom will rise today.&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;the-end&quot;)
   (delete-me))</property>
     <property name="hp" type="float" value="1"/>
