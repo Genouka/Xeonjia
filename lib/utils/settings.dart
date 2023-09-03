@@ -7,8 +7,7 @@ import 'package:xeonjia/utils/i18n.dart';
 class Settings {
   /// Import settings from a Json
   Settings(Map<String, dynamic> json)
-      : gestures = json['gestures'] ?? !Platform.isAndroid,
-        showDPad = json['showDPad'] ?? Platform.isAndroid,
+      : showDPad = json['showDPad'] ?? Platform.isAndroid,
         dPadSize = json['dPadSize'] ?? 1,
         dPadOffset =
             Offset(json['dPadOffsetX'] ?? 30, json['dPadOffsetY'] ?? 30),
@@ -20,7 +19,6 @@ class Settings {
 
   /// Export settings as a Json
   Map<String, dynamic> toJson() => {
-        'gestures': gestures,
         'showDPad': showDPad,
         'dPadSize': dPadSize,
         'dPadOffsetX': dPadOffset.dx,
@@ -34,9 +32,6 @@ class Settings {
 
   /// True if D-pad is enabled
   bool showDPad;
-
-  /// True if gestures are enabled
-  bool gestures;
 
   /// True if rules have been read
   bool firstRun;

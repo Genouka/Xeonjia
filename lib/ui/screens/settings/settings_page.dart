@@ -215,66 +215,50 @@ class SettingsPageState extends State<SettingsPage> {
                               color: focusItem == 3
                                   ? Colors.white24
                                   : Colors.white12,
-                              child: CheckboxListTile(
-                                  onFocusChange: (bool focus) => setState(() {
-                                        focus ? focusItem = 3 : null;
-                                      }),
-                                  title: Text('Gestures'.i18n,
-                                      style: TextStyle(
-                                          fontSize: 32,
-                                          fontFamily: settings.font,
-                                          color: Colors.white)),
-                                  activeColor: Colors.transparent,
-                                  subtitle: Text(
-                                      'Use gestures to move the character'.i18n,
-                                      style: TextStyle(
-                                          fontSize: 24,
-                                          fontFamily: settings.font,
-                                          color: Colors.white70)),
-                                  value: settings.gestures,
-                                  onChanged: (newValue) {
-                                    if (newValue! ||
-                                        settings.showDPad ||
-                                        !Platform.isAndroid) {
-                                      settings.gestures = newValue;
-                                      setState(() {});
-                                      saveSettings();
-                                    }
-                                  }),
-                            ),
-                            Container(
-                              margin: const EdgeInsets.symmetric(
-                                  vertical: 4, horizontal: 8),
-                              color: focusItem == 3
-                                  ? Colors.white24
-                                  : Colors.white12,
-                              child: CheckboxListTile(
-                                  onFocusChange: (bool focus) => setState(() {
-                                        focus ? focusItem = 3 : null;
-                                      }),
-                                  title: Text('D-pad'.i18n,
-                                      style: TextStyle(
-                                          fontSize: 32,
-                                          fontFamily: settings.font,
-                                          color: Colors.white)),
-                                  activeColor: Colors.transparent,
-                                  subtitle: Text(
-                                      'Use the directional pad to move the character.\nTo change its position, long-press the D-pad in the center.'
-                                          .i18n,
-                                      style: TextStyle(
-                                          fontSize: 24,
-                                          fontFamily: settings.font,
-                                          color: Colors.white70)),
+                              child: ListTile(
+                                onFocusChange: (bool focus) => setState(() {
+                                  focus ? focusItem = 3 : null;
+                                }),
+                                title: Text('Controller'.i18n,
+                                    style: TextStyle(
+                                        fontSize: 32,
+                                        fontFamily: settings.font,
+                                        color: Colors.white)),
+                                subtitle: Text(
+                                    'Move the character with gestures or virtual D-pad'
+                                            .i18n +
+                                        (Platform.isAndroid
+                                            ? ''
+                                            : '.\n' +
+                                                'You only need it on a touchscreen device'
+                                                    .i18n),
+                                    style: TextStyle(
+                                        fontSize: 24,
+                                        fontFamily: settings.font,
+                                        color: Colors.white70)),
+                                trailing: DropdownButton<bool>(
                                   value: settings.showDPad,
-                                  onChanged: (newValue) {
-                                    if (newValue! ||
-                                        settings.gestures ||
-                                        !Platform.isAndroid) {
-                                      settings.showDPad = newValue;
-                                      setState(() {});
-                                      saveSettings();
-                                    }
-                                  }),
+                                  onChanged: (bool? newValue) {
+                                    settings.showDPad = newValue!;
+                                    saveSettings();
+                                    setState(() {});
+                                  },
+                                  items: [true, false]
+                                      .map<DropdownMenuItem<bool>>(
+                                        (bool value) => DropdownMenuItem<bool>(
+                                          value: value,
+                                          child: Text(
+                                            value ? 'D-pad' : 'Gestures',
+                                            style: TextStyle(
+                                              fontSize: 24,
+                                              fontFamily: settings.font,
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                      .toList(),
+                                ),
+                              ),
                             ),
                             if (settings.showDPad)
                               Container(
@@ -292,7 +276,9 @@ class SettingsPageState extends State<SettingsPage> {
                                           fontSize: 32,
                                           fontFamily: settings.font,
                                           color: Colors.white)),
-                                  subtitle: Text('Virtual D-pad dimension'.i18n,
+                                  subtitle: Text(
+                                      'Virtual D-pad dimension.\nTo change its position, long-press the D-pad in the center.'
+                                          .i18n,
                                       style: TextStyle(
                                           fontSize: 24,
                                           fontFamily: settings.font,
