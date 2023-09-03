@@ -1512,6 +1512,10 @@ msgid "I have to go through the crypt to get the first signet."
 msgstr "Je dois traverser la crypte pour obtenir le premier sceau."
 
 #: assets/maps/story/x5.tmx:
+msgid "XEONJIA TOWER – 5F"
+msgstr ""
+
+#: assets/maps/story/x5.tmx:
 msgid "They could have put an elevator."
 msgstr ""
 
@@ -1924,6 +1928,10 @@ msgid "* Milla disappears into the leaf *"
 msgstr ""
 
 #: assets/maps/story/x8.tmx:
+msgid "XEONJIA TOWER – 8F"
+msgstr ""
+
+#: assets/maps/story/x8.tmx:
 msgid "An easy win.\nLet's move on."
 msgstr ""
 
@@ -2019,6 +2027,10 @@ msgstr "Souviens-toi, un bon bateau peut éviter un naufrage sur ces mers danger
 msgid "Hmm, should I take the faster boat or the one with the beer fridge?\nI don't know, I don't know…"
 msgstr "Hmm, est-ce que je devrais prendre le bateau le plus rapide ou celui avec le frigo à bière ?\nJe sais pas, je sais pas…"
 
+#: assets/maps/story/x4.tmx:
+msgid "XEONJIA TOWER – 4F"
+msgstr ""
+
 #: assets/maps/story/35.tmx:
 msgid "This boulder is very heavy."
 msgstr "Ce rocher est très lourd."
@@ -2061,6 +2073,10 @@ msgstr "Je perds toujours, mais cette fois-ci, ça va mieux que d'habitude."
 
 #: assets/maps/story/21_house.tmx:
 msgid "They are playing Quinb!"
+msgstr ""
+
+#: assets/maps/story/x2.tmx:
+msgid "XEONJIA TOWER – 2F"
 msgstr ""
 
 #: assets/maps/story/x2.tmx:
@@ -2117,6 +2133,10 @@ msgstr ""
 
 #: assets/maps/story/x2.tmx:
 msgid "Ok fine, see you later."
+msgstr ""
+
+#: assets/maps/story/x7.tmx:
+msgid "XEONJIA TOWER – 7F"
 msgstr ""
 
 #: assets/maps/story/x7.tmx:
@@ -2632,6 +2652,10 @@ msgid "My work is so boring…"
 msgstr "Mon travail est si ennuyant…"
 
 #: assets/maps/story/x10.tmx:
+msgid "XEONJIA TOWER – 10F"
+msgstr ""
+
+#: assets/maps/story/x10.tmx:
 msgid "iosa&joza"
 msgstr ""
 
@@ -2684,7 +2708,7 @@ msgid "Don't talk to our boss like that."
 msgstr ""
 
 #: assets/maps/story/x10.tmx:
-msgid "It deserves respect."
+msgid "He deserves respect."
 msgstr ""
 
 #: assets/maps/story/x10.tmx:
@@ -2898,6 +2922,10 @@ msgstr "Ce vase est très lourd ; je ne peux pas le bouger."
 #: assets/maps/story/28_house.tmx:
 msgid "Yes thanks"
 msgstr "Oui, merci"
+
+#: assets/maps/story/x11.tmx:
+msgid "XEONJIA TOWER – 11F"
+msgstr ""
 
 #: assets/maps/story/x11.tmx:
 msgid "I'm starting to get hungry."
@@ -3572,6 +3600,10 @@ msgid "WATERY CRYPT – B2F"
 msgstr "CRYPTE AQUEUSE – B2F"
 
 #: assets/maps/story/x3.tmx:
+msgid "XEONJIA TOWER – 3F"
+msgstr ""
+
+#: assets/maps/story/x3.tmx:
 msgid "There are no monsters here, except for that guy over there who's kind of ugly."
 msgstr ""
 
@@ -3690,6 +3722,10 @@ msgstr "Ouah ! Cette vue est spectaculaire !"
 #: assets/maps/story/42.tmx:
 msgid "Nope, there's only trash here."
 msgstr "Non, y a seulement des déchets ici."
+
+#: assets/maps/story/999_up.tmx:
+msgid "XEONJIA TOWER – 12F"
+msgstr ""
 
 #: assets/maps/story/999_up.tmx:
 msgid "We did it?"
@@ -4340,6 +4376,10 @@ msgid "During your journey you will run into them many times, it's not a problem
 msgstr ""
 
 #: assets/maps/story/x9.tmx:
+msgid "XEONJIA TOWER – 9"
+msgstr ""
+
+#: assets/maps/story/x9.tmx:
 msgid "Arrows, arrows. Arrows again."
 msgstr ""
 
@@ -4370,6 +4410,10 @@ msgstr "Boutique de souvenirs"
 #: assets/maps/story/10.tmx:
 msgid "I can see the inside of the shop."
 msgstr "Je peux voir l'intérieur de la boutique."
+
+#: assets/maps/story/x1.tmx:
+msgid "XEONJIA TOWER – 1F"
+msgstr ""
 
 #: assets/maps/story/x1.tmx:
 msgid "* The Spirit of Fire warmed the tower *"
@@ -4441,6 +4485,10 @@ msgstr ""
 
 #: assets/maps/story/31_house2.tmx:
 msgid "Greentwig City is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though."
+msgstr ""
+
+#: assets/maps/story/x6.tmx:
+msgid "XEONJIA TOWER – 6F"
 msgstr ""
 
 #: assets/maps/story/5.tmx:
