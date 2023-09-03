@@ -34,8 +34,8 @@ Future<void> loadStoredData() async {
 
   // Load items from assets
   var data = json
-      .decode(await rootBundle.loadString('assets/data/items-and-events.json'));
-  data['items'].forEach((key, value) => itemData[key] =
+      .decode(await rootBundle.loadString('assets/data/backpack-items.json'));
+  data.forEach((key, value) => itemData[key] =
       Item((value as Map<String, dynamic>)..putIfAbsent('id', () => key)));
 
   // Load maps data from kingdom.world and maps-data.json

@@ -77,9 +77,9 @@ Map<String, List<Translation>> tmx2po() {
       });
     }
   });
-  var dataJsonFileName = 'assets/data/items-and-events.json';
+  var dataJsonFileName = 'assets/data/backpack-items.json';
   var data = json.decode(File(dataJsonFileName).readAsStringSync());
-  data['items'].forEach((_, value) {
+  data.forEach((_, value) {
     dirStringsMap['story']!
         .add(Translation(dataJsonFileName, value['name'], null));
     if (value['description'] != null) {
