@@ -2,8 +2,11 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:flame/components.dart';
+import 'package:flutter/material.dart';
 import 'package:path/path.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:xeonjia/game/xeonjia.dart';
+import 'package:xeonjia/utils/config.dart';
 
 /// Set scheme's environment
 Environment setEnvironment(XeonjiaGame gameRef) {
@@ -281,6 +284,24 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     }
     return #NONE;
   });
+  _('dialog-hide-map', 1, (Cell? x) {
+    var it = (x!.car as Cell).iterator;
+    while (it.moveNext()) {
+      gameRef.setMessage(
+          (it.current as Cell).length == 1
+              ? Message(gameRef, (it.current as Cell).car as String,
+                  component:
+                      (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
+                          as BasicComponent)
+              : Message(gameRef, (it.current as Cell).cdr.car,
+                  component:
+                      (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
+                          as BasicComponent,
+                  author: (it.current as Cell).car as String),
+          hideMap: true);
+    }
+    return #NONE;
+  });
   _('dialog-kobi', 1, (Cell? x) {
     var it = (x!.car as Cell).iterator;
     while (it.moveNext()) {
@@ -301,30 +322,6 @@ Environment setEnvironment(XeonjiaGame gameRef) {
               author: (it.current as Cell).car as String,
               font: 'kobi',
               translate: settings.defaultFont, // transliterate?
-            ));
-    }
-    return #NONE;
-  });
-  _('dialog-kobi-untranslated', 1, (Cell? x) {
-    var it = (x!.car as Cell).iterator;
-    while (it.moveNext()) {
-      gameRef.setMessage((it.current as Cell).length == 1
-          ? Message(
-              gameRef,
-              (it.current as Cell).car as String,
-              component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
-                  as BasicComponent,
-              font: 'kobi',
-              translate: false,
-            )
-          : Message(
-              gameRef,
-              (it.current as Cell).cdr.car,
-              component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
-                  as BasicComponent,
-              author: (it.current as Cell).car as String,
-              font: 'kobi',
-              translate: false,
             ));
     }
     return #NONE;
@@ -573,10 +570,19 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     return #NONE;
   });
   _('the-end', 0, (Cell? x) {
-    gameRef.currentEventLog['the-end'] = true;
-    gameRef.addCustomWidgetOverlay('theEndMenu', TheEndMenu(gameRef));
+    mainCharacter.eventLog['the-end'] = true;
     mainCharacter.visitedRooms.addAll(['0', '1_home_2']);
     saveUserData();
+    // i18n: "And that's it.\nWe have now reached the end of this fantastic adventure!\nYour determination and courage made this victory possible.\nKeep exploring, dreaming and being the hero the world needs, because your adventures will never end.\nWhere will your next journey take you?\nThank you for playing Xeonjia!\nMaybe our paths will cross again.".i18n
+    // i18n: 'Bye!'.i18n
+    gameRef.executeAction(action: r'''
+    (dialog-hide-map
+      '(("the-end/book" "And that's it.\nWe have now reached the end of this fantastic adventure!\nYour determination and courage made this victory possible.\nKeep exploring, dreaming and being the hero the world needs, because your adventures will never end.\nWhere will your next journey take you?\nThank you for playing Xeonjia!\nMaybe our paths will cross again.")
+      ("/milla_happy" "Bye!")))''');
+    return #NONE;
+  });
+  _('close-game', 0, (Cell? x) {
+    Navigator.pop(gameRef.buildContext!);
     return #NONE;
   });
   _('shot-snowball', 1, (Cell? x) {
@@ -589,6 +595,12 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   _('get-inspect-key', 0, (Cell? x) => gameRef.inspectButtonKey);
   _('get-snowball-key', 0, (Cell? x) => gameRef.snowballButtonKey);
   _('get-mine-key', 0, (Cell? x) => gameRef.mineButtonKey);
+  _('hide-donation-worker', 0, (Cell? x) => Config.hideDonationWorker);
+  _(
+      'donation-page',
+      0,
+      (Cell? x) => launchUrl(Uri.parse(Config.donateUrl),
+          mode: LaunchMode.externalApplication));
 
   // Built-in procedures
   _('car', 1, (Cell? x) => (x!.car as Cell).car!);
