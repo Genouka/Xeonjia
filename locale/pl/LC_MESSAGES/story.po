@@ -39,7 +39,7 @@ msgid "king"
 msgstr "król"
 
 #: assets/maps/story/30_cityhall.tmx:
-msgid "Do not confuse me with the King of Evil, I'm not bad a guy haha."
+msgid "Do not confuse me with the King of Evil, I'm not a bad guy haha."
 msgstr ""
 
 #: assets/maps/story/30_cityhall.tmx:
@@ -443,7 +443,7 @@ msgid "Hexa Cave"
 msgstr ""
 
 #: assets/maps/story/38.tmx:
-msgid "Aquaville Towne"
+msgid "Aquaville Town"
 msgstr ""
 
 #: assets/maps/story/38.tmx:
@@ -463,7 +463,7 @@ msgid "These monsters don't seem very smart to me."
 msgstr ""
 
 #: assets/maps/story/17.tmx:
-msgid "I miss the monsters"
+msgid "I miss the monsters."
 msgstr ""
 
 #: assets/maps/story/17.tmx:
@@ -531,7 +531,7 @@ msgid "I'll go home as soon as my legs stop shaking in fear."
 msgstr ""
 
 #: assets/maps/story/13.tmx:
-msgid "Yes, I'm still here.\nI like this place"
+msgid "Yes, I'm still here.\nI like this place."
 msgstr ""
 
 #: assets/maps/story/13.tmx:
@@ -852,10 +852,6 @@ msgstr ""
 
 #: assets/maps/story/57_house.tmx:
 msgid "I tell all my friends that I met you."
-msgstr ""
-
-#: assets/maps/story/37.tmx:
-msgid "Aquaville Town"
 msgstr ""
 
 #: assets/maps/story/37.tmx:
