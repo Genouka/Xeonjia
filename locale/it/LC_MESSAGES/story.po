@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # Manuel Tassi <mannivuwiki@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 13:04+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 19:29+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -2775,7 +2775,7 @@ msgstr "Ma voi due vi conoscete?"
 
 #: assets/maps/story/39.tmx:
 msgid "September and I? Of course! We are best friends!"
-msgstr ""
+msgstr "Settembre e io? Ovviamente! Siamo migliori amiche!"
 
 #: assets/maps/story/39.tmx:
 msgid "We are accomplices in scientific experiments and inventions."
@@ -3727,7 +3727,7 @@ msgstr "Ma in questo modo, per evitare la vostra sofferenza, hai portato a noi l
 
 #: assets/maps/story/999_up.tmx:
 msgid "I have been blind to the pain I have inflicted on this world and those who inhabit it.\nI was ready to freeze everything and wipe out every living thing in this Kingdom.\nThe power wore me down.\nBut I'd do it all over again the same way.\nI hope you will not be faced with similar choices."
-msgstr ""
+msgstr "Sono stato cieco di fronte al dolore che ho inflitto a questo mondo e a coloro che lo abitano.\nEro pronto a congelare tutto e a spazzare via ogni essere vivente di questo Regno.\nIl potere mi ha logorato.\nMa rifarei tutto da capo allo stesso modo.\nSpero che non vi troverete mai di fronte a scelte simili."
 
 #: assets/maps/story/999_up.tmx:
 msgid "We would act differently."
@@ -4055,7 +4055,7 @@ msgstr "Esattamente.\nCosa pensavate di farvene?\nE vi dirò di più: tutta la f
 
 #: assets/maps/story/999_up.tmx:
 msgid "But we needed the signets to enter the tower, we should have taken them anyway."
-msgstr ""
+msgstr "Ma ci servivano i sigilli per entrare nella torre, avremmo dovuto comunque prenderli."
 
 #: assets/maps/story/999_up.tmx:
 msgid "Actually, it was enough to knock on the door of the tower and we would have opened."
@@ -4515,7 +4515,7 @@ msgstr "Questo è un muro."
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "king of evil"
-msgstr ""
+msgstr "re del male"
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "A table."
@@ -5007,4 +5007,4 @@ msgstr "Qui c'è la Torre Xeonjia."
 
 #: assets/data/backpack-items.json:
 msgid "Here is the top floor of the Xeonjia Tower."
-msgstr ""
+msgstr "Qui c'è l'ultimo piano della Torre Xeonjia."
