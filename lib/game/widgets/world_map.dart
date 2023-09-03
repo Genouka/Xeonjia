@@ -119,7 +119,7 @@ class _RectangleMap extends PositionComponent
       return true;
     }
     if (map.text != null) gameRef.setMessage(Message(gameRef, map.text!));
-    // i18n: "Do you want to come back to this place?".i18n
+    // i18n: "Do you want to go back to this place?".i18n
     // i18n: "* {{hero}} arrived here *".i18n
     // i18n: "* After a long journey, {{hero}} arrived here *".i18n
     // i18n: "* After a very long journey, {{hero}} arrived here *".i18n
@@ -133,7 +133,7 @@ class _RectangleMap extends PositionComponent
             : '* After a very long journey, {{hero}} arrived here *');
     gameRef.executeAction(action: '''
 (begin
-    (dialog '(("Do you want to come back to this place?")))
+    (dialog '(("Do you want to go back to this place?")))
     (define id "generic-question")
     (answer id '(("Yes" . #t) ("No" . #f)))
     (wait)

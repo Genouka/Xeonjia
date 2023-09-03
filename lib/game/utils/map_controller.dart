@@ -54,7 +54,8 @@ extension MapController on XeonjiaGame {
         setMessage(Message(
             this,
             'By clicking on the map I can go back to places I have already been.'
-                .i18n));
+                .i18n,
+            author: '/hero'));
       }
     } else {
       zoomMiniMap(toValue: 1);
