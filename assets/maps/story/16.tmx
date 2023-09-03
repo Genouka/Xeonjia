@@ -38,7 +38,7 @@
   </object>
   <object id="46" gid="176" x="16" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;14&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;14&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

@@ -7,37 +7,37 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="391" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="423" source="../tilesets/capital-2.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="448" source="../tilesets/capital-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA8tjZGDIG2CswMTAoIiElZiob4cp0EwzIOZkhNDmNLQDhsmxowIHzoHKewHN9AZiEADRPmTY8Y8BO8hHUwcC5IYFLjvKkfzEC6W50fxILP6Aww5k8B2IWYBqf+DwIyH8A4/ZEkT4kVB84gsrZICs5j0QizCiYmxhkU+CHUpANcqMCD4s3JAxcljoA/kGjKTZQchfuAByeBaTiDMZEW7FBeKBcm5AnAD1A6lpvRDJbFz+CQGq8QXiMDLzVSGa+/8h0SD8CohjgGqigDgOiA2BGADqBLKU3AUAAA==
+   H4sIAAAAAAAAA2tnZGBoH2BsycTAYIWErZmob4cf0Ex/IFZihNABNLQDhsmxYyIO3AqVTwaamQLEIACiU8mwQ56RASvoQFMHAuSGhT4OOyYg+UkNSqug+ZFYzInDDmQgAFQjC8SCjNj9SAgL4rFDAoc4sh8JxSe+sEIG4khqOIBsXTSMLSyQ/YorzmHAGihvg6QGFm7IGDksPIBsT0ZUO8SJ8Ac+f+ECyOHZQyJuYkS4FReoAMrFA3El1A+kpvUuJLNx+ScXKJ4GxPlQeUrsQLZHHOpmZiAuBeJiIC4HYi8gBgD5guRI3AUAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="63" class="NPC" gid="223" x="224" y="48" width="16" height="16">
+  <object id="63" class="NPC" gid="248" x="224" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="name" value="iosa"/>
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="64" class="NPC" gid="223" x="256" y="48" width="16" height="16">
+  <object id="64" class="NPC" gid="248" x="256" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="name" value="joza"/>
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="65" class="NPC" gid="395" x="240" y="48" width="16" height="16">
+  <object id="65" class="NPC" gid="420" x="240" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="66" class="NPC" gid="404" x="272" y="48" width="16" height="16">
+  <object id="66" class="NPC" gid="429" x="272" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="visible" type="bool" value="false"/>
@@ -46,12 +46,12 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGDngHxpNK/Nx8ckxAxewYCLDcBKBL43tqGBkYPgCpUfBKBgpQJNO6R0AVrFLhNwFAAA=
+   H4sIAAAAAAAAA2NgGDlAnBGVppX5uPjkmIELBDKRbjapII3GdkwE+pWXEUKPglEwUoATndI7ADFeS0bcBQAA
   </data>
  </layer>
  <layer id="11" name="Tile Layer 3" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBQMZiDFyMAgzUi8enWgWg0S1A8kIOTWRKBcEhAnDxH/DCYAAJ/wqQfcBQAA
+   H4sIAAAAAAAAA2NgGAWjYBQMZmDMyMBgwki8egegWkcS1A8kIOTWKqBcNRDXDBH/DCYAAML2IijcBQAA
   </data>
  </layer>
  <objectgroup id="8" name="items">
@@ -67,7 +67,7 @@
     (set-orientation 2)
     (set-orientation '(3 66))
     (dialog
-      '((&quot;/hero&quot; &quot;This must be the crypt of this region. Here is the second signet.&quot;)
+      '((&quot;/hero&quot; &quot;This should be the crypt of this region. Here is the second signet.&quot;)
       (&quot;/milla&quot; &quot;Yeaaah, let's go get it.&quot;)
       (&quot;/hero&quot; &quot;In the other crypt there were many monsters. We must be careful.&quot;)
       (&quot;/milla&quot; &quot;I'll help you.&quot;)
@@ -96,7 +96,7 @@
       (&quot;/hero&quot; &quot;What?!\nAre you ready to freeze the whole Kingdom?!&quot;)
       (&quot;dr. lache/lache&quot; &quot;How do you know our plan???\nWere you the ones who told him?&quot;)
       (&quot;iosa&amp;joza/iosa_and_joza&quot; &quot;No sir!\nWe didn't say anything.&quot;)
-      (&quot;dr. lache/lache&quot; &quot;It matters little.\nSoon this whole lousy kingdom will be frozen and I'll be rich and blissful away from here.&quot;)
+      (&quot;dr. lache/lache&quot; &quot;It matters little.\nSoon this whole lousy Kingdom will be frozen and I'll be rich and blissful away from here.&quot;)
       (&quot;/hero&quot; &quot;You can't do this, I'll stop you!&quot;)
       (&quot;dr. lache/lache&quot; &quot;If you are as good as they say, see you at the Xeonjia Tower, otherwise goodbye \&quot;chosen hero\&quot;.&quot;)))
     (wait)
@@ -130,7 +130,7 @@
     (set-orientation '(3 66))
     (dialog
       '((&quot;/milla&quot; &quot;Who were these guys? I do not like them.&quot;)
-      (&quot;/hero&quot; &quot;The henchmen of the Hoarfrost Team.\nThey want to freeze the whole kingdom so that it will be livable for the King of Evil.&quot;)
+      (&quot;/hero&quot; &quot;The henchmen of the Hoarfrost Team.\nThey want to freeze the whole Kingdom so that it will be livable for the King of Evil.&quot;)
       (&quot;/milla&quot; &quot;Uh, bad story.\nBut you're definitely stronger than them, hero!\nLet's go save the world!&quot;)))
     (wait)
     (set-orientation 1)
@@ -152,7 +152,7 @@
   (delete-me))</property>
    </properties>
   </object>
-  <object id="71" gid="285" x="272" y="240" width="16" height="16">
+  <object id="71" gid="310" x="272" y="240" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define event-id &quot;52.vase1&quot;)

@@ -11,7 +11,7 @@
  <tileset firstgid="228" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WTsQoCMQyGMzje5uLYR+h2i14dVbhzFlQQVFBwUPD9/QMJtkfrRf3ho71c0oS0ISIKwIMJqIGTPa+VrEGYy7f69VVnbDmfJmNvDbHjQqxF4Y9YBzbgKGzBLjr3kzjnIYplTgN1qvgeLuAq7MHNWDP36g4ewhk8wRTMxCe+L7UvwYrSXlXGnFrz4gv/WPrGfpGj4bsoqTHErgt27nP/3VvesuZ1Br8uY/OZvFY5es+5p3Tmg5wbKJ11/j+S/Qs4byQHOAQAAA==
+   H4sIAAAAAAAAA6WTsQoCMQyGMzje5uLYR+jWRa+OKqizoIKggoKDB76/fyDB9ujdRf3ho22aNKFtiIgi8GACAnAy57GSMQpzWatfW0HGWNhLfeqCfd0Toxp3xFoU/4h1YAfOwh4cknP7xDlPSSxzGahTxe9wA3fhCB7GmvmunqARruAFpmAmPiHxV/sSrCi/q8qYU2tefOGfSv/YL3I0/BZdqg2x2w4733No2Sx/WfM6g9+mYPOFvFY5+vS5p7zno5wbKe913h/J/A11RQnKOAQAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
@@ -45,11 +45,6 @@
 </property>
    </properties>
   </object>
-  <object id="51" gid="71" x="112" y="32" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;/_1&quot; &quot;Exit ↑&quot;)))"/>
-   </properties>
-  </object>
   <object id="53" class="Solid" gid="55" x="192" y="64" width="16" height="16">
    <properties>
     <property name="action">(begin
@@ -66,7 +61,7 @@
   </object>
   <object id="56" gid="219" x="128" y="32" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;17&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;17&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

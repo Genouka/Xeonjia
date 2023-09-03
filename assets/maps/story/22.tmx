@@ -18,11 +18,12 @@
    <properties>
     <property name="action">(begin
   (set &quot;022-talk-shen&quot; #t)
+  (define snowball-key (get-snowball-key))
   (dialog
     '((&quot;???/_happy&quot; &quot;Hey! Hi {{hero}}!&quot;)
     (&quot;/hero&quot; &quot;H-hi, you know me?&quot;)
     (&quot;???/&quot; &quot;Well, you are the hero of this year, you are quite famous. Are you here to visit the crypt?&quot;)
-    (&quot;/hero&quot; &quot;Yes. If I have not misunderstood, here's one of the 3 signets I need to access the Xeonjia Tower.&quot;)
+    (&quot;/hero&quot; &quot;Yes!\nHere's one of the 3 signets I need to access the Xeonjia Tower.&quot;)
     (&quot;???/&quot; &quot;Ah that's true, I've heard of it.\nBeware that here is full of monsters and bad people.&quot;)
     (&quot;/hero&quot; &quot;Ok thanks, I'll be careful.\nBut… who are you?&quot;)
     (&quot;???/&quot; &quot;Oh, yes sorry I forgot to introduce myself.&quot;)
@@ -32,14 +33,14 @@
   (wait)
   (give-weapon 1)
   (dialog
-    '((&quot;* {{hero}} got a SNOWBALLS CONTAINER *&quot;)
-    (&quot;/&quot; &quot;It's an invention of mine. It allows you to carry snowballs with you which you can throw at your opponents by pressing the \&quot;S\&quot; button.\nIt can contain up to 5 snowballs.&quot;)
+    '((&quot;* Shen gives a SNOWBALLS CONTAINER to {{hero}} *&quot;)
+    (&quot;/&quot; &quot;It's an invention of mine.\nWith this you can throw snowballs at your opponents by pressing the \&quot;{{snowball-key}}\&quot; button.\nIt can contain up to 5 snowballs.&quot;)
     (&quot;/hero_happy&quot; &quot;Wow! I'm sure it'll come in handy. Thank you.&quot;)
     (&quot;/_happy&quot; &quot;You're welcome.&quot;)
-    (&quot;/&quot; &quot;Unfortunately some time ago all the project blueprints were stolen and so the henchmen of the King of Evil have it too.&quot;)
+    (&quot;/&quot; &quot;Unfortunately some time ago all the project blueprints were stolen and so the Hoarfrost Team has it too.&quot;)
     (&quot;/hero&quot; &quot;Well, at least it will be an equal fight.&quot;)
     (&quot;/_happy&quot; &quot;Haha, well, you're right.&quot;)
-    (&quot;/&quot; &quot;Now I have to leave you, I have to study a strange rock that I found a little while ago.&quot;)
+    (&quot;/&quot; &quot;Now I have to leave you, I have to study a strange gem that I found a little while ago.&quot;)
     (&quot;/_happy&quot; &quot;We'll see again. Good luck!&quot;)
     (&quot;/hero_happy&quot; &quot;Bye Shen, thanks again!&quot;)))
   (wait)

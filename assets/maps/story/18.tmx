@@ -9,7 +9,7 @@
  <tileset firstgid="153" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="19" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAwtkYGAIAuJgIA4B4lAgloBiBSiGsXmA2BxJTIMBAhygdCIQJ0NxDBCnMmAHfjjEzaE0yOw8IM4H4ngoXUBAD7LZ9kjiILeWAXE5EKdB6QokOWRAiA8y1wfKVsPiFhsgtoXqM0fj22MxG918XACbXb5oZmlgUUMqgLnXAE0cFl92DJjhja4GGSjgUU8qgKU7ByiNHLYgv/syIMIUpJaFAZFOHRhQ0zNILQABooI7+AIAAA==
+   H4sIAAAAAAAAAwtkYGAIAuJgIA4B4lAgloBiBSiGsXmA2BxJTIMBAhygdCIQJ0NxDBCnMmAHfjjEzaE0yOw8IM4H4ngoXUBAD7LZ9kjiILeWAXE5EKdB6QokOWRAiA8y1wfK5sHiFhsgtoXqM0fj22MxG918XEANi5gvmlkaWNSQCmDuNUATh8WXHQNmeKOrQQYKeNSTCmDpzgFKI4ctyO++DIgwBallYUCkUwcG1PQMUgsAboJfqfgCAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">

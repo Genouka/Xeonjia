@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="80">
  <properties>
+  <property name="action">(if (eq? (last-place) &quot;9&quot;)
+  (music &quot;distorted&quot;))</property>
   <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="city"/>
  </properties>
@@ -21,21 +23,36 @@
   <object id="74" gid="151" x="64" y="80" width="16" height="16">
    <properties>
     <property name="action">(if (not (= (orientation) 0))
-  (dialog '((&quot;A computer turned off. Looks like a key is needed to turn it on.&quot;)))
-  (dialog '((&quot;There's nothing back here.&quot;)))))</property>
+  (if (eq? (last-place) &quot;9&quot;)
+    (if (has-item &quot;24.stone5&quot;)
+      (dialog '((&quot;The computer appears to be broken.&quot;)))
+      (begin
+        (dialog '((&quot;!\nAn object has materialized here!\nIt's a stone.&quot;)))
+        (wait)
+        (give-item &quot;24.stone5&quot;)))
+    (dialog '((&quot;A computer turned off. Looks like a key is needed to turn it on.&quot;))))
+  (dialog '((&quot;There's nothing back here.&quot;))))</property>
    </properties>
   </object>
   <object id="75" gid="152" x="80" y="80" width="16" height="16">
    <properties>
     <property name="action">(if (not (= (orientation) 0))
-  (dialog '((&quot;A computer turned off. Looks like a key is needed to turn it on.&quot;)))
-  (dialog '((&quot;There's nothing back here.&quot;)))))</property>
+  (if (eq? (last-place) &quot;9&quot;)
+    (if (has-item &quot;24.stone5&quot;)
+      (dialog '((&quot;The computer appears to be broken.&quot;)))
+      (begin
+        (dialog '((&quot;!\nAn object has materialized here!\nIt's a stone.&quot;)))
+        (wait)
+        (give-item &quot;24.stone5&quot;)))
+    (dialog '((&quot;A computer turned off. Looks like a key is needed to turn it on.&quot;))))
+  (dialog '((&quot;There's nothing back here.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="2" name="spawn points">
   <object id="70" class="Door" x="80" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="24"/>
    </properties>

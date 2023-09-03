@@ -16,20 +16,28 @@
  <objectgroup id="10" name="npcs">
   <object id="71" class="NPC" gid="20" x="80" y="80" width="16" height="16">
    <properties>
-    <property name="action">(if (!get &quot;001-talk-neighbor&quot;)
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(if (!get &quot;001-talk-neighbor&quot;)
   (begin
     (dialog
-      '((&quot;neighbor&quot; &quot;Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nYou simply have to open your backpack and eat the food!\nHere's to you!&quot;)))
+      '((&quot;neighbor&quot; &quot;Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nHere's to you!&quot;)))
     (wait)
     (give-item &quot;food-box&quot;)
     (dialog '((&quot;/hero_happy&quot; &quot;Thank you very much!\nIt looks delicious!&quot;)))
     (set &quot;001-talk-neighbor&quot; #t))
-  (dialog '((&quot;neighbor&quot; &quot;Good luck.&quot;))))</property>
+  (dialog '((&quot;neighbor&quot; &quot;Good luck.&quot;))))
+
+(dialog '((&quot;neighbor&quot; &quot;My box full of food made you win. So it's basically me who saved the world.&quot;))))</property>
    </properties>
   </object>
   <object id="73" class="NPC" gid="15" x="32" y="64" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/_happy&quot; &quot;It's the first time an inhabitant of this village has been chosen as a \&quot;hero\&quot;.\nI'm so happy.&quot;)))"/>
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(dialog '((&quot;/_happy&quot; &quot;It's the first time an inhabitant of this town has been chosen as a \&quot;hero\&quot;.\nI'm so happy.&quot;)))
+
+(dialog '((&quot;/_happy&quot; &quot;The \&quot;Last Hero\&quot; is an inhabitant of this town!\nI'm so happy.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
@@ -42,6 +50,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="1"/>
    </properties>

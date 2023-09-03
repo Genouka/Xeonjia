@@ -8,22 +8,22 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="366" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="398" source="../tilesets/crypt-2.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="448" source="../tilesets/crypt-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA1vHyMCwCwmvh+JdWMSR+RuAeBsQTwdiUsA0oPodUL2zSNQ7B0nvfBL1zkPSSw7Ygce/l4D4MhBfwaKPkH9vAfFtIL6DRS8h/z4C4sdA/ASLXkL+XQAUXwbEC3HI0yqs8IHBnDYm4pED6d0HxPux4M1AvByIN+KQPwDEAJQ8dpaEAwAA
+   H4sIAAAAAAAAA3vAyMDwBgk/hOI3WMSR+Y+A+AUQnwRiUsAJoPpXUL1nSNR7DknvRRL1XkDSSw54hce/LEAxViBmwyJHyL88QDFeIObDIkfIvyJAMVEgFsMiR8i/l4DiN4D4Mg55WoUVPjCY08ZhPHIgvR+A+CMW/BSIbwLxYxzyn4AYAJj9SbiEAwAA
   </data>
  </layer>
  <layer id="6" name="Tile Layer 2" width="15" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAXUAFsYyde7hwK9o2DoAwCLJ3eihAMAAA==
+   H4sIAAAAAAAAA2NgGAXUAM8Yydf7jgK9o2DoAwB03iyShAMAAA==
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="64" gid="421" x="112" y="96" width="16" height="16">
+  <object id="64" gid="471" x="112" y="96" width="16" height="16">
    <properties>
     <property name="actionOnEvent">(if (and (and (!get &quot;34-cave-spirit&quot;) (is-visible 74)) (and (is-visible 77) (and (is-visible 78) (and (is-visible 81) (and (is-visible 83) (is-visible 76))))))
   (show 64)
@@ -33,12 +33,12 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="72" gid="413" x="32" y="112" width="16" height="16">
+  <object id="72" gid="463" x="32" y="112" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;\&quot; #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \&quot;&quot;)
+            '((&quot;rock/&quot; &quot;#3: I'm green if #5 and #6 are both the same color. Otherwise I'm red.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -52,12 +52,12 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="74" gid="413" x="32" y="192" width="16" height="16">
+  <object id="74" gid="463" x="32" y="192" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;\&quot; #5: I'm red if #1 is red. Otherwise I'm green. \&quot;&quot;)
+            '((&quot;rock/&quot; &quot;#5: I'm red if #1 is red. Otherwise I'm green.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -71,12 +71,12 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="75" gid="413" x="192" y="112" width="16" height="16">
+  <object id="75" gid="463" x="192" y="112" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;\&quot; #4: I'm green if #3 is green. Otherwise I'm red. \&quot;&quot;)
+            '((&quot;rock/&quot; &quot;#4: I'm green if #3 is green. Otherwise I'm red.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -90,12 +90,12 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="76" gid="413" x="192" y="48" width="16" height="16">
+  <object id="76" gid="463" x="192" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;\&quot; #2: I'm green if #4 is red. Otherwise I'm red. \&quot;&quot;)
+            '((&quot;rock/&quot; &quot;#2: I'm green if #4 is red. Otherwise I'm red.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -109,12 +109,12 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="77" gid="405" x="32" y="112" width="16" height="16">
+  <object id="77" gid="455" x="32" y="112" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;\&quot; #3: I'm green if #5 and #6 are both the same color. Otherwise I'm red. \&quot;&quot;)
+            '((&quot;rock/&quot; &quot;#3: I'm green if #5 and #6 are both the same color. Otherwise I'm red.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -127,12 +127,12 @@
     (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
    </properties>
   </object>
-  <object id="78" gid="413" x="32" y="48" width="16" height="16">
+  <object id="78" gid="463" x="32" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;\&quot; #1: I'm red if #4 is green. Otherwise I'm green. \&quot;&quot;)
+            '((&quot;rock/&quot; &quot;#1: I'm red if #4 is green. Otherwise I'm green.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -146,12 +146,12 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="79" gid="405" x="32" y="48" width="16" height="16">
+  <object id="79" gid="455" x="32" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
   (begin
     (dialog
-      '((&quot;\&quot; #1: I'm red if #4 is green. Otherwise I'm green. \&quot;&quot;)
+      '((&quot;rock/&quot; &quot;#1: I'm red if #4 is green. Otherwise I'm green.&quot;)
       (&quot;There is a button, do I press it?&quot;)))
     (define id &quot;34-cave-button&quot;)
     (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -164,12 +164,12 @@
   (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
    </properties>
   </object>
-  <object id="80" gid="413" x="192" y="192" width="16" height="16">
+  <object id="80" gid="463" x="192" y="192" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;\&quot; #6: I'm red if #2 is green. Otherwise I'm green. \&quot;&quot;)
+            '((&quot;rock/&quot; &quot;#6: I'm red if #2 is green. Otherwise I'm green.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -183,12 +183,12 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="81" gid="405" x="192" y="192" width="16" height="16">
+  <object id="81" gid="455" x="192" y="192" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;\&quot; #6: I'm red if #2 is green. Otherwise I'm green. \&quot;&quot;)
+            '((&quot;rock/&quot; &quot;#6: I'm red if #2 is green. Otherwise I'm green.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -201,12 +201,12 @@
     (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
    </properties>
   </object>
-  <object id="82" gid="405" x="192" y="48" width="16" height="16">
+  <object id="82" gid="455" x="192" y="48" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;\&quot; #2: I'm green if #4 is red. Otherwise I'm red. \&quot;&quot;)
+            '((&quot;rock/&quot; &quot;#2: I'm green if #4 is red. Otherwise I'm red.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -219,12 +219,12 @@
     (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
    </properties>
   </object>
-  <object id="83" gid="405" x="192" y="112" width="16" height="16">
+  <object id="83" gid="455" x="192" y="112" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;\&quot; #4: I'm green if #3 is green. Otherwise I'm red. \&quot;&quot;)
+            '((&quot;rock/&quot; &quot;#4: I'm green if #3 is green. Otherwise I'm red.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -237,12 +237,12 @@
     (dialog '((&quot;I no longer need to press the button.&quot;))))</property>
    </properties>
   </object>
-  <object id="84" gid="405" x="32" y="192" width="16" height="16">
+  <object id="84" gid="455" x="32" y="192" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;\&quot; #5: I'm red if #1 is red. Otherwise I'm green. \&quot;&quot;)
+            '((&quot;rock/&quot; &quot;#5: I'm red if #1 is red. Otherwise I'm green.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -260,7 +260,7 @@
     <property name="actionOnCollision">(begin
   (set &quot;34-cave-talk&quot; #t)
   (delete-me)
-  (dialog '((&quot;!!!&quot;)))
+  (dialog '((&quot;!&quot;)))
   (wait)
   (move 1)
   (wait 0.4)
@@ -299,7 +299,7 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="87" gid="450" x="112" y="128" width="16" height="16">
+  <object id="87" gid="500" x="112" y="128" width="16" height="16">
    <properties>
     <property name="action">(if (not (is-visible 64))
     (dialog-kobi '((&quot;/&quot; &quot;Everything originated from water, everything will return to water.&quot;)))
@@ -319,13 +319,13 @@
         (set-orientation '(1 62))
         (set-orientation '(1 -1))
         (dialog
-            '((&quot;water spirit/water-spirit&quot; &quot;The King of Evil, as you know, came to us 64 years ago freezing the Kingdom and instilling fear.\nI don't know exactly where he comes from, but what I do know is that his goal is to collect gems that are scattered around the world.\nHe needs them to get energy to completely freeze our world.&quot;)
+            '((&quot;water spirit/water-spirit&quot; &quot;The King of Evil, as you know, came to us 65 years ago freezing the Kingdom and instilling fear.\nI don't know exactly where he comes from, but what I do know is that his goal is to collect gems that are scattered around the world.\nHe needs them to get energy to completely freeze our world.&quot;)
             (&quot;/hero&quot; &quot;Completely?!&quot;)
             (&quot;water spirit/water-spirit&quot; &quot;Yes, we are lucky we still have seas and a bearable temperature, but if he succeeds in his plan the Kingdom will no longer be livable for us.&quot;)
             (&quot;/hero&quot; &quot;And why would he want that??&quot;)
             (&quot;water spirit/water-spirit&quot; &quot;Because he and his fellows need very low temperatures to live, temperatures so low that right now there are only in the Xeonjia Tower.&quot;)
             (&quot;/shen&quot; &quot;So he's making our Kingdom unlivable for us to make it livable for him?!&quot;)
-            (&quot;water spirit/water-spirit&quot; &quot;Exactly.\nThe only way to stop him is to find as many gems as possible and finally defeat him, of course.\nHe uses the Hoarfrost Team to search for gems precisely because he cannot leave the tower.\nThis is what I know about the King of Evil. Now I must leave you to avoid becoming an ice pop, but we will see each other again in the future.\nI will appear to you when you need me.&quot;)))
+            (&quot;water spirit/water-spirit&quot; &quot;Exactly.\nThe only way to stop him is to find as many gems as possible and finally defeat him, of course.\nHe uses the Hoarfrost Team to search for gems because he cannot leave the tower.\nThis is what I know about the King of Evil. Now I must leave you to avoid becoming an ice pop, but we will see each other again in the future.\nI will appear to you when you need me.&quot;)))
         (wait)
         (hide 64)
         (wait 1)
@@ -344,13 +344,19 @@
             '((&quot;/shen&quot; &quot;We need to be more careful and look for them better.\nNow I'll leave you and continue my studies on the gem I have.\nSee you!&quot;)
             (&quot;/hero&quot; &quot;Bye Shen, be careful!&quot;)))
         (wait)
+        (move '(0 62))
+        (wait 0.6)
+        (move '(2 62))
+        (wait 0.6)
+        (move '(0 62))
+        (wait 0.6)
         (leave-npc 62)
         (set &quot;34-cave-spirit&quot; #t)))</property>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="9" name="npc">
-  <object id="62" class="NPC" gid="391" x="112" y="144" width="16" height="16">
+  <object id="62" class="NPC" gid="441" x="112" y="144" width="16" height="16">
    <properties>
     <property name="action">(if (not (is-visible 64))
   (if (!get &quot;34-cave-talk-shen-1&quot;)
@@ -385,6 +391,7 @@
  <objectgroup id="10" name="spawn points">
   <object id="61" class="Door" x="112" y="224" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="34"/>
    </properties>

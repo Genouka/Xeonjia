@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="70">
+ <properties>
+  <property name="disable-worldmap" type="bool" value="true"/>
+  <property name="map-name" value="XEONJIA TOWER – 5F"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <tileset firstgid="544" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="576" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="600" source="../tilesets/tower.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="15" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAytgYmAoxYHL8MgVAnEFENfiwHV45CqhetFBHFRsNSMqHxmg643FogYXwGUvIRCLx8349GCzlxT3outFByuA4XQWiFcykq73GFDPWiA+QqJeUJxsAOrZC8QbGYmLI1IAveMXZj4+vReA/rwIxJfwhFURE6ZbcbkdWbwYyK6hAAMANiQtl8ADAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="63" class="NPC" gid="556" x="96" y="160" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;They could have put an elevator.&quot;)))"/>
+    <property name="actionOnEvent">(if (visited-room &quot;x6&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="64" class="NPC" gid="572" x="128" y="160" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;How many floors do you think there are?&quot;)))"/>
+    <property name="actionOnEvent">(if (visited-room &quot;x6&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="15" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGNmgh2mgXUAZiCPT/SB9eUzk6x8FgwMAALbNha3AAwAA
+  </data>
+ </layer>
+ <objectgroup id="8" name="items">
+  <object id="67" gid="660" x="64" y="96" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 1)
+  (if (= (get-initial-HP) 100)
+    (hp-machine
+      '((&quot;fresh-water&quot; 33 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
+      (&quot;pomegranate-juice&quot; 90 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
+      (&quot;kiwi-juice&quot; 105 &quot;(give-item \&quot;kiwi-juice\&quot;)&quot;)
+      (&quot;healer&quot; 125 &quot;(give-item \&quot;healer\&quot;)&quot;)
+      (&quot;healer-plus&quot; 140 &quot;(give-item \&quot;healer-plus\&quot;)&quot;)
+      (&quot;hp-up-5-shop&quot; 180 &quot;(begin (increase-HP 5) (set-HP-diff 105))&quot;)))
+    (hp-machine
+      '((&quot;fresh-water&quot; 33 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
+      (&quot;pomegranate-juice&quot; 90 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
+      (&quot;kiwi-juice&quot; 105 &quot;(give-item \&quot;kiwi-juice\&quot;)&quot;)
+      (&quot;healer&quot; 125 &quot;(give-item \&quot;healer\&quot;)&quot;)
+      (&quot;healer-plus&quot; 140 &quot;(give-item \&quot;healer-plus\&quot;)&quot;))))
+  (dialog '((&quot;I can't use the HP machine from this side.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="68" class="Modifier" gid="594" x="48" y="80" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="69" class="Modifier" gid="594" x="160" y="64" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="20"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="54" class="Door" x="112" y="144" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="roomId" value="x4"/>
+   </properties>
+  </object>
+  <object id="66" class="Door" x="112" y="32" width="16" height="16">
+   <properties>
+    <property name="roomId" value="x6"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

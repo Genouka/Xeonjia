@@ -35,7 +35,7 @@
     <property name="moneyDelta" type="int" value="5"/>
    </properties>
   </object>
-  <object id="45" class="Solid" gid="63" x="192" y="160" width="16" height="16">
+  <object id="45" class="Solid" gid="55" x="192" y="160" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;10.berries&quot;)
@@ -55,12 +55,12 @@
   </object>
   <object id="47" gid="152" x="192" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="48" gid="151" x="224" y="160" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

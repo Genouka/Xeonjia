@@ -15,6 +15,7 @@
  <objectgroup id="10" name="npcs">
   <object id="79" class="Door" x="96" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="37"/>
    </properties>
@@ -37,7 +38,7 @@
     <property name="action">(if (= (orientation) 1)
   (dialog
     '((&quot;/book&quot; &quot;[…] but half of the army defected, made a deal with the King of Evil and founded the Hoarfrost Team. That moment decreed our defeat.&quot;)
-    (&quot;This book tells what happened 64 years ago.&quot;))))</property>
+    (&quot;This book tells what happened 65 years ago.&quot;))))</property>
    </properties>
   </object>
   <object id="85" gid="229" x="64" y="64" width="16" height="16">

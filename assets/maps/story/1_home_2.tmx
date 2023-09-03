@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="9" height="8" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="110">
  <properties>
-  <property name="action">(if (&lt;= (places-visited) 1)
-  (story-dialog &quot;T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia Tower is about to begin.\nThis year I'm the chosen \&quot;hero\&quot; in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to.&quot;))</property>
+  <property name="action">(if (and (get &quot;the-end&quot;) (!get &quot;1_home-end&quot;))
+  (begin
+    (set &quot;1_home-end&quot; #t)
+    (story-dialog &quot;Today… today… today is a day like many others.\nSince the King of Evil was defeated 1 month ago, I don't have much to do.&quot;))
+  (if (&lt;= (visited-rooms) 1)
+    (story-dialog &quot;Today… today is the day I've been waiting for all my life. My journey to the Xeonjia Tower is about to begin.\nThis year I'm the \&quot;chosen hero\&quot; in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to.&quot;)))</property>
   <property name="disable-minimap" type="bool" value="true"/>
-  <property name="milla">(dialog '((&quot;/milla&quot; &quot;I wish I knew you when you were little.&quot;)));;;
-(dialog '((&quot;/milla&quot; &quot;It all started here.&quot;)))</property>
+  <property name="milla">(if (!get &quot;the-end&quot;)
+  (dialog '((&quot;/milla&quot; &quot;I wish I knew you when you were little.&quot;)))
+  (dialog '((&quot;/milla&quot; &quot;What do we do today?&quot;))));;;
+(if (!get &quot;the-end&quot;)
+  (dialog '((&quot;/milla&quot; &quot;It all started here.&quot;)))
+  (dialog '((&quot;/milla&quot; &quot;What do we do today?&quot;))))</property>
   <property name="music" value="town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
@@ -25,33 +33,49 @@
  <objectgroup id="9" name="items">
   <object id="79" gid="218" x="16" y="96" width="16" height="16">
    <properties>
-    <property name="action">(if (not (has-been-here &quot;999&quot;))
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(if (not (visited-room &quot;999&quot;))
   (dialog '((&quot;I'd like to go back to bed but I can't.&quot;)))
-  (dialog '((&quot;It has been quite a while since the last time I slept here.&quot;))))</property>
+  (dialog '((&quot;It has been quite a while since the last time I slept here.&quot;))))
+
+(dialog '((&quot;I've already been in bed too long in the past few weeks…&quot;))))</property>
    </properties>
   </object>
   <object id="80" gid="219" x="32" y="96" width="16" height="16">
    <properties>
-    <property name="action">(if (not (has-been-here &quot;999&quot;))
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(if (not (visited-room &quot;999&quot;))
   (dialog '((&quot;I'd like to go back to bed but I can't.&quot;)))
-  (dialog '((&quot;It has been quite a while since the last time I slept here.&quot;))))</property>
+  (dialog '((&quot;It has been quite a while since the last time I slept here.&quot;))))
+
+(dialog '((&quot;I've already been in bed too long in the past few weeks…&quot;))))</property>
    </properties>
   </object>
   <object id="83" gid="203" x="96" y="80" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
-  (if (not (has-been-here &quot;999&quot;))
-    (dialog '((&quot;I'll miss you, TV.&quot;)))
-    (dialog '((&quot;I don't want to watch television now.&quot;))))
+  (if (!get &quot;the-end&quot;)
+    (if (not (visited-room &quot;999&quot;))
+      (dialog '((&quot;I'll miss you, TV.&quot;)))
+      (dialog '((&quot;I don't want to watch television now.&quot;))))
+    (dialog '((&quot;Too much TV lately.&quot;))))
   (if (= (orientation) 0)
-    (dialog '((&quot;There's a bit of dust back here.&quot;)))))</property>
+    (dialog '((&quot;There's a bit of dust back here.&quot;)))
+    (if (= (orientation) 2)
+      (dialog '((&quot;I can't use the TV from this side.&quot;))))))</property>
    </properties>
   </object>
   <object id="90" gid="187" x="48" y="112" width="16" height="16">
    <properties>
-    <property name="action">(if (not (has-been-here &quot;999&quot;))
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(if (not (visited-room &quot;999&quot;))
   (dialog '((&quot;I hope my parents will water it when I'm away.&quot;)))
-  (dialog '((&quot;This plant hasn't been watered for long.&quot;))))</property>
+  (dialog '((&quot;This plant hasn't been watered for long.&quot;))))
+
+(dialog '((&quot;This plant is very fragrant.&quot;))))</property>
    </properties>
   </object>
   <object id="98" gid="193" x="16" y="48" width="16" height="16">
@@ -98,6 +122,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="78" class="Door" x="96" y="32" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="1_home"/>
    </properties>

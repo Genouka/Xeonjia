@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="78">
+ <properties>
+  <property name="can-escape" type="bool" value="false"/>
+  <property name="disable-worldmap" type="bool" value="true"/>
+  <property name="map-name" value="XEONJIA TOWER – 4F"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <tileset firstgid="544" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="576" source="../tilesets/tower.tsx"/>
+ <tileset firstgid="640" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="15" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA4tgYmCIB+JYEnEkECcAcToQp5KIE6F6VzMygMEGIL0RykYH6HIwveQAmN6VOOzCBVYwIvTicqcbDjdtYMTtZnQ92Mwg5F9XPHLY9MLsAOkLZ0LoR7ebkL1H8YQhNfyLK45whTMxcYQL4IsjYgBIbxSSXpBbcLkfXS4aqC+FAgwALqy0XMADAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="63" class="NPC" gid="556" x="48" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if  (= (enemies-count) 0)
+  (begin
+    (dialog '((&quot;/_happy&quot; &quot;We won! We are strong!\nLet's move on.&quot;)))
+    (wait)
+    (leave-npc 63))
+  (dialog '((&quot;/_happy&quot; &quot;Hi!&quot;))))</property>
+    <property name="actionOnEvent">(if (visited-room &quot;x5&quot;)
+  (delete-me))</property>
+    <property name="team" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="64" class="NPC" gid="572" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if  (= (enemies-count) 0)
+  (begin
+    (dialog '((&quot;/&quot; &quot;An easy win.\nLet's move on.&quot;)))
+    (wait)
+    (leave-npc 64))
+  (dialog '((&quot;/&quot; &quot;Stay focused!&quot;))))</property>
+    <property name="actionOnEvent">(if (visited-room &quot;x5&quot;)
+  (delete-me))</property>
+    <property name="team" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="67" class="Monster" gid="154" x="112" y="160" width="16" height="16">
+   <properties>
+    <property name="hp" type="float" value="90"/>
+    <property name="level" type="float" value="5"/>
+   </properties>
+  </object>
+  <object id="68" class="Monster" gid="154" x="96" y="160" width="16" height="16">
+   <properties>
+    <property name="hp" type="float" value="90"/>
+    <property name="level" type="float" value="5"/>
+   </properties>
+  </object>
+  <object id="69" class="Monster" gid="154" x="128" y="160" width="16" height="16">
+   <properties>
+    <property name="hp" type="float" value="90"/>
+    <property name="level" type="float" value="5"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="15" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGAWjYBQMVQAAewDiOMADAAA=
+  </data>
+ </layer>
+ <objectgroup id="8" name="items">
+  <object id="74" gid="651" x="176" y="144" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="75" gid="651" x="112" y="208" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="76" gid="651" x="48" y="144" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="77" gid="651" x="112" y="80" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="15"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="54" class="Door" x="16" y="32" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="roomId" value="x3"/>
+   </properties>
+  </object>
+  <object id="66" class="Door" x="112" y="144" width="16" height="16">
+   <properties>
+    <property name="roomId" value="x5"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

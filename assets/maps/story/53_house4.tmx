@@ -16,6 +16,7 @@
  <objectgroup id="10" name="npcs">
   <object id="79" class="Door" x="112" y="32" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="53/up"/>
    </properties>

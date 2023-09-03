@@ -36,12 +36,12 @@
  <objectgroup id="8" name="items">
   <object id="60" gid="571" x="144" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog-kobi '((&quot;In the ardent embrace, life is born again.&quot;)))"/>
+    <property name="action" value="(dialog-kobi '((&quot;In the ardent embrace, life is born again&quot;)))"/>
    </properties>
   </object>
   <object id="61" gid="570" x="128" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog-kobi '((&quot;In the ardent embrace, life is born again.&quot;)))"/>
+    <property name="action" value="(dialog-kobi '((&quot;In the ardent embrace, life is born again&quot;)))"/>
    </properties>
   </object>
  </objectgroup>

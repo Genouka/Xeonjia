@@ -292,9 +292,14 @@
                     "name": "quiet",
                     "type": "bool",
                     "value": false
+                },
+                {
+                    "name": "visible",
+                    "type": "bool",
+                    "value": true
                 }
             ],
-            "name": "SliderCpu",
+            "name": "Monster",
             "type": "class",
             "useAs": [
                 "object",

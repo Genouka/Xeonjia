@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="21" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="60">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="21" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="61">
  <properties>
   <property name="map-name" value="Route 8"/>
  </properties>
@@ -9,6 +9,7 @@
  <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
  <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
  <tileset firstgid="544" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="568" source="../tilesets/npc_main.tsx"/>
  <layer id="1" name="Tile Layer 1" width="21" height="9">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgIA3cY2Rg2M0IodHBC0YIfkMGXo9D/C0NzISZexeLH7CB/VjUncci9gAothmHmdjCCwS24zAH2Z3k+BNd7C2RfsXlJnRwH0nNAyLc+IiAmehmEOPe1wTsxGUGAIpMzf70AgAA

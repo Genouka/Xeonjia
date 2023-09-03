@@ -23,7 +23,7 @@
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="84" class="SliderCpu" gid="343" x="128" y="144" width="16" height="16">
+  <object id="84" class="Monster" gid="343" x="128" y="144" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="70"/>
     <property name="level" type="float" value="4"/>
@@ -32,20 +32,23 @@
   <object id="92" class="NPC" gid="620" x="80" y="64" width="16" height="16">
    <properties>
     <property name="action">(if  (= (enemies-count) 0)
-  (dialog '((&quot;/_happy&quot; &quot;We won! We are strong!&quot;)))
+  (begin
+    (dialog '((&quot;/_happy&quot; &quot;We won! We are strong!\nLet's move on.&quot;)))
+    (wait)
+    (leave-npc 92))
   (dialog '((&quot;/_happy&quot; &quot;Hi!&quot;))))</property>
     <property name="actionOnEvent">(if (get &quot;t3_03-safe&quot;)
   (delete-me))</property>
     <property name="team" type="int" value="0"/>
    </properties>
   </object>
-  <object id="93" class="SliderCpu" gid="343" x="64" y="160" width="16" height="16">
+  <object id="93" class="Monster" gid="343" x="64" y="160" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="60"/>
     <property name="level" type="float" value="4"/>
    </properties>
   </object>
-  <object id="94" class="SliderCpu" gid="343" x="208" y="112" width="16" height="16">
+  <object id="94" class="Monster" gid="343" x="208" y="112" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="60"/>
     <property name="level" type="float" value="4"/>
@@ -82,6 +85,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="80" class="Door" x="96" y="48" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="t3_02"/>
    </properties>
   </object>

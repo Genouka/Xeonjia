@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="78">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="81">
  <properties>
   <property name="disable-minimap" type="bool" value="true"/>
   <property name="music" value="village"/>
@@ -7,13 +7,14 @@
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="237" source="../tilesets/npc_main.tsx"/>
  <layer id="1" name="Tile Layer 1" width="10" height="9">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA7vAwMBwngC+CMQ3gPg6EG+D0sgYJnYTqm4PATwU1D0gQt1DIL6GA19F4wMA6cfviWgBAAA=
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="74" gid="2" x="96" y="96" width="16" height="16">
+  <object id="74" gid="2" x="64" y="64" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;The Fire Region is the smallest region of the Kingdom, but that doesn't make it the least important.&quot;)))"/>
    </properties>
@@ -21,13 +22,29 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIB3sBOJdRKg7CMSHgHg7EWpBavYD8QEi1B4H4hNEmkttsJVMfQBHHCggaAEAAA==
+   H4sIAAAAAAAAA2NgIB3sBOJdRKo9BMTbiVS7H4gPEKHuOBCfIMFcaoKtZOoDAIt2jlhoAQAA
   </data>
  </layer>
- <objectgroup id="9" name="items"/>
+ <objectgroup id="9" name="items">
+  <object id="79" gid="193" x="48" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 1)
+  (begin
+    (define id &quot;2-story&quot;)
+    (dialog '((&quot;/&quot; &quot;There is a book called \&quot;Your child, the Hero! – Prepare your child to become a Hero in 10 steps\&quot;.\nDo you want to read it?&quot;)))
+    (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+    (wait)
+    (if (get id)
+      (dialog
+        '((&quot;/book&quot; &quot;Greetings, brave and ambitious parents!\nSure, there's no greater desire than to see one's child selected as the future Hero, right?\nOur very young children, at the age of 5, are subjected to tests of intelligence, audacity and strength.\nOnly ONE child is chosen each year, destined to become the Hero who will embark on the epic adventure on November 24 of the year of their 21st birthday.\nNow, you may be wondering: \&quot;How can I make sure that my child is the chosen one?\&quot;. Well, the answer is simpler than you might imagine! And you've already done the first step: you bought this book!&quot;)
+        (&quot;* {{hero}} stops reading *&quot;))))))</property>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="2" name="spawn points">
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="70"/>
    </properties>

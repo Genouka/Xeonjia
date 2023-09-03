@@ -2,16 +2,16 @@
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="18" height="19" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="55">
  <properties>
   <property name="has-hints" type="bool" value="true"/>
-  <property name="map-name" value="Melhopolis"/>
+  <property name="map-name" value="Greentwig City"/>
   <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="231" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52UOW/CQBCF5wfQBFKkQi5TunOTxC6RgAICBQkRihA3hCNcP583yoxYLxvby5M+zfp63rHfbouI2uAddEAXPAklY8xEUhPrPKsHPsEH6IMvSqsCHilb7PUNhgYjufbmuP8FvDrG7PMD1mAgdZPz7sCqrBgcwQmMwRScc3xYiXWs3+kBVEG5gIeq4fCxVff0ijze71IgNaT8f6rKygf39FzQ5798qI/r+7ik+ZhQOh+ao6Lz0Xzs6TYfPBfum/vlvrl/e12YsvOhmc9aF0X/vfrMwBwswBKsPJ5nBVK34Bfs6K/3g6cPK6H714Up3ZPuUdPyYWJK7296LhRius5d90SScU2OL/Xbx25YBQAA
+   H4sIAAAAAAAAA52UzU/CQBDF5w/wgnjoifTokVsvYnskUQ6gHFSMMYQvFfEDhD/fN2Em3S5Du+Ulv8xmWx4z7dv2iWgA7sA9GIJIOHPWTEJ7ZVJ1n/UAnsAjGIFnKqoJLqhc7PUKxg4TuXZt3H8FOsaafT7BCrxI/ar479irrBT8gS2YgjnYVfiwMmOPe2qAFjgP8FDdGj6+bmp6JaV3VSuW2qbqd6oqywfPdBnocywf6mM9H0uajxkV86E5Cu1H87Gmw3xwLzw3z8tz8/z+uXDl58PN/LG5Q9+99rMAb+AdfIBljd+zYqnf4Bf80H72TU0fVkannwtXEdlnLkQ9wyul4ndP99pCSnnvCeWZ43VX1v8USbqyWAUAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -28,7 +28,7 @@
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
-  <object id="50" class="NPC" gid="191" x="256" y="288" width="16" height="16">
+  <object id="50" class="NPC" gid="216" x="256" y="288" width="16" height="16">
    <properties>
     <property name="action">(if (! (get &quot;026-snowglobe&quot;))
   (begin
@@ -39,9 +39,13 @@
   (dialog '((&quot;/&quot; &quot;The weather is good today.&quot;))))</property>
    </properties>
   </object>
-  <object id="51" class="NPC" gid="223" x="128" y="32" width="16" height="16">
+  <object id="51" class="NPC" gid="248" x="128" y="32" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;We keep an eye on you.&quot;)))"/>
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(dialog '((&quot;/&quot; &quot;We keep an eye on you.&quot;)))
+
+(dialog '((&quot;/&quot; &quot;Ah, the Hoarfrost Team was defeated?\nNobody told me.\nAnd now what do I do?&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
@@ -51,14 +55,14 @@
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="53" gid="245" x="160" y="32" width="16" height="16">
+  <object id="53" gid="270" x="160" y="32" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;28&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;28&quot;) (delete-me))"/>
    </properties>
   </object>
-  <object id="54" gid="253" x="112" y="144" width="16" height="16">
+  <object id="54" gid="278" x="112" y="144" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;28&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;28&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

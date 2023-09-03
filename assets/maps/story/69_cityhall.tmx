@@ -124,6 +124,7 @@
  <objectgroup id="10" name="spawn points">
   <object id="97" class="Door" x="80" y="256" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="69"/>
    </properties>

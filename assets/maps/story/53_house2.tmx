@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="6" height="8" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="90">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="6" height="8" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="91">
  <properties>
   <property name="disable-minimap" type="bool" value="true"/>
   <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;I feel at home.&quot;)))"/>
@@ -16,40 +16,40 @@
  <objectgroup id="10" name="npcs">
   <object id="81" class="NPC" gid="234" x="48" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;guy/&quot; &quot;Welcome to DeepDaikon studios, we are a bit busy at the moment.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Welcome to DeepDaikon studios!\nWe are a bit busy at the moment.&quot;)))"/>
    </properties>
   </object>
   <object id="85" class="NPC" gid="233" x="16" y="64" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;guy/&quot; &quot;I did everything you see.\nI did you too.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="86" class="NPC" gid="235" x="64" y="96" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;guy/&quot; &quot;Bugs? Bugs? There are no bugs here.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I did everything you see.\nI did you too.&quot;)))"/>
    </properties>
   </object>
   <object id="89" class="NPC" gid="236" x="48" y="48" width="16" height="16">
    <properties>
     <property name="action">(begin
-  (dialog '((&quot;guy/&quot; &quot;Good that you got here.\nYou donated some money to this project, didn't you?&quot;)))
+  (dialog '((&quot;/&quot; &quot;Good that you got here.\nYou donated some money to this project, didn't you?&quot;)))
   (define id &quot;053-house2-question-donate&quot;)
   (answer id '((&quot;Yes, I did!&quot; . #t) (&quot;No…&quot; . #f)))
   (wait)
   (if (get id)
-    (dialog '((&quot;guy/_happy&quot; &quot;Bravo! I hope you are not lying to me.&quot;)))
-    (dialog '((&quot;guy/_sad&quot; &quot;I thought so. Very few people contributed.&quot;)))))</property>
+    (dialog '((&quot;/_happy&quot; &quot;Bravo! I hope you are not lying to me.&quot;)))
+    (dialog '((&quot;/_sad&quot; &quot;I thought so. Very few people contributed.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="90" class="NPC" gid="235" x="64" y="96" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;It took a long time but now we have finished building everything.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="6" height="8">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIB2045HbCMTdQNyDRW4yEE9B4m8mwq6NBOQBiIF+ocAAAAA=
+   H4sIAAAAAAAAA2NgIB20E5DvBuIeLOKTgXgKEn8zEXZtJCAPADfOC/vAAAAA
   </data>
  </layer>
  <layer id="12" name="Tile Layer 3" width="6" height="8">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoD7YSAMzcQEAyx4RwsAAAAA=
+   H4sIAAAAAAAAA2NgoA3YSCNz0QEA67TR6cAAAAA=
   </data>
  </layer>
  <objectgroup id="9" name="items"/>
@@ -62,6 +62,7 @@
   </object>
   <object id="84" class="Door" x="16" y="80" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="53"/>
    </properties>

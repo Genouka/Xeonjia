@@ -111,9 +111,10 @@
  <tile id="55" class="Solid">
   <properties>
    <property name="action">(if (and (has-weapon 1) (&gt; (enemies-count) 0))
-    (if (max-pp-snowballs)
-        (dialog '((&quot;The snowballs container is full.&quot;))))
-    (dialog '((&quot;A snowdrift.&quot;))))</property>
+  (if (max-pp-snowballs)
+    (dialog '((&quot;The snowballs container is full.&quot;)))
+    (dialog '((&quot;* {{user-name}} fills his snowballs container *&quot;))))
+  (dialog '((&quot;A snowdrift.&quot;))))</property>
   </properties>
  </tile>
 </tileset>

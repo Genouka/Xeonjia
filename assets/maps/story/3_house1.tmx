@@ -14,7 +14,11 @@
  <objectgroup id="10" name="npcs">
   <object id="71" class="NPC" gid="10" x="96" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;A few meters from here is the Mitsu Forest.\nOnce it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters.&quot;)))"/>
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(dialog '((&quot;/&quot; &quot;A few meters from here is the Mitsu Forest.\nOnce it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters.&quot;)))
+
+(dialog '((&quot;A few meters from here is the Mitsu Forest.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
@@ -27,6 +31,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="3"/>
    </properties>

@@ -12,39 +12,42 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
  <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="343" source="../tilesets/basic.tsx"/>
- <tileset firstgid="367" source="../tilesets/crypt-2.tsx"/>
- <tileset firstgid="423" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="583" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="368" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="392" source="../tilesets/crypt-2.tsx"/>
+ <tileset firstgid="448" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="608" source="../tilesets/npc_main.tsx"/>
  <layer id="1" name="Tile Layer 1" width="22" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WUTQoCMQyF65zBhTcQXSiCoF5NPIDgYhSFTlHQ2XiMLl16JhNoIZQkzeCDRyk8vvxQ6kfOeXBXMWaO4GDI5nzmtuC74EfiTpTMReDiiYpwnsCfdM/aF3eqSGa5ClzUQWFICoSNrCfDpaJ9j5V6JZfuY6hozcwNFW401Jk2zp0hN2vs3Jq+kF8CbwFeMdy2sl+t17XC5d6DZQe51zl4Z+RaRHeA+of7JpkN8LapV42L7/jF+GacQ+J2DHPIfiQu91d5ZY7SPeH+AFNp+lUoBQAA
+   H4sIAAAAAAAAA6WUTQoCMQyF65zBhccRXSiCoF5NPIDgYhSFTlHQ2XiMLl16DRNoIZQkzeCDRyk8vvxQ6kfOeXBXMWaO4GDI5nzmtuC74EfiTpTMReDiiYpwnsCfdM/aF3eqSGa5ClzUQWFICoSNrCfDpaJ9j5V6JZfuY6hozcwNFW401Jk2zp0hN2vs3Jq+kF8CbwFeMdy2sl+t17XC5d6DZQe51zl4Z+RaRHeA+of7JpkN8LapV42L7/jF+GacQ+J2DHPIfiQu91d5ZY7SPeH+AEQMrZooBQAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="84" class="SliderCpu" gid="318" x="128" y="144" width="16" height="16">
+  <object id="84" class="Monster" gid="318" x="128" y="144" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="60"/>
     <property name="level" type="float" value="2"/>
    </properties>
   </object>
-  <object id="92" class="NPC" gid="595" x="80" y="64" width="16" height="16">
+  <object id="92" class="NPC" gid="620" x="80" y="64" width="16" height="16">
    <properties>
     <property name="action">(if  (= (enemies-count) 0)
-  (dialog '((&quot;/_happy&quot; &quot;We won! We are strong!&quot;)))
+  (begin
+    (dialog '((&quot;/_happy&quot; &quot;We won! We are strong!\nLet's move on.&quot;)))
+    (wait)
+    (leave-npc 92))
   (dialog '((&quot;/_happy&quot; &quot;Hi!&quot;))))</property>
     <property name="actionOnEvent">(if (get &quot;t2_03-safe&quot;)
   (delete-me))</property>
     <property name="team" type="int" value="0"/>
    </properties>
   </object>
-  <object id="93" class="SliderCpu" gid="318" x="64" y="160" width="16" height="16">
+  <object id="93" class="Monster" gid="318" x="64" y="160" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="60"/>
     <property name="level" type="float" value="2"/>
    </properties>
   </object>
-  <object id="94" class="SliderCpu" gid="318" x="208" y="112" width="16" height="16">
+  <object id="94" class="Monster" gid="318" x="208" y="112" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="60"/>
     <property name="level" type="float" value="2"/>
@@ -53,26 +56,26 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="22" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGNlgEiN97JlCRXvo5eahBOaMhsmQBdjSMzXzCzUAAANvEKooBQAA
+   H4sIAAAAAAAAA2NgGNlgNSN97FlLRXvo5eahBLaOhsmQBdjSMzXzCzUAAPc5uDkoBQAA
   </data>
  </layer>
  <objectgroup id="9" name="items">
-  <object id="87" gid="354" x="112" y="192" width="16" height="16">
+  <object id="87" gid="379" x="112" y="192" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="88" gid="354" x="288" y="224" width="16" height="16">
+  <object id="88" gid="379" x="288" y="224" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="89" gid="354" x="288" y="64" width="16" height="16">
+  <object id="89" gid="379" x="288" y="64" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="91" gid="354" x="64" y="48" width="16" height="16">
+  <object id="91" gid="379" x="64" y="48" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
@@ -81,6 +84,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="80" class="Door" x="96" y="48" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="t2_02"/>
    </properties>
   </object>

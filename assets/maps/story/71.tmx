@@ -39,7 +39,11 @@
   <object id="59" class="NPC" gid="559" x="256" y="80" width="16" height="16">
    <properties>
     <property name="action">(if  (= (enemies-count) 0)
-  (dialog '((&quot;/_happy&quot; &quot;We won! We are strong!&quot;)))
+  (begin
+    (dialog '((&quot;/_happy&quot; &quot;We won! We are strong!\nI go to rest.&quot;)))
+    (wait)
+    (dialog '((&quot;* Milla disappears into the leaf *&quot;)))
+    (leave-npc 59))
   (dialog '((&quot;/_happy&quot; &quot;Hi!&quot;))))</property>
     <property name="actionOnEvent">(if (get &quot;71-safe&quot;)
   (delete-me))</property>

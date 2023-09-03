@@ -18,6 +18,8 @@
     <property name="action">(begin
   (dialog '((&quot;/&quot; &quot;We are moving to a new location.&quot;)))
   (set-orientation 3))</property>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
    </properties>
   </object>
   <object id="78" gid="46" x="64" y="96" width="16" height="16">
@@ -25,6 +27,8 @@
     <property name="action">(begin
   (dialog '((&quot;/&quot; &quot;I don't think it fits through the door.&quot;)))
   (set-orientation 1))</property>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
    </properties>
   </object>
   <object id="79" gid="47" x="48" y="80" width="16" height="16">
@@ -32,6 +36,8 @@
     <property name="action">(begin
   (dialog '((&quot;/&quot; &quot;But do we really need this?&quot;)))
   (set-orientation 2))</property>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
    </properties>
   </object>
  </objectgroup>
@@ -44,6 +50,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="70"/>
    </properties>

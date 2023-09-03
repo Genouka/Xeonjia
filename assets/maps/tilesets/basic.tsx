@@ -33,6 +33,10 @@
   <properties>
    <property name="healthPointsDelta" type="int" value="50"/>
   </properties>
+  <animation>
+   <frame tileid="12" duration="750"/>
+   <frame tileid="13" duration="750"/>
+  </animation>
  </tile>
  <tile id="13" class="Modifier">
   <properties>
@@ -54,7 +58,12 @@
   </properties>
  </tile>
  <tile id="16" class="Modifier"/>
- <tile id="17" class="Modifier"/>
+ <tile id="17" class="Modifier">
+  <animation>
+   <frame tileid="17" duration="500"/>
+   <frame tileid="16" duration="500"/>
+  </animation>
+ </tile>
  <tile id="18" class="Modifier"/>
  <tile id="19" class="Modifier"/>
  <tile id="20" class="Modifier"/>

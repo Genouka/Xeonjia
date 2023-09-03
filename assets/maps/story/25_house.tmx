@@ -2,6 +2,7 @@
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="75">
  <properties>
   <property name="disable-minimap" type="bool" value="true"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;I'm a little confused.&quot;)))"/>
   <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
@@ -36,6 +37,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="25"/>
    </properties>

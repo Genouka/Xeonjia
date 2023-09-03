@@ -21,20 +21,26 @@
     <property name="action">(begin 
     (dialog
         '((&quot;…&quot;)
-        (&quot;???/&quot; &quot;Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays.&quot;)
-        (&quot;/hero&quot; &quot;N-no, I'm {{hero}}, this year's chosen hero. I just left home to try to defeat the King of Evil.&quot;)
+        (&quot;???/_embarassed2&quot; &quot;Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays.&quot;)
+        (&quot;/hero&quot; &quot;N-no, I'm {{hero}}, this year's chosen hero.&quot;)
         (&quot;???/_surprised&quot; &quot;What?! So is it you?!&quot;)
         (&quot;???/_happy&quot; &quot;Nice to meet you, I've never met a hero before.&quot;)
-        (&quot;/&quot; &quot;My name is Milla, I was born and raised in this area. I too am setting out on a journey.&quot;)
-        (&quot;/hero_happy&quot; &quot;Oh cool! Where are you going?&quot;)
+        (&quot;/&quot; &quot;My name is Milla, I was born and raised in this area.\nWhy are you here?&quot;)
+        (&quot;/hero&quot; &quot;I just left home to try to defeat the King of Evil.&quot;)
+        (&quot;/&quot; &quot;I too am setting out on a journey!&quot;)
+        (&quot;/hero&quot; &quot;Oh cool! Where are you going?&quot;)
         (&quot;/_sweatsmile&quot; &quot;I have absolutely no idea.&quot;)
-        (&quot;/&quot; &quot;I just want to explore the world, know new places and learn new things.&quot;)
-        (&quot;/hero&quot; &quot;Wow, cool!&quot;)
-        (&quot;/&quot; &quot;Yep, it won't be easy but I want to visit the whole Kingdom!\nAnd maybe even visit places outside the Kingdom!&quot;)
+        (&quot;/&quot; &quot;I just want to explore the world, know new places and learn new things!\nIt won't be easy but I want to visit the whole Kingdom!\nAnd maybe even visit places outside the Kingdom!&quot;)
         (&quot;/hero_surprised&quot; &quot;Are there places outside the Kingdom?!&quot;)
         (&quot;/&quot; &quot;Dunno, that's what I want to find out!&quot;)
-        (&quot;/_happy&quot; &quot;Anyway, I don't want to waste any more of your time.&quot;)
-        (&quot;/&quot; &quot;After all, you have to save the world. Not an easy task!&quot;)
+        (&quot;/_embarassed2&quot; &quot;Anyway…\nI was wondering… Do you… Do you want to stop for a picnic?&quot;)
+        (&quot;/hero_embarassed&quot; &quot;Oh, I'm sorry but I want to reach the Xeonjia Tower as soon as possible.&quot;)
+        (&quot;/hero&quot; &quot;Hopefully before dark.&quot;)
+        (&quot;/_sweatsmile&quot; &quot;Oh well yeah sure.&quot;)
+        (&quot;/hero_happy&quot; &quot;Maybe after defeating the King of Evil.&quot;)
+        (&quot;/_happy&quot; &quot;Sure!&quot;)
+        (&quot;/&quot; &quot;Anyway, I don't want to waste any more of your time.&quot;)
+        (&quot;/_happy&quot; &quot;After all, you have to save the world. Not an easy task!&quot;)
         (&quot;/&quot; &quot;I'm sure we'll meet again soon, hero.&quot;)
         (&quot;/_happy&quot; &quot;See ya!&quot;)
         (&quot;/hero_happy&quot; &quot;Bye Milla!&quot;)))
@@ -85,17 +91,17 @@
   </object>
   <object id="55" gid="184" x="16" y="96" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="56" gid="184" x="16" y="288" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="57" gid="175" x="160" y="304" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

@@ -5,31 +5,41 @@
     (map-name &quot;Route 1&quot;))</property>
   <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Route 1"/>
+  <property name="milla">(if (! (has-item &quot;2.stone&quot;))
+  (begin
+    (dialog '((&quot;/milla&quot; &quot;Hey, I found this stone near here.\nHere's to you.&quot;)))
+    (wait)
+    (give-item &quot;2.stone&quot;)
+    (dialog '((&quot;/hero&quot; &quot;This is a very strange stone… Never seen anything like this before.&quot;))))
+  (dialog '((&quot;/milla&quot; &quot;If I find something interesting I'll give it to you.&quot;))))</property>
  </properties>
  <tileset firstgid="1" source="../tilesets/basic.tsx"/>
  <tileset firstgid="25" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="77" source="../tilesets/outdoor-1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="13">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgYGBIYUCAHCR+KBCHQcVAuBuIa4B4NhTDxPEBkFmxQBxHQB0DkrmUAnR3peBSiAa2AvE2IF4FxDuRzCIV7AXifUC8CYgPUmAOOkhBo8kFXQyUhTMsXXThcUsXEhumpghJLB6IfYG4EoirGHCHTwcQdxJwDyh9ZUExNcOZUjXobuliQKTNLiR5EF3DgJkPu6FiIDYAnREKf6gDAAA=
+   H4sIAAAAAAAAA2NgYGBIYUCAHCR+KBCHQcVAuBuIa4B4NhTDxPEBkFmxQBxHQB0Dkrm4QAkRZjBgcVcKLoVoYCsQbwPiVUC8E8ksUsFeIN4HxJuA+CAF5sBABJROQaPJBV0M+MOZEICliy48bulCYsPUFCGJxQOxLxBXAnEVA+7w6QDiTgLuAaWvLCimJJxhgJjwJUYNulu6GBBpswtJHkTXMGDmw26oGIgNAKA0rkOoAwAA
   </data>
  </layer>
  <objectgroup id="8" name="npcs">
   <object id="46" class="NPC" gid="45" x="256" y="128" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;I also often get hurt with rocks.\nIt's annoying but you'll get used to it.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;I also often get hurt by rocks.\nIt's annoying but you'll get used to it.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
   <object id="42" gid="139" x="0" y="32" width="16" height="16">
    <properties>
-    <property name="action">(if (! (has-item &quot;2.stone&quot;))
+    <property name="action">(begin
+  (define item-id &quot;2.money&quot;)
+  (define money-diff 200)
+  (if (! (has-item item-id))
     (begin
-        (dialog '((&quot;There seems to be something in the branches of this plant…\nIt's a stone!&quot;)))
-        (give-item &quot;2.stone&quot;)
-        (dialog '((&quot;This is a very strange stone… Never seen anything like this before.&quot;))))
-    (dialog '((&quot;A little plant… nothing else.&quot;))))</property>
+      (dialog '((&quot;* {{hero}} found {{money-diff}} ¤ *&quot;)))
+      (give-item item-id)
+       (set-money-diff money-diff))
+    (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
   <object id="44" class="Modifier" gid="21" x="256" y="32" width="16" height="16">
@@ -39,9 +49,9 @@
   </object>
   <object id="47" gid="140" x="128" y="144" width="16" height="16">
    <properties>
-    <property name="actionOnCollision">(if (and (!get &quot;002-hurt&quot;) (= (orientation) 0))
+    <property name="actionOnCollision">(if (!get &quot;002-hurt&quot;)
   (begin
-    (dialog '((&quot;/hero_sad&quot; &quot;Ouch! I hurt myself by bumping into this rock.&quot;)))
+    (dialog '((&quot;/hero_sad&quot; &quot;Ouch!&quot;)))
     (wait)
     (move '(3 46))
     (wait 0.5)
@@ -50,10 +60,10 @@
     (wait 1)
     (dialog
       '((&quot;/guy&quot; &quot;Are you okay?\nI heard you screaming.&quot;)
-      (&quot;/hero_sad&quot; &quot;Y-yes, I just lost 15 health points (HP).&quot;)
-      (&quot;/guy&quot; &quot;I know, it happens often.\nSome rocks are very sharp and pointy.\nWhen you bump into them you get hurt.&quot;)
-      (&quot;/hero&quot; &quot;Now I know!&quot;)
-      (&quot;/guy&quot; &quot;During your journey you will run into them many times, it's not a problem, just be careful not to run out of HP.&quot;)))
+      (&quot;/hero&quot; &quot;Y-yes, I hurt myself by bumping into this rock!\nI just lost 15 health points.&quot;)
+      (&quot;/guy&quot; &quot;I know, it happens often.\nToday you are the third.\nSome rocks are very sharp and pointy.\nYou get hurt when you bump into them.&quot;)
+      (&quot;/hero&quot; &quot;Now I know!\nI'll be careful from now on.&quot;)
+      (&quot;/guy&quot; &quot;During your journey you will run into them many times, it's not a problem.\nSometimes you can't even avoid them.\nJust be careful not to run out of HP.&quot;)))
     (wait)
     (move '(2 46))
     (wait 1)
@@ -65,68 +75,68 @@
   </object>
   <object id="58" gid="24" x="128" y="96" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="59" gid="24" x="128" y="80" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="60" gid="24" x="128" y="64" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="61" gid="24" x="128" y="48" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="87" gid="15" x="128" y="128" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="88" gid="15" x="144" y="128" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="89" gid="15" x="160" y="128" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="90" gid="15" x="176" y="128" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="91" gid="24" x="128" y="112" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="92" gid="15" x="224" y="128" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="93" gid="15" x="208" y="128" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="94" gid="15" x="192" y="128" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="18" height="13">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NggIAGIG5kQAUpDKSDDiDuJFLtXCCeB8QLgHghkjg2t+ADa4F4PRBvAOKNZLqFEGgiUl0DA363dxFpDrLbi/C4gZB92AA2c2D2EetPQqCBgXh3kZPOqGU3Pv9iCxNc6kHx2oxDrptIt+ADALRlnbqoAwAA
+   H4sIAAAAAAAAA2NggIAGIG5kQAUpDKSDDiDuJFLtXCCeB8QLgHghkjg2t+ADa4F4PRBvAOKNZLqFEGgiUl0DA363dxFpDja3Y3MDIfuwAWzmwOwj1p+EQAMD8e4iJ51Ry258/sUWJrjUg+K1GYdcN5FuwQcAb3qk96gDAAA=
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

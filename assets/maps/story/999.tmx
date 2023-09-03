@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="31" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="73">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="31" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="77">
  <properties>
   <property name="action" value="(map-name &quot;Xeonjia Tower&quot;)"/>
   <property name="has-hints" type="bool" value="true"/>
@@ -11,15 +11,15 @@
  <tileset firstgid="129" source="../tilesets/npc_main.tsx"/>
  <tileset firstgid="161" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="213" source="../tilesets/tower.tsx"/>
- <tileset firstgid="237" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="277" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="31" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgwA94gZiPBMxPwDxSwHCz234A7QYBByLUiAKxGBYsgENcnEp2I8sLArE8A3a/ygKxEJFmwoA5ie7CZj+yvcSYCwPCaHwFPPZisx+bvTDggEbjkke2lxgAsl8Oj7247LFHE7MBYlsS7IUBOzL0YHMPpeZQYvdAAEJ2G1DJHmzx6oDGZoHSyBhdzByLGhhWQGLbM6CmJ3QzQAAABSWHD8gGAAA=
+   H4sIAAAAAAAAA2NgwA94gZiPBMxPwDxSwHCz234A7QYBByLUiAKxGBYsgENcnEp2I8sLArE8A3a/ygKxEJFmwoA5ie7CZj+yvcSYCwPCaHwFPPZisx+bvTDggEbjkke2lxgAsl8Oj7247LFHE7MBYlsS7IUBOzL0YHMPpeZQYrcDHjW0thtXujSgkj3Y4tUBjc0CpZExupg5FjUwrIDEtmdATU/oZoAAAOcEOLjIBgAA
   </data>
  </layer>
  <layer id="6" name="Tile Layer 2" width="31" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzNhYGAwZUAAEzT+VSC+BsTXicA3gPgmkhnoZqHzbYDYFkkcnQ8C94D4PhH4AZqZuMxGB/jUPQPi52j4FRaxF2hmErKTkBvIAaTaicsN5ABK9I6CUTAKRgGlAABV4MGwyAYAAA==
+   H4sIAAAAAAAAAzNhYGAwZUAAEzQ+CFwD4utE4BtoZqCbhc63AWJbJHF0PgjcA+L7ROAHaGbiMhsd4FP3DIifo+FXWMReoJlJyE5CbiAHkGonLjeQAyjROwpGwSgYBZQCAJTI7z3IBgAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -37,11 +37,11 @@
       (&quot;/hero_mouthless&quot; &quot;…C-cute?? You have strange tastes.&quot;)
       (&quot;/hero&quot; &quot;Anyway…\n…I had to defeat them all.&quot;)
       (&quot;/_sad&quot; &quot;Nooooo!&quot;)
-      (&quot;/_sad&quot; &quot;I hope they are okay…&quot;)
+      (&quot;/_sad&quot; &quot;I hope they are okay now…&quot;)
       (&quot;/hero&quot; &quot;Y-yes… Sure…\n…\nBy the way, where are we?&quot;)
       (&quot;/_happy&quot; &quot;This is the tower where the King of Evil resides!&quot;)
       (&quot;/hero&quot; &quot;Oh really? Are we there yet?&quot;)
-      (&quot;/&quot; &quot;It seems so… but it's closed!\nThis nice gentleman here explained to me that to access the tower you need to have 3 signets.&quot;)
+      (&quot;/&quot; &quot;It seems so… but it's closed!\nThis nice gentleman here explained to me that to access the tower you need 3 signets.&quot;)
       (&quot;/hero&quot; &quot;Signets?&quot;)
       (&quot;/&quot; &quot;I did not understand exactly what they are, but they should be items that are placed in crypts in each region of the Kingdom.\n3 crypts with one signet each.&quot;)
       (&quot;/hero&quot; &quot;Okay, it doesn't sound complicated.\nIn this region for now I have not yet found the crypt.\nIt might be in the southeast.\nWhere are you headed now?&quot;)
@@ -53,14 +53,16 @@
     (fire-global-event))
   (dialog '((&quot;/&quot; &quot;Do your best!&quot;))))</property>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
-    (delete-me))</property>
+  (delete-me))</property>
    </properties>
   </object>
   <object id="45" class="NPC" gid="205" x="256" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (!(has-item &quot;signet-1&quot;))
-    (dialog '((&quot;/&quot; &quot;I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted.\nHow impertinent.&quot;)))
-    (dialog '((&quot;/&quot; &quot;One signet is not enough.&quot;))))</property>
+  (dialog '((&quot;/&quot; &quot;I hate this little girl here… She pestered me with a thousand questions and she cried until I told her what she wanted.\nHow impertinent.&quot;)))
+  (if (!(has-item &quot;signet-2&quot;))
+    (dialog '((&quot;/&quot; &quot;One signet is not enough.&quot;)))
+    (dialog '((&quot;/&quot; &quot;Two signets are not enough.&quot;)))))</property>
     <property name="actionOnEvent">(if (get &quot;58-shen&quot;)
   (delete-me))</property>
    </properties>
@@ -104,6 +106,13 @@
   (delete-me))</property>
    </properties>
   </object>
+  <object id="73" class="NPC" gid="149" x="208" y="64" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;65th hero/65hero&quot; &quot;I am the 65th hero… I had my Departure Day but a few weeks later I found out that you had already won.&quot;)))"/>
+    <property name="actionOnEvent">(if (!get &quot;the-end&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="11" name="Tile Layer 3" width="31" height="14">
   <data encoding="base64" compression="gzip">
@@ -134,9 +143,9 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="72" gid="260" x="128" y="208" width="16" height="16">
+  <object id="72" gid="300" x="128" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;21&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;21&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

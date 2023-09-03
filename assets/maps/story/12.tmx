@@ -41,7 +41,7 @@
   </object>
   <object id="44" gid="194" x="256" y="32" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;14&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;14&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="45" class="Modifier" gid="197" x="240" y="208" width="16" height="16">
@@ -51,7 +51,7 @@
   </object>
   <object id="47" gid="201" x="240" y="176" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;14&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;14&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>
@@ -75,7 +75,7 @@
   </object>
   <object id="49" gid="194" x="64" y="176" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;14&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;14&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

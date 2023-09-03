@@ -152,8 +152,16 @@
    <property name="action" value="(dialog '((&quot;This is a wall.&quot;)))"/>
   </properties>
  </tile>
- <tile id="37" class="Solid"/>
- <tile id="38" class="Solid"/>
+ <tile id="37" class="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;A bed.&quot;)))"/>
+  </properties>
+ </tile>
+ <tile id="38" class="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;A bed.&quot;)))"/>
+  </properties>
+ </tile>
  <tile id="39" class="Solid">
   <properties>
    <property name="action">(dialog
@@ -182,8 +190,16 @@
    <property name="action" value="(dialog '((&quot;This is a wall.&quot;)))"/>
   </properties>
  </tile>
- <tile id="45" class="Solid"/>
- <tile id="46" class="Solid"/>
+ <tile id="45" class="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;A bed.&quot;)))"/>
+  </properties>
+ </tile>
+ <tile id="46" class="Solid">
+  <properties>
+   <property name="action" value="(dialog '((&quot;A bed.&quot;)))"/>
+  </properties>
+ </tile>
  <tile id="47" class="Solid"/>
  <tile id="48" class="Ground">
   <properties>

@@ -11,7 +11,7 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
  <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="318" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="368" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="9" height="30">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA8WTwQqAIAyG590ogrKC6uW6Rq/eMTxlNWnNHaKSBj/Mf58bDqwVQOlUoBYAMOrQ5tdEngMI6yURZ7wSwjfIVMRL8a7G2hb2THffkP4+hutRZHjEYDRjtQqZL2bxOXSe1IfzsfajhT38vcM3bx9dPrGa92Lu2QpM69ShcuQz4vU3/+ATZhaYFRoGyKo4BAAA
@@ -24,7 +24,7 @@
   </data>
  </layer>
  <objectgroup id="9" name="items">
-  <object id="89" gid="329" x="64" y="16" width="16" height="16">
+  <object id="89" gid="379" x="64" y="16" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="200"/>
    </properties>
@@ -33,6 +33,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="87" class="Door" x="64" y="464" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="t1_04"/>
    </properties>

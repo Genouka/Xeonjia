@@ -3,22 +3,23 @@
  <properties>
   <property name="action">(if (! (in-battle))
   (map-name &quot;Hana's Tunnel&quot;)))</property>
+  <property name="can-escape" type="bool" value="false"/>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="Hana's Tunnel"/>
   <property name="start-battle" type="bool" value="false"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="391" source="../tilesets/crypt-2.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/crypt-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="40" height="7">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA1vOyMCwGQ2vwCJGD4xu70ogXg/EhMAUItRMopIaEOADqlsMxBuJdB+9wT8g7kJyn8FAOwgLmITkvsWD1I3Exm8XHdUgqwW5bzsQ7xikeCcQAwA9YJSVYAQAAA==
+   H4sIAAAAAAAAAzvAyMBwBg0fxCJGD4xu7yEgPgHEhMBaItSsppIaEFAHqtsDxKeIdB+9gTjQTYuR3Gcw0A7CAlYjuW/PIHUjsfG7mI5qkNWC3HcBiC8OUnwJiAGHexKVYAQAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="55" class="NPC" gid="224" x="288" y="96" width="16" height="16">
+  <object id="55" class="NPC" gid="249" x="288" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;What do you want?&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;44-safe&quot;)
@@ -29,7 +30,7 @@
     <property name="weaponAtk" type="int" value="10"/>
    </properties>
   </object>
-  <object id="58" class="NPC" gid="223" x="32" y="96" width="16" height="16">
+  <object id="58" class="NPC" gid="248" x="32" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;044-talk&quot;)
   (begin
@@ -65,6 +66,7 @@
  <objectgroup id="10" name="spawn points">
   <object id="51" class="Door" x="16" y="80" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="43"/>
    </properties>
   </object>

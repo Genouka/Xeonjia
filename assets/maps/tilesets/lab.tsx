@@ -65,11 +65,11 @@
   (if (!get &quot;024-lab-juice&quot;)
     (begin
       (dialog
-        '((&quot;Hey, there's a fruit juice here!\n* {{hero}} puts FRUIT JUICE in the backpack. *&quot;)))
+        '((&quot;Hey, there's a fruit juice here!\n* {{hero}} puts FRUIT JUICE in the backpack *&quot;)))
       (wait)
       (wait 1)
       (dialog
-        '((&quot;…\nNo… I think I'm stealing it.\n* {{hero}} puts FRUIT JUICE back on the shelf. *&quot;)
+        '((&quot;…\nNo… I think I'm stealing it.\n* {{hero}} puts FRUIT JUICE back on the shelf *&quot;)
         (&quot;I'm not even sure it's a fruit juice.&quot;)))
       (set &quot;024-lab-juice&quot; #t))
     (dialog '((&quot;Better not to touch anything.&quot;)))))</property>

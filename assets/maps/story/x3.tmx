@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="72">
+ <properties>
+  <property name="disable-worldmap" type="bool" value="true"/>
+  <property name="map-name" value="XEONJIA TOWER – 3F"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <tileset firstgid="544" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="576" source="../tilesets/tower.tsx"/>
+ <tileset firstgid="640" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="696" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="15" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA4tgYmCIB+JYEnAcEEcCcQIQpwNxKgk4DYgToXpXMzIQBdyYIDRIPUwvuhwIuDJhiiEDdL24gCsW84nVi80scvWSaq8rmjqYXnRxcuzFFabE6CUGuBIIZ2L8gKz3KIlpixg343IDSG8UmfEbDdSXQgEGANDIepPAAwAA
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="63" class="NPC" gid="556" x="32" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(dialog
+  '((&quot;/&quot; &quot;There are no monsters here, except for that guy over there who's kind of ugly.&quot;)))</property>
+    <property name="actionOnEvent">(if (visited-room &quot;x4&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="64" class="NPC" gid="572" x="48" y="48" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (visited-room &quot;x4&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="67" gid="238" x="32" y="208" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;x3-talk&quot;)
+  (begin
+    (set &quot;x3-talk&quot; #t)
+    (dialog '((&quot;/&quot; &quot;Isn't there a guided tour?\nAh, isn't this a tourist attraction?\nThat explains many things…&quot;))))
+  (dialog '((&quot;/&quot; &quot;At this point I do a tour of the tower.\nWhen do I get an opportunity like this again?&quot;))))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="15" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoB4oYaKiYaNgFIwCggAAQqOjm8ADAAA=
+  </data>
+ </layer>
+ <objectgroup id="8" name="items">
+  <object id="68" gid="636" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(if (= (orientation) 1)
+  (if (= (get-initial-HP) 100)
+    (hp-machine
+      '((&quot;fresh-water&quot; 33 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
+      (&quot;pomegranate-juice&quot; 90 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
+      (&quot;kiwi-juice&quot; 105 &quot;(give-item \&quot;kiwi-juice\&quot;)&quot;)
+      (&quot;healer&quot; 125 &quot;(give-item \&quot;healer\&quot;)&quot;)
+      (&quot;healer-plus&quot; 140 &quot;(give-item \&quot;healer-plus\&quot;)&quot;)
+      (&quot;hp-up-5-shop&quot; 180 &quot;(begin (increase-HP 5) (set-HP-diff 105))&quot;)))
+    (hp-machine
+      '((&quot;fresh-water&quot; 33 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
+      (&quot;pomegranate-juice&quot; 90 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
+      (&quot;kiwi-juice&quot; 105 &quot;(give-item \&quot;kiwi-juice\&quot;)&quot;)
+      (&quot;healer&quot; 125 &quot;(give-item \&quot;healer\&quot;)&quot;)
+      (&quot;healer-plus&quot; 140 &quot;(give-item \&quot;healer-plus\&quot;)&quot;))))
+  (dialog '((&quot;I can't use the HP machine from this side.&quot;))))</property>
+   </properties>
+  </object>
+  <object id="69" class="Modifier" gid="714" x="32" y="176" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="70" class="Modifier" gid="714" x="80" y="48" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="71" class="Modifier" gid="714" x="176" y="208" width="16" height="16">
+   <properties>
+    <property name="moneyDelta" type="int" value="20"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="spawn points">
+  <object id="54" class="Door" x="16" y="32" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="roomId" value="x2"/>
+   </properties>
+  </object>
+  <object id="66" class="Door" x="208" y="32" width="16" height="16">
+   <properties>
+    <property name="roomId" value="x4"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

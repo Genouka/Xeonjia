@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="27" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="49">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="27" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="52">
  <properties>
   <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Mitsu Forest"/>
@@ -8,9 +8,10 @@
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="181" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="205" source="../tilesets/tower.tsx"/>
  <layer id="1" name="Tile Layer 1" width="27" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WTsQ7CMAxEPXRkgwEJBibmbl0g7QioUBWJmY0RMSE+n4uIhbEwCc1JT7ETJ3bdpCeiIzjRS/0PfwoaUAXbUwub5ztQqjWvKziDW6Kfozu4gEeiP0QrsAYOjMKcC6P02+A7ytNU5OTeL9WcjMlRR+//FlNOPr4zlbHeKL8emIfFd5htS7VaLwfmSq03tdesVvm+f7EafQ6nkNpH9kr7W736vDGYBSaR2iw1YAt2Rh0yt/4u605Z0v/cEscs/ji7UPVwD4swtvT5dvWbqkQsv5dS+HLvHGzAQcQ+AZ2LRjroBQAA
+   H4sIAAAAAAAAA6WTuw7CMAxFPXRkg6ESDEzM3bpA0hFQoSoSMxsjYkJ8PjciVo1FSGiudBQ7LztO0hPRCZzprf6HX4IG1N52WGFzfwcqNeZ0AxdwT/Rz9ABX8Ez0x2gNNsCAie8zvpV+631DeSpFTK79ytuGhlrznBx1NNxbTDnx+M3UgfFG+XZkHBa/YbZDsmq8GhkrNd/UWrNa5bv6xXLkdyKROkTWSvtbvnq/KZh7ZpHcQnLn2oF9IA8ZW58r9KZC0nceEs9Z/rF3ofLhGha+benz7+o/VYu5/F8q4cu1C7AFRzH3Bc1vBmXoBQAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -32,11 +33,15 @@
     (begin
       (set &quot;009-talk-henchman&quot; #t)
       (dialog '((&quot;/hero_angry&quot; &quot;How rude!\nHe pushed me away viciously!&quot;))))))</property>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
    </properties>
   </object>
   <object id="37" class="NPC" gid="176" x="176" y="32" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;Weird things happen in this area…&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
    </properties>
   </object>
   <object id="42" class="Solid" gid="55" x="272" y="80" width="16" height="16">
@@ -63,6 +68,13 @@
             (give-item item-id)
             (set-HP-diff HP-diff))
         (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
+   </properties>
+  </object>
+  <object id="51" gid="177" x="16" y="96" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Weird things happen in this area…&quot;)))"/>
+    <property name="actionOnEvent">(if (or (!get &quot;the-end&quot;) (and (has-item &quot;2.stone&quot;) (and (has-item &quot;39.stone2&quot;) (and (has-item &quot;71.stone3&quot;) (and (has-item &quot;x1.stone4&quot;) (has-item &quot;24.stone5&quot;))))))
+  (delete-me))</property>
    </properties>
   </object>
  </objectgroup>
@@ -99,18 +111,36 @@
   </object>
   <object id="47" gid="204" x="352" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="48" gid="195" x="192" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
+   </properties>
+  </object>
+  <object id="49" class="Solid" x="80" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if (and (has-item &quot;2.stone&quot;) (and (has-item &quot;39.stone2&quot;) (and (has-item &quot;71.stone3&quot;) (has-item &quot;x1.stone4&quot;))))
+  (teleport-multi &quot;9&quot; &quot;24_house1&quot;)
+  (teleport-random))</property>
+    <property name="actionOnEvent">(if (and (has-item &quot;2.stone&quot;) (and (has-item &quot;39.stone2&quot;) (and (has-item &quot;71.stone3&quot;) (and (has-item &quot;x1.stone4&quot;) (has-item &quot;24.stone5&quot;)))))
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="50" gid="259" x="80" y="48" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (set &quot;game-completed&quot; #t)
+  (dialog-kobi '((&quot;Tetrahedron, fire.\nHexahedron, earth.\nOctahedron, air.\nIcosahedron, water.\nDodecahedron, universe.\nYou dwell in them all, and they all dwell in you.\nYou have now completed the game.\nThe only thing I can tell you now is:\nThank you.\nXeonjia will live in you forever.&quot;))))</property>
+    <property name="actionOnEvent">(if (not (and (has-item &quot;2.stone&quot;) (and (has-item &quot;39.stone2&quot;) (and (has-item &quot;71.stone3&quot;) (and (has-item &quot;x1.stone4&quot;) (has-item &quot;24.stone5&quot;))))))
+  (delete-me))</property>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="27" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGF7ABIhNgdgMScwMTQ2I74JDjhI78YlhU0NLQG/7RgEiTZEKzNAwMnClyEXUSd/YgCMQOxFhNy5/DQUAi09YXiInT6HrcaOCu8gBAC/mGC/oBQAA
+   H4sIAAAAAAAAA2NgGF7ABIhNgdgMScwMTQ2I74JDjhI70YEZEWpoBeht3yhApClSgRkaRgauFLmIOukbG3AEYici7Mblr6EAYPEJy0vk5Cl0PW5UcBc5AACLaC7J6AUAAA==
   </data>
  </layer>
  <objectgroup id="2" name="spawn points">

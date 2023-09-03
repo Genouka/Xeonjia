@@ -13,14 +13,14 @@
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="78" gid="19" x="64" y="112" width="16" height="16">
+  <object id="78" gid="11" x="64" y="112" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;We pride ourselves on our traditions, such as the fire dance, to honor the power of the volcano and appease its spirits.&quot;)))"/>
    </properties>
   </object>
   <object id="79" gid="42" x="96" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;Legends tell of an ancient guardian who protects the volcano. We see it as a symbol of hope and security.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Legends tell of an ancient guardian who protects the volcano.\nWe see it as a symbol of hope and security.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
@@ -33,6 +33,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="69"/>
    </properties>

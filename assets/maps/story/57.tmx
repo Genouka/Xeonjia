@@ -18,20 +18,24 @@
   <object id="59" class="NPC" gid="558" x="16" y="64" width="16" height="16">
    <properties>
     <property name="action">(if  (= (enemies-count) 0)
-  (dialog '((&quot;/_happy&quot; &quot;We won! We are strong!&quot;)))
+  (begin
+    (dialog '((&quot;/_happy&quot; &quot;We won! We are strong!\nI go to rest.&quot;)))
+    (wait)
+    (dialog '((&quot;* Milla disappears into the leaf *&quot;)))
+    (leave-npc 59))
   (dialog '((&quot;/_happy&quot; &quot;Hi!&quot;))))</property>
     <property name="actionOnEvent">(if (get &quot;57-safe&quot;)
   (delete-me))</property>
     <property name="team" type="int" value="0"/>
    </properties>
   </object>
-  <object id="60" class="SliderCpu" gid="179" x="208" y="80" width="16" height="16">
+  <object id="60" class="Monster" gid="179" x="208" y="80" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="60"/>
     <property name="level" type="float" value="4"/>
    </properties>
   </object>
-  <object id="61" class="SliderCpu" gid="179" x="144" y="96" width="16" height="16">
+  <object id="61" class="Monster" gid="179" x="144" y="96" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="60"/>
     <property name="level" type="float" value="4"/>

@@ -7,33 +7,33 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="391" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="423" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="448" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgQAX/GAiDT0CsxcjAoA3EOowI8XwgOw8LhgElIFuZEcM4FCCGJG8EZBsDsQmSWDmQnYPHDmTAhyauD+Qb4LEfWR6bXwgBYsIO2W247IC5w5QRYSausEP3IzoAhVcFGsbmXmLihliAHg5sJJpLKBxh4YNurhgeewiFEzbwHo1PTBiB3M5CrAVAs75jESbGHhkijAe5RQCahooZUXEmkvm48gUPEXYg24Welovw2IkOCOVNXHYQspMcTMiOoYIBjfkfU9wFAAA=
+   H4sIAAAAAAAAA2NgQAXijAwEATdQjTMQuwCxK5L6DiC7HQuGAWsg24aA+fpI8t5Atg8Q+yKJTQCyW/HYgQzU0cQ9gHxPPPYjy2PzCyFATNghuw2XHTB3+DEizMQVduh+RAeg8JqIhrG5l5i4IRagh4M8ieYSCkdY+KCbq49HH6FwwgY40PQQE0Ygt7MQab4kUK0AFvOIsUeGCPNBbtFkhIRLDxpuQjIfV77gIcIOGJDHkpa78diJDgjlTZh/sJUv+OwkBxOyY6hgAIgKOz7cBQAA
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NggAApRgYGaUaGAQPqQLs18NhPSJ5eAJs7aB121DT/H3WMwQkGKp7olX7pnU8GQ7ofDG4YBaQDACGtLdLcBQAA
+   H4sIAAAAAAAAA2NggABjRgYGE0aGAQMOQLsd8dhPSJ5eAJs7aB121DRfnMZhOFDxRK/0S+98MhjS/WBwwyggHQAAM04JrNwFAAA=
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="56" class="Modifier" gid="441" x="80" y="176" width="16" height="16">
+  <object id="56" class="Modifier" gid="466" x="80" y="176" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
    </properties>
   </object>
-  <object id="57" class="Modifier" gid="441" x="320" y="176" width="16" height="16">
+  <object id="57" class="Modifier" gid="466" x="320" y="176" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="58" gid="285" x="192" y="16" width="16" height="16">
+  <object id="58" gid="310" x="192" y="16" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define event-id &quot;54.vase1&quot;)

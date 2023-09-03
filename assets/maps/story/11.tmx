@@ -35,12 +35,12 @@
   </object>
   <object id="47" gid="151" x="16" y="64" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="49" gid="151" x="224" y="112" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

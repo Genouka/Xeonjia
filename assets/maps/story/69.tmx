@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="65">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="66">
  <properties>
   <property name="action">(if (! (== (last-place) &quot;74&quot;))
   (map-name &quot;Flamecot City&quot;))</property>
@@ -20,13 +20,26 @@
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="15" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgwARXGbEIAsELqPgrHPIwcBkofwVNDbreH0D6JxD/QsIw/m8C5g8m8AOHu3GJDyUwHPxAC4AtfQ8kuEfALYTkiQWDwd8ALL6kObAEAAA=
+   H4sIAAAAAAAAA2NgwARXGbEIAsELqPgrHPIwcBkofwVNDbreH0D6JxD/QsIw/m8C5g8m8AOHu3GJDyUwHPxAC4AtfQ8kuEcntwwGfwMAR69pzbAEAAA=
   </data>
  </layer>
  <objectgroup id="8" name="items">
   <object id="62" gid="471" x="16" y="128" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/_3&quot; &quot;City Hall&quot;)))"/>
+   </properties>
+  </object>
+  <object id="65" gid="470" x="144" y="272" width="16" height="16">
+   <properties>
+    <property name="action">(begin
+  (define event-id &quot;69.item&quot;)
+  (define item-id &quot;kiwi-juice&quot;)
+  (if (!get event-id)
+    (begin
+      (dialog '((&quot;Hey, there is something here!&quot;)))
+        (give-item item-id)
+        (set event-id #t))
+    (dialog '((&quot;A little plant… nothing else.&quot;)))))</property>
    </properties>
   </object>
  </objectgroup>

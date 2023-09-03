@@ -1,130 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="52" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="88">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="52" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="89">
  <properties>
-  <property name="action" value="(map-name &quot;Neubrij&quot;)"/>
-  <property name="map-name" value="Neubrij"/>
+  <property name="action" value="(map-name &quot;Archocean City&quot;)"/>
+  <property name="map-name" value="Archocean City"/>
   <property name="milla" value="(dialog '((&quot;/milla_happy&quot; &quot;I like this city!&quot;)))"/>
   <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="391" source="../tilesets/capital-2.tsx"/>
- <tileset firstgid="559" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="615" source="../tilesets/basic.tsx"/>
- <layer id="1" name="Tile Layer 1" width="52" height="15">
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/capital-2.tsx"/>
+ <tileset firstgid="584" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="640" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="664" source="../tilesets/npc_main.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="52" height="16">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+1VPU4CURB+b6XgBDaeYisLGkiMiQkJuhQsULAn4AiW1ibGzta7eAoUShsTT8BMmMkOz3k/PAyx8Eu+7PLtzDfzLdndpTVmeSAvgf0TsJexWw4fgDfEgTjPpeaB2uMv7Iq4ti0b5fo9HG+Bd8AKeFYY0yla7crRKtIq6ovVs+8rzePZC7u/m7zmY9fjiXiB8zdiDZwCZ8A5cCK0odC4ZkjHaaRe+j4RGc/OfQzluYAcG7tjTZzZVttQfyn8Ed/mJ1wNez6V3hQP7uFscjcJznFe7Bib8wG1a9orB9rOKcB5K5j7HrmPnIO59tw7BufJ2av0/LcpwHlaHomVzc9TKs9lE9Ea8l4k1ksN5x2TR/N084zEc4nHcUQbk8cosV5qMo9vt1AezVPmQfB7iCnfTZo2p76vxPra6eM8vt1CeXyeMg8i9P0KXZc1KT4yTyhv6PlxfUO/j/luH1qj/f4reXIyp+Q51W7/zOMWSSMNmjAMAAA=
+   H4sIAAAAAAAAA+1VO07DQBD1mgYpV4CCE9BwClcUNCAhJKRIAafASYr4BDkCJTUSoqPlLpwikDTMKjPyY5n9sIksJBjpaXffzrydZ2vthSmKxR/HKeG8B5z15OeBcM24gHkuNA3LPe6gVxtXpkOr7N/TeEO4JdSEg7IoDsuOu3S4mrma62L5ovvK58nZc/O1N9zz4cijaeOF5m+MhjAhTAkzwh1wQ+AkZ8jjJJKPuk8MiWfnOYb8nJCPtdmgYUxNx625vgJ9GwNnrXG2Zs98r03RkBrxhr1hiI/jcoPYOR80X3FfOaH1nBL2vCXhPfIcxYdgFTlP/OT0VXnebUoMPH4wlibfT6XcyzbCtaw9T8xHrtrSj6bp+hnBvbTjOMKNWWOUmI8c+vH1FvKjaaIfG/IdEuC3SeNmXLdfpuU3Tp348fUW8uPTRD82Qv+v0D7mpOign5Df0P1xdUPrbf7bP83R1r/FT47nFD999faPPHwC8ZHYfAANAAA=
   </data>
  </layer>
- <layer id="6" name="Tile Layer 2" width="52" height="15">
+ <layer id="6" name="Tile Layer 2" width="52" height="16">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3VRy9EURTA8bkSvZeNKEGUmY2ytfINLCwsrPBFWOk17PQebWOjd1sEUULCQt3pLSH+L55489xn5hlkJE7yy3XLu++cGRyLxXykelgsmeLnRXp8ITld5HNPgUaheN875OcjYfzsd0cW76pDvXCcmywuDfbvWL/HAx5VvxE5vKcHveiTvHOItWHJuiffqxe8nfh+M3g+V3JHEWvFBnXahP3obOSJ1/c1oBHZuufnmS9gEUvq3i7jnu5cCnPrL/5eORvK56jN7Vi8OsEpznCOC13uaczT3bAeJYxye2LtWV0/cNPczcS+pgZtPY7+h5j9G3A1bE7mZlTPXw2z9bz1nhKUogzlqEAlqlCNGtRKzijh6IzsHm3/MVuP0n+ucI0b3IqPvacJzWhBK9rQjg50ogvdkjNKODoju0fbfwbQr46Dwr7/6Ot56z8+8IUf/BGAQAQhGCEIxYjkMxtlLYy9cES4eGYM45jAJKYwjRnMYk7Y9x99PVHcHY0YxKp9NY4xHgnqPJExCcmf9N0U9qywuXhmmZxWsKrmuca4jg11vsm4hW3s6Or5D/eNFwL83rYwDAAA
+   H4sIAAAAAAAAA+3VN0/DQBTAcV82epNgo/eyIIoAAUkWysrEN2BgYGACvghM9CrY6F20hYXeWQEBoggkGCh/CyMccyaJDChIPOmni8/P5/ecxKco/1FmU5Qq8fOybdZrbWCdRp0m8XHuic/Pwvza745q7tWPAeG+NlkEmDyPUObDEI4IzW9ELfXOYg7zktqXmVuRzEdTXwxiPaizkuvrJGs0M9di8rycwnX0NOrF2/0GMYQaw/UHHB/iCMfauTvGe0OenWPHL/6uPA31OeprexFvFL4HARv84G/4XsrJqfDBftQwqy2SHqK0Ph59tHZv4kHXg74fd+8Qb/8DVsPpYW1m/fzV8Laf972nFW1oRwc60YVu9KAXfZIcNdzlyNbR7z/e9qPuP4EIQjBCbJ/3nmFyRzCKMYxjApOYwjRmJDlquMuRraPffxaxoI1LwnX/Mfbzvv/EIR4JSEQSkpGCVKQhHauSZ7bGXAbnMpFlMWcdG9jEFraxg13sYV+47j/GfnJYOxd5yNfeewWMhSjSjosZS1D6xb5r55wDTos5J9R0ijOtznPGC1xqx1eM17jBraGf//DdeAXAC5nwAA0AAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="63" class="NPC" gid="191" x="480" y="16" width="16" height="16">
+  <object id="63" class="NPC" gid="240" x="464" y="32" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;Hey, welcome to Neubrij!\nWe have the best view in the whole Kingdom.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Hey, welcome to Archocean City!\nWe have the best view in the whole Kingdom!\nHere we live between the sky and the water, have you noticed that?&quot;)))"/>
    </properties>
   </object>
-  <object id="65" class="NPC" gid="207" x="304" y="16" width="16" height="16">
+  <object id="65" class="NPC" gid="232" x="336" y="32" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;This city is very expensive.&quot;)))"/>
+    <property name="action">(begin
+  (dialog '((&quot;/&quot; &quot;This city is very expensive.&quot;)))
+  (if (get &quot;the-end&quot;)
+    (dialog '((&quot;/&quot; &quot;It was supposed to be a short holiday but it's lasting longer than expected.&quot;)))</property>
    </properties>
   </object>
-  <object id="66" class="NPC" gid="212" x="416" y="16" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;From this side you can see the volcano, beautiful beautiful.&quot;)))"/>
-   </properties>
-  </object>
-  <object id="67" class="NPC" gid="191" x="288" y="16" width="16" height="16">
+  <object id="67" class="NPC" gid="216" x="352" y="32" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;My boyfriend took me here for a short holiday.\nHow wonderful!&quot;)))"/>
    </properties>
   </object>
-  <object id="68" class="NPC" gid="227" x="608" y="16" width="16" height="16">
+  <object id="68" class="NPC" gid="252" x="608" y="32" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;Today is my day off.\nWorking 40 hours a week is tough.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Today is my day off.&quot;)))"/>
    </properties>
   </object>
-  <object id="69" class="NPC" gid="197" x="224" y="16" width="16" height="16">
+  <object id="69" class="NPC" gid="230" x="224" y="32" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;Don't worry, the bridge is very solid.\nIt has already collapsed 2 times but this time it was done a little better.\nI'm sure we've learned from our mistakes by now.\nDon't worry.&quot;)))"/>
    </properties>
   </object>
-  <object id="72" class="NPC" gid="220" x="368" y="16" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;You already feel captivated by the magic of this place, right?&quot;)))"/>
-   </properties>
-  </object>
-  <object id="73" class="NPC" gid="216" x="560" y="16" width="16" height="16">
-   <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;Here we live between the sky and the water, have you noticed that?&quot;)))"/>
-   </properties>
-  </object>
  </objectgroup>
  <objectgroup id="10" name="spawn points">
-  <object id="51" class="Door" x="192" y="80" width="16" height="16">
+  <object id="51" class="Door" x="192" y="96" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="54/1"/>
    </properties>
   </object>
-  <object id="52" class="Door" x="640" y="80" width="16" height="16">
+  <object id="52" class="Door" x="640" y="96" width="16" height="16">
    <properties>
     <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="52/1"/>
    </properties>
   </object>
-  <object id="56" class="Door" x="416" y="64" width="16" height="16">
+  <object id="56" class="Door" x="416" y="80" width="16" height="16">
    <properties>
     <property name="roomId" value="53_cityhall"/>
    </properties>
   </object>
-  <object id="57" class="Door" x="336" y="64" width="16" height="16">
+  <object id="57" class="Door" x="336" y="80" width="16" height="16">
    <properties>
     <property name="roomId" value="53_shop"/>
    </properties>
   </object>
-  <object id="58" class="Door" x="416" y="144" width="16" height="16">
+  <object id="58" class="Door" x="416" y="160" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="53_house2"/>
    </properties>
   </object>
-  <object id="59" class="Door" x="592" y="16" width="16" height="16">
+  <object id="59" class="Door" x="592" y="32" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="53_house3/up"/>
    </properties>
   </object>
-  <object id="61" class="Door" x="528" y="64" width="16" height="16">
+  <object id="61" class="Door" x="528" y="80" width="16" height="16">
    <properties>
     <property name="roomId" value="53_house1"/>
    </properties>
   </object>
-  <object id="74" class="Door" x="512" y="16" width="16" height="16">
+  <object id="74" class="Door" x="512" y="32" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="53_house1/up"/>
    </properties>
   </object>
-  <object id="76" class="Door" x="240" y="16" width="16" height="16">
+  <object id="76" class="Door" x="240" y="32" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="53_house4/up"/>
    </properties>
   </object>
-  <object id="78" class="Door" x="640" y="96" width="16" height="16">
+  <object id="78" class="Door" x="640" y="112" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="3"/>
     <property name="roomId" value="52/2"/>
    </properties>
   </object>
-  <object id="79" class="Door" x="192" y="96" width="16" height="16">
+  <object id="79" class="Door" x="192" y="112" width="16" height="16">
    <properties>
     <property name="orientation" type="int" value="2"/>
     <property name="roomId" value="54/2"/>
@@ -132,7 +121,7 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="81" gid="417" x="416" y="176" width="16" height="16">
+  <object id="81" gid="442" x="416" y="192" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;053-view&quot;)
   (begin
@@ -156,9 +145,9 @@
    </properties>
   </object>
  </objectgroup>
- <layer id="12" name="Tile Layer 3" width="52" height="15">
+ <layer id="12" name="Tile Layer 3" width="52" height="16">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAXujAwMHnTA3oyUuzWegBmaQHl/KthDLNDEY1cCEe5Ad2swkL8UiJcB8XZG/ObTAoDs2wLEW7HYG4zDLdugbgWBcDQ10VD+aSB9hs5+gYGTQHtPYbEb5jZ0/9LarbA4pVXc4vIvMQDkpkQgTkLCyQTEkqF2JRKpHlmM3ul7FAwP0DOabsgGrEwD7QLKwVFo/M8C0rOHQVpYD/TDhmHgj+EOAK4tQ5gwDAAA
+   H4sIAAAAAAAAA2NgGAXDDSQwMjAk0gGnMFLu1goCZjgB5TOoYA+xwAmPXZVEuAPdrTlA/j4g3g/EFxjxm08LALLvLBCfw2JvDg63nIe6FQQK0NSUQPlPgPRTOvsFBh4B7X2MxW6Y29D9S2u3wuKUVnGLy7/EAJCbqoC4GgnXEBCrgdpVRaR6ZDF6p+9RMDzA0tF0QzaQYxpoF1AO7kHjfzOQ3jIM0sIJoB9ODgN/DHcAAIAYOxIADQAA
   </data>
  </layer>
 </map>

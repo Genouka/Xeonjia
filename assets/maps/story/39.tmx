@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="76">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="12" nextobjectid="78">
  <properties>
   <property name="action">(begin
   (if (== (last-place) &quot;38&quot;)
@@ -17,44 +17,76 @@
       (place 64 96 64)
       (place -1 80 64)
       (black-curtain)
+      (wait)
       (dialog
         '((&quot;/september&quot; &quot;Ok, you were better than me.\nI still have room for improvement, I will continue to train.&quot;)
         (&quot;/september_happy&quot; &quot;Anyway, it is good to see you again.&quot;)
-        (&quot;/hero_happy&quot; &quot;It is good to see you too. I felt like I was going back to when we were kids.&quot;)
+        (&quot;/hero_happy&quot; &quot;It is good to see you too.\nDuring the battle it felt like I was going back to when we were kids.&quot;)
         (&quot;/september&quot; &quot;Hehe, you are right… we spent a lot of hours playing and training as kids.\nThat was the happiest time in my life…\nThis is too much nostalgia for me. I can't handle it.&quot;)
         (&quot;/september&quot; &quot;I don't have time for these emotions, I have to go back to training now.\nSee you in the Xeonjia Tower.&quot;)
         (&quot;/hero&quot; &quot;Are you going to the tower too?&quot;)
-        (&quot;/september&quot; &quot;Yes, of course!\nI will go there and I will defeat the King of Evil!\nEven though you are the protagonist and the so-called \&quot;Hero\&quot; it will be me who will defeat the King of Evil and be remembered as the savior of the world hehe.&quot;)
-        (&quot;/hero_happy&quot; &quot;Wait, wait, wait, don't steal my job! Haha&quot;)
-        (&quot;/hero&quot; &quot;Anyway, be careful not to get hurt, bye!&quot;)))
+        (&quot;/september&quot; &quot;Yes, of course!\nI will go there and I will defeat the King of Evil!\nEven though you are the protagonist and the so-called \&quot;Hero\&quot;, it will be me who will defeat the King of Evil and be remembered as the savior of the world hehe.&quot;)
+        (&quot;/hero_happy&quot; &quot;Wait, wait, wait, don't steal my job! Haha.&quot;)))
       (wait)
       (set-team '(0 64))
+      (place 76 0 112)
+      (show 76)
+      (wait 0.6)
+      (move '(2 76))
+      (wait 1.2)
+      (move '(1 76))
+      (wait 1.2)
+      (move '(3 76))
+      (wait 0.6)
+      (move '(0 76))
+      (wait 0.6)
+      (set-orientation '(1 64))
+      (set-orientation 1)
+      (dialog
+        '((&quot;/shen&quot; &quot;Hey you two, don't waste energy on each other!&quot;)
+        (&quot;/hero&quot; &quot;Shen!&quot;)
+        (&quot;/shen&quot; &quot;I saw that you were fighting.&quot;)
+        (&quot;/hero&quot; &quot;Did you also see that I won?&quot;)
+        (&quot;/september&quot; &quot;Did you also see that he was lucky?&quot;)
+        (&quot;/shen&quot; &quot;Yes, yes, I have seen everything.&quot;)
+        (&quot;/hero&quot; &quot;But do you two know each other?&quot;)
+        (&quot;/september&quot; &quot;Shen and I? Of course! We are best friends!&quot;)
+        (&quot;/shen&quot; &quot;We are accomplices in scientific experiments and inventions.&quot;)
+        (&quot;/september&quot; &quot;We made the snowball container together.&quot;)
+        (&quot;/shen&quot; &quot;I made it and she tried it.&quot;)
+        (&quot;/september&quot; &quot;That's what I said, we did it together.&quot;)
+        (&quot;/september&quot; &quot;Now I leave you because I have to go back to training.&quot;)
+        (&quot;/shen&quot; &quot;Yeah, I think we all have important things to do now.&quot;)
+        (&quot;/september&quot; &quot;See you soon!&quot;)
+        (&quot;/hero&quot; &quot;Bye!&quot;)))
+      (wait)
+      (leave-all '(64 76))
       (delete 72))))</property>
   <property name="map-name" value="Route 5"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="366" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="398" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="448" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAwtlZGAIHSQ4FojV0XAskXrjseCbDJhiMUhmayCxg4mw4y8DcSAXqNYAC46DugGfXSA7PhMwHyRvBlRrDsUWQKwNxFaMCDX47MLmD2x22gHV2gOxAxQbA7ETI6Y6bHY9BYr/A+L/ODADFnNA4CYWMQkcdj3EbgQcqDEQH2fYQBzUH3JY0qUSDveTCp5CaVzpUgKvbuIALAxwpUtkQK59MH8QSpfEAAMc4g+gNK50+RSHPmIBKJxgZnACzeNCcvdLJHXocsQCWNg6oJnxFGo3yI63DKj+kIHmVweo+FMoG+ZWGUaEOEwfjAYAkVpMxNwFAAA=
+   H4sIAAAAAAAAA2tnZGBoHyS4H4gj0XA/kXonYsHcWMT6kMyOQmK3EmGHPhATA+YD1SVhwROgbsBnF8gOVQL2gOQzgDgTirOAOBaIc5D04bMLmz+w2VkAFCsE4iIoTgXiEizqsNklDsQGQGyIAxvh8CM3FnEJHHYJEwgnNQbi4wwbmAD1RwCWdBlCgbnIQBxqDq50KYFfO1EAFga40iUyINc+mD8IpUtigAEOcSGoObjSpTiFcaKPZIY1kLZBMk8aiY0uRyyAha0Dmhni0DwJskMezR9+UDkHqDpxKBvmVj9GhLg4knkgAAAp1LJZ3AUAAA==
   </data>
  </layer>
  <layer id="6" name="Tile Layer 2" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGDxAjpGBQRENKzESp/cvFrF4LHrVsIhpEWkHsUAPaJ4+Gjaish2jgPYAlqZCsKRLQyrH52i6JB4wAt3MREN309p8egEA6/Ukf9wFAAA=
+   H4sIAAAAAAAAA2NgGDwggJGBIRgNhzASp1cfi7qJWMQisIjFEGkHsSABaF4iGk6hsh2jgPYAlqbasKTLZCrH52i6JB4YA91sQkN309p8egEAEf6g99wFAAA=
   </data>
  </layer>
  <layer id="11" name="Tile Layer 3" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGDwghBFTzBCL2CgYBaNgFGADjMDygmm0zAADAC9N7ZbcBQAA
+   H4sIAAAAAAAAA2NgGDygjRFTLBmL2CgYBaNgFGADxsDywmS0zAADABDcGLfcBQAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="61" class="NPC" gid="175" x="224" y="32" width="16" height="16">
+  <object id="61" class="NPC" gid="225" x="224" y="32" width="16" height="16">
    <properties>
     <property name="action">(if (! (has-item &quot;gem_4&quot;))
     (if (! (has-item &quot;40.eyeglasses&quot;))
@@ -74,7 +106,7 @@
     (dialog '((&quot;/&quot; &quot;I missed being able to see the sea.&quot;))))</property>
    </properties>
   </object>
-  <object id="64" class="NPC" gid="396" x="16" y="128" width="16" height="16">
+  <object id="64" class="NPC" gid="446" x="16" y="128" width="16" height="16">
    <properties>
     <property name="action">(if (and (is-friendly 64) (!get &quot;039-september-ok&quot;))
   (begin
@@ -88,9 +120,8 @@
     (move '(1 64))
     (wait 0.4)
     (move '(1 -1))
-    (set-orientation '(3 64))
+    (wait 1.2)
     (set-orientation '(2 -1))
-    (wait 1)
     (move '(2 64))
     (wait 0.5)
     (move '(0 64))
@@ -101,15 +132,14 @@
     (add-to-players 64)
     (start-battle))
   (if (!get &quot;039-september-ok&quot;)
-    (dialog '((&quot;/&quot; &quot;I will defeat you.&quot;)))
-    (dialog '((&quot;/&quot; &quot;I have to train harder.&quot;)))))</property>
-    <property name="actionOnEvent">(if  (get &quot;039-september-ok&quot;)
-    (delete-me))</property>
+    (dialog '((&quot;/&quot; &quot;I will defeat you.&quot;)))))</property>
+    <property name="actionOnEvent">(if (get &quot;039-september-ok&quot;)
+  (delete-me))</property>
     <property name="hp" type="float" value="60"/>
     <property name="weaponAtk" type="int" value="26"/>
    </properties>
   </object>
-  <object id="75" class="NPC" gid="178" x="32" y="160" width="16" height="16">
+  <object id="75" class="NPC" gid="228" x="32" y="160" width="16" height="16">
    <properties>
     <property name="action">(begin
     (dialog '((&quot;/&quot; &quot;I have heard that in each region there is a strange polyhedric stone.&quot;)))
@@ -117,15 +147,22 @@
         (dialog '((&quot;/&quot; &quot;This one seems to be useless.&quot;)))))</property>
    </properties>
   </object>
+  <object id="76" gid="442" x="0" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (get &quot;039-september-ok&quot;)
+  (delete-me))</property>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="68" gid="260" x="80" y="160" width="16" height="16">
+  <object id="68" gid="310" x="80" y="160" width="16" height="16">
    <properties>
     <property name="action">(if (! (has-item &quot;39.stone2&quot;))
     (begin
         (dialog '((&quot;Hey, there are items in here!&quot;)))
         (give-item &quot;39.stone2&quot;)
-        (dialog '((&quot;This is a very strange stone… Never seen anything like this before.&quot;))))
+        (dialog '((&quot;This is a very strange stone…&quot;))))
     (dialog '((&quot;This vase is empty.&quot;))))</property>
    </properties>
   </object>
@@ -135,12 +172,12 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="73" class="Modifier" gid="416" x="272" y="64" width="16" height="16">
+  <object id="73" class="Modifier" gid="466" x="272" y="64" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="30"/>
    </properties>
   </object>
-  <object id="74" gid="411" x="160" y="112" width="16" height="16">
+  <object id="74" gid="461" x="160" y="112" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="100"/>
    </properties>

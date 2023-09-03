@@ -36,10 +36,10 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
  <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="343" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="368" source="../tilesets/npc_main.tsx"/>
  <layer id="1" name="Tile Layer 1" width="19" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5WU4QrCMAyEO5n4xzERtqngfDnfHxEVGahLoIUzJFkbONgl3ceVljZVCEdSH9VEj+KSvRb+Sb6DXq94S4PiO5FFy7YxMqFPLC0b1vvfqpmQhVlOgiXroGRCFmap4ftJWpF/BX0+LLCwPqQ76WtkzGVtK9+X5uKa7FEWqzbYsl+S60da88yYe6yHsx+stK4kl3YncnNdxVrrTqR1pefoVQmLz20K9rlqrDNpVLSPjJ0xvwiWxcE3I70NHm+Jw7rBXjzeDOq/CpSkBQAA
+   H4sIAAAAAAAAA5WUbQvCMAyEO5n4xaEI21RQ/5z/HxEUGfiSQgtnyHVN4GCXdA+3rrRrQjiIhqQueVQs3dvAO9n30BsMzzQavldZrGwrkgl9ZlnZsF7/1syELMxyVCxdeyMTsjBLC88P0UL8M9jzcYaF9RbdRR+SsZa1bsremyvWxEdVrJawdd+T6ytaxhmZl1gsD8vnyWWdidpcV7WWnYm8zvsfS+VhxX2ZAt9Hi3USnQ3tEmNL5hfFYhy8M/LdUOLNcaJu8C0l3g8zbYdbpAUAAA==
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
@@ -65,7 +65,7 @@
     <property name="weaponAtk" type="int" value="12"/>
    </properties>
   </object>
-  <object id="93" class="NPC" gid="348" x="144" y="176" width="16" height="16">
+  <object id="93" class="NPC" gid="373" x="144" y="176" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (has-item &quot;signet-1&quot;)
@@ -112,7 +112,7 @@
     <property name="actionOnCollision">(begin
   (delete-me)
   (dialog '((&quot;…&quot;)))
-  (wait 1)
+  (wait)
   (set-orientation '(0 93))
   (wait 1)
   (set-orientation '(0 90))
@@ -125,15 +125,15 @@
   (wait 1)
   (dialog
     '((&quot;???/lache&quot; &quot;I didn't think you would get this far, kid.&quot;)
-    (&quot;/hero&quot; &quot;W-Who are you?&quot;)
+    (&quot;/hero&quot; &quot;W-who are you?&quot;)
     (&quot;???/lache&quot; &quot;I'm surprised that my name is not known among the woods of your village.&quot;)
-    (&quot;dr. lache/lache&quot; &quot;Anyway, I'm Dr. Lache and I'm the leader of the Hoarfrost Team.&quot;)
-    (&quot;/hero_angry&quot; &quot;S-So you're the one who spread terror and violence through the henchmen as ordered by the King of Evil?&quot;)
+    (&quot;dr. lache/lache&quot; &quot;My name is Dr. Lache and I'm the leader of the Hoarfrost Team.&quot;)
+    (&quot;/hero_angry&quot; &quot;So you're the one who spread terror and violence through the henchmen as ordered by the King of Evil?&quot;)
     (&quot;dr. lache/lache_happy&quot; &quot;As ordered by the King of Evil? HAHAHA&quot;)
     (&quot;dr. lache/lache&quot; &quot;I don't take orders from anyone. Between me and the King of Evil there is a peer collaboration.&quot;)
     (&quot;/hero&quot; &quot;Be that as it may, I won't let you continue your plans.&quot;)
     (&quot;/hero&quot; &quot;I'm {{hero}}, I'm the chos-&quot;)
-    (&quot;dr. lache/lache&quot; &quot;I know very well who you are, you're the chosen hero and blah, blah, blah.\nI don't have time for this.&quot;)
+    (&quot;dr. lache/lache&quot; &quot;I know very well who you are, you're this year's chosen hero and blah, blah, blah.\nI don't have time for this.&quot;)
     (&quot;dr. lache/lache&quot; &quot;I know you're interested in the signet, defeat my henchmen and it's yours.\nNow get out of my way.&quot;)
     (&quot;/hero&quot; &quot;I won't let you go so eas-&quot;)))
   (wait)
@@ -184,7 +184,7 @@
    <properties>
     <property name="action">(begin
     (define item-id &quot;t1_06.money&quot;)
-    (define money-diff 500)
+    (define money-diff 200)
     (if (! (has-item item-id))
         (begin
             (dialog '((&quot;* {{hero}} found {{money-diff}} ¤ *&quot;)))
@@ -197,6 +197,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="88" class="Door" x="144" y="288" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="t1_05"/>
    </properties>

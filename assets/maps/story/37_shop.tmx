@@ -28,12 +28,12 @@
  <objectgroup id="9" name="items">
   <object id="72" gid="199" x="80" y="96" width="16" height="16">
    <properties>
-    <property name="action">(if (not (has-been-here &quot;28&quot;))
+    <property name="action">(if (not (visited-room &quot;28&quot;))
   (shop
     '((&quot;berries-shop&quot; 5 &quot;(give-item \&quot;berries-shop\&quot;)&quot;)
     (&quot;fresh-water&quot; 20 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
     (&quot;pomegranate-juice&quot; 55 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)))
-  (if (not (has-been-here &quot;37&quot;))
+  (if (not (visited-room &quot;37&quot;))
     (shop
       '((&quot;fresh-water&quot; 22 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
       (&quot;pomegranate-juice&quot; 60 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
@@ -42,18 +42,19 @@
       (shop
         '((&quot;fresh-water&quot; 24 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
         (&quot;pomegranate-juice&quot; 65 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
-        (&quot;healer&quot; 90 &quot;(give-item \&quot;healer\&quot;)&quot;)
+        (&quot;healer&quot; 95 &quot;(give-item \&quot;healer\&quot;)&quot;)
         (&quot;hp-up-5-shop&quot; 150 &quot;(begin (increase-HP 5) (set-HP-diff 105))&quot;)))
       (shop
         '((&quot;fresh-water&quot; 24 &quot;(give-item \&quot;fresh-water\&quot;)&quot;)
         (&quot;pomegranate-juice&quot; 65 &quot;(give-item \&quot;pomegranate-juice\&quot;)&quot;)
-        (&quot;healer&quot; 90 &quot;(give-item \&quot;healer\&quot;)&quot;))))))</property>
+        (&quot;healer&quot; 95 &quot;(give-item \&quot;healer\&quot;)&quot;))))))</property>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="2" name="spawn points">
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="37"/>
    </properties>

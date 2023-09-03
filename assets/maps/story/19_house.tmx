@@ -9,25 +9,44 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA7vAwMBwnkh8EYhvAPF1HHgbEgbxb0LV7yESDwf1D0hQ/xCIr+HAV3GIAwC/ja0csAEAAA==
+   H4sIAAAAAAAAA7vAwMBwnkh8EYhvAPF1IN5GAIPU3ISq30MkHg7qH5Cg/iEQX8OBr+IQBwDhfgZxsAEAAA==
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="71" class="NPC" gid="19" x="48" y="80" width="16" height="16">
+  <object id="71" class="NPC" gid="19" x="32" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;I would have liked to have friends.&quot;)))"/>
+    <property name="action">(if (!get &quot;019-house-talk&quot;)
+    (begin
+        (dialog '((&quot;/&quot; &quot;I just cooked a cake. Do you want some?&quot;)))
+        (define id &quot;019-house-question-cake&quot;)
+        (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
+        (set &quot;019-house-talk&quot; #t)
+        (wait)
+        (if (get id)
+            (begin
+                (dialog
+                    '((&quot;/&quot; &quot;Here you go!&quot;)
+                    (&quot;/hero_happy&quot; &quot;Thank you!&quot;)
+                    (&quot;* {{hero}} eats a piece of cake *&quot;)))
+                (wait)
+                (set-HP-diff 30))
+             (dialog '((&quot;/&quot; &quot;Oh, ok. Then I'll eat it all.&quot;)))))
+    (if (get &quot;019-house-question-cake&quot;)
+        (dialog '((&quot;/&quot; &quot;You are my only friend.&quot;)))
+        (dialog '((&quot;/&quot; &quot;I would have liked to have friends.&quot;)))))</property>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="12" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIB3sBOJdJKg/CMSHoOztODA2ABLfD8QHsNC49BwH4hNYaHx2EOseYsFuKEYGWwnIEwsAQxt/GrABAAA=
+   H4sIAAAAAAAAA2NgoB/YjgPjUrsfiA9goXHpOQ7EJ7DQ+Owg1j2kgN1QjAy2EpAnFgAABz/mM7ABAAA=
   </data>
  </layer>
  <objectgroup id="9" name="items"/>
  <objectgroup id="2" name="spawn points">
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="19"/>
    </properties>

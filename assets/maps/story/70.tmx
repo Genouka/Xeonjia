@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="23" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="67">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="23" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="69">
  <properties>
   <property name="action">(if (! (== (last-place) &quot;79&quot;))
-  (map-name &quot;Fumarole Village&quot;))</property>
-  <property name="map-name" value="Fumarole Village"/>
+  (map-name &quot;Fumarole Town&quot;))</property>
+  <property name="map-name" value="Fumarole Town"/>
   <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;How many meters above sea level are we?&quot;)))"/>
   <property name="music" value="village"/>
  </properties>
@@ -12,16 +12,58 @@
  <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
  <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <tileset firstgid="544" source="../tilesets/npc_main.tsx"/>
  <layer id="1" name="Tile Layer 1" width="23" height="10">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA2NgQAJMDAxcQMzNxEB1IAA0kwWIRaBm32ZkYLjDiJDnwGE3TJwJiJmR5JD1SwDFeYBYBk3vXUbsdiO7SRCL3BtGVHyYEVMMhB8xotqN7iZJJDmYW+4xorphNRofBl4TsBub3GYcZiGDxUhqcNmNLrcJyN5OhNn4zMMHkP3wEGoGiF6PFtakAOS4gIU9rnTyGk8Y48PodoHCaRc0Hu5icS96mgcB9PQAAwBXOaC6mAMAAA==
   </data>
  </layer>
- <objectgroup id="9" name="npc"/>
+ <objectgroup id="9" name="npc">
+  <object id="67" class="NPC" gid="550" x="0" y="144" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;70-lache&quot;)
+  (delete-me))</property>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="8" name="items">
   <object id="66" gid="471" x="352" y="112" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;Fumarole Village&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;Fumarole Town&quot;)))"/>
+   </properties>
+  </object>
+  <object id="68" class="Solid" x="-16" y="80" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if (!get &quot;070-lache&quot;)
+  (begin
+    (delete-me)
+    (set &quot;070-lache&quot; #t)
+    (dialog '((&quot;/hero_exclamation&quot; &quot;!&quot;)))
+    (wait)
+    (move 2)
+    (set-orientation 3)
+    (wait 1.2)
+    (place 67 0 80)
+    (show 67)
+    (wait 1.2)
+    (move '(2 67))
+    (wait 1.2)
+    (dialog '((&quot;dr. lache/lache&quot; &quot;I don't have time to waste with you right now.&quot;)))
+    (wait)
+    (move 1)
+    (set-orientation 0)
+    (wait 0.6)
+    (move '(2 67))
+    (wait 0.6)
+    (move '(2 67))
+    (wait 0.6)
+    (move '(2 67))
+    (wait 0.6)
+    (leave-npc 67)))</property>
+    <property name="actionOnEvent">(if (get &quot;070-lache&quot;)
+  (delete-me))</property>
    </properties>
   </object>
  </objectgroup>

@@ -12,14 +12,21 @@
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="71" class="NPC" gid="7" x="48" y="80" width="16" height="16">
+  <object id="71" class="NPC" gid="23" x="48" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;The last time I went through the forest I was attacked.\nI'm not going back there anymore.&quot;)))"/>
+    <property name="action">(begin
+  (dialog '((&quot;/&quot; &quot;The last time I went through the forest I was attacked.\nI'm not going back there anymore.&quot;)))
+  (if (get &quot;the-end&quot;)
+    (dialog '((&quot;/&quot; &quot;Even if it's safe now.&quot;)))))</property>
    </properties>
   </object>
   <object id="72" class="NPC" gid="20" x="96" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;If you want to enter the forest you have to be careful, my grandson risked getting hurt there.&quot;)))"/>
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(dialog '((&quot;/&quot; &quot;If you want to enter the forest you have to be careful, my grandson risked getting hurt there.&quot;)))
+
+(dialog '((&quot;/&quot; &quot;There are no more monsters in the Mitsu Forest.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
@@ -37,6 +44,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="4"/>
    </properties>

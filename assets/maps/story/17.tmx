@@ -6,35 +6,39 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5WTsQrDMAxENWTsB3jooKlztyxtyJrQ//+e6sCCQ8hO9OCILJ+FEIqISDM9TNqFM3j32O/x3SWnJTmd+JmNasQ6m4xBf7+L2i+KW39zl6yfER/Tt+Cv1gdqOkxnob5O7uNs4a3MZ5d6/8BnxTHnwEK11+Te8bzvJ/ejiZ+Bd7Q/azj73HXiibnR/JdJP4B3CXqGHP+Xf+vMgALAAwAA
+   H4sIAAAAAAAAA5WTsQrDMAxENWTsB3jIoKlztyxJyNqS//+e+ogFh5Cd6MERWZYPIRQRkSIX2mTnT4uhV/seElOCnA7qmZ08vM8ufdDfeeP9pri0N0+J+umxVm2J+qw/0Kpv1S/hr4N7P1vUZuZzSL5/YLPimHNgIu8luDcsb/vJ/WhQz6C2tz+LO9vcdVDjc735T4N+AO8SNLsc/5d/BJQVpcADAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="38" class="SliderCpu" gid="129" x="112" y="256" width="16" height="16">
+  <object id="38" class="Monster" gid="129" x="112" y="256" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="30"/>
     <property name="level" type="float" value="0"/>
    </properties>
   </object>
-  <object id="39" class="SliderCpu" gid="129" x="32" y="256" width="16" height="16">
+  <object id="39" class="Monster" gid="129" x="32" y="256" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="30"/>
     <property name="level" type="float" value="0"/>
    </properties>
   </object>
-  <object id="41" class="SliderCpu" gid="129" x="64" y="256" width="16" height="16">
+  <object id="41" class="Monster" gid="129" x="64" y="256" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="40"/>
     <property name="level" type="float" value="0"/>
    </properties>
   </object>
-  <object id="43" class="NPC" gid="182" x="128" y="80" width="16" height="16">
+  <object id="43" class="NPC" gid="232" x="128" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;These monsters don't seem very smart to me.&quot;)))"/>
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(dialog '((&quot;/&quot; &quot;These monsters don't seem very smart to me.&quot;)))
+
+(dialog '((&quot;/&quot; &quot;I miss the monsters&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
@@ -58,7 +62,7 @@
 </property>
    </properties>
   </object>
-  <object id="46" gid="217" x="160" y="32" width="16" height="16">
+  <object id="46" gid="267" x="160" y="32" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="35"/>
    </properties>
@@ -108,7 +112,7 @@
     <property name="roomId" value="15"/>
    </properties>
   </object>
-  <object id="44" class="Modifier" gid="224" x="80" y="32" width="16" height="16">
+  <object id="44" class="Modifier" gid="274" x="80" y="32" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>

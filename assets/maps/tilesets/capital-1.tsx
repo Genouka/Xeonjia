@@ -30,7 +30,7 @@
   <properties>
    <property name="action">(if (= (orientation) 1)
   (begin
-    (dialog-kobi '((&quot;Life always finds a way.&quot;)))
+    (dialog-kobi '((&quot;Life always finds a way&quot;)))
     (dialog '((&quot;/hero&quot; &quot;I don't know what this means.&quot;)))))</property>
   </properties>
  </tile>

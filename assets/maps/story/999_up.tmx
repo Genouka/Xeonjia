@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="98">
+ <properties>
+  <property name="action">(if (and (!get &quot;999_up-safe&quot;) (and (eq? (enemies-count) 0) (and (get &quot;999_up-talk&quot;) (!get &quot;999_up-ok&quot;))))
+  (begin
+    (set &quot;999_up-ok&quot; #t)
+    (dialog '((&quot;…&quot;)))
+    (wait)
+    (wait 1)
+    (dialog '((&quot;hero&quot; &quot;We did it?&quot;)))
+    (wait)
+    (wait 2)
+    (respawn 67)
+    (friendly '(#t 67))
+    (quiet '(#t 67))
+    (respawn 61)
+    (respawn 62)
+    (set-orientation '(0 67))
+    (set-orientation '(1 -1))
+    (set-orientation '(1 61))
+    (set-orientation '(1 62))
+    (set-orientation '(1 63))
+    (place 61 96 176)
+    (place 62 128 176)
+    (place 63 144 176)
+    (place 67 112 128)
+    (place -1 112 176)
+    (black-curtain)
+    (dialog
+      '((&quot;…&quot;)
+      (&quot;/king-of-evil&quot; &quot;And so, in the end, it really happened.&quot;)
+      (&quot;/king-of-evil&quot; &quot;I just got defeated by 4 kids.&quot;)
+      (&quot;/shen&quot; &quot;I didn't even fight.&quot;)
+      (&quot;/king-of-evil&quot; &quot;Ah, right.&quot;)
+      (&quot;/king-of-evil&quot; &quot;And so, in the end, it really happened.&quot;)
+      (&quot;/king-of-evil&quot; &quot;I just got defeated by 3 kids.&quot;)
+      (&quot;/king-of-evil&quot; &quot;I had to leave my world because it was uninhabitable.\nFreezing your world was the only way to save me and my people.\nThere was no possibility of coexistence.&quot;)
+      (&quot;/hero&quot; &quot;But in this way, to avoid your own suffering you brought suffering to us.&quot;)
+      (&quot;/king-of-evil&quot; &quot;I have been blind to the pain I have inflicted on this world and those who inhabit it.\nI was ready to freeze everything and wipe out every living thing in this Kingdom.\nThe power wore me down.\nBut I'd do it all over again.\nI hope you will not be faced with similar choices.&quot;)
+      (&quot;/hero&quot; &quot;We would act differently.&quot;)
+      (&quot;/king-of-evil&quot; &quot;I know.&quot;)
+      (&quot;/king-of-evil&quot; &quot;I am leaving now, and with me the winter that has lasted for 65 years.\nRemember that even if my kingdom falls, evil will never completely disappear.\nIt will be reborn somewhere else, in a different form, waiting for a new opportunity to reclaim power.\nAlways be on your guard, heroes.\nFarewell.&quot;)))
+    (wait)
+    (wait)
+    (king-of-evil-out 67)
+    (wait 3)
+    (dialog
+      '((&quot;/milla&quot; &quot;And so, so… it's over.&quot;)
+      (&quot;/hero&quot; &quot;So it seems.&quot;)
+      (&quot;/shen&quot; &quot;How pathetic the King of Evil trying to justify all the evil he has done.&quot;)
+      (&quot;/september&quot; &quot;But… guys… it seems to me that it's still winter!&quot;)
+      (&quot;/hero_exclamation&quot; &quot;!&quot;)))
+    (wait)
+    (set-orientation '(0 -1))
+    (set-orientation '(0 61))
+    (set-orientation '(0 62))
+    (set-orientation '(0 63))
+    (wait 0.6)
+    (set-orientation '(3 -1))
+    (set-orientation '(3 61))
+    (set-orientation '(2 62))
+    (set-orientation '(2 63))
+    (wait 0.6)
+    (set-orientation '(2 -1))
+    (set-orientation '(2 61))
+    (set-orientation '(3 62))
+    (set-orientation '(3 63))
+    (wait 0.6)
+    (dialog
+      '((&quot;/hero&quot; &quot;You're right, it's still cold and the floor is still frozen!&quot;)
+      (&quot;/september&quot; &quot;Why isn't winter over?!&quot;)
+      (&quot;/shen&quot; &quot;Guys… do you know what day it is today?&quot;)
+      (&quot;/hero&quot; &quot;Actually no… I've lost track of time for quite a while.\nI think it has been at least a year since the start of the journey.&quot;)
+      (&quot;/shen&quot; &quot;Today is December 22nd… winter has just begun!&quot;)
+      (&quot;…&quot;)
+      (&quot;/hero_mouthless&quot; &quot;Hehe so we still have 3 months of winter ahead.&quot;)
+      (&quot;/shen&quot; &quot;Yea.&quot;)
+      (&quot;/hero_mouthless&quot; &quot;Oh.&quot;)
+      (&quot;/shen&quot; &quot;Yea.&quot;)
+      (&quot;/hero&quot; &quot;All right, after 65 years of winter, 3 more months don't make much of a difference.&quot;)
+      (&quot;/september&quot; &quot;Now what do we do?&quot;)
+      (&quot;/hero&quot; &quot;We go back home.&quot;)
+      (&quot;/milla&quot; &quot;There will be a sequel, right?&quot;)
+      (&quot;/hero&quot; &quot;I guess not.&quot;)
+      (&quot;/milla_sad&quot; &quot;No!??\nPlease.&quot;)
+      (&quot;/hero&quot; &quot;It's not up to me.&quot;)
+      (&quot;/milla_sad&quot; &quot;I want to have many more adventures.\nLet's save the world again, please.&quot;)
+      (&quot;/hero&quot; &quot;From what? The world is safe now.&quot;)
+      (&quot;/milla&quot; &quot;We need a new villain!\nSeptember, do you want to do this?&quot;)
+      (&quot;evil september/september_joking&quot; &quot;My glacial domain is about to begin.&quot;)
+      (&quot;/milla_happy&quot; &quot;Yeaaah. Thanks!!&quot;)
+      (&quot;/september&quot; &quot;You know I was kidding, right?&quot;)
+      (&quot;/milla_happy&quot; &quot;It doesn't matter.&quot;)
+      (&quot;/september&quot; &quot;Shall we go eat an ice cream?&quot;)
+      (&quot;/milla_happy&quot; &quot;Yeaaah.&quot;)))
+    (wait)
+    (wait 0.6)
+    (move '(0 63))
+    (wait 0.6)
+    (move '(2 62))
+    (set-orientation '(2 -1))
+    (set-orientation '(2 61))
+    (set-orientation '(3 63))
+    (wait 1)
+    (set-orientation '(1 63))
+    (wait 1)
+    (set-orientation '(3 62))
+    (wait 0.6)
+    (dialog '((&quot;/hero&quot; &quot;What's wrong, Milla?&quot;)))
+    (wait)
+    (dialog '((&quot;/milla_happy&quot; &quot;Snowball fight!&quot;))) 
+    (wait)
+    (wait 0.6)
+    (shot-snowball 62)
+    (wait 0.6)
+    (shot-snowball 63)
+    (wait 0.6)
+    (shot-snowball 61)
+    (shot-snowball 62)
+    (shot-snowball 63)
+    (shot-snowball -1)
+    (wait 0.6)
+    (shot-snowball 61)
+    (shot-snowball 62)
+    (shot-snowball 63)
+    (shot-snowball -1)
+    (wait 0.6)
+    (shot-snowball 61)
+    (shot-snowball 62)
+    (shot-snowball 63)
+    (shot-snowball -1)
+    (wait 0.6)
+    (music &quot;jrpg piano&quot;)
+    (the-end)
+    (wait)
+    (close-game)))</property>
+  <property name="can-escape" type="bool" value="false"/>
+  <property name="disable-worldmap" type="bool" value="true"/>
+  <property name="map-name" value="Xeonjia Tower"/>
+  <property name="milla">(if (!get &quot;999-september&quot;)
+  (dialog '((&quot;/&quot; &quot;Hey, there's September!&quot;)))
+  (dialog '((&quot;/&quot; &quot;Don't disturb me, I'm planning the trip.&quot;))))</property>
+  <property name="start-battle" type="bool" value="false"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
+ <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/outdoor-3.tsx"/>
+ <tileset firstgid="544" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="576" source="../tilesets/tower.tsx"/>
+ <tileset firstgid="640" source="../tilesets/basic.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="15" height="18">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA8tlYmCIJQPnA3EpEKeSgcuhetGBGxN+Pgjg0ksMwKd3BSMDw1kgXsmIXy82N20A6tkLxBux6HXD4196uRkGXJkQbkJ2M8xPrkzY9bpisd8BixhMHSG92AA2vchgE9Cdu5DwZix+RtdLKD254fAvOgCpC8MR9zC9tWhyyP4+yohdHATqgXxHIHYiAzsDsScQe5GBvYE4C4izycA5QAwA7T+eoTgEAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="npc">
+  <object id="61" class="NPC" gid="573" x="80" y="240" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Stay focused!&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
+    <property name="team" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="62" class="NPC" gid="557" x="96" y="240" width="16" height="16">
+   <properties>
+    <property name="action">(if  (= (enemies-count) 0)
+  (dialog '((&quot;/_happy&quot; &quot;Nobody can stop us!\nLet's move on.&quot;)))
+  (dialog '((&quot;/_happy&quot; &quot;Here we are, finally!&quot;))))</property>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
+    <property name="team" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="63" class="NPC" gid="568" x="112" y="272" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;Why do you waste your moves like this?&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="64" class="Solid" x="128" y="224" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(begin
+  (delete-me)
+  (set &quot;999_up-talk&quot; #t)
+  (dialog '((&quot;/hero&quot; &quot;Let's go!&quot;)))
+  (wait)
+  (move '(2 -1))
+  (move '(1 61))
+  (wait 0.9)
+  (move '(1 -1))
+  (move '(2 61))
+  (move '(2 62))
+  (wait 0.6)
+  (set-orientation '(1 61))
+  (move '(3 -1))
+  (move '(2 62))
+  (wait 0.6)
+  (move '(3 -1))
+  (move '(1 62))
+  (wait 0.6)
+  (set-orientation '(1 -1))
+  (move '(3 62))
+  (wait 0.6)
+  (set-orientation '(1 62))
+  (define-symbol &quot;gem_count&quot; (gem-count))
+  (dialog
+    '((&quot;/milla&quot; &quot;What's this thing?&quot;)
+    (&quot;/hero&quot; &quot;I don't know, it looks like a cluster of gems.&quot;)
+    (&quot;/milla&quot; &quot;How ugly.\nAnd why is it here?\nMost importantly… where is the King of Evil?&quot;)
+    (&quot;/hero&quot; &quot;This is a good question.&quot;)))
+  (wait)
+  (set-orientation '(2 61))
+  (dialog
+    '((&quot;/september_joking&quot; &quot;HA HA.&quot;)))
+  (wait)
+  (set-orientation '(3 -1))
+  (set-orientation '(3 62))
+  (dialog
+    '((&quot;/september_joking&quot; &quot;In all this time, haven't you figured it out?&quot;)
+    (&quot;/hero&quot; &quot;Figured it out what?&quot;)
+    (&quot;/september_joking&quot; &quot;How naive.&quot;)
+    (&quot;/september_joking&quot; &quot;It's me, the King of Evil!&quot;)
+    (&quot;/hero_exclamation&quot; &quot;What?!&quot;)
+    (&quot;evil september/september_joking&quot; &quot;Eternal winter is almost here. The Ice Kingdom will rise today!\nMy plan is about to come true also thanks to you.&quot;)
+    (&quot;evil september/september_joking&quot; &quot;I brought you here because…&quot;)
+    (&quot;/september_happy&quot; &quot;I can't go on without laughing, just kidding hehe.&quot;)
+    (&quot;/hero_mouthless&quot; &quot;…\nWhat a funny girl.&quot;)
+    (&quot;/hero&quot; &quot;I almost believed it.&quot;)
+    (&quot;/september&quot; &quot;You totally fell for it.&quot;)
+    (&quot;/milla&quot; &quot;You're good at playing the King of Evil, it's a role that suits you.&quot;)
+    (&quot;/september&quot; &quot;You say?&quot;)
+    (&quot;/milla&quot; &quot;Yes! Keep that in mind for next time.&quot;)))
+  (wait)
+  (place 63 112 224)
+  (show 63)
+  (wait 0.6)
+  (move '(2 63))
+  (wait 0.6)
+  (move '(1 63))
+  (set-orientation '(2 -1))
+  (set-orientation '(2 62))
+  (wait 0.6)
+  (set-orientation '(3 63))
+  (wait 0.6)
+  (dialog
+    '((&quot;/&quot; &quot;Shen!&quot;)
+    (&quot;/shen&quot; &quot;Did I miss something?&quot;)
+    (&quot;/hero&quot; &quot;The King of Evil is not here.&quot;)
+    (&quot;/shen&quot; &quot;In all this time, haven't you figured it out?&quot;)
+    (&quot;evil shen/shen&quot; &quot;It's me, the King of Evil!&quot;)
+    (&quot;/september&quot; &quot;I already made this joke a little while ago.&quot;)
+    (&quot;/shen&quot; &quot;Ah, what a pity.&quot;)
+    (&quot;…&quot;)))
+  (wait)
+  (set-orientation '(1 63))
+  (wait 0.6)
+  (dialog '((&quot;/shen&quot; &quot;What's this?&quot;)))
+  (wait)
+  (set-orientation '(1 -1))
+  (set-orientation '(1 61))
+  (set-orientation '(1 62))
+  (wait 0.6)
+  (dialog
+    '((&quot;/hero&quot; &quot;It looks like a cluster of gems.&quot;)))
+  (wait)
+  (set-orientation '(3 63))
+  (wait 0.6)
+  (dialog '((&quot;/shen&quot; &quot;Yes you are right!&quot;)))
+  (wait)
+  (set-orientation '(2 -1))
+  (set-orientation '(2 61))
+  (set-orientation '(2 62))
+  (wait 0.6)
+  (dialog
+    '((&quot;/shen&quot; &quot;They're the gems that the King of Evil wants to use as an energy source to complete the freezing of the Kingdom.\nIf everything is ready to complete the plan, it means that they have enough gems.&quot;)))
+  (wait)
+  (wait 1)
+  (set-orientation '(1 -1))
+  (set-orientation '(1 61))
+  (set-orientation '(1 62))
+  (set-orientation '(1 63))
+  (earthquake)
+  (wait 2)
+  (show 87)
+  (show 88)
+  (show 89)
+  (show 93)
+  (show 94)
+  (show 95)
+  (show 67)
+  (wait 3)
+  (dialog
+    '((&quot;/king-of-evil&quot; &quot;Finally.\nI am happy that you are here, so you can witness the end of your Kingdom.&quot;)
+    (&quot;/hero&quot; &quot;The King of Evil!&quot;)
+    (&quot;/king-of-evil&quot; &quot;I hate being called \&quot;King of Evil\&quot;.\nThis is the name you stupid inhabitants of this stupid Kingdom gave me.\nMy real name is King Tradraprara.&quot;)
+    (&quot;/hero&quot; &quot;Tradra–what??&quot;)
+    (&quot;/king-of-evil&quot; &quot;TRA-DRA-PRA-RA.&quot;)
+    (&quot;/milla&quot; &quot;It's even more unpronounceable than \&quot;Xeonjia\&quot;.&quot;)
+    (&quot;/king-of-evil&quot; &quot;It's not that difficult.&quot;)
+    (&quot;/king-of-evil&quot; &quot;Anyway, here we are. Everything is almost ready.&quot;)
+    (&quot;/king-of-evil&quot; &quot;Eternal winter is almost here. The Ice Kingdom will rise today!\nMy plan is about to come true also thanks to you.&quot;)
+    (&quot;/september_happy&quot; &quot;Hey, I said the exact same sentences before!&quot;)))
+  (wait)
+  (set-orientation '(3 62))
+  (set-orientation '(2 61))
+  (dialog
+    '((&quot;/milla&quot; &quot;I told you you're good as a King of Evil.&quot;)
+    (&quot;evil september/september_joking&quot; &quot;Tratradadadadra.&quot;)
+    (&quot;/king-of-evil&quot; &quot;STOP INTERRUPTING ME AND DON'T MAKE FUN OF ME!&quot;)))
+  (wait)
+  (set-orientation '(1 62))
+  (set-orientation '(1 61))
+  (define-symbol &quot;gem_count&quot; (gem-count))
+  (define-symbol &quot;required_gems&quot; (+ (gem-count) 1))
+  (dialog
+    '((&quot;/king-of-evil&quot; &quot;The planet I come from is no longer habitable, but this one is almost perfect.\nThe only problem is the temperature which is too high.\nBut now I have enough gems.\nWith the gems found by the Hoarfrost Team, I'm {{required_gems}} gems away, but I know that Shen has 2 and you {{hero}} have {{gem_count}} gems.\nMore than enough for my needs.&quot;)
+    (&quot;/shen&quot; &quot;So you used us to collect gems?&quot;)
+    (&quot;/king-of-evil&quot; &quot;Exactly.\nWhat were you thinking of doing with them?\nAnd I'll tell you more: the whole signet thing was to  make you go around the Kingdom in order to increase the probability of finding gems.\nOtherwise you would have come straight to the tower without bringing me any.&quot;)
+    (&quot;/hero&quot; &quot;But we needed the signets to enter the tower, we still had to get them.&quot;)
+    (&quot;/king-of-evil&quot; &quot;Actually, it was enough to knock on the door of the tower and we would have opened.&quot;)
+    (&quot;/hero&quot; &quot;Ah.\nIt matters little. I am this year's chosen hero and together with m–&quot;)
+    (&quot;/king-of-evil&quot; &quot;Even the \&quot;hero\&quot; thing is a joke.&quot;)
+    (&quot;/hero&quot; &quot;But, but… the legend of the chosen hero…&quot;)
+    (&quot;/king-of-evil&quot; &quot;I made up the legend.\nEvery year ONE hero is chosen because otherwise if hundreds of people tried to defeat me it would be more complicated to get rid of them all.\nIndeed, this year that you've come this far in 4 you're more annoying.&quot;)
+    (&quot;/hero&quot; &quot;Honestly I don't care about legends, heroes, signets or even gems.\nDuring this extraordinary adventure I've learned a lot and lived invaluable experiences. In some moments I suffered, I admit it, but it was worth it.&quot;)))
+  (wait)
+  (set-orientation '(3 63))
+  (dialog '((&quot;/hero&quot; &quot;Everything that has happened has contributed significantly to my maturation and growth.&quot;)))
+  (wait)
+  (set-orientation '(2 61))
+  (dialog '((&quot;/hero&quot; &quot;Most importantly, I got to know fantastic people.\nThe energy that unites us is stronger than the energy of a thousand gems and the warmth of our friendship can counteract even the coldest winter.&quot;)))
+  (wait)
+  (set-orientation '(3 62))
+  (wait 1.5)
+  (dialog
+    '((&quot;…&quot;)
+    (&quot;/september&quot; &quot;What banal, empty and unnecessarily pompous phrases.&quot;)
+    (&quot;/shen&quot; &quot;I agree.&quot;)
+    (&quot;/milla&quot; &quot;Please, {{hero}}, stop.&quot;)
+    (&quot;/hero&quot; &quot;In the harmonious symphony of human existence, friendship stands as the refined motif that weaves the notes of affection into a spiral of timeless emotions.&quot;)
+    (&quot;/milla&quot; &quot;Is getting worse.\nQuick! Somebody do something!&quot;)
+    (&quot;/september&quot; &quot;I propose to let Shen speak instead of {{hero}}.&quot;)
+    (&quot;/milla&quot; &quot;Proposal approved.&quot;)
+    (&quot;/hero&quot; &quot;Sorry, these are the last dialogues of the story, there must be something impressing and memorable.&quot;)
+    (&quot;/shen&quot; &quot;The only memorable thing here is just boredom.\nFight?&quot;)))
+  (wait)
+  (set-orientation '(1 -1))
+  (set-orientation '(1 61))
+  (set-orientation '(1 62))
+  (set-orientation '(1 63))
+  (dialog
+    '((&quot;/king-of-evil&quot; &quot;Yes, the time to fight has come.\nThe unrelenting cold of my wrath will embrace every corner of this world and everything will be enveloped in eternal winter.\nMy glacial domination is about to begin, and you will watch the dawn of this new era while your hopes turn into frozen tears.&quot;)))
+  (wait)
+  (wait 2)
+  (dialog
+    '((&quot;/hero&quot; &quot;You didn't interrupt him though.&quot;)
+    (&quot;/milla&quot; &quot;I liked his speech.&quot;)
+    (&quot;evil september/september_joking&quot; &quot;Your copes turn into chosen fears.&quot;)))
+  (wait)
+  (set-orientation '(3 62))
+  (dialog
+    '((&quot;/milla&quot; &quot;I don't recall him saying that.&quot;)
+    (&quot;evil september/september_joking&quot; &quot;Your soaps turn into frozen pears.&quot;)
+    (&quot;/milla&quot; &quot;Mmh… It wasn't even like that.&quot;)
+    (&quot;/shen&quot; &quot;Fight?&quot;)))
+  (wait)
+  (set-orientation '(1 62))
+  (dialog
+    '((&quot;/hero&quot; &quot;Let's fight.&quot;)
+    (&quot;/king-of-evil&quot; &quot;Let's fight.&quot;)))
+  (wait)
+  (friendly '(#f 67))
+  (quiet '(#f 67))
+  (start-battle)
+  (show 80)
+  (show 81)
+  (show 82)
+  (show 83)
+  (show 84)
+  (show 85)
+  (music &quot;boss&quot;))</property>
+    <property name="actionOnEvent">(if (get &quot;999_up-talk&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="67" gid="632" x="112" y="144" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;/&quot; &quot;The Ice Kingdom will rise today.&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
+    <property name="hp" type="float" value="1"/>
+    <property name="team" type="int" value="1"/>
+    <property name="visible" type="bool" value="false"/>
+    <property name="weaponAtk" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="80" gid="651" x="176" y="160" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="15"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="81" gid="651" x="48" y="240" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="15"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="82" gid="651" x="48" y="160" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="15"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="83" gid="651" x="176" y="240" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="15"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="84" gid="651" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="15"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="85" gid="651" x="160" y="48" width="16" height="16">
+   <properties>
+    <property name="healthPointsDelta" type="int" value="15"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="96" class="NPC" gid="572" x="16" y="240" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;999-september&quot;)
+  (begin
+    (set &quot;999-september&quot; #t)
+    (milla-in-noleaf)
+    (dialog
+      '((&quot;/hero&quot; &quot;September!&quot;)
+      (&quot;/&quot; &quot;{{hero}}! Milla!&quot;)
+      (&quot;/hero&quot; &quot;What are you doing here?&quot;)
+      (&quot;/milla&quot; &quot;Are you training to become the new King of Evil?&quot;)
+      (&quot;evil september/_joking&quot; &quot;Don't call me that. I hate being called \&quot;new King of Evil\&quot;.&quot;)
+      (&quot;/&quot; &quot;I'm bored. I'm walking around here because I didn't know what to do.&quot;)
+      (&quot;/hero&quot; &quot;Are you also struggling with being a hero in a world without a villain?&quot;)
+      (&quot;/&quot; &quot;Exactly.&quot;)
+      (&quot;/milla_happy&quot; &quot;Sequel! Sequel! Sequel!&quot;)
+      (&quot;/hero&quot; &quot;No Milla, no.&quot;)
+      (&quot;/&quot; &quot;We just have to find new things to do and hobbies.\nI'm thinking about photography.&quot;)
+      (&quot;/hero&quot; &quot;Cool! I'm thinking about drawing.&quot;)
+      (&quot;/milla&quot; &quot;What do you think if we organize a trip?&quot;)
+      (&quot;/hero&quot; &quot;Where?&quot;)
+      (&quot;/milla&quot; &quot;Outside the Kingdom!&quot;)
+      (&quot;/&quot; &quot;Are there places outside the Kingdom?!&quot;)
+      (&quot;/milla&quot; &quot;Dunno, let's find out!&quot;)
+      (&quot;/&quot; &quot;I'm so bored that you convinced me!\nLet's do it!&quot;)
+      (&quot;/milla_happy&quot; &quot;Yeaaa!&quot;)
+      (&quot;/hero&quot; &quot;But do you know that this journey will not be covered by this or any other game?&quot;)
+      (&quot;/milla&quot; &quot;It doesn't matter.&quot;)
+      (&quot;/milla&quot; &quot;We will still live it even if no one sees us.&quot;)
+      (&quot;/&quot; &quot;How much wisdom.&quot;)
+      (&quot;/milla&quot; &quot;I invite Shen as well. And the Spirit of Water.&quot;)
+      (&quot;/hero&quot; &quot;Do you also invite the Spirit of Fire?&quot;)
+      (&quot;/milla_sleepy&quot; &quot;No…&quot;)
+      (&quot;/hero&quot; &quot;Milla!&quot;)
+      (&quot;/milla_sleepy&quot; &quot;Ok…&quot;)
+      (&quot;/hero&quot; &quot;Good.&quot;)
+      (&quot;/milla_happy&quot; &quot;I'm so happy! I'm going to organize the trip. Byeee!&quot;)))
+    (wait)
+    (milla-out)
+    (wait 2)
+    (dialog
+      '((&quot;/&quot; &quot;I don't know if it's a good idea to go on a trip organized by her.&quot;)
+      (&quot;/hero&quot; &quot;It will be an interesting adventure.&quot;)
+      (&quot;/&quot; &quot;That's for sure.&quot;))))
+  (dialog '((&quot;/&quot; &quot;Lots of free time now, huh?&quot;))))</property>
+    <property name="actionOnEvent">(if (!get &quot;the-end&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="15" height="18">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGAWjYBRQA9QxkY6HKgAAbGmMQjgEAAA=
+  </data>
+ </layer>
+ <objectgroup id="8" name="items"/>
+ <objectgroup id="10" name="spawn points">
+  <object id="60" class="Door" x="112" y="224" width="16" height="16">
+   <properties>
+    <property name="mainDoor" type="bool" value="true"/>
+    <property name="roomId" value="x11"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

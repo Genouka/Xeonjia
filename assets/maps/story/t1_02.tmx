@@ -14,7 +14,7 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
  <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="318" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="368" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="22" height="15">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA62TwQrCMAyGW9hhgnZM1tUqzifyEXz/qwdPnkyxhRiStGMGPrZD++Vfl87WmHkDB8ABERiUNTHj0DvFIYcHXuZbQfCmNb01TRXQnlRPxjvm5wV4V3x7++u9AkvmRryR9NZqIt4F5Srg3Olsz0CX93WVHoHs94K3JSv1lm+NTF7f4OWyS/9+jVfL+2/vSZjnrV4tP+fV5qDM7sSslbxpvo8V5w7N4V3JS+eudhb4Lj5IT82L7+Rayh0eMx/km95MKAUAAA==
@@ -26,19 +26,19 @@
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="84" class="SliderCpu" gid="293" x="80" y="144" width="16" height="16">
+  <object id="84" class="Monster" gid="293" x="80" y="144" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="20"/>
     <property name="level" type="float" value="0"/>
    </properties>
   </object>
-  <object id="85" class="SliderCpu" gid="293" x="112" y="176" width="16" height="16">
+  <object id="85" class="Monster" gid="293" x="112" y="176" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="20"/>
     <property name="level" type="float" value="0"/>
    </properties>
   </object>
-  <object id="86" class="SliderCpu" gid="293" x="144" y="144" width="16" height="16">
+  <object id="86" class="Monster" gid="293" x="144" y="144" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="20"/>
     <property name="level" type="float" value="0"/>
@@ -67,23 +67,24 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="items">
-  <object id="90" gid="329" x="48" y="192" width="16" height="16">
+  <object id="90" gid="379" x="48" y="192" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
   <object id="95" gid="284" x="128" y="224" width="16" height="16">
    <properties>
-    <property name="action">(if (has-weapon 1)
+    <property name="action">(if (and (has-weapon 1) (&gt; (enemies-count) 0))
   (if (max-pp-snowballs)
     (dialog '((&quot;The snowballs container is full.&quot;)))
-    (dialog '((&quot;* {{hero}} filled his snowballs container *&quot;))))
+    (dialog '((&quot;* {{hero}} fills his snowballs container *&quot;))))
   (dialog '((&quot;A snowdrift.&quot;))))</property>
     <property name="actionOnCollision">(begin
+  (define inspect-key (get-inspect-key))
   (define event-id &quot;t1_02-snow-collision&quot;)
   (if (!get event-id)
     (begin
-      (dialog '((&quot;/&quot; &quot;Hmm, I think if I run out of snowballs I can make new ones from snowdrifts like this one.\nI just have to press the \&quot;A\&quot; key.&quot;)))
+      (dialog '((&quot;/&quot; &quot;Hmm, I think if I run out of snowballs I can make new ones from snowdrifts like this one.\nI just have to press the \&quot;{{inspect-key}}\&quot; button.&quot;)))
       (set event-id #t))))</property>
    </properties>
   </object>
@@ -102,7 +103,7 @@
     (delete-me))</property>
    </properties>
   </object>
-  <object id="98" gid="329" x="160" y="224" width="16" height="16">
+  <object id="98" gid="379" x="160" y="224" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="50"/>
    </properties>
@@ -111,6 +112,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="80" class="Door" x="176" y="208" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="t1_01"/>
    </properties>
   </object>

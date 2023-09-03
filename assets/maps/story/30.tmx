@@ -1,49 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="30" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="66">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="30" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="67">
  <properties>
-  <property name="action" value="(map-name &quot;Melhopolis&quot;)"/>
-  <property name="map-name" value="Melhopolis"/>
+  <property name="action" value="(map-name &quot;Greentwig City&quot;)"/>
+  <property name="map-name" value="Greentwig City"/>
   <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;This city is boring.&quot;)))"/>
   <property name="music" value="city"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/capital-1.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/capital-1.tsx"/>
+ <tileset firstgid="288" source="../tilesets/npc_main.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="30">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA92Vu04DQQxFp+AhIhEgvLZCNAgqKlAaQurwB7yEEI+kAgoEdPwndFDyE/EoHnFj2bNesmm40tGOLHnueuydDUHXLDNXgXnGq0Um6ow45yeu8Rm1xJTpiOgIj1sHOY8C9rXqeHcgPQ6IQ16vGfVM6oHvXcC+7Ro9UIUSQ48m8Qh8EJ9EX8SbGQ+tF9JjwER9Ed/ED8QHwgN7EdV11OElecj3lmeFs7tObCgsG/HNMH5WPeIkjPdZ1lGlBqwFVSh1JFk15OpItUgPq+crxNYfaMEeaW+rjrrUnbJHm/dPvc9pgdjP0DDyZB+s7yRqN+RnaSeTm85pL1fEhB6e/aPKZqxlp4ZVYtvhIWV9t0nyXj8Nv//MC+LSiGny5l4TN8CdEdPkzX0Io/v/ip9PEOtDTJM394V4Je7D6D/wBrFniGmqkpvmBudDi2ny5Fp3Yp36b3OFc1B1rspytTnQYsfMDKy9uUMuF9JzuAsAAA==
+   H4sIAAAAAAAAA92VOU8DQQyFJxKHiCDhCmwDokFQpQJtw1HDP+ASQhxJRSgQpOOv41E8yotlz3qT0PCkTzOy5HnrtXcnBF2LzFINlpkqlbyuMVG3xB2vuMc1qs14hR4vDnIeTeKMOM94/DiQHifEKe83HXVM44HPXcC5Jexn9UAVSgw9WsQAWG1QnOiJeCvjofVCevSZqG06v0PsNcbxvvDAXkRdOurwkjys55Z1xfM7xI7CuhHfDZPv6oq4DpN9lnXUqQFrkbJ6btWQqyPVgiqD/e42iP0p0L43q455qBDrXyj1OvU+pxWim6Fp5Mk+WN9J1FHIz9JhJje9p+NcETN6eM6Pqpox698dtUUcODykrO82Sf7Xb8L4zrwnHoyYJm/uE/EMvBoxTd7c9zD6/z/y+gGxHsQ0eXO/iG/iLYzugSHEPiGmqU5umhucDy2myZNbdZ/MQ/9trnAO6s5VVa42B1rsglmAvTf3F0Icgra4CwAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="49" class="NPC" gid="203" x="192" y="464" width="16" height="16">
+  <object id="49" class="NPC" gid="253" x="192" y="464" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I'm sorry but this road is closed.\nWork is underway to restore the railway system.&quot;)))"/>
    </properties>
   </object>
-  <object id="56" class="NPC" gid="202" x="224" y="144" width="16" height="16">
+  <object id="56" class="NPC" gid="252" x="224" y="144" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;Welcome to the City Hall.&quot;)))"/>
    </properties>
   </object>
-  <object id="57" class="NPC" gid="158" x="112" y="400" width="16" height="16">
+  <object id="57" class="NPC" gid="208" x="112" y="400" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
    </properties>
   </object>
-  <object id="59" class="NPC" gid="178" x="224" y="304" width="16" height="16">
+  <object id="59" class="NPC" gid="228" x="208" y="288" width="16" height="16">
    <properties>
     <property name="action">(begin
     (dialog
         '((&quot;/&quot; &quot;I can't wait till they finish to restore the railway system, it hasn't worked since the arrival of ice.&quot;)
-        (&quot;/_sad&quot; &quot;My wife got stuck on the other side of the kingdom, I wonder if I will ever see her again.&quot;)))
+        (&quot;/_sad&quot; &quot;My wife got stuck far away, I wonder if I will ever see her again.&quot;)))
     (set &quot;030-oldman-missing-her&quot; #t))</property>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="25" height="30">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+2VQQrDIBBFPUoP0XQZaG+Qkiy66BVKVqXJovToHUHhI6N+G5uVDz5B/TpORtSYNIPomtEomjLrIEdRB+0bOe9euC5SK4bn4IS8ybkf0oex/h0DqREjVQvLg4wxk76QVfQUnZw0/NjL+Rkwr8V9eycNHFuCsbPokoi1wh5jOXjQx+bi99SbdA4e9IW5WGI1Z3NI+XPnic3hV39tcrXfQu5fNfYhrIN9S0fQFOnT2DK3waHdm7G7lPWGZ0C7N7W+Em87V/XB96fk7dqLLwiOqJS4CwAA
+   H4sIAAAAAAAAA2NgwA8CgTiIAA4B4lAC5uADkUSqiyUgbwLEpjS0QwKNr4DGryPSjgYi1WGzh1Z2IANq2IEvLkAgj0g7CohUhw6qgLgMiM2gGBuAyVVA1RMDkP1VCaXtoBgbQJarRJNzBGInPHZVIbkRlx9gAFkdsX6BucmOAb8fYABZHbpfQABXnBPrB3LVo7uNFuqpDQjFPSWAUN4bBfQB6PEAqktDkHAoDjFsgBK9o4A4gK3cxFWWEqsWPQ1gKzexiZGidjRdUR8g1z+k1kX0AADeoPz3uAsAAA==
   </data>
  </layer>
  <objectgroup id="8" name="items">

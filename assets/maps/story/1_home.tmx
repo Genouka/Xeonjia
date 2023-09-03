@@ -4,7 +4,11 @@
   <property name="action">(if (== (last-place) &quot;1&quot;)
     (map-name &quot;Home&quot;))</property>
   <property name="disable-minimap" type="bool" value="true"/>
-  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;You grew up here, right?&quot;)))"/>
+  <property name="milla">(if (!get &quot;the-end&quot;)
+
+(dialog '((&quot;/milla&quot; &quot;You grew up here, right?&quot;)))
+
+(dialog '((&quot;/milla&quot; &quot;We don't have much to do.&quot;))))</property>
   <property name="music" value="town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
@@ -23,23 +27,33 @@
  <objectgroup id="10" name="npcs">
   <object id="71" class="NPC" gid="38" x="64" y="64" width="16" height="16">
    <properties>
-    <property name="action">(if (not (has-been-here &quot;999&quot;))
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(if (not (visited-room &quot;999&quot;))
   (if (!get &quot;001-talk-mom&quot;)
     (begin
       (dialog
         '((&quot;/hero_happy&quot; &quot;Good morning mom!&quot;)
-        (&quot;mom&quot; &quot;Hi {{hero}}! Did you sleep well?&quot;)
+        (&quot;mom&quot; &quot;Hi {{hero}}!\nDid you sleep well?&quot;)
         (&quot;/hero_sleepy&quot; &quot;Actually not very well… I'm still a little sleepy.&quot;)
-        (&quot;mom&quot; &quot;You always are.\nAnyway, now it is time to leave, be very careful and remember to check your health in the top left bar.&quot;)
+        (&quot;mom&quot; &quot;You always are.\nYou can't afford to be tired, from today you are officially the new hero.&quot;)
+        (&quot;mom/_happy&quot; &quot;My little hero!&quot;)
+        (&quot;/hero&quot; &quot;Do not call me that!&quot;)
+        (&quot;mom&quot; &quot;Did you get everything?&quot;)
+        (&quot;/hero&quot; &quot;Yes, it's all ready.\nNow it's time to leave.&quot;)
+        (&quot;mom&quot; &quot;Be very careful and remember to check your health in the top left bar.&quot;)
         (&quot;/hero&quot; &quot;Yea mom, I know. I am no longer a child.&quot;)
-        (&quot;mom&quot; &quot;Ah, and don't forget that the neighbor wanted to give you a little gift before you leave.&quot;)
+        (&quot;mom&quot; &quot;I know, I know.\nGo, my darling, and make your mother proud.\nAh, and don't forget that the neighbor wanted to give you some food before you leave.&quot;)
         (&quot;/hero&quot; &quot;Sure mom, I will stop by our neighbor.&quot;)
-        (&quot;/hero_happy&quot; &quot;Bye!&quot;)))
+        (&quot;/hero_happy&quot; &quot;Bye!&quot;)
+        (&quot;mom&quot; &quot;Bye, my little hero!&quot;)))
       (set &quot;001-talk-mom&quot; #t))
     (if  (!get &quot;001-talk-neighbor&quot;)
-      (dialog '((&quot;mom&quot; &quot;Go get the gift from the neighbor.&quot;)))
+      (dialog '((&quot;mom&quot; &quot;Go get the food from the neighbor.&quot;)))
       (dialog '((&quot;mom&quot; &quot;The food the neighbor gave you looks tasty!&quot;)))))
-  (dialog '((&quot;mom&quot; &quot;Hi {{hero}}, everything okay?\nYou missed your mom, right?&quot;))))</property>
+  (dialog '((&quot;mom&quot; &quot;Hi {{hero}}, everything okay?\nYou missed your mom, right?&quot;))))
+
+(dialog '((&quot;mom&quot; &quot;Hi my little hero!\nAre you going to spend more hours awake or asleep today?&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
@@ -51,14 +65,22 @@
   </object>
   <object id="76" gid="201" x="32" y="96" width="16" height="16">
    <properties>
-    <property name="action">(if (= (orientation) 0)
-    (dialog '((&quot;Unfortunately, this is not the time to lie down on the sofa.&quot;))))</property>
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(if (= (orientation) 0)
+    (dialog '((&quot;Unfortunately, this is not the time to lie down on the sofa.&quot;))))
+
+(dialog '((&quot;This sofa is very comfortable.&quot;))))</property>
    </properties>
   </object>
   <object id="77" gid="202" x="48" y="96" width="16" height="16">
    <properties>
-    <property name="action">(if (= (orientation) 0)
-    (dialog '((&quot;Unfortunately, this is not the time to lie down on the sofa.&quot;))))</property>
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(if (= (orientation) 0)
+    (dialog '((&quot;Unfortunately, this is not the time to lie down on the sofa.&quot;))))
+
+(dialog '((&quot;This sofa is very comfortable.&quot;))))</property>
    </properties>
   </object>
   <object id="78" gid="187" x="64" y="48" width="16" height="16">
@@ -70,6 +92,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="72" class="Door" x="96" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="1"/>
    </properties>

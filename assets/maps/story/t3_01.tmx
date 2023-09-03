@@ -29,6 +29,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="80" class="Door" x="176" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="67"/>
    </properties>
   </object>

@@ -38,7 +38,7 @@
   </object>
   <object id="74" gid="193" x="80" y="48" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;Here it's full of snow globes with a miniaturized Mitsu Forest inside. When they were built snow was a very rare phenomenon here and it was much more appreciated.&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;Here it's full of snow globes with a miniaturized Mitsu Forest inside. When they were built, snow was a very rare phenomenon here and it was much more appreciated.&quot;)))"/>
    </properties>
   </object>
   <object id="75" gid="194" x="96" y="48" width="16" height="16">
@@ -61,6 +61,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="10"/>
    </properties>

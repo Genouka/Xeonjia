@@ -366,10 +366,10 @@
         },
         {
             "fileName": "53.tmx",
-            "height": 240,
+            "height": 256,
             "width": 832,
             "x": 3648,
-            "y": 1168
+            "y": 1152
         },
         {
             "fileName": "54.tmx",
@@ -484,13 +484,6 @@
             "y": -144
         },
         {
-            "fileName": "72.tmx",
-            "height": 160,
-            "width": 368,
-            "x": 1616,
-            "y": -448
-        },
-        {
             "fileName": "73.tmx",
             "height": 160,
             "width": 192,
@@ -538,6 +531,13 @@
             "width": 128,
             "x": 3984,
             "y": 16
+        },
+        {
+            "fileName": "999_up.tmx",
+            "height": 288,
+            "width": 240,
+            "x": 1680,
+            "y": -512
         }
     ],
     "onlyShowAdjacentMaps": false,

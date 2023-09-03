@@ -9,61 +9,61 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="231" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="287" source="../tilesets/capital-1.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="312" source="../tilesets/capital-1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="12">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NiZGBgJBIzAzEXEL9gIA5zQ9W/YyAOj6qnvnohEtQLA9Vy4MDsOMQBNPuprUACAAA=
+   H4sIAAAAAAAAA5NmZGCQIhLLALEyEDMSiVWg6tmJxKPqqa9emwT1OkCsiAMr4BAHAJ56U2pAAgAA
   </data>
  </layer>
  <layer id="6" name="Tile Layer 2" width="12" height="12">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoBzoMjIw6DFSwSAcQI0RgokFqowQPKqeOurxAQBxkaJJQAIAAA==
+   H4sIAAAAAAAAA2NgoBy4MTIwuDNSwSAcwJ4RgokFdowQPKqeOurxAQCo+of+QAIAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="100" class="NPC" gid="229" x="64" y="144" width="16" height="16">
+  <object id="100" class="NPC" gid="254" x="64" y="144" width="16" height="16">
    <properties>
     <property name="action">(begin
     (set-orientation 2)
     (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
    </properties>
   </object>
-  <object id="101" class="NPC" gid="229" x="64" y="112" width="16" height="16">
+  <object id="101" class="NPC" gid="254" x="64" y="112" width="16" height="16">
    <properties>
     <property name="action">(begin
     (set-orientation 2)
     (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
    </properties>
   </object>
-  <object id="102" class="NPC" gid="229" x="64" y="80" width="16" height="16">
+  <object id="102" class="NPC" gid="254" x="64" y="80" width="16" height="16">
    <properties>
     <property name="action">(begin
     (set-orientation 2)
     (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
    </properties>
   </object>
-  <object id="104" class="NPC" gid="228" x="80" y="176" width="16" height="16">
+  <object id="104" class="NPC" gid="253" x="80" y="176" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;Welcome to the City Hall.&quot;)))"/>
    </properties>
   </object>
-  <object id="105" class="NPC" gid="230" x="112" y="144" width="16" height="16">
+  <object id="105" class="NPC" gid="255" x="112" y="144" width="16" height="16">
    <properties>
     <property name="action">(begin
     (set-orientation 3)
     (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
    </properties>
   </object>
-  <object id="106" class="NPC" gid="230" x="112" y="112" width="16" height="16">
+  <object id="106" class="NPC" gid="255" x="112" y="112" width="16" height="16">
    <properties>
     <property name="action">(begin
     (set-orientation 3)
     (dialog '((&quot;/&quot; &quot;…&quot;))))</property>
    </properties>
   </object>
-  <object id="107" class="NPC" gid="230" x="112" y="80" width="16" height="16">
+  <object id="107" class="NPC" gid="255" x="112" y="80" width="16" height="16">
    <properties>
     <property name="action">(begin
     (set-orientation 3)
@@ -72,9 +72,11 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="items">
-  <object id="82" class="Solid" gid="310" x="96" y="48" width="16" height="16">
+  <object id="82" class="Solid" gid="335" x="96" y="48" width="16" height="16">
    <properties>
-    <property name="action">(begin
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(begin
   (define talk-id &quot;053-cityhall-king-talk&quot;)
   (if (!get talk-id)
     (begin
@@ -93,12 +95,16 @@
         '((&quot;/hero&quot; &quot;Thank you!\nI will come back sooner or later.&quot;)))
       (wait)
       (set talk-id #t))
-    (dialog '((&quot;king/king-1&quot; &quot;In my region you are always welcome.&quot;)))))</property>
+    (dialog '((&quot;king/king-1&quot; &quot;In my region you are always welcome.&quot;)))))
+
+(dialog '((&quot;king/king-1&quot; &quot;Welcome back hero!\nI'm glad you came back to visit us.&quot;))))</property>
    </properties>
   </object>
-  <object id="83" class="Solid" gid="309" x="80" y="48" width="16" height="16">
+  <object id="83" class="Solid" gid="334" x="80" y="48" width="16" height="16">
    <properties>
-    <property name="action">(begin
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(begin
   (define talk-id &quot;053-cityhall-king-talk&quot;)
   (if (!get talk-id)
     (begin
@@ -117,13 +123,16 @@
         '((&quot;/hero&quot; &quot;Thank you!\nI will come back sooner or later.&quot;)))
       (wait)
       (set talk-id #t))
-    (dialog '((&quot;king/king-1&quot; &quot;In my region you are always welcome.&quot;)))))</property>
+    (dialog '((&quot;king/king-1&quot; &quot;In my region you are always welcome.&quot;)))))
+
+(dialog '((&quot;king/king-1&quot; &quot;Welcome back hero!\nI'm glad you came back to visit us.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="10" name="spawn points">
   <object id="114" class="Door" x="96" y="160" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="53"/>
    </properties>

@@ -16,7 +16,9 @@
  <objectgroup id="9" name="npc">
   <object id="37" class="NPC" gid="135" x="48" y="112" width="16" height="16">
    <properties>
-    <property name="action">(if (!get &quot;013-h-safe&quot;)
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(if (!get &quot;013-h-safe&quot;)
   (if  (&gt; (enemies-count) 0)
     (dialog '((&quot;/&quot; &quot;Help me please!&quot;)))
     (begin
@@ -25,18 +27,20 @@
         '((&quot;/hero&quot; &quot;Are you okay?&quot;)
         (&quot;/&quot; &quot;Yes, thank you so much for saving my life!\nI have to admit, I was so scared!&quot;)
         (&quot;/hero&quot; &quot;Me too!&quot;)
-        (&quot;/&quot; &quot;Luckily it went all right!\nI don't know how to thank you, I can give you this gem that I found a little while ago.&quot;)
+        (&quot;/&quot; &quot;Luckily it went all right!\nI really don't know how to thank you…\nHere you this gem that I found a little while ago.&quot;)
         (&quot;/hero_happy&quot; &quot;Thank you, it seems very precious!&quot;)))
       (wait)
       (give-item &quot;gem_1&quot;)
       (dialog
         '((&quot;/&quot; &quot;Now I think it's better for me if I go to my safe home.\nBye!&quot;)))))
-  (dialog '((&quot;/&quot; &quot;I'll go home as soon as my legs stop shaking in fear.&quot;))))</property>
+  (dialog '((&quot;/&quot; &quot;I'll go home as soon as my legs stop shaking in fear.&quot;))))
+
+(dialog '((&quot;/&quot; &quot;Yes, I'm still here.\nI like this place&quot;))))</property>
     <property name="actionOnEvent">(if (get &quot;013-h-safe&quot;)
   (set-orientation 0))</property>
    </properties>
   </object>
-  <object id="39" class="SliderCpu" gid="196" x="64" y="112" width="16" height="16">
+  <object id="39" class="Monster" gid="196" x="64" y="112" width="16" height="16">
    <properties>
     <property name="actionOnEvent">(if  (get &quot;013-safe&quot;)
   (delete-me))</property>
@@ -44,7 +48,7 @@
     <property name="level" type="float" value="0"/>
    </properties>
   </object>
-  <object id="46" class="SliderCpu" gid="181" x="48" y="96" width="16" height="16">
+  <object id="46" class="Monster" gid="181" x="48" y="96" width="16" height="16">
    <properties>
     <property name="actionOnEvent">(if  (get &quot;013-safe&quot;)
     (delete-me))</property>
@@ -110,16 +114,16 @@
     (dialog
       '((&quot;/lumberjack&quot; &quot;Please help me! Save me from these monsters!&quot;)
       (&quot;monster/green&quot; &quot;Gyaaa!&quot;)
-      (&quot;/hero&quot; &quot;Don't worry! I'll help you now!&quot;)))
+      (&quot;/hero&quot; &quot;Don't worry! I'll help you right away!&quot;)))
     (wait)
-    (wait 1)
+    (wait 2)
     (dialog
       '((&quot;/hero&quot; &quot;. . . . .&quot;)
       (&quot;/lumberjack&quot; &quot;. . . . .&quot;)
       (&quot;. . . . . . . . . .&quot;)
       (&quot;/lumberjack&quot; &quot;What are you waiting for??!&quot;)
       (&quot;/hero_mouthless&quot; &quot;I… I… I don't know how to fight!&quot;)
-      (&quot;/lumberjack&quot; &quot;What??\nAren't you this year's \&quot;choosen hero\&quot;?&quot;)
+      (&quot;/lumberjack&quot; &quot;What??\nAren't you this year's choosen hero?&quot;)
       (&quot;/hero&quot; &quot;Yes, I am…&quot;)
       (&quot;/hero_mouthless&quot; &quot;But this is my first battle…&quot;)
       (&quot;monster/green&quot; &quot;Gyaaa!&quot;)

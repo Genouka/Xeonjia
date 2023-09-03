@@ -111,16 +111,18 @@
  <objectgroup id="8" name="items">
   <object id="82" class="Solid" gid="335" x="96" y="80" width="16" height="16">
    <properties>
-    <property name="action">(begin
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(begin
   (define talk-id &quot;030-cityhall-king-talk&quot;)
   (if (!get talk-id)
     (begin
       (dialog
-        '((&quot;/hero&quot; &quot;H-Hello.&quot;)
-        (&quot;king/king-1&quot; &quot;Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region.&quot;)
-        (&quot;king/king-1_happy&quot; &quot;Do not confuse me with the King of Evil, I am good haha.&quot;)
+        '((&quot;/hero&quot; &quot;H-hello.&quot;)
+        (&quot;king/king-1&quot; &quot;Hello, you must be {{hero}}! Nice to meet you.\nI heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region.&quot;)
+        (&quot;king/king-1_happy&quot; &quot;Do not confuse me with the King of Evil, I'm not bad a guy haha.&quot;)
         (&quot;king/king-1&quot; &quot;So… tell me, how are you? Is everything okay? How is the journey going?&quot;)
-        (&quot;/hero&quot; &quot;Everything good, I just defeated the Hoarfrost Team and I got the first signet!&quot;)
+        (&quot;/hero&quot; &quot;Everything good, I just got the first signet!&quot;)
         (&quot;king/king-1_happy&quot; &quot;Oh really?! This is great news!&quot;)
         (&quot;king/king-1&quot; &quot;It has been difficult?&quot;)))
       (define id &quot;030-cityhall-question-difficult&quot;)
@@ -141,21 +143,25 @@
         (&quot;/hero&quot; &quot;Sure, I'll be careful.&quot;)
         (&quot;king/king-1&quot; &quot;Thank you again.\nI wish you a good journey, come back anytime.&quot;)))
       (set talk-id #t))
-    (dialog '((&quot;king/king-1&quot; &quot;Good journey {{hero}}, I have faith in you.&quot;)))))</property>
+    (dialog '((&quot;king/king-1&quot; &quot;Good journey {{hero}}, I have faith in you.&quot;)))))
+
+(dialog '((&quot;/&quot; &quot;As soon as I saw you I knew you would be the Last Hero.&quot;))))</property>
    </properties>
   </object>
   <object id="83" class="Solid" gid="334" x="80" y="80" width="16" height="16">
    <properties>
-    <property name="action">(begin
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(begin
   (define talk-id &quot;030-cityhall-king-talk&quot;)
   (if (!get talk-id)
     (begin
       (dialog
-        '((&quot;/hero&quot; &quot;H-Hello.&quot;)
-        (&quot;king/king-1&quot; &quot;Hello, you must be {{hero}}! Nice to meet you. I heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region.&quot;)
-        (&quot;king/king-1_happy&quot; &quot;Do not confuse me with the King of Evil, I am good haha.&quot;)
+        '((&quot;/hero&quot; &quot;H-hello.&quot;)
+        (&quot;king/king-1&quot; &quot;Hello, you must be {{hero}}! Nice to meet you.\nI heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region.&quot;)
+        (&quot;king/king-1_happy&quot; &quot;Do not confuse me with the King of Evil, I'm not bad a guy haha.&quot;)
         (&quot;king/king-1&quot; &quot;So… tell me, how are you? Is everything okay? How is the journey going?&quot;)
-        (&quot;/hero&quot; &quot;Everything good, I just defeated the Hoarfrost Team and I got the first signet!&quot;)
+        (&quot;/hero&quot; &quot;Everything good, I just got the first signet!&quot;)
         (&quot;king/king-1_happy&quot; &quot;Oh really?! This is great news!&quot;)
         (&quot;king/king-1&quot; &quot;It has been difficult?&quot;)))
       (define id &quot;030-cityhall-question-difficult&quot;)
@@ -176,7 +182,9 @@
         (&quot;/hero&quot; &quot;Sure, I'll be careful.&quot;)
         (&quot;king/king-1&quot; &quot;Thank you again.\nI wish you a good journey, come back anytime.&quot;)))
       (set talk-id #t))
-    (dialog '((&quot;king/king-1&quot; &quot;Good journey {{hero}}, I have faith in you.&quot;)))))</property>
+    (dialog '((&quot;king/king-1&quot; &quot;Good journey {{hero}}, I have faith in you.&quot;)))))
+
+(dialog '((&quot;/&quot; &quot;As soon as I saw you I knew you would be the Last Hero.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
@@ -189,6 +197,7 @@
   </object>
   <object id="114" class="Door" x="80" y="256" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="30/1"/>
    </properties>

@@ -11,29 +11,29 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
  <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="343" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="375" source="../tilesets/crypt-2.tsx"/>
- <tileset firstgid="431" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="591" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="368" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="400" source="../tilesets/crypt-2.tsx"/>
+ <tileset firstgid="456" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="616" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="19" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA52UOwoCQRBEdz2GlxANFEFQryWCIoIGJkZ+EPwF6gk08xMsCGJoJJ7FGtiBsumZUQsKprvZ17XsZxRH0RpepB6ldcgTusbWc+otlNrlpVLPRRYt29CRiWvL0rKxOqLWMjGLs2TFtVIrJROzOEtC5xbOA7hNvTudlwEWq4d+E+7TPJeJojHqfMbPujv22/oBl8AowuUAi3dadUWmyhcsuVOTnRfguocldxqd0b/Cl/iTZecultypqYp+jeYhFt/fHv0nfHA8ZxdL7jQ6on+DT4L1iv2sf/QLy3wD5p1IfrjHDbxVPEsZU8d8J1guDv8z7L/BxwtxjBu028d7AzN+k7CkBQAA
+   H4sIAAAAAAAAA52UuQoCQRBEd/0Mv0g0UARB/S0RFBE0MDHyQPAK1C/QzCNYEMTQSEytgR0om54ZtaBgupt9XcseoziK1vAi9SitQ57QNbaeU2+h1C4vlXousmjZho5MXFuWlo3VEbWWiVmcJSuulVopmZjFWRI6t3AewG3q3em8DLBYPfSbcJ/muUwUjVHnM37W3bHf1g+4BEYRLgdYvNOqKzJVvmDJnZrsvADXPSy50+iM/hW+xJ8sO3ex5E5NVfRrNA+x+P726D/hg+M5u1hyp9ER/Rt8EqxX7Gf9o19Y5hsw70Tywz1u4K3iWcqYOuY7wXJx+J9h/w0+Xohj3KDdPt4bwWuo16QFAAA=
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="108" class="SliderCpu" gid="318" x="160" y="176" width="16" height="16">
+  <object id="108" class="Monster" gid="318" x="160" y="176" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="70"/>
     <property name="level" type="float" value="4"/>
    </properties>
   </object>
-  <object id="109" class="SliderCpu" gid="318" x="128" y="176" width="16" height="16">
+  <object id="109" class="Monster" gid="318" x="128" y="176" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="70"/>
     <property name="level" type="float" value="4"/>
    </properties>
   </object>
-  <object id="110" class="SliderCpu" gid="318" x="144" y="176" width="16" height="16">
+  <object id="110" class="Monster" gid="318" x="144" y="176" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="70"/>
     <property name="level" type="float" value="4"/>
@@ -42,7 +42,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="19" height="19">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NggIAljAxkgUVk6iMVEOs+erlnFIyCUTBywBy0cmUWmeUMujnEmAcA+lkDbKQFAAA=
+   H4sIAAAAAAAAA2NggIC9jAxkgd1k6iMVEOs+erlnFIyCUTBywFa0cmUzmeUMujnEmAcAGs0jDqQFAAA=
   </data>
  </layer>
  <objectgroup id="9" name="items">
@@ -59,7 +59,7 @@
   (delete-me))</property>
    </properties>
   </object>
-  <object id="98" gid="426" x="144" y="32" width="16" height="16">
+  <object id="98" gid="451" x="144" y="32" width="16" height="16">
    <properties>
     <property name="action">(if (eq? (enemies-count) 0)
  (begin 
@@ -75,22 +75,22 @@
   (delete-me))</property>
    </properties>
   </object>
-  <object id="112" gid="602" x="48" y="224" width="16" height="16">
+  <object id="112" gid="627" x="48" y="224" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="113" gid="602" x="48" y="112" width="16" height="16">
+  <object id="113" gid="627" x="48" y="112" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="114" gid="602" x="192" y="112" width="16" height="16">
+  <object id="114" gid="627" x="192" y="112" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="115" gid="603" x="144" y="288" width="16" height="16">
+  <object id="115" gid="628" x="144" y="288" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="50"/>
    </properties>
@@ -99,14 +99,18 @@
  <objectgroup id="2" name="spawn points">
   <object id="88" class="Door" x="144" y="288" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="t2_03"/>
    </properties>
   </object>
-  <object id="111" class="NPC" gid="356" x="160" y="240" width="16" height="16">
+  <object id="111" class="NPC" gid="381" x="160" y="240" width="16" height="16">
    <properties>
     <property name="action">(if  (= (enemies-count) 0)
-  (dialog '((&quot;/_happy&quot; &quot;Let's get the second signet!&quot;)))
+  (begin
+    (dialog '((&quot;/_happy&quot; &quot;Let's get the second signet!&quot;)))
+    (wait)
+    (leave-npc 111))
   (dialog '((&quot;/_happy&quot; &quot;Hi!&quot;))))</property>
     <property name="actionOnEvent">(if (get &quot;t2_04-safe&quot;)
   (delete-me))</property>

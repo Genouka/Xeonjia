@@ -18,16 +18,16 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="391" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="17">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5WUwQrCMAyGW5FdxJ1kNy8KHlRQ1GfwIXwB8TLRDdRX9qKIoHgQE2lYyZqu/SFE27Vf/rRUqXAlWqkWRKb93+1hPrfCpb4Zn0Gem9+pyQ9Vn0PdIO4NDFpDNY6sOV/dX5NfEG+BkQV4t2vt6ape0gDGhtYenPEJ2/6vLnz/hNwRaiJPnJEEekBhP9q66gmKr9/C/9JxHjheQOwieJK4B2LQ+MFixPjzeeCMo8MPv6OxHjgjd/gJZUkeiHGCfLbiEtGnRKiTM1JdXxMjnwdijCFPIKYB+9ObQXexaNifGAvIS4hVAIPeDF9vXAxU6th/LTCbeiMxJI5LMR44A9+bq6rOfWMy3Vs6gxgPGD+1ytNBpAYAAA==
+   H4sIAAAAAAAAA5WUvwoCMQzGW1wUERSHG0RuEW+S21wUHFRQ1GfwIXwBcTnRE9QnNoEGS0xq+0HIXf/98rWlxsQrt8YMIEobHneF/soLSVPXvoG8dd+Fy22hD9WE75YNM2gO1bjw+kJ1Z66vC7mnMMoI736tE69e0gz+514bZ/Qj10eNYWwHYqTMyRQfeQID92Po7QmKzz/D/0M4D2yvIS4JPE3cQ8W83QL1xUjywBl3wQ+/o6keOKMS/MSyNA/EeEJ+efFO2KdcqZMzCvs7J0UhD8RYQl5BrCPWpzeD7mL9Z31i7CDvIQ4RDHozQnsjMVCFsP5RYf7bG42hcSSleOAMfG8a9nvuJ5fp3tIZpHjA+ADFYSc/pAYAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="56" class="SliderCpu" gid="154" x="256" y="16" width="16" height="16">
+  <object id="56" class="Monster" gid="154" x="256" y="16" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;048-milla&quot;)
@@ -37,7 +37,7 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="57" class="SliderCpu" gid="154" x="272" y="16" width="16" height="16">
+  <object id="57" class="Monster" gid="154" x="272" y="16" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;048-milla&quot;)
@@ -47,7 +47,7 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="58" class="SliderCpu" gid="154" x="256" y="32" width="16" height="16">
+  <object id="58" class="Monster" gid="154" x="256" y="32" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;048-milla&quot;)
@@ -57,7 +57,7 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="59" class="SliderCpu" gid="154" x="272" y="32" width="16" height="16">
+  <object id="59" class="Monster" gid="154" x="272" y="32" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;048-milla&quot;)
@@ -67,7 +67,7 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="65" class="Modifier" gid="409" x="32" y="192" width="16" height="16">
+  <object id="65" class="Modifier" gid="434" x="32" y="192" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="50"/>
    </properties>
@@ -75,12 +75,12 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="25" height="17">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgwA3UGRkYNBhJlyPHvMEApIBukx7E7hsFpAF6prfBnrZhgG8IuHEkg3hg/DgBcQIN4ykEaLYvEIcx0i7dxgDNjALiOCqYDQAyoWsFpAYAAA==
+   H4sIAAAAAAAAA2NgwA0cGBkYHBlJlyPHvMEAjIFuMxnE7hsFpAF6prfBnrZhQH0IuHEkgwpg/EQDcSUN4ykXaHYaEOcz0i7dlgLNLAbiciqYDQCwXGRZpAYAAA==
   </data>
  </layer>
  <layer id="13" name="Tile Layer 3" width="25" height="17">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBSMglFACCQyMjAkAXEy40C7ZGQBAAeKTv2kBgAA
+   H4sIAAAAAAAAA2NgGAWjYBSMglFACFQxMjBUA3EN40C7ZGQBACDzZlikBgAA
   </data>
  </layer>
  <objectgroup id="8" name="items">
@@ -189,11 +189,12 @@
       (&quot;/milla_sweatsmile&quot; &quot;Ah, yes, sometimes I forget some details when I introduce myself.\nI like to sing, I forgot to tell you that as well.&quot;)
       (&quot;/hero_mouthless&quot; &quot;Oh wait, it makes sense that you didn't give me this other information sooner.&quot;)
       (&quot;/hero&quot; &quot;Anyway I'm a bit confused… I always imagined the spirit was a little different.\nHow old are you? Do you have superpowers? Where do you come from? How many-&quot;)
-      (&quot;/milla&quot; &quot;Too many! Too many questions hero!\nI'm just a mystical spirit! That's it.\nI will explain everything better to you during the trip!&quot;)
-      (&quot;/hero&quot; &quot;During the trip?&quot;)
+      (&quot;/milla&quot; &quot;Too many! Too many questions hero!\nI'm just a mystical spirit! That's it.\nI will explain everything better to you during the journey!&quot;)
+      (&quot;/hero&quot; &quot;During the journey?&quot;)
       (&quot;/milla&quot; &quot;Yes, I have decided that from now on I will travel with you, so I can help you out.\nYou need me.&quot;)
       (&quot;/hero_happy&quot; &quot;O-ok, thanks!\nI was getting a little bored traveling alone all the time.&quot;)
-      (&quot;/milla&quot; &quot;Great!\nSo it's decided! We will travel together!\nHowever, to save energy I will often stay in the spiritual realm. To call me just hold this leaf that I am giving you now and I will appear.\nTo do this, just click on the top right where there is the leaf icon!&quot;)
+      (&quot;/milla_happy&quot; &quot;Great!\nSo it's decided! We will travel together!&quot;)
+      (&quot;/milla&quot; &quot;However, to save energy I will often stay in the spiritual realm. To call me just hold this leaf that I am giving you now and I will appear.\nTo do this, just click on the top right where there is the leaf icon!&quot;)
       (&quot;/hero&quot; &quot;Ok… ok…\nIt all seems so strange to me but it's okay.&quot;)
       (&quot;/milla&quot; &quot;Try calling me to see if you understand.\nNow I go to the spirit realm.\nByeeee!&quot;)
       (&quot;* Milla disappears into the leaf *&quot;)))
@@ -212,7 +213,7 @@
   (delete-me))</property>
    </properties>
   </object>
-  <object id="64" gid="403" x="192" y="32" width="16" height="16">
+  <object id="64" gid="428" x="192" y="32" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="120"/>
    </properties>

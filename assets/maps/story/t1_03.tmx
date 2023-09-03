@@ -12,26 +12,27 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
  <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="318" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="368" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="392" source="../tilesets/outdoor-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="22" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62T0QrCMAxFG9njhnMwOwXt//+eqA+CYgobXrPEtnOBA6NrTtoL7cm5/cp4pmca5rASW/BGYt2YDX24u/LyivfJXICX0tfy3h3T0fd6RbY3p4bxvkej55f3KvZWBXOXnlebVcO35rWyqxNzU95Udjln/zcHq5Z4Y05noKP5elC8mJOWqYe32kBew/jO5DvOPS96p56H8m/ynsT9LAL0yp4gvLnOEuKMN6KCC4goBQAA
+   H4sIAAAAAAAAA62T0QrCMAxFG9njhjqYnYLr/3+B/yXqg6CYQMtiSNZWFzgwtuakvawDOHdYGY8MSIccV2LLvATVHdnAzMPVl1e8L+TKeMe1F5j7dvi8R3r40rkGbG9JjfG8J6NnyXsTa5uKub/uV5vVsmfNa2XXZubmvLnsSvb+bw5W1XrpX6OcJkbP8kvvguLlOWmZenZXO5bXGO+ZvMelOXBv6nkq35L3LM5nEViv7AnCW+qsgWZ8AMsrjJQoBQAA
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="84" class="SliderCpu" gid="293" x="128" y="144" width="16" height="16">
+  <object id="84" class="Monster" gid="293" x="128" y="144" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="30"/>
     <property name="level" type="float" value="1"/>
    </properties>
   </object>
-  <object id="85" class="SliderCpu" gid="293" x="192" y="112" width="16" height="16">
+  <object id="85" class="Monster" gid="293" x="192" y="112" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="30"/>
     <property name="level" type="float" value="0"/>
    </properties>
   </object>
-  <object id="86" class="SliderCpu" gid="293" x="64" y="160" width="16" height="16">
+  <object id="86" class="Monster" gid="293" x="64" y="160" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="30"/>
     <property name="level" type="float" value="0"/>
@@ -61,56 +62,30 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="22" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIAxEGAmr+UKEObQAnEC3sQAxB5QeBaOA1oBnmKSzgcqz1Ab08AcA/k6yqigFAAA=
+   H4sIAAAAAAAAA2NgIAxEGAmr+UKEOdQG24Hu4gRiFiDmgNKjYBTQGvAMk3Q2EHmWFoAe/gAAEHUrcCgFAAA=
   </data>
  </layer>
  <objectgroup id="9" name="items">
-  <object id="91" gid="284" x="160" y="176" width="16" height="16">
-   <properties>
-    <property name="action">(if (has-weapon 1)
-    (if (max-pp-snowballs)
-        (dialog '((&quot;The snowballs container is full.&quot;)))
-        (dialog '((&quot;* {{hero}} filled his snowballs container *&quot;))))
-    (dialog '((&quot;A snowdrift.&quot;))))</property>
-   </properties>
-  </object>
-  <object id="92" gid="284" x="144" y="64" width="16" height="16">
-   <properties>
-    <property name="action">(if (has-weapon 1)
-    (if (max-pp-snowballs)
-        (dialog '((&quot;The snowballs container is full.&quot;)))
-        (dialog '((&quot;* {{hero}} filled his snowballs container *&quot;))))
-    (dialog '((&quot;A snowdrift.&quot;))))</property>
-   </properties>
-  </object>
-  <object id="93" gid="329" x="64" y="208" width="16" height="16">
+  <object id="93" gid="379" x="64" y="208" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="94" gid="329" x="304" y="64" width="16" height="16">
+  <object id="94" gid="379" x="304" y="64" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="95" gid="329" x="256" y="208" width="16" height="16">
+  <object id="95" gid="379" x="256" y="208" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
-   </properties>
-  </object>
-  <object id="97" gid="284" x="48" y="48" width="16" height="16">
-   <properties>
-    <property name="action">(if (has-weapon 1)
-    (if (max-pp-snowballs)
-        (dialog '((&quot;The snowballs container is full.&quot;)))
-        (dialog '((&quot;* {{hero}} filled his snowballs container *&quot;))))
-    (dialog '((&quot;A snowdrift.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="2" name="spawn points">
   <object id="80" class="Door" x="64" y="48" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="t1_02"/>
    </properties>
   </object>

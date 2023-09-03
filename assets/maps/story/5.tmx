@@ -2,12 +2,13 @@
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="17" height="14" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="86">
  <properties>
   <property name="action">(begin
-    (if (== (last-place) &quot;4&quot;)
-        (map-name &quot;Mitsu Forest&quot;))
-    (if  (first-time?)
-        (dialog '((&quot;Hey, this is the Mitsu Forest. My parents told me many stories about how beautiful and thriving it was a long time ago. It is said that once upon a time the mystical protective creature of this region lived here.&quot;)))))</property>
+  (if (== (last-place) &quot;4&quot;)
+    (map-name &quot;Mitsu Forest&quot;))
+  (if (first-time?)
+    (dialog '((&quot;/hero&quot; &quot;Hey, this is the Mitsu Forest!\nMy parents told me many stories about how beautiful it was a long time ago.\nIt is said that once upon a time the mystical protective creature of this region lived here.&quot;)))))</property>
   <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Mitsu Forest"/>
+  <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;Mitsu Forest!&quot;)))"/>
   <property name="music" value="forest"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
@@ -15,20 +16,46 @@
  <tileset firstgid="181" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="17" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA1NgYGDgAWIJJGzOgAn8gVgBiGWg8gpQcQUkNjqwAWJbJBoGeKC0PRa1GkhiMHkDHObDALL99rgUYQGcQKwHxFxoblTApQEK1JDYgkAsB8UiSOLofkbn4wKgsLUjQh06sMfBViDDLBCQQGITCn9CAJ/f1XCIowNYPJEDFKA0KI6EyDQD5gdseYNYIIFFzBOIvbDIsTCg5gV0AADbkfbeuAMAAA==
+   H4sIAAAAAAAAA1NgYGDgAWIJBggA0eYMmMAfiBWAWAYqrwAVV0BiowMbILZFomGAB0rbY1GrgSQGkzfAYT4MINtvj0sRFsAJxHpAzIXmRgVcGqBADYktCMRyUCyCJI7uZ3Q+LgAKWzsi1KEDexxsBTLMAgEJJDah8CcE8PldDYc4OoDFEzlAAUqD4kiITDNgfsCWN4gFEljEPIHYC4scCwNqXkAHAFXHww+4AwAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
   <object id="31" class="NPC" gid="150" x="80" y="32" width="16" height="16">
    <properties>
-    <property name="action">(dialog
-    '((&quot;/&quot; &quot;174805…\nI don't know what these figures are but a little while ago I heard someone say them out loud…\nDunno why.&quot;)))</property>
-    <property name="orientation" type="int" value="1"/>
+    <property name="action">(begin
+  (dialog '((&quot;/&quot; &quot;Remember that hydration is essential for good overall health.&quot;)))
+  (wait)
+  (if (!get &quot;005-fresh-water&quot;)
+    (begin
+      (dialog '((&quot;/&quot; &quot;Here's to you.&quot;)))
+      (wait)
+      (give-item &quot;fresh-water&quot;)
+      (set &quot;005-fresh-water&quot; #t))))</property>
    </properties>
   </object>
   <object id="43" class="NPC" gid="135" x="208" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;The trees of this region are admired and studied throughout the Kingdom. These blue ones are my favorite.&quot;)))"/>
+    <property name="action">(if (!get &quot;5-talk-botany&quot;)
+  (begin
+    (set &quot;5-talk-botany&quot; #t)
+    (dialog '((&quot;student&quot; &quot;Ah, this forest is a true paradise for a botany enthusiast like me!&quot;)))
+    (wait)
+    (set-orientation 0)
+    (dialog '((&quot;student&quot; &quot;Look at those plants!&quot;)))
+    (wait)
+    (set-orientation 1)
+    (dialog '((&quot;student&quot; &quot;And have you seen those?!&quot;)))
+    (wait)
+    (set-orientation 2)
+    (dialog '((&quot;student&quot; &quot;This one?&quot;)))
+    (wait)
+    (set-orientation 3)
+    (dialog '((&quot;student&quot; &quot;And those!&quot;)))
+    (wait)
+    (set-orientation (opposite-orientation))
+    (dialog '((&quot;student&quot; &quot;I love this place!&quot;)))
+    (wait))
+  (dialog '((&quot;student&quot; &quot;The trees of this region are admired and studied throughout the Kingdom.\nThese blue ones are my favorite.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
@@ -38,7 +65,7 @@
     <property name="action">(begin
     (dialog
         '((&quot;/_1&quot; &quot;Mitsu Forest – Welcome, respect nature and remember to take a look at the souvenir shop on the right.&quot;)))
-    (if (!get &quot;005-read&quot;)
+    (if (and (!get &quot;005-read&quot;) (!get &quot;the-end&quot;))
         (begin
             (dialog
                 '((&quot;/hero&quot; &quot;Once this was a very touristy place, the Kingdom tried to make money from it.&quot;)))
@@ -65,77 +92,77 @@
   </object>
   <object id="54" gid="195" x="64" y="176" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="56" gid="195" x="32" y="176" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="58" gid="196" x="224" y="192" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="59" gid="196" x="224" y="176" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="61" gid="196" x="176" y="160" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="72" gid="195" x="176" y="32" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="73" gid="195" x="96" y="176" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="74" gid="204" x="112" y="176" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="76" gid="204" x="112" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="77" gid="195" x="176" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="79" gid="195" x="144" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="81" gid="195" x="208" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="82" gid="196" x="224" y="208" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;9&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;9&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="83" gid="203" x="224" y="160" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
   <object id="84" gid="203" x="192" y="160" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;12&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;12&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

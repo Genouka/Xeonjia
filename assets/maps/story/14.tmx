@@ -11,7 +11,7 @@
  <tileset firstgid="228" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="13" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgQABzIFYAYnsoVkDDPFAaBuwZ8AMfKC2BZC4uYI6FL0LAfHQAs4cQsEPTgw3oQTEXFjl0t4IAHxJWxeE2dCAHxfI49NhhEYMBQSAWgrKRwxVkjzQDaWGHHG7Y/IbNHeY41BJrD7HAAaqHhQHiTxgfZr8C1H0KDIg0CwIAQCwD29gCAAA=
+   H4sIAAAAAAAAA2NgQABzIFYAYnsoVkDDPFAaBuwZ8AMfKC2BZC4uYI6FL0LAfHQAs4cQsEPTgw3oQTEXFjl0t4IAHxJWxeE2dCAHxfI49Nih8XmQ2IJALARlI4cryB5pBtLCDjncsPkN3R0wddjUEmsPscABqoeFAeJPGB9mvwLUfQoMiDQLAgB9KS2B2AIAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -28,7 +28,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="13" height="14">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIA64EKmO3sAMi1ggEAcBcQgQhxJpTiIQJwNxChCnEqknE4izgDgOiHOhYg4E3FkIxEVAnAbEpUTaAwNqJKrH547BCqjlPgC7T+/82AIAAA==
+   H4sIAAAAAAAAA2NgIA64EKmO3sAMi1ggEAcBcQgQhxJpTiIQJwNxChCnEqknE4izgDgOiHOhYg4E3FkIxEVAnAbEpUTaQ02ALbwGE6CW+wAjLTHh2AIAAA==
   </data>
  </layer>
  <objectgroup id="8" name="items">
@@ -44,7 +44,7 @@
   </object>
   <object id="51" gid="226" x="16" y="160" width="16" height="16">
    <properties>
-    <property name="actionOnEvent" value="(if (has-been-here &quot;15&quot;) (delete-me))"/>
+    <property name="actionOnEvent" value="(if (visited-room &quot;15&quot;) (delete-me))"/>
    </properties>
   </object>
  </objectgroup>

@@ -13,26 +13,27 @@
  <tileset firstgid="181" source="../tilesets/indoor.tsx"/>
  <tileset firstgid="237" source="../tilesets/crypt-1.tsx"/>
  <tileset firstgid="293" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="318" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="368" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="392" source="../tilesets/outdoor-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="22" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62U2QoCMQxFKxTBh2FQrNUB9f//UHwygQZCyNLIXLiUQnqy0LYdSmngW2CMOYL7RCzFE3cBPwxvg3t3YlaDiyuqwnoCX8ee9Cm2KuvlbHBRX4dhqTM2sp4Kl4vXLXvwuHweWVV2hrg94NZknlluJDkTyV2C+f5br3YfsjOY5WZENezNjerFe/xSfJnMZ3HpDXJn+rC42l/VnD6k34z7A4BFri0oBQAA
+   H4sIAAAAAAAAA6WU0QqDMAxFOyiDPYhMrFXB+f9fsF+TPS0BAyE0baIXLkWIp8klmh4hJPDUMNY8wdlQS/XE7cCL4vXkzpWaXuHiiYpwvsDj+Uw6gq7IZnkrXNSvwtCUGRtZW4HLxfuWM9S4PA+vInuHuLnBjc57rNyWZCaS2zXyvdpvaR+8GVi5HlEPd7hfw55JLu7xp+DBOIfGpW+Q25OPxi39q1JlDumdcf8Ja/GRKAUAAA==
   </data>
  </layer>
  <objectgroup id="10" name="npcs">
-  <object id="84" class="SliderCpu" gid="293" x="128" y="144" width="16" height="16">
+  <object id="84" class="Monster" gid="293" x="128" y="144" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="30"/>
     <property name="level" type="float" value="1"/>
    </properties>
   </object>
-  <object id="85" class="SliderCpu" gid="293" x="192" y="112" width="16" height="16">
+  <object id="85" class="Monster" gid="293" x="192" y="112" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="30"/>
     <property name="level" type="float" value="0"/>
    </properties>
   </object>
-  <object id="86" class="SliderCpu" gid="293" x="64" y="160" width="16" height="16">
+  <object id="86" class="Monster" gid="293" x="64" y="160" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="30"/>
     <property name="level" type="float" value="0"/>
@@ -45,31 +46,22 @@
   </data>
  </layer>
  <objectgroup id="9" name="items">
-  <object id="87" gid="329" x="112" y="192" width="16" height="16">
+  <object id="87" gid="379" x="112" y="192" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="88" gid="329" x="288" y="224" width="16" height="16">
+  <object id="88" gid="379" x="288" y="224" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="89" gid="329" x="288" y="64" width="16" height="16">
+  <object id="89" gid="379" x="288" y="64" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="90" gid="284" x="192" y="192" width="16" height="16">
-   <properties>
-    <property name="action">(if (has-weapon 1)
-    (if (max-pp-snowballs)
-        (dialog '((&quot;The snowballs container is full.&quot;)))
-        (dialog '((&quot;* {{hero}} filled his snowballs container *&quot;))))
-    (dialog '((&quot;A snowdrift.&quot;))))</property>
-   </properties>
-  </object>
-  <object id="91" gid="329" x="64" y="48" width="16" height="16">
+  <object id="91" gid="379" x="64" y="48" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="20"/>
    </properties>
@@ -78,6 +70,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="80" class="Door" x="96" y="48" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="roomId" value="t1_03"/>
    </properties>
   </object>

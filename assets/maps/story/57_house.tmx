@@ -14,7 +14,11 @@
  <objectgroup id="10" name="npcs">
   <object id="71" class="NPC" gid="44" x="96" y="80" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/&quot; &quot;Are you the 62nd hero?\nIt's been a while since a hero has been around here, they almost always give up before arriving here.&quot;)))"/>
+    <property name="action">(if (!get &quot;the-end&quot;)
+
+(dialog '((&quot;/&quot; &quot;Are you the 64th hero?\nIt's been a while since a hero has been around here, they almost always give up before arriving here.&quot;)))
+
+(dialog '((&quot;/&quot; &quot;I tell all my friends that I met you.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
@@ -27,6 +31,7 @@
  <objectgroup id="2" name="spawn points">
   <object id="70" class="Door" x="96" y="112" width="16" height="16">
    <properties>
+    <property name="mainDoor" type="bool" value="true"/>
     <property name="orientation" type="int" value="1"/>
     <property name="roomId" value="57"/>
    </properties>

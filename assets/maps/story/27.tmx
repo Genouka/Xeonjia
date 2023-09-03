@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="12" height="35" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="55">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="12" height="35" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="10" nextobjectid="57">
  <properties>
   <property name="action">(if (! (== (last-place) &quot;22&quot;))
     (map-name &quot;Route 3&quot;))</property>
@@ -7,24 +7,32 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="210" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="262" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="260" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="312" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="336" source="../tilesets/npc_main.tsx"/>
  <layer id="1" name="Tile Layer 1" width="12" height="35">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5VUMQ4DIQxj6NitHZDagSfcdkuLWNv/P6hBJZJlJQEsRQfCcRwudyn9kUc8JY6xbsnGCesrnb0k3rDPjoaldQK/jOdlksNgP6hl+flIfIManc89eWiGvudDtduEg7X1HXk4FvQjtIk+o3O9+5vVWdXnnqJc635KwO/aFfbVI4IW6kde9Bw56MWaKdb3oLn6na6iOHUjfqSPWrouG37wfa3kYb8rffA8RLNakz1vO/qKtsG/STwk7g6fPReDp55ZezbP0f/EqqNePb9cO0NoH5mCZ/gHCgn8IJAGAAA=
+   H4sIAAAAAAAAA5VTQQoCMQzswYvgRfRQUCQvkL3tRUuv+v8HmbINDDFJuwODXXYymWxjShty55259HNNNlY4n9S7F/MNz9nxsLxW0FP/PQxqNHQe9LLyfJjfoEfT65k8VMPfyyHedaDB3nJHHpYJ/wh14K/RtN73G/WZ9dczRbXW96FA37wLPBdPCF7oH2WR96jBLNZOaX8PUiv/01mQ0zfSR/7oJWfakQfva6YO552ZQ+9DtKulZ9D7tsdfUB09GfoL88a8Ov46Mxk6yay9o30+Mp9GjdfnzHykLauXV2fKQJkD7zun/x3+AfH8iZOQBgAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="54" class="NPC" gid="242" x="64" y="64" width="16" height="16">
+  <object id="54" class="NPC" gid="292" x="64" y="64" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I still don't understand why I lose money when I run out of HP.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="55" class="NPC" gid="351" x="160" y="560" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (get &quot;027-milla&quot;)
+  (delete-me))</property>
+    <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="12" height="35">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgwA9MgNiUgBpqAjMS1duh8R2B2ImAHnr7abDYTQwgJvxAgNJ4ohUww8GmNaAkXgdKLz6z6JVOYXFErH3I6QhfWqVn3JMCiM1fMEBqeqZVPkO3m1R/EAsAI1ump5AGAAA=
+   H4sIAAAAAAAAA2NgwA9MgNiUgBpqAjMS1duh8R2B2ImAHnr7abDYTQwgJvxAgNJ4ohUww8GmNaAkXgdKLz6z6JVOYXFErH3I6QhfWqVn3JMCiM1fMEBqeiYlnymQoBYdkOoPYgEANG2hipAGAAA=
   </data>
  </layer>
  <objectgroup id="8" name="items">
@@ -32,27 +40,83 @@
    <properties>
     <property name="action">(dialog
   '((&quot;/_1&quot; &quot;← Sacred Tree&quot;)
-  (&quot;/_1&quot; &quot;Melhopolis City Center →&quot;)))</property>
+  (&quot;/_1&quot; &quot;Greentwig City Center →&quot;)))</property>
    </properties>
   </object>
-  <object id="49" gid="275" x="64" y="32" width="16" height="16">
+  <object id="49" gid="325" x="64" y="32" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="100"/>
    </properties>
   </object>
-  <object id="50" class="Modifier" gid="280" x="16" y="368" width="16" height="16">
+  <object id="50" class="Modifier" gid="330" x="16" y="368" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="10"/>
    </properties>
   </object>
-  <object id="51" class="Modifier" gid="280" x="128" y="208" width="16" height="16">
+  <object id="51" class="Modifier" gid="330" x="128" y="208" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
    </properties>
   </object>
-  <object id="52" class="Modifier" gid="280" x="160" y="448" width="16" height="16">
+  <object id="52" class="Modifier" gid="330" x="160" y="448" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="56" class="Solid" x="176" y="512" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(begin
+  (delete-me)
+  (set &quot;027-milla&quot; #t)
+  (dialog '((&quot;!&quot;)))
+  (wait)
+  (place 55 176 512)
+  (show 55)
+  (dialog
+    '((&quot;/hero_happy&quot; &quot;Milla!&quot;)
+    (&quot;/milla_happy&quot; &quot;Hi hero!\nDid you get the first signet? Well done!&quot;)
+     (&quot;/milla&quot; &quot;Are you going to the Greentwig City center?&quot;)
+    (&quot;/hero&quot; &quot;Yes, have you been there?&quot;)
+    (&quot;/milla&quot; &quot;I'm from there!\nBut there's nothing special, it's a very boooring city.\nIn tourist guides, the \&quot;Museum of rocking chairs\&quot; is listed as the most interesting attraction.\nBut apparently it has closed down.&quot;)
+    (&quot;/hero&quot; &quot;Oh, what a pity.&quot;)
+    (&quot;/milla&quot; &quot;However, a visit to the City Hall is worthwhile. It's so spacious!&quot;)
+    (&quot;/hero&quot; &quot;Ok, thanks I'll visit it.\nHow's your journey going?&quot;)
+    (&quot;/milla_embarassed2&quot; &quot;It's going well, even if sometimes traveling alone can get a bit boring…&quot;)
+    (&quot;/hero&quot; &quot;Ah, I'm also a bit bored actually.&quot;)
+    (&quot;/milla_embarassed2&quot; &quot;Really?&quot;)
+    (&quot;/hero&quot; &quot;Yes, but I've been trained for this too.&quot;)
+    (&quot;/milla&quot; &quot;Oh.&quot;)
+    (&quot;/hero&quot; &quot;As my father says, a true hero knows no boredom!&quot;)
+    (&quot;/milla&quot; &quot;It must have been hard to spend most of your life preparing for this journey.&quot;)
+    (&quot;/hero&quot; &quot;A little bit, but the legend is clear: every year a hero has to leave, until the King of Evil is defeated.\nI couldn't escape this commitment.&quot;)
+    (&quot;/milla&quot; &quot;I too wanted to be a hero.\nBut my parents didn't let me participate in the selections.&quot;)
+    (&quot;/milla_sad&quot; &quot;Ouf!&quot;)
+    (&quot;/hero&quot; &quot;It's better this way, trust me.\nIt's a hard life for heroes.\nIn fact, I don't even have time to rest for a moment that I already have to go to the next place.\n\&quot;Sleep is for the weak, not for heroes\&quot;.\nAccording to plan, I should have already reached the Water Region.\nSo maybe it's better if i go now.&quot;)
+    (&quot;/milla&quot; &quot;Oh, ok.&quot;)
+    (&quot;/milla_happy&quot; &quot;Then see you around, hero!&quot;)
+    (&quot;/hero_happy&quot; &quot;Bye Milla!&quot;)))
+  (wait)
+  (wait 2)
+  (dialog
+    '((&quot;…&quot;)
+    (&quot;/hero&quot; &quot;Oops… Sorry.&quot;)))
+  (wait)
+  (move 1)
+  (set-orientation 0)
+  (wait 1)
+  (dialog
+    '((&quot;/milla_happy&quot; &quot;Thank you!&quot;)))
+  (wait)
+  (wait 0.6)
+  (move '(3 55))
+  (wait 0.6)
+  (move '(3 55))
+  (wait 0.6)
+  (move '(1 55))
+  (wait 1.2)
+  (leave-npc 55))</property>
+    <property name="actionOnEvent">(if (get &quot;027-milla&quot;)
+  (delete-me))</property>
    </properties>
   </object>
  </objectgroup>
