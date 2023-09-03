@@ -2774,7 +2774,7 @@ msgid "But do you two know each other?"
 msgstr "Ma voi due vi conoscete?"
 
 #: assets/maps/story/39.tmx:
-msgid "Shen and I? Of course! We are best friends!"
+msgid "September and I? Of course! We are best friends!"
 msgstr ""
 
 #: assets/maps/story/39.tmx:
@@ -3726,8 +3726,8 @@ msgid "But in this way, to avoid your own suffering you brought suffering to us.
 msgstr "Ma in questo modo, per evitare la vostra sofferenza, hai portato a noi la sofferenza."
 
 #: assets/maps/story/999_up.tmx:
-msgid "I have been blind to the pain I have inflicted on this world and those who inhabit it.\nI was ready to freeze everything and wipe out every living thing in this Kingdom.\nThe power wore me down.\nBut I'd do it all over again.\nI hope you will not be faced with similar choices."
-msgstr "Sono stato cieco di fronte al dolore che ho inflitto a questo mondo e a coloro che lo abitano.\nEro pronto a congelare tutto e a spazzare via ogni essere vivente di questo Regno.\nIl potere mi ha logorato.\nMa rifarei tutto da capo allo stesso modo.\nSpero che non vi troverete mai di fronte a scelte simili."
+msgid "I have been blind to the pain I have inflicted on this world and those who inhabit it.\nI was ready to freeze everything and wipe out every living thing in this Kingdom.\nThe power wore me down.\nBut I'd do it all over again the same way.\nI hope you will not be faced with similar choices."
+msgstr ""
 
 #: assets/maps/story/999_up.tmx:
 msgid "We would act differently."
@@ -4054,8 +4054,8 @@ msgid "Exactly.\nWhat were you thinking of doing with them?\nAnd I'll tell you m
 msgstr "Esattamente.\nCosa pensavate di farvene?\nE vi dirò di più: tutta la faccenda dei sigilli aveva lo scopo di farvi esplorare il Regno in modo da aumentare la probabilità di trovare gemme.\nAltrimenti sareste venuti direttamente alla torre senza portarmene neanche una."
 
 #: assets/maps/story/999_up.tmx:
-msgid "But we needed the signets to enter the tower, we still had to get them."
-msgstr "Ma ci servivano i sigilli per entrare nella torre, avremmo dovuto comunque prenderli."
+msgid "But we needed the signets to enter the tower, we should have taken them anyway."
+msgstr ""
 
 #: assets/maps/story/999_up.tmx:
 msgid "Actually, it was enough to knock on the door of the tower and we would have opened."
@@ -4514,7 +4514,7 @@ msgid "This is a wall."
 msgstr "Questo è un muro."
 
 #: assets/maps/tilesets/tower.tsx:
-msgid "king-of-evil"
+msgid "king of evil"
 msgstr ""
 
 #: assets/maps/tilesets/lab.tsx:
@@ -4732,10 +4732,6 @@ msgstr "rosso"
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "milla"
 msgstr "milla"
-
-#: assets/maps/tilesets/npc_main.tsx:
-msgid "65hero"
-msgstr ""
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "shen"
@@ -5008,3 +5004,7 @@ msgstr "Qui c'è il vulcano."
 #: assets/data/backpack-items.json:
 msgid "Here is the Xeonjia Tower."
 msgstr "Qui c'è la Torre Xeonjia."
+
+#: assets/data/backpack-items.json:
+msgid "Here is the top floor of the Xeonjia Tower."
+msgstr ""

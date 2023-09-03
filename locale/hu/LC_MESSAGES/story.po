@@ -2772,7 +2772,7 @@ msgid "But do you two know each other?"
 msgstr ""
 
 #: assets/maps/story/39.tmx:
-msgid "Shen and I? Of course! We are best friends!"
+msgid "September and I? Of course! We are best friends!"
 msgstr ""
 
 #: assets/maps/story/39.tmx:
@@ -3724,7 +3724,7 @@ msgid "But in this way, to avoid your own suffering you brought suffering to us.
 msgstr ""
 
 #: assets/maps/story/999_up.tmx:
-msgid "I have been blind to the pain I have inflicted on this world and those who inhabit it.\nI was ready to freeze everything and wipe out every living thing in this Kingdom.\nThe power wore me down.\nBut I'd do it all over again.\nI hope you will not be faced with similar choices."
+msgid "I have been blind to the pain I have inflicted on this world and those who inhabit it.\nI was ready to freeze everything and wipe out every living thing in this Kingdom.\nThe power wore me down.\nBut I'd do it all over again the same way.\nI hope you will not be faced with similar choices."
 msgstr ""
 
 #: assets/maps/story/999_up.tmx:
@@ -4052,7 +4052,7 @@ msgid "Exactly.\nWhat were you thinking of doing with them?\nAnd I'll tell you m
 msgstr ""
 
 #: assets/maps/story/999_up.tmx:
-msgid "But we needed the signets to enter the tower, we still had to get them."
+msgid "But we needed the signets to enter the tower, we should have taken them anyway."
 msgstr ""
 
 #: assets/maps/story/999_up.tmx:
@@ -4512,7 +4512,7 @@ msgid "This is a wall."
 msgstr ""
 
 #: assets/maps/tilesets/tower.tsx:
-msgid "king-of-evil"
+msgid "king of evil"
 msgstr ""
 
 #: assets/maps/tilesets/lab.tsx:
@@ -4730,10 +4730,6 @@ msgstr ""
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "milla"
 msgstr "milla"
-
-#: assets/maps/tilesets/npc_main.tsx:
-msgid "65hero"
-msgstr ""
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "shen"
@@ -5005,4 +5001,8 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Xeonjia Tower."
+msgstr ""
+
+#: assets/data/backpack-items.json:
+msgid "Here is the top floor of the Xeonjia Tower."
 msgstr ""
