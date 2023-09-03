@@ -9,16 +9,16 @@ msgid ""
 msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-03-05 18:54+0000\nLast-Translator: d4f5409d <d4f5409d-4b6a-4640-9ff3-155ebcdc7ab7@anonaddy.me>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
-msgid "What's your name?"
-msgstr "Mi a neved?"
+msgid "Valid characters: A-Z."
+msgstr ""
 
 #: lib/ui/basic.dart:
 msgid "Too short."
 msgstr "Túl rövid."
 
 #: lib/ui/basic.dart:
-msgid "Insert your name here"
-msgstr "Írd be a neved ide"
+msgid "Insert your name"
+msgstr ""
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -29,6 +29,10 @@ msgid "Settings"
 msgstr "Beállítás"
 
 #: lib/ui/screens/home/home_page.dart:
+msgid "Ice Adventures"
+msgstr ""
+
+#: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
 msgstr "Koppints a lejátszáshoz"
 
@@ -36,210 +40,125 @@ msgstr "Koppints a lejátszáshoz"
 msgid "Press enter"
 msgstr ""
 
-#: lib/ui/screens/welcome/widgets/choose_name.dart:
-msgid "Welcome!"
-msgstr "Üdvözlünk!"
-
-#: lib/ui/screens/welcome/widgets/choose_name.dart:
-msgid "Before starting tell me what you want to call your character."
-msgstr "Kezdés előtt mondd el, hogyan szeretnéd hívni a karaktered."
-
-#: lib/ui/screens/welcome/widgets/choose_name.dart:
-msgid "Random name"
-msgstr "Véletlenszerű név"
+#: lib/ui/screens/welcome/welcome_page.dart:
+msgid "Welcome"
+msgstr ""
 
 #: lib/ui/screens/welcome/welcome_page.dart:
-msgid "OK"
-msgstr "OK"
+msgid "Your journey is about to begin!\nWhat's your name?"
+msgstr ""
 
-#: lib/ui/screens/arena/widgets/play_button.dart:
-msgid "Play"
-msgstr "Játék"
-
-#: lib/ui/screens/arena/widgets/help_dialog.dart:
-msgid "Multiplayer Mode"
-msgstr "Többjátékos mód"
-
-#: lib/ui/screens/arena/widgets/help_dialog.dart:
-msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press \"Play\"."
-msgstr "Ennek a módnak a célja az ellenség legyőzése, a pontszerzés és a csapatod győzelemre juttatása.\n\nA szabályok egyszerűek:\n- A játékosok két csapatba szerveződnek.\n- Amikor egy játékos legyőz egy ellenfelet, csapata 100 pontot kap.\n- Az a csapat nyer, amelyik eléri a kívánt pontszámot.\n\nA csapattársaid a pirosak.\n\nEgyelőre csak CPU-k ellen lehet játszani.\n\nVálaszd ki a játék helyszínét és konfiguráld a játékot.\nHa készen állsz, nyomd meg a \"Játék\" gombot."
-
-#: lib/ui/screens/arena/widgets/help_dialog.dart:
-msgid "Okay, got it!"
-msgstr "Oké, értem!"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Easy"
-msgstr "Könnyű"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Medium"
-msgstr "Nehéz"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Hard"
-msgstr "Legnehezebb"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Multiplayer"
-msgstr "Többjátékos mód"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Map"
-msgstr "Térkép"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Place to play"
-msgstr "A játék helye"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Difficulty"
-msgstr "Nehézségi szint"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Match difficulty"
-msgstr "A mérkőzés nehézsége"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Points required"
-msgstr "Szükséges pontszám"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Points needed to win"
-msgstr "A győzelemhez szükséges pontok"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Time available"
-msgstr "Rendelkezésre álló idő"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Maximum time for a match (minutes)"
-msgstr "Egy mérkőzés maximális időtartama (perc)"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Players"
-msgstr "Játékosok"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Number of players per team"
-msgstr "A játékosok száma csapatonként"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Friendly Fire"
-msgstr "Baráti tűz"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "If enabled, players can hit their teammates"
-msgstr "Ha engedélyezve van, a játékosok megüthetik csapattársaikat"
+#: lib/ui/screens/welcome/welcome_page.dart:
+msgid "Let's start!"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
-msgid "Restore"
-msgstr "Visszaállítás"
-
-#: lib/ui/screens/settings/settings_page.dart:
-msgid "Restore default settings?"
-msgstr "Alapértelmezett beállítások visszaállítása?"
-
-#: lib/ui/screens/settings/settings_page.dart:
-msgid "Are you sure you want to delete your settings and restore default ones?"
-msgstr "Biztos, hogy törölni szeretnéd a beállításaidat és visszaállítani az alapértelmezetteket?"
-
-#: lib/ui/screens/settings/settings_page.dart:
-msgid "Cancel"
-msgstr "Mégsem"
-
-#: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Smallest"
-msgstr "Legkisebb"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Small"
-msgstr "Kicsi"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Default"
-msgstr "Alapértelmezett"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Large"
-msgstr "Nagy"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Largest"
-msgstr "Legnagyobb"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
-msgid "Your name"
-msgstr "A neved"
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Zoom out"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Zoom in"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Click here to change your name"
-msgstr "Koppints a neved megváltoztatásához"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "What's your name?"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Discard"
-msgstr "Elvetés"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Save"
-msgstr "Mentés"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Background music"
-msgstr "Háttérzene"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable background music"
-msgstr "Háttérzene engedélyezése"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Sound effects"
-msgstr "Hangeffektek"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable sound effects"
-msgstr "Hangeffektusok engedélyezése"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
-msgid "Show D-pad"
-msgstr "D-Pad megjelenítése"
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Controller"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
-msgid "Enable the directional pad.\nTo change its position, long-press the D-pad in the center."
-msgstr "Engedélyezd a D-padot.\nAhhoz, hogy megváltoztasd a helyzetét, nyomd meg hosszan középen."
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Move the character with gestures or virtual D-pad"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "You only need it on a touchscreen device"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad size"
-msgstr "D-pad mérete"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
-#, fuzzy
-msgid "Virtual D-pad dimension"
-msgstr "Virtuális D-pad dimenzió"
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Virtual D-pad dimension.\nTo change its position, long-press the D-pad in the center."
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Game zoom"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Zoom objects in the game for a better view"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Language"
-msgstr "Nyelv"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "App language"
-msgstr "Az alkalmazás nyelve"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "System default"
-msgstr "Alapértelmezett rendszer"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "By %s"
-msgstr "Készítette %s"
+msgid "Game made by %s"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "App developed by %s"
-msgstr "Az alkalmazás fejlesztője %s"
-
-#: lib/ui/screens/info/info_page.dart:
-msgid "Version: %s"
-msgstr "Verzió: %s"
+msgid "Version %s"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
@@ -250,8 +169,8 @@ msgid "Donate"
 msgstr "Adományozás"
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "Support the development"
-msgstr "A fejlesztés támogatása"
+msgid "Contribute to the project"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate"
@@ -266,28 +185,28 @@ msgid "Send email"
 msgstr "E-mail küldése"
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "Ask for something or request a new feature"
-msgstr "Kérj valamit vagy kérj egy új funkciót"
+msgid "Ask for something"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
 msgstr "Hibák jelentése"
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "Report bugs or request new feature"
-msgstr "Hibák jelentése vagy új funkció kérése"
+msgid "Report the bugs you found"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "View source code"
-msgstr "A forráskód megtekintése"
+msgid "Source code"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "Look at the source code"
-msgstr "Nézd meg a forrás kódot"
+msgid "View the source code"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "View License (GPLv3)"
-msgstr "Licenc megtekintése (GPLv3)"
+msgid "License (GPLv3)"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
@@ -310,8 +229,8 @@ msgid "This is where I am right now."
 msgstr "Itt vagyok jelenleg."
 
 #: lib/game/widgets/world_map.dart:
-msgid "Do you want to come back to this place?"
-msgstr "Vissza szeretnél jönni erre a helyre?"
+msgid "Do you want to go back to this place?"
+msgstr ""
 
 #: lib/game/widgets/world_map.dart:
 #, fuzzy
@@ -328,25 +247,17 @@ msgstr "* Egy hosszas utazás után, {{hero}} megérkezett ide *"
 msgid "* After a very long journey, {{hero}} arrived here *"
 msgstr "* Egy nagyon hosszas utazás során, {{hero}} megérkezett ide *"
 
-#: lib/game/widgets/menus/no_maps_menu.dart:
-msgid "You went too far!"
-msgstr "Túl messzire mentél!"
+#: lib/game/widgets/menus/you_lost_menu.dart:
+msgid "You run out of energy !"
+msgstr ""
 
-#: lib/game/widgets/menus/no_maps_menu.dart:
-msgid "The next part of the story is not yet available.\nIt will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback."
-msgstr "A történet következő része még nem elérhető.\nAzonban, hamarosan elérhető lesz.\n\nAddig is támogathatod a Xeonija fejlesztését adományozással vagy felhasználói visszajelzésekkel."
+#: lib/game/widgets/menus/you_lost_menu.dart:
+msgid "You lost %s ¤ and woke up after a short nap"
+msgstr ""
 
-#: lib/game/widgets/menus/no_maps_menu.dart:
-msgid "Report a bug or ask something"
-msgstr "Jelents hibát vagy kérdezz valamit"
-
-#: lib/game/widgets/menus/no_maps_menu.dart:
-msgid "Go back"
-msgstr "Vissza"
-
-#: lib/game/widgets/menus/no_maps_menu.dart:
-msgid "Back to menu"
-msgstr "Vissza a menübe"
+#: lib/game/widgets/menus/you_lost_menu.dart:
+msgid "Continue"
+msgstr ""
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "No items here"
@@ -377,46 +288,6 @@ msgstr "Titokzatos drágakövek szétszórva a világon."
 msgid "Do you want to use {{selected-item-name}}?"
 msgstr "Szeretnéd ezt használni: {{selected-item-name}}?"
 
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "You run out of energy !"
-msgstr "Kifogytál az energiából !"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "You lost %s ¤ and woke up after a short nap"
-msgstr "Elvesztettél %s ¤ és felébredtél egy rövid szunyókálás után"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "Your team won"
-msgstr "A csapatod nyert"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "Your team lost"
-msgstr "A csapatod vesztett"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "The time is over."
-msgstr "Az idő lejárt."
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "%s points have been achieved."
-msgstr "%s pontot sikerült elérni."
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "Do you want to restart this game?"
-msgstr "Újra akarod kezdeni a játékot?"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "Continue"
-msgstr "Folytatás"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "Yes"
-msgstr "Igen"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "No"
-msgstr "Nem"
-
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "pause"
 msgstr "szünet"
@@ -434,32 +305,20 @@ msgid "cancel"
 msgstr "mégsem"
 
 #: lib/game/widgets/menus/pause_menu.dart:
-msgid "HP: %s"
+msgid "You have %s HP and %s ¤."
 msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
-msgid "money: %s ¤"
-msgstr "pénz: %s ¤"
+msgid "Milla has %s HP."
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
-msgid "gems: %s"
-msgstr "drágakövek: %s"
+msgid "September has %s HP."
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
-msgid "play time: %s min"
-msgstr "játékidő: %s perc"
-
-#: lib/game/widgets/menus/pause_menu.dart:
-msgid "your defeats: %s"
-msgstr "a vereségeitek: %s"
-
-#: lib/game/widgets/menus/pause_menu.dart:
-msgid "enemies defeated: %s"
-msgstr "legyőzött ellenségek: %s"
-
-#: lib/game/widgets/menus/pause_menu.dart:
-msgid "your points: %s"
-msgstr "a pontjaid: %s"
+msgid "What do you want to do?"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "resume"
@@ -478,8 +337,12 @@ msgid "Are you sure you want to quit this game?"
 msgstr "Biztos, hogy ki akarsz szállni ebből a játékból?"
 
 #: lib/game/widgets/menus/pause_menu.dart:
-msgid "\n\nGame data since the last time you changed your location will be lost."
-msgstr "\n\nA legutóbbi helyváltoztatás óta eltelt játékadatok elvesznek."
+msgid "Game data since the last location change will be lost."
+msgstr ""
+
+#: lib/game/widgets/menus/shop_menu.dart:
+msgid "HP Machine"
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Shop"
@@ -489,6 +352,10 @@ msgstr "Bolt"
 #, fuzzy
 msgid "Do you want to buy {{selected-item-name}}?"
 msgstr "Szeretnéd megvenni ezt: {{selected-item-name}}?"
+
+#: lib/game/widgets/menus/shop_menu.dart:
+msgid "Do I buy {{selected-item-name}}?"
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 #, fuzzy
@@ -520,10 +387,6 @@ msgstr "3 lépés"
 msgid "Loading…\nPlease wait"
 msgstr "Betöltés...\nKérlek, várj"
 
-#: lib/game/widgets/buttons/minimap_button.dart:
-msgid "Close map"
-msgstr "Térkép bezárása"
-
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open local map"
 msgstr "Helyi térkép megnyitása"
@@ -539,6 +402,14 @@ msgstr "Tippek mutatása"
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Hide hints"
 msgstr "Tippek elrejtése"
+
+#: lib/game/utils/map_controller.dart:
+msgid "By clicking on the map I can go back to places I have already been."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "Where am I? How did I end up here?"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Mitsu Forest used to be bigger, it was deforested to build Melhopolis."
@@ -616,29 +487,41 @@ msgstr ""
 msgid "I am hungryyy."
 msgstr ""
 
+#: lib/game/utils/event_manager.dart:
+msgid "And that's it.\nWe have now reached the end of this fantastic adventure!\nYour determination and courage made this victory possible.\nKeep exploring, dreaming and being the hero the world needs, because your adventures will never end.\nWhere will your next journey take you?\nThank you for playing Xeonjia!\nMaybe our paths will cross again."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "Bye!"
+msgstr ""
+
 #: lib/game/components/character.dart:
 msgid "We must fight, not talk!"
 msgstr ""
 
 #: lib/game/components/character.dart:
-msgid "* {{hero}} puts %s in the backpack. *"
-msgstr "* {{hero}} %s -t tesz a hátizsákba. *"
+msgid "* {{hero}} puts %s in the backpack *"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "the gem"
 msgstr "a drágakő"
 
 #: lib/game/components/character.dart:
-msgid "* {{hero}} used {{selected-item-name}} *"
-msgstr "* {{hero}} használta: {{selected-item-name}} *"
+msgid "* {{hero}} uses {{selected-item-name}} *"
+msgstr ""
 
 #: lib/game/components/character.dart:
-msgid "* {{user-name}} used {{selected-item-name}} *"
+msgid "* {{user-name}} uses {{selected-item-name}} *"
 msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} gives %s *"
 msgstr "* {{hero}} ad: %s *"
+
+#: lib/game/components/common/basic.dart:
+msgid "You can't defeat me as long as there are other monsters besides me."
+msgstr ""
 
 #: lib/game/components/door.dart:
 msgid "There is still 1 enemy here. I can't escape."
@@ -661,7 +544,15 @@ msgid "It' time to fight!"
 msgstr "Itt az ideje a küzdelemnek!"
 
 #: lib/game/xeonjia_game.dart:
-msgid "Milla is tired and is back in the leaf, I have to continue the battle."
+msgid "Milla is tired and is back in the leaf, I must continue the battle."
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "September is tired, I must continue the battle alone."
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "September is tired, but we must continue the battle."
 msgstr ""
 
 #: lib/game/xeonjia_game.dart:
@@ -678,6 +569,26 @@ msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is already here!"
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "I have %s ¤. I'm not very rich."
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "I have %s health points."
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "I don't even have a cent!"
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "I have %s health points!"
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "I? I have %s health points."
 msgstr ""
 
 #: lib/game/xeonjia_game.dart:
@@ -705,16 +616,16 @@ msgid "A move can be used to walk, use items, attack or examine what is in front
 msgstr "Egy lépést használhatsz sétára, tárgyak használatára, támadásra vagy megnézheted vele, mi van előtted."
 
 #: lib/game/xeonjia_game.dart:
-msgid "You should already know the \"A\" button, it examines objects, plants and people."
-msgstr "Az \"A\" gombot már ismerheted, ezzel tudod megvizsgálni a különböző objektumokat, növényeket és embereket."
+msgid "You should already know the \"%s\" button, it examines objects, plants and people."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
-msgid "To attack use the \"P\" button. In this way you punch the enemy in front of you."
-msgstr "Támadásra használd a \"P\" gombot. Így meg tudod ütni a veled szemben álló ellenséget."
+msgid "To attack use the \"%s\" button. In this way you punch the enemy in front of you."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
-msgid "Otherwise, throw snowballs with the \"S\" button in the direction you are looking at."
-msgstr "Máskülönben hajíts hógolyókat az \"S\" gombbal, abba az irányba, amerre nézel."
+msgid "Otherwise, throw snowballs with the \"%s\" button in the direction you are looking at."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 #, fuzzy
@@ -722,7 +633,7 @@ msgid "If you run out of snowballs, get some snow from the snowdrifts around you
 msgstr "Ha kifogytál a hógolyókból, szerezz egy kis havat a körülötted lévő hóatorlaszokból."
 
 #: lib/game/xeonjia_game.dart:
-msgid "Mines you place under you with the \"M\" button explode as soon as an enemy steps on them."
+msgid "Mines you place under you with the \"%s\" button explode as soon as an enemy steps on them."
 msgstr ""
 
 #: lib/game/xeonjia_game.dart:

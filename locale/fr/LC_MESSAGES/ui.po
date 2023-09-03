@@ -10,16 +10,16 @@ msgid ""
 msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-18 12:14+0000\nLast-Translator: pascalou <bzhkrp@inboxen.org>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/ui/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
-msgid "What's your name?"
-msgstr "Comment vous appelez-vous ?"
+msgid "Valid characters: A-Z."
+msgstr ""
 
 #: lib/ui/basic.dart:
 msgid "Too short."
 msgstr "Trop court."
 
 #: lib/ui/basic.dart:
-msgid "Insert your name here"
-msgstr "Insérez votre nom ici"
+msgid "Insert your name"
+msgstr ""
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -30,6 +30,10 @@ msgid "Settings"
 msgstr "Paramètres"
 
 #: lib/ui/screens/home/home_page.dart:
+msgid "Ice Adventures"
+msgstr ""
+
+#: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
 msgstr "Appuyez pour jouer"
 
@@ -37,209 +41,125 @@ msgstr "Appuyez pour jouer"
 msgid "Press enter"
 msgstr "Appuyez sur Entrée"
 
-#: lib/ui/screens/welcome/widgets/choose_name.dart:
-msgid "Welcome!"
-msgstr "Bienvenue !"
-
-#: lib/ui/screens/welcome/widgets/choose_name.dart:
-msgid "Before starting tell me what you want to call your character."
-msgstr "Avant de commencer, dis-moi comment tu veux appeler ton personnage."
-
-#: lib/ui/screens/welcome/widgets/choose_name.dart:
-msgid "Random name"
-msgstr "Nom au hasard"
+#: lib/ui/screens/welcome/welcome_page.dart:
+msgid "Welcome"
+msgstr ""
 
 #: lib/ui/screens/welcome/welcome_page.dart:
-msgid "OK"
-msgstr "OK"
+msgid "Your journey is about to begin!\nWhat's your name?"
+msgstr ""
 
-#: lib/ui/screens/arena/widgets/play_button.dart:
-msgid "Play"
-msgstr "Jouer"
-
-#: lib/ui/screens/arena/widgets/help_dialog.dart:
-msgid "Multiplayer Mode"
-msgstr "Mode multijoueur"
-
-#: lib/ui/screens/arena/widgets/help_dialog.dart:
-msgid "The aim of this mode is to defeat enemies, score points and make your team win.\n\nThe rules are simple:\n- The players are organized into two teams.\n- Whenever a player defeats an opponent, his team scores 100 points.\n- The team that reaches the required score wins.\n\nYour teammates are the red ones.\n\nFor now it's only possible to play against CPUs.\n\nChoose the place to play and configure the game.\nWhen you are ready press \"Play\"."
-msgstr "Le but de ce mode est de vaincre les ennemis, marquer des points et faire gagner votre équipe.\n\nLes règles sont simples :\n- Les joueurs sont divisés en deux équipes.\n- Chaque fois qu'un joueur bat un adversaire, son équipe marque 100 points.\n- L'équipe qui atteint le score nécessaire gagne.\n\nVos coéquipiers sont les rouges.\n\nPour l'instant, il n'est possible de jouer que contre des processeurs.\n\nChoisissez l'endroit où jouer et configurez le jeu.\nQuand vous êtes prêt·e, appuyez sur « Jouer »."
-
-#: lib/ui/screens/arena/widgets/help_dialog.dart:
-msgid "Okay, got it!"
-msgstr "D'accord, compris !"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Easy"
-msgstr "Facile"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Medium"
-msgstr "Modérée"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Hard"
-msgstr "Difficile"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Multiplayer"
-msgstr "Multijoueur"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Map"
-msgstr "Carte"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Place to play"
-msgstr "Lieu où jouer"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Difficulty"
-msgstr "Difficulté"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Match difficulty"
-msgstr "Difficulté de la partie"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Points required"
-msgstr "Points nécessaires"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Points needed to win"
-msgstr "Pointes nécessaires pour gagner"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Time available"
-msgstr "Temps disponible"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Maximum time for a match (minutes)"
-msgstr "Temps maximal pour une partie (minutes)"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Players"
-msgstr "Joueurs"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Number of players per team"
-msgstr "Nombre de joueurs par équipe"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "Friendly Fire"
-msgstr "Feu ami"
-
-#: lib/ui/screens/arena/arena_page.dart:
-msgid "If enabled, players can hit their teammates"
-msgstr "Si ceci est activé, les joueurs peuvent frapper leurs coéquipiers"
+#: lib/ui/screens/welcome/welcome_page.dart:
+msgid "Let's start!"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
-msgid "Restore"
-msgstr "Restaurer"
-
-#: lib/ui/screens/settings/settings_page.dart:
-msgid "Restore default settings?"
-msgstr "Restaurer les paramètres par défaut ?"
-
-#: lib/ui/screens/settings/settings_page.dart:
-msgid "Are you sure you want to delete your settings and restore default ones?"
-msgstr "Êtes-vous sûr·e de vouloir supprimer vos paramètres et restaurer ceux par défaut ?"
-
-#: lib/ui/screens/settings/settings_page.dart:
-msgid "Cancel"
-msgstr "Annuler"
-
-#: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Smallest"
-msgstr "Le plus petit"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Small"
-msgstr "Petit"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Default"
-msgstr "Par défaut"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Large"
-msgstr "Grand"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Largest"
-msgstr "Le plus grand"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
-msgid "Your name"
-msgstr "Votre nom"
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Zoom out"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Zoom in"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Click here to change your name"
-msgstr "Clique ici pour changer le nom de ton personnage"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "What's your name?"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Discard"
-msgstr "Abandonner"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Save"
-msgstr "Enregistrer"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Background music"
-msgstr "Musique de fond"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable background music"
-msgstr "Activer la musique de fond"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Sound effects"
-msgstr "Effets sonores"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable sound effects"
-msgstr "Activer les effets sonores"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
-msgid "Show D-pad"
-msgstr "Afficher la croix directionnelle"
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Controller"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
-msgid "Enable the directional pad.\nTo change its position, long-press the D-pad in the center."
-msgstr "Activer la croix directionnelle.\nPour changer sa position, faire un appui long sur la croix directionnelle au centre."
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Move the character with gestures or virtual D-pad"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "You only need it on a touchscreen device"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad size"
-msgstr "Taille de la croix directionnelle"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
-msgid "Virtual D-pad dimension"
-msgstr "Dimension de la croix directionnelle virtuelle"
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Virtual D-pad dimension.\nTo change its position, long-press the D-pad in the center."
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Game zoom"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Zoom objects in the game for a better view"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "Language"
-msgstr "Langue"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "App language"
-msgstr "Langue de l'appli"
+msgstr ""
 
-#: lib/ui/screens/settings/resources/option_list.dart:
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "System default"
-msgstr "Langue du système"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "By %s"
-msgstr "Par %s"
+msgid "Game made by %s"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "App developed by %s"
-msgstr "Appli conçue par %s"
-
-#: lib/ui/screens/info/info_page.dart:
-msgid "Version: %s"
-msgstr "Version : %s"
+msgid "Version %s"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
@@ -250,8 +170,8 @@ msgid "Donate"
 msgstr "Faire un don"
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "Support the development"
-msgstr "Soutenez le développement"
+msgid "Contribute to the project"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate"
@@ -266,28 +186,28 @@ msgid "Send email"
 msgstr "Envoyer un courriel"
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "Ask for something or request a new feature"
-msgstr "Demander quelque chose ou demander une nouvelle fonctionnalité"
+msgid "Ask for something"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
 msgstr "Signaler des erreurs"
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "Report bugs or request new feature"
-msgstr "Signalez des erreurs ou demander une nouvelle fonctionnalité"
+msgid "Report the bugs you found"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "View source code"
-msgstr "Voir le code source"
+msgid "Source code"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "Look at the source code"
-msgstr "Jetez un œil au code source"
+msgid "View the source code"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
-msgid "View License (GPLv3)"
-msgstr "Voir la licence (GPLv3)"
+msgid "License (GPLv3)"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
@@ -310,8 +230,8 @@ msgid "This is where I am right now."
 msgstr "Voici où je me trouve."
 
 #: lib/game/widgets/world_map.dart:
-msgid "Do you want to come back to this place?"
-msgstr "Voulez-vous revenir à cet endroit ?"
+msgid "Do you want to go back to this place?"
+msgstr ""
 
 #: lib/game/widgets/world_map.dart:
 msgid "* {{hero}} arrived here *"
@@ -325,25 +245,17 @@ msgstr "* Après un long voyage, {{hero}} est arrivé ici *"
 msgid "* After a very long journey, {{hero}} arrived here *"
 msgstr "* Après un très long voyage, {{hero}} est arrivé ici *"
 
-#: lib/game/widgets/menus/no_maps_menu.dart:
-msgid "You went too far!"
-msgstr "Vous êtes allé·e trop loin !"
+#: lib/game/widgets/menus/you_lost_menu.dart:
+msgid "You run out of energy !"
+msgstr ""
 
-#: lib/game/widgets/menus/no_maps_menu.dart:
-msgid "The next part of the story is not yet available.\nIt will be available soon.\n\nIn the meantime you can support the development of Xeonjia by donating or by giving feedback."
-msgstr "La prochaine partie de l'histoire n'est pas encore disponible.\nEspérons qu'elle sera bientôt disponible.\n\nEn attendant, vous pouvez soutenir le développement de Xeonjia en faisant un don ou en faisant des remarques."
+#: lib/game/widgets/menus/you_lost_menu.dart:
+msgid "You lost %s ¤ and woke up after a short nap"
+msgstr ""
 
-#: lib/game/widgets/menus/no_maps_menu.dart:
-msgid "Report a bug or ask something"
-msgstr "Signaler un problème ou demander quelque chose"
-
-#: lib/game/widgets/menus/no_maps_menu.dart:
-msgid "Go back"
-msgstr "Retour"
-
-#: lib/game/widgets/menus/no_maps_menu.dart:
-msgid "Back to menu"
-msgstr "Retour au menu"
+#: lib/game/widgets/menus/you_lost_menu.dart:
+msgid "Continue"
+msgstr ""
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "No items here"
@@ -373,46 +285,6 @@ msgstr "De mystérieuses gemmes dispersées à travers le monde."
 msgid "Do you want to use {{selected-item-name}}?"
 msgstr "Voulez-vous utiliser {{selected-item-name}} ?"
 
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "You run out of energy !"
-msgstr "Vous n'avez plus d'énergie !"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "You lost %s ¤ and woke up after a short nap"
-msgstr "Vous avez perdu %s ¤ et vous vous êtes réveillé après un petit somme"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "Your team won"
-msgstr "Votre équipe a gagné"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "Your team lost"
-msgstr "Votre équipe a perdu"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "The time is over."
-msgstr "Le temps est fini."
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "%s points have been achieved."
-msgstr "%s points ont été marqués."
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "Do you want to restart this game?"
-msgstr "Voulez-vous recommencer le jeu ?"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "Continue"
-msgstr "Continuer"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "Yes"
-msgstr "Oui"
-
-#: lib/game/widgets/menus/end_menu.dart:
-msgid "No"
-msgstr "Non"
-
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "pause"
 msgstr "pause"
@@ -430,32 +302,20 @@ msgid "cancel"
 msgstr "annuler"
 
 #: lib/game/widgets/menus/pause_menu.dart:
-msgid "HP: %s"
-msgstr "PV : %s"
+msgid "You have %s HP and %s ¤."
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
-msgid "money: %s ¤"
-msgstr "argent : %s ¤"
+msgid "Milla has %s HP."
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
-msgid "gems: %s"
-msgstr "gemmes : %s"
+msgid "September has %s HP."
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
-msgid "play time: %s min"
-msgstr "temps de jeu : %s min"
-
-#: lib/game/widgets/menus/pause_menu.dart:
-msgid "your defeats: %s"
-msgstr "vos défaites : %s"
-
-#: lib/game/widgets/menus/pause_menu.dart:
-msgid "enemies defeated: %s"
-msgstr "ennemies vaincus : %s"
-
-#: lib/game/widgets/menus/pause_menu.dart:
-msgid "your points: %s"
-msgstr "vos points : %s"
+msgid "What do you want to do?"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "resume"
@@ -474,8 +334,12 @@ msgid "Are you sure you want to quit this game?"
 msgstr "Êtes-vous sûr·e de vouloir quitter cette partie ?"
 
 #: lib/game/widgets/menus/pause_menu.dart:
-msgid "\n\nGame data since the last time you changed your location will be lost."
-msgstr "\n\nLes données de jeu depuis la dernière fois que vous avez changé votre emplacement seront perdues."
+msgid "Game data since the last location change will be lost."
+msgstr ""
+
+#: lib/game/widgets/menus/shop_menu.dart:
+msgid "HP Machine"
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Shop"
@@ -484,6 +348,10 @@ msgstr "Boutique"
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Do you want to buy {{selected-item-name}}?"
 msgstr "Voulez-vous acheter {{selected-item-name}} ?"
+
+#: lib/game/widgets/menus/shop_menu.dart:
+msgid "Do I buy {{selected-item-name}}?"
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "I don't have enough money for this item."
@@ -513,10 +381,6 @@ msgstr "3 mouvements"
 msgid "Loading…\nPlease wait"
 msgstr "Chargement…\nVeuillez patienter"
 
-#: lib/game/widgets/buttons/minimap_button.dart:
-msgid "Close map"
-msgstr "Fermer la carte"
-
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open local map"
 msgstr "Ouvrir la carte locale"
@@ -532,6 +396,14 @@ msgstr "Afficher des indices"
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Hide hints"
 msgstr "Masquer les indices"
+
+#: lib/game/utils/map_controller.dart:
+msgid "By clicking on the map I can go back to places I have already been."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "Where am I? How did I end up here?"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Mitsu Forest used to be bigger, it was deforested to build Melhopolis."
@@ -609,29 +481,41 @@ msgstr "À quoi rêvent les porcelets ?"
 msgid "I am hungryyy."
 msgstr "J'ai faiiiiiim."
 
+#: lib/game/utils/event_manager.dart:
+msgid "And that's it.\nWe have now reached the end of this fantastic adventure!\nYour determination and courage made this victory possible.\nKeep exploring, dreaming and being the hero the world needs, because your adventures will never end.\nWhere will your next journey take you?\nThank you for playing Xeonjia!\nMaybe our paths will cross again."
+msgstr ""
+
+#: lib/game/utils/event_manager.dart:
+msgid "Bye!"
+msgstr ""
+
 #: lib/game/components/character.dart:
 msgid "We must fight, not talk!"
 msgstr "On doit se battre, pas parler !"
 
 #: lib/game/components/character.dart:
-msgid "* {{hero}} puts %s in the backpack. *"
-msgstr "* {{hero}} met %s dans le sac à dos. *"
+msgid "* {{hero}} puts %s in the backpack *"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "the gem"
 msgstr "la gemme"
 
 #: lib/game/components/character.dart:
-msgid "* {{hero}} used {{selected-item-name}} *"
-msgstr "* {{hero}} a utilisé {{selected-item-name}} *"
+msgid "* {{hero}} uses {{selected-item-name}} *"
+msgstr ""
 
 #: lib/game/components/character.dart:
-msgid "* {{user-name}} used {{selected-item-name}} *"
-msgstr "* {{user-name}} a utilisé {{selected-item-name}} *"
+msgid "* {{user-name}} uses {{selected-item-name}} *"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} gives %s *"
 msgstr "* {{hero}} donne %s *"
+
+#: lib/game/components/common/basic.dart:
+msgid "You can't defeat me as long as there are other monsters besides me."
+msgstr ""
 
 #: lib/game/components/door.dart:
 msgid "There is still 1 enemy here. I can't escape."
@@ -654,8 +538,16 @@ msgid "It' time to fight!"
 msgstr "Il est temps de se battre !"
 
 #: lib/game/xeonjia_game.dart:
-msgid "Milla is tired and is back in the leaf, I have to continue the battle."
-msgstr "Milla est fatiguée et est de retour dans la feuille, je dois continuer la bataille."
+msgid "Milla is tired and is back in the leaf, I must continue the battle."
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "September is tired, I must continue the battle alone."
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "September is tired, but we must continue the battle."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Battle!"
@@ -672,6 +564,26 @@ msgstr "Milla se repose."
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is already here!"
 msgstr "Milla est déjà ici !"
+
+#: lib/game/xeonjia_game.dart:
+msgid "I have %s ¤. I'm not very rich."
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "I have %s health points."
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "I don't even have a cent!"
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "I have %s health points!"
+msgstr ""
+
+#: lib/game/xeonjia_game.dart:
+msgid "I? I have %s health points."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"
@@ -698,24 +610,24 @@ msgid "A move can be used to walk, use items, attack or examine what is in front
 msgstr "Un mouvement peut-être utilisé pour marcher, utiliser des objets, attaquer ou examiner ce qui devant vous."
 
 #: lib/game/xeonjia_game.dart:
-msgid "You should already know the \"A\" button, it examines objects, plants and people."
-msgstr "Vous devriez déjà connaître le bouton A ; il examine les objets, les plantes et les gens."
+msgid "You should already know the \"%s\" button, it examines objects, plants and people."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
-msgid "To attack use the \"P\" button. In this way you punch the enemy in front of you."
-msgstr "Pour attaquer, utilisez le bouton P. De cette manière, vous donnez un coup de poing devant vous."
+msgid "To attack use the \"%s\" button. In this way you punch the enemy in front of you."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
-msgid "Otherwise, throw snowballs with the \"S\" button in the direction you are looking at."
-msgstr "Sinon, lancez des boules de neige avec le bouton S dans la direction dans laquelle vous regardez."
+msgid "Otherwise, throw snowballs with the \"%s\" button in the direction you are looking at."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "If you run out of snowballs, get some snow from the snowdrifts around you."
 msgstr "Si vous n'avez plus de boules de neige, récupérez de la neige dans les congères autour de vous."
 
 #: lib/game/xeonjia_game.dart:
-msgid "Mines you place under you with the \"M\" button explode as soon as an enemy steps on them."
-msgstr "Les mines que vous placez sous vous avec le bouton M explosent dès qu'un ennemi marche dessus."
+msgid "Mines you place under you with the \"%s\" button explode as soon as an enemy steps on them."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Remember, enemies also have HP. Hit them multiple times to knock them out!"
