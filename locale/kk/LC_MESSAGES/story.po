@@ -2,8 +2,9 @@
 # Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Fontan 030 <pomanfedurin@gmail.com>, 2023.
+# deepdaikon <deepdaikon@tuta.io>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-18 12:14+0000\nLast-Translator: Fontan 030 <pomanfedurin@gmail.com>\nLanguage-Team: Kazakh <https://translate.deepdaikon.xyz/projects/xeonjia/story/kk/>\nLanguage: kk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Kazakh <https://translate.deepdaikon.xyz/projects/xeonjia/story/kk/>\nLanguage: kk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -227,11 +228,11 @@ msgstr "Сынған монитор."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Yes"
-msgstr ""
+msgstr "Иә"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "No"
-msgstr ""
+msgstr "Жоқ"
 
 #: assets/maps/story/47.tmx:
 msgid "I'm sorry, but you don't have permission to use this vessel.\nIf you want to reach the Fire Region you have to take the boats that leave from the north of this region."
@@ -4923,7 +4924,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Berries"
-msgstr ""
+msgstr "Жидектер"
 
 #: assets/data/backpack-items.json:
 msgid "Five little berries. They restore 5 HP."

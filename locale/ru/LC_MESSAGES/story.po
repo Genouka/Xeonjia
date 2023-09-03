@@ -8,7 +8,7 @@
 # Alex <usr@skrep.eu>, 2023.
 # H6rd <hrdq@proton.me>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 08:06+0000\nLast-Translator: Andrey <jius55025@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -232,11 +232,11 @@ msgstr "Сломанный монитор."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 #: assets/maps/story/47.tmx:
 msgid "I'm sorry, but you don't have permission to use this vessel.\nIf you want to reach the Fire Region you have to take the boats that leave from the north of this region."
@@ -1124,7 +1124,7 @@ msgstr "Я думаю, что это древняя пещера.\nПосмот�
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Everything originated from water, everything will return to water."
-msgstr "Всё зарождается от воды,\nвсё закончится на воде."
+msgstr "Всё зарождается от воды, всё закончится на воде."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "What does it say? What does it mean?"
@@ -1256,7 +1256,7 @@ msgstr "Мы наблюдаем за тобой."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "The snowballs container is full."
-msgstr ""
+msgstr "Контейнер для снежков полон."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "* {{hero}} fills his snowballs container *"
@@ -1264,7 +1264,7 @@ msgstr ""
 
 #: assets/maps/story/t1_02.tmx:
 msgid "A snowdrift."
-msgstr ""
+msgstr "Сугроб."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "Hmm, I think if I run out of snowballs I can make new ones from snowdrifts like this one.\nI just have to press the \"{{inspect-key}}\" button."
@@ -1340,7 +1340,7 @@ msgstr "Это растение давно не поливали."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "This plant is very fragrant."
-msgstr ""
+msgstr "Это растение очень ароматное."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
@@ -2488,7 +2488,7 @@ msgstr ""
 
 #: assets/maps/story/70.tmx:
 msgid "dr. lache"
-msgstr ""
+msgstr "доктор лэйч"
 
 #: assets/maps/story/25_house.tmx:
 msgid "I'm a little confused."
@@ -2656,7 +2656,7 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "iosa&joza"
-msgstr ""
+msgstr "йоза&джоза"
 
 #: assets/maps/story/x10.tmx:
 msgid "You know, {{hero}}, you and I are not that different.\nI acted for the highest good.\nThis is a sick world.\nIt must be healed and that's why difficult decisions must be made. And I took that responsibility upon myself.\nThe only way to restore order is through chaos.\nYou will understand it too sooner or later."
@@ -2680,7 +2680,7 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "I will defeat you."
-msgstr ""
+msgstr "Я тебя уничтожу."
 
 #: assets/maps/story/x10.tmx:
 msgid "Dr. Lache!"
@@ -2732,11 +2732,11 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "iosa"
-msgstr ""
+msgstr "йоза"
 
 #: assets/maps/story/x10.tmx:
 msgid "joza"
-msgstr ""
+msgstr "джоза"
 
 #: assets/maps/story/39.tmx:
 msgid "Route 5"
@@ -4344,7 +4344,7 @@ msgstr ""
 
 #: assets/maps/story/2.tmx:
 msgid "This is a very strange stone… Never seen anything like this before."
-msgstr ""
+msgstr "Это очень странный камень… Ничего подобного я раньше не видел."
 
 #: assets/maps/story/2.tmx:
 msgid "I also often get hurt by rocks.\nIt's annoying but you'll get used to it."
@@ -4560,7 +4560,7 @@ msgstr "Башня такая мерзкая."
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "This is a wall."
-msgstr ""
+msgstr "Это стена."
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "king of evil"
@@ -4724,7 +4724,7 @@ msgstr "пожилая женщина"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "guy"
-msgstr ""
+msgstr "парень"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "old-man"
@@ -4848,7 +4848,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Package of the King"
-msgstr ""
+msgstr "Свёрток Короля"
 
 #: assets/data/backpack-items.json:
 msgid "Package given to me by the King."
@@ -5020,7 +5020,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Observation Tower."
-msgstr ""
+msgstr "Вот смотровая башня."
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Watery Crypt."
@@ -5032,7 +5032,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Here is the cableway."
-msgstr ""
+msgstr "Вот канатная дорога."
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Fiery Crypt."
@@ -5048,11 +5048,11 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Here is the volcano."
-msgstr ""
+msgstr "Вот вулкан."
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Xeonjia Tower."
-msgstr ""
+msgstr "Вот башня Xeonjia."
 
 #: assets/data/backpack-items.json:
 msgid "Here is the top floor of the Xeonjia Tower."

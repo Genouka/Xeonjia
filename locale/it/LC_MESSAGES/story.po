@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # Manuel Tassi <mannivuwiki@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 19:29+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -1511,7 +1511,7 @@ msgstr "Devo andare alla cripta per prendere il primo sigillo."
 
 #: assets/maps/story/x5.tmx:
 msgid "XEONJIA TOWER – 5F"
-msgstr ""
+msgstr "TORRE XEONJIA – 5P"
 
 #: assets/maps/story/x5.tmx:
 msgid "They could have put an elevator."
@@ -1927,7 +1927,7 @@ msgstr "* Milla scompare nella foglia *"
 
 #: assets/maps/story/x8.tmx:
 msgid "XEONJIA TOWER – 8F"
-msgstr ""
+msgstr "TORRE XEONJIA – 8P"
 
 #: assets/maps/story/x8.tmx:
 msgid "An easy win.\nLet's move on."
@@ -2027,7 +2027,7 @@ msgstr "Hmm, devo prendere la barca più veloce o quella con il frigo per la bir
 
 #: assets/maps/story/x4.tmx:
 msgid "XEONJIA TOWER – 4F"
-msgstr ""
+msgstr "TORRE XEONJIA – 4P"
 
 #: assets/maps/story/35.tmx:
 msgid "This boulder is very heavy."
@@ -2075,7 +2075,7 @@ msgstr "Stanno giocando a Quinb!"
 
 #: assets/maps/story/x2.tmx:
 msgid "XEONJIA TOWER – 2F"
-msgstr ""
+msgstr "TORRE XEONJIA – 2P"
 
 #: assets/maps/story/x2.tmx:
 msgid "Watch out, there are monsters here!"
@@ -2135,7 +2135,7 @@ msgstr "Ok va bene, ci rivediamo dopo."
 
 #: assets/maps/story/x7.tmx:
 msgid "XEONJIA TOWER – 7F"
-msgstr ""
+msgstr "TORRE XEONJIA – 7P"
 
 #: assets/maps/story/x7.tmx:
 msgid "What are those things?"
@@ -2651,7 +2651,7 @@ msgstr "Il mio lavoro è così noioso…"
 
 #: assets/maps/story/x10.tmx:
 msgid "XEONJIA TOWER – 10F"
-msgstr ""
+msgstr "TORRE XEONJIA – 10P"
 
 #: assets/maps/story/x10.tmx:
 msgid "iosa&joza"
@@ -2923,7 +2923,7 @@ msgstr "Sì grazie"
 
 #: assets/maps/story/x11.tmx:
 msgid "XEONJIA TOWER – 11F"
-msgstr ""
+msgstr "TORRE XEONJIA – 11P"
 
 #: assets/maps/story/x11.tmx:
 msgid "I'm starting to get hungry."
@@ -3599,7 +3599,7 @@ msgstr "CRIPTA ACQUOSA -2P"
 
 #: assets/maps/story/x3.tmx:
 msgid "XEONJIA TOWER – 3F"
-msgstr ""
+msgstr "TORRE XEONJIA – 3P"
 
 #: assets/maps/story/x3.tmx:
 msgid "There are no monsters here, except for that guy over there who's kind of ugly."
@@ -3723,7 +3723,7 @@ msgstr "No, qui c'è solo spazzatura."
 
 #: assets/maps/story/999_up.tmx:
 msgid "XEONJIA TOWER – 12F"
-msgstr ""
+msgstr "TORRE XEONJIA – 12P"
 
 #: assets/maps/story/999_up.tmx:
 msgid "We did it?"
@@ -4163,7 +4163,7 @@ msgstr "L'unica cosa memorabile qui è solo la noia.\nCombattiamo?"
 
 #: assets/maps/story/999_up.tmx:
 msgid "Yes, the time to fight has come.\nThe unrelenting cold of my wrath will embrace every corner of this world and everything will be enveloped in eternal winter.\nMy glacial domination is about to begin, and you will watch the dawn of this new era while your hopes turn into frozen tears."
-msgstr "Sì, è giunto il momento di combattere.\nL'implacabile freddo della mia ira abbraccerà ogni angolo di questo mondo e tutto sarà avvolto nell'eterno inverno.\nIl mio dominio glaciale sta per cominciare e voi assisterete all'alba di questa nuova era mentre le vostre speranze si trasformano in lacrime ghiacciate."
+msgstr "Sì, è giunto il momento di combattere.\nL'implacabile freddo della mia ira abbraccerà ogni angolo di questo mondo e tutto sarà avvolto nell'eterno inverno.\nIl mio dominio glaciale sta per cominciare e voi assisterete all'alba di questa nuova era mentre le vostre speranze si tramutano in lacrime ghiacciate."
 
 #: assets/maps/story/999_up.tmx:
 msgid "You didn't interrupt him though."
@@ -4175,7 +4175,7 @@ msgstr "Mi è piaciuto il suo discorso."
 
 #: assets/maps/story/999_up.tmx:
 msgid "Your copes turn into chosen fears."
-msgstr ""
+msgstr "Le vostre sostanze si tramutano in lacrime stracciate."
 
 #: assets/maps/story/999_up.tmx:
 msgid "I don't recall him saying that."
@@ -4183,7 +4183,7 @@ msgstr "Non mi ricordo che abbia detto questa frase."
 
 #: assets/maps/story/999_up.tmx:
 msgid "Your soaps turn into frozen pears."
-msgstr ""
+msgstr "Le vostre pietanze si trasportano in lattine schiacciate."
 
 #: assets/maps/story/999_up.tmx:
 msgid "Mmh… It wasn't even like that."
@@ -4375,7 +4375,7 @@ msgstr "Durante il tuo viaggio ti imbatterai in loro molte volte, non è un prob
 
 #: assets/maps/story/x9.tmx:
 msgid "XEONJIA TOWER – 9"
-msgstr ""
+msgstr "TORRE XEONJIA – 9P"
 
 #: assets/maps/story/x9.tmx:
 msgid "Arrows, arrows. Arrows again."
@@ -4411,7 +4411,7 @@ msgstr "Posso vedere l'interno del negozio."
 
 #: assets/maps/story/x1.tmx:
 msgid "XEONJIA TOWER – 1F"
-msgstr ""
+msgstr "TORRE XEONJIA – 1P"
 
 #: assets/maps/story/x1.tmx:
 msgid "* The Spirit of Fire warmed the tower *"
@@ -4487,7 +4487,7 @@ msgstr "Verdemura è il centro amministrativo della regione.\nAl giorno d'oggi, 
 
 #: assets/maps/story/x6.tmx:
 msgid "XEONJIA TOWER – 6F"
-msgstr ""
+msgstr "TORRE XEONJIA – 6P"
 
 #: assets/maps/story/5.tmx:
 msgid "Hey, this is the Mitsu Forest!\nMy parents told me many stories about how beautiful it was a long time ago.\nIt is said that once upon a time the mystical protective creature of this region lived here."

@@ -5,7 +5,7 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023.
 # Kempelen <lion@cmsbazar.hu>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-08 21:28+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -229,11 +229,11 @@ msgstr "Egy elromlott monitor."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Yes"
-msgstr ""
+msgstr "Igen"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "No"
-msgstr ""
+msgstr "Nem"
 
 #: assets/maps/story/47.tmx:
 msgid "I'm sorry, but you don't have permission to use this vessel.\nIf you want to reach the Fire Region you have to take the boats that leave from the north of this region."
@@ -1253,7 +1253,7 @@ msgstr "Figyelünk téged."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "The snowballs container is full."
-msgstr ""
+msgstr "A hógolyók tartálya megtelt."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "* {{hero}} fills his snowballs container *"
@@ -1261,7 +1261,7 @@ msgstr ""
 
 #: assets/maps/story/t1_02.tmx:
 msgid "A snowdrift."
-msgstr ""
+msgstr "Egy hótorlasz."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "Hmm, I think if I run out of snowballs I can make new ones from snowdrifts like this one.\nI just have to press the \"{{inspect-key}}\" button."
@@ -1337,7 +1337,7 @@ msgstr "Ezt a növényt már régóta nem öntözték."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "This plant is very fragrant."
-msgstr ""
+msgstr "Ez a növény nagyon illatos."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
@@ -2485,7 +2485,7 @@ msgstr ""
 
 #: assets/maps/story/70.tmx:
 msgid "dr. lache"
-msgstr ""
+msgstr "dr. lache"
 
 #: assets/maps/story/25_house.tmx:
 msgid "I'm a little confused."
@@ -2653,7 +2653,7 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "iosa&joza"
-msgstr ""
+msgstr "losa és joza"
 
 #: assets/maps/story/x10.tmx:
 msgid "You know, {{hero}}, you and I are not that different.\nI acted for the highest good.\nThis is a sick world.\nIt must be healed and that's why difficult decisions must be made. And I took that responsibility upon myself.\nThe only way to restore order is through chaos.\nYou will understand it too sooner or later."
@@ -2677,7 +2677,7 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "I will defeat you."
-msgstr ""
+msgstr "Legyőzlek."
 
 #: assets/maps/story/x10.tmx:
 msgid "Dr. Lache!"
@@ -2729,11 +2729,11 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "iosa"
-msgstr ""
+msgstr "losa"
 
 #: assets/maps/story/x10.tmx:
 msgid "joza"
-msgstr ""
+msgstr "joza"
 
 #: assets/maps/story/39.tmx:
 msgid "Route 5"
@@ -4341,7 +4341,7 @@ msgstr ""
 
 #: assets/maps/story/2.tmx:
 msgid "This is a very strange stone… Never seen anything like this before."
-msgstr ""
+msgstr "Ez egy nagyon furcsa kő... Soha nem láttam még ilyet."
 
 #: assets/maps/story/2.tmx:
 msgid "I also often get hurt by rocks.\nIt's annoying but you'll get used to it."
@@ -4557,7 +4557,7 @@ msgstr "A torony annyira csúnya."
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "This is a wall."
-msgstr ""
+msgstr "Ez egy fal."
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "king of evil"
@@ -4721,7 +4721,7 @@ msgstr "idős"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "guy"
-msgstr ""
+msgstr "srác"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "old-man"
@@ -4829,11 +4829,11 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Icosahedron"
-msgstr ""
+msgstr "Ikozaéder"
 
 #: assets/data/backpack-items.json:
 msgid "A strange blue icosahedral stone."
-msgstr ""
+msgstr "Egy különös kék ikozaéderes kő."
 
 #: assets/data/backpack-items.json:
 msgid "Snow globe"
@@ -4845,27 +4845,27 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Package of the King"
-msgstr ""
+msgstr "A király csomagja"
 
 #: assets/data/backpack-items.json:
 msgid "Package given to me by the King."
-msgstr ""
+msgstr "Csomagot kaptam a királytól."
 
 #: assets/data/backpack-items.json:
 msgid "Tetrahedron"
-msgstr ""
+msgstr "Tetraéder"
 
 #: assets/data/backpack-items.json:
 msgid "A strange red tetrahedral stone."
-msgstr ""
+msgstr "Egy furcsa vörös tetraéderes kő."
 
 #: assets/data/backpack-items.json:
 msgid "A pair of glasses"
-msgstr ""
+msgstr "Egy szemüveg"
 
 #: assets/data/backpack-items.json:
 msgid "Eyeglasses given to me by a girl."
-msgstr ""
+msgstr "Egy lánytól kaptam egy szemüveget."
 
 #: assets/data/backpack-items.json:
 msgid "Travel Pass"
@@ -4881,23 +4881,23 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "A strange green cubic stone."
-msgstr ""
+msgstr "Egy furcsa zöld kockakő."
 
 #: assets/data/backpack-items.json:
 msgid "Octahedron"
-msgstr ""
+msgstr "Oktaéder"
 
 #: assets/data/backpack-items.json:
 msgid "A strange white octahedral stone."
-msgstr ""
+msgstr "Egy furcsa, fehér, oktaéderes kő."
 
 #: assets/data/backpack-items.json:
 msgid "Dodecahedron"
-msgstr ""
+msgstr "Dodekaéder"
 
 #: assets/data/backpack-items.json:
 msgid "A strange multicolored dodecahedral stone."
-msgstr ""
+msgstr "Különös, sokszínű, dodekaéderes kő."
 
 #: assets/data/backpack-items.json:
 msgid "Signet #1"
@@ -4925,7 +4925,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Berries"
-msgstr ""
+msgstr "Bogyók"
 
 #: assets/data/backpack-items.json:
 msgid "Five little berries. They restore 5 HP."
@@ -4933,11 +4933,11 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "I'm already healthy, I don't need {{selected-item-name}} right now."
-msgstr ""
+msgstr "Már így is egészséges vagyok, most nincs szükségem {{selected-item-name}}."
 
 #: assets/data/backpack-items.json:
 msgid "Fresh Water"
-msgstr ""
+msgstr "Friss Víz"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of water. It restores 20 HP."
@@ -4945,7 +4945,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Pomegranate juice"
-msgstr ""
+msgstr "Gránátalma lé"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of pomegranate juice. It restores 50 HP."

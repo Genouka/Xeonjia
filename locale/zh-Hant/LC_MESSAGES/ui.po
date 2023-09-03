@@ -4,7 +4,7 @@
 # deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 # Lin.KH <dennyxbox890@gmail.com>, 2022.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-03-11 20:53+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -52,23 +52,23 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Smallest"
-msgstr ""
+msgstr "最小"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Small"
-msgstr ""
+msgstr "小"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Default"
-msgstr ""
+msgstr "預設"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Large"
-msgstr ""
+msgstr "大"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Largest"
-msgstr ""
+msgstr "最大"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom out"
@@ -80,35 +80,35 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Click here to change your name"
-msgstr ""
+msgstr "點擊此處更改名稱"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "What's your name?"
-msgstr ""
+msgstr "您的名字是？"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Discard"
-msgstr ""
+msgstr "拋棄"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Save"
-msgstr ""
+msgstr "儲存"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Background music"
-msgstr ""
+msgstr "背景音樂"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable background music"
-msgstr ""
+msgstr "啟用背景音樂"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Sound effects"
-msgstr ""
+msgstr "音效"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable sound effects"
-msgstr ""
+msgstr "開啟音效"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Controller"
@@ -124,7 +124,7 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad size"
-msgstr ""
+msgstr "十字方向鍵大小"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Virtual D-pad dimension.\nTo change its position, long-press the D-pad in the center."
@@ -140,15 +140,15 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Language"
-msgstr ""
+msgstr "語言"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "App language"
-msgstr ""
+msgstr "介面語言"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "System default"
-msgstr ""
+msgstr "系統預設"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Game made by %s"
@@ -244,15 +244,15 @@ msgstr "* 經過了漫長的旅程，{{hero}} 到達了這裡 *"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You run out of energy !"
-msgstr ""
+msgstr "你快用光體力了！"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You lost %s ¤ and woke up after a short nap"
-msgstr ""
+msgstr "你失去了 %s ¤ 並在短暫的睡眠後醒來"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "Continue"
-msgstr ""
+msgstr "繼續"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "No items here"
@@ -484,7 +484,7 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Bye!"
-msgstr ""
+msgstr "拜拜！"
 
 #: lib/game/components/character.dart:
 msgid "We must fight, not talk!"

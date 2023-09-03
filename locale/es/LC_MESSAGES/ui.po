@@ -2,11 +2,11 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Perro Tuerto <nika.zhenya@perrotuerto.blog>, 2020, 2021, 2023.
-# DeepDaikon <deepdaikon@tuta.io>, 2021, 2022.
+# DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # YottaMxt <yottamxt@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-16 21:12+0000\nLast-Translator: YottaMxt <yottamxt@gmail.com>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -54,23 +54,23 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Smallest"
-msgstr ""
+msgstr "Más pequeño"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Small"
-msgstr ""
+msgstr "Pequeño"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Default"
-msgstr ""
+msgstr "Por defecto"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Large"
-msgstr ""
+msgstr "Grande"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Largest"
-msgstr ""
+msgstr "Más grande"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom out"
@@ -82,35 +82,35 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Click here to change your name"
-msgstr ""
+msgstr "Pulsa aquí para cambiar tu nombre"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "What's your name?"
-msgstr ""
+msgstr "¿Cuál es tu nombre?"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Discard"
-msgstr ""
+msgstr "Descartar"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Background music"
-msgstr ""
+msgstr "Música de fondo"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable background music"
-msgstr ""
+msgstr "Habilitar música de fondo"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Sound effects"
-msgstr ""
+msgstr "Efectos de sonido"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable sound effects"
-msgstr ""
+msgstr "Habilitar efectos de sonido"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Controller"
@@ -126,7 +126,7 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad size"
-msgstr ""
+msgstr "Tamaño del D-pad"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Virtual D-pad dimension.\nTo change its position, long-press the D-pad in the center."
@@ -142,15 +142,15 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Language"
-msgstr ""
+msgstr "Idioma"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "App language"
-msgstr ""
+msgstr "Idioma de la aplicación"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "System default"
-msgstr ""
+msgstr "Sistema por defecto"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Game made by %s"
@@ -246,15 +246,15 @@ msgstr "* Después de un muy largo viaje, {{hero}} ha llegado aquí *"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You run out of energy !"
-msgstr ""
+msgstr "¡Te quedaste sin HP!"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You lost %s ¤ and woke up after a short nap"
-msgstr ""
+msgstr "Perdiste %s ¤ y despiertas después de una corta siesta"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "No items here"
@@ -486,7 +486,7 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Bye!"
-msgstr ""
+msgstr "¡Adiós!"
 
 #: lib/game/components/character.dart:
 msgid "We must fight, not talk!"

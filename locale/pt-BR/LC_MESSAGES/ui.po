@@ -4,7 +4,7 @@
 # deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 08:06+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Portuguese (Brazil) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/pt-BR/>\nLanguage: pt-BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Portuguese (Brazil) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/pt-BR/>\nLanguage: pt-BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -80,35 +80,35 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Click here to change your name"
-msgstr ""
+msgstr "Clique aqui para mudar seu nome"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "What's your name?"
-msgstr ""
+msgstr "Qual o seu nome?"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Discard"
-msgstr ""
+msgstr "Descartar"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Background music"
-msgstr ""
+msgstr "Música ambiente"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable background music"
-msgstr ""
+msgstr "Habilita música ambiente"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Sound effects"
-msgstr ""
+msgstr "Efeitos sonoros"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable sound effects"
-msgstr ""
+msgstr "Habilita efeitos sonoros"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Controller"
@@ -124,7 +124,7 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad size"
-msgstr ""
+msgstr "Tamanho do teclado direcional"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Virtual D-pad dimension.\nTo change its position, long-press the D-pad in the center."

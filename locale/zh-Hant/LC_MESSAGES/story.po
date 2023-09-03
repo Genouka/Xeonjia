@@ -5,7 +5,7 @@
 # Lin.KH <dennyxbox890@gmail.com>, 2022.
 # deepdaikon <deepdaikon@tuta.io>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-08 21:28+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -229,11 +229,11 @@ msgstr "一個損壞的螢幕。"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "No"
-msgstr ""
+msgstr "否"
 
 #: assets/maps/story/47.tmx:
 msgid "I'm sorry, but you don't have permission to use this vessel.\nIf you want to reach the Fire Region you have to take the boats that leave from the north of this region."
@@ -1253,7 +1253,7 @@ msgstr "我們盯上你了。"
 
 #: assets/maps/story/t1_02.tmx:
 msgid "The snowballs container is full."
-msgstr ""
+msgstr "雪球容器已滿。"
 
 #: assets/maps/story/t1_02.tmx:
 msgid "* {{hero}} fills his snowballs container *"
@@ -1261,7 +1261,7 @@ msgstr ""
 
 #: assets/maps/story/t1_02.tmx:
 msgid "A snowdrift."
-msgstr ""
+msgstr "一個雪堆。"
 
 #: assets/maps/story/t1_02.tmx:
 msgid "Hmm, I think if I run out of snowballs I can make new ones from snowdrifts like this one.\nI just have to press the \"{{inspect-key}}\" button."
@@ -1337,7 +1337,7 @@ msgstr "這株植物已經很久沒有澆過水了。"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "This plant is very fragrant."
-msgstr ""
+msgstr "這種植物很香。"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
@@ -2485,7 +2485,7 @@ msgstr ""
 
 #: assets/maps/story/70.tmx:
 msgid "dr. lache"
-msgstr ""
+msgstr "拉契博士"
 
 #: assets/maps/story/25_house.tmx:
 msgid "I'm a little confused."
@@ -2653,7 +2653,7 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "iosa&joza"
-msgstr ""
+msgstr "由薩&喬薩"
 
 #: assets/maps/story/x10.tmx:
 msgid "You know, {{hero}}, you and I are not that different.\nI acted for the highest good.\nThis is a sick world.\nIt must be healed and that's why difficult decisions must be made. And I took that responsibility upon myself.\nThe only way to restore order is through chaos.\nYou will understand it too sooner or later."
@@ -2677,7 +2677,7 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "I will defeat you."
-msgstr ""
+msgstr "我一定會打敗你。"
 
 #: assets/maps/story/x10.tmx:
 msgid "Dr. Lache!"
@@ -2729,11 +2729,11 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "iosa"
-msgstr ""
+msgstr "由薩"
 
 #: assets/maps/story/x10.tmx:
 msgid "joza"
-msgstr ""
+msgstr "喬薩"
 
 #: assets/maps/story/39.tmx:
 msgid "Route 5"
@@ -4341,7 +4341,7 @@ msgstr ""
 
 #: assets/maps/story/2.tmx:
 msgid "This is a very strange stone… Never seen anything like this before."
-msgstr ""
+msgstr "這是一塊非常奇怪的石頭……以前從未見過這樣的東西。"
 
 #: assets/maps/story/2.tmx:
 msgid "I also often get hurt by rocks.\nIt's annoying but you'll get used to it."
@@ -4557,7 +4557,7 @@ msgstr "這座塔長得也太醜了吧。"
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "This is a wall."
-msgstr ""
+msgstr "這是一堵牆。"
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "king of evil"
@@ -4721,7 +4721,7 @@ msgstr "老婆婆"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "guy"
-msgstr ""
+msgstr "一個人"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "old-man"
@@ -4829,43 +4829,43 @@ msgstr "這裡有幾張紙。"
 
 #: assets/data/backpack-items.json:
 msgid "Icosahedron"
-msgstr ""
+msgstr "二十面體"
 
 #: assets/data/backpack-items.json:
 msgid "A strange blue icosahedral stone."
-msgstr ""
+msgstr "奇怪的藍色二十面體石頭。"
 
 #: assets/data/backpack-items.json:
 msgid "Snow globe"
-msgstr ""
+msgstr "雪球"
 
 #: assets/data/backpack-items.json:
 msgid "A little snow globe with a miniaturized Mitsu Forest inside."
-msgstr ""
+msgstr "一個小雪球，裡面有一個縮小版的彌津森林。"
 
 #: assets/data/backpack-items.json:
 msgid "Package of the King"
-msgstr ""
+msgstr "國王的包裹"
 
 #: assets/data/backpack-items.json:
 msgid "Package given to me by the King."
-msgstr ""
+msgstr "國王給我的包裹。"
 
 #: assets/data/backpack-items.json:
 msgid "Tetrahedron"
-msgstr ""
+msgstr "四面體"
 
 #: assets/data/backpack-items.json:
 msgid "A strange red tetrahedral stone."
-msgstr ""
+msgstr "奇怪的紅色四面體石頭。"
 
 #: assets/data/backpack-items.json:
 msgid "A pair of glasses"
-msgstr ""
+msgstr "一副眼鏡"
 
 #: assets/data/backpack-items.json:
 msgid "Eyeglasses given to me by a girl."
-msgstr ""
+msgstr "一個女孩子給我的眼鏡。"
 
 #: assets/data/backpack-items.json:
 msgid "Travel Pass"
@@ -4881,23 +4881,23 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "A strange green cubic stone."
-msgstr ""
+msgstr "一塊奇怪的綠色立方體石頭。"
 
 #: assets/data/backpack-items.json:
 msgid "Octahedron"
-msgstr ""
+msgstr "八面體"
 
 #: assets/data/backpack-items.json:
 msgid "A strange white octahedral stone."
-msgstr ""
+msgstr "一塊奇怪的白色八面體石頭。"
 
 #: assets/data/backpack-items.json:
 msgid "Dodecahedron"
-msgstr ""
+msgstr "十二面體"
 
 #: assets/data/backpack-items.json:
 msgid "A strange multicolored dodecahedral stone."
-msgstr ""
+msgstr "一種奇怪的五彩十二面體石頭。"
 
 #: assets/data/backpack-items.json:
 msgid "Signet #1"
@@ -4905,7 +4905,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "First out of 3 signets required to enter the Xeonjia Tower."
-msgstr ""
+msgstr "進入 Xeonjia塔所需的 3 個徽章中的第一個。"
 
 #: assets/data/backpack-items.json:
 msgid "Signet #2"
@@ -4925,31 +4925,31 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Berries"
-msgstr ""
+msgstr "莓果"
 
 #: assets/data/backpack-items.json:
 msgid "Five little berries. They restore 5 HP."
-msgstr ""
+msgstr "五個莓果。回復５HP。"
 
 #: assets/data/backpack-items.json:
 msgid "I'm already healthy, I don't need {{selected-item-name}} right now."
-msgstr ""
+msgstr "我已經感覺很好了，我現在不需要 {{selected-item-name}}。"
 
 #: assets/data/backpack-items.json:
 msgid "Fresh Water"
-msgstr ""
+msgstr "乾淨的水"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of water. It restores 20 HP."
-msgstr ""
+msgstr "一瓶水。恢復 20 HP。"
 
 #: assets/data/backpack-items.json:
 msgid "Pomegranate juice"
-msgstr ""
+msgstr "石榴汁"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of pomegranate juice. It restores 50 HP."
-msgstr ""
+msgstr "一瓶石榴汁。恢復 50 HP。"
 
 #: assets/data/backpack-items.json:
 msgid "Kiwi juice"
@@ -4961,11 +4961,11 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Healer"
-msgstr ""
+msgstr "治療藥"
 
 #: assets/data/backpack-items.json:
 msgid "A medicine that restores 80 HP."
-msgstr ""
+msgstr "恢復80HP的藥劑。"
 
 #: assets/data/backpack-items.json:
 msgid "Healer Plus"
@@ -4977,31 +4977,31 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Food Box"
-msgstr ""
+msgstr "便當盒"
 
 #: assets/data/backpack-items.json:
 msgid "A small box full of rice, vegetables and beans. It restores 100 HP."
-msgstr ""
+msgstr "一個裝滿米飯、蔬菜和豆類的便當盒。恢復 100 HP。"
 
 #: assets/data/backpack-items.json:
 msgid "HP UP +5"
-msgstr ""
+msgstr "HP 上限 +5"
 
 #: assets/data/backpack-items.json:
 msgid "Increases the max HP by 5 points."
-msgstr ""
+msgstr "HP上限增加5點。"
 
 #: assets/data/backpack-items.json:
 msgid "Here is where I lived."
-msgstr ""
+msgstr "這是我曾居住的地方。"
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Mossy Crypt."
-msgstr ""
+msgstr "這是苔蘚地下城。"
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Vantoi Lab."
-msgstr ""
+msgstr "這裡是 Vantoi 實驗室。"
 
 #: assets/data/backpack-items.json:
 msgid "Here is the City Hall of Greentwig."
@@ -5009,7 +5009,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Hexa Cave."
-msgstr ""
+msgstr "這裡是六角洞窟。"
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Aquaville Town."
@@ -5017,7 +5017,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Observation Tower."
-msgstr ""
+msgstr "這裡是瞭望塔。"
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Watery Crypt."
@@ -5049,7 +5049,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Xeonjia Tower."
-msgstr ""
+msgstr "這裡是Xeonjia 塔。"
 
 #: assets/data/backpack-items.json:
 msgid "Here is the top floor of the Xeonjia Tower."

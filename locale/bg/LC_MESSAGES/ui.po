@@ -1,9 +1,9 @@
 # Translation for Xeonjia
 # Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# deepdaikon <deepdaikon@tuta.io>, 2022.
+# deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2022-10-01 21:02+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Bulgarian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/bg/>\nLanguage: bg\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Bulgarian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/bg/>\nLanguage: bg\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -139,15 +139,15 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Language"
-msgstr ""
+msgstr "Език"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "App language"
-msgstr ""
+msgstr "Език на приложението"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "System default"
-msgstr ""
+msgstr "Систмно подразбиране"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Game made by %s"

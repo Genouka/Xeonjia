@@ -2,11 +2,11 @@
 # Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # Viktória Nagy <tindykmp@protonmail.ch>, 2021, 2022.
-# DeepDaikon <deepdaikon@tuta.io>, 2021, 2022.
+# DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023.
 # Kempelen <lion@cmsbazar.hu>, 2022.
 # d4f5409d <d4f5409d-4b6a-4640-9ff3-155ebcdc7ab7@anonaddy.me>, 2022, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-03-05 18:54+0000\nLast-Translator: d4f5409d <d4f5409d-4b6a-4640-9ff3-155ebcdc7ab7@anonaddy.me>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -54,23 +54,23 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Smallest"
-msgstr ""
+msgstr "Legkisebb"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Small"
-msgstr ""
+msgstr "Kicsi"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Default"
-msgstr ""
+msgstr "Alapértelmezett"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Large"
-msgstr ""
+msgstr "Nagy"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Largest"
-msgstr ""
+msgstr "Legnagyobb"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom out"
@@ -82,35 +82,35 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Click here to change your name"
-msgstr ""
+msgstr "Koppints a neved megváltoztatásához"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "What's your name?"
-msgstr ""
+msgstr "Mi a neved?"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Discard"
-msgstr ""
+msgstr "Elvetés"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Save"
-msgstr ""
+msgstr "Mentés"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Background music"
-msgstr ""
+msgstr "Háttérzene"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable background music"
-msgstr ""
+msgstr "Háttérzene engedélyezése"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Sound effects"
-msgstr ""
+msgstr "Hangeffektek"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable sound effects"
-msgstr ""
+msgstr "Hangeffektusok engedélyezése"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Controller"
@@ -126,7 +126,7 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad size"
-msgstr ""
+msgstr "D-pad mérete"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Virtual D-pad dimension.\nTo change its position, long-press the D-pad in the center."
@@ -142,15 +142,15 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Language"
-msgstr ""
+msgstr "Nyelv"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "App language"
-msgstr ""
+msgstr "Az alkalmazás nyelve"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "System default"
-msgstr ""
+msgstr "Alapértelmezett rendszer"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Game made by %s"
@@ -249,15 +249,15 @@ msgstr "* Egy nagyon hosszas utazás során, {{hero}} megérkezett ide *"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You run out of energy !"
-msgstr ""
+msgstr "Kifogytál az energiából !"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You lost %s ¤ and woke up after a short nap"
-msgstr ""
+msgstr "Elvesztettél %s ¤ és felébredtél egy rövid szunyókálás után"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "Continue"
-msgstr ""
+msgstr "Folytatás"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "No items here"
@@ -493,7 +493,7 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Bye!"
-msgstr ""
+msgstr "Szia!"
 
 #: lib/game/components/character.dart:
 msgid "We must fight, not talk!"

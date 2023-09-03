@@ -7,7 +7,7 @@
 # YottaMxt <yottamxt@gmail.com>, 2023.
 # Nicolas <nicolas2013toledo@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 08:06+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -231,11 +231,11 @@ msgstr "Un monitor roto."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Yes"
-msgstr ""
+msgstr "Sí"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: assets/maps/story/47.tmx:
 msgid "I'm sorry, but you don't have permission to use this vessel.\nIf you want to reach the Fire Region you have to take the boats that leave from the north of this region."
@@ -583,11 +583,11 @@ msgstr ""
 
 #: assets/maps/story/13.tmx:
 msgid "Yes, I am…"
-msgstr "Sí, lo soy. . ."
+msgstr "Sí, lo soy…"
 
 #: assets/maps/story/13.tmx:
 msgid "But this is my first battle…"
-msgstr "Pero esta es mi primera batalla. . ."
+msgstr "Pero esta es mi primera batalla…"
 
 #: assets/maps/story/13.tmx:
 msgid "If you don't do anything this will be our LAST battle!"
@@ -599,7 +599,7 @@ msgstr "No tenemos más tiempo, ¡haz algo!"
 
 #: assets/maps/story/13.tmx:
 msgid "Hmm…\nAh, right! My mom gave me this book…"
-msgstr "Mmm. . .\n¡Ah, claro! Mi madre me dio este libro. . ."
+msgstr "Mmm…\n¡Ah, claro! Mi madre me dio este libro…"
 
 #: assets/maps/story/13.tmx:
 msgid "Ok, now I know what to do!\nLet's fight!"
@@ -771,7 +771,7 @@ msgstr "No te preocupes Shen. Yo, también, lo descubrí hace poco."
 
 #: assets/maps/story/75.tmx:
 msgid "We'll talk about it later…"
-msgstr "Hablaremos de eso más tarde. . ."
+msgstr "Hablaremos de eso más tarde…"
 
 #: assets/maps/story/75.tmx:
 msgid "Spirit of Fire, can you help us by heating the Xeonjia Tower?\nIt must reach a comfortable temperature for humans."
@@ -791,7 +791,7 @@ msgstr "Milla?"
 
 #: assets/maps/story/75.tmx:
 msgid "Thank you…"
-msgstr "Gracias. . ."
+msgstr "Gracias…"
 
 #: assets/maps/story/75.tmx:
 msgid "I know you love me Milla.\nAfter you defeat the King of Evil let's go on vacation together."
@@ -799,7 +799,7 @@ msgstr "Sé que me amas Milla.\nCuando derrotes al Rey del Mal nos vamos de vaca
 
 #: assets/maps/story/75.tmx:
 msgid "We'll see…"
-msgstr "Ya veremos. . ."
+msgstr "Ya veremos…"
 
 #: assets/maps/story/75.tmx:
 msgid "I force you."
@@ -1255,7 +1255,7 @@ msgstr "Te estamos observando."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "The snowballs container is full."
-msgstr ""
+msgstr "El contenedor de bolas de nieve está lleno."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "* {{hero}} fills his snowballs container *"
@@ -1263,7 +1263,7 @@ msgstr ""
 
 #: assets/maps/story/t1_02.tmx:
 msgid "A snowdrift."
-msgstr ""
+msgstr "Un montón de nieve."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "Hmm, I think if I run out of snowballs I can make new ones from snowdrifts like this one.\nI just have to press the \"{{inspect-key}}\" button."
@@ -1339,7 +1339,7 @@ msgstr "Esta planta hace mucho tiempo que no se riega."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "This plant is very fragrant."
-msgstr ""
+msgstr "Esta planta es muy fragante."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
@@ -2492,7 +2492,7 @@ msgstr ""
 
 #: assets/maps/story/70.tmx:
 msgid "dr. lache"
-msgstr ""
+msgstr "dr. Lache"
 
 #: assets/maps/story/25_house.tmx:
 msgid "I'm a little confused."
@@ -2660,7 +2660,7 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "iosa&joza"
-msgstr ""
+msgstr "iosa&joza"
 
 #: assets/maps/story/x10.tmx:
 msgid "You know, {{hero}}, you and I are not that different.\nI acted for the highest good.\nThis is a sick world.\nIt must be healed and that's why difficult decisions must be made. And I took that responsibility upon myself.\nThe only way to restore order is through chaos.\nYou will understand it too sooner or later."
@@ -2684,7 +2684,7 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "I will defeat you."
-msgstr ""
+msgstr "Te derrotaré."
 
 #: assets/maps/story/x10.tmx:
 msgid "Dr. Lache!"
@@ -2736,11 +2736,11 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "iosa"
-msgstr ""
+msgstr "iosa"
 
 #: assets/maps/story/x10.tmx:
 msgid "joza"
-msgstr ""
+msgstr "joza"
 
 #: assets/maps/story/39.tmx:
 msgid "Route 5"
@@ -3184,7 +3184,7 @@ msgstr ""
 
 #: assets/maps/story/60.tmx:
 msgid "One day you will feel nostalgic about this moment."
-msgstr ""
+msgstr "Algun día vas a sentir nostalgia por este momento."
 
 #: assets/maps/story/60.tmx:
 msgid "A boat named Pino."
@@ -4348,7 +4348,7 @@ msgstr ""
 
 #: assets/maps/story/2.tmx:
 msgid "This is a very strange stone… Never seen anything like this before."
-msgstr ""
+msgstr "Este es un pedrusco muy extraño... Nunca había visto nada como esto."
 
 #: assets/maps/story/2.tmx:
 msgid "I also often get hurt by rocks.\nIt's annoying but you'll get used to it."
@@ -4564,7 +4564,7 @@ msgstr "La torre es horrenda."
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "This is a wall."
-msgstr ""
+msgstr "Esto es un muro."
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "king of evil"
@@ -4728,7 +4728,7 @@ msgstr "anciana"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "guy"
-msgstr ""
+msgstr "chico"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "old-man"
@@ -4836,11 +4836,11 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Icosahedron"
-msgstr ""
+msgstr "Icosaedro"
 
 #: assets/data/backpack-items.json:
 msgid "A strange blue icosahedral stone."
-msgstr ""
+msgstr "Una extraña piedra en forma de icosaedro."
 
 #: assets/data/backpack-items.json:
 msgid "Snow globe"
@@ -4852,27 +4852,27 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Package of the King"
-msgstr ""
+msgstr "Paquete del Rey"
 
 #: assets/data/backpack-items.json:
 msgid "Package given to me by the King."
-msgstr ""
+msgstr "Paquete que me ha dado el Rey."
 
 #: assets/data/backpack-items.json:
 msgid "Tetrahedron"
-msgstr ""
+msgstr "Tetraedro"
 
 #: assets/data/backpack-items.json:
 msgid "A strange red tetrahedral stone."
-msgstr ""
+msgstr "Una extraña piedra roja en forma de tetraedro."
 
 #: assets/data/backpack-items.json:
 msgid "A pair of glasses"
-msgstr ""
+msgstr "Unas gafas"
 
 #: assets/data/backpack-items.json:
 msgid "Eyeglasses given to me by a girl."
-msgstr ""
+msgstr "Gafas que me dio una chica."
 
 #: assets/data/backpack-items.json:
 msgid "Travel Pass"
@@ -4888,23 +4888,23 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "A strange green cubic stone."
-msgstr ""
+msgstr "Una extraña piedra verde cúbica."
 
 #: assets/data/backpack-items.json:
 msgid "Octahedron"
-msgstr ""
+msgstr "Octaedro"
 
 #: assets/data/backpack-items.json:
 msgid "A strange white octahedral stone."
-msgstr ""
+msgstr "Una extraña piedra octaédrica blanca."
 
 #: assets/data/backpack-items.json:
 msgid "Dodecahedron"
-msgstr ""
+msgstr "Dodecaedro"
 
 #: assets/data/backpack-items.json:
 msgid "A strange multicolored dodecahedral stone."
-msgstr ""
+msgstr "Una extraña piedra en forma de dodecaedro multicolor."
 
 #: assets/data/backpack-items.json:
 msgid "Signet #1"
@@ -4932,7 +4932,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Berries"
-msgstr ""
+msgstr "Bayas"
 
 #: assets/data/backpack-items.json:
 msgid "Five little berries. They restore 5 HP."
@@ -4940,23 +4940,23 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "I'm already healthy, I don't need {{selected-item-name}} right now."
-msgstr ""
+msgstr "Ya estoy sano, no necesito {{selected-item-name}} ahora."
 
 #: assets/data/backpack-items.json:
 msgid "Fresh Water"
-msgstr ""
+msgstr "Agua Fresca"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of water. It restores 20 HP."
-msgstr ""
+msgstr "Una botella de agua. Restablece 20 HP."
 
 #: assets/data/backpack-items.json:
 msgid "Pomegranate juice"
-msgstr ""
+msgstr "Zumo de granada"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of pomegranate juice. It restores 50 HP."
-msgstr ""
+msgstr "Una botella de zumo de granada. Restablece 50 HP."
 
 #: assets/data/backpack-items.json:
 msgid "Kiwi juice"

@@ -4,7 +4,7 @@
 # Satou <sanna+dee@dismail.de>, 2022.
 # deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-08 21:28+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Japanese <https://translate.deepdaikon.xyz/projects/xeonjia/story/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Japanese <https://translate.deepdaikon.xyz/projects/xeonjia/story/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -228,11 +228,11 @@ msgstr "壊れたモニター。"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "No"
-msgstr ""
+msgstr "いいえ"
 
 #: assets/maps/story/47.tmx:
 msgid "I'm sorry, but you don't have permission to use this vessel.\nIf you want to reach the Fire Region you have to take the boats that leave from the north of this region."
@@ -1252,7 +1252,7 @@ msgstr "我々はお前のことを見ているぞ。"
 
 #: assets/maps/story/t1_02.tmx:
 msgid "The snowballs container is full."
-msgstr ""
+msgstr "雪玉コンテナはいっぱいになっている。"
 
 #: assets/maps/story/t1_02.tmx:
 msgid "* {{hero}} fills his snowballs container *"
@@ -1260,7 +1260,7 @@ msgstr ""
 
 #: assets/maps/story/t1_02.tmx:
 msgid "A snowdrift."
-msgstr ""
+msgstr "雪の吹きだまり。"
 
 #: assets/maps/story/t1_02.tmx:
 msgid "Hmm, I think if I run out of snowballs I can make new ones from snowdrifts like this one.\nI just have to press the \"{{inspect-key}}\" button."
@@ -1336,7 +1336,7 @@ msgstr "この植物は長い間水をやっていないみたいだ。"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "This plant is very fragrant."
-msgstr ""
+msgstr "この植物はとてもいい香りがする。"
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
@@ -2484,7 +2484,7 @@ msgstr ""
 
 #: assets/maps/story/70.tmx:
 msgid "dr. lache"
-msgstr ""
+msgstr "Dr.ラシェ"
 
 #: assets/maps/story/25_house.tmx:
 msgid "I'm a little confused."
@@ -2652,7 +2652,7 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "iosa&joza"
-msgstr ""
+msgstr "イオサ&ジョザ"
 
 #: assets/maps/story/x10.tmx:
 msgid "You know, {{hero}}, you and I are not that different.\nI acted for the highest good.\nThis is a sick world.\nIt must be healed and that's why difficult decisions must be made. And I took that responsibility upon myself.\nThe only way to restore order is through chaos.\nYou will understand it too sooner or later."
@@ -2676,7 +2676,7 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "I will defeat you."
-msgstr ""
+msgstr "あなたを倒す。"
 
 #: assets/maps/story/x10.tmx:
 msgid "Dr. Lache!"
@@ -2728,11 +2728,11 @@ msgstr ""
 
 #: assets/maps/story/x10.tmx:
 msgid "iosa"
-msgstr ""
+msgstr "イオサ"
 
 #: assets/maps/story/x10.tmx:
 msgid "joza"
-msgstr ""
+msgstr "ジョザ"
 
 #: assets/maps/story/39.tmx:
 msgid "Route 5"
@@ -2960,7 +2960,7 @@ msgstr "こんにちは、少しお疲れのようですね。ここで少し休
 
 #: assets/maps/story/66_house.tmx:
 msgid "* {{hero}} rested and is now in perfect health *"
-msgstr ""
+msgstr "*{{hero}}は休んだ、今はすっかり元気になった*"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Come back anytime."
@@ -4340,7 +4340,7 @@ msgstr ""
 
 #: assets/maps/story/2.tmx:
 msgid "This is a very strange stone… Never seen anything like this before."
-msgstr ""
+msgstr "これはとても不思議な石だ…こんなの見たことない。"
 
 #: assets/maps/story/2.tmx:
 msgid "I also often get hurt by rocks.\nIt's annoying but you'll get used to it."
@@ -4556,7 +4556,7 @@ msgstr "塔は見るに耐えない。"
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "This is a wall."
-msgstr ""
+msgstr "これは壁だ。"
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "king of evil"
@@ -4720,7 +4720,7 @@ msgstr "お年寄り"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "guy"
-msgstr ""
+msgstr "男性"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "old-man"
@@ -4828,11 +4828,11 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Icosahedron"
-msgstr ""
+msgstr "二十面体"
 
 #: assets/data/backpack-items.json:
 msgid "A strange blue icosahedral stone."
-msgstr ""
+msgstr "不思議な青い二十面体の石。"
 
 #: assets/data/backpack-items.json:
 msgid "Snow globe"
@@ -4844,27 +4844,27 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Package of the King"
-msgstr ""
+msgstr "王様の小包"
 
 #: assets/data/backpack-items.json:
 msgid "Package given to me by the King."
-msgstr ""
+msgstr "王様から預かった小包。"
 
 #: assets/data/backpack-items.json:
 msgid "Tetrahedron"
-msgstr ""
+msgstr "四面体"
 
 #: assets/data/backpack-items.json:
 msgid "A strange red tetrahedral stone."
-msgstr ""
+msgstr "不思議な赤い四面体の石。"
 
 #: assets/data/backpack-items.json:
 msgid "A pair of glasses"
-msgstr ""
+msgstr "メガネ"
 
 #: assets/data/backpack-items.json:
 msgid "Eyeglasses given to me by a girl."
-msgstr ""
+msgstr "女の人からもらったメガネ。"
 
 #: assets/data/backpack-items.json:
 msgid "Travel Pass"
@@ -4880,23 +4880,23 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "A strange green cubic stone."
-msgstr ""
+msgstr "不思議な緑の六面体の石。"
 
 #: assets/data/backpack-items.json:
 msgid "Octahedron"
-msgstr ""
+msgstr "八面体"
 
 #: assets/data/backpack-items.json:
 msgid "A strange white octahedral stone."
-msgstr ""
+msgstr "不思議な白い八面体の石。"
 
 #: assets/data/backpack-items.json:
 msgid "Dodecahedron"
-msgstr ""
+msgstr "十二面体"
 
 #: assets/data/backpack-items.json:
 msgid "A strange multicolored dodecahedral stone."
-msgstr ""
+msgstr "不思議な色とりどりの正十二面体の石。"
 
 #: assets/data/backpack-items.json:
 msgid "Signet #1"
@@ -4924,7 +4924,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Berries"
-msgstr ""
+msgstr "ベリー"
 
 #: assets/data/backpack-items.json:
 msgid "Five little berries. They restore 5 HP."
@@ -4932,11 +4932,11 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "I'm already healthy, I don't need {{selected-item-name}} right now."
-msgstr ""
+msgstr "もう元気だから、{{selected-item-name}}は今のところ必要ない。"
 
 #: assets/data/backpack-items.json:
 msgid "Fresh Water"
-msgstr ""
+msgstr "フレッシュウォーター"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of water. It restores 20 HP."
@@ -4944,11 +4944,11 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Pomegranate juice"
-msgstr ""
+msgstr "ザクロジュース"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of pomegranate juice. It restores 50 HP."
-msgstr ""
+msgstr "ザクロジュース。50HP回復する。"
 
 #: assets/data/backpack-items.json:
 msgid "Kiwi juice"

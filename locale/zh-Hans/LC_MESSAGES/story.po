@@ -9,7 +9,7 @@
 # Super12138 <cutewrp@163.com>, 2023.
 # hooay233 <hoorayof_hooay@163.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-18 12:14+0000\nLast-Translator: hooay233 <hoorayof_hooay@163.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -238,11 +238,11 @@ msgstr "一台被砸坏的显示器。"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "No"
-msgstr ""
+msgstr "否"
 
 #: assets/maps/story/47.tmx:
 #, fuzzy
@@ -4967,31 +4967,31 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Berries"
-msgstr ""
+msgstr "浆果"
 
 #: assets/data/backpack-items.json:
 msgid "Five little berries. They restore 5 HP."
-msgstr ""
+msgstr "五个小浆果(恢复 5 HP)."
 
 #: assets/data/backpack-items.json:
 msgid "I'm already healthy, I don't need {{selected-item-name}} right now."
-msgstr ""
+msgstr "我已经很健康了, 暂时不需要 {{selected-item-name}} ."
 
 #: assets/data/backpack-items.json:
 msgid "Fresh Water"
-msgstr ""
+msgstr "新鲜的水"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of water. It restores 20 HP."
-msgstr ""
+msgstr "一瓶水(恢复 20 HP)."
 
 #: assets/data/backpack-items.json:
 msgid "Pomegranate juice"
-msgstr ""
+msgstr "石榴汁"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of pomegranate juice. It restores 50 HP."
-msgstr ""
+msgstr "一瓶石榴汁(恢复 50 HP)."
 
 #: assets/data/backpack-items.json:
 msgid "Kiwi juice"
@@ -5027,11 +5027,11 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "HP UP +5"
-msgstr ""
+msgstr "生命最大值 +5"
 
 #: assets/data/backpack-items.json:
 msgid "Increases the max HP by 5 points."
-msgstr ""
+msgstr "增加最大 5 点生命值."
 
 #: assets/data/backpack-items.json:
 msgid "Here is where I lived."
