@@ -31,7 +31,7 @@ extension InputController on XeonjiaGame {
 
   /// Handle pan update event
   void panUpdateHandler(DragUpdateInfo info) async {
-    if (!(settings.gestures || miniMapEnabled)) return;
+    if (settings.showDPad && !miniMapEnabled) return;
     if (isNotPaused) {
       _gesturesDirection = GetDirection.fromOffset(
           info.raw.delta.dx.abs() > info.raw.delta.dy.abs()
