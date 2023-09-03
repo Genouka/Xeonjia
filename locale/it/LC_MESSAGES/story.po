@@ -4374,7 +4374,7 @@ msgid "During your journey you will run into them many times, it's not a problem
 msgstr "Durante il tuo viaggio ti imbatterai in loro molte volte, non è un problema.\nAlcune volte non puoi nemmeno evitarle.\nFai solo attenzione a non rimanere senza PV."
 
 #: assets/maps/story/x9.tmx:
-msgid "XEONJIA TOWER – 9"
+msgid "XEONJIA TOWER – 9F"
 msgstr "TORRE XEONJIA – 9P"
 
 #: assets/maps/story/x9.tmx:

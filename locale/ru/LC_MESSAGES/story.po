@@ -4375,7 +4375,7 @@ msgid "During your journey you will run into them many times, it's not a problem
 msgstr ""
 
 #: assets/maps/story/x9.tmx:
-msgid "XEONJIA TOWER – 9"
+msgid "XEONJIA TOWER – 9F"
 msgstr ""
 
 #: assets/maps/story/x9.tmx:
