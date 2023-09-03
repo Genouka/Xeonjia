@@ -1,10 +1,10 @@
 # Translation for Xeonjia
 # Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# deepdaikon <deepdaikon@tuta.io>, 2022.
+# deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 # J. Lavoie <j.lavoie@net-c.ca>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-01 18:11+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: Greek <https://translate.deepdaikon.xyz/projects/xeonjia/ui/el/>\nLanguage: el\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 08:06+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Greek <https://translate.deepdaikon.xyz/projects/xeonjia/ui/el/>\nLanguage: el\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -192,7 +192,7 @@ msgstr ""
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Sound effects"
-msgstr ""
+msgstr "Ηχητικές επιδράσεις"
 
 #: lib/ui/screens/settings/resources/option_list.dart:
 msgid "Enable sound effects"
@@ -264,7 +264,7 @@ msgstr "Αποστολή ηλεκτρονικό ταχυδρομείο"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ask for something or request a new feature"
-msgstr ""
+msgstr "Ρωτήστε κάτι ή ζητήσετε ένα νέο χαρακτηριστικό"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
@@ -300,7 +300,7 @@ msgstr "Διάβασε τις άδειες των τρίτων μερών"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ok"
-msgstr ""
+msgstr "ΟΚ"
 
 #: lib/game/widgets/world_map.dart:
 msgid "This is where I am right now."
@@ -460,7 +460,7 @@ msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Are you sure you want to restart this game?"
-msgstr ""
+msgstr "Σίγουρα θέλετε να επανεκκινήσετε το παιχνίδι;"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "It will restart from the last location change."
@@ -468,7 +468,7 @@ msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Are you sure you want to quit this game?"
-msgstr ""
+msgstr "Σίγουρα θέλετε να εγκαταλείψετε το παιχνίδι;"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "\n\nGame data since the last time you changed your location will be lost."

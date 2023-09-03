@@ -4,7 +4,7 @@
 # deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 # 4545duckling <motazahmed54321@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-06-07 13:13+0000\nLast-Translator: 4545duckling <motazahmed54321@gmail.com>\nLanguage-Team: Arabic <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ar/>\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 08:06+0000\nLast-Translator: 4545duckling <motazahmed54321@gmail.com>\nLanguage-Team: Arabic <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ar/>\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "What's your name?"
@@ -28,7 +28,7 @@ msgstr "اعدادات"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
-msgstr "انقر للعب"
+msgstr "اضغط للعب"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Press enter"

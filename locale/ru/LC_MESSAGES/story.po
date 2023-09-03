@@ -8,7 +8,7 @@
 # Alex <usr@skrep.eu>, 2023.
 # H6rd <hrdq@proton.me>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-20 13:25+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 08:06+0000\nLast-Translator: Andrey <jius55025@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -16,7 +16,7 @@ msgstr "ВОДЯНАЯ СКИПТА — B1F"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "We are underground."
-msgstr "Мы под землёй."
+msgstr "Мы под землей."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -256,7 +256,7 @@ msgstr "Монстры охотятся за мной! Я заберу печа�
 
 #: assets/maps/story/t2_04.tmx:
 msgid "Let's get the second signet!"
-msgstr "Давай возьмём вторую печать."
+msgstr "Давай возьмём вторую печать!"
 
 #: assets/maps/story/t2_04.tmx:
 msgid "Hi!"
@@ -444,7 +444,7 @@ msgstr ""
 
 #: assets/maps/story/73.tmx:
 msgid "If I find something interesting I'll give it to you."
-msgstr ""
+msgstr "Если я найду что-то интересное, я отдам это тебе."
 
 #: assets/maps/story/75.tmx:
 msgid "Route 10"
@@ -496,7 +496,7 @@ msgstr "Что?\nХмм... Очень странно... Я думаю я зна�
 
 #: assets/maps/story/75.tmx:
 msgid "September!?"
-msgstr "Сентябрь?!"
+msgstr "Сентябрь!?"
 
 #: assets/maps/story/75.tmx:
 msgid "Well, yes, you know how she is.\nShe must have gone there to get the signet by herself and now she's probablu going to the tower."
@@ -540,19 +540,19 @@ msgstr "А вот и я!"
 
 #: assets/maps/story/75.tmx:
 msgid "Milla! You need me?"
-msgstr ""
+msgstr "Милла! Я тебе нужен?"
 
 #: assets/maps/story/75.tmx:
 msgid "They. They need you."
-msgstr ""
+msgstr "Им. Ты нужен им."
 
 #: assets/maps/story/75.tmx:
 msgid "Do you know each other?"
-msgstr ""
+msgstr "Вы знаете друг друга?"
 
 #: assets/maps/story/75.tmx:
 msgid "Yes, but we don't get along very well."
-msgstr ""
+msgstr "Да, но не достаточно хорошо."
 
 #: assets/maps/story/75.tmx:
 msgid "It's not true, Milla always exaggerates.\nWe are \"best friends forever\"."
@@ -564,7 +564,7 @@ msgstr "Ты всегда дразнишь меня. Ты же знаешь, я 
 
 #: assets/maps/story/75.tmx:
 msgid "Fire is your friend if you are its friend."
-msgstr ""
+msgstr "Огонь - твой друг, если ты его друг."
 
 #: assets/maps/story/75.tmx:
 msgid "I prefer the Spirit of Water, at least he makes me feel good."
@@ -572,7 +572,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Don't tell me about the Spirit of Water!\nIt's unbearable!"
-msgstr ""
+msgstr "Не говори мне о Духе Воды!\nЭто невыносимо!"
 
 #: assets/maps/story/75.tmx:
 msgid "Can anyone tell me what's going on?!"
@@ -580,7 +580,7 @@ msgstr "Кто-нибудь может мне сказать что происх
 
 #: assets/maps/story/75.tmx:
 msgid "Milla is the Spirit of the Forest."
-msgstr ""
+msgstr "Милла - Дух Леса."
 
 #: assets/maps/story/75.tmx:
 msgid "What?!\nAnd why didn't you tell me sooner?!"
@@ -612,7 +612,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Of course! I love heating things!"
-msgstr ""
+msgstr "Конечно! Я люблю нагревать вещи!"
 
 #: assets/maps/story/75.tmx:
 msgid "Great!\nIt was easy.\nThank you very much!"
@@ -632,11 +632,11 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "We'll see…"
-msgstr ""
+msgstr "Посмотрим…"
 
 #: assets/maps/story/75.tmx:
 msgid "I force you."
-msgstr ""
+msgstr "Я заставляю тебя."
 
 #: assets/maps/story/75.tmx:
 msgid "I'm leaving you now, I'm getting ready to warm up the tower, it will require a lot of energy.\nBye!"
@@ -652,11 +652,11 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Ok see you soon!"
-msgstr ""
+msgstr "Ладно, скоро увидимся!"
 
 #: assets/maps/story/75.tmx:
 msgid "fire spirit"
-msgstr ""
+msgstr "огненный дух"
 
 #: assets/maps/story/68.tmx:
 msgid "How many meters above sea level are we?"
@@ -712,11 +712,11 @@ msgstr "Я помнил её менее суровой."
 
 #: assets/maps/story/77.tmx:
 msgid "Route 11"
-msgstr ""
+msgstr "Дорога 11"
 
 #: assets/maps/story/77.tmx:
 msgid "Cableway"
-msgstr ""
+msgstr "Канатная дорога"
 
 #: assets/maps/story/14.tmx:
 msgid "Hello, I'm a workers of the Kingdom.\nI'm smoothing this rock so it doesn't hurt anymore.\nA lot of people complain about these rocks, I'm sorry."
@@ -740,7 +740,7 @@ msgstr "Я должен остаться здесь, ведь если я уйд
 
 #: assets/maps/story/7.tmx:
 msgid "We stop for a picnic? No?"
-msgstr ""
+msgstr "Мы останавливаемся на пикник? Нет?"
 
 #: assets/maps/story/7.tmx:
 msgid "Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays."
@@ -944,7 +944,7 @@ msgstr "Давай! Я должен победить его, но я даже н
 
 #: assets/maps/story/34_cave.tmx:
 msgid "The King of Evil, as you know, came to us 64 years ago freezing the Kingdom and instilling fear.\nI don't know exactly where he comes from, but what I do know is that his goal is to collect gems that are scattered around the world.\nHe needs them to get energy to completely freeze our world."
-msgstr "Король Зла, как вы его называете, пришел в эти земли 64 года назад, заморозив Королевтсво и внушив смертным страх.\nЯ не знаю точно, откуда он родом, но я знаю что он пришел сюда, чтобы заполучить кристталы, которые разбросаны по всеми миру.\nС их помощью он заполучит силу, с которой заморозит весь ваш мир."
+msgstr "Король Зла, как вы его называете, пришел в эти земли 64 года назад, заморозив Королевтсво и внушив смертным страх.\nЯ не знаю точно, откуда он родом, но я знаю что он пришел сюда, чтобы заполучить кристаллы, которые разбросаны по всеми миру.\nС их помощью он заполучит силу, с которой заморозит весь ваш мир."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Completely?!"
@@ -1064,7 +1064,7 @@ msgstr "Камень, покрытый мхом."
 
 #: assets/maps/story/70_house2.tmx:
 msgid "Did you know that dragons sleep inside volcanoes?\nI've never seen one but I believe it."
-msgstr ""
+msgstr "Ты знал, что драконы спят внутри вулканов?\nЯ ни одного не видел, но я верю в это."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "T-today… today is the day I've been waiting for all my life. My journey to the Xeonjia Tower is about to begin.\nThis year I'm the chosen \"hero\" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to."
@@ -1076,7 +1076,7 @@ msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "It all started here."
-msgstr ""
+msgstr "Это всё началось здесь."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'd like to go back to bed but I can't."
@@ -1172,7 +1172,7 @@ msgstr ""
 
 #: assets/maps/story/69_house3.tmx:
 msgid "You have traveled a long way, keep some water."
-msgstr ""
+msgstr "Ты прошел долгий путь, держи немного воды."
 
 #: assets/maps/story/69_house3.tmx:
 msgid "Getting enough water is important for your health."
@@ -1276,7 +1276,7 @@ msgstr "Эта часть находится в стадии разработк�
 
 #: assets/maps/story/72.tmx:
 msgid "Why am I here? What am I supposed to do?"
-msgstr ""
+msgstr "Почему я здесь? Что я должен сделать?"
 
 #: assets/maps/story/72.tmx:
 msgid "One day you will feel nostalgic about this moment."
@@ -1312,7 +1312,7 @@ msgstr ""
 
 #: assets/maps/story/19.tmx:
 msgid "Good luck."
-msgstr ""
+msgstr "Удачи."
 
 #: assets/maps/story/19.tmx:
 msgid "Xeonjia Tower ↑"
@@ -1380,7 +1380,7 @@ msgstr ""
 
 #: assets/maps/story/55_cableway.tmx:
 msgid "My journey is almost over, I'm a little bit sad for this."
-msgstr ""
+msgstr "Моё путешествие почти закончилось, мне немного грустно из-за этого."
 
 #: assets/maps/story/21.tmx:
 msgid "Route 2"
@@ -1428,7 +1428,7 @@ msgstr ""
 
 #: assets/maps/story/t2_03.tmx:
 msgid "We won! We are strong!"
-msgstr ""
+msgstr "Мы победили! Мы сильные!"
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "How is it possible that there is all this built under the bridge?"
@@ -1436,7 +1436,7 @@ msgstr ""
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "Am I wasting my life?"
-msgstr ""
+msgstr "Я трачу свою жизнь в пустую?"
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "guy"
@@ -1448,7 +1448,7 @@ msgstr ""
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "Did I forget to sleep this week?"
-msgstr ""
+msgstr "Я забыл поспать на этой неделе?"
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "Maybe if I had more than 2 hours a week to work on this project it would be better."
@@ -1460,11 +1460,11 @@ msgstr ""
 
 #: assets/maps/story/74.tmx:
 msgid "This is a very strange stone…"
-msgstr ""
+msgstr "Это очень странный камень…"
 
 #: assets/maps/story/74.tmx:
 msgid "In my opinion that stone shouldn't have been here."
-msgstr ""
+msgstr "Я считаю, что этот камень не должен быть здесь."
 
 #: assets/maps/story/74.tmx:
 msgid "In the ardent embrace, life is born again."
@@ -1500,7 +1500,7 @@ msgstr ""
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "I have to go to the Fire Region."
-msgstr ""
+msgstr "Я должен идти в Регион Огня."
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "Oh, do you want to leave the region already?\nThis saddens me.\nTo go to the Fire Region you have to take a boat that you find west of here.\nYou need my written permission, here it is."
@@ -1508,11 +1508,11 @@ msgstr ""
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "Thank you!\nI will come back sooner or later."
-msgstr ""
+msgstr "Спасибо! \nЯ вернусь раньше или позже."
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "In my region you are always welcome."
-msgstr ""
+msgstr "В моём регионе тебе всегда рады."
 
 #: assets/maps/story/32.tmx:
 msgid "Relax and enjoy the sea."
@@ -1568,7 +1568,7 @@ msgstr "Дзззз…дззз…дзззз…"
 
 #: assets/maps/story/25.tmx:
 msgid "phone"
-msgstr ""
+msgstr "телефон"
 
 #: assets/maps/story/25.tmx:
 msgid "What's happening?"
@@ -1644,7 +1644,7 @@ msgstr "Нет, малыш. Нам звонил лидер команды \"Го
 
 #: assets/maps/story/71.tmx:
 msgid "Route 9"
-msgstr ""
+msgstr "Дорога 9"
 
 #: assets/maps/story/69_house2.tmx:
 msgid "We pride ourselves on our traditions, such as the fire dance, to honor the power of the volcano and appease its spirits."
@@ -1660,7 +1660,7 @@ msgstr ""
 
 #: assets/maps/story/53.tmx:
 msgid "I like this city!"
-msgstr ""
+msgstr "Мне нравится этот город!"
 
 #: assets/maps/story/53.tmx:
 msgid "Hey, welcome to Neubrij!\nWe have the best view in the whole Kingdom."
@@ -1668,7 +1668,7 @@ msgstr ""
 
 #: assets/maps/story/53.tmx:
 msgid "This city is very expensive."
-msgstr ""
+msgstr "Этот город очень дорогой."
 
 #: assets/maps/story/53.tmx:
 msgid "From this side you can see the volcano, beautiful beautiful."
@@ -1680,7 +1680,7 @@ msgstr ""
 
 #: assets/maps/story/53.tmx:
 msgid "Today is my day off.\nWorking 40 hours a week is tough."
-msgstr ""
+msgstr "Сегодня у меня отгул.\nРаботать 40 часов в неделю это жестко."
 
 #: assets/maps/story/53.tmx:
 msgid "Don't worry, the bridge is very solid.\nIt has already collapsed 2 times but this time it was done a little better.\nI'm sure we've learned from our mistakes by now.\nDon't worry."
@@ -1696,7 +1696,7 @@ msgstr ""
 
 #: assets/maps/story/53.tmx:
 msgid "Oh how wonderful!"
-msgstr ""
+msgstr "О, как чудесно!"
 
 #: assets/maps/story/53.tmx:
 msgid "Hey, that's not fair.\nI can only see the wall!"
@@ -1704,7 +1704,7 @@ msgstr ""
 
 #: assets/maps/story/53.tmx:
 msgid "Not my problem."
-msgstr ""
+msgstr "Не моя проблема."
 
 #: assets/maps/story/53.tmx:
 msgid "I wish I had a camera."
@@ -3556,7 +3556,7 @@ msgstr ""
 
 #: assets/data/items-and-events.json:
 msgid "Here is the Observation Tower."
-msgstr ""
+msgstr "Вот смотровая башня."
 
 #: assets/data/items-and-events.json:
 msgid "Here is the Watery Crypt."
@@ -3568,7 +3568,7 @@ msgstr ""
 
 #: assets/data/items-and-events.json:
 msgid "Here is the cableway."
-msgstr ""
+msgstr "Вот канатная дорога."
 
 #: assets/data/items-and-events.json:
 msgid "Here is the Fiery Crypt."
@@ -3584,8 +3584,8 @@ msgstr ""
 
 #: assets/data/items-and-events.json:
 msgid "Here is the volcano."
-msgstr ""
+msgstr "Вот вулкан."
 
 #: assets/data/items-and-events.json:
 msgid "Here is the Xeonjia Tower."
-msgstr ""
+msgstr "Вот башня Xeonjia."

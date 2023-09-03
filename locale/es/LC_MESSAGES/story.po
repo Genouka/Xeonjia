@@ -7,7 +7,7 @@
 # YottaMxt <yottamxt@gmail.com>, 2023.
 # Nicolas <nicolas2013toledo@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-08-20 13:25+0000\nLast-Translator: Nicolas <nicolas2013toledo@gmail.com>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 08:06+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -1295,7 +1295,7 @@ msgstr "Este no es un lugar para infantes, vete a casa."
 
 #: assets/maps/story/9.tmx:
 msgid "How rude!\nHe pushed me away viciously!"
-msgstr ""
+msgstr "¡Qué grosero!\n¡Me empujó con saña!"
 
 #: assets/maps/story/9.tmx:
 msgid "Weird things happen in this area…"
@@ -1375,7 +1375,7 @@ msgstr "¡Estoy asustado, estoy asustado! ¡¿Que pasa si hay una falla?! ¡¿Qu
 
 #: assets/maps/story/55_cableway.tmx:
 msgid "On the next ride I really get on it."
-msgstr ""
+msgstr "En el siguiente viaje me subo de verdad."
 
 #: assets/maps/story/55_cableway.tmx:
 #, fuzzy
@@ -1468,7 +1468,7 @@ msgstr "En mi opinion esa piedra no debería haber estado aquí."
 
 #: assets/maps/story/74.tmx:
 msgid "In the ardent embrace, life is born again."
-msgstr ""
+msgstr "En la ardiente aceptación renace la vida."
 
 #: assets/maps/story/2_house.tmx:
 msgid "You are the chosen one for this year, right?\nMy son was too, many years ago."
@@ -1492,7 +1492,7 @@ msgstr "{{hero}}!\nEncantado de conocerte, soy ON VII, el rey de la Region del A
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "My duty!\nBy the way, King Xe III gave me this package for you."
-msgstr ""
+msgstr "¡Mi deber!\nPor cierto, el Rey Xe III me dio este paquete para ti."
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "Oh thank you, it's medicine for my back pain.\nYou know, sitting all day…\nSome plants in the Mitsu Forest are miraculous to solve these problems.\nWhere are you headed?"
