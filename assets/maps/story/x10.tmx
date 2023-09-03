@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="78">
  <properties>
-  <property name="action">(if (and (!get &quot;x10-safe&quot;) (and (eq? (enemies-count) 0) (and (get &quot;x10-talk&quot;) (! (get &quot;x10-ok&quot;)))))
+  <property name="action">(begin
+  (map-name &quot;XEONJIA TOWER – 10F&quot;)
+(if (and (!get &quot;x10-safe&quot;) (and (eq? (enemies-count) 0) (and (get &quot;x10-talk&quot;) (! (get &quot;x10-ok&quot;)))))
   (begin
     (set &quot;x10-ok&quot; #t)
     (dialog '((&quot;…&quot;)))
@@ -65,7 +67,7 @@
     (set-orientation '(0 69))
     (wait 0.5)
     (leave-npc 69)
-    (music &quot;enemies&quot;)))</property>
+    (music &quot;enemies&quot;))))</property>
   <property name="can-escape" type="bool" value="false"/>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="XEONJIA TOWER – 10F"/>
@@ -157,7 +159,7 @@
     (&quot;dr. lache/lache&quot; &quot;How rude your friend.&quot;)
     (&quot;/september&quot; &quot;We didn't come all this way here to hear your craziness.\nLet's fight.&quot;)
     (&quot;/iosa&quot; &quot;Don't talk to our boss like that.&quot;)
-    (&quot;/joza&quot; &quot;It deserves respect.&quot;)
+    (&quot;/joza&quot; &quot;He deserves respect.&quot;)
     (&quot;iosa&amp;joza/iosa_and_joza&quot; &quot;Apologize to him!&quot;)
     (&quot;/milla_happy&quot; &quot;How cute, they talk together!&quot;)
     (&quot;dr. lache/lache&quot; &quot;I don't need their apologies.\nTheir rudeness is the result of this sick society.\nIt makes me realize once again that what we are doing is right and necessary.\nLet's get rid of them now.\nYou have come all this way in vain because your end has come.&quot;)

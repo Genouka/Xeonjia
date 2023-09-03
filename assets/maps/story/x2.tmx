@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="74">
  <properties>
-  <property name="action">(if (and (!get &quot;x2-safe&quot;) (!get &quot;x2-talk&quot;))
+  <property name="action">(begin
+  (map-name &quot;XEONJIA TOWER – 2F&quot;)
+(if (and (!get &quot;x2-safe&quot;) (!get &quot;x2-talk&quot;))
   (begin
     (set &quot;x2-talk&quot; #t)
     (dialog
@@ -12,7 +14,7 @@
       (&quot;/shen&quot; &quot;I don't like to fight, I'll leave it to you.&quot;)
       (&quot;/&quot; &quot;Ok, so it's me, September and Milla.&quot;)
       (&quot;/september&quot; &quot;What a dream team.&quot;)
-      (&quot;/milla_happy&quot; &quot;Best trio ever.&quot;)))))</property>
+      (&quot;/milla_happy&quot; &quot;Best trio ever.&quot;))))))</property>
   <property name="can-escape" type="bool" value="false"/>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="XEONJIA TOWER – 2F"/>
