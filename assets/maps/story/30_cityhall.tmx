@@ -120,7 +120,7 @@
       (dialog
         '((&quot;/hero&quot; &quot;H-hello.&quot;)
         (&quot;king/king-1&quot; &quot;Hello, you must be {{hero}}! Nice to meet you.\nI heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region.&quot;)
-        (&quot;king/king-1_happy&quot; &quot;Do not confuse me with the King of Evil, I'm not bad a guy haha.&quot;)
+        (&quot;king/king-1_happy&quot; &quot;Do not confuse me with the King of Evil, I'm not a bad guy haha.&quot;)
         (&quot;king/king-1&quot; &quot;So… tell me, how are you? Is everything okay? How is the journey going?&quot;)
         (&quot;/hero&quot; &quot;Everything good, I just got the first signet!&quot;)
         (&quot;king/king-1_happy&quot; &quot;Oh really?! This is great news!&quot;)
@@ -159,7 +159,7 @@
       (dialog
         '((&quot;/hero&quot; &quot;H-hello.&quot;)
         (&quot;king/king-1&quot; &quot;Hello, you must be {{hero}}! Nice to meet you.\nI heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region.&quot;)
-        (&quot;king/king-1_happy&quot; &quot;Do not confuse me with the King of Evil, I'm not bad a guy haha.&quot;)
+        (&quot;king/king-1_happy&quot; &quot;Do not confuse me with the King of Evil, I'm not a bad guy haha.&quot;)
         (&quot;king/king-1&quot; &quot;So… tell me, how are you? Is everything okay? How is the journey going?&quot;)
         (&quot;/hero&quot; &quot;Everything good, I just got the first signet!&quot;)
         (&quot;king/king-1_happy&quot; &quot;Oh really?! This is great news!&quot;)

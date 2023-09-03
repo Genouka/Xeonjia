@@ -35,7 +35,7 @@
         '((&quot;/&quot; &quot;Now I think it's better for me if I go to my safe home.\nBye!&quot;)))))
   (dialog '((&quot;/&quot; &quot;I'll go home as soon as my legs stop shaking in fear.&quot;))))
 
-(dialog '((&quot;/&quot; &quot;Yes, I'm still here.\nI like this place&quot;))))</property>
+(dialog '((&quot;/&quot; &quot;Yes, I'm still here.\nI like this place.&quot;))))</property>
     <property name="actionOnEvent">(if (get &quot;013-h-safe&quot;)
   (set-orientation 0))</property>
    </properties>

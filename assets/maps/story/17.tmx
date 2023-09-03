@@ -38,7 +38,7 @@
 
 (dialog '((&quot;/&quot; &quot;These monsters don't seem very smart to me.&quot;)))
 
-(dialog '((&quot;/&quot; &quot;I miss the monsters&quot;))))</property>
+(dialog '((&quot;/&quot; &quot;I miss the monsters.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>
