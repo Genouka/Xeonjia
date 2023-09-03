@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/screens/info/resources/third_party_licenses.dart';
+import 'package:xeonjia/utils/config.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
@@ -15,49 +16,50 @@ class _InfoPageState extends State<InfoPage> {
     {
       'title': 'DeepDaikon Project',
       'subtitle': 'Game made by %s'.i18n.fill(['DeepDaikon']),
-      'url': 'https://deepdaikon.xyz',
+      'url': Config.websiteUrl,
       'icon': const Icon(Icons.change_history),
     },
     {
-      'title': 'Version: %s'.i18n.fill(['2.5.0']),
+      'title': 'Version %s'.i18n.fill([Config.version]),
       'subtitle': 'App version'.i18n,
       'url': '',
       'icon': const Icon(Icons.looks_3_outlined),
     },
-    {
-      'title': 'Donate'.i18n,
-      'subtitle': 'Contribute to the project'.i18n,
-      'url': 'https://deepdaikon.xyz/donate',
-      'icon': const Icon(Icons.euro),
-    },
+    if (!Config.hideDonationInfo)
+      {
+        'title': 'Donate'.i18n,
+        'subtitle': 'Contribute to the project'.i18n,
+        'url': Config.donateUrl,
+        'icon': const Icon(Icons.euro),
+      },
     {
       'title': 'Translate'.i18n,
       'subtitle': 'Translate in your language'.i18n,
-      'url': 'https://translate.deepdaikon.xyz/engage/xeonjia/',
+      'url': Config.translateUrl,
       'icon': const Icon(Icons.translate_rounded),
     },
     {
       'title': 'Send email'.i18n,
       'subtitle': 'Ask for something'.i18n,
-      'url': 'mailto:deepdaikon' '@' 'tuta.io?subject=Xeonjia Game',
+      'url': Config.mailTo,
       'icon': const Icon(Icons.email),
     },
     {
       'title': 'Report bugs'.i18n,
       'subtitle': 'Report the bugs you found'.i18n,
-      'url': 'https://gitlab.com/deepdaikon/Xeonjia/issues',
+      'url': Config.bugTrackerUrl,
       'icon': const Icon(Icons.bug_report),
     },
     {
       'title': 'Source code'.i18n,
       'subtitle': 'View the source code'.i18n,
-      'url': 'https://gitlab.com/deepdaikon/Xeonjia',
+      'url': Config.sourceCodeUrl,
       'icon': const Icon(Icons.developer_mode),
     },
     {
       'title': 'License (GPLv3)'.i18n,
       'subtitle': 'Read software license'.i18n,
-      'url': 'https://gitlab.com/deepdaikon/Xeonjia/blob/master/LICENSE',
+      'url': Config.licenseUrl,
       'icon': const Icon(Icons.chrome_reader_mode),
     },
     {
