@@ -1059,11 +1059,11 @@ msgid "I wanted to buy some medicines but they don't have the ones I like."
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "#3: I'm green if #5 and #6 are both the same color. Otherwise I'm red."
+msgid "I'm green if #5 and #6 are both the same color. Otherwise I'm red."
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "rock"
+msgid "rock #3"
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
@@ -1075,23 +1075,43 @@ msgid "I no longer need to press the button."
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "#5: I'm red if #1 is red. Otherwise I'm green."
+msgid "I'm red if #1 is red. Otherwise I'm green."
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "#4: I'm green if #3 is green. Otherwise I'm red."
+msgid "rock #5"
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "#2: I'm green if #4 is red. Otherwise I'm red."
+msgid "I'm green if #3 is green. Otherwise I'm red."
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "#1: I'm red if #4 is green. Otherwise I'm green."
+msgid "rock #4"
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "#6: I'm red if #2 is green. Otherwise I'm green."
+msgid "I'm green if #4 is red. Otherwise I'm red."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "rock #2"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I'm red if #4 is green. Otherwise I'm green."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "rock #1"
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "I'm red if #2 is green. Otherwise I'm green."
+msgstr ""
+
+#: assets/maps/story/34_cave.tmx:
+msgid "rock #6"
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
@@ -1223,7 +1243,7 @@ msgid "Let me know if you need help."
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
-msgid "I think that all the writings on the six stones must be true to invoke the spirit."
+msgid "I think that all the writings on the six rocks must be true to invoke the spirit."
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
