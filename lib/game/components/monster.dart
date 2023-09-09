@@ -21,6 +21,10 @@ class MonsterComponent extends BasicComponent with Walker, RenderOffset, HPBar {
   Future<void>? onLoad() async {
     await super.onLoad();
     if (tile.properties['visible'] == 'false') hide();
+    if (!deleted && !isBeingDeleted) {
+      reflection = IceReflection(this);
+      gameRef.add(reflection!);
+    }
   }
 
   @override

@@ -169,6 +169,9 @@ abstract class BasicComponent extends SpriteComponent
   late FireAtlas atlas;
   Sprite getSpriteFromAtlas() => atlas.getSprite(name!);
 
+  /// Reflection on ice
+  IceReflection? reflection;
+
   /// Execute an action
   void executeAction([String? action, BasicComponent? actor]) {
     gameRef.executeAction(
@@ -322,6 +325,7 @@ abstract class BasicComponent extends SpriteComponent
     removeChildren();
     deleted = true;
     gameRef.remove(this);
+    if (reflection != null) gameRef.remove(reflection!);
   }
 
   /// Delete every son of this component
@@ -340,5 +344,6 @@ abstract class BasicComponent extends SpriteComponent
     x = startingPosition.x * componentSize;
     y = startingPosition.y * componentSize;
     if (!gameRef.children.contains(this)) gameRef.add(this);
+    if (reflection != null) gameRef.add(reflection!);
   }
 }

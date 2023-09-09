@@ -13,6 +13,7 @@ export 'package:xeonjia/game/components/static.dart';
 export 'package:xeonjia/game/components/thin_wall.dart';
 export 'package:xeonjia/game/components/utils/deletion_animation.dart';
 export 'package:xeonjia/game/components/utils/hp_bar.dart';
+export 'package:xeonjia/game/components/utils/ice_reflection.dart';
 export 'package:xeonjia/game/components/utils/npc_controller.dart';
 export 'package:xeonjia/game/components/utils/render_offset.dart';
 export 'package:xeonjia/game/components/utils/text_animation.dart';

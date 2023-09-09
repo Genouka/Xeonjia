@@ -85,6 +85,10 @@ class CharacterComponent extends BasicComponent
     } else {
       this.add(NpcController());
     }
+    if (!deleted && !isBeingDeleted) {
+      reflection = IceReflection(this);
+      gameRef.add(reflection!);
+    }
     return null;
   }
 
