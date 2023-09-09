@@ -1,0 +1,5 @@
+* Story mode is now complete!
+* Improve UI/UX and graphics
+* Various improvements
+* Update translations
+* Bug fixes
