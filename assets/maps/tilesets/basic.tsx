@@ -28,6 +28,10 @@
   <properties>
    <property name="healthPointsDelta" type="int" value="25"/>
   </properties>
+  <animation>
+   <frame tileid="11" duration="750"/>
+   <frame tileid="13" duration="750"/>
+  </animation>
  </tile>
  <tile id="12" class="Modifier">
   <properties>

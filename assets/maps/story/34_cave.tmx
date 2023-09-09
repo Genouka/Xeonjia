@@ -38,7 +38,7 @@
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;rock/&quot; &quot;#3: I'm green if #5 and #6 are both the same color. Otherwise I'm red.&quot;)
+            '((&quot;rock #3/none&quot; &quot;I'm green if #5 and #6 are both the same color. Otherwise I'm red.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -57,7 +57,7 @@
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;rock/&quot; &quot;#5: I'm red if #1 is red. Otherwise I'm green.&quot;)
+            '((&quot;rock #5/none&quot; &quot;I'm red if #1 is red. Otherwise I'm green.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -76,7 +76,7 @@
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;rock/&quot; &quot;#4: I'm green if #3 is green. Otherwise I'm red.&quot;)
+            '((&quot;rock #4/none&quot; &quot;I'm green if #3 is green. Otherwise I'm red.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -95,7 +95,7 @@
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;rock/&quot; &quot;#2: I'm green if #4 is red. Otherwise I'm red.&quot;)
+            '((&quot;rock #2/none&quot; &quot;I'm green if #4 is red. Otherwise I'm red.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -114,7 +114,7 @@
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;rock/&quot; &quot;#3: I'm green if #5 and #6 are both the same color. Otherwise I'm red.&quot;)
+            '((&quot;rock #3/none&quot; &quot;I'm green if #5 and #6 are both the same color. Otherwise I'm red.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -132,7 +132,7 @@
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;rock/&quot; &quot;#1: I'm red if #4 is green. Otherwise I'm green.&quot;)
+            '((&quot;rock #1/none&quot; &quot;I'm red if #4 is green. Otherwise I'm green.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -151,7 +151,7 @@
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
   (begin
     (dialog
-      '((&quot;rock/&quot; &quot;#1: I'm red if #4 is green. Otherwise I'm green.&quot;)
+      '((&quot;rock #1/none&quot; &quot;I'm red if #4 is green. Otherwise I'm green.&quot;)
       (&quot;There is a button, do I press it?&quot;)))
     (define id &quot;34-cave-button&quot;)
     (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -169,7 +169,7 @@
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;rock/&quot; &quot;#6: I'm red if #2 is green. Otherwise I'm green.&quot;)
+            '((&quot;rock #6/none&quot; &quot;I'm red if #2 is green. Otherwise I'm green.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -188,7 +188,7 @@
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;rock/&quot; &quot;#6: I'm red if #2 is green. Otherwise I'm green.&quot;)
+            '((&quot;rock #6/none&quot; &quot;I'm red if #2 is green. Otherwise I'm green.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -206,7 +206,7 @@
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;rock/&quot; &quot;#2: I'm green if #4 is red. Otherwise I'm red.&quot;)
+            '((&quot;rock #2/none&quot; &quot;I'm green if #4 is red. Otherwise I'm red.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -224,7 +224,7 @@
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;rock/&quot; &quot;#4: I'm green if #3 is green. Otherwise I'm red.&quot;)
+            '((&quot;rock #4/none&quot; &quot;I'm green if #3 is green. Otherwise I'm red.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -242,7 +242,7 @@
     <property name="action">(if (!get &quot;34-cave-spirit&quot;)
     (begin
         (dialog
-            '((&quot;rock/&quot; &quot;#5: I'm red if #1 is red. Otherwise I'm green.&quot;)
+            '((&quot;rock #5/none&quot; &quot;I'm red if #1 is red. Otherwise I'm green.&quot;)
             (&quot;There is a button, do I press it?&quot;)))
         (define id &quot;34-cave-button&quot;)
         (answer id '((&quot;Yes&quot; . #t) (&quot;No&quot; . #f)))
@@ -365,7 +365,7 @@
       (dialog '((&quot;/&quot; &quot;Let me know if you need help.&quot;)))
       (set &quot;34-cave-talk-shen-1&quot; #t))
     (begin
-      (dialog '((&quot;/&quot; &quot;I think that all the writings on the six stones must be true to invoke the spirit.&quot;)))
+      (dialog '((&quot;/&quot; &quot;I think that all the writings on the six rocks must be true to invoke the spirit.&quot;)))
       (if (get &quot;34-cave-talk-shen-2&quot;)
         (if (get &quot;34-cave-talk-shen-helped&quot;)
           (dialog '((&quot;/&quot; &quot;I think that #1 should be green.&quot;)))
