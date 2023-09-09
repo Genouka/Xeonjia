@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # Manuel Tassi <mannivuwiki@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-09 08:00+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -1079,7 +1079,7 @@ msgstr "Sono rosso se #1 è rosso. Altrimenti sono verde."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "rock #5"
-msgstr ""
+msgstr "roccia #5"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I'm green if #3 is green. Otherwise I'm red."
@@ -1087,7 +1087,7 @@ msgstr "Sono verde se #3 è verde. Altrimenti sono rosso."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "rock #4"
-msgstr ""
+msgstr "roccia #4"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I'm green if #4 is red. Otherwise I'm red."
@@ -1095,7 +1095,7 @@ msgstr "Sono verde se #4 è rosso. Altrimenti sono rosso."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "rock #2"
-msgstr ""
+msgstr "roccia #2"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I'm red if #4 is green. Otherwise I'm green."
@@ -1103,7 +1103,7 @@ msgstr "Sono rosso se #4 è verde. Altrimenti sono verde."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "rock #1"
-msgstr ""
+msgstr "roccia #1"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I'm red if #2 is green. Otherwise I'm green."
@@ -1111,7 +1111,7 @@ msgstr "Sono rosso se #2 è verde. Altrimenti sono verde."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "rock #6"
-msgstr ""
+msgstr "roccia #6"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hi {{hero}}! How are you doing? Were you able to get the first signet?"

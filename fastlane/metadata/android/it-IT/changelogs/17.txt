@@ -1,0 +1,5 @@
+* La modalità Storia è ora completa!
+* Miglioramenti alla UI/UX e alla grafica
+* Vari miglioramenti
+* Aggiornate traduzioni
+* Risolti bug
