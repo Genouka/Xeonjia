@@ -197,7 +197,7 @@ class CharacterComponent extends BasicComponent
       gameRef.pause(stopMusic: false, stopEngine: false);
       deletionAnimation(callback: () {
         gameRef.resume();
-        super.delete();
+        if (isBeingDeleted) super.delete();
         if (isPlayerOne) gameRef.end();
       });
     }

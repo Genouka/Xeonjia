@@ -18,10 +18,8 @@ mixin DeletionAnimation on Walker {
   @override
   void render(Canvas canvas) {
     if (isBeingDeleted && timer != null) {
-      super.render(canvas
-        ..drawPaint(paint
-          ..color = const Color(0xff000000)
-              .withOpacity(max(0, 1 - timer!.timer.progress - 0.5))));
+      setOpacity(max(0, 1 - timer!.timer.progress - 0.5));
+      super.render(canvas);
       canvas.drawCircle(
           Offset(componentSize / 2, componentSize / 2),
           max(0, 1 - timer!.timer.progress - 0.5) * 45,
@@ -32,5 +30,11 @@ mixin DeletionAnimation on Walker {
     } else {
       super.render(canvas);
     }
+  }
+
+  @override
+  void respawn(XeonjiaGame gameRef) {
+    makeOpaque();
+    super.respawn(gameRef);
   }
 }

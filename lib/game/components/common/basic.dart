@@ -344,6 +344,8 @@ abstract class BasicComponent extends SpriteComponent
     x = startingPosition.x * componentSize;
     y = startingPosition.y * componentSize;
     if (!gameRef.children.contains(this)) gameRef.add(this);
-    if (reflection != null) gameRef.add(reflection!);
+    if (reflection != null && !gameRef.children.contains(reflection)) {
+      gameRef.add(reflection!);
+    }
   }
 }
