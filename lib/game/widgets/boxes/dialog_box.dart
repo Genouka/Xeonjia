@@ -108,7 +108,7 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   void resumeAnimation() =>
       _controller?.isCompleted ?? true ? null : _controller?.forward();
 
-  double get opacity => widget.gameRef.isItemsMenuActive ? 1 : 0.8;
+  double get opacity => widget.gameRef.isItemsMenuActive ? 1 : 0.85;
   String get author => widget.gameRef.messageManager.currentMessage!.authorName;
 
   @override
@@ -257,6 +257,9 @@ class _AnswerButtons extends StatelessWidget {
           for (var answer in answers)
             TextButton(
               onPressed: () => gameRef.messageManager.chooseAnswer(answer),
+              style: ButtonStyle(
+                  overlayColor: MaterialStateColor.resolveWith(
+                      (states) => Colors.transparent)),
               child: Container(
                 constraints: const BoxConstraints(minWidth: 120),
                 child: Text(
