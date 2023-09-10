@@ -75,7 +75,7 @@ class _PercentIndicator extends StatelessWidget {
   _PercentIndicator({
     required this.values,
     required this.text,
-    this.colors = const [Colors.lightBlue, Color(0xFF81D4FA)],
+    required this.colors,
     // ignore: unused_element
     this.poisoned = false,
   })  : assert(colors.length == 2),
