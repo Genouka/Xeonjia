@@ -271,6 +271,10 @@ mixin Walker on BasicComponent {
     if (weapon.powerPoints > 0) {
       previousPP = weapon.powerPoints;
       weapon.shoot(shooter: this);
+    } else {
+      gameRef.setMessage(Message(
+          gameRef, "I've run out of shots for this weapon.".i18n,
+          author: '/' + (gameRef.user?.name ?? 'hero')));
     }
     if ((weapon.maxPp == double.infinity || weapon.powerPoints != previousPP) &&
         weapon.id != Weapons.snowball.id) {
