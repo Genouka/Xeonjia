@@ -13,10 +13,12 @@ extension InputController on XeonjiaGame {
       Platform.isLinux || Platform.isWindows ? 'X' : 'A';
   String get punchButtonKey =>
       Platform.isLinux || Platform.isWindows ? 'Q' : 'P';
-  String get snowballButtonKey =>
-      Platform.isLinux || Platform.isWindows ? 'E' : 'S';
-  String get mineButtonKey =>
-      Platform.isLinux || Platform.isWindows ? 'R' : 'M';
+  String get snowballButtonKey => Platform.isLinux || Platform.isWindows
+      ? 'Snowball (%s)'.i18n.fill(['E'])
+      : 'Snowball'.i18n;
+  String get mineButtonKey => Platform.isLinux || Platform.isWindows
+      ? 'Mine (%s)'.i18n.fill(['R'])
+      : 'Mine'.i18n;
 
   static Direction? _gesturesDirection;
   static double _gesturesElapsed = 0;

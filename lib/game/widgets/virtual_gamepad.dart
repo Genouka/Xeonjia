@@ -26,9 +26,8 @@ class Button extends HudButtonComponent {
         ) {
     (button as CircleComponent).paint.color = color.withOpacity(0.6);
     (buttonDown as CircleComponent).paint.color = color.withOpacity(0.4);
-    textBox
-      ..text = text
-      ..priority = 9999999;
+    hasIcon = text.length > 1;
+    if (!hasIcon) textBox.text = text;
   }
 
   Button.A(XeonjiaGame gameRef)
@@ -49,7 +48,7 @@ class Button extends HudButtonComponent {
 
   Button.S(XeonjiaGame gameRef)
       : this(
-          gameRef.snowballButtonKey,
+          'snowball-icon',
           () => gameRef.user!.shoot(Weapons.snowball.id),
           buttonPosition: Anchor.topRight,
           color: Colors.blueGrey.shade800,
@@ -62,7 +61,7 @@ class Button extends HudButtonComponent {
 
   Button.M(XeonjiaGame gameRef)
       : this(
-          gameRef.mineButtonKey,
+          'mine-icon',
           () => gameRef.user!.shoot(Weapons.mine.id),
           buttonPosition: Anchor.bottomLeft,
           color: Colors.blueGrey.shade800,
@@ -91,6 +90,17 @@ class Button extends HudButtonComponent {
           visibility: () => gameRef.miniMapActive,
         );
 
+  @override
+  Future<void> onLoad() async {
+    super.onLoad();
+    if (hasIcon) {
+      var atlas = await gameRef.loadCustomAtlas('images/metadata/weapons.xfa');
+      spriteComponent =
+          SpriteComponent(sprite: atlas.getSprite(text), priority: 9999999);
+      placeSprite();
+    }
+  }
+
   final String text;
   final VoidCallback onTap;
   final Color color;
@@ -106,12 +116,19 @@ class Button extends HudButtonComponent {
   final PositionComponent buttonDown =
       CircleComponent(radius: 20, paint: Paint());
 
-  final TextBoxComponent textBox =
-      TextBoxComponent(text: '', size: Vector2.all(40), align: Anchor.center);
+  SpriteComponent? spriteComponent;
+  final TextBoxComponent textBox = TextBoxComponent(
+      text: '', size: Vector2.all(40), align: Anchor.center, priority: 9999999);
+  bool hasIcon = false;
+  void placeSprite() {
+    spriteComponent!.size = size / 1.3;
+    spriteComponent!.x = (size.x - spriteComponent!.size.x) / 2;
+    spriteComponent!.y = (size.y - spriteComponent!.size.y) / 2;
+  }
 
   @override
   void onMount() {
-    this.add(textBox);
+    this.add(hasIcon ? spriteComponent! : textBox);
     super.onMount();
   }
 
@@ -121,16 +138,20 @@ class Button extends HudButtonComponent {
     size = Vector2.all(max(40, gameSize.toSize().shortestSide / 14));
     (button as CircleComponent).radius = size.x / 2;
     (buttonDown as CircleComponent).radius = size.x / 2;
-    textBox.size = size;
     if (gameRef.buildContext != null) {
-      textBox.textRenderer = TextPaint(
-          style: Theme.of(gameRef.buildContext!)
-              .textTheme
-              .labelLarge!
-              .copyWith(fontSize: size.x / 1.5));
+      if (spriteComponent != null) {
+        placeSprite();
+      } else {
+        textBox.size = size;
+        textBox.textRenderer = TextPaint(
+            style: Theme.of(gameRef.buildContext!)
+                .textTheme
+                .labelLarge!
+                .copyWith(fontSize: size.x / 1.5));
+        textBox.text = text + ' ';
+        textBox.text = text.trim();
+      }
     }
-    textBox.text = text + ' ';
-    textBox.text = text.trim();
     position = Vector2(gameSize.x - size.x * (buttonPosition.x == 0 ? 4 : 2),
         gameSize.y - size.x * (buttonPosition.y == 0 ? 4 : 2));
   }
