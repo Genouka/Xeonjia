@@ -407,6 +407,22 @@ msgstr "Tippek elrejtése"
 msgid "By clicking on the map I can go back to places I have already been."
 msgstr ""
 
+#: lib/game/utils/input_controller.dart:
+msgid "Snowball (%s)"
+msgstr ""
+
+#: lib/game/utils/input_controller.dart:
+msgid "Snowball"
+msgstr ""
+
+#: lib/game/utils/input_controller.dart:
+msgid "Mine (%s)"
+msgstr ""
+
+#: lib/game/utils/input_controller.dart:
+msgid "Mine"
+msgstr ""
+
 #: lib/game/utils/event_manager.dart:
 msgid "Where am I? How did I end up here?"
 msgstr ""
@@ -521,6 +537,10 @@ msgstr "* {{hero}} ad: %s *"
 
 #: lib/game/components/common/basic.dart:
 msgid "You can't defeat me as long as there are other monsters besides me."
+msgstr ""
+
+#: lib/game/components/common/walker.dart:
+msgid "I've run out of shots for this weapon."
 msgstr ""
 
 #: lib/game/components/door.dart:
