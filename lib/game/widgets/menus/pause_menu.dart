@@ -155,7 +155,8 @@ class PauseMenuState extends State<PauseMenu> {
                     .i18n
                     .fill([widget.gameRef.september!.hp.round().toString()])
                 : '') +
-            '\n\n' 'What do you want to do?'.i18n;
+            '\n\n' +
+            'What do you want to do?'.i18n;
         buttons = [
           actionButton(
               (selectedOptionIndex == 0 ? '> ' : '') +
