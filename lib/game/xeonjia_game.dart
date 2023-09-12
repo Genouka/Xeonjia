@@ -715,6 +715,20 @@ class XeonjiaGame extends FlameGame
   void onPanCancel() => panCancelHandler();
 
   @override
+  void onPanDown(DragDownInfo info) {
+    longPressMoving = false;
+    longPressButton = children.firstWhereOrNull(
+            (e) => e is Button && e.containsPoint(info.eventPosition.game))
+        as Button?;
+    longPressTime = longPressButton != null ? elapsed : double.infinity;
+  }
+
+  /// Handle long press on bottom right Buttons
+  Button? longPressButton;
+  double longPressTime = double.infinity;
+  bool longPressMoving = false;
+
+  @override
   void onTapUp(int pointerId, TapUpInfo info) {
     tapUpHandler(pointerId, info);
     super.onTapUp(pointerId, info);

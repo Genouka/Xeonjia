@@ -33,6 +33,21 @@ extension InputController on XeonjiaGame {
 
   /// Handle pan update event
   void panUpdateHandler(DragUpdateInfo info) async {
+    if (longPressMoving ||
+        (elapsed > longPressTime + 1 &&
+            longPressButton != null &&
+            longPressButton ==
+                children.firstWhereOrNull((e) =>
+                    e is Button && e.containsPoint(info.eventPosition.game)))) {
+      longPressMoving = true;
+      settings.buttonsOffset = Offset(
+          settings.buttonsOffset.dx - info.raw.delta.dx,
+          settings.buttonsOffset.dy - info.raw.delta.dy);
+      for (final component in children) {
+        if (component is Button) component.updatePosition();
+      }
+      return;
+    }
     if (settings.showDPad && !miniMapEnabled) return;
     if (isNotPaused) {
       _gesturesDirection = GetDirection.fromOffset(
@@ -68,6 +83,7 @@ extension InputController on XeonjiaGame {
   void panCancelHandler() {
     _gesturesDirection = null;
     _gesturesPlayerMoved = false;
+    longPressTime = double.infinity;
   }
 
   /// Handle tap up event
@@ -79,13 +95,10 @@ extension InputController on XeonjiaGame {
 
   /// Handle tap gesture
   void _tapHandler(Offset position) {
-    if (isPaused || !(user?.isMyTurn ?? false)) return;
-
-    // Ignore tap near buttons (bottom right)
-    var buttonSize =
-        children.whereType<Button>().firstOrNull?.size ?? Vector2.zero();
-    if (position.dx > canvasSize.x - buttonSize.x * (inBattle ? 4 : 2) &&
-        position.dy > canvasSize.y - buttonSize.y * (inBattle ? 4 : 2)) {
+    if (isPaused ||
+        !(user?.isMyTurn ?? false) ||
+        children
+            .any((e) => e is Button && e.containsPoint(position.toVector2()))) {
       return;
     }
 

@@ -14,6 +14,7 @@ class Button extends HudButtonComponent {
     this.percent,
     this.color = Colors.blueGrey,
     this.visibility,
+    this.movable = true,
   })  : paint = Paint()
           ..strokeWidth = 6
           ..color = color.withOpacity(0.7)
@@ -79,6 +80,7 @@ class Button extends HudButtonComponent {
           buttonPosition: Anchor.topRight,
           color: Colors.grey.shade800.withOpacity(0.7),
           visibility: () => gameRef.miniMapActive,
+          movable: false,
         );
 
   Button.minus(XeonjiaGame gameRef)
@@ -88,6 +90,7 @@ class Button extends HudButtonComponent {
           buttonPosition: Anchor.bottomRight,
           color: Colors.grey.shade800.withOpacity(0.7),
           visibility: () => gameRef.miniMapActive,
+          movable: false,
         );
 
   @override
@@ -108,6 +111,7 @@ class Button extends HudButtonComponent {
   final Anchor buttonPosition;
   final Function? percent;
   final Function? visibility;
+  final bool movable;
 
   @override
   final PositionComponent button = CircleComponent(radius: 20, paint: Paint());
@@ -135,7 +139,7 @@ class Button extends HudButtonComponent {
   @override
   void onGameResize(Vector2 gameSize) {
     super.onGameResize(gameSize);
-    size = Vector2.all(max(40, gameSize.toSize().shortestSide / 14));
+    size = Vector2.all(getDimension(gameSize));
     (button as CircleComponent).radius = size.x / 2;
     (buttonDown as CircleComponent).radius = size.x / 2;
     if (gameRef.buildContext != null) {
@@ -152,8 +156,33 @@ class Button extends HudButtonComponent {
         textBox.text = text.trim();
       }
     }
-    position = Vector2(gameSize.x - size.x * (buttonPosition.x == 0 ? 4 : 2),
-        gameSize.y - size.x * (buttonPosition.y == 0 ? 4 : 2));
+    updatePosition();
+  }
+
+  static double getDimension(Vector2 size) =>
+      max(40, size.toSize().shortestSide / 14);
+  void updatePosition() {
+    var buttonsDimension = getDimension(gameRef.size);
+    settings.buttonsOffset = settings.buttonsOffset.dx == -1
+        ? Offset(buttonsDimension * 2, buttonsDimension * 2)
+        : Offset(
+            min(gameRef.size.x - buttonsDimension * 2,
+                max(buttonsDimension, settings.buttonsOffset.dx)),
+            min(gameRef.size.y - buttonsDimension * 2,
+                max(buttonsDimension, settings.buttonsOffset.dy)));
+    saveSettings();
+    position = movable
+        ? Vector2(
+            gameRef.size.x -
+                (buttonPosition.x == 0
+                    ? settings.buttonsOffset.dx + size.x * 2
+                    : settings.buttonsOffset.dx),
+            gameRef.size.y -
+                (buttonPosition.y == 0
+                    ? settings.buttonsOffset.dy + size.y * 2
+                    : settings.buttonsOffset.dy))
+        : Vector2(gameRef.size.x - size.x * (buttonPosition.x == 0 ? 4 : 2),
+            gameRef.size.y - size.x * (buttonPosition.y == 0 ? 4 : 2));
   }
 
   @override

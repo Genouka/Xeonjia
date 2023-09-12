@@ -11,6 +11,8 @@ class Settings {
         dPadSize = json['dPadSize'] ?? 1,
         dPadOffset =
             Offset(json['dPadOffsetX'] ?? 30, json['dPadOffsetY'] ?? 30),
+        buttonsOffset =
+            Offset(json['buttonsOffsetX'] ?? -1, json['buttonsOffsetY'] ?? -1),
         zoomIn = json['zoomIn'] ?? 9,
         firstRun = json['firstRun'] ?? true,
         backgroundMusic = json['backgroundMusic'] ?? true,
@@ -23,6 +25,8 @@ class Settings {
         'dPadSize': dPadSize,
         'dPadOffsetX': dPadOffset.dx,
         'dPadOffsetY': dPadOffset.dy,
+        'buttonsOffsetX': buttonsOffset.dx,
+        'buttonsOffsetY': buttonsOffset.dy,
         'zoomIn': zoomIn,
         'firstRun': firstRun,
         'backgroundMusic': backgroundMusic,
@@ -47,6 +51,9 @@ class Settings {
   /// D-pad dimension and position
   double dPadSize;
   Offset dPadOffset;
+
+  /// Buttons position
+  Offset buttonsOffset;
 
   /// App language
   String? _languageCode;
