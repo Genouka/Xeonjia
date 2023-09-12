@@ -388,6 +388,7 @@ class XeonjiaGame extends FlameGame
 
   /// Pause game
   void pause({PauseMode? mode, bool stopMusic = true, bool stopEngine = true}) {
+    if (elapsed < 0.5 && mode == PauseMode.pause) return;
     if ((hasAction || messageManager.isActive) && mode != null) {
       stopEngine = true;
       stopMusic = true;
