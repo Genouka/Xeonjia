@@ -7,7 +7,7 @@ import 'package:xeonjia/game/xeonjia.dart';
 class IceReflection extends PositionComponent with HasGameRef<XeonjiaGame> {
   IceReflection(this.component);
   final BasicComponent component;
-  final Paint paint = Paint()..color = const Color.fromRGBO(0, 0, 0, 0.05);
+  final Paint paint = Paint()..color = const Color.fromRGBO(0, 0, 0, 0.075);
 
   @override
   void onMount() => gameRef.reorderChildren();
