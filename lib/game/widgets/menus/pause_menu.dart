@@ -65,47 +65,55 @@ class PauseMenuState extends State<PauseMenu> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.black87,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Expanded(
-            flex: 2,
-            child: Container(
-              alignment: Alignment.center,
-              child: FittedBox(
-                fit: BoxFit.fitWidth,
-                child: Text(
-                  pauseMode!.name.i18n.toUpperCase(),
-                  style: Theme.of(context).textTheme.displaySmall,
-                ),
-              ),
-            ),
-          ),
-          divider(context),
-          Expanded(
-            flex: 3,
-            child: Center(
-              child: ScrollConfiguration(
-                behavior: NoGlow(),
-                child: SingleChildScrollView(
+    return Stack(
+      children: [
+        Container(color: Colors.black87),
+        Center(
+          child: Container(
+            constraints: const BoxConstraints(maxHeight: 700),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(
+                  flex: 2,
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      text,
-                      style: Theme.of(context).textTheme.bodyMedium,
-                      textAlign: TextAlign.center,
+                    alignment: Alignment.center,
+                    child: FittedBox(
+                      fit: BoxFit.fitWidth,
+                      child: Text(
+                        pauseMode!.name.i18n.toUpperCase(),
+                        style: Theme.of(context).textTheme.displaySmall,
+                      ),
                     ),
                   ),
                 ),
-              ),
+                divider(context),
+                Expanded(
+                  flex: 3,
+                  child: Center(
+                    child: ScrollConfiguration(
+                      behavior: NoGlow(),
+                      child: SingleChildScrollView(
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Text(
+                            text,
+                            style: Theme.of(context).textTheme.bodyMedium,
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                divider(context),
+                Expanded(
+                    flex: 2, child: Center(child: Wrap(children: buttons))),
+              ],
             ),
           ),
-          divider(context),
-          Expanded(flex: 2, child: Center(child: Wrap(children: buttons))),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
