@@ -38,7 +38,8 @@ extension InputController on XeonjiaGame {
             longPressButton != null &&
             longPressButton ==
                 children.firstWhereOrNull((e) =>
-                    e is Button && e.containsPoint(info.eventPosition.game)))) {
+                    e is Button &&
+                    e.containsPoint(info.eventPosition.widget)))) {
       longPressMoving = true;
       settings.buttonsOffset = Offset(
           settings.buttonsOffset.dx - info.raw.delta.dx,

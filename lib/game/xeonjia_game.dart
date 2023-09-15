@@ -719,7 +719,7 @@ class XeonjiaGame extends FlameGame
   void onPanDown(DragDownInfo info) {
     longPressMoving = false;
     longPressButton = children.firstWhereOrNull(
-            (e) => e is Button && e.containsPoint(info.eventPosition.game))
+            (e) => e is Button && e.containsPoint(info.eventPosition.widget))
         as Button?;
     longPressTime = longPressButton != null ? elapsed : double.infinity;
   }
