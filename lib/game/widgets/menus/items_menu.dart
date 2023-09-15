@@ -166,8 +166,8 @@ class ItemsMenuState extends State<ItemsMenu> {
           onTap: widget.gameRef.userStatusMessage,
           opacity: 1,
           bottom: true,
-          below: true,
-          center: true,
+          below: MediaQuery.of(context).orientation == Orientation.portrait,
+          center: MediaQuery.of(context).orientation == Orientation.portrait,
           child: Text(
             '%s HP'.i18n.fill([widget.gameRef.playerOne!.hp.round()]),
             style: Theme.of(context).textTheme.labelLarge,
@@ -179,7 +179,8 @@ class ItemsMenuState extends State<ItemsMenu> {
           opacity: 1,
           bottom: true,
           below: false,
-          center: true,
+          center: MediaQuery.of(context).orientation == Orientation.portrait,
+          right: MediaQuery.of(context).orientation == Orientation.landscape,
           child: Text(
             '${widget.gameRef.playerOne!.money} ¤',
             style: Theme.of(context).textTheme.labelLarge,

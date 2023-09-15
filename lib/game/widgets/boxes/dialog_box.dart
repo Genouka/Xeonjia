@@ -137,8 +137,11 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                           widget.gameRef.messageManager.answers),
                     Container(
                       margin: widget.gameRef.isItemsMenuActive
-                          ? const EdgeInsets.only(
-                              bottom: 7, top: 20, left: 20, right: 20)
+                          ? EdgeInsets.only(
+                              bottom: 5.gridAligned.toDouble(),
+                              top: 20,
+                              left: 20,
+                              right: 20)
                           : const EdgeInsets.all(20),
                       padding: const EdgeInsets.all(20),
                       constraints: const BoxConstraints(maxWidth: 500),
