@@ -215,7 +215,8 @@ extension InputController on XeonjiaGame {
         backpackMenu?.state?.nextItem();
       } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
         backpackMenu?.state?.previousItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.space) {
+      } else if (event.logicalKey == LogicalKeyboardKey.space ||
+          event.logicalKey == LogicalKeyboardKey.keyX) {
         backpackMenu?.state?.chooseItem();
       } else if (event.logicalKey == LogicalKeyboardKey.escape) {
         overlays.remove('backpackMenu');
@@ -223,7 +224,8 @@ extension InputController on XeonjiaGame {
       }
     } else if (overlays.isActive('backpackMenu') && messageManager.isActive) {
       /// Backpack menu (with dialog)
-      if (event.logicalKey == LogicalKeyboardKey.space) {
+      if (event.logicalKey == LogicalKeyboardKey.space ||
+          event.logicalKey == LogicalKeyboardKey.keyX) {
         dialogBox.state?.next();
       }
     } else if (overlays.isActive('shopMenu') && !messageManager.isActive) {
@@ -232,7 +234,8 @@ extension InputController on XeonjiaGame {
         shopMenu?.state?.nextItem();
       } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
         shopMenu?.state?.previousItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.space) {
+      } else if (event.logicalKey == LogicalKeyboardKey.space ||
+          event.logicalKey == LogicalKeyboardKey.keyX) {
         shopMenu?.state?.chooseItem();
       } else if (event.logicalKey == LogicalKeyboardKey.escape) {
         overlays.remove('shopMenu');
@@ -240,7 +243,8 @@ extension InputController on XeonjiaGame {
       }
     } else if (overlays.isActive('shopMenu') && messageManager.isActive) {
       /// Shop menu (with dialog)
-      if (event.logicalKey == LogicalKeyboardKey.space) {
+      if (event.logicalKey == LogicalKeyboardKey.space ||
+          event.logicalKey == LogicalKeyboardKey.keyX) {
         dialogBox.state?.next();
       }
     } else if (overlays.isActive('pauseMenu')) {
@@ -308,7 +312,8 @@ extension InputController on XeonjiaGame {
         pause(mode: PauseMode.pause);
       }
     } else if (messageManager.isActive) {
-      if (event.logicalKey == LogicalKeyboardKey.space) {
+      if (event.logicalKey == LogicalKeyboardKey.space ||
+          event.logicalKey == LogicalKeyboardKey.keyX) {
         dialogBox.state?.next();
       } else if (event.logicalKey == LogicalKeyboardKey.escape) {
         pause(mode: PauseMode.pause);
