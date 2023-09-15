@@ -325,7 +325,7 @@ abstract class BasicComponent extends SpriteComponent
     removeChildren();
     deleted = true;
     gameRef.remove(this);
-    if (reflection != null) gameRef.remove(reflection!);
+    reflection?.removeFromParent();
   }
 
   /// Delete every son of this component

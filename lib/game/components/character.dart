@@ -189,6 +189,7 @@ class CharacterComponent extends BasicComponent
   void delete({bool silently = false}) {
     stop();
     isBeingDeleted = true;
+    reflection?.removeFromParent();
     if (silently) {
       super.delete();
       if (isPlayerOne) gameRef.end();
