@@ -95,7 +95,7 @@
     (wait)
     (leave-npc 63))
   (dialog '((&quot;/_happy&quot; &quot;The situation is getting critical.&quot;))))</property>
-    <property name="actionOnEvent">(if (visited-room &quot;x11&quot;)
+    <property name="actionOnEvent">(if (get &quot;x10-safe&quot;)
   (delete-me))</property>
     <property name="team" type="int" value="0"/>
    </properties>
@@ -108,7 +108,7 @@
     (wait)
     (leave-npc 64))
   (dialog '((&quot;/&quot; &quot;Stay focused!&quot;))))</property>
-    <property name="actionOnEvent">(if (visited-room &quot;x11&quot;)
+    <property name="actionOnEvent">(if (get &quot;x10-safe&quot;)
   (delete-me))</property>
     <property name="team" type="int" value="0"/>
    </properties>
