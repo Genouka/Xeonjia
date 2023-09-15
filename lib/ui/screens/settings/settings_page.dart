@@ -18,19 +18,19 @@ class SettingsPageState extends State<SettingsPage> {
   final _textFieldController = TextEditingController(text: mainCharacter.name);
   int focusItem = -1;
 
-  final Map<double, String> dPadSizes = {
-    0.8: 'Smallest'.i18n,
-    0.9: 'Small'.i18n,
-    1: 'Default'.i18n,
-    1.1: 'Large'.i18n,
-    1.2: 'Largest'.i18n,
-  };
+  Map<double, String> get dPadSizes => {
+        0.8: 'Smallest'.i18n,
+        0.9: 'Small'.i18n,
+        1: 'Default'.i18n,
+        1.1: 'Large'.i18n,
+        1.2: 'Largest'.i18n,
+      };
 
-  final Map<double, String> zoomOptions = {
-    12: 'Zoom out'.i18n,
-    9: 'Default'.i18n,
-    7: 'Zoom in'.i18n,
-  };
+  Map<double, String> get zoomOptions => {
+        12: 'Zoom out'.i18n,
+        9: 'Default'.i18n,
+        7: 'Zoom in'.i18n,
+      };
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -250,7 +250,9 @@ class SettingsPageState extends State<SettingsPage> {
                                         (bool value) => DropdownMenuItem<bool>(
                                           value: value,
                                           child: Text(
-                                            value ? 'D-pad' : 'Gestures',
+                                            value
+                                                ? 'D-pad'.i18n
+                                                : 'Gestures'.i18n,
                                             style: TextStyle(
                                               fontSize: 24,
                                               fontFamily: settings.font,
