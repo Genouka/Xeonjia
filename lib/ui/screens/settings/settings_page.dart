@@ -237,6 +237,8 @@ class SettingsPageState extends State<SettingsPage> {
                                         fontFamily: settings.font,
                                         color: Colors.white70)),
                                 trailing: DropdownButton<bool>(
+                                  alignment: AlignmentDirectional.centerEnd,
+                                  underline: const SizedBox(),
                                   value: settings.showDPad,
                                   onChanged: (bool? newValue) {
                                     settings.showDPad = newValue!;
@@ -284,6 +286,8 @@ class SettingsPageState extends State<SettingsPage> {
                                           fontFamily: settings.font,
                                           color: Colors.white70)),
                                   trailing: DropdownButton<double>(
+                                    alignment: AlignmentDirectional.centerEnd,
+                                    underline: const SizedBox(),
                                     value: settings.dPadSize,
                                     onChanged: (double? newValue) {
                                       settings.dPadSize = newValue!;
@@ -332,6 +336,8 @@ class SettingsPageState extends State<SettingsPage> {
                                         fontFamily: settings.font,
                                         color: Colors.white70)),
                                 trailing: DropdownButton<double>(
+                                  alignment: AlignmentDirectional.centerEnd,
+                                  underline: const SizedBox(),
                                   value: settings.zoomIn,
                                   onChanged: (double? newValue) {
                                     settings.zoomIn = newValue!;
@@ -378,6 +384,8 @@ class SettingsPageState extends State<SettingsPage> {
                                         fontFamily: settings.font,
                                         color: Colors.white70)),
                                 trailing: DropdownButton<Locale>(
+                                  alignment: AlignmentDirectional.centerEnd,
+                                  underline: const SizedBox(),
                                   value: settings.useSystemLanguage
                                       ? const Locale.fromSubtags()
                                       : settings.locale,
