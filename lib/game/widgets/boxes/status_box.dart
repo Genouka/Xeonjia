@@ -22,7 +22,8 @@ class StatusBoxState extends State<StatusBox> {
   @override
   Widget build(BuildContext context) {
     return widget.gameRef.playerOne?.isLoaded != true ||
-            widget.gameRef.miniMapEnabled
+            widget.gameRef.miniMapEnabled ||
+            widget.gameRef.messageManager.hideMap
         ? Container()
         : InfoBox(
             onTap: () => widget.gameRef.pause(mode: PauseMode.pause),

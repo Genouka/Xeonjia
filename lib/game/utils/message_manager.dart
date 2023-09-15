@@ -35,6 +35,7 @@ class MessageManager {
       if (hideMap) {
         hideMap = false;
         gameRef.playBackgroundMusic();
+        gameRef.statusBox.state?.refresh();
       }
     }
   }
@@ -43,7 +44,6 @@ class MessageManager {
   bool get isActive => _messages.isNotEmpty;
 
   /// If true, hide the map with a black container
-  /// eg. it will be used for chapter change
   bool hideMap = false;
 
   /// Choose an answer
@@ -58,6 +58,7 @@ class MessageManager {
       {bool? hideMap, VoidCallback? callback}) {
     if (newMessages == null) return;
     this.hideMap = hideMap ?? false;
+    gameRef.statusBox.state?.refresh();
     this.callback = callback;
     _messages.addAll(newMessages.fold([], (previousValue, element) {
       (previousValue as List<Message>).addAll(_splitMessage(element));
