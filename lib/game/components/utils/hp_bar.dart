@@ -21,7 +21,7 @@ mixin HPBar on Walker {
         Offset(width, -_padding),
         Paint()
           ..color = Colors.black
-          ..strokeWidth = 2
+          ..strokeWidth = 3
           ..style = PaintingStyle.fill);
 
     var currentHP = (hp * width) / maxHP;
@@ -30,7 +30,7 @@ mixin HPBar on Walker {
         Offset(currentHP, -_padding),
         Paint()
           ..color = MyColors.healthPointsColor(currentHP / width)
-          ..strokeWidth = 2
+          ..strokeWidth = 3
           ..style = PaintingStyle.fill);
   }
 }
