@@ -428,7 +428,12 @@ class SettingsPageState extends State<SettingsPage> {
                                     DropdownMenuItem<Locale>(
                                       value: const Locale.fromSubtags(),
                                       child: Text(
-                                        'System default'.i18n,
+                                        () {
+                                          String text = 'System default'.i18n;
+                                          return text.length > 22
+                                              ? text.substring(0, 20) + '…'
+                                              : text;
+                                        }(),
                                         style: TextStyle(
                                           fontSize:
                                               settings.smallerFont ? 20 : 24,
