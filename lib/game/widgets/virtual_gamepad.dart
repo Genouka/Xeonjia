@@ -243,7 +243,7 @@ class _VirtualDPadState extends State<VirtualDPad> {
 
   @override
   Widget build(BuildContext context) {
-    size = MediaQuery.of(context).size.shortestSide / 10 * settings.dPadSize;
+    size = MediaQuery.of(context).size.shortestSide / 9 * settings.dPadSize;
     settings.dPadOffset = Offset(
         max(
             0,
@@ -262,7 +262,7 @@ class _VirtualDPadState extends State<VirtualDPad> {
               onPanStart: (details) async {
                 direction = getDirection(details.localPosition);
                 if (direction == null) {
-                  moving = true;
+                  longPressTime = widget.gameRef.elapsed;
                 } else {
                   while (direction != null &&
                       widget.gameRef.map.id == currentMapId &&
@@ -274,7 +274,10 @@ class _VirtualDPadState extends State<VirtualDPad> {
                 }
               },
               onPanUpdate: (details) {
-                if (moving) {
+                if (moving ||
+                    (widget.gameRef.elapsed > longPressTime + 1 &&
+                        direction == null)) {
+                  moving = true;
                   setState(() => settings.dPadOffset = Offset(
                       details.globalPosition.dx - size * 1.5,
                       MediaQuery.of(context).size.height -
@@ -319,9 +322,11 @@ class _VirtualDPadState extends State<VirtualDPad> {
         : Container();
   }
 
+  double longPressTime = double.infinity;
   void onLongPressEnd() {
     direction = null;
     if (moving) saveSettings();
+    longPressTime = double.infinity;
     moving = false;
   }
 
