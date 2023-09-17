@@ -124,6 +124,14 @@ msgid "You only need it on a touchscreen device"
 msgstr "Ne hai bisogno solo su un dispositivo touchscreen"
 
 #: lib/ui/screens/settings/settings_page.dart:
+msgid "D-pad"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
+msgid "Gestures"
+msgstr ""
+
+#: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad size"
 msgstr "Dimensione D-pad"
 
