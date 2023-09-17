@@ -42,14 +42,16 @@ class WorldMap extends SpriteComponent with HasGameRef<XeonjiaGame> {
         break;
     }
     gameRef.camera.snapTo(Vector2(
-        gameRef.moveCamera(gameRef.size.x, gameRef.map.width, pointer.x),
         gameRef.moveCamera(
-            gameRef.size.y, gameRef.map.width * 0.7, pointer.y)));
+            gameRef.size.x, gameRef.map.width, pointer.x * gameRef.miniMapZoom),
+        gameRef.moveCamera(gameRef.size.y, gameRef.map.width * 0.7,
+            pointer.y * gameRef.miniMapZoom)));
   }
 
   void selectPoint() {
-    (children.firstWhereOrNull(
-                (m) => m is _RectangleMap && m.containsPoint(pointer.position))
+    (children.firstWhereOrNull((m) =>
+                m is _RectangleMap &&
+                m.containsPoint(pointer.position * gameRef.miniMapZoom))
             as _RectangleMap?)
         ?.selected();
   }

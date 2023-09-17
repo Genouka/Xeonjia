@@ -205,8 +205,11 @@ extension InputController on XeonjiaGame {
         hideHints = !hideHints;
       } else if (event.logicalKey == LogicalKeyboardKey.space ||
           event.logicalKey == LogicalKeyboardKey.keyX) {
-        worldMapComponent?.selectPoint();
-      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
+        messageManager.isActive
+            ? dialogBox.state?.next()
+            : worldMapComponent?.selectPoint();
+      } else if (event.logicalKey == LogicalKeyboardKey.escape &&
+          !messageManager.isActive) {
         miniMap();
       }
     } else if (overlays.isActive('backpackMenu') && !messageManager.isActive) {
