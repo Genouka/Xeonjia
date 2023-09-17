@@ -362,17 +362,24 @@ class _VirtualDPadState extends State<VirtualDPad> {
   }
 
   Direction? getDirection(Offset position) {
-    if (position.dx < size) {
+    if (position.dx <= size && position.dy >= size && position.dy <= 2 * size) {
       return Direction.left;
-    } else if (position.dx > 2 * size) {
+    } else if (position.dx >= 2 * size &&
+        position.dy >= size &&
+        position.dy <= 2 * size) {
       return Direction.right;
-    } else if (position.dy < size) {
+    } else if (position.dy <= size &&
+        position.dx >= size &&
+        position.dx <= 2 * size) {
       return Direction.up;
-    } else if (position.dy > 2 * size) {
+    } else if (position.dy >= 2 * size &&
+        position.dx >= size &&
+        position.dx <= 2 * size) {
       return Direction.down;
     }
     return null;
   }
 
-  Widget separator() => SizedBox(width: size, height: size);
+  Widget separator() =>
+      Container(width: size, height: size, color: Colors.transparent);
 }
