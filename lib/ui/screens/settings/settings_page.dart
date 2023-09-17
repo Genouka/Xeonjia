@@ -38,7 +38,7 @@ class SettingsPageState extends State<SettingsPage> {
           title: Text('Settings'.i18n.toUpperCase()),
           titleTextStyle: TextStyle(
             color: Colors.white,
-            fontSize: 48,
+            fontSize: settings.smallerFont ? 34 : 48,
             fontWeight: FontWeight.w600,
             fontFamily: settings.font,
           ),
@@ -80,12 +80,14 @@ class SettingsPageState extends State<SettingsPage> {
                                 }),
                                 title: Text(mainCharacter.name,
                                     style: TextStyle(
-                                        fontSize: 32,
+                                        fontSize:
+                                            settings.smallerFont ? 24 : 32,
                                         fontFamily: settings.font)),
                                 subtitle: Text(
                                     'Click here to change your name'.i18n,
                                     style: TextStyle(
-                                        fontSize: 24,
+                                        fontSize:
+                                            settings.smallerFont ? 18 : 24,
                                         fontFamily: settings.font,
                                         color: Colors.white70)),
                                 onTap: () => showDialog(
@@ -94,7 +96,9 @@ class SettingsPageState extends State<SettingsPage> {
                                       return AlertDialog(
                                         title: Text("What's your name?".i18n,
                                             style: TextStyle(
-                                                fontSize: 32,
+                                                fontSize: settings.smallerFont
+                                                    ? 24
+                                                    : 32,
                                                 fontFamily: settings.font),
                                             textAlign: TextAlign.center),
                                         content: insertNameForm(
@@ -119,7 +123,9 @@ class SettingsPageState extends State<SettingsPage> {
                                               'Discard'.i18n,
                                               style: TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 24,
+                                                  fontSize: settings.smallerFont
+                                                      ? 20
+                                                      : 24,
                                                   fontFamily: settings.font),
                                             ),
                                           ),
@@ -136,7 +142,9 @@ class SettingsPageState extends State<SettingsPage> {
                                               'Save'.i18n,
                                               style: TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 24,
+                                                  fontSize: settings.smallerFont
+                                                      ? 20
+                                                      : 24,
                                                   fontFamily: settings.font),
                                             ),
                                           ),
@@ -162,7 +170,8 @@ class SettingsPageState extends State<SettingsPage> {
                                     title: Text(
                                       'Background music'.i18n,
                                       style: TextStyle(
-                                          fontSize: 32,
+                                          fontSize:
+                                              settings.smallerFont ? 24 : 32,
                                           fontFamily: settings.font,
                                           color: Colors.white),
                                     ),
@@ -170,7 +179,8 @@ class SettingsPageState extends State<SettingsPage> {
                                     subtitle: Text(
                                         'Enable background music'.i18n,
                                         style: TextStyle(
-                                            fontSize: 24,
+                                            fontSize:
+                                                settings.smallerFont ? 20 : 24,
                                             fontFamily: settings.font,
                                             color: Colors.white70)),
                                     value: settings.backgroundMusic,
@@ -193,13 +203,15 @@ class SettingsPageState extends State<SettingsPage> {
                                         }),
                                     title: Text('Sound effects'.i18n,
                                         style: TextStyle(
-                                            fontSize: 32,
+                                            fontSize:
+                                                settings.smallerFont ? 24 : 32,
                                             fontFamily: settings.font,
                                             color: Colors.white)),
                                     activeColor: Colors.transparent,
                                     subtitle: Text('Enable sound effects'.i18n,
                                         style: TextStyle(
-                                            fontSize: 24,
+                                            fontSize:
+                                                settings.smallerFont ? 20 : 24,
                                             fontFamily: settings.font,
                                             color: Colors.white70)),
                                     value: settings.soundEffects,
@@ -221,7 +233,8 @@ class SettingsPageState extends State<SettingsPage> {
                                 }),
                                 title: Text('Controller'.i18n,
                                     style: TextStyle(
-                                        fontSize: 32,
+                                        fontSize:
+                                            settings.smallerFont ? 24 : 32,
                                         fontFamily: settings.font,
                                         color: Colors.white)),
                                 subtitle: Text(
@@ -233,7 +246,8 @@ class SettingsPageState extends State<SettingsPage> {
                                                 'You only need it on a touchscreen device'
                                                     .i18n),
                                     style: TextStyle(
-                                        fontSize: 24,
+                                        fontSize:
+                                            settings.smallerFont ? 20 : 24,
                                         fontFamily: settings.font,
                                         color: Colors.white70)),
                                 trailing: DropdownButton<bool>(
@@ -254,7 +268,9 @@ class SettingsPageState extends State<SettingsPage> {
                                                 ? 'D-pad'.i18n
                                                 : 'Gestures'.i18n,
                                             style: TextStyle(
-                                              fontSize: 24,
+                                              fontSize: settings.smallerFont
+                                                  ? 20
+                                                  : 24,
                                               fontFamily: settings.font,
                                             ),
                                           ),
@@ -277,14 +293,16 @@ class SettingsPageState extends State<SettingsPage> {
                                   }),
                                   title: Text('D-pad size'.i18n,
                                       style: TextStyle(
-                                          fontSize: 32,
+                                          fontSize:
+                                              settings.smallerFont ? 24 : 32,
                                           fontFamily: settings.font,
                                           color: Colors.white)),
                                   subtitle: Text(
                                       'Virtual D-pad dimension.\nTo change its position, long-press the D-pad in the center.'
                                           .i18n,
                                       style: TextStyle(
-                                          fontSize: 24,
+                                          fontSize:
+                                              settings.smallerFont ? 20 : 24,
                                           fontFamily: settings.font,
                                           color: Colors.white70)),
                                   trailing: DropdownButton<double>(
@@ -305,7 +323,9 @@ class SettingsPageState extends State<SettingsPage> {
                                             child: Text(
                                               dPadSizes[value]!,
                                               style: TextStyle(
-                                                fontSize: 24,
+                                                fontSize: settings.smallerFont
+                                                    ? 20
+                                                    : 24,
                                                 fontFamily: settings.font,
                                               ),
                                             ),
@@ -327,14 +347,16 @@ class SettingsPageState extends State<SettingsPage> {
                                 }),
                                 title: Text('Game zoom'.i18n,
                                     style: TextStyle(
-                                        fontSize: 32,
+                                        fontSize:
+                                            settings.smallerFont ? 24 : 32,
                                         fontFamily: settings.font,
                                         color: Colors.white)),
                                 subtitle: Text(
                                     'Zoom objects in the game for a better view'
                                         .i18n,
                                     style: TextStyle(
-                                        fontSize: 24,
+                                        fontSize:
+                                            settings.smallerFont ? 20 : 24,
                                         fontFamily: settings.font,
                                         color: Colors.white70)),
                                 trailing: DropdownButton<double>(
@@ -355,7 +377,9 @@ class SettingsPageState extends State<SettingsPage> {
                                           child: Text(
                                             zoomOptions[value]!,
                                             style: TextStyle(
-                                              fontSize: 24,
+                                              fontSize: settings.smallerFont
+                                                  ? 20
+                                                  : 24,
                                               fontFamily: settings.font,
                                             ),
                                           ),
@@ -377,12 +401,14 @@ class SettingsPageState extends State<SettingsPage> {
                                 }),
                                 title: Text('Language'.i18n,
                                     style: TextStyle(
-                                        fontSize: 32,
+                                        fontSize:
+                                            settings.smallerFont ? 24 : 32,
                                         fontFamily: settings.font,
                                         color: Colors.white)),
                                 subtitle: Text('App language'.i18n,
                                     style: TextStyle(
-                                        fontSize: 24,
+                                        fontSize:
+                                            settings.smallerFont ? 20 : 24,
                                         fontFamily: settings.font,
                                         color: Colors.white70)),
                                 trailing: DropdownButton<Locale>(
@@ -404,7 +430,8 @@ class SettingsPageState extends State<SettingsPage> {
                                       child: Text(
                                         'System default'.i18n,
                                         style: TextStyle(
-                                          fontSize: 24,
+                                          fontSize:
+                                              settings.smallerFont ? 20 : 24,
                                           fontFamily: settings.font,
                                         ),
                                       ),

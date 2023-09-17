@@ -78,7 +78,7 @@ class _InfoPageState extends State<InfoPage> {
         title: Text('Info'.i18n.toUpperCase()),
         titleTextStyle: TextStyle(
           color: Colors.white,
-          fontSize: 48,
+          fontSize: settings.smallerFont ? 34 : 48,
           fontWeight: FontWeight.w600,
           fontFamily: settings.font,
         ),
@@ -127,11 +127,12 @@ class _InfoPageState extends State<InfoPage> {
                             title: Text(
                               infoMenuList[index]['title'],
                               style: TextStyle(
-                                  fontSize: 32, fontFamily: settings.font),
+                                  fontSize: settings.smallerFont ? 24 : 32,
+                                  fontFamily: settings.font),
                             ),
                             subtitle: Text(infoMenuList[index]['subtitle'],
                                 style: TextStyle(
-                                    fontSize: 24,
+                                    fontSize: settings.smallerFont ? 18 : 24,
                                     color: Colors.white70,
                                     fontFamily: settings.font)),
                             onTap: () async {
@@ -167,15 +168,17 @@ class _InfoPageState extends State<InfoPage> {
           for (final license in licenses) {
             licenseList.add(ExpansionTile(
               title: Text(license['lib']!,
-                  style: const TextStyle(
-                      color: Colors.white, fontSize: 32, fontFamily: 'dd5x7')),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: settings.smallerFont ? 24 : 32,
+                      fontFamily: 'dd5x7')),
               initiallyExpanded: true,
               children: <Widget>[
                 SingleChildScrollView(
                     child: Text(license['text']!,
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 24,
+                            fontSize: settings.smallerFont ? 18 : 24,
                             fontFamily: settings.font))),
               ],
             ));
@@ -184,7 +187,7 @@ class _InfoPageState extends State<InfoPage> {
             title: Text('Third Party Licenses'.i18n,
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 48,
+                    fontSize: settings.smallerFont ? 34 : 48,
                     fontFamily: settings.font)),
             content: SizedBox(
                 width: double.maxFinite,
@@ -195,7 +198,7 @@ class _InfoPageState extends State<InfoPage> {
                 child: Text('Ok'.i18n,
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 32,
+                        fontSize: settings.smallerFont ? 24 : 32,
                         fontFamily: settings.font)),
               ),
             ],
