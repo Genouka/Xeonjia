@@ -152,16 +152,18 @@ class PauseMenuState extends State<PauseMenu> {
             (widget.gameRef.inBattle &&
                     widget.gameRef.milla != null &&
                     widget.gameRef.milla!.teamId == 0
-                ? '\n' 'Milla has %s HP.'
-                    .i18n
-                    .fill([widget.gameRef.milla!.hp.round().toString()])
+                ? '\n' +
+                    'Milla has %s HP.'
+                        .i18n
+                        .fill([widget.gameRef.milla!.hp.round().toString()])
                 : '') +
             (widget.gameRef.inBattle &&
                     widget.gameRef.september != null &&
                     widget.gameRef.september!.teamId == 0
-                ? ' ' 'September has %s HP.'
-                    .i18n
-                    .fill([widget.gameRef.september!.hp.round().toString()])
+                ? ' ' +
+                    'September has %s HP.'
+                        .i18n
+                        .fill([widget.gameRef.september!.hp.round().toString()])
                 : '') +
             '\n\n' +
             'What do you want to do?'.i18n;
