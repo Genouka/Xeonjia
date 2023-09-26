@@ -1,0 +1,5 @@
+* Der Story-Modus ist jetzt komplett!
+* Verbesserte UI/UX und Grafiken
+* Verschiedene Verbesserungen
+* Übersetzungen aktualisiert
+* Fehlerbehebungen

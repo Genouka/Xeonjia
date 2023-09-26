@@ -8,8 +8,9 @@
 # 鸞瑤綾舞 <user3678169@163.com>, 2023.
 # Super12138 <cutewrp@163.com>, 2023.
 # hooay233 <hoorayof_hooay@163.com>, 2023.
+# libamidi <scrollofamidi@outlook.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-23 13:13+0000\nLast-Translator: libamidi <scrollofamidi@outlook.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -4627,7 +4628,7 @@ msgstr ""
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "A table."
-msgstr ""
+msgstr "一张桌子。"
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "A stool."
@@ -4675,7 +4676,7 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A wall."
-msgstr ""
+msgstr "一堵墙。"
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "There is a small difference in height here… I can't climb over it on this side."
@@ -4839,15 +4840,15 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "milla"
-msgstr ""
+msgstr "米拉"
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "shen"
-msgstr ""
+msgstr "枕"
 
 #: assets/maps/tilesets/npc_main.tsx:
 msgid "september"
-msgstr ""
+msgstr "九月"
 
 #: assets/maps/tilesets/crypt-1.tsx:
 msgid "A sharp and pointed rock covered by moss. It hurts."
@@ -4855,7 +4856,7 @@ msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A chair."
-msgstr ""
+msgstr "一把椅子。"
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A painting that depicts this area long ago."
@@ -4875,11 +4876,11 @@ msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A television."
-msgstr ""
+msgstr "一台电视。"
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A bed."
-msgstr ""
+msgstr "一张床。"
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "This pig looks very happy."
