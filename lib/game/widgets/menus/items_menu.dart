@@ -30,6 +30,8 @@ abstract class ItemsMenu extends StatefulWidget {
 class ItemsMenuState extends State<ItemsMenu> {
   Item? selectedItem;
   int selectedItemIndex = 0;
+  final ScrollController _controller = ScrollController();
+  final double scrollOffset = 60;
 
   @override
   void initState() {
@@ -42,9 +44,15 @@ class ItemsMenuState extends State<ItemsMenu> {
     setState(() {
       if (++selectedItemIndex < widget.items.length) {
         selectedItem = widget.items[selectedItemIndex];
+        _controller.animateTo(selectedItemIndex * scrollOffset,
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.fastOutSlowIn);
       } else {
         selectedItemIndex = 0;
         selectedItem = widget.items.firstOrNull;
+        _controller.animateTo(0,
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.fastOutSlowIn);
       }
     });
   }
@@ -52,14 +60,25 @@ class ItemsMenuState extends State<ItemsMenu> {
   /// Select the previous item
   void previousItem() {
     setState(() {
-      if (--selectedItemIndex < 0) selectedItemIndex = widget.items.length - 1;
-      selectedItem = widget.items[selectedItemIndex];
+      if (--selectedItemIndex < 0) {
+        selectedItemIndex = widget.items.length - 1;
+        selectedItem = widget.items[selectedItemIndex];
+        _controller.animateTo(_controller.position.maxScrollExtent,
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.fastOutSlowIn);
+      } else {
+        selectedItem = widget.items[selectedItemIndex];
+        _controller.animateTo(selectedItemIndex * scrollOffset,
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.fastOutSlowIn);
+      }
     });
   }
 
   /// Choose the currently selected item
   void chooseItem([Item? i]) {
     setState(() {
+      selectedItemIndex = widget.items.indexOf(i ?? selectedItem!);
       selectedItem = i ?? selectedItem;
       widget.gameRef.setMessage(Message(
         widget.gameRef,
@@ -99,7 +118,7 @@ class ItemsMenuState extends State<ItemsMenu> {
                       constraints: const BoxConstraints(maxWidth: 700),
                       child: ListView(
                         shrinkWrap: true,
-                        primary: true,
+                        controller: _controller,
                         children: [
                           for (var i in widget.items)
                             InkWell(
