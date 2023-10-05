@@ -597,8 +597,8 @@ class XeonjiaGame extends FlameGame
     ]);
   }
 
-  /// Reload HP bar
-  void refreshHPBar() => statusBox.state?.refresh();
+  /// Reload HP bar (it shows [c]'s HP; if null it shows [user]'s HP)
+  void refreshHPBar([CharacterComponent? c]) => statusBox.state?.refresh(c);
 
   /// Explain battles
   void battleRules({bool askForConfirmation = false}) {

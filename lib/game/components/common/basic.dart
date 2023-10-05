@@ -208,7 +208,9 @@ abstract class BasicComponent extends SpriteComponent
       poisonQuantity += poison;
       if (_hp < 0) _hp = 0;
       if (_hp > maxHP) _hp = maxHP;
-      if (isUser && difference != 0) gameRef.refreshHPBar();
+      if (isUser && difference != 0) {
+        gameRef.refreshHPBar(this as CharacterComponent);
+      }
       if (_hp <= 0) {
         if (name == 'king-of-evil' && gameRef.enemies > 1) {
           _hp = 1;

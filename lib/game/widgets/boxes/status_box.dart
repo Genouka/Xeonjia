@@ -15,9 +15,13 @@ class StatusBox extends StatefulWidget {
 }
 
 class StatusBoxState extends State<StatusBox> {
-  void refresh() {
-    if (mounted) setState(() {});
+  void refresh([CharacterComponent? c]) {
+    if (mounted) setState(() => character = c);
   }
+
+  /// StatusBox shows HP of this character
+  CharacterComponent? character;
+  CharacterComponent? get shownCharacter => character ?? widget.gameRef.user;
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +39,9 @@ class StatusBoxState extends State<StatusBox> {
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 4),
                       child: Icon(
-                        (widget.gameRef.user?.isPlayerOne ?? true)
+                        (shownCharacter?.isPlayerOne ?? true)
                             ? Icons.favorite
-                            : (widget.gameRef.user?.name == 'milla')
+                            : (shownCharacter?.name == 'milla')
                                 ? Icons.energy_savings_leaf
                                 : Icons.person,
                         color: Colors.white,
@@ -47,13 +51,13 @@ class StatusBoxState extends State<StatusBox> {
                     Expanded(
                       child: _PercentIndicator(
                         values: [
-                          widget.gameRef.user!.hp,
-                          widget.gameRef.user!.maxHP,
+                          shownCharacter!.hp,
+                          shownCharacter!.maxHP,
                         ],
-                        text: widget.gameRef.user!.hp.round().toString(),
+                        text: shownCharacter!.hp.round().toString(),
                         colors: [
-                          MyColors.healthPointsColor(widget.gameRef.user!.hp /
-                              widget.gameRef.user!.maxHP),
+                          MyColors.healthPointsColor(
+                              shownCharacter!.hp / shownCharacter!.maxHP),
                           Colors.grey
                         ],
                       ),
