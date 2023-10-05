@@ -11,8 +11,6 @@ class BattleTextBox extends PositionComponent with HasGameRef<XeonjiaGame> {
   }
 
   final String text;
-  final TextPaint textPaint =
-      TextPaint(style: TextStyle(fontSize: 64, fontFamily: settings.font));
 
   /// Seconds to open and close the box (total duration = animationDuration * 2)
   double animationDuration = 0.4;
@@ -26,7 +24,7 @@ class BattleTextBox extends PositionComponent with HasGameRef<XeonjiaGame> {
   @override
   void onGameResize(Vector2 size) {
     super.onGameResize(size);
-    height = 84;
+    height = size.y / 8;
     width = size.x;
     position = Vector2(size.x / 2, size.y / 2);
   }
@@ -47,9 +45,11 @@ class BattleTextBox extends PositionComponent with HasGameRef<XeonjiaGame> {
         Rect.fromLTWH((width - currentWidth) / 2, 0, currentWidth, height),
         Paint()..color = Colors.grey.shade800.withOpacity(0.7));
     if (currentWidth > width / 3) {
-      textPaint.render(
-          canvas, text, Vector2(gameRef.size.x / 2, height / 2 - 4),
-          anchor: Anchor.center);
+      TextPaint(
+              style:
+                  TextStyle(fontSize: height / 1.2, fontFamily: settings.font))
+          .render(canvas, text, Vector2(gameRef.size.x / 2, height / 2 - 4),
+              anchor: Anchor.center);
     }
   }
 }
