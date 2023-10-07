@@ -5,7 +5,7 @@
 # no no <skariko@pm.me>, 2020.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-17 09:47+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-10-07 11:29+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -161,23 +161,23 @@ msgstr "Predefinita di sistema"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Thanks to everyone who contributed to this project!"
-msgstr ""
+msgstr "Grazie a tutti coloro che hanno contribuito a questo progetto!"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Programmer:"
-msgstr ""
+msgstr "Programmatore:"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Artists:"
-msgstr ""
+msgstr "Artisti:"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Music by:"
-msgstr ""
+msgstr "Musiche di:"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Translators"
-msgstr ""
+msgstr "Traduttori"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Game made by %s"
@@ -185,11 +185,11 @@ msgstr "Gioco realizzato da %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Credits"
-msgstr ""
+msgstr "Crediti"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "People who worked on this project"
-msgstr ""
+msgstr "Persone che hanno lavorato a questo progetto"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version %s"
