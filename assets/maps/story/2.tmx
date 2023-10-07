@@ -7,7 +7,7 @@
   <property name="map-name" value="Route 1"/>
   <property name="milla">(if (! (has-item &quot;2.stone&quot;))
   (begin
-    (dialog '((&quot;/milla&quot; &quot;Hey, I found this stone near here.\nHere's to you.&quot;)))
+    (dialog '((&quot;/milla&quot; &quot;Hey, I found this stone near here.\nHere you go.&quot;)))
     (wait)
     (give-item &quot;2.stone&quot;)
     (dialog '((&quot;/hero&quot; &quot;This is a very strange stone… Never seen anything like this before.&quot;))))

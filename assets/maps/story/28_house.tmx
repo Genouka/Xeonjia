@@ -23,7 +23,7 @@
     (wait)
     (if (get id)
       (begin
-        (dialog '((&quot;/&quot; &quot;Here's to you!&quot;)))
+        (dialog '((&quot;/&quot; &quot;Here you go!&quot;)))
         (give-item &quot;gem_3&quot;)
         (dialog '((&quot;/hero_happy&quot; &quot;Thank you!&quot;))))
       (dialog '((&quot;/&quot; &quot;Oh, ok. Then I'll have to think about what to do with this gem.&quot;)))))

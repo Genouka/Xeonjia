@@ -28,7 +28,7 @@
     <property name="action">(if (!get &quot;055-cableway-fresh-water&quot;)
   (begin
     (dialog
-      '((&quot;/&quot; &quot;I'm scared, I'm scared! What if there is a fault?! What if I get stuck?! If I can't get off anymore?! I suffer from claustrophobia.\nDrinking water helps, maybe.\nYou don't seem comfortable either, here's to you.&quot;)))
+      '((&quot;/&quot; &quot;I'm scared, I'm scared! What if there is a fault?! What if I get stuck?! If I can't get off anymore?! I suffer from claustrophobia.\nDrinking water helps, maybe.\nYou don't seem comfortable either, here you go.&quot;)))
     (wait)
     (give-item &quot;fresh-water&quot;)
     (set &quot;055-cableway-fresh-water&quot; #t)

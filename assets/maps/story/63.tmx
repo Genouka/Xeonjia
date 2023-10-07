@@ -4,7 +4,7 @@
   <property name="map-name" value="Route 8"/>
   <property name="milla">(if (!get &quot;063-milla-fresh-water&quot;)
   (begin
-    (dialog '((&quot;/milla&quot; &quot;Hey, I found this bottle near here.\nHere's to you.&quot;)))
+    (dialog '((&quot;/milla&quot; &quot;Hey, I found this bottle near here.\nHere you go.&quot;)))
     (give-item &quot;fresh-water&quot;)
     (set &quot;063-milla-fresh-water&quot; #t))
   (dialog '((&quot;/milla&quot; &quot;If I find something interesting I'll give it to you.&quot;))))</property>

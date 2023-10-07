@@ -47,15 +47,15 @@
     (set &quot;007-milla&quot; #t)
     (wait)
     (move 0)
-    (wait 0.4)
+    (wait 0.6)
     (move 3)
-    (wait 0.4)
+    (wait 0.6)
     (move 0)
-    (wait 0.4)
+    (wait 0.6)
     (move 3)
-    (wait 0.4)
+    (wait 0.6)
     (move 0)
-    (wait 0.4)
+    (wait 0.6)
     (leave))</property>
     <property name="actionOnEvent" value="(if  (get &quot;007-milla&quot;) (delete-me))"/>
    </properties>

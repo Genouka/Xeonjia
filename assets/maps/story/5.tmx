@@ -27,7 +27,7 @@
   (wait)
   (if (!get &quot;005-fresh-water&quot;)
     (begin
-      (dialog '((&quot;/&quot; &quot;Here's to you.&quot;)))
+      (dialog '((&quot;/&quot; &quot;Here you go.&quot;)))
       (wait)
       (give-item &quot;fresh-water&quot;)
       (set &quot;005-fresh-water&quot; #t))))</property>

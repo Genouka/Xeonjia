@@ -19,7 +19,7 @@
     <property name="action">(if (! (has-item &quot;gem_6&quot;))
   (begin
     (dialog
-      '((&quot;/_happy&quot; &quot;Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere's to you!&quot;)
+      '((&quot;/_happy&quot; &quot;Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere you go!&quot;)
       (&quot;/hero&quot; &quot;Thank you!&quot;)))
     (wait)
     (give-item &quot;gem_6&quot;))

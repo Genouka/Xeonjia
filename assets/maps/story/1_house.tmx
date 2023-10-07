@@ -21,7 +21,7 @@
 (if (!get &quot;001-talk-neighbor&quot;)
   (begin
     (dialog
-      '((&quot;neighbor&quot; &quot;Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nHere's to you!&quot;)))
+      '((&quot;neighbor&quot; &quot;Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nHere you go!&quot;)))
     (wait)
     (give-item &quot;food-box&quot;)
     (dialog '((&quot;/hero_happy&quot; &quot;Thank you very much!\nIt looks delicious!&quot;)))
