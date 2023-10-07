@@ -85,7 +85,7 @@ msgid "Yes of course, I'll give it to him."
 msgstr "当然，我会送给他的。"
 
 #: assets/maps/story/30_cityhall.tmx:
-msgid "Thank you very much. Here's to you."
+msgid "Thank you very much. Here you are."
 msgstr "非常感谢。这是给你的。"
 
 #: assets/maps/story/30_cityhall.tmx:
@@ -491,7 +491,7 @@ msgstr "我讨厌那些总是说同样的话的人。"
 
 #: assets/maps/story/79_house.tmx:
 #, fuzzy
-msgid "Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere's to you!"
+msgid "Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere you go!"
 msgstr "勇者终于来了！\n这几年我都在等着勇者！\n我家里几十年来一直保留着这颗宝石，希望送给勇者。\n交给你了！"
 
 #: assets/maps/story/79_house.tmx:
@@ -626,7 +626,7 @@ msgid "Ok, now I know what to do!\nLet's fight!"
 msgstr "好，现在我知道怎么做了！\n我们开打吧！"
 
 #: assets/maps/story/73.tmx:
-msgid "Hey, I found this bottle near here.\nHere's to you."
+msgid "Hey, I found this bottle near here.\nHere you go."
 msgstr "嘿，我在这找到了一个瓶子。\n给你吧。"
 
 #: assets/maps/story/73.tmx:
@@ -1688,7 +1688,7 @@ msgid "Do you want to go back down the volcano?"
 msgstr ""
 
 #: assets/maps/story/55_cableway.tmx:
-msgid "I'm scared, I'm scared! What if there is a fault?! What if I get stuck?! If I can't get off anymore?! I suffer from claustrophobia.\nDrinking water helps, maybe.\nYou don't seem comfortable either, here's to you."
+msgid "I'm scared, I'm scared! What if there is a fault?! What if I get stuck?! If I can't get off anymore?! I suffer from claustrophobia.\nDrinking water helps, maybe.\nYou don't seem comfortable either, here you go."
 msgstr ""
 
 #: assets/maps/story/55_cableway.tmx:
@@ -2947,7 +2947,7 @@ msgid "Hoarfrost Team members came to our house because they wanted a gem that I
 msgstr ""
 
 #: assets/maps/story/28_house.tmx:
-msgid "Here's to you!"
+msgid "Here you go!"
 msgstr ""
 
 #: assets/maps/story/28_house.tmx:
@@ -3051,7 +3051,7 @@ msgid "NEIGHBOR'S HOUSE"
 msgstr ""
 
 #: assets/maps/story/1_house.tmx:
-msgid "Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nHere's to you!"
+msgid "Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nHere you go!"
 msgstr ""
 
 #: assets/maps/story/1_house.tmx:
@@ -3352,10 +3352,6 @@ msgstr ""
 
 #: assets/maps/story/38_house.tmx:
 msgid "I just cooked a cake. Do you want some?"
-msgstr ""
-
-#: assets/maps/story/38_house.tmx:
-msgid "Here you go!"
 msgstr ""
 
 #: assets/maps/story/38_house.tmx:
@@ -4399,7 +4395,7 @@ msgid "Route 1"
 msgstr ""
 
 #: assets/maps/story/2.tmx:
-msgid "Hey, I found this stone near here.\nHere's to you."
+msgid "Hey, I found this stone near here.\nHere you go."
 msgstr ""
 
 #: assets/maps/story/2.tmx:
@@ -4563,7 +4559,7 @@ msgid "Remember that hydration is essential for good overall health."
 msgstr ""
 
 #: assets/maps/story/5.tmx:
-msgid "Here's to you."
+msgid "Here you go."
 msgstr ""
 
 #: assets/maps/story/5.tmx:

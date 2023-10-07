@@ -80,7 +80,7 @@ msgid "Yes of course, I'll give it to him."
 msgstr "Igen, persze, odaadom neki."
 
 #: assets/maps/story/30_cityhall.tmx:
-msgid "Thank you very much. Here's to you."
+msgid "Thank you very much. Here you are."
 msgstr "Köszönöm szépen. Tessék."
 
 #: assets/maps/story/30_cityhall.tmx:
@@ -476,7 +476,7 @@ msgid "I hate people who always say the same things."
 msgstr "Utálom azokat az embereket, akik mindig ugyanazt mondják."
 
 #: assets/maps/story/79_house.tmx:
-msgid "Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere's to you!"
+msgid "Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere you go!"
 msgstr ""
 
 #: assets/maps/story/79_house.tmx:
@@ -604,7 +604,7 @@ msgid "Ok, now I know what to do!\nLet's fight!"
 msgstr ""
 
 #: assets/maps/story/73.tmx:
-msgid "Hey, I found this bottle near here.\nHere's to you."
+msgid "Hey, I found this bottle near here.\nHere you go."
 msgstr ""
 
 #: assets/maps/story/73.tmx:
@@ -1652,7 +1652,7 @@ msgid "Do you want to go back down the volcano?"
 msgstr ""
 
 #: assets/maps/story/55_cableway.tmx:
-msgid "I'm scared, I'm scared! What if there is a fault?! What if I get stuck?! If I can't get off anymore?! I suffer from claustrophobia.\nDrinking water helps, maybe.\nYou don't seem comfortable either, here's to you."
+msgid "I'm scared, I'm scared! What if there is a fault?! What if I get stuck?! If I can't get off anymore?! I suffer from claustrophobia.\nDrinking water helps, maybe.\nYou don't seem comfortable either, here you go."
 msgstr ""
 
 #: assets/maps/story/55_cableway.tmx:
@@ -2904,8 +2904,8 @@ msgid "Hoarfrost Team members came to our house because they wanted a gem that I
 msgstr "A Hoarfrost Team tagjai eljöttek hozzánk, mert egy drágakövet akartak, amit a földön találtam.\nSikerült elrejtenünk előlük, de nem akarunk több problémát.\nVégül is nincs is rá szükségünk, odaadhatjuk neked?"
 
 #: assets/maps/story/28_house.tmx:
-msgid "Here's to you!"
-msgstr "Tessék itt van!"
+msgid "Here you go!"
+msgstr ""
 
 #: assets/maps/story/28_house.tmx:
 msgid "Oh, ok. Then I'll have to think about what to do with this gem."
@@ -3008,7 +3008,7 @@ msgid "NEIGHBOR'S HOUSE"
 msgstr "A SZOMSZÉD HÁZA"
 
 #: assets/maps/story/1_house.tmx:
-msgid "Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nHere's to you!"
+msgid "Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nHere you go!"
 msgstr ""
 
 #: assets/maps/story/1_house.tmx:
@@ -3310,10 +3310,6 @@ msgstr "Egy mohával borított sziklafal."
 #: assets/maps/story/38_house.tmx:
 msgid "I just cooked a cake. Do you want some?"
 msgstr "Most sütöttem egy tortát. Kérsz belőle?"
-
-#: assets/maps/story/38_house.tmx:
-msgid "Here you go!"
-msgstr "Tessék, itt van!"
 
 #: assets/maps/story/38_house.tmx:
 msgid "* {{hero}} eats a piece of cake *"
@@ -4356,7 +4352,7 @@ msgid "Route 1"
 msgstr "1. útvonal"
 
 #: assets/maps/story/2.tmx:
-msgid "Hey, I found this stone near here.\nHere's to you."
+msgid "Hey, I found this stone near here.\nHere you go."
 msgstr ""
 
 #: assets/maps/story/2.tmx:
@@ -4520,7 +4516,7 @@ msgid "Remember that hydration is essential for good overall health."
 msgstr ""
 
 #: assets/maps/story/5.tmx:
-msgid "Here's to you."
+msgid "Here you go."
 msgstr ""
 
 #: assets/maps/story/5.tmx:

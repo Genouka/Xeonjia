@@ -84,7 +84,7 @@ msgid "Yes of course, I'll give it to him."
 msgstr "Oui, bien sûr, je vais lui donner."
 
 #: assets/maps/story/30_cityhall.tmx:
-msgid "Thank you very much. Here's to you."
+msgid "Thank you very much. Here you are."
 msgstr "Merci beaucoup. Voici pour toi."
 
 #: assets/maps/story/30_cityhall.tmx:
@@ -480,7 +480,7 @@ msgid "I hate people who always say the same things."
 msgstr "Je déteste les gens qui disent toujours les même choses."
 
 #: assets/maps/story/79_house.tmx:
-msgid "Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere's to you!"
+msgid "Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere you go!"
 msgstr "Enfin un héro !\nÇa fait des années que j'attends qu'un héro passe par là !\nMa famille a gardé cette gemme des décennies dans l'espoir de l'offrir à un héro.\nTiens, elle est à toi !"
 
 #: assets/maps/story/79_house.tmx:
@@ -608,7 +608,7 @@ msgid "Ok, now I know what to do!\nLet's fight!"
 msgstr "D'accord, maintenant je sais quoi faire !\nCombattons !"
 
 #: assets/maps/story/73.tmx:
-msgid "Hey, I found this bottle near here.\nHere's to you."
+msgid "Hey, I found this bottle near here.\nHere you go."
 msgstr "Hé, j'ai trouvé cette bouteille ici.\nTiens."
 
 #: assets/maps/story/73.tmx:
@@ -1656,7 +1656,7 @@ msgid "Do you want to go back down the volcano?"
 msgstr "Veux-tu redescendre le long du volcan ?"
 
 #: assets/maps/story/55_cableway.tmx:
-msgid "I'm scared, I'm scared! What if there is a fault?! What if I get stuck?! If I can't get off anymore?! I suffer from claustrophobia.\nDrinking water helps, maybe.\nYou don't seem comfortable either, here's to you."
+msgid "I'm scared, I'm scared! What if there is a fault?! What if I get stuck?! If I can't get off anymore?! I suffer from claustrophobia.\nDrinking water helps, maybe.\nYou don't seem comfortable either, here you go."
 msgstr "J'ai peur, j'ai peur ! Et s'il y a un problème ? Et si je restais coincé ? Si je ne peux plus descendre ! Je souffre de claustrophobie.\nBoire de l'eau, ça aide peut-être.\nTu n'as pas l'air à l'aise non plus, à ta santé."
 
 #: assets/maps/story/55_cableway.tmx:
@@ -2908,7 +2908,7 @@ msgid "Hoarfrost Team members came to our house because they wanted a gem that I
 msgstr "Des membres de l'Équipe givrée sont venus chez nous, parce qu'ils voulaient une gemme que j'ai trouvée sur le sol.\nOn a réussi à la leur cacher, mais on ne veut plus avoir de problèmes.\nOn n'en veut même pas après tout. Peut-on te la donner ?"
 
 #: assets/maps/story/28_house.tmx:
-msgid "Here's to you!"
+msgid "Here you go!"
 msgstr "Voici !"
 
 #: assets/maps/story/28_house.tmx:
@@ -3012,7 +3012,7 @@ msgid "NEIGHBOR'S HOUSE"
 msgstr "MAISON DE LA VOISINE"
 
 #: assets/maps/story/1_house.tmx:
-msgid "Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nHere's to you!"
+msgid "Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nHere you go!"
 msgstr ""
 
 #: assets/maps/story/1_house.tmx:
@@ -3314,10 +3314,6 @@ msgstr "Un mur de roche couvert de mousse."
 #: assets/maps/story/38_house.tmx:
 msgid "I just cooked a cake. Do you want some?"
 msgstr "Je viens de faire un gâteau. Tu en veux ?"
-
-#: assets/maps/story/38_house.tmx:
-msgid "Here you go!"
-msgstr "Tiens !"
 
 #: assets/maps/story/38_house.tmx:
 msgid "* {{hero}} eats a piece of cake *"
@@ -4360,7 +4356,7 @@ msgid "Route 1"
 msgstr "Route 1"
 
 #: assets/maps/story/2.tmx:
-msgid "Hey, I found this stone near here.\nHere's to you."
+msgid "Hey, I found this stone near here.\nHere you go."
 msgstr ""
 
 #: assets/maps/story/2.tmx:
@@ -4524,7 +4520,7 @@ msgid "Remember that hydration is essential for good overall health."
 msgstr ""
 
 #: assets/maps/story/5.tmx:
-msgid "Here's to you."
+msgid "Here you go."
 msgstr ""
 
 #: assets/maps/story/5.tmx:

@@ -82,7 +82,7 @@ msgid "Yes of course, I'll give it to him."
 msgstr "Certo, glielo consegnerò."
 
 #: assets/maps/story/30_cityhall.tmx:
-msgid "Thank you very much. Here's to you."
+msgid "Thank you very much. Here you are."
 msgstr "Grazie mille. Ecco a te."
 
 #: assets/maps/story/30_cityhall.tmx:
@@ -478,7 +478,7 @@ msgid "I hate people who always say the same things."
 msgstr "Odio le persone che dicono sempre le stesse cose."
 
 #: assets/maps/story/79_house.tmx:
-msgid "Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere's to you!"
+msgid "Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere you go!"
 msgstr "Finalmente un eroe!\nSono anni che aspetto che passi un eroe da queste parti!\nLa mia famiglia conserva questa gemma da decenni nella speranza di regalarla a un eroe.\nEcco a te!"
 
 #: assets/maps/story/79_house.tmx:
@@ -606,7 +606,7 @@ msgid "Ok, now I know what to do!\nLet's fight!"
 msgstr "Ok, ora so cosa fare!\nCombattiamo!"
 
 #: assets/maps/story/73.tmx:
-msgid "Hey, I found this bottle near here.\nHere's to you."
+msgid "Hey, I found this bottle near here.\nHere you go."
 msgstr "Ehi, ho trovato questa bottiglia qui vicino.\nEcco a te."
 
 #: assets/maps/story/73.tmx:
@@ -1654,7 +1654,7 @@ msgid "Do you want to go back down the volcano?"
 msgstr "Vuoi tornare giù dal vulcano?"
 
 #: assets/maps/story/55_cableway.tmx:
-msgid "I'm scared, I'm scared! What if there is a fault?! What if I get stuck?! If I can't get off anymore?! I suffer from claustrophobia.\nDrinking water helps, maybe.\nYou don't seem comfortable either, here's to you."
+msgid "I'm scared, I'm scared! What if there is a fault?! What if I get stuck?! If I can't get off anymore?! I suffer from claustrophobia.\nDrinking water helps, maybe.\nYou don't seem comfortable either, here you go."
 msgstr "Ho paura, ho paura! E se c'è un guasto?! E se rimango bloccato?! Se non posso più scendere?! Soffro di claustrofobia.\nBere acqua aiuta, forse.\nNemmeno tu sembri a tuo agio, bevi anche tu."
 
 #: assets/maps/story/55_cableway.tmx:
@@ -2906,7 +2906,7 @@ msgid "Hoarfrost Team members came to our house because they wanted a gem that I
 msgstr "I membri del Team Brina sono venuti a casa nostra perché volevano una gemma che ho trovato a terra.\nSiamo riusciti a tenergliela nascosta ma non vogliamo più avere problemi.\nNon la abbiamo nemmeno bisogno dopotutto, possiamo darla a te?"
 
 #: assets/maps/story/28_house.tmx:
-msgid "Here's to you!"
+msgid "Here you go!"
 msgstr "Ecco a te!"
 
 #: assets/maps/story/28_house.tmx:
@@ -3010,7 +3010,7 @@ msgid "NEIGHBOR'S HOUSE"
 msgstr "CASA DEL VICINO"
 
 #: assets/maps/story/1_house.tmx:
-msgid "Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nHere's to you!"
+msgid "Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nHere you go!"
 msgstr "Ciao ragazzo, stai bene?\nOggi è il grande giorno, eh?\nFai attenzione, il mondo è un posto pericoloso.\nTi ho preparato questa scatola piena di cibo, ti servirà quando avrai pochi PV.\nEcco a te!"
 
 #: assets/maps/story/1_house.tmx:
@@ -3312,10 +3312,6 @@ msgstr "Una parete rocciosa coperta di muschio."
 #: assets/maps/story/38_house.tmx:
 msgid "I just cooked a cake. Do you want some?"
 msgstr "Ho appena cucinato una torta. Ne vuoi un po'?"
-
-#: assets/maps/story/38_house.tmx:
-msgid "Here you go!"
-msgstr "Ecco a te!"
 
 #: assets/maps/story/38_house.tmx:
 msgid "* {{hero}} eats a piece of cake *"
@@ -4358,7 +4354,7 @@ msgid "Route 1"
 msgstr "Percorso 1"
 
 #: assets/maps/story/2.tmx:
-msgid "Hey, I found this stone near here.\nHere's to you."
+msgid "Hey, I found this stone near here.\nHere you go."
 msgstr "Ehi, ho trovato questa pietra qui vicino.\nEcco a te."
 
 #: assets/maps/story/2.tmx:
@@ -4522,7 +4518,7 @@ msgid "Remember that hydration is essential for good overall health."
 msgstr "Ricorda che l'idratazione è essenziale per una buona salute generale."
 
 #: assets/maps/story/5.tmx:
-msgid "Here's to you."
+msgid "Here you go."
 msgstr "Ecco a te."
 
 #: assets/maps/story/5.tmx:
