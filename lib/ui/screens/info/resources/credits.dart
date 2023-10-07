@@ -4,12 +4,12 @@ import 'package:xeonjia/utils/i18n.dart';
 String get credits => '''
 ${'Thanks to everyone who contributed to this project!'.i18n}
 
-# ${'Programmer:'.i18n} deepdaikon
+# ${'Programmer'.i18n}: deepdaikon
 
-# ${'Artists:'.i18n}
+# ${'Artists'.i18n}:
     * deepdaikon
 
-# ${'Music by:'.i18n} Yubatake
+# ${'Music by'.i18n}: Yubatake
 
 # ${'Translators'.i18n}:
     * Alex
