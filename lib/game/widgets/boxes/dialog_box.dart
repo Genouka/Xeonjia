@@ -38,8 +38,8 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
         widget.gameRef.messageManager.clear();
       }
       widget.gameRef.playSound(Sfx.dialog);
-      if (mounted) setState(() {});
     }
+    if (mounted) setState(() {});
   }
 
   void refresh() {
