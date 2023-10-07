@@ -164,16 +164,16 @@ msgid "Thanks to everyone who contributed to this project!"
 msgstr "Grazie a tutti coloro che hanno contribuito a questo progetto!"
 
 #: lib/ui/screens/info/resources/credits.dart:
-msgid "Programmer:"
-msgstr "Programmatore:"
+msgid "Programmer"
+msgstr "Programmatore"
 
 #: lib/ui/screens/info/resources/credits.dart:
-msgid "Artists:"
-msgstr "Artisti:"
+msgid "Artists"
+msgstr "Artisti"
 
 #: lib/ui/screens/info/resources/credits.dart:
-msgid "Music by:"
-msgstr "Musiche di:"
+msgid "Music by"
+msgstr "Musiche"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Translators"
