@@ -158,8 +158,36 @@ msgstr "アプリの言語"
 msgid "System default"
 msgstr "システムに従う"
 
+#: lib/ui/screens/info/resources/credits.dart:
+msgid "Thanks to everyone who contributed to this project!"
+msgstr ""
+
+#: lib/ui/screens/info/resources/credits.dart:
+msgid "Programmer:"
+msgstr ""
+
+#: lib/ui/screens/info/resources/credits.dart:
+msgid "Artists:"
+msgstr ""
+
+#: lib/ui/screens/info/resources/credits.dart:
+msgid "Music by:"
+msgstr ""
+
+#: lib/ui/screens/info/resources/credits.dart:
+msgid "Translators"
+msgstr ""
+
 #: lib/ui/screens/info/info_page.dart:
 msgid "Game made by %s"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "Credits"
+msgstr ""
+
+#: lib/ui/screens/info/info_page.dart:
+msgid "People who worked on this project"
 msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
