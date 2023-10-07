@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:xeonjia/ui/basic.dart';
+import 'package:xeonjia/ui/screens/info/resources/credits.dart';
 import 'package:xeonjia/ui/screens/info/resources/third_party_licenses.dart';
 import 'package:xeonjia/utils/config.dart';
 import 'package:xeonjia/utils/i18n.dart';
@@ -18,6 +19,12 @@ class _InfoPageState extends State<InfoPage> {
       'subtitle': 'Game made by %s'.i18n.fill(['DeepDaikon']),
       'url': Config.websiteUrl,
       'icon': const Icon(Icons.change_history),
+    },
+    {
+      'title': 'Credits'.i18n.fill([Config.version]),
+      'subtitle': 'People who worked on this project'.i18n,
+      'url': '',
+      'icon': const Icon(Icons.people_alt_rounded),
     },
     {
       'title': 'Version %s'.i18n.fill([Config.version]),
@@ -142,6 +149,9 @@ class _InfoPageState extends State<InfoPage> {
                               } else if (infoMenuList[index]['title'] ==
                                   'Third Party Licenses'.i18n) {
                                 _licenseDialog();
+                              } else if (infoMenuList[index]['title'] ==
+                                  'Credits'.i18n) {
+                                _creditsDialog();
                               }
                             },
                           ),
@@ -154,6 +164,46 @@ class _InfoPageState extends State<InfoPage> {
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  /// Display credits in an alert dialog
+  void _creditsDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) => StatefulBuilder(
+        builder: (context, setState) {
+          return AlertDialog(
+            title: Text('Credits'.i18n,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: settings.smallerFont ? 34 : 48,
+                    fontFamily: settings.font)),
+            content: Container(
+              constraints: const BoxConstraints(maxWidth: 400, minWidth: 300),
+              child: SingleChildScrollView(
+                child: Center(
+                    child: Text(credits,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: settings.smallerFont ? 18 : 24,
+                            fontFamily: settings.font))),
+              ),
+            ),
+            actions: <Widget>[
+              TextButton(
+                onPressed: Navigator.of(context).pop,
+                child: Text('Ok'.i18n,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: settings.smallerFont ? 24 : 32,
+                        fontFamily: settings.font)),
+              ),
+            ],
+          );
+        },
       ),
     );
   }
@@ -185,6 +235,7 @@ class _InfoPageState extends State<InfoPage> {
           }
           return AlertDialog(
             title: Text('Third Party Licenses'.i18n,
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: settings.smallerFont ? 34 : 48,
