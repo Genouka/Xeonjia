@@ -147,18 +147,17 @@ extension InputController on XeonjiaGame {
     /// Handle input based on game state
     if (messageManager.isActive && messageManager.isShowingAQuestion) {
       /// Dialog menu (with question)
-      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
+      if (_down(event)) {
         dialogBox.state?.selectNextAnswer();
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
+      } else if (_up(event)) {
         dialogBox.state?.selectPreviousAnswer();
-      } else if ((event.logicalKey == LogicalKeyboardKey.space ||
-              event.logicalKey == LogicalKeyboardKey.keyX) &&
+      } else if (_enter(event) &&
           (dialogBox.state?.isShowingAnswers ?? false)) {
         dialogBox.state?.chooseAnswer();
       }
     } else if (miniMapEnabled) {
       /// Mini map and World map
-      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
+      if (_down(event)) {
         if (worldMapEnabled) {
           worldMapComponent?.movePointer(Direction.down);
         } else {
@@ -167,7 +166,7 @@ extension InputController on XeonjiaGame {
               moveCamera(
                   size.y, map.height, camera.position.y + 50 + size.y / 2)));
         }
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
+      } else if (_up(event)) {
         if (worldMapEnabled) {
           worldMapComponent?.movePointer(Direction.up);
         } else {
@@ -176,7 +175,7 @@ extension InputController on XeonjiaGame {
               moveCamera(
                   size.y, map.height, camera.position.y - 50 + size.y / 2)));
         }
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
+      } else if (_right(event)) {
         if (worldMapEnabled) {
           worldMapComponent?.movePointer(Direction.right);
         } else {
@@ -185,7 +184,7 @@ extension InputController on XeonjiaGame {
                   size.x, map.width, camera.position.x + 50 + size.x / 2),
               moveCamera(size.y, map.height, camera.position.y + size.y / 2)));
         }
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
+      } else if (_left(event)) {
         if (worldMapEnabled) {
           worldMapComponent?.movePointer(Direction.left);
         } else {
@@ -194,134 +193,143 @@ extension InputController on XeonjiaGame {
                   size.x, map.width, camera.position.x - 50 + size.x / 2),
               moveCamera(size.y, map.height, camera.position.y + size.y / 2)));
         }
-      } else if (event.logicalKey == LogicalKeyboardKey.add) {
+      } else if (_zoomIn(event)) {
         zoomMiniMap();
-      } else if (event.logicalKey == LogicalKeyboardKey.minus) {
+      } else if (_zoomOut(event)) {
         zoomMiniMap(out: true);
-      } else if (event.logicalKey == LogicalKeyboardKey.keyM &&
-          !worldMapDisabled) {
+      } else if (_map(event) && !worldMapDisabled) {
         worldMap();
-      } else if (event.logicalKey == LogicalKeyboardKey.keyH) {
+      } else if (_hint(event)) {
         hideHints = !hideHints;
-      } else if (event.logicalKey == LogicalKeyboardKey.space ||
-          event.logicalKey == LogicalKeyboardKey.keyX) {
+      } else if (_enter(event)) {
         messageManager.isActive
             ? dialogBox.state?.next()
             : worldMapComponent?.selectPoint();
-      } else if (event.logicalKey == LogicalKeyboardKey.escape &&
-          !messageManager.isActive) {
+      } else if (_esc(event) && !messageManager.isActive) {
         miniMap();
       }
     } else if (overlays.isActive('backpackMenu') && !messageManager.isActive) {
       /// Backpack menu (without dialog)
-      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
+      if (_down(event)) {
         backpackMenu?.state?.nextItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
+      } else if (_up(event)) {
         backpackMenu?.state?.previousItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.space ||
-          event.logicalKey == LogicalKeyboardKey.keyX) {
+      } else if (_enter(event)) {
         backpackMenu?.state?.chooseItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
+      } else if (_esc(event)) {
         overlays.remove('backpackMenu');
         resume();
       }
     } else if (overlays.isActive('backpackMenu') && messageManager.isActive) {
       /// Backpack menu (with dialog)
-      if (event.logicalKey == LogicalKeyboardKey.space ||
-          event.logicalKey == LogicalKeyboardKey.keyX) {
+      if (_enter(event)) {
         dialogBox.state?.next();
       }
     } else if (overlays.isActive('shopMenu') && !messageManager.isActive) {
       /// Shop menu (without dialog)
-      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
+      if (_down(event)) {
         shopMenu?.state?.nextItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
+      } else if (_up(event)) {
         shopMenu?.state?.previousItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.space ||
-          event.logicalKey == LogicalKeyboardKey.keyX) {
+      } else if (_enter(event)) {
         shopMenu?.state?.chooseItem();
-      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
+      } else if (_esc(event)) {
         overlays.remove('shopMenu');
         resume();
       }
     } else if (overlays.isActive('shopMenu') && messageManager.isActive) {
       /// Shop menu (with dialog)
-      if (event.logicalKey == LogicalKeyboardKey.space ||
-          event.logicalKey == LogicalKeyboardKey.keyX) {
-        dialogBox.state?.next();
-      }
+      if (_enter(event)) dialogBox.state?.next();
     } else if (overlays.isActive('pauseMenu')) {
       /// Pause menu
-      if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
+      if (_right(event)) {
         pauseMenu?.state?.selectNextOption();
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
+      } else if (_left(event)) {
         pauseMenu?.state?.selectPreviousOption();
-      } else if (event.logicalKey == LogicalKeyboardKey.space) {
+      } else if (_enter(event)) {
         pauseMenu?.state?.chooseOption();
-      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
+      } else if (_esc(event)) {
         overlays.remove('pauseMenu');
         resume();
       }
     } else if (overlays.isActive('youLostMenu')) {
       /// You lost menu
-      if (event.logicalKey == LogicalKeyboardKey.space ||
-          event.logicalKey == LogicalKeyboardKey.escape) {
-        restartAfterEnd();
-      }
+      if (_enter(event) || _esc(event)) restartAfterEnd();
     } else if (!paused && !messageManager.isActive) {
       /// In-game
-      if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
+      if (_down(event)) {
         movePlayer(Direction.down);
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
+      } else if (_up(event)) {
         movePlayer(Direction.up);
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
+      } else if (_right(event)) {
         movePlayer(Direction.right);
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
+      } else if (_left(event)) {
         movePlayer(Direction.left);
-      } else if (event.logicalKey == LogicalKeyboardKey.space ||
-          event.logicalKey == LogicalKeyboardKey.keyX) {
+      } else if (_enter(event)) {
         user?.inspect();
-      } else if (event.logicalKey == LogicalKeyboardKey.keyA) {
+      } else if (_leftOrientation(event)) {
         user!.updateOrientation(Direction.left);
-      } else if (event.logicalKey == LogicalKeyboardKey.keyW) {
+      } else if (_upOrientation(event)) {
         user!.updateOrientation(Direction.up);
-      } else if (event.logicalKey == LogicalKeyboardKey.keyD) {
+      } else if (_rightOrientation(event)) {
         user!.updateOrientation(Direction.right);
-      } else if (event.logicalKey == LogicalKeyboardKey.keyS) {
+      } else if (_downOrientation(event)) {
         user!.updateOrientation(Direction.down);
-      } else if (event.logicalKey == LogicalKeyboardKey.keyQ) {
+      } else if (_punch(event)) {
         if (inBattle) user!.shoot(Weapons.punch.id);
-      } else if (event.logicalKey == LogicalKeyboardKey.keyE) {
+      } else if (_snowball(event)) {
         if (inBattle && user!.hasWeaponId(Weapons.snowball.id)) {
           user!.shoot(Weapons.snowball.id);
         }
-      } else if (event.logicalKey == LogicalKeyboardKey.keyR) {
+      } else if (_mine(event)) {
         if (inBattle && user!.hasWeaponId(Weapons.mine.id)) {
           user!.shoot(Weapons.mine.id);
         }
-      } else if (event.logicalKey == LogicalKeyboardKey.keyB) {
+      } else if (_backpack(event)) {
         if (overlays.isActive('backpackButton') && isBackpackButtonActive) {
           backpack();
         }
-      } else if (event.logicalKey == LogicalKeyboardKey.keyL) {
+      } else if (_milla(event)) {
         if (overlays.isActive('leafButton')) millaLeaf();
-      } else if (event.logicalKey == LogicalKeyboardKey.keyH) {
+      } else if (_hint(event)) {
         hideHints = !hideHints;
-      } else if (event.logicalKey == LogicalKeyboardKey.keyM) {
+      } else if (_map(event)) {
         if (worldMapEnabled || (!map.disableMiniMap && isMiniMapButtonActive)) {
           miniMap();
         }
-      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
+      } else if (_esc(event)) {
         pause(mode: PauseMode.pause);
       }
     } else if (messageManager.isActive) {
-      if (event.logicalKey == LogicalKeyboardKey.space ||
-          event.logicalKey == LogicalKeyboardKey.keyX) {
+      if (_enter(event)) {
         dialogBox.state?.next();
-      } else if (event.logicalKey == LogicalKeyboardKey.escape) {
+      } else if (_esc(event)) {
         pause(mode: PauseMode.pause);
       }
     }
     return KeyEventResult.handled;
   }
 }
+
+bool _down(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.arrowDown;
+bool _up(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.arrowUp;
+bool _right(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.arrowRight;
+bool _left(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.arrowLeft;
+bool _downOrientation(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyS;
+bool _upOrientation(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyW;
+bool _rightOrientation(RawKeyEvent e) =>
+    e.logicalKey == LogicalKeyboardKey.keyD;
+bool _leftOrientation(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyA;
+bool _enter(RawKeyEvent e) =>
+    e.logicalKey == LogicalKeyboardKey.space ||
+    e.logicalKey == LogicalKeyboardKey.keyX;
+bool _esc(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.escape;
+bool _zoomIn(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.add;
+bool _zoomOut(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.minus;
+bool _map(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyM;
+bool _hint(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyH;
+bool _punch(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyQ;
+bool _snowball(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyE;
+bool _mine(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyR;
+bool _backpack(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyB;
+bool _milla(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyL;
