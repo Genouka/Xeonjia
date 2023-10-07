@@ -322,14 +322,38 @@ bool _rightOrientation(RawKeyEvent e) =>
 bool _leftOrientation(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyA;
 bool _enter(RawKeyEvent e) =>
     e.logicalKey == LogicalKeyboardKey.space ||
-    e.logicalKey == LogicalKeyboardKey.keyX;
-bool _esc(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.escape;
-bool _zoomIn(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.add;
-bool _zoomOut(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.minus;
-bool _map(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyM;
-bool _hint(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyH;
-bool _punch(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyQ;
-bool _snowball(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyE;
-bool _mine(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyR;
-bool _backpack(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyB;
-bool _milla(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyL;
+    e.logicalKey == LogicalKeyboardKey.keyX ||
+    e.logicalKey == LogicalKeyboardKey.gameButtonA;
+bool _esc(RawKeyEvent e) =>
+    e.logicalKey == LogicalKeyboardKey.escape ||
+    e.logicalKey == LogicalKeyboardKey.gameButtonStart ||
+    e.logicalKey == LogicalKeyboardKey.gameButtonLeft1;
+bool _zoomIn(RawKeyEvent e) =>
+    e.logicalKey == LogicalKeyboardKey.add ||
+    e.logicalKey == LogicalKeyboardKey.zoomIn ||
+    e.logicalKey == LogicalKeyboardKey.gameButtonRight2;
+bool _zoomOut(RawKeyEvent e) =>
+    e.logicalKey == LogicalKeyboardKey.minus ||
+    e.logicalKey == LogicalKeyboardKey.zoomOut ||
+    e.logicalKey == LogicalKeyboardKey.gameButtonLeft2;
+bool _map(RawKeyEvent e) =>
+    e.logicalKey == LogicalKeyboardKey.keyM ||
+    e.logicalKey == LogicalKeyboardKey.gameButtonMode;
+bool _hint(RawKeyEvent e) =>
+    e.logicalKey == LogicalKeyboardKey.keyH ||
+    e.logicalKey == LogicalKeyboardKey.gameButtonLeft2;
+bool _punch(RawKeyEvent e) =>
+    e.logicalKey == LogicalKeyboardKey.keyQ ||
+    e.logicalKey == LogicalKeyboardKey.gameButtonB;
+bool _snowball(RawKeyEvent e) =>
+    e.logicalKey == LogicalKeyboardKey.keyE ||
+    e.logicalKey == LogicalKeyboardKey.gameButtonX;
+bool _mine(RawKeyEvent e) =>
+    e.logicalKey == LogicalKeyboardKey.keyR ||
+    e.logicalKey == LogicalKeyboardKey.gameButtonRight1;
+bool _backpack(RawKeyEvent e) =>
+    e.logicalKey == LogicalKeyboardKey.keyB ||
+    e.logicalKey == LogicalKeyboardKey.gameButtonY;
+bool _milla(RawKeyEvent e) =>
+    e.logicalKey == LogicalKeyboardKey.keyL ||
+    e.logicalKey == LogicalKeyboardKey.gameButtonRight2;
