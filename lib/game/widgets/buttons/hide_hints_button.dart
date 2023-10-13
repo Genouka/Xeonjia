@@ -53,11 +53,12 @@ class HideHintsButton extends TextBoxComponent
   }
 
   @override
-  void render(Canvas c) {
+  void render(Canvas canvas) {
     if (disabled) return;
     final rect = RRect.fromRectAndRadius(
         Rect.fromLTWH(0, 0, size.x, size.y), const Radius.circular(30));
-    c.drawRRect(rect, Paint()..color = Colors.grey.shade800.withOpacity(0.7));
-    super.render(c);
+    canvas.drawRRect(
+        rect, Paint()..color = Colors.grey.shade800.withOpacity(0.7));
+    super.render(canvas);
   }
 }
