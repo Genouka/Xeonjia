@@ -27,12 +27,6 @@ class ModifierComponent extends BasicComponent {
   }
 
   @override
-  Future<void>? onLoad() {
-    gameRef.reorderChildren();
-    return super.onLoad();
-  }
-
-  @override
   String? atlasAsset;
 
   @override

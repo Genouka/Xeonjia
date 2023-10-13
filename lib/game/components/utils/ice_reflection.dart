@@ -10,9 +10,6 @@ class IceReflection extends PositionComponent with HasGameRef<XeonjiaGame> {
   final Paint paint = Paint()..color = const Color.fromRGBO(0, 0, 0, 0.075);
 
   @override
-  void onMount() => gameRef.reorderChildren();
-
-  @override
   int priority = -998;
 
   bool get _hidden =>
