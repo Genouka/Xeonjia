@@ -345,11 +345,11 @@ class XeonjiaGame extends FlameGame
   }
 
   @override
-  void onGameResize(Vector2 canvasSize) {
-    setComponentSize(canvasSize.toSize());
+  void onGameResize(Vector2 size) {
+    setComponentSize(size.toSize());
     miniMapZoom = 1;
-    bool changed = !(hasLayout && this.canvasSize == canvasSize);
-    super.onGameResize(canvasSize);
+    bool changed = !(hasLayout && canvasSize == size);
+    super.onGameResize(size);
     if (!worldMapEnabled && changed) {
       inBattle
           ? updateCamera(activePlayer?.x ?? 0, activePlayer?.y ?? 0)
