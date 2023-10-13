@@ -49,7 +49,10 @@ class XeonjiaGame extends FlameGame
 
   @override
   Future<void>? onLoad() {
-    if (settings.backgroundMusic) FlameAudio.bgm.initialize();
+    if (settings.backgroundMusic) {
+      bgm = Bgm(audioCache: AudioCache(prefix: 'assets/audio/'));
+      bgm!.initialize();
+    }
     return null;
   }
 
@@ -92,6 +95,7 @@ class XeonjiaGame extends FlameGame
             translate: false,
           ),
           callback: startBattle);
+      resume();
     }
   }
 
@@ -326,6 +330,7 @@ class XeonjiaGame extends FlameGame
           (!c.deleted || !onlyAlive));
 
   /// Background music
+  Bgm? bgm;
   String? currentBgm;
   String? customBgm;
 
@@ -408,7 +413,7 @@ class XeonjiaGame extends FlameGame
     }
     _pause = true;
     if (stopEngine) pauseEngine();
-    if (stopMusic) FlameAudio.bgm.pause();
+    if (stopMusic) bgm?.pause();
     if (mode != null) {
       pauseMenu = PauseMenu(this, mode);
       addCustomWidgetOverlay('pauseMenu', pauseMenu!);
@@ -421,7 +426,7 @@ class XeonjiaGame extends FlameGame
     dialogBox.state?.resumeAnimation();
     resumeEngine();
     if (settings.backgroundMusic && map.music != 'none') {
-      FlameAudio.bgm.resume();
+      bgm?.resume();
     }
   }
 
@@ -747,8 +752,10 @@ class XeonjiaGame extends FlameGame
 
   @override
   void onRemove() {
-    FlameAudio.bgm.stop();
-    FlameAudio.bgm.dispose();
+    removeAll(children);
+    update(0);
+    bgm?.stop();
+    bgm?.dispose();
     super.onRemove();
   }
 }

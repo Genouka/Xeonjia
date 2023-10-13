@@ -8,7 +8,7 @@ extension AudioController on XeonjiaGame {
     customBgm = custom;
     String newBgm = custom ?? map.music ?? 'route';
     if (newBgm == 'none') {
-      FlameAudio.bgm.stop();
+      bgm?.stop();
       return;
     }
     var currentMap = map.id;
@@ -19,16 +19,16 @@ extension AudioController on XeonjiaGame {
       // With this workaround the performance returns to normal with each room
       // change. Don't know why.
       // AudioPool, clearing cache, and other solutions didn't work.
-      FlameAudio.bgm.pause().then((_) {
-        if (!paused && currentMap == map.id) FlameAudio.bgm.resume();
+      bgm?.pause().then((_) {
+        if (!paused && currentMap == map.id) bgm?.resume();
       });
       return;
     }
     currentBgm = newBgm;
-    FlameAudio.bgm.stop();
+    bgm?.stop();
     Future.delayed(const Duration(seconds: 1), () {
       if (!paused && currentMap == map.id) {
-        FlameAudio.bgm.play('bgm/' + currentBgm! + '.oga');
+        bgm?.play('bgm/' + currentBgm! + '.oga');
       }
     });
   }
