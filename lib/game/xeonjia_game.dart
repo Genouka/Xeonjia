@@ -303,13 +303,15 @@ class XeonjiaGame extends FlameGame
         setMessage(Message(
             this,
             'Milla is tired and is back in the leaf, I must continue the battle.'
-                .i18n));
+                .i18n,
+            translate: false));
       } else if (component.name == 'september') {
         setMessage(Message(
             this,
             (milla?.deleted ?? true)
                 ? 'September is tired, I must continue the battle alone.'.i18n
-                : 'September is tired, but we must continue the battle.'.i18n));
+                : 'September is tired, but we must continue the battle.'.i18n,
+            translate: false));
       }
     }
     super.remove(component);
