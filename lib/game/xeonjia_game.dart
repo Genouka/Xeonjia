@@ -19,7 +19,7 @@ void setComponentSize(Size screenSize) => componentSize =
 class XeonjiaGame extends FlameGame
     with KeyboardEvents, PanDetector, HasTappables {
   XeonjiaGame() {
-    camera.speed = 300;
+    camera.speed = 750;
     environment = setEnvironment(this);
     messageManager = MessageManager(this);
     dialogBox = DialogBox(this);
