@@ -243,7 +243,7 @@ class _VirtualDPadState extends State<VirtualDPad> {
 
   @override
   Widget build(BuildContext context) {
-    size = MediaQuery.of(context).size.shortestSide / 9 * settings.dPadSize;
+    size = MediaQuery.of(context).size.shortestSide / 8 * settings.dPadSize;
     settings.dPadOffset = Offset(
         max(
             0,
