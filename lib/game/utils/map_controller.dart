@@ -77,7 +77,7 @@ extension MapController on XeonjiaGame {
             : miniMapZoom * componentSize * map.height > canvasSize.y)) {
       miniMapZoom = toValue ??
           (out
-              ? max(previousValue - delta, delta / 2)
+              ? max(previousValue - delta, delta)
               : min(previousValue + delta, 2));
     }
     if (previousValue != miniMapZoom) {
