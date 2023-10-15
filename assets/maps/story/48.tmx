@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="17" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="66">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="17" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="68">
  <properties>
   <property name="map-name" value="Route 6"/>
   <property name="milla">(if (!get &quot;048-leaf&quot;)
@@ -202,6 +202,8 @@
     (milla-out)
     (wait 3)
     (set &quot;milla-leaf&quot; #t)
+    (place 66 -16 64)
+    (place 67 64 272)
     (give-leaf))
   (if (!get &quot;048-leaf&quot;)
     (begin
@@ -216,6 +218,30 @@
   <object id="64" gid="428" x="192" y="32" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="120"/>
+   </properties>
+  </object>
+  <object id="66" class="Solid" x="0" y="32" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if (!get &quot;048-leaf&quot;)
+  (begin
+    (dialog '((&quot;/hero&quot; &quot;I should try calling Milla by clicking on the leaf icon at the top right of the screen.&quot;)))
+    (wait)
+    (set-orientation 2))
+  (delete-me)))</property>
+    <property name="actionOnEvent">(if (get &quot;048-leaf&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+  <object id="67" class="Solid" x="32" y="256" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if (!get &quot;048-leaf&quot;)
+  (begin
+    (dialog '((&quot;/hero&quot; &quot;I should try calling Milla by clicking on the leaf icon at the top right of the screen.&quot;)))
+    (wait)
+    (set-orientation 1))
+  (delete-me)))</property>
+    <property name="actionOnEvent">(if (get &quot;048-leaf&quot;)
+  (delete-me))</property>
    </properties>
   </object>
  </objectgroup>

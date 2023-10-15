@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="78">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="79">
  <properties>
   <property name="map-name" value="Route 6"/>
   <property name="milla">(if (!get &quot;049-milla-fresh-water&quot;)
@@ -11,22 +11,22 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="391" source="../tilesets/indoor.tsx"/>
- <tileset firstgid="447" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/indoor.tsx"/>
+ <tileset firstgid="472" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA51UsUoDQRC9AU0jpDHY2SixNY1/kV7BDxCNGEyEGEwaTSBV/sHSX7NRgqBYHL7hdnGczOxtfPCY3du79252ZrdHRdFLcAwymiGW4ApshLmHPtZvAiP422PMO+IZ65ZCb1/pNhM+2kP/0xFVTOEC60PBS/W+9GiLtbr8PQ3mbcKDwO98addjoHLx8qhDw9GwctH18Gp3klnTHI/S0Un1zQhr9+B10LkSfW55xD3g3n02mELfyMHykHvyQr9chMh4A1tU8f0fHnJflrROxie4jfEH4o6xJ3Uesh6WR1v57IpcYl3G9FdHe8Qzq8/qo5h3hM8Wxl+FjQOsHdK6h8z3FDwLz7uI5xueIS+POB+IfFh3tbl0rYd39+TgAd9MwKmhyRgZZynnfoz3PscnxBk4p6q+d0bvyv6wNGItXzHeI/9u0DkwfwC1BxyeCAcAAA==
+   H4sIAAAAAAAAA51UwWoCMRA19NKyFCw9BITqpbCXlt56adFrvfgX3i34AVIRl9qCFu2lreCp/9CjX+YbTOiQnclGHzyGJJv3djKTLEyttojwAyTkLlrEDGy5sYYC61NHD9r7BHbZHOlapncf6OYRn9Aj/KeO2TOGEdbfGF+C77lHm61V5a9pEF8jHg3w8gBtzWMW5KLlUYWWoiHlEtZDq10vsaYpHlbRivXN3PX2xOmMWZ9LHv4MqHf/BMZQCDlIHvxMtuafGxcJp4i3jmfC/1Z58HP5NWUS6ohN8By8PsKD10PyaAc+NywXXxeqhRW8vYe/s+Fd/WLjLvO5Ai+UOj1g/tGUPXi+A/DZzfcRhwfeIS0PP56xfEg3O0K7ykN7e1KwxJ4V+CloEubCXUp5H/27T/Eb/AHXZl/fd6F3eX9IGr6WJ+Cd0d8G6Vx2qYAtJQgHAAA=
   </data>
  </layer>
  <layer id="6" name="Tile Layer 2" width="25" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgQAB1RgYGDUaGUTAKRgEOYIGWPyxpkF/s0cx0poEd34H4BxBPBJo9CYh/Ut8KBneou2cC6VlA3DlatoyCQQoAa2oYtQgHAAA=
+   H4sIAAAAAAAAA2NgQAAHRgYGR0aGUTAKRgEOEIiWP4JokF8i0MyMoYEdAkAzBYF4FRCvBmIhGtiRADVzE5DeDMSLRsuWUTBIAQB975O5CAcAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="59" class="NPC" gid="189" x="80" y="176" width="16" height="16">
+  <object id="59" class="NPC" gid="214" x="80" y="176" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;My roof burned.\nYes, okay, it keeps snowing in my house, but it's nice to be able to watch the sky.&quot;)))"/>
    </properties>
@@ -54,73 +54,73 @@
  </objectgroup>
  <layer id="13" name="Tile Layer 3" width="25" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYOgDdUYGBg1GBA0C/wbWSYMa2EPDaDuUdmaknV0gO2AYOX4IASmgOmkaumsU0A8M9rgEAIeqNFUIBwAA
+   H4sIAAAAAAAAA2NgGAWjYOgDB0YGBkdGBA0C4owD66bBDCKgYXMBSsfQMKxAdsAwcvwQAsZAdSajcTgswGCPSwCm8mdgCAcAAA==
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="61" class="Ground" gid="328" x="112" y="192" width="16" height="16">
+  <object id="61" class="Ground" gid="353" x="112" y="192" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;sheet-of-paper/book&quot; &quot;Well, this is / My final abode / The snow lay 1 meter.&quot;)))"/>
     <property name="priority" type="int" value="900"/>
    </properties>
   </object>
-  <object id="63" class="Ground" gid="310" x="112" y="208" width="16" height="16">
+  <object id="63" class="Ground" gid="335" x="112" y="208" width="16" height="16">
    <properties>
     <property name="priority" type="int" value="900"/>
    </properties>
   </object>
-  <object id="65" class="Ground" gid="328" x="80" y="192" width="16" height="16">
+  <object id="65" class="Ground" gid="353" x="80" y="192" width="16" height="16">
    <properties>
     <property name="priority" type="int" value="900"/>
    </properties>
   </object>
-  <object id="66" class="Ground" gid="328" x="96" y="192" width="16" height="16">
+  <object id="66" class="Ground" gid="353" x="96" y="192" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;sheet-of-paper/book&quot; &quot;Just being here / I am here / And the snow falls.&quot;)))"/>
     <property name="priority" type="int" value="900"/>
    </properties>
   </object>
-  <object id="68" class="Ground" gid="336" x="80" y="208" width="16" height="16">
+  <object id="68" class="Ground" gid="361" x="80" y="208" width="16" height="16">
    <properties>
     <property name="priority" type="int" value="900"/>
    </properties>
   </object>
-  <object id="69" class="Ground" gid="336" x="96" y="208" width="16" height="16">
+  <object id="69" class="Ground" gid="361" x="96" y="208" width="16" height="16">
    <properties>
     <property name="priority" type="int" value="900"/>
    </properties>
   </object>
-  <object id="70" class="Ground" gid="335" x="64" y="208" width="16" height="16">
+  <object id="70" class="Ground" gid="360" x="64" y="208" width="16" height="16">
    <properties>
     <property name="priority" type="int" value="900"/>
    </properties>
   </object>
-  <object id="71" class="Solid" gid="345" x="96" y="224" width="16" height="16">
+  <object id="71" class="Solid" gid="370" x="96" y="224" width="16" height="16">
    <properties>
     <property name="action">(if (= (orientation) 1)
   (dialog '((&quot;It's not a good thing to look into other people's homes.&quot;))))</property>
     <property name="priority" type="int" value="-200"/>
    </properties>
   </object>
-  <object id="72" class="Ground" gid="331" x="128" y="192" width="16" height="16">
+  <object id="72" class="Ground" gid="356" x="128" y="192" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;sheet-of-paper/book&quot; &quot;Bitter winter wind / Ends there / Sound of the sea.&quot;)))"/>
     <property name="priority" type="int" value="900"/>
    </properties>
   </object>
-  <object id="73" class="Ground" gid="339" x="128" y="208" width="16" height="16">
+  <object id="73" class="Ground" gid="364" x="128" y="208" width="16" height="16">
    <properties>
     <property name="priority" type="int" value="900"/>
    </properties>
   </object>
-  <object id="74" class="Solid" gid="303" x="144" y="208" width="16" height="16">
+  <object id="74" class="Solid" gid="328" x="144" y="208" width="16" height="16">
    <properties>
     <property name="action">(if (! (= (orientation) 2))
   (dialog '((&quot;This is a common tree in this area.&quot;))))</property>
     <property name="priority" type="int" value="-200"/>
    </properties>
   </object>
-  <object id="77" gid="459" x="192" y="240" width="16" height="16">
+  <object id="77" gid="484" x="192" y="240" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="120"/>
    </properties>

@@ -83,7 +83,7 @@
  <tileset firstgid="600" source="../tilesets/tower.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="16">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAytgYmAoxYHL8MgVAnEFENfiwHV45CqhepFBLBJ/NSN2cRBA1uuEJocLODNh6gWBOAL6keWxuRkGHJhQaXSArheXOmzy2OyFuWsFMJzOAvFKRkz3Ius9z8iAATYAxfYC8UYsciD1yPY6Y3Everwgq8MXVoQAreIIBI5i8SsuvQ5obshjQrULPY6K8KRnZH3o4VYM5NdQgAGF4m76wAMAAA==
+   H4sIAAAAAAAAAytgYmAoxYHL8MgVAnEFENfiwHV45CqhepFBLBJ/NSN2cRBA1uuEJocLqDJi6gWBOAL6keWxuRkGHJggdjjgkEfXi0sdNnls9sLctQJo51kgXsmI6V5kvecZGTDABqDYXiDeiEUOpB7ZXmcs7kWPF2R1+MKKEKBVHIHAUSx+xaXXAc0NeUyodqHHURGe9IysDz3cioH8GgowAC9kQwrAAwAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">

@@ -16,7 +16,7 @@
  <tileset firstgid="640" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="16">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA4tgYmCIxYHj8chFAnECEKfiwOl45BKhemHAFYm9gZGBYS8Qb2TELg/TuxkqfxRJHTYAk9/EiGmvGxN2Pdjk0fUi2wsyexcjwk3o8vj8iw1g8+9KLP7FZ+8KIB0D1XsEKnaeEbefQeLnoeqOAWl3qN6NJNq7AUs4k+NfdHMJ2YtNLznxiy1d4bMXlq6iyPRvNJCdQgEGAACKW5XAAwAA
+   H4sIAAAAAAAAA4tgYmCIxYHj8chFAnECEKfiwOl45BKherGBDYwMDHuBeCMjdnmY3s1Q+aM41MEATH4TI357CQFset1wmIUujs9ekFoYxmfvSqg/1JDkQH7axYgIC2T5FUCxGKjeI1D58wTCCiZ/DEi7Q/VuxBLO2OyFyW+gQTjjs5cYvehhiy2s8aUrfP6FpasoMv0bDdSXQgEGAL2vB57AAwAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
