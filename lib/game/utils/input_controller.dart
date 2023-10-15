@@ -96,9 +96,11 @@ extension InputController on XeonjiaGame {
 
   /// Handle tap gesture
   void _tapHandler(Offset position) {
-    Button? b = children.firstWhereOrNull(
-        (e) => e is Button && e.containsPoint(position.toVector2())) as Button?;
-    if (isPaused || !(user?.isMyTurn ?? false)) {
+    Button? b = children.firstWhereOrNull((e) =>
+        e is Button &&
+        e.containsPoint(position.toVector2()) &&
+        (e.visibility?.call() ?? true)) as Button?;
+    if ((isPaused && !miniMapEnabled) || !(user?.isMyTurn ?? false)) {
       return;
     } else if (b != null) {
       b.onTap();
