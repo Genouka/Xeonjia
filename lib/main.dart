@@ -28,10 +28,6 @@ void main() async {
     settings.audioSupported = false;
     saveSettings();
   } else if (Platform.isLinux) {
-    settings.soundEffects = false;
-    settings.backgroundMusic = false;
-    settings.audioSupported = false;
-    saveSettings();
     await windowManager.ensureInitialized();
     windowManager.setMinimumSize(const Size(400, 500));
     windowManager.setMaximumSize(Size.infinite);
