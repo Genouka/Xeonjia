@@ -113,6 +113,7 @@ extension InputController on XeonjiaGame {
     if (position.dx < topLeftSize.x && position.dy < topLeftSize.y * 2 + 20) {
       return;
     }
+    if (miniMapEnabled) return;
 
     // Update orientation
     var relativeTapX =
