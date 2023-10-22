@@ -64,7 +64,7 @@ class WelcomePage extends StatelessWidget {
                             onPressed: () =>
                                 saveName(context, _textFieldController.text),
                             child: Text(
-                              '> ' "Let's start!".i18n,
+                              '> ' + "Let's start!".i18n,
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 32,
