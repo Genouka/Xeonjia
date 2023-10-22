@@ -29,6 +29,8 @@ void main() async {
     saveSettings();
   } else if (Platform.isLinux) {
     await windowManager.ensureInitialized();
+    settings.soundEffects = false;
+    saveSettings();
     windowManager.setMinimumSize(const Size(400, 500));
     windowManager.setMaximumSize(Size.infinite);
   } else if (Platform.isWindows) {
