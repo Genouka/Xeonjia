@@ -4,6 +4,7 @@
   <property name="action" value="(map-name &quot;XEONJIA TOWER – 11F&quot;)"/>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="XEONJIA TOWER – 11F"/>
+  <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
@@ -22,14 +23,14 @@
   <object id="63" class="NPC" gid="556" x="96" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I'm starting to get hungry.&quot;)))"/>
-    <property name="actionOnEvent">(if (visited-room &quot;x12&quot;)
+    <property name="actionOnEvent">(if (visited-room &quot;999_up&quot;)
   (delete-me))</property>
    </properties>
   </object>
   <object id="64" class="NPC" gid="572" x="80" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I think that this is the last floor before the King of Evil.&quot;)))"/>
-    <property name="actionOnEvent">(if (visited-room &quot;x12&quot;)
+    <property name="actionOnEvent">(if (visited-room &quot;999_up&quot;)
   (delete-me))</property>
    </properties>
   </object>

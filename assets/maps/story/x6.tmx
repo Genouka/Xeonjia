@@ -5,6 +5,7 @@
   <property name="can-escape" type="bool" value="false"/>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="XEONJIA TOWER – 6F"/>
+  <property name="music" value="enemies"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>

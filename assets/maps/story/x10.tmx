@@ -71,6 +71,7 @@
   <property name="can-escape" type="bool" value="false"/>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="XEONJIA TOWER – 10F"/>
+  <property name="music" value="enemies"/>
   <property name="start-battle" type="bool" value="false"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
@@ -83,7 +84,7 @@
  <tileset firstgid="600" source="../tilesets/tower.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="16">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAytgYmAoxYHL8MgVAnEFENfiwHV45CqhepFBLBJ/NSN2cRBA1uuEJocLqDJi6gWBOAL6keWxuRkGHJggdjjgkEfXi0sdNnls9sLctQJo51kgXsmI6V5kvecZGTDABqDYXiDeiEUOpB7ZXmcs7kWPF2R1+MKKEKBVHIHAUSx+xaXXAc0NeUyodqHHURGe9IysDz3cioH8GgowAC9kQwrAAwAA
+   H4sIAAAAAAAAAytgYmAoxYHL8MgVAnEFENfiwHV45CqhepFBLBJ/NSN2cRDAppcQUGXErjeOgDnI8jC9Tlj0ODBB7HDAIueIxb/Y1KGbh24vNnetANp5FohXMmK6F1nveUYGDLABKLYXiDdikQOpR7bXGYt70eMFWR05cYTuZhggJ45wgaNY/IpLrxOaG/KYUO1yRLO3CE96RtaHHm7FQH4NBRgA8xTtoMADAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">

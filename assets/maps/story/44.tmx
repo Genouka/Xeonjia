@@ -15,7 +15,7 @@
  <tileset firstgid="416" source="../tilesets/crypt-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="40" height="7">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzvAyMBwBg0fxCJGD4xu7yEgPgHEhMBaItSsppIaEFAHqtsDxKeIdB+9gTjQTYuR3Gcw0A7CAlYjuW/PIHUjsfG7mI5qkNWC3HcBiC8OUnwJiAGHexKVYAQAAA==
+   H4sIAAAAAAAAAzvAyMBwBg0fxCJGD4xu7yEgPgHEhIA0HdWAgDpQ3R4gPkWk+7jpqAYExIHqFiO5z4A4bXQFq5Hct4eAG5mJ8De11CADYuOX3ukPBGDxewGILw5SfAmIAX9BU05gBAAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="98">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="123">
  <properties>
   <property name="action">(begin
   (map-name &quot;XEONJIA TOWER – 12F&quot;)
@@ -108,6 +108,7 @@
     (set-orientation '(1 63))
     (wait 1)
     (set-orientation '(3 62))
+    (music &quot;none&quot;)
     (wait 0.6)
     (dialog '((&quot;/hero&quot; &quot;What's wrong, Milla?&quot;)))
     (wait)
@@ -132,17 +133,15 @@
     (shot-snowball 62)
     (shot-snowball 63)
     (shot-snowball -1)
-    (wait 0.6)
-    (music &quot;jrpg piano&quot;)
-    (the-end)
-    (wait)
-    (close-game))))</property>
+    (wait 2)
+    (the-end))))</property>
   <property name="can-escape" type="bool" value="false"/>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="Xeonjia Tower"/>
   <property name="milla">(if (!get &quot;999-september&quot;)
   (dialog '((&quot;/&quot; &quot;Hey, there's September!&quot;)))
   (dialog '((&quot;/&quot; &quot;Don't disturb me, I'm planning the trip.&quot;))))</property>
+  <property name="music" value="enemies"/>
   <property name="start-battle" type="bool" value="false"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
@@ -185,9 +184,127 @@
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="64" class="Solid" x="128" y="224" width="16" height="16">
+  <object id="67" gid="632" x="112" y="144" width="16" height="16">
    <properties>
-    <property name="actionOnCollision">(begin
+    <property name="action" value="(dialog '((&quot;/king-of-evil&quot; &quot;The Ice Kingdom will rise today.&quot;)))"/>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
+    <property name="hp" type="float" value="110"/>
+    <property name="team" type="int" value="1"/>
+    <property name="visible" type="bool" value="false"/>
+    <property name="weaponAtk" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="96" class="NPC" gid="572" x="16" y="240" width="16" height="16">
+   <properties>
+    <property name="action">(if (!get &quot;999_up-september&quot;)
+  (begin
+    (set &quot;999_up-september&quot; #t)
+    (milla-in-noleaf)
+    (dialog
+      '((&quot;/hero&quot; &quot;September!&quot;)
+      (&quot;/&quot; &quot;{{hero}}! Milla!&quot;)
+      (&quot;/hero&quot; &quot;What are you doing here?&quot;)
+      (&quot;/milla&quot; &quot;Are you training to become the new King of Evil?&quot;)
+      (&quot;evil september/_joking&quot; &quot;Don't call me that. I hate being called \&quot;new King of Evil\&quot;.&quot;)
+      (&quot;/&quot; &quot;I'm bored. I'm walking around here because I didn't know what to do.&quot;)
+      (&quot;/hero&quot; &quot;Are you also struggling with being a hero in a world without a villain?&quot;)
+      (&quot;/&quot; &quot;Exactly.&quot;)
+      (&quot;/milla_happy&quot; &quot;Sequel! Sequel! Sequel!&quot;)
+      (&quot;/hero&quot; &quot;No Milla, no.&quot;)
+      (&quot;/&quot; &quot;We just have to find new things to do and hobbies.\nI'm thinking about photography.&quot;)
+      (&quot;/hero&quot; &quot;Cool! I'm thinking about drawing.&quot;)
+      (&quot;/milla&quot; &quot;What do you think if we organize a trip?&quot;)
+      (&quot;/hero&quot; &quot;Where?&quot;)
+      (&quot;/milla&quot; &quot;Outside the Kingdom!&quot;)
+      (&quot;/&quot; &quot;Are there places outside the Kingdom?!&quot;)
+      (&quot;/milla&quot; &quot;Dunno, let's find out!&quot;)
+      (&quot;/&quot; &quot;I'm so bored that you convinced me!\nLet's do it!&quot;)
+      (&quot;/milla_happy&quot; &quot;Yeaaa!&quot;)
+      (&quot;/hero&quot; &quot;But do you know that this journey will not be covered by this or any other game?&quot;)
+      (&quot;/milla&quot; &quot;It doesn't matter.&quot;)
+      (&quot;/milla&quot; &quot;We will still live it even if no one sees us.&quot;)
+      (&quot;/&quot; &quot;How much wisdom.&quot;)
+      (&quot;/milla&quot; &quot;I invite Shen as well. And the Spirit of Water.&quot;)
+      (&quot;/hero&quot; &quot;Do you also invite the Spirit of Fire?&quot;)
+      (&quot;/milla_sleepy&quot; &quot;No…&quot;)
+      (&quot;/hero&quot; &quot;Milla!&quot;)
+      (&quot;/milla_sleepy&quot; &quot;Ok…&quot;)
+      (&quot;/hero&quot; &quot;Good.&quot;)
+      (&quot;/milla_happy&quot; &quot;I'm so happy! I'm going to organize the trip. Byeee!&quot;)))
+    (wait)
+    (milla-out)
+    (wait 2)
+    (dialog
+      '((&quot;/&quot; &quot;I don't know if it's a good idea to go on a trip organized by her.&quot;)
+      (&quot;/hero&quot; &quot;It will be an interesting adventure.&quot;)
+      (&quot;/&quot; &quot;That's for sure.&quot;))))
+  (dialog '((&quot;/&quot; &quot;Lots of free time now, huh?&quot;))))</property>
+    <property name="actionOnEvent">(if (!get &quot;the-end&quot;)
+  (delete-me))</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="6" name="Tile Layer 2" width="15" height="18">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGAWjYBRQA9QxkY6HKgAAbGmMQjgEAAA=
+  </data>
+ </layer>
+ <objectgroup id="8" name="items">
+  <object id="110" gid="651" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
+    <property name="healthPointsDelta" type="int" value="15"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="111" gid="651" x="160" y="48" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
+    <property name="healthPointsDelta" type="int" value="15"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="112" gid="651" x="176" y="160" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
+    <property name="healthPointsDelta" type="int" value="15"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="113" gid="651" x="48" y="160" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
+    <property name="healthPointsDelta" type="int" value="15"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="114" gid="651" x="176" y="240" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
+    <property name="healthPointsDelta" type="int" value="15"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="115" gid="651" x="48" y="240" width="16" height="16">
+   <properties>
+    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
+  (delete-me))</property>
+    <property name="healthPointsDelta" type="int" value="15"/>
+    <property name="visible" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="116" class="Solid" x="128" y="224" width="16" height="16">
+   <properties>
+    <property name="actionOnCollision">(if (get &quot;999_up-talk&quot;)
+  (delete-me)
+
+(begin
   (delete-me)
   (set &quot;999_up-talk&quot; #t)
   (dialog '((&quot;/hero&quot; &quot;Let's go!&quot;)))
@@ -289,12 +406,12 @@
   (set-orientation '(1 63))
   (earthquake)
   (wait 2)
-  (show 87)
-  (show 88)
-  (show 89)
-  (show 93)
-  (show 94)
-  (show 95)
+  (show 117)
+  (show 118)
+  (show 119)
+  (show 120)
+  (show 121)
+  (show 122)
   (show 67)
   (wait 3)
   (dialog
@@ -380,120 +497,54 @@
   (friendly '(#f 67))
   (quiet '(#f 67))
   (start-battle)
-  (show 80)
-  (show 81)
-  (show 82)
-  (show 83)
-  (show 84)
-  (show 85)
-  (music &quot;boss&quot;))</property>
+  (show 110)
+  (show 111)
+  (show 112)
+  (show 113)
+  (show 114)
+  (show 115)
+  (music &quot;boss&quot;)))</property>
     <property name="actionOnEvent">(if (get &quot;999_up-talk&quot;)
   (delete-me))</property>
    </properties>
   </object>
-  <object id="67" gid="632" x="112" y="144" width="16" height="16">
+  <object id="117" class="Monster" gid="129" x="64" y="96" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;/king-of-evil&quot; &quot;The Ice Kingdom will rise today.&quot;)))"/>
-    <property name="actionOnEvent">(if (get &quot;the-end&quot;)
-  (delete-me))</property>
-    <property name="hp" type="float" value="1"/>
-    <property name="team" type="int" value="1"/>
-    <property name="visible" type="bool" value="false"/>
-    <property name="weaponAtk" type="int" value="20"/>
+    <property name="hp" type="float" value="50"/>
+    <property name="level" type="float" value="5"/>
    </properties>
   </object>
-  <object id="80" gid="651" x="176" y="160" width="16" height="16">
+  <object id="118" class="Monster" gid="154" x="48" y="128" width="16" height="16">
    <properties>
-    <property name="healthPointsDelta" type="int" value="15"/>
-    <property name="visible" type="bool" value="false"/>
+    <property name="hp" type="float" value="50"/>
+    <property name="level" type="float" value="5"/>
    </properties>
   </object>
-  <object id="81" gid="651" x="48" y="240" width="16" height="16">
+  <object id="119" class="Monster" gid="179" x="80" y="128" width="16" height="16">
    <properties>
-    <property name="healthPointsDelta" type="int" value="15"/>
-    <property name="visible" type="bool" value="false"/>
+    <property name="hp" type="float" value="50"/>
+    <property name="level" type="float" value="5"/>
    </properties>
   </object>
-  <object id="82" gid="651" x="48" y="160" width="16" height="16">
+  <object id="120" class="Monster" gid="129" x="160" y="96" width="16" height="16">
    <properties>
-    <property name="healthPointsDelta" type="int" value="15"/>
-    <property name="visible" type="bool" value="false"/>
+    <property name="hp" type="float" value="50"/>
+    <property name="level" type="float" value="5"/>
    </properties>
   </object>
-  <object id="83" gid="651" x="176" y="240" width="16" height="16">
+  <object id="121" class="Monster" gid="154" x="144" y="128" width="16" height="16">
    <properties>
-    <property name="healthPointsDelta" type="int" value="15"/>
-    <property name="visible" type="bool" value="false"/>
+    <property name="hp" type="float" value="50"/>
+    <property name="level" type="float" value="5"/>
    </properties>
   </object>
-  <object id="84" gid="651" x="64" y="48" width="16" height="16">
+  <object id="122" class="Monster" gid="179" x="176" y="128" width="16" height="16">
    <properties>
-    <property name="healthPointsDelta" type="int" value="15"/>
-    <property name="visible" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="85" gid="651" x="160" y="48" width="16" height="16">
-   <properties>
-    <property name="healthPointsDelta" type="int" value="15"/>
-    <property name="visible" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="96" class="NPC" gid="572" x="16" y="240" width="16" height="16">
-   <properties>
-    <property name="action">(if (!get &quot;999-september&quot;)
-  (begin
-    (set &quot;999-september&quot; #t)
-    (milla-in-noleaf)
-    (dialog
-      '((&quot;/hero&quot; &quot;September!&quot;)
-      (&quot;/&quot; &quot;{{hero}}! Milla!&quot;)
-      (&quot;/hero&quot; &quot;What are you doing here?&quot;)
-      (&quot;/milla&quot; &quot;Are you training to become the new King of Evil?&quot;)
-      (&quot;evil september/_joking&quot; &quot;Don't call me that. I hate being called \&quot;new King of Evil\&quot;.&quot;)
-      (&quot;/&quot; &quot;I'm bored. I'm walking around here because I didn't know what to do.&quot;)
-      (&quot;/hero&quot; &quot;Are you also struggling with being a hero in a world without a villain?&quot;)
-      (&quot;/&quot; &quot;Exactly.&quot;)
-      (&quot;/milla_happy&quot; &quot;Sequel! Sequel! Sequel!&quot;)
-      (&quot;/hero&quot; &quot;No Milla, no.&quot;)
-      (&quot;/&quot; &quot;We just have to find new things to do and hobbies.\nI'm thinking about photography.&quot;)
-      (&quot;/hero&quot; &quot;Cool! I'm thinking about drawing.&quot;)
-      (&quot;/milla&quot; &quot;What do you think if we organize a trip?&quot;)
-      (&quot;/hero&quot; &quot;Where?&quot;)
-      (&quot;/milla&quot; &quot;Outside the Kingdom!&quot;)
-      (&quot;/&quot; &quot;Are there places outside the Kingdom?!&quot;)
-      (&quot;/milla&quot; &quot;Dunno, let's find out!&quot;)
-      (&quot;/&quot; &quot;I'm so bored that you convinced me!\nLet's do it!&quot;)
-      (&quot;/milla_happy&quot; &quot;Yeaaa!&quot;)
-      (&quot;/hero&quot; &quot;But do you know that this journey will not be covered by this or any other game?&quot;)
-      (&quot;/milla&quot; &quot;It doesn't matter.&quot;)
-      (&quot;/milla&quot; &quot;We will still live it even if no one sees us.&quot;)
-      (&quot;/&quot; &quot;How much wisdom.&quot;)
-      (&quot;/milla&quot; &quot;I invite Shen as well. And the Spirit of Water.&quot;)
-      (&quot;/hero&quot; &quot;Do you also invite the Spirit of Fire?&quot;)
-      (&quot;/milla_sleepy&quot; &quot;No…&quot;)
-      (&quot;/hero&quot; &quot;Milla!&quot;)
-      (&quot;/milla_sleepy&quot; &quot;Ok…&quot;)
-      (&quot;/hero&quot; &quot;Good.&quot;)
-      (&quot;/milla_happy&quot; &quot;I'm so happy! I'm going to organize the trip. Byeee!&quot;)))
-    (wait)
-    (milla-out)
-    (wait 2)
-    (dialog
-      '((&quot;/&quot; &quot;I don't know if it's a good idea to go on a trip organized by her.&quot;)
-      (&quot;/hero&quot; &quot;It will be an interesting adventure.&quot;)
-      (&quot;/&quot; &quot;That's for sure.&quot;))))
-  (dialog '((&quot;/&quot; &quot;Lots of free time now, huh?&quot;))))</property>
-    <property name="actionOnEvent">(if (!get &quot;the-end&quot;)
-  (delete-me))</property>
+    <property name="hp" type="float" value="50"/>
+    <property name="level" type="float" value="5"/>
    </properties>
   </object>
  </objectgroup>
- <layer id="6" name="Tile Layer 2" width="15" height="18">
-  <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBRQA9QxkY6HKgAAbGmMQjgEAAA=
-  </data>
- </layer>
- <objectgroup id="8" name="items"/>
  <objectgroup id="10" name="spawn points">
   <object id="60" class="Door" x="112" y="224" width="16" height="16">
    <properties>
