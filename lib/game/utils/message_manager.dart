@@ -34,6 +34,7 @@ class MessageManager {
       callback = null;
       if (hideMap) {
         hideMap = false;
+        gameRef.overlays.add('leafButton');
         gameRef.playBackgroundMusic();
         gameRef.statusBox.state?.refresh();
       }
@@ -58,6 +59,7 @@ class MessageManager {
       {bool? hideMap, VoidCallback? callback}) {
     if (newMessages == null) return;
     this.hideMap = hideMap ?? false;
+    if (this.hideMap) gameRef.overlays.remove('leafButton');
     gameRef.statusBox.state?.refresh();
     this.callback = callback;
     _messages.addAll(newMessages.fold([], (previousValue, element) {
