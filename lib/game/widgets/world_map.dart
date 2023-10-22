@@ -95,7 +95,7 @@ class Pointer extends PositionComponent with HasGameRef<XeonjiaGame> {
   }
 
   final Paint _paint = Paint()..color = Colors.red;
-  final int delta = 15;
+  int get delta => (gameRef.size.toSize().shortestSide / 25).round();
   bool visible = false;
 
   @override
