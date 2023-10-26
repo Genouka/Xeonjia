@@ -3,6 +3,7 @@
  <properties>
   <property name="action">(begin
   (map-name &quot;XEONJIA TOWER – 12F&quot;)
+  (if (!get &quot;the-end&quot;) (disable-world-map))
 
 (if (and (!get &quot;999_up-safe&quot;) (and (eq? (enemies-count) 0) (and (get &quot;999_up-talk&quot;) (!get &quot;999_up-ok&quot;))))
   (begin
@@ -136,7 +137,7 @@
     (wait 2)
     (the-end))))</property>
   <property name="can-escape" type="bool" value="false"/>
-  <property name="disable-worldmap" type="bool" value="true"/>
+  <property name="disable-worldmap" type="bool" value="false"/>
   <property name="map-name" value="Xeonjia Tower"/>
   <property name="milla">(if (!get &quot;999-september&quot;)
   (dialog '((&quot;/&quot; &quot;Hey, there's September!&quot;)))
@@ -512,36 +513,42 @@
    <properties>
     <property name="hp" type="float" value="50"/>
     <property name="level" type="float" value="5"/>
+    <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
   <object id="118" class="Monster" gid="154" x="48" y="128" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="50"/>
     <property name="level" type="float" value="5"/>
+    <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
   <object id="119" class="Monster" gid="179" x="80" y="128" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="50"/>
     <property name="level" type="float" value="5"/>
+    <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
   <object id="120" class="Monster" gid="129" x="160" y="96" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="50"/>
     <property name="level" type="float" value="5"/>
+    <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
   <object id="121" class="Monster" gid="154" x="144" y="128" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="50"/>
     <property name="level" type="float" value="5"/>
+    <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
   <object id="122" class="Monster" gid="179" x="176" y="128" width="16" height="16">
    <properties>
     <property name="hp" type="float" value="50"/>
     <property name="level" type="float" value="5"/>
+    <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
  </objectgroup>
