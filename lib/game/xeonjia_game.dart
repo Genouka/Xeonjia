@@ -226,10 +226,8 @@ class XeonjiaGame extends FlameGame
         if (i >= players.length) i = 0;
         if (!(players[i].deleted || players[i].isBeingDeleted)) {
           changingTurn = true;
-          bool deletingSomeone = players.any(
-              (p) => p is CharacterComponent && !p.deleted && p.isBeingDeleted);
           add(TimerComponent(
-              period: deletingSomeone ? 1.8 : 0,
+              period: 0.5,
               onTick: () {
                 if (!inBattle ||
                     playerOne!.isBeingDeleted ||
@@ -239,7 +237,7 @@ class XeonjiaGame extends FlameGame
                     moveCamera(size.y, map.height, players[i].y)));
               }));
           add(TimerComponent(
-              period: deletingSomeone ? 2.5 : 0.7,
+              period: 1,
               onTick: () {
                 if (!inBattle ||
                     playerOne!.isBeingDeleted ||
