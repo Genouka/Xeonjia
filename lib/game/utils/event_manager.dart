@@ -572,6 +572,10 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     }
     return #NONE;
   });
+  _('disable-world-map', 0, (Cell? x) {
+    gameRef.map.disableWorldMap = true;
+    return #NONE;
+  });
   _('give-leaf', 0, (Cell? x) {
     gameRef.overlays.remove('leafButton');
     gameRef.overlays.add('leafButton');
