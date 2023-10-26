@@ -83,6 +83,10 @@ class XeonjiaGame extends FlameGame
     overlays.add('dialogBox');
     overlays.remove('statusBox');
     overlays.add('statusBox');
+    if (startingDialog != '') {
+      setMessage(Message(this, startingDialog));
+      startingDialog = '';
+    }
     executeAction(action: map.action, actor: playerOne!);
     if (enemies > 0 && map.startBattle) {
       setMessage(
@@ -156,6 +160,7 @@ class XeonjiaGame extends FlameGame
   /// Dialog box
   late DialogBox dialogBox;
   late MessageManager messageManager;
+  String startingDialog = '';
 
   /// Curtain during [start]
   final CurtainComponent _curtain = CurtainComponent();
