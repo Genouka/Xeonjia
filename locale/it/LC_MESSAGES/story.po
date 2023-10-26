@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # Manuel Tassi <mannivuwiki@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-09 08:00+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-10-26 19:12+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -299,7 +299,7 @@ msgstr "No! L'importante è tornare!\nI 63 eroi prima di te non ce l'hanno fatta
 
 #: assets/maps/story/1.tmx:
 msgid "Do you think I'm ready?"
-msgstr "Pensi che sono pronto?"
+msgstr "Pensi che io sia pronto?"
 
 #: assets/maps/story/1.tmx:
 msgid "Absolutely not!\nBut today is Departure Day, what you have learned will have to be enough for you.\nIf you don't leave today, the Kings will send next year's hero on this journey.\nIt would be humiliating for the whole family and our town."
@@ -347,7 +347,7 @@ msgstr "Devo dire addio ai miei genitori premendo il tasto \"{{inspect-key}}\" p
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, I have to go to my neighbor first."
-msgstr "Come ha detto mia mamma, devo prima andare dal mio vicino."
+msgstr "Come ha detto mia mamma, devo prima andare dalla mia vicina."
 
 #: assets/maps/story/1.tmx:
 msgid "From here on is the frozen floor.\nI'll slide until I reach an obstacle.\nSo I have to use my mind to figure out the best path."
@@ -995,7 +995,7 @@ msgstr "Oh, mi dispiace ma voglio raggiungere la Torre Xeonjia il prima possibil
 
 #: assets/maps/story/7.tmx:
 msgid "Hopefully before dark."
-msgstr "Magari prima che faccia buio."
+msgstr "Spero prima che faccia buio."
 
 #: assets/maps/story/7.tmx:
 msgid "Oh well yeah sure."
@@ -2079,7 +2079,7 @@ msgstr "Stanno giocando a Quinb! Sembra che si stiano divertendo molto!"
 
 #: assets/maps/story/21_house.tmx:
 msgid "Sorry, I have to stay focused."
-msgstr "Scusa, devo rimanere concentrato."
+msgstr "Scusa, devo rimanere concentrata."
 
 #: assets/maps/story/21_house.tmx:
 msgid "I love Quinb!"
@@ -2335,7 +2335,7 @@ msgstr "Sì! Nessun problema!"
 
 #: assets/maps/story/999.tmx:
 msgid "Have you seen those little green worms?\nThey are so cute!"
-msgstr "Avete visto quei vermetti verdi?\nSono così carini!"
+msgstr "Hai visto quei vermetti verdi?\nSono così carini!"
 
 #: assets/maps/story/999.tmx:
 msgid "…C-cute?? You have strange tastes."
@@ -2515,7 +2515,7 @@ msgstr "Sono un po' confuso."
 
 #: assets/maps/story/25_house.tmx:
 msgid "I'm planning a surprise wedding for my son.\nI hope he doesn't find out."
-msgstr "Sto pianificando un matrimonio a sorpresa per mio figlio.\nSpero che non lo scopra."
+msgstr "Sto organizzando un matrimonio a sorpresa per mio figlio.\nSpero che non lo scopra."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Home"
@@ -3007,7 +3007,7 @@ msgstr "Devo prendere il sigillo."
 
 #: assets/maps/story/1_house.tmx:
 msgid "NEIGHBOR'S HOUSE"
-msgstr "CASA DEL VICINO"
+msgstr "CASA DELLA VICINA"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nHere you go!"
@@ -3015,7 +3015,7 @@ msgstr "Ciao ragazzo, stai bene?\nOggi è il grande giorno, eh?\nFai attenzione,
 
 #: assets/maps/story/1_house.tmx:
 msgid "neighbor"
-msgstr "vicino"
+msgstr "vicina"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Thank you very much!\nIt looks delicious!"
@@ -4731,7 +4731,7 @@ msgstr "ragazzina"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "youngster"
-msgstr "ragazzino"
+msgstr "ragazzina"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "elderly"
