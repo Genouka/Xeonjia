@@ -6,7 +6,7 @@ extension AudioController on XeonjiaGame {
   void playBackgroundMusic({String? custom}) {
     if (!settings.backgroundMusic || messageManager.hideMap) return;
     customBgm = custom;
-    String newBgm = custom ?? map.music ?? 'route';
+    String newBgm = custom ?? map.music ?? 'route-1';
     if (newBgm == 'none') {
       bgm?.stop();
       return;

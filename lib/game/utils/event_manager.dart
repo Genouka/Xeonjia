@@ -607,7 +607,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     // i18n: 'Bye!'.i18n
     gameRef.executeAction(action: r'''
     (begin
-      (music "jrpg-piano")
+      (music "finale")
       (dialog-hide-map-then-close
         '(("the-end/book" "And that's it.\nWe have now reached the end of this fantastic adventure!\nYour determination and courage made this victory possible.\nKeep exploring, dreaming and being the hero the world needs, because your adventures will never end.\nWhere will your next journey take you?\nThank you for playing Xeonjia!\nMaybe our paths will cross again.")
         ("/milla_happy" "Bye!"))))''');
