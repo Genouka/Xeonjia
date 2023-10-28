@@ -596,6 +596,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     mainCharacter.eventLog = Map.from(gameRef.currentEventLog);
     mainCharacter.eventLog['the-end'] = true;
     mainCharacter.eventLog['${gameRef.map.id}-safe'] = true;
+    mainCharacter.itemList = List.from(gameRef.playerOne!.itemList);
     mainCharacter.visitedRooms.addAll(['0', '1_home_2']);
     mainCharacter.currentHP = gameRef.playerOne!.maxHP;
     mainCharacter.money = gameRef.playerOne!.money;
