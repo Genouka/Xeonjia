@@ -15,7 +15,7 @@
 # xlf1024 <pgc79727@zbock.com>, 2023.
 # Iwan Gabovitch <qvolloc@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-26 20:13+0000\nLast-Translator: Iwan Gabovitch <qvolloc@gmail.com>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-10-28 18:40+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -2187,7 +2187,7 @@ msgstr "Ich weiß es nicht! Versuch, darauf zu treten und schau, ob etwas passie
 
 #: assets/maps/story/x7.tmx:
 msgid "Let's try."
-msgstr "Probieren wir’s."
+msgstr "Probieren wir's."
 
 #: assets/maps/story/x7.tmx:
 msgid "Uh?"
@@ -2207,7 +2207,7 @@ msgstr "Nicht besonders."
 
 #: assets/maps/story/x7.tmx:
 msgid "I like it!"
-msgstr "Mir gefällt’s!"
+msgstr "Mir gefällt's!"
 
 #: assets/maps/story/27.tmx:
 msgid "I still don't understand why I lose money when I run out of HP."
@@ -3939,7 +3939,7 @@ msgstr "Warum verschwendest du deine Züge so?"
 
 #: assets/maps/story/999_up.tmx:
 msgid "Let's go!"
-msgstr "Los geht’s!"
+msgstr "Los geht's!"
 
 #: assets/maps/story/999_up.tmx:
 msgid "What's this thing?"
@@ -4287,7 +4287,7 @@ msgstr "Keine Ahnung, lass es uns herausfinden!"
 
 #: assets/maps/story/999_up.tmx:
 msgid "I'm so bored that you convinced me!\nLet's do it!"
-msgstr "Du hast mich in all meiner Langeweile überzeugt!\nMachen wir’s!"
+msgstr "Du hast mich in all meiner Langeweile überzeugt!\nMachen wir's!"
 
 #: assets/maps/story/999_up.tmx:
 msgid "Yeaaa!"

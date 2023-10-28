@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # Manuel Tassi <mannivuwiki@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-10-26 19:12+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-10-28 18:40+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -199,7 +199,7 @@ msgstr "Hai tutte le pietre?! Congratulazioni!\nC'è qualcuno che ti aspetta nel
 
 #: assets/maps/story/24_lab.tmx:
 msgid "So you finished this challenge too, huh?\nBravo."
-msgstr "Quindi hai finito anche questa sfida, eh?\nBravo."
+msgstr "Quindi hai completato anche questa sfida, eh?\nBravo."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Did you organize this treasure hunt? Right?"
@@ -2063,7 +2063,7 @@ msgstr "Una roccia pesante."
 
 #: assets/maps/story/35.tmx:
 msgid "↑ Hexa Cave"
-msgstr "↑ Grotta Hex"
+msgstr "↑ Grotta Hexa"
 
 #: assets/maps/story/35.tmx:
 msgid "Aquaville Town →"
@@ -2231,7 +2231,7 @@ msgstr "Sì, ci sei stata?"
 
 #: assets/maps/story/27.tmx:
 msgid "I'm from there!\nBut there's nothing special, it's a very boooring city.\nIn tourist guides, the \"Museum of rocking chairs\" is listed as the most interesting attraction.\nBut apparently it has closed down."
-msgstr "Sono vengo da lì!\nMa non c'è nulla di che, è una città davvero noiooosa.\nNelle guide turistiche come attrazione più interessante indicano il \"Museo delle sedie a dondolo\".\nMa a quanto pare ha chiuso."
+msgstr "Vengo da lì!\nMa non c'è nulla di che, è una città davvero noiooosa.\nNelle guide turistiche come attrazione più interessante indicano il \"Museo delle sedie a dondolo\".\nMa a quanto pare ha chiuso."
 
 #: assets/maps/story/27.tmx:
 msgid "Oh, what a pity."
@@ -2679,7 +2679,7 @@ msgstr "iosa&joza"
 
 #: assets/maps/story/x10.tmx:
 msgid "You know, {{hero}}, you and I are not that different.\nI acted for the highest good.\nThis is a sick world.\nIt must be healed and that's why difficult decisions must be made. And I took that responsibility upon myself.\nThe only way to restore order is through chaos.\nYou will understand it too sooner or later."
-msgstr "Sai, {{hero}}, tu ed io non siamo poi così diversi.\nHo agito per il bene più alto.\nQuesto è un mondo malato.\nVa guarito e per questo bisogna prendere decisioni difficili. E io mi sono preso questa responsabilità.\nL’unico modo per ripristinare l’ordine è attraverso il caos.\nLo capirai anche tu prima o poi."
+msgstr "Sai, {{hero}}, tu ed io non siamo poi così diversi.\nHo agito per il bene più alto.\nQuesto è un mondo malato.\nVa guarito e per questo bisogna prendere decisioni difficili. E io mi sono preso questa responsabilità.\nL'unico modo per ripristinare l'ordine è attraverso il caos.\nLo capirai anche tu prima o poi."
 
 #: assets/maps/story/x10.tmx:
 msgid "Nobody can stop us!\nLet's move on."
@@ -3071,7 +3071,7 @@ msgstr "Ottimo, ha funzionato.\nMa… devi apparire sulla mia testa?"
 
 #: assets/maps/story/48.tmx:
 msgid "No, but I like it that way.\nProblems?"
-msgstr "No, ma mi piace così.\nI problemi?"
+msgstr "No, ma mi piace così.\nProblemi?"
 
 #: assets/maps/story/48.tmx:
 msgid "No, but… you weigh…"
@@ -3771,7 +3771,7 @@ msgstr "Sono appena stato sconfitto da 3 ragazzini."
 
 #: assets/maps/story/999_up.tmx:
 msgid "I had to leave my world because it was uninhabitable.\nFreezing your world was the only way to save me and my people.\nThere was no possibility of coexistence."
-msgstr "Ho dovuto lasciare il mio mondo perché era ormai diventato inabitabile.\nCongelare il vostro mondo era l'unico modo per salvare me e la mia gente.\nNon c’era possibilità di convivenza."
+msgstr "Ho dovuto lasciare il mio mondo perché era ormai diventato inabitabile.\nCongelare il vostro mondo era l'unico modo per salvare me e la mia gente.\nNon c'era possibilità di convivenza."
 
 #: assets/maps/story/999_up.tmx:
 msgid "But in this way, to avoid your own suffering you brought suffering to us."
@@ -4259,7 +4259,7 @@ msgstr "Dobbiamo solo trovare nuove cose da fare e hobby.\nIo sto pensando alla 
 
 #: assets/maps/story/999_up.tmx:
 msgid "Cool! I'm thinking about drawing."
-msgstr "Bello! Io so pensando di disegnare."
+msgstr "Bello! Io so pensando di dedicarmi al disegno."
 
 #: assets/maps/story/999_up.tmx:
 msgid "What do you think if we organize a trip?"

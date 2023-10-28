@@ -9,7 +9,7 @@
 # pascalou <bzhkrp@inboxen.org>, 2023.
 # Thothorg <jean-baptiste.ouy@posteo.net>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-10-28 18:40+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -3185,7 +3185,7 @@ msgstr "Essaie de m'appeler pour voir si tu comprends.\nMaintenant, je vais dans
 
 #: assets/maps/story/48.tmx:
 msgid "I should try calling Milla by clicking on the leaf icon at the top right of the screen."
-msgstr "Je devrais essayer d'appeler Milla en cliquant sur l’icône de la feuille en haut à droite de l'écran."
+msgstr "Je devrais essayer d'appeler Milla en cliquant sur l'icône de la feuille en haut à droite de l'écran."
 
 #: assets/maps/story/60.tmx:
 msgid "I don't like boating."

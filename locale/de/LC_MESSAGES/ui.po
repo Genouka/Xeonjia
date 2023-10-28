@@ -12,7 +12,7 @@
 # Sebastian <abba@use.startmail.com>, 2023.
 # Iwan Gabovitch <qvolloc@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-10-08 15:13+0000\nLast-Translator: Iwan Gabovitch <qvolloc@gmail.com>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-10-28 18:40+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -56,7 +56,7 @@ msgstr "Deine Reise kann beginnen!\nWie heißt du?"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Let's start!"
-msgstr "Los geht’s!"
+msgstr "Los geht's!"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Smallest"
@@ -540,7 +540,7 @@ msgstr "Ich bin huuungrig."
 
 #: lib/game/utils/event_manager.dart:
 msgid "And that's it.\nWe have now reached the end of this fantastic adventure!\nYour determination and courage made this victory possible.\nKeep exploring, dreaming and being the hero the world needs, because your adventures will never end.\nWhere will your next journey take you?\nThank you for playing Xeonjia!\nMaybe our paths will cross again."
-msgstr "Und das war’s.\nWir haben jetzt das Ende dieses fantastischen Abenteuers erreicht!\nDeine Entschlossenheit und dein Mut haben diesen Sieg ermöglicht.\nErforsche weiter, folge deinen Träumen und trage die Heldenrolle, für diese Welt – deine Abenteuer werden nie enden.\nWohin wird dich deine nächste Reise führen?\nDanke, dass du Xeonjia gespielt hast!\nVielleicht kreuzen sich unsere Wege ja wieder."
+msgstr "Und das war's.\nWir haben jetzt das Ende dieses fantastischen Abenteuers erreicht!\nDeine Entschlossenheit und dein Mut haben diesen Sieg ermöglicht.\nErforsche weiter, folge deinen Träumen und trage die Heldenrolle, für diese Welt – deine Abenteuer werden nie enden.\nWohin wird dich deine nächste Reise führen?\nDanke, dass du Xeonjia gespielt hast!\nVielleicht kreuzen sich unsere Wege ja wieder."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Bye!"
@@ -700,7 +700,7 @@ msgstr "Und falls du wenige LP übrig hast, nutze einen freien Zug, um etwas aus
 
 #: lib/game/xeonjia_game.dart:
 msgid "That's all. Good luck!"
-msgstr "Das war’s erstmal. Viel Glück!"
+msgstr "Das war's erstmal. Viel Glück!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "manual"
