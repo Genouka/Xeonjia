@@ -3795,6 +3795,10 @@ msgid "And so, in the end, it really happened."
 msgstr ""
 
 #: assets/maps/story/999_up.tmx:
+msgid "king of evil"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
 msgid "I just got defeated by 4 kids."
 msgstr ""
 
@@ -3968,6 +3972,126 @@ msgstr ""
 
 #: assets/maps/story/999_up.tmx:
 msgid "Why do you waste your moves like this?"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "The Ice Kingdom will rise today."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "{{hero}}! Milla!"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "What are you doing here?"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Are you training to become the new King of Evil?"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Don't call me that. I hate being called \"new King of Evil\"."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "I'm bored. I'm walking around here because I didn't know what to do."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Are you also struggling with being a hero in a world without a villain?"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Exactly."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Sequel! Sequel! Sequel!"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "No Milla, no."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "We just have to find new things to do and hobbies.\nI'm thinking about photography."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Cool! I'm thinking about drawing."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "What do you think if we organize a trip?"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Where?"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Outside the Kingdom!"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Dunno, let's find out!"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "I'm so bored that you convinced me!\nLet's do it!"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Yeaaa!"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "But do you know that this journey will not be covered by this or any other game?"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "We will still live it even if no one sees us."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "How much wisdom."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "I invite Shen as well. And the Spirit of Water."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Do you also invite the Spirit of Fire?"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Ok…"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Good."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "I'm so happy! I'm going to organize the trip. Byeee!"
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "I don't know if it's a good idea to go on a trip organized by her."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "It will be an interesting adventure."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "That's for sure."
+msgstr ""
+
+#: assets/maps/story/999_up.tmx:
+msgid "Lots of free time now, huh?"
 msgstr ""
 
 #: assets/maps/story/999_up.tmx:
@@ -4254,126 +4378,6 @@ msgstr ""
 msgid "Let's fight."
 msgstr ""
 
-#: assets/maps/story/999_up.tmx:
-msgid "The Ice Kingdom will rise today."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "{{hero}}! Milla!"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "What are you doing here?"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Are you training to become the new King of Evil?"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Don't call me that. I hate being called \"new King of Evil\"."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "I'm bored. I'm walking around here because I didn't know what to do."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Are you also struggling with being a hero in a world without a villain?"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Exactly."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Sequel! Sequel! Sequel!"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "No Milla, no."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "We just have to find new things to do and hobbies.\nI'm thinking about photography."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Cool! I'm thinking about drawing."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "What do you think if we organize a trip?"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Where?"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Outside the Kingdom!"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Dunno, let's find out!"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "I'm so bored that you convinced me!\nLet's do it!"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Yeaaa!"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "But do you know that this journey will not be covered by this or any other game?"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "We will still live it even if no one sees us."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "How much wisdom."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "I invite Shen as well. And the Spirit of Water."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Do you also invite the Spirit of Fire?"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Ok…"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Good."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "I'm so happy! I'm going to organize the trip. Byeee!"
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "I don't know if it's a good idea to go on a trip organized by her."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "It will be an interesting adventure."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "That's for sure."
-msgstr ""
-
-#: assets/maps/story/999_up.tmx:
-msgid "Lots of free time now, huh?"
-msgstr ""
-
 #: assets/maps/story/t3_03.tmx:
 msgid "FIERY CRYPT – B3F"
 msgstr ""
@@ -4616,10 +4620,6 @@ msgstr "这座塔长得也太难看了。"
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "This is a wall."
-msgstr ""
-
-#: assets/maps/tilesets/tower.tsx:
-msgid "king of evil"
 msgstr ""
 
 #: assets/maps/tilesets/lab.tsx:

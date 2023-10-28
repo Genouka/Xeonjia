@@ -3762,6 +3762,10 @@ msgid "And so, in the end, it really happened."
 msgstr "Und so ist es am Ende wirklich passiert."
 
 #: assets/maps/story/999_up.tmx:
+msgid "king of evil"
+msgstr "König des Bösen"
+
+#: assets/maps/story/999_up.tmx:
 msgid "I just got defeated by 4 kids."
 msgstr "Ich wurde einfach von 4 Kindern besiegt."
 
@@ -3936,6 +3940,126 @@ msgstr "Da sind wir ja endlich!"
 #: assets/maps/story/999_up.tmx:
 msgid "Why do you waste your moves like this?"
 msgstr "Warum verschwendest du deine Züge so?"
+
+#: assets/maps/story/999_up.tmx:
+msgid "The Ice Kingdom will rise today."
+msgstr "Das Eisreich wird sich heute erheben."
+
+#: assets/maps/story/999_up.tmx:
+msgid "{{hero}}! Milla!"
+msgstr "{{hero}}! Milla!"
+
+#: assets/maps/story/999_up.tmx:
+msgid "What are you doing here?"
+msgstr "Was machst du denn hier?"
+
+#: assets/maps/story/999_up.tmx:
+msgid "Are you training to become the new King of Evil?"
+msgstr "Trainierst du, um der neue König des Bösen zu werden?"
+
+#: assets/maps/story/999_up.tmx:
+msgid "Don't call me that. I hate being called \"new King of Evil\"."
+msgstr "Nenn mich nicht so. Ich hasse es, „neuer König des Bösen“ genannt zu werden."
+
+#: assets/maps/story/999_up.tmx:
+msgid "I'm bored. I'm walking around here because I didn't know what to do."
+msgstr "Mir ist langweilig. Ich laufe hier herum, weil ich nicht wusste, was ich tun soll."
+
+#: assets/maps/story/999_up.tmx:
+msgid "Are you also struggling with being a hero in a world without a villain?"
+msgstr "Leidest du auch darunter, ein Held in einer Welt ohne Bösewicht zu sein?"
+
+#: assets/maps/story/999_up.tmx:
+msgid "Exactly."
+msgstr "Ganz genau."
+
+#: assets/maps/story/999_up.tmx:
+msgid "Sequel! Sequel! Sequel!"
+msgstr "Fortsetzung! Fortsetzung! Fortsetzung!"
+
+#: assets/maps/story/999_up.tmx:
+msgid "No Milla, no."
+msgstr "Nein, Milla, nein."
+
+#: assets/maps/story/999_up.tmx:
+msgid "We just have to find new things to do and hobbies.\nI'm thinking about photography."
+msgstr "Wir müssen einfach neue Dinge tun und neue Hobbys finden.\nIch denke da an Fotografie."
+
+#: assets/maps/story/999_up.tmx:
+msgid "Cool! I'm thinking about drawing."
+msgstr "Cool! Ich überlege mir, zu zeichnen."
+
+#: assets/maps/story/999_up.tmx:
+msgid "What do you think if we organize a trip?"
+msgstr "Wollen wir einen Ausflug organisieren?"
+
+#: assets/maps/story/999_up.tmx:
+msgid "Where?"
+msgstr "Wohin denn?"
+
+#: assets/maps/story/999_up.tmx:
+msgid "Outside the Kingdom!"
+msgstr "Außerhalb des Königreichs!"
+
+#: assets/maps/story/999_up.tmx:
+msgid "Dunno, let's find out!"
+msgstr "Keine Ahnung, lass es uns herausfinden!"
+
+#: assets/maps/story/999_up.tmx:
+msgid "I'm so bored that you convinced me!\nLet's do it!"
+msgstr "Du hast mich in all meiner Langeweile überzeugt!\nMachen wir's!"
+
+#: assets/maps/story/999_up.tmx:
+msgid "Yeaaa!"
+msgstr "Yeaaa!"
+
+#: assets/maps/story/999_up.tmx:
+msgid "But do you know that this journey will not be covered by this or any other game?"
+msgstr "Aber dir ist klar, dass diese Reise weder in diesem noch in einem anderen Spiel vorkommen wird?"
+
+#: assets/maps/story/999_up.tmx:
+msgid "We will still live it even if no one sees us."
+msgstr "Wir werden sie erleben, auch wenn uns niemand zuschaut."
+
+#: assets/maps/story/999_up.tmx:
+msgid "How much wisdom."
+msgstr "Welch Weisheit."
+
+#: assets/maps/story/999_up.tmx:
+msgid "I invite Shen as well. And the Spirit of Water."
+msgstr "Ich lade auch Shen ein. Und den Wassergeist."
+
+#: assets/maps/story/999_up.tmx:
+msgid "Do you also invite the Spirit of Fire?"
+msgstr "Lädst du auch den Feuergeist ein?"
+
+#: assets/maps/story/999_up.tmx:
+msgid "Ok…"
+msgstr "Okay …"
+
+#: assets/maps/story/999_up.tmx:
+msgid "Good."
+msgstr "Gut."
+
+#: assets/maps/story/999_up.tmx:
+msgid "I'm so happy! I'm going to organize the trip. Byeee!"
+msgstr "Ich bin so glücklich! Ich werde den Ausflug planen. Tschüssiii!"
+
+#: assets/maps/story/999_up.tmx:
+msgid "I don't know if it's a good idea to go on a trip organized by her."
+msgstr "Ich weiß nicht, ob ein von ihr organisierter Ausflug eine gute Idee ist."
+
+#: assets/maps/story/999_up.tmx:
+msgid "It will be an interesting adventure."
+msgstr "Es wird ein interessantes Abenteuer sein."
+
+#: assets/maps/story/999_up.tmx:
+msgid "That's for sure."
+msgstr "Das auf jeden Fall."
+
+#: assets/maps/story/999_up.tmx:
+msgid "Lots of free time now, huh?"
+msgstr "Jetzt hast du viel Freizeit, was?"
 
 #: assets/maps/story/999_up.tmx:
 msgid "Let's go!"
@@ -4221,126 +4345,6 @@ msgstr "Kämpfen wir?"
 msgid "Let's fight."
 msgstr "Kämpfen wir."
 
-#: assets/maps/story/999_up.tmx:
-msgid "The Ice Kingdom will rise today."
-msgstr "Das Eisreich wird sich heute erheben."
-
-#: assets/maps/story/999_up.tmx:
-msgid "{{hero}}! Milla!"
-msgstr "{{hero}}! Milla!"
-
-#: assets/maps/story/999_up.tmx:
-msgid "What are you doing here?"
-msgstr "Was machst du denn hier?"
-
-#: assets/maps/story/999_up.tmx:
-msgid "Are you training to become the new King of Evil?"
-msgstr "Trainierst du, um der neue König des Bösen zu werden?"
-
-#: assets/maps/story/999_up.tmx:
-msgid "Don't call me that. I hate being called \"new King of Evil\"."
-msgstr "Nenn mich nicht so. Ich hasse es, „neuer König des Bösen“ genannt zu werden."
-
-#: assets/maps/story/999_up.tmx:
-msgid "I'm bored. I'm walking around here because I didn't know what to do."
-msgstr "Mir ist langweilig. Ich laufe hier herum, weil ich nicht wusste, was ich tun soll."
-
-#: assets/maps/story/999_up.tmx:
-msgid "Are you also struggling with being a hero in a world without a villain?"
-msgstr "Leidest du auch darunter, ein Held in einer Welt ohne Bösewicht zu sein?"
-
-#: assets/maps/story/999_up.tmx:
-msgid "Exactly."
-msgstr "Ganz genau."
-
-#: assets/maps/story/999_up.tmx:
-msgid "Sequel! Sequel! Sequel!"
-msgstr "Fortsetzung! Fortsetzung! Fortsetzung!"
-
-#: assets/maps/story/999_up.tmx:
-msgid "No Milla, no."
-msgstr "Nein, Milla, nein."
-
-#: assets/maps/story/999_up.tmx:
-msgid "We just have to find new things to do and hobbies.\nI'm thinking about photography."
-msgstr "Wir müssen einfach neue Dinge tun und neue Hobbys finden.\nIch denke da an Fotografie."
-
-#: assets/maps/story/999_up.tmx:
-msgid "Cool! I'm thinking about drawing."
-msgstr "Cool! Ich überlege mir, zu zeichnen."
-
-#: assets/maps/story/999_up.tmx:
-msgid "What do you think if we organize a trip?"
-msgstr "Wollen wir einen Ausflug organisieren?"
-
-#: assets/maps/story/999_up.tmx:
-msgid "Where?"
-msgstr "Wohin denn?"
-
-#: assets/maps/story/999_up.tmx:
-msgid "Outside the Kingdom!"
-msgstr "Außerhalb des Königreichs!"
-
-#: assets/maps/story/999_up.tmx:
-msgid "Dunno, let's find out!"
-msgstr "Keine Ahnung, lass es uns herausfinden!"
-
-#: assets/maps/story/999_up.tmx:
-msgid "I'm so bored that you convinced me!\nLet's do it!"
-msgstr "Du hast mich in all meiner Langeweile überzeugt!\nMachen wir's!"
-
-#: assets/maps/story/999_up.tmx:
-msgid "Yeaaa!"
-msgstr "Yeaaa!"
-
-#: assets/maps/story/999_up.tmx:
-msgid "But do you know that this journey will not be covered by this or any other game?"
-msgstr "Aber dir ist klar, dass diese Reise weder in diesem noch in einem anderen Spiel vorkommen wird?"
-
-#: assets/maps/story/999_up.tmx:
-msgid "We will still live it even if no one sees us."
-msgstr "Wir werden sie erleben, auch wenn uns niemand zuschaut."
-
-#: assets/maps/story/999_up.tmx:
-msgid "How much wisdom."
-msgstr "Welch Weisheit."
-
-#: assets/maps/story/999_up.tmx:
-msgid "I invite Shen as well. And the Spirit of Water."
-msgstr "Ich lade auch Shen ein. Und den Wassergeist."
-
-#: assets/maps/story/999_up.tmx:
-msgid "Do you also invite the Spirit of Fire?"
-msgstr "Lädst du auch den Feuergeist ein?"
-
-#: assets/maps/story/999_up.tmx:
-msgid "Ok…"
-msgstr "Okay …"
-
-#: assets/maps/story/999_up.tmx:
-msgid "Good."
-msgstr "Gut."
-
-#: assets/maps/story/999_up.tmx:
-msgid "I'm so happy! I'm going to organize the trip. Byeee!"
-msgstr "Ich bin so glücklich! Ich werde den Ausflug planen. Tschüssiii!"
-
-#: assets/maps/story/999_up.tmx:
-msgid "I don't know if it's a good idea to go on a trip organized by her."
-msgstr "Ich weiß nicht, ob ein von ihr organisierter Ausflug eine gute Idee ist."
-
-#: assets/maps/story/999_up.tmx:
-msgid "It will be an interesting adventure."
-msgstr "Es wird ein interessantes Abenteuer sein."
-
-#: assets/maps/story/999_up.tmx:
-msgid "That's for sure."
-msgstr "Das auf jeden Fall."
-
-#: assets/maps/story/999_up.tmx:
-msgid "Lots of free time now, huh?"
-msgstr "Jetzt hast du viel Freizeit, was?"
-
 #: assets/maps/story/t3_03.tmx:
 msgid "FIERY CRYPT – B3F"
 msgstr "Feuerkrypta – 3. UG"
@@ -4584,10 +4588,6 @@ msgstr "Dieser Turm ist so hässlich."
 #: assets/maps/tilesets/tower.tsx:
 msgid "This is a wall."
 msgstr "Das ist eine Wand."
-
-#: assets/maps/tilesets/tower.tsx:
-msgid "king of evil"
-msgstr "König des Bösen"
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "A table."
