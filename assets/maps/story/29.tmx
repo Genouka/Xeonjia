@@ -4,20 +4,20 @@
   <property name="action" value="(map-name &quot;Mitsu Forest&quot;)"/>
   <property name="map-name" value="Mitsu Forest"/>
   <property name="milla" value="(dialog '((&quot;/milla_sad&quot; &quot;…&quot;)))"/>
-  <property name="music" value="forest"/>
+  <property name="music" value="tree"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/capital-1.tsx"/>
- <tileset firstgid="186" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="238" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/capital-1.tsx"/>
+ <tileset firstgid="236" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="288" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="14" height="21">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5VSOw6DMAz1HVgidfHYMRsLRVn7OWO5Kq6K1VfLdsKTrIDzPjGEKMZs1hEsUjfQvRIOcpVfpO5SD0dXzHvE8/o2y+Jpcnp8BB9rdc6IntmezfO4ttcSzwwV8kb0ymH6zXpGl83e09fAM+rpXBx4vqW2YK8F/j2UQ3sWDHlrwvF62sfvcx3I8/x6yP5f5DdJXej/nuGznqXRdwaGnE/tbXUkCpgEAAA=
+   H4sIAAAAAAAAA5VSOw6DMAz1HVgidfHYMRsLRVn7OXy5Ea6K1VfLdsKTrIDzPjGEKMZs1hEsUjfQvRIOcpVfpO5SD0dXzHvE8/o2y+Jpcnp8BB9rdc6IntmezfO4ttcSzwwV8kb0ymH6zXpGl83e09fAM+rpXBx4vqW2YK8F/j2UQ3sWDHlrwvF62sfvcx3I8/x6yP5f5DdJXej/nuGznqXRdwaGnE/t/pPs95gEAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="44" class="NPC" gid="215" x="96" y="240" width="16" height="16">
+  <object id="44" class="NPC" gid="265" x="96" y="240" width="16" height="16">
    <properties>
     <property name="action">(begin
   (dialog '((&quot;/&quot; &quot;Nobody knows what the writing on this rock means, it is not even known who wrote it.&quot;)))
@@ -35,7 +35,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="14" height="21">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgwA5MgNgUie+CRw26WhhwBGInHOYTow6bOC67YMCZRPXUBoPBvllAPBuI5wDxXBLMWgTEi4F4CRAvJUHfKiBeDcRrgHgtCfrwAXqHI7WA2UA7gEYAOT7oETcARTv7HpgEAAA=
+   H4sIAAAAAAAAA2NgwA5MgNgUie+CRw26WhhwBGInHOYTow6bOC67YMCZRPXUBoPBvjNAfBaIzwHxeRLMugLEV4H4GhBfJ0HfHSC+C8T3gPg+CfrwAXqHI7WA2UA7gEYAOT7oETcAohumspgEAAA=
   </data>
  </layer>
  <objectgroup id="8" name="items">

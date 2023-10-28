@@ -4,19 +4,20 @@
   <property name="action">(if (! (== (last-place) &quot;48&quot;))
   (map-name &quot;Route 6&quot;))</property>
   <property name="map-name" value="Route 6"/>
+  <property name="music" value="route-2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="391" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5WUPWsCQRCGd8ugtV0aRYso+BHFwiaCBAIJURISo6K2WghGAvoH8ntF0sQi5D3cgWGYWb2BhxuW24d3d29v5Z1bKaxBmtIc5JmBezAXPVUVfc2f97yCJ/Amej6f+phnAkZgKvqWWPO1Mn8JtmAHiuAQ3uW9LM3zg/F9iv39Y/u8DPOJDMudNXrpogxXXvdcUr/B8wk2gcTTxvNO0Im4c8Y5fQlHNzwth3O65xs8KGiVx3jByPMM+oEB6IEX5rlBXwYVNqZ53sEQfAQewZjNaaC/Bc0znrpYg/z+6C7wXNKTnN3C69mTKvkTMpd1t/g73Fli3uS7ORrr4pkov7YfsmL3PVZy3ZaHMsmitciMliftv/Uf9SAL96AFAAA=
+   H4sIAAAAAAAAA5WUPWsCURBF3VKCjRbpQ6ztbAyxMEKMUSxsFCQgGEyI5MOEmFYLQUXQP+Bf9S6+geEys2YHDl6WncO89/a5jDKZpcEKpCnLIZ4ZeAJ/lKXukRvRec8EPIN3yrpfcpLnB0zBL+U2rbls9C/ADuzBLbgIPTpzWZ4cyKbY40u1P4vQL1wrT9HJ7JIZrhzPfyofPGuwCcSeDugR3QR3yTmnLTn64ddzyP6w5wCGBlZV8PzGmWcMXgKvYADelKeGfAfq6pnl+QCf4CswAt+qp4n8CFpnPA+0Bv7+5C7oudgTn908smePqxqd4Lm8u6Xf0c6q8sbfTcE5Lz2TzG/tB1fSfU8qXrfnkZm4ZC08o+dJ+996BP1SE6ygBQAA
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="60" class="NPC" gid="227" x="80" y="96" width="16" height="16">
+  <object id="60" class="NPC" gid="252" x="80" y="96" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;046-fresh-water&quot;)
   (begin
@@ -33,26 +34,26 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="18" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIB+oMzIwaDASp9aJEZONrJ8UswYa6APdaUChWwsp1F/BCMGVFJhDqRuwgUygmblAbIWGvciwyx6LHmcc5kgBxaVxyLkDxT3QsPcApjVNAnYPpbyADQx19w8mAABZUDXUoAUAAA==
+   H4sIAAAAAAAAA2NgIB84MDIwODISpzaaEZONrJ8UswYaeADd6UmhW7so1D+REYInUWAOpW7ABpqAZrYBcTAaTibDrggsemJwmGMMFDfBIZcAFE9EwykDmNacCNg9lPICNjDU3T+YAACpVU4CoAUAAA==
   </data>
  </layer>
  <layer id="12" name="Tile Layer 3" width="18" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgwA0SGRkYkoA4mRGVPVSBOtDtGkPY/bQGsPBBp0kF1UA9NUBcS2FYNwP1twBx6xCPs9HwGAXkAgArxWnIoAUAAA==
+   H4sIAAAAAAAAA2NgwA2qGBkYqoG4hhGVPVSBA9DtjkPY/bQGsPBBp0kFU4B6pgLxNArDeg5Q/1wgnjfE42w0PEYBuQAAN2a4+aAFAAA=
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="59" gid="301" x="48" y="128" width="16" height="16">
+  <object id="59" gid="326" x="48" y="128" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Hana's Tunnel&quot;)))"/>
    </properties>
   </object>
-  <object id="63" gid="301" x="128" y="224" width="16" height="16">
+  <object id="63" gid="326" x="128" y="224" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Boats boats! – Custom-made boat store&quot;)))"/>
    </properties>
   </object>
-  <object id="67" class="Modifier" gid="409" x="192" y="224" width="16" height="16">
+  <object id="67" class="Modifier" gid="434" x="192" y="224" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="30"/>
    </properties>

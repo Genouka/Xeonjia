@@ -5,6 +5,7 @@
   (map-name &quot;Route 9&quot;))</property>
   <property name="map-name" value="Route 8"/>
   <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;How many meters above sea level are we?&quot;)))"/>
+  <property name="music" value="route-3"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>

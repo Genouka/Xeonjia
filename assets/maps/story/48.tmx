@@ -14,6 +14,7 @@
       (&quot;/milla_happy&quot; &quot;Great, then I'll appear on your head.\nSee ya!&quot;)))
     (set &quot;048-leaf&quot; #t))
   (dialog '((&quot;/milla&quot; &quot;Did you miss me already?\nLet me rest a bit.&quot;))))</property>
+  <property name="music" value="route-2"/>
   <property name="start-battle" type="bool" value="false"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>

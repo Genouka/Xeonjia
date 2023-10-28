@@ -4,7 +4,7 @@
   <property name="action" value="(map-name &quot;Greentwig City&quot;)"/>
   <property name="map-name" value="Greentwig City"/>
   <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;This city is boring.&quot;)))"/>
-  <property name="music" value="city"/>
+  <property name="music" value="city-1"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>

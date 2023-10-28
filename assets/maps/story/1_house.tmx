@@ -3,7 +3,7 @@
  <properties>
   <property name="action" value="(map-name &quot;NEIGHBOR'S HOUSE&quot;)"/>
   <property name="disable-minimap" type="bool" value="true"/>
-  <property name="music" value="town"/>
+  <property name="music" value="village-1"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>

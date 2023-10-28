@@ -3,7 +3,7 @@
  <properties>
   <property name="disable-minimap" type="bool" value="true"/>
   <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;I'm a little confused.&quot;)))"/>
-  <property name="music" value="city"/>
+  <property name="music" value="city-1"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>

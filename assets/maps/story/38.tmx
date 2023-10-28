@@ -5,26 +5,26 @@
     (map-name &quot;Aquaville Town&quot;))</property>
   <property name="map-name" value="Aquaville Town"/>
   <property name="milla" value="(dialog '((&quot;/milla_happy&quot; &quot;I love this village!&quot;)))"/>
-  <property name="music" value="village"/>
+  <property name="music" value="village-2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="366" source="../tilesets/npc_main.tsx"/>
- <tileset firstgid="398" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/npc_main.tsx"/>
+ <tileset firstgid="448" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="22">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA8WTPQvCMBCGG+ho/4E4OKiDBcHBL/xG3USRioOoi6M/1rGbSwcHR8eAb+gFj5jWgIMvPLTX5OHaaxsJz4v+wDGDDa2vc/b4wJYtuTsQEDyBo2tL4v3mPlg9x74QLES2q3sVcJTseg91HfRzXJ2b0XeKfU0wc3BV38SoY8fnlUZfHpdZPcHVuK7qA73/k7CvJ0RsrLnUuq8tS7rnFbvnIjtXrvyw0vDnLYEqo0zfozmrisXdk1Njvk5omSV3L6BhkBfunkELtEEHdJk7pnOf/VfcHYAhGIl070S85/Wtb1a4y78BF1f7iruXzl06ui8ZWqsuKAUAAA==
+   H4sIAAAAAAAAA8WTuwrCQBBFXSzT2aSwsNMyXUrzB2Jho4WCYOEL36idKKJYiNpY+qve4Cxel01csPDCIbNMDpPdJAeVyRz+wDWBvfR3KfeEwJajuCcQCZzI0bXF/9EtUG+FugXWKtnVs8q4BtQbom6CUYqrkzPmLlB3wNLBjef66nPtKbf9BsZcjstZlUDW6Mfri7z/W0LfFzyj57LWc23ZyDNvqV+h2jfeEYf3WwV1oibflHlWRYt7FqdBvk7LMpvdB2gbpIXdO+iCHuiDAbkzqUP6N9gdgwmYqte9c/U+r29zk8IufwMurvZj8nLugcO/EOcJIJvbXSgFAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="59" class="NPC" gid="183" x="48" y="48" width="16" height="16">
+  <object id="59" class="NPC" gid="233" x="48" y="48" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I want to reach the capital quickly but the only way is traveling by land.&quot;)))"/>
    </properties>
   </object>
-  <object id="60" class="NPC" gid="194" x="192" y="96" width="16" height="16">
+  <object id="60" class="NPC" gid="244" x="192" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I really needed a pomegranate juice.&quot;)))"/>
    </properties>
@@ -32,16 +32,16 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="15" height="22">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIB8IMBIWw6VGAos4uhiIzwvEgkAsBMTCOPThA5JA9VJALE2iPloDTSzucQOK6QKxOxlutQbqMQFiWzL0OgP1OAKxK43DCFv8DnYAc2MiIyqfHBAC1KuIhA1JMEsNTa0WlA9KM5oE0oweUE4fCRtB1ZKbZkD5l5g0wweU4yczzsWA6sQHUfoAAMKjbVcoBQAA
+   H4sIAAAAAAAAA2NgIB84MRIWw6XGC4s4uhiIbw/EzkDsAsSuOPThA95A9T5A7EuiPlqDaCzuqQCKxQNxJRluzQXqSQPifDL0lgL1FANxOY3DCFv8DnYAc+NkRlQ+OaANqDcYCSeTYFYEmtoYKB+UZqIJpJkEoFwiEk6BqiU3zYDyLzFpxgEo50hmnHsA1XkOovQBAENR3T8oBQAA
   </data>
  </layer>
  <layer id="11" name="Tile Layer 3" width="15" height="22">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAXkAA9GBgZPIPZiJE58uAABRvz8wQho5WY+oDn8VDBruKeZ4QAALPxxxCgFAAA=
+   H4sIAAAAAAAAA2NgGAXkgCpGBoZqIK5hJE58uAAnRvz8wQho5WYHoDmOVDBruKeZ4QAAtCr4sSgFAAA=
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="62" gid="260" x="16" y="64" width="16" height="16">
+  <object id="62" gid="310" x="16" y="64" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define event-id &quot;38.vase1&quot;)
@@ -54,7 +54,7 @@
         (dialog '((&quot;There are still items in here but I've already taken one.&quot;)))))</property>
    </properties>
   </object>
-  <object id="63" gid="260" x="48" y="304" width="16" height="16">
+  <object id="63" gid="310" x="48" y="304" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;38.vase2&quot;)

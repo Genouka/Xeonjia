@@ -2,24 +2,25 @@
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="13" nextobjectid="63">
  <properties>
   <property name="map-name" value="Route 4"/>
+  <property name="music" value="route-2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="366" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAwtlZGAIHUQYBMjRF08H/JWBtuAtEDvQ2I6nUExLIMMIwdQwB5c4Pn9Qy39/SVBLrn8dgPgFED8kQQ+p/gP54y2JekgFXymwg1j/gMzHF874zCHWDhZGCKYlgJUjDlA2ctjB0vVbqFveQvkgNReh4jyMiLB4CjXnKZI5MDkAtY99pdwFAAA=
+   H4sIAAAAAAAAA2tnZGBoH0QYBMjRN5EOWB3qPloBeaD5DrS1gkGcEYJpCfwYIZga5uASx+cPavlPnwRzyPWvAxBLAfUKk6CfVP+B/CFP4zhXp8AOYv0jTyBd4TOHWDvMGCGYlgBWjjhA2chhB0vX8lB3yEP5IDXMUL4dIyIsxKFlhjiSOTA5ABlj8ircBQAA
   </data>
  </layer>
  <layer id="6" name="Tile Layer 2" width="25" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgoD3gY2Rg4GfEr4YZTZ4YPYxAeSaoGjEgLU5APTeaPLIeQSAtBMTCQMwLxSDACaS5CJhLLJAEmiMFxNIkmofsT1oBavpzFIwCYvIvPkBMmicmz+MDpKR5ATrkDQkq2wEAtUvvYNwFAAA=
+   H4sIAAAAAAAAA2NgoD1wYGRgcGTEr8YUTZ4YPcZAeROoGg8g7UlAvS2aPLIeZyDtAsSuQGwPxSBgDaRtCJhLLPAGmuMDxL4kmofsT1oBavpzFIwCYvIvPkBMmicmz+MDpKR5JzrkDS8q2wEAZnmAVtwFAAA=
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="54" gid="260" x="0" y="144" width="16" height="16">
+  <object id="54" gid="310" x="0" y="144" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define event-id &quot;33.vase&quot;)
@@ -32,29 +33,29 @@
         (dialog '((&quot;There are still items in here but I've already taken one.&quot;)))))</property>
    </properties>
   </object>
-  <object id="59" gid="341" x="176" y="32" width="16" height="16">
+  <object id="59" gid="391" x="176" y="32" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;I can see a city in the distance.&quot;)))"/>
    </properties>
   </object>
-  <object id="60" class="Modifier" gid="384" x="240" y="48" width="16" height="16">
+  <object id="60" class="Modifier" gid="434" x="240" y="48" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="20"/>
    </properties>
   </object>
-  <object id="61" class="Modifier" gid="384" x="240" y="128" width="16" height="16">
+  <object id="61" class="Modifier" gid="434" x="240" y="128" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
    </properties>
   </object>
-  <object id="62" gid="377" x="48" y="224" width="16" height="16">
+  <object id="62" gid="427" x="48" y="224" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="9" name="npc">
-  <object id="52" class="NPC" gid="183" x="160" y="48" width="16" height="16">
+  <object id="52" class="NPC" gid="233" x="160" y="48" width="16" height="16">
    <properties>
     <property name="action">(begin
     (dialog '((&quot;/&quot; &quot;In the distance can be seen the other part of the region.&quot;)))
@@ -62,7 +63,7 @@
     (set-orientation 1))</property>
    </properties>
   </object>
-  <object id="55" class="NPC" gid="205" x="16" y="144" width="16" height="16">
+  <object id="55" class="NPC" gid="255" x="16" y="144" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts.&quot;)))"/>
    </properties>

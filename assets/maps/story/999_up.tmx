@@ -32,18 +32,18 @@
     (black-curtain)
     (dialog
       '((&quot;…&quot;)
-      (&quot;/king-of-evil&quot; &quot;And so, in the end, it really happened.&quot;)
-      (&quot;/king-of-evil&quot; &quot;I just got defeated by 4 kids.&quot;)
+      (&quot;king of evil/king-of-evil&quot; &quot;And so, in the end, it really happened.&quot;)
+      (&quot;king of evil/king-of-evil&quot; &quot;I just got defeated by 4 kids.&quot;)
       (&quot;/shen&quot; &quot;I didn't even fight.&quot;)
-      (&quot;/king-of-evil&quot; &quot;Ah, right.&quot;)
-      (&quot;/king-of-evil&quot; &quot;And so, in the end, it really happened.&quot;)
-      (&quot;/king-of-evil&quot; &quot;I just got defeated by 3 kids.&quot;)
-      (&quot;/king-of-evil&quot; &quot;I had to leave my world because it was uninhabitable.\nFreezing your world was the only way to save me and my people.\nThere was no possibility of coexistence.&quot;)
+      (&quot;king of evil/king-of-evil&quot; &quot;Ah, right.&quot;)
+      (&quot;king of evil/king-of-evil&quot; &quot;And so, in the end, it really happened.&quot;)
+      (&quot;king of evil/king-of-evil&quot; &quot;I just got defeated by 3 kids.&quot;)
+      (&quot;king of evil/king-of-evil&quot; &quot;I had to leave my world because it was uninhabitable.\nFreezing your world was the only way to save me and my people.\nThere was no possibility of coexistence.&quot;)
       (&quot;/hero&quot; &quot;But in this way, to avoid your own suffering you brought suffering to us.&quot;)
-      (&quot;/king-of-evil&quot; &quot;I have been blind to the pain I have inflicted on this world and those who inhabit it.\nI was ready to freeze everything and wipe out every living thing in this Kingdom.\nThe power wore me down.\nBut I'd do it all over again the same way.\nI hope you will not be faced with similar choices.&quot;)
+      (&quot;king of evil/king-of-evil&quot; &quot;I have been blind to the pain I have inflicted on this world and those who inhabit it.\nI was ready to freeze everything and wipe out every living thing in this Kingdom.\nThe power wore me down.\nBut I'd do it all over again the same way.\nI hope you will not be faced with similar choices.&quot;)
       (&quot;/hero&quot; &quot;We would act differently.&quot;)
-      (&quot;/king-of-evil&quot; &quot;I know.&quot;)
-      (&quot;/king-of-evil&quot; &quot;I am leaving now, and with me the winter that has lasted for 65 years.\nRemember that even if my kingdom falls, evil will never completely disappear.\nIt will be reborn somewhere else, in a different form, waiting for a new opportunity to reclaim power.\nAlways be on your guard, heroes.\nFarewell.&quot;)))
+      (&quot;king of evil/king-of-evil&quot; &quot;I know.&quot;)
+      (&quot;king of evil/king-of-evil&quot; &quot;I am leaving now, and with me the winter that has lasted for 65 years.\nRemember that even if my kingdom falls, evil will never completely disappear.\nIt will be reborn somewhere else, in a different form, waiting for a new opportunity to reclaim power.\nAlways be on your guard, heroes.\nFarewell.&quot;)))
     (wait)
     (wait)
     (king-of-evil-out 67)
@@ -142,7 +142,7 @@
   <property name="milla">(if (!get &quot;999-september&quot;)
   (dialog '((&quot;/&quot; &quot;Hey, there's September!&quot;)))
   (dialog '((&quot;/&quot; &quot;Don't disturb me, I'm planning the trip.&quot;))))</property>
-  <property name="music" value="enemies"/>
+  <property name="music" value="tower"/>
   <property name="start-battle" type="bool" value="false"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
@@ -155,7 +155,7 @@
  <tileset firstgid="640" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA8tlYmCIJQPnA3EpEKeSgcuhetGBGxN+Pgjg0ksMwKd3BSMDw1kgXsmIXy82N20A6tkLxBux6HXD4196uRkGXJkQbkJ2M8xPrkzY9bpisd8BixhMHSG92AA2vchgE9Cdu5DwZix+RtdLKD254fAvOgCpC8MR9zC9tWhyyP4+yohdHATqgXxHIHYiAzsDsScQe5GBvYE4C4izycA5QAwA7T+eoTgEAAA=
+   H4sIAAAAAAAAA8tlYmCIJQPnA3EpEKeSgcuhetGBGxN+Pgjg0ksMwKd3BSMDw1kgXsmIXy82N20A6tkLxBux6HXD4196uRkGXKHs84yobj7PiCqPrtcVi/0OWMRg6gjpxQaw6UUGm4Bu3IWEN2PxM7re82hq0OMOWR5fOIP0heGIe5jeWjQ5ZH8fZcQuDgL1QL4jEDuRgZ2B2BOIvcjA3kCcBcTZZOAcIAYApJBunzgEAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc">
@@ -416,15 +416,15 @@
   (show 67)
   (wait 3)
   (dialog
-    '((&quot;/king-of-evil&quot; &quot;Finally.\nI am happy that you are here, so you can witness the end of your Kingdom.&quot;)
+    '((&quot;king of evil/king-of-evil&quot; &quot;Finally.\nI am happy that you are here, so you can witness the end of your Kingdom.&quot;)
     (&quot;/hero&quot; &quot;The King of Evil!&quot;)
-    (&quot;/king-of-evil&quot; &quot;I hate being called \&quot;King of Evil\&quot;.\nThis is the name you stupid inhabitants of this stupid Kingdom gave me.\nMy real name is King Tradraprara.&quot;)
+    (&quot;king of evil/king-of-evil&quot; &quot;I hate being called \&quot;King of Evil\&quot;.\nThis is the name you stupid inhabitants of this stupid Kingdom gave me.\nMy real name is King Tradraprara.&quot;)
     (&quot;/hero&quot; &quot;Tradra–what??&quot;)
-    (&quot;/king-of-evil&quot; &quot;TRA-DRA-PRA-RA.&quot;)
+    (&quot;king of evil/king-of-evil&quot; &quot;TRA-DRA-PRA-RA.&quot;)
     (&quot;/milla&quot; &quot;It's even more unpronounceable than \&quot;Xeonjia\&quot;.&quot;)
-    (&quot;/king-of-evil&quot; &quot;It's not that difficult.&quot;)
-    (&quot;/king-of-evil&quot; &quot;Anyway, here we are. Everything is almost ready.&quot;)
-    (&quot;/king-of-evil&quot; &quot;Eternal winter is almost here. The Ice Kingdom will rise today!\nMy plan is about to come true also thanks to you.&quot;)
+    (&quot;king of evil/king-of-evil&quot; &quot;It's not that difficult.&quot;)
+    (&quot;king of evil/king-of-evil&quot; &quot;Anyway, here we are. Everything is almost ready.&quot;)
+    (&quot;king of evil/king-of-evil&quot; &quot;Eternal winter is almost here. The Ice Kingdom will rise today!\nMy plan is about to come true also thanks to you.&quot;)
     (&quot;/september_happy&quot; &quot;Hey, I said the exact same sentences before!&quot;)))
   (wait)
   (set-orientation '(3 62))
@@ -432,22 +432,22 @@
   (dialog
     '((&quot;/milla&quot; &quot;I told you you're good as a King of Evil.&quot;)
     (&quot;evil september/september_joking&quot; &quot;Tratradadadadra.&quot;)
-    (&quot;/king-of-evil&quot; &quot;STOP INTERRUPTING ME AND DON'T MAKE FUN OF ME!&quot;)))
+    (&quot;king of evil/king-of-evil&quot; &quot;STOP INTERRUPTING ME AND DON'T MAKE FUN OF ME!&quot;)))
   (wait)
   (set-orientation '(1 62))
   (set-orientation '(1 61))
   (define-symbol &quot;gem_count&quot; (gem-count))
   (define-symbol &quot;required_gems&quot; (+ (gem-count) 1))
   (dialog
-    '((&quot;/king-of-evil&quot; &quot;The planet I come from is no longer habitable, but this one is almost perfect.\nThe only problem is the temperature which is too high.\nBut now I have enough gems.\nWith the gems found by the Hoarfrost Team, I'm {{required_gems}} gems away, but I know that Shen has 2 and you {{hero}} have {{gem_count}} gems.\nMore than enough for my needs.&quot;)
+    '((&quot;king of evil/king-of-evil&quot; &quot;The planet I come from is no longer habitable, but this one is almost perfect.\nThe only problem is the temperature which is too high.\nBut now I have enough gems.\nWith the gems found by the Hoarfrost Team, I'm {{required_gems}} gems away, but I know that Shen has 2 and you {{hero}} have {{gem_count}} gems.\nMore than enough for my needs.&quot;)
     (&quot;/shen&quot; &quot;So you used us to collect gems?&quot;)
-    (&quot;/king-of-evil&quot; &quot;Exactly.\nWhat were you thinking of doing with them?\nAnd I'll tell you more: the whole signet thing was to  make you go around the Kingdom in order to increase the probability of finding gems.\nOtherwise you would have come straight to the tower without bringing me any.&quot;)
+    (&quot;king of evil/king-of-evil&quot; &quot;Exactly.\nWhat were you thinking of doing with them?\nAnd I'll tell you more: the whole signet thing was to  make you go around the Kingdom in order to increase the probability of finding gems.\nOtherwise you would have come straight to the tower without bringing me any.&quot;)
     (&quot;/hero&quot; &quot;But we needed the signets to enter the tower, we should have taken them anyway.&quot;)
-    (&quot;/king-of-evil&quot; &quot;Actually, it was enough to knock on the door of the tower and we would have opened.&quot;)
+    (&quot;king of evil/king-of-evil&quot; &quot;Actually, it was enough to knock on the door of the tower and we would have opened.&quot;)
     (&quot;/hero&quot; &quot;Ah.\nIt matters little. I am this year's chosen hero and together with m–&quot;)
-    (&quot;/king-of-evil&quot; &quot;Even the \&quot;hero\&quot; thing is a joke.&quot;)
+    (&quot;king of evil/king-of-evil&quot; &quot;Even the \&quot;hero\&quot; thing is a joke.&quot;)
     (&quot;/hero&quot; &quot;But, but… the legend of the chosen hero…&quot;)
-    (&quot;/king-of-evil&quot; &quot;I made up the legend.\nEvery year ONE hero is chosen because otherwise if hundreds of people tried to defeat me it would be more complicated to get rid of them all.\nIndeed, this year that you've come this far in 4 you're more annoying.&quot;)
+    (&quot;king of evil/king-of-evil&quot; &quot;I made up the legend.\nEvery year ONE hero is chosen because otherwise if hundreds of people tried to defeat me it would be more complicated to get rid of them all.\nIndeed, this year that you've come this far in 4 you're more annoying.&quot;)
     (&quot;/hero&quot; &quot;Honestly I don't care about legends, heroes, signets or even gems.\nDuring this extraordinary adventure I've learned a lot and lived invaluable experiences. In some moments I suffered, I admit it, but it was worth it.&quot;)))
   (wait)
   (set-orientation '(3 63))
@@ -475,7 +475,7 @@
   (set-orientation '(1 62))
   (set-orientation '(1 63))
   (dialog
-    '((&quot;/king-of-evil&quot; &quot;Yes, the time to fight has come.\nThe unrelenting cold of my wrath will embrace every corner of this world and everything will be enveloped in eternal winter.\nMy glacial domination is about to begin, and you will watch the dawn of this new era while your hopes turn into frozen tears.&quot;)))
+    '((&quot;king of evil/king-of-evil&quot; &quot;Yes, the time to fight has come.\nThe unrelenting cold of my wrath will embrace every corner of this world and everything will be enveloped in eternal winter.\nMy glacial domination is about to begin, and you will watch the dawn of this new era while your hopes turn into frozen tears.&quot;)))
   (wait)
   (wait 2)
   (dialog
@@ -493,7 +493,7 @@
   (set-orientation '(1 62))
   (dialog
     '((&quot;/hero&quot; &quot;Let's fight.&quot;)
-    (&quot;/king-of-evil&quot; &quot;Let's fight.&quot;)))
+    (&quot;king of evil/king-of-evil&quot; &quot;Let's fight.&quot;)))
   (wait)
   (friendly '(#f 67))
   (quiet '(#f 67))
@@ -504,7 +504,7 @@
   (show 113)
   (show 114)
   (show 115)
-  (music &quot;boss&quot;)))</property>
+  (music &quot;king-of-evil&quot;)))</property>
     <property name="actionOnEvent">(if (get &quot;999_up-talk&quot;)
   (delete-me))</property>
    </properties>

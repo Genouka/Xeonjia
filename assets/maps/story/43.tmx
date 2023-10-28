@@ -4,38 +4,39 @@
   <property name="action">(if (== (last-place) &quot;44&quot;)
     (map-name &quot;Route 5&quot;))</property>
   <property name="map-name" value="Route 5"/>
+  <property name="music" value="route-2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="391" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="11" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA8tjZGDIG8K4DIgdoDQhtaVA7AhVT0gtMkCXqwDiHCLVgkA5kh5CamEAXQ8+tch6crD45Rd25Qz5WNT+w6EWm9myONyBzWxS1IqRoBaXe7GpdSBBLTY3fKKCG0jxGzb3vsKhFgT0gbQBEHMC2XpAzAmNe3S1AP7DFCb0AwAA
+   H4sIAAAAAAAAA2tnZGBoH8K4H4gjoTQhtX1AHAVVT0gtMkCXmwjErUSqBYEJSHoIqYUBdD341CLracXiF2Ec6juwqBUnwWwzHGqxmU2KWn0S1OJyLza1DriVEuUGbkbK3UCK37C5lxmHG0DAA0h7AjEnkK0HxErQuEdXCwCUaf2B9AMAAA==
   </data>
  </layer>
  <layer id="6" name="Tile Layer 2" width="11" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGPrAipH6ZrYBzfSEYkIgBagmFYjTKFSrCRTTAmJtINZhxK/WEChmBMTGQGxCQC2t3DuY1BpC5UKAtCsQhxFhbgxQjQ8Qx9Eg/Qw0+Ael9bDIAQCxWkZa9AMAAA==
+   H4sIAAAAAAAAA2NgGPogmJH6Zs4HmpkExYRALVBNHRDXU6jWCSjmDMQuQOzKiF+tF1DMG4h9gNiXgFpauXcwqfWCyuUC6TggzifC3FKgmlQgLqdB+hloIA71kx4WOQDoeD2e9AMAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="62" class="NPC" gid="225" x="96" y="368" width="16" height="16">
+  <object id="62" class="NPC" gid="250" x="96" y="368" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;44-safe&quot;)
   (delete-me))</property>
    </properties>
   </object>
-  <object id="66" class="NPC" gid="180" x="48" y="192" width="16" height="16">
+  <object id="66" class="NPC" gid="205" x="48" y="192" width="16" height="16">
    <properties>
     <property name="action">(if (!get &quot;44-safe&quot;)
   (dialog '((&quot;/&quot; &quot;To reach the other shore you have to go through the submarine tunnel but is currently guarded by the Hoarfrost Team.\nIf they don't leave, I'll try to cross the sea with the boat.&quot;)))
   (dialog '((&quot;/&quot; &quot;To reach the other shore you have to go through the submarine tunnel.&quot;))))</property>
    </properties>
   </object>
-  <object id="67" class="NPC" gid="196" x="80" y="80" width="16" height="16">
+  <object id="67" class="NPC" gid="221" x="80" y="80" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I think I will spend the rest of my life here.&quot;)))"/>
    </properties>
@@ -43,31 +44,31 @@
  </objectgroup>
  <layer id="12" name="Tile Layer 3" width="11" height="23">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGNoglxFCezESVmsPVeNMhFp3oBoPIPYmQu0ooA3QHA17BnVgGGhQORwAPgtz6vQDAAA=
+   H4sIAAAAAAAAA2NgGNqgjRFCJzMSVhsBVRNDhNoEoJpEIE4hQu0ooA1wGg17BgdgGDhSORwACtUshvQDAAA=
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="59" gid="301" x="96" y="352" width="16" height="16">
+  <object id="59" gid="326" x="96" y="352" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Hana's Tunnel&quot;)))"/>
    </properties>
   </object>
-  <object id="60" gid="301" x="96" y="304" width="16" height="16">
+  <object id="60" gid="326" x="96" y="304" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/_2&quot; &quot;Observation Tower&quot;)))"/>
    </properties>
   </object>
-  <object id="68" gid="311" x="64" y="80" width="16" height="16">
+  <object id="68" gid="336" x="64" y="80" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;Wow! The view here is spectacular!&quot;)))"/>
    </properties>
   </object>
-  <object id="70" gid="315" x="96" y="80" width="16" height="16">
+  <object id="70" gid="340" x="96" y="80" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;Wow! The view here is spectacular!&quot;)))"/>
    </properties>
   </object>
-  <object id="71" class="Modifier" gid="409" x="96" y="96" width="16" height="16">
+  <object id="71" class="Modifier" gid="434" x="96" y="96" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="50"/>
    </properties>

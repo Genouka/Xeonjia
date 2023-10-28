@@ -14,7 +14,7 @@
 (if (!get &quot;the-end&quot;)
   (dialog '((&quot;/milla&quot; &quot;It all started here.&quot;)))
   (dialog '((&quot;/milla&quot; &quot;What do we do today?&quot;))))</property>
-  <property name="music" value="town"/>
+  <property name="music" value="village-1"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/npc_common.tsx"/>
  <tileset firstgid="53" source="../tilesets/outdoor-1.tsx"/>

@@ -145,7 +145,7 @@
       (set talk-id #t))
     (dialog '((&quot;king/king-1&quot; &quot;Good journey {{hero}}, I have faith in you.&quot;)))))
 
-(dialog '((&quot;/&quot; &quot;As soon as I saw you I knew you would be the Last Hero.&quot;))))</property>
+(dialog '((&quot;king/king-1&quot; &quot;As soon as I saw you I knew you would be the Last Hero.&quot;))))</property>
    </properties>
   </object>
   <object id="83" class="Solid" gid="334" x="80" y="80" width="16" height="16">
@@ -184,7 +184,7 @@
       (set talk-id #t))
     (dialog '((&quot;king/king-1&quot; &quot;Good journey {{hero}}, I have faith in you.&quot;)))))
 
-(dialog '((&quot;/&quot; &quot;As soon as I saw you I knew you would be the Last Hero.&quot;))))</property>
+(dialog '((&quot;king/king-1&quot; &quot;As soon as I saw you I knew you would be the Last Hero.&quot;))))</property>
    </properties>
   </object>
  </objectgroup>

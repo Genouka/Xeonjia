@@ -63,6 +63,7 @@
       (leave-all '(64 76))
       (delete 72))))</property>
   <property name="map-name" value="Route 5"/>
+  <property name="music" value="route-2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>

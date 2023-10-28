@@ -5,7 +5,7 @@
     (map-name &quot;Greentwig City&quot;))</property>
   <property name="has-hints" type="bool" value="true"/>
   <property name="map-name" value="Greentwig City"/>
-  <property name="music" value="city"/>
+  <property name="music" value="city-1"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>

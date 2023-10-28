@@ -5,7 +5,7 @@
   (map-name &quot;Fumarole Town&quot;))</property>
   <property name="map-name" value="Fumarole Town"/>
   <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;How many meters above sea level are we?&quot;)))"/>
-  <property name="music" value="village"/>
+  <property name="music" value="village-3"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
@@ -39,6 +39,7 @@
     <property name="actionOnCollision">(if (!get &quot;070-lache&quot;)
   (begin
     (delete-me)
+    (music &quot;boss&quot;)
     (set &quot;070-lache&quot; #t)
     (dialog '((&quot;/hero_exclamation&quot; &quot;!&quot;)))
     (wait)
@@ -61,6 +62,7 @@
     (wait 0.6)
     (move '(2 67))
     (wait 0.6)
+    (music &quot;village-3&quot;)
     (leave-npc 67)))</property>
     <property name="actionOnEvent">(if (get &quot;070-lache&quot;)
   (delete-me))</property>

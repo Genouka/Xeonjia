@@ -9,7 +9,7 @@
       (&quot;/september&quot; &quot;Here we are finally! It's time to save the world!&quot;)))))</property>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="XEONJIA TOWER – 1F"/>
-  <property name="music" value="enemies"/>
+  <property name="music" value="tower"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>

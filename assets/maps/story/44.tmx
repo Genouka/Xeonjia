@@ -6,6 +6,7 @@
   <property name="can-escape" type="bool" value="false"/>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="Hana's Tunnel"/>
+  <property name="music" value="route-2"/>
   <property name="start-battle" type="bool" value="false"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>

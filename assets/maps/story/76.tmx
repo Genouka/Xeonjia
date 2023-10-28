@@ -4,6 +4,7 @@
   <property name="map-name" value="Route 8"/>
   <property name="milla">(dialog '((&quot;/milla&quot; &quot;Oh, the sea! I missed it!&quot;)));;;
 (dialog '((&quot;/milla&quot; &quot;Oh, that tree is like those in the Mitsu Forest! I missed it!&quot;)))</property>
+  <property name="music" value="route-3"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>

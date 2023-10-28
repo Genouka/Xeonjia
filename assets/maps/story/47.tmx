@@ -2,25 +2,26 @@
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="59">
  <properties>
   <property name="map-name" value="Route 6"/>
+  <property name="music" value="route-2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAwtlZGCIBOIAIMYHeIHyTxkgGMZmAdIvoWLYQBhQPhQJo9sjCGQLAbEwI8RMXOAllEa3xw+oJxrNDnR7JIG0FBBLI5n/AIhfAPFDJLNuQmkZJHW4zMflH2KABJLZUQTMR7YnCskubiB9DUj/RsLXoeLEup2QXSB8mwETRyHJk2M+OsZmB6VmDoQdkWj2UCNs8MUPrcwfxaN4JGIAYQZwpwgHAAA=
+   H4sIAAAAAAAAA2tnZGDoBuImIMYH7IHy4lAMY5sBsTSUjQ10AMXbkTC6Pc5AtgsQu0LNxAWkoXLo9jQA+b1odqDb4w2kfYDYF0mvEJAtBcTCSGLcULYfI2HzcfmHGCCBZHYPAfOR7elBsssWSHMAsS4S5mSEiBPrdkJ2gTAvFtyDhMkxHx1js4NSMwfCjm4086kRNvjih1bmj+JRPBIxAJEbdvgIBwAA
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="25" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAXUBMyMpIkPZhCA5mY/GvghAs3MsCFqBwjAwosW4URPkAR0fzIQp9DQH1lAs7OBOGeIh9UoGB4AAJt51ZQIBwAA
+   H4sIAAAAAAAAA2NgGAXUBKaMpIkPZtCE5uYGGvihC83MjiFqBwjAwosW4URPMAXo/qlAPI2G/pgDNHsuEM8b4mE1CoYHAADXuRWSCAcAAA==
   </data>
  </layer>
  <objectgroup id="8" name="items"/>
  <objectgroup id="10" name="spawn points">
-  <object id="57" class="NPC" gid="202" x="192" y="144" width="16" height="16">
+  <object id="57" class="NPC" gid="252" x="192" y="144" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I'm sorry, but you don't have permission to use this vessel.\nIf you want to reach the Fire Region you have to take the boats that leave from the north of this region.&quot;)))"/>
    </properties>

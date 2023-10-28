@@ -2,25 +2,26 @@
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="15" height="27" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="64">
  <properties>
   <property name="map-name" value="Route 4"/>
+  <property name="music" value="route-2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="366" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="27">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WUuw7CMAxFXYkFvqAD3wELjxkGNpb2v5FY2DIwdGQFbMmWjIvzvNJRoiS3fqQtAMDE9AzNA/NUe5OCtEP24OvurAcee7N+Qs6R52lvKrbnlRilfvJuI/vHyN4L5rWWSLyx/tj4wazHchctul9/bc5U7wbq7oi8B56L/418EgDnXpPzEr2rrq1eW2tOv0nrhrwpbkie8r0S0/Y7pRvk12f14FFil+Tf8h39u6MSLynn/+R5SaV3pb25sS/4Pg2MyOuZPkuMyJUZEuizli9V//9VVAYAAA==
+   H4sIAAAAAAAAA6VUuw7CMAx0NiQWtlRiYOwKDGWgLTMMfBMbS/lnbDUWlmmcpDnppMj21a8mAAAHN7OBmXT2gXvh4zgioUcOEMfWLdt9sDfKfkc+jO9JbSp3TMs5SvWkvRj+m+Fr3X+vJWCtNR+dn+fEdqt2Rif25Stqpn47WLcj0o7hzPoj2k4JniP/VA6uqO0r+9W95syb8Kyou3W/Pa/Rck497xQ2ibtgYaf6Lam/5h4t7ahES8h5n2JaQumupDY39ws1UyAjNjMZS/wg34FTgjJW8wuVhAghVAYAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="15" height="27">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAzNhYGAwZaAecARiJyLVmpBpN8wOcvXTEzAyMjAwMSL4pIQPJ1AfFyNhdbQElIYxveIIPZzJAUMhPeECZlB6KPuBGECp/0jJf9QGA2k3PQEAVYuLgFQGAAA=
+   H4sIAAAAAAAAAzNhYGAwZaAecARiJyLVmpBpN8wOcvXTExgzAt3JiOCTEj7WQH02jITV0RJQGsb0iiP0cCYHDIX0hAuYQemh7AdiAKX+IyX/URsMpN30BADEc8lCVAYAAA==
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="56" gid="260" x="16" y="192" width="16" height="16">
+  <object id="56" gid="310" x="16" y="192" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define event-id &quot;36.vase1&quot;)
@@ -33,7 +34,7 @@
         (dialog '((&quot;This vase is empty.&quot;)))))</property>
    </properties>
   </object>
-  <object id="57" gid="260" x="112" y="160" width="16" height="16">
+  <object id="57" gid="310" x="112" y="160" width="16" height="16">
    <properties>
     <property name="action">(begin
     (define item-id &quot;36.vase2&quot;)
@@ -46,22 +47,22 @@
         (dialog '((&quot;This vase is empty.&quot;)))))</property>
    </properties>
   </object>
-  <object id="58" class="Modifier" gid="384" x="64" y="80" width="16" height="16">
+  <object id="58" class="Modifier" gid="434" x="64" y="80" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="15"/>
    </properties>
   </object>
-  <object id="59" class="Modifier" gid="384" x="192" y="64" width="16" height="16">
+  <object id="59" class="Modifier" gid="434" x="192" y="64" width="16" height="16">
    <properties>
     <property name="moneyDelta" type="int" value="25"/>
    </properties>
   </object>
-  <object id="60" gid="378" x="48" y="304" width="16" height="16">
+  <object id="60" gid="428" x="48" y="304" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="60"/>
    </properties>
   </object>
-  <object id="61" gid="377" x="32" y="32" width="16" height="16">
+  <object id="61" gid="427" x="32" y="32" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="25"/>
    </properties>

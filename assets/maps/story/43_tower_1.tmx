@@ -5,6 +5,7 @@
     (map-name &quot;Observation Tower&quot;))
 </property>
   <property name="disable-minimap" type="bool" value="true"/>
+  <property name="music" value="route-2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>

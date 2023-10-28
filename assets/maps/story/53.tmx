@@ -4,7 +4,7 @@
   <property name="action" value="(map-name &quot;Archocean City&quot;)"/>
   <property name="map-name" value="Archocean City"/>
   <property name="milla" value="(dialog '((&quot;/milla_happy&quot; &quot;I like this city!&quot;)))"/>
-  <property name="music" value="city"/>
+  <property name="music" value="city-2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
@@ -35,7 +35,7 @@
     <property name="action">(begin
   (dialog '((&quot;/&quot; &quot;This city is very expensive.&quot;)))
   (if (get &quot;the-end&quot;)
-    (dialog '((&quot;/&quot; &quot;It was supposed to be a short holiday but it's lasting longer than expected.&quot;)))</property>
+    (dialog '((&quot;/&quot; &quot;It was supposed to be a short holiday but it's lasting longer than expected.&quot;)))))</property>
    </properties>
   </object>
   <object id="67" class="NPC" gid="216" x="352" y="32" width="16" height="16">

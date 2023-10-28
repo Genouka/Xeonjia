@@ -2,14 +2,15 @@
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="11" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="56">
  <properties>
   <property name="map-name" value="Route 5"/>
+  <property name="music" value="route-2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="154" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="206" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
  <layer id="1" name="Tile Layer 1" width="11" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NggICnQCwIxHJIOIyRgSEUCeMD6GqfkqD2IRXM5WHEVPsXh1o/oFw0mlpBIBYCYmE0f6KbCcKSQCwFxNKM+M1EDzOQmigc6kAYJo9PDQwTkh/KGABPQoROlAIAAA==
+   H4sIAAAAAAAAA2NggABxRgYGQSAth4Q7gGLtSBgfQFcrjkc9ulphEtTiMteOEVOtPg61DUDxXjS1zkDsAsSuaHrQzQRhbyD2AWJfRvxmoocZSE0PDnUgDJPHpwaGCckPZQwA6393QJQCAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
@@ -19,7 +20,7 @@
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="55" gid="260" x="16" y="32" width="16" height="16">
+  <object id="55" gid="310" x="16" y="32" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;Nope, there's only trash here.&quot;)))"/>
    </properties>

@@ -5,7 +5,7 @@
     (map-name &quot;Aquaville Town&quot;))</property>
   <property name="map-name" value="Aquaville Town"/>
   <property name="milla" value="(dialog '((&quot;/milla_happy&quot; &quot;I love this village!&quot;)))"/>
-  <property name="music" value="village"/>
+  <property name="music" value="village-2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>

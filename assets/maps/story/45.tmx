@@ -2,25 +2,26 @@
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="11" height="15" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="11" nextobjectid="57">
  <properties>
   <property name="map-name" value="Route 6"/>
+  <property name="music" value="route-2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/npc_common.tsx"/>
- <tileset firstgid="231" source="../tilesets/outdoor-2.tsx"/>
- <tileset firstgid="391" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="204" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="256" source="../tilesets/outdoor-2.tsx"/>
+ <tileset firstgid="416" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="11" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA8tjZGDIG8XDGlfgwDlY1P5jwA7KseghBPLJVAsAj0O8wZQCAAA=
+   H4sIAAAAAAAAA2tnZGBoH8XDGk/EgVuxqBUHYmxgAhY9hEAHmWoBJZA2L5QCAAA=
   </data>
  </layer>
  <objectgroup id="9" name="npc"/>
  <layer id="6" name="Tile Layer 2" width="11" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAXDBcgwEq9WhZE4PWJI8iokmE8JAACotvt5lAIAAA==
+   H4sIAAAAAAAAA2NgGAXDBZgyEq/WlpE4PfpI8rYkmE8JAABQp6EzlAIAAA==
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="56" gid="408" x="64" y="192" width="16" height="16">
+  <object id="56" gid="433" x="64" y="192" width="16" height="16">
    <properties>
     <property name="itemId" value="gem_5"/>
    </properties>

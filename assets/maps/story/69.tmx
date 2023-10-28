@@ -5,7 +5,7 @@
   (map-name &quot;Flamecot City&quot;))</property>
   <property name="map-name" value="Flamecot City"/>
   <property name="milla" value="(dialog '((&quot;/milla&quot; &quot;This is the third capital of the Kingdom. What is your favorite?&quot;)))"/>
-  <property name="music" value="city"/>
+  <property name="music" value="city-3"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
