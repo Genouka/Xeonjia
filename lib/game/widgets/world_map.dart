@@ -133,14 +133,13 @@ class _RectangleMap extends PositionComponent
         : (distance < 0.3
             ? '* After a long journey, {{hero}} arrived here *'
             : '* After a very long journey, {{hero}} arrived here *');
-    gameRef.startingDialog = text;
     gameRef.executeAction(action: '''
 (begin
     (dialog '(("Do you want to go back to this place?")))
     (define id "generic-question")
     (answer id '(("Yes" . #t) ("No" . #f)))
     (wait)
-    (if (get id) (teleport "${map.id}")))''');
+    (if (get id) (teleport-with-dialog "${map.id}" "$text")))''');
     return true;
   }
 

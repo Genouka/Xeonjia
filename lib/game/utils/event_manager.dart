@@ -411,6 +411,13 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     gameRef.changeRoom((x!.car as String) + '/teleport');
     return #NONE;
   });
+  _('teleport-with-dialog', 2, (Cell? x) {
+    gameRef.worldMap(enable: false);
+    gameRef.miniMap(enable: false);
+    gameRef.startingDialog = x!.cdr.car as String;
+    gameRef.changeRoom((x.car as String) + '/teleport');
+    return #NONE;
+  });
   _('teleport-multi', 2, (Cell? x) {
     mainCharacter.visitedRooms.add(x!.car as String);
     gameRef.changeRoom(x.cdr.car as String);
