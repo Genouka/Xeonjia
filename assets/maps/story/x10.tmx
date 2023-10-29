@@ -66,8 +66,7 @@
     (wait 0.5)
     (set-orientation '(0 69))
     (wait 0.5)
-    (leave-npc 69)
-    (music &quot;enemies&quot;))))</property>
+    (leave-npc 69))))</property>
   <property name="can-escape" type="bool" value="false"/>
   <property name="disable-worldmap" type="bool" value="true"/>
   <property name="map-name" value="XEONJIA TOWER – 10F"/>
@@ -119,7 +118,7 @@
     <property name="action" value="(dialog '((&quot;/&quot; &quot;What do you want?&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;x10-safe&quot;)
   (delete-me))</property>
-    <property name="hp" type="float" value="70"/>
+    <property name="hp" type="float" value="80"/>
     <property name="name" value="iosa"/>
     <property name="team" type="int" value="1"/>
     <property name="weaponAtk" type="int" value="20"/>
@@ -130,7 +129,7 @@
     <property name="action" value="(dialog '((&quot;/&quot; &quot;What do you want?&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;x10-safe&quot;)
   (delete-me))</property>
-    <property name="hp" type="float" value="50"/>
+    <property name="hp" type="float" value="70"/>
     <property name="name" value="joza"/>
     <property name="team" type="int" value="1"/>
     <property name="weaponAtk" type="int" value="20"/>
@@ -152,9 +151,12 @@
   (delete-me)
   (set-orientation '(1 63))
   (set-orientation '(1 64))
+  (dialog '((&quot;!&quot;)))
+  (wait)
+  (move 1)
+  (wait 0.6)
   (dialog
-    '((&quot;!&quot;)
-    (&quot;/&quot; &quot;Dr. Lache!&quot;)
+    '((&quot;/&quot; &quot;Dr. Lache!&quot;)
     (&quot;dr. lache/lache&quot; &quot;Very well. Here you are, {{hero}}.\nI admit I didn't think you'd make it, I underestimated you.\nNo hero has ever come this far.\nCongratulations, you've come a long way and I recognize your worth, but you missed one thing.\nYou did not understand the greatness of my vision.\nIt will be thanks to me that all the rottenness of this world will be eradicated.\nOrder arises out of destruction.&quot;)
     (&quot;/september&quot; &quot;Who is this braggart?\nLet's defeat him and go to the King of Evil.&quot;)
     (&quot;dr. lache/lache&quot; &quot;How rude your friend.&quot;)

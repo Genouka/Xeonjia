@@ -126,7 +126,7 @@
     (move '(3 65))
     (leave-all '(63 64 65))
     (wait)
-    (music &quot;route&quot;)
+    (music &quot;route-2&quot;)
     (set-orientation 2)
     (set-orientation '(3 66))
     (dialog

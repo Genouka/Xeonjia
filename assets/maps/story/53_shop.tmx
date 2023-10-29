@@ -22,7 +22,7 @@
  </objectgroup>
  <layer id="6" name="Tile Layer 2" width="10" height="9">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgIB7sBOJdeGgYOAjEh/DQyGA7DrvOIrH3A/EBPDQMHAfiE0g0AxY+KWA3FrwViU0KAABeVAZfaAEAAA==
+   H4sIAAAAAAAAA2NgIB7sBOJdeGgYOAjEh/DQyGA7EfbuB+IDeGgYOA7EJ5BoBix8UsBuLHgrEpsUAACraVsQaAEAAA==
   </data>
  </layer>
  <objectgroup id="9" name="items">

@@ -176,7 +176,7 @@
     (delete-animated 59)
     (wait 0.6)
     (delete-animated 56)
-    (music &quot;route&quot;)
+    (music &quot;route-2&quot;)
     (dialog
       '((&quot;/hero_exclamation&quot; &quot;M-Milla??!\nWhat did you do? How??? Where did you appear from?&quot;)
       (&quot;/milla_happy&quot; &quot;I saw that you were in trouble and helped you.&quot;)

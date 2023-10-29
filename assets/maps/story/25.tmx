@@ -6,42 +6,42 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
  <tileset firstgid="129" source="../tilesets/monsters.tsx"/>
- <tileset firstgid="179" source="../tilesets/basic.tsx"/>
- <tileset firstgid="203" source="../tilesets/npc_common.tsx"/>
+ <tileset firstgid="204" source="../tilesets/basic.tsx"/>
+ <tileset firstgid="228" source="../tilesets/npc_common.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="23">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAA7WUvWsCQRDFt0ijBEErCwlpRCuxu8aordHGbxM/IIiCSSyS6P/vG24Wh8ne7lr44MfJ7Lu53X2MxvxXF9RBBZS5NgQjMAYTMFXvvIEVeOfnWqw98jNh31IgfaQPsBXsHPuzvhmYg4XDdwCf4Bt8gSPXc6AB8gGf1Q/4BSfwB85cr4ECqAZ8bdGrCJ5AyaR3oWukHnjlekm9r+Vbu5f0N22ertxDPntW0i25+3w2z41x56l9rtzpjJQn5bg3aa5n3YBlfacMH82Pzlh+xyrJ8LXAi7nOoU9J2BLVhyTn2TWndl8hhfLqRu4nNKex53LNqTyL7jPw9JJ56bmIvR+pjmetnlHvB3q0HWsx/xu+vUjRfT2bdH8PoMm/y8afyQVOmI/deAYAAA==
   </data>
  </layer>
  <objectgroup id="9" name="npc">
-  <object id="56" class="NPC" gid="247" x="112" y="64" width="16" height="16">
+  <object id="56" class="NPC" gid="272" x="112" y="64" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
   (delete-me))</property>
    </properties>
   </object>
-  <object id="58" class="NPC" gid="250" x="128" y="80" width="16" height="16">
+  <object id="58" class="NPC" gid="275" x="128" y="80" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
   (delete-me))</property>
    </properties>
   </object>
-  <object id="59" class="NPC" gid="249" x="96" y="80" width="16" height="16">
+  <object id="59" class="NPC" gid="274" x="96" y="80" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
   (delete-me))</property>
    </properties>
   </object>
-  <object id="60" class="NPC" gid="247" x="144" y="16" width="16" height="16">
+  <object id="60" class="NPC" gid="272" x="144" y="16" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;…&quot;)))"/>
     <property name="visible" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="62" class="NPC" gid="248" x="112" y="96" width="16" height="16">
+  <object id="62" class="NPC" gid="273" x="112" y="96" width="16" height="16">
    <properties>
     <property name="action" value="(dialog '((&quot;…&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
@@ -55,12 +55,12 @@
   </data>
  </layer>
  <objectgroup id="8" name="items">
-  <object id="47" gid="190" x="112" y="288" width="16" height="16">
+  <object id="47" gid="215" x="112" y="288" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
   </object>
-  <object id="48" gid="190" x="128" y="240" width="16" height="16">
+  <object id="48" gid="215" x="128" y="240" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="25"/>
    </properties>
@@ -210,7 +210,7 @@
     (set-orientation '(0 -1))
     (wait 0.5)
     (black-curtain)
-    (music &quot;city&quot;)
+    (music &quot;city-1&quot;)
     (leave-all '(56 58 59 60 62))))</property>
     <property name="actionOnEvent">(if (get &quot;025-henchmen&quot;)
   (delete-me))</property>

@@ -11,6 +11,7 @@
     (dialog '((&quot;…&quot;)))
     (wait)
     (wait 1)
+    (music &quot;none&quot;)
     (dialog '((&quot;hero&quot; &quot;We did it?&quot;)))
     (wait)
     (wait 2)
@@ -109,7 +110,6 @@
     (set-orientation '(1 63))
     (wait 1)
     (set-orientation '(3 62))
-    (music &quot;none&quot;)
     (wait 0.6)
     (dialog '((&quot;/hero&quot; &quot;What's wrong, Milla?&quot;)))
     (wait)
@@ -143,6 +143,36 @@
   (dialog '((&quot;/&quot; &quot;Hey, there's September!&quot;)))
   (dialog '((&quot;/&quot; &quot;Don't disturb me, I'm planning the trip.&quot;))))</property>
   <property name="music" value="tower"/>
+  <property name="skip-story">(if (!get &quot;999_up-talk&quot;)
+(begin
+  (set &quot;999_up-talk&quot; #t)
+  (delete 116)
+  (place -1 112 176)
+  (place 61 96 176)
+  (place 62 128 176)
+  (place 63 144 176)
+  (set-orientation '(1 -1))
+  (set-orientation '(1 61))
+  (set-orientation '(1 62))
+  (set-orientation '(1 63))
+  (show 63)
+  (show 117)
+  (show 118)
+  (show 119)
+  (show 120)
+  (show 121)
+  (show 122)
+  (show 67)
+  (friendly '(#f 67))
+  (quiet '(#f 67))
+  (start-battle)
+  (show 110)
+  (show 111)
+  (show 112)
+  (show 113)
+  (show 114)
+  (show 115)
+  (music &quot;king-of-evil&quot;)))</property>
   <property name="start-battle" type="bool" value="false"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/outdoor-1.tsx"/>
@@ -306,6 +336,7 @@
   (delete-me)
 
 (begin
+  (remove-story-button)
   (delete-me)
   (set &quot;999_up-talk&quot; #t)
   (dialog '((&quot;/hero&quot; &quot;Let's go!&quot;)))
@@ -497,6 +528,7 @@
   (wait)
   (friendly '(#f 67))
   (quiet '(#f 67))
+  (set-permanent &quot;999_up-story&quot; #t)
   (start-battle)
   (show 110)
   (show 111)
