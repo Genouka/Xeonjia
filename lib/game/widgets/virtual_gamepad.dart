@@ -160,7 +160,7 @@ class Button extends HudButtonComponent {
   }
 
   static double getDimension(Vector2 size) =>
-      max(40, size.toSize().shortestSide / 14);
+      max(45, size.toSize().shortestSide / 12);
   void updatePosition() {
     var buttonsDimension = getDimension(gameRef.size);
     settings.buttonsOffset = settings.buttonsOffset.dx == -1
