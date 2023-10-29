@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # Manuel Tassi <mannivuwiki@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-10-28 18:40+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-10-29 16:51+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -975,7 +975,7 @@ msgstr "Non ne ho la minima idea."
 
 #: assets/maps/story/7.tmx:
 msgid "I just want to explore the world, know new places and learn new things!\nIt won't be easy but I want to visit the whole Kingdom!\nAnd maybe even visit places outside the Kingdom!"
-msgstr "Voglio esplorare il mondo, conoscere nuovi posti e imparare cose nuove!\nNon sarà facile ma voglio visitare tutto il Regno!\nE magari visitare anche posti al di fuori dal Regno!"
+msgstr "Voglio esplorare il mondo, conoscere nuovi posti e imparare cose nuove!\nNon sarà facile ma voglio visitare tutto il Regno!\nE magari visitare anche posti al di fuori del Regno!"
 
 #: assets/maps/story/7.tmx:
 msgid "Are there places outside the Kingdom?!"
@@ -2419,7 +2419,7 @@ msgstr "Settembre!"
 
 #: assets/maps/story/999.tmx:
 msgid "Here you are finally."
-msgstr "Eccovi finalmente."
+msgstr "Eccoti finalmente."
 
 #: assets/maps/story/999.tmx:
 msgid "She has the third signet."
@@ -2659,7 +2659,7 @@ msgstr "Zoysii?\nHo già sentito questo nome…"
 
 #: assets/maps/story/50_house.tmx:
 msgid "Hello! I am the official florist of the Region!\nThe most beautiful flowers? Zoysii!"
-msgstr "Ciao! Sono il fiorista ufficiale della Regione!\nI fiori più belli? Zoysii!"
+msgstr "Ciao! Sono la fiorista ufficiale della Regione!\nI fiori più belli? Zoysii!"
 
 #: assets/maps/story/t1_03.tmx:
 msgid "MOSSY CRYPT – B3F"
@@ -3623,7 +3623,7 @@ msgstr "Non ci sono mostri qui, tranne quel tizio laggiù che è un po' bruttino
 
 #: assets/maps/story/x3.tmx:
 msgid "Isn't there a guided tour?\nAh, isn't this a tourist attraction?\nThat explains many things…"
-msgstr "Non c'è una visita guidata?\nAh, non è questa un'attrazione turistica?\nQuesto spiega molte cose…"
+msgstr "Non c'è una visita guidata?\nAh, questa non è un'attrazione turistica?\nQuesto spiega molte cose…"
 
 #: assets/maps/story/x3.tmx:
 msgid "At this point I do a tour of the tower.\nWhen do I get an opportunity like this again?"
@@ -3687,7 +3687,7 @@ msgstr "Mi sento a casa."
 
 #: assets/maps/story/53_house2.tmx:
 msgid "Welcome to DeepDaikon studios!\nWe are a bit busy at the moment."
-msgstr "Benvenuti negli studi DeepDaikon!\nAl momento siamo un po' impegnati."
+msgstr "Benvenuto negli studi DeepDaikon!\nAl momento siamo un po' impegnati."
 
 #: assets/maps/story/53_house2.tmx:
 msgid "I did everything you see.\nI did you too."
@@ -4775,7 +4775,7 @@ msgstr "La vita trova sempre una via"
 
 #: assets/maps/tilesets/capital-1.tsx:
 msgid "I don't know what this means."
-msgstr "Non so cosa significhi."
+msgstr "Non so cosa significa."
 
 #: assets/maps/tilesets/capital-1.tsx:
 msgid "I can't go beyond this."
