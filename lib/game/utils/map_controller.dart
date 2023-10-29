@@ -12,6 +12,7 @@ extension MapController on XeonjiaGame {
       pause(stopEngine: false, stopMusic: false);
       statusBox.state?.refresh();
       overlays.remove('mapNameBox');
+      overlays.remove('skipButton');
       if (!inBattle) addCustomWidgetOverlay('mapNameBox', MapNameBox(this));
       overlays.remove('miniMapButton');
       overlays.remove('backpackButton');
@@ -33,6 +34,11 @@ extension MapController on XeonjiaGame {
       overlays.add('dialogBox');
       overlays.remove('statusBox');
       overlays.add('statusBox');
+      if (map.skipStory != null &&
+          (currentEventLog['${map.id}-story'] ?? false) &&
+          !(currentEventLog['${map.id}-safe'] ?? false)) {
+        overlays.add('skipButton');
+      }
       overlays.add(inBattle ? 'rulesButton' : 'leafButton');
       statusBox.state?.refresh();
       resume();

@@ -86,7 +86,8 @@ class XeonjiaGame extends FlameGame
     overlays.remove('statusBox');
     overlays.add('statusBox');
     if (map.skipStory != null &&
-        (currentEventLog['${map.id}-story'] ?? false)) {
+        (currentEventLog['${map.id}-story'] ?? false) &&
+        !(currentEventLog['${map.id}-safe'] ?? false)) {
       overlays.add('skipButton');
     }
     if (startingDialog != '') {
@@ -114,6 +115,7 @@ class XeonjiaGame extends FlameGame
   void start() async {
     _curtain.start();
     pause(stopMusic: false);
+    overlays.remove('skipButton');
     overlays.remove('mapNameBox');
     overlays.remove('miniMapButton');
     overlays.remove('backpackButton');
