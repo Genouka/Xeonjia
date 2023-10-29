@@ -17,12 +17,14 @@ class Message {
     authorName = m.group(1) != '' ? m.group(1)! : (author == '' ? '' : name);
     var mood = m.group(3);
     var spriteName = name + (mood != '' ? '_$mood' : '');
-    if (authorName != '' && spriteName != 'none') {
+    if (authorName != '') {
       authorName = ((authorName == 'hero')
               ? mainCharacter.name
               : authorName.i18n.replaceAll('-', ' '))
           .toUpperCase();
-      sprite = gameRef.dialogAtlases[xfaFile]?.getSprite(spriteName);
+      if (spriteName != 'none') {
+        sprite = gameRef.dialogAtlases[xfaFile]?.getSprite(spriteName);
+      }
     }
     if (translate) {
       text = text
