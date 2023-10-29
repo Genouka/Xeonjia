@@ -212,7 +212,7 @@ abstract class BasicComponent extends SpriteComponent
         gameRef.refreshHPBar(this as CharacterComponent);
       }
       if (_hp <= 0) {
-        if (name == 'king-of-evil' && gameRef.enemies > 1) {
+        if (name == 'king of evil' && gameRef.enemies > 1) {
           _hp = 1;
           gameRef.setMessage(Message(
             gameRef,
