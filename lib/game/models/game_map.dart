@@ -12,6 +12,7 @@ class GameMap {
     this.canEscape = true,
     this.hasHints = false,
     this.startBattle = true,
+    this.skipStory,
   });
 
   /// Map id
@@ -49,4 +50,7 @@ class GameMap {
   /// True if game.startBattle() is called immediately
   /// If false, (start-battle) procedure must be used
   bool startBattle;
+
+  /// Action used to skip story dialogs
+  String? skipStory;
 }

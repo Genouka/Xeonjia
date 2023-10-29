@@ -44,6 +44,8 @@ class XeonjiaGame extends FlameGame
           VirtualDPad(this),
       'dialogBox': (BuildContext context, XeonjiaGame game) => game.dialogBox,
       'loading': (BuildContext context, XeonjiaGame game) => LoadingPage(),
+      'skipButton': (BuildContext context, XeonjiaGame game) =>
+          SkipButton(this),
     };
     start();
   }
@@ -83,6 +85,10 @@ class XeonjiaGame extends FlameGame
     overlays.add('dialogBox');
     overlays.remove('statusBox');
     overlays.add('statusBox');
+    if (map.skipStory != null &&
+        (currentEventLog['${map.id}-story'] ?? false)) {
+      overlays.add('skipButton');
+    }
     if (startingDialog != '') {
       setMessage(Message(this, startingDialog));
       startingDialog = '';
@@ -564,6 +570,13 @@ class XeonjiaGame extends FlameGame
                   ? '''(dialog '(("Milla is resting.")))'''
                   : '''(dialog '(("Milla is already here!")))'''));
     }
+  }
+
+  /// Skip story dialogs
+  void skipStory() {
+    if (map.skipStory != null) executeAction(action: map.skipStory);
+    overlays.remove('skipButton');
+    map.skipStory = null;
   }
 
   /// Open backpack

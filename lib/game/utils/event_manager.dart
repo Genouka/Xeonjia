@@ -559,6 +559,12 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     gameRef.currentEventLog[x!.car.toString()] = x.cdr.car;
     return #NONE;
   });
+  _('set-permanent', 2, (Cell? x) {
+    gameRef.currentEventLog[x!.car.toString()] = x.cdr.car;
+    mainCharacter.eventLog[x.car.toString()] = x.cdr.car;
+    saveUserData();
+    return #NONE;
+  });
   _('map-name', 1, (Cell? x) {
     if (gameRef.inBattle) return #NONE;
     gameRef.map.name = stringify(x!.car, false);
@@ -586,6 +592,11 @@ Environment setEnvironment(XeonjiaGame gameRef) {
   _('give-leaf', 0, (Cell? x) {
     gameRef.overlays.remove('leafButton');
     gameRef.overlays.add('leafButton');
+    return #NONE;
+  });
+  _('remove-story-button', 0, (Cell? x) {
+    gameRef.overlays.remove('skipButton');
+    gameRef.map.skipStory = null;
     return #NONE;
   });
   _('earthquake', 0, (Cell? x) {

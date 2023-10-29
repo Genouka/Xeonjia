@@ -61,6 +61,10 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
           gameRef.map.startBattle =
               property.getAttributeNode('value')!.value == 'true';
           break;
+        case 'skip-story':
+          gameRef.map.skipStory =
+              property.getAttributeNode('value')?.value ?? property.text;
+          break;
       }
     }
   }

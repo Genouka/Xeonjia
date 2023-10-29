@@ -47,6 +47,7 @@ export 'package:xeonjia/game/widgets/buttons/hide_hints_button.dart';
 export 'package:xeonjia/game/widgets/buttons/leaf_button.dart';
 export 'package:xeonjia/game/widgets/buttons/minimap_button.dart';
 export 'package:xeonjia/game/widgets/buttons/rules_button.dart';
+export 'package:xeonjia/game/widgets/buttons/skip_button.dart';
 export 'package:xeonjia/game/widgets/buttons/world_map_button.dart';
 export 'package:xeonjia/game/widgets/loading_page.dart';
 export 'package:xeonjia/game/widgets/menus/backpack_menu.dart';
