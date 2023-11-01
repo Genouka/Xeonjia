@@ -335,6 +335,7 @@ class SettingsPageState extends State<SettingsPage> {
                                   ),
                                 ),
                               ),
+                            /*
                             Container(
                               margin: const EdgeInsets.symmetric(
                                   vertical: 4, horizontal: 8),
@@ -388,7 +389,7 @@ class SettingsPageState extends State<SettingsPage> {
                                       .toList(),
                                 ),
                               ),
-                            ),
+                            ),*/
                             Container(
                               margin: const EdgeInsets.symmetric(
                                   vertical: 4, horizontal: 8),
