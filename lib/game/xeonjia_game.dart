@@ -603,7 +603,7 @@ class XeonjiaGame extends FlameGame
           'I have %s health points.'.i18n.fill([playerOne!.hp.round()]),
         '/hero'
       ],
-      if (inBattle && milla != null && milla!.teamId == 0)
+      if (inBattle && milla != null && milla!.teamId == 0 && milla!.hp > 0)
         [
           if (money)
             "I don't even have a cent!".i18n
@@ -611,7 +611,11 @@ class XeonjiaGame extends FlameGame
             'I have %s health points!'.i18n.fill([milla!.hp.round()]),
           '/milla_happy'
         ],
-      if (!money && inBattle && september != null && september!.teamId == 0)
+      if (!money &&
+          inBattle &&
+          september != null &&
+          september!.teamId == 0 &&
+          september!.hp > 0)
         [
           'I? I have %s health points.'.i18n.fill([september!.hp.round()]),
           '/september'

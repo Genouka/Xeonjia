@@ -151,7 +151,8 @@ class PauseMenuState extends State<PauseMenu> {
             ]) +
             (widget.gameRef.inBattle &&
                     widget.gameRef.milla != null &&
-                    widget.gameRef.milla!.teamId == 0
+                    widget.gameRef.milla!.teamId == 0 &&
+                    widget.gameRef.milla!.hp > 0
                 ? '\n' +
                     'Milla has %s HP.'
                         .i18n
@@ -159,7 +160,8 @@ class PauseMenuState extends State<PauseMenu> {
                 : '') +
             (widget.gameRef.inBattle &&
                     widget.gameRef.september != null &&
-                    widget.gameRef.september!.teamId == 0
+                    widget.gameRef.september!.teamId == 0 &&
+                    widget.gameRef.september!.hp > 0
                 ? ' ' +
                     'September has %s HP.'
                         .i18n
