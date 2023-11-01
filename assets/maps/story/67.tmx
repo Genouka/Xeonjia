@@ -27,7 +27,7 @@
  <objectgroup id="8" name="items">
   <object id="57" gid="471" x="336" y="64" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;Flamecot City&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/_3&quot; &quot;Flamecot City&quot;)))"/>
    </properties>
   </object>
   <object id="60" gid="556" x="224" y="144" width="16" height="16">

@@ -31,7 +31,7 @@
  <objectgroup id="8" name="items">
   <object id="66" gid="471" x="352" y="112" width="16" height="16">
    <properties>
-    <property name="action" value="(dialog '((&quot;Fumarole Town&quot;)))"/>
+    <property name="action" value="(dialog '((&quot;/_3&quot; &quot;Fumarole Town&quot;)))"/>
    </properties>
   </object>
   <object id="68" class="Solid" x="-16" y="80" width="16" height="16">

@@ -18,7 +18,7 @@
  <tileset firstgid="608" source="../tilesets/npc_main.tsx"/>
  <layer id="1" name="Tile Layer 1" width="22" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WUMQrCQBBF15zBwuOIjWKlXstGEUFrLaIobIKC2niMlJZew7+QgWGZ2Z3gh8+y4fNmZxjie855uMo4ZA5wbchSnrglfFN8h5fwIJE5K9xwBjU4j/CnvZM20Z20wvc16+WicIO2CkPSDtl9y60Z6yFwufi7+4l6MZfPo6t4zZq9OcVtDHWGhXMn5EaFnZvTF/kJeGN4KnDLzHxTSnGlfcjNgHZrBt4cXhi5OdFucf3DfRv2LOaGPX4Kvhr70LiVwOwyH40r/at8oo/YL8b9AY3PVcgoBQAA
+   H4sIAAAAAAAAA6WUQQrCMBBFY0/hccSN4kq9lhtFBF3roopCWhSqG4/RpUuv4Q90YAiTyRQ/fELK501mGOoHznm4yjhkjnBtyFKeuCV8T/gBr+ChkrkkuOEManGe4E93J22jO2mN7xvWyzXBDdolGJL2yB46bs1YjcDl4u/+KvViLp9HX/GaNXuzxm0NdUaFc2fkxoWdm1OYyRS8CTwTuGVmvpo0rrQPuRnQbs3BW8BLIzcn2i2uf7hvw57F3LDHT8E3Yx8pbiUw+8wnxZX+VV7pI/aLcX9RikANKAUAAA==
   </data>
  </layer>
  <objectgroup id="10" name="npcs">

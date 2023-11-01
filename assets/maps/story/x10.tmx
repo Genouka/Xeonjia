@@ -118,7 +118,7 @@
     <property name="action" value="(dialog '((&quot;/&quot; &quot;What do you want?&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;x10-safe&quot;)
   (delete-me))</property>
-    <property name="hp" type="float" value="80"/>
+    <property name="hp" type="float" value="90"/>
     <property name="name" value="iosa"/>
     <property name="team" type="int" value="1"/>
     <property name="weaponAtk" type="int" value="20"/>
@@ -129,10 +129,10 @@
     <property name="action" value="(dialog '((&quot;/&quot; &quot;What do you want?&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;x10-safe&quot;)
   (delete-me))</property>
-    <property name="hp" type="float" value="70"/>
+    <property name="hp" type="float" value="80"/>
     <property name="name" value="joza"/>
     <property name="team" type="int" value="1"/>
-    <property name="weaponAtk" type="int" value="20"/>
+    <property name="weaponAtk" type="int" value="23"/>
    </properties>
   </object>
   <object id="69" gid="548" x="112" y="128" width="16" height="16">
@@ -140,7 +140,7 @@
     <property name="action" value="(dialog '((&quot;/&quot; &quot;I will defeat you.&quot;)))"/>
     <property name="actionOnEvent">(if (get &quot;x10-safe&quot;)
   (delete-me))</property>
-    <property name="hp" type="float" value="90"/>
+    <property name="hp" type="float" value="110"/>
     <property name="team" type="int" value="1"/>
     <property name="weaponAtk" type="int" value="25"/>
    </properties>
