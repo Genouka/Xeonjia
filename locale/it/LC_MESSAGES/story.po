@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # Manuel Tassi <mannivuwiki@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-10-29 16:51+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-01 18:17+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -283,7 +283,7 @@ msgstr "Sei cresciuto qui, vero?"
 
 #: assets/maps/story/1.tmx:
 msgid "Here is our sleepyhead!\nFinally awake!\nThe hopes of the whole Kingdom are entrusted to you and you take it easy?"
-msgstr "Ecco il nostro dormiglione!\nFinalmente sveglio!\nTi sono affidate le speranze di tutto il Regno e te la prendi con comoda?"
+msgstr "Ecco il nostro dormiglione!\nFinalmente sveglio!\nTi sono affidate le speranze di tutto il Regno e tu te la prendi con comoda?"
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
@@ -371,7 +371,7 @@ msgstr "Pietre rare?"
 
 #: assets/maps/story/1.tmx:
 msgid "Yes, I have no idea what they are for.\nTo be honest, I don't even know if they're worth looking for.\nIt's just to pass the time."
-msgstr "Sì, non ho idea a cosa servano.\nAd essere onesti, non so nemmeno se valga la pena cercarle.\nÈ solo per passare il tempo."
+msgstr "Sì, non ho idea di cosa servano.\nAd essere onesti, non so nemmeno se valga la pena cercarle.\nÈ solo per passare il tempo."
 
 #: assets/maps/story/1.tmx:
 msgid "Ok, maybe I'll go look for them."
@@ -1831,7 +1831,7 @@ msgstr "Guarda guarda chi c'è… l' \"eroe\" di quest'anno.\nAbbiamo fatto fuor
 
 #: assets/maps/story/25.tmx:
 msgid "W-who are you?! What do you want?!"
-msgstr "C-Chi sei?! Che cosa vuoi?!"
+msgstr "C-Chi siete?! Che cosa volete?!"
 
 #: assets/maps/story/25.tmx:
 msgid "You don't seem particularly informed, kid.\nAt least those before you had the basics.\nThey should choose \"heroes\" more carefully.\nWe are the Hoarfrost Team!\nWe are the professionals of crime.\nThe King of Evil's right-hand men.\nThanks to us, the King of Evil will be able to complete his work."
@@ -4627,7 +4627,7 @@ msgstr "Forse è meglio se sto attento a dove metto i piedi."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A rocky wall."
-msgstr "Un muro roccioso."
+msgstr "Una parete rocciosa."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A wall."
