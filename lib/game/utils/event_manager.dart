@@ -1,8 +1,9 @@
-import 'dart:io';
+import 'dart:convert';
 import 'dart:math';
 
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:xeonjia/game/xeonjia.dart';
@@ -423,13 +424,15 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     gameRef.changeRoom(x.cdr.car as String);
     return #NONE;
   });
-  _('teleport-random', 0, (Cell? x) {
-    var maps = Directory('assets/maps/story')
-        .listSync()
-        .where((f) => f is File && extension(f.path) == '.tmx')
+  _('teleport-random', 0, (Cell? x) async {
+    final Map<String, dynamic> manifestMap =
+        json.decode(await rootBundle.loadString('AssetManifest.json'));
+    var maps = manifestMap.keys
+        .where((String key) => key.contains('.tmx'))
+        .map((e) => e.split('/').last)
         .toList();
     gameRef.changeRoom(
-        basenameWithoutExtension(maps[Random().nextInt(maps.length)].path) +
+        basenameWithoutExtension(maps[Random().nextInt(maps.length)]) +
             '/teleport');
     gameRef.setMessage(Message(
       gameRef,
