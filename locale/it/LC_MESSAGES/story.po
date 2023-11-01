@@ -7,7 +7,7 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # Manuel Tassi <mannivuwiki@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-01 18:17+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-01 22:39+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Italian <https://translate.deepdaikon.xyz/projects/xeonjia/story/it/>\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -1551,7 +1551,7 @@ msgstr "Il vulcano è il cuore e l'anima della nostra comunità.\nTutto ciò che
 
 #: assets/maps/story/69_house1.tmx:
 msgid "I was a main character in the story but due to lack of time and budget I was cut off.\nBut I swear I'm important, eh."
-msgstr "Ero uno dei personaggi principali della storia ma, per mancanza di tempo e di budget, mi hanno tagliato fuori.\nMa ti giuro che sono importante, eh."
+msgstr "Ero uno dei personaggi principali della storia, ma per mancanza di tempo e di budget mi hanno tagliato fuori.\nMa ti giuro che sono importante, eh."
 
 #: assets/maps/story/69_house1.tmx:
 msgid "someone"
