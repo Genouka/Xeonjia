@@ -102,7 +102,7 @@
  <tile id="49" class="Solid">
   <properties>
    <property name="action">(if (= (orientation) 0)
-    (dialog '((&quot;A rocky wall covered by moss.&quot;))))</property>
+    (dialog '((&quot;A rocky wall.&quot;))))</property>
   </properties>
  </tile>
  <tile id="50" class="Solid"/>

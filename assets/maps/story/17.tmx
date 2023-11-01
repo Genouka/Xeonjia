@@ -28,7 +28,7 @@
   </object>
   <object id="41" class="Monster" gid="129" x="64" y="256" width="16" height="16">
    <properties>
-    <property name="hp" type="float" value="40"/>
+    <property name="hp" type="float" value="30"/>
     <property name="level" type="float" value="0"/>
    </properties>
   </object>
