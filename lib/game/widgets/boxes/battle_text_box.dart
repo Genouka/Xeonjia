@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia.dart';
@@ -46,8 +48,9 @@ class BattleTextBox extends PositionComponent with HasGameRef<XeonjiaGame> {
         Paint()..color = Colors.grey.shade800.withOpacity(0.7));
     if (currentWidth > width / 3) {
       TextPaint(
-              style:
-                  TextStyle(fontSize: height / 1.2, fontFamily: settings.font))
+              style: TextStyle(
+                  fontSize: min(height / 1.2, width / text.length * 2),
+                  fontFamily: settings.font))
           .render(canvas, text, Vector2(gameRef.size.x / 2, height / 2 - 4),
               anchor: Anchor.center);
     }
