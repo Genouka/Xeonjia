@@ -63,12 +63,12 @@
   </object>
   <object id="69" class="Modifier" gid="594" x="128" y="208" width="16" height="16">
    <properties>
-    <property name="moneyDelta" type="int" value="20"/>
+    <property name="moneyDelta" type="int" value="40"/>
    </properties>
   </object>
   <object id="70" class="Modifier" gid="594" x="64" y="208" width="16" height="16">
    <properties>
-    <property name="moneyDelta" type="int" value="20"/>
+    <property name="moneyDelta" type="int" value="65"/>
    </properties>
   </object>
  </objectgroup>

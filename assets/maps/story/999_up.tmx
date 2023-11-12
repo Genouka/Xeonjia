@@ -437,6 +437,7 @@
   (set-orientation '(1 62))
   (set-orientation '(1 63))
   (earthquake)
+  (music &quot;none&quot;)
   (wait 2)
   (show 117)
   (show 118)
