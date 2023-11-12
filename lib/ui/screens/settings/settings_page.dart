@@ -431,8 +431,8 @@ class SettingsPageState extends State<SettingsPage> {
                                       child: Text(
                                         () {
                                           String text = 'System default'.i18n;
-                                          return text.length > 22
-                                              ? text.substring(0, 20) + '…'
+                                          return text.length > 16
+                                              ? text.substring(0, 14) + '…'
                                               : text;
                                         }(),
                                         style: TextStyle(
