@@ -1,0 +1,5 @@
+* Finalisation du mode Histoire !
+* Améliorations des graphismes et interfaces
+* Améliorations diverses
+* Mises à jour des traductions
+* Corrections de bugs
