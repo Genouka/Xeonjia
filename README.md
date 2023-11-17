@@ -1,6 +1,8 @@
 # X E O N J i A
 
-Save the world by solving ice puzzles and defeating enemies.
+Save the world by solving ice puzzles and defeating enemies!
+
+Available on Android, Windows and Linux.
 
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
      alt="Get it on Google Play"
@@ -29,8 +31,8 @@ The world has been frozen by the **"King of Evil"** and it's no longer a safe pl
 Legend has it that a brave hero will defeat the King of Evil and save the kingdom… For this reason
 every year a person is appointed as "hero" and sent on a journey to try to save it.
 
-Now is your time, **you have been chosen as this year's hero!** Will you be able to defeat the King
-of Evil?
+Now it's your time, **you have been chosen as this year's hero!** Will you be able to defeat the
+King of Evil?
 
 You will have to travel the world, explore cities, dungeons and mystical caves.
 
@@ -45,8 +47,6 @@ Keep in mind that most of **the floor is frozen**, so you can't stop yourself un
 wall, a boulder, or any other type of obstacle.
 
 **Use your mind to figure out the best path!**
-
-**Note**: this game is currently in early beta stage.
 
 ## Screenshots
 
@@ -64,7 +64,7 @@ If you want to support the development of Xeonjia you can donate through Liberap
 
 ## Contribute
 
-Xeonjia is still in an early stage of development, so any contribution is highly appreciated.
+Any contribution is highly appreciated.
 
 Are you a pixel artist? A musician? A storywriter? A developer? None of these but you just want to
 help?
@@ -94,18 +94,22 @@ Some of the reviews and comments received:
 - "Xeonjia is a very unique and enjoyable game to play. With pixel art graphics it mixes RPGs with
 puzzle games!" - [Le Alternative](https://www.lealternative.net/2020/12/23/xeonjia/)
 
+- "I never knew a mobile game could be this fun, but I love everything about Xeonjia. The puzzles
+were just the right difficulty, and I love the music and visual design as well as story. Thank
+you!!!" - Ra
+
 - "It's a free, open source RPG. I don't think people have really found this app yet, but they
-will." - [M.T.](https://play.google.com/store/apps/details?id=xyz.deepdaikon.xeonjia&reviewId=37a2c723-efc6-4e6f-a85a-77d3821bc778)
+will." - M.T.
 
 - "I found it a really interesting and clever idea." - R.V.
 
 - "Thanks for developing this game! I enjoy ice puzzles in games, so this is a real treat to play." -
-[K.](https://gitlab.com/deepdaikon/Xeonjia/-/issues/13)
+K.
 
 - "Nice game, cool mechanic. I like the puzzle aspect of the navigation. It can be tedious, but it's
-part of the fun." - [G.L.](https://gitlab.com/deepdaikon/Xeonjia/-/issues/16)
+part of the fun." - G.L.
 
-- "Me encantó." - [J.O.](https://play.google.com/store/apps/details?id=xyz.deepdaikon.xeonjia&reviewId=b6903d23-f484-4ef3-8a39-7932394ec32b)
+- "Me encantó." - J.O.
 
 ## License
 
@@ -129,5 +133,6 @@ Commons Attribution-ShareAlike 4.0 International License
 ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
 
 The following .oga files are adapted artwork from Yubatake and are licensed under the Creative
-Commons Attribution 3.0 Unported License ([CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)):
-boss, city, cityhall, enemies, forest, gameover, item, mystic, road, town, village, win.
+Commons Attribution 3.0 Unported License ([CC BY 3.0](https://creativecommons.org/licenses/by/3.0/))
+: boss, city-1, city-2, city-3, cityhall, enemies, forest, gameover, item, king-of-evil, mystic,
+route-1, route-2, route-3, tower, tree, village-1, village-2, village-3, win.

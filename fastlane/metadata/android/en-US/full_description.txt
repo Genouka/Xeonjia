@@ -7,7 +7,7 @@ The world has been frozen by the <b>“King of Evil”</b> and it’s no longer 
 
 Legend has it that a brave hero will defeat the King of Evil and save the kingdom… For this reason every year a person is appointed as “hero” and sent on a journey to try to save it.
 
-Now is your time, <b>you have been chosen as this year’s hero!</b> Will you be able to defeat the King of Evil?
+Now it's your time, <b>you have been chosen as this year’s hero!</b> Will you be able to defeat the King of Evil?
 
 You will have to travel the world, explore cities, dungeons and mystical caves.
 
@@ -20,5 +20,3 @@ Be careful, the world is full of <b>dangerous enemies</b> ready to attack you!
 Keep in mind that most of <b>the floor is frozen</b>, so you can’t stop yourself until you reach a wall, a boulder, or any other type of obstacle.
 
 <b>Use your mind to figure out the best path!</b>
-
-<b>Note</b>: this game is currently in early beta stage.
