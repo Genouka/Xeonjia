@@ -54,12 +54,16 @@ ${'Thanks to everyone who contributed to this project!'.i18n}
     * Sebastian
     * Sergiy Borodych
     * Sir Crownguard
+    * snipe2004
     * Super12138
     * Swann Fournial
     * Thothorg
+    * Tomasz K.
     * Tri-fan
     * Viktória Nagy
+    * Vinicius
     * Vri
+    * Vsnmrn
     * Xika Ka
     * xlf1024
     * YottaMxt
