@@ -20,5 +20,3 @@ Fai attenzione perché il mondo è pieno di <b>creature pericolose</b> pronte ad
 Tieni a mente che gran parte del <b>pavimento è ghiacciato</b>, scivolerai senza poterti fermare se non andando addosso ad un muro, ad una roccia o ad un qualunque altro ostacolo.
 
 <b>Ragiona e pensa bene ogni movimento: cerca di trovare il percorso migliore!</b>
-
-<b>Nota</b>: questo gioco è attualmente in versione beta.

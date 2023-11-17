@@ -20,5 +20,3 @@ Attention, le monde regorge <b>d'ennemis dangereux</b> prêts à vous attaquer 
 Gardez à l'esprit que la majeure partie du <b>sol est gelé</b>, vous ne pouvez donc pas vous arrêter tant que vous n'avez pas atteint un mur, un rocher ou tout autre type d'obstacle.
 
 <b>Utilisez votre tête pour trouver le meilleur chemin !</b>
-
-<b>Note</b> : ce jeu est actuellement en bêta.

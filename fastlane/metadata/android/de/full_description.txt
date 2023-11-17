@@ -20,5 +20,3 @@ Sei vorsichtig, die Welt ist voller <b>gefährlicher Gegner</b>, bereit dich anz
 Beachte, dass größtenteils <b>der Boden eingefroren ist</b>, also du nicht anhalten kannst bis du eine Wand, einen Felsbrocken oder ein sonstiges Hindernis erreicht hast.
 
 <b>Nutze deinen Verstand, um den besten Pfad herauszufinden!</b>
-
-<b>Hinweis</b>: Dieses Spiel befindet sich derzeit in einer frühen Betaphase.

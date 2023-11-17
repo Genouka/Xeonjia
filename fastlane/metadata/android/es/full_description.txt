@@ -20,5 +20,3 @@ Ten cuidado, ¡el mundo está lleno de <b>peligrosos enemigos</b> listos para at
 Ten en cuenta, en gran medida, <b>el piso está congelado</b>, así que no puedes detenerte hasta que des con un muro, una roca o cualquier otro tipo de obstáculo.
 
 <b>¡Usa tu intelecto para encontrar el mejor camino!</b>
-
-<b>Nota</b>: este juego actualmente está en una fase beta temprana.
