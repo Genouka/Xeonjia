@@ -9,7 +9,7 @@
 # snipe2004 <snipe2004@hotmail.com>, 2023.
 # Vsnmrn <vsnmrn1@protonmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-12 17:15+0000\nLast-Translator: Vsnmrn <vsnmrn1@protonmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/ui/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-17 21:28+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/ui/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -673,7 +673,7 @@ msgstr "Vous devriez déjà connaître le bouton \"%s\" ; il examine les objets
 
 #: lib/game/xeonjia_game.dart:
 msgid "To attack use the \"%s\" button. In this way you punch the enemy in front of you."
-msgstr "Pour attaquer, utilisez le bouton P. De cette manière, vous donnez un coup de poing devant vous."
+msgstr "Pour attaquer, utilisez le bouton « %s ». De cette manière, vous donnez un coup de poing devant vous."
 
 #: lib/game/xeonjia_game.dart:
 msgid "Otherwise, throw snowballs with the \"%s\" button in the direction you are looking at."
