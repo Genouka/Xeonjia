@@ -11,6 +11,7 @@ const List<Locale> enabledLocales = [
   Locale('hu'),
   Locale('it'),
   Locale('ja'),
+  Locale('pt'),
   Locale('ru'),
   Locale('tr'),
   Locale('vi'),
@@ -22,6 +23,7 @@ final List<Locale> supportedLocales = [
   const Locale('bn'),
   const Locale('id'),
   const Locale('nn'),
+  const Locale('pl'),
   const Locale('uk'),
 ];
 const languagesWithSpecialCharacters = [
