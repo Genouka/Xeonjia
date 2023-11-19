@@ -11,7 +11,7 @@
 # snipe2004 <snipe2004@hotmail.com>, 2023.
 # Vsnmrn <vsnmrn1@protonmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-17 20:48+0000\nLast-Translator: Vsnmrn <vsnmrn1@protonmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-19 22:16+0000\nLast-Translator: Vsnmrn <vsnmrn1@protonmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -1279,7 +1279,7 @@ msgstr "Nous te surveillons."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "The snowballs container is full."
-msgstr "Le conteneur à boules de neige est plein."
+msgstr "Le conteneur de boules de neige est plein."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "* {{hero}} fills his snowballs container *"
@@ -2831,7 +2831,7 @@ msgstr "Nous collaborons à des expériences et inventions scientifiques."
 
 #: assets/maps/story/39.tmx:
 msgid "We made the snowball container together."
-msgstr "Nous avons fabriqué ensemble le conteneur à boules de neige."
+msgstr "Nous avons fabriqué ensemble le conteneur de boules de neige."
 
 #: assets/maps/story/39.tmx:
 msgid "I made it and she tried it."
@@ -4319,7 +4319,7 @@ msgstr "J'ai apprécié son discours."
 
 #: assets/maps/story/999_up.tmx:
 msgid "Your copes turn into chosen fears."
-msgstr ""
+msgstr "Vos déboires se transformeront en larmes mêlées."
 
 #: assets/maps/story/999_up.tmx:
 msgid "I don't recall him saying that."
@@ -4327,7 +4327,7 @@ msgstr "Je ne me souviens pas qu'il ait dit cela."
 
 #: assets/maps/story/999_up.tmx:
 msgid "Your soaps turn into frozen pears."
-msgstr ""
+msgstr "Vos fermoirs se transformeront en charmes gelés."
 
 #: assets/maps/story/999_up.tmx:
 msgid "Mmh… It wasn't even like that."
@@ -4403,11 +4403,11 @@ msgstr "TOUR XEONJIA – 8e étage"
 
 #: assets/maps/story/x9.tmx:
 msgid "Arrows, arrows. Arrows again."
-msgstr ""
+msgstr "Des flèches, des flèches. Encore des flèches."
 
 #: assets/maps/story/x9.tmx:
 msgid "Just a little more effort and we'll make it."
-msgstr ""
+msgstr "Juste un peu plus d'efforts et nous y arriverons."
 
 #: assets/maps/story/41.tmx:
 msgid "As long as the tunnel is blocked we must organize differently to get goods and people from one side to another."
@@ -4439,39 +4439,39 @@ msgstr "TOUR XEONJIA - RDC"
 
 #: assets/maps/story/x1.tmx:
 msgid "* The Spirit of Fire warmed the tower *"
-msgstr ""
+msgstr "* L'Esprit du Feu a réchauffé la tour *"
 
 #: assets/maps/story/x1.tmx:
 msgid "Here we are finally! It's time to save the world!"
-msgstr ""
+msgstr "Nous y voilà enfin ! Il est temps de sauver le monde !"
 
 #: assets/maps/story/x1.tmx:
 msgid "The temperature is great here."
-msgstr ""
+msgstr "La température est agréable ici."
 
 #: assets/maps/story/x1.tmx:
 msgid "What were you thinking about?"
-msgstr ""
+msgstr "À quoi pensais-tu ?"
 
 #: assets/maps/story/x1.tmx:
 msgid "I can't wait to defeat the King of Evil."
-msgstr ""
+msgstr "J'ai hâte de vaincre le Roi du Mal."
 
 #: assets/maps/story/x1.tmx:
 msgid "We have no time to waste!"
-msgstr ""
+msgstr "Nous n'avons pas de temps à perdre !"
 
 #: assets/maps/story/x1.tmx:
 msgid "If there are monsters I hide, I don't like to fight."
-msgstr ""
+msgstr "S'il y a des monstres, je me cache, je n'aime pas me battre."
 
 #: assets/maps/story/x1.tmx:
 msgid "Yeahhh!"
-msgstr ""
+msgstr "Ouiii !"
 
 #: assets/maps/story/x1.tmx:
 msgid "Am I really in the tower? I still don't believe it…\nAfter this long journey…\nEverything I've been through has prepared me for this moment.\nI can no longer hesitate, I can't look back.\nLet the last challenge begin!"
-msgstr ""
+msgstr "Suis-je vraiment dans la tour ? Je n'y crois toujours pas...\nAprès ce long voyage...\nTout ce que j'ai vécu m'a préparé à ce moment.\nJe ne peux plus hésiter, je ne peux plus regarder en arrière.\nQue le dernier défi commence !"
 
 #: assets/maps/story/x1.tmx:
 msgid "Come on, {{hero}}! Move! What are you waiting for?!"
@@ -4479,15 +4479,15 @@ msgstr "Allez, {{hero}} ! Bouge ! Qu'est-ce que tu attends ?!"
 
 #: assets/maps/story/x1.tmx:
 msgid "Yes, sorry, I'm coming!"
-msgstr ""
+msgstr "Oui, désolé, j'arrive !"
 
 #: assets/maps/story/x1.tmx:
 msgid "The door is closed. I can't open it.\nAnyway, it's not the time to run away."
-msgstr ""
+msgstr "La porte est fermée. Je ne peux pas l'ouvrir.\nDe toute façon, ce n'est pas le moment de s'enfuir."
 
 #: assets/maps/story/x1.tmx:
 msgid "There is something behind this rock… It's a stone!"
-msgstr ""
+msgstr "Il y a quelque chose derrière ce rocher... C'est une pierre !"
 
 #: assets/maps/story/70_house3.tmx:
 msgid "We are moving to a new location."
@@ -4503,7 +4503,7 @@ msgstr "Mais a-t-on vraiment besoin de ça ?"
 
 #: assets/maps/story/4.tmx:
 msgid "On the ground it's easy to find XEON ¤ stones that you can use to buy items in shops."
-msgstr ""
+msgstr "Sur le terrain, il est facile de trouver des pierres XEON ¤ que tu peux utiliser pour acheter des objets dans des magasins."
 
 #: assets/maps/story/31_house2.tmx:
 msgid "Greentwig City is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though."
@@ -4515,51 +4515,51 @@ msgstr "TOUR XEONJIA – 5e étage"
 
 #: assets/maps/story/5.tmx:
 msgid "Hey, this is the Mitsu Forest!\nMy parents told me many stories about how beautiful it was a long time ago.\nIt is said that once upon a time the mystical protective creature of this region lived here."
-msgstr ""
+msgstr "Hé, c'est la Forêt Mitsu !\nMes parents m'ont raconté de nombreuses histoires sur la beauté de cette forêt il y a très longtemps.\nOn dit qu'autrefois, la créature protectrice mystique de cette région vivait ici."
 
 #: assets/maps/story/5.tmx:
 msgid "Mitsu Forest!"
-msgstr ""
+msgstr "La Forêt Mitsu !"
 
 #: assets/maps/story/5.tmx:
 msgid "Remember that hydration is essential for good overall health."
-msgstr ""
+msgstr "N'oublie pas que l'hydratation est essentielle pour une bonne santé générale."
 
 #: assets/maps/story/5.tmx:
 msgid "Here you go."
-msgstr ""
+msgstr "Voilà, c'est parti."
 
 #: assets/maps/story/5.tmx:
 msgid "Ah, this forest is a true paradise for a botany enthusiast like me!"
-msgstr ""
+msgstr "Ah, cette forêt est un véritable paradis pour un passionné de botanique comme moi !"
 
 #: assets/maps/story/5.tmx:
 msgid "student"
-msgstr ""
+msgstr "étudiant"
 
 #: assets/maps/story/5.tmx:
 msgid "Look at those plants!"
-msgstr ""
+msgstr "Regarde ces plantes !"
 
 #: assets/maps/story/5.tmx:
 msgid "And have you seen those?!"
-msgstr ""
+msgstr "Et tu as vu celles-là ?!"
 
 #: assets/maps/story/5.tmx:
 msgid "This one?"
-msgstr ""
+msgstr "Celle-ci ?"
 
 #: assets/maps/story/5.tmx:
 msgid "And those!"
-msgstr ""
+msgstr "Et celles-là !"
 
 #: assets/maps/story/5.tmx:
 msgid "I love this place!"
-msgstr ""
+msgstr "J'adore cet endroit !"
 
 #: assets/maps/story/5.tmx:
 msgid "The trees of this region are admired and studied throughout the Kingdom.\nThese blue ones are my favorite."
-msgstr ""
+msgstr "Les arbres de cette région sont admirés et étudiés dans tout le Royaume.\nCes arbres bleus sont mes préférés."
 
 #: assets/maps/story/5.tmx:
 msgid "Mitsu Forest – Welcome, respect nature and remember to take a look at the souvenir shop on the right."
@@ -4571,11 +4571,11 @@ msgstr "Autrefois, c'était un endroit très touristique, le Royaume a essayé d
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "A cluster of gems."
-msgstr ""
+msgstr "Un amas de gemmes."
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "Is still here."
-msgstr ""
+msgstr "Est toujours là."
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "The tower is so ugly."
@@ -4599,11 +4599,11 @@ msgstr "Tubes à essai et autres trucs scientifiques."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "Hey, there's a fruit juice here!\n* {{hero}} puts FRUIT JUICE in the backpack *"
-msgstr ""
+msgstr "Hé, il y a un jus de fruit ici !\n* {{hero}} met le JUS DE FRUIT dans son sac à dos *"
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "…\nNo… I think I'm stealing it.\n* {{hero}} puts FRUIT JUICE back on the shelf *"
-msgstr ""
+msgstr "...\nNon... Je crois que je suis en train de le voler.\n* {{hero}} replace le JUS DE FRUIT sur l'étagère *"
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "I'm not even sure it's a fruit juice."
@@ -4643,7 +4643,7 @@ msgstr "Il y a une petite différence de hauteur ici... Je ne peux pas escalader
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "* {{user-name}} fills his snowballs container *"
-msgstr ""
+msgstr "* {{user-name}} remplit son conteneur de boules de neige *"
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "An empty vase."
@@ -4775,7 +4775,7 @@ msgstr "ouvrier"
 
 #: assets/maps/tilesets/capital-1.tsx:
 msgid "Life always finds a way"
-msgstr ""
+msgstr "La vie trouve toujours un chemin"
 
 #: assets/maps/tilesets/capital-1.tsx:
 msgid "I don't know what this means."
@@ -4839,7 +4839,7 @@ msgstr "Une télévision."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A bed."
-msgstr ""
+msgstr "Un lit."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "This pig looks very happy."
@@ -4899,7 +4899,7 @@ msgstr "Laissez-passer requis pour atteindre la Région du feu."
 
 #: assets/data/backpack-items.json:
 msgid "Hexahedron"
-msgstr ""
+msgstr "Hexaèdre"
 
 #: assets/data/backpack-items.json:
 msgid "A strange green cubic stone."
@@ -4927,7 +4927,7 @@ msgstr "Sceau nº 1"
 
 #: assets/data/backpack-items.json:
 msgid "First out of 3 signets required to enter the Xeonjia Tower."
-msgstr ""
+msgstr "Le premier des 3 sceaux requis pour entrer dans la Tour Xeonjia."
 
 #: assets/data/backpack-items.json:
 msgid "Signet #2"
@@ -4975,7 +4975,7 @@ msgstr "Une bouteille de jus de grenade. Elle restaure 50 PV."
 
 #: assets/data/backpack-items.json:
 msgid "Kiwi juice"
-msgstr ""
+msgstr "Jus de kiwi"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of kiwi juice. It restores 70 HP."
@@ -4991,7 +4991,7 @@ msgstr "Un médicament qui restaure 80 PV."
 
 #: assets/data/backpack-items.json:
 msgid "Healer Plus"
-msgstr ""
+msgstr "Guérisseur Plus"
 
 #: assets/data/backpack-items.json:
 msgid "A medicine that restores 95 HP."
@@ -5075,4 +5075,4 @@ msgstr "Voici la Tour Xeonjia."
 
 #: assets/data/backpack-items.json:
 msgid "Here is the top floor of the Xeonjia Tower."
-msgstr ""
+msgstr "Voici le dernier étage de la Tour Xeonjia."
