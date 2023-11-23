@@ -11,7 +11,7 @@
 # snipe2004 <snipe2004@hotmail.com>, 2023.
 # Vsnmrn <vsnmrn1@protonmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-19 22:16+0000\nLast-Translator: Vsnmrn <vsnmrn1@protonmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-23 21:31+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -3375,7 +3375,7 @@ msgstr "Salut, je suis Mil..."
 
 #: assets/maps/story/58.tmx:
 msgid "{{hero}}, long time no see! Are you all right?"
-msgstr "Ça faisait longtemps {{héro}} ! Tout va bien ?"
+msgstr "Ça faisait longtemps {{hero}} ! Tout va bien ?"
 
 #: assets/maps/story/58.tmx:
 msgid "Yes, everything is fine. I have ju–"
