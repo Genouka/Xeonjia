@@ -177,6 +177,7 @@
   (quiet '(#f 69))
   (set &quot;x10-talk&quot; #t)
   (start-battle)
+  (set-HP-diff 105)
   (music &quot;boss&quot;))</property>
     <property name="actionOnEvent">(if (get &quot;x10-talk&quot;)
   (delete-me))</property>
