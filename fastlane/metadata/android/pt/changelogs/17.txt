@@ -1,0 +1,5 @@
+* O modo de estória já está completo!
+* UI/UX e gráficos melhorados
+* Vários melhoramentos
+* Traduções atualizadas
+* Bug fixes

@@ -4,11 +4,11 @@
 # Fontan 030 <pomanfedurin@gmail.com>, 2023.
 # deepdaikon <deepdaikon@tuta.io>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Kazakh <https://translate.deepdaikon.xyz/projects/xeonjia/ui/kk/>\nLanguage: kk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-30 18:16+0000\nLast-Translator: Fontan 030 <pomanfedurin@gmail.com>\nLanguage-Team: Kazakh <https://translate.deepdaikon.xyz/projects/xeonjia/ui/kk/>\nLanguage: kk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
-msgstr ""
+msgstr "Жарамды таңбалар: A-Z."
 
 #: lib/ui/basic.dart:
 msgid "Too short."
@@ -16,7 +16,7 @@ msgstr "Тым қысқа."
 
 #: lib/ui/basic.dart:
 msgid "Insert your name"
-msgstr ""
+msgstr "Атыңызды енгізіңіз"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -24,15 +24,15 @@ msgstr "Ақпарат"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Settings"
-msgstr "Баптаулар"
+msgstr "Баптау"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Ice Adventures"
-msgstr ""
+msgstr "Мұздағы шытырман оқиғалар"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
-msgstr ""
+msgstr "Ойнау үшін басыңыз"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Press enter"
@@ -40,15 +40,15 @@ msgstr "Enter басыңыз"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Welcome"
-msgstr ""
+msgstr "Қош келдіңіз"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Your journey is about to begin!\nWhat's your name?"
-msgstr ""
+msgstr "Сапарыңыз жақын арада басталады!\nАтыңыз кім?"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Let's start!"
-msgstr ""
+msgstr "Бастайық!"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Smallest"
@@ -72,11 +72,11 @@ msgstr "Ең үлкен"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom out"
-msgstr ""
+msgstr "Кішірейту"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom in"
-msgstr ""
+msgstr "Үлкейту"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Click here to change your name"
@@ -112,7 +112,7 @@ msgstr "Дыбыс эффектілерін қосу"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Controller"
-msgstr ""
+msgstr "Басқару"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Move the character with gestures or virtual D-pad"
@@ -124,11 +124,11 @@ msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad"
-msgstr ""
+msgstr "Айқыш"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Gestures"
-msgstr ""
+msgstr "Сырғыту"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad size"
@@ -164,19 +164,19 @@ msgstr ""
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Programmer"
-msgstr ""
+msgstr "Бағдарламалау"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Artists"
-msgstr ""
+msgstr "Суретшілер"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Music by"
-msgstr ""
+msgstr "Музыка"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Translators"
-msgstr ""
+msgstr "Аудармашылар"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Game made by %s"
@@ -184,7 +184,7 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Credits"
-msgstr ""
+msgstr "Авторлар"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "People who worked on this project"
@@ -192,7 +192,7 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version %s"
-msgstr ""
+msgstr "Нұсқа: %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
@@ -240,7 +240,7 @@ msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "License (GPLv3)"
-msgstr ""
+msgstr "Лицензия (GPLv3)"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
@@ -412,7 +412,7 @@ msgstr "3 әрекет"
 
 #: lib/game/widgets/loading_page.dart:
 msgid "Loading…\nPlease wait"
-msgstr ""
+msgstr "Жүктелуде…\nКүте тұрыңыз"
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open local map"
@@ -420,7 +420,7 @@ msgstr ""
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open world map"
-msgstr ""
+msgstr "Әлем картасын ашу"
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Show hints"
@@ -484,7 +484,7 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "How are you?"
-msgstr ""
+msgstr "Қалайсың?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "It's cold here."
@@ -536,7 +536,7 @@ msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Bye!"
-msgstr ""
+msgstr "Көріскенше!"
 
 #: lib/game/components/character.dart:
 msgid "We must fight, not talk!"
@@ -560,7 +560,7 @@ msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} gives %s *"
-msgstr ""
+msgstr "* {{hero}} %s берді *"
 
 #: lib/game/components/common/basic.dart:
 msgid "You can't defeat me as long as there are other monsters besides me."

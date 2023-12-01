@@ -1,708 +1,713 @@
 # Translation for Xeonjia
-# Copyright (C) 2020 DeepDaikon
+# Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# Swann Fournial <s.fournial@protonmail.com>, 2021.
-# DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023.
-# J. Lavoie <j.lavoie@net-c.ca>, 2021, 2022, 2023.
-# PulsarTech <crewtech2@gmail.com>, 2022.
-# pascalou <bzhkrp@inboxen.org>, 2023.
-# snipe2004 <snipe2004@hotmail.com>, 2023.
-# Vsnmrn <vsnmrn1@protonmail.com>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-30 18:16+0000\nLast-Translator: Vsnmrn <vsnmrn1@protonmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/ui/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
-msgstr "Caractères valides : A-Z."
+msgstr ""
 
 #: lib/ui/basic.dart:
 msgid "Too short."
-msgstr "Trop court."
+msgstr ""
 
 #: lib/ui/basic.dart:
 msgid "Insert your name"
-msgstr "Entrez votre nom"
+msgstr ""
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
-msgstr "Infos"
+msgstr ""
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Settings"
-msgstr "Paramètres"
+msgstr ""
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Ice Adventures"
-msgstr "Aventures glacées"
+msgstr ""
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
-msgstr "Appuyez pour jouer"
+msgstr ""
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Press enter"
-msgstr "Appuyez sur Entrée"
+msgstr ""
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Welcome"
-msgstr "Bienvenue"
+msgstr ""
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Your journey is about to begin!\nWhat's your name?"
-msgstr "Votre voyage est sur le point de commencer !\nComment vous appelez-vous ?"
+msgstr ""
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Let's start!"
-msgstr "Commençons !"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Smallest"
-msgstr "Le plus petit"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Small"
-msgstr "Petit"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Default"
-msgstr "Par défaut"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Large"
-msgstr "Grand"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Largest"
-msgstr "Le plus grand"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom out"
-msgstr "Réduire"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom in"
-msgstr "Agrandir"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Click here to change your name"
-msgstr "Clique ici pour changer le nom de ton personnage"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "What's your name?"
-msgstr "Comment vous appelez-vous ?"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Discard"
-msgstr "Abandonner"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Save"
-msgstr "Enregistrer"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Background music"
-msgstr "Musique de fond"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable background music"
-msgstr "Activer la musique de fond"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Sound effects"
-msgstr "Effets sonores"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable sound effects"
-msgstr "Activer les effets sonores"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Controller"
-msgstr "Commande"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Move the character with gestures or virtual D-pad"
-msgstr "Déplacer le personnage avec des gestes ou la croix directionnelle virtuelle"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "You only need it on a touchscreen device"
-msgstr "Vous en avez besoin seulement sur un appareil avec un écran tactile"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad"
-msgstr "Croix directionnelle"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Gestures"
-msgstr "Gestes"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad size"
-msgstr "Taille de la croix directionnelle"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Virtual D-pad dimension.\nTo change its position, long-press the D-pad in the center."
-msgstr "Dimension de la croix directionnelle.\nPour changer sa position, appuyez longuement le centre de la croix directionnelle."
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Game zoom"
-msgstr "Zoom du jeu"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom objects in the game for a better view"
-msgstr "Zoomer sur les objets dans le jeu pour mieux voir"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Language"
-msgstr "Langue"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "App language"
-msgstr "Langue de l'appli"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "System default"
-msgstr "Langue du système"
+msgstr ""
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Thanks to everyone who contributed to this project!"
-msgstr "Merci à toutes les personnes qui ont contribué à ce projet !"
+msgstr ""
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Programmer"
-msgstr "Programmeur"
+msgstr ""
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Artists"
-msgstr "Artistes"
+msgstr ""
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Music by"
-msgstr "Musique de"
+msgstr ""
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Translators"
-msgstr "Traducteurs"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Game made by %s"
-msgstr "Jeu fait par %s"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Credits"
-msgstr "Crédits"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "People who worked on this project"
-msgstr "Les personnes qui ont travaillé sur ce projet"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version %s"
-msgstr "Version %s"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
-msgstr "Version de l'appli"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Donate"
-msgstr "Faire un don"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Contribute to the project"
-msgstr "Contribuer au projet"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate"
-msgstr "Traduire"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate in your language"
-msgstr "Traduire dans votre langue"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
-msgstr "Envoyer un courriel"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ask for something"
-msgstr "Demander quelque chose"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
-msgstr "Signaler des erreurs"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report the bugs you found"
-msgstr "Signaler les erreurs que vous avez trouvées"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Source code"
-msgstr "Code source"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View the source code"
-msgstr "Voir le code source"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "License (GPLv3)"
-msgstr "Licence (GPLv3)"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
-msgstr "Lire la licence du logiciel"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Third Party Licenses"
-msgstr "Licences tierces"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read third party notices"
-msgstr "Lire les notices des tiers"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ok"
-msgstr "OK"
+msgstr ""
 
 #: lib/game/widgets/world_map.dart:
 msgid "This is where I am right now."
-msgstr "Voici où je me trouve."
+msgstr ""
 
 #: lib/game/widgets/world_map.dart:
 msgid "Do you want to go back to this place?"
-msgstr "Voulez-vous retourner à cet endroit ?"
+msgstr ""
 
 #: lib/game/widgets/world_map.dart:
 msgid "* {{hero}} arrived here *"
-msgstr "* {{hero}} est arrivé ici *"
+msgstr ""
 
 #: lib/game/widgets/world_map.dart:
 msgid "* After a long journey, {{hero}} arrived here *"
-msgstr "* Après un long voyage, {{hero}} est arrivé ici *"
+msgstr ""
 
 #: lib/game/widgets/world_map.dart:
 msgid "* After a very long journey, {{hero}} arrived here *"
-msgstr "* Après un très long voyage, {{hero}} est arrivé ici *"
+msgstr ""
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You run out of energy !"
-msgstr "Vous n'avez plus d'énergie !"
+msgstr ""
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You lost %s ¤ and woke up after a short nap"
-msgstr "Vous avez perdu %s ¤ et vous vous êtes réveillé après un petit somme"
+msgstr ""
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "Continue"
-msgstr "Continuer"
+msgstr ""
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "No items here"
-msgstr "Aucun élément ici"
+msgstr ""
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "%s HP"
-msgstr "%s PV"
+msgstr ""
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "Close"
-msgstr "Fermer"
+msgstr ""
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Backpack"
-msgstr "Sac à dos"
+msgstr ""
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Gems"
-msgstr "Gemmes"
+msgstr ""
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Mysterious gems scattered around the world."
-msgstr "De mystérieuses gemmes dispersées à travers le monde."
+msgstr ""
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Do you want to use {{selected-item-name}}?"
-msgstr "Voulez-vous utiliser {{selected-item-name}} ?"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "pause"
-msgstr "pause"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "restart"
-msgstr "recommencer"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "exit"
-msgstr "quitter"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "cancel"
-msgstr "annuler"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "You have %s HP and %s ¤."
-msgstr "Vous avez %s PV et %s ¤."
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Milla has %s HP."
-msgstr "Milla a %s PV."
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "September has %s HP."
-msgstr "Septembre a %s PV."
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "What do you want to do?"
-msgstr "Que voulez-vous faire ?"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "resume"
-msgstr "reprendre"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Are you sure you want to restart this game?"
-msgstr "Êtes-vous sûr·e de vouloir recommencer le jeu ?"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "It will restart from the last location change."
-msgstr "Il recommencera depuis le dernier changement de lieu."
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Are you sure you want to quit this game?"
-msgstr "Êtes-vous sûr·e de vouloir quitter cette partie ?"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Game data since the last location change will be lost."
-msgstr "Les données de jeu depuis le dernier emplacement seront perdues."
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "HP Machine"
-msgstr "Machine à PV"
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Shop"
-msgstr "Boutique"
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Do you want to buy {{selected-item-name}}?"
-msgstr "Voulez-vous acheter {{selected-item-name}} ?"
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Do I buy {{selected-item-name}}?"
-msgstr "Est-ce que j’achète {{selected-item-name}} ?"
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "I don't have enough money for this item."
-msgstr "Je n'ai pas assez d'argent pour cet objet."
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Let me know if you need anything else."
-msgstr "Faites-moi savoir si vous avez besoin d'autre chose."
+msgstr ""
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "Wait"
-msgstr "Attendez"
+msgstr ""
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "1 move"
-msgstr "1 mouvement"
+msgstr ""
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "2 moves"
-msgstr "2 mouvements"
+msgstr ""
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "3 moves"
-msgstr "3 mouvements"
+msgstr ""
 
 #: lib/game/widgets/loading_page.dart:
 msgid "Loading…\nPlease wait"
-msgstr "Chargement…\nVeuillez patienter"
+msgstr ""
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open local map"
-msgstr "Ouvrir la carte locale"
+msgstr ""
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open world map"
-msgstr "Ouvrir la carte du monde"
+msgstr ""
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Show hints"
-msgstr "Afficher des indices"
+msgstr ""
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Hide hints"
-msgstr "Masquer les indices"
+msgstr ""
 
 #: lib/game/utils/map_controller.dart:
 msgid "By clicking on the map I can go back to places I have already been."
-msgstr "En cliquant sur la carte, je peux retourner à des endroits que j'ai déjà visité."
+msgstr ""
 
 #: lib/game/utils/input_controller.dart:
 msgid "Snowball (%s)"
-msgstr "Boule de neige (%s)"
+msgstr ""
 
 #: lib/game/utils/input_controller.dart:
 msgid "Snowball"
-msgstr "Boule de neige"
+msgstr ""
 
 #: lib/game/utils/input_controller.dart:
 msgid "Mine (%s)"
-msgstr "Mine (%s)"
+msgstr ""
 
 #: lib/game/utils/input_controller.dart:
 msgid "Mine"
-msgstr "Mine"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Where am I? How did I end up here?"
-msgstr "Où suis-je ? Comment suis-je arrivé ici ?"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Mitsu Forest used to be bigger, it was deforested to build Melhopolis."
-msgstr "La Forêt Mitsu était plus grande avant ; elle a été rasée en partie pour bâtir Melhopolis."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "The Xeonjia Tower is the tallest building in the Kingdom."
-msgstr "La Tour Xeonjia est le plus grand bâtiment du Royaume."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "There are 3 regions in the Kingdom."
-msgstr "Il y a 3 régions dans le Royaume."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "If you click on a point on the world map you can travel to places you have already been."
-msgstr "Si vous cliquez sur un point de la carte du monde, vous pouvez voyager vers un lieu que vous avez déjà visité."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "The world is big."
-msgstr "Le monde est grand."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "What time is it?"
-msgstr "Quelle heure est-il ?"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "If we walk around long enough, we're sure to arrive somewhere!"
-msgstr "Si on marche assez longtemps, on est sûr d'arriver quelque part !"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "How are you?"
-msgstr "Comment ça va ?"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "It's cold here."
-msgstr "Il fait froid ici."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Green! Green!\nGreen is the answer, but I don't remember the question."
-msgstr "Vert ! Vert !\nLa réponse est \"vert\", mais je ne me souviens plus de la question."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Ours is a strange world, it's cold here but a little warmer there."
-msgstr "Le nôtre est un monde étrange ; il fait froid ici, mais un peu plus chaud là."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "I have to stop eating ice cream before bed."
-msgstr "Je dois arrêter de manger de la glace avant d'aller au lit."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "I know many languages."
-msgstr "Je connais beaucoup de langues."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Hey!"
-msgstr "Coucou !"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Here I am."
-msgstr "Me voici."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Leave me alone."
-msgstr "Laisse-moi tranquille."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Do you believe in fairies??"
-msgstr "Est-ce que tu crois aux fées ?"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "What do piglets dream about?"
-msgstr "À quoi rêvent les porcelets ?"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "I am hungryyy."
-msgstr "J'ai faiiiiiim."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "And that's it.\nWe have now reached the end of this fantastic adventure!\nYour determination and courage made this victory possible.\nKeep exploring, dreaming and being the hero the world needs, because your adventures will never end.\nWhere will your next journey take you?\nThank you for playing Xeonjia!\nMaybe our paths will cross again."
-msgstr "Et c'est tout.\nNous avons maintenant atteint la fin de cette fantastique aventure !\nVotre détermination et votre courage ont rendu cette victoire possible.\nContinuez à explorer, à rêver et à être le héros dont le monde a besoin, car vos aventures ne se termineront jamais.\nOù vous mènera votre prochain voyage ?\nMerci d'avoir joué à Xeonjia !\nPeut-être que nos chemins se croiseront à nouveau."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Bye!"
-msgstr "Salut !"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "We must fight, not talk!"
-msgstr "On doit se battre, pas parler !"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} puts %s in the backpack *"
-msgstr "* {{hero}} met %s dans le sac à dos. *"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "the gem"
-msgstr "la gemme"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} uses {{selected-item-name}} *"
-msgstr "* {{hero}} a utilisé {{selected-item-name}} *"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "* {{user-name}} uses {{selected-item-name}} *"
-msgstr "* {{user-name}} a utilisé {{selected-item-name}} *"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} gives %s *"
-msgstr "* {{hero}} donne %s *"
+msgstr ""
 
 #: lib/game/components/common/basic.dart:
 msgid "You can't defeat me as long as there are other monsters besides me."
-msgstr "Vous ne pouvez pas me vaincre tant qu'il y a d'autres monstres à côté de moi."
+msgstr ""
 
 #: lib/game/components/common/walker.dart:
 msgid "I've run out of shots for this weapon."
-msgstr "Je suis à court de tirs pour cette arme."
+msgstr ""
 
 #: lib/game/components/door.dart:
 msgid "There is still 1 enemy here. I can't escape."
-msgstr "Il y a encore 1 ennemi ici. Je ne peux pas m'échapper."
+msgstr ""
 
 #: lib/game/components/door.dart:
 msgid "There are still %s enemies here. I can't escape."
-msgstr "Il y a encore %s ennemis ici. Je ne peux pas m'échapper."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "There is one enemy here!"
-msgstr "Il y a iun ennemi ici !"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "There are %s enemies here!"
-msgstr "Il y a %s ennemis ici !"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "It' time to fight!"
-msgstr "Il est temps de se battre !"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is tired and is back in the leaf, I must continue the battle."
-msgstr "Milla est fatiguée et est de retour dans la feuille, je dois continuer le combat."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "September is tired, I must continue the battle alone."
-msgstr "Septembre est fatiguée, je dois continuer le combat seul."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "September is tired, but we must continue the battle."
-msgstr "Septembre est fatiguée, mais nous devons continuer le combat."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Battle!"
-msgstr "Combat !"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "You won!"
-msgstr "Vous avez gagné !"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is resting."
-msgstr "Milla se repose."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is already here!"
-msgstr "Milla est déjà ici !"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s ¤. I'm not very rich."
-msgstr "J'ai %s ¤. Je ne suis pas très riche."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s health points."
-msgstr "J'ai %s points de vie."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "I don't even have a cent!"
-msgstr "Je n'ai même pas un centime !"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s health points!"
-msgstr "J'ai %s points de vie !"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "I? I have %s health points."
-msgstr "Moi ? J'ai %s points de vie."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"
-msgstr "Voulez-vous relire les explications sur comment se battre ?"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "* {{hero}} consults \"The Manual of the Perfect Hero\" *"
-msgstr "* {{hero}} consulte « Le Manuel du parfait héros » *"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Chapter 4: Battles"
-msgstr "Chapitre 4 : Combats"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "In battle each player has 3 moves per turn."
-msgstr "En combat, chaque joueur a 3 mouvements par tour."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "After these 3 moves, it is the opponent's turn."
-msgstr "Après ces 3 mouvements, c'est au tour de l'adversaire."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "A move can be used to walk, use items, attack or examine what is in front of you."
-msgstr "Un mouvement peut être utilisé pour marcher, utiliser des objets, attaquer ou examiner ce qui devant vous."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "You should already know the \"%s\" button, it examines objects, plants and people."
-msgstr "Vous devriez déjà connaître le bouton \"%s\" ; il examine les objets, les plantes et les gens."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "To attack use the \"%s\" button. In this way you punch the enemy in front of you."
-msgstr "Pour attaquer, utilisez le bouton « %s ». De cette manière, vous donnez un coup de poing devant vous."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Otherwise, throw snowballs with the \"%s\" button in the direction you are looking at."
-msgstr "Sinon, lancez des boules de neige avec le bouton « %s » dans la direction dans laquelle vous regardez."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "If you run out of snowballs, get some snow from the snowdrifts around you."
-msgstr "Si vous n'avez plus de boules de neige, récupérez de la neige dans les congères autour de vous."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Mines you place under you with the \"%s\" button explode as soon as an enemy steps on them."
-msgstr "Les mines que vous placez sous vous avec le bouton « %s » explosent dès qu'un ennemi marche dessus."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Remember, enemies also have HP. Hit them multiple times to knock them out!"
-msgstr "Rappelez-vous, les ennemis ont des PV aussi. Frappez-les plusieurs fois pour les éliminer !"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "And if you have few HP take advantage of a move you have available to eat or drink something you have in your backpack!"
-msgstr "Et si vous avez peu de PV, profitez d'un mouvement que vous avez pour manger ou boire quelque chose que vous avez dans votre sac à dos !"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "That's all. Good luck!"
-msgstr "C'est tout. Bonne chance !"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "manual"
-msgstr "manuel"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "book"
-msgstr "livre"
+msgstr ""

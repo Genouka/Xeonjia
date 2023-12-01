@@ -20,5 +20,3 @@ Tenha cuidado, o mundo está cheio de <b>inimigos perigosos</b> prontos para ata
 Tenha em mente que a maior parte do <b>chão está congelada</b>, então você não pode parar até chegar a uma parede, uma pedra ou qualquer outro tipo de obstáculo.
 
 <b>Use sua mente para descobrir o melhor caminho!</b>
-
-<b>Nota</b>: este jogo está atualmente em fase beta inicial.

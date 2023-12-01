@@ -4,7 +4,7 @@
 # Daniel de Sousa Souza Melo <mekoy95190@mmgaklan.com>, 2020.
 # Vinicius <suburbanizar@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-10-12 18:13+0000\nLast-Translator: Vinicius <suburbanizar@gmail.com>\nLanguage-Team: Portuguese (Brazil) <https://translate.deepdaikon.xyz/projects/xeonjia/story/pt-BR/>\nLanguage: pt-BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-30 18:16+0000\nLast-Translator: Vinicius <suburbanizar@gmail.com>\nLanguage-Team: Portuguese (Brazil) <https://translate.deepdaikon.xyz/projects/xeonjia/story/pt-BR/>\nLanguage: pt-BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -764,47 +764,47 @@ msgstr "Tenho ouvido muito isso ultimamente."
 
 #: assets/maps/story/75.tmx:
 msgid "Don't worry Shen. I, too, recently found it out."
-msgstr ""
+msgstr "Não se preocupe Shen. Eu também descobri recentemente."
 
 #: assets/maps/story/75.tmx:
 msgid "We'll talk about it later…"
-msgstr ""
+msgstr "Falaremos sobre isso mais tarde…"
 
 #: assets/maps/story/75.tmx:
 msgid "Spirit of Fire, can you help us by heating the Xeonjia Tower?\nIt must reach a comfortable temperature for humans."
-msgstr ""
+msgstr "Espírito do Fogo, você pode nos ajudar aquecendo a Torre Xeonjia?\nDeve atingir uma temperatura confortável para os humanos."
 
 #: assets/maps/story/75.tmx:
 msgid "Of course! I love heating things!"
-msgstr ""
+msgstr "Claro! Adoro aquecer coisas!"
 
 #: assets/maps/story/75.tmx:
 msgid "Great!\nIt was easy.\nThank you very much!"
-msgstr ""
+msgstr "Ótimo!\nFoi fácil.\nMuito obrigado!"
 
 #: assets/maps/story/75.tmx:
 msgid "Milla?"
-msgstr ""
+msgstr "Milla?"
 
 #: assets/maps/story/75.tmx:
 msgid "Thank you…"
-msgstr ""
+msgstr "Obrigado…"
 
 #: assets/maps/story/75.tmx:
 msgid "I know you love me Milla.\nAfter you defeat the King of Evil let's go on vacation together."
-msgstr ""
+msgstr "Eu sei que você me ama Milla.\nDepois de derrotar o Rei do Mal, vamos sair de férias juntos."
 
 #: assets/maps/story/75.tmx:
 msgid "We'll see…"
-msgstr ""
+msgstr "Veremos…"
 
 #: assets/maps/story/75.tmx:
 msgid "I force you."
-msgstr ""
+msgstr "Eu forço você."
 
 #: assets/maps/story/75.tmx:
 msgid "I'm leaving you now, I'm getting ready to warm up the tower, it will require a lot of energy.\nBye!"
-msgstr ""
+msgstr "Estou deixando vocês agora, estou me preparando para aquecer a torre, vai exigir muita energia.\nTchau!"
 
 #: assets/maps/story/75.tmx:
 msgid "Bye!"
@@ -812,63 +812,63 @@ msgstr "Tchau!"
 
 #: assets/maps/story/75.tmx:
 msgid "Great.\nNow only the third signet is missing which I hope September has.\nLet's meet at Xeonjia Tower."
-msgstr ""
+msgstr "Ótimo.\nAgora falta apenas o terceiro sinete, que espero que tenha sido feito em Setembro.\nVamos nos encontrar na Torre Xeonjia."
 
 #: assets/maps/story/75.tmx:
 msgid "Ok see you soon!"
-msgstr ""
+msgstr "OK, vejo você em breve!"
 
 #: assets/maps/story/75.tmx:
 msgid "There is lava here."
-msgstr ""
+msgstr "Há lava aqui."
 
 #: assets/maps/story/75.tmx:
 msgid "fire spirit"
-msgstr ""
+msgstr "Espírito de fogo"
 
 #: assets/maps/story/68.tmx:
 msgid "How many meters above sea level are we?"
-msgstr ""
+msgstr "Quantos metros acima do nível do mar estamos?"
 
 #: assets/maps/story/70_house4.tmx:
 msgid "The Fire Region is the smallest region of the Kingdom, but that doesn't make it the least important."
-msgstr ""
+msgstr "A Região do Fogo é a menor região do Reino, mas isso não a torna a menos importante."
 
 #: assets/maps/story/70_house4.tmx:
 msgid "There is a book called \"Your child, the Hero! – Prepare your child to become a Hero in 10 steps\".\nDo you want to read it?"
-msgstr ""
+msgstr "Existe um livro chamado “Seu filho, o Herói! – Prepare seu filho para se tornar um Herói em 10 passos”.\nVocê quer ler?"
 
 #: assets/maps/story/70_house4.tmx:
 msgid "Greetings, brave and ambitious parents!\nSure, there's no greater desire than to see one's child selected as the future Hero, right?\nOur very young children, at the age of 5, are subjected to tests of intelligence, audacity and strength.\nOnly ONE child is chosen each year, destined to become the Hero who will embark on the epic adventure on November 24 of the year of their 21st birthday.\nNow, you may be wondering: \"How can I make sure that my child is the chosen one?\". Well, the answer is simpler than you might imagine! And you've already done the first step: you bought this book!"
-msgstr ""
+msgstr "Saudações, pais corajosos e ambiciosos!\nClaro, não há desejo maior do que ver seu filho selecionado como futuro Herói, certo?\nNossos filhos muito pequenos, aos 5 anos, são submetidos a testes de inteligência, audácia e força.\nApenas UMA criança é escolhida a cada ano, destinada a se tornar o Herói que embarcará na aventura épica no dia 24 de novembro do ano em que completa 21 anos.\nAgora, você deve estar se perguntando: “Como posso ter certeza de que meu filho é o escolhido?”. Bem, a resposta é mais simples do que você imagina! E você já deu o primeiro passo: comprou esse livro!"
 
 #: assets/maps/story/70_house4.tmx:
 msgid "* {{hero}} stops reading *"
-msgstr ""
+msgstr "*{{hero}} para de ler*"
 
 #: assets/maps/story/57_house.tmx:
 msgid "Are you the 64th hero?\nIt's been a while since a hero has been around here, they almost always give up before arriving here."
-msgstr ""
+msgstr "Você é o 64º herói?\nJá faz um tempo que não aparece um herói por aqui, quase sempre eles desistem antes de chegar aqui."
 
 #: assets/maps/story/57_house.tmx:
 msgid "I tell all my friends that I met you."
-msgstr ""
+msgstr "Digo a todos os meus amigos que conheci você."
 
 #: assets/maps/story/37.tmx:
 msgid "The prices for an HP UP are too high for me."
-msgstr ""
+msgstr "Os preços de um HP UP são muito altos para mim."
 
 #: assets/maps/story/37.tmx:
 msgid "I would love to leave for a long journey but I don't have the strength anymore."
-msgstr ""
+msgstr "Adoraria partir para uma longa viagem, mas não tenho mais forças."
 
 #: assets/maps/story/37.tmx:
 msgid "{{hero}}, there you are. Finally! I heard a rumor that you were coming here."
-msgstr ""
+msgstr "{{hero}}, aí está você. Finalmente! Ouvi um boato de que você estava vindo para cá."
 
 #: assets/maps/story/37.tmx:
 msgid "September! Long time no see! Last time was when we battled each other to be proclaimed HERO.\nWe were 5 years old."
-msgstr ""
+msgstr "Setembro! Muito tempo sem ver! A última vez foi quando lutamos entre si para sermos proclamados HERÓIS.\nTínhamos 5 anos."
 
 #: assets/maps/story/37.tmx:
 msgid "I remember well, you got lucky that time.\nBut now it would go differently.\nI challenge you now. Show me that you are better than me.\nSee you on the north-east side of the village.\nI will wait for you there."
