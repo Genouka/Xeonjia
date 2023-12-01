@@ -392,6 +392,7 @@ class XeonjiaGame extends FlameGame
     changingTurn = false;
     overlays.remove('rulesButton');
     overlays.add('leafButton');
+    if (miniMapEnabled) miniMap();
     // only if the previous player wasn't user
     if (!overlays.isActive('backpackButton')) {
       overlays.add('backpackButton');
