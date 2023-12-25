@@ -7,12 +7,15 @@
 # 苏汀 <753594451@qq.com>, 2022.
 # hooay233 <hoorayof_hooay@163.com>, 2023.
 # libamidi <scrollofamidi@outlook.com>, 2023.
+# Alex Black <limbobytes@outlook.com>, 2023.
+# 林波 <limbobytes@outlook.com>, 2023.
+# tonykouki <1020070531@qq.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-19 19:13+0000\nLast-Translator: libamidi <scrollofamidi@outlook.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-12-20 06:17+0000\nLast-Translator: tonykouki <1020070531@qq.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
-msgstr ""
+msgstr "只能使用英文字母A-Z。"
 
 #: lib/ui/basic.dart:
 msgid "Too short."
@@ -20,7 +23,7 @@ msgstr "太短了。"
 
 #: lib/ui/basic.dart:
 msgid "Insert your name"
-msgstr ""
+msgstr "输入你的名字"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
@@ -32,7 +35,7 @@ msgstr "设置"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Ice Adventures"
-msgstr ""
+msgstr "冰雪探险"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
@@ -40,19 +43,19 @@ msgstr "点击开始"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Press enter"
-msgstr ""
+msgstr "按下回车键"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Welcome"
-msgstr ""
+msgstr "欢迎"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Your journey is about to begin!\nWhat's your name?"
-msgstr ""
+msgstr "你的旅程即将开始！\n你的名字是什么？"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Let's start!"
-msgstr ""
+msgstr "开始吧！"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Smallest"
@@ -76,15 +79,15 @@ msgstr "最大"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom out"
-msgstr ""
+msgstr "缩小"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom in"
-msgstr ""
+msgstr "放大"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Click here to change your name"
-msgstr ""
+msgstr "点击此处已更改你的名称"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "What's your name?"
@@ -116,39 +119,39 @@ msgstr "开启音效"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Controller"
-msgstr ""
+msgstr "方向键"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Move the character with gestures or virtual D-pad"
-msgstr ""
+msgstr "以手势或是方向键控制角色"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "You only need it on a touchscreen device"
-msgstr ""
+msgstr "仅触摸屏设备需要此选项"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad"
-msgstr ""
+msgstr "方向键"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Gestures"
-msgstr ""
+msgstr "手势"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad size"
-msgstr ""
+msgstr "方向键大小"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Virtual D-pad dimension.\nTo change its position, long-press the D-pad in the center."
-msgstr ""
+msgstr "方向键大小。\n长按方向键中央以移动。"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Game zoom"
-msgstr ""
+msgstr "缩放"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom objects in the game for a better view"
-msgstr ""
+msgstr "调整游戏显示大小以优化视图"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Language"
@@ -164,35 +167,35 @@ msgstr "系统默认"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Thanks to everyone who contributed to this project!"
-msgstr ""
+msgstr "感谢此项目的所有贡献者！"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Programmer"
-msgstr ""
+msgstr "程序员"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Artists"
-msgstr ""
+msgstr "美术设计"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Music by"
-msgstr ""
+msgstr "音乐设计"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Translators"
-msgstr ""
+msgstr "翻译者"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Game made by %s"
-msgstr ""
+msgstr "此游戏由%s制作"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Credits"
-msgstr ""
+msgstr "致谢"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "People who worked on this project"
-msgstr ""
+msgstr "为该项目工作的人员"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version %s"
@@ -208,7 +211,7 @@ msgstr "捐助"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Contribute to the project"
-msgstr ""
+msgstr "贡献"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate"
@@ -224,7 +227,7 @@ msgstr "发送邮件"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ask for something"
-msgstr ""
+msgstr "询问某些事项"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
@@ -232,7 +235,7 @@ msgstr "报告错误"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report the bugs you found"
-msgstr ""
+msgstr "报告您发现的BUG"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Source code"
@@ -244,7 +247,7 @@ msgstr "查看源代码"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "License (GPLv3)"
-msgstr ""
+msgstr "授权(GPLv3)"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
@@ -264,27 +267,27 @@ msgstr "确定"
 
 #: lib/game/widgets/world_map.dart:
 msgid "This is where I am right now."
-msgstr ""
+msgstr "这是我目前的位置。"
 
 #: lib/game/widgets/world_map.dart:
 msgid "Do you want to go back to this place?"
-msgstr ""
+msgstr "是否回到此处？"
 
 #: lib/game/widgets/world_map.dart:
 msgid "* {{hero}} arrived here *"
-msgstr ""
+msgstr "* {{hero}} 到达此处*"
 
 #: lib/game/widgets/world_map.dart:
 msgid "* After a long journey, {{hero}} arrived here *"
-msgstr ""
+msgstr "*经过长途跋涉，{{hero}} 来到了这里*"
 
 #: lib/game/widgets/world_map.dart:
 msgid "* After a very long journey, {{hero}} arrived here *"
-msgstr ""
+msgstr "*经过漫长的旅程，{{hero}}来到了这里*"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You run out of energy !"
-msgstr ""
+msgstr "你的体力已经几乎耗尽！"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You lost %s ¤ and woke up after a short nap"
@@ -300,7 +303,7 @@ msgstr "无物品"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "%s HP"
-msgstr ""
+msgstr "%s生命值"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "Close"
@@ -312,15 +315,15 @@ msgstr "背包"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Gems"
-msgstr ""
+msgstr "宝石"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Mysterious gems scattered around the world."
-msgstr ""
+msgstr "神秘的宝石散落于世界各地。"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Do you want to use {{selected-item-name}}?"
-msgstr ""
+msgstr "你确定要使用 {{selected-item-name}}吗？"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "pause"
@@ -340,19 +343,19 @@ msgstr "取消"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "You have %s HP and %s ¤."
-msgstr ""
+msgstr "你有 %s 点HP和 %s 个¤ 。"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Milla has %s HP."
-msgstr ""
+msgstr "米拉有 %s 点HP。"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "September has %s HP."
-msgstr ""
+msgstr "九月有 %s 点HP。"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "What do you want to do?"
-msgstr ""
+msgstr "你想做什么？"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "resume"
@@ -372,11 +375,11 @@ msgstr "你确定要退出游戏吗？"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Game data since the last location change will be lost."
-msgstr ""
+msgstr "自上次存档点变更的数据将会丢失。"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "HP Machine"
-msgstr ""
+msgstr "HP 自动售卖机"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Shop"
@@ -384,15 +387,15 @@ msgstr "商店"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Do you want to buy {{selected-item-name}}?"
-msgstr ""
+msgstr "您想要购买 {{selected-item-name}} 吗?"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Do I buy {{selected-item-name}}?"
-msgstr ""
+msgstr "要买{{selected-item-name}}吗？"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "I don't have enough money for this item."
-msgstr ""
+msgstr "我没有足够的金币买这个。"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Let me know if you need anything else."
@@ -400,7 +403,7 @@ msgstr "让我知道你还要什么。"
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "Wait"
-msgstr ""
+msgstr "等待"
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "1 move"
@@ -420,7 +423,7 @@ msgstr "加载中……\n请稍等"
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open local map"
-msgstr ""
+msgstr "开启区域地图"
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open world map"
@@ -428,115 +431,115 @@ msgstr "打开世界地图"
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Show hints"
-msgstr ""
+msgstr "显示提示"
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Hide hints"
-msgstr ""
+msgstr "隐藏提示"
 
 #: lib/game/utils/map_controller.dart:
 msgid "By clicking on the map I can go back to places I have already been."
-msgstr ""
+msgstr "点按地图可以返回我曾经去过的地方。"
 
 #: lib/game/utils/input_controller.dart:
 msgid "Snowball (%s)"
-msgstr ""
+msgstr "雪球 (%s)"
 
 #: lib/game/utils/input_controller.dart:
 msgid "Snowball"
-msgstr ""
+msgstr "雪球"
 
 #: lib/game/utils/input_controller.dart:
 msgid "Mine (%s)"
-msgstr ""
+msgstr "地雷 (%s)"
 
 #: lib/game/utils/input_controller.dart:
 msgid "Mine"
-msgstr ""
+msgstr "地雷"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Where am I? How did I end up here?"
-msgstr ""
+msgstr "我是谁？这是哪里？"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Mitsu Forest used to be bigger, it was deforested to build Melhopolis."
-msgstr ""
+msgstr "弥津之森以前曾经比较大，但是为了盖 Melhopolis 市被砍伐了不少。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "The Xeonjia Tower is the tallest building in the Kingdom."
-msgstr ""
+msgstr "Xeonjia 塔是整个帝国最高的建筑物。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "There are 3 regions in the Kingdom."
-msgstr ""
+msgstr "帝国分成三个区域。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "If you click on a point on the world map you can travel to places you have already been."
-msgstr ""
+msgstr "点按地图可以带你回到你曾探索过的地点。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "The world is big."
-msgstr ""
+msgstr "世界真大。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "What time is it?"
-msgstr ""
+msgstr "现在几点了？"
 
 #: lib/game/utils/event_manager.dart:
 msgid "If we walk around long enough, we're sure to arrive somewhere!"
-msgstr ""
+msgstr "如果走的够久，一定会到哪里的!"
 
 #: lib/game/utils/event_manager.dart:
 msgid "How are you?"
-msgstr ""
+msgstr "吃饱了吗？"
 
 #: lib/game/utils/event_manager.dart:
 msgid "It's cold here."
-msgstr ""
+msgstr "好冷啊。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Green! Green!\nGreen is the answer, but I don't remember the question."
-msgstr ""
+msgstr "绿色! 是绿色!\n答案是绿色啦, 但我不记得问题了。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Ours is a strange world, it's cold here but a little warmer there."
-msgstr ""
+msgstr "这世界还真怪，这里冷，那里却比较暖。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "I have to stop eating ice cream before bed."
-msgstr ""
+msgstr "我该戒掉睡前吃冰淇淋的习惯了。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "I know many languages."
-msgstr ""
+msgstr "我会很多种语言。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Hey!"
-msgstr ""
+msgstr "嘿!"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Here I am."
-msgstr ""
+msgstr "我在这儿。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Leave me alone."
-msgstr ""
+msgstr "走开。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Do you believe in fairies??"
-msgstr ""
+msgstr "你相信仙子吗？"
 
 #: lib/game/utils/event_manager.dart:
 msgid "What do piglets dream about?"
-msgstr ""
+msgstr "小猪会梦到什么呢？"
 
 #: lib/game/utils/event_manager.dart:
 msgid "I am hungryyy."
-msgstr ""
+msgstr "我好饿饿饿饿饿啊。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "And that's it.\nWe have now reached the end of this fantastic adventure!\nYour determination and courage made this victory possible.\nKeep exploring, dreaming and being the hero the world needs, because your adventures will never end.\nWhere will your next journey take you?\nThank you for playing Xeonjia!\nMaybe our paths will cross again."
-msgstr ""
+msgstr "就这样。\n我们来到了这趟神奇探险的终点！\n这场胜利都要归功于你的毅力和勇气。\n继续探索、梦想，当个世界需要的勇士，因为你的冒险永不停歇。\n你的下一场旅途将会带你到哪里呢？\n谢谢你玩 Xeonjia！\n或许我们将来会再见面。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Bye!"
@@ -544,11 +547,11 @@ msgstr "拜拜！"
 
 #: lib/game/components/character.dart:
 msgid "We must fight, not talk!"
-msgstr ""
+msgstr "该战斗力，不要在这里闲聊了!"
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} puts %s in the backpack *"
-msgstr ""
+msgstr "* {{hero}} 将 %s 放入背包 *"
 
 #: lib/game/components/character.dart:
 msgid "the gem"
@@ -556,11 +559,11 @@ msgstr "宝石"
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} uses {{selected-item-name}} *"
-msgstr ""
+msgstr "* {{hero}} 使用了 {{selected-item-name}} *"
 
 #: lib/game/components/character.dart:
 msgid "* {{user-name}} uses {{selected-item-name}} *"
-msgstr ""
+msgstr "* {{user-name}} 使用了 {{selected-item-name}} *"
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} gives %s *"
@@ -568,47 +571,47 @@ msgstr "* {{hero}} 给了 %s *"
 
 #: lib/game/components/common/basic.dart:
 msgid "You can't defeat me as long as there are other monsters besides me."
-msgstr ""
+msgstr "只要我身边的随从还在，你就不能把我打倒。"
 
 #: lib/game/components/common/walker.dart:
 msgid "I've run out of shots for this weapon."
-msgstr ""
+msgstr "这个武器没子弹了。"
 
 #: lib/game/components/door.dart:
 msgid "There is still 1 enemy here. I can't escape."
-msgstr ""
+msgstr "这里还有1个敌人。我不能逃跑。"
 
 #: lib/game/components/door.dart:
 msgid "There are still %s enemies here. I can't escape."
-msgstr ""
+msgstr "这里还有 %s 个敌人。我不能逃跑。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "There is one enemy here!"
-msgstr ""
+msgstr "这里有一个敌人!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "There are %s enemies here!"
-msgstr ""
+msgstr "这里有 ％s 个敌人!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "It' time to fight!"
-msgstr ""
+msgstr "是时候开始战斗啦!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is tired and is back in the leaf, I must continue the battle."
-msgstr ""
+msgstr "米拉累了，她回到叶子里休息了，但我必须继续战斗。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "September is tired, I must continue the battle alone."
-msgstr ""
+msgstr "九月累了，但我必须独自战斗。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "September is tired, but we must continue the battle."
-msgstr ""
+msgstr "九月累了，但我们必须继续战斗。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Battle!"
-msgstr ""
+msgstr "开战!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "You won!"
@@ -616,92 +619,92 @@ msgstr "你赢了！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is resting."
-msgstr ""
+msgstr "米拉在休息。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is already here!"
-msgstr ""
+msgstr "米拉已经在这里了！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s ¤. I'm not very rich."
-msgstr ""
+msgstr "我有 %s ¤，不是很有钱。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s health points."
-msgstr ""
+msgstr "我有 %s 点 HP。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "I don't even have a cent!"
-msgstr ""
+msgstr "我一毛钱都没有!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s health points!"
-msgstr ""
+msgstr "我有 %s 点 HP！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "I? I have %s health points."
-msgstr ""
+msgstr "我？我有 %s 点 HP。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"
-msgstr ""
+msgstr "你想重新阅读如何战斗的方法吗？"
 
 #: lib/game/xeonjia_game.dart:
 msgid "* {{hero}} consults \"The Manual of the Perfect Hero\" *"
-msgstr ""
+msgstr "* {{hero}} 查阅了 \"《完美勇士手册》\" *"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Chapter 4: Battles"
-msgstr ""
+msgstr "第 4 章 ：战斗"
 
 #: lib/game/xeonjia_game.dart:
 msgid "In battle each player has 3 moves per turn."
-msgstr ""
+msgstr "在战斗中，玩家每回合有3次行动机会。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "After these 3 moves, it is the opponent's turn."
-msgstr ""
+msgstr "三次动作之后，就轮到对手了。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "A move can be used to walk, use items, attack or examine what is in front of you."
-msgstr ""
+msgstr "一次动作可以选择用来移动、使用物品、攻击或检查你面前的东西。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "You should already know the \"%s\" button, it examines objects, plants and people."
-msgstr ""
+msgstr "你应该已经知道%s按钮是做什么的了，可以检查物体、植物跟人。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "To attack use the \"%s\" button. In this way you punch the enemy in front of you."
-msgstr ""
+msgstr "使用 %s 按钮可以攻击你面前的人。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Otherwise, throw snowballs with the \"%s\" button in the direction you are looking at."
-msgstr ""
+msgstr "要不然使用%s按钮朝你前方丢雪球吧。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "If you run out of snowballs, get some snow from the snowdrifts around you."
-msgstr ""
+msgstr "如果你的雪球用完了，就从你周围的雪堆里获取雪球。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Mines you place under you with the \"%s\" button explode as soon as an enemy steps on them."
-msgstr ""
+msgstr "一旦敌人踩到你以%s钮放下来的地雷便会引爆。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Remember, enemies also have HP. Hit them multiple times to knock them out!"
-msgstr ""
+msgstr "请记住，敌人也有 HP。 击中敌人多次以将他们击倒！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "And if you have few HP take advantage of a move you have available to eat or drink something you have in your backpack!"
-msgstr ""
+msgstr "如果您的 HP 很少，请使用您背包里的恢复道具！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "That's all. Good luck!"
-msgstr ""
+msgstr "就这些。祝你好运!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "manual"
-msgstr ""
+msgstr "手册"
 
 #: lib/game/xeonjia_game.dart:
 msgid "book"
-msgstr ""
+msgstr "书"

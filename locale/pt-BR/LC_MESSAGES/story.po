@@ -3,8 +3,9 @@
 # This file is distributed under the same license as Xeonjia.
 # Daniel de Sousa Souza Melo <mekoy95190@mmgaklan.com>, 2020.
 # Vinicius <suburbanizar@gmail.com>, 2023.
+# Lucas Melo Sanginetto <lucamsanginetto@outlook.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-30 18:16+0000\nLast-Translator: Vinicius <suburbanizar@gmail.com>\nLanguage-Team: Portuguese (Brazil) <https://translate.deepdaikon.xyz/projects/xeonjia/story/pt-BR/>\nLanguage: pt-BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-12-25 14:58+0000\nLast-Translator: Lucas Melo Sanginetto <lucamsanginetto@outlook.com>\nLanguage-Team: Portuguese (Brazil) <https://translate.deepdaikon.xyz/projects/xeonjia/story/pt-BR/>\nLanguage: pt-BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -112,7 +113,7 @@ msgstr "Só um pouco"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! {{HP-diff}} HP have been recovered *"
-msgstr "* {{hero}} encontrou algumas amoras. {{HP-diff}} HP foram recuperarados *"
+msgstr "* {{hero}} encontrou algumas amoras. {{HP-diff}} HP foram recuperados *"
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant… nothing else."
@@ -280,7 +281,7 @@ msgstr "Você cresceu aqui, certo?"
 
 #: assets/maps/story/1.tmx:
 msgid "Here is our sleepyhead!\nFinally awake!\nThe hopes of the whole Kingdom are entrusted to you and you take it easy?"
-msgstr "Aqui está o nosso dorminhoco!\nFinalmente acordei!\nAs esperanças de todo o Reino estão confiadas a você e você vai com calma?"
+msgstr "Aqui está o nosso dorminhoco!\nFinalmente acordado!\nAs esperanças de todo o Reino estão confiadas a você e você vai com calma?"
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
@@ -308,7 +309,7 @@ msgstr "Eu sei.\nAgora... então... estou indo embora."
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nIf you lose your way or get stuck take a look at the map I gave you.\nYou can open it by tapping on its icon in the upper right corner."
-msgstr "Boa viagem, {hero}}.\nSe você se perder ou ficar preso, dê uma olhada no mapa que lhe dei.\nVocê pode abri-lo tocando em seu ícone no canto superior direito."
+msgstr "Boa viagem, {{hero}}.\nSe você se perder ou ficar preso, dê uma olhada no mapa que lhe dei.\nVocê pode abri-lo tocando em seu ícone no canto superior direito."
 
 #: assets/maps/story/1.tmx:
 msgid "Okay, sure sure.\nBye!"
@@ -896,7 +897,7 @@ msgstr ""
 
 #: assets/maps/story/77.tmx:
 msgid "Route 11"
-msgstr ""
+msgstr "Rota 11"
 
 #: assets/maps/story/77.tmx:
 msgid "Cableway"
@@ -1156,7 +1157,7 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "!!!"
-msgstr ""
+msgstr "!!!"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Slooosh!"
@@ -1280,7 +1281,7 @@ msgstr ""
 
 #: assets/maps/story/t1_02.tmx:
 msgid "A snowdrift."
-msgstr ""
+msgstr "Um monte de neve."
 
 #: assets/maps/story/t1_02.tmx:
 msgid "Hmm, I think if I run out of snowballs I can make new ones from snowdrifts like this one.\nI just have to press the \"{{inspect-key}}\" button."
@@ -1300,7 +1301,7 @@ msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "Today… today is the day I've been waiting for all my life. My journey to the Xeonjia Tower is about to begin.\nThis year I'm the \"chosen hero\" in charge of defeating the monster that froze the Kingdom…\nAfter years of training I hope to be able to."
-msgstr ""
+msgstr "Hoje… hoje é o dia que estive esperando por toda minha vida. Minha jornada à Torre Xeonjia está prestes a começar.\nEste ano sou o \"herói escolhido\" encarregado de derrotar o monstro que congelou o Reino…\nApós anos de treinamento, espero poder."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I wish I knew you when you were little."
@@ -1316,7 +1317,7 @@ msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'd like to go back to bed but I can't."
-msgstr ""
+msgstr "Gostaria de voltar para a cama, mas não posso."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "It has been quite a while since the last time I slept here."
@@ -1328,7 +1329,7 @@ msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I'll miss you, TV."
-msgstr ""
+msgstr "Vou sentir sua falta, TV."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I don't want to watch television now."
@@ -1348,31 +1349,31 @@ msgstr ""
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "I hope my parents will water it when I'm away."
-msgstr ""
+msgstr "Espero que meus pais a reguem quando eu estiver fora."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "This plant hasn't been watered for long."
-msgstr ""
+msgstr "Esta planta não é regada há muito tempo."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "This plant is very fragrant."
-msgstr ""
+msgstr "Esta planta é muito cheirosa."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "All my books are here."
-msgstr ""
+msgstr "Todos os meus livros estão aqui."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "My chair."
-msgstr ""
+msgstr "Minha cadeira."
 
 #: assets/maps/story/1_home_2.tmx:
 msgid "From here I can see the garden."
-msgstr ""
+msgstr "Daqui posso ver o jardim."
 
 #: assets/maps/story/24.tmx:
 msgid "Greentwig City"
-msgstr ""
+msgstr "Cidade de Greentwig"
 
 #: assets/maps/story/24.tmx:
 msgid "The city center is a few kilometers to the south."
@@ -1404,7 +1405,7 @@ msgstr ""
 
 #: assets/maps/story/53_house4.tmx:
 msgid "This door is closed."
-msgstr ""
+msgstr "Esta porta está fechada."
 
 #: assets/maps/story/26.tmx:
 msgid "Did you come here just to talk to me?\nI don't have much to say, but I can give you this little snow globe."
@@ -1412,7 +1413,7 @@ msgstr ""
 
 #: assets/maps/story/26.tmx:
 msgid "The weather is good today."
-msgstr ""
+msgstr "O tempo está bom hoje."
 
 #: assets/maps/story/26.tmx:
 msgid "We keep an eye on you."
@@ -1440,7 +1441,7 @@ msgstr ""
 
 #: assets/maps/story/22.tmx:
 msgid "Route 3"
-msgstr ""
+msgstr "Rota 3"
 
 #: assets/maps/story/22.tmx:
 msgid "Hey! Hi {{hero}}!"
@@ -1584,11 +1585,11 @@ msgstr ""
 
 #: assets/maps/story/19.tmx:
 msgid "Good luck."
-msgstr ""
+msgstr "Boa sorte."
 
 #: assets/maps/story/19.tmx:
 msgid "Xeonjia Tower ↑"
-msgstr ""
+msgstr "Torre Xeonjia ↑"
 
 #: assets/maps/story/19.tmx:
 msgid "Tourist Information and Reception Office.\nClosed until further notice."
@@ -1596,7 +1597,7 @@ msgstr ""
 
 #: assets/maps/story/29.tmx:
 msgid "Mitsu Forest"
-msgstr ""
+msgstr "Floresta Mitsu"
 
 #: assets/maps/story/29.tmx:
 msgid "Nobody knows what the writing on this rock means, it is not even known who wrote it."
@@ -1664,7 +1665,7 @@ msgstr ""
 
 #: assets/maps/story/21.tmx:
 msgid "Route 2"
-msgstr ""
+msgstr "Rota 2"
 
 #: assets/maps/story/21.tmx:
 msgid "Greentwig City →"
@@ -1748,11 +1749,11 @@ msgstr ""
 
 #: assets/maps/story/2_house.tmx:
 msgid "You are the chosen one for this year, right?\nMy son was too, many years ago."
-msgstr ""
+msgstr "Você é o escolhido deste ano, certo?\nMeu filho também era, há muitos anos."
 
 #: assets/maps/story/2_house.tmx:
 msgid "Unfortunately he failed to defeat the King of Evil…"
-msgstr ""
+msgstr "Infelizmente ele falhou em derrotar o Rei do Mal…"
 
 #: assets/maps/story/2_house.tmx:
 msgid "Now you're unemployed, huh?"
@@ -1932,7 +1933,7 @@ msgstr ""
 
 #: assets/maps/story/71.tmx:
 msgid "Route 9"
-msgstr ""
+msgstr "Rota 9"
 
 #: assets/maps/story/71.tmx:
 msgid "We won! We are strong!\nI go to rest."
@@ -1964,7 +1965,7 @@ msgstr ""
 
 #: assets/maps/story/53.tmx:
 msgid "Archocean City"
-msgstr ""
+msgstr "Cidade de Archocean"
 
 #: assets/maps/story/53.tmx:
 msgid "I like this city!"
@@ -2176,7 +2177,7 @@ msgstr ""
 
 #: assets/maps/story/x7.tmx:
 msgid "Let's try."
-msgstr ""
+msgstr "Vamos tentar."
 
 #: assets/maps/story/x7.tmx:
 msgid "Uh?"
@@ -2304,11 +2305,11 @@ msgstr ""
 
 #: assets/maps/story/53_house3.tmx:
 msgid "Oink !"
-msgstr ""
+msgstr "Óinc !"
 
 #: assets/maps/story/999.tmx:
 msgid "Xeonjia Tower"
-msgstr ""
+msgstr "Torre Xeonjia"
 
 #: assets/maps/story/999.tmx:
 msgid "The toweeeeer!"
@@ -2392,7 +2393,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "Good luck {{hero}}!"
-msgstr ""
+msgstr "Boa sorte {{hero}}!"
 
 #: assets/maps/story/999.tmx:
 msgid "Do your best!"
@@ -2460,7 +2461,7 @@ msgstr ""
 
 #: assets/maps/story/999.tmx:
 msgid "65th hero"
-msgstr ""
+msgstr "65º herói"
 
 #: assets/maps/story/999.tmx:
 msgid "Xeonjia Tower – Dwelling of the King of Evil. Stay away."
@@ -2524,63 +2525,63 @@ msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "Good morning mom!"
-msgstr ""
+msgstr "Bom dia mãe!"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Hi {{hero}}!\nDid you sleep well?"
-msgstr ""
+msgstr "Oi {{hero}}!\nVocê dormiu bem?"
 
 #: assets/maps/story/1_home.tmx:
 msgid "mom"
-msgstr ""
+msgstr "mãe"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Actually not very well… I'm still a little sleepy."
-msgstr ""
+msgstr "Na verdade não muito bem… Ainda estou um pouco sonolento."
 
 #: assets/maps/story/1_home.tmx:
 msgid "You always are.\nYou can't afford to be tired, from today you are officially the new hero."
-msgstr ""
+msgstr "Você sempre está.\nVocê não pode se dar ao luxo de estar cansado, a partir de hoje você é oficialmente o novo herói."
 
 #: assets/maps/story/1_home.tmx:
 msgid "My little hero!"
-msgstr ""
+msgstr "Meu heroizinho!"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Do not call me that!"
-msgstr ""
+msgstr "Não me chame disso!"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Did you get everything?"
-msgstr ""
+msgstr "Você pegou tudo?"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Yes, it's all ready.\nNow it's time to leave."
-msgstr ""
+msgstr "Sim, está tudo pronto.\nAgora é hora de partir."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Be very careful and remember to check your health in the top left bar."
-msgstr ""
+msgstr "Tenha muito cuidado e lembre-se de checar sua saúde na barra superior esquerda."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Yea mom, I know. I am no longer a child."
-msgstr ""
+msgstr "Sim mãe, eu sei. Não sou mais uma criança."
 
 #: assets/maps/story/1_home.tmx:
 msgid "I know, I know.\nGo, my darling, and make your mother proud.\nAh, and don't forget that the neighbor wanted to give you some food before you leave."
-msgstr ""
+msgstr "Eu sei, eu sei.\nVá, meu querido, e deixe sua mãe orgulhosa.\nAh, e não esqueça que a vizinha queria te dar um pouco de comida antes de você partir."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Sure mom, I will stop by our neighbor."
-msgstr ""
+msgstr "Certo mãe, vou passar na nossa vizinha."
 
 #: assets/maps/story/1_home.tmx:
 msgid "Bye, my little hero!"
-msgstr ""
+msgstr "Tchau, meu heroizinho!"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Go get the food from the neighbor."
-msgstr ""
+msgstr "Vá buscar a comida da vizinha."
 
 #: assets/maps/story/1_home.tmx:
 msgid "The food the neighbor gave you looks tasty!"
@@ -2596,7 +2597,7 @@ msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "Unfortunately, this is not the time to lie down on the sofa."
-msgstr ""
+msgstr "Infelizmente, não é hora de deitar no sofá."
 
 #: assets/maps/story/1_home.tmx:
 msgid "This sofa is very comfortable."
@@ -2604,7 +2605,7 @@ msgstr ""
 
 #: assets/maps/story/1_home.tmx:
 msgid "This plant seems to have been recently watered."
-msgstr ""
+msgstr "Esta planta parece ter sido regada recentemente."
 
 #: assets/maps/story/4_house.tmx:
 msgid "The last time I went through the forest I was attacked.\nI'm not going back there anymore."
@@ -2652,7 +2653,7 @@ msgstr ""
 
 #: assets/maps/story/50_house.tmx:
 msgid "Zoysii?\nI've heard this name before…"
-msgstr ""
+msgstr "Zoysii?\nJá ouvi esse nome antes…"
 
 #: assets/maps/story/50_house.tmx:
 msgid "Hello! I am the official florist of the Region!\nThe most beautiful flowers? Zoysii!"
@@ -2756,7 +2757,7 @@ msgstr ""
 
 #: assets/maps/story/39.tmx:
 msgid "Route 5"
-msgstr ""
+msgstr "Rota 5"
 
 #: assets/maps/story/39.tmx:
 msgid "Ok, you were better than me.\nI still have room for improvement, I will continue to train."
@@ -2952,7 +2953,7 @@ msgstr ""
 
 #: assets/maps/story/46.tmx:
 msgid "Route 6"
-msgstr ""
+msgstr "Rota 6"
 
 #: assets/maps/story/46.tmx:
 msgid "Were you able to chase away the Hoarfrost Team?!\nThank you, it had been months since the tunnel was blocked.\nYou must be thirsty, here's this bottle of water for you."
@@ -2972,7 +2973,7 @@ msgstr ""
 
 #: assets/maps/story/43_tower_1.tmx:
 msgid "Observation Tower"
-msgstr ""
+msgstr "Torre de Observação"
 
 #: assets/maps/story/66_house.tmx:
 msgid "Hi, you look a little tired. Rest here for a moment."
@@ -2996,7 +2997,7 @@ msgstr ""
 
 #: assets/maps/story/67.tmx:
 msgid "Flamecot City"
-msgstr ""
+msgstr "Cidade de Flamecot"
 
 #: assets/maps/story/67.tmx:
 msgid "I have to take the signet."
@@ -3004,19 +3005,19 @@ msgstr ""
 
 #: assets/maps/story/1_house.tmx:
 msgid "NEIGHBOR'S HOUSE"
-msgstr ""
+msgstr "CASA DA VIZINHA"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Hello lad, are you all right?\nToday is the big day, huh?\nBe careful, the world is a dangerous place.\nI made you this box full of food, you will need it when you have few HP.\nHere you go!"
-msgstr ""
+msgstr "Olá rapaz, você está bem?\nHoje é o grande dia, né?\nTenha cuidado, o mundo é um lugar perigoso.\nFiz para você esta caixa cheia de comida, você vai precisar dela quando tiver poucos HP.\nAqui está!"
 
 #: assets/maps/story/1_house.tmx:
 msgid "neighbor"
-msgstr ""
+msgstr "vizinha"
 
 #: assets/maps/story/1_house.tmx:
 msgid "Thank you very much!\nIt looks delicious!"
-msgstr ""
+msgstr "Muito obrigado!\nParece delicioso!"
 
 #: assets/maps/story/1_house.tmx:
 msgid "My box full of food made you win. So it's basically me who saved the world."
@@ -3024,7 +3025,7 @@ msgstr ""
 
 #: assets/maps/story/1_house.tmx:
 msgid "It's the first time an inhabitant of this town has been chosen as a \"hero\".\nI'm so happy."
-msgstr ""
+msgstr "É a primeira vez que um habitante desta cidade é escolhido como \"herói\".\nEstou tão feliz."
 
 #: assets/maps/story/1_house.tmx:
 msgid "The \"Last Hero\" is an inhabitant of this town!\nI'm so happy."
@@ -3340,7 +3341,7 @@ msgstr ""
 
 #: assets/maps/story/61.tmx:
 msgid "Route 8"
-msgstr ""
+msgstr "Rota 8"
 
 #: assets/maps/story/61.tmx:
 msgid "Do you want to go to the Water Region?"
@@ -3488,7 +3489,7 @@ msgstr ""
 
 #: assets/maps/story/49.tmx:
 msgid "It's not a good thing to look into other people's homes."
-msgstr ""
+msgstr "Não é bom olhar dentro da casa de outras pessoas."
 
 #: assets/maps/story/49.tmx:
 msgid "Bitter winter wind / Ends there / Sound of the sea."
@@ -4352,7 +4353,7 @@ msgstr ""
 
 #: assets/maps/story/2.tmx:
 msgid "Route 1"
-msgstr ""
+msgstr "Rota 1"
 
 #: assets/maps/story/2.tmx:
 msgid "Hey, I found this stone near here.\nHere you go."
@@ -4364,31 +4365,31 @@ msgstr ""
 
 #: assets/maps/story/2.tmx:
 msgid "I also often get hurt by rocks.\nIt's annoying but you'll get used to it."
-msgstr ""
+msgstr "Também costumo me machucar com pedras.\nÉ irritante, mas você vai se acostumar."
 
 #: assets/maps/story/2.tmx:
 msgid "Ouch!"
-msgstr ""
+msgstr "Ai!"
 
 #: assets/maps/story/2.tmx:
 msgid "Are you okay?\nI heard you screaming."
-msgstr ""
+msgstr "Você está bem?\nEu ouvi você gritando."
 
 #: assets/maps/story/2.tmx:
 msgid "Y-yes, I hurt myself by bumping into this rock!\nI just lost 15 health points."
-msgstr ""
+msgstr "S-sim, eu me machuquei esbarrando nesta pedra!\nAcabei de perder 15 pontos de vida."
 
 #: assets/maps/story/2.tmx:
 msgid "I know, it happens often.\nToday you are the third.\nSome rocks are very sharp and pointy.\nYou get hurt when you bump into them."
-msgstr ""
+msgstr "Eu sei, acontece frequentemente.\nHoje você é o terceiro.\nAlgumas pedras são muito afiadas e pontudas.\nVocê se machuca quando esbarra nelas."
 
 #: assets/maps/story/2.tmx:
 msgid "Now I know!\nI'll be careful from now on."
-msgstr ""
+msgstr "Agora eu sei!\nTerei cuidado de agora em diante."
 
 #: assets/maps/story/2.tmx:
 msgid "During your journey you will run into them many times, it's not a problem.\nSometimes you can't even avoid them.\nJust be careful not to run out of HP."
-msgstr ""
+msgstr "Durante sua jornada você os encontrará muitas vezes, não é um problema.\nÀs vezes você nem pode evitá-los.\nSó tome cuidado para não ficar sem HP."
 
 #: assets/maps/story/x9.tmx:
 msgid "XEONJIA TOWER – 9F"
@@ -4580,7 +4581,7 @@ msgstr ""
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "A table."
-msgstr ""
+msgstr "Uma mesa."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "A stool."
@@ -4664,11 +4665,11 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "text"
-msgstr ""
+msgstr "texto"
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A sharp and pointed rock."
-msgstr ""
+msgstr "Uma pedra afiada e pontuda."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "A street lamp."
@@ -4688,23 +4689,23 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "signpost"
-msgstr ""
+msgstr "placa"
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A little plant."
-msgstr ""
+msgstr "Uma pequena planta."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A tree."
-msgstr ""
+msgstr "Uma árvore."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A little plant without leaves."
-msgstr ""
+msgstr "Uma pequena planta sem folhas."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A sharp and pointed rock. It hurts."
-msgstr ""
+msgstr "Uma pedra afiada e pontuda. Isso machuca."
 
 #: assets/maps/tilesets/outdoor-1.tsx:
 msgid "A trash can."
@@ -4760,7 +4761,7 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "henchman"
-msgstr ""
+msgstr "capanga"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "worker"
@@ -4808,7 +4809,7 @@ msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A chair."
-msgstr ""
+msgstr "Uma cadeira."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A painting that depicts this area long ago."
@@ -4816,7 +4817,7 @@ msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "It's full of books here."
-msgstr ""
+msgstr "Está cheio de livros aqui."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A closed door."
@@ -4824,15 +4825,15 @@ msgstr ""
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "There is some food between the mattresses of this sofa."
-msgstr ""
+msgstr "Há um pouco de comida entre os colchões deste sofá."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A television."
-msgstr ""
+msgstr "Uma televisão."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A bed."
-msgstr ""
+msgstr "Uma cama."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "This pig looks very happy."
@@ -4844,7 +4845,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Icosahedron"
-msgstr ""
+msgstr "Icosaedro"
 
 #: assets/data/backpack-items.json:
 msgid "A strange blue icosahedral stone."
@@ -4868,7 +4869,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Tetrahedron"
-msgstr ""
+msgstr "Tetraedro"
 
 #: assets/data/backpack-items.json:
 msgid "A strange red tetrahedral stone."
@@ -4892,7 +4893,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Hexahedron"
-msgstr ""
+msgstr "Hexaedro"
 
 #: assets/data/backpack-items.json:
 msgid "A strange green cubic stone."
@@ -4900,7 +4901,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Octahedron"
-msgstr ""
+msgstr "Octaedro"
 
 #: assets/data/backpack-items.json:
 msgid "A strange white octahedral stone."
@@ -4908,7 +4909,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Dodecahedron"
-msgstr ""
+msgstr "Dodecaedro"
 
 #: assets/data/backpack-items.json:
 msgid "A strange multicolored dodecahedral stone."
@@ -4916,7 +4917,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Signet #1"
-msgstr ""
+msgstr "Sinete #1"
 
 #: assets/data/backpack-items.json:
 msgid "First out of 3 signets required to enter the Xeonjia Tower."
@@ -4924,7 +4925,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Signet #2"
-msgstr ""
+msgstr "Sinete #2"
 
 #: assets/data/backpack-items.json:
 msgid "Second out of 3 signets required to enter the Xeonjia Tower."
@@ -4932,7 +4933,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Signet #3"
-msgstr ""
+msgstr "Sinete #3"
 
 #: assets/data/backpack-items.json:
 msgid "Third out of 3 signets required to enter the Xeonjia Tower."
@@ -4968,7 +4969,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Kiwi juice"
-msgstr ""
+msgstr "Suco de kiwi"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of kiwi juice. It restores 70 HP."
@@ -4992,7 +4993,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Food Box"
-msgstr ""
+msgstr "Caixa de Comida"
 
 #: assets/data/backpack-items.json:
 msgid "A small box full of rice, vegetables and beans. It restores 100 HP."

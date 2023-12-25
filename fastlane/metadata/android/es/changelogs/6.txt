@@ -1,5 +1,5 @@
 * Nueva modalidad de historia
-* Gráficos actualizados
-* Mejoras UI/UX
-* Adición de música de fondo y de efectos
-* Arreglo de bugs
+* Actualización de gráficos
+* Mejora en la interfaz y experiencia de usuario
+* Adición de música de fondo y de efectos de sonido
+* Corrección de errores

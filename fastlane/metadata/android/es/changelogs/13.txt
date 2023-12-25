@@ -1,10 +1,10 @@
 * Nuevo combate basado en torneos
 * Nuevo mapa del mundo
-* Se han mejorado los gráficos
-* Se ha mejorado la UI/UX
-*Se ha mejorado el modo historia
-* Se han mejorado las animaciones, la música de fondo y el SFX
-* Se ha mejorado el gamepad
+* Mejora en los gráficos
+* Mejora en la interfaz y experiencia de usuario
+* Mejora en el modo historia
+* Mejora en las animaciones, la música de fondo y los efectos de sonido
+* Mejora en los controles
 * Ajustes en la dificultad del juego
-* Se han actualizado las traducciones
-* Se han corregido fallos
+* Actualización de las traducciones
+* Corrección de errores

@@ -6,8 +6,9 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # YottaMxt <yottamxt@gmail.com>, 2023.
 # Nicolas <nicolas2013toledo@gmail.com>, 2023.
+# perro tuerto <hi@perrotuerto.blog>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-12-23 20:58+0000\nLast-Translator: perro tuerto <hi@perrotuerto.blog>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/story/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -31,19 +32,20 @@ msgstr "…"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "H-hello."
-msgstr ""
+msgstr "Ho-ola."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Hello, you must be {{hero}}! Nice to meet you.\nI heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
-msgstr ""
+msgstr "¡Hola, debes ser {{hero}}! Un gusto conocerte.\n Escuché que te dirigías a estos lugares.\n Mi nombre es Xe III y soy el rey de esta región."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "king"
 msgstr "rey"
 
 #: assets/maps/story/30_cityhall.tmx:
+#, fuzzy
 msgid "Do not confuse me with the King of Evil, I'm not a bad guy haha."
-msgstr ""
+msgstr "No me confundan con el Rey del Mal, no soy un mal tipo jaja."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "So… tell me, how are you? Is everything okay? How is the journey going?"
@@ -51,7 +53,7 @@ msgstr "Entonces… dime, ¿cómo estás? ¿Está todo bien? ¿Cómo ha sido la 
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Everything good, I just got the first signet!"
-msgstr ""
+msgstr "Todo está bien, ¡acabo de conseguir mi primer sello!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Oh really?! This is great news!"
@@ -103,7 +105,7 @@ msgstr "Buen viaje, {{hero}}, tengo fe en ti."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "As soon as I saw you I knew you would be the Last Hero."
-msgstr ""
+msgstr "Tan pronto como te vi, supe que serías el Último Héroe."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes, quite a lot"
@@ -159,35 +161,35 @@ msgstr "El trabajo de una vida ha sido destruido…"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Again."
-msgstr ""
+msgstr "Otra vez."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "{{hero}}!\nThieves broke in again 2 days ago.\nWhat's up?\nHave you decided to look for the stones?"
-msgstr ""
+msgstr "¡{{hero}}!\nLos ladrones volvieron de nuevo hace 2 días.\n¿Qué pasó?\n¿Ya decidiste buscar las piedras?"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Great!"
-msgstr ""
+msgstr "¡Magnífico!"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Wise choice! Live your life!"
-msgstr ""
+msgstr "¡Sabia decisión! ¡Disfruta tu vida!"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "From my research, I think a stone is in an area close to your home."
-msgstr ""
+msgstr "Según mi investigación, creo que la piedra está en un área cerca de tu hogar."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A stone may be near where you and September fought long ago."
-msgstr ""
+msgstr "Una piedra podría estar donde Septiembre y tú lucharon hace tiempo."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Another stone might be found near the volcano."
-msgstr ""
+msgstr "Otra piedra podría encontrarse cerca del volcán."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Xeonjia Tower. I would go there to look for a stone."
-msgstr ""
+msgstr "Torreo Xeonjia. Allí iría a buscar la piedra."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "I think a stone is still missing but I don't know where it is.\nI've heard strange tales related to the Mitsu Forest."
@@ -1662,9 +1664,8 @@ msgid "On the next ride I really get on it."
 msgstr "En el siguiente viaje me subo de verdad."
 
 #: assets/maps/story/55_cableway.tmx:
-#, fuzzy
 msgid "My journey is almost over, I'm a little bit sad for this."
-msgstr "Mi travesía esta por acabar, me siento un poco triste por esto."
+msgstr "Mi aventura está por acabar, me siento un poco triste por esto."
 
 #: assets/maps/story/21.tmx:
 msgid "Route 2"
@@ -1855,7 +1856,6 @@ msgid "You can't run away from here.\nDid you think you could get away with it t
 msgstr "No puedes escapar de aqui.\n¿Pensaste que te saldrías con tanta facilidad?\nEl hecho de que quisiste escapar y no pelear hace claro el hecho del poco valor que tienes.\nEspero que el \"heroe\" del año que viene sea un poco más valiente, por lo menos seria un poco más divertido para nosotros."
 
 #: assets/maps/story/25.tmx:
-#, fuzzy
 msgid "Bzzt… Bzzt… Bzzt…"
 msgstr "Bzzt… Bzzt… Bzzt…"
 
@@ -1920,14 +1920,12 @@ msgid "Ah okay, perfect. We leave it free.\nSee you later boss."
 msgstr "Ah okay, perfecto. Lo dejamos libre.\nNos vemos despues jefe."
 
 #: assets/maps/story/25.tmx:
-#, fuzzy
 msgid "Beep… Beep… Beep…"
 msgstr "Beep… Beep… Beep…"
 
 #: assets/maps/story/25.tmx:
-#, fuzzy
 msgid "You got lucky this time.\nBut soon you will be dealing with our boss."
-msgstr "Tuviste suerte esta ves.\nPero pronto estaras lidiando con nuestro jefe."
+msgstr "Esta vez tuviste suerte.\nPero muy pronto lidiarás con nuestro jefe."
 
 #: assets/maps/story/25.tmx:
 msgid "The King of Evil?"
@@ -2334,9 +2332,8 @@ msgid "Are you ok? Did you get here without any problems?"
 msgstr "¿Estas bien? ¿Pudiste llegar aquí sin algun problema?"
 
 #: assets/maps/story/999.tmx:
-#, fuzzy
 msgid "Yes! No problem at all!"
-msgstr "¡Sí! ¡No hay problema!"
+msgstr "¡Sí! ¡No hay ningún problema!"
 
 #: assets/maps/story/999.tmx:
 msgid "Have you seen those little green worms?\nThey are so cute!"

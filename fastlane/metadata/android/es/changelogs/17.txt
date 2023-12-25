@@ -1,0 +1,5 @@
+* ¡El modo historia ya está terminado!
+* Mejora en la interfaz y la experiencia del usuario y en los gráficos
+* Varias mejoras
+* Actualización de las traducciones
+* Corrección de errores

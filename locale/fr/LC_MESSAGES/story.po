@@ -11,7 +11,7 @@
 # snipe2004 <snipe2004@hotmail.com>, 2023.
 # Vsnmrn <vsnmrn1@protonmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-12-01 19:16+0000\nLast-Translator: Vsnmrn <vsnmrn1@protonmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-12-10 21:16+0000\nLast-Translator: Vsnmrn <vsnmrn1@protonmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/story/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -483,7 +483,7 @@ msgstr "Je déteste les gens qui disent toujours les même choses."
 
 #: assets/maps/story/79_house.tmx:
 msgid "Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere you go!"
-msgstr "Enfin un héro !\nÇa fait des années que j'attends qu'un héro passe par là !\nMa famille a gardé cette gemme des décennies dans l'espoir de l'offrir à un héro.\nTiens, elle est à toi !"
+msgstr "Enfin un héros !\nÇa fait des années que j'attends qu'un héros passe par là !\nMa famille a gardé cette gemme des décennies dans l'espoir de l'offrir à un héros.\nTiens, elle est à toi !"
 
 #: assets/maps/story/79_house.tmx:
 msgid "Thank you!"
@@ -1211,7 +1211,7 @@ msgstr "Donc il rend notre Royaume inhabitable pour nous pour le rendre habitabl
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Exactly.\nThe only way to stop him is to find as many gems as possible and finally defeat him, of course.\nHe uses the Hoarfrost Team to search for gems because he cannot leave the tower.\nThis is what I know about the King of Evil. Now I must leave you to avoid becoming an ice pop, but we will see each other again in the future.\nI will appear to you when you need me."
-msgstr "Exactement.\nLe seul moyen de l'arrêter est de trouver autant de gemmes que possible et de le vaincre, bien sûr.\nIl utilise l'Équipe givrée pour chercher des gemmes car il ne peut pas quitter la tour.\nVoilà ce que je sais sur le Roi du mal. Je dois maintenant vous quitter pour ne pas devenir une glace, mais nous nous reverrons ultérieurement.\nJe vous apparaîtrai quand vous aurez besoin de moi."
+msgstr "Exactement.\nLe seul moyen de l'arrêter est de trouver autant de gemmes que possible et de le vaincre, bien sûr.\nIl utilise l'Équipe givrée pour chercher des gemmes car il ne peut pas quitter la tour.\nVoilà ce que je sais sur le Roi du Mal. Je dois maintenant vous quitter pour ne pas devenir une glace, mais nous nous reverrons ultérieurement.\nJe vous apparaîtrai quand vous aurez besoin de moi."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "So gems are more important than I thought… And they can be used as an energy source.\nI only have one, how many have you found so far?"
@@ -2191,7 +2191,7 @@ msgstr "Euh ?"
 
 #: assets/maps/story/x7.tmx:
 msgid "They change the direction you're going."
-msgstr "Elles changent la direction que tu prends."
+msgstr "Elles changent la direction dans laquelle on va."
 
 #: assets/maps/story/x7.tmx:
 msgid "That's so nice. It looks like a lot of fun."
@@ -2203,7 +2203,7 @@ msgstr "Pas tant que ça."
 
 #: assets/maps/story/x7.tmx:
 msgid "I like it!"
-msgstr "Je l'aime bien !"
+msgstr "J'aime bien ça !"
 
 #: assets/maps/story/27.tmx:
 msgid "I still don't understand why I lose money when I run out of HP."
@@ -2431,7 +2431,7 @@ msgstr "Elle a le troisième sceau."
 
 #: assets/maps/story/999.tmx:
 msgid "Of course I took it, {{hero}} is too slow."
-msgstr "Bien-sûr je l'ai pris, {{hero}} est trop lent."
+msgstr "Bien sûr je l'ai pris, {{hero}} est trop lent."
 
 #: assets/maps/story/999.tmx:
 msgid "The Spirit of Fire is warming up the tower right now."
@@ -2439,11 +2439,11 @@ msgstr "L'Esprit du Feu réchauffe la tour en ce moment."
 
 #: assets/maps/story/999.tmx:
 msgid "So everything is ready, with the three signets we can enter."
-msgstr "Donc tout est prêt, avec les troisième sceau, on peut rentrer."
+msgstr "Donc tout est prêt, avec le troisième sceau, on peut entrer."
 
 #: assets/maps/story/999.tmx:
 msgid "From now on, maximum concentration, today we save the world.\nHere's the third signet, I give you the honor to open the door."
-msgstr "A partir de maintenant, concentration maximale, aujourd'hui nous sauvons le monde.\nVoici le troisième sceau, je vous accorde l'honneur d'ouvrir la porte."
+msgstr "À partir de maintenant, concentration maximale, aujourd'hui nous sauvons le monde.\nVoici le troisième sceau, je t'accorde l'honneur d'ouvrir la porte."
 
 #: assets/maps/story/999.tmx:
 msgid "What an unexpected kindness."
@@ -2451,7 +2451,7 @@ msgstr "Quelle gentillesse inattendue."
 
 #: assets/maps/story/999.tmx:
 msgid "Only because you have 2 signets and I only have 1.\nYou beat me."
-msgstr "Simplement parce que vous avez deux sceaux et que je n'en ai qu'un.\nVous m'avez battu."
+msgstr "Simplement parce que tu as deux sceaux et que je n'en ai qu'un.\nTu m'as battue."
 
 #: assets/maps/story/999.tmx:
 msgid "* {{hero}} uses the 3 signets *"
@@ -2663,7 +2663,7 @@ msgstr "Zoysii ?\nJ'ai déjà entendu ce nom…"
 
 #: assets/maps/story/50_house.tmx:
 msgid "Hello! I am the official florist of the Region!\nThe most beautiful flowers? Zoysii!"
-msgstr "Bonjour ! Je suis le fleuriste officiel de la Région !\nLes plus belles fleurs ? Zoysii !"
+msgstr "Bonjour ! Je suis la fleuriste officielle de la Région !\nLes plus belles fleurs ? Zoysii !"
 
 #: assets/maps/story/t1_03.tmx:
 msgid "MOSSY CRYPT – B3F"
@@ -2783,7 +2783,7 @@ msgstr "Hé hé, tu as raison... Nous avons passé beaucoup d'heures à jouer et
 
 #: assets/maps/story/39.tmx:
 msgid "I don't have time for these emotions, I have to go back to training now.\nSee you in the Xeonjia Tower."
-msgstr "Je n'ai pas le temps pour ces émotions, je dois retourner m'entraîner maintenant.\nRendez-vous dans la tour Xeonjia."
+msgstr "Je n'ai pas le temps pour ces émotions, je dois retourner m'entraîner maintenant.\nRendez-vous dans la Tour Xeonjia."
 
 #: assets/maps/story/39.tmx:
 msgid "Are you going to the tower too?"
@@ -3035,7 +3035,7 @@ msgstr "C'est la première fois qu'un habitant de ce village est choisi comme «
 
 #: assets/maps/story/1_house.tmx:
 msgid "The \"Last Hero\" is an inhabitant of this town!\nI'm so happy."
-msgstr "Le Dernier Héros est un habitant de ce village !\nJ'en suis très heureux."
+msgstr "Le Dernier Héros est un habitant de ce village !\nJ'en suis très heureuse."
 
 #: assets/maps/story/30.tmx:
 msgid "This city is boring."
@@ -3383,7 +3383,7 @@ msgstr "Oui, tout va bien. J'ai ju..."
 
 #: assets/maps/story/58.tmx:
 msgid "I'm sorry, we don't have much time. The King of Evil is about to conclude his plan."
-msgstr "Je suis désolé, nous n'avons plus beaucoup de temps. Le Roi du mal va bientôt achever son plan."
+msgstr "Je suis désolé, nous n'avons plus beaucoup de temps. Le Roi du Mal va bientôt achever son plan."
 
 #: assets/maps/story/58.tmx:
 msgid "We know!\nWe met the Hoarfr–"
@@ -3399,11 +3399,11 @@ msgstr "Combien de sceaux as-tu ?"
 
 #: assets/maps/story/58.tmx:
 msgid "I have 2 signets, now I'm about to go get the third one."
-msgstr "J'ai 2 sceaux, et je vais bientôt avoir la troisième."
+msgstr "J'ai 2 sceaux, et je vais bientôt avoir le troisième."
 
 #: assets/maps/story/58.tmx:
 msgid "Great! With the third we can enter the Xeonjia Tower."
-msgstr "Super  ! Avec la troisième nous pourrons entrer dans la tour Xeonjia."
+msgstr "Super ! Avec le troisième nous pourrons entrer dans la Tour Xeonjia."
 
 #: assets/maps/story/58.tmx:
 msgid "We absolutely have to stop the Hoarfrost Team and the King of Evil."
@@ -3415,11 +3415,11 @@ msgstr "C'est vrai, nous allons les arrêter !\nJ'ai vainc..."
 
 #: assets/maps/story/58.tmx:
 msgid "How many gems did you find?"
-msgstr "Combien de gemmes as tu trouvé ?"
+msgstr "Combien de gemmes as-tu trouvé ?"
 
 #: assets/maps/story/58.tmx:
 msgid "I don't know if they will be enough…"
-msgstr "Je ne sais pas s'ils seront assez…"
+msgstr "Je ne sais pas si ce sera assez…"
 
 #: assets/maps/story/58.tmx:
 msgid "By the way, hi, I'm Mil–"
@@ -3427,7 +3427,7 @@ msgstr "Au fait, salut, je suis Mil..."
 
 #: assets/maps/story/58.tmx:
 msgid "We'll go to the tower with the ones we found.\nAlways keep your eyes open, the gems are often found in hidden places."
-msgstr "Nous irons à la tour avec celles que nous avons.\nGardes les yeux ouvert, les gemmes sont souvent cachées."
+msgstr "Nous irons à la tour avec celles que nous avons.\nGarde les yeux ouverts, les gemmes sont souvent cachées."
 
 #: assets/maps/story/58.tmx:
 msgid "I'll pay attention, but it's not eas–"
@@ -3507,11 +3507,11 @@ msgstr "C'est un arbre répandu dans cette zone."
 
 #: assets/maps/story/t3_04.tmx:
 msgid "Hey, where's the signet?"
-msgstr "Hé, où sont les sceaux ?"
+msgstr "Hé, où est le sceau ?"
 
 #: assets/maps/story/t3_04.tmx:
 msgid "There is no signet here!\nHow is that possible?!"
-msgstr "Il n'y a pas de sceaux ici ?\nMais comment est-ce possible ??"
+msgstr "Le sceau n'est pas ici ?\nMais comment est-ce possible ??"
 
 #: assets/maps/story/t3_04.tmx:
 msgid "Did they forget to put it?"
@@ -3527,7 +3527,7 @@ msgstr "Et maintenant, on fait quoi ?"
 
 #: assets/maps/story/t3_04.tmx:
 msgid "I don't know… I don't know…\nLet's continue our journey for now.\nWe'll decide what to do with Shen."
-msgstr "Je n'sais pas… je n'sais pas…\nContinuons notre voyage pour l'instant.\nNous déciderons ce que nous ferons de Shen."
+msgstr "Je sais pas… je sais pas…\nContinuons notre voyage pour l'instant.\nNous déciderons ce que nous ferons avec Shen."
 
 #: assets/maps/story/52.tmx:
 msgid "This should be the crypt of this region. Here is the second signet."
@@ -3547,11 +3547,11 @@ msgstr "Je vais t'aider."
 
 #: assets/maps/story/52.tmx:
 msgid "To fight? Sure?\nOk thank you."
-msgstr "Se battre ? C'est sûr ?\nD'accord, merci."
+msgstr "À combattre ? Tu es sûre ?\nD'accord, merci."
 
 #: assets/maps/story/52.tmx:
 msgid "Look who's back again.\nThe \"hero\".\nAnd he even made a friend."
-msgstr "Regardez qui est de retour.\nLe « héros ».\nEt il s'est même fait un ami."
+msgstr "Regardez qui est de retour.\nLe « héros ».\nEt il s'est même fait une amie."
 
 #: assets/maps/story/52.tmx:
 msgid "Dr. Lache!\nI defeated your henchmen last time, now I will defeat you too."
@@ -3563,7 +3563,7 @@ msgstr "Tu ne nous as pas vaincus."
 
 #: assets/maps/story/52.tmx:
 msgid "We were just trying to figure out what you were capable of."
-msgstr "Nous essayions juste de savoir de quoi vous étiez capable."
+msgstr "Nous essayions juste de savoir de quoi tu étais capable."
 
 #: assets/maps/story/52.tmx:
 msgid "Either way, no one is here to fight.\nEverything is now ready for the completion of our work."
@@ -3767,7 +3767,7 @@ msgstr "Je viens de me faire battre par 4 enfants."
 
 #: assets/maps/story/999_up.tmx:
 msgid "I didn't even fight."
-msgstr "Je ne me suis même pas battu."
+msgstr "Je ne me suis même pas battue."
 
 #: assets/maps/story/999_up.tmx:
 msgid "Ah, right."
@@ -3999,11 +3999,11 @@ msgstr "En dehors du Royaume !"
 
 #: assets/maps/story/999_up.tmx:
 msgid "Dunno, let's find out!"
-msgstr "Je ne sais pas, découvrons !"
+msgstr "Je ne sais pas, découvrons-le !"
 
 #: assets/maps/story/999_up.tmx:
 msgid "I'm so bored that you convinced me!\nLet's do it!"
-msgstr "Je m'ennuie tellement que tu m'as convaincu !\nFaisons-le !"
+msgstr "Je m'ennuie tellement que tu m'as convaincue !\nFaisons-le !"
 
 #: assets/maps/story/999_up.tmx:
 msgid "Yeaaa!"
@@ -4123,7 +4123,7 @@ msgstr "Je l'ai presque cru."
 
 #: assets/maps/story/999_up.tmx:
 msgid "You totally fell for it."
-msgstr "Vous êtes tombé dans le panneau."
+msgstr "Vous êtes tombés dans le panneau."
 
 #: assets/maps/story/999_up.tmx:
 msgid "You're good at playing the King of Evil, it's a role that suits you."
@@ -4151,7 +4151,7 @@ msgstr "méchante shen"
 
 #: assets/maps/story/999_up.tmx:
 msgid "I already made this joke a little while ago."
-msgstr "J'ai déjà fait cette blague il y a quelques temps."
+msgstr "J'ai déjà fait cette blague il n'y a pas longtemps."
 
 #: assets/maps/story/999_up.tmx:
 msgid "Ah, what a pity."

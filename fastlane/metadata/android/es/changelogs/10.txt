@@ -1,2 +1,2 @@
-* Actualización de las traducción
-* Arreglo de errores
+* Actualización de las traducciones
+* Corrección de errores

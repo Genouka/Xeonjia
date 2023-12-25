@@ -4,7 +4,7 @@
 # deepdaikon <deepdaikon@tuta.io>, 2022.
 # Bruno Cabrita <bruno.cabrita@protonmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-12-01 19:16+0000\nLast-Translator: Bruno Cabrita <bruno.cabrita@protonmail.com>\nLanguage-Team: Portuguese <https://translate.deepdaikon.xyz/projects/xeonjia/ui/pt/>\nLanguage: pt\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-12-03 21:16+0000\nLast-Translator: Bruno Cabrita <bruno.cabrita@protonmail.com>\nLanguage-Team: Portuguese <https://translate.deepdaikon.xyz/projects/xeonjia/ui/pt/>\nLanguage: pt\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -288,27 +288,28 @@ msgstr ""
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "No items here"
 msgstr ""
 
 #: lib/game/widgets/menus/items_menu.dart:
+#, fuzzy
 msgid "%s HP"
-msgstr ""
+msgstr "%s HP"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Backpack"
-msgstr ""
+msgstr "Mochila"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Gems"
-msgstr ""
+msgstr "Gemas"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Mysterious gems scattered around the world."

@@ -1,26 +1,22 @@
-<b>Xeonjia</b> is an <b>adventure game</b> set in a <b>frozen world</b>.
+<b>Xeonjia</b> 是一款 <b>奇幻风格的冒险游戏</b> 设定在一个 <b>被寒冰所垄罩的世界当中</b>.
 
-The floor is frozen! Think carefully about your moves because you can't change direction until you meet an obstacle.
-Use you mind to solve the ice slide puzzles!
+地表被完全结冻！ 再三考虑你的移动方向，因为在遇到障碍之前你不能改变方向喔。
+用你的智慧解决难题！
 
-The world has been frozen by the <b>“King of Evil”</b> and it’s no longer a safe place.
+这个世界被 <b>“邪恶帝王”</b> 所冻结，大地荒芜，寸草不生。
 
-Legend has it that a brave hero will defeat the King of Evil and save the kingdom… For this reason every year a person is appointed as “hero” and sent on a journey to try to save it.
+远古的传说中将会出现勇者击败邪恶帝王，拯救王国... 所以每年都会选出一位勇者，并使他踏上旅途，尝试拯救世界。
 
-Now is your time, <b>you have been chosen as this year’s hero!</b> Will you be able to defeat the King of Evil?
+啊现在你被选中了， <b>【恭喜您今年被选为勇者！ 】</b> 你有办法击败邪恶帝王吗？
 
-You will have to travel the world, explore cities, dungeons and mystical caves.
+你必须环游世界，探索城市、地下城还有神秘的洞窟。
 
-<b>Are you ready to solve quests and puzzles in this frozen RPG world?</b>
+<b>准备好在这个角色扮演游戏中完成委托，解决难题吗？ </b>
 
-Over time, you will gain experience points that will allow you to increase your level and you will find money and hidden treasures that you can use to buy stuff and improve yourself.
+随着时间的推移，勇者将获得经验值，以提高您的等级。 发现金币和神秘宝箱，用它们来购买物品和强化自己的力量。
 
-Be careful, the world is full of <b>dangerous enemies</b> ready to attack you!
+你最好注意你的四周，这个世界充满了<b>危险的魔物</b>随时会攻击你！
 
-Keep in mind that most of <b>the floor is frozen</b>, so you can’t stop yourself until you reach a wall, a boulder, or any other type of obstacle.
+记住，大多数的<b>地表都是结冻的</b>，在遇到墙壁、巨石或任何其他类型的障碍物之前，您停不下来。
 
-<b>用你聪慧的大脑找出解决问题的最佳路线!</b>
-
-<b>请注意</b>: 这个游戏目前处于早期测试阶段。
-
-!!:待完成
+<b>用你的智慧找出最佳路径！ </b>
