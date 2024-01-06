@@ -4,9 +4,9 @@
 # crlambda <lm3c@protonmail.ch>, 2021.
 # Lin.KH <dennyxbox890@gmail.com>, 2022.
 # deepdaikon <deepdaikon@tuta.io>, 2023.
-# randint <lancameb@hotmail.com>, 2023.
+# randint <lancameb@hotmail.com>, 2023, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-12-25 14:58+0000\nLast-Translator: randint <lancameb@hotmail.com>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-01-06 16:21+0000\nLast-Translator: randint <lancameb@hotmail.com>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -1582,7 +1582,7 @@ msgstr "四面體者，火也。\n六面體者，地也。\n八面體者，氣�
 
 #: assets/maps/story/19.tmx:
 msgid "You must be thirsty, here's this bottle of water for you."
-msgstr ""
+msgstr "你大概很渴吧，這瓶水給你。"
 
 #: assets/maps/story/19.tmx:
 msgid "Good luck."
@@ -1634,11 +1634,11 @@ msgstr "烈焰地下城 – B1F"
 
 #: assets/maps/story/24_house1.tmx:
 msgid "The computer appears to be broken."
-msgstr ""
+msgstr "這台電腦看起來壞掉了。"
 
 #: assets/maps/story/24_house1.tmx:
 msgid "!\nAn object has materialized here!\nIt's a stone."
-msgstr ""
+msgstr "！\n有東西出現了！\n是顆石頭。"
 
 #: assets/maps/story/24_house1.tmx:
 msgid "A computer turned off. Looks like a key is needed to turn it on."
@@ -1650,19 +1650,19 @@ msgstr "這裡什麼都沒有。"
 
 #: assets/maps/story/55_cableway.tmx:
 msgid "Do you want to go back down the volcano?"
-msgstr ""
+msgstr "你要下山嗎？"
 
 #: assets/maps/story/55_cableway.tmx:
 msgid "I'm scared, I'm scared! What if there is a fault?! What if I get stuck?! If I can't get off anymore?! I suffer from claustrophobia.\nDrinking water helps, maybe.\nYou don't seem comfortable either, here you go."
-msgstr ""
+msgstr "我好怕，我好怕！要是什麼東西出錯了該怎麼辦?! 我要是卡住了怎麼辦?! 要是我下不來怎麼辦?! 我有密閉恐懼症。\n喝口水或許有幫助。\n你看起來也不太舒服，給你喝點水。"
 
 #: assets/maps/story/55_cableway.tmx:
 msgid "On the next ride I really get on it."
-msgstr ""
+msgstr "再等下一班車，我就坐。"
 
 #: assets/maps/story/55_cableway.tmx:
 msgid "My journey is almost over, I'm a little bit sad for this."
-msgstr ""
+msgstr "我的旅途將結束了，有點感傷。"
 
 #: assets/maps/story/21.tmx:
 msgid "Route 2"
@@ -1670,7 +1670,7 @@ msgstr "2 號小徑"
 
 #: assets/maps/story/21.tmx:
 msgid "Greentwig City →"
-msgstr ""
+msgstr "綠枝市 →"
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "Hi, I'm sorry but we're closed. Once this was a busy shop, but now it doesn't even make sense to stay open."
@@ -1690,7 +1690,7 @@ msgstr "我從未見過如此多的灰塵。"
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "Here it's full of snow globes with a miniaturized Mitsu Forest inside. When they were built, snow was a very rare phenomenon here and it was much more appreciated."
-msgstr ""
+msgstr "這裡滿滿的都是雪花球，裝著一個個迷你版的彌津之森。製造這些雪花球時，此處雪還很罕見，更受人們喜愛。"
 
 #: assets/maps/story/10_old_shop.tmx:
 msgid "There are very expensive junk here."
@@ -1706,7 +1706,7 @@ msgstr "從這個窗戶我只能看到一棵樹。"
 
 #: assets/maps/story/t2_03.tmx:
 msgid "WATERY CRYPT – B3F"
-msgstr ""
+msgstr "水下地窖 - B3F"
 
 #: assets/maps/story/t2_03.tmx:
 msgid "We won! We are strong!\nLet's move on."
@@ -1978,55 +1978,55 @@ msgstr ""
 
 #: assets/maps/story/53.tmx:
 msgid "This city is very expensive."
-msgstr ""
+msgstr "這裡物價好貴。"
 
 #: assets/maps/story/53.tmx:
 msgid "It was supposed to be a short holiday but it's lasting longer than expected."
-msgstr ""
+msgstr "本來只打算在這裡待個幾天而已，沒想到待了那麼久。"
 
 #: assets/maps/story/53.tmx:
 msgid "My boyfriend took me here for a short holiday.\nHow wonderful!"
-msgstr ""
+msgstr "我的男友帶我來這裡放鬆個幾天。\n好棒喔！"
 
 #: assets/maps/story/53.tmx:
 msgid "Today is my day off."
-msgstr ""
+msgstr "我今天休假。"
 
 #: assets/maps/story/53.tmx:
 msgid "Don't worry, the bridge is very solid.\nIt has already collapsed 2 times but this time it was done a little better.\nI'm sure we've learned from our mistakes by now.\nDon't worry."
-msgstr ""
+msgstr "不要擔心，這座橋很穩固的。\n以前它曾垮過 2 次，但這次重建的做工比較紮實。\n我相信我們已從失敗中汲取教訓了。\n不要擔心啦。"
 
 #: assets/maps/story/53.tmx:
 msgid "Oh how wonderful!"
-msgstr ""
+msgstr "哇，真棒！"
 
 #: assets/maps/story/53.tmx:
 msgid "Hey, that's not fair.\nI can only see the wall!"
-msgstr ""
+msgstr "欸，不公平啦。\n我視野被牆擋住了啦！"
 
 #: assets/maps/story/53.tmx:
 msgid "Not my problem."
-msgstr ""
+msgstr "怪我咯。"
 
 #: assets/maps/story/53.tmx:
 msgid "I wish I had a camera."
-msgstr ""
+msgstr "好想要有個相機。"
 
 #: assets/maps/story/53.tmx:
 msgid "Ok, that's enough.\nBye."
-msgstr ""
+msgstr "好，先這樣吧。\n掰。"
 
 #: assets/maps/story/53.tmx:
 msgid "From here I can only see the wall."
-msgstr ""
+msgstr "我在這裡只看得見這堵牆。"
 
 #: assets/maps/story/46_house.tmx:
 msgid "Our family has been building boats for over 140 years.\nWe are good at it."
-msgstr ""
+msgstr "我們家世世代代都在建船，建了超過 140 年。\n我們很會造船。"
 
 #: assets/maps/story/46_house.tmx:
 msgid "Welcome to our boat store!\nAre you looking for a boat to explore the vast ocean or to transport your goods?\nI am here to help you find the right boat for your needs!\nMotorized, rowing, sailing, white, coloured, fast, resistant, large, small…"
-msgstr ""
+msgstr "歡迎來到敝店！\n你想要搭船探索大海還是運輸貨物呢？\n我可以幫你找到最合適的船喔！\n動力船、划艇、帆船、白船、五顏六色的船、快艇、大船、小舟…"
 
 #: assets/maps/story/46_house.tmx:
 msgid "These I see all look exactly the same to me…"
@@ -3610,7 +3610,7 @@ msgstr ""
 
 #: assets/maps/story/t2_02.tmx:
 msgid "WATERY CRYPT – B2F"
-msgstr ""
+msgstr "水下地窖 - B2F"
 
 #: assets/maps/story/x3.tmx:
 msgid "XEONJIA TOWER – 3F"
@@ -5038,7 +5038,7 @@ msgstr "這裡是瞭望塔。"
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Watery Crypt."
-msgstr ""
+msgstr "這裡是水下地窖。"
 
 #: assets/data/backpack-items.json:
 msgid "Here is Archocean City."

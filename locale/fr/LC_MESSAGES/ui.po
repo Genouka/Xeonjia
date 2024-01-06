@@ -9,7 +9,7 @@
 # snipe2004 <snipe2004@hotmail.com>, 2023.
 # Vsnmrn <vsnmrn1@protonmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-12-12 15:16+0000\nLast-Translator: Vsnmrn <vsnmrn1@protonmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/ui/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-12-29 22:59+0000\nLast-Translator: Vsnmrn <vsnmrn1@protonmail.com>\nLanguage-Team: French <https://translate.deepdaikon.xyz/projects/xeonjia/ui/fr/>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -141,7 +141,7 @@ msgstr "Taille de la croix directionnelle"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Virtual D-pad dimension.\nTo change its position, long-press the D-pad in the center."
-msgstr "Dimension de la croix directionnelle.\nPour changer sa position, appuyez longuement le centre de la croix directionnelle."
+msgstr "Dimension de la croix directionnelle.\nPour changer sa position, appuyez longuement au centre de la croix directionnelle."
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Game zoom"

@@ -3,9 +3,9 @@
 # This file is distributed under the same license as Xeonjia.
 # Daniel de Sousa Souza Melo <mekoy95190@mmgaklan.com>, 2020.
 # Vinicius <suburbanizar@gmail.com>, 2023.
-# Lucas Melo Sanginetto <lucamsanginetto@outlook.com>, 2023.
+# Lucas Melo Sanginetto <lucamsanginetto@outlook.com>, 2023, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-12-25 14:58+0000\nLast-Translator: Lucas Melo Sanginetto <lucamsanginetto@outlook.com>\nLanguage-Team: Portuguese (Brazil) <https://translate.deepdaikon.xyz/projects/xeonjia/story/pt-BR/>\nLanguage: pt-BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-01-03 02:59+0000\nLast-Translator: Lucas Melo Sanginetto <lucamsanginetto@outlook.com>\nLanguage-Team: Portuguese (Brazil) <https://translate.deepdaikon.xyz/projects/xeonjia/story/pt-BR/>\nLanguage: pt-BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -345,7 +345,7 @@ msgstr "Tenho que me despedir dos meus pais com o botão \"{{inspect-key}}\" ant
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, I have to go to my neighbor first."
-msgstr "Como minha mãe disse, primeiro tenho que ir ao meu vizinho."
+msgstr "Como minha mãe disse, primeiro tenho que ir à minha vizinha."
 
 #: assets/maps/story/1.tmx:
 msgid "From here on is the frozen floor.\nI'll slide until I reach an obstacle.\nSo I have to use my mind to figure out the best path."
@@ -917,7 +917,7 @@ msgstr ""
 
 #: assets/maps/story/14.tmx:
 msgid "← Pharmacy"
-msgstr ""
+msgstr "← Farmácia"
 
 #: assets/maps/story/14.tmx:
 msgid "I guess this rock has just been smoothed out."
@@ -1041,15 +1041,15 @@ msgstr ""
 
 #: assets/maps/story/28_lp_shop.tmx:
 msgid "Pharmacy"
-msgstr ""
+msgstr "Farmácia"
 
 #: assets/maps/story/28_lp_shop.tmx:
 msgid "Welcome to my shop!"
-msgstr ""
+msgstr "Bem-vindo à minha loja!"
 
 #: assets/maps/story/28_lp_shop.tmx:
 msgid "pharmacist"
-msgstr ""
+msgstr "farmacêutica"
 
 #: assets/maps/story/28_lp_shop.tmx:
 msgid "I wanted to buy some medicines but they don't have the ones I like."
@@ -1237,7 +1237,7 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Let me know if you need help."
-msgstr ""
+msgstr "Me avise se precisar de ajuda."
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I think that all the writings on the six rocks must be true to invoke the spirit."
@@ -1389,7 +1389,7 @@ msgstr ""
 
 #: assets/maps/story/24.tmx:
 msgid "I can see the inside of the Pharmacy."
-msgstr ""
+msgstr "Posso ver o interior da Farmácia."
 
 #: assets/maps/story/24.tmx:
 msgid "Greentwig City – Regional capital"
@@ -2585,7 +2585,7 @@ msgstr "Vá buscar a comida da vizinha."
 
 #: assets/maps/story/1_home.tmx:
 msgid "The food the neighbor gave you looks tasty!"
-msgstr ""
+msgstr "A comida que a vizinha te deu parece saborosa!"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Hi {{hero}}, everything okay?\nYou missed your mom, right?"
@@ -2893,11 +2893,11 @@ msgstr ""
 
 #: assets/maps/story/3_house1.tmx:
 msgid "A few meters from here is the Mitsu Forest.\nOnce it attracted many tourists as it was considered a sacred place, but now it's dangerous and infested with monsters."
-msgstr ""
+msgstr "A poucos metros daqui fica a Floresta Mitsu.\nAntigamente atraía muitos turistas por ser considerada um lugar sagrado, mas agora é perigosa e infestada de monstros."
 
 #: assets/maps/story/3_house1.tmx:
 msgid "A few meters from here is the Mitsu Forest."
-msgstr ""
+msgstr "A poucos metros daqui fica a Floresta Mitsu."
 
 #: assets/maps/story/28_house.tmx:
 msgid "Hoarfrost Team members came to our house because they wanted a gem that I found on the ground.\nWe managed to keep it hidden from them but we don't want to have problems anymore.\nWe don't even need it after all, can we give it to you?"
@@ -3661,7 +3661,7 @@ msgstr ""
 
 #: assets/maps/story/3.tmx:
 msgid "The ice is so slippery, have you noticed?\nI feel more comfortable on the snow."
-msgstr ""
+msgstr "O gelo é tão escorregadio, já percebeu?\nMe sinto mais confortável na neve."
 
 #: assets/maps/story/3.tmx:
 msgid "It seems that once there was a path here."
@@ -4497,7 +4497,7 @@ msgstr ""
 
 #: assets/maps/story/4.tmx:
 msgid "On the ground it's easy to find XEON ¤ stones that you can use to buy items in shops."
-msgstr ""
+msgstr "No chão é fácil encontrar pedras XEON ¤ que você pode usar para comprar itens em lojas."
 
 #: assets/maps/story/31_house2.tmx:
 msgid "Greentwig City is the administrative center of the region.\nNowadays corruption, poverty and crime are rampant, though."
@@ -4577,7 +4577,7 @@ msgstr ""
 
 #: assets/maps/tilesets/tower.tsx:
 msgid "This is a wall."
-msgstr ""
+msgstr "Isto é uma parede."
 
 #: assets/maps/tilesets/lab.tsx:
 msgid "A table."
@@ -4685,7 +4685,7 @@ msgstr ""
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "This is a pharmacy."
-msgstr ""
+msgstr "Isto é uma farmácia."
 
 #: assets/maps/tilesets/outdoor-2.tsx:
 msgid "signpost"
@@ -4721,7 +4721,7 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "lumberjack"
-msgstr ""
+msgstr "lenhador"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "young-girl"
@@ -4729,7 +4729,7 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "youngster"
-msgstr ""
+msgstr "jovem"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "elderly"
@@ -4737,7 +4737,7 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "guy"
-msgstr ""
+msgstr "cara"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "old-man"
@@ -4745,7 +4745,7 @@ msgstr ""
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "adventurer"
-msgstr ""
+msgstr "aventureiro"
 
 #: assets/maps/tilesets/npc_common.tsx:
 msgid "dude"
@@ -4813,7 +4813,7 @@ msgstr "Uma cadeira."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "A painting that depicts this area long ago."
-msgstr ""
+msgstr "Uma pintura que retrata esta área há muito tempo."
 
 #: assets/maps/tilesets/indoor.tsx:
 msgid "It's full of books here."
@@ -4953,19 +4953,19 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Fresh Water"
-msgstr ""
+msgstr "Água Fresca"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of water. It restores 20 HP."
-msgstr ""
+msgstr "Uma garrafa de água. Restaura 20 HP."
 
 #: assets/data/backpack-items.json:
 msgid "Pomegranate juice"
-msgstr ""
+msgstr "Suco de romã"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of pomegranate juice. It restores 50 HP."
-msgstr ""
+msgstr "Uma garrafa de suco de romã. Restaura 50 HP."
 
 #: assets/data/backpack-items.json:
 msgid "Kiwi juice"
@@ -4973,7 +4973,7 @@ msgstr "Suco de kiwi"
 
 #: assets/data/backpack-items.json:
 msgid "A bottle of kiwi juice. It restores 70 HP."
-msgstr ""
+msgstr "Uma garrafa de suco de kiwi. Restaura 70 HP."
 
 #: assets/data/backpack-items.json:
 msgid "Healer"
@@ -4997,7 +4997,7 @@ msgstr "Caixa de Comida"
 
 #: assets/data/backpack-items.json:
 msgid "A small box full of rice, vegetables and beans. It restores 100 HP."
-msgstr ""
+msgstr "Uma caixinha cheia de arroz, legumes e feijão. Restaura 100 HP."
 
 #: assets/data/backpack-items.json:
 msgid "HP UP +5"

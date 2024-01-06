@@ -6,19 +6,19 @@
 # 苏汀 <753594451@qq.com>, 2022.
 # deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 # 鸞瑤綾舞 <user3678169@163.com>, 2023.
-# Super12138 <cutewrp@163.com>, 2023.
+# Super12138 <cutewrp@163.com>, 2023, 2024.
 # hooay233 <hoorayof_hooay@163.com>, 2023.
 # libamidi <scrollofamidi@outlook.com>, 2023.
 # Alex Black <limbobytes@outlook.com>, 2023.
 # 李前 <914846037@qq.com>, 2023.
-# 林波 <limbobytes@outlook.com>, 2023.
+# 林波 <limbobytes@outlook.com>, 2023, 2024.
 # tonykouki <1020070531@qq.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-12-20 06:17+0000\nLast-Translator: 林波 <limbobytes@outlook.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-01-01 15:59+0000\nLast-Translator: 林波 <limbobytes@outlook.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
-msgstr "水下地窖 - B1F"
+msgstr "水下地窖 - B1层"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "We are underground."
@@ -626,7 +626,6 @@ msgid "Route 10"
 msgstr "10 号小径"
 
 #: assets/maps/story/75.tmx:
-#, fuzzy
 msgid "How much lavaaa!"
 msgstr "好多岩浆啊啊啊！"
 
@@ -760,7 +759,7 @@ msgstr "米拉是树林意志的化身。"
 
 #: assets/maps/story/75.tmx:
 msgid "What?!\nAnd why didn't you tell me sooner?!"
-msgstr ""
+msgstr "什么？？\n你为什么不早告诉我？！"
 
 #: assets/maps/story/75.tmx:
 msgid "Last time you were in a hurry, there was no opportunity."
