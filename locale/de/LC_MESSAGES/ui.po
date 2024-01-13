@@ -4,7 +4,7 @@
 # Hrela <6d8fd379d7b549a5+xeonjia-weblate@posteo.net>, 2020.
 # anselm-helbig <gh@mnemonikk.org>, 2020.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021, 2022, 2023.
-# DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023.
+# DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023, 2024.
 # zwergwolf <sadness@gmx.de>, 2021.
 # araccaine <arac.caine@posteo.de>, 2021.
 # Vri <vrifox@vrifox.cc>, 2022.
@@ -12,7 +12,7 @@
 # Sebastian <abba@use.startmail.com>, 2023.
 # Iwan Gabovitch <qvolloc@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-10-28 18:40+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-01-13 13:53+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/ui/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -464,7 +464,7 @@ msgstr "Wo bin ich? Wie bin ich hier gelandet?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Mitsu Forest used to be bigger, it was deforested to build Greentwig City."
-msgstr ""
+msgstr "Der Mitsuwald war früher größer, wurde jedoch abgeholzt um Stadt Grünzweig zu bauen."
 
 #: lib/game/utils/event_manager.dart:
 msgid "The Xeonjia Tower is the tallest building in the Kingdom."

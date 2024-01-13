@@ -2,7 +2,7 @@
 # Copyright (C) 2020 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
 # anselm-helbig <gh@mnemonikk.org>, 2020.
-# DeepDaikon <deepdaikon@tuta.io>, 2020, 2021, 2022, 2023.
+# DeepDaikon <deepdaikon@tuta.io>, 2020, 2021, 2022, 2023, 2024.
 # Swann Fournial <s.fournial@protonmail.com>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2021, 2023.
 # araccaine <arac.caine@posteo.de>, 2021.
@@ -15,7 +15,7 @@
 # xlf1024 <pgc79727@zbock.com>, 2023.
 # Iwan Gabovitch <qvolloc@gmail.com>, 2023.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-11-28 01:56+0000\nLast-Translator: J. Lavoie <j.lavoie@net-c.ca>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-01-13 13:53+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -3195,7 +3195,7 @@ msgstr "Ich sollte Milla rufen, indem ich auf das Blattsymbol rechts oben am Bil
 
 #: assets/maps/story/48.tmx:
 msgid "A small pond."
-msgstr ""
+msgstr "Ein kleiner Teich."
 
 #: assets/maps/story/60.tmx:
 msgid "I don't like boating."
