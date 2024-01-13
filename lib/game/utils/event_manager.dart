@@ -494,7 +494,7 @@ Environment setEnvironment(XeonjiaGame gameRef) {
     if (gameRef.map.milla == null) {
       var dialogs = [
         [
-          'Mitsu Forest used to be bigger, it was deforested to build Melhopolis.'
+          'Mitsu Forest used to be bigger, it was deforested to build Greentwig City.'
               .i18n
         ],
         ['The Xeonjia Tower is the tallest building in the Kingdom.'.i18n],
