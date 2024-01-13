@@ -138,8 +138,10 @@ mixin Walker on BasicComponent {
       } else if (direction!.dy > 0) {
         y = collidedRect.top - height;
       }
-      for (final e in collidedComponents
-          .sorted((a, b) => a.priority.compareTo(b.priority))) {
+      for (final e in collidedComponents.sorted((a, b) =>
+          a is DirectionChangerComponent
+              ? 1
+              : a.priority.compareTo(b.priority))) {
         onCollision(e, wasStationary);
       }
       hasMoved();
