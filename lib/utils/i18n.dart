@@ -22,6 +22,7 @@ final List<Locale> supportedLocales = [
   const Locale('be'),
   const Locale('bn'),
   const Locale('id'),
+  const Locale('kk'),
   const Locale('nn'),
   const Locale('pl'),
   const Locale('uk'),
@@ -35,6 +36,7 @@ const languagesWithSpecialCharacters = [
 const languagesWithNonSupportedCharacters = [
   'be',
   'bn',
+  'kk',
   'vi',
 ];
 
@@ -55,6 +57,7 @@ const Map<String, List<String>> languageNames = {
   'ru': ['Russian', 'Русский'],
   'nn': ['Norwegian Nynorsk', 'Nynorsk'],
   'ja': ['Japanese', '日本語'],
+  'kk': ['Kazakh', 'Қазақша'],
   'de': ['German', 'Deutsch'],
   'ko': ['Korean', '한국어'],
   'fr': ['French', 'Français'],
