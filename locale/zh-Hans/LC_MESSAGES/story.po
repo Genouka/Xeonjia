@@ -714,6 +714,10 @@ msgid "Here I am!"
 msgstr "我在这儿!"
 
 #: assets/maps/story/75.tmx:
+msgid "fire spirit"
+msgstr ""
+
+#: assets/maps/story/75.tmx:
 msgid "Milla! You need me?"
 msgstr "米拉！你需要我吗？"
 
@@ -831,10 +835,6 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "There is lava here."
-msgstr ""
-
-#: assets/maps/story/75.tmx:
-msgid "fire spirit"
 msgstr ""
 
 #: assets/maps/story/68.tmx:
@@ -3207,6 +3207,10 @@ msgstr ""
 
 #: assets/maps/story/48.tmx:
 msgid "I should try calling Milla by clicking on the leaf icon at the top right of the screen."
+msgstr ""
+
+#: assets/maps/story/48.tmx:
+msgid "A small pond."
 msgstr ""
 
 #: assets/maps/story/60.tmx:

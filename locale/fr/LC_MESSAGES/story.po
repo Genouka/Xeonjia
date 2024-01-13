@@ -710,6 +710,10 @@ msgid "Here I am!"
 msgstr "Me voici !"
 
 #: assets/maps/story/75.tmx:
+msgid "fire spirit"
+msgstr "esprit du feu"
+
+#: assets/maps/story/75.tmx:
 msgid "Milla! You need me?"
 msgstr "Milla ! Tu as besoin de moi ?"
 
@@ -828,10 +832,6 @@ msgstr "Ok, à plus tard !"
 #: assets/maps/story/75.tmx:
 msgid "There is lava here."
 msgstr "Il y a de la lave ici."
-
-#: assets/maps/story/75.tmx:
-msgid "fire spirit"
-msgstr "esprit du feu"
 
 #: assets/maps/story/68.tmx:
 msgid "How many meters above sea level are we?"
@@ -3188,6 +3188,10 @@ msgstr "Essaie de m'appeler pour voir si tu comprends.\nMaintenant, je vais dans
 #: assets/maps/story/48.tmx:
 msgid "I should try calling Milla by clicking on the leaf icon at the top right of the screen."
 msgstr "Je devrais essayer d'appeler Milla en cliquant sur l'icône de la feuille en haut à droite de l'écran."
+
+#: assets/maps/story/48.tmx:
+msgid "A small pond."
+msgstr ""
 
 #: assets/maps/story/60.tmx:
 msgid "I don't like boating."

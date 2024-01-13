@@ -460,8 +460,8 @@ msgid "Where am I? How did I end up here?"
 msgstr "Où suis-je ? Comment suis-je arrivé ici ?"
 
 #: lib/game/utils/event_manager.dart:
-msgid "Mitsu Forest used to be bigger, it was deforested to build Melhopolis."
-msgstr "La Forêt Mitsu était plus grande avant ; elle a été rasée en partie pour bâtir Melhopolis."
+msgid "Mitsu Forest used to be bigger, it was deforested to build Greentwig City."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "The Xeonjia Tower is the tallest building in the Kingdom."

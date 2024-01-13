@@ -455,7 +455,7 @@ msgid "Where am I? How did I end up here?"
 msgstr ""
 
 #: lib/game/utils/event_manager.dart:
-msgid "Mitsu Forest used to be bigger, it was deforested to build Melhopolis."
+msgid "Mitsu Forest used to be bigger, it was deforested to build Greentwig City."
 msgstr ""
 
 #: lib/game/utils/event_manager.dart:
