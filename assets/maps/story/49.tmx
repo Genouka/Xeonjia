@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="79">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="25" height="18" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#e1f5fe" nextlayerid="14" nextobjectid="81">
  <properties>
   <property name="map-name" value="Route 6"/>
   <property name="milla">(if (!get &quot;049-milla-fresh-water&quot;)
@@ -18,7 +18,7 @@
  <tileset firstgid="472" source="../tilesets/basic.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA51UwWoCMRA19NKyFCw9BITqpbCXlt56adFrvfgX3i34AVIRl9qCFu2lreCp/9CjX+YbTOiQnclGHzyGJJv3djKTLEyttojwAyTkLlrEDGy5sYYC61NHD9r7BHbZHOlapncf6OYRn9Aj/KeO2TOGEdbfGF+C77lHm61V5a9pEF8jHg3w8gBtzWMW5KLlUYWWoiHlEtZDq10vsaYpHlbRivXN3PX2xOmMWZ9LHv4MqHf/BMZQCDlIHvxMtuafGxcJp4i3jmfC/1Z58HP5NWUS6ohN8By8PsKD10PyaAc+NywXXxeqhRW8vYe/s+Fd/WLjLvO5Ai+UOj1g/tGUPXi+A/DZzfcRhwfeIS0PP56xfEg3O0K7ykN7e1KwxJ4V+CloEubCXUp5H/27T/Eb/AHXZl/fd6F3eX9IGr6WJ+Cd0d8G6Vx2qYAtJQgHAAA=
+   H4sIAAAAAAAAA51Uu2pCQRB1sYlIwJDigpDYCDYROxtF29jkL9In4AdIgkR8gAa1SRRS5R9S5styBnfJMM7sXj1wGHb37jl3dmZ35QqFVYTvIKHhY4ZYBmt+bGGC9TfPANp7Dw7YHOlmTK8tdBsRH+kh/6nvDoxhhPU544v4nnv02Foqf0uDOI14VMHrE7Qtj5nIxcojhZqhoeUi62HV7iFRU0Jej8zQivXN0vf22Ou8sj7XPMIZUO/+KIxhouSgefAz+XX//PKRcIHY9Cwp/5vy4Ofy7Y5JqCDegpdgXXgQUh68HppHT/jcsVxCXagWmbM9wp2Vd/WDjQfM5wa8MurUwXzXHXvwM30Cn/38I+LwxDtk5RHGM5YP6ZbP0E55WG9PHqyxZwNuFU3CUrlLed7H8O5T/AR34N4d6rtQepf3h6YRalkEW85+G7Rz+QPl4dI0CAcAAA==
   </data>
  </layer>
  <layer id="6" name="Tile Layer 2" width="25" height="18">
@@ -124,6 +124,16 @@
   <object id="77" gid="484" x="192" y="240" width="16" height="16">
    <properties>
     <property name="healthPointsDelta" type="int" value="120"/>
+   </properties>
+  </object>
+  <object id="79" gid="391" x="240" y="112" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;A small pond.&quot;)))"/>
+   </properties>
+  </object>
+  <object id="80" gid="391" x="272" y="176" width="16" height="16">
+   <properties>
+    <property name="action" value="(dialog '((&quot;A small pond.&quot;)))"/>
    </properties>
   </object>
  </objectgroup>
