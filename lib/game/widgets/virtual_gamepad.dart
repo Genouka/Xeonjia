@@ -267,7 +267,8 @@ class _VirtualDPadState extends State<VirtualDPad> {
                   while (direction != null &&
                       widget.gameRef.map.id == currentMapId &&
                       widget.gameRef.isNotPaused &&
-                      !moving) {
+                      !moving &&
+                      widget.gameRef.user!.isMyTurn) {
                     widget.gameRef.movePlayer(direction!, slow: true);
                     await Future.delayed(const Duration(milliseconds: 50));
                   }
