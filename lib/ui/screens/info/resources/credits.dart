@@ -17,11 +17,14 @@ ${'Thanks to everyone who contributed to this project!'.i18n}
     * Andrey
     * anselm-helbig
     * araccaine
+    * Bruno Cabrita
     * cannnAvar
+    * CaoWangrenbo
     * ctntt
     * deepdaikon
     * Denis Proleev
     * d4f5409d
+    * Filip-K-87
     * Fontan 030
     * hamaryns
     * hooay233
@@ -34,9 +37,10 @@ ${'Thanks to everyone who contributed to this project!'.i18n}
     * KMX
     * libamidi
     * liimee
+    * limbobytes
     * Lin.KH
     * Liu Tao
-    * Luán yáo líng wu
+    * Lucas Melo Sanginetto
     * Mark Badrus
     * Martin
     * Muha Aliss
@@ -49,6 +53,7 @@ ${'Thanks to everyone who contributed to this project!'.i18n}
     * Pink Serenity
     * PulsarTech
     * Quang Trung
+    * randint
     * Satou
     * Sean R.
     * Sebastian
@@ -59,7 +64,9 @@ ${'Thanks to everyone who contributed to this project!'.i18n}
     * Swann Fournial
     * Thothorg
     * Tomasz K.
+    * tonykouki
     * Tri-fan
+    * user3678169
     * Viktória Nagy
     * Vinicius
     * Vri
@@ -69,4 +76,5 @@ ${'Thanks to everyone who contributed to this project!'.i18n}
     * YottaMxt
     * zwergwolf
     * 4545duckling
+    * 914846037
 ''';
