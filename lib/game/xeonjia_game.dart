@@ -455,7 +455,11 @@ class XeonjiaGame extends FlameGame
     environment.defineSymbol(
         Sym('actor'), Intrinsic('actor', 0, (Cell? x) => actor ?? playerOne!));
     environment.defineSymbol(
-        Sym('user-name'), (user?.name ?? mainCharacter.name).toUpperCase());
+        Sym('user-name'),
+        (user?.isPlayerOne ?? true
+                ? mainCharacter.name
+                : (user?.name?.i18n ?? mainCharacter.name))
+            .toUpperCase());
     environment.defineSymbol(Sym('minutes-played'),
         (mainCharacter.minutesPlayed + elapsed / 60).round());
     _actionContinuation =
