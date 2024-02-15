@@ -6,7 +6,7 @@
 # deepdaikon <deepdaikon@tuta.io>, 2023.
 # randint <lancameb@hotmail.com>, 2023, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-01-06 16:21+0000\nLast-Translator: randint <lancameb@hotmail.com>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-01-28 14:22+0000\nLast-Translator: randint <lancameb@hotmail.com>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -1710,43 +1710,43 @@ msgstr "水下地窖 - B3F"
 
 #: assets/maps/story/t2_03.tmx:
 msgid "We won! We are strong!\nLet's move on."
-msgstr ""
+msgstr "贏了！我們超強！\n走吧。"
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "How is it possible that there is all this built under the bridge?"
-msgstr ""
+msgstr "怎麼可能啊，這橋下怎麼蓋了那麼多東西？"
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "Am I wasting my life?"
-msgstr ""
+msgstr "我在浪費人生嗎？"
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "Did I forget to sleep this week?"
-msgstr ""
+msgstr "我這週是不是忘記要睡覺了？"
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "Does this make any sense?"
-msgstr ""
+msgstr "這有任何道理嗎？"
 
 #: assets/maps/story/53_house2_2.tmx:
 msgid "Bugs? Bugs? There are no bugs here."
-msgstr ""
+msgstr "蟲？蟲？這裡沒有蟲。"
 
 #: assets/maps/story/74.tmx:
 msgid "Are you interested in this stone? I just found it but I can't take it with me, it weighs too much."
-msgstr ""
+msgstr "你對這顆石頭有興趣嗎？我剛撿到的，但是有點太重了我不能帶走。"
 
 #: assets/maps/story/74.tmx:
 msgid "This is a very strange stone…"
-msgstr ""
+msgstr "這顆石頭很奇特…"
 
 #: assets/maps/story/74.tmx:
 msgid "In my opinion that stone shouldn't have been here."
-msgstr ""
+msgstr "我認為，那顆石頭不該在這的。"
 
 #: assets/maps/story/74.tmx:
 msgid "In the ardent embrace, life is born again"
-msgstr ""
+msgstr "在熱情的擁抱中，生命再次誕生"
 
 #: assets/maps/story/2_house.tmx:
 msgid "You are the chosen one for this year, right?\nMy son was too, many years ago."
@@ -1758,7 +1758,7 @@ msgstr "不幸的是，他沒能打敗邪惡帝王……"
 
 #: assets/maps/story/2_house.tmx:
 msgid "Now you're unemployed, huh?"
-msgstr ""
+msgstr "你失業了，呵？"
 
 #: assets/maps/story/2_house.tmx:
 msgid "Many before you have failed, but I am sure you will handle it right."
@@ -1766,7 +1766,7 @@ msgstr "在你成為勇者之前有很多人失敗了，但我相信你一定會
 
 #: assets/maps/story/2_house.tmx:
 msgid "I knew you would make it."
-msgstr ""
+msgstr "我就知道你可以的。"
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "Welcome to the City Hall."
@@ -1774,7 +1774,7 @@ msgstr "歡迎來到市政廳。"
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "{{hero}}!\nNice to meet you, I am ON VII, the king of the Water Region.\nI was told you freed Hana's Tunnel from the Hoarfrost Team, thanks a lot!\nThe tunnel had been blocked for weeks."
-msgstr ""
+msgstr "{{hero}}！\n很高興見到你，朕乃 ON 七世，水之王領。\n聽說你把哈娜隧道從寒冰旅團手中搶了回來，真是謝謝你啊！\n那隧道已經被封住好幾個星期了。"
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "My duty!\nBy the way, King Xe III gave me this package for you."
@@ -1858,7 +1858,7 @@ msgstr "滋… 滋… 滋…"
 
 #: assets/maps/story/25.tmx:
 msgid "phone"
-msgstr ""
+msgstr "手機"
 
 #: assets/maps/story/25.tmx:
 msgid "What's happening?"
@@ -2962,11 +2962,11 @@ msgstr ""
 
 #: assets/maps/story/46.tmx:
 msgid "The Hana's Tunnel connects the 2 parts of the region."
-msgstr ""
+msgstr "哈娜隧道連接了兩邊。"
 
 #: assets/maps/story/46.tmx:
 msgid "Hana's Tunnel"
-msgstr "漢娜的隧道"
+msgstr "哈娜隧道"
 
 #: assets/maps/story/46.tmx:
 msgid "Boats boats! – Custom-made boat store"

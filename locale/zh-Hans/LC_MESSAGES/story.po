@@ -13,8 +13,9 @@
 # 李前 <914846037@qq.com>, 2023.
 # 林波 <limbobytes@outlook.com>, 2023, 2024.
 # tonykouki <1020070531@qq.com>, 2023.
+# 忘了叫啥 <1479949473@qq.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-01-01 15:59+0000\nLast-Translator: 林波 <limbobytes@outlook.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-02-15 04:22+0000\nLast-Translator: 林波 <limbobytes@outlook.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -715,7 +716,7 @@ msgstr "我在这儿!"
 
 #: assets/maps/story/75.tmx:
 msgid "fire spirit"
-msgstr ""
+msgstr "火灵"
 
 #: assets/maps/story/75.tmx:
 msgid "Milla! You need me?"
@@ -767,15 +768,15 @@ msgstr "什么？？\n你为什么不早告诉我？！"
 
 #: assets/maps/story/75.tmx:
 msgid "Last time you were in a hurry, there was no opportunity."
-msgstr ""
+msgstr "上次你好像很急，没机会和你谈啊。"
 
 #: assets/maps/story/75.tmx:
 msgid "There is always an opportunity to say something like this!"
-msgstr ""
+msgstr "这些话总是可以找到机会讲的！"
 
 #: assets/maps/story/75.tmx:
 msgid "I've been hearing that a lot lately."
-msgstr ""
+msgstr "哈哈... 最近大家一直跟我说这句话。"
 
 #: assets/maps/story/75.tmx:
 msgid "Don't worry Shen. I, too, recently found it out."
