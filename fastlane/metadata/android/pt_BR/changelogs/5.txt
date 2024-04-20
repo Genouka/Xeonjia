@@ -1,0 +1,3 @@
+* Adicionadas algumas animações
+* Habilitada a orientação paisagem
+* Correções de bugs

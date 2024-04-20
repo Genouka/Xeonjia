@@ -14,8 +14,9 @@
 # xlf1024 <felix.hopmann@mnet-mail.de>, 2023.
 # xlf1024 <pgc79727@zbock.com>, 2023.
 # Iwan Gabovitch <qvolloc@gmail.com>, 2023.
+# Carlos Henrique Maschio Martins <carlosmartins00098@gmail.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-01-13 13:53+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-02-24 04:10+0000\nLast-Translator: Carlos Henrique Maschio Martins <carlosmartins00098@gmail.com>\nLanguage-Team: German <https://translate.deepdaikon.xyz/projects/xeonjia/story/de/>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -1047,7 +1048,7 @@ msgstr "Picknick-Platz ↑"
 
 #: assets/maps/story/7.tmx:
 msgid "Forest Center ↓"
-msgstr "Waldzentrum ↓"
+msgstr "Wald Zentrum ↓"
 
 #: assets/maps/story/28_lp_shop.tmx:
 msgid "Pharmacy"

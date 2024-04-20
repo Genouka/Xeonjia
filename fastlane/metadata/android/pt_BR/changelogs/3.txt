@@ -1,0 +1,3 @@
+* Adicionado o modo Multiplayer
+* Gamepad melhorado
+* Correções de bugs

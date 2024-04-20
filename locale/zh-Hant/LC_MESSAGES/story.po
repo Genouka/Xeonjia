@@ -6,7 +6,7 @@
 # deepdaikon <deepdaikon@tuta.io>, 2023.
 # randint <lancameb@hotmail.com>, 2023, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-01-28 14:22+0000\nLast-Translator: randint <lancameb@hotmail.com>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-04-20 08:01+0000\nLast-Translator: randint <lancameb@hotmail.com>\nLanguage-Team: Chinese (Traditional) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hant/>\nLanguage: zh-Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -74,7 +74,7 @@ msgstr "我相信你也能拿到另外兩個徽章。"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Since you're heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here."
-msgstr "既然你要往東走，你能幫我一個忙嗎？你能把這個包裹送到水之王領嗎？它位於這裡以東幾公里處。"
+msgstr "既然你要往東走，你能幫我一個忙嗎？你能把這個包裹送到水之王領嗎？往東走幾公里就到了。"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes of course, I'll give it to him."
@@ -442,7 +442,7 @@ msgstr "一個石塊。"
 
 #: assets/maps/story/34.tmx:
 msgid "Hexa Cave"
-msgstr "赫薩洞窟"
+msgstr "六角洞窟"
 
 #: assets/maps/story/38.tmx:
 msgid "Aquaville Town"
@@ -1778,31 +1778,31 @@ msgstr "{{hero}}！\n很高興見到你，朕乃 ON 七世，水之王領。\n�
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "My duty!\nBy the way, King Xe III gave me this package for you."
-msgstr ""
+msgstr "這是我應做的！\n對了，Xe 三世託我轉交這個包裹。"
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "Oh thank you, it's medicine for my back pain.\nYou know, sitting all day…\nSome plants in the Mitsu Forest are miraculous to solve these problems.\nWhere are you headed?"
-msgstr ""
+msgstr "謝謝你，最近我腰酸背痛，要吃藥。\n一整天坐著不動，真的是……\n彌津之森裡有些植物有神奇的藥效，可以處理這些毛病。\n你要去哪裡？"
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "I have to go to the Fire Region."
-msgstr ""
+msgstr "我要去火之領域。"
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "Oh, do you want to leave the region already?\nThis saddens me.\nTo go to the Fire Region you have to take a boat that you find west of here.\nYou need my written permission, here it is."
-msgstr ""
+msgstr "喔，你已經要離開水之領域了？\n有點難過呢。\n要去火之領域得去西邊搭船。\n你將會需要我簽過的通行證，給你。"
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "Thank you!\nI will come back sooner or later."
-msgstr ""
+msgstr "謝謝！\n我不久後會回來的。"
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "In my region you are always welcome."
-msgstr ""
+msgstr "歡迎你隨時回來看看。"
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "Welcome back hero!\nI'm glad you came back to visit us."
-msgstr ""
+msgstr "歡迎回來！\n很高興再次見到你。"
 
 #: assets/maps/story/32.tmx:
 msgid "Relax and enjoy the sea."
@@ -1814,7 +1814,7 @@ msgstr "哇！我以前從未見過大海！"
 
 #: assets/maps/story/32.tmx:
 msgid "It's very calm and relaxing."
-msgstr ""
+msgstr "大海真令人平靜。"
 
 #: assets/maps/story/32.tmx:
 msgid "The sea is very calm and relaxing."
@@ -1850,7 +1850,7 @@ msgstr "你抓不到我的！"
 
 #: assets/maps/story/25.tmx:
 msgid "You can't run away from here.\nDid you think you could get away with it that easily?\nThe fact that you tried to escape and not to fight makes it clear how little value you are.\nI hope next year's \"hero\" is a little braver than you, at least it would be a bit more fun for us."
-msgstr ""
+msgstr "你不能逃離這裡。\n你還真的以為這樣就可以逃過一劫了？\n你還真是沒用，這畏戰而逃的模樣。\n希望明年的「英雄」比你更勇敢一些些，至少對我們更有趣。"
 
 #: assets/maps/story/25.tmx:
 msgid "Bzzt… Bzzt… Bzzt…"
@@ -1934,47 +1934,47 @@ msgstr "不是，小屁孩。我們剛才是與寒冰旅團的領導人進行溝
 
 #: assets/maps/story/71.tmx:
 msgid "Route 9"
-msgstr ""
+msgstr "9號小徑"
 
 #: assets/maps/story/71.tmx:
 msgid "We won! We are strong!\nI go to rest."
-msgstr ""
+msgstr "我們贏了！我們超強！\n我要去休息了。"
 
 #: assets/maps/story/71.tmx:
 msgid "* Milla disappears into the leaf *"
-msgstr ""
+msgstr "* 米拉被吸到葉子裡消失 *"
 
 #: assets/maps/story/x8.tmx:
 msgid "XEONJIA TOWER – 8F"
-msgstr ""
+msgstr "XEONJIA 塔 - 8F"
 
 #: assets/maps/story/x8.tmx:
 msgid "An easy win.\nLet's move on."
-msgstr ""
+msgstr "真簡單。\n走吧。"
 
 #: assets/maps/story/x8.tmx:
 msgid "Stay focused!"
-msgstr ""
+msgstr "保持專注！"
 
 #: assets/maps/story/69_house2.tmx:
 msgid "We pride ourselves on our traditions, such as the fire dance, to honor the power of the volcano and appease its spirits."
-msgstr ""
+msgstr "我們以文化傳統為傲。比如說火之舞，彰顯火山的神威並取悅神靈們。"
 
 #: assets/maps/story/69_house2.tmx:
 msgid "Legends tell of an ancient guardian who protects the volcano.\nWe see it as a symbol of hope and security."
-msgstr ""
+msgstr "傳說中火山有個古老的守護者。\n對我們來說，這象徵希望和安全。"
 
 #: assets/maps/story/53.tmx:
 msgid "Archocean City"
-msgstr ""
+msgstr "元海城"
 
 #: assets/maps/story/53.tmx:
 msgid "I like this city!"
-msgstr ""
+msgstr "我好愛這個城市！"
 
 #: assets/maps/story/53.tmx:
 msgid "Hey, welcome to Archocean City!\nWe have the best view in the whole Kingdom!\nHere we live between the sky and the water, have you noticed that?"
-msgstr ""
+msgstr "嘿，歡迎來到元海城！\n我們有全王國底下最棒的風景！\n我們住在天和海的交界，你有發現嗎？"
 
 #: assets/maps/story/53.tmx:
 msgid "This city is very expensive."
@@ -2030,23 +2030,23 @@ msgstr "歡迎來到敝店！\n你想要搭船探索大海還是運輸貨物呢�
 
 #: assets/maps/story/46_house.tmx:
 msgid "These I see all look exactly the same to me…"
-msgstr ""
+msgstr "它們看起來完全一模一樣……"
 
 #: assets/maps/story/46_house.tmx:
 msgid "It's because you don't understand anything about boats!"
-msgstr ""
+msgstr "那是因為你不懂船啦！"
 
 #: assets/maps/story/46_house.tmx:
 msgid "Remember, a good boat can mean the difference between life and death in these dangerous seas!"
-msgstr ""
+msgstr "記住，船的好壞會左右你在這洶湧的海域中的生死！"
 
 #: assets/maps/story/46_house.tmx:
 msgid "Hmm, should I take the faster boat or the one with the beer fridge?\nI don't know, I don't know…"
-msgstr ""
+msgstr "嗯，我該搭比較快的這艘，還是有小冰箱的那艘？\n好難決定，好難決定……"
 
 #: assets/maps/story/x4.tmx:
 msgid "XEONJIA TOWER – 4F"
-msgstr ""
+msgstr "XEONJIA 塔 – 4F"
 
 #: assets/maps/story/35.tmx:
 msgid "This boulder is very heavy."
@@ -2062,47 +2062,47 @@ msgstr "一塊沉重的石頭。"
 
 #: assets/maps/story/35.tmx:
 msgid "↑ Hexa Cave"
-msgstr "↑ 赫薩洞窟"
+msgstr "↑ 六角洞窟"
 
 #: assets/maps/story/35.tmx:
 msgid "Aquaville Town →"
-msgstr ""
+msgstr "水之鎮 →"
 
 #: assets/maps/story/21_house.tmx:
 msgid "I hate product placements."
-msgstr ""
+msgstr "我痛恨業配。"
 
 #: assets/maps/story/21_house.tmx:
 msgid "They are playing Quinb! It looks like they are having a lot of fun!"
-msgstr ""
+msgstr "他們在玩 Quinb！看起來好好玩！"
 
 #: assets/maps/story/21_house.tmx:
 msgid "Sorry, I have to stay focused."
-msgstr ""
+msgstr "抱歉，我得專心。"
 
 #: assets/maps/story/21_house.tmx:
 msgid "I love Quinb!"
-msgstr ""
+msgstr "我最愛 Quinb 了！"
 
 #: assets/maps/story/21_house.tmx:
 msgid "I always lose, but this time it's going better than usual."
-msgstr ""
+msgstr "我每次都輸，但目前這局分數比平常高。"
 
 #: assets/maps/story/21_house.tmx:
 msgid "They are playing Quinb!"
-msgstr ""
+msgstr "他們在玩 Quinb！"
 
 #: assets/maps/story/x2.tmx:
 msgid "XEONJIA TOWER – 2F"
-msgstr ""
+msgstr "XEONJIA 塔 – 2F"
 
 #: assets/maps/story/x2.tmx:
 msgid "Watch out, there are monsters here!"
-msgstr ""
+msgstr "小心，這裡有怪物！"
 
 #: assets/maps/story/x2.tmx:
 msgid "Finally some fun!\nWho fights besides me?"
-msgstr ""
+msgstr "終於有點有趣的了！\n有誰要跟我打他們？"
 
 #: assets/maps/story/x2.tmx:
 msgid "Of course I fight!"
@@ -2154,7 +2154,7 @@ msgstr ""
 
 #: assets/maps/story/x7.tmx:
 msgid "XEONJIA TOWER – 7F"
-msgstr ""
+msgstr "XEONJIA 塔 – 7F"
 
 #: assets/maps/story/x7.tmx:
 msgid "What are those things?"
@@ -2670,7 +2670,7 @@ msgstr "工作好無聊……"
 
 #: assets/maps/story/x10.tmx:
 msgid "XEONJIA TOWER – 10F"
-msgstr ""
+msgstr "XEONJIA 塔 – 10F"
 
 #: assets/maps/story/x10.tmx:
 msgid "iosa&joza"
@@ -2942,7 +2942,7 @@ msgstr "好的謝謝"
 
 #: assets/maps/story/x11.tmx:
 msgid "XEONJIA TOWER – 11F"
-msgstr ""
+msgstr "XEONJIA 塔 – 11F"
 
 #: assets/maps/story/x11.tmx:
 msgid "I'm starting to get hungry."
@@ -3402,7 +3402,7 @@ msgstr ""
 
 #: assets/maps/story/58.tmx:
 msgid "Great! With the third we can enter the Xeonjia Tower."
-msgstr ""
+msgstr "太棒了！有了第三個徽章，可以進去 Xeonjia 塔了。"
 
 #: assets/maps/story/58.tmx:
 msgid "We absolutely have to stop the Hoarfrost Team and the King of Evil."
@@ -3590,7 +3590,7 @@ msgstr ""
 
 #: assets/maps/story/52.tmx:
 msgid "If you are as good as they say, see you at the Xeonjia Tower, otherwise goodbye \"chosen hero\"."
-msgstr ""
+msgstr "如果你真如他們所說的那麼好，那麼 Xeonjia 塔見，不然有期再會了，「被選中的英雄」。"
 
 #: assets/maps/story/52.tmx:
 msgid "Who were these guys? I do not like them."
@@ -3618,7 +3618,7 @@ msgstr "水下地窖 - B2F"
 
 #: assets/maps/story/x3.tmx:
 msgid "XEONJIA TOWER – 3F"
-msgstr ""
+msgstr "XEONJIA 塔 – 3F"
 
 #: assets/maps/story/x3.tmx:
 msgid "There are no monsters here, except for that guy over there who's kind of ugly."
@@ -3742,7 +3742,7 @@ msgstr "不，這裡只有垃圾。"
 
 #: assets/maps/story/999_up.tmx:
 msgid "XEONJIA TOWER – 12F"
-msgstr ""
+msgstr "XEONJIA 塔 – 12F"
 
 #: assets/maps/story/999_up.tmx:
 msgid "We did it?"
@@ -4106,7 +4106,7 @@ msgstr "永冬在即，冰國將起！\n多虧了你，我的計畫即將成真�
 
 #: assets/maps/story/999_up.tmx:
 msgid "I brought you here because…"
-msgstr "我把你帶到這裡是為了"
+msgstr "我把你帶到這裡是為了……"
 
 #: assets/maps/story/999_up.tmx:
 msgid "I can't go on without laughing, just kidding hehe."
@@ -4398,7 +4398,7 @@ msgstr ""
 
 #: assets/maps/story/x9.tmx:
 msgid "XEONJIA TOWER – 9F"
-msgstr ""
+msgstr "XEONJIA 塔 – 9F"
 
 #: assets/maps/story/x9.tmx:
 msgid "Arrows, arrows. Arrows again."
@@ -4434,7 +4434,7 @@ msgstr "我可以看到商店的內部。"
 
 #: assets/maps/story/x1.tmx:
 msgid "XEONJIA TOWER – 1F"
-msgstr ""
+msgstr "XEONJIA 塔 – 1F"
 
 #: assets/maps/story/x1.tmx:
 msgid "* The Spirit of Fire warmed the tower *"
@@ -4510,7 +4510,7 @@ msgstr ""
 
 #: assets/maps/story/x6.tmx:
 msgid "XEONJIA TOWER – 6F"
-msgstr ""
+msgstr "XEONJIA 塔 – 6F"
 
 #: assets/maps/story/5.tmx:
 msgid "Hey, this is the Mitsu Forest!\nMy parents told me many stories about how beautiful it was a long time ago.\nIt is said that once upon a time the mystical protective creature of this region lived here."
@@ -4926,7 +4926,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "First out of 3 signets required to enter the Xeonjia Tower."
-msgstr "進入 Xeonjia塔所需的 3 個徽章中的第一個。"
+msgstr "進入 Xeonjia 塔所需的 3 個徽章中的第一個。"
 
 #: assets/data/backpack-items.json:
 msgid "Signet #2"
@@ -4934,7 +4934,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Second out of 3 signets required to enter the Xeonjia Tower."
-msgstr ""
+msgstr "進入 Xeonjia 塔所需的 3 個徽章中的第二個。"
 
 #: assets/data/backpack-items.json:
 msgid "Signet #3"
@@ -4942,7 +4942,7 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Third out of 3 signets required to enter the Xeonjia Tower."
-msgstr ""
+msgstr "進入 Xeonjia 塔所需的 3 個徽章中的第三個。"
 
 #: assets/data/backpack-items.json:
 msgid "Berries"
@@ -5070,8 +5070,8 @@ msgstr ""
 
 #: assets/data/backpack-items.json:
 msgid "Here is the Xeonjia Tower."
-msgstr "這裡是Xeonjia 塔。"
+msgstr "這裡是 Xeonjia 塔。"
 
 #: assets/data/backpack-items.json:
 msgid "Here is the top floor of the Xeonjia Tower."
-msgstr ""
+msgstr "這裡是 Xeonjia 塔的頂樓。"

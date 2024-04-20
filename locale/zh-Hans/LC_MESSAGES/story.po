@@ -15,7 +15,7 @@
 # tonykouki <1020070531@qq.com>, 2023.
 # 忘了叫啥 <1479949473@qq.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-02-15 04:22+0000\nLast-Translator: 林波 <limbobytes@outlook.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-04-13 13:49+0000\nLast-Translator: 林波 <limbobytes@outlook.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -486,7 +486,6 @@ msgid "I hate people who always say the same things."
 msgstr "我讨厌那些总是说同样的话的人。"
 
 #: assets/maps/story/79_house.tmx:
-#, fuzzy
 msgid "Finally a hero!\nI've been waiting for years for a hero to pass by!\nMy family has been keeping this gem for decades in hopes of gifting it to a hero.\nHere you go!"
 msgstr "勇者终于来了！\n这几年我都在等着勇者！\n我家里几十年来一直保留着这颗宝石，希望送给勇者。\n交给你了！"
 
@@ -760,7 +759,7 @@ msgstr "现在是什么情況?!"
 
 #: assets/maps/story/75.tmx:
 msgid "Milla is the Spirit of the Forest."
-msgstr "米拉是树林意志的化身。"
+msgstr "米拉是森林意志的化身。"
 
 #: assets/maps/story/75.tmx:
 msgid "What?!\nAnd why didn't you tell me sooner?!"
@@ -780,31 +779,31 @@ msgstr "哈哈... 最近大家一直跟我说这句话。"
 
 #: assets/maps/story/75.tmx:
 msgid "Don't worry Shen. I, too, recently found it out."
-msgstr ""
+msgstr "沈小姐，不要担心，我也是最近才发现的。"
 
 #: assets/maps/story/75.tmx:
 msgid "We'll talk about it later…"
-msgstr ""
+msgstr "我们还是等一会再谈吧…"
 
 #: assets/maps/story/75.tmx:
 msgid "Spirit of Fire, can you help us by heating the Xeonjia Tower?\nIt must reach a comfortable temperature for humans."
-msgstr ""
+msgstr "火灵，你能帮助我们把Xeonjia塔楼加热吗？\n必须使其达到人类舒适的温度。"
 
 #: assets/maps/story/75.tmx:
 msgid "Of course! I love heating things!"
-msgstr ""
+msgstr "当然啦!我喜欢热的东西!"
 
 #: assets/maps/story/75.tmx:
 msgid "Great!\nIt was easy.\nThank you very much!"
-msgstr ""
+msgstr "太好了！\n这很轻松。\n谢谢你！"
 
 #: assets/maps/story/75.tmx:
 msgid "Milla?"
-msgstr ""
+msgstr "米拉？"
 
 #: assets/maps/story/75.tmx:
 msgid "Thank you…"
-msgstr ""
+msgstr "谢谢你…"
 
 #: assets/maps/story/75.tmx:
 msgid "I know you love me Milla.\nAfter you defeat the King of Evil let's go on vacation together."
