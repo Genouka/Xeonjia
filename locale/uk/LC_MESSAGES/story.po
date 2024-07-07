@@ -4,24 +4,25 @@
 # Sergiy Borodych <sergiy.borodych@gmail.com>, 2021.
 # DeepDaikon <deepdaikon@tuta.io>, 2021, 2023.
 # Sean R. <seanrmsk@protonmail.com>, 2021.
+# Y106 <gigbogdi4@gmail.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Ukrainian <https://translate.deepdaikon.xyz/projects/xeonjia/story/uk/>\nLanguage: uk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-07-07 18:02+0000\nLast-Translator: Y106 <gigbogdi4@gmail.com>\nLanguage-Team: Ukrainian <https://translate.deepdaikon.xyz/projects/xeonjia/story/uk/>\nLanguage: uk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
-msgstr ""
+msgstr "ВОДЯНИЙ СКЛЕП - Підвал 1-й поверх"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "We are underground."
-msgstr ""
+msgstr "Ми під землею."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
-msgstr "Сіті-хол"
+msgstr "Ратуша"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "This place smells good."
-msgstr ""
+msgstr "Це місце добре пахне."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "…"
@@ -29,87 +30,87 @@ msgstr "…"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "H-hello."
-msgstr ""
+msgstr "П-привіт."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Hello, you must be {{hero}}! Nice to meet you.\nI heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
-msgstr ""
+msgstr "Вітаю, ви повинні бути {{hero}}! Приємно познайомитися.\nЯ чув, що ви прямуєте в ці краї.\nМене звуть Xe III, і я король цього регіону."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "king"
-msgstr ""
+msgstr "король"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Do not confuse me with the King of Evil, I'm not a bad guy haha."
-msgstr ""
+msgstr "Не плутайте мене з Королем Зла, я не поганець, ха-ха."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "So… tell me, how are you? Is everything okay? How is the journey going?"
-msgstr ""
+msgstr "Тож... скажи мені, як ти? Все в порядку? Як проходить подорож?"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Everything good, I just got the first signet!"
-msgstr ""
+msgstr "Все добре, щойно отримав перший перстень!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Oh really?! This is great news!"
-msgstr ""
+msgstr "Ой справді?! Яка чудова новина!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "It has been difficult?"
-msgstr ""
+msgstr "Було складно?"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Well, but if you did it, it means that you are strong!"
-msgstr ""
+msgstr "Ну, якщо ти це зробив, значить, ти сильний!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Well, congratulations! This means that you are strong!"
-msgstr ""
+msgstr "Ну що ж, вітаю! Це значить, що ти сильний!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "I trust that you will be able to take the other two signets as well."
-msgstr ""
+msgstr "Я вірю, що ти зможеш отримати й інші два персні."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Since you're heading east, can you do me a favour? Could you deliver this package to the King of the Water Region? It is a few kilometers east of here."
-msgstr ""
+msgstr "Оскільки ти прямуєш на схід, можеш зробити мені послугу? Чи могли б ви доставити цей пакунок Королю Водного регіону? Це кілька кілометрів на схід звідси."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes of course, I'll give it to him."
-msgstr ""
+msgstr "Так, звичайно, я йому передам."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Thank you very much. Here you are."
-msgstr ""
+msgstr "Дуже тобі дякую. Тримай."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Be careful not to drop it, it is fragile."
-msgstr ""
+msgstr "Будь обережний, не впустити, він крихкий."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Sure, I'll be careful."
-msgstr ""
+msgstr "Звичайно, буду обережний."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Thank you again.\nI wish you a good journey, come back anytime."
-msgstr ""
+msgstr "Дякую тобі ще раз.\nБажаю гарної дороги, повертайся коли завгодно."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Good journey {{hero}}, I have faith in you."
-msgstr ""
+msgstr "Щасливої дороги, {{hero}}, я вірю в тебе."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "As soon as I saw you I knew you would be the Last Hero."
-msgstr ""
+msgstr "Як тільки я тебе побачив, я зрозумів, що ти будеш тим самим Героєм."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes, quite a lot"
-msgstr ""
+msgstr "Так, досить складно"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Just a little"
-msgstr ""
+msgstr "Трохи"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! {{HP-diff}} HP have been recovered *"
@@ -121,27 +122,27 @@ msgstr "Маленька рослина … і нічого іншого."
 
 #: assets/maps/story/33.tmx:
 msgid "Hey, there are items in here!"
-msgstr ""
+msgstr "Гей, тут є предмети!"
 
 #: assets/maps/story/33.tmx:
 msgid "There are still items in here but I've already taken one."
-msgstr ""
+msgstr "Тут ще є предмети, але я вже взяв один."
 
 #: assets/maps/story/33.tmx:
 msgid "I can see a city in the distance."
-msgstr ""
+msgstr "Я бачу місто вдалині."
 
 #: assets/maps/story/33.tmx:
 msgid "In the distance can be seen the other part of the region."
-msgstr ""
+msgstr "Вдалині видно іншу частину регіону."
 
 #: assets/maps/story/33.tmx:
 msgid "The inhabitants of this region leave gifts in these vases for travelers and sailors who land here.\nIt is an ancient custom.\nFeel free to take the gifts."
-msgstr ""
+msgstr "Мешканці цього регіону залишають у цих вазах подарунки для мандрівників і моряків, які висаджуються тут.\nЦе давній звичай.\nНе соромтеся брати їх."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "VANTOI LAB – 1F"
-msgstr "VANTOI LAB – 1 поверх"
+msgstr "ЛАБОРАТОРІЯ VANTOI – 1 поверх"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Sorry about the mess. Thieves have entered and turned everything upside down."
@@ -157,7 +158,7 @@ msgstr "Вся праця життя знищена…"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Again."
-msgstr ""
+msgstr "Знову."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "{{hero}}!\nThieves broke in again 2 days ago.\nWhat's up?\nHave you decided to look for the stones?"
@@ -165,59 +166,59 @@ msgstr ""
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Great!"
-msgstr ""
+msgstr "Чудово!"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Wise choice! Live your life!"
-msgstr ""
+msgstr "Мудрий вибір! Живи своїм життям!"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "From my research, I think a stone is in an area close to your home."
-msgstr ""
+msgstr "Згідно з моїми дослідженнями, я думаю, що камінь знаходиться поблизу твого дому."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "A stone may be near where you and September fought long ago."
-msgstr ""
+msgstr "Камінь може бути поруч з місцем, де ви з Вереснем билися."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Another stone might be found near the volcano."
-msgstr ""
+msgstr "Ще один камінь має бути біля вулкана."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Xeonjia Tower. I would go there to look for a stone."
-msgstr ""
+msgstr "Вежа Ксеонія. Я б там камінь шукав."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "I think a stone is still missing but I don't know where it is.\nI've heard strange tales related to the Mitsu Forest."
-msgstr ""
+msgstr "Я думаю, що камінь все ще не знайдений, але я не знаю, де він.\nЯ чув дивні історії, пов'язані з лісом Міцу."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Do you have all the stones?! Congratulations!\nThere is someone waiting for you in the Mitsu Forest."
-msgstr ""
+msgstr "У тебе всі камні?! Щиро вітаю!\nДехто чекає на тебе у лісі Міцу."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "So you finished this challenge too, huh?\nBravo."
-msgstr ""
+msgstr "Отже, ти також завершив цей виклик, га?\nБраво."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Did you organize this treasure hunt? Right?"
-msgstr ""
+msgstr "Ти організувала цей пошук скарбів? Так?"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Yes… I placed the stones…\nI did it to give you something to do."
-msgstr ""
+msgstr "Так… Це я поклала каміння…\nЯ зробила це, щоб тобі було що робити."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Thank you Shen, I enjoyed it!"
-msgstr ""
+msgstr "Дякую Шен, мені сподобалось!"
 
 #: assets/maps/story/24_lab.tmx:
 msgid "This makes me happy!\nBut now we're really done."
-msgstr ""
+msgstr "Я радий!\nАле на цьому все."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Have a nice life, {{hero}}."
-msgstr ""
+msgstr "Щасливої дороги, {{hero}}."
 
 #: assets/maps/story/24_lab.tmx:
 msgid "Someone used this plant to do some experiments."
@@ -237,51 +238,51 @@ msgstr "Ні"
 
 #: assets/maps/story/47.tmx:
 msgid "I'm sorry, but you don't have permission to use this vessel.\nIf you want to reach the Fire Region you have to take the boats that leave from the north of this region."
-msgstr ""
+msgstr "Вибачте, але ви не маєте дозволу на використання цього судна.\nЯкщо ви хочете дістатися до регіону вогню, вам потрібно сісти на човен, що відправляється з півночі регіону."
 
 #: assets/maps/story/8.tmx:
 msgid "Go this way →"
-msgstr ""
+msgstr "Іди сюди →"
 
 #: assets/maps/story/69_cityhall.tmx:
 msgid "There is no one here."
-msgstr ""
+msgstr "Тут нікого немає."
 
 #: assets/maps/story/76.tmx:
 msgid "Oh, the sea! I missed it!"
-msgstr ""
+msgstr "Ох, море! Я пропустив це!"
 
 #: assets/maps/story/76.tmx:
 msgid "Oh, that tree is like those in the Mitsu Forest! I missed it!"
-msgstr ""
+msgstr "О, це дерево схоже на ті в лісі Міцу! Я пропустив це!"
 
 #: assets/maps/story/76.tmx:
 msgid "Volcano, sea, forest.\nThere's a little bit of everything here."
-msgstr ""
+msgstr "Вулкан, море, ліс.\nТут всього потроху."
 
 #: assets/maps/story/76.tmx:
 msgid "You've traveled a long way to get here, I know that.\nI give you this."
-msgstr ""
+msgstr "Ви пройшли довгий шлях, щоб потрапити сюди, я це знаю.\nЯ друю тобі це."
 
 #: assets/maps/story/1.tmx:
 msgid "Sunfrond Town"
-msgstr ""
+msgstr "місто Сонячного листя"
 
 #: assets/maps/story/1.tmx:
 msgid "Oh, your hometown."
-msgstr ""
+msgstr "О, твоє рідне місто."
 
 #: assets/maps/story/1.tmx:
 msgid "Let's explore the world!"
-msgstr ""
+msgstr "Давайте досліджувати світ!"
 
 #: assets/maps/story/1.tmx:
 msgid "You grew up here, right?"
-msgstr ""
+msgstr "Ти тут виріс, чи не так?"
 
 #: assets/maps/story/1.tmx:
 msgid "Here is our sleepyhead!\nFinally awake!\nThe hopes of the whole Kingdom are entrusted to you and you take it easy?"
-msgstr ""
+msgstr "Ось наша соня!\nНарешті прокинувся!\nНадії всього Королівства покладені на тебе, а ти легковажиш?"
 
 #: assets/maps/story/1.tmx:
 msgid "dad"
@@ -289,99 +290,99 @@ msgstr "тато"
 
 #: assets/maps/story/1.tmx:
 msgid "I'm a little late but what's the problem?\nThe important thing is to leave, isn't it?"
-msgstr ""
+msgstr "Я трохи запізнився, і що з того?\nГоловне піти, чи не так?"
 
 #: assets/maps/story/1.tmx:
 msgid "No! The important thing is to come back!\nThe 63 heroes before you didn't make it, but they weren't trained by a good father like me."
-msgstr ""
+msgstr "Ні! Головне - повернутися!\n63 герої до тебе не повернулися, але їх не вчив такий добрий батько як я."
 
 #: assets/maps/story/1.tmx:
 msgid "Do you think I'm ready?"
-msgstr ""
+msgstr "Ви думаєте, я готовий?"
 
 #: assets/maps/story/1.tmx:
 msgid "Absolutely not!\nBut today is Departure Day, what you have learned will have to be enough for you.\nIf you don't leave today, the Kings will send next year's hero on this journey.\nIt would be humiliating for the whole family and our town."
-msgstr ""
+msgstr "Ні в якому разі!\nАле сьогодні День Від'їзду, і того, що ти дізнався, тобі має бути достатньо.\nЯкщо ти не поїдеш сьогодні, королі відправлять у цю подорож героя наступного року.\nЦе буде принизливо для всієї родини і для нашого міста."
 
 #: assets/maps/story/1.tmx:
 msgid "I know.\nNow… so… I'm leaving."
-msgstr ""
+msgstr "Я знаю.\nНу що ж... я йду."
 
 #: assets/maps/story/1.tmx:
 msgid "Safe travels, {{hero}}.\nIf you lose your way or get stuck take a look at the map I gave you.\nYou can open it by tapping on its icon in the upper right corner."
-msgstr ""
+msgstr "Щасливої дороги, {{hero}}.\nЯкщо ти заблукаєш або застрягнеш, подивись на мапу, що я тобі дав.\nТи можеш відкрити її, натиснувши на значок у верхньому правому куті."
 
 #: assets/maps/story/1.tmx:
 msgid "Okay, sure sure.\nBye!"
-msgstr ""
+msgstr "Гаразд, звичайно, звичайно.\nДо побачення!"
 
 #: assets/maps/story/1.tmx:
 msgid "The tower in which the King of Evil resides should be located near the capital of the region."
-msgstr ""
+msgstr "Вежа, Короля Зла, повинна розташовуватися недалеко від столиці цього регіону."
 
 #: assets/maps/story/1.tmx:
 msgid "Stay focused on your goals and don't wander around aimlessly."
-msgstr ""
+msgstr "Зосередьтеся на своїх цілях і не блукайте безцільно."
 
 #: assets/maps/story/1.tmx:
 msgid "Here is our sleepyhead hero!\nFinally awake!"
-msgstr ""
+msgstr "Ось наш герой-соня!\nНарешті прокинувся!"
 
 #: assets/maps/story/1.tmx:
 msgid "Do you still have nothing to do today?"
-msgstr ""
+msgstr "Тобі досі нема чого робити на сьогодні?"
 
 #: assets/maps/story/1.tmx:
 msgid "Sunfrond Town – Hometown of the 64th hero"
-msgstr ""
+msgstr "Місто Сонячного листя – Рідне місто 64-го героя"
 
 #: assets/maps/story/1.tmx:
 msgid "Sunfrond Town – Hometown of the Last Hero"
-msgstr ""
+msgstr "Місто Сонячного листя – Рідне місто останнього героя"
 
 #: assets/maps/story/1.tmx:
 msgid "I've to say goodbye to my parents with the \"{{inspect-key}}\" button before I leave. Otherwise it would be rude."
-msgstr ""
+msgstr "Я маю попрощатися з батьками за допомогою кнопки \"{{inspect-key}}\", перш ніж піти. Інакше було б грубо."
 
 #: assets/maps/story/1.tmx:
 msgid "Like my mother said, I have to go to my neighbor first."
-msgstr ""
+msgstr "Як каже моя мама, спочатку піду до сусіда."
 
 #: assets/maps/story/1.tmx:
 msgid "From here on is the frozen floor.\nI'll slide until I reach an obstacle.\nSo I have to use my mind to figure out the best path."
-msgstr ""
+msgstr "Далі - крижана підлога.\nЯ буду ковзати, поки не досягну перешкоди.\nТож я маю використати свій розум, щоб знайти найкращий шлях."
 
 #: assets/maps/story/1.tmx:
 msgid "Here you are finally!\nI've been waiting for hours for you to wake up!\nHow are you?"
-msgstr ""
+msgstr "Ось ти нарешті!\nЯ годинами чекав, поки ти прокинешся!\nЯк справи?"
 
 #: assets/maps/story/1.tmx:
 msgid "I'm fine, even if I don't know what to do anymore.\nWhat does a hero do when there are no more villains?"
-msgstr ""
+msgstr "Я в порядку, навіть якщо я більше не знаю, що робити.\nЩо робить герой, коли лиходіїв більше немає?"
 
 #: assets/maps/story/1.tmx:
 msgid "I think it's time to dedicate yourself to something else.\nBut if you really want to explore this world again, I found out that there are 5 very rare stones hidden around the Kingdom.\nEach has a particular shape and color."
-msgstr ""
+msgstr "Думаю, настав час присвятити себе чомусь іншому.\nАле якщо ти справді хочеш знову дослідити цей світ, я дізнався, що по всьому Королівству заховано 5 дуже рідкісних каменів.\nКожен з них має особливу форму та колір."
 
 #: assets/maps/story/1.tmx:
 msgid "Rare stones?"
-msgstr ""
+msgstr "Рідкісні камені?"
 
 #: assets/maps/story/1.tmx:
 msgid "Yes, I have no idea what they are for.\nTo be honest, I don't even know if they're worth looking for.\nIt's just to pass the time."
-msgstr ""
+msgstr "Так, я не знаю, для чого вони.\nЧесно кажучи, навіть не знаю, чи варто їх шукати.\nМарна трата часу."
 
 #: assets/maps/story/1.tmx:
 msgid "Ok, maybe I'll go look for them."
-msgstr ""
+msgstr "Гаразд, можливо, пошукаю."
 
 #: assets/maps/story/1.tmx:
 msgid "Great! If so, let me know.\nNow I go, I've already wasted all morning out here waiting for you.\nCome and see me at the Vantoi Lab whenever you want.\nDo you remember where it is? Southeast of the Xeonjia Tower.\nBye!"
-msgstr ""
+msgstr "Чудово! Якщо так, дай мені знати.\nА тепер я піду, я вже змарнував весь ранок, чекаючи на тебе.\nПриходь до мене в лабораторію Вантоі, коли захочеш.\nТи пам'ятаєш, де це? На південний схід від вежі Ксеонія.\nБувай!"
 
 #: assets/maps/story/1.tmx:
 msgid "Bye Shen!"
-msgstr ""
+msgstr "Бувай Шен!"
 
 #: assets/maps/story/1.tmx:
 msgid "Did you like the game? Do you want to donate to the project?"
@@ -813,7 +814,7 @@ msgstr ""
 
 #: assets/maps/story/75.tmx:
 msgid "Bye!"
-msgstr ""
+msgstr "Бувай!"
 
 #: assets/maps/story/75.tmx:
 msgid "Great.\nNow only the third signet is missing which I hope September has.\nLet's meet at Xeonjia Tower."

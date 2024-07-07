@@ -4,12 +4,13 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023.
 # Denis Proleev <denproleev@gmail.com>, 2021.
 # Andrey <jius55025@gmail.com>, 2023.
+# KiberDoktor <kiberdoktor2@gmail.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-08 22:12+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-06-29 12:59+0000\nLast-Translator: KiberDoktor <kiberdoktor2@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
-msgstr ""
+msgstr "Допустимые символы: A-Z."
 
 #: lib/ui/basic.dart:
 msgid "Too short."
@@ -29,7 +30,7 @@ msgstr "Настройки"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Ice Adventures"
-msgstr ""
+msgstr "Ледяные приключения"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
@@ -45,7 +46,7 @@ msgstr "Добро пожаловать"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Your journey is about to begin!\nWhat's your name?"
-msgstr ""
+msgstr "Ваше путешествие вот-вот начнется!\nКак тебя зовут?"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Let's start!"
@@ -117,19 +118,19 @@ msgstr "Контроллер"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Move the character with gestures or virtual D-pad"
-msgstr ""
+msgstr "Перемещайте персонажа с помощью жестов или виртуальной крестовины"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "You only need it on a touchscreen device"
-msgstr ""
+msgstr "Только для устройств с сенсорным экраном"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad"
-msgstr ""
+msgstr "Крестовина"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Gestures"
-msgstr ""
+msgstr "Жесты"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad size"
