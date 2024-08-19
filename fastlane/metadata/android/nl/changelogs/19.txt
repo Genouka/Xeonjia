@@ -1,0 +1,2 @@
+* Vertalingen bijwerken
+* Oplossen van bugs
