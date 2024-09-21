@@ -14,8 +14,9 @@
 # 林波 <limbobytes@outlook.com>, 2023, 2024.
 # tonykouki <1020070531@qq.com>, 2023.
 # 忘了叫啥 <1479949473@qq.com>, 2024.
+# LS-Shandong <shu_lin_work@outlook.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-04-13 13:49+0000\nLast-Translator: 林波 <limbobytes@outlook.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-09-01 08:31+0000\nLast-Translator: LS-Shandong <shu_lin_work@outlook.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -807,19 +808,19 @@ msgstr "谢谢你…"
 
 #: assets/maps/story/75.tmx:
 msgid "I know you love me Milla.\nAfter you defeat the King of Evil let's go on vacation together."
-msgstr ""
+msgstr "我知道你爱我，米拉。\n等你打败了邪恶之王 我们一起去度假吧。"
 
 #: assets/maps/story/75.tmx:
 msgid "We'll see…"
-msgstr ""
+msgstr "我们拭目以待…"
 
 #: assets/maps/story/75.tmx:
 msgid "I force you."
-msgstr ""
+msgstr "加油。"
 
 #: assets/maps/story/75.tmx:
 msgid "I'm leaving you now, I'm getting ready to warm up the tower, it will require a lot of energy.\nBye!"
-msgstr ""
+msgstr "我要走了，我要去给塔取暖，这需要很多体力。\n再见！"
 
 #: assets/maps/story/75.tmx:
 msgid "Bye!"
@@ -827,59 +828,59 @@ msgstr "拜拜！"
 
 #: assets/maps/story/75.tmx:
 msgid "Great.\nNow only the third signet is missing which I hope September has.\nLet's meet at Xeonjia Tower."
-msgstr ""
+msgstr "太好了。\n现在只差第三块印章了，我希望 September 能拿到它。\n我们在 Xeonjia 塔楼见吧。"
 
 #: assets/maps/story/75.tmx:
 msgid "Ok see you soon!"
-msgstr ""
+msgstr "好的，再见！"
 
 #: assets/maps/story/75.tmx:
 msgid "There is lava here."
-msgstr ""
+msgstr "这里有熔岩。"
 
 #: assets/maps/story/68.tmx:
 msgid "How many meters above sea level are we?"
-msgstr ""
+msgstr "我们所在之处的海拔是多少米？"
 
 #: assets/maps/story/70_house4.tmx:
 msgid "The Fire Region is the smallest region of the Kingdom, but that doesn't make it the least important."
-msgstr ""
+msgstr "火焰区是王国最小的地区，但这并不意味着它最不重要。"
 
 #: assets/maps/story/70_house4.tmx:
 msgid "There is a book called \"Your child, the Hero! – Prepare your child to become a Hero in 10 steps\".\nDo you want to read it?"
-msgstr ""
+msgstr "有一本书叫《你的孩子，英雄！—— 用 10 个步骤让您的孩子成为英雄》。\n你想读一读吗？"
 
 #: assets/maps/story/70_house4.tmx:
 msgid "Greetings, brave and ambitious parents!\nSure, there's no greater desire than to see one's child selected as the future Hero, right?\nOur very young children, at the age of 5, are subjected to tests of intelligence, audacity and strength.\nOnly ONE child is chosen each year, destined to become the Hero who will embark on the epic adventure on November 24 of the year of their 21st birthday.\nNow, you may be wondering: \"How can I make sure that my child is the chosen one?\". Well, the answer is simpler than you might imagine! And you've already done the first step: you bought this book!"
-msgstr ""
+msgstr "你们好，勇敢而雄心勃勃的父母们！\n当然，最大的愿望莫过于看到自己的孩子被选为未来的英雄，不是吗？\n我们年仅 5 岁的孩子要接受智力、胆量和力量的考验。\n每年只有一个孩子被选中，他们将成为英雄，在 21 岁生日那年的 11 月 24 日踏上史诗般的冒险旅程。\n现在，你可能想知道 \"我怎样才能确保我的孩子被选中？答案比你想象的还要简单！你已经迈出了第一步：你买了这本书！"
 
 #: assets/maps/story/70_house4.tmx:
 msgid "* {{hero}} stops reading *"
-msgstr ""
+msgstr "* {{hero}} 停止阅读 *"
 
 #: assets/maps/story/57_house.tmx:
 msgid "Are you the 64th hero?\nIt's been a while since a hero has been around here, they almost always give up before arriving here."
-msgstr ""
+msgstr "你是第 64 位英雄吗？\n这里已经很久没有英雄出现了，他们几乎都是还没到这里就放弃了。"
 
 #: assets/maps/story/57_house.tmx:
 msgid "I tell all my friends that I met you."
-msgstr ""
+msgstr "我告诉我所有的朋友，我遇见了你。"
 
 #: assets/maps/story/37.tmx:
 msgid "The prices for an HP UP are too high for me."
-msgstr ""
+msgstr "HP 提升的价格对我来说太高了。"
 
 #: assets/maps/story/37.tmx:
 msgid "I would love to leave for a long journey but I don't have the strength anymore."
-msgstr ""
+msgstr "我很想去远行，但我已经没有力气了。"
 
 #: assets/maps/story/37.tmx:
 msgid "{{hero}}, there you are. Finally! I heard a rumor that you were coming here."
-msgstr ""
+msgstr "{{hero}}，你来了，终于来了！我听说你要来这里。"
 
 #: assets/maps/story/37.tmx:
 msgid "September! Long time no see! Last time was when we battled each other to be proclaimed HERO.\nWe were 5 years old."
-msgstr ""
+msgstr "September！好久不见！上次还是我们互相争夺英雄称号的时候。\n那时我们 5 岁。"
 
 #: assets/maps/story/37.tmx:
 msgid "I remember well, you got lucky that time.\nBut now it would go differently.\nI challenge you now. Show me that you are better than me.\nSee you on the north-east side of the village.\nI will wait for you there."

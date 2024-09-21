@@ -1,0 +1,5 @@
+* Modul poveste a fost completat!
+* Îmbunătățiri UI/UX și grafice
+* Diverse îmbunătățiri 
+* Actualizează translațiile
+* Rezolvări bug-uri

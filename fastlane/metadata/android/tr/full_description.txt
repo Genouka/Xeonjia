@@ -1,17 +1,21 @@
-Oyunda iki farklı mod mevcut:
+Xeonjia buz tutmuş bir dünyada geçen bir macera oyunudur.
 
-1) Hikâye modu: Kulenin son katına ulaş ve "Kötülüklerin Efendisi"ni alt et!
+Yer buz tutmuş! Adımlarına dikkat et, çünkü bir engele gelene kadar yön değiştiremeyeceksin. Bulmacaları çözmek için aklını kullan.
 
-2) Çok oyunculu mod: Bu modda amaç puan toplayıp takımının kazanmasını sağlamaktır.
+Dünya <b>"Kütülükler Kralı"</b> tarafından donduruldu ve artık güvenli bir yer değil.
 
-Karakterini oyun içerisinde hareket ettirmek için parmağınla kaydırman yeterli.
+Bir efsane der ki cesur bir kahraman Kötülükler Kralı'nı alt edip krallığı kurtaracak... Bu sebeple her yıl "kahraman"  seçilen bir kişi krallığı kurtarmak gayesiyle bir yolculuğa gönderiliyor.
 
-Bir duvara, kayaya veya başka bir engele ulaşana kadar karakterini durduramayacağını sakın unutma.
+Şimdi senin sıran. <b>Bu yılın kahramanı sen seçildin</b> Kötülükler Kralı'nın hakkından gelebilecek misin?
 
-Zamanla deneyim puanları kazanarak üst seviyelere yükselebilecek ve bulduğun para ve gizli hazinelerle de bir şeyler satın alıp karakterini geliştirebileceksin.
+Dünyayı gezmen, şehirleri,  zindanları, gizemli mağaraları keşfetmen gerekecek.
 
-Ancak dikkatli ol, etrafın sana saldırmayı bekleyen tehlikeli düşmanlarla dolu!
+<b>Bu buz tutmuş RYO dünyasında maceralara , bulmacalara hazır mısın? </b>
 
-En ideal yolu bulmak için aklını kullan!
+Zaman içinde kazandığın deneyim puanları ile seviye atlayabilecek, bulduğun para ve gizli hazineler ile bir şeyler satın alıp kendini geliştirebileceksin.
 
-<b>Dipnot</b>: Bu oyun hâlâ beta aşamasındadır.
+Dikkatli ol, bu dünya her an saldırabilecek <b>tehlikeli düşmanlarla</b> dolu!
+
+Sakın unutma: yer nerdeyse tamamen <b>buz tutmuş</b>. Bir duvara, kayaya veya başka bir engele gelene karar duramayacaksın. 
+
+<b>En ideal yolu bulmak için aklını kullan!</b>

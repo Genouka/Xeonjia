@@ -6,8 +6,10 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2021.
 # YottaMxt <yottamxt@gmail.com>, 2023.
 # perro tuerto <hi@perrotuerto.blog>, 2023.
+# Jorge Castro Nistal <nikey_es@yahoo.es>, 2024.
+# Tetro <longterm.dimness856@aleeas.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-12-23 20:58+0000\nLast-Translator: perro tuerto <hi@perrotuerto.blog>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-09-12 13:31+0000\nLast-Translator: Tetro <longterm.dimness856@aleeas.com>\nLanguage-Team: Spanish <https://translate.deepdaikon.xyz/projects/xeonjia/ui/es/>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -459,7 +461,7 @@ msgstr "¿Dónde estoy? ¿Cómo terminé aquí?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Mitsu Forest used to be bigger, it was deforested to build Greentwig City."
-msgstr ""
+msgstr "El bosque Mitsu solía ser más grande, fue deforestado para construir Ciudad Broteverde."
 
 #: lib/game/utils/event_manager.dart:
 msgid "The Xeonjia Tower is the tallest building in the Kingdom."
@@ -594,7 +596,6 @@ msgid "It' time to fight!"
 msgstr "¡Es hora de luchar!"
 
 #: lib/game/xeonjia_game.dart:
-#, fuzzy
 msgid "Milla is tired and is back in the leaf, I must continue the battle."
 msgstr "Milla está cansada y ha regresado a la hoja, debo continuar la batalla."
 

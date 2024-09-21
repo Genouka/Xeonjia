@@ -1,0 +1,2 @@
+* Actualizarea traducerilor
+* Rezolvarea bug-urilor

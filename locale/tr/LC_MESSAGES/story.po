@@ -6,16 +6,18 @@
 # deepdaikon <deepdaikon@tuta.io>, 2022, 2023.
 # Sir Crownguard <trilug_inhofe@simplelogin.com>, 2022.
 # cannnAvar <bartucanavar@proton.me>, 2023.
+# mimoguz <mimoguz@outlook.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-09-21 09:31+0000\nLast-Translator: mimoguz <mimoguz@outlook.com>\nLanguage-Team: Turkish <https://translate.deepdaikon.xyz/projects/xeonjia/story/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
 msgstr ""
 
 #: assets/maps/story/t2_01.tmx:
+#, fuzzy
 msgid "We are underground."
-msgstr ""
+msgstr "Yeraltındayız."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "City Hall"
@@ -23,7 +25,7 @@ msgstr "Belediye Binası"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "This place smells good."
-msgstr ""
+msgstr "Bu yer güzel kokuyor."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "…"
@@ -31,11 +33,12 @@ msgstr "…"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "H-hello."
-msgstr ""
+msgstr "M-merhaba."
 
 #: assets/maps/story/30_cityhall.tmx:
+#, fuzzy
 msgid "Hello, you must be {{hero}}! Nice to meet you.\nI heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
-msgstr ""
+msgstr "Selam, sen {{hero}} olmalısın! Tanıştığımıza sevindim.\nBu taraflara geldiğini duymuştum.\nBenim adım Xe III, bu ülkenin kralıyım."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "king"
@@ -43,7 +46,7 @@ msgstr "kral"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Do not confuse me with the King of Evil, I'm not a bad guy haha."
-msgstr ""
+msgstr "Beni Kötülükler Kralı ile karıştırma, ben kötü bir adam değilim haha."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "So… tell me, how are you? Is everything okay? How is the journey going?"
@@ -51,7 +54,7 @@ msgstr "Peki… söyle bana, nasılsın? Her şey yolunda mı? Yolculuk nasıl g
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Everything good, I just got the first signet!"
-msgstr ""
+msgstr "Her şey iyi gidiyor, ilk mühürü buldum!"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Oh really?! This is great news!"
@@ -103,7 +106,7 @@ msgstr "İyi yolculuklar {{hero}}, sana güveniyorum."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "As soon as I saw you I knew you would be the Last Hero."
-msgstr ""
+msgstr "Seni görür görmez Son Kahraman olacağını anladım."
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Yes, quite a lot"

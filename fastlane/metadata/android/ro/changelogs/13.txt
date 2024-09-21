@@ -1,0 +1,10 @@
+* Luptă nouă bazată pe ture
+* O nouă hartă a lumii
+* Îmbunătățirea graficii
+* Îmbunătățirea UI/UX
+* Îmbunătățirea modului poveste
+* Îmbunătățirea animațiilor, a muzicii de fundal și a sfx-urilor
+* Îmbunătățirea gamepad-ului
+* Ajustarea dificultății jocului
+* Actualizarea traducerilor
+* Rezolvarea bug-urilor

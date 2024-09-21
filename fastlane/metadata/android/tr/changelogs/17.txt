@@ -1,0 +1,5 @@
+* Hikâye modu tamamlandı!
+* UI/UX ve grafikler iyileştirmeleri.
+* Çeşitli iyileştirmeler.
+* Çevirileri güncelle
+* Hata gidermeleri

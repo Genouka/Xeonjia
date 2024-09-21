@@ -1,0 +1,3 @@
+* Adăugarea unei părți noi a poveștii
+* Actualizarea translațiilor
+* Rezolvări bug-uri
