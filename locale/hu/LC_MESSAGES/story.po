@@ -4,8 +4,9 @@
 # Viktória Nagy <tindykmp@protonmail.ch>, 2021, 2022.
 # DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023.
 # Kempelen <lion@cmsbazar.hu>, 2022.
+# Balázs Úr <balazs@urbalazs.hu>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-10-27 13:18+0000\nLast-Translator: Balázs Úr <balazs@urbalazs.hu>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -865,7 +866,7 @@ msgstr "Szeretnék hosszú útra indulni, de már nincs hozzá erőm."
 
 #: assets/maps/story/37.tmx:
 msgid "{{hero}}, there you are. Finally! I heard a rumor that you were coming here."
-msgstr "{{{hero}}, hát itt vagy. Végre! Hallottam a pletykát, hogy idejössz."
+msgstr "{{hero}}, hát itt vagy. Végre! Hallottam egy pletykát, hogy idejöttél."
 
 #: assets/maps/story/37.tmx:
 msgid "September! Long time no see! Last time was when we battled each other to be proclaimed HERO.\nWe were 5 years old."
@@ -1113,7 +1114,7 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hi {{hero}}! How are you doing? Were you able to get the first signet?"
-msgstr "Szia {{{hero}}! Hogy vagy? Sikerült megszerezned az első jelvényt?"
+msgstr "Szia, {{hero}}! Hogy vagy? Sikerült megszerezned az első pecsétet?"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hi Shen! Yes I did it!"
@@ -3317,7 +3318,7 @@ msgstr "Most sütöttem egy tortát. Kérsz belőle?"
 
 #: assets/maps/story/38_house.tmx:
 msgid "* {{hero}} eats a piece of cake *"
-msgstr "* {{{hero}} eszik egy szelet tortát *"
+msgstr "* {{hero}} eszik egy szelet tortát *"
 
 #: assets/maps/story/38_house.tmx:
 msgid "Oh, ok. Then I'll eat it all."

@@ -15,8 +15,9 @@
 # tonykouki <1020070531@qq.com>, 2023.
 # 忘了叫啥 <1479949473@qq.com>, 2024.
 # LS-Shandong <shu_lin_work@outlook.com>, 2024.
+# Deleted User <noreply+148@weblate.org>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-09-01 08:31+0000\nLast-Translator: LS-Shandong <shu_lin_work@outlook.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-10-20 08:47+0000\nLast-Translator: Deleted User <noreply+148@weblate.org>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -884,7 +885,7 @@ msgstr "September！好久不见！上次还是我们互相争夺英雄称号的
 
 #: assets/maps/story/37.tmx:
 msgid "I remember well, you got lucky that time.\nBut now it would go differently.\nI challenge you now. Show me that you are better than me.\nSee you on the north-east side of the village.\nI will wait for you there."
-msgstr ""
+msgstr "我还记得，那次你走了运。\n但今天事情不一样了。\n我要下战贴。证明你的实力比我强。\n在村庄的东北角见。\n我在那里等你。"
 
 #: assets/maps/story/37.tmx:
 msgid "W-wait a moment, September!"

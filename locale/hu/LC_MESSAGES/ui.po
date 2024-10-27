@@ -5,12 +5,13 @@
 # DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023.
 # Kempelen <lion@cmsbazar.hu>, 2022.
 # d4f5409d <d4f5409d-4b6a-4640-9ff3-155ebcdc7ab7@anonaddy.me>, 2022, 2023.
+# Balázs Úr <balazs@urbalazs.hu>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2023-09-03 20:46+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-10-27 13:18+0000\nLast-Translator: Balázs Úr <balazs@urbalazs.hu>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
-msgstr ""
+msgstr "Érvényes karakterek: A-Z."
 
 #: lib/ui/basic.dart:
 msgid "Too short."
@@ -18,39 +19,39 @@ msgstr "Túl rövid."
 
 #: lib/ui/basic.dart:
 msgid "Insert your name"
-msgstr ""
+msgstr "Írd be a neved"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
-msgstr "Infó"
+msgstr "Információ"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Settings"
-msgstr "Beállítás"
+msgstr "Beállítások"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Ice Adventures"
-msgstr ""
+msgstr "Jeges kalandok"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
-msgstr "Koppints a lejátszáshoz"
+msgstr "Koppints a játékhoz"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Press enter"
-msgstr ""
+msgstr "Nyomd meg az Entert"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Welcome"
-msgstr ""
+msgstr "Üdvözlünk"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Your journey is about to begin!\nWhat's your name?"
-msgstr ""
+msgstr "Az utazásod hamarosan elkezdődik!\nMi a neved?"
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Let's start!"
-msgstr ""
+msgstr "Kezdjünk hozzá!"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Smallest"
@@ -74,15 +75,15 @@ msgstr "Legnagyobb"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom out"
-msgstr ""
+msgstr "Kicsinyítés"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom in"
-msgstr ""
+msgstr "Nagyítás"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Click here to change your name"
-msgstr "Koppints a neved megváltoztatásához"
+msgstr "Koppints ide a neved megváltoztatásához"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "What's your name?"
@@ -106,47 +107,47 @@ msgstr "Háttérzene engedélyezése"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Sound effects"
-msgstr "Hangeffektek"
+msgstr "Hanghatások"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable sound effects"
-msgstr "Hangeffektusok engedélyezése"
+msgstr "Hanghatások engedélyezése"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Controller"
-msgstr ""
+msgstr "Vezérlő"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Move the character with gestures or virtual D-pad"
-msgstr ""
+msgstr "A karakter mozgatása gesztusokkal vagy virtuális irányítógombokkal"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "You only need it on a touchscreen device"
-msgstr ""
+msgstr "Csak érintőképernyős eszközökön van rá szükséged"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad"
-msgstr ""
+msgstr "Irányítógombok"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Gestures"
-msgstr ""
+msgstr "Gesztusok"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad size"
-msgstr "D-pad mérete"
+msgstr "Irányítógombok mérete"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Virtual D-pad dimension.\nTo change its position, long-press the D-pad in the center."
-msgstr ""
+msgstr "A virtuális irányítógombok mérete.\nA helyzete megváltoztatásához nyomj hosszan az irányítógombok közepére."
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Game zoom"
-msgstr ""
+msgstr "Játék nagyítása"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom objects in the game for a better view"
-msgstr ""
+msgstr "A játékban lévő objektumok nagyítása a jobb nézet érdekében"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Language"
@@ -158,43 +159,43 @@ msgstr "Az alkalmazás nyelve"
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "System default"
-msgstr "Alapértelmezett rendszer"
+msgstr "Rendszer alapértelmezettje"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Thanks to everyone who contributed to this project!"
-msgstr ""
+msgstr "Köszönet mindenkinek, akik közreműködtek ebben a projektben!"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Programmer"
-msgstr ""
+msgstr "Programozó"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Artists"
-msgstr ""
+msgstr "Művészek"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Music by"
-msgstr ""
+msgstr "Zene"
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Translators"
-msgstr ""
+msgstr "Fordítók"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Game made by %s"
-msgstr ""
+msgstr "A játék készítője: %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Credits"
-msgstr ""
+msgstr "Köszönetnyilvánítás"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "People who worked on this project"
-msgstr ""
+msgstr "A projekten dolgozó emberek"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version %s"
-msgstr ""
+msgstr "Verzió: %s"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
@@ -206,15 +207,15 @@ msgstr "Adományozás"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Contribute to the project"
-msgstr ""
+msgstr "Közreműködés a projektben"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate"
-msgstr "Fordítsd le"
+msgstr "Fordítás"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate in your language"
-msgstr "Fordíts le a saját nyelvedre"
+msgstr "Fordítás a saját nyelvedre"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
@@ -222,7 +223,7 @@ msgstr "E-mail küldése"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ask for something"
-msgstr ""
+msgstr "Valamilyen kérdés elküldése"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
@@ -230,27 +231,27 @@ msgstr "Hibák jelentése"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report the bugs you found"
-msgstr ""
+msgstr "A talált hibák jelentése"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Source code"
-msgstr ""
+msgstr "Forráskód"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View the source code"
-msgstr ""
+msgstr "A forráskód megtekintése"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "License (GPLv3)"
-msgstr ""
+msgstr "Licenc (GPLv3)"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
-msgstr "Szoftverlicenc olvasása"
+msgstr "A szoftverlicenc elolvasása"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Third Party Licenses"
-msgstr "Harmadik fél licencek"
+msgstr "Harmadik fél licencei"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read third party notices"
@@ -258,38 +259,35 @@ msgstr "Harmadik felek értesítéseinek elolvasása"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ok"
-msgstr "Ok"
+msgstr "Rendben"
 
 #: lib/game/widgets/world_map.dart:
 msgid "This is where I am right now."
-msgstr "Itt vagyok jelenleg."
+msgstr "Ez az, ahol most vagyok."
 
 #: lib/game/widgets/world_map.dart:
 msgid "Do you want to go back to this place?"
-msgstr ""
+msgstr "Szeretnél visszamenni erre a helyre?"
 
 #: lib/game/widgets/world_map.dart:
-#, fuzzy
 msgid "* {{hero}} arrived here *"
-msgstr "* {{hero}} megérkezett *"
+msgstr "* {{hero}} megérkezett ide *"
 
 #: lib/game/widgets/world_map.dart:
-#, fuzzy
 msgid "* After a long journey, {{hero}} arrived here *"
-msgstr "* Egy hosszas utazás után, {{hero}} megérkezett ide *"
+msgstr "* Egy hosszú utazás után {{hero}} megérkezett ide *"
 
 #: lib/game/widgets/world_map.dart:
-#, fuzzy
 msgid "* After a very long journey, {{hero}} arrived here *"
-msgstr "* Egy nagyon hosszas utazás során, {{hero}} megérkezett ide *"
+msgstr "* Egy nagyon hosszú utazás után {{hero}} megérkezett ide *"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You run out of energy !"
-msgstr "Kifogytál az energiából !"
+msgstr "Elfogyott az energiád!"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You lost %s ¤ and woke up after a short nap"
-msgstr "Elvesztettél %s ¤ és felébredtél egy rövid szunyókálás után"
+msgstr "Elveszett %s ¤, és felébredtél egy rövid szunyókálás után"
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "Continue"
@@ -297,11 +295,11 @@ msgstr "Folytatás"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "No items here"
-msgstr "Nincs itt semmi"
+msgstr "Itt nincsenek tárgyak"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "%s HP"
-msgstr ""
+msgstr "%s életpont"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "Close"
@@ -316,9 +314,8 @@ msgid "Gems"
 msgstr "Drágakövek"
 
 #: lib/game/widgets/menus/backpack_menu.dart:
-#, fuzzy
 msgid "Mysterious gems scattered around the world."
-msgstr "Titokzatos drágakövek szétszórva a világon."
+msgstr "Titokzatos drágakövek szétszóródva a világ minden táján."
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Do you want to use {{selected-item-name}}?"
@@ -326,11 +323,11 @@ msgstr "Szeretnéd ezt használni: {{selected-item-name}}?"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "pause"
-msgstr "szünet"
+msgstr "szüneteltetés"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "restart"
-msgstr "újrajátszás"
+msgstr "újrakezdés"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "exit"
@@ -338,23 +335,23 @@ msgstr "kilépés"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "cancel"
-msgstr "mégsem"
+msgstr "mégse"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "You have %s HP and %s ¤."
-msgstr ""
+msgstr "%s életpontod van és %s ¤ van nálad."
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Milla has %s HP."
-msgstr ""
+msgstr "Milla %s életponttal rendelkezik."
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "September has %s HP."
-msgstr ""
+msgstr "Szeptember %s életponttal rendelkezik."
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "What do you want to do?"
-msgstr ""
+msgstr "Mit szeretnél tenni?"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "resume"
@@ -362,48 +359,45 @@ msgstr "folytatás"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Are you sure you want to restart this game?"
-msgstr "Biztos, hogy újra akarod kezdeni a játékot?"
+msgstr "Biztosan újra szeretnéd kezdeni ezt a játékot?"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "It will restart from the last location change."
-msgstr "Az utolsó helyváltástól indul újra."
+msgstr "Az utolsó helyváltoztatástól fog újraindulni."
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Are you sure you want to quit this game?"
-msgstr "Biztos, hogy ki akarsz szállni ebből a játékból?"
+msgstr "Biztosan ki szeretnél lépni ebből a játékból?"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Game data since the last location change will be lost."
-msgstr ""
+msgstr "A legutóbbi helyváltoztatás óta rögzített játékadatok elvesznek."
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "HP Machine"
-msgstr ""
+msgstr "Életpontgép"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Shop"
 msgstr "Bolt"
 
 #: lib/game/widgets/menus/shop_menu.dart:
-#, fuzzy
 msgid "Do you want to buy {{selected-item-name}}?"
 msgstr "Szeretnéd megvenni ezt: {{selected-item-name}}?"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Do I buy {{selected-item-name}}?"
-msgstr ""
+msgstr "Megveszem ezt: {{selected-item-name}}?"
 
 #: lib/game/widgets/menus/shop_menu.dart:
-#, fuzzy
 msgid "I don't have enough money for this item."
-msgstr "Nincs elég pénzem erre."
+msgstr "Nincs elég pénzem erre a tárgyra."
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Let me know if you need anything else."
 msgstr "Szólj, ha szükséged van még valamire."
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
-#, fuzzy
 msgid "Wait"
 msgstr "Várj"
 
@@ -421,7 +415,7 @@ msgstr "3 lépés"
 
 #: lib/game/widgets/loading_page.dart:
 msgid "Loading…\nPlease wait"
-msgstr "Betöltés...\nKérlek, várj"
+msgstr "Betöltés…\nKérlek, várj"
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open local map"
@@ -433,7 +427,7 @@ msgstr "Világtérkép megnyitása"
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Show hints"
-msgstr "Tippek mutatása"
+msgstr "Tippek megjelenítése"
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Hide hints"
@@ -441,119 +435,119 @@ msgstr "Tippek elrejtése"
 
 #: lib/game/utils/map_controller.dart:
 msgid "By clicking on the map I can go back to places I have already been."
-msgstr ""
+msgstr "A térképre kattintva visszamehetek olyan helyekre, ahol már jártam."
 
 #: lib/game/utils/input_controller.dart:
 msgid "Snowball (%s)"
-msgstr ""
+msgstr "Hógolyó (%s)"
 
 #: lib/game/utils/input_controller.dart:
 msgid "Snowball"
-msgstr ""
+msgstr "Hógolyó"
 
 #: lib/game/utils/input_controller.dart:
 msgid "Mine (%s)"
-msgstr ""
+msgstr "Akna (%s)"
 
 #: lib/game/utils/input_controller.dart:
 msgid "Mine"
-msgstr ""
+msgstr "Akna"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Where am I? How did I end up here?"
-msgstr ""
+msgstr "Hol vagyok? Hogy kerültem ide?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Mitsu Forest used to be bigger, it was deforested to build Greentwig City."
-msgstr ""
+msgstr "A Mitsu-erdő régebben nagyobb volt, de kivágták a fákat Greentwig város felépítéséhez."
 
 #: lib/game/utils/event_manager.dart:
 msgid "The Xeonjia Tower is the tallest building in the Kingdom."
-msgstr ""
+msgstr "A Xeonjia-torony a legmagasabb épület a királyságban."
 
 #: lib/game/utils/event_manager.dart:
 msgid "There are 3 regions in the Kingdom."
-msgstr ""
+msgstr "A királyságban 3 régió van."
 
 #: lib/game/utils/event_manager.dart:
 msgid "If you click on a point on the world map you can travel to places you have already been."
-msgstr ""
+msgstr "Ha rákattintasz a világtérkép egy pontjára, akkor elutazhatsz olyan helyekre, ahol már jártál."
 
 #: lib/game/utils/event_manager.dart:
 msgid "The world is big."
-msgstr ""
+msgstr "A világ nagy."
 
 #: lib/game/utils/event_manager.dart:
 msgid "What time is it?"
-msgstr ""
+msgstr "Mennyi az idő?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "If we walk around long enough, we're sure to arrive somewhere!"
-msgstr ""
+msgstr "Ha elég sokáig sétálunk, biztosan megérkezünk valahová!"
 
 #: lib/game/utils/event_manager.dart:
 msgid "How are you?"
-msgstr ""
+msgstr "Hogy vagy?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "It's cold here."
-msgstr ""
+msgstr "Hideg van itt."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Green! Green!\nGreen is the answer, but I don't remember the question."
-msgstr ""
+msgstr "Zöld! Zöld!\nZöld a válasz, de nem emlékszem a kérdésre."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Ours is a strange world, it's cold here but a little warmer there."
-msgstr ""
+msgstr "Különös világ a miénk, itt hideg van, de ott kicsit melegebb van."
 
 #: lib/game/utils/event_manager.dart:
 msgid "I have to stop eating ice cream before bed."
-msgstr ""
+msgstr "Le kell állnom a lefekvés előtti jégkrémevéssel."
 
 #: lib/game/utils/event_manager.dart:
 msgid "I know many languages."
-msgstr ""
+msgstr "Sok nyelvet ismerek."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Hey!"
-msgstr ""
+msgstr "Hé!"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Here I am."
-msgstr ""
+msgstr "Itt vagyok."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Leave me alone."
-msgstr ""
+msgstr "Hagyj magamra."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Do you believe in fairies??"
-msgstr ""
+msgstr "Hiszel a tündérekben??"
 
 #: lib/game/utils/event_manager.dart:
 msgid "What do piglets dream about?"
-msgstr ""
+msgstr "Miről álmodnak a malacok?"
 
 #: lib/game/utils/event_manager.dart:
 msgid "I am hungryyy."
-msgstr ""
+msgstr "Éhes vagyokkk."
 
 #: lib/game/utils/event_manager.dart:
 msgid "And that's it.\nWe have now reached the end of this fantastic adventure!\nYour determination and courage made this victory possible.\nKeep exploring, dreaming and being the hero the world needs, because your adventures will never end.\nWhere will your next journey take you?\nThank you for playing Xeonjia!\nMaybe our paths will cross again."
-msgstr ""
+msgstr "És ez minden.\nMost elérkeztünk ennek a fantasztikus kalandnak a végére!\nAz elszántságod és bátorságod tette lehetővé ezt a győzelmet.\nFolytasd a felfedezést, az álmodozást, és legyél az a hős, akire a világnak szüksége van, mert a kalandjaid soha sem érnek véget.\nHová vezet majd a következő utazásod?\nKöszönjük, hogy játszottál a Xeonjia játékkal!\nTalán az útjaink újra találkozni fognak."
 
 #: lib/game/utils/event_manager.dart:
 msgid "Bye!"
-msgstr "Szia!"
+msgstr "Viszlát!"
 
 #: lib/game/components/character.dart:
 msgid "We must fight, not talk!"
-msgstr ""
+msgstr "Harcolnunk kell, nem beszélgetnünk!"
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} puts %s in the backpack *"
-msgstr ""
+msgstr "* {{hero}} beteszi a hátizsákba ezt: %s *"
 
 #: lib/game/components/character.dart:
 msgid "the gem"
@@ -561,27 +555,27 @@ msgstr "a drágakő"
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} uses {{selected-item-name}} *"
-msgstr ""
+msgstr "* {{hero}} ezt használja: {{selected-item-name}} *"
 
 #: lib/game/components/character.dart:
 msgid "* {{user-name}} uses {{selected-item-name}} *"
-msgstr ""
+msgstr "* {{user-name}} ezt használja: {{selected-item-name}} *"
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} gives %s *"
-msgstr "* {{hero}} ad: %s *"
+msgstr "* {{hero}} ezt adja: %s *"
 
 #: lib/game/components/common/basic.dart:
 msgid "You can't defeat me as long as there are other monsters besides me."
-msgstr ""
+msgstr "Addig nem tudsz legyőzni, amíg más szörnyek is vannak rajtam kívül."
 
 #: lib/game/components/common/walker.dart:
 msgid "I've run out of shots for this weapon."
-msgstr ""
+msgstr "Elfogytak a lövedékek ehhez a fegyverhez."
 
 #: lib/game/components/door.dart:
 msgid "There is still 1 enemy here. I can't escape."
-msgstr "Még mindig van itt egy ellenség. Nem tudok elmenekülni."
+msgstr "Még mindig van itt 1 ellenség. Nem tudok elmenekülni."
 
 #: lib/game/components/door.dart:
 msgid "There are still %s enemies here. I can't escape."
@@ -597,19 +591,19 @@ msgstr "Itt van %s ellenség!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "It' time to fight!"
-msgstr "Itt az ideje a küzdelemnek!"
+msgstr "Itt az idő a harcra!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is tired and is back in the leaf, I must continue the battle."
-msgstr ""
+msgstr "Milla elfáradt, és visszatér a levélbe, folytatnom kell a harcot."
 
 #: lib/game/xeonjia_game.dart:
 msgid "September is tired, I must continue the battle alone."
-msgstr ""
+msgstr "Szeptember elfáradt, egyedül kell folytatnom a harcot."
 
 #: lib/game/xeonjia_game.dart:
 msgid "September is tired, but we must continue the battle."
-msgstr ""
+msgstr "Szeptember elfáradt, de folytatnunk kell a harcot."
 
 #: lib/game/xeonjia_game.dart:
 msgid "Battle!"
@@ -617,93 +611,91 @@ msgstr "Harc!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "You won!"
-msgstr "Nyertél!"
+msgstr "Győztél!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is resting."
-msgstr ""
+msgstr "Milla pihen."
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is already here!"
-msgstr ""
+msgstr "Milla már itt van!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s ¤. I'm not very rich."
-msgstr ""
+msgstr "%s ¤ van nálam. Nem vagyok túl gazdag."
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s health points."
-msgstr ""
+msgstr "%s életpontom van."
 
 #: lib/game/xeonjia_game.dart:
 msgid "I don't even have a cent!"
-msgstr ""
+msgstr "Még egy fillérem sincs!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s health points!"
-msgstr ""
+msgstr "%s életpontom van!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "I? I have %s health points."
-msgstr ""
+msgstr "Én? %s életpontom van."
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"
-msgstr "Szeretnéd újra elolvasni a magyarázatot arról, hogyan kell harcolni?"
+msgstr "Szeretnéd újra elolvasni a magyarázatot, hogy hogyan kell harcolni?"
 
 #: lib/game/xeonjia_game.dart:
 msgid "* {{hero}} consults \"The Manual of the Perfect Hero\" *"
-msgstr "* {{hero}} konzultálja a \"A Tökéletes Hős Kézikönyve\"-t *"
+msgstr "* {{hero}} olvasgatja az „A tökéletes hős kézikönyve” könyvet *"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Chapter 4: Battles"
-msgstr "4. Fejezet: Harcok"
+msgstr "4. fejezet: Harcok"
 
 #: lib/game/xeonjia_game.dart:
 msgid "In battle each player has 3 moves per turn."
-msgstr "A csatákban minden játékosnak 3 lépése van körönként."
+msgstr "A harcban minden játékosnak 3 lépése van körönként."
 
 #: lib/game/xeonjia_game.dart:
 msgid "After these 3 moves, it is the opponent's turn."
-msgstr "A három lépés után az ellenség következik."
+msgstr "A 3 lépés után az ellenfél következik."
 
 #: lib/game/xeonjia_game.dart:
 msgid "A move can be used to walk, use items, attack or examine what is in front of you."
-msgstr "Egy lépést használhatsz sétára, tárgyak használatára, támadásra vagy megnézheted vele, mi van előtted."
+msgstr "Egy lépés használható sétára, tárgyak használatára, támadásra vagy megvizsgálhatod, hogy mi van előtted."
 
 #: lib/game/xeonjia_game.dart:
 msgid "You should already know the \"%s\" button, it examines objects, plants and people."
-msgstr ""
+msgstr "Már ismerned kell az „%s” gombot, ez vizsgálja meg a tárgyakat, növényeket és embereket."
 
 #: lib/game/xeonjia_game.dart:
 msgid "To attack use the \"%s\" button. In this way you punch the enemy in front of you."
-msgstr ""
+msgstr "Támadáshoz használd a „%s” gombot. Így ütöd meg az előtted álló ellenséget."
 
 #: lib/game/xeonjia_game.dart:
 msgid "Otherwise, throw snowballs with the \"%s\" button in the direction you are looking at."
-msgstr ""
+msgstr "Ellenkező esetben dobj hógolyókat a „%s” gombbal abba az irányba, amerre nézel."
 
 #: lib/game/xeonjia_game.dart:
-#, fuzzy
 msgid "If you run out of snowballs, get some snow from the snowdrifts around you."
-msgstr "Ha kifogytál a hógolyókból, szerezz egy kis havat a körülötted lévő hóatorlaszokból."
+msgstr "Ha elfogytak a hógolyóid, szerezz egy kis havat a körülötted lévő hótorlaszokból."
 
 #: lib/game/xeonjia_game.dart:
 msgid "Mines you place under you with the \"%s\" button explode as soon as an enemy steps on them."
-msgstr ""
+msgstr "A „%s” gombbal magad alá helyezett aknák akkor robbannak fel, amikor egy ellenség rájuk lép."
 
 #: lib/game/xeonjia_game.dart:
-#, fuzzy
 msgid "Remember, enemies also have HP. Hit them multiple times to knock them out!"
-msgstr "Ne felejtsd, az ellenségeknek szintén van HP-jük. Többször üsd meg őket a legyőzés érdekében!"
+msgstr "Ne feledd, az ellenségeknek szintén van életpontjuk. Üsd meg őket többször, hogy kiüsd őket!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "And if you have few HP take advantage of a move you have available to eat or drink something you have in your backpack!"
-msgstr "Ha pedig kevés a HP-d, használd ki a rendelkezésedre álló lépést, és egyél vagy igyál valamit, ami a hátizsákodban van!"
+msgstr "Ha pedig kevés az életpontod, használd ki az elérhető mozgás előnyét, és egyél vagy igyál valamit, ami a hátizsákodban van!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "That's all. Good luck!"
-msgstr "Ennyi minden. Sok sikert!"
+msgstr "Ez minden. Sok szerencsét!"
 
 #: lib/game/xeonjia_game.dart:
 msgid "manual"
