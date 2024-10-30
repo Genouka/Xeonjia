@@ -1,3 +1,3 @@
 * Többjátékos mód hozzáadása
-* Gamepad javítása
+* A játékvezérlő továbbfejlesztése
 * Hibajavítások

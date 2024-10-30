@@ -1,4 +1,4 @@
-*Hozzá adtunk egy új részt a történethez
-* Különböző fejlesztések és új funkciók
+* A történet új részének hozzáadása
+* Különféle továbbfejlesztések és új funkciók
 * Fordítások frissítése és új nyelvek hozzáadása (béta)
 * Hibajavítások

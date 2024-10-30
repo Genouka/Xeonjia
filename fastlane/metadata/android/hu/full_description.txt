@@ -1,17 +1,22 @@
-Két módban játszató:
+A <b>Xeonjia</b> egy <b>fagyos világban</b> játszódó <b>kalandjáték</b>.
 
-1) Történet mód: a cél a torony utolsó emeletének elérése és a "Gonosz Király" legyőzése.
+A talaj megfagyott! Gondold át alaposan a lépéseidet, mert nem tudsz irányt változtatni, amíg akadályba nem ütközöl.
+Használd az eszed a jeges, csúszós fejtörők megoldásához!
 
-2) Többjátékosos mód: ebben a módban a cél a pontgyűjtés és a csapat győzelme.
+A <b>„gonosz király”</b> befagyasztotta a világot, és többé már nem biztonságos hely.
 
-Alapvetően az ujjaddal kell majd mozgatnod a karakteredet a világban.
+A legenda szerint egy bátor hős legyőzi majd a gonosz királyt, és megmenti a királyságot… Ezért minden évben kineveznek egy személyt „hősnek”, és útnak indítják, hogy megpróbálja megmenteni a királyságot.
 
-Ne feledd, hogy nem állhatsz meg, amíg nem érsz el egy falat, sziklát vagy bármilyen más típusú akadályt.
+Most eljött a te időd, <b>téged választottak az idei év hősének!</b> Képes leszel legyőzni a gonosz királyt?
 
-Idővel tapasztalati pontokat fogsz szerezni, amelyekkel növelheted a szinted, és pénzt és rejtett kincseket találsz, amiket arra használhatsz, hogy dolgokat vásárolj és fejleszd magad.
+Be kell majd utaznod a világot, felfedezned városokat, várbörtönöket és misztikus barlangokat.
 
-Légy óvatos, a világ tele van veszélyes ellenségekkel, akik készen állnak arra, hogy megtámadjanak!
+<b>Készen állsz a küldetések és fejtörők megoldására ebben a fagyos RPG-világban?</b>
 
-Használd az eszed, hogy kitaláld a legjobb utat!
+Idővel tapasztalati pontokat szerzel majd, amelyek lehetővé teszik, hogy növeld a szinted, valamint pénzt és rejtett kincseket találsz, amelyeket dolgok vásárlásához és önmagad fejlesztéséhez használhatsz.
 
-<b>Megjegyzés</b>: ez a játék jelenleg korai béta fázisban van.
+Légy óvatos, a világ tele van <b>veszélyes ellenségekkel</b>, akik készen állnak arra, hogy megtámadjanak!
+
+Ne feledd, hogy a <b>talaj nagy része fagyott</b>, így nem tudsz megállni, amíg nem érsz el egy falat, egy sziklát vagy bármilyen más típusú akadályt.
+
+<b>Használd az eszed, hogy megtaláld a legjobb utat!</b>

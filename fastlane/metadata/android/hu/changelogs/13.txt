@@ -1,0 +1,10 @@
+* Új körökre osztott harc
+* Új világtérkép
+* A grafika továbbfejlesztése
+* UI/UX továbbfejlesztések
+* A történet mód továbbfejlesztése
+* Animációk, háttérzene és hanghatások továbbfejlesztése
+* A játékvezérlő továbbfejlesztése
+* A játék nehézségének beállításai
+* Fordítások frissítése
+* Hibajavítások

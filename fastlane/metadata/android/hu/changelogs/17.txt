@@ -1,0 +1,5 @@
+* A történet mód most már teljes!
+* UI/UX és grafikai frissítések
+* Különféle fejlesztések
+* Fordítások frissítése
+* Hibajavítások
