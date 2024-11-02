@@ -1,0 +1,2 @@
+* Übersetzungen verbessert
+* Bugfixes

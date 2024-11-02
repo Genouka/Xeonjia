@@ -1,0 +1,2 @@
+*Actualizează translațiile
+*Rezolvări bug-uri
