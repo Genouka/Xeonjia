@@ -1,7 +1,7 @@
 /// Build variants
 class Config {
   /// App version (shown in InfoPage)
-  static const String version = '3.0.2';
+  static const String version = '3.0.4';
 
   /// True: hide donation link in InfoPage (due to Play Store policies)
   static const bool hideDonationInfo = false;
