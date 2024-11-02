@@ -3,8 +3,9 @@
 # This file is distributed under the same license as Xeonjia.
 # Satou <sanna+dee@dismail.de>, 2022.
 # deepdaikon <deepdaikon@tuta.io>, 2022, 2023, 2024.
+# Balázs Úr <balazs@urbalazs.hu>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-09-21 09:31+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Japanese <https://translate.deepdaikon.xyz/projects/xeonjia/story/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-11-02 13:54+0000\nLast-Translator: Balázs Úr <balazs@urbalazs.hu>\nLanguage-Team: Japanese <https://translate.deepdaikon.xyz/projects/xeonjia/story/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -32,7 +33,7 @@ msgstr "こんにちは"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "Hello, you must be {{hero}}! Nice to meet you.\nI heard you were heading to these parts.\nMy name is Xe III and I am the King of this Region."
-msgstr "こんにちは、あなたはきっと{英雄}！お会いできて嬉しいです。\n私はあなたがこれらの場所に行くと聞きました。\n私の名前はXe IIIで、私はこの地域の王です。"
+msgstr "こんにちは、あなたはきっと{{hero}}！お会いできて嬉しいです。\n私はあなたがこれらの場所に行くと聞きました。\n私の名前はXe IIIで、私はこの地域の王です。"
 
 #: assets/maps/story/30_cityhall.tmx:
 msgid "king"
