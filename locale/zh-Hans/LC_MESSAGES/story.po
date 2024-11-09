@@ -676,7 +676,7 @@ msgid "September!?"
 msgstr "九月！？"
 
 #: assets/maps/story/75.tmx:
-msgid "Well, yes, you know how she is.\nShe must have gone there to get the signet by herself and now she's probablu going to the tower."
+msgid "Well, yes, you know how she is.\nShe must have gone there to get the signet by herself and now she's probably going to the tower."
 msgstr "嗯，对，你知道是谁的。\n她大概自己拿了徽章，往 Xeonjia 塔了吧。"
 
 #: assets/maps/story/75.tmx:
