@@ -675,7 +675,7 @@ msgid "September!?"
 msgstr "September!?"
 
 #: assets/maps/story/75.tmx:
-msgid "Well, yes, you know how she is.\nShe must have gone there to get the signet by herself and now she's probablu going to the tower."
+msgid "Well, yes, you know how she is.\nShe must have gone there to get the signet by herself and now she's probably going to the tower."
 msgstr "Nun, ja, du weißt wie sie ist.\nSie muss wohl dort hingegangen sein um das dritte Siegel zu holen und nun wird sie wohl auf dem Weg zum Turm sein."
 
 #: assets/maps/story/75.tmx:
