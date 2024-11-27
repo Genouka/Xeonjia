@@ -6,7 +6,7 @@
 # Kempelen <lion@cmsbazar.hu>, 2022.
 # Balázs Úr <balazs@urbalazs.hu>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-11-02 13:54+0000\nLast-Translator: Balázs Úr <balazs@urbalazs.hu>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-11-20 11:08+0000\nLast-Translator: Balázs Úr <balazs@urbalazs.hu>\nLanguage-Team: Hungarian <https://translate.deepdaikon.xyz/projects/xeonjia/story/hu/>\nLanguage: hu\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -4254,11 +4254,11 @@ msgstr "De, de… a kiválasztott hős legendája…"
 
 #: assets/maps/story/999_up.tmx:
 msgid "I made up the legend.\nEvery year ONE hero is chosen because otherwise if hundreds of people tried to defeat me it would be more complicated to get rid of them all.\nIndeed, this year that you've come this far in 4 you're more annoying."
-msgstr "Én találtam ki a legendát.\nMinden évben EGY hős került kiválasztásra, mert különben ha több száz ember próbált volna legyőzni engem, sokkal bonyolultabb lett volna megszabadulni mindannyiuktól.\nValóban, ebben az évben, hogy idáig eljutottatok, 4-egy együtt még idegesítőbbek vagytok."
+msgstr "Én találtam ki a legendát.\nMinden évben EGY hős került kiválasztásra, mert különben ha több száz ember próbált volna legyőzni engem, sokkal bonyolultabb lett volna megszabadulni mindannyiuktól.\nValóban, ebben az évben, hogy idáig eljutottatok, 4-en együtt még idegesítőbbek vagytok."
 
 #: assets/maps/story/999_up.tmx:
 msgid "Honestly I don't care about legends, heroes, signets or even gems.\nDuring this extraordinary adventure I've learned a lot and lived invaluable experiences. In some moments I suffered, I admit it, but it was worth it."
-msgstr "Őszintén szólva nem érdekelnek a legendák, a hősök, a pecsétek. de még a drágakövek sem.\nE rendkívüli kaland során sokat tanultam, és felbecsülhetetlen élményeket éltem át. Néhány pillanatban szenvedtem, bevallom, de megérte."
+msgstr "Őszintén szólva nem érdekelnek a legendák, a hősök, a pecsétek, de még a drágakövek sem.\nE rendkívüli kaland során sokat tanultam, és felbecsülhetetlen élményeket éltem át. Néhány pillanatban szenvedtem, bevallom, de megérte."
 
 #: assets/maps/story/999_up.tmx:
 msgid "Everything that has happened has contributed significantly to my maturation and growth."

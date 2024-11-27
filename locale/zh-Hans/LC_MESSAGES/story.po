@@ -16,8 +16,9 @@
 # 忘了叫啥 <1479949473@qq.com>, 2024.
 # LS-Shandong <shu_lin_work@outlook.com>, 2024.
 # Deleted User <noreply+148@weblate.org>, 2024.
+# Kun Bang Tu <linyu30000@hotmail.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-10-20 08:47+0000\nLast-Translator: Deleted User <noreply+148@weblate.org>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-11-27 09:08+0000\nLast-Translator: Kun Bang Tu <linyu30000@hotmail.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -821,7 +822,7 @@ msgstr "加油。"
 
 #: assets/maps/story/75.tmx:
 msgid "I'm leaving you now, I'm getting ready to warm up the tower, it will require a lot of energy.\nBye!"
-msgstr "我要走了，我要去给塔取暖，这需要很多体力。\n再见！"
+msgstr "我准备差不多了，是时候去使塔的温度回暖了。这将会是一件耗费能量的事情。我得走了。\n拜！"
 
 #: assets/maps/story/75.tmx:
 msgid "Bye!"
@@ -889,7 +890,7 @@ msgstr "我还记得，那次你走了运。\n但今天事情不一样了。\n�
 
 #: assets/maps/story/37.tmx:
 msgid "W-wait a moment, September!"
-msgstr ""
+msgstr "等、等一下，九月！"
 
 #: assets/maps/story/37.tmx:
 msgid "How are you? Everything good? I haven't seen you for 16 years… We have so much to talk about."
@@ -897,11 +898,11 @@ msgstr ""
 
 #: assets/maps/story/37.tmx:
 msgid "I don't have time to mess around.\nSee you where I told you."
-msgstr ""
+msgstr "我没有时间乱来。\n在我告诉你的地方见。"
 
 #: assets/maps/story/37.tmx:
 msgid "Ok… see you later."
-msgstr ""
+msgstr "好的…待会儿见。"
 
 #: assets/maps/story/37.tmx:
 msgid "I remembered her less surly."
@@ -913,19 +914,20 @@ msgstr ""
 
 #: assets/maps/story/77.tmx:
 msgid "Cableway"
-msgstr ""
+msgstr "索道"
 
 #: assets/maps/story/77.tmx:
 msgid "I can see the inside of the building."
-msgstr ""
+msgstr "我能看到大楼的内部。"
 
 #: assets/maps/story/14.tmx:
 msgid "Hello, I'm a workers of the Kingdom.\nI'm smoothing this rock so it doesn't hurt anymore.\nA lot of people complain about these rocks, I'm sorry."
 msgstr ""
 
 #: assets/maps/story/14.tmx:
+#, fuzzy
 msgid "Maybe one day these rocks will all be nice and smooth, but today is not that day."
-msgstr ""
+msgstr "也许有一天，这些石头会变得又平整又光滑，但不是现在。"
 
 #: assets/maps/story/14.tmx:
 msgid "← Pharmacy"
@@ -933,7 +935,7 @@ msgstr "← 药店"
 
 #: assets/maps/story/14.tmx:
 msgid "I guess this rock has just been smoothed out."
-msgstr ""
+msgstr "我猜这块石头刚刚被磨平。"
 
 #: assets/maps/story/18.tmx:
 msgid "I have to stay here because if I move you can't get out anymore."
@@ -946,19 +948,20 @@ msgstr ""
 #: assets/maps/story/7.tmx:
 #, fuzzy
 msgid "Oops… yes, sorry, I am in the middle of the road…\nAre you a tourist? There are very few nowadays."
-msgstr "噢……是的，抱歉，我挡在路中央了……\n你是游客吗？现在游客已经很少见了。"
+msgstr "噢……抱歉，我挡在路中间了……\n你是游客吗？现在游客已经很少见了。"
 
 #: assets/maps/story/7.tmx:
 msgid "???"
-msgstr ""
+msgstr "？？？"
 
 #: assets/maps/story/7.tmx:
+#, fuzzy
 msgid "N-no, I'm {{hero}}, this year's chosen hero."
-msgstr ""
+msgstr "额... 不，我是 {{hero}}，今年的勇者。"
 
 #: assets/maps/story/7.tmx:
 msgid "What?! So is it you?!"
-msgstr ""
+msgstr "什么？！原来那就是你吗？！"
 
 #: assets/maps/story/7.tmx:
 msgid "Nice to meet you, I've never met a hero before."
@@ -966,7 +969,7 @@ msgstr "很高兴认识你，我之前还从来没见到过一个英雄呢。"
 
 #: assets/maps/story/7.tmx:
 msgid "My name is Milla, I was born and raised in this area.\nWhy are you here?"
-msgstr ""
+msgstr "我叫米拉，我在这个地区出生和长大。\n你为什么在这里？"
 
 #: assets/maps/story/7.tmx:
 msgid "I just left home to try to defeat the King of Evil."
@@ -979,7 +982,7 @@ msgstr ""
 #: assets/maps/story/7.tmx:
 #, fuzzy
 msgid "Oh cool! Where are you going?"
-msgstr "哦，酷！你打算去哪里？"
+msgstr "哦，酷！那你打算去哪里？"
 
 #: assets/maps/story/7.tmx:
 #, fuzzy
@@ -993,7 +996,7 @@ msgstr ""
 #: assets/maps/story/7.tmx:
 #, fuzzy
 msgid "Are there places outside the Kingdom?!"
-msgstr "王国外面还有地方吗？！"
+msgstr "王国之外还有可以去的地方吗？！"
 
 #: assets/maps/story/7.tmx:
 msgid "Dunno, that's what I want to find out!"
@@ -1009,7 +1012,7 @@ msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Hopefully before dark."
-msgstr ""
+msgstr "希望能在天黑之前。"
 
 #: assets/maps/story/7.tmx:
 msgid "Oh well yeah sure."
@@ -1021,7 +1024,7 @@ msgstr ""
 
 #: assets/maps/story/7.tmx:
 msgid "Sure!"
-msgstr ""
+msgstr "好啊！"
 
 #: assets/maps/story/7.tmx:
 msgid "Anyway, I don't want to waste any more of your time."
@@ -1069,19 +1072,19 @@ msgstr "药剂师"
 
 #: assets/maps/story/28_lp_shop.tmx:
 msgid "I wanted to buy some medicines but they don't have the ones I like."
-msgstr ""
+msgstr "我想买些药，但其他店没有我想要的。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I'm green if #5 and #6 are both the same color. Otherwise I'm red."
-msgstr ""
+msgstr "如果 #5 跟 #6 颜色相同，那我便是绿的。否则我是红的。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "rock #3"
-msgstr ""
+msgstr "石头 #3"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "There is a button, do I press it?"
-msgstr ""
+msgstr "那里有一个按钮，要按下它吗？"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I no longer need to press the button."
@@ -1089,43 +1092,43 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I'm red if #1 is red. Otherwise I'm green."
-msgstr ""
+msgstr "如果 #1 是红的，那我便是红的。否则我是绿的。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "rock #5"
-msgstr ""
+msgstr "石头 #5"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I'm green if #3 is green. Otherwise I'm red."
-msgstr ""
+msgstr "如果 #3 是绿的，那我便是绿的。否则我是红的。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "rock #4"
-msgstr ""
+msgstr "石头 #4"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I'm green if #4 is red. Otherwise I'm red."
-msgstr ""
+msgstr "如果 #4 是红的，那我便是绿的。否则我是红的。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "rock #2"
-msgstr ""
+msgstr "石头 #2"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I'm red if #4 is green. Otherwise I'm green."
-msgstr ""
+msgstr "如果 #4 是绿的，那我便是红的。否则我是绿的。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "rock #1"
-msgstr ""
+msgstr "石头 #1"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I'm red if #2 is green. Otherwise I'm green."
-msgstr ""
+msgstr "如果 #2 是绿的，那我便是红的。否则我是绿的。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "rock #6"
-msgstr ""
+msgstr "石头 #6"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hi {{hero}}! How are you doing? Were you able to get the first signet?"
@@ -1133,15 +1136,15 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Hi Shen! Yes I did it!"
-msgstr ""
+msgstr "沈小姐！我做到了！"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "But it was not easy."
-msgstr ""
+msgstr "但这并不容易。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I didn't have any big problems."
-msgstr ""
+msgstr "我没遇到什么大问题。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Great! I had no doubt you would make it.\nDid you find the snowballs helpful?"
@@ -1157,15 +1160,16 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Everything originated from water, everything will return to water."
-msgstr ""
+msgstr "万物源于水，又将归于水。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "What does it say? What does it mean?"
-msgstr ""
+msgstr "它写了什么？这是什么意思？"
 
 #: assets/maps/story/34_cave.tmx:
+#, fuzzy
 msgid "It is the ancient writing used in these areas long ago.\nHere it says:"
-msgstr ""
+msgstr "这是这里古时候用的语言。\n它写着："
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I think somehow it's possible to invoke the protective spirit of this region. We just have to figure out how."
@@ -1173,19 +1177,20 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "!!!"
-msgstr ""
+msgstr "！！！"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "Slooosh!"
 msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
+#, fuzzy
 msgid "Hi, I'm the Spirit of Water.\nIs there anything you need?\nI don't have much time, with this cold I quickly become ice. And I'd say there's enough ice here."
-msgstr ""
+msgstr "你好，我是水之精灵。\n你有什么需要吗？\n我的时间不多了，在这么冷的地方我很快就要冻成冰块了。这里已经有很多冰块了。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "water spirit"
-msgstr ""
+msgstr "水之精灵"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "{{hero}} what could we ask him? I have plenty of questions, but if you agree I would ask him if he knows anything about the King of Evil."
@@ -1237,11 +1242,12 @@ msgstr ""
 
 #: assets/maps/story/34_cave.tmx:
 msgid "I have found {{gem_count}} so far."
-msgstr ""
+msgstr "目前我已经找到了 {{gem_count}}个。"
 
 #: assets/maps/story/34_cave.tmx:
+#, fuzzy
 msgid "Well, it's a start."
-msgstr ""
+msgstr "嗯，好的开始。"
 
 #: assets/maps/story/34_cave.tmx:
 msgid "We need to be more careful and look for them better.\nNow I'll leave you and continue my studies on the gem I have.\nSee you!"
