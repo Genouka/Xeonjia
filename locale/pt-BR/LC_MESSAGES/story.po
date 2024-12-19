@@ -6,7 +6,7 @@
 # Lucas Melo Sanginetto <lucamsanginetto@outlook.com>, 2023, 2024.
 # Carlos Henrique Maschio Martins <carlosmartins00098@gmail.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-02-26 13:23+0000\nLast-Translator: Carlos Henrique Maschio Martins <carlosmartins00098@gmail.com>\nLanguage-Team: Portuguese (Brazil) <https://translate.deepdaikon.xyz/projects/xeonjia/story/pt-BR/>\nLanguage: pt-BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-12-19 20:07+0000\nLast-Translator: Carlos Henrique Maschio Martins <carlosmartins00098@gmail.com>\nLanguage-Team: Portuguese (Brazil) <https://translate.deepdaikon.xyz/projects/xeonjia/story/pt-BR/>\nLanguage: pt-BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -3094,7 +3094,7 @@ msgstr "A Prefeitura parece espaçosa."
 
 #: assets/maps/story/48.tmx:
 msgid "Great, it worked.\nBut… do you have to appear on my head?"
-msgstr ""
+msgstr "Ótimo, funcionou.\nMas… você tem que aparecer na minha cabeça?"
 
 #: assets/maps/story/48.tmx:
 msgid "No, but I like it that way.\nProblems?"
@@ -3194,7 +3194,7 @@ msgstr "O-ok, obrigado!\nEu estava ficando um pouco entediado de viajar sozinho 
 
 #: assets/maps/story/48.tmx:
 msgid "Great!\nSo it's decided! We will travel together!"
-msgstr ""
+msgstr "Ótimo!\nEntão está decidido! Vamos viajar juntos!"
 
 #: assets/maps/story/48.tmx:
 msgid "However, to save energy I will often stay in the spiritual realm. To call me just hold this leaf that I am giving you now and I will appear.\nTo do this, just click on the top right where there is the leaf icon!"

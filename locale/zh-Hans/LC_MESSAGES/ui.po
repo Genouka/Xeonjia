@@ -10,8 +10,9 @@
 # Alex Black <limbobytes@outlook.com>, 2023.
 # 林波 <limbobytes@outlook.com>, 2023.
 # tonykouki <1020070531@qq.com>, 2023.
+# Boy-Grid <grid_boy@petalmail.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-01-13 14:10+0000\nLast-Translator: deepdaikon <deepdaikon@tuta.io>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-12-18 01:15+0000\nLast-Translator: Boy-Grid <grid_boy@petalmail.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -543,7 +544,7 @@ msgstr "就这样。\n我们来到了这趟神奇探险的终点！\n这场胜�
 
 #: lib/game/utils/event_manager.dart:
 msgid "Bye!"
-msgstr "拜拜！"
+msgstr "拜！"
 
 #: lib/game/components/character.dart:
 msgid "We must fight, not talk!"

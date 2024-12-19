@@ -8,8 +8,9 @@
 # Alex <usr@skrep.eu>, 2023.
 # H6rd <hrdq@proton.me>, 2023.
 # Elena <frogq455@gmail.com>, 2024.
+# Gleb Davydov <requestdg@gmail.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-11-27 09:08+0000\nLast-Translator: Andrey <jius55025@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-12-02 21:50+0000\nLast-Translator: Gleb Davydov <requestdg@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/story/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -1709,7 +1710,7 @@ msgstr "Через окно, я могу видеть только деревь�
 
 #: assets/maps/story/t2_03.tmx:
 msgid "WATERY CRYPT – B3F"
-msgstr ""
+msgstr "ВОДНАЯ КРИПТА - -3 этаж"
 
 #: assets/maps/story/t2_03.tmx:
 msgid "We won! We are strong!\nLet's move on."
@@ -1776,12 +1777,14 @@ msgid "Welcome to the City Hall."
 msgstr "Добро пожаловать в мэрию."
 
 #: assets/maps/story/53_cityhall.tmx:
+#, fuzzy
 msgid "{{hero}}!\nNice to meet you, I am ON VII, the king of the Water Region.\nI was told you freed Hana's Tunnel from the Hoarfrost Team, thanks a lot!\nThe tunnel had been blocked for weeks."
-msgstr ""
+msgstr "{{hero}},\nРад встрече, я ON VII, король Водного Региона.\nМне сказали ты освободил Туннель Hana от Hoarfrost Team, большое спасибо!\nТуннель был заблокирован несколько недеь."
 
 #: assets/maps/story/53_cityhall.tmx:
+#, fuzzy
 msgid "My duty!\nBy the way, King Xe III gave me this package for you."
-msgstr ""
+msgstr "Это честь для меня!\nКстати, король Xe III передал мне этот пакет для Вас."
 
 #: assets/maps/story/53_cityhall.tmx:
 msgid "Oh thank you, it's medicine for my back pain.\nYou know, sitting all day…\nSome plants in the Mitsu Forest are miraculous to solve these problems.\nWhere are you headed?"
@@ -1977,7 +1980,7 @@ msgstr "Мне нравится этот город!"
 
 #: assets/maps/story/53.tmx:
 msgid "Hey, welcome to Archocean City!\nWe have the best view in the whole Kingdom!\nHere we live between the sky and the water, have you noticed that?"
-msgstr ""
+msgstr "Хей, приветствую в городе Архоушен!\nУ нас лучшие виды во всем Королевстве!\nЗдесь мы живем между небом и водой, заметил?"
 
 #: assets/maps/story/53.tmx:
 msgid "This city is very expensive."
@@ -1985,19 +1988,19 @@ msgstr "Этот город очень дорогой."
 
 #: assets/maps/story/53.tmx:
 msgid "It was supposed to be a short holiday but it's lasting longer than expected."
-msgstr ""
+msgstr "Это должен был быть короткий отпуск, но он длится дольше чем я ожидал."
 
 #: assets/maps/story/53.tmx:
 msgid "My boyfriend took me here for a short holiday.\nHow wonderful!"
-msgstr ""
+msgstr "Мой парень пригласил меня сюда на короткий отпуск.\nКак прекрасно!"
 
 #: assets/maps/story/53.tmx:
 msgid "Today is my day off."
-msgstr ""
+msgstr "Сегодня у меня выходной."
 
 #: assets/maps/story/53.tmx:
 msgid "Don't worry, the bridge is very solid.\nIt has already collapsed 2 times but this time it was done a little better.\nI'm sure we've learned from our mistakes by now.\nDon't worry."
-msgstr ""
+msgstr "Не переживай, мост очень крепок.\nОн уже дважды падал, но в этот раз его сделали немного лучше.\nЯ уверен теперь мы научились на наших ошибках.\nНе переживай."
 
 #: assets/maps/story/53.tmx:
 msgid "Oh how wonderful!"
@@ -2005,7 +2008,7 @@ msgstr "О, как чудесно!"
 
 #: assets/maps/story/53.tmx:
 msgid "Hey, that's not fair.\nI can only see the wall!"
-msgstr ""
+msgstr "Эй, не честно.\nЯ вижу одну только стену!"
 
 #: assets/maps/story/53.tmx:
 msgid "Not my problem."
@@ -2013,7 +2016,7 @@ msgstr "Не моя проблема."
 
 #: assets/maps/story/53.tmx:
 msgid "I wish I had a camera."
-msgstr ""
+msgstr "Хотел бы я, чтобы у меня с собой была камера."
 
 #: assets/maps/story/53.tmx:
 msgid "Ok, that's enough.\nBye."
@@ -2077,31 +2080,31 @@ msgstr "Я ненавижу продакт-плейсмент."
 
 #: assets/maps/story/21_house.tmx:
 msgid "They are playing Quinb! It looks like they are having a lot of fun!"
-msgstr ""
+msgstr "Они играют в Quinb! Видимо им весело!"
 
 #: assets/maps/story/21_house.tmx:
 msgid "Sorry, I have to stay focused."
-msgstr ""
+msgstr "Извини, мне нужно сосредоточиться."
 
 #: assets/maps/story/21_house.tmx:
 msgid "I love Quinb!"
-msgstr ""
+msgstr "Я люблю Quinb!"
 
 #: assets/maps/story/21_house.tmx:
 msgid "I always lose, but this time it's going better than usual."
-msgstr ""
+msgstr "Я всегда проигрываю, но в этот раз все идет лучше чем обычно."
 
 #: assets/maps/story/21_house.tmx:
 msgid "They are playing Quinb!"
-msgstr ""
+msgstr "Они играют в Quinb!"
 
 #: assets/maps/story/x2.tmx:
 msgid "XEONJIA TOWER – 2F"
-msgstr ""
+msgstr "БАШНЯ XEONJIA - 2 этаж"
 
 #: assets/maps/story/x2.tmx:
 msgid "Watch out, there are monsters here!"
-msgstr ""
+msgstr "Осторожно, здесь монстры!"
 
 #: assets/maps/story/x2.tmx:
 msgid "Finally some fun!\nWho fights besides me?"
@@ -2109,63 +2112,63 @@ msgstr "Наконец-то веселье!\nКто дерется вместе 
 
 #: assets/maps/story/x2.tmx:
 msgid "Of course I fight!"
-msgstr ""
+msgstr "Конечно я сражусь!"
 
 #: assets/maps/story/x2.tmx:
 msgid "I'll help you too!"
-msgstr ""
+msgstr "Я тоже помогу!"
 
 #: assets/maps/story/x2.tmx:
 msgid "I don't like to fight, I'll leave it to you."
-msgstr ""
+msgstr "Я не хочу драться, оставляю это вам."
 
 #: assets/maps/story/x2.tmx:
 msgid "Ok, so it's me, September and Milla."
-msgstr ""
+msgstr "Окей, тогда сразятся Сентябрь, Мила и я."
 
 #: assets/maps/story/x2.tmx:
 msgid "What a dream team."
-msgstr ""
+msgstr "Что за команда мечты."
 
 #: assets/maps/story/x2.tmx:
 msgid "Best trio ever."
-msgstr ""
+msgstr "Лучшее трио."
 
 #: assets/maps/story/x2.tmx:
 msgid "I stay here. I'll join you later."
-msgstr ""
+msgstr "Я останусь здесь. Присоединюсь к вам позже."
 
 #: assets/maps/story/x2.tmx:
 msgid "These monsters are not very scary."
-msgstr ""
+msgstr "Эти монстры не очень страшные."
 
 #: assets/maps/story/x2.tmx:
 msgid "You go ahead in the next floors, I'll join you later.\nIf there are monsters I prefer to stay safe here."
-msgstr ""
+msgstr "Идите на следующие этажи, я догоню вас позже.\nЕсли там есть монстры, я предпочту остаться здесь, в безопасности."
 
 #: assets/maps/story/x2.tmx:
 msgid "Are you sure?"
-msgstr ""
+msgstr "Ты в порядке?"
 
 #: assets/maps/story/x2.tmx:
 msgid "Yes, you'll manage without me anyway."
-msgstr ""
+msgstr "Да, вы и без меня отлично справитесь."
 
 #: assets/maps/story/x2.tmx:
 msgid "Ok fine, see you later."
-msgstr ""
+msgstr "Хорошо, увидимся позже."
 
 #: assets/maps/story/x7.tmx:
 msgid "XEONJIA TOWER – 7F"
-msgstr ""
+msgstr "БАШНЯ XEONJIA - 7 этаж"
 
 #: assets/maps/story/x7.tmx:
 msgid "What are those things?"
-msgstr ""
+msgstr "Что это?"
 
 #: assets/maps/story/x7.tmx:
 msgid "Seventh floor. I think we're more than halfway through."
-msgstr ""
+msgstr "Седьмой этаж. Думаю мы более чем на пол пути."
 
 #: assets/maps/story/x7.tmx:
 msgid "She amuses herself easily."
@@ -2173,23 +2176,23 @@ msgstr ""
 
 #: assets/maps/story/x7.tmx:
 msgid "?\nWhat are those arrows?"
-msgstr ""
+msgstr "?\nЧто это за стрелки?"
 
 #: assets/maps/story/x7.tmx:
 msgid "I don't know! Try getting on it and see if anything happens."
-msgstr ""
+msgstr "Не знаю! Попробуй встать на одну из них и посмотреть что произойдет."
 
 #: assets/maps/story/x7.tmx:
 msgid "Let's try."
-msgstr ""
+msgstr "Попробую."
 
 #: assets/maps/story/x7.tmx:
 msgid "Uh?"
-msgstr ""
+msgstr "Хм?"
 
 #: assets/maps/story/x7.tmx:
 msgid "They change the direction you're going."
-msgstr ""
+msgstr "Они меняют направление движения."
 
 #: assets/maps/story/x7.tmx:
 msgid "That's so nice. It looks like a lot of fun."
