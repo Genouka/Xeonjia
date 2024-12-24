@@ -19,7 +19,7 @@
 # Kun Bang Tu <linyu30000@hotmail.com>, 2024.
 # Boy-Grid <grid_boy@petalmail.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-12-19 20:07+0000\nLast-Translator: Boy-Grid <grid_boy@petalmail.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-12-24 19:54+0000\nLast-Translator: Boy-Grid <grid_boy@petalmail.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -127,7 +127,7 @@ msgstr "还算轻松。"
 
 #: assets/maps/story/15.tmx:
 msgid "* {{hero}} found some berries! {{HP-diff}} HP have been recovered *"
-msgstr "* {{hero}}发现了一些浆果！已恢复 {{HP-diff}} 点生命值 *"
+msgstr "* {{hero}}发现了一些浆果！恢复了{{HP-diff}}点生命值 *"
 
 #: assets/maps/story/15.tmx:
 msgid "A little plant… nothing else."
@@ -447,7 +447,7 @@ msgstr "这个花瓶是空的。"
 
 #: assets/maps/story/34.tmx:
 msgid "* {{hero}} found {{money-diff}} ¤ *"
-msgstr "* {{hero}} 找到了 {{money-diff}} ¤ *"
+msgstr "* {{hero}}找到了{{money-diff}} ¤  *"
 
 #: assets/maps/story/34.tmx:
 msgid "A rock."
@@ -996,7 +996,7 @@ msgstr "国境以外还有其它地方吗？！"
 
 #: assets/maps/story/7.tmx:
 msgid "Dunno, that's what I want to find out!"
-msgstr "卜吱道呐，但这正是我所想探索的！"
+msgstr "窝卜吱道，但这正是我所想探索的！"
 
 #: assets/maps/story/7.tmx:
 msgid "Anyway…\nI was wondering… Do you… Do you want to stop for a picnic?"
@@ -1837,203 +1837,203 @@ msgstr "海洋有着安气宁神的力量。"
 
 #: assets/maps/story/32.tmx:
 msgid "Welcome to the Water Region! Enjoy your stay."
-msgstr ""
+msgstr "欢迎来到水之国！驻留愉快。"
 
 #: assets/maps/story/25.tmx:
 msgid "Look who's here… This year's \"hero\".\nWe took out the heroes of past years, we will take you out too."
-msgstr ""
+msgstr "瞧瞧谁来了…这不是今年的勇者嘛。\n往年的勇者都败在了我们的手下，你也不会例外。"
 
 #: assets/maps/story/25.tmx:
 msgid "W-who are you?! What do you want?!"
-msgstr ""
+msgstr "你、你们是什么人？！你们想要干嘛？！"
 
 #: assets/maps/story/25.tmx:
 msgid "You don't seem particularly informed, kid.\nAt least those before you had the basics.\nThey should choose \"heroes\" more carefully.\nWe are the Hoarfrost Team!\nWe are the professionals of crime.\nThe King of Evil's right-hand men.\nThanks to us, the King of Evil will be able to complete his work."
-msgstr ""
+msgstr "看来你连状况都还没有搞清楚啊，小子。\n在你之前的勇者起码还有些概念。\n他们应该更加谨慎地挑选勇者的。\n我们是霜白部队！\n我们是犯罪的专家。\n邪恶帝王的左膀右臂。\n多亏了我们，邪恶帝王才能完成他的事业。"
 
 #: assets/maps/story/25.tmx:
 msgid "His work?! What are you talking about?"
-msgstr ""
+msgstr "他的事业？！你们什么意思？"
 
 #: assets/maps/story/25.tmx:
 msgid "Hehe, we don't reveal our plans to you, kid.\nWe're not stupid.\nAnd anyway, even if we told you everything, it wouldn't do you any good, since we're going to take you out now."
-msgstr ""
+msgstr "哼哼，我们可不会就这么跟你透露我们的计划，小子。\n我们又不蠢。\n而且无论如何，即便我们把一切的一切都告诉你了，你也得不到任何好处，因为我们现在就要把你给解决了。"
 
 #: assets/maps/story/25.tmx:
 msgid "You won't catch me!"
-msgstr ""
+msgstr "你们抓不到我的！"
 
 #: assets/maps/story/25.tmx:
 msgid "You can't run away from here.\nDid you think you could get away with it that easily?\nThe fact that you tried to escape and not to fight makes it clear how little value you are.\nI hope next year's \"hero\" is a little braver than you, at least it would be a bit more fun for us."
-msgstr ""
+msgstr "你跑不到哪儿去的。\n你觉得你可以就这么轻松地跑掉吗？\n你的逃跑和避战策略只会让你的软弱无能展现无遗。\n我希望明年的“勇者”比你勇敢一点儿，起码能给我们带来更多乐子。"
 
 #: assets/maps/story/25.tmx:
 msgid "Bzzt… Bzzt… Bzzt…"
-msgstr ""
+msgstr "嗡…嗡…嗡…"
 
 #: assets/maps/story/25.tmx:
 msgid "phone"
-msgstr ""
+msgstr "手机"
 
 #: assets/maps/story/25.tmx:
 msgid "What's happening?"
-msgstr ""
+msgstr "发生什么了？"
 
 #: assets/maps/story/25.tmx:
 msgid "This year's \"hero\".\nWe just caught him."
-msgstr ""
+msgstr "今年的“勇者”。\n我们刚刚抓住了他。"
 
 #: assets/maps/story/25.tmx:
 msgid "Very well."
-msgstr ""
+msgstr "很好。"
 
 #: assets/maps/story/25.tmx:
 msgid "Do we get rid of him?"
-msgstr ""
+msgstr "要我们解决掉他吗？"
 
 #: assets/maps/story/25.tmx:
 msgid "Does he look smart?"
-msgstr ""
+msgstr "他看起来灵光吗？"
 
 #: assets/maps/story/25.tmx:
 msgid "No."
-msgstr ""
+msgstr "不。"
 
 #: assets/maps/story/25.tmx:
 msgid "Then let him go."
-msgstr ""
+msgstr "那就放他走。"
 
 #: assets/maps/story/25.tmx:
 msgid "WHAT?!\nAre you sure? Why have him around again?"
-msgstr ""
+msgstr "啊？！\n您确定吗？何必给自己留麻烦呢？"
 
 #: assets/maps/story/25.tmx:
 msgid "He has to go through me anyway if he wants to continue his journey.\nI'll get rid of him."
-msgstr ""
+msgstr "如果他还执意要完成使命，他反正是要过我这一关的。\n我会解决他的。"
 
 #: assets/maps/story/25.tmx:
 msgid "But what if he makes trouble and…"
-msgstr ""
+msgstr "可如果他之后给我们造成了麻烦…"
 
 #: assets/maps/story/25.tmx:
 msgid "Do not insist. It's my final decision."
-msgstr ""
+msgstr "就这样了。我已经决定了。"
 
 #: assets/maps/story/25.tmx:
 msgid "But boss, we can't risk that he will…"
-msgstr ""
+msgstr "可是老大，我们冒不了…"
 
 #: assets/maps/story/25.tmx:
 msgid "You will still get your reward, don't worry."
-msgstr ""
+msgstr "你的奖赏不受影响，放心照做吧。"
 
 #: assets/maps/story/25.tmx:
 msgid "Ah okay, perfect. We leave it free.\nSee you later boss."
-msgstr ""
+msgstr "噢那行，没问题。我们放他走了。\n回见，老大。"
 
 #: assets/maps/story/25.tmx:
 msgid "Beep… Beep… Beep…"
-msgstr ""
+msgstr "嘟…嘟…嘟…"
 
 #: assets/maps/story/25.tmx:
 msgid "You got lucky this time.\nBut soon you will be dealing with our boss."
-msgstr ""
+msgstr "这次就算你走运。\n但你很快就要面对我们的老大了。"
 
 #: assets/maps/story/25.tmx:
 msgid "The King of Evil?"
-msgstr ""
+msgstr "邪恶帝王？"
 
 #: assets/maps/story/25.tmx:
 msgid "No, kid. We were in communication with the leader of Hoarfrost Team.\nHe will take care of you.\nIn any case, we keep an eye on you.\nWe wish you the worst."
-msgstr ""
+msgstr "不，小子。我们刚在和霜白部队的老大通话。\n他会搞定你的。\n无论如何，我们都会盯着你。\n祝你霉运临头。"
 
 #: assets/maps/story/71.tmx:
 msgid "Route 9"
-msgstr ""
+msgstr "9号小径"
 
 #: assets/maps/story/71.tmx:
 msgid "We won! We are strong!\nI go to rest."
-msgstr ""
+msgstr "我们赢了！好样儿的！\n我去休息了。"
 
 #: assets/maps/story/71.tmx:
 msgid "* Milla disappears into the leaf *"
-msgstr ""
+msgstr "* 米拉化为了叶子 *"
 
 #: assets/maps/story/x8.tmx:
 msgid "XEONJIA TOWER – 8F"
-msgstr ""
+msgstr "Xeonjia塔楼 – 8层"
 
 #: assets/maps/story/x8.tmx:
 msgid "An easy win.\nLet's move on."
-msgstr ""
+msgstr "轻轻松松。\n咱继续赶路吧。"
 
 #: assets/maps/story/x8.tmx:
 msgid "Stay focused!"
-msgstr ""
+msgstr "打起精神来！"
 
 #: assets/maps/story/69_house2.tmx:
 msgid "We pride ourselves on our traditions, such as the fire dance, to honor the power of the volcano and appease its spirits."
-msgstr ""
+msgstr "我们有着许多为之自豪的传统，例如赞美火山力量和安抚火之灵的火焰舞。"
 
 #: assets/maps/story/69_house2.tmx:
 msgid "Legends tell of an ancient guardian who protects the volcano.\nWe see it as a symbol of hope and security."
-msgstr ""
+msgstr "传说有一个守护火山的远古卫士。\n我们将它视作为希望和安全的象征。"
 
 #: assets/maps/story/53.tmx:
 msgid "Archocean City"
-msgstr ""
+msgstr "凌海市"
 
 #: assets/maps/story/53.tmx:
 msgid "I like this city!"
-msgstr ""
+msgstr "我喜欢这个城市！"
 
 #: assets/maps/story/53.tmx:
 msgid "Hey, welcome to Archocean City!\nWe have the best view in the whole Kingdom!\nHere we live between the sky and the water, have you noticed that?"
-msgstr ""
+msgstr "嘿，欢迎来到凌海市！\n我们有着全王国最棒的风景！\n城市伫立于水天相接之处，你注意到了吗？"
 
 #: assets/maps/story/53.tmx:
 msgid "This city is very expensive."
-msgstr ""
+msgstr "这里的物价很高。"
 
 #: assets/maps/story/53.tmx:
 msgid "It was supposed to be a short holiday but it's lasting longer than expected."
-msgstr ""
+msgstr "本来只计划了几天的假期，却没想到多待了这么久。"
 
 #: assets/maps/story/53.tmx:
 msgid "My boyfriend took me here for a short holiday.\nHow wonderful!"
-msgstr ""
+msgstr "我男朋友带我来这儿度几天假。\n真是完美！"
 
 #: assets/maps/story/53.tmx:
 msgid "Today is my day off."
-msgstr ""
+msgstr "我今天休息。"
 
 #: assets/maps/story/53.tmx:
 msgid "Don't worry, the bridge is very solid.\nIt has already collapsed 2 times but this time it was done a little better.\nI'm sure we've learned from our mistakes by now.\nDon't worry."
-msgstr ""
+msgstr "不用担心，这座桥很结实的。\n它之前是塌过两次，但是这次建得结实些了。\n我想我们已经汲取到了教训了。\n不用担心。"
 
 #: assets/maps/story/53.tmx:
 msgid "Oh how wonderful!"
-msgstr ""
+msgstr "哦真是完美！"
 
 #: assets/maps/story/53.tmx:
 msgid "Hey, that's not fair.\nI can only see the wall!"
-msgstr ""
+msgstr "嘿，这不公平。\n我在这儿脸上正对着墙！"
 
 #: assets/maps/story/53.tmx:
 msgid "Not my problem."
-msgstr ""
+msgstr "又不是我的错。"
 
 #: assets/maps/story/53.tmx:
 msgid "I wish I had a camera."
-msgstr ""
+msgstr "我真希望我带了相机。"
 
 #: assets/maps/story/53.tmx:
 msgid "Ok, that's enough.\nBye."
-msgstr ""
+msgstr "好了，这就够了。\n拜拜。"
 
 #: assets/maps/story/53.tmx:
 msgid "From here I can only see the wall."
-msgstr ""
+msgstr "这儿只能看到墙。"
 
 #: assets/maps/story/46_house.tmx:
 msgid "Our family has been building boats for over 140 years.\nWe are good at it."
