@@ -19,7 +19,7 @@
 # Kun Bang Tu <linyu30000@hotmail.com>, 2024.
 # Boy-Grid <grid_boy@petalmail.com>, 2024.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-12-24 19:54+0000\nLast-Translator: Boy-Grid <grid_boy@petalmail.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2024-12-26 16:12+0000\nLast-Translator: Boy-Grid <grid_boy@petalmail.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -459,7 +459,7 @@ msgstr "海克萨洞穴"
 
 #: assets/maps/story/38.tmx:
 msgid "Aquaville Town"
-msgstr "水滨镇"
+msgstr "滨水镇"
 
 #: assets/maps/story/38.tmx:
 msgid "I love this village!"
@@ -2037,211 +2037,211 @@ msgstr "这儿只能看到墙。"
 
 #: assets/maps/story/46_house.tmx:
 msgid "Our family has been building boats for over 140 years.\nWe are good at it."
-msgstr ""
+msgstr "我们的家族已经造船140余年了。\n我们是造船的专家。"
 
 #: assets/maps/story/46_house.tmx:
 msgid "Welcome to our boat store!\nAre you looking for a boat to explore the vast ocean or to transport your goods?\nI am here to help you find the right boat for your needs!\nMotorized, rowing, sailing, white, coloured, fast, resistant, large, small…"
-msgstr ""
+msgstr "欢迎来到我们的船店！\n您是否有意购置一条用于周游汪洋或是运输货物的船呢？\n就由我来帮您找到合您心意的那艘船！\n摩托艇，划艇，帆船，纯色，鲜艳，快，稳，大，小…"
 
 #: assets/maps/story/46_house.tmx:
 msgid "These I see all look exactly the same to me…"
-msgstr ""
+msgstr "我感觉我看到的这些都一模一样…"
 
 #: assets/maps/story/46_house.tmx:
 msgid "It's because you don't understand anything about boats!"
-msgstr ""
+msgstr "那是因为您还不够了解船！"
 
 #: assets/maps/story/46_house.tmx:
 msgid "Remember, a good boat can mean the difference between life and death in these dangerous seas!"
-msgstr ""
+msgstr "记住，船的好与坏的差别在那些危险海域即是生与死的差别！"
 
 #: assets/maps/story/46_house.tmx:
 msgid "Hmm, should I take the faster boat or the one with the beer fridge?\nI don't know, I don't know…"
-msgstr ""
+msgstr "嗯，我该选更快的船还是带啤酒冰柜的船呢？\n让我想想，让我想想…"
 
 #: assets/maps/story/x4.tmx:
 msgid "XEONJIA TOWER – 4F"
-msgstr ""
+msgstr "Xeonjia塔楼 – 4层"
 
 #: assets/maps/story/35.tmx:
 msgid "This boulder is very heavy."
-msgstr ""
+msgstr "这块石头太重了。"
 
 #: assets/maps/story/35.tmx:
 msgid "We are trying to move this boulder.\nI'm sorry but it's going to take a while."
-msgstr ""
+msgstr "我们正在试着移开这块石头。\n我很抱歉但这得花上一些时间。"
 
 #: assets/maps/story/35.tmx:
 msgid "A heavy rock."
-msgstr ""
+msgstr "一块大石头。"
 
 #: assets/maps/story/35.tmx:
 msgid "↑ Hexa Cave"
-msgstr ""
+msgstr "↑ 海克萨洞穴"
 
 #: assets/maps/story/35.tmx:
 msgid "Aquaville Town →"
-msgstr ""
+msgstr "滨水镇 →"
 
 #: assets/maps/story/21_house.tmx:
 msgid "I hate product placements."
-msgstr ""
+msgstr "我讨厌植入式广告。"
 
 #: assets/maps/story/21_house.tmx:
 msgid "They are playing Quinb! It looks like they are having a lot of fun!"
-msgstr ""
+msgstr "他们在玩儿Quinb！看起来他们玩儿得很开心！"
 
 #: assets/maps/story/21_house.tmx:
 msgid "Sorry, I have to stay focused."
-msgstr ""
+msgstr "抱歉，我得保持注意力集中。"
 
 #: assets/maps/story/21_house.tmx:
 msgid "I love Quinb!"
-msgstr ""
+msgstr "我喜欢Quinb！"
 
 #: assets/maps/story/21_house.tmx:
 msgid "I always lose, but this time it's going better than usual."
-msgstr ""
+msgstr "我经常输，但这次走势比往常好。"
 
 #: assets/maps/story/21_house.tmx:
 msgid "They are playing Quinb!"
-msgstr ""
+msgstr "他们在玩儿Quinb！"
 
 #: assets/maps/story/x2.tmx:
 msgid "XEONJIA TOWER – 2F"
-msgstr ""
+msgstr "Xeonjia塔楼 – 2层"
 
 #: assets/maps/story/x2.tmx:
 msgid "Watch out, there are monsters here!"
-msgstr ""
+msgstr "小心，这儿有魔物！"
 
 #: assets/maps/story/x2.tmx:
 msgid "Finally some fun!\nWho fights besides me?"
-msgstr ""
+msgstr "终于来了点儿乐子！\n有人要一起上吗？"
 
 #: assets/maps/story/x2.tmx:
 msgid "Of course I fight!"
-msgstr ""
+msgstr "当然要算上我！"
 
 #: assets/maps/story/x2.tmx:
 msgid "I'll help you too!"
-msgstr ""
+msgstr "我也要来帮忙！"
 
 #: assets/maps/story/x2.tmx:
 msgid "I don't like to fight, I'll leave it to you."
-msgstr ""
+msgstr "我不喜欢战斗，这儿就交给你们了。"
 
 #: assets/maps/story/x2.tmx:
 msgid "Ok, so it's me, September and Milla."
-msgstr ""
+msgstr "行，那么就是我，九月和米拉。"
 
 #: assets/maps/story/x2.tmx:
 msgid "What a dream team."
-msgstr ""
+msgstr "多么梦幻的队伍啊。"
 
 #: assets/maps/story/x2.tmx:
 msgid "Best trio ever."
-msgstr ""
+msgstr "史上最棒的三人组。"
 
 #: assets/maps/story/x2.tmx:
 msgid "I stay here. I'll join you later."
-msgstr ""
+msgstr "我先待在这儿。我待会儿去和你们会和。"
 
 #: assets/maps/story/x2.tmx:
 msgid "These monsters are not very scary."
-msgstr ""
+msgstr "这些魔物没有那么吓人的。"
 
 #: assets/maps/story/x2.tmx:
 msgid "You go ahead in the next floors, I'll join you later.\nIf there are monsters I prefer to stay safe here."
-msgstr ""
+msgstr "你们先往上面的楼层去，我待会儿就去找你们。\n如果那儿有魔物的话我觉得还是待在这儿安全。"
 
 #: assets/maps/story/x2.tmx:
 msgid "Are you sure?"
-msgstr ""
+msgstr "你确定吗？"
 
 #: assets/maps/story/x2.tmx:
 msgid "Yes, you'll manage without me anyway."
-msgstr ""
+msgstr "嗯，反正没有我你们也能搞定。"
 
 #: assets/maps/story/x2.tmx:
 msgid "Ok fine, see you later."
-msgstr ""
+msgstr "那好吧，回头见。"
 
 #: assets/maps/story/x7.tmx:
 msgid "XEONJIA TOWER – 7F"
-msgstr ""
+msgstr "Xeonjia塔楼 – 7层"
 
 #: assets/maps/story/x7.tmx:
 msgid "What are those things?"
-msgstr ""
+msgstr "这些是什么？"
 
 #: assets/maps/story/x7.tmx:
 msgid "Seventh floor. I think we're more than halfway through."
-msgstr ""
+msgstr "第七层。我想我们已经走了一半多了。"
 
 #: assets/maps/story/x7.tmx:
 msgid "She amuses herself easily."
-msgstr ""
+msgstr "她很擅长于自娱自乐。"
 
 #: assets/maps/story/x7.tmx:
 msgid "?\nWhat are those arrows?"
-msgstr ""
+msgstr "？\n这些箭头是做什么用的？"
 
 #: assets/maps/story/x7.tmx:
 msgid "I don't know! Try getting on it and see if anything happens."
-msgstr ""
+msgstr "我不知道！踩上去看看会不会发生点儿什么。"
 
 #: assets/maps/story/x7.tmx:
 msgid "Let's try."
-msgstr ""
+msgstr "我们来试一下。"
 
 #: assets/maps/story/x7.tmx:
 msgid "Uh?"
-msgstr ""
+msgstr "嘎？"
 
 #: assets/maps/story/x7.tmx:
 msgid "They change the direction you're going."
-msgstr ""
+msgstr "它们会改变你的前进方向。"
 
 #: assets/maps/story/x7.tmx:
 msgid "That's so nice. It looks like a lot of fun."
-msgstr ""
+msgstr "真不错。这看起来很好玩儿。"
 
 #: assets/maps/story/x7.tmx:
 msgid "Not that much."
-msgstr ""
+msgstr "还行吧。"
 
 #: assets/maps/story/x7.tmx:
 msgid "I like it!"
-msgstr ""
+msgstr "我喜欢！"
 
 #: assets/maps/story/27.tmx:
 msgid "I still don't understand why I lose money when I run out of HP."
-msgstr ""
+msgstr "我还是不懂为什么HP耗尽的时候总会丢钱。"
 
 #: assets/maps/story/27.tmx:
 msgid "← Sacred Tree"
-msgstr ""
+msgstr "← 圣树"
 
 #: assets/maps/story/27.tmx:
 msgid "Greentwig City Center →"
-msgstr ""
+msgstr "郁枝市中心 →"
 
 #: assets/maps/story/27.tmx:
 msgid "Milla!"
-msgstr ""
+msgstr "米拉！"
 
 #: assets/maps/story/27.tmx:
 msgid "Hi hero!\nDid you get the first signet? Well done!"
-msgstr ""
+msgstr "嗨勇者！\n你拿到了第一个徽章了吗？好样儿的！"
 
 #: assets/maps/story/27.tmx:
 msgid "Are you going to the Greentwig City center?"
-msgstr ""
+msgstr "你正要去郁枝市中心嘛？"
 
 #: assets/maps/story/27.tmx:
 msgid "Yes, have you been there?"
-msgstr ""
+msgstr "是的，你去过那儿了吗？"
 
 #: assets/maps/story/27.tmx:
 msgid "I'm from there!\nBut there's nothing special, it's a very boooring city.\nIn tourist guides, the \"Museum of rocking chairs\" is listed as the most interesting attraction.\nBut apparently it has closed down."
