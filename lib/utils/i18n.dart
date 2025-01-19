@@ -15,7 +15,8 @@ const List<Locale> enabledLocales = [
   Locale('ru'),
   Locale('tr'),
   Locale('vi'),
-  Locale('zh'),
+  Locale('zh_cn'),
+  Locale('zh_tw')
 ];
 final List<Locale> supportedLocales = [
   ...enabledLocales,
@@ -31,7 +32,8 @@ const languagesWithSpecialCharacters = [
   'ja',
   'ru',
   'uk',
-  'zh',
+  'zh_cn',
+  'zh_tw'
 ];
 const languagesWithNonSupportedCharacters = [
   'be',
@@ -41,7 +43,8 @@ const languagesWithNonSupportedCharacters = [
 ];
 
 const Map<String, List<String>> languageNames = {
-  'zh': ['Chinese', '汉语'],
+  'zh_cn': ['Chinese Simplified', '中文简体'],
+  'zh_tw': ['Chinese Traditional','中文正體'],
   'es': ['Spanish', 'Español'],
   'en': ['English', 'English'],
   'be': ['Belarusian', 'беларуская мова'],
@@ -80,7 +83,8 @@ extension Localization on String {
     for (final locale in supportedLocales) {
       var language = locale.languageCode;
       if (language == 'en') continue;
-      if (language == 'zh') language += '-Hant';
+      if (language == 'zh_tw') language = 'zh-Hant';
+      if (language == 'zh_cn') language = 'zh-Hans';
       if (language == 'pt') language += '-BR';
       for (final fileName in ['story', 'ui']) {
         _translations += await GettextImporter().fromAssetFile(
