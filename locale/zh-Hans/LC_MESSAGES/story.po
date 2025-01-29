@@ -20,7 +20,7 @@
 # Boy-Grid <grid_boy@petalmail.com>, 2024, 2025.
 # genouka <2980077544@qq.com>, 2025.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2025-01-19 06:54+0000\nLast-Translator: genouka <2980077544@qq.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2025-01-29 11:56+0000\nLast-Translator: Boy-Grid <grid_boy@petalmail.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/story/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: assets/maps/story/t2_01.tmx:
 msgid "WATERY CRYPT – B1F"
@@ -2566,7 +2566,7 @@ msgstr "我的小勇者！"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Do not call me that!"
-msgstr "别这样儿喊我！"
+msgstr "别这样喊我！"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Did you get everything?"
@@ -2578,119 +2578,119 @@ msgstr "嗯，都准备好了。\n现在是时候出发了。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Be very careful and remember to check your health in the top left bar."
-msgstr ""
+msgstr "千万小心，记得在左上角检查你的健康值。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Yea mom, I know. I am no longer a child."
-msgstr "嗷，妈妈，我知道。可我已不再是个小孩子了。"
+msgstr "嗯妈妈，我知道。我已经不是小孩子了。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "I know, I know.\nGo, my darling, and make your mother proud.\nAh, and don't forget that the neighbor wanted to give you some food before you leave."
-msgstr "我知道，我知道。\n出發吧，親愛的。讓媽媽為你感到驕傲。\n啊，別忘了鄰居想要在你走之前給你一些食物。"
+msgstr "我知道，我知道。\n出发吧，亲爱的，做妈妈的骄傲。\n啊，另外别忘了邻居想要在你出发之前给你一点儿吃的。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Sure mom, I will stop by our neighbor."
-msgstr "當然，媽媽，我會去我們的鄰居那裡。"
+msgstr "没问题妈妈，我会顺道儿去一趟我们邻居那儿。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Bye, my little hero!"
-msgstr "再見，我的小英雄！"
+msgstr "拜，我的小英雄！"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Go get the food from the neighbor."
-msgstr "去从邻居那里得到一些食物。"
+msgstr "去邻居那儿拿一些吃的。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "The food the neighbor gave you looks tasty!"
-msgstr "邻居给你的食物看起来很好吃！"
+msgstr "邻居给你的餐点看起来很好吃！"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Hi {{hero}}, everything okay?\nYou missed your mom, right?"
-msgstr ""
+msgstr "嗨{{hero}}，一切都还顺利吗？\n你想你的妈妈了，是吗？"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Hi my little hero!\nAre you going to spend more hours awake or asleep today?"
-msgstr ""
+msgstr "嗨我的小勇者！\n你今天打算多睡一会儿还是多耍一会儿？"
 
 #: assets/maps/story/1_home.tmx:
 msgid "Unfortunately, this is not the time to lie down on the sofa."
-msgstr "很不幸，现在不是躺在沙发上的时候了。"
+msgstr "可惜，现在不是躺在沙发上的时候。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "This sofa is very comfortable."
-msgstr ""
+msgstr "这张沙发非常舒适。"
 
 #: assets/maps/story/1_home.tmx:
 msgid "This plant seems to have been recently watered."
-msgstr "这株植物看起来在最近浇过水了。"
+msgstr "看起来最近有人给这株植物浇过水。"
 
 #: assets/maps/story/4_house.tmx:
 msgid "The last time I went through the forest I was attacked.\nI'm not going back there anymore."
-msgstr "上次我穿过森林的时候被袭击了，\n我再也不想回去那里了。"
+msgstr "我上次穿过森林的时候被袭击了。\n我再也不想回到那里了。"
 
 #: assets/maps/story/4_house.tmx:
 msgid "Even if it's safe now."
-msgstr ""
+msgstr "即便那里现在是安全的了。"
 
 #: assets/maps/story/4_house.tmx:
 msgid "If you want to enter the forest you have to be careful, my grandson risked getting hurt there."
-msgstr "你想进入森林的话必须要小心，我的孙子在那里受过伤。"
+msgstr "要进入到森林里边儿的话你可一定要小心，我孙子在那里受过伤。"
 
 #: assets/maps/story/4_house.tmx:
 msgid "There are no more monsters in the Mitsu Forest."
-msgstr ""
+msgstr "迷津森林里边儿今后不会再有魔物了。"
 
 #: assets/maps/story/62.tmx:
 msgid "Hey, there is something here!"
-msgstr ""
+msgstr "嘿，这儿有点东西！"
 
 #: assets/maps/story/26_house.tmx:
 msgid "Do you think piglets will one day be a common pet?"
-msgstr "你觉得小猪有一天会成为常见的宠物吗？"
+msgstr "你觉得小猪会有一天成为一个普遍的宠物吗？"
 
 #: assets/maps/story/26_house.tmx:
 msgid "I think so too."
-msgstr ""
+msgstr "我也这么认为。"
 
 #: assets/maps/story/26_house.tmx:
 msgid "Oh, I hope you are not right."
-msgstr ""
+msgstr "喔，我希望你说的是错的。"
 
 #: assets/maps/story/26_house.tmx:
 msgid "I like piglets."
-msgstr ""
+msgstr "我喜欢小猪。"
 
 #: assets/maps/story/26_house.tmx:
 msgid "Remove the casing and loosen the screws until panel B2 reaches…"
-msgstr ""
+msgstr "拆除包装并松开螺丝，直到你看见B2面板…"
 
 #: assets/maps/story/26_house.tmx:
 msgid "This is the manual for assembling a library."
-msgstr ""
+msgstr "这是图书馆的组装手册。"
 
 #: assets/maps/story/50_house.tmx:
 msgid "Zoysii?\nI've heard this name before…"
-msgstr ""
+msgstr "Zoysii？\n我以前听到过这个名字…"
 
 #: assets/maps/story/50_house.tmx:
 msgid "Hello! I am the official florist of the Region!\nThe most beautiful flowers? Zoysii!"
-msgstr ""
+msgstr "哈啰！我是王国的御用园艺师！\n最美丽的花朵？Zoysii！"
 
 #: assets/maps/story/t1_03.tmx:
 msgid "MOSSY CRYPT – B3F"
-msgstr ""
+msgstr "苔藓窖窟 – B3层"
 
 #: assets/maps/story/t1_03.tmx:
 msgid "My work is so boring…"
-msgstr ""
+msgstr "我的工作真是无聊…"
 
 #: assets/maps/story/x10.tmx:
 msgid "XEONJIA TOWER – 10F"
-msgstr ""
+msgstr "Xeonjia塔楼 – 10层"
 
 #: assets/maps/story/x10.tmx:
 msgid "iosa&joza"
-msgstr ""
+msgstr "尤萨&乔萨"
 
 #: assets/maps/story/x10.tmx:
 msgid "You know, {{hero}}, you and I are not that different.\nI acted for the highest good.\nThis is a sick world.\nIt must be healed and that's why difficult decisions must be made. And I took that responsibility upon myself.\nThe only way to restore order is through chaos.\nYou will understand it too sooner or later."
