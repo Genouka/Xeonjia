@@ -11,8 +11,9 @@
 # 林波 <limbobytes@outlook.com>, 2023.
 # tonykouki <1020070531@qq.com>, 2023.
 # Boy-Grid <grid_boy@petalmail.com>, 2024, 2025.
+# ozroigon <orecolorow@outlook.com>, 2025.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2025-04-05 18:15+0000\nLast-Translator: Boy-Grid <grid_boy@petalmail.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2025-04-14 17:39+0000\nLast-Translator: Boy-Grid <grid_boy@petalmail.com>\nLanguage-Team: Chinese (Simplified) <https://translate.deepdaikon.xyz/projects/xeonjia/ui/zh_Hans/>\nLanguage: zh-Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
@@ -188,7 +189,7 @@ msgstr "翻译者"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Game made by %s"
-msgstr "游戏由%s制作"
+msgstr "%s制作游戏"
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Credits"
@@ -304,7 +305,7 @@ msgstr "空无一物"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "%s HP"
-msgstr "%s生命值"
+msgstr "%s健康值"
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "Close"
@@ -344,19 +345,19 @@ msgstr "取消"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "You have %s HP and %s ¤."
-msgstr "你有%s生命值和%s¤。"
+msgstr "你有%s健康值和%s¤。"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Milla has %s HP."
-msgstr "米拉有%s生命值。"
+msgstr "米拉有%s健康值。"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "September has %s HP."
-msgstr "九月有%s生命值。"
+msgstr "九月有%s健康值。"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "What do you want to do?"
-msgstr "你要进行什么行动？"
+msgstr "您想做什么？"
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "resume"
@@ -380,7 +381,7 @@ msgstr "上一次位置变更后的数据将会被丢弃。"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "HP Machine"
-msgstr "生命值机"
+msgstr "健康值机"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Shop"
@@ -396,11 +397,11 @@ msgstr "我要购买{{selected-item-name}}吗？"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "I don't have enough money for this item."
-msgstr "我没有足够的钱来买这个物品。"
+msgstr "我没有足够的钱来购买这个物品。"
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Let me know if you need anything else."
-msgstr "如果你需要其它东西，请让我知道。"
+msgstr "如果你需要任何东西，请告诉我。"
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "Wait"
@@ -420,15 +421,15 @@ msgstr "三步"
 
 #: lib/game/widgets/loading_page.dart:
 msgid "Loading…\nPlease wait"
-msgstr "加载中……\n请稍等"
+msgstr "加载中…\n请稍候"
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open local map"
-msgstr "开启区域地图"
+msgstr "打开本地地图"
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open world map"
-msgstr "打开世界地图"
+msgstr "打开王国地图"
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Show hints"
@@ -504,7 +505,7 @@ msgstr "绿色！是绿色！\n答案是绿色，但是我不记得问题了。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Ours is a strange world, it's cold here but a little warmer there."
-msgstr "我们王国真是奇怪，这儿冷，那儿却又暖和点儿。"
+msgstr "我们王国真是奇怪，这儿冷，那儿可又暖和点儿。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "I have to stop eating ice cream before bed."
@@ -572,47 +573,47 @@ msgstr "* {{hero}}给了%s *"
 
 #: lib/game/components/common/basic.dart:
 msgid "You can't defeat me as long as there are other monsters besides me."
-msgstr "只要我身边的随从还在，你就不能把我打倒。"
+msgstr "只要我的身侧还有其它随从，你们就无法击败我。"
 
 #: lib/game/components/common/walker.dart:
 msgid "I've run out of shots for this weapon."
-msgstr "这个武器没子弹了。"
+msgstr "我已经用完这个武器的子弹了。"
 
 #: lib/game/components/door.dart:
 msgid "There is still 1 enemy here. I can't escape."
-msgstr "这里还有1个敌人。我不能逃跑。"
+msgstr "这儿还有1个敌人。我不能逃跑。"
 
 #: lib/game/components/door.dart:
 msgid "There are still %s enemies here. I can't escape."
-msgstr "这里还有 %s 个敌人。我不能逃跑。"
+msgstr "这儿还有%s个敌人。我不能逃跑。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "There is one enemy here!"
-msgstr "这里有一个敌人!"
+msgstr "这儿有1个敌人！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "There are %s enemies here!"
-msgstr "这里有 ％s 个敌人!"
+msgstr "这儿有％s个敌人！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "It' time to fight!"
-msgstr "是时候开始战斗啦!"
+msgstr "是时候战斗了！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is tired and is back in the leaf, I must continue the battle."
-msgstr "米拉累了，她回到叶子里休息了，但我必须继续战斗。"
+msgstr "米拉累了并且回到叶子里去了，我必须继续战斗。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "September is tired, I must continue the battle alone."
-msgstr "九月累了，但我必须独自战斗。"
+msgstr "九月累了，我必须一个人继续战斗。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "September is tired, but we must continue the battle."
-msgstr "九月累了，但我们必须继续战斗。"
+msgstr "九月累了，我们必须继续战斗。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Battle!"
-msgstr "开战!"
+msgstr "开战！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "You won!"
@@ -620,87 +621,87 @@ msgstr "你赢了！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is resting."
-msgstr "米拉在休息。"
+msgstr "米拉正在休息。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is already here!"
-msgstr "米拉已经在这里了！"
+msgstr "米拉已经在这儿了！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s ¤. I'm not very rich."
-msgstr "我有 %s ¤，不是很有钱。"
+msgstr "我有%s¤。我并不很有钱。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s health points."
-msgstr "我有 %s 点 HP。"
+msgstr "我有%s健康值。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "I don't even have a cent!"
-msgstr "我一毛钱都没有!"
+msgstr "我没有哪怕一分钱！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s health points!"
-msgstr "我有 %s 点 HP！"
+msgstr "我有%s健康值！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "I? I have %s health points."
-msgstr "我？我有 %s 点 HP。"
+msgstr "我？我有%s健康值。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"
-msgstr "你想重新阅读如何战斗的方法吗？"
+msgstr "你要重新阅读如何战斗的解释吗？"
 
 #: lib/game/xeonjia_game.dart:
 msgid "* {{hero}} consults \"The Manual of the Perfect Hero\" *"
-msgstr "* {{hero}} 查阅了 \"《完美勇士手册》\" *"
+msgstr "* {{hero}}查阅了“完美勇者的手册” *"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Chapter 4: Battles"
-msgstr "第 4 章 ：战斗"
+msgstr "第4章：战斗"
 
 #: lib/game/xeonjia_game.dart:
 msgid "In battle each player has 3 moves per turn."
-msgstr "在战斗中，玩家每回合有3次行动机会。"
+msgstr "在战斗中每个玩家每回合可以行动3步。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "After these 3 moves, it is the opponent's turn."
-msgstr "三次动作之后，就轮到对手了。"
+msgstr "在这3步之后，就是对手的回合了。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "A move can be used to walk, use items, attack or examine what is in front of you."
-msgstr "一次动作可以选择用来移动、使用物品、攻击或检查你面前的东西。"
+msgstr "一步可以被用来移动、使用物品、攻击或与你面前的东西交互。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "You should already know the \"%s\" button, it examines objects, plants and people."
-msgstr "你应该已经知道%s按钮是做什么的了，可以检查物体、植物跟人。"
+msgstr "你应该已经知道“%s”按钮了，它与物体、植物和人交互。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "To attack use the \"%s\" button. In this way you punch the enemy in front of you."
-msgstr "使用 %s 按钮可以攻击你面前的人。"
+msgstr "使用“%s”按钮来攻击。如此你可以击打你面前的敌人。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Otherwise, throw snowballs with the \"%s\" button in the direction you are looking at."
-msgstr "要不然使用%s按钮朝你前方丢雪球吧。"
+msgstr "或者，使用“%s”按钮朝你看向的方向扔雪球。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "If you run out of snowballs, get some snow from the snowdrifts around you."
-msgstr "如果你的雪球用完了，就从你周围的雪堆里获取雪球。"
+msgstr "如果你用完了雪球，从你周围的雪堆里获取一些雪。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Mines you place under you with the \"%s\" button explode as soon as an enemy steps on them."
-msgstr "一旦敌人踩到你以%s钮放下来的地雷便会引爆。"
+msgstr "你使用“%s”按钮在你身下放置的地雷在一个敌人踩上它们时即爆炸。"
 
 #: lib/game/xeonjia_game.dart:
 msgid "Remember, enemies also have HP. Hit them multiple times to knock them out!"
-msgstr "请记住，敌人也有 HP。 击中敌人多次以将他们击倒！"
+msgstr "记住，敌人们也有HP。多次打击他们来击败他们！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "And if you have few HP take advantage of a move you have available to eat or drink something you have in your backpack!"
-msgstr "如果您的 HP 很少，请使用您背包里的恢复道具！"
+msgstr "并且如果你几乎没有HP，利用你所拥有的，能吃下或喝下你背包中你所持有的什么的一步！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "That's all. Good luck!"
-msgstr "就这些。祝你好运!"
+msgstr "这就是全部了。好运！"
 
 #: lib/game/xeonjia_game.dart:
 msgid "manual"
