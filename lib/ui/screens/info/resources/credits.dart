@@ -18,6 +18,7 @@ ${'Thanks to everyone who contributed to this project!'.i18n}
     * anselm-helbig
     * araccaine
     * Balázs Úr
+    * Boy-Grid
     * Bruno Cabrita
     * cannnAvar
     * CaoWangrenbo
@@ -26,8 +27,11 @@ ${'Thanks to everyone who contributed to this project!'.i18n}
     * deepdaikon
     * Denis Proleev
     * d4f5409d
+    * Elena
     * Filip-K-87
     * Fontan 030
+    * genouka
+    * Gleb Davydov
     * hamaryns
     * hooay233
     * Hrela
@@ -39,6 +43,7 @@ ${'Thanks to everyone who contributed to this project!'.i18n}
     * Kempelen
     * KiberDoktor
     * KMX
+    * Kun Bang Tu
     * libamidi
     * liimee
     * limbobytes
@@ -53,6 +58,7 @@ ${'Thanks to everyone who contributed to this project!'.i18n}
     * Nicolas
     * no no
     * notjatin
+    * ozroigon
     * pascalou
     * Patryk
     * perro tuerto
@@ -68,6 +74,7 @@ ${'Thanks to everyone who contributed to this project!'.i18n}
     * snipe2004
     * Sniventals
     * Super12138
+    * Svitozar
     * Swann Fournial
     * Tetro
     * Thothorg
