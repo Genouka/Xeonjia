@@ -1,707 +1,702 @@
 # Translation for Xeonjia
-# Copyright (C) 2020 DeepDaikon
+# Copyright (C) 2020, 2021, 2022 DeepDaikon
 # This file is distributed under the same license as Xeonjia.
-# DeepDaikon <deepdaikon@tuta.io>, 2021, 2022, 2023, 2024.
-# Denis Proleev <denproleev@gmail.com>, 2021.
-# Andrey <jius55025@gmail.com>, 2023.
-# KiberDoktor <kiberdoktor2@gmail.com>, 2024.
-# Elena <frogq455@gmail.com>, 2024.
-# MrSliv69 <mrsliv6969@gmail.com>, 2025.
+# bugu <yongmi@tuta.io>, 2026.
 msgid ""
-msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2025-09-02 21:57+0000\nLast-Translator: MrSliv69 <mrsliv6969@gmail.com>\nLanguage-Team: Russian <https://translate.deepdaikon.xyz/projects/xeonjia/ui/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Weblate 4.4.2\n"
+msgstr "Project-Id-Version: \nPOT-Creation-Date: \nPO-Revision-Date: 2026-07-23 03:25+0000\nLast-Translator: bugu <yongmi@tuta.io>\nLanguage-Team: Hakka Chinese <https://translate.deepdaikon.xyz/projects/xeonjia/ui/hak/>\nLanguage: hak\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.4.2\n"
 
 #: lib/ui/basic.dart:
 msgid "Valid characters: A-Z."
-msgstr "Допустимые символы: A-Z."
+msgstr ""
 
 #: lib/ui/basic.dart:
 msgid "Too short."
-msgstr "Слишком коротко."
+msgstr "短過頭咧。"
 
 #: lib/ui/basic.dart:
 msgid "Insert your name"
-msgstr "Введите ваше имя"
+msgstr "輸入你個名字"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Info"
-msgstr "Информация"
+msgstr "資訊"
 
 #: lib/ui/screens/home/widgets/bottom_row.dart:
 msgid "Settings"
-msgstr "Настройки"
+msgstr "設定"
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Ice Adventures"
-msgstr "Ледяные приключения"
+msgstr ""
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Tap to play"
-msgstr "Нажмите чтобы начать"
+msgstr ""
 
 #: lib/ui/screens/home/home_page.dart:
 msgid "Press enter"
-msgstr "Нажмите клавишу ввода"
+msgstr ""
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Welcome"
-msgstr "Добро пожаловать"
+msgstr ""
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Your journey is about to begin!\nWhat's your name?"
-msgstr "Ваше путешествие вот-вот начнется!\nКак тебя зовут?"
+msgstr ""
 
 #: lib/ui/screens/welcome/welcome_page.dart:
 msgid "Let's start!"
-msgstr "Начнём!"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Smallest"
-msgstr "Минимальный"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Small"
-msgstr "Маленький"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Default"
-msgstr "По умолчанию"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Large"
-msgstr "Большой"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Largest"
-msgstr "Максимальный"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom out"
-msgstr "Отдалить"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom in"
-msgstr "Приблизить"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Click here to change your name"
-msgstr "Нажми сюда чтобы изменить имя"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "What's your name?"
-msgstr "Как тебя зовут?"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Discard"
-msgstr "Изменить"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Save"
-msgstr "Сохранить"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Background music"
-msgstr "Фоновая музыка"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable background music"
-msgstr "Включить фоновую музыку"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Sound effects"
-msgstr "Звуковые эффекты"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Enable sound effects"
-msgstr "Включить звуковые эффекты"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Controller"
-msgstr "Контроллер"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Move the character with gestures or virtual D-pad"
-msgstr "Перемещайте персонажа с помощью жестов или виртуальной крестовины"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "You only need it on a touchscreen device"
-msgstr "Только для устройств с сенсорным экраном"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad"
-msgstr "Крестовина"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Gestures"
-msgstr "Жестами"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "D-pad size"
-msgstr "Размер D-Pad"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Virtual D-pad dimension.\nTo change its position, long-press the D-pad in the center."
-msgstr "Виртуальный размер D-pad.\nЧтобы изменить его положение, нажмите и удерживайте D-pad в центре."
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Game zoom"
-msgstr "Игровой зум"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Zoom objects in the game for a better view"
-msgstr "Увеличивайте масштаб объектов в игре для лучшего обзора"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "Language"
-msgstr "Язык"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "App language"
-msgstr "Язык приложения"
+msgstr ""
 
 #: lib/ui/screens/settings/settings_page.dart:
 msgid "System default"
-msgstr "Системный"
+msgstr ""
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Thanks to everyone who contributed to this project!"
-msgstr "Спасибо всем, кто внес свой вклад в этот проект!"
+msgstr ""
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Programmer"
-msgstr "Программист"
+msgstr ""
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Artists"
-msgstr "Художники"
+msgstr ""
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Music by"
-msgstr "Музыка"
+msgstr ""
 
 #: lib/ui/screens/info/resources/credits.dart:
 msgid "Translators"
-msgstr "Переводчики"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Game made by %s"
-msgstr "Игра разработана %s"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Credits"
-msgstr "Титры"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "People who worked on this project"
-msgstr "Над проектом работали"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Version %s"
-msgstr "Версия %s"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "App version"
-msgstr "Версия приложения"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Donate"
-msgstr "Внести пожертвование"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Contribute to the project"
-msgstr "Внесите вклад в проект."
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate"
-msgstr "Перевести игру"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Translate in your language"
-msgstr "Перевести на свой язык"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Send email"
-msgstr "Связаться по электронной почте"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ask for something"
-msgstr "Задать вопрос"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report bugs"
-msgstr "Сообщить об ошибках"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Report the bugs you found"
-msgstr "Сообщить о найденных дефектах"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Source code"
-msgstr "Исходный код"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "View the source code"
-msgstr "Посмотреть исходный код"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "License (GPLv3)"
-msgstr "Лицензия (GPLv3)"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read software license"
-msgstr "Прочитать лицензию ПО"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Third Party Licenses"
-msgstr "Лицензии третьих лиц"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Read third party notices"
-msgstr "Прочитать предупреждения третьих лиц"
+msgstr ""
 
 #: lib/ui/screens/info/info_page.dart:
 msgid "Ok"
-msgstr "ОК"
+msgstr ""
 
 #: lib/game/widgets/world_map.dart:
 msgid "This is where I am right now."
-msgstr "Здесь нахожусь я."
+msgstr ""
 
 #: lib/game/widgets/world_map.dart:
 msgid "Do you want to go back to this place?"
-msgstr "Вы хотите вернуться на это место?"
+msgstr ""
 
 #: lib/game/widgets/world_map.dart:
 msgid "* {{hero}} arrived here *"
-msgstr "* {{hero}} вернулся сюда *"
+msgstr ""
 
 #: lib/game/widgets/world_map.dart:
 msgid "* After a long journey, {{hero}} arrived here *"
-msgstr "* После долгого пути, {{hero}} вернулся сюда *"
+msgstr ""
 
 #: lib/game/widgets/world_map.dart:
 msgid "* After a very long journey, {{hero}} arrived here *"
-msgstr "* После очееень долгого пути, {{hero}} вернулся сюда *"
+msgstr ""
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You run out of energy !"
-msgstr "Твои силы иссякли !"
+msgstr ""
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "You lost %s ¤ and woke up after a short nap"
-msgstr "Ты потерял %s ¤ и очнулся после короткого сна"
+msgstr ""
 
 #: lib/game/widgets/menus/you_lost_menu.dart:
 msgid "Continue"
-msgstr "Продолжить"
+msgstr ""
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "No items here"
-msgstr "Нет вещей тут"
+msgstr ""
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "%s HP"
-msgstr "%s HP"
+msgstr ""
 
 #: lib/game/widgets/menus/items_menu.dart:
 msgid "Close"
-msgstr "Закрыть"
+msgstr ""
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Backpack"
-msgstr "Рюкзак"
+msgstr ""
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Gems"
-msgstr "Кристалл"
+msgstr ""
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Mysterious gems scattered around the world."
-msgstr "Мистические кристаллы разбросаны по всему миру."
+msgstr ""
 
 #: lib/game/widgets/menus/backpack_menu.dart:
 msgid "Do you want to use {{selected-item-name}}?"
-msgstr "Вы хотите использовать {{selected-item-name}}?"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "pause"
-msgstr "пауза"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "restart"
-msgstr "перезапустить"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "exit"
-msgstr "выход"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "cancel"
-msgstr "отмена"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "You have %s HP and %s ¤."
-msgstr "У вас %s жизней и %s ¤."
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Milla has %s HP."
-msgstr "У Миллы %s жизней."
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "September has %s HP."
-msgstr "У Септембер %s жизней"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "What do you want to do?"
-msgstr "Что вы хотите сделать?"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "resume"
-msgstr "продолжить"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Are you sure you want to restart this game?"
-msgstr "Ты уверен, что хочешь перезапустить игру?"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "It will restart from the last location change."
-msgstr "Перезапуск выполнится с последней посещённой локации."
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Are you sure you want to quit this game?"
-msgstr "Ты уверен, что хочешь выйти из игры?"
+msgstr ""
 
 #: lib/game/widgets/menus/pause_menu.dart:
 msgid "Game data since the last location change will be lost."
-msgstr "Данные игры с момента последнего изменения местоположения будут потеряны."
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "HP Machine"
-msgstr "Аппарат с Жизнями"
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Shop"
-msgstr "Магазин"
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Do you want to buy {{selected-item-name}}?"
-msgstr "Вы хотите купить {{selected-item-name}}?"
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Do I buy {{selected-item-name}}?"
-msgstr "Могу я купить {{selected-item-name}}?"
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "I don't have enough money for this item."
-msgstr "У меня недостаточно денег, чтобы купить этот предмет."
+msgstr ""
 
 #: lib/game/widgets/menus/shop_menu.dart:
 msgid "Let me know if you need anything else."
-msgstr "Дайте знать, если Вам понадобится что-нибудь ещё."
+msgstr ""
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "Wait"
-msgstr "Подождите"
+msgstr ""
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "1 move"
-msgstr "1 действие"
+msgstr ""
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "2 moves"
-msgstr "2 действия"
+msgstr ""
 
 #: lib/game/widgets/boxes/remaining_moves_box.dart:
 msgid "3 moves"
-msgstr "3 действия"
+msgstr ""
 
 #: lib/game/widgets/loading_page.dart:
 msgid "Loading…\nPlease wait"
-msgstr "Загрузка...\nПодождите, пожалуйста"
+msgstr ""
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open local map"
-msgstr "Открыть локальную карту"
+msgstr ""
 
 #: lib/game/widgets/buttons/world_map_button.dart:
 msgid "Open world map"
-msgstr "Открыть глобальную карту"
+msgstr "打開地圖"
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Show hints"
-msgstr "Показать подсказки"
+msgstr "顯示提示"
 
 #: lib/game/widgets/buttons/hide_hints_button.dart:
 msgid "Hide hints"
-msgstr "Скрыть подсказки"
+msgstr "隱藏提示"
 
 #: lib/game/utils/map_controller.dart:
 msgid "By clicking on the map I can go back to places I have already been."
-msgstr "Нажав на карту, я могу вернуться в те места, где уже побывал."
+msgstr ""
 
 #: lib/game/utils/input_controller.dart:
 msgid "Snowball (%s)"
-msgstr "Снежки (%s)"
+msgstr "雪球（%s）"
 
 #: lib/game/utils/input_controller.dart:
 msgid "Snowball"
-msgstr "Снежки"
+msgstr "雪球"
 
 #: lib/game/utils/input_controller.dart:
 msgid "Mine (%s)"
-msgstr "Мина (%s)"
+msgstr "地雷（%s）"
 
 #: lib/game/utils/input_controller.dart:
 msgid "Mine"
-msgstr "Мина"
+msgstr "地雷"
 
 #: lib/game/utils/event_manager.dart:
 msgid "Where am I? How did I end up here?"
-msgstr "Где я? Как я здесь оказался?"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Mitsu Forest used to be bigger, it was deforested to build Greentwig City."
-msgstr "Когда-то лес Мицу был больше, но его вырубили, чтобы построить Гринтвиг."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "The Xeonjia Tower is the tallest building in the Kingdom."
-msgstr "Башня Xeonjia - самое высокое здание в Королевстве."
+msgstr "Xeonjia 塔係完隻王國最高的建築。"
 
 #: lib/game/utils/event_manager.dart:
 msgid "There are 3 regions in the Kingdom."
-msgstr "В королевстве есть 3 региона."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "If you click on a point on the world map you can travel to places you have already been."
-msgstr "Если вы нажмёте на точку на карте мира, вы сможете отправиться в места, где вы уже были."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "The world is big."
-msgstr "Мир большой."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "What time is it?"
-msgstr "Который час?"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "If we walk around long enough, we're sure to arrive somewhere!"
-msgstr "Если мы будем идти достаточно долго, мы обязательно куда-нибудь придем!"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "How are you?"
-msgstr "Как ты?"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "It's cold here."
-msgstr "Здесь холодно."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Green! Green!\nGreen is the answer, but I don't remember the question."
-msgstr "Зелёный! Зелёный!\nЗелёный это ответ, но я не помню вопрос."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Ours is a strange world, it's cold here but a little warmer there."
-msgstr "Странный у нас мир, здесь холодно, а там чуть теплее."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "I have to stop eating ice cream before bed."
-msgstr "Я должен перестать есть мороженое перед сном."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "I know many languages."
-msgstr "Я знаю много языков."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Hey!"
-msgstr "Эй!"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Here I am."
-msgstr "А вот и я."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Leave me alone."
-msgstr "Оставь меня в покое."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Do you believe in fairies??"
-msgstr "Вы верите в фей?"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "What do piglets dream about?"
-msgstr "О чем мечтают поросята?"
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "I am hungryyy."
-msgstr "Я голодееен."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "And that's it.\nWe have now reached the end of this fantastic adventure!\nYour determination and courage made this victory possible.\nKeep exploring, dreaming and being the hero the world needs, because your adventures will never end.\nWhere will your next journey take you?\nThank you for playing Xeonjia!\nMaybe our paths will cross again."
-msgstr "И это все.\nТеперь мы подошли к концу этого фантастического приключения!\nВаша решимость и мужество сделали эту победу возможной.\nПродолжайте исследовать, мечтать и быть героем, в котором нуждается мир, потому что ваши приключения никогда не кончатся.\nКуда приведет вас ваше следующее путешествие?\nСпасибо, что сыграли в Xeonjia!\nВозможно, наши пути еще пересекутся."
+msgstr ""
 
 #: lib/game/utils/event_manager.dart:
 msgid "Bye!"
-msgstr "Пока!"
+msgstr "拜拜！"
 
 #: lib/game/components/character.dart:
 msgid "We must fight, not talk!"
-msgstr "Мы должны драться, а не болтать!"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} puts %s in the backpack *"
-msgstr "* {{hero}} кладёт %s в рюкзак. *"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "the gem"
-msgstr "Гем"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} uses {{selected-item-name}} *"
-msgstr "* {{hero}} использует {{selected-item-name}} *"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "* {{user-name}} uses {{selected-item-name}} *"
-msgstr "* {{user-name}} использует {{selected-item-name}} *"
+msgstr ""
 
 #: lib/game/components/character.dart:
 msgid "* {{hero}} gives %s *"
-msgstr "* {{hero}} отдаёт %s *"
+msgstr ""
 
 #: lib/game/components/common/basic.dart:
 msgid "You can't defeat me as long as there are other monsters besides me."
-msgstr "Ты не сможешь победить меня, пока есть другие монстры, кроме меня."
+msgstr ""
 
 #: lib/game/components/common/walker.dart:
 msgid "I've run out of shots for this weapon."
-msgstr "У меня закончились патроны к этому оружию."
+msgstr ""
 
 #: lib/game/components/door.dart:
 msgid "There is still 1 enemy here. I can't escape."
-msgstr "Остался еще 1 враг. Я не могу уйти."
+msgstr ""
 
 #: lib/game/components/door.dart:
 msgid "There are still %s enemies here. I can't escape."
-msgstr "Осталось еще %s врагов . Я не могу уйти."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "There is one enemy here!"
-msgstr "Тут есть один враг!"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "There are %s enemies here!"
-msgstr "Тут есть %s врагов!"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "It' time to fight!"
-msgstr "Время сражаться!"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is tired and is back in the leaf, I must continue the battle."
-msgstr "Милла устала и вернулась назад в листву, я должен продолжить бой."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "September is tired, I must continue the battle alone."
-msgstr "Септембер устал, я должен продолжить битву в одиночку."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "September is tired, but we must continue the battle."
-msgstr "Септембер устал, но мы должны продолжать битву."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Battle!"
-msgstr "Бой!"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "You won!"
-msgstr "Ты победил!"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is resting."
-msgstr "Милла отдыхает."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Milla is already here!"
-msgstr "Милла уже здесь!"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s ¤. I'm not very rich."
-msgstr "У меня есть %s ¤ . Я не богат."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s health points."
-msgstr "У меня есть %s очков здоровья."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "I don't even have a cent!"
-msgstr "У меня нет ни цента!"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "I have %s health points!"
-msgstr "У меня есть %s очков здоровья!"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "I? I have %s health points."
-msgstr "Я? У меня %s очков здоровья."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Do you want to reread the explanation of how to fight?"
-msgstr "Хотите перечитать пособие по ведению боя?"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "* {{hero}} consults \"The Manual of the Perfect Hero\" *"
-msgstr "* {{hero}} берет \"Пособие Идеального Героя\" *"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Chapter 4: Battles"
-msgstr "Глава 4: Бои"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "In battle each player has 3 moves per turn."
-msgstr "В бою у каждого игрока есть 3 действия за ход."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "After these 3 moves, it is the opponent's turn."
-msgstr "После 3 действий, ход переходит к оппоненту."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "A move can be used to walk, use items, attack or examine what is in front of you."
-msgstr "Действия это движение, использование предметов, атака или анализ вашего окружение."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "You should already know the \"%s\" button, it examines objects, plants and people."
-msgstr "Вы должны знать кто кнопка \"A\", это исследование обьектов, растений и людей."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "To attack use the \"%s\" button. In this way you punch the enemy in front of you."
-msgstr "Чтобы атаковать, используйте кнопку \"P\". В этом случаи вы бьете врага находящегося напротив вас."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Otherwise, throw snowballs with the \"%s\" button in the direction you are looking at."
-msgstr "В противном же случаи, бросайте снежки с помощь кнопки \"S\", в том направлении, в котором вы смотрите."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "If you run out of snowballs, get some snow from the snowdrifts around you."
-msgstr "Если у вас кончатся снежки, возьмите их в ближайших сугробах."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Mines you place under you with the \"%s\" button explode as soon as an enemy steps on them."
-msgstr "Мины, которые вы ставите под себя с помощью кнопки «М», взрываются, как только на них наступает враг."
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "Remember, enemies also have HP. Hit them multiple times to knock them out!"
-msgstr "Помните, у врагов тоже есть HP. Чтобы уничтожить их, нужно ударить несколько раз!"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "And if you have few HP take advantage of a move you have available to eat or drink something you have in your backpack!"
-msgstr "И если у вас осталось мало HP, воспользуйтесь действиями чтобы сьесть или выпить что-то, что у вас есть в рюкзаке!"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "That's all. Good luck!"
-msgstr "Конец. Удачи!"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "manual"
-msgstr "пособие"
+msgstr ""
 
 #: lib/game/xeonjia_game.dart:
 msgid "book"
-msgstr "книга"
+msgstr ""
