@@ -15,12 +15,14 @@ ${'Thanks to everyone who contributed to this project!'.i18n}
 # ${'Translators'.i18n}:
     * Alex
     * Alparslan Şakçi
+    * anapanasati.mind
     * Andrey
     * anselm-helbig
     * araccaine
     * Balázs Úr
     * Boy-Grid
     * Bruno Cabrita
+    * bugu
     * cannnAvar
     * CaoWangrenbo
     * Carlos Henrique Maschio Martins
@@ -55,6 +57,7 @@ ${'Thanks to everyone who contributed to this project!'.i18n}
     * Mark Badrus
     * Martin
     * mimoguz
+    * MrSliv69
     * Muha Aliss
     * Nicolas
     * no no
