@@ -5,14 +5,14 @@ import 'package:xeonjia/game/xeonjia.dart';
 /// Menu that shows a list of [Item]s. Used for [ShopMenu] and [BackpackMenu]
 abstract class ItemsMenu extends StatefulWidget {
   ItemsMenu(
-    this.gameRef, {
+    this.game, {
     required this.text,
     required this.items,
     required this.onSelection,
     required this.onClose,
     this.showPrices = false,
   });
-  final XeonjiaGame gameRef;
+  final XeonjiaGame game;
   final String text;
   final List<Item> items;
   final bool showPrices;
@@ -44,15 +44,19 @@ class ItemsMenuState extends State<ItemsMenu> {
     setState(() {
       if (++selectedItemIndex < widget.items.length) {
         selectedItem = widget.items[selectedItemIndex];
-        _controller.animateTo(selectedItemIndex * scrollOffset,
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.fastOutSlowIn);
+        _controller.animateTo(
+          selectedItemIndex * scrollOffset,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.fastOutSlowIn,
+        );
       } else {
         selectedItemIndex = 0;
         selectedItem = widget.items.firstOrNull;
-        _controller.animateTo(0,
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.fastOutSlowIn);
+        _controller.animateTo(
+          0,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.fastOutSlowIn,
+        );
       }
     });
   }
@@ -63,14 +67,18 @@ class ItemsMenuState extends State<ItemsMenu> {
       if (--selectedItemIndex < 0) {
         selectedItemIndex = widget.items.length - 1;
         selectedItem = widget.items[selectedItemIndex];
-        _controller.animateTo(_controller.position.maxScrollExtent,
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.fastOutSlowIn);
+        _controller.animateTo(
+          _controller.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.fastOutSlowIn,
+        );
       } else {
         selectedItem = widget.items[selectedItemIndex];
-        _controller.animateTo(selectedItemIndex * scrollOffset,
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.fastOutSlowIn);
+        _controller.animateTo(
+          selectedItemIndex * scrollOffset,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.fastOutSlowIn,
+        );
       }
     });
   }
@@ -80,16 +88,22 @@ class ItemsMenuState extends State<ItemsMenu> {
     setState(() {
       selectedItemIndex = widget.items.indexOf(i ?? selectedItem!);
       selectedItem = i ?? selectedItem;
-      widget.gameRef.setMessage(Message(
-        widget.gameRef,
-        selectedItem!.description!,
-        author: '${selectedItem!.rawName}/${selectedItem!.id}',
-        xfaFile: 'items',
-      ));
-      widget.gameRef.environment
-          .defineSymbol(Sym('selected-item-id'), selectedItem!.id);
-      widget.gameRef.environment
-          .defineSymbol(Sym('selected-item-name'), selectedItem!.name);
+      widget.game.setMessage(
+        Message(
+          widget.game,
+          selectedItem!.description!,
+          author: '${selectedItem!.rawName}/${selectedItem!.id}',
+          xfaFile: 'items',
+        ),
+      );
+      widget.game.environment.defineSymbol(
+        Sym('selected-item-id'),
+        selectedItem!.id,
+      );
+      widget.game.environment.defineSymbol(
+        Sym('selected-item-name'),
+        selectedItem!.name,
+      );
       widget.onSelection(selectedItem);
     });
   }
@@ -98,122 +112,132 @@ class ItemsMenuState extends State<ItemsMenu> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black87,
-      child: Stack(children: [
-        Container(
-          height: MediaQuery.of(context).size.height,
-          padding: EdgeInsets.only(
-            left: MediaQuery.of(context).size.width / 7,
-            right: MediaQuery.of(context).size.width / 7,
-            top: 60,
-            bottom: 82,
-          ),
-          child: widget.items.isEmpty
-              ? Container(
-                  padding: const EdgeInsets.only(bottom: 60),
-                  child: Center(child: Text('No items here'.i18n)))
-              : ScrollConfiguration(
-                  behavior: NoGlow(),
-                  child: Center(
-                    child: Container(
-                      constraints: const BoxConstraints(maxWidth: 700),
-                      child: ListView(
-                        shrinkWrap: true,
-                        controller: _controller,
-                        children: [
-                          for (var i in widget.items)
-                            InkWell(
-                              onTap: () => chooseItem(i),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      SizedBox(
+      child: Stack(
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height,
+            padding: EdgeInsets.only(
+              left: MediaQuery.of(context).size.width / 7,
+              right: MediaQuery.of(context).size.width / 7,
+              top: 60,
+              bottom: 82,
+            ),
+            child: widget.items.isEmpty
+                ? Container(
+                    padding: const EdgeInsets.only(bottom: 60),
+                    child: Center(child: Text('No items here'.i18n)),
+                  )
+                : ScrollConfiguration(
+                    behavior: NoGlow(),
+                    child: Center(
+                      child: Container(
+                        constraints: const BoxConstraints(maxWidth: 700),
+                        child: ListView(
+                          shrinkWrap: true,
+                          controller: _controller,
+                          children: [
+                            for (final i in widget.items)
+                              InkWell(
+                                onTap: () => chooseItem(i),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        SizedBox(
                                           width: 20,
-                                          child: Text(selectedItem?.id == i.id
-                                              ? '>'
-                                              : '')),
-                                      Expanded(
-                                          child: Text(i.name,
-                                              textAlign: TextAlign.center)),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 10),
-                                        child: Text(
-                                          widget.showPrices
-                                              ? '${i.price} ¤'
-                                              : (i.keyItem
-                                                  ? '  '
-                                                  : 'x ${i.quantity}'),
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodyMedium!
-                                              .copyWith(
-                                                  color: widget
-                                                              .gameRef
+                                          child: Text(
+                                            selectedItem?.id == i.id ? '>' : '',
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Text(
+                                            i.name,
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                            left: 10,
+                                          ),
+                                          child: Text(
+                                            widget.showPrices
+                                                ? '${i.price} ¤'
+                                                : (i.keyItem
+                                                      ? '  '
+                                                      : 'x ${i.quantity}'),
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodyMedium!
+                                                .copyWith(
+                                                  color:
+                                                      widget
+                                                              .game
                                                               .playerOne!
                                                               .money >=
                                                           (i.price ?? -1)
                                                       ? Colors.white
-                                                      : Colors.red),
+                                                      : Colors.red,
+                                                ),
+                                          ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 40),
-                                ],
+                                      ],
+                                    ),
+                                    const SizedBox(height: 40),
+                                  ],
+                                ),
                               ),
-                            ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-        ),
-        _CloseButton(widget.gameRef, widget.onClose),
-        InfoBox(
-          onTap: null,
-          opacity: 1,
-          child: Text(
-            widget.text.toUpperCase(),
-            style: Theme.of(context).textTheme.labelLarge,
-            maxLines: 1,
           ),
-        ),
-        InfoBox(
-          onTap: widget.gameRef.userStatusMessage,
-          opacity: 1,
-          bottom: true,
-          below: MediaQuery.of(context).orientation == Orientation.portrait,
-          center: MediaQuery.of(context).orientation == Orientation.portrait,
-          child: Text(
-            '%s HP'.i18n.fill([widget.gameRef.playerOne!.hp.round()]),
-            style: Theme.of(context).textTheme.labelLarge,
-            maxLines: 1,
+          _CloseButton(widget.game, widget.onClose),
+          InfoBox(
+            onTap: null,
+            opacity: 1,
+            child: Text(
+              widget.text.toUpperCase(),
+              style: Theme.of(context).textTheme.labelLarge,
+              maxLines: 1,
+            ),
           ),
-        ),
-        InfoBox(
-          onTap: () => widget.gameRef.userStatusMessage(money: true),
-          opacity: 1,
-          bottom: true,
-          below: false,
-          center: MediaQuery.of(context).orientation == Orientation.portrait,
-          right: MediaQuery.of(context).orientation == Orientation.landscape,
-          child: Text(
-            '${widget.gameRef.playerOne!.money} ¤',
-            style: Theme.of(context).textTheme.labelLarge,
-            maxLines: 1,
+          InfoBox(
+            onTap: widget.game.userStatusMessage,
+            opacity: 1,
+            bottom: true,
+            below: MediaQuery.of(context).orientation == Orientation.portrait,
+            center: MediaQuery.of(context).orientation == Orientation.portrait,
+            child: Text(
+              '%s HP'.i18n.fill([widget.game.playerOne!.hp.round()]),
+              style: Theme.of(context).textTheme.labelLarge,
+              maxLines: 1,
+            ),
           ),
-        ),
-      ]),
+          InfoBox(
+            onTap: () => widget.game.userStatusMessage(money: true),
+            opacity: 1,
+            bottom: true,
+            below: false,
+            center: MediaQuery.of(context).orientation == Orientation.portrait,
+            right: MediaQuery.of(context).orientation == Orientation.landscape,
+            child: Text(
+              '${widget.game.playerOne!.money} ¤',
+              style: Theme.of(context).textTheme.labelLarge,
+              maxLines: 1,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
 
 class _CloseButton extends StatelessWidget {
-  _CloseButton(this.gameRef, this.onClose);
-  final XeonjiaGame gameRef;
+  _CloseButton(this.game, this.onClose);
+  final XeonjiaGame game;
   final VoidCallback onClose;
 
   @override
@@ -229,8 +253,9 @@ class _CloseButton extends StatelessWidget {
           width: MediaQuery.of(context).size.width / 2.2,
           constraints: const BoxConstraints(maxWidth: 320),
           decoration: BoxDecoration(
-              color: Colors.grey.shade800,
-              borderRadius: const BorderRadius.all(Radius.circular(30))),
+            color: Colors.grey.shade800,
+            borderRadius: const BorderRadius.all(Radius.circular(30)),
+          ),
           child: Row(
             children: [
               Expanded(

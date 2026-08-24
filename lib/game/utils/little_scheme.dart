@@ -184,7 +184,7 @@ class Cell extends Iterable<Object> {
   Iterator<Object> get iterator => _CellIterator(this);
 }
 
-class _CellIterator extends Iterator<Object> {
+class _CellIterator implements Iterator<Object> {
   _CellIterator(this.k);
   late Cell j;
   dynamic k;
@@ -249,7 +249,7 @@ typedef Setter = void Function(Object val);
 /// List of frames which map symbols to values
 class Environment {
   /// Construct a new frame on the [next] (= current) environment or null.
-  Environment(this.gameRef, Cell? symbols, Cell? data, Environment? next) {
+  Environment(this.game, Cell? symbols, Cell? data, Environment? next) {
     var names = symbols?.map((e) => e as Sym).toList() ?? [];
     var values = data?.toList() ?? [];
     if (names.length != values.length) {
@@ -263,7 +263,7 @@ class Environment {
   late List<Sym> _names;
   late List<Object> _values;
   Environment? _next;
-  XeonjiaGame gameRef;
+  XeonjiaGame game;
 
   /// Searches the environment for [symbol] and returns its setter.
   Setter lookForSetter(Sym symbol) {
@@ -457,8 +457,11 @@ String stringify(Object? exp, [bool quote = true]) {
 //----------------------------------------------------------------------
 
 /// Evaluates an expression in an environment.
-Continuation? evaluate(dynamic exp, Environment env,
-    [Continuation? previousK]) {
+Continuation? evaluate(
+  dynamic exp,
+  Environment env, [
+  Continuation? previousK,
+]) {
   var k = previousK ?? Continuation();
   try {
     for (;;) {
@@ -492,7 +495,7 @@ Continuation? evaluate(dynamic exp, Environment env,
             k.push(ContOp.SETQ, env.lookForSetter(kdr.car as Sym));
           } else if (identical(kar, waitSym)) {
             if (kdr?.car != null) {
-              env.gameRef.nextActionDelay = kdr?.car?.toDouble();
+              env.game.nextActionDelay = kdr?.car?.toDouble();
             }
             exp = null;
             k.push(ContOp.WAIT, kdr);
@@ -513,11 +516,11 @@ Continuation? evaluate(dynamic exp, Environment env,
       for (;;) {
         if (k.isEmpty) {
           // execution finished
-          env.gameRef.clearActionContinuation();
-          if (!env.gameRef.messageManager.isActive &&
-              !env.gameRef.worldMapEnabled &&
-              !env.gameRef.isItemsMenuActive) {
-            env.gameRef.resume();
+          env.game.clearActionContinuation();
+          if (!env.game.messageManager.isActive &&
+              !env.game.worldMapEnabled &&
+              !env.game.isItemsMenuActive) {
+            env.game.resume();
           }
           return null;
         }
@@ -527,8 +530,8 @@ Continuation? evaluate(dynamic exp, Environment env,
         switch (op) {
           case ContOp.WAIT:
             // execution paused
-            if (env.gameRef.nextActionDelay != 0 && env.gameRef.hasAction) {
-              env.gameRef.continueAction();
+            if (env.game.nextActionDelay != 0 && env.game.hasAction) {
+              env.game.continueAction();
             }
             return k;
           case ContOp.THEN: // x is (e2 e3) of (if e1 e2 e3).
@@ -640,7 +643,7 @@ REPair applyFunction(Object? fun, Cell? arg, Continuation k, Environment env) {
   } else if (fun is Closure) {
     k.pushRestoreEnv(env);
     k.push(ContOp.BEGIN, fun.body);
-    return REPair(#NONE, Environment(env.gameRef, fun.params, arg, fun.env));
+    return REPair(#NONE, Environment(env.game, fun.params, arg, fun.env));
   } else if (fun is Continuation) {
     k.copyFrom(fun);
     return REPair(arg!.car!, env);

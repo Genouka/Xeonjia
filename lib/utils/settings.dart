@@ -7,32 +7,33 @@ import 'package:xeonjia/utils/i18n.dart';
 class Settings {
   /// Import settings from a Json
   Settings(Map<String, dynamic> json)
-      : showDPad = json['showDPad'] ?? Platform.isAndroid,
-        dPadSize = json['dPadSize'] ?? 1,
-        dPadOffset =
-            Offset(json['dPadOffsetX'] ?? 30, json['dPadOffsetY'] ?? 30),
-        buttonsOffset =
-            Offset(json['buttonsOffsetX'] ?? -1, json['buttonsOffsetY'] ?? -1),
-        zoomIn = json['zoomIn'] ?? 9,
-        firstRun = json['firstRun'] ?? true,
-        backgroundMusic = json['backgroundMusic'] ?? true,
-        soundEffects = json['soundEffects'] ?? true,
-        _languageCode = json['languageCode'];
+    : showDPad = json['showDPad'] ?? Platform.isAndroid,
+      dPadSize = json['dPadSize'] ?? 1,
+      dPadOffset = Offset(json['dPadOffsetX'] ?? 30, json['dPadOffsetY'] ?? 30),
+      buttonsOffset = Offset(
+        json['buttonsOffsetX'] ?? -1,
+        json['buttonsOffsetY'] ?? -1,
+      ),
+      zoomIn = json['zoomIn'] ?? 9,
+      firstRun = json['firstRun'] ?? true,
+      backgroundMusic = json['backgroundMusic'] ?? true,
+      soundEffects = json['soundEffects'] ?? true,
+      _languageCode = json['languageCode'];
 
   /// Export settings as a Json
   Map<String, dynamic> toJson() => {
-        'showDPad': showDPad,
-        'dPadSize': dPadSize,
-        'dPadOffsetX': dPadOffset.dx,
-        'dPadOffsetY': dPadOffset.dy,
-        'buttonsOffsetX': buttonsOffset.dx,
-        'buttonsOffsetY': buttonsOffset.dy,
-        'zoomIn': zoomIn,
-        'firstRun': firstRun,
-        'backgroundMusic': backgroundMusic,
-        'soundEffects': soundEffects,
-        'languageCode': _languageCode,
-      };
+    'showDPad': showDPad,
+    'dPadSize': dPadSize,
+    'dPadOffsetX': dPadOffset.dx,
+    'dPadOffsetY': dPadOffset.dy,
+    'buttonsOffsetX': buttonsOffset.dx,
+    'buttonsOffsetY': buttonsOffset.dy,
+    'zoomIn': zoomIn,
+    'firstRun': firstRun,
+    'backgroundMusic': backgroundMusic,
+    'soundEffects': soundEffects,
+    'languageCode': _languageCode,
+  };
 
   /// True if D-pad is enabled
   bool showDPad;
@@ -60,10 +61,17 @@ class Settings {
   bool get useSystemLanguage => _languageCode == null || _languageCode == 'und';
   String get _currentLanguageCode =>
       useSystemLanguage ? Platform.localeName : _languageCode!;
-  Locale get locale => supportedLocales
-              .contains(Locale(_currentLanguageCode.split('_').first)) ||
+  Locale get locale =>
+      supportedLocales.contains(
+            Locale(_currentLanguageCode.split('_').first),
+          ) ||
           !useSystemLanguage
-      ? Locale(_currentLanguageCode.split('_').first)
+      ? Locale(
+          _currentLanguageCode.split('_').first,
+          _currentLanguageCode.split('_').length > 1
+              ? _currentLanguageCode.split('_').last
+              : '',
+        )
       : const Locale('en');
   set locale(Locale? locale) => _languageCode = locale?.toString();
 
@@ -73,7 +81,7 @@ class Settings {
   bool get defaultFont => font == 'dd5x7';
   bool get smallerFont => !defaultFont;
   bool get _useExtendedFont =>
-      languagesWithSpecialCharacters.contains(locale.languageCode);
+      languagesWithSpecialCharacters.contains(locale.toString());
   bool get _useSystemFont =>
-      languagesWithNonSupportedCharacters.contains(locale.languageCode);
+      languagesWithNonSupportedCharacters.contains(locale.toString());
 }

@@ -6,6 +6,14 @@ analyzer:
     prefer_const_constructors_in_immutables: ignore
     prefer_interpolation_to_compose_strings: ignore
     use_key_in_widget_constructors: ignore
+  exclude:
+    - build/**
+    - android/**
+    - ios/**
+    - web/**
+    - windows/**
+    - macos/**
+    - linux/**
 
 linter:
   rules:
@@ -25,8 +33,6 @@ linter:
     - sized_box_shrink_expand
     - sort_constructors_first
     - sort_unnamed_constructors_first
-    - unnecessary_await_in_return
-    - unnecessary_lambdas
     - unnecessary_parenthesis
     - unnecessary_raw_strings
     - use_decorated_box

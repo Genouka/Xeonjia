@@ -8,12 +8,16 @@ class GamePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: _game.onWillPop,
+    return PopScope(
+      onPopInvokedWithResult: _game.onWillPop,
       child: Theme(
         data: gameTheme,
         child: Scaffold(
-          body: GameWidget(game: _game, overlayBuilderMap: _game.overlayMap),
+          body: GameWidget(
+            key: ValueKey(_game),
+            game: _game,
+            overlayBuilderMap: _game.overlayMap,
+          ),
         ),
       ),
     );

@@ -7,19 +7,21 @@ import 'package:xeonjia/utils/local_data_controller.dart';
 /// Page route
 class FadeRoute extends PageRouteBuilder {
   FadeRoute(this.page)
-      : super(
-          pageBuilder: (
-            BuildContext context,
-            Animation<double> animation,
-            Animation<double> secondaryAnimation,
-          ) =>
-              page,
-          transitionsBuilder: (BuildContext context,
-                  Animation<double> animation,
-                  Animation<double> secondaryAnimation,
-                  Widget child) =>
-              FadeTransition(opacity: animation, child: child),
-        );
+    : super(
+        pageBuilder:
+            (
+              BuildContext context,
+              Animation<double> animation,
+              Animation<double> secondaryAnimation,
+            ) => page,
+        transitionsBuilder:
+            (
+              BuildContext context,
+              Animation<double> animation,
+              Animation<double> secondaryAnimation,
+              Widget child,
+            ) => FadeTransition(opacity: animation, child: child),
+      );
 
   @override
   final Duration transitionDuration = const Duration(milliseconds: 150);
@@ -31,47 +33,50 @@ class FadeRoute extends PageRouteBuilder {
 class NoGlow extends ScrollBehavior {
   @override
   Widget buildOverscrollIndicator(
-      BuildContext context, Widget child, ScrollableDetails details) {
+    BuildContext context,
+    Widget child,
+    ScrollableDetails details,
+  ) {
     return child;
   }
 }
 
 /// Gradient decoration used in HomePage, SettingsPage, InfoPage, WelcomePage
 BoxDecoration gradientDecoration({bool withOpacity = false}) => BoxDecoration(
-      gradient: LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        colors: [
-          Color(withOpacity ? 0x85306684 : 0xFF306684),
-          const Color(0xFFC1D5DE),
-        ],
-      ),
-    );
+  gradient: LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      Color(withOpacity ? 0x85306684 : 0xFF306684),
+      const Color(0xFFC1D5DE),
+    ],
+  ),
+);
 
 /// Close button in settings and info pages
 TextButton closeButton(
-        BuildContext context, ValueChanged<bool>? onFocusChange) =>
-    TextButton(
-      onFocusChange: onFocusChange,
-      style: ButtonStyle(
-        overlayColor:
-            MaterialStateColor.resolveWith((states) => Colors.white24),
-      ),
-      onPressed: () => Navigator.of(context).pop(),
-      child: const Text(
-        '×',
-        style:
-            TextStyle(color: Colors.white, fontSize: 48, fontFamily: 'dd5x7'),
-      ),
-    );
+  BuildContext context,
+  ValueChanged<bool>? onFocusChange,
+) => TextButton(
+  onFocusChange: onFocusChange,
+  style: ButtonStyle(
+    overlayColor: WidgetStateColor.resolveWith((states) => Colors.white24),
+  ),
+  onPressed: () => Navigator.of(context).pop(),
+  child: const Text(
+    '×',
+    style: TextStyle(color: Colors.white, fontSize: 48, fontFamily: 'dd5x7'),
+  ),
+);
 
 /// Form used to insert player name
 Widget insertNameForm(
-    GlobalKey<FormState> key,
-    TextEditingController textFieldController,
-    Function onSubmitted,
-    BuildContext context,
-    {double? fontSize = 32}) {
+  GlobalKey<FormState> key,
+  TextEditingController textFieldController,
+  Function onSubmitted,
+  BuildContext context, {
+  double? fontSize = 32,
+}) {
   return Form(
     key: key,
     child: TextFormField(
@@ -126,7 +131,9 @@ Widget insertNameForm(
 class LatiniseAndUpperCaseTextFormatter extends TextInputFormatter {
   @override
   TextEditingValue formatEditUpdate(
-      TextEditingValue oldValue, TextEditingValue newValue) {
+    TextEditingValue oldValue,
+    TextEditingValue newValue,
+  ) {
     var text = newValue.text.latinise();
     return TextEditingValue(
       text: text.toUpperCase(),

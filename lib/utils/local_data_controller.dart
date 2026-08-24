@@ -26,29 +26,42 @@ Future<void> loadStoredData() async {
   _prefs = await SharedPreferences.getInstance();
 
   // Load user data from shared preferences
-  mainCharacter =
-      CharacterInfo(jsonDecode(_prefs.getString('userData_V2') ?? '{}'));
+  mainCharacter = CharacterInfo(
+    jsonDecode(_prefs.getString('userData_V2') ?? '{}'),
+  );
 
   // Restore app settings
   settings = Settings(jsonDecode(_prefs.getString('settings_V2') ?? '{}'));
 
   // Load items from assets
-  var data = json
-      .decode(await rootBundle.loadString('assets/data/backpack-items.json'));
-  data.forEach((key, value) => itemData[key] =
-      Item((value as Map<String, dynamic>)..putIfAbsent('id', () => key)));
+  var data = json.decode(
+    await rootBundle.loadString('assets/data/backpack-items.json'),
+  );
+  data.forEach(
+    (key, value) => itemData[key] = Item(
+      (value as Map<String, dynamic>)..putIfAbsent('id', () => key),
+    ),
+  );
 
   // Load maps data from kingdom.world and maps-data.json
   final List<dynamic> kingdomWorld = json.decode(
-      await rootBundle.loadString('assets/maps/story/kingdom.world'))['maps'];
-  final Map<String, dynamic> mapsData =
-      json.decode(await rootBundle.loadString('assets/data/maps-data.json'));
+    await rootBundle.loadString('assets/maps/story/kingdom.world'),
+  )['maps'];
+  final Map<String, dynamic> mapsData = json.decode(
+    await rootBundle.loadString('assets/data/maps-data.json'),
+  );
   for (final map in kingdomWorld) {
-    worldData.add(MapData({}
-      ..addAll(map)
-      ..addAll(mapsData.containsKey(map['fileName'])
-          ? mapsData[map['fileName']]
-          : {})));
+    worldData.add(
+      MapData(
+        {}
+          ..addAll(map)
+          ..addAll(
+            mapsData.containsKey(map['fileName'])
+                ? mapsData[map['fileName']]
+                : {},
+          ),
+      ),
+    );
   }
 }
 

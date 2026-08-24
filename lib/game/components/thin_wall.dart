@@ -4,10 +4,11 @@ import 'package:xeonjia/game/xeonjia.dart';
 
 /// Thin wall with one solid side
 class ThinWallComponent extends BasicComponent {
-  ThinWallComponent(tile)
-      : _solidSide = GetDirection.fromInt(
-            int.parse(tile.properties['solidSide'] ?? '0')),
-        super.fromTile(tile);
+  ThinWallComponent(super.tile)
+    : _solidSide = GetDirection.fromInt(
+        int.parse(tile.properties['solidSide'] ?? '0'),
+      ),
+      super.fromTile();
   final Direction _solidSide;
 
   bool isBlocking(Direction direction) =>
@@ -23,12 +24,17 @@ class ThinWallComponent extends BasicComponent {
                 x,
                 y + height + (otherComponent.direction!.dy > 0 ? 0 : -1),
                 width,
-                1)
+                1,
+              )
             : null;
       case Direction.up:
         return otherComponent.direction!.dy != 0
             ? Rect.fromLTWH(
-                x, y + (otherComponent.direction!.dy > 0 ? 0 : -1), width, 1)
+                x,
+                y + (otherComponent.direction!.dy > 0 ? 0 : -1),
+                width,
+                1,
+              )
             : null;
       case Direction.right:
         return otherComponent.direction!.dx != 0
@@ -36,15 +42,18 @@ class ThinWallComponent extends BasicComponent {
                 x + width + (otherComponent.direction!.dx > 0 ? 0 : -1),
                 y,
                 1,
-                height)
+                height,
+              )
             : null;
       case Direction.left:
         return otherComponent.direction!.dx != 0
             ? Rect.fromLTWH(
-                x + (otherComponent.direction!.dx > 0 ? 0 : -1), y, 1, height)
+                x + (otherComponent.direction!.dx > 0 ? 0 : -1),
+                y,
+                1,
+                height,
+              )
             : null;
-      default:
-        return null;
     }
   }
 }

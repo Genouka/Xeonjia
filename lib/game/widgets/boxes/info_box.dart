@@ -39,9 +39,18 @@ class InfoBox extends StatelessWidget {
           width: width,
           height: 36,
           decoration: BoxDecoration(
-              color: Colors.grey.shade800.withOpacity(opacity),
-              borderRadius: BorderRadius.all(Radius.circular(radius))),
-          child: Center(child: child),
+            color: Colors.grey.shade800.withAlpha((255.0 * 0.7).round()),
+            borderRadius: BorderRadius.all(Radius.circular(radius)),
+          ),
+          child: Center(
+            child: DefaultTextHeightBehavior(
+              textHeightBehavior: const TextHeightBehavior(
+                applyHeightToFirstAscent: false,
+                applyHeightToLastDescent: false,
+              ),
+              child: child,
+            ),
+          ),
         ),
       ),
     );

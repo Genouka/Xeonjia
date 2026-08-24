@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:collection/collection.dart';
+import 'package:flame/events.dart';
 import 'package:flame/extensions.dart';
-import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xeonjia/game/xeonjia.dart';
@@ -37,13 +37,16 @@ extension InputController on XeonjiaGame {
         (elapsed > longPressTime + 1 &&
             longPressButton != null &&
             longPressButton ==
-                children.firstWhereOrNull((e) =>
-                    e is Button &&
-                    e.containsPoint(info.eventPosition.widget)))) {
+                children.firstWhereOrNull(
+                  (e) =>
+                      e is Button && e.containsPoint(info.eventPosition.widget),
+                ))) {
       longPressMoving = true;
+      var shortestSide = size.toSize().shortestSide;
       settings.buttonsOffset = Offset(
-          settings.buttonsOffset.dx - info.raw.delta.dx,
-          settings.buttonsOffset.dy - info.raw.delta.dy);
+        settings.buttonsOffset.dx - info.raw.delta.dx / shortestSide,
+        settings.buttonsOffset.dy - info.raw.delta.dy / shortestSide,
+      );
       for (final component in children) {
         if (component is Button) component.updatePosition();
       }
@@ -52,9 +55,10 @@ extension InputController on XeonjiaGame {
     if (settings.showDPad && !miniMapEnabled) return;
     if (isNotPaused) {
       _gesturesDirection = GetDirection.fromOffset(
-          info.raw.delta.dx.abs() > info.raw.delta.dy.abs()
-              ? Offset(info.raw.delta.dx, 0)
-              : Offset(0, info.raw.delta.dy));
+        info.raw.delta.dx.abs() > info.raw.delta.dy.abs()
+            ? Offset(info.raw.delta.dx, 0)
+            : Offset(0, info.raw.delta.dy),
+      );
       if (_gesturesElapsed > 0) {
         if (!_gesturesPlayerMoved) {
           _gesturesPlayerMoved = true;
@@ -69,11 +73,37 @@ extension InputController on XeonjiaGame {
         await Future.delayed(const Duration(milliseconds: 50));
       }
     } else if (miniMapEnabled) {
-      camera.snapTo(Vector2(
-          moveCamera(size.x, map.width,
-              camera.position.x - info.raw.delta.dx + size.x / 2),
-          moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height,
-              camera.position.y - info.raw.delta.dy + size.y / 2)));
+      if (worldMapEnabled) {
+        worldMapComponent!.pointer.visible = false;
+        var wm = worldMapComponent!;
+        wm.position = Vector2(
+          -moveCamera(
+            size.x,
+            map.width,
+            -wm.position.x - info.raw.delta.dx + size.x / 2,
+          ),
+          -moveCamera(
+            size.y,
+            map.width * 0.7,
+            -wm.position.y - info.raw.delta.dy + size.y / 2,
+          ),
+        );
+      } else {
+        camera.moveTo(
+          Vector2(
+            moveCamera(
+              size.x,
+              map.width,
+              camera.viewfinder.position.x - info.raw.delta.dx + size.x / 2,
+            ),
+            moveCamera(
+              size.y,
+              map.height,
+              camera.viewfinder.position.y - info.raw.delta.dy + size.y / 2,
+            ),
+          ),
+        );
+      }
     }
   }
 
@@ -88,18 +118,22 @@ extension InputController on XeonjiaGame {
   }
 
   /// Handle tap up event
-  void tapUpHandler(int pointerId, TapUpInfo info) {
+  void tapUpHandler(TapUpEvent event) {
     messageManager.isActive
         ? dialogBox.state!.next()
-        : _tapHandler(info.raw.globalPosition);
+        : _tapHandler(event.raw.globalPosition);
   }
 
   /// Handle tap gesture
   void _tapHandler(Offset position) {
-    Button? b = children.firstWhereOrNull((e) =>
-        e is Button &&
-        e.containsPoint(position.toVector2()) &&
-        (e.visibility?.call() ?? true)) as Button?;
+    Button? b =
+        children.firstWhereOrNull(
+              (e) =>
+                  e is Button &&
+                  e.containsPoint(position.toVector2()) &&
+                  (e.visibility?.call() ?? true),
+            )
+            as Button?;
     if ((isPaused && !miniMapEnabled) || !(user?.isMyTurn ?? false)) {
       return;
     } else if (b != null) {
@@ -108,26 +142,40 @@ extension InputController on XeonjiaGame {
     }
 
     // Ignore tap near buttons (top left)
-    var topLeftSize = children.whereType<HideHintsButton>().firstOrNull?.size ??
+    var topLeftSize =
+        children.whereType<HideHintsButton>().firstOrNull?.size ??
         Vector2.zero();
     if (position.dx < topLeftSize.x && position.dy < topLeftSize.y * 2 + 20) {
+      return;
+    }
+    if (worldMapEnabled) {
+      worldMapComponent!.selectPoint(
+        Vector2(
+          (position.dx - worldMapComponent!.position.x) / miniMapZoom,
+          (position.dy - worldMapComponent!.position.y) / miniMapZoom,
+        ),
+      );
       return;
     }
     if (miniMapEnabled) return;
 
     // Update orientation
     var relativeTapX =
-        position.dx - (user!.x + componentSize / 2 - camera.position.x);
+        position.dx -
+        (user!.x + componentSize / 2 - camera.viewport.position.x);
     var relativeTapY =
-        position.dy - (user!.y + componentSize / 2 - camera.position.y);
+        position.dy -
+        (user!.y + componentSize / 2 - camera.viewport.position.y);
 
     if (position.dx < componentSize || position.dx > size.x - componentSize) {
       user!.updateOrientation(
-          GetDirection.fromXY(position.dx - componentSize, 0));
+        GetDirection.fromXY(position.dx - componentSize, 0),
+      );
     } else if (position.dy < componentSize ||
         position.dy > size.y - componentSize) {
       user!.updateOrientation(
-          GetDirection.fromXY(0, position.dy - componentSize));
+        GetDirection.fromXY(0, position.dy - componentSize),
+      );
     } else if (relativeTapX.abs() > 15 || relativeTapY.abs() > 15) {
       relativeTapX.abs() > relativeTapY.abs()
           ? user!.updateOrientation(GetDirection.fromXY(relativeTapX, 0))
@@ -142,10 +190,13 @@ extension InputController on XeonjiaGame {
 
   /// Handle keyboard input
   KeyEventResult keyboardHandler(
-      RawKeyEvent event, Set<LogicalKeyboardKey> keysPressed) {
+    KeyEvent event,
+    Set<LogicalKeyboardKey> keysPressed,
+  ) {
     if (event.logicalKey.keyLabel.contains('Audio Volume')) {
       return KeyEventResult.skipRemainingHandlers;
-    } else if (event is! RawKeyDownEvent || overlays.isActive('loading')) {
+    } else if ((event is! KeyDownEvent && event is! KeyRepeatEvent) ||
+        overlays.isActive('loading')) {
       return KeyEventResult.ignored;
     }
 
@@ -166,37 +217,77 @@ extension InputController on XeonjiaGame {
         if (worldMapEnabled) {
           worldMapComponent?.movePointer(Direction.down);
         } else {
-          camera.snapTo(Vector2(
-              moveCamera(size.x, map.width, camera.position.x + size.x / 2),
+          camera.moveTo(
+            Vector2(
               moveCamera(
-                  size.y, map.height, camera.position.y + 50 + size.y / 2)));
+                size.x,
+                map.width,
+                camera.viewfinder.position.x + size.x / 2,
+              ),
+              moveCamera(
+                size.y,
+                map.height,
+                camera.viewfinder.position.y + 50 + size.y / 2,
+              ),
+            ),
+          );
         }
       } else if (_up(event)) {
         if (worldMapEnabled) {
           worldMapComponent?.movePointer(Direction.up);
         } else {
-          camera.snapTo(Vector2(
-              moveCamera(size.x, map.width, camera.position.x + size.x / 2),
+          camera.moveTo(
+            Vector2(
               moveCamera(
-                  size.y, map.height, camera.position.y - 50 + size.y / 2)));
+                size.x,
+                map.width,
+                camera.viewfinder.position.x + size.x / 2,
+              ),
+              moveCamera(
+                size.y,
+                map.height,
+                camera.viewfinder.position.y - 50 + size.y / 2,
+              ),
+            ),
+          );
         }
       } else if (_right(event)) {
         if (worldMapEnabled) {
           worldMapComponent?.movePointer(Direction.right);
         } else {
-          camera.snapTo(Vector2(
+          camera.moveTo(
+            Vector2(
               moveCamera(
-                  size.x, map.width, camera.position.x + 50 + size.x / 2),
-              moveCamera(size.y, map.height, camera.position.y + size.y / 2)));
+                size.x,
+                map.width,
+                camera.viewfinder.position.x + 50 + size.x / 2,
+              ),
+              moveCamera(
+                size.y,
+                map.height,
+                camera.viewfinder.position.y + size.y / 2,
+              ),
+            ),
+          );
         }
       } else if (_left(event)) {
         if (worldMapEnabled) {
           worldMapComponent?.movePointer(Direction.left);
         } else {
-          camera.snapTo(Vector2(
+          camera.moveTo(
+            Vector2(
               moveCamera(
-                  size.x, map.width, camera.position.x - 50 + size.x / 2),
-              moveCamera(size.y, map.height, camera.position.y + size.y / 2)));
+                size.x,
+                map.width,
+                camera.viewfinder.position.x - 50 + size.x / 2,
+              ),
+              moveCamera(
+                size.y,
+                map.height,
+                camera.viewfinder.position.y + size.y / 2,
+              ),
+            ),
+          );
         }
       } else if (_zoomIn(event)) {
         zoomMiniMap();
@@ -316,49 +407,49 @@ extension InputController on XeonjiaGame {
   }
 }
 
-bool _down(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.arrowDown;
-bool _up(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.arrowUp;
-bool _right(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.arrowRight;
-bool _left(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.arrowLeft;
-bool _downOrientation(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyS;
-bool _upOrientation(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyW;
-bool _rightOrientation(RawKeyEvent e) =>
-    e.logicalKey == LogicalKeyboardKey.keyD;
-bool _leftOrientation(RawKeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyA;
-bool _enter(RawKeyEvent e) =>
+bool _down(KeyEvent e) => e.logicalKey == LogicalKeyboardKey.arrowDown;
+bool _up(KeyEvent e) => e.logicalKey == LogicalKeyboardKey.arrowUp;
+bool _right(KeyEvent e) => e.logicalKey == LogicalKeyboardKey.arrowRight;
+bool _left(KeyEvent e) => e.logicalKey == LogicalKeyboardKey.arrowLeft;
+bool _downOrientation(KeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyS;
+bool _upOrientation(KeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyW;
+bool _rightOrientation(KeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyD;
+bool _leftOrientation(KeyEvent e) => e.logicalKey == LogicalKeyboardKey.keyA;
+bool _enter(KeyEvent e) =>
     e.logicalKey == LogicalKeyboardKey.space ||
     e.logicalKey == LogicalKeyboardKey.keyX ||
+    e.logicalKey == LogicalKeyboardKey.enter ||
     e.logicalKey == LogicalKeyboardKey.gameButtonA;
-bool _esc(RawKeyEvent e) =>
+bool _esc(KeyEvent e) =>
     e.logicalKey == LogicalKeyboardKey.escape ||
     e.logicalKey == LogicalKeyboardKey.gameButtonStart ||
     e.logicalKey == LogicalKeyboardKey.gameButtonLeft1;
-bool _zoomIn(RawKeyEvent e) =>
+bool _zoomIn(KeyEvent e) =>
     e.logicalKey == LogicalKeyboardKey.add ||
     e.logicalKey == LogicalKeyboardKey.zoomIn ||
     e.logicalKey == LogicalKeyboardKey.gameButtonRight2;
-bool _zoomOut(RawKeyEvent e) =>
+bool _zoomOut(KeyEvent e) =>
     e.logicalKey == LogicalKeyboardKey.minus ||
     e.logicalKey == LogicalKeyboardKey.zoomOut ||
     e.logicalKey == LogicalKeyboardKey.gameButtonLeft2;
-bool _map(RawKeyEvent e) =>
+bool _map(KeyEvent e) =>
     e.logicalKey == LogicalKeyboardKey.keyM ||
     e.logicalKey == LogicalKeyboardKey.gameButtonMode;
-bool _hint(RawKeyEvent e) =>
+bool _hint(KeyEvent e) =>
     e.logicalKey == LogicalKeyboardKey.keyH ||
     e.logicalKey == LogicalKeyboardKey.gameButtonLeft2;
-bool _punch(RawKeyEvent e) =>
+bool _punch(KeyEvent e) =>
     e.logicalKey == LogicalKeyboardKey.keyQ ||
     e.logicalKey == LogicalKeyboardKey.gameButtonB;
-bool _snowball(RawKeyEvent e) =>
+bool _snowball(KeyEvent e) =>
     e.logicalKey == LogicalKeyboardKey.keyE ||
     e.logicalKey == LogicalKeyboardKey.gameButtonX;
-bool _mine(RawKeyEvent e) =>
+bool _mine(KeyEvent e) =>
     e.logicalKey == LogicalKeyboardKey.keyR ||
     e.logicalKey == LogicalKeyboardKey.gameButtonRight1;
-bool _backpack(RawKeyEvent e) =>
+bool _backpack(KeyEvent e) =>
     e.logicalKey == LogicalKeyboardKey.keyB ||
     e.logicalKey == LogicalKeyboardKey.gameButtonY;
-bool _milla(RawKeyEvent e) =>
+bool _milla(KeyEvent e) =>
     e.logicalKey == LogicalKeyboardKey.keyL ||
     e.logicalKey == LogicalKeyboardKey.gameButtonRight2;

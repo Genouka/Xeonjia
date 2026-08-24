@@ -10,12 +10,13 @@ import 'package:xeonjia/game/xeonjia.dart';
 import 'package:xml/xml.dart';
 
 /// Import map from a TMX file
-Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
-  var mapXml =
-      XmlDocument.parse(await rootBundle.loadString(fileName)).rootElement;
+Future<void> importMap(XeonjiaGame game, String fileName) async {
+  var mapXml = XmlDocument.parse(
+    await rootBundle.loadString(fileName),
+  ).rootElement;
 
   // Get map information
-  gameRef.map
+  game.map
     ..width = int.parse(mapXml.getAttribute('width')!)
     ..height = int.parse(mapXml.getAttribute('height')!);
 
@@ -26,44 +27,43 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
       if (property.attributes.isEmpty) continue;
       switch (property.getAttributeNode('name')!.value) {
         case 'action':
-          gameRef.map.action =
-              property.getAttributeNode('value')?.value ?? property.text;
+          game.map.action =
+              property.getAttributeNode('value')?.value ?? property.value;
           break;
         case 'music':
-          gameRef.map.music = property.getAttributeNode('value')!.value;
+          game.map.music = property.getAttributeNode('value')!.value;
           break;
         case 'milla':
-          gameRef.map.milla = (property.text.isNotEmpty
-                  ? property.text
-                  : property.getAttributeNode('value')!.value)
-              .split(';;;');
+          game.map.milla =
+              (property.value ?? property.getAttributeNode('value')!.value)
+                  .split(';;;');
           break;
         case 'map-name':
-          gameRef.map.name = property.getAttributeNode('value')!.value;
+          game.map.name = property.getAttributeNode('value')!.value;
           break;
         case 'disable-minimap':
-          gameRef.map.disableMiniMap =
+          game.map.disableMiniMap =
               property.getAttributeNode('value')!.value == 'true';
           break;
         case 'disable-worldmap':
-          gameRef.map.disableWorldMap =
+          game.map.disableWorldMap =
               property.getAttributeNode('value')!.value == 'true';
           break;
         case 'can-escape':
-          gameRef.map.canEscape =
+          game.map.canEscape =
               property.getAttributeNode('value')!.value == 'true';
           break;
         case 'has-hints':
-          gameRef.map.hasHints =
+          game.map.hasHints =
               property.getAttributeNode('value')!.value == 'true';
           break;
         case 'start-battle':
-          gameRef.map.startBattle =
+          game.map.startBattle =
               property.getAttributeNode('value')!.value == 'true';
           break;
         case 'skip-story':
-          gameRef.map.skipStory =
-              property.getAttributeNode('value')?.value ?? property.text;
+          game.map.skipStory =
+              property.getAttributeNode('value')?.value ?? property.value;
           break;
       }
     }
@@ -73,15 +73,18 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
   var tileMap = <int, Tile>{};
 
   // Read tilesets
-  await Future.forEach(mapXml.findElements('tileset'),
-      (XmlElement tilesetElement) async {
+  await Future.forEach(mapXml.findElements('tileset'), (
+    XmlElement tilesetElement,
+  ) async {
     var firstGid = int.parse(tilesetElement.getAttribute('firstgid')!);
 
     XmlElement tileset = (tilesetElement.getAttribute('source') == null)
         ? tilesetElement
-        : XmlDocument.parse(await rootBundle.loadString(
-                'assets/maps/story/' + tilesetElement.getAttribute('source')!))
-            .rootElement;
+        : XmlDocument.parse(
+            await rootBundle.loadString(
+              'assets/maps/story/' + tilesetElement.getAttribute('source')!,
+            ),
+          ).rootElement;
 
     var tileHeight = double.parse(tileset.getAttribute('tileheight')!);
     var tileCount = int.parse(tileset.getAttribute('tilecount')!);
@@ -94,7 +97,9 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
         .split('../../images/')
         .last;
     var spriteSheet = SpriteSheet(
-        srcSize: Vector2.all(16), image: Flame.images.fromCache(image));
+      srcSize: Vector2.all(16),
+      image: Flame.images.fromCache(image),
+    );
 
     // Get tiles from tileset
     if (tileset.findElements('tile').isEmpty) {
@@ -118,8 +123,9 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
             ((newTile.gid! - firstGid) / columns).floor() * tileHeight;
         newTile.properties['image'] = image;
         newTile.sprite = spriteSheet.getSprite(
-            (newTile.gid! - firstGid) ~/ columns,
-            (newTile.gid! - firstGid) % columns);
+          (newTile.gid! - firstGid) ~/ columns,
+          (newTile.gid! - firstGid) % columns,
+        );
 
         // Read tile properties
         var properties = tile.findElements('properties');
@@ -127,7 +133,8 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
           for (final property in properties.single.children) {
             if (property.attributes.isNotEmpty) {
               newTile.properties[property.getAttributeNode('name')!.value] =
-                  property.getAttributeNode('value')?.value ?? property.text;
+                  property.getAttributeNode('value')?.value ??
+                  property.innerText;
             }
           }
         }
@@ -140,8 +147,9 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
             // All frames have the same duration (it uses the last value)
             newTile.animationStepTime =
                 double.parse(frame.getAttributeNode('duration')!.value) / 1000;
-            newTile.animationSprites
-                .add(spriteSheet.getSprite(id ~/ columns, id % columns));
+            newTile.animationSprites.add(
+              spriteSheet.getSprite(id ~/ columns, id % columns),
+            );
           });
         }
 
@@ -153,7 +161,7 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
   var layerCount = 0;
   mapXml.findElements('layer').forEach((layer) {
     var mapData = <int>[];
-    var gzipMapData = layer.findElements('data').single.text;
+    var gzipMapData = layer.findElements('data').single.innerText;
     var m = gzip.decode(base64.decode(gzipMapData.trim()));
     for (var i = 0; i < m.length; i += 4) {
       mapData.add(m[i] + (m[i + 1] << 8) + (m[i + 2] << 16) + (m[i + 3] << 16));
@@ -166,10 +174,10 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
       if (componentTile != null) {
         componentTile.position = Point(columnCount, lineCount);
         componentTile.layer = layerCount;
-        componentTile.createComponent(gameRef);
+        componentTile.createComponent(game);
       }
       ++columnCount;
-      if (columnCount == gameRef.map.width) {
+      if (columnCount == game.map.width) {
         columnCount = 0;
         ++lineCount;
       }
@@ -187,17 +195,16 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
           ? tileMap[int.parse(object.getAttribute('gid')!)]
           : Tile();
       var x = int.parse(object.getAttributeNode('x')!.value) / 16;
-      var y = int.parse(object.getAttributeNode('y')!.value) / 16 -
+      var y =
+          int.parse(object.getAttributeNode('y')!.value) / 16 -
           (isTileObject ? 1 : 0);
       var properties = <String, dynamic>{};
-      object
-          .findElements('properties')
-          .single
-          .findElements('property')
-          .forEach((property) {
-        properties[property.getAttributeNode('name')!.value] =
-            property.getAttributeNode('value')?.value ?? property.text;
-      });
+      object.findElements('properties').single.findElements('property').forEach(
+        (property) {
+          properties[property.getAttributeNode('name')!.value] =
+              property.getAttributeNode('value')?.value ?? property.innerText;
+        },
+      );
       tile!.tiledClass = object.getAttribute('class') ?? tile.tiledClass;
       tile.position = Point(x, y);
       tile.properties.addAll(properties);
@@ -218,13 +225,13 @@ Future<void> importMap(XeonjiaGame gameRef, String fileName) async {
         }
         if (tile.properties['mainDoor'] == 'true') mainDoor = tile;
       }
-      tile.createComponent(gameRef);
+      tile.createComponent(game);
     });
   });
   if (!playerOneCreated && mainDoor != null) {
     mainDoor!
       ..properties['createDoor'] = false
       ..properties['isPlayerOne'] = true
-      ..createComponent(gameRef);
+      ..createComponent(game);
   }
 }

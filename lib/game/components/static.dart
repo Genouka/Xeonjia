@@ -4,11 +4,10 @@ import 'package:xeonjia/game/xeonjia.dart';
 
 /// Static component
 class StaticComponent extends BasicComponent {
-  StaticComponent(tile, {bool walkable = false})
-      : _slippery = (tile.properties['slippery'] ?? 'false') == 'true',
-        _walkable = walkable,
-        hideable = (tile.properties['hideable'] ?? 'false') == 'true',
-        super.fromTile(tile);
+  StaticComponent(super.tile, {this._walkable = false})
+    : _slippery = (tile.properties['slippery'] ?? 'false') == 'true',
+      hideable = (tile.properties['hideable'] ?? 'false') == 'true',
+      super.fromTile();
 
   /// If true: other components slide on this
   final bool _slippery;
@@ -33,7 +32,7 @@ class StaticComponent extends BasicComponent {
 
   @override
   void render(Canvas canvas) {
-    if (hideable && gameRef.hideHints) return;
+    if (hideable && game.hideHints) return;
     super.render(canvas);
   }
 }

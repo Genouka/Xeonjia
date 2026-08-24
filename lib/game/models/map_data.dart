@@ -3,14 +3,14 @@ import 'package:flame/image_composition.dart';
 /// Map information taken from kingdom.world and maps-data.json
 class MapData {
   MapData(Map<String, dynamic> json)
-      : id = json['fileName'].split('.').first,
-        fileName = json['fileName'],
-        height = json['height'] / 16,
-        width = json['width'] / 16,
-        x = json['x'] / 16,
-        y = json['y'] / 16,
-        text = json['text'],
-        hidden = json['hidden'] ?? false;
+    : id = json['fileName'].split('.').first,
+      fileName = json['fileName'],
+      height = json['height'] / 16,
+      width = json['width'] / 16,
+      x = json['x'] / 16,
+      y = json['y'] / 16,
+      text = json['text'],
+      hidden = json['hidden'] ?? false;
 
   final String id;
   final String fileName;

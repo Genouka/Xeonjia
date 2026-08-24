@@ -74,7 +74,7 @@ class _InfoPageState extends State<InfoPage> {
       'subtitle': 'Read third party notices'.i18n,
       'url': '',
       'icon': const Icon(Icons.code),
-    }
+    },
   ];
   int focusItem = -1;
 
@@ -118,42 +118,55 @@ class _InfoPageState extends State<InfoPage> {
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
                           margin: const EdgeInsets.symmetric(
-                              vertical: 4, horizontal: 8),
+                            vertical: 4,
+                            horizontal: 8,
+                          ),
                           color: focusItem == index
                               ? Colors.white24
                               : Colors.white12,
-                          child: ListTile(
-                            onFocusChange: (bool focus) => setState(() {
-                              focus ? focusItem = index : null;
-                            }),
-                            leading: Icon(
-                              infoMenuList[index]['icon'].icon,
-                              size: 27,
-                              color: Colors.white70,
-                            ),
-                            title: Text(
-                              infoMenuList[index]['title'],
-                              style: TextStyle(
-                                  fontSize: settings.smallerFont ? 24 : 32,
-                                  fontFamily: settings.font),
-                            ),
-                            subtitle: Text(infoMenuList[index]['subtitle'],
+                          child: Material(
+                            type: MaterialType.transparency,
+                            child: ListTile(
+                              onFocusChange: (bool focus) => setState(() {
+                                focus ? focusItem = index : null;
+                              }),
+                              leading: Icon(
+                                infoMenuList[index]['icon'].icon,
+                                size: 27,
+                                color: Colors.white70,
+                              ),
+                              title: Text(
+                                infoMenuList[index]['title'],
                                 style: TextStyle(
-                                    fontSize: settings.smallerFont ? 18 : 24,
-                                    color: Colors.white70,
-                                    fontFamily: settings.font)),
-                            onTap: () async {
-                              if (infoMenuList[index]['url'].length != 0) {
-                                launchUrl(Uri.parse(infoMenuList[index]['url']),
-                                    mode: LaunchMode.externalApplication);
-                              } else if (infoMenuList[index]['title'] ==
-                                  'Third Party Licenses'.i18n) {
-                                _licenseDialog();
-                              } else if (infoMenuList[index]['title'] ==
-                                  'Credits'.i18n) {
-                                _creditsDialog();
-                              }
-                            },
+                                  fontSize: settings.smallerFont ? 24 : 32,
+                                  fontFamily: settings.font,
+                                  height: 1,
+                                ),
+                              ),
+                              subtitle: Text(
+                                infoMenuList[index]['subtitle'],
+                                style: TextStyle(
+                                  fontSize: settings.smallerFont ? 18 : 24,
+                                  color: Colors.white70,
+                                  fontFamily: settings.font,
+                                  height: 1,
+                                ),
+                              ),
+                              onTap: () async {
+                                if (infoMenuList[index]['url'].length != 0) {
+                                  launchUrl(
+                                    Uri.parse(infoMenuList[index]['url']),
+                                    mode: LaunchMode.externalApplication,
+                                  );
+                                } else if (infoMenuList[index]['title'] ==
+                                    'Third Party Licenses'.i18n) {
+                                  _licenseDialog();
+                                } else if (infoMenuList[index]['title'] ==
+                                    'Credits'.i18n) {
+                                  _creditsDialog();
+                                }
+                              },
+                            ),
                           ),
                         );
                       },
@@ -175,31 +188,41 @@ class _InfoPageState extends State<InfoPage> {
       builder: (BuildContext context) => StatefulBuilder(
         builder: (context, setState) {
           return AlertDialog(
-            title: Text('Credits'.i18n,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: settings.smallerFont ? 34 : 48,
-                    fontFamily: settings.font)),
+            title: Text(
+              'Credits'.i18n,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: settings.smallerFont ? 34 : 48,
+                fontFamily: settings.font,
+              ),
+            ),
             content: Container(
               constraints: const BoxConstraints(maxWidth: 400, minWidth: 300),
               child: SingleChildScrollView(
                 child: Center(
-                    child: Text(credits,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: settings.smallerFont ? 18 : 24,
-                            fontFamily: settings.font))),
+                  child: Text(
+                    credits,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: settings.smallerFont ? 18 : 24,
+                      fontFamily: settings.font,
+                    ),
+                  ),
+                ),
               ),
             ),
             actions: <Widget>[
               TextButton(
                 onPressed: Navigator.of(context).pop,
-                child: Text('Ok'.i18n,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: settings.smallerFont ? 24 : 32,
-                        fontFamily: settings.font)),
+                child: Text(
+                  'Ok'.i18n,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: settings.smallerFont ? 24 : 32,
+                    fontFamily: settings.font,
+                  ),
+                ),
               ),
             ],
           );
@@ -216,41 +239,57 @@ class _InfoPageState extends State<InfoPage> {
         builder: (context, setState) {
           var licenseList = <Widget>[];
           for (final license in licenses) {
-            licenseList.add(ExpansionTile(
-              title: Text(license['lib']!,
+            licenseList.add(
+              ExpansionTile(
+                title: Text(
+                  license['lib']!,
                   style: TextStyle(
-                      color: Colors.white,
-                      fontSize: settings.smallerFont ? 24 : 32,
-                      fontFamily: 'dd5x7')),
-              initiallyExpanded: true,
-              children: <Widget>[
-                SingleChildScrollView(
-                    child: Text(license['text']!,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: settings.smallerFont ? 18 : 24,
-                            fontFamily: settings.font))),
-              ],
-            ));
+                    color: Colors.white,
+                    fontSize: settings.smallerFont ? 24 : 32,
+                    fontFamily: 'dd5x7',
+                  ),
+                ),
+                initiallyExpanded: true,
+                children: <Widget>[
+                  SingleChildScrollView(
+                    child: Text(
+                      license['text']!,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: settings.smallerFont ? 18 : 24,
+                        fontFamily: settings.font,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            );
           }
           return AlertDialog(
-            title: Text('Third Party Licenses'.i18n,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: settings.smallerFont ? 34 : 48,
-                    fontFamily: settings.font)),
+            title: Text(
+              'Third Party Licenses'.i18n,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: settings.smallerFont ? 34 : 48,
+                fontFamily: settings.font,
+              ),
+            ),
             content: SizedBox(
-                width: double.maxFinite,
-                child: ListView(children: licenseList)),
+              width: double.maxFinite,
+              child: ListView(children: licenseList),
+            ),
             actions: <Widget>[
               TextButton(
                 onPressed: Navigator.of(context).pop,
-                child: Text('Ok'.i18n,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: settings.smallerFont ? 24 : 32,
-                        fontFamily: settings.font)),
+                child: Text(
+                  'Ok'.i18n,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: settings.smallerFont ? 24 : 32,
+                    fontFamily: settings.font,
+                  ),
+                ),
               ),
             ],
           );

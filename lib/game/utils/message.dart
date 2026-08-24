@@ -4,7 +4,7 @@ import 'package:xeonjia/game/xeonjia.dart';
 /// Message shown in dialog box
 class Message {
   Message(
-    this.gameRef,
+    this.game,
     this.text, {
     this.author = '',
     this.component,
@@ -18,12 +18,13 @@ class Message {
     var mood = m.group(3);
     var spriteName = name + (mood != '' ? '_$mood' : '');
     if (authorName != '') {
-      authorName = ((authorName == 'hero')
-              ? mainCharacter.name
-              : authorName.i18n.replaceAll('-', ' '))
-          .toUpperCase();
+      authorName =
+          ((authorName == 'hero')
+                  ? mainCharacter.name
+                  : authorName.i18n.replaceAll('-', ' '))
+              .toUpperCase();
       if (spriteName != 'none') {
-        sprite = gameRef.dialogAtlases[xfaFile]?.getSprite(spriteName);
+        sprite = game.dialogAtlases[xfaFile]?.getSprite(spriteName);
       }
     }
     if (translate) {
@@ -31,23 +32,27 @@ class Message {
           .replaceAll(r'\n', '\n')
           .i18n
           .replaceAll('\n', r'\n')
-          .replaceAllMapped(RegExp('{{(.*?)}}'),
-              (m) => gameRef.environment.lookForValue(Sym(m[1]!)).toString());
+          .replaceAllMapped(
+            RegExp('{{(.*?)}}'),
+            (m) => game.environment.lookForValue(Sym(m[1]!)).toString(),
+          );
       if (font == 'kobi') {
         const diacritics =
             'ÀÁÂÃÄÅàáâãäåắạÒÓÔÕÕÖØòóôõöøốọồớÈÉÊËèéêëềẽðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüựứừưÑñŠšŸÿýŽžđ';
         const nonDiacritics =
             'AAAAAAaaaaaaaaOOOOOOOooooooooooEEEEeeeeeeeCcDIIIIiiiiUUUUuuuuuuuuNnSsYyyZzd';
-        text = text.splitMapJoin('',
-            onNonMatch: (char) => char.isNotEmpty && diacritics.contains(char)
-                ? nonDiacritics[diacritics.indexOf(char)]
-                : char);
+        text = text.splitMapJoin(
+          '',
+          onNonMatch: (char) => char.isNotEmpty && diacritics.contains(char)
+              ? nonDiacritics[diacritics.indexOf(char)]
+              : char,
+        );
       }
     }
   }
 
   /// Current game
-  final XeonjiaGame gameRef;
+  final XeonjiaGame game;
 
   /// Text of the message
   String text;

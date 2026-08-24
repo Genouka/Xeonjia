@@ -35,17 +35,21 @@ class NpcController extends Component {
   void _patternMove() {
     if (npc.isStationary && !_movementInQueue) {
       _movementInQueue = true;
-      npc.gameRef.add(TimerComponent(
+      npc.game.add(
+        TimerComponent(
           period: 0.5,
           onTick: () {
             _movementInQueue = false;
             npc.updateDirection(
-                _hasMovements ? _nextDirection : GetDirection.random,
-                animated: false);
+              _hasMovements ? _nextDirection : GetDirection.random,
+              animated: false,
+            );
             if (++_movementPatternIndex >= _movementPattern.length) {
               _movementPatternIndex = 0;
             }
-          }));
+          },
+        ),
+      );
     }
   }
 
@@ -53,16 +57,21 @@ class NpcController extends Component {
   // (the code/logic will be improved sooner or later)
   Direction? previousMove;
   void _freeMove() {
-    if (npc.gameRef.remainingMoves == 3) previousMove = null;
+    if (npc.game.remainingMoves == 3) previousMove = null;
     bool near = false;
     bool done = false;
     Direction newOrientation = npc.orientation;
-    CharacterComponent player = npc.gameRef.children
-        .where((c) => c is CharacterComponent && c.teamId == 0)
-        .reduce((curr, next) => npc.distance(curr as PositionComponent) <
-                npc.distance(next as PositionComponent)
-            ? curr
-            : next) as CharacterComponent;
+    CharacterComponent player =
+        npc.game.world.children
+                .where((c) => c is CharacterComponent && c.teamId == 0)
+                .reduce(
+                  (curr, next) =>
+                      npc.distance(curr as PositionComponent) <
+                          npc.distance(next as PositionComponent)
+                      ? curr
+                      : next,
+                )
+            as CharacterComponent;
     // Check if player has the same x or y
     if (player.x == npc.x) {
       newOrientation = player.y > npc.y ? Direction.down : Direction.up;
@@ -77,10 +86,12 @@ class NpcController extends Component {
         (npc.hasPpForWeapon(Weapons.snowball.id) && near)) {
       npc.updateOrientation(newOrientation);
       // If npc has remained stationary in this turn move away else shoot
-      var weapon = npc.getWeaponById(npc.hasPpForWeapon(Weapons.snowball.id)
-          ? Weapons.snowball.id
-          : Weapons.punch.id);
-      if (!(npc.gameRef.remainingMoves == 1 &&
+      var weapon = npc.getWeaponById(
+        npc.hasPpForWeapon(Weapons.snowball.id)
+            ? Weapons.snowball.id
+            : Weapons.punch.id,
+      );
+      if (!(npc.game.remainingMoves == 1 &&
           previousMove == null &&
           player.hp - weapon.atk > 0)) {
         done = true;
@@ -108,7 +119,7 @@ class NpcController extends Component {
             remainingDirections.remove(newOrientation);
             if (remainingDirections.isEmpty ||
                 cantMoveInThisDirection(remainingDirections.first)) {
-              npc.gameRef.useMove(npc);
+              npc.game.useMove(npc);
             } else {
               newOrientation = remainingDirections.first;
             }
@@ -130,8 +141,10 @@ class NpcController extends Component {
         !(component is StaticComponent && component.isFloor);
   }
 
-  Direction getCloserToPlayer(CharacterComponent player,
-      [Direction? directionAvoided]) {
+  Direction getCloserToPlayer(
+    CharacterComponent player, [
+    Direction? directionAvoided,
+  ]) {
     if ([Direction.right, Direction.left].contains(directionAvoided) ||
         Random().nextBool()) {
       return player.y > npc.y ? Direction.down : Direction.up;
@@ -142,10 +155,10 @@ class NpcController extends Component {
 
   @override
   void update(double dt) {
-    if (npc.gameRef.isPaused || npc.quiet) return;
+    if (npc.game.isPaused || npc.quiet) return;
     if (_hasMovements) {
       _patternMove();
-    } else if (npc.gameRef.isNotPaused &&
+    } else if (npc.game.isNotPaused &&
         npc.isMyTurn &&
         (_timeToNextMove -= dt) < 0) {
       _freeMove();

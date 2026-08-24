@@ -7,8 +7,8 @@ enum PauseMode { pause, restart, exit }
 
 /// In-game pause menu
 class PauseMenu extends StatefulWidget {
-  PauseMenu(this.gameRef, this.mode);
-  final XeonjiaGame gameRef;
+  PauseMenu(this.game, this.mode);
+  final XeonjiaGame game;
   final PauseMode mode;
 
   @override
@@ -108,7 +108,9 @@ class PauseMenuState extends State<PauseMenu> {
                 ),
                 divider(context),
                 Expanded(
-                    flex: 2, child: Center(child: Wrap(children: buttons))),
+                  flex: 2,
+                  child: Center(child: Wrap(children: buttons)),
+                ),
               ],
             ),
           ),
@@ -126,8 +128,8 @@ class PauseMenuState extends State<PauseMenu> {
             pauseMode!.name.i18n.toUpperCase(),
         () {
           if (pauseMode == PauseMode.restart) {
-            widget.gameRef.overlays.remove('pauseMenu');
-            widget.gameRef.start();
+            widget.game.overlays.remove('pauseMenu');
+            widget.game.start();
           } else {
             Navigator.pop(context);
           }
@@ -145,37 +147,40 @@ class PauseMenuState extends State<PauseMenu> {
     ];
     switch (pauseMode!) {
       case PauseMode.pause:
-        text = 'You have %s HP and %s ¤.'.i18n.fill([
-              widget.gameRef.playerOne!.hp.round().toString(),
-              widget.gameRef.playerOne!.money
+        text =
+            'You have %s HP and %s ¤.'.i18n.fill([
+              widget.game.playerOne!.hp.round().toString(),
+              widget.game.playerOne!.money,
             ]) +
-            (widget.gameRef.inBattle &&
-                    widget.gameRef.milla != null &&
-                    widget.gameRef.milla!.teamId == 0 &&
-                    widget.gameRef.milla!.hp > 0
+            (widget.game.inBattle &&
+                    widget.game.milla != null &&
+                    widget.game.milla!.teamId == 0 &&
+                    widget.game.milla!.hp > 0
                 ? '\n' +
-                    'Milla has %s HP.'
-                        .i18n
-                        .fill([widget.gameRef.milla!.hp.round().toString()])
+                      'Milla has %s HP.'.i18n.fill([
+                        widget.game.milla!.hp.round().toString(),
+                      ])
                 : '') +
-            (widget.gameRef.inBattle &&
-                    widget.gameRef.september != null &&
-                    widget.gameRef.september!.teamId == 0 &&
-                    widget.gameRef.september!.hp > 0
+            (widget.game.inBattle &&
+                    widget.game.september != null &&
+                    widget.game.september!.teamId == 0 &&
+                    widget.game.september!.hp > 0
                 ? ' ' +
-                    'September has %s HP.'
-                        .i18n
-                        .fill([widget.gameRef.september!.hp.round().toString()])
+                      'September has %s HP.'.i18n.fill([
+                        widget.game.september!.hp.round().toString(),
+                      ])
                 : '') +
             '\n\n' +
             'What do you want to do?'.i18n;
         buttons = [
           actionButton(
-              (selectedOptionIndex == 0 ? '> ' : '') +
-                  'resume'.i18n.toUpperCase(), () {
-            widget.gameRef.overlays.remove('pauseMenu');
-            widget.gameRef.resume();
-          }),
+            (selectedOptionIndex == 0 ? '> ' : '') +
+                'resume'.i18n.toUpperCase(),
+            () {
+              widget.game.overlays.remove('pauseMenu');
+              widget.game.resume();
+            },
+          ),
           actionButton(
             (selectedOptionIndex == 1 ? '> ' : '') + 'exit'.i18n.toUpperCase(),
             () {
@@ -198,12 +203,14 @@ class PauseMenuState extends State<PauseMenu> {
         ];
         break;
       case PauseMode.restart:
-        text = 'Are you sure you want to restart this game?'.i18n +
+        text =
+            'Are you sure you want to restart this game?'.i18n +
             '\n\n' +
             'It will restart from the last location change.'.i18n;
         break;
       case PauseMode.exit:
-        text = 'Are you sure you want to quit this game?'.i18n +
+        text =
+            'Are you sure you want to quit this game?'.i18n +
             '\n\n' +
             'Game data since the last location change will be lost.'.i18n;
     }
@@ -211,23 +218,23 @@ class PauseMenuState extends State<PauseMenu> {
 }
 
 InkWell actionButton(String text, VoidCallback onPressed) => InkWell(
-      onTap: onPressed,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 14),
-        child: Text(
-          text,
-          textAlign: TextAlign.center,
-          style: gameTheme.textTheme.bodyMedium,
-        ),
-      ),
-    );
+  onTap: onPressed,
+  child: Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 14),
+    child: Text(
+      text,
+      textAlign: TextAlign.center,
+      style: gameTheme.textTheme.bodyMedium,
+    ),
+  ),
+);
 
 Widget divider(BuildContext context) => Container(
-      height: 3,
-      width: MediaQuery.of(context).size.width / 1.5,
-      constraints: const BoxConstraints(maxWidth: 600),
-      decoration: const BoxDecoration(
-        color: Colors.white24,
-        borderRadius: BorderRadius.all(Radius.circular(30)),
-      ),
-    );
+  height: 3,
+  width: MediaQuery.of(context).size.width / 1.5,
+  constraints: const BoxConstraints(maxWidth: 600),
+  decoration: const BoxDecoration(
+    color: Colors.white24,
+    borderRadius: BorderRadius.all(Radius.circular(30)),
+  ),
+);

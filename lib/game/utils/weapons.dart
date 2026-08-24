@@ -60,7 +60,7 @@ abstract class Weapon {
 /// Punch
 class PunchWeapon extends Weapon {
   PunchWeapon({required this.level})
-      : super(Weapons.punch.id, double.infinity) {
+    : super(Weapons.punch.id, double.infinity) {
     atk = 10 + level * 2.0;
   }
 
@@ -71,52 +71,63 @@ class PunchWeapon extends Weapon {
   void shoot({required Walker shooter}) {
     var componentInFront = shooter.componentInFront();
     componentInFront?.hpDifference(-atk, cause: shooter);
-    shooter.animation = shooter.atlas
-        .getAnimation('${shooter.name}-${shooter.orientation.index}-punching');
-    if (shooter.isUser) shooter.gameRef.playSound(Sfx.punch);
+    shooter.animation = shooter.atlas.getAnimation(
+      '${shooter.name}-${shooter.orientation.index}-punching',
+    );
+    if (shooter.isUser) shooter.game.playSound(Sfx.punch);
   }
 }
 
 /// Snowball
 class SnowBallWeapon extends Weapon {
   SnowBallWeapon({required this.level, double? powerPoints})
-      : super(Weapons.snowball.id, powerPoints) {
+    : super(Weapons.snowball.id, powerPoints) {
     atk = 10 + level * 2.0;
   }
   SnowBallWeapon.fromAtk({required int atk, double? powerPoints})
-      : this(level: (atk - 10) ~/ 2, powerPoints: powerPoints);
+    : this(level: (atk - 10) ~/ 2, powerPoints: powerPoints);
 
   @override
   final int level;
 
   @override
   void shoot({required Walker shooter, bool forced = false}) {
-    if ((powerPoints > 0 && !shooter.gameRef.thereIsASnowball) || forced) {
+    if ((powerPoints > 0 && !shooter.game.thereIsASnowball) || forced) {
       late Point startingPosition;
       switch (shooter.orientation) {
         case Direction.down:
-          startingPosition =
-              Point(shooter.x, shooter.y + componentSize - componentSize / 3);
+          startingPosition = Point(
+            shooter.x,
+            shooter.y + componentSize - componentSize / 3,
+          );
           break;
         case Direction.up:
-          startingPosition =
-              Point(shooter.x, shooter.y - componentSize + componentSize / 4);
+          startingPosition = Point(
+            shooter.x,
+            shooter.y - componentSize + componentSize / 4,
+          );
           break;
         case Direction.right:
-          startingPosition =
-              Point(shooter.x + componentSize - componentSize / 3, shooter.y);
+          startingPosition = Point(
+            shooter.x + componentSize - componentSize / 3,
+            shooter.y,
+          );
           break;
         case Direction.left:
-          startingPosition =
-              Point(shooter.x - componentSize + componentSize / 3, shooter.y);
+          startingPosition = Point(
+            shooter.x - componentSize + componentSize / 3,
+            shooter.y,
+          );
           break;
       }
-      shooter.gameRef.add(SnowballComponent(
-          startingPosition, shooter, shooter.orientation, atk));
+      shooter.game.addComponent(
+        SnowballComponent(startingPosition, shooter, shooter.orientation, atk),
+      );
       --powerPoints;
-      if (shooter == shooter.gameRef.playerOne) {
+      if (shooter == shooter.game.playerOne) {
         shooter.animation = shooter.atlas.getAnimation(
-            '${shooter.name}-${shooter.orientation.index}-punching');
+          '${shooter.name}-${shooter.orientation.index}-punching',
+        );
       }
     }
   }
@@ -125,7 +136,7 @@ class SnowBallWeapon extends Weapon {
 /// Mine
 class MineWeapon extends Weapon {
   MineWeapon({required this.level, double? powerPoints = 3})
-      : super(Weapons.mine.id, powerPoints) {
+    : super(Weapons.mine.id, powerPoints) {
     atk = 15 + level * 2.0;
   }
 
@@ -135,8 +146,9 @@ class MineWeapon extends Weapon {
   @override
   void shoot({required Walker shooter}) {
     if (powerPoints > 0) {
-      shooter.gameRef.add(
-          ModifierComponent.mine(Point(shooter.x, shooter.y), shooter, atk));
+      shooter.game.addComponent(
+        ModifierComponent.mine(Point(shooter.x, shooter.y), shooter, atk),
+      );
       --powerPoints;
     }
   }

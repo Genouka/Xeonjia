@@ -1,7 +1,7 @@
 /// Build variants
 class Config {
   /// App version (shown in InfoPage)
-  static const String version = '3.0.4';
+  static const String version = '3.0.5';
 
   /// True: hide donation link in InfoPage (due to Play Store policies)
   static const bool hideDonationInfo = false;
@@ -15,7 +15,9 @@ class Config {
   static const String translateUrl =
       'https://translate.deepdaikon.xyz/engage/xeonjia/';
   static const String mailTo =
-      'mailto:deepdaikon' '@' 'tuta.io?subject=Xeonjia Game';
+      'mailto:deepdaikon'
+      '@'
+      'tuta.io?subject=Xeonjia Game';
   static const String bugTrackerUrl =
       'https://gitlab.com/deepdaikon/Xeonjia/issues';
   static const String sourceCodeUrl = 'https://gitlab.com/deepdaikon/Xeonjia';

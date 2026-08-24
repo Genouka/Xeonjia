@@ -19,7 +19,9 @@ extension MapController on XeonjiaGame {
       overlays.remove('leafButton');
       overlays.remove('rulesButton');
       overlays.remove('virtualDPad');
-      addAll([zoomInButton, zoomOutButton]);
+      zoomInButton = Button.plus(this);
+      zoomOutButton = Button.minus(this);
+      camera.viewport.addAll([zoomInButton!, zoomOutButton!]);
       miniMapActive = true;
     } else {
       zoomMiniMap(toValue: 1);
@@ -27,7 +29,9 @@ extension MapController on XeonjiaGame {
       updateCamera(user!.x, user!.y);
       overlays.remove('mapNameBox');
       overlays.remove('miniMapButton');
-      removeAll([zoomInButton, zoomOutButton]);
+      camera.viewport.removeAll([zoomInButton!, zoomOutButton!]);
+      zoomInButton = null;
+      zoomOutButton = null;
       overlays.add('backpackButton');
       overlays.remove('dialogBox');
       overlays.add('virtualDPad');
@@ -57,11 +61,14 @@ extension MapController on XeonjiaGame {
       overlays.remove('mapNameBox');
       if (!(currentEventLog['howToWorldMap'] ?? false) && map.id != '1') {
         currentEventLog['howToWorldMap'] = true;
-        setMessage(Message(
+        setMessage(
+          Message(
             this,
             'By clicking on the map I can go back to places I have already been.'
                 .i18n,
-            author: '/hero'));
+            author: '/hero',
+          ),
+        );
       }
     } else {
       zoomMiniMap(toValue: 1);
@@ -81,15 +88,25 @@ extension MapController on XeonjiaGame {
         (worldMapEnabled
             ? miniMapZoom * componentSize * map.width * 0.7 > canvasSize.y
             : miniMapZoom * componentSize * map.height > canvasSize.y)) {
-      miniMapZoom = toValue ??
+      miniMapZoom =
+          toValue ??
           (out
               ? max(previousValue - delta, delta)
               : min(previousValue + delta, 2));
     }
     if (previousValue != miniMapZoom) {
-      updateCamera(
-          (camera.position.x + size.x / 2) * miniMapZoom / previousValue,
-          (camera.position.y + size.y / 2) * miniMapZoom / previousValue);
+      if (worldMapEnabled) {
+        worldMapComponent?.reclampPosition(previousValue.toDouble());
+      } else {
+        updateCamera(
+          (camera.viewfinder.position.x + size.x / 2) *
+              miniMapZoom /
+              previousValue,
+          (camera.viewfinder.position.y + size.y / 2) *
+              miniMapZoom /
+              previousValue,
+        );
+      }
     }
   }
 }

@@ -6,21 +6,22 @@ import 'package:xeonjia/game/utils/weapons.dart';
 class CharacterInfo {
   /// Import character data from a Json
   CharacterInfo(Map<String, dynamic> json)
-      : name = json['name'] ?? '',
-        eventLog = jsonDecode(json['eventLog'] ?? '{}'),
-        atk = json['atk'] ?? 1,
-        def = 0, // forced to zero (note that old players had json['def'] = 3)
-        maxHP = json['maxHP'] ?? 100,
-        currentHP = json['currentHP'] ?? 0,
-        poisonQuantity = json['poisonQuantity'] ?? 0,
-        money = json['money'] ?? 0,
-        itemList = (json['itemList'] ?? []).cast<String>(),
-        visitedRooms = (json['viewedRooms'] ?? ['1_home_2']).cast<String>(),
-        minutesPlayed = json['minutesPlayed'] ?? 0,
-        movesCounter = json['movesCounter'] ?? 0,
-        defeatsCounter = json['defeatsCounter'] ?? 0 {
-    List<dynamic> jsonWeaponList =
-        jsonDecode(json['weaponList'] ?? '[{"id": 0, "lv": 0}]');
+    : name = json['name'] ?? '',
+      eventLog = jsonDecode(json['eventLog'] ?? '{}'),
+      atk = json['atk'] ?? 1,
+      def = 0, // forced to zero (note that old players had json['def'] = 3)
+      maxHP = json['maxHP'] ?? 100,
+      currentHP = json['currentHP'] ?? 0,
+      poisonQuantity = json['poisonQuantity'] ?? 0,
+      money = json['money'] ?? 0,
+      itemList = (json['itemList'] ?? []).cast<String>(),
+      visitedRooms = (json['viewedRooms'] ?? ['1_home_2']).cast<String>(),
+      minutesPlayed = json['minutesPlayed'] ?? 0,
+      movesCounter = json['movesCounter'] ?? 0,
+      defeatsCounter = json['defeatsCounter'] ?? 0 {
+    List<dynamic> jsonWeaponList = jsonDecode(
+      json['weaponList'] ?? '[{"id": 0, "lv": 0}]',
+    );
     for (final weapon in jsonWeaponList) {
       weaponList.add(Weapon.fromJson(weapon));
     }
@@ -85,10 +86,13 @@ class CharacterInfo {
       'currentHP': currentHP,
       'poisonQuantity': poisonQuantity,
       'money': money,
-      'weaponList': jsonEncode(weaponList.fold(
+      'weaponList': jsonEncode(
+        weaponList.fold(
           <Map>[],
           (previousValue, element) =>
-              (((previousValue as List?) ?? [])..add(element.toJson())))),
+              (((previousValue as List?) ?? [])..add(element.toJson())),
+        ),
+      ),
       'itemList': itemList,
       'viewedRooms': visitedRooms,
       'minutesPlayed': minutesPlayed,

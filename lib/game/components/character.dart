@@ -11,10 +11,12 @@ class CharacterComponent extends BasicComponent
     team = 0,
   }) : super(tile.id, tile.position!, tile.properties) {
     bool isPlayerOne = tile.properties['isPlayerOne'] ?? false;
-    maxHP = initialHP ??
+    maxHP =
+        initialHP ??
         (isPlayerOne ? mainCharacter.maxHP : (100 + 5 * level).toDouble());
     updateOrientation(
-        GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0')));
+      GetDirection.fromInt(int.parse(tile.properties['orientation'] ?? '0')),
+    );
     _initialOrientation = orientation;
     friendly = 'true' == (tile.properties['friendly'] ?? 'true');
     quiet = 'true' == (tile.properties['quiet'] ?? 'true');
@@ -35,7 +37,8 @@ class CharacterComponent extends BasicComponent
     name ??= isPlayerOne ? 'hero' : 'unknown';
     if (['hero', 'milla', 'september'].contains(name)) atlasAsset = '$name.xfa';
     if (weaponList.isEmpty) {
-      weaponList = inputWeaponList ??
+      weaponList =
+          inputWeaponList ??
           ((team == 0)
               ? [SnowBallWeapon(level: 5), MineWeapon(level: 1)]
               : [SnowBallWeapon(level: 9), MineWeapon(level: 5)]);
@@ -47,7 +50,8 @@ class CharacterComponent extends BasicComponent
         (name == 'september' && tile.properties['hp'] == null)) {
       maxHP = 100;
       weaponList = List.from(
-          mainCharacter.weaponList.map((e) => Weapon.fromJson(e.toJson())));
+        mainCharacter.weaponList.map((e) => Weapon.fromJson(e.toJson())),
+      );
       for (final w in weaponList) {
         w.restorePp();
       }
@@ -60,34 +64,37 @@ class CharacterComponent extends BasicComponent
 
   /// Non-Player Character
   CharacterComponent.npc(Tile tile)
-      : this(
-          tile,
-          initialHP: double.parse(tile.properties['hp'] ?? 'Infinity'),
-          team: int.parse(tile.properties['team'] ?? '0'),
-          inputWeaponList: [
-            SnowBallWeapon.fromAtk(
-                atk: int.parse(tile.properties['weaponAtk'] ?? '0'),
-                powerPoints: 9999)
-          ],
-          level: int.parse(tile.properties['level'] ?? '0'),
-        );
+    : this(
+        tile,
+        initialHP: double.parse(tile.properties['hp'] ?? 'Infinity'),
+        team: int.parse(tile.properties['team'] ?? '0'),
+        inputWeaponList: [
+          SnowBallWeapon.fromAtk(
+            atk: int.parse(tile.properties['weaponAtk'] ?? '0'),
+            powerPoints: 9999,
+          ),
+        ],
+        level: int.parse(tile.properties['level'] ?? '0'),
+      );
 
   @override
   Future<void>? onLoad() {
     super.onLoad();
     if (tile.properties['isPlayerOne'] ?? false) {
-      setStatus(mainCharacter.currentHP <= 0 ? maxHP : mainCharacter.currentHP,
-          mainCharacter.poisonQuantity);
-      gameRef.refreshHPBar();
-      if (gameRef.isLoaded) gameRef.updateCamera(x, y);
+      setStatus(
+        mainCharacter.currentHP <= 0 ? maxHP : mainCharacter.currentHP,
+        mainCharacter.poisonQuantity,
+      );
+      game.refreshHPBar();
+      if (game.isLoaded) game.updateCamera(x, y);
       _itemList = List.from(mainCharacter.itemList);
-      gameRef.playerOneReady();
+      game.playerOneReady();
     } else {
       this.add(NpcController());
     }
     if (!deleted && !isBeingDeleted) {
       reflection = IceReflection(this);
-      gameRef.add(reflection!);
+      game.addComponent(reflection!);
     }
     return null;
   }
@@ -104,16 +111,16 @@ class CharacterComponent extends BasicComponent
   }
 
   /// Total number of minutes played by the character in this game
-  double get minutesPlayed =>
-      mainCharacter.minutesPlayed + gameRef.elapsed / 60;
+  double get minutesPlayed => mainCharacter.minutesPlayed + game.elapsed / 60;
 
   /// List of [Item]s owned
   /// Add/remove [Item]s by using [addItem] and [removeItem]
   List<String> _itemList = [];
   List<String> get itemList => _itemList;
-  List<Item> get backpackItems => _itemList.fold([],
-      (p, e) => itemData.keys.contains(e) ? (p..add(itemData[e]!..id = e)) : p)
-    ..sort((a, b) => a.name.compareTo(b.name));
+  List<Item> get backpackItems => _itemList.fold(
+    [],
+    (p, e) => itemData.keys.contains(e) ? (p..add(itemData[e]!..id = e)) : p,
+  )..sort((a, b) => a.name.compareTo(b.name));
   int get gemCount => _itemList.where((e) => e.startsWith('gem_')).length;
 
   /// Initial orientation
@@ -130,12 +137,12 @@ class CharacterComponent extends BasicComponent
 
   // Inspect what is in front of this
   void inspect() {
-    if (gameRef.isNotPaused && isStationary && !isBeingDeleted && isMyTurn) {
+    if (game.isNotPaused && isStationary && !isBeingDeleted && isMyTurn) {
       BasicComponent? component = componentInFront();
       component?.playAction(orientation);
       if ((component?.action ?? '') != '') {
-        gameRef.playSound(Sfx.dialog);
-        gameRef.useMove(this);
+        game.playSound(Sfx.dialog);
+        game.useMove(this);
       }
     }
   }
@@ -145,23 +152,27 @@ class CharacterComponent extends BasicComponent
     _itemList.add(itemId);
     if (isUser) {
       if (itemData.containsKey(itemId)) {
-        gameRef.setMessage(Message(
-          gameRef,
-          '* {{hero}} puts %s in the backpack *'
-              .i18n
-              .fill([itemData[itemId]!.name]),
-          author: '-/$itemId',
-          xfaFile: 'items',
-        ));
+        game.setMessage(
+          Message(
+            game,
+            '* {{hero}} puts %s in the backpack *'.i18n.fill([
+              itemData[itemId]!.name,
+            ]),
+            author: '-/$itemId',
+            xfaFile: 'items',
+          ),
+        );
       } else if (itemId.startsWith('gem_')) {
-        gameRef.setMessage(Message(
-          gameRef,
-          '* {{hero}} puts %s in the backpack *'.i18n.fill(['the gem'.i18n]),
-          author: '-/gem_*',
-          xfaFile: 'items',
-        ));
+        game.setMessage(
+          Message(
+            game,
+            '* {{hero}} puts %s in the backpack *'.i18n.fill(['the gem'.i18n]),
+            author: '-/gem_*',
+            xfaFile: 'items',
+          ),
+        );
       }
-      if (sfx) gameRef.playSound(Sfx.item);
+      if (sfx) game.playSound(Sfx.item);
     }
   }
 
@@ -169,14 +180,17 @@ class CharacterComponent extends BasicComponent
   void removeItem(String itemId, {bool used = true}) {
     _itemList.remove(itemId);
     if (isUser) {
-      if (used) gameRef.useMove(gameRef.user ?? this);
-      gameRef.setMessage(Message(
-          gameRef,
+      if (used) game.useMove(game.user ?? this);
+      game.setMessage(
+        Message(
+          game,
           used
-              ? (gameRef.user?.isPlayerOne ?? true
-                  ? '* {{hero}} uses {{selected-item-name}} *'.i18n
-                  : '* {{user-name}} uses {{selected-item-name}} *'.i18n)
-              : '* {{hero}} gives %s *'.i18n.fill([itemData[itemId]!.name])));
+              ? (game.user?.isPlayerOne ?? true
+                    ? '* {{hero}} uses {{selected-item-name}} *'.i18n
+                    : '* {{user-name}} uses {{selected-item-name}} *'.i18n)
+              : '* {{hero}} gives %s *'.i18n.fill([itemData[itemId]!.name]),
+        ),
+      );
     }
   }
 
@@ -192,31 +206,33 @@ class CharacterComponent extends BasicComponent
     reflection?.removeFromParent();
     if (silently) {
       super.delete();
-      if (isPlayerOne) gameRef.end();
+      if (isPlayerOne) game.end();
     } else {
-      if (isPlayerOne) gameRef.playSound(Sfx.gameover);
-      gameRef.pause(stopMusic: false, stopEngine: false);
-      deletionAnimation(callback: () {
-        gameRef.resume();
-        if (gameRef.inBattle &&
-            this == gameRef.activePlayer &&
-            !gameRef.changingTurn) {
-          gameRef.useMove(this, skipTurn: true);
-        }
-        if (isBeingDeleted) super.delete();
-        if (isPlayerOne) gameRef.end();
-      });
+      if (isPlayerOne) game.playSound(Sfx.gameover);
+      game.pause(stopMusic: false, stopEngine: false);
+      deletionAnimation(
+        callback: () {
+          game.resume();
+          if (game.inBattle &&
+              this == game.activePlayer &&
+              !game.changingTurn) {
+            game.useMove(this, skipTurn: true);
+          }
+          if (isBeingDeleted) super.delete();
+          if (isPlayerOne) game.end();
+        },
+      );
     }
   }
 
   @override
-  void respawn(XeonjiaGame gameRef) {
-    super.respawn(gameRef);
+  void respawn(XeonjiaGame game) {
+    super.respawn(game);
     for (final weapon in weaponList) {
       weapon.restorePp();
     }
     updateOrientation(_initialOrientation);
     direction = null;
-    if (isPlayerOne) gameRef.updateCamera(x, y);
+    if (isPlayerOne) game.updateCamera(x, y);
   }
 }

@@ -28,15 +28,20 @@ mixin TextAnimation on SpriteComponent {
     TextPainter(
         textDirection: TextDirection.ltr,
         text: TextSpan(
-            text: _text,
-            style: TextStyle(
-                fontSize: size.x / 2,
-                fontFamily: 'dd5x7',
-                color: const Color(0xFF000000),
-                letterSpacing: 1.1,
-                fontWeight: FontWeight.w600)))
+          text: _text,
+          style: TextStyle(
+            fontSize: size.x / 2,
+            fontFamily: 'dd5x7',
+            color: const Color(0xFF000000),
+            letterSpacing: 1.1,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      )
       ..layout()
-      ..paint(canvas,
-          Offset(size.x / 4, -60 * (0.2 + _seconds - _remainingSeconds)));
+      ..paint(
+        canvas,
+        Offset(size.x / 4, -60 * (0.2 + _seconds - _remainingSeconds)),
+      );
   }
 }

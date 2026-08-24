@@ -5,16 +5,18 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
 /// Box with the number of remaining moves
-class RemainingMovesBox extends TextBoxComponent with HasGameRef<XeonjiaGame> {
+class RemainingMovesBox extends TextBoxComponent
+    with HasGameReference<XeonjiaGame> {
   RemainingMovesBox() : super(size: Vector2.all(1), align: Anchor.center) {
-    positionType = PositionType.viewport;
+    game.camera.viewport.add(this);
     priority = 1000;
   }
 
   @override
   void onMount() {
-    textRenderer =
-        TextPaint(style: Theme.of(gameRef.buildContext!).textTheme.labelLarge);
+    textRenderer = TextPaint(
+      style: Theme.of(game.buildContext!).textTheme.labelLarge,
+    );
     super.onMount();
   }
 
@@ -29,8 +31,8 @@ class RemainingMovesBox extends TextBoxComponent with HasGameRef<XeonjiaGame> {
   @override
   void onGameResize(Vector2 size) {
     super.onGameResize(size);
-    this.size = Vector2(min(320, gameRef.canvasSize.x / 2.2), 36);
-    position = Vector2(6, gameRef.miniMapEnabled ? 6 : 46);
+    this.size = Vector2(min(320, game.canvasSize.x / 2.2), 36);
+    position = Vector2(6, game.miniMapEnabled ? 6 : 46);
     // Workaround to force align = center again
     text = text + ' ';
     text = text.trim();
@@ -38,19 +40,23 @@ class RemainingMovesBox extends TextBoxComponent with HasGameRef<XeonjiaGame> {
 
   @override
   void update(double dt) {
-    text = (gameRef.user?.isMyTurn ?? false)
-        ? texts[gameRef.remainingMoves]!
+    text = (game.user?.isMyTurn ?? false)
+        ? texts[game.remainingMoves]!
         : texts[0]!;
     super.update(dt);
   }
 
   @override
   void render(Canvas canvas) {
-    if (gameRef.enemies == 0 || gameRef.worldMapEnabled) return;
+    if (game.enemies == 0 || game.worldMapEnabled) return;
     final rect = RRect.fromRectAndRadius(
-        Rect.fromLTWH(0, 0, size.x, size.y), const Radius.circular(30));
+      Rect.fromLTWH(0, 0, size.x, size.y),
+      const Radius.circular(30),
+    );
     canvas.drawRRect(
-        rect, Paint()..color = Colors.grey.shade800.withOpacity(0.7));
+      rect,
+      Paint()..color = Colors.grey.shade800.withAlpha((255.0 * 0.7).round()),
+    );
     super.render(canvas);
   }
 }

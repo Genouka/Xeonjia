@@ -7,9 +7,8 @@ import 'package:xeonjia/game/xeonjia.dart';
 
 /// Button that opens the world map
 class WorldMapButton extends TextBoxComponent
-    with HasGameRef<XeonjiaGame>, Tappable {
-  WorldMapButton() : super(size: Vector2.all(1), align: Anchor.center) {
-    positionType = PositionType.viewport;
+    with HasGameReference<XeonjiaGame>, TapCallbacks {
+  WorldMapButton() : super(align: Anchor.center) {
     priority = 10000;
   }
 
@@ -20,40 +19,45 @@ class WorldMapButton extends TextBoxComponent
 
   @override
   void onMount() {
-    textRenderer =
-        TextPaint(style: Theme.of(gameRef.buildContext!).textTheme.labelLarge);
+    textRenderer = TextPaint(
+      style: Theme.of(game.buildContext!).textTheme.labelLarge,
+    );
     return super.onMount();
   }
 
   @override
   void onGameResize(Vector2 size) {
     super.onGameResize(size);
-    this.size = Vector2(min(320, gameRef.canvasSize.x / 1.8), 36);
-    position = Vector2(6, gameRef.canvasSize.y - this.size.y - 6);
+    this.size = Vector2(min(320, game.canvasSize.x / 1.8), 60);
+    position = Vector2(6, game.canvasSize.y - this.size.y);
     // Workaround to force align = center again
     text = text + ' ';
     text = text.trim();
   }
 
   @override
-  bool onTapUp(TapUpInfo info) {
-    if (!gameRef.worldMapDisabled) gameRef.worldMap();
+  bool onTapUp(TapUpEvent event) {
+    if (!game.worldMapDisabled) game.worldMap();
     return true;
   }
 
   @override
   void update(double dt) {
-    text = gameRef.worldMapEnabled ? texts.first : texts.last;
+    text = game.worldMapEnabled ? texts.first : texts.last;
     super.update(dt);
   }
 
   @override
   void render(Canvas canvas) {
-    if (gameRef.worldMapDisabled) return;
+    if (game.worldMapDisabled) return;
     final rect = RRect.fromRectAndRadius(
-        Rect.fromLTWH(0, 0, size.x, size.y), const Radius.circular(30));
+      Rect.fromLTWH(0, 0, size.x, size.y),
+      const Radius.circular(30),
+    );
     canvas.drawRRect(
-        rect, Paint()..color = Colors.grey.shade800.withOpacity(0.7));
+      rect,
+      Paint()..color = Colors.grey.shade800.withAlpha((255.0 * 0.7).round()),
+    );
     super.render(canvas);
   }
 }

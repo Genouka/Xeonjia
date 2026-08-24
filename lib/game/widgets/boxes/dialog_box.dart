@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
 class DialogBox extends StatefulWidget {
-  DialogBox(this.gameRef);
-  final XeonjiaGame gameRef;
+  DialogBox(this.game);
+  final XeonjiaGame game;
 
   @override
   final GlobalKey<State<DialogBox>> key = GlobalKey();
@@ -25,19 +25,19 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
     selectedAnswerIndex = 0;
     if (_controller?.isAnimating ?? false) {
       _controller!.fling().whenComplete(() {
-        if (mounted && widget.gameRef.messageManager.isShowingAQuestion) {
+        if (mounted && widget.game.messageManager.isShowingAQuestion) {
           setState(() {});
         }
       });
     } else {
-      if (widget.gameRef.messageManager.hasOtherMessages) {
-        widget.gameRef.messageManager.nextMessage();
+      if (widget.game.messageManager.hasOtherMessages) {
+        widget.game.messageManager.nextMessage();
         _animateText();
       } else if (removeAnswers ||
-          !widget.gameRef.messageManager.isShowingAQuestion) {
-        widget.gameRef.messageManager.clear();
+          !widget.game.messageManager.isShowingAQuestion) {
+        widget.game.messageManager.clear();
       }
-      widget.gameRef.playSound(Sfx.dialog);
+      widget.game.playSound(Sfx.dialog);
     }
     if (mounted) setState(() {});
   }
@@ -49,14 +49,13 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
 
   /// True if answers are shown
   bool get isShowingAnswers =>
-      widget.gameRef.messageManager.isShowingAQuestion &&
+      widget.game.messageManager.isShowingAQuestion &&
       _characterCountAnimation!.isCompleted;
 
   /// Select the next answer
   void selectNextAnswer() {
     setState(() {
-      if (++selectedAnswerIndex >=
-          widget.gameRef.messageManager.answers.length) {
+      if (++selectedAnswerIndex >= widget.game.messageManager.answers.length) {
         selectedAnswerIndex = 0;
       }
     });
@@ -66,38 +65,40 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   void selectPreviousAnswer() {
     setState(() {
       if (--selectedAnswerIndex < 0) {
-        selectedAnswerIndex = widget.gameRef.messageManager.answers.length - 1;
+        selectedAnswerIndex = widget.game.messageManager.answers.length - 1;
       }
     });
   }
 
   /// Choose the currently selected answer
   void chooseAnswer() {
-    widget.gameRef.messageManager.chooseAnswer(
-        widget.gameRef.messageManager.answers[selectedAnswerIndex]);
+    widget.game.messageManager.chooseAnswer(
+      widget.game.messageManager.answers[selectedAnswerIndex],
+    );
   }
 
   /// Typing text animation
   AnimationController? _controller;
   Animation<int>? _characterCountAnimation;
   void _animateText() {
-    if (!widget.gameRef.messageManager.isActive ||
+    if (!widget.game.messageManager.isActive ||
         (_controller?.isAnimating ?? false)) {
       return;
     }
     _controller = AnimationController(
       duration: Duration(
-          milliseconds:
-              35 * widget.gameRef.messageManager.currentMessage!.text.length),
+        milliseconds:
+            35 * widget.game.messageManager.currentMessage!.text.length,
+      ),
       vsync: this,
     );
     _characterCountAnimation = StepTween(
-            begin: 0,
-            end: widget.gameRef.messageManager.currentMessage!.text.length)
-        .animate(CurvedAnimation(parent: _controller!, curve: Curves.linear));
+      begin: 0,
+      end: widget.game.messageManager.currentMessage!.text.length,
+    ).animate(CurvedAnimation(parent: _controller!, curve: Curves.linear));
     _controller!.forward().then((_) {
       _controller!.dispose();
-      if (mounted && widget.gameRef.messageManager.isShowingAQuestion) {
+      if (mounted && widget.game.messageManager.isShowingAQuestion) {
         setState(() {});
       }
     });
@@ -108,24 +109,26 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
   void resumeAnimation() =>
       _controller?.isCompleted ?? true ? null : _controller?.forward();
 
-  double get opacity => widget.gameRef.isItemsMenuActive ? 1 : 0.85;
-  String get author => widget.gameRef.messageManager.currentMessage!.authorName;
+  double get opacity => widget.game.isItemsMenuActive ? 1 : 0.85;
+  String get author => widget.game.messageManager.currentMessage!.authorName;
 
   @override
   Widget build(BuildContext context) {
-    double imageScale =
-        min(3, (MediaQuery.of(context).size.width ~/ 100).roundToDouble());
+    double imageScale = min(
+      3,
+      (MediaQuery.of(context).size.width ~/ 100).roundToDouble(),
+    );
     if (_characterCountAnimation == null) _animateText();
     return Visibility(
-      visible: widget.gameRef.messageManager.isActive,
+      visible: widget.game.messageManager.isActive,
       child: InkWell(
         enableFeedback: false,
         onTap: next,
         child: Stack(
           children: [
-            if (widget.gameRef.messageManager.hideMap)
+            if (widget.game.messageManager.hideMap)
               Container(color: Colors.black),
-            if (widget.gameRef.messageManager.isActive)
+            if (widget.game.messageManager.isActive)
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 child: Column(
@@ -133,28 +136,37 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     if (isShowingAnswers)
-                      _AnswerButtons(widget.gameRef,
-                          widget.gameRef.messageManager.answers),
+                      _AnswerButtons(
+                        widget.game,
+                        widget.game.messageManager.answers,
+                      ),
                     Container(
-                      margin: widget.gameRef.isItemsMenuActive
+                      margin: widget.game.isItemsMenuActive
                           ? EdgeInsets.only(
                               bottom: 5.gridAligned.toDouble(),
                               top: 20,
                               left: 20,
-                              right: 20)
+                              right: 20,
+                            )
                           : const EdgeInsets.all(20),
                       padding: const EdgeInsets.all(20),
                       constraints: const BoxConstraints(maxWidth: 500),
                       decoration: BoxDecoration(
-                        color: Colors.grey.shade800.withOpacity(opacity),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(30)),
+                        color: Colors.grey.shade800.withAlpha(
+                          (255.0 * opacity).round(),
+                        ),
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(30),
+                        ),
                         border: Border.all(color: Colors.blue, width: 3),
                       ),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          if (widget.gameRef.messageManager.currentMessage!
+                          if (widget
+                                  .game
+                                  .messageManager
+                                  .currentMessage!
                                   .sprite !=
                               null)
                             SizedBox(
@@ -163,16 +175,23 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                 scale: imageScale.gridAligned.toDouble(),
                                 alignment: Alignment.bottomLeft,
                                 child: SpriteWidget(
-                                  sprite: widget.gameRef.messageManager
-                                      .currentMessage!.sprite!,
+                                  sprite: widget
+                                      .game
+                                      .messageManager
+                                      .currentMessage!
+                                      .sprite!,
                                 ),
                               ),
                             ),
                           Flexible(
                             child: Container(
                               padding: const EdgeInsets.only(left: 20),
-                              constraints: widget.gameRef.messageManager
-                                          .currentMessage!.sprite !=
+                              constraints:
+                                  widget
+                                          .game
+                                          .messageManager
+                                          .currentMessage!
+                                          .sprite !=
                                       null
                                   ? BoxConstraints(minHeight: 32 * imageScale)
                                   : null,
@@ -183,45 +202,54 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                   children: [
                                     if (author != '' && author != ' ')
                                       Padding(
-                                        padding:
-                                            const EdgeInsets.only(bottom: 4),
+                                        padding: const EdgeInsets.only(
+                                          bottom: 4,
+                                        ),
                                         child: Text(
                                           author.toUpperCase(),
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodyLarge,
+                                          style: Theme.of(
+                                            context,
+                                          ).textTheme.bodyLarge,
                                         ),
                                       ),
                                     AnimatedBuilder(
                                       animation: _characterCountAnimation!,
-                                      builder: (BuildContext context,
-                                          Widget? child) {
-                                        return Text(
-                                          widget.gameRef.messageManager
-                                              .currentMessage!.text
-                                              .substring(
-                                                  0,
-                                                  min(
+                                      builder:
+                                          (
+                                            BuildContext context,
+                                            Widget? child,
+                                          ) {
+                                            return Text(
+                                              widget
+                                                  .game
+                                                  .messageManager
+                                                  .currentMessage!
+                                                  .text
+                                                  .substring(
+                                                    0,
+                                                    min(
                                                       widget
-                                                          .gameRef
+                                                          .game
                                                           .messageManager
                                                           .currentMessage!
                                                           .text
                                                           .length,
                                                       _characterCountAnimation!
-                                                          .value)),
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodyMedium!
-                                              .copyWith(
-                                                fontFamily: widget
-                                                    .gameRef
-                                                    .messageManager
-                                                    .currentMessage!
-                                                    .font,
-                                              ),
-                                        );
-                                      },
+                                                          .value,
+                                                    ),
+                                                  ),
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyMedium!
+                                                  .copyWith(
+                                                    fontFamily: widget
+                                                        .game
+                                                        .messageManager
+                                                        .currentMessage!
+                                                        .font,
+                                                  ),
+                                            );
+                                          },
                                     ),
                                   ],
                                 ),
@@ -242,8 +270,8 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
 }
 
 class _AnswerButtons extends StatelessWidget {
-  const _AnswerButtons(this.gameRef, this.answers);
-  final XeonjiaGame gameRef;
+  const _AnswerButtons(this.game, this.answers);
+  final XeonjiaGame game;
   final List<Answer> answers;
 
   @override
@@ -251,18 +279,20 @@ class _AnswerButtons extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
-        color: Colors.grey.shade800.withOpacity(0.8),
+        color: Colors.grey.shade800.withAlpha((255.0 * 0.8).round()),
         borderRadius: const BorderRadius.all(Radius.circular(30)),
         border: Border.all(color: Colors.blue, width: 3),
       ),
       child: Column(
         children: [
-          for (var answer in answers)
+          for (final answer in answers)
             TextButton(
-              onPressed: () => gameRef.messageManager.chooseAnswer(answer),
+              onPressed: () => game.messageManager.chooseAnswer(answer),
               style: ButtonStyle(
-                  overlayColor: MaterialStateColor.resolveWith(
-                      (states) => Colors.transparent)),
+                overlayColor: WidgetStateColor.resolveWith(
+                  (states) => Colors.transparent,
+                ),
+              ),
               child: Container(
                 constraints: const BoxConstraints(minWidth: 120),
                 child: Text(

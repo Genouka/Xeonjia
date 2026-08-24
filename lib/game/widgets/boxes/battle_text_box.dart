@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
 /// TextBox shown at the beginning and end of a battle
-class BattleTextBox extends PositionComponent with HasGameRef<XeonjiaGame> {
+class BattleTextBox extends PositionComponent
+    with HasGameReference<XeonjiaGame> {
   BattleTextBox(this.text) {
-    positionType = PositionType.viewport;
+    game.camera.viewport.add(this);
     priority = 1000;
     anchor = Anchor.center;
   }
@@ -34,7 +35,7 @@ class BattleTextBox extends PositionComponent with HasGameRef<XeonjiaGame> {
   @override
   void update(double dt) {
     if (elapsed > animationDuration && (stayOpenFor -= dt) > 0) return;
-    if ((elapsed += dt) > 2 * animationDuration) gameRef.remove(this);
+    if ((elapsed += dt) > 2 * animationDuration) game.remove(this);
     super.update(dt);
   }
 
@@ -44,15 +45,21 @@ class BattleTextBox extends PositionComponent with HasGameRef<XeonjiaGame> {
         ? width * elapsed / animationDuration
         : width * (2 - elapsed / animationDuration);
     canvas.drawRect(
-        Rect.fromLTWH((width - currentWidth) / 2, 0, currentWidth, height),
-        Paint()..color = Colors.grey.shade800.withOpacity(0.7));
+      Rect.fromLTWH((width - currentWidth) / 2, 0, currentWidth, height),
+      Paint()..color = Colors.grey.shade800.withAlpha((255.0 * 0.7).round()),
+    );
     if (currentWidth > width / 3) {
       TextPaint(
-              style: TextStyle(
-                  fontSize: min(height / 1.2, width / text.length * 2),
-                  fontFamily: settings.font))
-          .render(canvas, text, Vector2(gameRef.size.x / 2, height / 2 - 4),
-              anchor: Anchor.center);
+        style: TextStyle(
+          fontSize: min(height / 1.2, width / text.length * 2),
+          fontFamily: settings.font,
+        ),
+      ).render(
+        canvas,
+        text,
+        Vector2(game.size.x / 2, height / 2 - 4),
+        anchor: Anchor.center,
+      );
     }
   }
 }

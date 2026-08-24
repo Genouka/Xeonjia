@@ -833,5 +833,5 @@ Map<String, String> latinMap = {
   'ᵣ': 'r',
   'ᵤ': 'u',
   'ᵥ': 'v',
-  'ₓ': 'x'
+  'ₓ': 'x',
 };

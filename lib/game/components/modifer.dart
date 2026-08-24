@@ -1,27 +1,29 @@
 import 'dart:math';
 
+import 'package:flame/sprite.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
 /// Stats modifier component
 /// It increases/decreases character stats
 class ModifierComponent extends BasicComponent {
-  ModifierComponent(tile, {this.father})
-      : _moneyDelta = int.parse(tile.properties['moneyDelta'] ?? '0'),
-        _atkDelta = int.parse(tile.properties['atkDelta'] ?? '0'),
-        _defDelta = int.parse(tile.properties['defDelta'] ?? '0'),
-        _hpDelta = double.parse(tile.properties['healthPointsDelta'] ?? '0'),
-        _powerPointsDelta =
-            int.parse(tile.properties['powerPointsDelta'] ?? '0'),
-        _poisonDelta = double.parse(tile.properties['poisonDelta'] ?? '0'),
-        _itemId = tile.properties['itemId'] ?? '0',
-        super.fromTile(tile);
+  ModifierComponent(super.tile, {this.father})
+    : _moneyDelta = int.parse(tile.properties['moneyDelta'] ?? '0'),
+      _atkDelta = int.parse(tile.properties['atkDelta'] ?? '0'),
+      _defDelta = int.parse(tile.properties['defDelta'] ?? '0'),
+      _hpDelta = double.parse(tile.properties['healthPointsDelta'] ?? '0'),
+      _powerPointsDelta = int.parse(tile.properties['powerPointsDelta'] ?? '0'),
+      _poisonDelta = double.parse(tile.properties['poisonDelta'] ?? '0'),
+      _itemId = tile.properties['itemId'] ?? '0',
+      super.fromTile();
 
   /// Constructor used for mine weapon shots
   ModifierComponent.mine(Point position, this.father, double atk)
-      : atlasAsset = 'weapons.xfa',
-        name = 'mine-${father!.name}',
-        super(null,
-            Point(position.x / componentSize, position.y / componentSize)) {
+    : atlasAsset = 'weapons.xfa',
+      name = 'mine-${father!.name}',
+      super(
+        null,
+        Point(position.x / componentSize, position.y / componentSize),
+      ) {
     _hpDelta = -atk;
     explosionOnDelete = true;
   }
@@ -73,22 +75,23 @@ class ModifierComponent extends BasicComponent {
         }
         if (componentAbove.isUser) {
           if (_hpDelta != 0 && componentAbove.isUser) {
-            gameRef.user!.showText('+ ${_hpDelta.round()} HP');
+            game.user!.showText('+ ${_hpDelta.round()} HP');
           } else if (_moneyDelta != 0 && componentAbove.isUser) {
-            gameRef.user!.showText('+ $_moneyDelta ¤');
-            gameRef.playSound(Sfx.money);
+            game.user!.showText('+ $_moneyDelta ¤');
+            game.playSound(Sfx.money);
           }
           if (_itemId != '0' && componentAbove.isUser) {
-            gameRef.playerOne!.addItem(_itemId, sfx: _moneyDelta == 0);
+            game.playerOne!.addItem(_itemId, sfx: _moneyDelta == 0);
           }
         }
       }
       if (explosionOnDelete) {
         if (componentAbove.hp <= 0) (componentAbove as Walker).stop();
         isBeingDeleted = true;
-        gameRef.playSound(Sfx.explosion);
-        animation = atlas.getAnimation('${name}_explosion')
-          ..onComplete = delete;
+        game.playSound(Sfx.explosion);
+        animation = atlas.getAnimation('${name}_explosion');
+        animationTicker = SpriteAnimationTicker(animation!);
+        animationTicker!.onComplete = delete;
       } else {
         delete();
       }

@@ -1,7 +1,8 @@
 import 'package:xeonjia/utils/i18n.dart';
 
 /// List of people who worked on this project
-String get credits => '''
+String get credits =>
+    '''
 ${'Thanks to everyone who contributed to this project!'.i18n}
 
 # ${'Programmer'.i18n}: deepdaikon

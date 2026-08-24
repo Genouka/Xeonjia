@@ -3,27 +3,29 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 /// Button used to explain battles
 class RulesButton extends StatelessWidget {
-  RulesButton(this.gameRef);
-  final XeonjiaGame gameRef;
+  RulesButton(this.game);
+  final XeonjiaGame game;
 
   @override
   Widget build(BuildContext context) {
     return Positioned(
       top: 6,
-      right: gameRef.map.disableMiniMap ? 50 : 94,
+      right: game.map.disableMiniMap ? 50 : 94,
       child: InkWell(
-        onTap: () => gameRef.messageManager.isActive ||
-                gameRef.hasAction ||
-                !gameRef.playerOne!.isStationary ||
-                !gameRef.user!.isMyTurn
+        onTap: () =>
+            game.messageManager.isActive ||
+                game.hasAction ||
+                !game.playerOne!.isStationary ||
+                !game.user!.isMyTurn
             ? null
-            : gameRef.battleRules(askForConfirmation: true),
+            : game.battleRules(askForConfirmation: true),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
           height: 34,
           decoration: BoxDecoration(
-              color: Colors.grey.shade800.withOpacity(0.7),
-              borderRadius: const BorderRadius.all(Radius.circular(30))),
+            color: Colors.grey.shade800.withAlpha((255.0 * 0.7).round()),
+            borderRadius: const BorderRadius.all(Radius.circular(30)),
+          ),
           child: const Icon(Icons.menu_book, color: Colors.white),
         ),
       ),

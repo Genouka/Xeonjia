@@ -19,10 +19,18 @@ class BottomRow extends StatelessWidget {
     );
   }
 
-  Widget _button(BuildContext context, IconData icon, String tooltip,
-      Widget Function() page) {
+  Widget _button(
+    BuildContext context,
+    IconData icon,
+    String tooltip,
+    Widget Function() page,
+  ) {
     return IconButton(
-      icon: Icon(icon, color: Colors.white.withOpacity(0.7), size: 28),
+      icon: Icon(
+        icon,
+        color: Colors.white.withAlpha((255.0 * 0.7).round()),
+        size: 28,
+      ),
       tooltip: tooltip,
       onPressed: () => Navigator.push(context, FadeRoute(page())),
     );

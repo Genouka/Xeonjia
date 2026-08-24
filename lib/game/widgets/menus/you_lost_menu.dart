@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
 class YouLostMenu extends StatelessWidget {
-  const YouLostMenu(this.gameRef, this.callback, [this._lostMoney = 0]);
-  final XeonjiaGame gameRef;
+  const YouLostMenu(this.game, this.callback, [this._lostMoney = 0]);
+  final XeonjiaGame game;
   final VoidCallback callback;
   final int _lostMoney;
 
@@ -12,9 +12,9 @@ class YouLostMenu extends StatelessWidget {
     String title;
     var content = '';
     title = 'You run out of energy !'.i18n;
-    content = 'You lost %s ¤ and woke up after a short nap'
-        .i18n
-        .fill(['$_lostMoney']);
+    content = 'You lost %s ¤ and woke up after a short nap'.i18n.fill([
+      '$_lostMoney',
+    ]);
 
     return Container(
       color: Colors.black87,

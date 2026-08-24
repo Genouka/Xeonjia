@@ -3,8 +3,8 @@ import 'package:xeonjia/game/xeonjia.dart';
 
 /// Map name shown on the top left of the screen
 class MapNameBox extends StatelessWidget {
-  MapNameBox(this.gameRef, {this.below = false}) : text = gameRef.map.name;
-  final XeonjiaGame gameRef;
+  MapNameBox(this.game, {this.below = false}) : text = game.map.name;
+  final XeonjiaGame game;
   final String? text;
   final bool below;
 
@@ -12,9 +12,9 @@ class MapNameBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return text != null
         ? InfoBox(
-            onTap: () => gameRef.messageManager.isActive
+            onTap: () => game.messageManager.isActive
                 ? null
-                : gameRef.pause(mode: PauseMode.pause),
+                : game.pause(mode: PauseMode.pause),
             below: below,
             child: Marquee(
               child: Text(
@@ -37,8 +37,9 @@ class Marquee extends StatefulWidget {
 }
 
 class _MarqueeState extends State<Marquee> {
-  ScrollController scrollController =
-      ScrollController(initialScrollOffset: -50);
+  ScrollController scrollController = ScrollController(
+    initialScrollOffset: -50,
+  );
 
   @override
   void initState() {
@@ -54,14 +55,14 @@ class _MarqueeState extends State<Marquee> {
 
   @override
   Widget build(BuildContext context) => Center(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          controller: scrollController,
-          child: widget.child,
-        ),
-      );
+    child: SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      controller: scrollController,
+      child: widget.child,
+    ),
+  );
 
-  void scroll(_) async {
+  void scroll(Duration _) async {
     if (scrollController.hasClients) {
       await scrollController.animateTo(
         scrollController.position.maxScrollExtent,

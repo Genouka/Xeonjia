@@ -39,11 +39,7 @@ import 'package:flame/sprite.dart';
 extension FireAtlasExtensions on Game {
   /// Load a [FireAtlas] instances from the given [asset]
   Future<FireAtlas> loadCustomAtlas(String asset) async {
-    return FireAtlas.loadAsset(
-      asset,
-      assets: assets,
-      images: images,
-    );
+    return FireAtlas.loadAsset(asset, assets: assets, images: images);
   }
 }
 
@@ -134,12 +130,9 @@ abstract class BaseSelection {
 /// {@endtemplate}
 class SpriteSelection extends BaseSelection {
   /// {@macro _sprite_selection}
-  SpriteSelection({
-    required Selection info,
-  }) : super(info);
+  SpriteSelection({required Selection info}) : super(info);
 
   /// Creates a [SpriteSelection] from [json].
-  @override
   factory SpriteSelection.fromJson(Map<String, dynamic> json) {
     final info = Selection.fromJson(json);
     return SpriteSelection(info: info);
@@ -174,7 +167,6 @@ class AnimationSelection extends BaseSelection {
   }) : super(info);
 
   /// Creates a [AnimationSelection] from [json].
-  @override
   factory AnimationSelection.fromJson(Map<String, dynamic> json) {
     final info = Selection.fromJson(json);
 
@@ -312,10 +304,6 @@ class FireAtlas {
 
     final stringBytes = utf8.encode(raw);
     final gzipBytes = GZipEncoder().encode(stringBytes);
-
-    if (gzipBytes == null) {
-      throw 'Generated an empty file';
-    }
     return gzipBytes;
   }
 

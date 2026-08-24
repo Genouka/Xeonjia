@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:collection/collection.dart';
 import 'package:flame/components.dart';
+import 'package:flame/events.dart';
 import 'package:flame/game.dart';
 import 'package:flame/input.dart';
 import 'package:flame_audio/bgm.dart';
@@ -17,15 +18,14 @@ void setComponentSize(Size screenSize) => componentSize =
 
 /// This contains the game logics
 class XeonjiaGame extends FlameGame
-    with KeyboardEvents, PanDetector, HasTappables {
+    with KeyboardEvents, PanDetector, TapCallbacks {
   XeonjiaGame() {
-    camera.speed = 750;
     environment = setEnvironment(this);
     messageManager = MessageManager(this);
     dialogBox = DialogBox(this);
     preLoadDialogAtlases();
     statusBox = StatusBox(this);
-    add(_curtain);
+    this.add(_curtain);
     overlayMap = {
       'statusBox': (BuildContext context, XeonjiaGame game) => statusBox,
       'backpackButton': (BuildContext context, XeonjiaGame game) =>
@@ -52,6 +52,7 @@ class XeonjiaGame extends FlameGame
 
   @override
   Future<void>? onLoad() {
+    camera.viewfinder.anchor = Anchor.topLeft;
     if (settings.backgroundMusic) {
       bgm = Bgm(audioCache: AudioCache(prefix: 'assets/audio/'));
       bgm!.initialize();
@@ -77,8 +78,9 @@ class XeonjiaGame extends FlameGame
     overlays.remove('loading');
     overlays.remove('dialogBox');
     overlays.add('virtualDPad');
-    add(Button.A(this));
-    add(WorldMapButton());
+    camera.viewport.add(Button.A(this));
+    camera.viewport.add(WorldMapButton());
+    updateCamera(playerOne!.x, playerOne!.y);
     overlays.add('miniMapButton');
     overlays.add('backpackButton');
     overlays.add('leafButton');
@@ -97,16 +99,17 @@ class XeonjiaGame extends FlameGame
     executeAction(action: map.action, actor: playerOne!);
     if (enemies > 0 && map.startBattle) {
       setMessage(
-          Message(
-            this,
-            (enemies == 1
-                    ? 'There is one enemy here!'.i18n
-                    : 'There are %s enemies here!'.i18n.fill([enemies])) +
-                ' ' +
-                "It' time to fight!".i18n,
-            translate: false,
-          ),
-          callback: startBattle);
+        Message(
+          this,
+          (enemies == 1
+                  ? 'There is one enemy here!'.i18n
+                  : 'There are %s enemies here!'.i18n.fill([enemies])) +
+              ' ' +
+              "It' time to fight!".i18n,
+          translate: false,
+        ),
+        callback: startBattle,
+      );
       resume();
     }
   }
@@ -140,8 +143,15 @@ class XeonjiaGame extends FlameGame
 
     // Remove previous components
     // They are removed during the next update()
-    removeAll(children.whereNot((c) => c is CurtainComponent));
-    add(BackgroundComponent());
+    removeAll(
+      children
+          .whereNot(
+            (c) => c is CurtainComponent || c is World || c is CameraComponent,
+          )
+          .toList(),
+    );
+    world.removeAll(world.children.toList());
+    addComponent(BackgroundComponent());
     players.clear();
     deletedComponents.clear();
 
@@ -149,7 +159,7 @@ class XeonjiaGame extends FlameGame
     map = GameMap(fullId: mainCharacter.visitedRooms.last);
     await importMap(this, 'assets/maps/story/${map.id}.tmx');
     miniMapActive = false;
-    if (map.hasHints) add(HideHintsButton());
+    if (map.hasHints) camera.viewport.add(HideHintsButton());
     resume();
     playBackgroundMusic();
   }
@@ -157,8 +167,7 @@ class XeonjiaGame extends FlameGame
   // Map with widgets overlay
   Map<String, Widget Function(BuildContext, XeonjiaGame)>? overlayMap;
   void addCustomWidgetOverlay(String overlayName, Widget widget) {
-    overlays.addEntry(
-        overlayName, (BuildContext context, Game gameRef) => widget);
+    overlays.addEntry(overlayName, (BuildContext context, Game game) => widget);
     overlays.add(overlayName);
   }
 
@@ -210,16 +219,18 @@ class XeonjiaGame extends FlameGame
   /// Main characters
   CharacterComponent? playerOne;
   CharacterComponent? milla;
-  CharacterComponent? get september => children.firstWhereOrNull(
-          (c) => c is CharacterComponent && c.name == 'september')
-      as CharacterComponent?;
+  CharacterComponent? get september =>
+      children.firstWhereOrNull(
+            (c) => c is CharacterComponent && c.name == 'september',
+          )
+          as CharacterComponent?;
 
   /// Battle variables
   Walker? get activePlayer => changingTurn ? null : players[_activePlayerIndex];
   CharacterComponent? get user =>
       !inBattle || players.isEmpty || activePlayer?.teamId != 0
-          ? playerOne
-          : activePlayer as CharacterComponent;
+      ? playerOne
+      : activePlayer as CharacterComponent;
   late bool changingTurn;
   int _activePlayerIndex = 0;
   late int remainingMoves;
@@ -230,34 +241,48 @@ class XeonjiaGame extends FlameGame
     if (!skipTurn && !(component.isMyTurn && inBattle)) return;
     if (skipTurn || --remainingMoves <= 0) {
       remainingMoves = 3;
-      for (int i = _activePlayerIndex + 1;; i++) {
+      for (int i = _activePlayerIndex + 1; ; i++) {
         if (i >= players.length) i = 0;
         if (!(players[i].deleted || players[i].isBeingDeleted)) {
           changingTurn = true;
-          add(TimerComponent(
+          this.add(
+            TimerComponent(
               period: 0.5,
               onTick: () {
                 if (!inBattle ||
                     playerOne!.isBeingDeleted ||
-                    playerOne!.deleted) return;
-                camera.moveTo(Vector2(
+                    playerOne!.deleted) {
+                  return;
+                }
+                camera.moveTo(
+                  Vector2(
                     moveCamera(size.x, map.width, players[i].x),
-                    moveCamera(size.y, map.height, players[i].y)));
-              }));
-          add(TimerComponent(
+                    moveCamera(size.y, map.height, players[i].y),
+                  ),
+                );
+              },
+            ),
+          );
+          this.add(
+            TimerComponent(
               period: 1,
               onTick: () {
                 if (!inBattle ||
                     playerOne!.isBeingDeleted ||
-                    playerOne!.deleted) return;
+                    playerOne!.deleted) {
+                  return;
+                }
                 if (players[i].deleted || players[i].isBeingDeleted) {
                   useMove(players[i], skipTurn: true);
                 } else {
                   _activePlayerIndex = i;
                   changingTurn = false;
-                  camera.moveTo(Vector2(
+                  camera.moveTo(
+                    Vector2(
                       moveCamera(size.x, map.width, players[i].x),
-                      moveCamera(size.y, map.height, players[i].y)));
+                      moveCamera(size.y, map.height, players[i].y),
+                    ),
+                  );
                   refreshHPBar();
                   if (user!.isMyTurn) {
                     // only if the previous player wasn't user
@@ -279,15 +304,16 @@ class XeonjiaGame extends FlameGame
                     overlays.remove('virtualDPad');
                   }
                 }
-              }));
+              },
+            ),
+          );
           break;
         }
       }
     }
   }
 
-  @override
-  FutureOr<void> add(Component component) {
+  void addComponent(Component component) {
     if (component is Walker &&
         (([-3, -2, 0, 1].contains(component.teamId)) ||
             (component is CharacterComponent &&
@@ -303,35 +329,41 @@ class XeonjiaGame extends FlameGame
     if (component is CharacterComponent && component.name == 'milla') {
       milla = component;
     }
-    return super.add(component);
+    world.add(component);
   }
 
-  @override
-  void remove(Component component) {
+  void removeComponent(Component component) {
     if (isEnemy(component) && enemies == 0 && inBattle) endBattle();
     if (inBattle && component is CharacterComponent) {
       if (component == milla) {
-        setMessage(Message(
+        setMessage(
+          Message(
             this,
             'Milla is tired and is back in the leaf, I must continue the battle.'
                 .i18n,
-            translate: false));
+            translate: false,
+          ),
+        );
       } else if (component.name == 'september') {
-        setMessage(Message(
+        setMessage(
+          Message(
             this,
             (milla?.deleted ?? true)
                 ? 'September is tired, I must continue the battle alone.'.i18n
                 : 'September is tired, but we must continue the battle.'.i18n,
-            translate: false));
+            translate: false,
+          ),
+        );
       }
     }
-    super.remove(component);
+    world.remove(component);
   }
 
   /// Get [BasicComponent] from ID
   BasicComponent? getComponentFromId(int id) =>
-      (List.from(children)..addAll(deletedComponents))
-          .firstWhereOrNull((c) => c is BasicComponent && c.id == id);
+      (List.from(children)..addAll(deletedComponents)).firstWhereOrNull(
+        (c) => c is BasicComponent && c.id == id,
+      );
 
   /// Count enemies (alive) in the room
   int get enemies => players.where((e) => isEnemy(e, onlyAlive: true)).length;
@@ -355,6 +387,11 @@ class XeonjiaGame extends FlameGame
   void update(double dt) {
     elapsed += dt;
     inputControllerUpdate(dt);
+    if (!miniMapEnabled && !worldMapEnabled) {
+      inBattle
+          ? updateCamera(activePlayer?.x ?? 0, activePlayer?.y ?? 0)
+          : updateCamera(user?.x ?? 0, user?.y ?? 0);
+    }
     super.update(dt);
   }
 
@@ -375,11 +412,15 @@ class XeonjiaGame extends FlameGame
   bool inBattle = false;
   void startBattle() {
     inBattle = true;
-    add(BattleTextBox('Battle!'.i18n.toUpperCase()));
-    add(Button.P(this));
-    if (playerOne!.hasWeaponId(Weapons.snowball.id)) add(Button.S(this));
-    if (playerOne!.hasWeaponId(Weapons.mine.id)) add(Button.M(this));
-    add(RemainingMovesBox());
+    this.add(BattleTextBox('Battle!'.i18n.toUpperCase()));
+    camera.viewport.add(Button.P(this));
+    if (playerOne!.hasWeaponId(Weapons.snowball.id)) {
+      camera.viewport.add(Button.S(this));
+    }
+    if (playerOne!.hasWeaponId(Weapons.mine.id)) {
+      camera.viewport.add(Button.M(this));
+    }
+    this.add(RemainingMovesBox());
     overlays.remove('mapNameBox');
     overlays.add('rulesButton');
     overlays.remove('leafButton');
@@ -403,10 +444,14 @@ class XeonjiaGame extends FlameGame
       overlays.remove('statusBox');
       overlays.add('statusBox');
     }
-    camera.moveTo(Vector2(moveCamera(size.x, map.width, playerOne!.x),
-        moveCamera(size.y, map.height, playerOne!.y)));
+    camera.moveTo(
+      Vector2(
+        moveCamera(size.x, map.width, playerOne!.x),
+        moveCamera(size.y, map.height, playerOne!.y),
+      ),
+    );
     _activePlayerIndex = players.indexOf(playerOne!);
-    add(BattleTextBox('You won!'.i18n.toUpperCase()));
+    this.add(BattleTextBox('You won!'.i18n.toUpperCase()));
     children
         .where((c) => c is ModifierComponent && c.explosionOnDelete)
         .forEach((c) => (c as ModifierComponent).delete());
@@ -446,24 +491,36 @@ class XeonjiaGame extends FlameGame
   }
 
   /// Execute an action
-  void executeAction(
-      {required String? action, BasicComponent? actor, BasicComponent? self}) {
+  void executeAction({
+    required String? action,
+    BasicComponent? actor,
+    BasicComponent? self,
+  }) {
     if (action?.isEmpty ?? true) return;
     pause(stopEngine: false, stopMusic: false);
     environment.defineSymbol(
-        Sym('self'), Intrinsic('self', 0, (Cell? x) => self!));
+      Sym('self'),
+      Intrinsic('self', 0, (Cell? x) => self!),
+    );
     environment.defineSymbol(
-        Sym('actor'), Intrinsic('actor', 0, (Cell? x) => actor ?? playerOne!));
+      Sym('actor'),
+      Intrinsic('actor', 0, (Cell? x) => actor ?? playerOne!),
+    );
     environment.defineSymbol(
-        Sym('user-name'),
-        (user?.isPlayerOne ?? true
-                ? mainCharacter.name
-                : (user?.name?.i18n ?? mainCharacter.name))
-            .toUpperCase());
-    environment.defineSymbol(Sym('minutes-played'),
-        (mainCharacter.minutesPlayed + elapsed / 60).round());
-    _actionContinuation =
-        evaluate(readFromTokens(splitStringIntoTokens(action!)), environment);
+      Sym('user-name'),
+      (user?.isPlayerOne ?? true
+              ? mainCharacter.name
+              : (user?.name?.i18n ?? mainCharacter.name))
+          .toUpperCase(),
+    );
+    environment.defineSymbol(
+      Sym('minutes-played'),
+      (mainCharacter.minutesPlayed + elapsed / 60).round(),
+    );
+    _actionContinuation = evaluate(
+      readFromTokens(splitStringIntoTokens(action!)),
+      environment,
+    );
   }
 
   /// Continue action execution after (wait)
@@ -475,10 +532,12 @@ class XeonjiaGame extends FlameGame
     if (hasAction) {
       delay ??= nextActionDelay;
       nextActionDelay = 0;
-      add(TimerComponent(
-        period: delay,
-        onTick: () => evaluate(null, environment, _actionContinuation),
-      ));
+      this.add(
+        TimerComponent(
+          period: delay,
+          onTick: () => evaluate(null, environment, _actionContinuation),
+        ),
+      );
       if (isItemsMenuActive) update(0);
     } else if (!worldMapEnabled && !isItemsMenuActive) {
       resume();
@@ -493,8 +552,11 @@ class XeonjiaGame extends FlameGame
   }
 
   /// Show a list of messages in the [dialogBox]
-  void setMessages(List<Message> messages,
-      {bool hideMap = false, VoidCallback? callback}) {
+  void setMessages(
+    List<Message> messages, {
+    bool hideMap = false,
+    VoidCallback? callback,
+  }) {
     messageManager.setMessages(messages, hideMap: hideMap, callback: callback);
   }
 
@@ -533,16 +595,20 @@ class XeonjiaGame extends FlameGame
   /// Update [camera] position
   void updateCamera(double x, double y) {
     if (map.width == 0) return;
-    camera.snapTo(Vector2(moveCamera(size.x, map.width, x),
-        moveCamera(size.y, worldMapEnabled ? map.width * 0.7 : map.height, y)));
+    camera.viewfinder.position = Vector2(
+      moveCamera(size.x, map.width, x),
+      moveCamera(size.y, worldMapEnabled ? map.height * 0.7 : map.height, y),
+    );
   }
 
   /// Calculate [camera] position
   double moveCamera(double screenSize, num mapSize, double pos) {
     var delta = mapSize * componentSize * miniMapZoom - screenSize;
-    return (delta <= 0 ? delta / 2 : max(0, min(pos - screenSize / 2, delta)))
-        .gridAligned
-        .toDouble();
+    var result =
+        (delta <= 0 ? delta / 2 : max(0, min(pos - screenSize / 2, delta)))
+            .gridAligned
+            .toDouble();
+    return result;
   }
 
   /// Mini-map
@@ -555,8 +621,8 @@ class XeonjiaGame extends FlameGame
   WorldMap? worldMapComponent;
 
   /// Buttons used to zoom in and out
-  late Button zoomInButton = Button.plus(this);
-  late Button zoomOutButton = Button.minus(this);
+  Button? zoomInButton;
+  Button? zoomOutButton;
 
   /// Show Milla
   void millaLeaf() {
@@ -564,8 +630,8 @@ class XeonjiaGame extends FlameGame
       // i18n: 'Milla is resting.'.i18n
       // i18n: 'Milla is already here!'.i18n
       executeAction(
-          action: milla == null || !milla!.isVisible
-              ? '''
+        action: milla == null || !milla!.isVisible
+            ? '''
       (begin
         (milla-in)
         (milla-dialog)
@@ -573,9 +639,10 @@ class XeonjiaGame extends FlameGame
         (milla-out)
         (set-orientation 0)
         (wait 2))'''
-              : (milla!.deleted
+            : (milla!.deleted
                   ? '''(dialog '(("Milla is resting.")))'''
-                  : '''(dialog '(("Milla is already here!")))'''));
+                  : '''(dialog '(("Milla is already here!")))'''),
+      );
     }
   }
 
@@ -606,7 +673,7 @@ class XeonjiaGame extends FlameGame
           "I have %s ¤. I'm not very rich.".i18n.fill([playerOne!.money])
         else
           'I have %s health points.'.i18n.fill([playerOne!.hp.round()]),
-        '/hero'
+        '/hero',
       ],
       if (inBattle && milla != null && milla!.teamId == 0 && milla!.hp > 0)
         [
@@ -614,7 +681,7 @@ class XeonjiaGame extends FlameGame
             "I don't even have a cent!".i18n
           else
             'I have %s health points!'.i18n.fill([milla!.hp.round()]),
-          '/milla_happy'
+          '/milla_happy',
         ],
       if (!money &&
           inBattle &&
@@ -623,12 +690,12 @@ class XeonjiaGame extends FlameGame
           september!.hp > 0)
         [
           'I? I have %s health points.'.i18n.fill([september!.hp.round()]),
-          '/september'
+          '/september',
         ],
     ];
     setMessages([
       for (final message in messages)
-        Message(this, message.first, author: message.last, translate: false)
+        Message(this, message.first, author: message.last, translate: false),
     ]);
   }
 
@@ -639,20 +706,23 @@ class XeonjiaGame extends FlameGame
   void battleRules({bool askForConfirmation = false}) {
     if (askForConfirmation) {
       // i18n: "Do you want to reread the explanation of how to fight?".i18n
-      executeAction(action: '''
+      executeAction(
+        action: '''
           (begin
             (dialog '(("Do you want to reread the explanation of how to fight?")))
             (define id "generic-question")
             (answer id '(("Yes" . #t) ("No" . #f)))
             (wait)
             (if (get id)
-              (battle-rules)))''');
+              (battle-rules)))''',
+      );
       return;
     }
 
     // i18n: '* {{hero}} consults "The Manual of the Perfect Hero" *'.i18n
-    setMessage(Message(
-        this, '* {{hero}} consults "The Manual of the Perfect Hero" *'));
+    setMessage(
+      Message(this, '* {{hero}} consults "The Manual of the Perfect Hero" *'),
+    );
     final List<String> texts = [
       'Chapter 4: Battles'.i18n,
       'In battle each player has 3 moves per turn.'.i18n,
@@ -685,7 +755,7 @@ class XeonjiaGame extends FlameGame
     // i18n: 'manual'.i18n, 'book'.i18n
     setMessages([
       for (final string in texts)
-        Message(this, string, author: '/manual', translate: false)
+        Message(this, string, author: '/manual', translate: false),
     ]);
   }
 
@@ -703,7 +773,9 @@ class XeonjiaGame extends FlameGame
     saveUserData();
     refreshHPBar();
     addCustomWidgetOverlay(
-        'youLostMenu', YouLostMenu(this, restartAfterEnd, lostMoney));
+      'youLostMenu',
+      YouLostMenu(this, restartAfterEnd, lostMoney),
+    );
   }
 
   /// Close YouLostMenu and restart the game
@@ -727,25 +799,27 @@ class XeonjiaGame extends FlameGame
       keyboardHandler(event, keysPressed);
 
   /// True if it's possible to open the backpack
-  bool get isBackpackButtonActive => !(messageManager.isActive ||
-      hasAction ||
-      !user!.isStationary ||
-      !user!.isMyTurn);
+  bool get isBackpackButtonActive =>
+      !(messageManager.isActive ||
+          hasAction ||
+          !user!.isStationary ||
+          !user!.isMyTurn);
 
   /// True if it's possible to open the mini-map
-  bool get isMiniMapButtonActive => !(messageManager.isActive ||
-      hasAction ||
-      !user!.isStationary ||
-      changingTurn);
+  bool get isMiniMapButtonActive =>
+      !(messageManager.isActive ||
+          hasAction ||
+          !user!.isStationary ||
+          changingTurn);
 
   /// True if the world map is disabled
   bool get worldMapDisabled =>
       !miniMapEnabled || inBattle || map.disableWorldMap;
 
   /// Handle back button
-  Future<bool> onWillPop() {
+  // ignore: avoid_positional_boolean_parameters
+  void onWillPop(bool didPop, Object? result) {
     miniMapEnabled ? miniMap() : pause(mode: PauseMode.exit);
-    return Future.value(false);
   }
 
   @override
@@ -763,9 +837,11 @@ class XeonjiaGame extends FlameGame
   @override
   void onPanDown(DragDownInfo info) {
     longPressMoving = false;
-    longPressButton = children.firstWhereOrNull(
-            (e) => e is Button && e.containsPoint(info.eventPosition.widget))
-        as Button?;
+    longPressButton =
+        children.firstWhereOrNull(
+              (e) => e is Button && e.containsPoint(info.eventPosition.widget),
+            )
+            as Button?;
     longPressTime = longPressButton != null ? elapsed : double.infinity;
   }
 
@@ -775,15 +851,20 @@ class XeonjiaGame extends FlameGame
   bool longPressMoving = false;
 
   @override
-  void onTapUp(int pointerId, TapUpInfo info) {
-    tapUpHandler(pointerId, info);
-    super.onTapUp(pointerId, info);
+  void onTapUp(TapUpEvent event) {
+    tapUpHandler(event);
+    super.onTapUp(event);
   }
 
   @override
   void onRemove() {
     removeAll(children);
-    update(0);
+    world.removeAll(world.children);
+    var attempts = 0;
+    while (hasLifecycleEvents && attempts < 20) {
+      processLifecycleEvents();
+      attempts++;
+    }
     bgm?.stop();
     bgm?.dispose();
     super.onRemove();

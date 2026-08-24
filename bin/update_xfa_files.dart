@@ -13,7 +13,7 @@ void main() {
           utf8.decode(GZipDecoder().decodeBytes(fsEntity.readAsBytesSync())))
         ..remove('imageData');
       File('assets/images/metadata/${basenameWithoutExtension(fsEntity.path)}.xfa')
-          .writeAsBytes(GZipEncoder().encode(utf8.encode(jsonEncode(map)))!);
+          .writeAsBytes(GZipEncoder().encode(utf8.encode(jsonEncode(map))));
     }
   });
   // ignore: avoid_print

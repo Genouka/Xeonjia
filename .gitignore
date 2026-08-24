@@ -43,6 +43,7 @@
 /dev/integration_tests/**/Pods
 /packages/flutter/coverage/
 /version
+**/ephemeral/
 
 # packages file containing multi-root paths
 .packages.generated

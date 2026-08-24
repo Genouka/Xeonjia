@@ -44,9 +44,11 @@ mixin Walker on BasicComponent {
     if (atlasAsset == null) {
       const size = 16.0;
       for (final d in Direction.values) {
-        _sprites[d] = Sprite(Flame.images.fromCache(image),
-            srcPosition: Vector2(d.index * size, imageY),
-            srcSize: Vector2.all(size));
+        _sprites[d] = Sprite(
+          Flame.images.fromCache(image),
+          srcPosition: Vector2(d.index * size, imageY),
+          srcSize: Vector2.all(size),
+        );
       }
       updateOrientation();
     }
@@ -55,16 +57,19 @@ mixin Walker on BasicComponent {
 
   /// If this component was previously still update its
   /// [direction] and [_orientation]
-  void updateDirection(Direction newDirection,
-      {bool forced = false, bool animated = true, bool slow = false}) {
-    if (!isBeingDeleted &&
-        (isStationary || forced) &&
-        !gameRef.thereIsASnowball) {
+  void updateDirection(
+    Direction newDirection, {
+    bool forced = false,
+    bool animated = true,
+    bool slow = false,
+  }) {
+    if (!isBeingDeleted && (isStationary || forced) && !game.thereIsASnowball) {
       wasStationary = true;
       _slowedMove = slow ? 0.2 : 0;
       if (animated &&
-          ((animation?.done() ?? true) || orientation != newDirection)) {
+          ((animationTicker?.done() ?? true) || orientation != newDirection)) {
         animation = atlas.getAnimation('$name-${newDirection.index}-walking');
+        animationTicker = SpriteAnimationTicker(animation!);
       }
       direction = newDirection;
       updateOrientation();
@@ -98,18 +103,23 @@ mixin Walker on BasicComponent {
     final overlappedComponents = <BasicComponent>[];
 
     // Distance traveled
-    final delta =
-        min((_slowedMove > 0 ? speed * 0.6 : speed) * dt, componentSize - 1);
-    final candidatePositionTemp =
-        toRect().translate(direction!.dx * delta, direction!.dy * delta);
+    final delta = min(
+      (_slowedMove > 0 ? speed * 0.6 : speed) * dt,
+      componentSize - 1,
+    );
+    final candidatePositionTemp = toRect().translate(
+      direction!.dx * delta,
+      direction!.dy * delta,
+    );
     final candidatePosition = Rect.fromLTWH(
-        candidatePositionTemp.left.gridAligned.toDouble(),
-        candidatePositionTemp.top.gridAligned.toDouble(),
-        candidatePositionTemp.width,
-        candidatePositionTemp.height);
+      candidatePositionTemp.left.gridAligned.toDouble(),
+      candidatePositionTemp.top.gridAligned.toDouble(),
+      candidatePositionTemp.width,
+      candidatePositionTemp.height,
+    );
 
     // Check if this is going to collide or overlap another component
-    for (final component in gameRef.children) {
+    for (final component in game.world.children) {
       if (component is BasicComponent &&
           component != this &&
           component != father &&
@@ -138,10 +148,11 @@ mixin Walker on BasicComponent {
       } else if (direction!.dy > 0) {
         y = collidedRect.top - height;
       }
-      for (final e in collidedComponents.sorted((a, b) =>
-          a is DirectionChangerComponent
-              ? 1
-              : a.priority.compareTo(b.priority))) {
+      for (final e in collidedComponents.sorted(
+        (a, b) => a is DirectionChangerComponent
+            ? 1
+            : a.priority.compareTo(b.priority),
+      )) {
         onCollision(e, wasStationary);
       }
       hasMoved();
@@ -159,29 +170,31 @@ mixin Walker on BasicComponent {
 
   /// Function called if the component is moving
   void isMoving() {
-    if ((isMyTurn && gameRef.inBattle) || this == gameRef.playerOne) {
-      gameRef.updateCamera(x, y);
+    if ((isMyTurn && game.inBattle) || this == game.playerOne) {
+      game.updateCamera(x, y);
     }
   }
 
   /// Function called if the component moved
   void hasMoved() {
-    if (!wasStationary && (gameRef.isEnemy(this) || isUser)) {
-      gameRef.useMove(this);
+    if (!wasStationary && (game.isEnemy(this) || isUser)) {
+      game.useMove(this);
     }
   }
 
   /// Function called when this component collide another component
   // ignore_for_file: avoid_positional_boolean_parameters
-  void onCollision(BasicComponent collidedComponent,
-      [bool wasStationary = false]) {
+  void onCollision(
+    BasicComponent collidedComponent, [
+    bool wasStationary = false,
+  ]) {
     stop();
     if (!isUser) {
       collidedComponent.hpDifference(-atk, cause: this, poison: poisonAtk);
     } else if (settings.soundEffects &&
         (collidedComponent is! StaticComponent || !collidedComponent.isFloor)) {
       if (_previousCollisionSound > 1) {
-        gameRef.playSound(Sfx.collision, volume: 0.4);
+        game.playSound(Sfx.collision, volume: 0.4);
         _previousCollisionSound = 0;
       }
     }
@@ -200,20 +213,25 @@ mixin Walker on BasicComponent {
 
   /// Get components under this one
   List<BasicComponent> componentsUnder() {
-    return gameRef.children
-        .where((component) =>
-            (component is StaticComponent || component is ThinWallComponent) &&
-            (component as BasicComponent)
-                .toRect()
-                .contains(Offset(x + componentSize / 2, y + componentSize / 2)))
+    return game.world.children
+        .where(
+          (component) =>
+              (component is StaticComponent ||
+                  component is ThinWallComponent) &&
+              (component as BasicComponent).toRect().contains(
+                Offset(x + componentSize / 2, y + componentSize / 2),
+              ),
+        )
         .toList()
         .cast<BasicComponent>();
   }
 
   /// Workaround (waiting for the priority/layers + collision fix)
-  ThinWallComponent? _wallInFront() => componentsUnder().firstWhereOrNull(
-          (c) => c is ThinWallComponent && c.isBlocking(orientation))
-      as ThinWallComponent?;
+  ThinWallComponent? _wallInFront() =>
+      componentsUnder().firstWhereOrNull(
+            (c) => c is ThinWallComponent && c.isBlocking(orientation),
+          )
+          as ThinWallComponent?;
 
   /// Get component in front of this
   BasicComponent? componentInFront([Direction? orientation]) {
@@ -234,14 +252,17 @@ mixin Walker on BasicComponent {
         offset = Offset(x - componentSize / 2, y + componentSize / 2);
         break;
     }
-    return gameRef.children
-        .where((component) =>
-            component is BasicComponent &&
-            component.toRect().contains(offset) &&
-            !component.isFlying() &&
-            !component.isBeingDeleted)
-        .sorted((a, b) => a.priority.compareTo(b.priority))
-        .lastOrNull as BasicComponent?;
+    return game.world.children
+            .where(
+              (component) =>
+                  component is BasicComponent &&
+                  component.toRect().contains(offset) &&
+                  !component.isFlying() &&
+                  !component.isBeingDeleted,
+            )
+            .sorted((a, b) => a.priority.compareTo(b.priority))
+            .lastOrNull
+        as BasicComponent?;
   }
 
   /// List of weapon owned
@@ -261,9 +282,9 @@ mixin Walker on BasicComponent {
 
   /// Shoot with the weapon that has weapon.id == id or with the current weapon
   void shoot(int id) {
-    if (!gameRef.inBattle ||
+    if (!game.inBattle ||
         isBeingDeleted ||
-        gameRef.isPaused ||
+        game.isPaused ||
         !isMyTurn ||
         !isStationary) {
       return;
@@ -274,19 +295,23 @@ mixin Walker on BasicComponent {
       previousPP = weapon.powerPoints;
       weapon.shoot(shooter: this);
     } else {
-      gameRef.setMessage(Message(
-          gameRef, "I've run out of shots for this weapon.".i18n,
-          author: '/' + (gameRef.user?.name ?? 'hero')));
+      game.setMessage(
+        Message(
+          game,
+          "I've run out of shots for this weapon.".i18n,
+          author: '/' + (game.user?.name ?? 'hero'),
+        ),
+      );
     }
     if ((weapon.maxPp == double.infinity || weapon.powerPoints != previousPP) &&
         weapon.id != Weapons.snowball.id) {
-      gameRef.useMove(this);
+      game.useMove(this);
     }
   }
 
   /// Check if it is this component's turn during a battle
-  bool get isMyTurn => gameRef.enemies > 0
-      ? (gameRef.players.isNotEmpty ? this == gameRef.activePlayer : false)
+  bool get isMyTurn => game.enemies > 0
+      ? (game.players.isNotEmpty ? this == game.activePlayer : false)
       : true;
 
   @override
@@ -299,12 +324,11 @@ mixin Walker on BasicComponent {
 
   @override
   void render(Canvas canvas) {
-    if (isMyTurn &&
-        gameRef.inBattle &&
-        !gameRef.miniMapEnabled &&
-        !isBeingDeleted) {
+    if (isMyTurn && game.inBattle && !game.miniMapEnabled && !isBeingDeleted) {
       canvas.drawOval(
-          Rect.fromLTWH(0, size.y / 1.5, size.x, size.y / 2.35), _paint);
+        Rect.fromLTWH(0, size.y / 1.5, size.x, size.y / 2.35),
+        _paint,
+      );
     }
     super.render(canvas);
   }

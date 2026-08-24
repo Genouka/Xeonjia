@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
+import 'package:flame/sprite.dart';
 import 'package:meta/meta.dart';
 
 import 'package:xeonjia/game/xeonjia.dart';
@@ -10,49 +11,56 @@ import 'package:xeonjia/game/xeonjia.dart';
 /// Basic game component
 /// Every game component extends this one
 abstract class BasicComponent extends SpriteComponent
-    with HasGameRef<XeonjiaGame>, TextAnimation {
-  BasicComponent(int? id, Point startingPosition,
-      [Map<String, dynamic>? properties])
-      : this.fromTile(Tile(
-            id: id,
-            position: startingPosition,
-            size: componentSize,
-            sprite: (properties?.containsKey('image') ?? false)
-                ? Sprite(
-                    Flame.images.fromCache(properties!['image']),
-                    srcPosition:
-                        Vector2(0, 16 * (properties['imageY'] as double? ?? 0)),
-                    srcSize: Vector2.all(16),
-                  )
-                : null,
-            properties: properties));
+    with HasGameReference<XeonjiaGame>, TextAnimation {
+  BasicComponent(
+    int? id,
+    Point startingPosition, [
+    Map<String, dynamic>? properties,
+  ]) : this.fromTile(
+         Tile(
+           id: id,
+           position: startingPosition,
+           size: componentSize,
+           sprite: (properties?.containsKey('image') ?? false)
+               ? Sprite(
+                   Flame.images.fromCache(properties!['image']),
+                   srcPosition: Vector2(
+                     0,
+                     16 * (properties['imageY'] as double? ?? 0),
+                   ),
+                   srcSize: Vector2.all(16),
+                 )
+               : null,
+           properties: properties,
+         ),
+       );
 
   BasicComponent.fromTile(this.tile)
-      : id = tile.id,
-        startingPosition = tile.position!,
-        name = tile.properties['name'],
-        atlasAsset = tile.properties['atlasAsset'],
-        action = tile.properties['action'] ?? '',
-        actionOnCollision = tile.properties['actionOnCollision'] ?? '',
-        actionOnEvent = tile.properties['actionOnEvent'] ?? '',
-        maxHP = double.parse(tile.properties['hp'] ?? 'Infinity'),
-        level = int.parse(tile.properties['level'] ?? '0'),
-        atk = double.parse(tile.properties['atk'] ?? '0'),
-        def = double.parse(tile.properties['def'] ?? '0'),
-        poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
-        _visible = 'true' == (tile.properties['visible'] ?? 'true'),
-        _flying = 'true' == (tile.properties['flying'] ?? 'false'),
-        _layerPriority = 100 * (tile.layer ?? 0),
-        _customPriority = int.parse(tile.properties['priority'] ?? '0'),
-        image = tile.properties['image'] ?? '',
-        imageY = tile.properties['imageY'] ?? 0,
-        super(
-          size: Vector2(tile.size!, tile.size!),
-          sprite: tile.sprite,
-        ) {
+    : id = tile.id,
+      startingPosition = tile.position!,
+      name = tile.properties['name'],
+      atlasAsset = tile.properties['atlasAsset'],
+      action = tile.properties['action'] ?? '',
+      actionOnCollision = tile.properties['actionOnCollision'] ?? '',
+      actionOnEvent = tile.properties['actionOnEvent'] ?? '',
+      maxHP = double.parse(tile.properties['hp'] ?? 'Infinity'),
+      level = int.parse(tile.properties['level'] ?? '0'),
+      atk = double.parse(tile.properties['atk'] ?? '0'),
+      def = double.parse(tile.properties['def'] ?? '0'),
+      poisonAtk = double.parse(tile.properties['poisonAtk'] ?? '0'),
+      _visible = 'true' == (tile.properties['visible'] ?? 'true'),
+      _flying = 'true' == (tile.properties['flying'] ?? 'false'),
+      _layerPriority = 100 * (tile.layer ?? 0),
+      _customPriority = int.parse(tile.properties['priority'] ?? '0'),
+      image = tile.properties['image'] ?? '',
+      imageY = tile.properties['imageY'] ?? 0,
+      super(size: Vector2(tile.size!, tile.size!), sprite: tile.sprite) {
     if (tile.animationSprites.isNotEmpty) {
-      animation = SpriteAnimation.spriteList(tile.animationSprites,
-          stepTime: tile.animationStepTime ?? 0.15, loop: true);
+      animation = SpriteAnimation.spriteList(
+        tile.animationSprites,
+        stepTime: tile.animationStepTime ?? 0.15,
+        loop: true,
+      );
     }
     if (tile.hidden) hide();
     x = startingPosition.x * componentSize;
@@ -135,10 +143,11 @@ abstract class BasicComponent extends SpriteComponent
 
   /// Check if this is Component controlled by the user
   bool get isUser => teamId == 0;
-  bool get isPlayerOne => this == gameRef.playerOne;
+  bool get isPlayerOne => this == game.playerOne;
 
   /// Sprite animation
   SpriteAnimation? animation;
+  SpriteAnimationTicker? animationTicker;
 
   /// True if this is doing the deletion animation
   bool isBeingDeleted = false;
@@ -158,7 +167,7 @@ abstract class BasicComponent extends SpriteComponent
     if (this is! SnowballComponent) executeAction();
     sprite ??= Sprite(Flame.images.fromCache('basic.png')); // placeholder
     if (atlasAsset != null && name != null) {
-      atlas = await gameRef.loadCustomAtlas('images/metadata/$atlasAsset');
+      atlas = await game.loadCustomAtlas('images/metadata/$atlasAsset');
       sprite = getSpriteFromAtlas();
       if ('true' == (tile.properties['visible'] ?? 'true')) show();
     }
@@ -174,8 +183,11 @@ abstract class BasicComponent extends SpriteComponent
 
   /// Execute an action
   void executeAction([String? action, BasicComponent? actor]) {
-    gameRef.executeAction(
-        action: action ?? actionOnEvent, actor: actor ?? this, self: this);
+    game.executeAction(
+      action: action ?? actionOnEvent,
+      actor: actor ?? this,
+      self: this,
+    );
   }
 
   @mustCallSuper
@@ -185,42 +197,47 @@ abstract class BasicComponent extends SpriteComponent
   void setStatus(double hp, double poison) {
     _hp = hp;
     poisonQuantity = poison;
-    gameRef.refreshHPBar();
+    game.refreshHPBar();
   }
 
   /// Restore HP and poison quantity
   void restoreStatus() {
     _hp = maxHP;
     poisonQuantity = 0;
-    gameRef.refreshHPBar();
+    game.refreshHPBar();
   }
 
   /// Function used to change health points
-  void hpDifference(double difference,
-      {BasicComponent? cause, double poison = 0}) {
+  void hpDifference(
+    double difference, {
+    BasicComponent? cause,
+    double poison = 0,
+  }) {
     if (teamId != (cause?.teamId ?? -99)) {
       double actual = difference < 0 ? min(0, difference + def) : difference;
       _hp += actual;
       if (actual != 0 && maxHP.isFinite) {
         showText(actual.round().toString());
-        if (isUser && actual < 0) gameRef.playSound(Sfx.damage, volume: 1);
+        if (isUser && actual < 0) game.playSound(Sfx.damage, volume: 1);
       }
       poisonQuantity += poison;
       if (_hp < 0) _hp = 0;
       if (_hp > maxHP) _hp = maxHP;
       if (isUser && difference != 0) {
-        gameRef.refreshHPBar(this as CharacterComponent);
+        game.refreshHPBar(this as CharacterComponent);
       }
       if (_hp <= 0) {
-        if (name == 'king of evil' && gameRef.enemies > 1) {
+        if (name == 'king of evil' && game.enemies > 1) {
           _hp = 1;
-          gameRef.setMessage(Message(
-            gameRef,
-            "You can't defeat me as long as there are other monsters besides me."
-                .i18n,
-            author: '/king-of-evil',
-            translate: false,
-          ));
+          game.setMessage(
+            Message(
+              game,
+              "You can't defeat me as long as there are other monsters besides me."
+                  .i18n,
+              author: '/king-of-evil',
+              translate: false,
+            ),
+          );
           return;
         }
         delete();
@@ -248,16 +265,24 @@ abstract class BasicComponent extends SpriteComponent
       // Else return a rect with width = 1 at the left or right of this
       return otherComponent.direction!.dx * (otherComponent.x - x) > 0
           ? null
-          : Rect.fromLTWH(x + (otherComponent.direction!.dx > 0 ? width : -1),
-              y, 1, height);
+          : Rect.fromLTWH(
+              x + (otherComponent.direction!.dx > 0 ? width : -1),
+              y,
+              1,
+              height,
+            );
     } else {
       // (going up or down)
       // If otherComponent.center > this.center -> do nothing
       // Else return a rect with height = 1 at the top or bottom of this
       return otherComponent.direction!.dy * (otherComponent.y - y) > 0
           ? null
-          : Rect.fromLTWH(x,
-              y + (otherComponent.direction!.dy > 0 ? height : -1), width, 1);
+          : Rect.fromLTWH(
+              x,
+              y + (otherComponent.direction!.dy > 0 ? height : -1),
+              width,
+              1,
+            );
     }
   }
 
@@ -283,7 +308,7 @@ abstract class BasicComponent extends SpriteComponent
 
   @override
   void update(double dt) {
-    animation?.update(dt);
+    animationTicker?.update(dt);
     super.update(dt);
   }
 
@@ -293,20 +318,24 @@ abstract class BasicComponent extends SpriteComponent
   @override
   @mustCallSuper
   void render(Canvas canvas) {
-    if (!_visible || gameRef.worldMapEnabled) return;
-    if (gameRef.miniMapEnabled) {
+    if (!_visible || game.worldMapEnabled) return;
+    if (game.miniMapEnabled) {
       canvas
-        ..translate(position.x * gameRef.miniMapZoom - position.x,
-            position.y * gameRef.miniMapZoom - position.y)
-        ..scale(gameRef.miniMapZoom);
+        ..translate(
+          position.x * game.miniMapZoom - position.x,
+          position.y * game.miniMapZoom - position.y,
+        )
+        ..scale(game.miniMapZoom);
     }
     if (renderTranslateY != 0) canvas.translate(0, -renderTranslateY * height);
-    animation?.done() ?? true
+    animationTicker?.done() ?? true
         ? super.render(
-            renderHeight == 1 ? canvas : (canvas..scale(1, renderHeight)))
-        : animation!
-            .getSprite()
-            .render(canvas, size: Vector2(width, renderHeight * height));
+            renderHeight == 1 ? canvas : (canvas..scale(1, renderHeight)),
+          )
+        : animationTicker!.getSprite().render(
+            canvas,
+            size: Vector2(width, renderHeight * height),
+          );
     showTextAnimation(canvas);
   }
 
@@ -323,31 +352,31 @@ abstract class BasicComponent extends SpriteComponent
   /// Delete component
   /// Silently: don't execute [XeonjiaGame.map.action] and [deletionAnimation]
   void delete({bool silently = false}) {
-    gameRef.deletedComponents.add(this);
+    game.deletedComponents.add(this);
     removeChildren();
     deleted = true;
-    gameRef.remove(this);
+    game.removeComponent(this);
     reflection?.removeFromParent();
   }
 
   /// Delete every son of this component
   void removeChildren() {
-    for (final c in gameRef.children) {
+    for (final c in game.world.children) {
       if (c is BasicComponent && c.father == this) c.delete();
     }
   }
 
   /// Respawn component
   @mustCallSuper
-  void respawn(XeonjiaGame gameRef) {
+  void respawn(XeonjiaGame game) {
     deleted = false;
     isBeingDeleted = false;
     restoreHP();
     x = startingPosition.x * componentSize;
     y = startingPosition.y * componentSize;
-    if (!gameRef.children.contains(this)) gameRef.add(this);
-    if (reflection != null && !gameRef.children.contains(reflection)) {
-      gameRef.add(reflection!);
+    if (!game.world.children.contains(this)) game.addComponent(this);
+    if (reflection != null && !game.world.children.contains(reflection)) {
+      game.addComponent(reflection!);
     }
   }
 }

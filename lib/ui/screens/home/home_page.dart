@@ -32,8 +32,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       body: Focus(
         focusNode: focusNode,
         autofocus: true,
-        onKey: (node, event) {
-          if (event is RawKeyDownEvent) {
+        onKeyEvent: (node, event) {
+          if (event is KeyDownEvent) {
             if (event.logicalKey == LogicalKeyboardKey.enter ||
                 event.logicalKey == LogicalKeyboardKey.space) {
               startGame();
@@ -47,18 +47,19 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         },
         child: InkWell(
           onTap: startGame,
-          overlayColor:
-              MaterialStateColor.resolveWith((states) => Colors.transparent),
+          overlayColor: WidgetStateColor.resolveWith(
+            (states) => Colors.transparent,
+          ),
           child: DecoratedBox(
             decoration: gradientDecoration(withOpacity: true),
             child: AnimatedBackground(
               behaviour: RainParticleBehaviour(
                 ParticleOptions(
                   image: Image(
-                      image:
-                          Image.asset('assets/graphics/icon_white.png').image),
-                  particleCount:
-                      (MediaQuery.of(context).size.longestSide / 6).round(),
+                    image: Image.asset('assets/graphics/icon_white.png').image,
+                  ),
+                  particleCount: (MediaQuery.of(context).size.longestSide / 6)
+                      .round(),
                   spawnMinSpeed: 60,
                   spawnMaxSpeed: 80,
                 ),
@@ -80,15 +81,16 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                               maxLines: 1,
                               style: TextStyle(
                                 letterSpacing: min(
-                                    24,
-                                    (MediaQuery.of(context).size.width - 20) /
-                                        24),
+                                  24,
+                                  (MediaQuery.of(context).size.width - 20) / 24,
+                                ),
                                 fontSize: min(
                                   MediaQuery.of(context).size.height / 1.75,
                                   min(
-                                      160,
-                                      (MediaQuery.of(context).size.width - 20) /
-                                          4),
+                                    160,
+                                    (MediaQuery.of(context).size.width - 20) /
+                                        4,
+                                  ),
                                 ),
                                 fontFamily: 'dd5x7',
                                 foreground: Paint()
@@ -102,17 +104,18 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                               maxLines: 1,
                               style: TextStyle(
                                 letterSpacing: min(
-                                    24,
-                                    (MediaQuery.of(context).size.width - 20) /
-                                        24),
+                                  24,
+                                  (MediaQuery.of(context).size.width - 20) / 24,
+                                ),
                                 color: Colors.white,
                                 fontSize: min(
-                                    MediaQuery.of(context).size.height / 1.75,
-                                    min(
-                                        160,
-                                        (MediaQuery.of(context).size.width -
-                                                20) /
-                                            4)),
+                                  MediaQuery.of(context).size.height / 1.75,
+                                  min(
+                                    160,
+                                    (MediaQuery.of(context).size.width - 20) /
+                                        4,
+                                  ),
+                                ),
                                 fontFamily: 'dd5x7',
                               ),
                             ),
@@ -123,13 +126,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           maxLines: 1,
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: min(
-                                    MediaQuery.of(context).size.height / 6,
-                                    min(
-                                        72,
-                                        (MediaQuery.of(context).size.width -
-                                                20) /
-                                            8)) /
+                            fontSize:
+                                min(
+                                  MediaQuery.of(context).size.height / 6,
+                                  min(
+                                    72,
+                                    (MediaQuery.of(context).size.width - 20) /
+                                        8,
+                                  ),
+                                ) /
                                 (settings.smallerFont ? 1.5 : 1),
                             fontFamily: settings.font,
                           ),
@@ -144,13 +149,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white70,
-                            fontSize: min(
-                                    MediaQuery.of(context).size.height / 8,
-                                    min(
-                                        48,
-                                        (MediaQuery.of(context).size.width -
-                                                20) /
-                                            10)) /
+                            fontSize:
+                                min(
+                                  MediaQuery.of(context).size.height / 8,
+                                  min(
+                                    48,
+                                    (MediaQuery.of(context).size.width - 20) /
+                                        10,
+                                  ),
+                                ) /
                                 (settings.smallerFont ? 1.5 : 1),
                             fontFamily: settings.font,
                           ),

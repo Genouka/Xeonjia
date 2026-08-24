@@ -25,10 +25,10 @@ extension GetDirection on Direction {
   static Direction fromXY(double x, double y) => fromOffset(Offset(x, y));
   static Direction fromOffset(Offset offset) =>
       (offset.dx.abs() >= offset.dy.abs())
-          ? offset.dx >= 0
-              ? Direction.right
-              : Direction.left
-          : offset.dy >= 0
-              ? Direction.down
-              : Direction.up;
+      ? offset.dx >= 0
+            ? Direction.right
+            : Direction.left
+      : offset.dy >= 0
+      ? Direction.down
+      : Direction.up;
 }

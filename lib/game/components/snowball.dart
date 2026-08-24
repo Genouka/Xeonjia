@@ -1,17 +1,24 @@
 import 'dart:math';
 
 import 'package:flame/components.dart';
+import 'package:flame/sprite.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
 /// Shot created by [SnowBallWeapon]
 class SnowballComponent extends BasicComponent with Walker {
   SnowballComponent(
-      Point startingPosition, this.father, this.direction, this.atk)
-      : super(
-            null,
-            Point(startingPosition.x / componentSize,
-                startingPosition.y / componentSize),
-            {});
+    Point startingPosition,
+    this.father,
+    this.direction,
+    this.atk,
+  ) : super(
+        null,
+        Point(
+          startingPosition.x / componentSize,
+          startingPosition.y / componentSize,
+        ),
+        {},
+      );
 
   @override
   BasicComponent? father;
@@ -47,39 +54,47 @@ class SnowballComponent extends BasicComponent with Walker {
   @override
   void isMoving() {
     if (father!.distance(this) > componentSize * 2 && direction != null) {
-      gameRef.updateCamera(x - direction!.dx * 2 * componentSize,
-          y - direction!.dy * 2 * componentSize);
+      game.updateCamera(
+        x - direction!.dx * 2 * componentSize,
+        y - direction!.dy * 2 * componentSize,
+      );
     }
   }
 
   @override
-  void onCollision(BasicComponent? collidedComponent,
-      [bool wasStationary = false]) {
+  void onCollision(
+    BasicComponent? collidedComponent, [
+    bool wasStationary = false,
+  ]) {
     if (isBeingDeleted) return;
     x += direction!.dx * componentSize / 2;
     y += direction!.dy * componentSize / 2;
     stop();
-    gameRef.playSound(Sfx.snowball);
+    game.playSound(Sfx.snowball);
     isBeingDeleted = true;
-    animation = atlas.getAnimation('${name}_explosion')
-      ..onComplete = () {
-        if (gameRef.activePlayer != null &&
-            !gameRef.playerOne!.isBeingDeleted) {
-          gameRef.camera.moveTo(Vector2(
-              gameRef.moveCamera(
-                  gameRef.size.x, gameRef.map.width, gameRef.activePlayer!.x),
-              gameRef.moveCamera(gameRef.size.y, gameRef.map.height,
-                  gameRef.activePlayer!.y)));
-        }
-        hide();
-        // Wait 0.5 seconds before next npc move
-        gameRef.add(TimerComponent(
-            period: (father as Walker).teamId != 0 ? 0.5 : 0,
-            onTick: () {
-              gameRef.useMove(father as Walker);
-              delete();
-            }));
-      };
+    animation = atlas.getAnimation('${name}_explosion');
+    animationTicker = SpriteAnimationTicker(animation!);
+    animationTicker!.onComplete = () {
+      if (game.activePlayer != null && !game.playerOne!.isBeingDeleted) {
+        game.camera.moveTo(
+          Vector2(
+            game.moveCamera(game.size.x, game.map.width, game.activePlayer!.x),
+            game.moveCamera(game.size.y, game.map.height, game.activePlayer!.y),
+          ),
+        );
+      }
+      hide();
+      // Wait 0.5 seconds before next npc move
+      game.add(
+        TimerComponent(
+          period: (father as Walker).teamId != 0 ? 0.5 : 0,
+          onTick: () {
+            game.useMove(father as Walker);
+            delete();
+          },
+        ),
+      );
+    };
     if (collidedComponent?.teamId != father!.teamId) {
       collidedComponent?.hpDifference(-atk, cause: father);
     }

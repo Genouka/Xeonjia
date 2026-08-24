@@ -4,8 +4,8 @@ import 'package:xeonjia/game/xeonjia.dart';
 
 /// Manage game [Message]s (used in [DialogBox])
 class MessageManager {
-  MessageManager(this.gameRef);
-  final XeonjiaGame gameRef;
+  MessageManager(this.game);
+  final XeonjiaGame game;
   VoidCallback? callback;
 
   /// [Message]s to show
@@ -18,7 +18,7 @@ class MessageManager {
 
   /// Increase [_currentIndex] and check if there are other messages
   bool get hasOtherMessages =>
-      _currentIndex + 1 < (gameRef.messageManager._messages.length);
+      _currentIndex + 1 < (game.messageManager._messages.length);
 
   /// Answers shown at the end of the dialog
   List<Answer> answers = [];
@@ -29,14 +29,14 @@ class MessageManager {
     _messages = [];
     answers = [];
     if (!soft) {
-      gameRef.continueAction(delay: 0);
+      game.continueAction(delay: 0);
       callback?.call();
       callback = null;
       if (hideMap) {
         hideMap = false;
-        gameRef.overlays.add('leafButton');
-        gameRef.playBackgroundMusic();
-        gameRef.statusBox.state?.refresh();
+        game.overlays.add('leafButton');
+        game.playBackgroundMusic();
+        game.statusBox.state?.refresh();
       }
     }
   }
@@ -49,55 +49,62 @@ class MessageManager {
 
   /// Choose an answer
   void chooseAnswer(Answer answer) {
-    gameRef.currentEventLog[answer.questionId] = answer.value;
-    gameRef.messageManager.clear();
-    gameRef.dialogBox.state!.next(removeAnswers: true);
+    game.currentEventLog[answer.questionId] = answer.value;
+    game.messageManager.clear();
+    game.dialogBox.state!.next(removeAnswers: true);
   }
 
   /// Show one or more messages
-  void setMessages(List<Message>? newMessages,
-      {bool? hideMap, VoidCallback? callback}) {
+  void setMessages(
+    List<Message>? newMessages, {
+    bool? hideMap,
+    VoidCallback? callback,
+  }) {
     if (newMessages == null) return;
     this.hideMap = hideMap ?? false;
     if (this.hideMap) {
-      gameRef.overlays.remove('leafButton');
-      gameRef.overlays.remove('miniMapButton');
+      game.overlays.remove('leafButton');
+      game.overlays.remove('miniMapButton');
     }
-    gameRef.statusBox.state?.refresh();
+    game.statusBox.state?.refresh();
     this.callback = callback;
-    _messages.addAll(newMessages.fold([], (previousValue, element) {
-      (previousValue as List<Message>).addAll(_splitMessage(element));
-      return previousValue;
-    }));
+    _messages.addAll(
+      newMessages.fold([], (previousValue, element) {
+        (previousValue as List<Message>).addAll(_splitMessage(element));
+        return previousValue;
+      }),
+    );
     _currentIndex = 0;
-    gameRef.dialogBox.state?.refresh();
-    gameRef.pause(stopMusic: false);
+    game.dialogBox.state?.refresh();
+    game.pause(stopMusic: false);
   }
 
   /// Split message in sentences and group them
   List<Message> _splitMessage(Message message) {
     var strings = <String>[];
-    RegExp(r'([^.,;?!…。！？]*[.,;?!»…。？！]*)\s*')
-        .allMatches(message.text)
-        .forEach((m) {
-      var match = m.group(0);
-      (strings.isNotEmpty &&
-              !match!.contains(r'\n') &&
-              (strings.last.length + match.length < 90 ||
-                  (match.length < 3 && strings.isNotEmpty)))
-          ? strings.last += match
-          : strings.add(match!.replaceAll(r'\n', ''));
-    });
+    RegExp(r'([^.,;?!…。！？]*[.,;?!»…。？！]*)\s*').allMatches(message.text).forEach(
+      (m) {
+        var match = m.group(0);
+        (strings.isNotEmpty &&
+                !match!.contains(r'\n') &&
+                (strings.last.length + match.length < 90 ||
+                    (match.length < 3 && strings.isNotEmpty)))
+            ? strings.last += match
+            : strings.add(match!.replaceAll(r'\n', ''));
+      },
+    );
     return strings.fold([], (previousValue, element) {
-      previousValue.add(Message(
-        gameRef,
-        element,
-        author: message.author,
-        component: message.component,
-        translate: false,
-        font: message.font,
-        xfaFile: message.xfaFile,
-      ));
+      previousValue.add(
+        Message(
+          game,
+          element,
+          author: message.author,
+          component: message.component,
+          translate: false,
+          font: message.font,
+          xfaFile: message.xfaFile,
+        ),
+      );
       return previousValue;
     });
   }

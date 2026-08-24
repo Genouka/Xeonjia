@@ -8,7 +8,7 @@ import 'package:xeonjia/game/xeonjia_game.dart';
 
 /// Ice floor
 class BackgroundComponent extends PositionComponent
-    with HasGameRef<XeonjiaGame> {
+    with HasGameReference<XeonjiaGame> {
   @override
   final int priority = -999;
   late ui.Image img;
@@ -23,12 +23,16 @@ class BackgroundComponent extends PositionComponent
 
   @override
   void render(Canvas canvas) {
-    gameRef.worldMapEnabled
+    game.worldMapEnabled
         ? null
         : paintImage(
             canvas: canvas,
-            rect: Rect.fromLTWH(0, 0, width * gameRef.miniMapZoom,
-                height * gameRef.miniMapZoom),
+            rect: Rect.fromLTWH(
+              0,
+              0,
+              width * game.miniMapZoom,
+              height * game.miniMapZoom,
+            ),
             image: img,
             repeat: ImageRepeat.repeat,
             filterQuality: FilterQuality.none,
@@ -37,8 +41,8 @@ class BackgroundComponent extends PositionComponent
 
   @override
   void onGameResize(Vector2 size) {
-    width = gameRef.map.width * componentSize;
-    height = gameRef.map.height * componentSize;
+    width = game.map.width * componentSize;
+    height = game.map.height * componentSize;
     super.onGameResize(size);
   }
 }

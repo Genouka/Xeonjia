@@ -36,7 +36,9 @@ class WelcomePage extends StatelessWidget {
                         child: Text(
                           'Welcome'.i18n,
                           style: TextStyle(
-                              fontSize: 48, fontFamily: settings.font),
+                            fontSize: 48,
+                            fontFamily: settings.font,
+                          ),
                         ),
                       ),
                       Padding(
@@ -46,15 +48,21 @@ class WelcomePage extends StatelessWidget {
                               .i18n,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: 32, fontFamily: settings.font),
+                            fontSize: 32,
+                            fontFamily: settings.font,
+                          ),
                         ),
                       ),
                       Center(
                         child: Container(
                           padding: const EdgeInsets.symmetric(vertical: 10),
                           constraints: const BoxConstraints(maxWidth: 250),
-                          child: insertNameForm(_formKey, _textFieldController,
-                              saveName, context),
+                          child: insertNameForm(
+                            _formKey,
+                            _textFieldController,
+                            saveName,
+                            context,
+                          ),
                         ),
                       ),
                       Padding(
@@ -66,13 +74,14 @@ class WelcomePage extends StatelessWidget {
                             child: Text(
                               '> ' + "Let's start!".i18n,
                               style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 32,
-                                  fontFamily: settings.font),
+                                color: Colors.white,
+                                fontSize: 32,
+                                fontFamily: settings.font,
+                              ),
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

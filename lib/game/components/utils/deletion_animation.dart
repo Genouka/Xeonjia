@@ -12,7 +12,7 @@ mixin DeletionAnimation on Walker {
   void deletionAnimation({required VoidCallback callback}) {
     isBeingDeleted = true;
     timer = TimerComponent(period: 1.5, onTick: callback);
-    gameRef.add(timer!);
+    game.add(timer!);
   }
 
   @override
@@ -21,20 +21,21 @@ mixin DeletionAnimation on Walker {
       setOpacity(max(0, 1 - timer!.timer.progress - 0.5));
       super.render(canvas);
       canvas.drawCircle(
-          Offset(componentSize / 2, componentSize / 2),
-          max(0, 1 - timer!.timer.progress - 0.5) * 45,
-          Paint()
-            ..color = Colors.black
-            ..strokeWidth = 3
-            ..style = PaintingStyle.stroke);
+        Offset(componentSize / 2, componentSize / 2),
+        max(0, 1 - timer!.timer.progress - 0.5) * 45,
+        Paint()
+          ..color = Colors.black
+          ..strokeWidth = 3
+          ..style = PaintingStyle.stroke,
+      );
     } else {
       super.render(canvas);
     }
   }
 
   @override
-  void respawn(XeonjiaGame gameRef) {
+  void respawn(XeonjiaGame game) {
     makeOpaque();
-    super.respawn(gameRef);
+    super.respawn(game);
   }
 }

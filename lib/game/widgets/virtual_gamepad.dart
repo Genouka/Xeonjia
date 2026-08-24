@@ -15,91 +15,95 @@ class Button extends HudButtonComponent {
     this.color = Colors.blueGrey,
     this.visibility,
     this.movable = true,
-  })  : paint = Paint()
-          ..strokeWidth = 6
-          ..color = color.withOpacity(0.7)
-          ..style = PaintingStyle.stroke,
-        super(
-          onReleased: () {
-            if (visibility?.call() ?? true) onTap();
-          },
-          priority: 9999999,
-        ) {
-    (button as CircleComponent).paint.color = color.withOpacity(0.6);
-    (buttonDown as CircleComponent).paint.color = color.withOpacity(0.4);
+  }) : paint = Paint()
+         ..strokeWidth = 6
+         ..color = color.withAlpha((255.0 * 0.7).round())
+         ..style = PaintingStyle.stroke,
+       super(
+         onReleased: () {
+           if (visibility?.call() ?? true) onTap();
+         },
+         priority: 9999999,
+       ) {
+    (button as CircleComponent).paint.color = color.withAlpha(
+      (255.0 * 0.6).round(),
+    );
+    (buttonDown as CircleComponent).paint.color = color.withAlpha(
+      (255.0 * 0.4).round(),
+    );
     hasIcon = text.length > 1;
     if (!hasIcon) textBox.text = text;
   }
 
-  Button.A(XeonjiaGame gameRef)
-      : this(gameRef.inspectButtonKey, () => gameRef.user!.inspect(),
-            visibility: () =>
-                !gameRef.miniMapActive && (gameRef.user?.isMyTurn ?? false));
+  Button.A(XeonjiaGame game)
+    : this(
+        game.inspectButtonKey,
+        () => game.user!.inspect(),
+        visibility: () => !game.miniMapActive && (game.user?.isMyTurn ?? false),
+      );
 
-  Button.P(XeonjiaGame gameRef)
-      : this(
-          gameRef.punchButtonKey,
-          () => gameRef.user!.shoot(0),
-          buttonPosition: Anchor.topLeft,
-          color: Colors.blue.shade800,
-          visibility: () =>
-              gameRef.overlays.isActive('rulesButton') &&
-              gameRef.user!.isMyTurn,
-        );
+  Button.P(XeonjiaGame game)
+    : this(
+        game.punchButtonKey,
+        () => game.user!.shoot(0),
+        buttonPosition: Anchor.topLeft,
+        color: Colors.blue.shade800,
+        visibility: () =>
+            game.overlays.isActive('rulesButton') && game.user!.isMyTurn,
+      );
 
-  Button.S(XeonjiaGame gameRef)
-      : this(
-          'snowball-icon',
-          () => gameRef.user!.shoot(Weapons.snowball.id),
-          buttonPosition: Anchor.topRight,
-          color: Colors.blueGrey.shade800,
-          percent: () =>
-              gameRef.user!.getWeaponById(Weapons.snowball.id).ppPercentage,
-          visibility: () =>
-              gameRef.overlays.isActive('rulesButton') &&
-              gameRef.user!.isMyTurn,
-        );
+  Button.S(XeonjiaGame game)
+    : this(
+        'snowball-icon',
+        () => game.user!.shoot(Weapons.snowball.id),
+        buttonPosition: Anchor.topRight,
+        color: Colors.blueGrey.shade800,
+        percent: () =>
+            game.user!.getWeaponById(Weapons.snowball.id).ppPercentage,
+        visibility: () =>
+            game.overlays.isActive('rulesButton') && game.user!.isMyTurn,
+      );
 
-  Button.M(XeonjiaGame gameRef)
-      : this(
-          'mine-icon',
-          () => gameRef.user!.shoot(Weapons.mine.id),
-          buttonPosition: Anchor.bottomLeft,
-          color: Colors.blueGrey.shade800,
-          percent: () =>
-              gameRef.user!.getWeaponById(Weapons.mine.id).ppPercentage,
-          visibility: () =>
-              gameRef.overlays.isActive('rulesButton') &&
-              gameRef.user!.isMyTurn,
-        );
+  Button.M(XeonjiaGame game)
+    : this(
+        'mine-icon',
+        () => game.user!.shoot(Weapons.mine.id),
+        buttonPosition: Anchor.bottomLeft,
+        color: Colors.blueGrey.shade800,
+        percent: () => game.user!.getWeaponById(Weapons.mine.id).ppPercentage,
+        visibility: () =>
+            game.overlays.isActive('rulesButton') && game.user!.isMyTurn,
+      );
 
-  Button.plus(XeonjiaGame gameRef)
-      : this(
-          '+',
-          gameRef.zoomMiniMap,
-          buttonPosition: Anchor.topRight,
-          color: Colors.grey.shade800.withOpacity(0.7),
-          visibility: () => gameRef.miniMapActive,
-          movable: false,
-        );
+  Button.plus(XeonjiaGame game)
+    : this(
+        '+',
+        game.zoomMiniMap,
+        buttonPosition: Anchor.topRight,
+        color: Colors.grey.shade800.withAlpha((255.0 * 0.7).round()),
+        visibility: () => game.miniMapActive,
+        movable: false,
+      );
 
-  Button.minus(XeonjiaGame gameRef)
-      : this(
-          '-',
-          () => gameRef.zoomMiniMap(out: true),
-          buttonPosition: Anchor.bottomRight,
-          color: Colors.grey.shade800.withOpacity(0.7),
-          visibility: () => gameRef.miniMapActive,
-          movable: false,
-        );
+  Button.minus(XeonjiaGame game)
+    : this(
+        '-',
+        () => game.zoomMiniMap(out: true),
+        buttonPosition: Anchor.bottomRight,
+        color: Colors.grey.shade800.withAlpha((255.0 * 0.7).round()),
+        visibility: () => game.miniMapActive,
+        movable: false,
+      );
 
   @override
   Future<void> onLoad() async {
     super.onLoad();
     if (hasIcon) {
-      var atlas = await gameRef.loadCustomAtlas('images/metadata/weapons.xfa');
-      spriteComponent =
-          SpriteComponent(sprite: atlas.getSprite(text), priority: 9999999);
+      var atlas = await game.loadCustomAtlas('images/metadata/weapons.xfa');
+      spriteComponent = SpriteComponent(
+        sprite: atlas.getSprite(text),
+        priority: 9999999,
+      );
       placeSprite();
     }
   }
@@ -117,12 +121,18 @@ class Button extends HudButtonComponent {
   final PositionComponent button = CircleComponent(radius: 20, paint: Paint());
 
   @override
-  final PositionComponent buttonDown =
-      CircleComponent(radius: 20, paint: Paint());
+  final PositionComponent buttonDown = CircleComponent(
+    radius: 20,
+    paint: Paint(),
+  );
 
   SpriteComponent? spriteComponent;
   final TextBoxComponent textBox = TextBoxComponent(
-      text: '', size: Vector2.all(40), align: Anchor.center, priority: 9999999);
+    text: '',
+    size: Vector2.all(40),
+    align: Anchor.center,
+    priority: 9999999,
+  );
   bool hasIcon = false;
   void placeSprite() {
     spriteComponent!.size = size / 1.3;
@@ -142,16 +152,15 @@ class Button extends HudButtonComponent {
     size = Vector2.all(getDimension(gameSize));
     (button as CircleComponent).radius = size.x / 2;
     (buttonDown as CircleComponent).radius = size.x / 2;
-    if (gameRef.buildContext != null) {
+    if (game.buildContext != null) {
       if (spriteComponent != null) {
         placeSprite();
       } else {
         textBox.size = size;
         textBox.textRenderer = TextPaint(
-            style: Theme.of(gameRef.buildContext!)
-                .textTheme
-                .labelLarge!
-                .copyWith(fontSize: size.x / 1.5));
+          style: Theme.of(game.buildContext!).textTheme.labelLarge!
+              .copyWith(fontSize: size.x / 1.5),
+        );
         textBox.text = text + ' ';
         textBox.text = text.trim();
       }
@@ -162,27 +171,35 @@ class Button extends HudButtonComponent {
   static double getDimension(Vector2 size) =>
       max(45, (size.toSize().shortestSide / 10) * (0.2 + settings.dPadSize));
   void updatePosition() {
-    var buttonsDimension = getDimension(gameRef.size);
-    settings.buttonsOffset = settings.buttonsOffset.dx == -1
-        ? Offset(buttonsDimension * 2, buttonsDimension * 2)
-        : Offset(
-            min(gameRef.size.x - buttonsDimension * 2,
-                max(buttonsDimension, settings.buttonsOffset.dx)),
-            min(gameRef.size.y - buttonsDimension * 2,
-                max(buttonsDimension, settings.buttonsOffset.dy)));
+    var buttonsDimension = getDimension(game.size);
+    var minMargin = buttonsDimension * 1.3;
+    var maxMargin = buttonsDimension * 2.5;
+    var defaultMargin = buttonsDimension * 1.6;
+
+    double marginX;
+    double marginY;
+    if (settings.buttonsOffset.dx == -1) {
+      marginX = defaultMargin;
+      marginY = defaultMargin;
+    } else {
+      marginX = settings.buttonsOffset.dx.clamp(minMargin, maxMargin);
+      marginY = settings.buttonsOffset.dy.clamp(minMargin, maxMargin);
+    }
+
+    settings.buttonsOffset = Offset(marginX, marginY);
     saveSettings();
+
     position = movable
         ? Vector2(
-            gameRef.size.x -
-                (buttonPosition.x == 0
-                    ? settings.buttonsOffset.dx + size.x * 2
-                    : settings.buttonsOffset.dx),
-            gameRef.size.y -
-                (buttonPosition.y == 0
-                    ? settings.buttonsOffset.dy + size.y * 2
-                    : settings.buttonsOffset.dy))
-        : Vector2(gameRef.size.x - size.x * (buttonPosition.x == 0 ? 4 : 2),
-            gameRef.size.y - size.x * (buttonPosition.y == 0 ? 4 : 2));
+            game.size.x -
+                (buttonPosition.x == 0 ? marginX + size.x * 2 : marginX),
+            game.size.y -
+                (buttonPosition.y == 0 ? marginY + size.y * 2 : marginY),
+          )
+        : Vector2(
+            game.size.x - size.x * (buttonPosition.x == 0 ? 4 : 2),
+            game.size.y - size.x * (buttonPosition.y == 0 ? 4 : 2),
+          );
   }
 
   @override
@@ -190,7 +207,9 @@ class Button extends HudButtonComponent {
     if (percent != null) {
       canvas.drawArc(
         Rect.fromCircle(
-            radius: size.x / 2 + 3, center: Offset(size.x / 2, size.y / 2)),
+          radius: size.x / 2 + 3,
+          center: Offset(size.x / 2, size.y / 2),
+        ),
         -pi / 2,
         2 * pi * percent!(),
         false,
@@ -208,16 +227,16 @@ class Button extends HudButtonComponent {
 
 /// Virtual D-pad
 class VirtualDPad extends StatefulWidget {
-  VirtualDPad(this.gameRef);
-  final XeonjiaGame gameRef;
+  VirtualDPad(this.game);
+  final XeonjiaGame game;
 
   @override
   State<VirtualDPad> createState() => _VirtualDPadState();
 }
 
 class _VirtualDPadState extends State<VirtualDPad> {
-  final Color arrowColor = Colors.white.withOpacity(0.7);
-  final Color buttonColor = Colors.grey.withOpacity(0.3);
+  final Color arrowColor = Colors.white.withAlpha((255.0 * 0.7).round());
+  final Color buttonColor = Colors.grey.withAlpha((255.0 * 0.3).round());
   Direction? direction;
   double size = 0;
   bool moving = false;
@@ -245,15 +264,22 @@ class _VirtualDPadState extends State<VirtualDPad> {
   Widget build(BuildContext context) {
     size = MediaQuery.of(context).size.shortestSide / 8 * settings.dPadSize;
     settings.dPadOffset = Offset(
-        max(
-            0,
-            min(MediaQuery.of(context).size.width - size * 3,
-                settings.dPadOffset.dx)),
-        max(
-            0,
-            min(MediaQuery.of(context).size.height - size * 3,
-                settings.dPadOffset.dy)));
-    String currentMapId = widget.gameRef.map.id;
+      max(
+        0,
+        min(
+          MediaQuery.of(context).size.width - size * 3,
+          settings.dPadOffset.dx,
+        ),
+      ),
+      max(
+        0,
+        min(
+          MediaQuery.of(context).size.height - size * 3,
+          settings.dPadOffset.dy,
+        ),
+      ),
+    );
+    String currentMapId = widget.game.map.id;
     return settings.showDPad
         ? Positioned(
             left: settings.dPadOffset.dx,
@@ -262,28 +288,31 @@ class _VirtualDPadState extends State<VirtualDPad> {
               onPanStart: (details) async {
                 direction = getDirection(details.localPosition);
                 if (direction == null) {
-                  longPressTime = widget.gameRef.elapsed;
+                  longPressTime = widget.game.elapsed;
                 } else {
                   while (direction != null &&
-                      widget.gameRef.map.id == currentMapId &&
-                      widget.gameRef.isNotPaused &&
+                      widget.game.map.id == currentMapId &&
+                      widget.game.isNotPaused &&
                       !moving &&
-                      widget.gameRef.user!.isMyTurn) {
-                    widget.gameRef.movePlayer(direction!, slow: true);
+                      widget.game.user!.isMyTurn) {
+                    widget.game.movePlayer(direction!, slow: true);
                     await Future.delayed(const Duration(milliseconds: 50));
                   }
                 }
               },
               onPanUpdate: (details) {
                 if (moving ||
-                    (widget.gameRef.elapsed > longPressTime + 1 &&
+                    (widget.game.elapsed > longPressTime + 1 &&
                         direction == null)) {
                   moving = true;
-                  setState(() => settings.dPadOffset = Offset(
+                  setState(
+                    () => settings.dPadOffset = Offset(
                       details.globalPosition.dx - size * 1.5,
                       MediaQuery.of(context).size.height -
                           details.globalPosition.dy -
-                          size * 1.5));
+                          size * 1.5,
+                    ),
+                  );
                 } else {
                   direction = getDirection(details.localPosition) ?? direction;
                 }
@@ -341,20 +370,20 @@ class _VirtualDPadState extends State<VirtualDPad> {
               borderRadius: BorderRadius.only(
                 topLeft:
                     direction == Direction.up || direction == Direction.left
-                        ? const Radius.circular(5)
-                        : Radius.zero,
+                    ? const Radius.circular(5)
+                    : Radius.zero,
                 topRight:
                     direction == Direction.up || direction == Direction.right
-                        ? const Radius.circular(5)
-                        : Radius.zero,
+                    ? const Radius.circular(5)
+                    : Radius.zero,
                 bottomLeft:
                     direction == Direction.down || direction == Direction.left
-                        ? const Radius.circular(5)
-                        : Radius.zero,
+                    ? const Radius.circular(5)
+                    : Radius.zero,
                 bottomRight:
                     direction == Direction.down || direction == Direction.right
-                        ? const Radius.circular(5)
-                        : Radius.zero,
+                    ? const Radius.circular(5)
+                    : Radius.zero,
               ),
             ),
             child: arrowIcon(direction),

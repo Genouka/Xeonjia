@@ -2,54 +2,57 @@ import 'package:xeonjia/game/xeonjia.dart';
 
 extension CreateComponent on Tile {
   /// Create components based on tile property "type"
-  void createComponent(XeonjiaGame gameRef) {
+  void createComponent(XeonjiaGame game) {
     switch (tiledClass) {
       case 'Solid':
-        gameRef.add(StaticComponent(this));
+        game.addComponent(StaticComponent(this));
         break;
       case 'Modifier':
-        properties['itemId'] ??= '${gameRef.map.id}.$id';
+        properties['itemId'] ??= '${game.map.id}.$id';
         var itemId = properties['itemId'];
 
         // Load item only if it is not an unique item (id == "0")
         // or if it is not already owned by the player
         if (itemId == '0' || !mainCharacter.itemList.contains(itemId)) {
-          gameRef.add(ModifierComponent(this));
+          game.addComponent(ModifierComponent(this));
         }
         break;
       case 'Ground':
-        gameRef.add(StaticComponent(this, walkable: true));
+        game.addComponent(StaticComponent(this, walkable: true));
         break;
       case 'Door':
         if (properties['isPlayerOne'] == true) {
-          gameRef.add(CharacterComponent(
+          game.addComponent(
+            CharacterComponent(
               Tile()
                 ..id = -1
                 ..position = position
                 ..properties = properties,
               inputWeaponList: mainCharacter.weaponList
                   .map((e) => Weapon.fromJson(e.toJson()))
-                  .toList()));
+                  .toList(),
+            ),
+          );
         }
         if (properties['roomId'] != '0' && properties['createDoor'] != false) {
-          gameRef.add(DoorComponent(this));
+          game.addComponent(DoorComponent(this));
         }
         break;
       case 'ThinWall':
-        gameRef.add(ThinWallComponent(this));
+        game.addComponent(ThinWallComponent(this));
         break;
       case 'NPC':
-        gameRef.add(CharacterComponent.npc(this));
+        game.addComponent(CharacterComponent.npc(this));
         break;
       case 'Hurdle':
-        gameRef.add(HurdleComponent(this));
+        game.addComponent(HurdleComponent(this));
         break;
       case 'DirectionChanger':
-        gameRef.add(DirectionChangerComponent(this));
+        game.addComponent(DirectionChangerComponent(this));
         break;
       case 'Monster':
-        if (!(gameRef.currentEventLog['${gameRef.map.id}-safe'] ?? false)) {
-          gameRef.add(MonsterComponent(this));
+        if (!(game.currentEventLog['${game.map.id}-safe'] ?? false)) {
+          game.addComponent(MonsterComponent(this));
         }
         break;
       default:

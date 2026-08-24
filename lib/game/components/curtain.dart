@@ -5,7 +5,8 @@ import 'package:flame/components.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
 
 /// Black curtain shown while changing room
-class CurtainComponent extends PositionComponent with HasGameRef<XeonjiaGame> {
+class CurtainComponent extends PositionComponent
+    with HasGameReference<XeonjiaGame> {
   double _opacity = 1;
   bool get done => _opacity == 0;
   void start() => _opacity = 1;
@@ -14,7 +15,11 @@ class CurtainComponent extends PositionComponent with HasGameRef<XeonjiaGame> {
   void render(Canvas canvas) {
     if (!done) {
       canvas.drawPaint(
-          Paint()..color = const Color(0xff000000).withOpacity(_opacity));
+        Paint()
+          ..color = const Color(
+            0xff000000,
+          ).withAlpha((255.0 * _opacity).round()),
+      );
     }
   }
 

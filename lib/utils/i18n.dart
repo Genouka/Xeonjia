@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:i18n_extension/i18n_extension.dart';
-import 'package:i18n_extension/io/import.dart';
+import 'package:i18n_extension_importer/i18n_extension_importer.dart';
 
 const List<Locale> enabledLocales = [
   Locale('de'),
@@ -15,8 +15,8 @@ const List<Locale> enabledLocales = [
   Locale('ru'),
   Locale('tr'),
   Locale('vi'),
-  Locale('zh_cn'),
-  Locale('zh_tw')
+  Locale('zh', 'cn'),
+  Locale('zh', 'tw'),
 ];
 final List<Locale> supportedLocales = [
   ...enabledLocales,
@@ -28,23 +28,12 @@ final List<Locale> supportedLocales = [
   const Locale('pl'),
   const Locale('uk'),
 ];
-const languagesWithSpecialCharacters = [
-  'ja',
-  'ru',
-  'uk',
-  'zh_cn',
-  'zh_tw'
-];
-const languagesWithNonSupportedCharacters = [
-  'be',
-  'bn',
-  'kk',
-  'vi',
-];
+const languagesWithSpecialCharacters = ['ja', 'ru', 'uk', 'zh_cn', 'zh_tw'];
+const languagesWithNonSupportedCharacters = ['be', 'bn', 'kk', 'vi'];
 
 const Map<String, List<String>> languageNames = {
   'zh_cn': ['Chinese Simplified', '中文简体'],
-  'zh_tw': ['Chinese Traditional','中文正體'],
+  'zh_tw': ['Chinese Traditional', '中文正體'],
   'es': ['Spanish', 'Español'],
   'en': ['English', 'English'],
   'be': ['Belarusian', 'беларуская мова'],
@@ -78,17 +67,22 @@ const Map<String, List<String>> languageNames = {
 };
 
 extension Localization on String {
-  static TranslationsByLocale _translations = Translations.byLocale('en');
+  static Translations _translations = Translations.byLocale('en');
   static Future<void> loadTranslations() async {
     for (final locale in supportedLocales) {
-      var language = locale.languageCode;
+      var language =
+          locale.languageCode +
+          (locale.countryCode != null ? '_${locale.countryCode}' : '');
+      var languagePath = language;
       if (language == 'en') continue;
-      if (language == 'zh_tw') language = 'zh-Hant';
-      if (language == 'zh_cn') language = 'zh-Hans';
-      if (language == 'pt') language += '-BR';
+      if (language == 'zh_tw') languagePath = 'zh-Hant';
+      if (language == 'zh_cn') languagePath = 'zh-Hans';
+      if (language == 'pt') languagePath += '-BR';
       for (final fileName in ['story', 'ui']) {
         _translations += await GettextImporter().fromAssetFile(
-            locale.languageCode, 'locale/$language/LC_MESSAGES/$fileName.po');
+          language,
+          'locale/$languagePath/LC_MESSAGES/$fileName.po',
+        );
       }
     }
   }
