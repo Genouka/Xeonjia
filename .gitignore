@@ -116,6 +116,9 @@ flutter_export_environment.sh
 # Web related
 lib/generated_plugin_registrant.dart
 
+# Widget Preview related
+.widget_preview/
+
 # Coverage
 coverage/
 
