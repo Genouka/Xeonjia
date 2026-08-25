@@ -11,9 +11,8 @@ import 'package:xml/xml.dart';
 
 /// Import map from a TMX file
 Future<void> importMap(XeonjiaGame game, String fileName) async {
-  var mapXml = XmlDocument.parse(
-    await rootBundle.loadString(fileName),
-  ).rootElement;
+  var mapXml = XmlDocument.parse(await rootBundle.loadString(fileName))
+      .rootElement;
 
   // Get map information
   game.map
@@ -73,99 +72,103 @@ Future<void> importMap(XeonjiaGame game, String fileName) async {
   var tileMap = <int, Tile>{};
 
   // Read tilesets
-  await Future.forEach(mapXml.findElements('tileset'), (
-    XmlElement tilesetElement,
-  ) async {
-    var firstGid = int.parse(tilesetElement.getAttribute('firstgid')!);
+  await Future.wait(
+    mapXml.findElements('tileset').map((tilesetElement) async {
+      var firstGid = int.parse(tilesetElement.getAttribute('firstgid')!);
+      XmlElement tileset = (tilesetElement.getAttribute('source') == null)
+          ? tilesetElement
+          : XmlDocument.parse(
+              await rootBundle.loadString(
+                'assets/maps/story/' + tilesetElement.getAttribute('source')!,
+              ),
+            ).rootElement;
 
-    XmlElement tileset = (tilesetElement.getAttribute('source') == null)
-        ? tilesetElement
-        : XmlDocument.parse(
-            await rootBundle.loadString(
-              'assets/maps/story/' + tilesetElement.getAttribute('source')!,
-            ),
-          ).rootElement;
+      var tileHeight = double.parse(tileset.getAttribute('tileheight')!);
+      var tileCount = int.parse(tileset.getAttribute('tilecount')!);
+      var columns = int.parse(tileset.getAttribute('columns')!);
 
-    var tileHeight = double.parse(tileset.getAttribute('tileheight')!);
-    var tileCount = int.parse(tileset.getAttribute('tilecount')!);
-    var columns = int.parse(tileset.getAttribute('columns')!);
+      var image = tileset
+          .findElements('image')
+          .single
+          .getAttribute('source')!
+          .split('../../images/')
+          .last;
+      var spriteSheet = SpriteSheet(
+        srcSize: Vector2.all(16),
+        image: Flame.images.fromCache(image),
+      );
 
-    var image = tileset
-        .findElements('image')
-        .single
-        .getAttribute('source')!
-        .split('../../images/')
-        .last;
-    var spriteSheet = SpriteSheet(
-      srcSize: Vector2.all(16),
-      image: Flame.images.fromCache(image),
-    );
+      // Get tiles from tileset
+      if (tileset.findElements('tile').isEmpty) {
+        // Used for object groups
+        // Properties are defined in objectgroup
+        for (var i = 0; i < tileCount; i++) {
+          var newTile = Tile(gid: firstGid + i);
+          newTile.sprite = spriteSheet.getSprite(i ~/ columns, i % columns);
+          newTile.properties['imageY'] =
+              ((newTile.gid! - firstGid) / columns).floor() * tileHeight;
+          newTile.properties['image'] = image;
+          tileMap[newTile.gid!] = newTile;
+        }
+      } else {
+        tileset.findElements('tile').forEach((tile) {
+          var newTile = Tile(
+            gid: int.parse(tile.getAttribute('id')!) + firstGid,
+            tiledClass: tile.getAttribute('class'),
+          );
+          newTile.properties['imageY'] =
+              ((newTile.gid! - firstGid) / columns).floor() * tileHeight;
+          newTile.properties['image'] = image;
+          newTile.sprite = spriteSheet.getSprite(
+            (newTile.gid! - firstGid) ~/ columns,
+            (newTile.gid! - firstGid) % columns,
+          );
 
-    // Get tiles from tileset
-    if (tileset.findElements('tile').isEmpty) {
-      // Used for object groups
-      // Properties are defined in objectgroup
-      for (var i = 0; i < tileCount; i++) {
-        var newTile = Tile(gid: firstGid + i);
-        newTile.sprite = spriteSheet.getSprite(i ~/ columns, i % columns);
-        newTile.properties['imageY'] =
-            ((newTile.gid! - firstGid) / columns).floor() * tileHeight;
-        newTile.properties['image'] = image;
-        tileMap[newTile.gid!] = newTile;
-      }
-    } else {
-      tileset.findElements('tile').forEach((tile) {
-        var newTile = Tile(
-          gid: int.parse(tile.getAttribute('id')!) + firstGid,
-          tiledClass: tile.getAttribute('class'),
-        );
-        newTile.properties['imageY'] =
-            ((newTile.gid! - firstGid) / columns).floor() * tileHeight;
-        newTile.properties['image'] = image;
-        newTile.sprite = spriteSheet.getSprite(
-          (newTile.gid! - firstGid) ~/ columns,
-          (newTile.gid! - firstGid) % columns,
-        );
-
-        // Read tile properties
-        var properties = tile.findElements('properties');
-        if (properties.isNotEmpty) {
-          for (final property in properties.single.children) {
-            if (property.attributes.isNotEmpty) {
-              newTile.properties[property.getAttributeNode('name')!.value] =
-                  property.getAttributeNode('value')?.value ??
-                  property.innerText;
+          // Read tile properties
+          var properties = tile.findElements('properties');
+          if (properties.isNotEmpty) {
+            for (final property in properties.single.children) {
+              if (property.attributes.isNotEmpty) {
+                newTile.properties[property.getAttributeNode('name')!.value] =
+                    property.getAttributeNode('value')?.value ??
+                    property.innerText;
+              }
             }
           }
-        }
 
-        // Load animation
-        var animation = tile.findElements('animation');
-        if (animation.isNotEmpty) {
-          animation.single.findElements('frame').forEach((frame) {
-            var id = int.parse(frame.getAttributeNode('tileid')!.value);
-            // All frames have the same duration (it uses the last value)
-            newTile.animationStepTime =
-                double.parse(frame.getAttributeNode('duration')!.value) / 1000;
-            newTile.animationSprites.add(
-              spriteSheet.getSprite(id ~/ columns, id % columns),
-            );
-          });
-        }
+          // Load animation
+          var animation = tile.findElements('animation');
+          if (animation.isNotEmpty) {
+            animation.single.findElements('frame').forEach((frame) {
+              var id = int.parse(frame.getAttributeNode('tileid')!.value);
+              // All frames have the same duration (it uses the last value)
+              newTile.animationStepTime =
+                  double.parse(frame.getAttributeNode('duration')!.value) /
+                  1000;
+              newTile.animationSprites.add(
+                spriteSheet.getSprite(id ~/ columns, id % columns),
+              );
+            });
+          }
 
-        tileMap[newTile.gid!] = newTile;
-      });
-    }
-  });
+          tileMap[newTile.gid!] = newTile;
+        });
+      }
+    }),
+  );
 
   var layerCount = 0;
   mapXml.findElements('layer').forEach((layer) {
-    var mapData = <int>[];
     var gzipMapData = layer.findElements('data').single.innerText;
     var m = gzip.decode(base64.decode(gzipMapData.trim()));
-    for (var i = 0; i < m.length; i += 4) {
-      mapData.add(m[i] + (m[i + 1] << 8) + (m[i + 2] << 16) + (m[i + 3] << 16));
-    }
+    var mapData = List<int>.generate(
+      m.length ~/ 4,
+      (i) =>
+          m[i * 4] |
+          (m[i * 4 + 1] << 8) |
+          (m[i * 4 + 2] << 16) |
+          (m[i * 4 + 3] << 24),
+    );
 
     var lineCount = 0;
     var columnCount = 0;
