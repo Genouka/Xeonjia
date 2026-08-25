@@ -50,6 +50,7 @@ flutter:
     - locale/de/LC_MESSAGES/
     - locale/es/LC_MESSAGES/
     - locale/fr/LC_MESSAGES/
+    - locale/hak/LC_MESSAGES/
     - locale/hu/LC_MESSAGES/
     - locale/id/LC_MESSAGES/
     - locale/it/LC_MESSAGES/
