@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flame/sprite.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
 enum Weapons {
@@ -74,6 +75,7 @@ class PunchWeapon extends Weapon {
     shooter.animation = shooter.atlas.getAnimation(
       '${shooter.name}-${shooter.orientation.index}-punching',
     );
+    shooter.animationTicker = SpriteAnimationTicker(shooter.animation!);
     if (shooter.isUser) shooter.game.playSound(Sfx.punch);
   }
 }
@@ -128,6 +130,7 @@ class SnowBallWeapon extends Weapon {
         shooter.animation = shooter.atlas.getAnimation(
           '${shooter.name}-${shooter.orientation.index}-punching',
         );
+        shooter.animationTicker = SpriteAnimationTicker(shooter.animation!);
       }
     }
   }

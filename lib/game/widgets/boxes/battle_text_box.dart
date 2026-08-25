@@ -8,7 +8,6 @@ import 'package:xeonjia/game/xeonjia.dart';
 class BattleTextBox extends PositionComponent
     with HasGameReference<XeonjiaGame> {
   BattleTextBox(this.text) {
-    game.camera.viewport.add(this);
     priority = 1000;
     anchor = Anchor.center;
   }
@@ -35,7 +34,9 @@ class BattleTextBox extends PositionComponent
   @override
   void update(double dt) {
     if (elapsed > animationDuration && (stayOpenFor -= dt) > 0) return;
-    if ((elapsed += dt) > 2 * animationDuration) game.remove(this);
+    if ((elapsed += dt) > 2 * animationDuration) {
+      game.camera.viewport.remove(this);
+    }
     super.update(dt);
   }
 

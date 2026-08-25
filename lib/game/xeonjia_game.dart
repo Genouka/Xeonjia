@@ -219,11 +219,9 @@ class XeonjiaGame extends FlameGame
   /// Main characters
   CharacterComponent? playerOne;
   CharacterComponent? milla;
-  CharacterComponent? get september =>
-      children.firstWhereOrNull(
-            (c) => c is CharacterComponent && c.name == 'september',
-          )
-          as CharacterComponent?;
+  CharacterComponent? get september => children.firstWhereOrNull(
+    (c) => c is CharacterComponent && c.name == 'september',
+  ) as CharacterComponent?;
 
   /// Battle variables
   Walker? get activePlayer => changingTurn ? null : players[_activePlayerIndex];
@@ -361,7 +359,7 @@ class XeonjiaGame extends FlameGame
 
   /// Get [BasicComponent] from ID
   BasicComponent? getComponentFromId(int id) =>
-      (List.from(children)..addAll(deletedComponents)).firstWhereOrNull(
+      (List.from(world.children)..addAll(deletedComponents)).firstWhereOrNull(
         (c) => c is BasicComponent && c.id == id,
       );
 
@@ -387,11 +385,6 @@ class XeonjiaGame extends FlameGame
   void update(double dt) {
     elapsed += dt;
     inputControllerUpdate(dt);
-    if (!miniMapEnabled && !worldMapEnabled) {
-      inBattle
-          ? updateCamera(activePlayer?.x ?? 0, activePlayer?.y ?? 0)
-          : updateCamera(user?.x ?? 0, user?.y ?? 0);
-    }
     super.update(dt);
   }
 
@@ -412,7 +405,7 @@ class XeonjiaGame extends FlameGame
   bool inBattle = false;
   void startBattle() {
     inBattle = true;
-    this.add(BattleTextBox('Battle!'.i18n.toUpperCase()));
+    camera.viewport.add(BattleTextBox('Battle!'.i18n.toUpperCase()));
     camera.viewport.add(Button.P(this));
     if (playerOne!.hasWeaponId(Weapons.snowball.id)) {
       camera.viewport.add(Button.S(this));
@@ -420,7 +413,7 @@ class XeonjiaGame extends FlameGame
     if (playerOne!.hasWeaponId(Weapons.mine.id)) {
       camera.viewport.add(Button.M(this));
     }
-    this.add(RemainingMovesBox());
+    camera.viewport.add(RemainingMovesBox());
     overlays.remove('mapNameBox');
     overlays.add('rulesButton');
     overlays.remove('leafButton');
@@ -837,11 +830,9 @@ class XeonjiaGame extends FlameGame
   @override
   void onPanDown(DragDownInfo info) {
     longPressMoving = false;
-    longPressButton =
-        children.firstWhereOrNull(
-              (e) => e is Button && e.containsPoint(info.eventPosition.widget),
-            )
-            as Button?;
+    longPressButton = children.firstWhereOrNull(
+      (e) => e is Button && e.containsPoint(info.eventPosition.widget),
+    ) as Button?;
     longPressTime = longPressButton != null ? elapsed : double.infinity;
   }
 

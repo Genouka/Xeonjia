@@ -7,8 +7,7 @@ import 'package:xeonjia/game/xeonjia.dart';
 /// Box with the number of remaining moves
 class RemainingMovesBox extends TextBoxComponent
     with HasGameReference<XeonjiaGame> {
-  RemainingMovesBox() : super(size: Vector2.all(1), align: Anchor.center) {
-    game.camera.viewport.add(this);
+  RemainingMovesBox() : super(size: Vector2(320, 36), align: Anchor.center) {
     priority = 1000;
   }
 

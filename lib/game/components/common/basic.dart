@@ -61,6 +61,7 @@ abstract class BasicComponent extends SpriteComponent
         stepTime: tile.animationStepTime ?? 0.15,
         loop: true,
       );
+      animationTicker = SpriteAnimationTicker(animation!);
     }
     if (tile.hidden) hide();
     x = startingPosition.x * componentSize;
