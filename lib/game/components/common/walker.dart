@@ -91,7 +91,6 @@ mixin Walker on BasicComponent {
   @override
   void update(double dt) {
     if (!isStationary) _move(dt);
-    _previousCollisionSound += dt;
     super.update(dt);
   }
 
@@ -107,21 +106,19 @@ mixin Walker on BasicComponent {
       (_slowedMove > 0 ? speed * 0.6 : speed) * dt,
       componentSize - 1,
     );
-    final candidatePositionTemp = toRect().translate(
-      direction!.dx * delta,
-      direction!.dy * delta,
-    );
     final candidatePosition = Rect.fromLTWH(
-      candidatePositionTemp.left.gridAligned.toDouble(),
-      candidatePositionTemp.top.gridAligned.toDouble(),
-      candidatePositionTemp.width,
-      candidatePositionTemp.height,
+      (x + direction!.dx * delta).gridAligned.toDouble(),
+      (y + direction!.dy * delta).gridAligned.toDouble(),
+      width,
+      height,
     );
 
     // Check if this is going to collide or overlap another component
-    for (final component in game.world.children) {
-      if (component is BasicComponent &&
-          component != this &&
+    final current = gridTile;
+    final next = Point(current.x + direction!.dx, current.y + direction!.dy);
+    final nearby = [...game.componentsAt(current), ...game.componentsAt(next)];
+    for (final component in nearby) {
+      if (component != this &&
           component != father &&
           this != component.father) {
         var componentCollisionRect = component.collisionRect(this);
@@ -164,6 +161,8 @@ mixin Walker on BasicComponent {
         overlappedComponent.overlappedBy(this);
       }
     }
+    // Update grid position after moving
+    game.gridRegister(this);
     isMoving();
     wasStationary = false;
   }
@@ -184,6 +183,7 @@ mixin Walker on BasicComponent {
 
   /// Function called when this component collide another component
   // ignore_for_file: avoid_positional_boolean_parameters
+  double _lastCollisionSoundTime = -1;
   void onCollision(
     BasicComponent collidedComponent, [
     bool wasStationary = false,
@@ -193,17 +193,15 @@ mixin Walker on BasicComponent {
       collidedComponent.hpDifference(-atk, cause: this, poison: poisonAtk);
     } else if (settings.soundEffects &&
         (collidedComponent is! StaticComponent || !collidedComponent.isFloor)) {
-      if (_previousCollisionSound > 1) {
+      if (game.elapsed - _lastCollisionSoundTime > 1) {
         game.playSound(Sfx.collision, volume: 0.4);
-        _previousCollisionSound = 0;
+        _lastCollisionSoundTime = game.elapsed;
       }
     }
     if (_wallInFront() == null) {
       collidedComponent.collidedBy(this, wasStationary);
     }
   }
-
-  double _previousCollisionSound = 1;
 
   @mustCallSuper
   void stop() {
@@ -212,65 +210,38 @@ mixin Walker on BasicComponent {
   }
 
   /// Get components under this one
-  List<BasicComponent> componentsUnder() {
-    return game.world.children
-        .where(
-          (component) =>
-              (component is StaticComponent ||
-                  component is ThinWallComponent) &&
-              (component as BasicComponent).toRect().contains(
-                Offset(x + componentSize / 2, y + componentSize / 2),
-              ),
-        )
-        .toList()
-        .cast<BasicComponent>();
-  }
+  List<BasicComponent> componentsUnder() => game
+      .componentsAt(gridTile)
+      .where((c) => c is StaticComponent || c is ThinWallComponent)
+      .toList();
 
-  /// Workaround (waiting for the priority/layers + collision fix)
-  ThinWallComponent? _wallInFront() =>
-      componentsUnder().firstWhereOrNull(
-            (c) => c is ThinWallComponent && c.isBlocking(orientation),
-          )
-          as ThinWallComponent?;
+  /// Check if a ThinWall is in front of this
+  ThinWallComponent? _wallInFront() {
+    for (final c in game.componentsAt(gridTile)) {
+      if (c is ThinWallComponent && c.isBlocking(orientation)) return c;
+    }
+    return null;
+  }
 
   /// Get component in front of this
   BasicComponent? componentInFront([Direction? orientation]) {
-    var wall = _wallInFront();
+    final wall = _wallInFront();
     if (wall != null) return wall;
-    Offset offset;
-    switch (orientation ?? this.orientation) {
-      case Direction.down:
-        offset = Offset(x + componentSize / 2, y + componentSize * 3 / 2);
-        break;
-      case Direction.up:
-        offset = Offset(x + componentSize / 2, y - componentSize / 2);
-        break;
-      case Direction.right:
-        offset = Offset(x + componentSize * 3 / 2, y + componentSize / 2);
-        break;
-      case Direction.left:
-        offset = Offset(x - componentSize / 2, y + componentSize / 2);
-        break;
+    final dir = orientation ?? this.orientation;
+    final target = Point(gridTile.x + dir.dx, gridTile.y + dir.dy);
+    BasicComponent? best;
+    for (final c in game.componentsAt(target)) {
+      if (c.isFlying() || c.isBeingDeleted) continue;
+      if (best == null || c.priority >= best.priority) best = c;
     }
-    return game.world.children
-            .where(
-              (component) =>
-                  component is BasicComponent &&
-                  component.toRect().contains(offset) &&
-                  !component.isFlying() &&
-                  !component.isBeingDeleted,
-            )
-            .sorted((a, b) => a.priority.compareTo(b.priority))
-            .lastOrNull
-        as BasicComponent?;
+    return best;
   }
 
   /// List of weapon owned
   List<Weapon> weaponList = [];
 
   /// True if this has the weapon
-  bool hasWeaponId(int id) =>
-      weaponList.where((weapon) => weapon.id == id).isNotEmpty;
+  bool hasWeaponId(int id) => weaponList.any((weapon) => weapon.id == id);
 
   /// True if this has the weapon and the weapon has at least one PP
   bool hasPpForWeapon(int id) =>

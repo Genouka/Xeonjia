@@ -151,6 +151,7 @@ class XeonjiaGame extends FlameGame
           .toList(),
     );
     world.removeAll(world.children.toList());
+    grid.clear();
     addComponent(BackgroundComponent());
     players.clear();
     deletedComponents.clear();
@@ -353,6 +354,10 @@ class XeonjiaGame extends FlameGame
           ),
         );
       }
+    }
+    if (component is BasicComponent && component.registeredTile != null) {
+      grid[component.registeredTile]?.remove(component);
+      component.registeredTile = null;
     }
     world.remove(component);
   }
@@ -785,6 +790,21 @@ class XeonjiaGame extends FlameGame
         elapsed > 0.5) {
       user?.updateDirection(direction, slow: slow);
     }
+  }
+
+  /// Spatial grid: tile -> components currently occupying it
+  final Map<Point<int>, List<BasicComponent>> grid = {};
+
+  /// Components present in a given tile (empty list if none)
+  List<BasicComponent> componentsAt(Point<int> tile) => grid[tile] ?? const [];
+
+  /// Register/update a component's position in the grid
+  void gridRegister(BasicComponent c) {
+    final newTile = c.gridTile;
+    if (c.registeredTile == newTile) return;
+    if (c.registeredTile != null) grid[c.registeredTile]?.remove(c);
+    (grid[newTile] ??= []).add(c);
+    c.registeredTile = newTile;
   }
 
   @override

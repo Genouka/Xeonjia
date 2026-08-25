@@ -161,6 +161,13 @@ abstract class BasicComponent extends SpriteComponent
   /// Component default name (eg. girl, man, hero, old-man)
   String? name;
 
+  /// Grid tile currently occupied by this component
+  Point<int> get gridTile =>
+      Point((x / componentSize).round(), (y / componentSize).round());
+
+  /// Tile this component is currently registered under in the grid
+  Point<int>? registeredTile;
+
   @override
   @mustCallSuper
   Future<void>? onLoad() async {
@@ -348,6 +355,7 @@ abstract class BasicComponent extends SpriteComponent
     x *= ratio;
     y *= ratio;
     super.onGameResize(size);
+    game.gridRegister(this);
   }
 
   /// Delete component
