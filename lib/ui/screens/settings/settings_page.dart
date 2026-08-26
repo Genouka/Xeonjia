@@ -1,11 +1,13 @@
 import 'dart:io';
 
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:i18n_extension/i18n_extension.dart';
 import 'package:xeonjia/ui/basic.dart';
 import 'package:xeonjia/ui/themes.dart';
+import 'package:xeonjia/utils/data_transfer.dart';
 import 'package:xeonjia/utils/i18n.dart';
 import 'package:xeonjia/utils/local_data_controller.dart';
 
@@ -544,6 +546,20 @@ class SettingsPageState extends State<SettingsPage> {
                             ),
                           ),
                         ),
+                        _tile(
+                          index: 7,
+                          title: 'Export data'.i18n,
+                          subtitle: 'Save your game and your settings in a backup file'
+                              .i18n,
+                          onTap: exportUserData,
+                        ),
+                        _tile(
+                          index: 8,
+                          title: 'Import data'.i18n,
+                          subtitle: 'Restore your game and your settings from a backup file'
+                              .i18n,
+                          onTap: importUserData,
+                        ),
                       ],
                     ),
                   ),
@@ -555,6 +571,176 @@ class SettingsPageState extends State<SettingsPage> {
       ),
     ),
   );
+
+  /// Settings entry with a title, a description and an action
+  Widget _tile({
+    required int index,
+    required String title,
+    required String subtitle,
+    required VoidCallback onTap,
+  }) => Container(
+    margin: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+    color: focusItem == index ? Colors.white24 : Colors.white12,
+    child: Material(
+      type: MaterialType.transparency,
+      child: ListTile(
+        onFocusChange: (bool focus) => setState(() {
+          focus ? focusItem = index : null;
+        }),
+        title: Text(
+          title,
+          style: TextStyle(
+            fontSize: settings.smallerFont ? 24 : 32,
+            fontFamily: settings.font,
+            color: Colors.white,
+            height: 1,
+          ),
+        ),
+        subtitle: Text(
+          subtitle,
+          style: TextStyle(
+            fontSize: settings.smallerFont ? 20 : 24,
+            fontFamily: settings.font,
+            color: Colors.white70,
+            height: 1,
+          ),
+        ),
+        onTap: onTap,
+      ),
+    ),
+  );
+
+  /// Write game data and settings in a file chosen by the player
+  Future<void> exportUserData() async {
+    Uri? file;
+    try {
+      file = await FilePicker.saveFile(
+        dialogTitle: 'Export data'.i18n,
+        fileName: backupFileName(),
+        bytes: exportData(),
+        mimeType: backupMimeType,
+      );
+    } catch (_) {
+      _showMessage('Something went wrong.'.i18n);
+      return;
+    } finally {
+      SystemChrome.restoreSystemUIOverlays();
+    }
+    if (file != null) _showMessage('Data exported.'.i18n);
+  }
+
+  /// Replace game data and settings with the content of a backup file
+  Future<void> importUserData() async {
+    if (!await _confirmImport()) return;
+    PlatformFile? file;
+    try {
+      file = await FilePicker.pickFile(dialogTitle: 'Import data'.i18n);
+    } catch (_) {
+      _showMessage('Something went wrong.'.i18n);
+      return;
+    } finally {
+      SystemChrome.restoreSystemUIOverlays();
+    }
+    if (file == null) return;
+
+    final ImportError? error;
+    try {
+      error = importData(await file.readAsBytes());
+    } catch (_) {
+      _showMessage('Something went wrong.'.i18n);
+      return;
+    }
+    if (error != null) {
+      _showMessage(switch (error) {
+        ImportError.notABackup => 'This is not a Xeonjia backup file.'.i18n,
+        ImportError.unsupportedVersion =>
+          'This backup file requires a newer version of the app.'.i18n,
+        ImportError.corrupted => 'This backup file is damaged.'.i18n,
+      });
+      return;
+    }
+
+    _textFieldController.text = mainCharacter.name;
+    if (mounted) I18n.of(context).locale = settings.locale;
+    updateGameTheme();
+    setState(() {});
+    _showMessage('Data imported.'.i18n);
+  }
+
+  /// Ask the player before overwriting the current game
+  Future<bool> _confirmImport() async {
+    final bool? confirmed = await showDialog<bool>(
+      context: context,
+      builder: (BuildContext context) => AlertDialog(
+        title: Text(
+          'Import data'.i18n,
+          style: TextStyle(
+            fontSize: settings.smallerFont ? 24 : 32,
+            fontFamily: settings.font,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        content: Text(
+          'Your current game and your current settings will be lost.'.i18n,
+          style: TextStyle(
+            fontSize: settings.smallerFont ? 20 : 24,
+            fontFamily: settings.font,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        actionsAlignment: MainAxisAlignment.center,
+        actions: <Widget>[
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            style: TextButton.styleFrom(
+              foregroundColor: Theme.of(context).primaryColor,
+            ),
+            child: Text(
+              'Discard'.i18n,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: settings.smallerFont ? 20 : 24,
+                fontFamily: settings.font,
+              ),
+            ),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            style: TextButton.styleFrom(
+              foregroundColor: Theme.of(context).primaryColor,
+            ),
+            child: Text(
+              'Import data'.i18n,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: settings.smallerFont ? 20 : 24,
+                fontFamily: settings.font,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+    SystemChrome.restoreSystemUIOverlays();
+    return confirmed ?? false;
+  }
+
+  /// Show the outcome of an import or an export
+  void _showMessage(String message) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          message,
+          style: TextStyle(
+            fontSize: settings.smallerFont ? 20 : 24,
+            fontFamily: settings.font,
+            height: 1,
+          ),
+        ),
+      ),
+    );
+  }
 
   void saveName(BuildContext context, String text) {
     if (_formKey.currentState!.validate()) {
