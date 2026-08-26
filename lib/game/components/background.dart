@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:ui' as ui;
 
-import 'package:flame/components.dart';
+import 'package:flame/components.dart' hide Matrix4;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xeonjia/game/xeonjia_game.dart';
@@ -12,6 +12,7 @@ class BackgroundComponent extends PositionComponent
   @override
   final int priority = -999;
   late ui.Image img;
+  late final Paint _paint;
 
   @override
   FutureOr<void> onLoad() async {
@@ -19,24 +20,23 @@ class BackgroundComponent extends PositionComponent
     ui.Codec codec = await ui.instantiateImageCodec(Uint8List.view(bd.buffer));
     ui.FrameInfo frameInfo = await codec.getNextFrame();
     img = frameInfo.image;
+    _paint = Paint()
+      ..shader = ui.ImageShader(
+        img,
+        TileMode.repeated,
+        TileMode.repeated,
+        Matrix4.identity().storage,
+      )
+      ..filterQuality = FilterQuality.none;
   }
 
   @override
   void render(Canvas canvas) {
-    game.worldMapEnabled
-        ? null
-        : paintImage(
-            canvas: canvas,
-            rect: Rect.fromLTWH(
-              0,
-              0,
-              width * game.miniMapZoom,
-              height * game.miniMapZoom,
-            ),
-            image: img,
-            repeat: ImageRepeat.repeat,
-            filterQuality: FilterQuality.none,
-          );
+    if (game.worldMapEnabled) return;
+    canvas.drawRect(
+      Rect.fromLTWH(0, 0, width * game.miniMapZoom, height * game.miniMapZoom),
+      _paint,
+    );
   }
 
   @override
