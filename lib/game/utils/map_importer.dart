@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'dart:io';
 import 'dart:math';
 
+import 'package:archive/archive.dart';
 import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
@@ -34,8 +34,8 @@ Future<void> importMap(XeonjiaGame game, String fileName) async {
           break;
         case 'milla':
           game.map.milla =
-              (property.value ?? property.getAttributeNode('value')!.value)
-                  .split(';;;');
+              (property.value ?? property.getAttributeNode('value')?.value)
+                  ?.split(';;;');
           break;
         case 'map-name':
           game.map.name = property.getAttributeNode('value')!.value;
@@ -160,7 +160,7 @@ Future<void> importMap(XeonjiaGame game, String fileName) async {
   var layerCount = 0;
   mapXml.findElements('layer').forEach((layer) {
     var gzipMapData = layer.findElements('data').single.innerText;
-    var m = gzip.decode(base64.decode(gzipMapData.trim()));
+    var m = GZipDecoder().decodeBytes(base64.decode(gzipMapData.trim()));
     var mapData = List<int>.generate(
       m.length ~/ 4,
       (i) =>

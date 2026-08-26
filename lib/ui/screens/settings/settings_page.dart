@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:i18n_extension/i18n_extension.dart';
@@ -290,7 +291,7 @@ class SettingsPageState extends State<SettingsPage> {
                               subtitle: Text(
                                 'Move the character with gestures or virtual D-pad'
                                         .i18n +
-                                    (Platform.isAndroid
+                                    ((!kIsWeb && Platform.isAndroid)
                                         ? ''
                                         : '.\n' +
                                               'You only need it on a touchscreen device'

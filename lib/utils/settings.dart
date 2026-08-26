@@ -1,13 +1,14 @@
 import 'dart:io';
 import 'dart:ui';
 
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:xeonjia/utils/i18n.dart';
 
 /// This contains the configurations of the app
 class Settings {
   /// Import settings from a Json
   Settings(Map<String, dynamic> json)
-    : showDPad = json['showDPad'] ?? Platform.isAndroid,
+    : showDPad = json['showDPad'] ?? (!kIsWeb && Platform.isAndroid),
       dPadSize = json['dPadSize'] ?? 1,
       dPadOffset = Offset(json['dPadOffsetX'] ?? 30, json['dPadOffsetY'] ?? 30),
       buttonsOffset = Offset(
@@ -60,7 +61,10 @@ class Settings {
   String? _languageCode;
   bool get useSystemLanguage => _languageCode == null || _languageCode == 'und';
   String get _currentLanguageCode =>
-      useSystemLanguage ? Platform.localeName : _languageCode!;
+      useSystemLanguage ? _systemLocaleName : _languageCode!;
+  String get _systemLocaleName => kIsWeb
+      ? PlatformDispatcher.instance.locale.toString()
+      : Platform.localeName;
   Locale get locale =>
       supportedLocales.contains(
             Locale(_currentLanguageCode.split('_').first),

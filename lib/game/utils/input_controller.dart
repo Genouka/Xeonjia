@@ -3,20 +3,22 @@ import 'dart:io';
 import 'package:collection/collection.dart';
 import 'package:flame/events.dart';
 import 'package:flame/extensions.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 
+bool get _isDesktopKeyboard =>
+    !kIsWeb && (Platform.isLinux || Platform.isWindows);
+
 /// Handle user input
 extension InputController on XeonjiaGame {
-  String get inspectButtonKey =>
-      Platform.isLinux || Platform.isWindows ? 'X' : 'A';
-  String get punchButtonKey =>
-      Platform.isLinux || Platform.isWindows ? 'Q' : 'P';
-  String get snowballButtonKey => Platform.isLinux || Platform.isWindows
+  String get inspectButtonKey => _isDesktopKeyboard ? 'X' : 'A';
+  String get punchButtonKey => _isDesktopKeyboard ? 'Q' : 'P';
+  String get snowballButtonKey => _isDesktopKeyboard
       ? 'Snowball (%s)'.i18n.fill(['E'])
       : 'Snowball'.i18n;
-  String get mineButtonKey => Platform.isLinux || Platform.isWindows
+  String get mineButtonKey => _isDesktopKeyboard
       ? 'Mine (%s)'.i18n.fill(['R'])
       : 'Mine'.i18n;
 
