@@ -81,11 +81,13 @@ extension Localization on String {
     for (final locale in supportedLocales) {
       var language =
           locale.languageCode +
-          (locale.countryCode != null ? '_${locale.countryCode}' : '');
+          (locale.countryCode != null
+              ? '-${locale.countryCode!.toUpperCase()}'
+              : '');
       var languagePath = language;
       if (language == 'en') continue;
-      if (language == 'zh_tw') languagePath = 'zh-Hant';
-      if (language == 'zh_cn') languagePath = 'zh-Hans';
+      if (language == 'zh-TW') languagePath = 'zh-Hant';
+      if (language == 'zh-CN') languagePath = 'zh-Hans';
       if (language == 'pt') languagePath += '-BR';
       for (final fileName in ['story', 'ui']) {
         _translations += await GettextImporter().fromAssetFile(
