@@ -55,12 +55,8 @@ class WorldMap extends SpriteComponent with HasGameReference<XeonjiaGame> {
 
   void _pan(double worldX, double worldY) {
     position = Vector2(
-      -game.moveCamera(game.size.x, game.map.width, worldX * game.miniMapZoom),
-      -game.moveCamera(
-        game.size.y,
-        game.map.width * 0.7,
-        worldY * game.miniMapZoom,
-      ),
+      -game.moveCamera(game.size.x, worldMapWidth, worldX * game.miniMapZoom),
+      -game.moveCamera(game.size.y, worldMapHeight, worldY * game.miniMapZoom),
     );
   }
 
@@ -78,8 +74,8 @@ class WorldMap extends SpriteComponent with HasGameReference<XeonjiaGame> {
   void onGameResize(Vector2 size) {
     super.onGameResize(size);
     this.size = Vector2(
-      game.map.width * componentSize * game.miniMapZoom,
-      game.map.width * componentSize * game.miniMapZoom * 0.7,
+      worldMapWidth * componentSize * game.miniMapZoom,
+      worldMapHeight * componentSize * game.miniMapZoom,
     );
     _updateCamera();
   }
@@ -94,12 +90,8 @@ class WorldMap extends SpriteComponent with HasGameReference<XeonjiaGame> {
   void _updateCamera() {
     if (_currentMapPosition != null && game.elapsed != 0) {
       position = Vector2(
-        -game.moveCamera(game.size.x, game.map.width, _currentMapPosition!.x),
-        -game.moveCamera(
-          game.size.y,
-          game.map.width * 0.7,
-          _currentMapPosition!.y,
-        ),
+        -game.moveCamera(game.size.x, worldMapWidth, _currentMapPosition!.x),
+        -game.moveCamera(game.size.y, worldMapHeight, _currentMapPosition!.y),
       );
     }
   }
@@ -117,8 +109,8 @@ class WorldMap extends SpriteComponent with HasGameReference<XeonjiaGame> {
       centerY = (-position.y + game.size.y / 2) * zoomRatio;
     }
     position = Vector2(
-      -game.moveCamera(game.size.x, game.map.width, centerX),
-      -game.moveCamera(game.size.y, game.map.width * 0.7, centerY),
+      -game.moveCamera(game.size.x, worldMapWidth, centerX),
+      -game.moveCamera(game.size.y, worldMapHeight, centerY),
     );
   }
 
@@ -195,8 +187,8 @@ class _RectangleMap extends PositionComponent
   void onGameResize(Vector2 size) {
     super.onGameResize(size);
     var parentSize = Vector2(
-      game.map.width * componentSize * game.miniMapZoom,
-      game.map.width * componentSize * game.miniMapZoom * 0.7,
+      worldMapWidth * componentSize * game.miniMapZoom,
+      worldMapHeight * componentSize * game.miniMapZoom,
     );
     final double multiplier = parentSize.x * MapData.offset.x * MapData.scale;
     final Vector2 offset = Vector2.copy(parentSize)..multiply(MapData.offset);

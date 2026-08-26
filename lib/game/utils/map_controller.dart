@@ -83,11 +83,11 @@ extension MapController on XeonjiaGame {
   void zoomMiniMap({double? toValue, bool out = false, bool enable = false}) {
     var previousValue = enable ? 1 : miniMapZoom;
     var delta = 16 / componentSize;
+    var mapWidth = worldMapEnabled ? worldMapWidth : map.width;
+    var mapHeight = worldMapEnabled ? worldMapHeight : map.height.toDouble();
     if (!out ||
-        miniMapZoom * componentSize * map.width > canvasSize.x ||
-        (worldMapEnabled
-            ? miniMapZoom * componentSize * map.width * 0.7 > canvasSize.y
-            : miniMapZoom * componentSize * map.height > canvasSize.y)) {
+        miniMapZoom * componentSize * mapWidth > canvasSize.x ||
+        miniMapZoom * componentSize * mapHeight > canvasSize.y) {
       miniMapZoom =
           toValue ??
           (out

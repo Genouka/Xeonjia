@@ -16,6 +16,10 @@ late double componentSize;
 void setComponentSize(Size screenSize) => componentSize =
     (screenSize.shortestSide / settings.zoomIn).round16.gridAligned.toDouble();
 
+/// World-map size (in components)
+const double worldMapWidth = 25;
+const double worldMapHeight = worldMapWidth * 0.7; // map.png ratio is 100x70
+
 /// This contains the game logics
 class XeonjiaGame extends FlameGame
     with KeyboardEvents, PanDetector, TapCallbacks {
@@ -594,8 +598,8 @@ class XeonjiaGame extends FlameGame
   void updateCamera(double x, double y) {
     if (map.width == 0) return;
     camera.viewfinder.position = Vector2(
-      moveCamera(size.x, map.width, x),
-      moveCamera(size.y, worldMapEnabled ? map.height * 0.7 : map.height, y),
+      moveCamera(size.x, worldMapEnabled ? worldMapWidth : map.width, x),
+      moveCamera(size.y, worldMapEnabled ? worldMapHeight : map.height, y),
     );
   }
 

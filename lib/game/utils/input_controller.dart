@@ -81,12 +81,12 @@ extension InputController on XeonjiaGame {
         wm.position = Vector2(
           -moveCamera(
             size.x,
-            map.width,
+            worldMapWidth,
             -wm.position.x - info.raw.delta.dx + size.x / 2,
           ),
           -moveCamera(
             size.y,
-            map.width * 0.7,
+            worldMapHeight,
             -wm.position.y - info.raw.delta.dy + size.y / 2,
           ),
         );
