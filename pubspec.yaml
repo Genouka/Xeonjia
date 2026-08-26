@@ -17,7 +17,7 @@ dependencies:
   archive: ^4.2.0
   collection: ^1.19.1
   device_info_plus: ^13.2.0
-  flame: ^1.38.0
+  flame: ^1.38.1
   flame_audio: ^2.12.2
   flame_noise: ^0.3.3+22
   i18n_extension: ^15.1.1
