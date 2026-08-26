@@ -155,6 +155,7 @@ class XeonjiaGame extends FlameGame
           .toList(),
     );
     world.removeAll(world.children.toList());
+    camera.viewport.removeAll(camera.viewport.children);
     grid.clear();
     addComponent(BackgroundComponent());
     players.clear();
