@@ -11,6 +11,7 @@ class DirectionChangerComponent extends BasicComponent {
       ),
       super.fromTile();
   final Direction _forcedDirection;
+  Direction get forcedDirection => _forcedDirection;
 
   @override
   int get priority => 20;

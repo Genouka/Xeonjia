@@ -12,6 +12,9 @@ class HurdleComponent extends BasicComponent {
 
   final Direction _allowedDirection;
 
+  /// True if this can be bypassed by moving towards [direction]
+  bool allows(Direction direction) => direction == _allowedDirection;
+
   @override
   Rect? collisionRect(Walker otherComponent) {
     return (otherComponent.direction == _allowedDirection ||

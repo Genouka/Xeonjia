@@ -5,12 +5,12 @@ import 'package:xeonjia/game/xeonjia.dart';
 /// Static component
 class StaticComponent extends BasicComponent {
   StaticComponent(super.tile, {this._walkable = false})
-    : _slippery = (tile.properties['slippery'] ?? 'false') == 'true',
+    : isSlippery = (tile.properties['slippery'] ?? 'false') == 'true',
       hideable = (tile.properties['hideable'] ?? 'false') == 'true',
       super.fromTile();
 
   /// If true: other components slide on this
-  final bool _slippery;
+  bool isSlippery;
 
   /// If true: other components can walk on this
   final bool _walkable;
@@ -21,7 +21,7 @@ class StaticComponent extends BasicComponent {
 
   @override
   Rect? collisionRect(Walker otherComponent) {
-    if (_slippery) return null;
+    if (isSlippery) return null;
     if (!_walkable) return super.collisionRect(otherComponent);
     if (otherComponent.isFlying() != isFlying() ||
         otherComponent.wasStationary) {
