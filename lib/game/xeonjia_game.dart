@@ -455,9 +455,10 @@ class XeonjiaGame extends FlameGame
       ),
     );
     _activePlayerIndex = players.indexOf(playerOne!);
-    this.add(BattleTextBox('You won!'.i18n.toUpperCase()));
-    children
+    camera.viewport.add(BattleTextBox('You won!'.i18n.toUpperCase()));
+    world.children
         .where((c) => c is ModifierComponent && c.explosionOnDelete)
+        .toList()
         .forEach((c) => (c as ModifierComponent).delete());
     playBackgroundMusic(custom: null);
     playSound(Sfx.win, volume: 1);
@@ -856,7 +857,7 @@ class XeonjiaGame extends FlameGame
   @override
   void onPanDown(DragDownInfo info) {
     longPressMoving = false;
-    longPressButton = children.firstWhereOrNull(
+    longPressButton = camera.viewport.children.firstWhereOrNull(
       (e) => e is Button && e.containsPoint(info.eventPosition.widget),
     ) as Button?;
     longPressTime = longPressButton != null ? elapsed : double.infinity;
