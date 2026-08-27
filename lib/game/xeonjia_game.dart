@@ -225,7 +225,7 @@ class XeonjiaGame extends FlameGame
   /// Main characters
   CharacterComponent? playerOne;
   CharacterComponent? milla;
-  CharacterComponent? get september => children.firstWhereOrNull(
+  CharacterComponent? get september => world.children.firstWhereOrNull(
     (c) => c is CharacterComponent && c.name == 'september',
   ) as CharacterComponent?;
 
@@ -238,7 +238,8 @@ class XeonjiaGame extends FlameGame
   late bool changingTurn;
   int _activePlayerIndex = 0;
   late int remainingMoves;
-  bool get thereIsASnowball => children.any((c) => c is SnowballComponent);
+  bool get thereIsASnowball =>
+      world.children.any((c) => c is SnowballComponent);
 
   /// Increase the move counter during a battle
   void useMove(Walker component, {bool skipTurn = false}) {

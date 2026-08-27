@@ -207,9 +207,9 @@ class DialogBoxState extends State<DialogBox> with TickerProviderStateMixin {
                                         ),
                                         child: Text(
                                           author.toUpperCase(),
-                                          style: Theme.of(
-                                            context,
-                                          ).textTheme.bodyLarge,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyLarge,
                                         ),
                                       ),
                                     AnimatedBuilder(

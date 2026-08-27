@@ -766,8 +766,7 @@ express Statement of Purpose.
 ''',
   },
   {
-    'lib':
-        'Music: JRPG Collection by Yubatake\nhttps://yubatake.bandcamp.com/album/jrpg-collection',
+    'lib': 'Music: JRPG Collection by Yubatake\nhttps://yubatake.bandcamp.com/album/jrpg-collection',
     'text': '''
 Creative Commons Legal Code
 

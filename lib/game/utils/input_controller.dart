@@ -15,12 +15,10 @@ bool get _isDesktopKeyboard =>
 extension InputController on XeonjiaGame {
   String get inspectButtonKey => _isDesktopKeyboard ? 'X' : 'A';
   String get punchButtonKey => _isDesktopKeyboard ? 'Q' : 'P';
-  String get snowballButtonKey => _isDesktopKeyboard
-      ? 'Snowball (%s)'.i18n.fill(['E'])
-      : 'Snowball'.i18n;
-  String get mineButtonKey => _isDesktopKeyboard
-      ? 'Mine (%s)'.i18n.fill(['R'])
-      : 'Mine'.i18n;
+  String get snowballButtonKey =>
+      _isDesktopKeyboard ? 'Snowball (%s)'.i18n.fill(['E']) : 'Snowball'.i18n;
+  String get mineButtonKey =>
+      _isDesktopKeyboard ? 'Mine (%s)'.i18n.fill(['R']) : 'Mine'.i18n;
 
   static Direction? _gesturesDirection;
   static double _gesturesElapsed = 0;
@@ -39,7 +37,7 @@ extension InputController on XeonjiaGame {
         (elapsed > longPressTime + 1 &&
             longPressButton != null &&
             longPressButton ==
-                children.firstWhereOrNull(
+                camera.viewport.children.firstWhereOrNull(
                   (e) =>
                       e is Button && e.containsPoint(info.eventPosition.widget),
                 ))) {
@@ -49,7 +47,7 @@ extension InputController on XeonjiaGame {
         settings.buttonsOffset.dx - info.raw.delta.dx / shortestSide,
         settings.buttonsOffset.dy - info.raw.delta.dy / shortestSide,
       );
-      for (final component in children) {
+      for (final component in camera.viewport.children) {
         if (component is Button) component.updatePosition();
       }
       return;
@@ -128,14 +126,12 @@ extension InputController on XeonjiaGame {
 
   /// Handle tap gesture
   void _tapHandler(Offset position) {
-    Button? b =
-        children.firstWhereOrNull(
-              (e) =>
-                  e is Button &&
-                  e.containsPoint(position.toVector2()) &&
-                  (e.visibility?.call() ?? true),
-            )
-            as Button?;
+    Button? b = camera.viewport.children.firstWhereOrNull(
+      (e) =>
+          e is Button &&
+          e.containsPoint(position.toVector2()) &&
+          (e.visibility?.call() ?? true),
+    ) as Button?;
     if ((isPaused && !miniMapEnabled) || !(user?.isMyTurn ?? false)) {
       return;
     } else if (b != null) {
@@ -145,7 +141,10 @@ extension InputController on XeonjiaGame {
 
     // Ignore tap near buttons (top left)
     var topLeftSize =
-        children.whereType<HideHintsButton>().firstOrNull?.size ??
+        camera.viewport.children
+            .whereType<HideHintsButton>()
+            .firstOrNull
+            ?.size ??
         Vector2.zero();
     if (position.dx < topLeftSize.x && position.dy < topLeftSize.y * 2 + 20) {
       return;

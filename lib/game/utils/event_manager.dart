@@ -226,8 +226,9 @@ Environment setEnvironment(XeonjiaGame game) {
     return #NONE;
   });
   x('is-friendly', 1, (Cell? x) {
-    return (game.getComponentFromId(x!.car as int) as CharacterComponent)
-        .friendly;
+    return (game.getComponentFromId(
+      x!.car as int,
+    ) as CharacterComponent).friendly;
   });
   x('friendly', 1, (Cell? x) {
     var actorAndValue = getActorAndValue(x);
@@ -289,16 +290,16 @@ Environment setEnvironment(XeonjiaGame game) {
             ? Message(
                 game,
                 (it.current as Cell).car as String,
-                component:
-                    (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
-                        as BasicComponent,
+                component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(
+                  x,
+                ) as BasicComponent,
               )
             : Message(
                 game,
                 (it.current as Cell).cdr.car,
-                component:
-                    (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
-                        as BasicComponent,
+                component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(
+                  x,
+                ) as BasicComponent,
                 author: (it.current as Cell).car as String,
               ),
       );
@@ -313,16 +314,16 @@ Environment setEnvironment(XeonjiaGame game) {
             ? Message(
                 game,
                 (it.current as Cell).car as String,
-                component:
-                    (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
-                        as BasicComponent,
+                component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(
+                  x,
+                ) as BasicComponent,
               )
             : Message(
                 game,
                 (it.current as Cell).cdr.car,
-                component:
-                    (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
-                        as BasicComponent,
+                component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(
+                  x,
+                ) as BasicComponent,
                 author: (it.current as Cell).car as String,
               ),
         hideMap: true,
@@ -338,16 +339,16 @@ Environment setEnvironment(XeonjiaGame game) {
             ? Message(
                 game,
                 (it.current as Cell).car as String,
-                component:
-                    (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
-                        as BasicComponent,
+                component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(
+                  x,
+                ) as BasicComponent,
               )
             : Message(
                 game,
                 (it.current as Cell).cdr.car,
-                component:
-                    (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
-                        as BasicComponent,
+                component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(
+                  x,
+                ) as BasicComponent,
                 author: (it.current as Cell).car as String,
               ),
         hideMap: true,
@@ -364,18 +365,18 @@ Environment setEnvironment(XeonjiaGame game) {
             ? Message(
                 game,
                 (it.current as Cell).car as String,
-                component:
-                    (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
-                        as BasicComponent,
+                component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(
+                  x,
+                ) as BasicComponent,
                 font: 'kobi',
                 translate: settings.defaultFont, // transliterate?
               )
             : Message(
                 game,
                 (it.current as Cell).cdr.car,
-                component:
-                    (env.lookForValue(Sym('actor')) as Intrinsic).fun!(x)
-                        as BasicComponent,
+                component: (env.lookForValue(Sym('actor')) as Intrinsic).fun!(
+                  x,
+                ) as BasicComponent,
                 author: (it.current as Cell).car as String,
                 font: 'kobi',
                 translate: settings.defaultFont, // transliterate?

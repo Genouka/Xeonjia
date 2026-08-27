@@ -16,9 +16,8 @@ class CurtainComponent extends PositionComponent
     if (!done) {
       canvas.drawPaint(
         Paint()
-          ..color = const Color(
-            0xff000000,
-          ).withAlpha((255.0 * _opacity).round()),
+          ..color = const Color(0xff000000)
+              .withAlpha((255.0 * _opacity).round()),
       );
     }
   }

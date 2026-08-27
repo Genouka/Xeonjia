@@ -62,9 +62,9 @@ class WorldMap extends SpriteComponent with HasGameReference<XeonjiaGame> {
 
   void selectPoint([Vector2? at]) {
     var p = (at ?? pointer.position) * game.miniMapZoom;
-    (children.firstWhereOrNull((m) => m is _RectangleMap && m.containsPoint(p))
-            as _RectangleMap?)
-        ?.selected();
+    (children.firstWhereOrNull(
+      (m) => m is _RectangleMap && m.containsPoint(p),
+    ) as _RectangleMap?)?.selected();
   }
 
   @override
