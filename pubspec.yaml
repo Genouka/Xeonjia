@@ -19,7 +19,7 @@ dependencies:
   crypto: ^3.0.7
   device_info_plus: ^13.2.0
   file_picker: ^12.1.1
-  flame: ^1.38.1
+  flame: ^1.38.2
   flame_audio: ^2.12.2
   flame_noise: ^0.3.3+22
   i18n_extension: ^15.1.1
