@@ -9,6 +9,9 @@ import 'package:flutter/services.dart';
 import 'package:xeonjia/game/xeonjia.dart';
 import 'package:xml/xml.dart';
 
+String? _tiledClass(XmlElement element) =>
+    element.getAttribute('type') ?? element.getAttribute('class');
+
 /// Import map from a TMX file
 Future<void> importMap(XeonjiaGame game, String fileName) async {
   var mapXml = XmlDocument.parse(await rootBundle.loadString(fileName))
@@ -114,7 +117,7 @@ Future<void> importMap(XeonjiaGame game, String fileName) async {
         tileset.findElements('tile').forEach((tile) {
           var newTile = Tile(
             gid: int.parse(tile.getAttribute('id')!) + firstGid,
-            tiledClass: tile.getAttribute('class'),
+            tiledClass: _tiledClass(tile),
           );
           newTile.properties['imageY'] =
               ((newTile.gid! - firstGid) / columns).floor() * tileHeight;
@@ -208,7 +211,7 @@ Future<void> importMap(XeonjiaGame game, String fileName) async {
               property.getAttributeNode('value')?.value ?? property.innerText;
         },
       );
-      tile!.tiledClass = object.getAttribute('class') ?? tile.tiledClass;
+      tile!.tiledClass = _tiledClass(object) ?? tile.tiledClass;
       tile.position = Point(x, y);
       tile.properties.addAll(properties);
       // Add itemId value even if properties['itemId'] == null
