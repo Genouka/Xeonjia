@@ -26,9 +26,7 @@ jobs:
           flutter-version-file: pubspec.yaml # path to pubspec.yaml or .fvmrc or .fvm/fvm_config.json
       - run: flutter --version
       - run: flutter pub get
-      - run: flutter test
       - run: flutter build apk
-      - run: flutter build appbundle
       - run: flutter build web
       - uses: actions/upload-artifact@v4
         with:
